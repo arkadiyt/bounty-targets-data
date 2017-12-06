@@ -708,7 +708,6 @@ type ActivitiesSwagAwarded implements ActivityInterface, Node, ReportActivityInt
 type ActivitiesTeamPublished implements ActivityInterface, Node {
   _id: ID!
   actor: ActorUnion!
-  attachments: [Attachment]
   created_at: String!
   i_can_edit: Boolean!
   id: ID!
@@ -758,7 +757,6 @@ type ActivitiesUserBannedFromProgram implements ActivityInterface, Node, ReportA
 type ActivitiesUserJoined implements ActivityInterface, Node {
   _id: ID!
   actor: ActorUnion!
-  attachments: [Attachment]
   created_at: String!
   i_can_edit: Boolean!
   id: ID!
@@ -783,7 +781,6 @@ type ActivityConnection {
 interface ActivityInterface {
   _id: ID!
   actor: ActorUnion!
-  attachments: [Attachment]
   created_at: String!
   i_can_edit: Boolean!
   internal: Boolean
@@ -2292,10 +2289,10 @@ type ProgramHealthAcknowledgementEdge {
 
 # reason which reflect the state of a program health acknowledgement
 enum ProgramHealthAcknowledgementReasonEnum {
-  failed
+  grace_period
+  in_review
   ok
   paused
-  review
 }
 
 # Root entity of the Hackerone Schema
