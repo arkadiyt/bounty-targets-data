@@ -1,0 +1,26 @@
+# bounty-targets-data [![Last commit](https://img.shields.io/github/last-commit/arkadiyt/bounty-targets-data.svg)](https://github.com/arkadiyt/bounty-targets-data/commits/master) [![License](https://img.shields.io/github/license/arkadiyt/bounty-targets-data.svg)](https://github.com/arkadiyt/bounty-targets-data/blob/master/LICENSE.md)
+
+### What's it for
+
+This repo contains data dumps of Hackerone and Bugcrowd scopes (i.e. the domains that are eligible for bug bounty reports). The files provided are:
+
+Main files:
+- [domains.txt](https://github.com/arkadiyt/bounty-targets-data/blob/master/data/domains.txt): full list of domains, without wildcards.
+- [wildcards.txt](https://github.com/arkadiyt/bounty-targets-data/blob/master/data/wildcards.txt): full list of wildcard domains. **Note:** A program might have `*.example.com` in-scope but `excluded.example.com` out-of-scope so check your program rules before submitting reports.
+
+Extra files:
+- [bugcrowd_data.json](https://github.com/arkadiyt/bounty-targets-data/blob/master/data/bugcrowd_data.json): raw bugcrowd data.
+- [hackerone_data.json](https://github.com/arkadiyt/bounty-targets-data/blob/master/data/hackerone_data.json): raw hackerone data.
+- [hackerone_schema.graphql](https://github.com/arkadiyt/bounty-targets-data/blob/master/data/hackerone_schema.graphql): hackerone's graphql api schema.
+
+### Status
+
+The last change was detected on **Wednesday 12/06/2017 09:42 (UTC)**. New changes are picked up hourly.
+
+### The code
+
+The code used to generate these files lives in the [bounty-targets](https://github.com/arkadiyt/bounty-targets) repo.
+
+### Getting in touch
+
+Feel free to contact me on twitter: https://twitter.com/arkadiyt
