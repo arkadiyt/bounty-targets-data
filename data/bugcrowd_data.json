@@ -2254,16 +2254,28 @@
     "targets": {
       "in_scope": [
         {
+          "type": "website",
+          "target": "*.tesla.services"
+        },
+        {
+          "type": "website",
+          "target": "*.tesla.cn"
+        },
+        {
+          "type": "ios",
+          "target": "Official Tesla iOS apps"
+        },
+        {
+          "type": "android",
+          "target": "Official Tesla Android apps"
+        },
+        {
           "type": "other",
           "target": "*.teslamotors.com"
         },
         {
           "type": "other",
           "target": "Any host verified to be owned by Tesla Motors Inc. (domains/IP space/etc.)"
-        },
-        {
-          "type": "other",
-          "target": "Mobile Applications (\"Tesla Model S\" on iOS and Android)"
         },
         {
           "type": "other",
@@ -2275,7 +2287,30 @@
         }
       ],
       "out_of_scope": [
-
+        {
+          "type": "",
+          "target": "Any other third-party websites hosted by non-Tesla entities"
+        },
+        {
+          "type": "",
+          "target": "*.shareholder.com"
+        },
+        {
+          "type": "",
+          "target": "ir.teslamotors.com"
+        },
+        {
+          "type": "",
+          "target": "mkto.teslamotors.com"
+        },
+        {
+          "type": "",
+          "target": "feedback.teslamotors.com"
+        },
+        {
+          "type": "",
+          "target": "Any SolarCity property, including *.solarcity.com"
+        }
       ]
     }
   },
