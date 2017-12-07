@@ -15,9 +15,9 @@ Extra files:
 
 ### Status
 
-The last change was detected on **Thursday 12/07/2017 04:10 (UTC)**. New changes are picked up hourly.
+The last change was detected on **Thursday 12/07/2017 07:36 (UTC)**. New changes are picked up hourly.
 
-### The code
+### Code
 
 The code used to generate these files lives in the [bounty-targets](https://github.com/arkadiyt/bounty-targets) repo.
 
