@@ -2350,6 +2350,20 @@ type Query implements Node {
   resource(url: URI): ResourceInterface
   session: Session
   severity_calculator: SeverityCalculator
+  sla_statuses(
+    # Returns the elements in the list that come after the specified global ID.
+    after: String
+
+    # Returns the elements in the list that come before the specified global ID.
+    before: String
+
+    # Returns the first _n_ elements from the list.
+    first: Int
+
+    # Returns the last _n_ elements from the list.
+    last: Int
+    order_by: SlaStatusOrder = {field: EARLIEST_SLA_FAILURE}
+  ): SlaStatusConnection
   surveys(
     # Returns the elements in the list that come after the specified global ID.
     after: String
@@ -2692,6 +2706,46 @@ enum SeveritySecurityRequirementEnum {
 enum SeverityUserInteractionEnum {
   none
   required
+}
+
+# SLA Status of a Team
+type SlaStatus implements Node, ResourceInterface {
+  first_program_response_sla_fail_in_hours: Int
+  first_program_response_sla_failures_count: Int
+  first_program_response_sla_misses_count: Int
+  first_program_response_sla_ok_count: Int
+  id: ID!
+  team: Team!
+  url: URI!
+  user_id: Int
+}
+
+# The connection type for SlaStatus.
+type SlaStatusConnection {
+  # A list of edges.
+  edges: [SlaStatusEdge]
+
+  # Information to aid in pagination.
+  pageInfo: PageInfo!
+  total_count: Int!
+}
+
+# An edge in a connection.
+type SlaStatusEdge {
+  # A cursor for use in pagination.
+  cursor: String!
+
+  # The item at the end of the edge.
+  node: SlaStatus
+}
+
+input SlaStatusOrder {
+  field: SlaStatusOrderField!
+}
+
+# Fields on which a collection of SLA statuses can be ordered
+enum SlaStatusOrderField {
+  EARLIEST_SLA_FAILURE
 }
 
 # SLA types
