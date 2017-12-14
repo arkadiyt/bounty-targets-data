@@ -1818,6 +1818,7 @@ type Error implements Node {
 enum ErrorTypeEnum {
   ARGUMENT
   AUTHORIZATION
+  THROTTLE
 }
 
 # An External Program
@@ -1929,6 +1930,15 @@ type InvitationsSoftLaunch implements InvitationInterface, Node {
   message: String
   team: Team!
   token: String
+}
+
+# An edge in a connection.
+type InvitationsSoftLaunchEdge {
+  # A cursor for use in pagination.
+  cursor: String!
+
+  # The item at the end of the edge.
+  node: InvitationsSoftLaunch
 }
 
 # A JIRA integration for a team
@@ -2838,6 +2848,16 @@ type SlackUser implements Node {
   id: ID!
   name: String!
   real_name: String
+}
+
+# The connection type for InvitationsSoftLaunch.
+type SoftLaunchConnection {
+  # A list of edges.
+  edges: [InvitationsSoftLaunchEdge]
+
+  # Information to aid in pagination.
+  pageInfo: PageInfo!
+  total_count: Int!
 }
 
 # A static participant for a team
@@ -4110,6 +4130,20 @@ type User implements Node, ResourceInterface {
   name: String
   new_feature_notification: NewFeatureNotification
   next_update_username_date: String
+  open_soft_launch_invitations(
+    # Returns the elements in the list that come after the specified global ID.
+    after: String
+
+    # Returns the elements in the list that come before the specified global ID.
+    before: String
+
+    # Returns the first _n_ elements from the list.
+    first: Int
+
+    # Returns the last _n_ elements from the list.
+    last: Int
+    team_handle: String = null
+  ): SoftLaunchConnection
   otp_backup_codes: [String]
   payout_preferences: [PayoutPreferenceUnion]
   profile_picture(size: ProfilePictureSizes!): String!
