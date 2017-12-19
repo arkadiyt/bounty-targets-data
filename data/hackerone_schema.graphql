@@ -25,7 +25,7 @@ type AcknowledgeProgramHealthAcknowledgementMutationPayload {
 
   # A unique identifier for the client performing the mutation.
   clientMutationId: String
-  errors: [Error]
+  errors(types: [ErrorTypeEnum]): ErrorConnection!
   me: User
   was_successful: Boolean!
 }
@@ -1390,7 +1390,7 @@ input CreateMailingAddressInput {
 type CreateMailingAddressPayload {
   # A unique identifier for the client performing the mutation.
   clientMutationId: String
-  errors: [Error]
+  errors(types: [ErrorTypeEnum]): ErrorConnection!
   me: User
   was_successful: Boolean!
 }
@@ -1452,7 +1452,7 @@ input CreatePaypalPreferenceInput {
 type CreatePaypalPreferencePayload {
   # A unique identifier for the client performing the mutation.
   clientMutationId: String
-  errors: [Error]
+  errors(types: [ErrorTypeEnum]): ErrorConnection!
   me: User
   was_successful: Boolean!
 }
@@ -1536,7 +1536,7 @@ input CreateSurveyAnswerInput {
 type CreateSurveyAnswerPayload {
   # A unique identifier for the client performing the mutation.
   clientMutationId: String
-  errors: [Error]
+  errors(types: [ErrorTypeEnum]): ErrorConnection!
   me: User
   was_successful: Boolean!
 }
@@ -1767,7 +1767,7 @@ type DismissProgramHealthAcknowledgementMutationPayload {
   # A unique identifier for the client performing the mutation.
   clientMutationId: String
   dismissed_program_health_acknowledgement_id: String!
-  errors: [Error]
+  errors(types: [ErrorTypeEnum]): ErrorConnection!
   me: User
   was_successful: Boolean!
 }
@@ -1812,6 +1812,25 @@ type Error implements Node {
   id: ID!
   message: String!
   type: ErrorTypeEnum!
+}
+
+# The connection type for Error.
+type ErrorConnection {
+  # A list of edges.
+  edges: [ErrorEdge]
+
+  # Information to aid in pagination.
+  pageInfo: PageInfo!
+  total_count: Int!
+}
+
+# An edge in a connection.
+type ErrorEdge {
+  # A cursor for use in pagination.
+  cursor: String!
+
+  # The item at the end of the edge.
+  node: Error
 }
 
 # Types of errors that can occur
@@ -2006,7 +2025,7 @@ input LeavePrivateProgramInput {
 type LeavePrivateProgramPayload {
   # A unique identifier for the client performing the mutation.
   clientMutationId: String
-  errors: [Error]
+  errors(types: [ErrorTypeEnum]): ErrorConnection!
   me: User
   was_successful: Boolean!
 }
@@ -2051,7 +2070,7 @@ input MarkReportAsNeedsMoreInfoInput {
 type MarkReportAsNeedsMoreInfoPayload {
   # A unique identifier for the client performing the mutation.
   clientMutationId: String
-  errors: [Error]
+  errors(types: [ErrorTypeEnum]): ErrorConnection!
   query: Query
   report: Report
   report_id: ID!
@@ -2070,7 +2089,7 @@ input MarkReportAsNoiseInput {
 type MarkReportAsNoisePayload {
   # A unique identifier for the client performing the mutation.
   clientMutationId: String
-  errors: [Error]
+  errors(types: [ErrorTypeEnum]): ErrorConnection!
   query: Query
   report: Report
   was_successful: Boolean!
@@ -2088,7 +2107,7 @@ input MarkReportAsSignalInput {
 type MarkReportAsSignalPayload {
   # A unique identifier for the client performing the mutation.
   clientMutationId: String
-  errors: [Error]
+  errors(types: [ErrorTypeEnum]): ErrorConnection!
   query: Query
   report: Report
   was_successful: Boolean!
@@ -3778,7 +3797,7 @@ input UpdateLastViewedNewFeaturesAtInput {
 type UpdateLastViewedNewFeaturesAtPayload {
   # A unique identifier for the client performing the mutation.
   clientMutationId: String
-  errors: [Error]
+  errors(types: [ErrorTypeEnum]): ErrorConnection!
   me: User
   was_successful: Boolean!
 }
@@ -4025,7 +4044,7 @@ input UpdateUserEmailInput {
 type UpdateUserEmailPayload {
   # A unique identifier for the client performing the mutation.
   clientMutationId: String
-  errors: [Error]
+  errors(types: [ErrorTypeEnum]): ErrorConnection!
   me: User
   was_successful: Boolean!
 }
