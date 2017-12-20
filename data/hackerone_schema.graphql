@@ -2401,6 +2401,7 @@ type Query implements Node {
     # Returns the last _n_ elements from the list.
     last: Int
     order_by: SlaStatusOrder = {field: EARLIEST_SLA_FAILURE}
+    team_states: [TeamState]
   ): SlaStatusConnection
   surveys(
     # Returns the elements in the list that come after the specified global ID.
