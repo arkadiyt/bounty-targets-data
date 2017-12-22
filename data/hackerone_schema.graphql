@@ -2766,14 +2766,13 @@ enum SeverityUserInteractionEnum {
 }
 
 # SLA Status of a Team
-type SlaStatus implements Node, ResourceInterface {
+type SlaStatus implements Node {
   first_program_response_sla_fail_in_hours: Int
   first_program_response_sla_failures_count: Int
   first_program_response_sla_misses_count: Int
   first_program_response_sla_ok_count: Int
   id: ID!
   team: Team!
-  url: URI!
   user_id: Int
 }
 
@@ -3408,6 +3407,7 @@ type Team implements Node, ResourceInterface {
   sla_failed_count: Int
   sla_failed_count_redacted: Int
   sla_missed_count: Int
+  sla_status: SlaStatus
   slack_integration: SlackIntegration
   slack_pipelines(
     # Returns the elements in the list that come after the specified global ID.
