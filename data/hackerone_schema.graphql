@@ -2126,6 +2126,16 @@ type MarkReportAsSignalPayload {
   was_successful: Boolean!
 }
 
+input MembershipOrder {
+  direction: OrderDirection!
+  field: MembershipOrderField!
+}
+
+# Fields on which a collection of Memberships can be ordered
+enum MembershipOrderField {
+  TEAM_NAME
+}
+
 type Mutation {
   acceptInvitation(input: AcceptInvitationInput!): AcceptInvitationPayload
   acknowledgeProgramHealthAcknowledgement(input: AcknowledgeProgramHealthAcknowledgementMutationInput!): AcknowledgeProgramHealthAcknowledgementMutationPayload
@@ -2781,12 +2791,12 @@ enum SeverityUserInteractionEnum {
 
 # SLA Status of a Team
 type SlaStatus implements Node {
-  first_program_response_sla_fail_in_hours: Int
-  first_program_response_sla_failures_count: Int
-  first_program_response_sla_misses_count: Int
-  first_program_response_sla_ok_count: Int
   id: ID!
   team: Team!
+  triage_sla_fail_in_hours: Int
+  triage_sla_failures_count: Int
+  triage_sla_misses_count: Int
+  triage_sla_ok_count: Int
   user_id: Int
 }
 
@@ -3702,6 +3712,7 @@ type TeamPostConnection {
 
   # Information to aid in pagination.
   pageInfo: PageInfo!
+  total_count: Int!
 }
 
 # Fields on which a collection of team posts can be ordered
@@ -4220,6 +4231,7 @@ type User implements Node, ResourceInterface {
 
     # Returns the last _n_ elements from the list.
     last: Int
+    order_by: MembershipOrder = {field: TEAM_NAME, direction: ASC}
   ): TeamMemberConnection
   name: String
   new_feature_notification: NewFeatureNotification
