@@ -6250,6 +6250,17 @@
     "targets": {
       "in_scope": [
         {
+          "asset_identifier": "secure.lahitapiola.fi",
+          "asset_type": "URL",
+          "availability_requirement": "low",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "This domain is designed to send emails. It is by design that it accepts all kinds of sender and receiver addresses, including lahitapiola addresses. Because it is an email-service, there is an smtp server. That is also by design. Sending emails to root or other localhost users is not an issue. Also as a reminder - SSL/TLS, DNS and email best practices (DMARC etc.) and all theoretical hardening trick and tips without any real life business case will be closed as n/a.\n\nThis service is hosted and segregated outside of any critical infrastructure. Besides any potential data sent between two parties, there is no privacy related personal data stored on the server. The service is not critical for daily operations.\n\nThings that might be interesting to us (not an exhaustive list)\n- Using the smtp server to relay spam\n- Leaking the actual contents of another users email\n- Modifying contents or attachments of another user\n\nDo not use automated scanners which could DoS this service. You will get banned.",
+          "integrity_requirement": "medium",
+          "max_severity": "critical"
+        },
+        {
           "asset_identifier": "toimitilat.lahitapiola.fi",
           "asset_type": "URL",
           "availability_requirement": "low",
@@ -6407,17 +6418,6 @@
         },
         {
           "asset_identifier": "omatalous.lahitapiola.fi",
-          "asset_type": "URL",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": false,
-          "eligible_for_submission": false,
-          "instruction": "Third party service located outside of critical resources. Service is not critical and does not contain critical information. Assessment is based on LocalTapiola risk management processes and is not open for discussion. ",
-          "integrity_requirement": null,
-          "max_severity": "none"
-        },
-        {
-          "asset_identifier": "secure.lahitapiola.fi",
           "asset_type": "URL",
           "availability_requirement": null,
           "confidentiality_requirement": null,
