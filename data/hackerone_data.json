@@ -6256,7 +6256,7 @@
           "confidentiality_requirement": "high",
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
-          "instruction": "This domain is designed to send emails. It is by design that it accepts all kinds of sender and receiver addresses, including lahitapiola addresses. Because it is an email-service, there is an smtp server. That is also by design. Sending emails to root or other localhost users is not an issue. Also as a reminder - SSL/TLS, DNS and email best practices (DMARC etc.) and all theoretical hardening trick and tips without any real life business case will be closed as n/a.\n\nThis service is hosted and segregated outside of any critical infrastructure. Besides any potential data sent between two parties, there is no privacy related personal data stored on the server. The service is not critical for daily operations.\n\nThings that might be interesting to us (not an exhaustive list)\n- Using the smtp server to relay spam\n- Leaking the actual contents of another users email\n- Modifying contents or attachments of another user\n\nDo not use automated scanners which could DoS this service. You will get banned.",
+          "instruction": "This domain is designed to send emails. It is by design that it accepts all kinds of sender and receiver addresses, including lahitapiola addresses. Because it is an email-service, there is an smtp server. That is also by design. Sending emails to root or other localhost users is not an issue. Also as a reminder - SSL/TLS, DNS and email best practices (DMARC etc.) and all theoretical hardening trick and tips without any real life business case will be closed as n/a.\n\nThis service is hosted and segregated outside of any critical infrastructure. Besides any potential data sent between two parties, there is no privacy related personal data stored on the server. The service is not critical for daily operations.\n\nThings that might be interesting to us (not an exhaustive list)\n- Using the smtp server to relay spam\n- Leaking the actual contents of another users email\n- Modifying contents or attachments of another user\n\nNo automated portscanning or bruteforcing allowed - you will have very limited success and you will be blocked. Copy-pasted reports from vulnerability scanners or Kali-scripts where no business impact is proven will not be awarded.",
           "integrity_requirement": "medium",
           "max_severity": "critical"
         },
@@ -6278,7 +6278,7 @@
           "confidentiality_requirement": "high",
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
-          "instruction": "No automated portscanning allowed - you will have very limited success and you will be blocked.",
+          "instruction": "This is our service portal for customers. This site contains customer information which is only accessible to customers.  We are primarily interested in issues that are a direct threat to the integrity of our customers or their information - meaning stealing information, modifying information or deleting information. Also privacy issues are high on our list of critical issues.\n\nTo be a successful reporter, you need to have an account on this website and understand the basics of the industry we do business in. If you want to understand our reasoning behind assessing reports, read up on risk management to understand the basic concepts of impact and probability. \n\nNo automated portscanning or bruteforcing allowed - you will have very limited success and you will be blocked. Copy-pasted reports from vulnerability scanners or Kali-scripts where no business impact is proven will not be awarded.\n\nThere are no demo or test accounts.",
           "integrity_requirement": "high",
           "max_severity": "critical"
         },
@@ -6289,7 +6289,7 @@
           "confidentiality_requirement": "medium",
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
-          "instruction": "No automated portscanning allowed - you will have very limited success and you will be blocked.",
+          "instruction": "This is another (and very much secondary) public website. It is built using both customized off-the-shelf tools (you can find out which tools by reading disclosed reports!). This site does (and should not) contain any customer information. We are interested in issues affecting continuity and integrity, misconfigurations that might lead to phishing or other attacks against our customers. Planting misinformation or using our public website for sharing malware would be a serious issue.\n\nIf you understand what a public website is, in which country we operate in and the basics of the industry we do business in you will have a better chance of submitting reports successfully. If you want to understand our reasoning behind assessing reports, read up on risk management to understand the basic concepts of impact and probability. \n\nNo automated portscanning or bruteforcing allowed - you will have very limited success and you will be blocked. Copy-pasted reports from vulnerability scanners or Kali-scripts where no business impact is proven will not be awarded.",
           "integrity_requirement": "medium",
           "max_severity": "critical"
         },
@@ -6300,19 +6300,19 @@
           "confidentiality_requirement": "medium",
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
-          "instruction": "No automated portscanning allowed - you will have very limited success and you will be blocked.",
+          "instruction": "This is our public website. It is built using both customized off-the-shelf tools as well as custom code. This site does (and should not) contain any customer information. We are interested in issues affecting continuity and integrity, misconfigurations that might lead to phishing or other attacks against our customers. Planting misinformation or using our public website for sharing malware would be a serious issue.\n\nIf you understand what a public website is, in which country we operate in and the basics of the industry we do business in you will have a better chance of submitting reports successfully. If you want to understand our reasoning behind assessing reports, read up on risk management to understand the basic concepts of impact and probability. \n\nNo automated portscanning or bruteforcing allowed - you will have very limited success and you will be blocked. Copy-pasted reports from vulnerability scanners or Kali-scripts where no business impact is proven will not be awarded.",
           "integrity_requirement": "high",
           "max_severity": "critical"
         },
         {
           "asset_identifier": "www.tapiola.fi",
           "asset_type": "URL",
-          "availability_requirement": "high",
+          "availability_requirement": "medium",
           "confidentiality_requirement": "medium",
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
-          "instruction": "No automated portscanning allowed - you will have very limited success and you will be blocked.",
-          "integrity_requirement": "high",
+          "instruction": "This is another entry point to our public website https://www.lahitapiola,fi. Do NOT copy your report on both domains and always PRIMARILY report on the www.lahitapiola.fi -asset.\n\nNo automated portscanning or bruteforcing allowed - you will have very limited success and you will be blocked. Copy-pasted reports from vulnerability scanners or Kali-scripts where no business impact is proven will not be awarded.",
+          "integrity_requirement": "medium",
           "max_severity": "critical"
         },
         {
@@ -6322,7 +6322,7 @@
           "confidentiality_requirement": "high",
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
-          "instruction": "No automated portscanning allowed - you will have very limited success and you will be blocked.",
+          "instruction": "This is our service portal for corporate users. This site contains customer information which is only accessible for corporate customers.  We are primarily interested in issues that are a direct threat to the integrity of our customers or their information - meaning stealing information, modifying information or deleting information. \n\nTo be a successful reporter, you need to have an account on this website and understand the basics of the industry we do business. If you want to understand our reasoning behind assessing reports, read up on risk management to understand the basic concepts of impact and probability. \n\nNo automated portscanning or bruteforcing allowed - you will have very limited success and you will be blocked. Copy-pasted reports from vulnerability scanners or Kali-scripts where no business impact is proven will not be awarded.\n\nThere are no demo or test accounts.",
           "integrity_requirement": "high",
           "max_severity": "critical"
         }
@@ -6346,7 +6346,7 @@
           "confidentiality_requirement": null,
           "eligible_for_bounty": false,
           "eligible_for_submission": false,
-          "instruction": "No relevant services registered.",
+          "instruction": "No relevant services registered unless explicitly listed as in scope in other assets.",
           "integrity_requirement": null,
           "max_severity": "none"
         },
