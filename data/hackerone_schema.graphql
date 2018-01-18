@@ -1087,6 +1087,7 @@ enum BountyStatusEnum {
   confirmed
   failed
   failed_ofac_check
+  hold
   needs_payout_method
   needs_tax_form
   no_mileage_account
@@ -2408,6 +2409,7 @@ type Query implements Node {
 
     # Returns the first _n_ elements from the list.
     first: Int
+    id: ID
 
     # Returns the last _n_ elements from the list.
     last: Int
@@ -3335,6 +3337,7 @@ type Team implements Node, ResourceInterface {
   i_can_view_phabricator_integration: Boolean
   i_can_view_program_health: Boolean!
   i_can_view_reports_resolved: Boolean
+  i_can_view_response_efficiency_indicators: Boolean
   i_can_view_weaknesses: Boolean
   i_cannot_create_jira_webhook_reasons: [TeamCannotCreateJiraWebhookReasons]!
   id: ID!
@@ -4413,9 +4416,11 @@ type Weakness implements Node {
 
     # Returns the first _n_ elements from the list.
     first: Int
+    id: ID
 
     # Returns the last _n_ elements from the list.
     last: Int
+    order_by: ClusterOrder = {direction: ASC, field: BROWSING_FRIENDLY}
   ): ClusterConnection
   created_at: DateTime!
   description: String
