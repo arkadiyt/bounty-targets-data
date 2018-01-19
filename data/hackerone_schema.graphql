@@ -1938,6 +1938,7 @@ enum InvitationStateEnum {
   cancelled
   expired
   open
+  pending_terms
   rejected
 }
 
@@ -1970,6 +1971,7 @@ type InvitationsSoftLaunch implements InvitationInterface, Node {
   id: ID!
   markdown_message: String
   message: String
+  state: InvitationStateEnum
   team: Team!
   token: String
 }
