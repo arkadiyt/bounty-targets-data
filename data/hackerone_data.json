@@ -10882,17 +10882,6 @@
           "max_severity": "critical"
         },
         {
-          "asset_identifier": "https://austinheap.com/projects/wordpress-security-txt/",
-          "asset_type": "URL",
-          "availability_requirement": "low",
-          "confidentiality_requirement": "low",
-          "eligible_for_bounty": false,
-          "eligible_for_submission": true,
-          "instruction": "The [security.txt WordPress plugin](https://github.com/securitytxt/wp-security-txt) sends requests to this endpoint.",
-          "integrity_requirement": "low",
-          "max_severity": "medium"
-        },
-        {
           "asset_identifier": "https://bugbountyguide.com/",
           "asset_type": "URL",
           "availability_requirement": "high",
@@ -10921,7 +10910,7 @@
           "confidentiality_requirement": "high",
           "eligible_for_bounty": false,
           "eligible_for_submission": true,
-          "instruction": "This is my personal website.\n\nhttps://edoverflow.com uses https://gitalk.github.io/ to allow readers to comment on posts. The comment section supports [Markdown](https://daringfireball.net/projects/markdown/) and also requires a GitHub secret token to be embedded in the source code. If you are able to trigger XSS or bypass the callback URL in the OAuth flow (currently set to `https://edoverflow.com/`) for that comment section, these would be valid issues and could potentially have a high impact. Please do not spam the comment section with XSS payloads, instead set up https://gitalk.github.io/ locally and try to inject web script there. On top of that, please keep in mind that https://edoverflow.com has a fairly strict [Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP), therefore in order to demonstrate the impact of the issue, you should attempt to bypass the policy too.",
+          "instruction": "This is my personal website.\n\nhttps://edoverflow.com uses https://gitalk.github.io/ to allow readers to comment on posts. The comment section supports [Markdown](https://daringfireball.net/projects/markdown/) and also requires a GitHub secret token to be embedded in the source code. If you are able to trigger XSS or bypass the callback URL in the OAuth flow (currently set to `https://edoverflow.com/`) for that comment section, these would be valid issues and could potentially have a high impact. Please do not spam the comment section with XSS payloads, instead set up https://gitalk.github.io/ locally and try to inject web script there.",
           "integrity_requirement": "high",
           "max_severity": "critical"
         },
@@ -10955,28 +10944,6 @@
           "eligible_for_bounty": false,
           "eligible_for_submission": true,
           "instruction": "Any GitHub projects by the \"securitytxt\" organization are in scope.",
-          "integrity_requirement": "high",
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "https://github.com/securitytxt/chrome-extension",
-          "asset_type": "SOURCE_CODE",
-          "availability_requirement": "high",
-          "confidentiality_requirement": "high",
-          "eligible_for_bounty": false,
-          "eligible_for_submission": true,
-          "instruction": "The official Chrome extension for security.txt. This extension will automatically check every page you visit for a security.txt file. Currently it checks for the file in the root directory and in /.well-known/.",
-          "integrity_requirement": "high",
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "https://github.com/securitytxt/wordpress-security-txt-svn",
-          "asset_type": "SOURCE_CODE",
-          "availability_requirement": "high",
-          "confidentiality_requirement": "high",
-          "eligible_for_bounty": false,
-          "eligible_for_submission": true,
-          "instruction": "A plugin for serving 'security.txt' in WordPress 4.9+, based on configuration settings. The plugin can be found here: https://wordpress.org/plugins/wp-security-txt/",
           "integrity_requirement": "high",
           "max_severity": "critical"
         },
@@ -11023,17 +10990,6 @@
           "eligible_for_bounty": false,
           "eligible_for_submission": false,
           "instruction": "Please do not report issues concerning my personal email addresses unless the severity is very high.",
-          "integrity_requirement": null,
-          "max_severity": "none"
-        },
-        {
-          "asset_identifier": "https://austinheap.com/*",
-          "asset_type": "URL",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": false,
-          "eligible_for_submission": false,
-          "instruction": "Only https://austinheap.com/projects/wordpress-security-txt/ is in scope as listed above.",
           "integrity_requirement": null,
           "max_severity": "none"
         },
