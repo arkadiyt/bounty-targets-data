@@ -602,6 +602,17 @@
           "max_severity": "medium"
         },
         {
+          "asset_identifier": "https://github.com/WordPress/gutenberg",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": "low",
+          "confidentiality_requirement": "none",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "All source code that isn't behind authentication is intended to be public. The source code itself has `Medium` CVSS impact scores. The applications that manage the code (Trac, Git, SVN, etc) have `Low` scores, except for vulnerabilities that allow modifications to the source code.",
+          "integrity_requirement": "low",
+          "max_severity": "medium"
+        },
+        {
           "asset_identifier": "irclogs.wordpress.org",
           "asset_type": "URL",
           "availability_requirement": "low",
@@ -1755,7 +1766,7 @@
           "confidentiality_requirement": "high",
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
-          "instruction": "The iOS app is open source, decompilation issues are not eligible https://github.com/irccloud/ios",
+          "instruction": "The iOS app is open source, decompilation issues are not eligible https://github.com/irccloud/ios\nVulnerabilities requiring local or root access to a device are also not eligible.",
           "integrity_requirement": "high",
           "max_severity": "critical"
         },
@@ -1766,7 +1777,7 @@
           "confidentiality_requirement": "high",
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
-          "instruction": "The Android app is open source, decompilation issues are not eligible https://github.com/irccloud/android",
+          "instruction": "The Android app is open source, decompilation issues are not eligible https://github.com/irccloud/android\nVulnerabilities requiring local or root access to a device are also not eligible.",
           "integrity_requirement": "high",
           "max_severity": "critical"
         },
