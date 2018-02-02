@@ -7619,6 +7619,131 @@
     }
   },
   {
+    "id": 14786,
+    "name": "Intel Corporation",
+    "handle": "intel",
+    "url": "https://hackerone.com/intel",
+    "offers_bounties": true,
+    "quick_to_bounty": true,
+    "quick_to_first_response": false,
+    "targets": {
+      "in_scope": [
+        {
+          "asset_identifier": "Firmware",
+          "asset_type": "OTHER",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "-\tUEFI BIOS (Tiano core components for which Intel is only named maintainer) \n-\tIntel® Management Engine \n-\tBaseboard Management Controller (BMC) \n-\tMotherboard / System (e.g., Intel Compute Stick) \n-\tSolid State Drives ",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "Hardware",
+          "asset_type": "OTHER",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "-\tProcessor (inclusive of micro-code ROM + updates) \n-\tChipset \n-\tFPGA \n-\tNetworking / Communication \n-\tMotherboard / System (e.g., Intel Compute Stick, NUC) \n-\tSolid State Drive ",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "Software",
+          "asset_type": "OTHER",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "-\tDevice driver \n-\tApplication \n-\tTool ",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "asset_identifier": "Intel Freeware Applications",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "Intel freeware applications are out of Scope.  However, if you have a security vulnerability in an Intel freeware application, please send your report to the Intel Product Security Response Team (PSIRT) at secure@intel.com. Please remember to encrypt your report using the Intel PSIRT public key, which can be found at https://security-center.intel.com .",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "Intel Open/Prototyping Platforms",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "Intel products intended for prototyping use or that are “open” in order to provide customers with debugging capability are out of Scope.",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "Intel's Web Infrastructure, i.e., *.intel.com",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "Intel’s web infrastructure, i.e., website domains owned and/or operated by Intel, fall out of Scope.  Please send security vulnerability reports against intel.com and/or related web presence to external.security.research@intel.com",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "Intel-Maintained Open Source Projects",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "Intel-Maintained open source software projects fall out of Scope.  Please see www.01.org/security for information on reporting security vulnerabilities in Intel-maintained open source projects.",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "McAfee Products",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "Products of former Intel subsidiary McAfee fall out of Scope.  Please send vulnerability reports against McAfee products to the McAfee product security team. For more information, visit https://www.mcafee.com/us/threat-center/product-security-bulletins.aspx\n",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "Recent Acquisitions",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "Recent acquisitions by Intel are out of Scope for the Bug Bounty program for a minimum period of 6 months after the acquisition is complete. If you have a security vulnerability in a product recently acquired by Intel, please send your report to the Intel Product Security Response Team (PSIRT) at secure@intel.com. Please remember to encrypt your report using the Intel PSIRT public key, which can be found at https://security-center.intel.com .",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "Third-Party Products",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "Third-party products that do or do not contain Intel-branded products or technology fall out of Scope.  However, if the issue is root-caused to an Intel-branded product or technology, please submit your report under the appropriate Scope type above. Please remember to encrypt your report using the Intel PSIRT public key, which can be found at https://security-center.intel.com .",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        }
+      ]
+    }
+  },
+  {
     "id": 15252,
     "name": "PortSwigger Web Security",
     "handle": "portswigger",
