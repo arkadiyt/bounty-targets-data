@@ -949,7 +949,7 @@ type BadgesUsersEdge {
 
 # Resources for setting up the Bank Transfer payment method
 type BankTransferReference implements Node {
-  beneficiary_required_details(currency: String!, bank_account_country: String!, beneficiary_country: String!): BeneficiaryRequiredDetail
+  beneficiary_required_details(bank_account_country: String!, beneficiary_country: String!, currency: String!): BeneficiaryRequiredDetail
   countries: [Country]
   currencies: [Currency]
   id: ID!
