@@ -3659,6 +3659,7 @@ type Team implements Node, ResourceInterface {
   ): StructuredScopesConnection
   submission_state: SubmissionStateEnum!
   target_signal: Float
+  team_display_options: TeamDisplayOptions
   team_member_groups(
     # Returns the elements in the list that come after the specified global ID.
     after: String
@@ -3743,6 +3744,23 @@ type TeamConnection {
   # Information to aid in pagination.
   pageInfo: PageInfo!
   total_count: Int!
+}
+
+# Display options for a HackerOne team
+type TeamDisplayOptions {
+  _id: ID!
+  id: ID!
+  show_average_bounty: Boolean!
+  show_mean_bounty_time: Boolean!
+  show_mean_first_response_time: Boolean!
+  show_mean_report_triage_time: Boolean!
+  show_mean_resolution_time: Boolean!
+  show_minimum_bounty: Boolean!
+  show_reports_resolved: Boolean!
+  show_response_efficiency_indicator: Boolean!
+  show_top_bounties: Boolean!
+  show_total_bounties_paid: Boolean!
+  team: Team!
 }
 
 # An edge in a connection.
