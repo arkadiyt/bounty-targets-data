@@ -4465,6 +4465,7 @@ type User implements Node, ResourceInterface {
     # Returns the last _n_ elements from the list.
     last: Int
     order_by: MembershipOrder = {field: TEAM_NAME, direction: ASC}
+    team_handles: [String] = []
   ): TeamMemberConnection
   name: String
   new_feature_notification: NewFeatureNotification
