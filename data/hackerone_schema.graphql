@@ -3588,7 +3588,7 @@ type Team implements Node, ResourceInterface {
 
     # Returns the elements in the list that come before the specified global ID.
     before: String
-    end_date: String
+    end_date: DateTime
 
     # Returns the first _n_ elements from the list.
     first: Int
@@ -3596,7 +3596,7 @@ type Team implements Node, ResourceInterface {
     # Returns the last _n_ elements from the list.
     last: Int
     of: SlaSnapshotFilterField
-    start_date: String
+    start_date: DateTime
   ): SlaSnapshotConnection
   sla_status: SlaStatus
   slack_integration: SlackIntegration
