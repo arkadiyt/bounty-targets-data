@@ -97,6 +97,10 @@
       "in_scope": [
         {
           "type": "other",
+          "target": "*.atlassian.io subdomains that are used within the application"
+        },
+        {
+          "type": "other",
           "target": "Any associated *.atlassian.io domain that can be exploited DIRECTLY from the *.atlassian.net instance"
         },
         {
@@ -196,8 +200,28 @@
           "target": "SourceTree (https://www.sourcetreeapp.com/)"
         },
         {
+          "type": "other",
+          "target": "Stride (bugbounty-test-<bugcrowd-name>.atlassian.net)"
+        },
+        {
+          "type": "other",
+          "target": "Stride Desktop Client"
+        },
+        {
+          "type": "android",
+          "target": "Stride Mobile Application for Android"
+        },
+        {
+          "type": "ios",
+          "target": "Stride Mobile Application for iOS"
+        },
+        {
           "type": "website",
           "target": "https://bitbucket.org/"
+        },
+        {
+          "type": "website",
+          "target": "https://stride.video/<your-video>"
         }
       ],
       "out_of_scope": [
