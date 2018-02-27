@@ -1863,6 +1863,34 @@ enum ErrorTypeEnum {
   THROTTLE
 }
 
+# Trigger Expression
+type Expression implements Node {
+  _id: ID!
+  id: ID!
+  left_value: String!
+  operand: String!
+  right_value: String!
+  trigger: Trigger!
+}
+
+# The connection type for Expression.
+type ExpressionConnection {
+  # A list of edges.
+  edges: [ExpressionEdge]
+
+  # Information to aid in pagination.
+  pageInfo: PageInfo!
+}
+
+# An edge in a connection.
+type ExpressionEdge {
+  # A cursor for use in pagination.
+  cursor: String!
+
+  # The item at the end of the edge.
+  node: Expression
+}
+
 # An External Program
 type ExternalProgram implements Node {
   # The primary key from the database
@@ -3693,6 +3721,19 @@ type Team implements Node, ResourceInterface {
   triage_note_html: String
   triage_time: Float
   triaged_staleness_threshold: Int
+  triggers(
+    # Returns the elements in the list that come after the specified global ID.
+    after: String
+
+    # Returns the elements in the list that come before the specified global ID.
+    before: String
+
+    # Returns the first _n_ elements from the list.
+    first: Int
+
+    # Returns the last _n_ elements from the list.
+    last: Int
+  ): TriggerConnection
   twitter_handle: String
   updated_at: DateTime
   url: URI!
@@ -3971,11 +4012,47 @@ enum TeamWeaknessStates {
   hidden
 }
 
-# A HackerOne trigger
+# Trigger
 type Trigger implements Node {
   _id: ID!
+  action_common_response: CommonResponse!
+  action_message: String
+  action_type: String!
+  expressions(
+    # Returns the elements in the list that come after the specified global ID.
+    after: String
+
+    # Returns the elements in the list that come before the specified global ID.
+    before: String
+
+    # Returns the first _n_ elements from the list.
+    first: Int
+
+    # Returns the last _n_ elements from the list.
+    last: Int
+  ): ExpressionConnection!
   id: ID!
-  title: String!
+  team: Team!
+  title: String
+}
+
+# The connection type for Trigger.
+type TriggerConnection {
+  # A list of edges.
+  edges: [TriggerEdge]
+
+  # Information to aid in pagination.
+  pageInfo: PageInfo!
+  total_count: Int!
+}
+
+# An edge in a connection.
+type TriggerEdge {
+  # A cursor for use in pagination.
+  cursor: String!
+
+  # The item at the end of the edge.
+  node: Trigger
 }
 
 # Tshirt size
