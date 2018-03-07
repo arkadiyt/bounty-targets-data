@@ -1130,8 +1130,6 @@ type Cluster implements Node {
     last: Int
     order_by: WeaknessOrder = {direction: ASC, field: name}
     search: String = null
-    team_handle: String = null
-    team_weakness_state: [TeamWeaknessStates] = [enabled, disabled, hidden]
   ): ClusterWeaknessConnection
 }
 
@@ -3804,7 +3802,6 @@ type Team implements Node, ResourceInterface {
     last: Int
     order_by: WeaknessOrder = {direction: ASC, field: name}
     search: String = null
-    team_weakness_state: [TeamWeaknessStates] = [enabled, disabled, hidden]
   ): TeamWeaknessConnection
   website: String
   whitelisted_hackers(
