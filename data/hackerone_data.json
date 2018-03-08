@@ -11315,6 +11315,17 @@
           "max_severity": "critical"
         },
         {
+          "asset_identifier": "com.showmax.app",
+          "asset_type": "GOOGLE_PLAY_APP_ID",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Showmax - security+android@showmax.com",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
           "asset_identifier": "com.smule.singandroid.*",
           "asset_type": "GOOGLE_PLAY_APP_ID",
           "availability_requirement": null,
@@ -12523,6 +12534,17 @@
       "out_of_scope": [
         {
           "asset_identifier": "*.amazon.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "Please do not test against Amazon Web Services infrastructure. If you find any misconfigurations (e.g. world-accessible S3 bucket), please report it using one of assets in scope.",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "*.amazoncognito.com",
           "asset_type": "URL",
           "availability_requirement": null,
           "confidentiality_requirement": null,
