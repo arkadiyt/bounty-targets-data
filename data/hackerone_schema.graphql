@@ -1231,6 +1231,25 @@ enum CommonResponseOrderField {
   title
 }
 
+input ConnectionFilter {
+  and: ConnectionFilterLogicalOperator
+  or: ConnectionFilterLogicalOperator
+  substate: ConnectionFilterOperation
+  team_id: ConnectionFilterOperation
+  title: ConnectionFilterOperation
+  vulnerability_information: ConnectionFilterOperation
+}
+
+input ConnectionFilterLogicalOperator {
+  left: ConnectionFilter!
+  right: ConnectionFilter!
+}
+
+input ConnectionFilterOperation {
+  contains: String
+  does_not_contain: String
+}
+
 # Will only return values for valid SeverityRatingEnum and null.
 scalar CountBySeverity
 
@@ -2591,6 +2610,7 @@ type Query implements Node {
     # Returns the elements in the list that come before the specified global ID.
     before: String
     database_id: Int = null
+    filter: ConnectionFilter
 
     # Returns the first _n_ elements from the list.
     first: Int
@@ -3630,6 +3650,7 @@ type Team implements Node, ResourceInterface {
     # Returns the elements in the list that come before the specified global ID.
     before: String
     database_id: Int = null
+    filter: ConnectionFilter
 
     # Returns the first _n_ elements from the list.
     first: Int
@@ -4683,6 +4704,7 @@ type User implements Node, ResourceInterface {
     # Returns the elements in the list that come before the specified global ID.
     before: String
     database_id: Int = null
+    filter: ConnectionFilter
 
     # Returns the first _n_ elements from the list.
     first: Int
