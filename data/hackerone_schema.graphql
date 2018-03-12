@@ -1617,6 +1617,7 @@ input CreateTriggerInput {
   # A unique identifier for the client performing the mutation.
   clientMutationId: String
   expression: [ExpressionInput]!
+  expression_operator: String!
   team_id: ID!
   title: String
 }
@@ -4088,6 +4089,7 @@ type Trigger implements Node {
   action_common_response: CommonResponse!
   action_message: String
   action_type: String!
+  expression_operator: String!
   expressions(
     # Returns the elements in the list that come after the specified global ID.
     after: String
@@ -4522,6 +4524,7 @@ input UpdateTriggerInput {
   # A unique identifier for the client performing the mutation.
   clientMutationId: String
   expression: [ExpressionInput]!
+  expression_operator: String!
   title: String
   trigger_id: ID!
 }
