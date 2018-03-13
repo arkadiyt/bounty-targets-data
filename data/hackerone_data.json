@@ -10,6 +10,17 @@
     "targets": {
       "in_scope": [
         {
+          "asset_identifier": "https://*.hackerone-ext-content.com",
+          "asset_type": "URL",
+          "availability_requirement": "low",
+          "confidentiality_requirement": "none",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "This domain is used to serve static marketing assets. No confidential information is stored on these systems. However, it is important to us that these assets cannot be updated by an unauthorized third-party.",
+          "integrity_requirement": "medium",
+          "max_severity": "high"
+        },
+        {
           "asset_identifier": "https://api.hackerone.com",
           "asset_type": "URL",
           "availability_requirement": "high",
@@ -19,6 +30,17 @@
           "instruction": "This is our public API that customers use to read and interact with reports. To look for vulnerabilities in this asset, create a sandboxed program, select HackerOne Professional or HackerOne Enterprise in the Product Edition settings page, and create an API token. This system’s backend is written in Ruby, converts the request to a GraphQL query, and serializes the GraphQL result to JSON.\n\n",
           "integrity_requirement": "high",
           "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://errors.hackerone.net",
+          "asset_type": "URL",
+          "availability_requirement": "low",
+          "confidentiality_requirement": "medium",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "A separate domain that we use to capture information of client and server side exceptions.",
+          "integrity_requirement": "low",
+          "max_severity": "high"
         },
         {
           "asset_identifier": "https://hackerone-attachments.s3.amazonaws.com/",
