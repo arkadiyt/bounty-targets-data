@@ -2615,6 +2615,7 @@ type Query implements Node {
 
     # Returns the first _n_ elements from the list.
     first: Int
+    handle: String
 
     # Returns the last _n_ elements from the list.
     last: Int
@@ -2630,6 +2631,7 @@ type Query implements Node {
     # add a page argument till Relay supports this
     page: Int = null
     pre_submission_review_states: [ReportPreSubmissionReviewStateEnum] = null
+    state: ReportStateEnum
     substate: ReportStateEnum
     without_scope: Boolean = null
   ): ReportConnection
@@ -3655,6 +3657,7 @@ type Team implements Node, ResourceInterface {
 
     # Returns the first _n_ elements from the list.
     first: Int
+    handle: String
 
     # Returns the last _n_ elements from the list.
     last: Int
@@ -4727,6 +4730,7 @@ type User implements Node, ResourceInterface {
     # add a page argument till Relay supports this
     page: Int = null
     pre_submission_review_states: [ReportPreSubmissionReviewStateEnum] = null
+    state: ReportStateEnum
     substate: ReportStateEnum
     without_scope: Boolean = null
   ): ReportConnection
