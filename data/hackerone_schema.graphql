@@ -4112,7 +4112,7 @@ enum TeamWeaknessStates {
 }
 
 # Trigger
-type Trigger implements Node {
+type Trigger implements Node, ResourceInterface {
   _id: ID!
   action_common_response: CommonResponse!
   action_message: String
@@ -4147,6 +4147,7 @@ type Trigger implements Node {
     # Returns the last _n_ elements from the list.
     last: Int
   ): TriggerActionLogConnection
+  url: URI!
 }
 
 # TriggerActionLog
