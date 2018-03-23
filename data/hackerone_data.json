@@ -8156,6 +8156,76 @@
     }
   },
   {
+    "id": 15230,
+    "name": "Quantopian",
+    "handle": "quantopian",
+    "url": "https://hackerone.com/quantopian",
+    "offers_bounties": true,
+    "quick_to_bounty": true,
+    "quick_to_first_response": false,
+    "targets": {
+      "in_scope": [
+        {
+          "asset_identifier": "*.dynoquant.com",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "We host internal and middleware servers on the domain \"dynoquant.com\". We accept reports about these servers just as we accept reports about our front-end application (i.e., www.quantopian.com). When testing these servers for vulnerabilities, please be cognizant of the fact that they are production servers and avoid testing which could negatively impact their normal operations.",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "*.quantshack.com",
+          "asset_type": "URL",
+          "availability_requirement": "low",
+          "confidentiality_requirement": "low",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "We host non-production servers in our \"quantshack.com\" domain, primarily www.quantshack.com. You actually shouldn't be able to access www.quantshack.com, because it is restricted by an IP whitelist and anyone not on the whitelist should get redirected automatically to www.quantopian.com. If you are able to bypass that whitelist, that's certainly a reportable issue. We will also accept reports about issues you discover on any other resources you discover in this domain.",
+          "integrity_requirement": "low",
+          "max_severity": "medium"
+        },
+        {
+          "asset_identifier": "blog.quantopian.com",
+          "asset_type": "URL",
+          "availability_requirement": "medium",
+          "confidentiality_requirement": "medium",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "### DO NOT SUBMIT: \n* xmlrpc.php on our blog; we know it's enabled and [we are not going to disable it](https://www.wordfence.com/blog/2015/10/should-you-disable-xml-rpc-on-wordpress/);\n* attacks requiring a victim's device to be compromised by malware, a rootkit, etc;\n* security vulnerabilities in third-party components made public within the past 14 days;\n* issues that you have not actually confirmed are present; or\n* issues without a clearly defined security impact.",
+          "integrity_requirement": "medium",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "www.quantopian.com",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Hey there! We welcome vulnerabilities on our servers and middleware associated with this asset.\n\n### DO NOT SUBMIT: \n* DMARC or DKIM;\n* attacks requiring physical access to a member's or employee's device;\n* attacks requiring a member's or employee's device to be compromised by malware, a rootkit, etc;\n* third-party platforms and services hosting our resources or employed by them;\n* social engineering;\n* security vulnerabilities in third-party components made public within the past 14 days;\n* issues that you have not actually confirmed are present on our site; or\n* issues without a clearly defined security impact.",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "asset_identifier": "status.quantopian.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        }
+      ]
+    }
+  },
+  {
     "id": 15252,
     "name": "PortSwigger Web Security",
     "handle": "portswigger",
