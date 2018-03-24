@@ -8172,7 +8172,7 @@
           "confidentiality_requirement": "high",
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
-          "instruction": "We host internal and middleware servers on the domain \"dynoquant.com\". We accept reports about these servers just as we accept reports about our front-end application (i.e., www.quantopian.com). When testing these servers for vulnerabilities, please be cognizant of the fact that they are production servers and avoid testing which could negatively impact their normal operations.",
+          "instruction": "We host internal and middleware servers on the domain \"dynoquant.com\". We accept reports about these servers just as we accept reports about our front-end application (i.e., www.quantopian.com). When testing these servers for vulnerabilities, please be cognizant of the fact that they are production servers and avoid testing which could negatively impact their normal operations.\n\nPlease do not submit reports about DMARC, DKIM, or SPF on this domain.",
           "integrity_requirement": "high",
           "max_severity": "critical"
         },
@@ -8183,7 +8183,7 @@
           "confidentiality_requirement": "low",
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
-          "instruction": "We host non-production servers in our \"quantshack.com\" domain, primarily www.quantshack.com. You actually shouldn't be able to access www.quantshack.com, because it is restricted by an IP whitelist and anyone not on the whitelist should get redirected automatically to www.quantopian.com. If you are able to bypass that whitelist, that's certainly a reportable issue. We will also accept reports about issues you discover on any other resources you discover in this domain.",
+          "instruction": "We host non-production servers in our \"quantshack.com\" domain, primarily www.quantshack.com. You actually shouldn't be able to access www.quantshack.com, because it is restricted by an IP whitelist and anyone not on the whitelist should get redirected automatically to www.quantopian.com. If you are able to bypass that whitelist, that's certainly a reportable issue. We will also accept reports about issues you discover on any other resources you discover in this domain.\n\n\nPlease do not submit reports about DMARC, DKIM, or SPF on this domain.",
           "integrity_requirement": "low",
           "max_severity": "medium"
         },
@@ -8205,7 +8205,7 @@
           "confidentiality_requirement": "high",
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
-          "instruction": "Hey there! We welcome vulnerabilities on our servers and middleware associated with this asset.\n\n**DO NOT CREATE NEW, TOP-LEVEL TEST POSTS IN OUR FORUMS.** Furthermore, **only create test comments on [this forum post](https://www.quantopian.com/posts/welcome-hackerone-hackers-please-post-test-comments-only-in-this-post).** We are working on a technical solution to allow hackers to test top-level posts, but in the meantime, top-level test posts are excessively disruptive, as are test comments on posts other than [the post created for that purpose](https://www.quantopian.com/posts/welcome-hackerone-hackers-please-post-test-comments-only-in-this-post).\n\n### DO NOT SUBMIT:\n\n* DMARC or DKIM;\n* attacks requiring physical access to a member's or employee's device;\n* attacks requiring a member's or employee's device to be compromised by malware, a rootkit, etc;\n* third-party platforms and services hosting our resources or employed by them;\n* social engineering;\n* security vulnerabilities in third-party components made public within the past 14 days;\n* issues that you have not actually confirmed are present on our site; or\n* issues without a clearly defined security impact.",
+          "instruction": "Hey there! We welcome vulnerabilities on our servers and middleware associated with this asset.\n\n**DO NOT CREATE NEW, TOP-LEVEL TEST POSTS IN OUR FORUMS.** Furthermore, **only create test comments on [this forum post](https://www.quantopian.com/posts/welcome-hackerone-hackers-please-post-test-comments-only-in-this-post).** We are working on a technical solution to allow hackers to test top-level posts, but in the meantime, top-level test posts are excessively disruptive, as are test comments on posts other than [the post created for that purpose](https://www.quantopian.com/posts/welcome-hackerone-hackers-please-post-test-comments-only-in-this-post).\n\n### DO NOT SUBMIT:\n\n* DMARC, DKIM, or SPF;\n* attacks requiring physical access to a member's or employee's device;\n* attacks requiring a member's or employee's device to be compromised by malware, a rootkit, etc;\n* third-party platforms and services hosting our resources or employed by them;\n* social engineering;\n* security vulnerabilities in third-party components made public within the past 14 days;\n* issues that you have not actually confirmed are present on our site; or\n* issues without a clearly defined security impact.",
           "integrity_requirement": "high",
           "max_severity": "critical"
         }
