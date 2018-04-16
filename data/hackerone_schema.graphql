@@ -3555,6 +3555,7 @@ type Team implements Node & ResourceInterface {
     updated_at_after: String
   ): ActivityConnection
   automatic_invites: Boolean
+  awards_miles: Boolean
   base_bounty: Int
   bounty_awarded_staleness_threshold: Int
   bounty_time: Float
@@ -3636,6 +3637,7 @@ type Team implements Node & ResourceInterface {
   name: String!
   new_staleness_threshold: Int
   new_staleness_threshold_limit: Int
+  offered_swag: Boolean
   offers_bounties: Boolean
   offers_swag: Boolean
   participants(
@@ -3720,7 +3722,10 @@ type Team implements Node & ResourceInterface {
   ): ReportConnection
   resolution_time: Float
   resolved_staleness_threshold: Int
+  review_rejected_at: DateTime
   review_requested_at: DateTime
+  settings_disabled: Boolean
+  setup_guide_completed: Boolean
   sla_failed_count: Int
   sla_failed_count_redacted: Int
   sla_missed_count: Int
@@ -3831,6 +3836,7 @@ type Team implements Node & ResourceInterface {
   ): TeamMemberConnection
   triage_active: Boolean
   triage_bounty_management: String
+  triage_enabled: Boolean
   triage_note: String
   triage_note_html: String
   triage_time: Float
