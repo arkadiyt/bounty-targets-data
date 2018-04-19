@@ -11816,6 +11816,17 @@
           "instruction": "This is our internal employee information/help desk site. It is running on Wordpress on third party infrastructure. There is non-public information on this site. Our primary concern here would be access to non-public information, defacement, or vulnerabilities which can be leveraged to attack other systems or users. We may elect to **accept reports but not pay bounties based on impact**.  Reward amounts for this property will typically be lower than our customer facing applications.\n\n",
           "integrity_requirement": "low",
           "max_severity": "medium"
+        },
+        {
+          "asset_identifier": "theacademy.upserve.com",
+          "asset_type": "URL",
+          "availability_requirement": "none",
+          "confidentiality_requirement": "none",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "This is a low security impact site without sensitive data or critical functions. Generally the only reports which will be bounty eligible will be vulnerabilities which can be leveraged to attack other systems or users. We may elect to **accept reports but not pay bounties based on impact**.\n\nFor example:\n* Blind, Stored, or Reflected XSS\n* Content modification / defacement\n* Remote Code Execution\n* Local File Inclusion\n* SSRF\n\nReports we're not interested in for this asset:\n* Best practices for SSL, Headers, etc. unless they facilitate an impactful attack (see above)\n* User enumeration (administrators or otherwise)\n* Mail server configuration issues\n* xmlrpc exposure\n* Self XSS",
+          "integrity_requirement": "low",
+          "max_severity": "low"
         }
       ],
       "out_of_scope": [
