@@ -1233,11 +1233,16 @@ enum CommonResponseOrderField {
 
 input ConnectionFilter {
   and: ConnectionFilterLogicalOperator
+  handle: ConnectionFilterOperation
+  name: ConnectionFilterOperation
   or: ConnectionFilterLogicalOperator
   substate: ConnectionFilterOperation
+  team: ConnectionFilter
   team_id: ConnectionFilterOperation
   title: ConnectionFilterOperation
   vulnerability_information: ConnectionFilterOperation
+  weakness: ConnectionFilter
+  weakness_id: ConnectionFilterOperation
 }
 
 input ConnectionFilterLogicalOperator {
@@ -4152,6 +4157,7 @@ type Trigger implements Node & ResourceInterface {
     last: Int
   ): ExpressionConnection!
   id: ID!
+  seeded: Boolean!
   team: Team!
   title: String
   trigger_action_logs(
