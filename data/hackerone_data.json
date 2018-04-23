@@ -15037,6 +15037,54 @@
     }
   },
   {
+    "id": 25854,
+    "name": "RSK",
+    "handle": "rsk_co",
+    "url": "https://hackerone.com/rsk_co",
+    "offers_bounties": true,
+    "quick_to_bounty": true,
+    "quick_to_first_response": true,
+    "targets": {
+      "in_scope": [
+        {
+          "asset_identifier": "https://bounty-node.rsk.co",
+          "asset_type": "URL",
+          "availability_requirement": "medium",
+          "confidentiality_requirement": "low",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "A RSKj JSON RPC server is available for testing. You can obtain the list of JSON RPC methods supported from the rskj source code and from RSK and Ethereum documentation. A nginx server in front of the JSON RPC filters some methods that are known to be problematic.\n\nYou can attempt the following attacks:\n * Bypass the Nginx JSON RPC method blacklist filtering.\n * Application level DoS: exploit the non blacklisted methods to consume server's resources. \n * System Information disclosure (file system, private keys)\n * Code execution (Hint: check the object mapping capabilities of the JSON parser library and Java reflection)\n\n**Only application level DoS attacks are allowed. Do not attempt volumetric transport level attacks**\n\nSample Request:\n`curl -s -X POST -H \"Content-Type: application/json\" -d '{\"jsonrpc\":\"2.0\",\"method\":\"web3_clientVersion\", \"params\": {},  \"id\":666}' https://bounty-node.rsk.co `\n\nThe blacklisted methods are the following:\n```\neth_newBlockFilter\neth_newPendingTransactionFilter\neth_uninstallFilter\neth_getFilterChanges\neth_getFilterLogs\neth_getCompilers\neth_compileLLL\neth_compileSolidity\neth_compileSerpent\neth_accounts\neth_sendTransaction\neth_sign\nweb3_sha3\n```\n\n\nThe filtering is performed with a Nginx configuration similar to the one described in the following article: \nhttps://github.com/rsksmart/rskj/wiki/Nginx-Proxy-Server-for-JSONRPC-Calls\n\nGood luck!",
+          "integrity_requirement": "low",
+          "max_severity": "high"
+        },
+        {
+          "asset_identifier": "https://github.com/rsksmart/rskj",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "RSKj Installation instructions: https://github.com/rsksmart/rskj/wiki\nBinary releases: https://github.com/rsksmart/rskj/releases\nGitter channel for technical questions: https://gitter.im/rsksmart/rskj",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "asset_identifier": "*.rsk.co",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "RSK websites, infrastructure and assets are NOT part of the bounty program.",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        }
+      ]
+    }
+  },
+  {
     "id": 25889,
     "name": "Nimiq",
     "handle": "nimiq",
