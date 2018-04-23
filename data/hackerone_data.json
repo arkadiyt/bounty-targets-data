@@ -9718,6 +9718,175 @@
     }
   },
   {
+    "id": 17011,
+    "name": "New Relic",
+    "handle": "newrelic",
+    "url": "https://hackerone.com/newrelic",
+    "offers_bounties": true,
+    "quick_to_bounty": true,
+    "quick_to_first_response": true,
+    "targets": {
+      "in_scope": [
+        {
+          "asset_identifier": "*.infrastructure-data.newrelic.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "*.infrastructure.newrelic.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "*.newrelic.com",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "All New Relic assets are in scope for our responsible disclosure program, except where otherwise noted. Submissions for assets that are not in scope for a paid bounty are eligible for HackerOne reputation.",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "Infrastructure agents",
+          "asset_type": "DOWNLOADABLE_EXECUTABLES",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "The [**New Relic Infrastructure** agents](https://docs.newrelic.com/docs/infrastructure/new-relic-infrastructure/installation) are used to send information (running processes, memory usage, etc.) from Windows and Linux servers to be viewed within the **New Relic** web application. We may provide rewards for security issues found within the **Infrastructure** agent that could reduce the security of the systems the agent runs on. Rewards are based on the default configuration settings, but agents that show problems due to a configuration change may be eligible for a reward.",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "Synthetics minions (public and private)",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "**Synthetics** minions are sandboxed virtual machines that run monitors (scripts) to gather information about your websites, critical business transactions, and API endpoints. Minions can run in our data center or [privately within your own infrastructure](https://docs.newrelic.com/docs/synthetics/new-relic-synthetics/private-locations/install-configure-private-minions). We recommend familiarizing yourself with the product by [reading our documentation](https://docs.newrelic.com/docs/synthetics/new-relic-synthetics/scripting-monitors).",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "alerts.newrelic.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "infrastructure.newrelic.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "[**New Relic Infrastructure**](https://newrelic.com/infrastructure) provides deep, real-time visibility into a company’s dynamic cloud and hybrid infrastructure and integrates seamlessly with **New Relic**’s application performance solutions. The web application at [infrastructure.newrelic.com](https://infrastructure.newrelic.com) displays information collected on servers running **Infrastructure** agents. We recommend familiarizing yourself with the product by [reading our documentation](https://docs.newrelic.com/docs/infrastructure/new-relic-infrastructure).",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "synthethics.newrelic.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "**New Relic Synthetics** provides you with a suite of automated, scriptable tools to monitor your websites, critical business transactions, and API endpoints. The web application at [synthetics.newrelic.com](https://synthetics.newrelic.com) displays information from monitors (scripts) running on minions (virtual machines) in our data center or privately within your own infrastructure. We recommend familiarizing yourself with the product by [reading our documentation](https://docs.newrelic.com/docs/synthetics/new-relic-synthetics/getting-started/introduction-new-relic-synthetics).",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "asset_identifier": "blog.newrelic.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "Our blog is hosted externally by WP Engine. Any security issues found should be reported [directly to WP Engine](https://wpengine.com/contact/).",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "discuss.newrelic.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "Our discussion forum is hosted externally by Discourse. Any security issues found should be reported to the [Discourse coordinated disclosure program on HackerOne](https://hackerone.com/discourse).",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "docs.newrelic.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "Our documentation site is hosted externally by Acquia. Any security issues found should be reported to the [Acquia security team](https://www.acquia.com/how-report-security-issue).",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "ir.newrelic.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "Our investor relations portal is hosted externally by Q4 Inc. Any security issues found should be reported [directly to Q4 Inc.](https://www.q4inc.com/contact/default.aspx)",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "support.newrelic.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "Our support portal is hosted externally by Zendesk. Any security issues found should be reported to the [Zendesk coordinated disclosure program on HackerOne](https://hackerone.com/zendesk).",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "try.newrelic.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "This domain is related to a service hosted externally by Marketo. Any security issues found should be reported to the [Marketo security team](https://documents.marketo.com/legal/notices/responsible-disclosure-policy.pdf).",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        }
+      ]
+    }
+  },
+  {
     "id": 17443,
     "name": "Vanilla",
     "handle": "vanilla",
