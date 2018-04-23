@@ -3729,6 +3729,7 @@ type Team implements Node & ResourceInterface {
   ): ReportConnection
   resolution_time: Float
   resolved_staleness_threshold: Int
+  response_efficiency_percentage: Int
   review_rejected_at: DateTime
   review_requested_at: DateTime
   settings_disabled: Boolean
@@ -3907,7 +3908,7 @@ type Team implements Node & ResourceInterface {
 
     # Returns the last _n_ elements from the list.
     last: Int
-  ): ReporterConnection
+  ): WhitelistedHackerConnection
 }
 
 # Different reasons why a team cannot create a jira webhook
@@ -4978,4 +4979,14 @@ input WeaknessOrder {
 # Fields on which a collection of weaknesses can be ordered
 enum WeaknessOrderField {
   name
+}
+
+# The connection type for User.
+type WhitelistedHackerConnection {
+  # A list of edges.
+  edges: [UserEdge]
+
+  # Information to aid in pagination.
+  pageInfo: PageInfo!
+  total_count: Int!
 }
