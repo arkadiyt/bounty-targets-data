@@ -2547,7 +2547,9 @@ type PostEdge {
 # Product Edition of a Team
 type ProductEdition {
   display_name: String!
+  hacker_invitations_enabled: Boolean!
   id: ID!
+  saas_deal: Boolean!
 }
 
 # Different possible profile picture sizes
@@ -3563,6 +3565,8 @@ type Team implements Node & ResourceInterface {
     # activities(updated_at_after: "2017-11-30 13:37:12 UTC")
     updated_at_after: String
   ): ActivityConnection
+  allow_all_hacker_invitations: Boolean
+  allow_email_and_automatic_invitations: Boolean
   automatic_invites: Boolean
   awards_miles: Boolean
   base_bounty: Int
@@ -3828,19 +3832,7 @@ type Team implements Node & ResourceInterface {
   ): SwagConnection
   target_signal: Float
   team_display_options: TeamDisplayOptions
-  team_member_groups(
-    # Returns the elements in the list that come after the specified global ID.
-    after: String
-
-    # Returns the elements in the list that come before the specified global ID.
-    before: String
-
-    # Returns the first _n_ elements from the list.
-    first: Int
-
-    # Returns the last _n_ elements from the list.
-    last: Int
-  ): TeamMemberGroupConnection
+  team_member_groups: [TeamMemberGroup]
   team_members(
     # Returns the elements in the list that come after the specified global ID.
     after: String
@@ -4048,24 +4040,6 @@ type TeamMemberGroup implements Node {
   id: ID!
   name: String!
   permissions: [String]!
-}
-
-# The connection type for TeamMemberGroup.
-type TeamMemberGroupConnection {
-  # A list of edges.
-  edges: [TeamMemberGroupEdge]
-
-  # Information to aid in pagination.
-  pageInfo: PageInfo!
-}
-
-# An edge in a connection.
-type TeamMemberGroupEdge {
-  # A cursor for use in pagination.
-  cursor: String!
-
-  # The item at the end of the edge.
-  node: TeamMemberGroup
 }
 
 input TeamMemberOrder {
