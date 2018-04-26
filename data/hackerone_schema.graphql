@@ -3867,6 +3867,8 @@ type Team implements Node & ResourceInterface {
 
     # Returns the last _n_ elements from the list.
     last: Int
+    order_by: TriggersOrder = {direction: DESC, field: created_at}
+    search: String = null
   ): TriggerConnection
   twitter_handle: String
   updated_at: DateTime
@@ -4132,6 +4134,7 @@ type Trigger implements Node & ResourceInterface {
   _id: ID!
   action_message: String
   action_type: String!
+  created_at: DateTime!
   expression_operator: String!
   expressions(
     # Returns the elements in the list that come after the specified global ID.
@@ -4208,6 +4211,16 @@ type TriggerEdge {
 
   # The item at the end of the edge.
   node: Trigger
+}
+
+# Fields on which a collection of triggers can be ordered
+enum TriggerOrderField {
+  created_at
+}
+
+input TriggersOrder {
+  direction: OrderDirection!
+  field: TriggerOrderField!
 }
 
 # Tshirt size
