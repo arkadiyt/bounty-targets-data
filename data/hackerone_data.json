@@ -6301,17 +6301,6 @@
           "instruction": "This is our core web application. You will need to contact us at security@pullstring.com and provide an email address in order to receive an account invitation.",
           "integrity_requirement": "high",
           "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "www.pullstring.com",
-          "asset_type": "URL",
-          "availability_requirement": "low",
-          "confidentiality_requirement": "low",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "This is the PullString marketing site. Note that this site is hosted on a third-party service (HubSpot) and we are limited in the settings we can change. Reports that relate to HubSpot's security, or other settings that are beyond our control, will not be eligible for a bounty.",
-          "integrity_requirement": "low",
-          "max_severity": "medium"
         }
       ],
       "out_of_scope": [
@@ -6346,6 +6335,17 @@
           "eligible_for_submission": false,
           "instruction": "This service is hosted by a third party that we do not control.",
           "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "www.pullstring.com",
+          "asset_type": "URL",
+          "availability_requirement": "low",
+          "confidentiality_requirement": "low",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "This site is hosted on a third-party service (HubSpot) and we are limited in the settings we can change.",
+          "integrity_requirement": "low",
           "max_severity": "none"
         }
       ]
