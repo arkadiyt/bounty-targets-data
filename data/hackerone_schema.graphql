@@ -1726,6 +1726,52 @@ type CurrencycloudBankTransferPayoutPreferenceType implements Node & PayoutPrefe
   name: String
 }
 
+# A request for a CVE
+type CveRequest implements Node {
+  created_at: DateTime
+  description: String
+  id: ID!
+  owner: User!
+  product: String
+  product_version: String
+  references: [String]
+  report: Report
+  state: CveRequestStateEnum!
+  team: Team!
+  updated_at: DateTime
+  vulnerability_discovered_at: DateTime
+  weakness: Weakness
+}
+
+# An edge in a connection.
+type CveRequestEdge {
+  # A cursor for use in pagination.
+  cursor: String!
+
+  # The item at the end of the edge.
+  node: CveRequest
+}
+
+# States of a CVE Request
+enum CveRequestStateEnum {
+  cancelled
+  draft
+  hackerone_approved
+  mitre_approved
+  pending_hackerone_approval
+  pending_mitre_approval
+}
+
+# The connection type for CveRequest.
+type CveRequestsConnectionType {
+  # A list of edges.
+  edges: [CveRequestEdge]
+
+  # Information to aid in pagination.
+  pageInfo: PageInfo!
+  total_count: Int!
+}
+
 # Converts a date to iso8601
 scalar DateTime
 
@@ -3621,6 +3667,19 @@ type Team implements Node & ResourceInterface {
   created_at: DateTime
   critical_submissions_enabled: Boolean
   currency: String
+  cve_requests(
+    # Returns the elements in the list that come after the specified global ID.
+    after: String
+
+    # Returns the elements in the list that come before the specified global ID.
+    before: String
+
+    # Returns the first _n_ elements from the list.
+    first: Int
+
+    # Returns the last _n_ elements from the list.
+    last: Int
+  ): CveRequestsConnectionType
   fancy_slack_integration: Boolean
   fancy_slack_integration_enabled: Boolean!
   first_response_time: Float
