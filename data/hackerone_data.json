@@ -15743,5 +15743,64 @@
 
       ]
     }
+  },
+  {
+    "id": 27759,
+    "name": "Monaco",
+    "handle": "monaco",
+    "url": "https://hackerone.com/monaco",
+    "offers_bounties": true,
+    "quick_to_bounty": true,
+    "quick_to_first_response": true,
+    "targets": {
+      "in_scope": [
+        {
+          "asset_identifier": "co.mona.android",
+          "asset_type": "GOOGLE_PLAY_APP_ID",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Get the app here: https://play.google.com/store/apps/details?id=co.mona.android\n\nYou won’t need test accounts for this as it will be public facing sites for now.\n\nThe app should give you the functionality to start using the Monaco services.",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "com.monaco.mobile",
+          "asset_type": "APPLE_STORE_APP_ID",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Get the app here - https://itunes.apple.com/us/app/monaco-card/id1262148500?ls=1&mt=8\n\nYou won’t need test accounts for this as it will be public facing sites for now.\n\nGet the Monaco Cryptocurrency Card app for iOS in the link above this app should allow you to create an account and start using the Monaco services.",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "www.mona.co",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "You won’t need test accounts for this as it will be public facing sites for now.",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "asset_identifier": "*.mona.co",
+          "asset_type": "URL",
+          "availability_requirement": "none",
+          "confidentiality_requirement": "none",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "Anything other than www.mona.co is out of scope for the time being.",
+          "integrity_requirement": "none",
+          "max_severity": "none"
+        }
+      ]
+    }
   }
 ]
