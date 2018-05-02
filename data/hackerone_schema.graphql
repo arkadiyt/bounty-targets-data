@@ -32,7 +32,7 @@ type AcknowledgeProgramHealthAcknowledgementPayload implements MutationResult {
 # A Activities::AgreedOnGoingPublic activity for a report
 type ActivitiesAgreedOnGoingPublic implements ActivityInterface & Node & ReportActivityInterface {
   _id: ID!
-  actor: ActorUnion!
+  actor: ActorUnion
   attachments: [Attachment]
   automated_response: Boolean
   created_at: DateTime!
@@ -50,7 +50,7 @@ type ActivitiesAgreedOnGoingPublic implements ActivityInterface & Node & ReportA
 # A Activities::BountyAwarded activity for a report
 type ActivitiesBountyAwarded implements ActivityInterface & Node & ReportActivityInterface {
   _id: ID!
-  actor: ActorUnion!
+  actor: ActorUnion
   attachments: [Attachment]
   automated_response: Boolean
   bonus_amount: String
@@ -70,7 +70,7 @@ type ActivitiesBountyAwarded implements ActivityInterface & Node & ReportActivit
 # A Activities::BountySuggested activity for a report
 type ActivitiesBountySuggested implements ActivityInterface & Node & ReportActivityInterface {
   _id: ID!
-  actor: ActorUnion!
+  actor: ActorUnion
   attachments: [Attachment]
   automated_response: Boolean
   bonus_amount: String
@@ -90,7 +90,7 @@ type ActivitiesBountySuggested implements ActivityInterface & Node & ReportActiv
 # A Activities::BugCloned activity for a report
 type ActivitiesBugCloned implements ActivityInterface & Node & ReportActivityInterface {
   _id: ID!
-  actor: ActorUnion!
+  actor: ActorUnion
   attachments: [Attachment]
   automated_response: Boolean
   created_at: DateTime!
@@ -109,7 +109,7 @@ type ActivitiesBugCloned implements ActivityInterface & Node & ReportActivityInt
 # A Activities::BugDuplicate activity for a report
 type ActivitiesBugDuplicate implements ActivityInterface & Node & ReportActivityInterface {
   _id: ID!
-  actor: ActorUnion!
+  actor: ActorUnion
   attachments: [Attachment]
   automated_response: Boolean
   created_at: DateTime!
@@ -128,7 +128,7 @@ type ActivitiesBugDuplicate implements ActivityInterface & Node & ReportActivity
 # A Activities::BugFiled activity for a report
 type ActivitiesBugFiled implements ActivityInterface & Node & ReportActivityInterface {
   _id: ID!
-  actor: ActorUnion!
+  actor: ActorUnion
   attachments: [Attachment]
   automated_response: Boolean
   created_at: DateTime!
@@ -145,7 +145,7 @@ type ActivitiesBugFiled implements ActivityInterface & Node & ReportActivityInte
 # A Activities::BugInactive activity for a report
 type ActivitiesBugInactive implements ActivityInterface & Node & ReportActivityInterface {
   _id: ID!
-  actor: ActorUnion!
+  actor: ActorUnion
   attachments: [Attachment]
   automated_response: Boolean
   created_at: DateTime!
@@ -162,7 +162,7 @@ type ActivitiesBugInactive implements ActivityInterface & Node & ReportActivityI
 # A Activities::BugInformative activity for a report
 type ActivitiesBugInformative implements ActivityInterface & Node & ReportActivityInterface {
   _id: ID!
-  actor: ActorUnion!
+  actor: ActorUnion
   attachments: [Attachment]
   automated_response: Boolean
   created_at: DateTime!
@@ -179,7 +179,7 @@ type ActivitiesBugInformative implements ActivityInterface & Node & ReportActivi
 # A Activities::BugNeedsMoreInfo activity for a report
 type ActivitiesBugNeedsMoreInfo implements ActivityInterface & Node & ReportActivityInterface {
   _id: ID!
-  actor: ActorUnion!
+  actor: ActorUnion
   attachments: [Attachment]
   automated_response: Boolean
   created_at: DateTime!
@@ -196,7 +196,7 @@ type ActivitiesBugNeedsMoreInfo implements ActivityInterface & Node & ReportActi
 # A Activities::BugNew activity for a report
 type ActivitiesBugNew implements ActivityInterface & Node & ReportActivityInterface {
   _id: ID!
-  actor: ActorUnion!
+  actor: ActorUnion
   attachments: [Attachment]
   automated_response: Boolean
   created_at: DateTime!
@@ -213,7 +213,7 @@ type ActivitiesBugNew implements ActivityInterface & Node & ReportActivityInterf
 # A Activities::BugNotApplicable activity for a report
 type ActivitiesBugNotApplicable implements ActivityInterface & Node & ReportActivityInterface {
   _id: ID!
-  actor: ActorUnion!
+  actor: ActorUnion
   attachments: [Attachment]
   automated_response: Boolean
   created_at: DateTime!
@@ -230,7 +230,7 @@ type ActivitiesBugNotApplicable implements ActivityInterface & Node & ReportActi
 # A Activities::BugReopened activity for a report
 type ActivitiesBugReopened implements ActivityInterface & Node & ReportActivityInterface {
   _id: ID!
-  actor: ActorUnion!
+  actor: ActorUnion
   attachments: [Attachment]
   automated_response: Boolean
   created_at: DateTime!
@@ -247,7 +247,7 @@ type ActivitiesBugReopened implements ActivityInterface & Node & ReportActivityI
 # A Activities::BugResolved activity for a report
 type ActivitiesBugResolved implements ActivityInterface & Node & ReportActivityInterface {
   _id: ID!
-  actor: ActorUnion!
+  actor: ActorUnion
   attachments: [Attachment]
   automated_response: Boolean
   created_at: DateTime!
@@ -264,7 +264,7 @@ type ActivitiesBugResolved implements ActivityInterface & Node & ReportActivityI
 # A Activities::BugSpam activity for a report
 type ActivitiesBugSpam implements ActivityInterface & Node & ReportActivityInterface {
   _id: ID!
-  actor: ActorUnion!
+  actor: ActorUnion
   attachments: [Attachment]
   automated_response: Boolean
   created_at: DateTime!
@@ -281,7 +281,7 @@ type ActivitiesBugSpam implements ActivityInterface & Node & ReportActivityInter
 # A Activities::BugTriaged activity for a report
 type ActivitiesBugTriaged implements ActivityInterface & Node & ReportActivityInterface {
   _id: ID!
-  actor: ActorUnion!
+  actor: ActorUnion
   attachments: [Attachment]
   automated_response: Boolean
   created_at: DateTime!
@@ -298,7 +298,7 @@ type ActivitiesBugTriaged implements ActivityInterface & Node & ReportActivityIn
 # A Activities::ChangedScope activity for a report
 type ActivitiesChangedScope implements ActivityInterface & Node & ReportActivityInterface {
   _id: ID!
-  actor: ActorUnion!
+  actor: ActorUnion
   attachments: [Attachment]
   automated_response: Boolean
   created_at: DateTime!
@@ -317,7 +317,7 @@ type ActivitiesChangedScope implements ActivityInterface & Node & ReportActivity
 # A Activities::Comment activity for a report
 type ActivitiesComment implements ActivityInterface & Node & ReportActivityInterface {
   _id: ID!
-  actor: ActorUnion!
+  actor: ActorUnion
   attachments: [Attachment]
   automated_response: Boolean
   created_at: DateTime!
@@ -334,7 +334,7 @@ type ActivitiesComment implements ActivityInterface & Node & ReportActivityInter
 # A Activities::CommentsClosed activity for a report
 type ActivitiesCommentsClosed implements ActivityInterface & Node & ReportActivityInterface {
   _id: ID!
-  actor: ActorUnion!
+  actor: ActorUnion
   attachments: [Attachment]
   automated_response: Boolean
   created_at: DateTime!
@@ -351,7 +351,7 @@ type ActivitiesCommentsClosed implements ActivityInterface & Node & ReportActivi
 # A Activities::CveIdAdded activity for a report
 type ActivitiesCveIdAdded implements ActivityInterface & Node & ReportActivityInterface {
   _id: ID!
-  actor: ActorUnion!
+  actor: ActorUnion
   attachments: [Attachment]
   automated_response: Boolean
   created_at: DateTime!
@@ -369,7 +369,7 @@ type ActivitiesCveIdAdded implements ActivityInterface & Node & ReportActivityIn
 # A Activities::ExternalAdvisoryAdded activity for a report
 type ActivitiesExternalAdvisoryAdded implements ActivityInterface & Node & ReportActivityInterface {
   _id: ID!
-  actor: ActorUnion!
+  actor: ActorUnion
   attachments: [Attachment]
   automated_response: Boolean
   created_at: DateTime!
@@ -386,7 +386,7 @@ type ActivitiesExternalAdvisoryAdded implements ActivityInterface & Node & Repor
 # A Activities::ExternalUserInvitationCancelled activity for a report
 type ActivitiesExternalUserInvitationCancelled implements ActivityInterface & Node & ReportActivityInterface {
   _id: ID!
-  actor: ActorUnion!
+  actor: ActorUnion
   attachments: [Attachment]
   automated_response: Boolean
   created_at: DateTime!
@@ -404,7 +404,7 @@ type ActivitiesExternalUserInvitationCancelled implements ActivityInterface & No
 # A Activities::ExternalUserInvited activity for a report
 type ActivitiesExternalUserInvited implements ActivityInterface & Node & ReportActivityInterface {
   _id: ID!
-  actor: ActorUnion!
+  actor: ActorUnion
   attachments: [Attachment]
   automated_response: Boolean
   created_at: DateTime!
@@ -422,7 +422,7 @@ type ActivitiesExternalUserInvited implements ActivityInterface & Node & ReportA
 # A Activities::ExternalUserJoined activity for a report
 type ActivitiesExternalUserJoined implements ActivityInterface & Node & ReportActivityInterface {
   _id: ID!
-  actor: ActorUnion!
+  actor: ActorUnion
   attachments: [Attachment]
   automated_response: Boolean
   created_at: DateTime!
@@ -441,7 +441,7 @@ type ActivitiesExternalUserJoined implements ActivityInterface & Node & ReportAc
 # A Activities::ExternalUserRemoved activity for a report
 type ActivitiesExternalUserRemoved implements ActivityInterface & Node & ReportActivityInterface {
   _id: ID!
-  actor: ActorUnion!
+  actor: ActorUnion
   attachments: [Attachment]
   automated_response: Boolean
   created_at: DateTime!
@@ -459,7 +459,7 @@ type ActivitiesExternalUserRemoved implements ActivityInterface & Node & ReportA
 # A Activities::GroupAssignedToBug activity for a report
 type ActivitiesGroupAssignedToBug implements ActivityInterface & Node & ReportActivityInterface {
   _id: ID!
-  actor: ActorUnion!
+  actor: ActorUnion
   assigned_group: TeamMemberGroup
   attachments: [Attachment]
   automated_response: Boolean
@@ -478,7 +478,7 @@ type ActivitiesGroupAssignedToBug implements ActivityInterface & Node & ReportAc
 # A Activities::HackerRequestedMediation activity for a report
 type ActivitiesHackerRequestedMediation implements ActivityInterface & Node & ReportActivityInterface {
   _id: ID!
-  actor: ActorUnion!
+  actor: ActorUnion
   attachments: [Attachment]
   automated_response: Boolean
   created_at: DateTime!
@@ -495,7 +495,7 @@ type ActivitiesHackerRequestedMediation implements ActivityInterface & Node & Re
 # A Activities::ManuallyDisclosed activity for a report
 type ActivitiesManuallyDisclosed implements ActivityInterface & Node & ReportActivityInterface {
   _id: ID!
-  actor: ActorUnion!
+  actor: ActorUnion
   attachments: [Attachment]
   automated_response: Boolean
   created_at: DateTime!
@@ -512,7 +512,7 @@ type ActivitiesManuallyDisclosed implements ActivityInterface & Node & ReportAct
 # A Activities::MediationRequested activity for a report
 type ActivitiesMediationRequested implements ActivityInterface & Node & ReportActivityInterface {
   _id: ID!
-  actor: ActorUnion!
+  actor: ActorUnion
   attachments: [Attachment]
   automated_response: Boolean
   created_at: DateTime!
@@ -529,7 +529,7 @@ type ActivitiesMediationRequested implements ActivityInterface & Node & ReportAc
 # An Activities::NobodyAssignedToBug activity for a report
 type ActivitiesNobodyAssignedToBug implements ActivityInterface & Node & ReportActivityInterface {
   _id: ID!
-  actor: ActorUnion!
+  actor: ActorUnion
   attachments: [Attachment]
   automated_response: Boolean
   created_at: DateTime!
@@ -546,7 +546,7 @@ type ActivitiesNobodyAssignedToBug implements ActivityInterface & Node & ReportA
 # A Activities::NotEligibleForBounty activity for a report
 type ActivitiesNotEligibleForBounty implements ActivityInterface & Node & ReportActivityInterface {
   _id: ID!
-  actor: ActorUnion!
+  actor: ActorUnion
   attachments: [Attachment]
   automated_response: Boolean
   created_at: DateTime!
@@ -563,7 +563,7 @@ type ActivitiesNotEligibleForBounty implements ActivityInterface & Node & Report
 # A Activities::ReassignedToTeam activity for a report
 type ActivitiesReassignedToTeam implements ActivityInterface & Node & ReportActivityInterface {
   _id: ID!
-  actor: ActorUnion!
+  actor: ActorUnion
   attachments: [Attachment]
   automated_response: Boolean
   created_at: DateTime!
@@ -580,7 +580,7 @@ type ActivitiesReassignedToTeam implements ActivityInterface & Node & ReportActi
 # A Activities::ReferenceIdAdded activity for a report
 type ActivitiesReferenceIdAdded implements ActivityInterface & Node & ReportActivityInterface {
   _id: ID!
-  actor: ActorUnion!
+  actor: ActorUnion
   attachments: [Attachment]
   automated_response: Boolean
   created_at: DateTime!
@@ -599,7 +599,7 @@ type ActivitiesReferenceIdAdded implements ActivityInterface & Node & ReportActi
 # A Activities::ReportBecamePublic activity for a report
 type ActivitiesReportBecamePublic implements ActivityInterface & Node & ReportActivityInterface {
   _id: ID!
-  actor: ActorUnion!
+  actor: ActorUnion
   attachments: [Attachment]
   automated_response: Boolean
   created_at: DateTime!
@@ -616,7 +616,7 @@ type ActivitiesReportBecamePublic implements ActivityInterface & Node & ReportAc
 # A Activities::ReportCollaboratorInvited activity for a report
 type ActivitiesReportCollaboratorInvited implements ActivityInterface & Node & ReportActivityInterface {
   _id: ID!
-  actor: ActorUnion!
+  actor: ActorUnion
   attachments: [Attachment]
   automated_response: Boolean
   created_at: DateTime!
@@ -633,7 +633,7 @@ type ActivitiesReportCollaboratorInvited implements ActivityInterface & Node & R
 # A Activities::ReportCollaboratorJoined activity for a report
 type ActivitiesReportCollaboratorJoined implements ActivityInterface & Node & ReportActivityInterface {
   _id: ID!
-  actor: ActorUnion!
+  actor: ActorUnion
   attachments: [Attachment]
   automated_response: Boolean
   created_at: DateTime!
@@ -650,7 +650,7 @@ type ActivitiesReportCollaboratorJoined implements ActivityInterface & Node & Re
 # A Activities::ReportSeverityUpdated activity for a report
 type ActivitiesReportSeverityUpdated implements ActivityInterface & Node & ReportActivityInterface {
   _id: ID!
-  actor: ActorUnion!
+  actor: ActorUnion
   attachments: [Attachment]
   automated_response: Boolean
   created_at: DateTime!
@@ -667,7 +667,7 @@ type ActivitiesReportSeverityUpdated implements ActivityInterface & Node & Repor
 # A Activities::ReportTitleUpdated activity for a report
 type ActivitiesReportTitleUpdated implements ActivityInterface & Node & ReportActivityInterface {
   _id: ID!
-  actor: ActorUnion!
+  actor: ActorUnion
   attachments: [Attachment]
   automated_response: Boolean
   created_at: DateTime!
@@ -686,7 +686,7 @@ type ActivitiesReportTitleUpdated implements ActivityInterface & Node & ReportAc
 # A Activities::ReportVulnerabilityTypesUpdated activity for a report
 type ActivitiesReportVulnerabilityTypesUpdated implements ActivityInterface & Node & ReportActivityInterface {
   _id: ID!
-  actor: ActorUnion!
+  actor: ActorUnion
   attachments: [Attachment]
   automated_response: Boolean
   created_at: DateTime!
@@ -705,7 +705,7 @@ type ActivitiesReportVulnerabilityTypesUpdated implements ActivityInterface & No
 # A Activities::SwagAwarded activity for a report
 type ActivitiesSwagAwarded implements ActivityInterface & Node & ReportActivityInterface {
   _id: ID!
-  actor: ActorUnion!
+  actor: ActorUnion
   attachments: [Attachment]
   automated_response: Boolean
   created_at: DateTime!
@@ -723,7 +723,7 @@ type ActivitiesSwagAwarded implements ActivityInterface & Node & ReportActivityI
 # A Activities::TeamPublished activity for a team
 type ActivitiesTeamPublished implements ActivityInterface & Node {
   _id: ID!
-  actor: ActorUnion!
+  actor: ActorUnion
   created_at: DateTime!
   i_can_edit: Boolean!
   id: ID!
@@ -736,7 +736,7 @@ type ActivitiesTeamPublished implements ActivityInterface & Node {
 # A Activities::UserAssignedToBug activity for a report
 type ActivitiesUserAssignedToBug implements ActivityInterface & Node & ReportActivityInterface {
   _id: ID!
-  actor: ActorUnion!
+  actor: ActorUnion
   assigned_user: User!
   attachments: [Attachment]
   automated_response: Boolean
@@ -754,7 +754,7 @@ type ActivitiesUserAssignedToBug implements ActivityInterface & Node & ReportAct
 # A Activities::UserBannedFromProgram activity for a report
 type ActivitiesUserBannedFromProgram implements ActivityInterface & Node & ReportActivityInterface {
   _id: ID!
-  actor: ActorUnion!
+  actor: ActorUnion
   attachments: [Attachment]
   automated_response: Boolean
   created_at: DateTime!
@@ -772,7 +772,7 @@ type ActivitiesUserBannedFromProgram implements ActivityInterface & Node & Repor
 # A Activities::UserJoined activity for a user
 type ActivitiesUserJoined implements ActivityInterface & Node {
   _id: ID!
-  actor: ActorUnion!
+  actor: ActorUnion
   created_at: DateTime!
   i_can_edit: Boolean!
   id: ID!
@@ -796,7 +796,7 @@ type ActivityConnection {
 # A interface for the common fields on an HackerOne Activity
 interface ActivityInterface {
   _id: ID!
-  actor: ActorUnion!
+  actor: ActorUnion
   created_at: DateTime!
   i_can_edit: Boolean!
   internal: Boolean
@@ -1754,6 +1754,7 @@ type CurrencycloudBankTransferPayoutPreferenceType implements Node & PayoutPrefe
 # A request for a CVE
 type CveRequest implements Node {
   created_at: DateTime
+  cve_identifier: String
   description: String
   id: ID!
   latest_state_change_reason: String
@@ -4632,10 +4633,16 @@ input UpdateTeamResponseSlaInput {
 
   # A unique identifier for the client performing the mutation.
   clientMutationId: String
+  critical_severity_resolved_staleness_threshold: Int
+  high_severity_resolved_staleness_threshold: Int
+  low_severity_resolved_staleness_threshold: Int
+  medium_severity_resolved_staleness_threshold: Int
   new_staleness_threshold: Int
+  none_severity_resolved_staleness_threshold: Int
   resolved_staleness_threshold: Int
   team_handle: String!
   triaged_staleness_threshold: Int
+  use_advanced_settings: Boolean
 }
 
 # Autogenerated return type of UpdateTeamResponseSla
