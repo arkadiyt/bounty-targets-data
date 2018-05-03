@@ -2897,6 +2897,10 @@ type Report implements Node & ResourceInterface {
   latest_public_activity_of_team_at: DateTime
   mediation_requested_at: DateTime
   original_report: Report
+
+  # A post-submission trigger that notified the hacker after submission. This
+  # field is only present for reports filed after February 14, 2016.
+  post_submission_trigger_log_trigger: Trigger
   pre_submission_review_state: String
   reference: ID
   reference_link: String
@@ -2916,10 +2920,6 @@ type Report implements Node & ResourceInterface {
   team_member_agreed_on_going_public_at: DateTime
   title: String
   triaged_at: DateTime
-
-  # A pre-submission trigger that notified the hacker before submission. This
-  # field is only present for reports filed after February 14, 2016.
-  triggered_pre_submission_trigger: Trigger
   url: URI!
   vulnerability_information: String
   vulnerability_information_html: String
@@ -3708,6 +3708,7 @@ type Team implements Node & ResourceInterface {
     # Returns the last _n_ elements from the list.
     last: Int
   ): CveRequestsConnectionType
+  external_program: ExternalProgram
   fancy_slack_integration: Boolean
   fancy_slack_integration_enabled: Boolean!
   first_response_time: Float
@@ -4145,8 +4146,11 @@ type TeamMemberGroup implements Node {
 
   # ID of the object.
   id: ID!
+  immutable: Boolean!
+  key: String
   name: String!
   permissions: [String]!
+  team_members: [TeamMember]
 }
 
 input TeamMemberOrder {
@@ -4237,7 +4241,7 @@ enum TeamWeaknessStates {
 # Trigger
 type Trigger implements Node & ResourceInterface {
   _id: ID!
-  action_message: String
+  action_message: String!
   action_type: String!
   created_at: DateTime!
   expression_operator: String!
@@ -4815,6 +4819,7 @@ type UpdateUserPasswordPayload {
 type User implements Node & ResourceInterface {
   _id: ID!
   address: Address
+  anc_triager: Boolean
   authentication_service: AuthenticationServiceEnum!
   badges(
     # Returns the elements in the list that come after the specified global ID.
@@ -4861,6 +4866,7 @@ type User implements Node & ResourceInterface {
     last: Int
   ): UserConnection
   email: String
+  hackerone_triager: Boolean
   i_can_update_username: Boolean
   id: ID!
   impact: Float
