@@ -3026,6 +3026,13 @@ interface ResourceInterface {
   url: URI!
 }
 
+# Possible response efficiency indicators
+enum ResponseEfficiencyIndicatorEnum {
+  failed
+  missed
+  ok
+}
+
 # A HackerOne session
 type Session implements Node {
   csrf_token: String!
@@ -3751,6 +3758,7 @@ type Team implements Node & ResourceInterface {
   jira_integration: JiraIntegration
   jira_oauth: JiraOauth
   jira_webhook: JiraWebhook
+  launch_link: String
   maximum_number_of_team_mediation_requests: Float
   name: String!
   new_staleness_threshold: Int
@@ -3839,10 +3847,12 @@ type Team implements Node & ResourceInterface {
   ): ReportConnection
   resolution_time: Float
   resolved_staleness_threshold: Int
+  response_efficiency_indicator: ResponseEfficiencyIndicatorEnum
   response_efficiency_percentage: Int
   review_rejected_at: DateTime
   review_requested_at: DateTime
   settings_disabled: Boolean
+  settings_link: String
   setup_guide_completed: Boolean
   sla_failed_count: Int
   sla_failed_count_redacted: Int
