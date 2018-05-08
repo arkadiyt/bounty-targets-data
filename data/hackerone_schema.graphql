@@ -3141,6 +3141,17 @@ enum SeverityUserInteractionEnum {
   required
 }
 
+# Resolution SLA settings for a HackerOne team
+type SlaSetting {
+  _id: ID!
+  critical_severity_resolved_staleness_threshold: Int!
+  high_severity_resolved_staleness_threshold: Int!
+  id: ID!
+  low_severity_resolved_staleness_threshold: Int!
+  medium_severity_resolved_staleness_threshold: Int!
+  none_severity_resolved_staleness_threshold: Int!
+}
+
 # SLA snapshot of a Team
 type SlaSnapshot implements Node {
   average_time_to_bounty_awarded: Float
@@ -3734,6 +3745,7 @@ type Team implements Node & ResourceInterface {
   i_can_view_phabricator_integration: Boolean
   i_can_view_program_health_redesign: Boolean!
   i_can_view_reports_resolved: Boolean
+  i_can_view_resolution_time_by_severity: Boolean
   i_can_view_response_efficiency_indicators: Boolean
   i_can_view_weaknesses: Boolean
   i_cannot_create_jira_webhook_reasons: [TeamCannotCreateJiraWebhookReasons]!
@@ -3857,6 +3869,7 @@ type Team implements Node & ResourceInterface {
   sla_failed_count: Int
   sla_failed_count_redacted: Int
   sla_missed_count: Int
+  sla_setting: SlaSetting
   sla_snapshots(
     # Returns the elements in the list that come after the specified global ID.
     after: String
