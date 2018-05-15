@@ -1112,6 +1112,7 @@ type BountyEdge {
 enum BountyStatusEnum {
   cancelled
   confirmed
+  external_payment
   failed
   failed_ofac_check
   hold
@@ -2267,6 +2268,7 @@ type JiraOauth implements Node {
   created_at: DateTime!
   id: ID!
   issue_types: [Hash]
+  jwt: Boolean!
   projects: [Hash]
   site: String
   team: Team!
