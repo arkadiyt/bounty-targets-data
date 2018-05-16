@@ -3153,6 +3153,7 @@ type SlaSetting {
   low_severity_resolved_staleness_threshold: Int!
   medium_severity_resolved_staleness_threshold: Int!
   none_severity_resolved_staleness_threshold: Int!
+  use_advanced_settings: Boolean!
 }
 
 # SLA snapshot of a Team
@@ -3996,8 +3997,6 @@ type Team implements Node & ResourceInterface {
   settings_link: String
   setup_guide_completed: Boolean
   sla_failed_count: Int
-  sla_failed_count_redacted: Int
-  sla_missed_count: Int
   sla_setting: SlaSetting
   sla_snapshots(
     # Returns the elements in the list that come after the specified global ID.
