@@ -1753,7 +1753,8 @@ type CurrencycloudBankTransferPayoutPreferenceType implements Node & PayoutPrefe
 }
 
 # A request for a CVE
-type CveRequest implements Node {
+type CveRequest implements Node & ResourceInterface {
+  _id: ID!
   created_at: DateTime
   cve_identifier: String
   description: String
@@ -1767,6 +1768,7 @@ type CveRequest implements Node {
   state: CveRequestStateEnum!
   team: Team!
   updated_at: DateTime
+  url: URI!
   vulnerability_discovered_at: DateTime
   weakness: Weakness
 }
