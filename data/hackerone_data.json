@@ -8755,6 +8755,76 @@
     }
   },
   {
+    "id": 15230,
+    "name": "Quantopian",
+    "handle": "quantopian",
+    "url": "https://hackerone.com/quantopian",
+    "offers_bounties": true,
+    "quick_to_bounty": true,
+    "quick_to_first_response": true,
+    "targets": {
+      "in_scope": [
+        {
+          "asset_identifier": "*.dynoquant.com",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "We host internal and middleware servers on the domain \"dynoquant.com\". We accept reports about these servers just as we accept reports about our front-end application (i.e., www.quantopian.com). When testing these servers for vulnerabilities, please be cognizant of the fact that they are production servers and avoid testing which could negatively impact their normal operations.\n\nPlease do not submit reports about DMARC, DKIM, or SPF on this domain.",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "*.quantshack.com",
+          "asset_type": "URL",
+          "availability_requirement": "low",
+          "confidentiality_requirement": "low",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "We host non-production servers in our \"quantshack.com\" domain, primarily www.quantshack.com. You actually shouldn't be able to access www.quantshack.com, because it is restricted by an IP whitelist and anyone not on the whitelist should get redirected automatically to www.quantopian.com. If you are able to bypass that whitelist, that's certainly a reportable issue. We will also accept reports about issues you discover on any other resources you discover in this domain.\n\n\nPlease do not submit reports about DMARC, DKIM, or SPF on this domain.",
+          "integrity_requirement": "low",
+          "max_severity": "medium"
+        },
+        {
+          "asset_identifier": "blog.quantopian.com",
+          "asset_type": "URL",
+          "availability_requirement": "medium",
+          "confidentiality_requirement": "medium",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "### DO NOT SUBMIT: \n* xmlrpc.php on our blog; we know it's enabled and [we are not going to disable it](https://www.wordfence.com/blog/2015/10/should-you-disable-xml-rpc-on-wordpress/);\n* attacks requiring a victim's device to be compromised by malware, a rootkit, etc;\n* security vulnerabilities in third-party components made public within the past 14 days;\n* issues that you have not actually confirmed are present; or\n* issues without a clearly defined security impact.",
+          "integrity_requirement": "medium",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "www.quantopian.com",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Hey there! We welcome vulnerabilities on our servers and middleware associated with this asset.\n\n**IMPORTANT:** Any account created at www.quantopian.com for security testing should have the string \"hackerone\" somewhere in the local part of its email address, i.e., the part before the \"@\". On many email platforms you can achieve this by appending \"+hackerone\" to the end of your username. There are several reasons for this:\n\n* It enables us to distinguish security testing from real site usage in our site analytics.\n* It enables us to automatically provide hackers with early access to new features that aren't ready to roll out to our entire user base yet, so that you can test them.\n* It allows us to make the site behave slightly differently for security testers to minimize the impact of security testing on the rest of our user base.\n\n**DO NOT CREATE NEW, TOP-LEVEL TEST POSTS IN OUR FORUMS.** Furthermore, **only create test comments on [this forum post](https://www.quantopian.com/posts/welcome-hackerone-hackers-please-post-test-comments-only-in-this-post).** We are working on a technical solution to allow hackers to test top-level posts, but in the meantime, top-level test posts are excessively disruptive, as are test comments on posts other than [the post created for that purpose](https://www.quantopian.com/posts/welcome-hackerone-hackers-please-post-test-comments-only-in-this-post).\n\n### DO NOT SUBMIT:\n\n* DMARC, DKIM, or SPF;\n* CSRF unless your proof-of-concept is successful when you've removed the CSRF token from both the cookie _and_ the hidden form field in the submission;\n* attacks requiring physical access to a member's or employee's device;\n* attacks requiring a member's or employee's device to be compromised by malware, a rootkit, etc;\n* third-party platforms and services hosting our resources or employed by them;\n* social engineering;\n* security vulnerabilities in third-party components made public within the past 14 days;\n* issues that you have not actually confirmed are present on our site; or\n* issues without a clearly defined security impact.",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "asset_identifier": "status.quantopian.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        }
+      ]
+    }
+  },
+  {
     "id": 15252,
     "name": "PortSwigger Web Security",
     "handle": "portswigger",
