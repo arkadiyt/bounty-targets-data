@@ -4751,17 +4751,6 @@
           "instruction": "**What it does:** Grab iOS and Android apps communicate with this service while you use Grab. This endpoint acts as an API gateway proxy to all of our services. This API exposes the largest attack surface of any service here at Grab.\n\n**What to look for:** Much like our external API, p.grabtaxi.com is a RESTful API performed over certificate-pinned HTTPS requests. The best way to hunt for bugs here is to use your own auth token via the X-mts-ssid header and look for authorization and access control issues, user enumeration, business logic etc. Please keep in mind that you should only ever perform this testing against accounts you own, failure to do so could result in ban from the program, which nobody wants!.\n\n**What it runs on:** Golang",
           "integrity_requirement": "high",
           "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "parcel.grab.com",
-          "asset_type": "URL",
-          "availability_requirement": "low",
-          "confidentiality_requirement": "medium",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "**What it does:** This website allows Grab customers to book courier service for same day or next day delivery. This application also allows our customers to manage their profile, order history and track orders. This application does not accepts, store or transmit any PCI information.\n\n**What to look for:** For this service, Any security issue that could result in disclosure of personally identifiable information of Grab our customers.\n\n**What it runs on:** PHP Laravel and AngularJS",
-          "integrity_requirement": "low",
-          "max_severity": "high"
         }
       ],
       "out_of_scope": [
