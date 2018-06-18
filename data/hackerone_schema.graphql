@@ -1150,6 +1150,8 @@ enum BountyStatusEnum {
 type BountyTable implements Node & ResourceInterface {
   _id: ID!
   critical: Int
+  description: String
+  description_html: String
   high: Int
   id: ID!
   low: Int
@@ -4658,6 +4660,7 @@ input UpdateBountyTableInput {
   # A unique identifier for the client performing the mutation.
   clientMutationId: String
   critical: Int
+  description: String
   high: Int
   low: Int
   medium: Int
