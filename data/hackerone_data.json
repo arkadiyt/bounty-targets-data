@@ -21,6 +21,17 @@
           "max_severity": "medium"
         },
         {
+          "asset_identifier": "https://*.hackerone-user-content.com/",
+          "asset_type": "URL",
+          "availability_requirement": "none",
+          "confidentiality_requirement": "none",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "This is an Amazon S3 bucket that contains profile and cover photos of users and programs. It does not contain any highly confidential information and would not impact the main application if it would be unreachable. A signed request is required to download an object.\n\n",
+          "integrity_requirement": "low",
+          "max_severity": "low"
+        },
+        {
           "asset_identifier": "https://api.hackerone.com",
           "asset_type": "URL",
           "availability_requirement": "high",
@@ -63,17 +74,6 @@
           "instruction": "This is our main application that hackers and customers use to interact with each other. It connects with a database that contains information about vulnerability reports, users, and programs. This system’s backend is written in Ruby and exposes data to the client through GraphQL, rendered pages, and JSON endpoints.\n\n",
           "integrity_requirement": "high",
           "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "https://profile-photos.hackerone-user-content.com/",
-          "asset_type": "URL",
-          "availability_requirement": "none",
-          "confidentiality_requirement": "none",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "This is an Amazon S3 bucket that contains profile and cover photos of users and programs. It does not contain any highly confidential information and would not impact the main application if it would be unreachable. A signed request is required to download an object.\n\n",
-          "integrity_requirement": "low",
-          "max_severity": "low"
         },
         {
           "asset_identifier": "https://www.hackerone.com",
