@@ -1162,16 +1162,12 @@ type BountyTable implements Node & ResourceInterface {
     # Returns the last _n_ elements from the list.
     last: Int
   ): BountyTableRowConnection
-  critical: Int
   critical_label: String!
   description: String
   description_html: String
-  high: Int
   high_label: String!
   id: ID!
-  low: Int
   low_label: String!
-  medium: Int
   medium_label: String!
   team: Team!
   url: URI!
