@@ -1180,6 +1180,7 @@ type BountyTableRow implements Node & ResourceInterface {
   high: Int
   id: ID!
   low: Int
+  maximum: Int
   medium: Int
   structured_scope: StructuredScope
   url: URI!
@@ -1210,6 +1211,7 @@ input BountyTableRowInput {
   high: Int
   id: ID
   low: Int
+  maximum: Int
   medium: Int
   structured_scope_id: ID
 }
