@@ -2519,7 +2519,6 @@ type MarkReportAsNeedsMoreInfoPayload implements MutationResult {
   errors(types: [ErrorTypeEnum]): ErrorConnection!
   query: Query
   report: Report
-  report_id: ID!
   was_successful: Boolean!
 }
 
@@ -4007,7 +4006,6 @@ type Team implements Node & ResourceInterface {
   i_can_view_reports_resolved: Boolean
   i_can_view_resolution_time_by_severity: Boolean
   i_can_view_weaknesses: Boolean
-  i_cannot_create_jira_webhook_reasons: [TeamCannotCreateJiraWebhookReasons]!
   id: ID!
   inbox_views(
     # Returns the elements in the list that come after the specified global ID.
@@ -4361,13 +4359,6 @@ type Team implements Node & ResourceInterface {
     # Returns the last _n_ elements from the list.
     last: Int
   ): WhitelistedHackerConnection
-}
-
-# Different reasons why a team cannot create a jira webhook
-enum TeamCannotCreateJiraWebhookReasons {
-  CANNOT_VIEW
-  FEATURE_GATED
-  PROGRAM_PERMISSION_REQUIRED
 }
 
 # The connection type for Team.
