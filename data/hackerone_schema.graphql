@@ -2858,12 +2858,13 @@ type ProgramHealthAcknowledgementSeenPayload implements MutationResult {
 input PublishPolicyInput {
   # A unique identifier for the client performing the mutation.
   clientMutationId: String
-  name: String
+  organization: String
   reason: String
   referrer_url: URI
   team_policy: String!
   user_email: String
-  user_name: String
+  user_first_name: String
+  user_last_name: String
   user_password: String
   user_password_confirmation: String
   website: URI
@@ -2874,7 +2875,7 @@ type PublishPolicyPayload implements MutationResult {
   # A unique identifier for the client performing the mutation.
   clientMutationId: String
   errors(types: [ErrorTypeEnum]): ErrorConnection!
-  team: Team
+  redirect_path: URI
   was_successful: Boolean!
 }
 
