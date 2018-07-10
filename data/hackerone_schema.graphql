@@ -4098,6 +4098,7 @@ type Team implements Node & ResourceInterface {
     # Returns the last _n_ elements from the list.
     last: Int
     limit: Int = null
+    order_by: UserOrderInput = {direction: DESC, field: rank}
     year: Int = null
   ): ParticipantConnection
   phabricator_integration: PhabricatorIntegration
@@ -5502,6 +5503,17 @@ type UserEdge {
 
   # The item at the end of the edge.
   node: User
+}
+
+# Fields on which a collection of users can be ordered
+enum UserOrderField {
+  rank
+  username
+}
+
+input UserOrderInput {
+  direction: OrderDirection!
+  field: UserOrderField!
 }
 
 # The type of vulnerability on a HackerOne report
