@@ -2904,10 +2904,63 @@
     "quick_to_first_response": false,
     "targets": {
       "in_scope": [
-
+        {
+          "asset_identifier": "https://deals.souq.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "This is Souq daily deals website.",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://sell.souq.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "This is Souq Selling Center, where sellers can manage their orders and listings. Anything regarding Sub-accounts is not related to the scope of the bug bounty program",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://uae.souq.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "This is Souq.com main online marketplace website. All other country sites in Saudi, Egypt, Kuwait ..etc are of the same structure. Don't try to test other country websites to keep things aligned.",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        }
       ],
       "out_of_scope": [
-
+        {
+          "asset_identifier": "https://affiliates.souq.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "https://developer.souq.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        }
       ]
     }
   },
