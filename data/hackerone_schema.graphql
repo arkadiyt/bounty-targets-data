@@ -1857,6 +1857,33 @@ type CreateUserLufthansaAccountPayload {
   me: User
 }
 
+# Credentials of a team
+type Credential implements Node {
+  _id: ID!
+  credentials: String
+  id: ID!
+  user: User
+}
+
+# The connection type for Credential.
+type CredentialConnection {
+  # A list of edges.
+  edges: [CredentialEdge]
+
+  # Information to aid in pagination.
+  pageInfo: PageInfo!
+  total_count: Int!
+}
+
+# An edge in a connection.
+type CredentialEdge {
+  # A cursor for use in pagination.
+  cursor: String!
+
+  # The item at the end of the edge.
+  node: Credential
+}
+
 # A currency as defined by ISO 4217
 type Currency implements Node {
   code: String!
@@ -4002,6 +4029,19 @@ type Team implements Node & ResourceInterface {
     order_by: CommonResponseOrder = {direction: ASC, field: title}
   ): CommonResponseConnection
   created_at: DateTime
+  credentials(
+    # Returns the elements in the list that come after the specified global ID.
+    after: String
+
+    # Returns the elements in the list that come before the specified global ID.
+    before: String
+
+    # Returns the first _n_ elements from the list.
+    first: Int
+
+    # Returns the last _n_ elements from the list.
+    last: Int
+  ): CredentialConnection
   critical_submissions_enabled: Boolean
   currency: String
   cve_requests(
@@ -4028,6 +4068,7 @@ type Team implements Node & ResourceInterface {
   handle: String!
   has_avatar: Boolean
   has_policy: Boolean
+  hide_bounty_amounts: Boolean
   i_can_create_jira_webhook: Boolean
   i_can_destroy_jira_webhook: Boolean!
   i_can_manage_program: Boolean!
