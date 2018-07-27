@@ -1513,6 +1513,8 @@ input CreateExternalReportInput {
   # A unique identifier for the client performing the mutation.
   clientMutationId: String
   handle: String!
+  reported_date: DateTime
+  resolved_date: DateTime
   title: String!
   vulnerability_information: String!
 }
@@ -2840,6 +2842,34 @@ type ProductEdition {
   hacker_invitations_enabled: Boolean!
   id: ID!
   saas_deal: Boolean!
+}
+
+# Profile Metrics snapshot of a Team
+type ProfileMetricsSnapshot implements Node {
+  bounties_count: Float
+  bounties_paid: Float
+  id: ID!
+  month: Int!
+  year: Int!
+}
+
+# The connection type for ProfileMetricsSnapshot.
+type ProfileMetricsSnapshotConnection {
+  # A list of edges.
+  edges: [ProfileMetricsSnapshotEdge]
+
+  # Information to aid in pagination.
+  pageInfo: PageInfo!
+  total_count: Int!
+}
+
+# An edge in a connection.
+type ProfileMetricsSnapshotEdge {
+  # A cursor for use in pagination.
+  cursor: String!
+
+  # The item at the end of the edge.
+  node: ProfileMetricsSnapshot
 }
 
 # Different possible profile picture sizes
@@ -4200,6 +4230,21 @@ type Team implements Node & ResourceInterface {
     order_by: TeamPostOrderInput = {direction: DESC, field: created_at}
   ): TeamPostConnection
   product_edition: ProductEdition
+  profile_metrics_snapshots(
+    # Returns the elements in the list that come after the specified global ID.
+    after: String
+
+    # Returns the elements in the list that come before the specified global ID.
+    before: String
+    end_date: DateTime
+
+    # Returns the first _n_ elements from the list.
+    first: Int
+
+    # Returns the last _n_ elements from the list.
+    last: Int
+    start_date: DateTime
+  ): ProfileMetricsSnapshotConnection
   profile_picture(size: ProfilePictureSizes!): String!
   program_leave_survey_answers(
     # Returns the elements in the list that come after the specified global ID.
