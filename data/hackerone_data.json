@@ -8476,6 +8476,77 @@
     }
   },
   {
+    "id": 8724,
+    "name": "MariaDB",
+    "handle": "mariadb",
+    "url": "https://hackerone.com/mariadb",
+    "offers_bounties": false,
+    "quick_to_bounty": false,
+    "quick_to_first_response": true,
+    "targets": {
+      "in_scope": [
+        {
+          "asset_identifier": "MariaDB Core - Access control bypass",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "Any vulnerability leading to database authentication bypass, privilege escalation and other access control bypass attacks are considered Critical and will be handled accordingly. Examples of security vulnerabilities that subvert access controls are:\n\n* Authentication bypass (tricking the server to authenticate as any user without valid credentials)\n* Vertical escalation of privilege (normal user gains administrative access)\n* Horizontal escalation of privilege (normal user can view/modify databases of another user)",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "MariaDB Core - Data corruption, exfiltration, disclosure",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": "low",
+          "confidentiality_requirement": "low",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "Data corruption attacks that affect the integrity of the database without authentication or privileges to do that normally are considered with a base risk of Medium and depending on the severity of the corruption and affected data, it can be raised to Critical. Similarly, for data exfiltration attacks that affect the confidentiality of the database without authorization to do that normally and attacks leading to protected information disclosure without authentication or authorization are considered as Medium severity but can be elevated to Critical on a case by case basis. In addition to all of the other classified attacks that lead to total control of the server and/or the underlying operating system, like a buffer overflow with remote code execution, other examples of security vulnerabilities that lead to corruption and leakages are: \n* overwriting configuration/random files in the filesystem via SQL routines\n* sensitive information leaks via unprotected log files\n* path traversal leading to protected information disclosure\n* information exposure via warning and error messages with superfluous verbosity\n* cryptographic algorithm implementation and design errors\n",
+          "integrity_requirement": "low",
+          "max_severity": "medium"
+        },
+        {
+          "asset_identifier": "MariaDB Core - Denial of Service",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": "low",
+          "confidentiality_requirement": "low",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "Any program errors that attackers can use to crash the server immediately and/or corrupt its internal state and configuration permanently, preventing the user from easily resuming the service, resulting in near, or total loss of availability are commonly know as Denial of Service (DoS) attacks. In addition to the vulnerabilities listed in the RCE scope, the ones that don't lead to a code execution scenario, but do crash the server or lead to program state corruption at run-time, further examples include:\n\n* NULL pointer dereferences\n* Concurrency issues leading to dead-locks, buffer underruns and race conditions\n* Resource and memory leaks leading to a DoS condition in a short period of time",
+          "integrity_requirement": "low",
+          "max_severity": "medium"
+        },
+        {
+          "asset_identifier": "MariaDB Core - Remote Code Execution",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "Gaining unauthorized Remote Code Execution (RCE) on the server, slave (replication, federated) or client machine is considered a Critical vulnerability. Examples of security vulnerabilities that could potentially lead to such a vulnerability include:\n* Stack based buffer overflows\n* Heap based buffer overflows\n* Format string errors\n* Off by one errors\n* Integer overflows, divide-by-zero, precision errors that lead to controlable memory corruption\n* Dangling pointer, double free and use after free\n\nWhile this list doesn't aim to be exhaustive, you have to prove that your report does lead to Remote Code Execution via known exploitation techniques either directly or by chaining multiple, previously undisclosed/unfixed, vulnerabilities together. Otherwise they should be classified as denial of service (DoS).",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://mariadb.org",
+          "asset_type": "URL",
+          "availability_requirement": "low",
+          "confidentiality_requirement": "low",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "Critical security issues in our website, support, development, testing, release infrastructure and web services that could potentially affect end users of MariaDB server. Examples are server side attack vectors that lead to binary release distribution integrity corruption or web attacks that could lead to serious compromise of our infrastructure, such as:\n\n* Cross Site Scripting (XSS)\n* Cross Site Request Forgery (CSRF)\n* Server Side Request Forgery (SSRF)\n* Remote Code Execution (RCE)\n* Remote Command Injection (RCI)\n* Remote File Injection (RFI)\n* SQL Injection (SQLi)\n\nPlease refrain from full-blown penetration testing, automated scans and other activities that might lead to privacy violations, destruction of data, and interruption or degradation of our service. See *Limited Scope* Policy section for details.",
+          "integrity_requirement": "low",
+          "max_severity": "medium"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
     "id": 8906,
     "name": "Open-Xchange",
     "handle": "open-xchange",
