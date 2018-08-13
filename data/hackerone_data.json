@@ -11696,6 +11696,17 @@
     "targets": {
       "in_scope": [
         {
+          "asset_identifier": "*.blog.newrelic.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "Our blog is hosted externally by WP Engine. Issues within this application or regarding our content should be reported here. No security testing should be done against the platform itself. Any security issues found within the platform should be reported [directly to WP Engine](https://wpengine.com/contact/).",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
           "asset_identifier": "*.infrastructure-data.newrelic.com",
           "asset_type": "URL",
           "availability_requirement": null,
@@ -11773,6 +11784,17 @@
           "max_severity": "critical"
         },
         {
+          "asset_identifier": "blog.newrelic.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "Our blog is hosted externally by WP Engine. Issues within this application or regarding our content should be reported here. No security testing should be done against the platform itself. Any security issues found within the platform should be reported [directly to WP Engine](https://wpengine.com/contact/).",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
           "asset_identifier": "discuss.newrelic.com",
           "asset_type": "URL",
           "availability_requirement": null,
@@ -11780,6 +11802,17 @@
           "eligible_for_bounty": false,
           "eligible_for_submission": true,
           "instruction": "Our discussion forum is a customized @discourse installation; any issues with our customization can be reported here. If you're researching issues with the forum software itself, you should follow the guidelines in @discourse and either set up your own instance or use their test instance.\n\nAll care should be made to avoid generating excessive numbers of posts or otherwise affecting the experience of other users on the forum. If any issues are discovered that may affect other users, such as XSS, they should be reported here immediately and all effort should be made to prevent other users from encountering the issue. Social engineering is strictly forbidden.",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "docs.newrelic.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "Our documentation site is hosted externally by Acquia. Issues within this application or regarding our content should be reported here. No security testing should be done against the platform itself. Any security issues found within the platform should be reported to the [Acquia security team](https://www.acquia.com/how-report-security-issue).",
           "integrity_requirement": null,
           "max_severity": "critical"
         },
@@ -11802,6 +11835,17 @@
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
           "instruction": "[**New Relic Insights**](https://newrelic.com/insights/) is a software analytics resource to gather and visualize data. Data can be sent to **Insights** directly or via other **New Relic** products. The [**New Relic Query Language (NRQL)**](https://docs.newrelic.com/docs/insights/nrql-new-relic-query-language/using-nrql/introduction-nrql), similar to SQL, is a query language for making calls against the **Insights** event database.\n\n\nWe recommend familiarizing yourself with our [**Insights** documentation](https://docs.newrelic.com/docs/insights) and with [**NRQL** queries](https://docs.newrelic.com/docs/insights/nrql-new-relic-query-language/using-nrql/introduction-nrql). Note that while **NRQL** is very similar to SQL, SQL injection should not be possible. ",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "learn.newrelic.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "Our training portal is hosted externally by Acquia. Issues within this application or regarding our content should be reported here. No security testing should be done against the platform itself. Any security issues found within the platform should be reported to the [Acquia security team](https://www.acquia.com/how-report-security-issue).",
           "integrity_requirement": null,
           "max_severity": "critical"
         },
@@ -11830,57 +11874,13 @@
       ],
       "out_of_scope": [
         {
-          "asset_identifier": "*.blog.newrelic.com",
-          "asset_type": "URL",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": false,
-          "eligible_for_submission": false,
-          "instruction": "Our blog is hosted externally by WP Engine. Any security issues found should be reported [directly to WP Engine](https://wpengine.com/contact/).",
-          "integrity_requirement": null,
-          "max_severity": "none"
-        },
-        {
-          "asset_identifier": "blog.newrelic.com",
-          "asset_type": "URL",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": false,
-          "eligible_for_submission": false,
-          "instruction": "Our blog is hosted externally by WP Engine. Any security issues found should be reported [directly to WP Engine](https://wpengine.com/contact/).",
-          "integrity_requirement": null,
-          "max_severity": "none"
-        },
-        {
-          "asset_identifier": "docs.newrelic.com",
-          "asset_type": "URL",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": false,
-          "eligible_for_submission": false,
-          "instruction": "Our documentation site is hosted externally by Acquia. Any security issues found should be reported to the [Acquia security team](https://www.acquia.com/how-report-security-issue).",
-          "integrity_requirement": null,
-          "max_severity": "none"
-        },
-        {
           "asset_identifier": "ir.newrelic.com",
           "asset_type": "URL",
           "availability_requirement": null,
           "confidentiality_requirement": null,
           "eligible_for_bounty": false,
           "eligible_for_submission": false,
-          "instruction": "Our investor relations portal is hosted externally by Q4 Inc. Any security issues found should be reported [directly to Q4 Inc.](https://www.q4inc.com/contact/default.aspx)",
-          "integrity_requirement": null,
-          "max_severity": "none"
-        },
-        {
-          "asset_identifier": "learn.newrelic.com",
-          "asset_type": "URL",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": false,
-          "eligible_for_submission": false,
-          "instruction": "Our training portal is hosted externally by Acquia. Any security issues found should be reported to the [Acquia security team](https://www.acquia.com/how-report-security-issue).",
+          "instruction": "Our investor relations portal is hosted externally by Q4 Inc. and should not be targeted for any security testing. Any security issues found should be reported [directly to Q4 Inc.](https://www.q4inc.com/contact/default.aspx)",
           "integrity_requirement": null,
           "max_severity": "none"
         },
@@ -11891,7 +11891,7 @@
           "confidentiality_requirement": null,
           "eligible_for_bounty": false,
           "eligible_for_submission": false,
-          "instruction": "Our status page is hosted externally by Atlassian Statuspage. Any security issues found should be reported to the [StatusPage.io coordinated disclosure program](https://bugcrowd.com/statuspage).",
+          "instruction": "Our status page is hosted externally by Atlassian Statuspage and should not be targeted for any security testing. Any security issues found should be reported to the [StatusPage.io coordinated disclosure program](https://bugcrowd.com/statuspage).",
           "integrity_requirement": null,
           "max_severity": "none"
         },
@@ -11902,7 +11902,7 @@
           "confidentiality_requirement": null,
           "eligible_for_bounty": false,
           "eligible_for_submission": false,
-          "instruction": "This domain is related to a service hosted externally by Marketo. Any security issues found should be reported to the [Marketo security team](https://documents.marketo.com/legal/notices/responsible-disclosure-policy.pdf).",
+          "instruction": "This domain is related to a service hosted externally by Marketo and should not be targeted for any security testing. Any security issues found should be reported to the [Marketo security team](https://documents.marketo.com/legal/notices/responsible-disclosure-policy.pdf).",
           "integrity_requirement": null,
           "max_severity": "none"
         }
