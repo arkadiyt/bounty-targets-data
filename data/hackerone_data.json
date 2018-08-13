@@ -9390,7 +9390,7 @@
           "confidentiality_requirement": "medium",
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
-          "instruction": "icq.com sites:\nicq.com\nfiles.icq.com \nwapi.icq.com\nstore.icq.com\nsearch.icq.com\nOnly critical serverside vulnerabilities are eligible for bug bounty.\nXSS, CSRF are accepted with low impact (except web.icq.com, use different asset).\n",
+          "instruction": "### API (icq.com) and the main web landing\n\n**What it does:**  This is domain with some API endpoints (see domain names below for functionality description) . Also there is main web landing https://icq.com where user can update profile, request reset password. and so on.\n\n* icq.com\n* files.icq.com \n* wapi.icq.com\n* store.icq.com\n* search.icq.com\n\n**What security issues best to look for:** Critical web application security flaws from [OWASP Top 10](https://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project) such as: Injections, Broken Authentication, Sensitive Data Exposure, Broken Access Control.  Cross-Site Scripting (XSS), Cross-Site Request Forgery (CSRF) are accepted with low impact (except web.icq.com, use different asset).\n\n**What it runs on:** PHP, Nginx",
           "integrity_requirement": "medium",
           "max_severity": "critical"
         },
@@ -9401,7 +9401,7 @@
           "confidentiality_requirement": "medium",
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
-          "instruction": "*.icq.net API/hosts:\napi.icq.net\nbos.icq.net\nrapi.icq.net\nbotapi.icq.net\nThis is sandbox domain with API and static data. XSS CSRF, etc are not accepted.\nPlease read program rules for categories of the bugs accepted",
+          "instruction": "### API (icq.net)\n\n**What it does:**  This is sandbox domain with API and static data\n\n* api.icq.net\n* bos.icq.net\n* rapi.icq.net\n* botapi.icq.net\n\n**What security issues best to look for:** Critical web application security flaws from [OWASP Top 10](https://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project) such as: Injections, Broken Authentication, Sensitive Data Exposure, Broken Access Control.  Cross-Site Scripting (XSS), Cross-Site Request Forgery (CSRF) **are not accepted**.\n\n**What it runs on:** C/C++, PHP, Nginx",
           "integrity_requirement": "medium",
           "max_severity": "critical"
         },
@@ -9445,7 +9445,7 @@
           "confidentiality_requirement": "high",
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
-          "instruction": "web.icq.com Web messaging application\nPlease read program rules for categories of the bugs accepted",
+          "instruction": "### ICQ web application\n\n**What it does**: This is official ICQ web application client. So you need only modern web browser to use ICQ. It is static and all requests and features interact with the API.\n\n**What security issues best to look for:** Common web application security flaws from [OWASP Top 10](https://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project) such as: Cross-Site Scripting (XSS) and Cross-Site Request Forgery (CSRF).\n\n**What it runs on:** HTML, JavaScript, Nginx",
           "integrity_requirement": "high",
           "max_severity": "critical"
         }
