@@ -2381,6 +2381,13 @@ type GenerateTaxFormUrlPayload {
   me: User
 }
 
+# Invitation settings for users
+type HackerInvitationsProfile implements Node {
+  bounty_programs_only: Boolean
+  id: ID!
+  receive_invites: Boolean
+}
+
 # A HackeronePayroll Payout Preference
 type HackeronePayrollPayoutPreferenceType implements Node & PayoutPreferenceInterface {
   _id: ID!
@@ -4272,7 +4279,6 @@ type Team implements Node & ResourceInterface {
   i_can_view_jira_webhook: Boolean
   i_can_view_phabricator_integration: Boolean
   i_can_view_reports_resolved: Boolean
-  i_can_view_resolution_time_by_severity: Boolean
   i_can_view_weaknesses: Boolean
   id: ID!
   inbox_views(
@@ -5737,7 +5743,9 @@ type User implements Node & ResourceInterface {
   email: String
   facebook_user_id: String
   fb_auth_supported: Boolean
+  hacker_invitations_profile: HackerInvitationsProfile
   hackerone_triager: Boolean
+  i_can_update_invitation_preferences: Boolean
   i_can_update_username: Boolean
   id: ID!
   impact: Float
