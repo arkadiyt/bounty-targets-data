@@ -3537,6 +3537,41 @@
     }
   },
   {
+    "name": "Trello",
+    "url": "https://bugcrowd.com/trello",
+    "allows_disclosure": true,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "website",
+          "target": "*.trello.services"
+        },
+        {
+          "type": "website",
+          "target": "api.trello.com"
+        },
+        {
+          "type": "website",
+          "target": "trello.com"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "",
+          "target": "e.trello.com"
+        },
+        {
+          "type": "",
+          "target": "help.trello.com"
+        },
+        {
+          "type": "",
+          "target": "trello-attachments.s3.amazonaws.com"
+        }
+      ]
+    }
+  },
+  {
     "name": "Twilio",
     "url": "https://bugcrowd.com/twilio",
     "allows_disclosure": false,
