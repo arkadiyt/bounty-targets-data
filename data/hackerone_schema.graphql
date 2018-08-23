@@ -5721,6 +5721,7 @@ type User implements Node & ResourceInterface {
     last: Int
   ): BadgesUsersConnection
   bio: String
+  blacklisted_from_hacker_publish: Boolean!
   bounties(
     # Returns the elements in the list that come after the specified global ID.
     after: String
