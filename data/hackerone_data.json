@@ -9486,9 +9486,20 @@
           "confidentiality_requirement": "high",
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
-          "instruction": "### ICQ dektop application\n\n**What it does:**This is official ICQ dektop client for Windows, Linux, Mac OS X. It runs native OS code and have connections to the API endpoints.\n\n**What security issues best to look for:** Remote Code Execution in client, Remote permanent (resistant to application restart) DoS against application, Broken Authentication, Sensitive Data Exposure, Broken Access Control. **Reports based on the source code are not accepted**. Confirm the problem actually exists in application and report it for executable.\n\n**What it runs on:** C++, QT, boost, ffmpeg, libevent. Source code is available on GitHub https://github.com/mailru/icqdesktop. \n\n\n\n\n\n\n",
+          "instruction": "### ICQ desktop application\n\n**What it does:**This is official ICQ desktop client for Windows, Linux, Mac OS X. It runs native OS code and have connections to the API endpoints.\n\n**What security issues best to look for:** Remote Code Execution in client, Remote permanent (resistant to application restart) DoS against application, Broken Authentication, Sensitive Data Exposure, Broken Access Control. **Reports based on the source code are not accepted**. Confirm the problem actually exists in application and report it for executable.\n\n**What it runs on:** C++, QT, boost, ffmpeg, libevent. Source code is available on GitHub https://github.com/mailru/icqdesktop. \n\n\n\n\n\n\n",
           "integrity_requirement": "high",
           "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "agent.mail.ru",
+          "asset_type": "URL",
+          "availability_requirement": "low",
+          "confidentiality_requirement": "low",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "## Mail.Ru Agent the main web landing page\n\n**What it does**: This is the main web product page https://agent.mail.ru/ where user can download Mail.Ru Agent applications for specific platforms.",
+          "integrity_requirement": "medium",
+          "max_severity": "high"
         },
         {
           "asset_identifier": "com.icq",
@@ -9526,6 +9537,17 @@
       ],
       "out_of_scope": [
         {
+          "asset_identifier": "Mail.Ru Agent",
+          "asset_type": "DOWNLOADABLE_EXECUTABLES",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "## Mail.Ru Agent desktop application\n\nPlease, search for security issues in ICQ desktop application.",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
           "asset_identifier": "https://github.com/mailru/icqdesktop",
           "asset_type": "SOURCE_CODE",
           "availability_requirement": null,
@@ -9535,6 +9557,39 @@
           "instruction": "Reports based on the source code are not accepted.\nConfirm the problem actually exists in application and report it for executable.",
           "integrity_requirement": null,
           "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "ru.mail",
+          "asset_type": "GOOGLE_PLAY_APP_ID",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "## Mail.Ru Agent for Android\n\nPlease, search for security issues in ICQ for Android",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "ru.mail",
+          "asset_type": "APPLE_STORE_APP_ID",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "## Mail.Ru Agent for iOS\n\nPlease, search for security issues in ICQ for iOS",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "webagent.mail.ru",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "## Mail.Ru Agent web application\n\n**What it does:** This is official Mail.Ru Agent web application client https://webagent.mail.ru/webim/agent/popup.html.\n\nPlease, search for security issues in ICQ web application.",
+          "integrity_requirement": null,
+          "max_severity": "none"
         }
       ]
     }
