@@ -18086,6 +18086,28 @@
     "targets": {
       "in_scope": [
         {
+          "asset_identifier": "*.dev.lifeomic.com",
+          "asset_type": "URL",
+          "availability_requirement": "medium",
+          "confidentiality_requirement": "medium",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": "medium",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "*.us.lifeomic.com",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "Please note: Account signup will require a real credit card in production(*.us.lifeomic.com). You can bypass this restriction by testing in our dev instance (*.dev.lifeomic.com).",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
           "asset_identifier": "Scope Not Listed (See Instruction)",
           "asset_type": "OTHER",
           "availability_requirement": null,
@@ -18185,6 +18207,39 @@
           "max_severity": "critical"
         },
         {
+          "asset_identifier": "https://jupiterone.io/",
+          "asset_type": "URL",
+          "availability_requirement": "medium",
+          "confidentiality_requirement": "medium",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": "medium",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://lifeapps.io",
+          "asset_type": "URL",
+          "availability_requirement": "medium",
+          "confidentiality_requirement": "medium",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": "medium",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "lifeomic.com",
+          "asset_type": "URL",
+          "availability_requirement": "medium",
+          "confidentiality_requirement": "medium",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": "low",
+          "max_severity": "critical"
+        },
+        {
           "asset_identifier": "lifeomic.com/security",
           "asset_type": "URL",
           "availability_requirement": "medium",
@@ -18238,28 +18293,6 @@
           "eligible_for_bounty": false,
           "eligible_for_submission": false,
           "instruction": "Please do not test against Amazon Web Services infrastructure. If you find any misconfigurations (e.g. world-accessible S3 bucket), please report it using one of assets in scope.",
-          "integrity_requirement": null,
-          "max_severity": "none"
-        },
-        {
-          "asset_identifier": "*.us.lifeomic.com",
-          "asset_type": "URL",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": false,
-          "eligible_for_submission": false,
-          "instruction": "We are still working to enable our Production environment, and we plan to  add it to the program scope by end of the year. Meanwhile, please help us testing security of our applications in Development (*.dev.lifeomic.com)",
-          "integrity_requirement": null,
-          "max_severity": "none"
-        },
-        {
-          "asset_identifier": "lifeomic.com",
-          "asset_type": "URL",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": false,
-          "eligible_for_submission": false,
-          "instruction": "lifeomic.com (www.lifeomic.com) is not in scope of this program. This is a 3rd party managed website hosting",
           "integrity_requirement": null,
           "max_severity": "none"
         },
