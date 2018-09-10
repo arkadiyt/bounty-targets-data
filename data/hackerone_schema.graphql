@@ -3208,6 +3208,7 @@ type Query implements Node {
     without_scope: Boolean = null
   ): ReportConnection
   resource(url: URI): ResourceInterface
+  retest(activity_id: Int!): ReportRetest
   session: Session
   severity_calculator: SeverityCalculator
   sla_statuses(
@@ -3446,6 +3447,23 @@ enum ReportPreSubmissionReviewStateEnum {
   pre_submission_needs_more_info
   pre_submission_pending
   pre_submission_rejected
+}
+
+# A report retest
+type ReportRetest {
+  _id: ID!
+  created_at: DateTime
+  created_by: User
+  id: ID!
+  report: Report
+  retest_user(user_id: Int!): ReportRetestUser
+}
+
+# A report retest user
+type ReportRetestUser {
+  _id: ID!
+  completed_at: DateTime
+  id: ID!
 }
 
 # States a report can be in
