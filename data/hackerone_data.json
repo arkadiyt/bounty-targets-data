@@ -6113,9 +6113,9 @@
           "confidentiality_requirement": null,
           "eligible_for_bounty": false,
           "eligible_for_submission": false,
-          "instruction": "Occasionally, exceptional reports are rewarded at our discretion on a case by case basis.\n\n[https://electron.atom.io](https://electron.atom.io \"https://electron.atom.io\")\n\n",
+          "instruction": "Electron vulnerabilities which do not affect Atom or GitHub Desktop are out-of-scope and should be [reported directly](https://electronjs.org/community) to the Electron developers.\n\n",
           "integrity_requirement": null,
-          "max_severity": "critical"
+          "max_severity": "none"
         },
         {
           "asset_identifier": "GitHub Desktop",
@@ -6149,6 +6149,17 @@
           "instruction": "enterprise.github.com is commonly confused with the [GitHub Enterprise product](https://github.com/pricing/business-enterprise) which is an on-premise instance of GitHub. Occasionally, exceptional reports are rewarded at our discretion on a case by case basis.\n\n",
           "integrity_requirement": null,
           "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "git.io",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "The [git.io](https://git.io) URL shortener is out-of-scope.",
+          "integrity_requirement": null,
+          "max_severity": "none"
         }
       ]
     }
@@ -11038,7 +11049,7 @@
           "confidentiality_requirement": "low",
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
-          "instruction": "We host non-production servers in our \"quantshack.com\" domain, primarily www.quantshack.com.\n\nYou shouldn't be able to access www.quantshack.com, because it is restricted by an IP whitelist and anyone not on the whitelist should get redirected automatically to www.quantopian.com. If you are able to bypass that whitelist and access _anything other than an error page_, that's certainly a reportable issue.\n\nWe will also accept reports about issues you discover on any other resources you discover in this domain.\n\nPlease do not submit reports about DMARC, DKIM, or SPF on this domain.",
+          "instruction": "We host non-production servers in our \"quantshack.com\" domain, primarily www.quantshack.com.\n\nYou shouldn't be able to access front-end pages on www.quantshack.com, because it is restricted by an IP whitelist and anyone not on the whitelist should get redirected automatically to www.quantopian.com. If you are able to bypass that whitelist and access any functionality other than an error page, that's certainly a reportable issue. Note that _functionality_ is key; static assets (i.e., JavaScript files style sheets, images, etc.) on www.quantshack.com are not protected by a whitelist, so please do not submit reports about them.\n\nWe will also accept reports about issues you discover on any other resources you discover in this domain.\n\nPlease do not submit reports about DMARC, DKIM, or SPF on this domain.",
           "integrity_requirement": "low",
           "max_severity": "medium"
         },
