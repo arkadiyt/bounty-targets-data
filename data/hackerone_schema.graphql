@@ -3214,6 +3214,7 @@ type Query implements Node {
   ): Node
   query: Query!
   report(id: Int!): Report
+  report_retest_user(activity_id: Int!): ReportRetestUser
   reports(
     # Returns the elements in the list that come after the specified global ID.
     after: String
@@ -3247,7 +3248,6 @@ type Query implements Node {
     without_scope: Boolean = null
   ): ReportConnection
   resource(url: URI): ResourceInterface
-  retest(activity_id: Int!): ReportRetest
   session: Session
   severity_calculator: SeverityCalculator
   sla_statuses(
@@ -3496,14 +3496,52 @@ type ReportRetest {
   created_by: User
   id: ID!
   report: Report
-  retest_user(user_id: Int!): ReportRetestUser
+  report_retest_users(
+    # Returns the elements in the list that come after the specified global ID.
+    after: String
+
+    # Returns the elements in the list that come before the specified global ID.
+    before: String
+
+    # Returns the first _n_ elements from the list.
+    first: Int
+
+    # Returns the last _n_ elements from the list.
+    last: Int
+  ): ReportRetestUserConnection
 }
 
 # A report retest user
 type ReportRetestUser {
   _id: ID!
+  answered_can_be_reproduced: Boolean
+  answered_fix_can_be_bypassed: Boolean
+  bypass_report_id: Int
   completed_at: DateTime
   id: ID!
+  report_retest: ReportRetest
+  user: User
+}
+
+# The connection type for ReportRetestUser.
+type ReportRetestUserConnection {
+  completed_count: Int!
+
+  # A list of edges.
+  edges: [ReportRetestUserEdge]
+
+  # Information to aid in pagination.
+  pageInfo: PageInfo!
+  total_count: Int!
+}
+
+# An edge in a connection.
+type ReportRetestUserEdge {
+  # A cursor for use in pagination.
+  cursor: String!
+
+  # The item at the end of the edge.
+  node: ReportRetestUser
 }
 
 # States a report can be in
@@ -4855,7 +4893,6 @@ type TeamCachedProfile {
   hackers_invited_all_time_count: Int
   id: ID!
   latest_report_created_at: DateTime
-  latest_serious_report_created_at: DateTime
   latest_serious_report_triaged_at: DateTime
   recently_participating_hackers_count: Int
   reports_received_in_three_months_count: Int
@@ -6168,6 +6205,8 @@ input UserOrderInput {
 type UserSession implements Node {
   _id: ID!
   country: String
+  created_at: DateTime!
+  deactivated_at: DateTime
   id: ID!
   ip_address: String
   user_agent: String
