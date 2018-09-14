@@ -3395,6 +3395,7 @@ type Report implements Node & ResourceInterface {
   # field is only present for reports filed after February 14, 2016.
   post_submission_trigger_log_trigger: Trigger
   pre_submission_review_state: String
+  previous_substate: String
   reference: ID
   reference_link: String
   reporter: User
@@ -5048,6 +5049,7 @@ enum TeamMemberOrderField {
 
 # Fields on which a collection of Teams can be ordered
 enum TeamOrderField {
+  average_bounty_amount
   name
   reports_resolved
 }
