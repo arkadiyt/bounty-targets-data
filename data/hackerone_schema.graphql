@@ -2494,8 +2494,8 @@ type ExternalProgramEdge {
 
 input FiltersExternalProgramFilterInput {
   _and: [FiltersExternalProgramFilterInput]
-  _id: IntPredicateInput
   _or: [FiltersExternalProgramFilterInput]
+  id: IntPredicateInput
   name: StringSimplePredicateInput
   offers_rewards: BooleanPredicateInput
   policy: StringSimplePredicateInput
@@ -2504,17 +2504,17 @@ input FiltersExternalProgramFilterInput {
 
 input FiltersStructuredScopeFilterInput {
   _and: [FiltersStructuredScopeFilterInput]
-  _id: IntPredicateInput
   _or: [FiltersStructuredScopeFilterInput]
   asset_identifier: StringSimplePredicateInput
   asset_type: StructuredScopedAssetTypeEnumPredicateInput
+  id: IntPredicateInput
 }
 
 input FiltersTeamFilterInput {
   _and: [FiltersTeamFilterInput]
-  _id: IntPredicateInput
   _or: [FiltersTeamFilterInput]
   external_program: FiltersExternalProgramFilterInput
+  id: IntPredicateInput
   internet_bug_bounty: BooleanPredicateInput
   name: StringSimplePredicateInput
   offers_bounties: BooleanPredicateInput
@@ -2527,8 +2527,8 @@ input FiltersTeamFilterInput {
 
 input FiltersUserFilterInput {
   _and: [FiltersUserFilterInput]
-  _id: IntPredicateInput
   _or: [FiltersUserFilterInput]
+  id: IntPredicateInput
   is_me: Boolean
 }
 
