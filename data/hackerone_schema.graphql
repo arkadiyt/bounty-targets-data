@@ -2496,18 +2496,17 @@ input FiltersExternalProgramFilterInput {
   _and: [FiltersExternalProgramFilterInput]
   _id: IntPredicateInput
   _or: [FiltersExternalProgramFilterInput]
-  about: StringPredicateInput
-  name: StringPredicateInput
+  name: StringSimplePredicateInput
   offers_rewards: BooleanPredicateInput
-  policy: StringPredicateInput
-  website: StringPredicateInput
+  policy: StringSimplePredicateInput
+  website: StringSimplePredicateInput
 }
 
 input FiltersStructuredScopeFilterInput {
   _and: [FiltersStructuredScopeFilterInput]
   _id: IntPredicateInput
   _or: [FiltersStructuredScopeFilterInput]
-  asset_identifier: StringPredicateInput
+  asset_identifier: StringSimplePredicateInput
   asset_type: StructuredScopedAssetTypeEnumPredicateInput
 }
 
@@ -2516,14 +2515,13 @@ input FiltersTeamFilterInput {
   _id: IntPredicateInput
   _or: [FiltersTeamFilterInput]
   external_program: FiltersExternalProgramFilterInput
-  external_url: StringPredicateInput
   internet_bug_bounty: BooleanPredicateInput
-  name: StringPredicateInput
+  name: StringSimplePredicateInput
   offers_bounties: BooleanPredicateInput
-  policy: StringPredicateInput
+  policy: StringSimplePredicateInput
   state: TeamStatePredicateInput
   structured_scopes: FiltersStructuredScopeFilterInput
-  website: StringPredicateInput
+  website: StringSimplePredicateInput
   whitelisted_hackers: FiltersUserFilterInput
 }
 
@@ -4019,7 +4017,7 @@ type StaticParticipantEdge {
   node: StaticParticipant
 }
 
-input StringPredicateInput {
+input StringSimplePredicateInput {
   _eq: String
   _gt: String
   _gte: String
@@ -4179,18 +4177,12 @@ input StructuredScopedAssetTypeEnumPredicateInput {
   _eq: StructuredScopedAssetTypeEnum
   _gt: StructuredScopedAssetTypeEnum
   _gte: StructuredScopedAssetTypeEnum
-  _ilike: String
   _in: [StructuredScopedAssetTypeEnum]
   _is_null: Boolean
-  _like: String
   _lt: StructuredScopedAssetTypeEnum
   _lte: StructuredScopedAssetTypeEnum
   _neq: StructuredScopedAssetTypeEnum
-  _nilike: String
   _nin: [StructuredScopedAssetTypeEnum]
-  _nlike: String
-  _nsimilar: String
-  _similar: String
 }
 
 # The connection type for StructuredScope.
@@ -5212,18 +5204,12 @@ input TeamStatePredicateInput {
   _eq: TeamState
   _gt: TeamState
   _gte: TeamState
-  _ilike: String
   _in: [TeamState]
   _is_null: Boolean
-  _like: String
   _lt: TeamState
   _lte: TeamState
   _neq: TeamState
-  _nilike: String
   _nin: [TeamState]
-  _nlike: String
-  _nsimilar: String
-  _similar: String
 }
 
 # Team configuration of a weakness
