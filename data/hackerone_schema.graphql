@@ -4943,6 +4943,7 @@ type Team implements Node & ResourceInterface {
 
     # Returns the last _n_ elements from the list.
     last: Int
+    order_by: TeamWeaknessesOrder = {field: id, direction: DESC}
     state: TeamWeaknessStates
     with_reports: Boolean
   ): TeamWeaknessConnection
@@ -5247,11 +5248,22 @@ type TeamWeaknessEdge {
   node: TeamWeakness
 }
 
+# Fields on which a collection of reports can be ordered
+enum TeamWeaknessOrderField {
+  id
+  report_count
+}
+
 # Possible states of how a weakness can be configured for a team
 enum TeamWeaknessStates {
   disabled
   enabled
   hidden
+}
+
+input TeamWeaknessesOrder {
+  direction: OrderDirection!
+  field: TeamWeaknessOrderField!
 }
 
 # Triage meta
