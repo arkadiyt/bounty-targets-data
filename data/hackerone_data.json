@@ -21454,6 +21454,55 @@
     }
   },
   {
+    "id": 31752,
+    "name": "ESLint",
+    "handle": "eslint",
+    "url": "https://hackerone.com/eslint",
+    "offers_bounties": false,
+    "quick_to_bounty": false,
+    "quick_to_first_response": false,
+    "targets": {
+      "in_scope": [
+        {
+          "asset_identifier": "https://github.com/eslint/eslint",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "[ESLint](https://github.com/eslint/eslint) is a static analysis tool for JavaScript code.\n\nWe are interested in hearing about cases where running ESLint on attacker-supplied source file, with an attacker-supplied set of JSON rule/parser option/environment configurations, could allow an attacker to execute arbitrary code. For example, the [demo](https://eslint.org/demo/) on `eslint.org` runs ESLint in the user's browser, with the source code and configuration specified in the URL hash. Some of our users also host services that can be used to lint untrusted code. An attack of this nature would likely indicate a [reflected cross-site scripting](https://en.wikipedia.org/wiki/Cross-site_scripting) vulnerability on `eslint.org`, and similar vulnerabilities on other sites that run ESLint on user-supplied input.\n\nOther potential security vulnerabilities in ESLint are also in scope, but note that most aspects of ESLint are not security-sensitive. For example ESLint allows the user to load plugins and JavaScript config files, which are executed during a lint run. As a result, a malicious config file or plugin could compromise the user's system. However, we don't consider this to be an issue specific to ESLint; in general, it's important that a user doesn't run untrusted third-party code on a system.\n\nFor bugs in ESLint which don't have a security impact, please create an issue [here](https://github.com/eslint/eslint/issues/new?template=BUG_REPORT.md) instead.",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://github.com/eslint/eslint-github-bot",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": "low",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "`eslint-github-bot` is a webhook service that automates some common tasks for repositories run by the ESLint team. ESLint's instance of `eslint-github-bot` is hosted at https://jenkins.eslint.org:7999.\n\nExamples of potential security bugs in the bot include:\n\n* An issue that allows an attacker to impersonate webhook events from GitHub\n* An issue that allows an attacker to read or write files on the server hosting the bot\n* An issue that causes the bot to create a large number of GitHub notifications resulting from a disproportionately small set of actions by an unauthorized GitHub user. For example, if it's possible to get the bot to comment on 100 issues by opening a single pull request, we'd like to know about it.",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "jenkins.eslint.org",
+          "asset_type": "URL",
+          "availability_requirement": "medium",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "ESLint's Jenkins server is used to carry out releases of ESLint-maintained packages. As such, it has access to several confidential resources, including an npm token and ssh key with access to all of ESLint's packages and repositories, respectively.\n\nThe Jenkins server is intended to be locked down such that only authorized ESLint team members can view build information/logs and start releases. We'd be interested in hearing about any issues that would allow an unauthorized user to gain access to build information or configure/start builds.",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
     "id": 32792,
     "name": "44CON Hack for Charity",
     "handle": "44con_hack_for_charity",
