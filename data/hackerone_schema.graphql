@@ -3314,6 +3314,7 @@ type Query implements Node {
     pre_submission_review_states: [ReportPreSubmissionReviewStateEnum] = null
     state: ReportStateEnum
     substate: ReportStateEnum
+    triage_dashboard: Boolean = false
     where: FiltersReportFilterInput
     without_scope: Boolean = null
   ): ReportConnection
@@ -3472,6 +3473,7 @@ type Report implements Node & ResourceInterface {
   severity: Severity
   singular_disclosure_allowed: Boolean
   singular_disclosure_disabled: Boolean
+  sla_fails_in_hours: Int
   stage: String
   state: String
   structured_scope: StructuredScope
@@ -3546,6 +3548,7 @@ enum ReportOrderField {
   created_at
   id
   latest_activity_at
+  sla_fails_at
 }
 
 input ReportOrderInput {
@@ -4102,6 +4105,7 @@ type StructuredScope implements Node & ResourceInterface {
     pre_submission_review_states: [ReportPreSubmissionReviewStateEnum] = null
     state: ReportStateEnum
     substate: ReportStateEnum
+    triage_dashboard: Boolean = false
     where: FiltersReportFilterInput
     without_scope: Boolean = null
   ): ReportConnection
@@ -4769,6 +4773,7 @@ type Team implements Node & ResourceInterface {
     pre_submission_review_states: [ReportPreSubmissionReviewStateEnum] = null
     state: ReportStateEnum
     substate: ReportStateEnum
+    triage_dashboard: Boolean = false
     violates_minimum_sla: SlaTypeEnum
     where: FiltersReportFilterInput
     without_scope: Boolean = null
@@ -6262,6 +6267,7 @@ type User implements Node & ResourceInterface {
     pre_submission_review_states: [ReportPreSubmissionReviewStateEnum] = null
     state: ReportStateEnum
     substate: ReportStateEnum
+    triage_dashboard: Boolean = false
     where: FiltersReportFilterInput
     without_scope: Boolean = null
   ): ReportConnection
