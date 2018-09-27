@@ -3595,8 +3595,8 @@ type ReportRetestUser {
   bypass_report_id: Int
   completed_at: DateTime
   id: ID!
-  payment_status: String
   report_retest: ReportRetest
+  status: BountyStatusEnum!
   user: User
 }
 
