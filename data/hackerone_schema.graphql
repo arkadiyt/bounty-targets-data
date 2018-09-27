@@ -2508,6 +2508,7 @@ input FiltersTeamFilterInput {
   policy: StringSimplePredicateInput
   state: TeamStatePredicateInput
   structured_scopes: FiltersStructuredScopeFilterInput
+  submission_state: SubmissionStateEnumPredicateInput
   website: StringSimplePredicateInput
   whitelisted_hackers: FiltersUserFilterInput
 }
@@ -4217,6 +4218,18 @@ enum SubmissionStateEnum {
   disabled
   open
   paused
+}
+
+input SubmissionStateEnumPredicateInput {
+  _eq: SubmissionStateEnum
+  _gt: SubmissionStateEnum
+  _gte: SubmissionStateEnum
+  _in: [SubmissionStateEnum]
+  _is_null: Boolean
+  _lt: SubmissionStateEnum
+  _lte: SubmissionStateEnum
+  _neq: SubmissionStateEnum
+  _nin: [SubmissionStateEnum]
 }
 
 # Team subscription action enum
