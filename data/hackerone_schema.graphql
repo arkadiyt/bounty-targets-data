@@ -3340,6 +3340,7 @@ type Query implements Node {
     state: ReportStateEnum
     substate: ReportStateEnum
     triage_dashboard: Boolean = false
+    triage_dashboard_tab: String = null
     where: FiltersReportFilterRootInput
     without_scope: Boolean = null
   ): ReportConnection
@@ -4131,6 +4132,7 @@ type StructuredScope implements Node & ResourceInterface {
     state: ReportStateEnum
     substate: ReportStateEnum
     triage_dashboard: Boolean = false
+    triage_dashboard_tab: String = null
     where: FiltersReportFilterRootInput
     without_scope: Boolean = null
   ): ReportConnection
@@ -4827,6 +4829,7 @@ type Team implements Node & ResourceInterface {
     state: ReportStateEnum
     substate: ReportStateEnum
     triage_dashboard: Boolean = false
+    triage_dashboard_tab: String = null
     violates_minimum_sla: SlaTypeEnum
     where: FiltersReportFilterRootInput
     without_scope: Boolean = null
@@ -6217,6 +6220,7 @@ type User implements Node & ResourceInterface {
   hacker_invitations_profile: HackerInvitationsProfile
   hackerone_triager: Boolean
   i_can_see_kerk_directory_survey: Boolean
+  i_can_see_kerk_policy_survey: Boolean
   i_can_update_invitation_profile: Boolean
   i_can_update_username: Boolean
   id: ID!
@@ -6323,6 +6327,7 @@ type User implements Node & ResourceInterface {
     state: ReportStateEnum
     substate: ReportStateEnum
     triage_dashboard: Boolean = false
+    triage_dashboard_tab: String = null
     where: FiltersReportFilterRootInput
     without_scope: Boolean = null
   ): ReportConnection
