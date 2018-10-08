@@ -5034,6 +5034,7 @@ type Team implements Node & ResourceInterface {
   twitter_handle: String
   updated_at: DateTime
   url: URI!
+  vpn_enabled: Boolean
   weaknesses(
     # Returns the elements in the list that come after the specified global ID.
     after: String
@@ -6400,6 +6401,7 @@ type User implements Node & ResourceInterface {
   unconfirmed_email: String
   url: URI!
   username: String!
+  vpn_credentials: [VpnCredential]
   website: String
   whitelisted_teams(
     # Returns the elements in the list that come after the specified global ID.
@@ -6496,6 +6498,13 @@ type VerifyAccountRecoveryPhoneNumberPayload implements MutationResult {
   errors(types: [ErrorTypeEnum]): ErrorConnection!
   me: User
   was_successful: Boolean!
+}
+
+# VPN Credential for a user
+type VpnCredential implements Node {
+  id: ID!
+  name: String
+  state: String
 }
 
 # The type of vulnerability on a HackerOne report
