@@ -20768,22 +20768,33 @@
           "instruction": "The `src/` folder on the `master` branch of our repository has all the source code from our official implementation that we look forward to be tested.",
           "integrity_requirement": "high",
           "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://keyguard.nimiq.com/",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "The Nimiq Keyguard is designed to be the place where the keys of the users are stored (encrypted) if they are not using a supported hardware wallet and as such it is very important for us to make sure that the Keyguard is very secure. Examples of the kind of exploits we are interested in are: unauthorized key extraction, unauthorized signing of transactions, displaying information when signing a transaction that is different from the actual data in the signed transaction, etc. These exploits need to be due to a problem in the Keyguard itself, so things like social engineering or using malware on an user computer are not considered valid reports.\n\nThe source code for the Keyguard is available [here](https://github.com/nimiq/keyguard) in case it can help you to find security issues with it, but please keep in mind we're looking for bugs that can be actually exploitable in the current deployment of the Keyguard (i.e. in https://keyguard.nimiq.com/).",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://safe.nimiq.com/",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "The Nimiq Safe is the main place where our users interact with the blockchain and with the funds protected by their keys (usually stored in the Keyguard) which means we expect it to be highly secure. Examples of the kind of exploits we're interested in are: opening a fake Keyguard from the Nimiq Safe which would allow an attacker to trick the user into entering their keys and stealing them, deleting a user's key without them explicitly wanting to, hijacking the \"copy to clipboard\" functionality to copy the wrong address or displaying the wrong address when the user is asked to verify the address on the Ledger Nano S.\n\nThe source code for the Safe is available [here](https://github.com/nimiq/safe) in case it can help you to find security issues with it, but please keep in mind we're looking for bugs that can be actually exploitable in the current deployment of the keyguard (i.e. in https://safe.nimiq.com/).",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
         }
       ],
       "out_of_scope": [
         {
           "asset_identifier": "*.nimiq.com",
-          "asset_type": "URL",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": false,
-          "eligible_for_submission": false,
-          "instruction": "",
-          "integrity_requirement": null,
-          "max_severity": "none"
-        },
-        {
-          "asset_identifier": "https://keyguard.nimiq.com/",
           "asset_type": "URL",
           "availability_requirement": null,
           "confidentiality_requirement": null,
@@ -20802,17 +20813,6 @@
           "eligible_for_submission": false,
           "instruction": "",
           "integrity_requirement": null,
-          "max_severity": "none"
-        },
-        {
-          "asset_identifier": "https://safe.nimiq.com/",
-          "asset_type": "URL",
-          "availability_requirement": "high",
-          "confidentiality_requirement": "high",
-          "eligible_for_bounty": false,
-          "eligible_for_submission": false,
-          "instruction": "",
-          "integrity_requirement": "high",
           "max_severity": "none"
         }
       ]
