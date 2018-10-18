@@ -2246,6 +2246,37 @@
     }
   },
   {
+    "name": "Mailgun",
+    "url": "https://bugcrowd.com/mailgun",
+    "allows_disclosure": false,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "api",
+          "target": "https://api.mailgun.net"
+        },
+        {
+          "type": "website",
+          "target": "https://app.mailgun.com"
+        },
+        {
+          "type": "website",
+          "target": "https://signup.mailgun.com"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "website",
+          "target": "https://documentation.mailgun.com"
+        },
+        {
+          "type": "website",
+          "target": "https://www.mailgun.com/"
+        }
+      ]
+    }
+  },
+  {
     "name": "MasterCard",
     "url": "https://bugcrowd.com/mastercard",
     "allows_disclosure": false,
