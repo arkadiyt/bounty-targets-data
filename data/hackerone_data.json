@@ -187,7 +187,7 @@
   },
   {
     "id": 19,
-    "name": "Yahoo!",
+    "name": "Oath",
     "handle": "yahoo",
     "url": "https://hackerone.com/yahoo",
     "offers_bounties": true,
@@ -236,6 +236,50 @@
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
           "instruction": "* [Rivals Android](https://play.google.com/store/apps/details?id=com.yahoo.rivals.android)\n* [Rivals iOS](https://itunes.apple.com/us/app/rivals-com-no-1-college-sports-recruiting-news/id1069511855?mt=8)\n* Rivals (web)",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "Tumblr Blog Network",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "*.tumblr.com\n\n*Note: Blogs are cached for 1 minute after first request (60s from first request); content is re-loaded into cache when a new request is submitted after the 61st second.*\n\nHow to identify you are looking at the Blog Network:\n* Header: `X-tumblr-user` can be used to identify if the domain is a blog on the Blog Network\n* View the domain in a browser, there will be a Tumblr banner visible. \n\nExclusions for this asset:\n* JavaScript is allowed; XSS is excluded from eligibility.\n* Pages can be framed; Clickjacking or other X-Frame-Options attacks are excluded from eligibility.",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "Tumblr Dashboard",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Web Dashboard\n* www.tumblr.com\n\nMobile Dashboard\n* www.tumblr.com\n* Must use mobile device user-agent to access when testing with desktop browser. It's a completely new architecture, different tech stack from regular web dashboard.\t\n\nAPIs\n* api.tumblr.com",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "Tumblr Mobile",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "[Tumblr iOS](https://itunes.apple.com/us/app/tumblr/id305343404?mt=8)\n* com.tumblr.tumblr\n* Minimum OS version: iOS 11\n\n[Tumblr Android](https://play.google.com/store/apps/details?id=com.tumblr&hl=en_US)\n* com.tumblr\n* Minimum OS version: API 21\n\nExclusions:\n* Twitter api key in code\n* Certificate pinning",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "Tumblr Services",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Tumblr Micro-Services \n* t.umblr.com - A link-redirection service domain.\n* *.tumblr.com - The site itself, the API, sub-services, S3 buckets and more.\n* *.srvcs.tumblr.com - Various micro-services domains used for logging and metrics, messaging, etc.\n* *.txmblr.com - Various safe-domains used to host UGC that could be malicious (e.g. safe.txmblr.com).\n\nTumblr Support\n* secure.tumblr.com\n* assets.tumblr.com\n* safe.tumblr.com\n* embed.tumblr.com\n",
           "integrity_requirement": null,
           "max_severity": "critical"
         },
