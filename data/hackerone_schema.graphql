@@ -2482,6 +2482,14 @@ type ExternalProgramEdge {
   node: ExternalProgram
 }
 
+# A HackerOne feature
+type Feature implements Node {
+  _id: ID!
+  enabled: Boolean!
+  id: ID!
+  key: String!
+}
+
 input FiltersExternalProgramFilterInput {
   id: IntPredicateInput
   name: StringPredicateInput
@@ -6235,6 +6243,7 @@ type User implements Node & ResourceInterface {
   facebook_user_id: String
   facebook_user_name: String
   fb_auth_supported: Boolean
+  features: [Feature]
   hacker_invitations_profile: HackerInvitationsProfile
   hackerone_triager: Boolean
   i_can_update_invitation_profile: Boolean
