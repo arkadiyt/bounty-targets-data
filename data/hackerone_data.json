@@ -11954,7 +11954,7 @@
           "asset_identifier": "brave.com",
           "asset_type": "URL",
           "availability_requirement": "medium",
-          "confidentiality_requirement": "low",
+          "confidentiality_requirement": "none",
           "eligible_for_bounty": false,
           "eligible_for_submission": true,
           "instruction": "We are not generally interested in bugs on <brave.com>. Particularly severe bugs which threaten immediate user harm may be considered. Due to report volume, we do not guarantee responses to website-related submissions.",
@@ -12062,28 +12062,6 @@
         },
         {
           "asset_identifier": "https://github.com/brave/browser-ios",
-          "asset_type": "SOURCE_CODE",
-          "availability_requirement": "high",
-          "confidentiality_requirement": "high",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "",
-          "integrity_requirement": "high",
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "https://github.com/brave/browser-laptop",
-          "asset_type": "SOURCE_CODE",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "",
-          "integrity_requirement": null,
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "https://github.com/brave/muon",
           "asset_type": "SOURCE_CODE",
           "availability_requirement": "high",
           "confidentiality_requirement": "high",
@@ -12228,6 +12206,17 @@
           "max_severity": "none"
         },
         {
+          "asset_identifier": "https://github.com/brave/browser-laptop",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": "none",
+          "confidentiality_requirement": "low",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "Brave has moved from the Muon-based `browser-laptop` codebase to a Chromium-based `brave-browser` codebase. Muon-based Brave is no longer available for download from <brave.com> and everyone will be migrated to the Chromium-based Brave in a few weeks.",
+          "integrity_requirement": "none",
+          "max_severity": "none"
+        },
+        {
           "asset_identifier": "https://github.com/brave/link-bubble",
           "asset_type": "SOURCE_CODE",
           "availability_requirement": null,
@@ -12236,6 +12225,17 @@
           "eligible_for_submission": false,
           "instruction": "LinkBubble is no longer in scope",
           "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "https://github.com/brave/muon",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": "none",
+          "confidentiality_requirement": "none",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "Since Brave is moving from Muon to Chromium, we will no longer be maintaining the Muon codebase.",
+          "integrity_requirement": "none",
           "max_severity": "none"
         }
       ]

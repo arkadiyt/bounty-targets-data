@@ -3415,6 +3415,7 @@ type Query implements Node {
     last: Int
     order_by: TeamOrderInput
     permissions: [PermissionEnum] = []
+    search: String
     where: FiltersTeamFilterRootInput
   ): TeamConnection
   user(username: String!): User
@@ -4662,6 +4663,7 @@ type Team implements Node & ResourceInterface {
     last: Int
     order_by: TeamOrderInput
     permissions: [PermissionEnum] = []
+    search: String
     where: FiltersTeamFilterRootInput
   ): TeamConnection
   handle: String!
@@ -6418,6 +6420,7 @@ type User implements Node & ResourceInterface {
     last: Int
     order_by: TeamOrderInput
     permissions: [PermissionEnum] = []
+    search: String
     where: FiltersTeamFilterRootInput
   ): TeamConnection
   totp_enabled: Boolean
