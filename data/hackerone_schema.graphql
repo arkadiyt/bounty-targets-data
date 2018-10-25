@@ -3052,6 +3052,13 @@ interface Node {
   id: ID!
 }
 
+# An OAuth Application that can use a 'Sign in using HackerOne' flow and be given OAuth Access Tokens.
+type OauthApplication {
+  client_id: String
+  name: String
+  scopes: [String]
+}
+
 # Possible directions for sorting a collection
 enum OrderDirection {
   ASC
@@ -3331,6 +3338,7 @@ type Query implements Node {
     # ID of the object.
     id: ID!
   ): Node
+  oauth_application(client_id: String!): OauthApplication
   query: Query!
   report(id: Int!): Report
   report_retest_user(activity_id: Int!): ReportRetestUser
