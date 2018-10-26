@@ -1214,17 +1214,6 @@
     "targets": {
       "in_scope": [
         {
-          "asset_identifier": "*.concrete5.org",
-          "asset_type": "URL",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": false,
-          "eligible_for_submission": true,
-          "instruction": "",
-          "integrity_requirement": null,
-          "max_severity": "critical"
-        },
-        {
           "asset_identifier": "https://github.com/concrete5/concrete5",
           "asset_type": "SOURCE_CODE",
           "availability_requirement": null,
@@ -1237,7 +1226,17 @@
         }
       ],
       "out_of_scope": [
-
+        {
+          "asset_identifier": "*.concrete5.org",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "Please send reports of issues with concrete5.org the website to `security@concrete5.org`.\n\nThank you!",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        }
       ]
     }
   },
