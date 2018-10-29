@@ -6044,13 +6044,13 @@
         {
           "asset_identifier": "GitHub CSP",
           "asset_type": "OTHER",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
+          "availability_requirement": "none",
+          "confidentiality_requirement": "medium",
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
           "instruction": "While content-injection vulnerabilities are already in-scope for our [GitHub.com bounty](https://bounty.github.com/targets/github.html), we also accept bounty reports for novel [CSP](https://developers.google.com/web/fundamentals/security/csp/) bypasses affecting GitHub.com, even if they do not include a content-injection vulnerability. Using an intercepting proxy or your browser's developer tools, experiment with injecting content into the DOM. See if you can execute arbitrary JavaScript or exfiltrate sensitive page contents such as CSRF tokens. Reports of other previously-unknown impacts from content-injection will also be considered.\n\nPreviously identified attacks are not eligible for reward (we've put a lot of thought into CSP bypasses already). You can find a discussion of known attacks and our attempts to mitigate them [here](http://githubengineering.com/githubs-csp-journey/). Attacks against CSP features not used on GitHub.com, such as script nonces, are not eligible for reward. Vulnerabilities resulting from injection in implausible locations, such as within an element that doesn't contain user-content, are not eligible for reward. Rewards are determined at our discretion: if you think you've found something cool and novel, report it!\n\n",
-          "integrity_requirement": null,
-          "max_severity": "critical"
+          "integrity_requirement": "none",
+          "max_severity": "high"
         },
         {
           "asset_identifier": "GitHub Enterprise",
