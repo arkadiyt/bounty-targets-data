@@ -13305,14 +13305,69 @@
           "max_severity": "critical"
         },
         {
-          "asset_identifier": "APM agents",
+          "asset_identifier": ".NET Core agent",
           "asset_type": "DOWNLOADABLE_EXECUTABLES",
-          "availability_requirement": "high",
-          "confidentiality_requirement": "high",
-          "eligible_for_bounty": false,
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
           "eligible_for_submission": true,
-          "instruction": "The [**New Relic APM** agents](https://docs.newrelic.com/docs/agents) are used to send information from supported applications to be viewed within the **New Relic** web application. We may reward reputation for security issues found within the **APM** agent that could reduce the security of the application or server the agent is running within.",
-          "integrity_requirement": "high",
+          "instruction": "The [**New Relic** .NET Core agent](https://docs.newrelic.com/docs/agents/net-agent/getting-started/introduction-new-relic-net) can by [installed](https://docs.newrelic.com/docs/agents/net-agent/installation/install-enable-new-relic-net-agent) within a [supported .NET Core application](https://docs.newrelic.com/docs/agents/net-agent/getting-started/compatibility-requirements-net-agent). It is designed to collect data about the running application and send it back for display within [**New Relic** APM](https://docs.newrelic.com/docs/apm/new-relic-apm/getting-started/introduction-new-relic-apm). We may provide rewards for security issues found within the .NET Core agent that could reduce the security of the application the agent is integrated with. Rewards are based on the default configuration settings, but agents that show problems due to a configuration change may be eligible for a reward.",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": ".NET agent",
+          "asset_type": "DOWNLOADABLE_EXECUTABLES",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "The [**New Relic** .NET agent](https://docs.newrelic.com/docs/agents/net-agent/getting-started/introduction-new-relic-net) can by [installed](https://docs.newrelic.com/docs/agents/net-agent/installation/install-enable-new-relic-net-agent) within a [supported .NET Framework application](https://docs.newrelic.com/docs/agents/net-agent/getting-started/compatibility-requirements-net-agent). It is designed to collect data about the running application and send it back for display within [**New Relic** APM](https://docs.newrelic.com/docs/apm/new-relic-apm/getting-started/introduction-new-relic-apm). We may provide rewards for security issues found within the .NET Framework agent that could reduce the security of the application the agent is integrated with. Rewards are based on the default configuration settings, but agents that show problems due to a configuration change may be eligible for a reward.",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "Agent traffic",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "The [**New Relic** agents](https://docs.newrelic.com/docs/agents/manage-apm-agents/installation/compatibility-requirements-new-relic-agents) are designed to collect data and send it back for display within the [**New Relic** products](https://docs.newrelic.com/docs/licenses/new-relic-products). Traffic between the agents and **New Relic** backend services may be inspected and reports concerning issues with how the agent connects and transports information are acceptable.",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "Android agent",
+          "asset_type": "DOWNLOADABLE_EXECUTABLES",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "The [**New Relic** Android agent](https://docs.newrelic.com/docs/mobile-monitoring/new-relic-mobile-android/get-started/introduction-new-relic-mobile-android) is [installed via Gradle](https://docs.newrelic.com/docs/mobile-monitoring/new-relic-mobile-android/install-configure/install-android-apps-gradle-android-studio) within a [supported Android application](https://docs.newrelic.com/docs/mobile-monitoring/new-relic-mobile-android/get-started/new-relic-android-compatibility-requirements). It is designed to collect data about the running application and send it back for display within [**New Relic Mobile**](https://docs.newrelic.com/docs/mobile-monitoring/new-relic-mobile/getting-started/introduction-new-relic-mobile). We may provide rewards for security issues found within the Android agent that could reduce the security of the application the agent is integrated with. Rewards are based on the default configuration settings, but agents that show problems due to a configuration change may be eligible for a reward.",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "Browser agent",
+          "asset_type": "DOWNLOADABLE_EXECUTABLES",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "The [**New Relic** Browser agent](https://docs.newrelic.com/docs/browser/new-relic-browser/getting-started/introduction-new-relic-browser) is [deployed as a JavaScript snippet](https://docs.newrelic.com/docs/browser/new-relic-browser/installation/install-new-relic-browser-agent) by way of a [supported APM agent or web application](https://docs.newrelic.com/docs/browser/new-relic-browser/getting-started/compatibility-requirements-new-relic-browser). It is designed to collect data about the running application and send it back for display within [**New Relic** Browser](https://docs.newrelic.com/docs/browser/new-relic-browser/getting-started/introduction-new-relic-browser). We may provide rewards for security issues found within the Browser agent that could reduce the security of the browser the agent is running within. Rewards are based on the default configuration settings, but agents that show problems due to a configuration change may be eligible for a reward.",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "Go agent",
+          "asset_type": "DOWNLOADABLE_EXECUTABLES",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "The [**New Relic** Go agent](https://docs.newrelic.com/docs/agents/go-agent/get-started/introduction-new-relic-go) is [installed](https://docs.newrelic.com/docs/agents/go-agent/installation/install-new-relic-go) within a [supported Go application](https://docs.newrelic.com/docs/agents/go-agent/get-started/go-agent-compatibility-requirements). It is designed to collect data about the running application and send it back for display within [**New Relic** APM](https://docs.newrelic.com/docs/apm/new-relic-apm/getting-started/introduction-new-relic-apm). We may provide rewards for security issues found within the Go agent that could reduce the security of the application the agent is integrated with. Rewards are based on the default configuration settings, but agents that show problems due to a configuration change may be eligible for a reward.\n\nSource code for this agent can be inspected [on GitHub](https://github.com/newrelic/go-agent).",
+          "integrity_requirement": null,
           "max_severity": "critical"
         },
         {
@@ -13327,6 +13382,61 @@
           "max_severity": "critical"
         },
         {
+          "asset_identifier": "Java agent",
+          "asset_type": "DOWNLOADABLE_EXECUTABLES",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "The [**New Relic** Java agent](https://docs.newrelic.com/docs/agents/java-agent/installation/install-java-agent) can by [installed](https://docs.newrelic.com/docs/agents/java-agent/installation/install-java-agent) within a [supported Java application](https://docs.newrelic.com/docs/agents/java-agent/getting-started/compatibility-requirements-java-agent). It is designed to collect data about the running application and send it back for display within [**New Relic** APM](https://docs.newrelic.com/docs/apm/new-relic-apm/getting-started/introduction-new-relic-apm). We may provide rewards for security issues found within the Java agent that could reduce the security of the application the agent is integrated with. Rewards are based on the default configuration settings, but agents that show problems due to a configuration change may be eligible for a reward.",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "Node.js agent",
+          "asset_type": "DOWNLOADABLE_EXECUTABLES",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "The [**New Relic** Node.js agent](https://docs.newrelic.com/docs/agents/nodejs-agent/getting-started/introduction-new-relic-nodejs) can by [installed via `npm`](https://docs.newrelic.com/docs/agents/nodejs-agent/installation-configuration/install-maintain-nodejs) within a [supported Node.js application](https://docs.newrelic.com/docs/agents/nodejs-agent/getting-started/new-relic-nodejs#requirements). It is designed to collect data about the running application and send it back for display within [**New Relic** APM](https://docs.newrelic.com/docs/apm/new-relic-apm/getting-started/introduction-new-relic-apm). We may provide rewards for security issues found within the Node.js agent that could reduce the security of the application the agent is integrated with. Rewards are based on the default configuration settings, but agents that show problems due to a configuration change may be eligible for a reward.\n\nSource code for this agent can be inspected [on GitHub](https://github.com/newrelic/node-newrelic).",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "PHP agent",
+          "asset_type": "DOWNLOADABLE_EXECUTABLES",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "The [**New Relic** PHP agent](https://docs.newrelic.com/docs/agents/php-agent/getting-started/introduction-new-relic-php) can be [installed](https://docs.newrelic.com/docs/agents/php-agent/installation/php-agent-installation-overview) within a [supported PHP application](https://docs.newrelic.com/docs/agents/php-agent/getting-started/php-agent-compatibility-requirements). It is designed to collect data about the running application and send it back for display within [**New Relic** APM](https://docs.newrelic.com/docs/apm/new-relic-apm/getting-started/introduction-new-relic-apm). We may provide rewards for security issues found within the PHP agent that could reduce the security of the application the agent is integrated with. Rewards are based on the default configuration settings, but agents that show problems due to a configuration change may be eligible for a reward.",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "Python agent",
+          "asset_type": "DOWNLOADABLE_EXECUTABLES",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "The [**New Relic** Python agent](https://docs.newrelic.com/docs/agents/python-agent/getting-started/introduction-new-relic-python) can by [installed with Pip](https://docs.newrelic.com/docs/agents/python-agent/installation/standard-python-agent-install) within a [supported Python application](https://docs.newrelic.com/docs/agents/python-agent/getting-started/instrumented-python-packages). It is designed to collect data about the running application and send it back for display within [**New Relic** APM](https://docs.newrelic.com/docs/apm/new-relic-apm/getting-started/introduction-new-relic-apm). We may provide rewards for security issues found within the Python agent that could reduce the security of the application the agent is integrated with. Rewards are based on the default configuration settings, but agents that show problems due to a configuration change may be eligible for a reward.",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "Ruby agent",
+          "asset_type": "DOWNLOADABLE_EXECUTABLES",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "The [**New Relic** Ruby agent](https://docs.newrelic.com/docs/agents/ruby-agent/getting-started/introduction-new-relic-ruby) is [installed as a Ruby gem](https://docs.newrelic.com/docs/agents/ruby-agent/installation-configuration/ruby-agent-installation) within a [supported Ruby application](https://docs.newrelic.com/docs/agents/ruby-agent/getting-started/ruby-agent-requirements-supported-frameworks). It is designed to collect data about the running application and send it back for display within [**New Relic** APM](https://docs.newrelic.com/docs/apm/new-relic-apm/getting-started/introduction-new-relic-apm). We may provide rewards for security issues found within the Ruby agent that could reduce the security of the application the agent is integrated with. Rewards are based on the default configuration settings, but agents that show problems due to a configuration change may be eligible for a reward.\n\nSource code for this agent can be inspected [on GitHub](https://github.com/newrelic/rpm).",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
           "asset_identifier": "Synthetics minions (public and private)",
           "asset_type": "OTHER",
           "availability_requirement": null,
@@ -13334,6 +13444,17 @@
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
           "instruction": "[**Synthetics**](https://docs.newrelic.com/docs/synthetics/new-relic-synthetics/getting-started/introduction-new-relic-synthetics) minions are sandboxed virtual machines that run monitors (scripts) to gather information about your websites, critical business transactions, and API endpoints. Minions can run in our data center or [privately within your own infrastructure](https://docs.newrelic.com/docs/synthetics/new-relic-synthetics/private-locations/install-configure-private-minions). We recommend familiarizing yourself with the product by [reading our documentation](https://docs.newrelic.com/docs/synthetics/new-relic-synthetics/scripting-monitors).\n\nNote that out-of-date packages running on these minions are not in scope for this program. Minions are intended to be updated from within the VM or with future releases.",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "Unity agent",
+          "asset_type": "DOWNLOADABLE_EXECUTABLES",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "The [**New Relic** Unity agent](https://docs.newrelic.com/docs/mobile-monitoring/new-relic-mobile-unity/get-started/introduction-new-relic-unity) is [installed](https://docs.newrelic.com/docs/mobile-monitoring/new-relic-mobile-unity/install-configure/unity-plugin-installation-configuration) within a Unity application on iOS or Android. It is designed to collect data about the running application and send it back for display within [**New Relic Mobile**](https://docs.newrelic.com/docs/mobile-monitoring/new-relic-mobile/getting-started/introduction-new-relic-mobile). We may provide rewards for security issues found within the Unity agent that could reduce the security of the application the agent is integrated with. Rewards are based on the default configuration settings, but agents that show problems due to a configuration change may be eligible for a reward.",
           "integrity_requirement": null,
           "max_severity": "critical"
         },
@@ -13382,6 +13503,17 @@
           "max_severity": "critical"
         },
         {
+          "asset_identifier": "iOS agent",
+          "asset_type": "DOWNLOADABLE_EXECUTABLES",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "The [**New Relic** iOS agent](https://docs.newrelic.com/docs/mobile-monitoring/new-relic-mobile-ios/get-started/introduction-new-relic-mobile-ios) is [installed as a framework](https://docs.newrelic.com/docs/mobile-monitoring/new-relic-mobile-ios/installation/ios-manual-installation) or [via CocoaPods](https://docs.newrelic.com/docs/mobile-monitoring-installation/cocoapods-installation-and-configuration) within a [supported iOS application](https://docs.newrelic.com/docs/mobile-monitoring/new-relic-mobile-ios/get-started/new-relic-ios-compatibility-requirements). It is designed to collect data about the running application and send it back for display within [**New Relic Mobile**](https://docs.newrelic.com/docs/mobile-monitoring/new-relic-mobile/getting-started/introduction-new-relic-mobile). We may provide rewards for security issues found within the iOS agent that could reduce the security of the application the agent is integrated with. Rewards are based on the default configuration settings, but agents that show problems due to a configuration change may be eligible for a reward.\n",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
           "asset_identifier": "infrastructure.newrelic.com",
           "asset_type": "URL",
           "availability_requirement": null,
@@ -13426,7 +13558,7 @@
           "max_severity": "critical"
         },
         {
-          "asset_identifier": "synthethics.newrelic.com",
+          "asset_identifier": "synthetics.newrelic.com",
           "asset_type": "URL",
           "availability_requirement": null,
           "confidentiality_requirement": null,
