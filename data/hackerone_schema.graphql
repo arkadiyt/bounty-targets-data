@@ -3637,6 +3637,7 @@ enum ReportFilterEnum {
 }
 
 input ReportFilterInput {
+  assignee: [String]
   bounty_awarded_at__gt: DateTime
   bounty_awarded_at__lt: DateTime
   bounty_awarded_at__null: Boolean
