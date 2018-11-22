@@ -240,17 +240,6 @@
           "max_severity": "critical"
         },
         {
-          "asset_identifier": "Rivals",
-          "asset_type": "OTHER",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "* [Rivals Android](https://play.google.com/store/apps/details?id=com.yahoo.rivals.android)\n* [Rivals iOS](https://itunes.apple.com/us/app/rivals-com-no-1-college-sports-recruiting-news/id1069511855?mt=8)\n* Rivals (web)",
-          "integrity_requirement": null,
-          "max_severity": "critical"
-        },
-        {
           "asset_identifier": "Tumblr Blog Network",
           "asset_type": "OTHER",
           "availability_requirement": null,
@@ -561,6 +550,17 @@
           "max_severity": "none"
         },
         {
+          "asset_identifier": "Rivals",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "* [Rivals Android](https://play.google.com/store/apps/details?id=com.yahoo.rivals.android)\n* [Rivals iOS](https://itunes.apple.com/us/app/rivals-com-no-1-college-sports-recruiting-news/id1069511855?mt=8)\n* Rivals (web)",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
           "asset_identifier": "Yahoo 7",
           "asset_type": "OTHER",
           "availability_requirement": null,
@@ -630,8 +630,8 @@
     "handle": "rails",
     "url": "https://hackerone.com/rails",
     "offers_bounties": true,
-    "quick_to_bounty": true,
-    "quick_to_first_response": true,
+    "quick_to_bounty": false,
+    "quick_to_first_response": false,
     "targets": {
       "in_scope": [
         {
@@ -702,7 +702,7 @@
     "url": "https://hackerone.com/ibb-nginx",
     "offers_bounties": true,
     "quick_to_bounty": false,
-    "quick_to_first_response": false,
+    "quick_to_first_response": true,
     "targets": {
       "in_scope": [
 
@@ -3107,6 +3107,87 @@
     }
   },
   {
+    "id": 315,
+    "name": "Open Technology Fund",
+    "handle": "otf",
+    "url": "https://hackerone.com/otf",
+    "offers_bounties": true,
+    "quick_to_bounty": false,
+    "quick_to_first_response": false,
+    "targets": {
+      "in_scope": [
+        {
+          "asset_identifier": "apply.opentech.fund",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Please do not submit reports using this domain unless required, using sandbox.opentech.fund instead.",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "sandbox.opentech.fund",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "low",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Please run all tests and report against this domain, unless absolutely required.",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "www.opentech.fund",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Please do not submit reports using this domain unless required, using sandbox.opentech.fund instead.",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "asset_identifier": "archive.opentech.fund",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "fund.otf.is",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "old.opentech.fund",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        }
+      ]
+    }
+  },
+  {
     "id": 333,
     "name": "Sucuri",
     "handle": "sucuri",
@@ -3754,7 +3835,7 @@
     "handle": "dashlane",
     "url": "https://hackerone.com/dashlane",
     "offers_bounties": true,
-    "quick_to_bounty": true,
+    "quick_to_bounty": false,
     "quick_to_first_response": true,
     "targets": {
       "in_scope": [
@@ -3891,7 +3972,7 @@
     "handle": "instacart",
     "url": "https://hackerone.com/instacart",
     "offers_bounties": false,
-    "quick_to_bounty": true,
+    "quick_to_bounty": false,
     "quick_to_first_response": true,
     "targets": {
       "in_scope": [
@@ -5367,7 +5448,7 @@
           "confidentiality_requirement": "low",
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
-          "instruction": "Arrive iOS app, available in the [iTunes store](https://itunes.apple.com/ca/app/frenzy-buy-sneakers-and-more/id1140572698)",
+          "instruction": "Frenzy iOS app, available in the [iTunes store](https://itunes.apple.com/ca/app/frenzy-buy-sneakers-and-more/id1140572698)",
           "integrity_requirement": "low",
           "max_severity": "medium"
         },
@@ -5444,7 +5525,7 @@
           "confidentiality_requirement": "low",
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
-          "instruction": "",
+          "instruction": "When testing Exchange, be sure to **unpublish** any listings you create after your testing is finished.",
           "integrity_requirement": "low",
           "max_severity": "medium"
         },
@@ -7808,7 +7889,7 @@
     "handle": "inflection",
     "url": "https://hackerone.com/inflection",
     "offers_bounties": true,
-    "quick_to_bounty": false,
+    "quick_to_bounty": true,
     "quick_to_first_response": true,
     "targets": {
       "in_scope": [
@@ -10035,7 +10116,7 @@
     "url": "https://hackerone.com/dovecot",
     "offers_bounties": false,
     "quick_to_bounty": false,
-    "quick_to_first_response": true,
+    "quick_to_first_response": false,
     "targets": {
       "in_scope": [
         {
@@ -11767,7 +11848,7 @@
     "handle": "blockstack",
     "url": "https://hackerone.com/blockstack",
     "offers_bounties": true,
-    "quick_to_bounty": true,
+    "quick_to_bounty": false,
     "quick_to_first_response": true,
     "targets": {
       "in_scope": [
@@ -13687,6 +13768,17 @@
           "eligible_for_submission": true,
           "instruction": "Our training portal is hosted externally by Acquia. Issues within this application or regarding our content should be reported here. No security testing should be done against the platform itself. Any security issues found within the platform should be reported to the [Acquia security team](https://www.acquia.com/how-report-security-issue).",
           "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "login.newrelic.com",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": "high",
           "max_severity": "critical"
         },
         {
@@ -16747,17 +16839,6 @@
           "max_severity": "critical"
         },
         {
-          "asset_identifier": "com.shazam.android",
-          "asset_type": "GOOGLE_PLAY_APP_ID",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "Shazam - security-hackerone@shazam.com\n",
-          "integrity_requirement": null,
-          "max_severity": "critical"
-        },
-        {
           "asset_identifier": "com.shopee.id",
           "asset_type": "GOOGLE_PLAY_APP_ID",
           "availability_requirement": null,
@@ -18201,6 +18282,17 @@
           "max_severity": "critical"
         },
         {
+          "asset_identifier": "playartifact.com",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
           "asset_identifier": "steam.exe",
           "asset_type": "DOWNLOADABLE_EXECUTABLES",
           "availability_requirement": null,
@@ -18403,7 +18495,7 @@
     "handle": "recargapay",
     "url": "https://hackerone.com/recargapay",
     "offers_bounties": true,
-    "quick_to_bounty": false,
+    "quick_to_bounty": true,
     "quick_to_first_response": true,
     "targets": {
       "in_scope": [
@@ -20924,6 +21016,17 @@
     "targets": {
       "in_scope": [
         {
+          "asset_identifier": "cosmos/ledger-cosmos-app",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
           "asset_identifier": "https://github.com/cosmos/cosmos-sdk",
           "asset_type": "SOURCE_CODE",
           "availability_requirement": null,
@@ -20932,6 +21035,17 @@
           "eligible_for_submission": true,
           "instruction": "",
           "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://github.com/cosmos/ledger-cosmos",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": "high",
           "max_severity": "critical"
         },
         {
@@ -21979,7 +22093,7 @@
     "url": "https://hackerone.com/impinj",
     "offers_bounties": false,
     "quick_to_bounty": false,
-    "quick_to_first_response": true,
+    "quick_to_first_response": false,
     "targets": {
       "in_scope": [
         {
@@ -23254,6 +23368,44 @@
           "integrity_requirement": null,
           "max_severity": "none"
         }
+      ]
+    }
+  },
+  {
+    "id": 34384,
+    "name": "Aeternity",
+    "handle": "aeternity",
+    "url": "https://hackerone.com/aeternity",
+    "offers_bounties": true,
+    "quick_to_bounty": true,
+    "quick_to_first_response": true,
+    "targets": {
+      "in_scope": [
+        {
+          "asset_identifier": "http://github.com/aeternity/epoch",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://github.com/aeternity/enoise",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": "none",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        }
+      ],
+      "out_of_scope": [
+
       ]
     }
   },
