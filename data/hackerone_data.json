@@ -866,11 +866,11 @@
           "asset_identifier": "*.trac.wordpress.org, *.svn.wordpress.org, *.git.wordpress.org, github.com/WordPress",
           "asset_type": "SOURCE_CODE",
           "availability_requirement": "low",
-          "confidentiality_requirement": "medium",
+          "confidentiality_requirement": "high",
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
-          "instruction": "All source code that isn't behind authentication is intended to be public. The source code itself has `Medium` CVSS impact scores. The applications that manage the code (Trac, Git, SVN, etc) have `Low` scores, except for vulnerabilities that allow modifications to the source code.",
-          "integrity_requirement": "medium",
+          "instruction": "All source code that isn't behind authentication is intended to be public. The source code itself has `High` CVSS impact scores. The applications that manage the code (Trac, Git, SVN, etc) have `Low` scores, except for vulnerabilities that allow modifications to the source code.\n\nMost of the source code in these domains is contained in the \"meta\" repository: `git clone git://meta.git.wordpress.org/`",
+          "integrity_requirement": "high",
           "max_severity": "critical"
         },
         {
@@ -913,7 +913,7 @@
           "confidentiality_requirement": "high",
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
-          "instruction": "We generally **aren’t** interested in the following problems:\n\n* [Users with administrator or editor privileges can post arbitrary JavaScript](https://make.wordpress.org/core/handbook/testing/reporting-security-vulnerabilities/#why-are-some-users-allowed-to-post-unfiltered-html)\n* [Disclosure of user IDs](https://make.wordpress.org/core/handbook/testing/reporting-security-vulnerabilities/#why-are-disclosures-of-usernames-or-user-ids-not-a-security-issue)\n* Open API endpoints serving public data (Including [usernames and user IDs](https://make.wordpress.org/core/handbook/testing/reporting-security-vulnerabilities/#why-are-disclosures-of-usernames-or-user-ids-not-a-security-issue))\n* [Path disclosures for errors, warnings, or notices](https://make.wordpress.org/core/handbook/testing/reporting-security-vulnerabilities/#why-are-there-path-disclosures-when-directly-loading-certain-files)\n* WordPress version number disclosure\n* Any vulnerability with a CVSS 3 score lower than 4.0, unless it can be combined with other vulnerabilities to achieve a higher score.\n* Output from automated scans - please manually verify issues and include a valid proof of concept.\n\nIf you think you found an exception, please, let us know.\n",
+          "instruction": "",
           "integrity_requirement": "high",
           "max_severity": "critical"
         },
@@ -924,7 +924,7 @@
           "confidentiality_requirement": "high",
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
-          "instruction": "We generally **aren’t** interested in the following problems:\n\n* [Users with administrator or editor privileges can post arbitrary JavaScript](https://make.wordpress.org/core/handbook/testing/reporting-security-vulnerabilities/#why-are-some-users-allowed-to-post-unfiltered-html)\n* [Disclosure of user IDs](https://make.wordpress.org/core/handbook/testing/reporting-security-vulnerabilities/#why-are-disclosures-of-usernames-or-user-ids-not-a-security-issue)\n* Open API endpoints serving public data (Including [usernames and user IDs](https://make.wordpress.org/core/handbook/testing/reporting-security-vulnerabilities/#why-are-disclosures-of-usernames-or-user-ids-not-a-security-issue))\n* [Path disclosures for errors, warnings, or notices](https://make.wordpress.org/core/handbook/testing/reporting-security-vulnerabilities/#why-are-there-path-disclosures-when-directly-loading-certain-files)\n* WordPress version number disclosure\n* Any vulnerability with a CVSS 3 score lower than 4.0, unless it can be combined with other vulnerabilities to achieve a higher score.\n* Output from automated scans - please manually verify issues and include a valid proof of concept.\n\nIf you think you found an exception, please, let us know.\n",
+          "instruction": "",
           "integrity_requirement": "high",
           "max_severity": "critical"
         },
@@ -935,7 +935,7 @@
           "confidentiality_requirement": "high",
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
-          "instruction": "We generally **aren’t** interested in the following problems:\n\n* [Users with administrator or editor privileges can post arbitrary JavaScript](https://make.wordpress.org/core/handbook/testing/reporting-security-vulnerabilities/#why-are-some-users-allowed-to-post-unfiltered-html)\n* [Disclosure of user IDs](https://make.wordpress.org/core/handbook/testing/reporting-security-vulnerabilities/#why-are-disclosures-of-usernames-or-user-ids-not-a-security-issue)\n* Open API endpoints serving public data (Including [usernames and user IDs](https://make.wordpress.org/core/handbook/testing/reporting-security-vulnerabilities/#why-are-disclosures-of-usernames-or-user-ids-not-a-security-issue))\n* [Path disclosures for errors, warnings, or notices](https://make.wordpress.org/core/handbook/testing/reporting-security-vulnerabilities/#why-are-there-path-disclosures-when-directly-loading-certain-files)\n* WordPress version number disclosure\n* Any vulnerability with a CVSS 3 score lower than 4.0, unless it can be combined with other vulnerabilities to achieve a higher score.\n* Output from automated scans - please manually verify issues and include a valid proof of concept.\n\nIf you think you found an exception, please, let us know.\n",
+          "instruction": "",
           "integrity_requirement": "high",
           "max_severity": "critical"
         },
@@ -964,13 +964,13 @@
         {
           "asset_identifier": "https://github.com/WordPress/gutenberg",
           "asset_type": "SOURCE_CODE",
-          "availability_requirement": "low",
-          "confidentiality_requirement": "none",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
-          "instruction": "All source code that isn't behind authentication is intended to be public. The source code itself has `Medium` CVSS impact scores. The applications that manage the code (Trac, Git, SVN, etc) have `Low` scores, except for vulnerabilities that allow modifications to the source code.",
-          "integrity_requirement": "low",
-          "max_severity": "medium"
+          "instruction": "",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
         },
         {
           "asset_identifier": "irclogs.wordpress.org",
@@ -1019,35 +1019,35 @@
       ],
       "out_of_scope": [
         {
+          "asset_identifier": "*.wordpress.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "All WordPress.com vulnerabilities should be reported to [Automattic's HackerOne program](https://hackerone.com/automattic). \n\n**WordPress.com vulnerabilities reported here will be marked as `Not Applicable`.**",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
           "asset_identifier": "335703880",
           "asset_type": "APPLE_STORE_APP_ID",
           "availability_requirement": null,
           "confidentiality_requirement": null,
           "eligible_for_bounty": false,
           "eligible_for_submission": false,
-          "instruction": "**Please, report vulnerabilities for WordPress.com or the WordPress mobile apps through the [Automattic HackerOne page](/automattic).**\n",
+          "instruction": "**Please, report vulnerabilities for the WordPress mobile apps through the [Automattic HackerOne page](/automattic).**\n",
           "integrity_requirement": null,
           "max_severity": "none"
         },
         {
-          "asset_identifier": "https://github.com/wordpress-mobile/WordPress-Android",
+          "asset_identifier": "https://github.com/wordpress-mobile/",
           "asset_type": "SOURCE_CODE",
           "availability_requirement": null,
           "confidentiality_requirement": null,
           "eligible_for_bounty": false,
           "eligible_for_submission": false,
-          "instruction": "**Please, report vulnerabilities for WordPress.com or the WordPress mobile apps through the [Automattic HackerOne page](/automattic).**\n",
-          "integrity_requirement": null,
-          "max_severity": "none"
-        },
-        {
-          "asset_identifier": "https://github.com/wordpress-mobile/WordPress-iOS",
-          "asset_type": "SOURCE_CODE",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": false,
-          "eligible_for_submission": false,
-          "instruction": "**Please, report vulnerabilities for WordPress.com or the WordPress mobile apps through the [Automattic HackerOne page](/automattic).**\n",
+          "instruction": "**Please, report vulnerabilities for the WordPress mobile apps through the [Automattic HackerOne page](/automattic).**\n",
           "integrity_requirement": null,
           "max_severity": "none"
         },
@@ -1058,29 +1058,18 @@
           "confidentiality_requirement": null,
           "eligible_for_bounty": false,
           "eligible_for_submission": false,
-          "instruction": "**Please, report vulnerabilities for WordPress.com or the WordPress mobile apps through the [Automattic HackerOne page](/automattic).**\n",
+          "instruction": "**Please, report vulnerabilities for the WordPress mobile apps through the [Automattic HackerOne page](/automattic).**\n",
           "integrity_requirement": null,
           "max_severity": "none"
         },
         {
-          "asset_identifier": "status.wordpress.org,glotpress.blog",
+          "asset_identifier": "status.wordpress.org,glotpress.blog,wordpress.tv",
           "asset_type": "URL",
           "availability_requirement": null,
           "confidentiality_requirement": null,
           "eligible_for_bounty": false,
           "eligible_for_submission": false,
           "instruction": "These are hosted on WordPress.com and we don't have access to modify the code, servers, etc. Check [Automattic's HackerOne program](https://hackerone.com/automattic) for details on reporting vulnerabilities with WordPress.com sites.",
-          "integrity_requirement": null,
-          "max_severity": "none"
-        },
-        {
-          "asset_identifier": "wordpress.com,*.wordpress.com",
-          "asset_type": "URL",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": false,
-          "eligible_for_submission": false,
-          "instruction": "All WordPress.com vulnerabilities should be reported to [Automattic's HackerOne program](https://hackerone.com/automattic). WordPress.com vulnerabilities reported here will be marked as Not Applicable.",
           "integrity_requirement": null,
           "max_severity": "none"
         }
