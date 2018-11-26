@@ -2583,6 +2583,7 @@ input FiltersTeamFilterInput {
   state: TeamStatePredicateInput
   structured_scopes: FiltersStructuredScopeFilterInput
   submission_state: SubmissionStateEnumPredicateInput
+  triage_subscriptions: FiltersTriageSubscriptionFilterInput
   website: StringPredicateInput
   whitelisted_hackers: FiltersUserFilterInput
 }
@@ -2602,8 +2603,14 @@ input FiltersTeamFilterRootInput {
   state: TeamStatePredicateInput
   structured_scopes: FiltersStructuredScopeFilterInput
   submission_state: SubmissionStateEnumPredicateInput
+  triage_subscriptions: FiltersTriageSubscriptionFilterInput
   website: StringPredicateInput
   whitelisted_hackers: FiltersUserFilterInput
+}
+
+input FiltersTriageSubscriptionFilterInput {
+  id: IntPredicateInput
+  is_active: Boolean
 }
 
 input FiltersUserFilterInput {
