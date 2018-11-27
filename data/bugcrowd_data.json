@@ -3019,6 +3019,45 @@
     }
   },
   {
+    "name": "Skyscanner",
+    "url": "https://bugcrowd.com/skyscanner",
+    "allows_disclosure": false,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "android",
+          "target": "Skyscanner Android App"
+        },
+        {
+          "type": "ios",
+          "target": "Skyscanner iOS App"
+        },
+        {
+          "type": "api",
+          "target": "gateway.skyscanner.net/*"
+        },
+        {
+          "type": "website",
+          "target": "partnerportal.skyscanner.net/*"
+        },
+        {
+          "type": "website",
+          "target": "skyscanner.net/*"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "other",
+          "target": "Corporate Email (*@skyscanner.net)"
+        },
+        {
+          "type": "website",
+          "target": "Subdomains (*.skyscanner.net/*)"
+        }
+      ]
+    }
+  },
+  {
     "name": "Smartsheet",
     "url": "https://bugcrowd.com/smartsheet",
     "allows_disclosure": true,

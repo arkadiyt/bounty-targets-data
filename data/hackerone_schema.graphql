@@ -295,6 +295,23 @@ type ActivitiesBugTriaged implements ActivityInterface & Node & ReportActivityIn
   updated_at: DateTime!
 }
 
+# A Activities::CancelledDisclosureRequest activity for a report
+type ActivitiesCancelledDisclosureRequest implements ActivityInterface & Node & ReportActivityInterface {
+  _id: ID!
+  actor: ActorUnion
+  attachments: [Attachment]
+  automated_response: Boolean
+  created_at: DateTime!
+  genius_execution_id: ID
+  i_can_edit: Boolean!
+  id: ID!
+  internal: Boolean
+  markdown_message: String
+  message: String
+  report: Report
+  updated_at: DateTime!
+}
+
 # A Activities::ChangedScope activity for a report
 type ActivitiesChangedScope implements ActivityInterface & Node & ReportActivityInterface {
   _id: ID!
@@ -867,6 +884,7 @@ enum ActivityTypes {
   BugResolved
   BugSpam
   BugTriaged
+  CancelledDisclosureRequest
   ChangedScope
   Comment
   CommentsClosed
@@ -900,7 +918,7 @@ enum ActivityTypes {
 }
 
 # Activities can be of multiple types
-union ActivityUnion = ActivitiesAgreedOnGoingPublic | ActivitiesBountyAwarded | ActivitiesBountySuggested | ActivitiesBugCloned | ActivitiesBugDuplicate | ActivitiesBugFiled | ActivitiesBugInactive | ActivitiesBugInformative | ActivitiesBugNeedsMoreInfo | ActivitiesBugNew | ActivitiesBugNotApplicable | ActivitiesBugReopened | ActivitiesBugResolved | ActivitiesBugSpam | ActivitiesBugTriaged | ActivitiesChangedScope | ActivitiesComment | ActivitiesCommentsClosed | ActivitiesCveIdAdded | ActivitiesExternalAdvisoryAdded | ActivitiesExternalUserInvitationCancelled | ActivitiesExternalUserInvited | ActivitiesExternalUserJoined | ActivitiesExternalUserRemoved | ActivitiesGroupAssignedToBug | ActivitiesHackerRequestedMediation | ActivitiesManuallyDisclosed | ActivitiesMediationRequested | ActivitiesNobodyAssignedToBug | ActivitiesNotEligibleForBounty | ActivitiesProgramInactive | ActivitiesReassignedToTeam | ActivitiesReferenceIdAdded | ActivitiesReportBecamePublic | ActivitiesReportCollaboratorInvited | ActivitiesReportCollaboratorJoined | ActivitiesReportSeverityUpdated | ActivitiesReportTitleUpdated | ActivitiesReportVulnerabilityTypesUpdated | ActivitiesSwagAwarded | ActivitiesTeamPublished | ActivitiesUserAssignedToBug | ActivitiesUserBannedFromProgram | ActivitiesUserCompletedRetest | ActivitiesUserJoined
+union ActivityUnion = ActivitiesAgreedOnGoingPublic | ActivitiesBountyAwarded | ActivitiesBountySuggested | ActivitiesBugCloned | ActivitiesBugDuplicate | ActivitiesBugFiled | ActivitiesBugInactive | ActivitiesBugInformative | ActivitiesBugNeedsMoreInfo | ActivitiesBugNew | ActivitiesBugNotApplicable | ActivitiesBugReopened | ActivitiesBugResolved | ActivitiesBugSpam | ActivitiesBugTriaged | ActivitiesCancelledDisclosureRequest | ActivitiesChangedScope | ActivitiesComment | ActivitiesCommentsClosed | ActivitiesCveIdAdded | ActivitiesExternalAdvisoryAdded | ActivitiesExternalUserInvitationCancelled | ActivitiesExternalUserInvited | ActivitiesExternalUserJoined | ActivitiesExternalUserRemoved | ActivitiesGroupAssignedToBug | ActivitiesHackerRequestedMediation | ActivitiesManuallyDisclosed | ActivitiesMediationRequested | ActivitiesNobodyAssignedToBug | ActivitiesNotEligibleForBounty | ActivitiesProgramInactive | ActivitiesReassignedToTeam | ActivitiesReferenceIdAdded | ActivitiesReportBecamePublic | ActivitiesReportCollaboratorInvited | ActivitiesReportCollaboratorJoined | ActivitiesReportSeverityUpdated | ActivitiesReportTitleUpdated | ActivitiesReportVulnerabilityTypesUpdated | ActivitiesSwagAwarded | ActivitiesTeamPublished | ActivitiesUserAssignedToBug | ActivitiesUserBannedFromProgram | ActivitiesUserCompletedRetest | ActivitiesUserJoined
 
 # An edge in a connection.
 type ActivityUnionEdge {
