@@ -1278,6 +1278,7 @@ type CancelTwoFactorAuthenticationResetPayload implements MutationResult {
 # Challenge setting of a Team
 type ChallengeSetting implements Node {
   id: ID!
+  not_started: Boolean
   policy: String
 }
 
