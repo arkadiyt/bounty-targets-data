@@ -1223,6 +1223,45 @@
     }
   },
   {
+    "name": "Directly",
+    "url": "https://bugcrowd.com/directly",
+    "allows_disclosure": false,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "website",
+          "target": "*.sandbox.directly.com/"
+        },
+        {
+          "type": "website",
+          "target": "app.sandbox.directly.com"
+        },
+        {
+          "type": "website",
+          "target": "http://directly.github.io/demosite/qa/rtm/sandbox.html"
+        },
+        {
+          "type": "website",
+          "target": "https://sandbox.directly.com/dashboard/index"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "website",
+          "target": "*.sandbox.directly.com/schedule-a-demo/* OR /product/* OR /careers/* OR /about/* OR /legal/* OR /trust/*"
+        },
+        {
+          "type": "website",
+          "target": "resources.directly.com/*"
+        },
+        {
+          "type": "website",
+          "target": "www.directly.com"
+        }
+      ]
+    }
+  },
+  {
     "name": "eero",
     "url": "https://bugcrowd.com/eero",
     "allows_disclosure": false,
@@ -3796,22 +3835,6 @@
         {
           "type": "website",
           "target": "www.usaa.com"
-        }
-      ],
-      "out_of_scope": [
-
-      ]
-    }
-  },
-  {
-    "name": "Volusion V1",
-    "url": "https://bugcrowd.com/volusion",
-    "allows_disclosure": true,
-    "targets": {
-      "in_scope": [
-        {
-          "type": "other",
-          "target": "https://www.VolusionPenTest1.com"
         }
       ],
       "out_of_scope": [
