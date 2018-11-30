@@ -2564,7 +2564,15 @@ type Feature implements Node {
   key: String!
 }
 
+# Possible directions for sorting a collection
+enum FilterOrderDirectionEnum {
+  ASC
+  DESC
+}
+
 input FiltersExternalProgramFilterInput {
+  _and: [FiltersExternalProgramFilterInput]
+  _or: [FiltersExternalProgramFilterInput]
   id: IntPredicateInput
   name: StringPredicateInput
   offers_rewards: BooleanPredicateInput
@@ -2572,9 +2580,9 @@ input FiltersExternalProgramFilterInput {
   website: StringPredicateInput
 }
 
-input FiltersReportFilterRootInput {
-  _and: [FiltersReportFilterRootInput]
-  _or: [FiltersReportFilterRootInput]
+input FiltersReportFilterInput {
+  _and: [FiltersReportFilterInput]
+  _or: [FiltersReportFilterInput]
   id: IntPredicateInput
   substate: ReportStateEnumPredicateInput
   team: FiltersTeamFilterInput
@@ -2583,13 +2591,26 @@ input FiltersReportFilterRootInput {
   weakness: FiltersWeaknessFilterInput
 }
 
+input FiltersReportFilterOrder {
+  direction: FilterOrderDirectionEnum = ASC
+  field: FiltersReportFilterOrderField = id
+}
+
+enum FiltersReportFilterOrderField {
+  id
+}
+
 input FiltersStructuredScopeFilterInput {
+  _and: [FiltersStructuredScopeFilterInput]
+  _or: [FiltersStructuredScopeFilterInput]
   asset_identifier: StringPredicateInput
   asset_type: StructuredScopedAssetTypeEnumPredicateInput
   id: IntPredicateInput
 }
 
 input FiltersTeamFilterInput {
+  _and: [FiltersTeamFilterInput]
+  _or: [FiltersTeamFilterInput]
   bookmarked_team_users: FiltersUserFilterInput
   external_program: FiltersExternalProgramFilterInput
   handle: StringPredicateInput
@@ -2607,37 +2628,34 @@ input FiltersTeamFilterInput {
   whitelisted_hackers: FiltersUserFilterInput
 }
 
-input FiltersTeamFilterRootInput {
-  _and: [FiltersTeamFilterRootInput]
-  _or: [FiltersTeamFilterRootInput]
-  bookmarked_team_users: FiltersUserFilterInput
-  external_program: FiltersExternalProgramFilterInput
-  handle: StringPredicateInput
-  id: IntPredicateInput
-  internet_bug_bounty: BooleanPredicateInput
-  name: StringPredicateInput
-  offers_bounties: BooleanPredicateInput
-  policy: StringPredicateInput
-  response_efficiency_percentage: IntPredicateInput
-  state: TeamStatePredicateInput
-  structured_scopes: FiltersStructuredScopeFilterInput
-  submission_state: SubmissionStateEnumPredicateInput
-  triage_subscriptions: FiltersTriageSubscriptionFilterInput
-  website: StringPredicateInput
-  whitelisted_hackers: FiltersUserFilterInput
+input FiltersTeamFilterOrder {
+  direction: FilterOrderDirectionEnum = ASC
+  field: FiltersTeamFilterOrderField = id
+}
+
+enum FiltersTeamFilterOrderField {
+  cached_response_efficiency_percentage
+  id
+  started_accepting_at
 }
 
 input FiltersTriageSubscriptionFilterInput {
+  _and: [FiltersTriageSubscriptionFilterInput]
+  _or: [FiltersTriageSubscriptionFilterInput]
   id: IntPredicateInput
   is_active: Boolean
 }
 
 input FiltersUserFilterInput {
+  _and: [FiltersUserFilterInput]
+  _or: [FiltersUserFilterInput]
   id: IntPredicateInput
   is_me: Boolean
 }
 
 input FiltersWeaknessFilterInput {
+  _and: [FiltersWeaknessFilterInput]
+  _or: [FiltersWeaknessFilterInput]
   id: IntPredicateInput
   name: StringPredicateInput
 }
@@ -3483,11 +3501,12 @@ type Query implements Node {
     # add a page argument till Relay supports this
     page: Int = null
     pre_submission_review_states: [ReportPreSubmissionReviewStateEnum] = null
+    secure_order_by: FiltersReportFilterOrder
     state: ReportStateEnum
     substate: ReportStateEnum
     triage_dashboard: Boolean = false
     triage_dashboard_tab: String = null
-    where: FiltersReportFilterRootInput
+    where: FiltersReportFilterInput
     without_scope: Boolean = null
   ): ReportConnection
   resource(url: URI): ResourceInterface
@@ -3538,7 +3557,8 @@ type Query implements Node {
     order_by: TeamOrderInput
     permissions: [PermissionEnum] = []
     search: String
-    where: FiltersTeamFilterRootInput
+    secure_order_by: FiltersTeamFilterOrder
+    where: FiltersTeamFilterInput
   ): TeamConnection
   user(username: String!): User
   users(
@@ -4323,11 +4343,12 @@ type StructuredScope implements Node & ResourceInterface {
     # add a page argument till Relay supports this
     page: Int = null
     pre_submission_review_states: [ReportPreSubmissionReviewStateEnum] = null
+    secure_order_by: FiltersReportFilterOrder
     state: ReportStateEnum
     substate: ReportStateEnum
     triage_dashboard: Boolean = false
     triage_dashboard_tab: String = null
-    where: FiltersReportFilterRootInput
+    where: FiltersReportFilterInput
     without_scope: Boolean = null
   ): ReportConnection
   structured_scope_versions(
@@ -4849,7 +4870,8 @@ type Team implements Node & ResourceInterface {
     order_by: TeamOrderInput
     permissions: [PermissionEnum] = []
     search: String
-    where: FiltersTeamFilterRootInput
+    secure_order_by: FiltersTeamFilterOrder
+    where: FiltersTeamFilterInput
   ): TeamConnection
   handle: String!
   has_avatar: Boolean
@@ -5038,12 +5060,13 @@ type Team implements Node & ResourceInterface {
     # add a page argument till Relay supports this
     page: Int = null
     pre_submission_review_states: [ReportPreSubmissionReviewStateEnum] = null
+    secure_order_by: FiltersReportFilterOrder
     state: ReportStateEnum
     substate: ReportStateEnum
     triage_dashboard: Boolean = false
     triage_dashboard_tab: String = null
     violates_minimum_sla: SlaTypeEnum
-    where: FiltersReportFilterRootInput
+    where: FiltersReportFilterInput
     without_scope: Boolean = null
   ): ReportConnection
   resolution_time: Float
@@ -5446,8 +5469,6 @@ enum TeamOrderField {
   minimum_bounty
   name
   reports_resolved
-  response_efficiency
-  started_accepting_at
 }
 
 input TeamOrderInput {
@@ -6774,11 +6795,12 @@ type User implements Node & ResourceInterface {
     # add a page argument till Relay supports this
     page: Int = null
     pre_submission_review_states: [ReportPreSubmissionReviewStateEnum] = null
+    secure_order_by: FiltersReportFilterOrder
     state: ReportStateEnum
     substate: ReportStateEnum
     triage_dashboard: Boolean = false
     triage_dashboard_tab: String = null
-    where: FiltersReportFilterRootInput
+    where: FiltersReportFilterInput
     without_scope: Boolean = null
   ): ReportConnection
   reputation: Int
@@ -6843,7 +6865,8 @@ type User implements Node & ResourceInterface {
     order_by: TeamOrderInput
     permissions: [PermissionEnum] = []
     search: String
-    where: FiltersTeamFilterRootInput
+    secure_order_by: FiltersTeamFilterOrder
+    where: FiltersTeamFilterInput
   ): TeamConnection
   totp_enabled: Boolean
   totp_supported: Boolean
@@ -6870,7 +6893,8 @@ type User implements Node & ResourceInterface {
     order_by: TeamOrderInput
     permissions: [PermissionEnum] = []
     search: String
-    where: FiltersTeamFilterRootInput
+    secure_order_by: FiltersTeamFilterOrder
+    where: FiltersTeamFilterInput
   ): WhitelistedTeamConnection
 }
 
