@@ -4906,6 +4906,19 @@ type Team implements Node & ResourceInterface {
     order_by: TeamInboxViewOrder = {direction: ASC, field: position}
     visible: Boolean
   ): TeamInboxViewConnection
+  insights_team_weaknesses(
+    # Returns the elements in the list that come after the specified global ID.
+    after: String
+
+    # Returns the elements in the list that come before the specified global ID.
+    before: String
+
+    # Returns the first _n_ elements from the list.
+    first: Int
+
+    # Returns the last _n_ elements from the list.
+    last: Int
+  ): TeamWeaknessConnection
   internet_bug_bounty: Boolean
   invitation_rejection_survey_answers(
     # Returns the elements in the list that come after the specified global ID.
@@ -5229,22 +5242,6 @@ type Team implements Node & ResourceInterface {
     order_by: TeamMemberOrder = {direction: ASC, field: username}
   ): TeamMemberConnection
   team_profile: TeamCachedProfile
-  team_weaknesses(
-    # Returns the elements in the list that come after the specified global ID.
-    after: String
-
-    # Returns the elements in the list that come before the specified global ID.
-    before: String
-
-    # Returns the first _n_ elements from the list.
-    first: Int
-
-    # Returns the last _n_ elements from the list.
-    last: Int
-    order_by: TeamWeaknessesOrder = {field: id, direction: DESC}
-    state: TeamWeaknessStates
-    with_reports: Boolean
-  ): TeamWeaknessConnection
   triage_active: Boolean
   triage_bounty_management: String
   triage_enabled: Boolean
@@ -5546,22 +5543,11 @@ type TeamWeaknessEdge {
   node: TeamWeakness
 }
 
-# Fields on which a collection of reports can be ordered
-enum TeamWeaknessOrderField {
-  id
-  report_count
-}
-
 # Possible states of how a weakness can be configured for a team
 enum TeamWeaknessStates {
   disabled
   enabled
   hidden
-}
-
-input TeamWeaknessesOrder {
-  direction: OrderDirection!
-  field: TeamWeaknessOrderField!
 }
 
 # Triage meta
