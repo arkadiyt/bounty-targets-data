@@ -5328,6 +5328,17 @@
     "targets": {
       "in_scope": [
         {
+          "asset_identifier": "api.mapbox.com",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Our APIs are the primary interface to Mapbox for many of our customers, and all actions a customer can take on their account run through them. ",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
           "asset_identifier": "https://github.com/mapbox",
           "asset_type": "SOURCE_CODE",
           "availability_requirement": "medium",
@@ -5414,6 +5425,17 @@
           "eligible_for_bounty": false,
           "eligible_for_submission": false,
           "instruction": "- `status.mapbox.com` - please instead report to the [StatusPage.io bug bounty program](https://bugcrowd.com/statuspage)\n- `email.mapbox.com`\n- [Mapbox Studio Classic](https://www.mapbox.com/mapbox-studio-classic/)\n- [Tilemill](https://www.mapbox.com/tilemill/)\n- [Legacy iOS SDK](https://github.com/mapbox/mapbox-ios-sdk-legacy)\n- [Legacy Android SDK](https://github.com/mapbox/mapbox-android-sdk-legacy)\n- [osm-navigation-map](https://github.com/mapbox/osm-navigation-map)(deprecated)",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "geojson.io",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "Geojson.io is considered deprecated and no longer maintained. The original developer has forked the code and maintains <https://geojson.net> . As such, Mapbox considers <https://geojson.io> to be out of scope for our security program.",
           "integrity_requirement": null,
           "max_severity": "none"
         }
