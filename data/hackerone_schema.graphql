@@ -3653,7 +3653,7 @@ type Report implements Node & ResourceInterface {
     # Returns the last _n_ elements from the list.
     last: Int
     not_types: [ActivityTypes]
-    order_by: ActivityOrderInput
+    order_by: ActivityOrderInput = {direction: DESC, field: created_at}
     types: [ActivityTypes]
 
     # A timestamp encoded as a string that. When provided, only activities with a
@@ -4763,7 +4763,7 @@ type Team implements Node & ResourceInterface {
     # Returns the last _n_ elements from the list.
     last: Int
     not_types: [ActivityTypes]
-    order_by: ActivityOrderInput
+    order_by: ActivityOrderInput = {direction: DESC, field: created_at}
     types: [ActivityTypes]
 
     # A timestamp encoded as a string that. When provided, only activities with a
