@@ -1016,6 +1016,9 @@ type BadgesUsersConnection {
   # A list of edges.
   edges: [BadgesUsersEdge]
 
+  # A list of nodes.
+  nodes: [BadgesUsers]
+
   # Information to aid in pagination.
   pageInfo: PageInfo!
 }
@@ -1042,10 +1045,10 @@ type BeneficiaryRequiredDetail implements Node {
   bank_account_country: String!
   beneficiary_country: String!
   beneficiary_required_details(
-    # Returns the elements in the list that come after the specified global ID.
+    # Returns the elements in the list that come after the specified cursor.
     after: String
 
-    # Returns the elements in the list that come before the specified global ID.
+    # Returns the elements in the list that come before the specified cursor.
     before: String
 
     # Returns the first _n_ elements from the list.
@@ -1067,10 +1070,10 @@ input BeneficiaryRequiredDetailInput {
 type BeneficiaryRequiredDetails implements Node {
   beneficiary_entity_type: String!
   beneficiary_required_fields(
-    # Returns the elements in the list that come after the specified global ID.
+    # Returns the elements in the list that come after the specified cursor.
     after: String
 
-    # Returns the elements in the list that come before the specified global ID.
+    # Returns the elements in the list that come before the specified cursor.
     before: String
 
     # Returns the first _n_ elements from the list.
@@ -1089,6 +1092,9 @@ type BeneficiaryRequiredDetails implements Node {
 type BeneficiaryRequiredDetailsConnection {
   # A list of edges.
   edges: [BeneficiaryRequiredDetailsEdge]
+
+  # A list of nodes.
+  nodes: [BeneficiaryRequiredDetails]
 
   # Information to aid in pagination.
   pageInfo: PageInfo!
@@ -1115,6 +1121,9 @@ type BeneficiaryRequiredField implements Node {
 type BeneficiaryRequiredFieldConnection {
   # A list of edges.
   edges: [BeneficiaryRequiredFieldEdge]
+
+  # A list of nodes.
+  nodes: [BeneficiaryRequiredField]
 
   # Information to aid in pagination.
   pageInfo: PageInfo!
@@ -1196,10 +1205,10 @@ enum BountyStatusEnum {
 type BountyTable implements Node & ResourceInterface {
   _id: ID!
   bounty_table_rows(
-    # Returns the elements in the list that come after the specified global ID.
+    # Returns the elements in the list that come after the specified cursor.
     after: String
 
-    # Returns the elements in the list that come before the specified global ID.
+    # Returns the elements in the list that come before the specified cursor.
     before: String
 
     # Returns the first _n_ elements from the list.
@@ -1324,10 +1333,10 @@ type Cluster implements Node {
   name: String!
   updated_at: DateTime!
   weaknesses(
-    # Returns the elements in the list that come after the specified global ID.
+    # Returns the elements in the list that come after the specified cursor.
     after: String
 
-    # Returns the elements in the list that come before the specified global ID.
+    # Returns the elements in the list that come before the specified cursor.
     before: String
 
     # Returns the first _n_ elements from the list.
@@ -1394,8 +1403,6 @@ type CoinbasePayoutPreferenceType implements Node & PayoutPreferenceInterface {
   _id: ID!
   default: Boolean
   email: String
-
-  # ID of the object.
   id: ID!
 }
 
@@ -2117,8 +2124,6 @@ enum CurrencycloudBankTransferPaymentType {
 type CurrencycloudBankTransferPayoutPreferenceType implements Node & PayoutPreferenceInterface {
   _id: ID!
   default: Boolean
-
-  # ID of the object.
   id: ID!
   name: String
 }
@@ -2527,6 +2532,9 @@ type ExpressionConnection {
   # A list of edges.
   edges: [ExpressionEdge]
 
+  # A list of nodes.
+  nodes: [Expression]
+
   # Information to aid in pagination.
   pageInfo: PageInfo!
 }
@@ -2566,8 +2574,6 @@ type ExternalProgram implements Node {
   _id: ID!
   about: String
   handle: String!
-
-  # ID of the object.
   id: ID!
   name: String!
   profile_picture(size: ProfilePictureSizes!): String!
@@ -2578,6 +2584,9 @@ type ExternalProgram implements Node {
 type ExternalProgramConnection {
   # A list of edges.
   edges: [ExternalProgramEdge]
+
+  # A list of nodes.
+  nodes: [ExternalProgram]
 
   # Information to aid in pagination.
   pageInfo: PageInfo!
@@ -2774,8 +2783,6 @@ type HackeronePayrollPayoutPreferenceType implements Node & PayoutPreferenceInte
   _id: ID!
   default: Boolean
   email: String
-
-  # ID of the object.
   id: ID!
 }
 
@@ -3367,8 +3374,6 @@ type PaypalPayoutPreferenceType implements Node & PayoutPreferenceInterface {
   _id: ID!
   default: Boolean
   email: String
-
-  # ID of the object.
   id: ID!
 }
 
@@ -3563,10 +3568,10 @@ type PublishPolicyPayload implements MutationResult {
 type Query implements Node {
   bank_transfer_reference: BankTransferReference
   clusters(
-    # Returns the elements in the list that come after the specified global ID.
+    # Returns the elements in the list that come after the specified cursor.
     after: String
 
-    # Returns the elements in the list that come before the specified global ID.
+    # Returns the elements in the list that come before the specified cursor.
     before: String
 
     # Returns the first _n_ elements from the list.
@@ -3580,10 +3585,10 @@ type Query implements Node {
   embedded_submission_form(uuid: String!): EmbeddedSubmissionForm
   external_program(handle: String!): ExternalProgram
   external_programs(
-    # Returns the elements in the list that come after the specified global ID.
+    # Returns the elements in the list that come after the specified cursor.
     after: String
 
-    # Returns the elements in the list that come before the specified global ID.
+    # Returns the elements in the list that come before the specified cursor.
     before: String
 
     # Returns the first _n_ elements from the list.
@@ -3594,10 +3599,10 @@ type Query implements Node {
     search_input: String
   ): ExternalProgramConnection
   hacktivity_items(
-    # Returns the elements in the list that come after the specified global ID.
+    # Returns the elements in the list that come after the specified cursor.
     after: String
 
-    # Returns the elements in the list that come before the specified global ID.
+    # Returns the elements in the list that come before the specified cursor.
     before: String
 
     # Returns the first _n_ elements from the list.
@@ -3623,10 +3628,10 @@ type Query implements Node {
   report(id: Int!): Report
   report_retest_user(activity_id: Int!): ReportRetestUser
   reports(
-    # Returns the elements in the list that come after the specified global ID.
+    # Returns the elements in the list that come after the specified cursor.
     after: String
 
-    # Returns the elements in the list that come before the specified global ID.
+    # Returns the elements in the list that come before the specified cursor.
     before: String
     database_id: Int = null
     filter: ReportFilterInput
@@ -3662,10 +3667,10 @@ type Query implements Node {
   session: Session
   severity_calculator: SeverityCalculator
   sla_statuses(
-    # Returns the elements in the list that come after the specified global ID.
+    # Returns the elements in the list that come after the specified cursor.
     after: String
 
-    # Returns the elements in the list that come before the specified global ID.
+    # Returns the elements in the list that come before the specified cursor.
     before: String
 
     # Returns the first _n_ elements from the list.
@@ -3677,10 +3682,10 @@ type Query implements Node {
     team_states: [TeamState]
   ): SlaStatusConnection
   surveys(
-    # Returns the elements in the list that come after the specified global ID.
+    # Returns the elements in the list that come after the specified cursor.
     after: String
 
-    # Returns the elements in the list that come before the specified global ID.
+    # Returns the elements in the list that come before the specified cursor.
     before: String
     category: SurveyCategoryEnum
 
@@ -3692,10 +3697,10 @@ type Query implements Node {
   ): SurveyConnectionType
   team(handle: String!): Team
   teams(
-    # Returns the elements in the list that come after the specified global ID.
+    # Returns the elements in the list that come after the specified cursor.
     after: String
 
-    # Returns the elements in the list that come before the specified global ID.
+    # Returns the elements in the list that come before the specified cursor.
     before: String
 
     # Returns the first _n_ elements from the list.
@@ -3711,10 +3716,10 @@ type Query implements Node {
   ): TeamConnection
   user(username: String!): User
   users(
-    # Returns the elements in the list that come after the specified global ID.
+    # Returns the elements in the list that come after the specified cursor.
     after: String
 
-    # Returns the elements in the list that come before the specified global ID.
+    # Returns the elements in the list that come before the specified cursor.
     before: String
 
     # Returns the first _n_ elements from the list.
@@ -3760,10 +3765,10 @@ type RemoveBountyTablePayload implements MutationResult {
 type Report implements Node & ResourceInterface {
   _id: ID!
   activities(
-    # Returns the elements in the list that come after the specified global ID.
+    # Returns the elements in the list that come after the specified cursor.
     after: String
 
-    # Returns the elements in the list that come before the specified global ID.
+    # Returns the elements in the list that come before the specified cursor.
     before: String
 
     # Returns the first _n_ elements from the list.
@@ -3851,8 +3856,13 @@ type ReportConnection {
   # A list of edges.
   edges: [ReportEdge]
 
+  # A list of nodes.
+  nodes: [Report]
+
   # Information to aid in pagination.
   pageInfo: PageInfo!
+
+  # Int
   total_count: Int!
 }
 
@@ -3960,10 +3970,10 @@ type ReportRetest {
   id: ID!
   report: Report
   report_retest_users(
-    # Returns the elements in the list that come after the specified global ID.
+    # Returns the elements in the list that come after the specified cursor.
     after: String
 
-    # Returns the elements in the list that come before the specified global ID.
+    # Returns the elements in the list that come before the specified cursor.
     before: String
 
     # Returns the first _n_ elements from the list.
@@ -3994,8 +4004,13 @@ type ReportRetestUserConnection {
   # A list of edges.
   edges: [ReportRetestUserEdge]
 
+  # A list of nodes.
+  nodes: [ReportRetestUser]
+
   # Information to aid in pagination.
   pageInfo: PageInfo!
+
+  # Int
   total_count: Int!
 }
 
@@ -4033,16 +4048,6 @@ input ReportStateEnumPredicateInput {
   _lte: ReportStateEnum
   _neq: ReportStateEnum
   _nin: [ReportStateEnum]
-}
-
-# The connection type for User.
-type ReporterConnection {
-  # A list of edges.
-  edges: [UserEdge]
-
-  # Information to aid in pagination.
-  pageInfo: PageInfo!
-  total_count: Int!
 }
 
 # Represents a type that can be retrieved by a URL.
@@ -4291,7 +4296,6 @@ enum SlaTypeEnum {
 
 # Slack channel
 type SlackChannel implements Node {
-  # ID of the object.
   id: ID!
   name: String!
 }
@@ -4367,8 +4371,6 @@ type SlackUser implements Node {
   avatar_small: String!
   deleted: Boolean!
   email: String!
-
-  # ID of the object.
   id: ID!
   name: String!
   real_name: String
@@ -4465,10 +4467,10 @@ type StructuredScope implements Node & ResourceInterface {
   reference: String
   rendered_instruction: String
   reports(
-    # Returns the elements in the list that come after the specified global ID.
+    # Returns the elements in the list that come after the specified cursor.
     after: String
 
-    # Returns the elements in the list that come before the specified global ID.
+    # Returns the elements in the list that come before the specified cursor.
     before: String
     database_id: Int = null
     filter: ReportFilterInput
@@ -4501,10 +4503,10 @@ type StructuredScope implements Node & ResourceInterface {
     without_scope: Boolean = null
   ): ReportConnection
   structured_scope_versions(
-    # Returns the elements in the list that come after the specified global ID.
+    # Returns the elements in the list that come after the specified cursor.
     after: String
 
-    # Returns the elements in the list that come before the specified global ID.
+    # Returns the elements in the list that come before the specified cursor.
     before: String
 
     # Returns the first _n_ elements from the list.
@@ -4656,10 +4658,10 @@ type Survey implements Node & ResourceInterface {
   id: ID!
   question: String!
   structured_responses(
-    # Returns the elements in the list that come after the specified global ID.
+    # Returns the elements in the list that come after the specified cursor.
     after: String
 
-    # Returns the elements in the list that come before the specified global ID.
+    # Returns the elements in the list that come before the specified cursor.
     before: String
 
     # Returns the first _n_ elements from the list.
@@ -4679,10 +4681,10 @@ type SurveyAnswer implements Node {
   id: ID!
   source_type: String
   survey_structured_responses(
-    # Returns the elements in the list that come after the specified global ID.
+    # Returns the elements in the list that come after the specified cursor.
     after: String
 
-    # Returns the elements in the list that come before the specified global ID.
+    # Returns the elements in the list that come before the specified cursor.
     before: String
 
     # Returns the first _n_ elements from the list.
@@ -4815,13 +4817,19 @@ type Swag implements Node {
 
 # The connection type for Swag.
 type SwagConnection {
+  # Boolean
   any: Boolean!
 
   # A list of edges.
   edges: [SwagEdge]
 
+  # A list of nodes.
+  nodes: [Swag]
+
   # Information to aid in pagination.
   pageInfo: PageInfo!
+
+  # Int
   total_count: Int!
 }
 
@@ -4870,10 +4878,10 @@ type Team implements Node & ResourceInterface {
   about: String
   abuse: Boolean
   activities(
-    # Returns the elements in the list that come after the specified global ID.
+    # Returns the elements in the list that come after the specified cursor.
     after: String
 
-    # Returns the elements in the list that come before the specified global ID.
+    # Returns the elements in the list that come before the specified cursor.
     before: String
 
     # Returns the first _n_ elements from the list.
@@ -4900,10 +4908,10 @@ type Team implements Node & ResourceInterface {
   base_bounty: Int
   bookmarked: Boolean
   bookmarked_team_users(
-    # Returns the elements in the list that come after the specified global ID.
+    # Returns the elements in the list that come after the specified cursor.
     after: String
 
-    # Returns the elements in the list that come before the specified global ID.
+    # Returns the elements in the list that come before the specified cursor.
     before: String
 
     # Returns the first _n_ elements from the list.
@@ -4918,10 +4926,10 @@ type Team implements Node & ResourceInterface {
   bug_count: Int
   challenge_setting: ChallengeSetting
   child_teams(
-    # Returns the elements in the list that come after the specified global ID.
+    # Returns the elements in the list that come after the specified cursor.
     after: String
 
-    # Returns the elements in the list that come before the specified global ID.
+    # Returns the elements in the list that come before the specified cursor.
     before: String
 
     # Returns the first _n_ elements from the list.
@@ -4932,10 +4940,10 @@ type Team implements Node & ResourceInterface {
   ): TeamConnection
   claimed_credential: Credential
   common_responses(
-    # Returns the elements in the list that come after the specified global ID.
+    # Returns the elements in the list that come after the specified cursor.
     after: String
 
-    # Returns the elements in the list that come before the specified global ID.
+    # Returns the elements in the list that come before the specified cursor.
     before: String
 
     # Returns the first _n_ elements from the list.
@@ -4949,10 +4957,10 @@ type Team implements Node & ResourceInterface {
   credential_instruction: String
   credential_instruction_html: String
   credentials(
-    # Returns the elements in the list that come after the specified global ID.
+    # Returns the elements in the list that come after the specified cursor.
     after: String
 
-    # Returns the elements in the list that come before the specified global ID.
+    # Returns the elements in the list that come before the specified cursor.
     before: String
 
     # Returns the first _n_ elements from the list.
@@ -4966,10 +4974,10 @@ type Team implements Node & ResourceInterface {
   critical_submissions_enabled: Boolean
   currency: String
   cve_requests(
-    # Returns the elements in the list that come after the specified global ID.
+    # Returns the elements in the list that come after the specified cursor.
     after: String
 
-    # Returns the elements in the list that come before the specified global ID.
+    # Returns the elements in the list that come before the specified cursor.
     before: String
     database_id: Int = null
 
@@ -4980,10 +4988,10 @@ type Team implements Node & ResourceInterface {
     last: Int
   ): CveRequestsConnection
   embedded_submission_domains(
-    # Returns the elements in the list that come after the specified global ID.
+    # Returns the elements in the list that come after the specified cursor.
     after: String
 
-    # Returns the elements in the list that come before the specified global ID.
+    # Returns the elements in the list that come before the specified cursor.
     before: String
 
     # Returns the first _n_ elements from the list.
@@ -4994,10 +5002,10 @@ type Team implements Node & ResourceInterface {
   ): EmbeddedSubmissionDomainConnectionType
   embedded_submission_form_enabled: Boolean!
   embedded_submission_forms(
-    # Returns the elements in the list that come after the specified global ID.
+    # Returns the elements in the list that come after the specified cursor.
     after: String
 
-    # Returns the elements in the list that come before the specified global ID.
+    # Returns the elements in the list that come before the specified cursor.
     before: String
 
     # Returns the first _n_ elements from the list.
@@ -5015,10 +5023,10 @@ type Team implements Node & ResourceInterface {
   grace_period_remaining_in_days: Int
   hackerone_to_jira_events_configuration: HackeroneToJiraEventsConfiguration
   hackers_also_viewed(
-    # Returns the elements in the list that come after the specified global ID.
+    # Returns the elements in the list that come after the specified cursor.
     after: String
 
-    # Returns the elements in the list that come before the specified global ID.
+    # Returns the elements in the list that come before the specified cursor.
     before: String
 
     # Returns the first _n_ elements from the list.
@@ -5051,10 +5059,10 @@ type Team implements Node & ResourceInterface {
   i_can_view_weaknesses: Boolean
   id: ID!
   inbox_views(
-    # Returns the elements in the list that come after the specified global ID.
+    # Returns the elements in the list that come after the specified cursor.
     after: String
 
-    # Returns the elements in the list that come before the specified global ID.
+    # Returns the elements in the list that come before the specified cursor.
     before: String
 
     # Returns the first _n_ elements from the list.
@@ -5066,10 +5074,10 @@ type Team implements Node & ResourceInterface {
     visible: Boolean
   ): TeamInboxViewConnection
   insights_team_weaknesses(
-    # Returns the elements in the list that come after the specified global ID.
+    # Returns the elements in the list that come after the specified cursor.
     after: String
 
-    # Returns the elements in the list that come before the specified global ID.
+    # Returns the elements in the list that come before the specified cursor.
     before: String
 
     # Returns the first _n_ elements from the list.
@@ -5080,10 +5088,10 @@ type Team implements Node & ResourceInterface {
   ): TeamWeaknessConnection
   internet_bug_bounty: Boolean
   invitation_rejection_survey_answers(
-    # Returns the elements in the list that come after the specified global ID.
+    # Returns the elements in the list that come after the specified cursor.
     after: String
 
-    # Returns the elements in the list that come before the specified global ID.
+    # Returns the elements in the list that come before the specified cursor.
     before: String
 
     # A date string that, when provided, only survey answers with a created_at
@@ -5117,10 +5125,10 @@ type Team implements Node & ResourceInterface {
   offers_swag: Boolean
   only_cleared_hackers: Boolean
   participants(
-    # Returns the elements in the list that come after the specified global ID.
+    # Returns the elements in the list that come after the specified cursor.
     after: String
 
-    # Returns the elements in the list that come before the specified global ID.
+    # Returns the elements in the list that come before the specified cursor.
     before: String
 
     # Returns the first _n_ elements from the list.
@@ -5136,10 +5144,10 @@ type Team implements Node & ResourceInterface {
   policy: String
   policy_html: String
   posts(
-    # Returns the elements in the list that come after the specified global ID.
+    # Returns the elements in the list that come after the specified cursor.
     after: String
 
-    # Returns the elements in the list that come before the specified global ID.
+    # Returns the elements in the list that come before the specified cursor.
     before: String
 
     # Returns the first _n_ elements from the list.
@@ -5151,10 +5159,10 @@ type Team implements Node & ResourceInterface {
   ): TeamPostConnection
   product_edition: ProductEdition
   profile_metrics_snapshots(
-    # Returns the elements in the list that come after the specified global ID.
+    # Returns the elements in the list that come after the specified cursor.
     after: String
 
-    # Returns the elements in the list that come before the specified global ID.
+    # Returns the elements in the list that come before the specified cursor.
     before: String
 
     # Returns the first _n_ elements from the list.
@@ -5165,10 +5173,10 @@ type Team implements Node & ResourceInterface {
   ): ProfileMetricsSnapshotConnection
   profile_picture(size: ProfilePictureSizes!): String!
   program_leave_survey_answers(
-    # Returns the elements in the list that come after the specified global ID.
+    # Returns the elements in the list that come after the specified cursor.
     after: String
 
-    # Returns the elements in the list that come before the specified global ID.
+    # Returns the elements in the list that come before the specified cursor.
     before: String
 
     # A date string that, when provided, only survey answers with a created_at
@@ -5192,10 +5200,10 @@ type Team implements Node & ResourceInterface {
   report_submission_form_intro_html: String
   report_template: String
   reporters(
-    # Returns the elements in the list that come after the specified global ID.
+    # Returns the elements in the list that come after the specified cursor.
     after: String
 
-    # Returns the elements in the list that come before the specified global ID.
+    # Returns the elements in the list that come before the specified cursor.
     before: String
 
     # Returns the first _n_ elements from the list.
@@ -5203,12 +5211,12 @@ type Team implements Node & ResourceInterface {
 
     # Returns the last _n_ elements from the list.
     last: Int
-  ): ReporterConnection
+  ): UserConnection
   reports(
-    # Returns the elements in the list that come after the specified global ID.
+    # Returns the elements in the list that come after the specified cursor.
     after: String
 
-    # Returns the elements in the list that come before the specified global ID.
+    # Returns the elements in the list that come before the specified cursor.
     before: String
     database_id: Int = null
     filter: ReportFilterInput
@@ -5254,10 +5262,10 @@ type Team implements Node & ResourceInterface {
   sla_failed_count: Int
   sla_setting: SlaSetting
   sla_snapshots(
-    # Returns the elements in the list that come after the specified global ID.
+    # Returns the elements in the list that come after the specified cursor.
     after: String
 
-    # Returns the elements in the list that come before the specified global ID.
+    # Returns the elements in the list that come before the specified cursor.
     before: String
     end_date: DateTime
 
@@ -5272,10 +5280,10 @@ type Team implements Node & ResourceInterface {
   sla_status: SlaStatus
   slack_integration: SlackIntegration
   slack_pipelines(
-    # Returns the elements in the list that come after the specified global ID.
+    # Returns the elements in the list that come after the specified cursor.
     after: String
 
-    # Returns the elements in the list that come before the specified global ID.
+    # Returns the elements in the list that come before the specified cursor.
     before: String
 
     # Returns the first _n_ elements from the list.
@@ -5285,10 +5293,10 @@ type Team implements Node & ResourceInterface {
     last: Int
   ): SlackPipelineConnection
   soft_launch_invitations(
-    # Returns the elements in the list that come after the specified global ID.
+    # Returns the elements in the list that come after the specified cursor.
     after: String
 
-    # Returns the elements in the list that come before the specified global ID.
+    # Returns the elements in the list that come before the specified cursor.
     before: String
 
     # Returns the first _n_ elements from the list.
@@ -5300,10 +5308,10 @@ type Team implements Node & ResourceInterface {
   started_accepting_at: DateTime
   state: TeamState
   static_participants(
-    # Returns the elements in the list that come after the specified global ID.
+    # Returns the elements in the list that come after the specified cursor.
     after: String
 
-    # Returns the elements in the list that come before the specified global ID.
+    # Returns the elements in the list that come before the specified cursor.
     before: String
 
     # Returns the first _n_ elements from the list.
@@ -5314,11 +5322,11 @@ type Team implements Node & ResourceInterface {
   ): StaticParticipantConnection
   structured_policy: StructuredPolicy
   structured_scope_versions(
-    # Returns the elements in the list that come after the specified global ID.
+    # Returns the elements in the list that come after the specified cursor.
     after: String
     archived: Boolean
 
-    # Returns the elements in the list that come before the specified global ID.
+    # Returns the elements in the list that come before the specified cursor.
     before: String
 
     # Returns the first _n_ elements from the list.
@@ -5328,12 +5336,12 @@ type Team implements Node & ResourceInterface {
     last: Int
   ): StructuredScopeVersionConnection
   structured_scopes(
-    # Returns the elements in the list that come after the specified global ID.
+    # Returns the elements in the list that come after the specified cursor.
     after: String
     archived: Boolean = null
     asset_type: String = null
 
-    # Returns the elements in the list that come before the specified global ID.
+    # Returns the elements in the list that come before the specified cursor.
     before: String
     eligible_for_submission: Boolean = null
 
@@ -5347,10 +5355,10 @@ type Team implements Node & ResourceInterface {
   submission_requirements: SubmissionRequirements
   submission_state: SubmissionStateEnum
   survey_answers(
-    # Returns the elements in the list that come after the specified global ID.
+    # Returns the elements in the list that come after the specified cursor.
     after: String
 
-    # Returns the elements in the list that come before the specified global ID.
+    # Returns the elements in the list that come before the specified cursor.
     before: String
 
     # A date string that, when provided, only survey answers with a created_at
@@ -5371,10 +5379,10 @@ type Team implements Node & ResourceInterface {
     start_date: String
   ): SurveyAnswerConnection
   swag(
-    # Returns the elements in the list that come after the specified global ID.
+    # Returns the elements in the list that come after the specified cursor.
     after: String
 
-    # Returns the elements in the list that come before the specified global ID.
+    # Returns the elements in the list that come before the specified cursor.
     before: String
 
     # Returns the first _n_ elements from the list.
@@ -5387,10 +5395,10 @@ type Team implements Node & ResourceInterface {
   team_display_options: TeamDisplayOptions
   team_member_groups: [TeamMemberGroup]
   team_members(
-    # Returns the elements in the list that come after the specified global ID.
+    # Returns the elements in the list that come after the specified cursor.
     after: String
 
-    # Returns the elements in the list that come before the specified global ID.
+    # Returns the elements in the list that come before the specified cursor.
     before: String
 
     # Returns the first _n_ elements from the list.
@@ -5410,10 +5418,10 @@ type Team implements Node & ResourceInterface {
   triaged_staleness_threshold: Int
   triaged_staleness_threshold_limit: Int
   triggers(
-    # Returns the elements in the list that come after the specified global ID.
+    # Returns the elements in the list that come after the specified cursor.
     after: String
 
-    # Returns the elements in the list that come before the specified global ID.
+    # Returns the elements in the list that come before the specified cursor.
     before: String
 
     # Returns the first _n_ elements from the list.
@@ -5429,10 +5437,10 @@ type Team implements Node & ResourceInterface {
   url: URI!
   vpn_enabled: Boolean
   weaknesses(
-    # Returns the elements in the list that come after the specified global ID.
+    # Returns the elements in the list that come after the specified cursor.
     after: String
 
-    # Returns the elements in the list that come before the specified global ID.
+    # Returns the elements in the list that come before the specified cursor.
     before: String
     cluster_id: ID = null
 
@@ -5446,10 +5454,10 @@ type Team implements Node & ResourceInterface {
   ): DeprecatedTeamWeaknessConnection
   website: String
   whitelisted_hackers(
-    # Returns the elements in the list that come after the specified global ID.
+    # Returns the elements in the list that come after the specified cursor.
     after: String
 
-    # Returns the elements in the list that come before the specified global ID.
+    # Returns the elements in the list that come before the specified cursor.
     before: String
 
     # Returns the first _n_ elements from the list.
@@ -5457,7 +5465,7 @@ type Team implements Node & ResourceInterface {
 
     # Returns the last _n_ elements from the list.
     last: Int
-  ): WhitelistedHackerConnection
+  ): UserConnection
 }
 
 # Cached metrics of a Team
@@ -5598,8 +5606,6 @@ type TeamMemberEdge {
 type TeamMemberGroup implements Node {
   _id: ID!
   created_at: DateTime
-
-  # ID of the object.
   id: ID!
   immutable: Boolean!
   key: String
@@ -5724,10 +5730,10 @@ type Trigger implements Node & ResourceInterface {
   created_at: DateTime!
   expression_operator: String!
   expressions(
-    # Returns the elements in the list that come after the specified global ID.
+    # Returns the elements in the list that come after the specified cursor.
     after: String
 
-    # Returns the elements in the list that come before the specified global ID.
+    # Returns the elements in the list that come before the specified cursor.
     before: String
 
     # Returns the first _n_ elements from the list.
@@ -5741,10 +5747,10 @@ type Trigger implements Node & ResourceInterface {
   team: Team!
   title: String
   trigger_action_logs(
-    # Returns the elements in the list that come after the specified global ID.
+    # Returns the elements in the list that come after the specified cursor.
     after: String
 
-    # Returns the elements in the list that come before the specified global ID.
+    # Returns the elements in the list that come before the specified cursor.
     before: String
 
     # Returns the first _n_ elements from the list.
@@ -6798,10 +6804,10 @@ type User implements Node & ResourceInterface {
   anc_triager: Boolean
   authentication_service: AuthenticationServiceEnum!
   badges(
-    # Returns the elements in the list that come after the specified global ID.
+    # Returns the elements in the list that come after the specified cursor.
     after: String
 
-    # Returns the elements in the list that come before the specified global ID.
+    # Returns the elements in the list that come before the specified cursor.
     before: String
 
     # Returns the first _n_ elements from the list.
@@ -6813,10 +6819,10 @@ type User implements Node & ResourceInterface {
   bio: String
   blacklisted_from_hacker_publish: Boolean!
   bounties(
-    # Returns the elements in the list that come after the specified global ID.
+    # Returns the elements in the list that come after the specified cursor.
     after: String
 
-    # Returns the elements in the list that come before the specified global ID.
+    # Returns the elements in the list that come before the specified cursor.
     before: String
     currency: CurrencyCode = null
 
@@ -6830,10 +6836,10 @@ type User implements Node & ResourceInterface {
   demo_hacker: Boolean!
   disabled: Boolean!
   duplicate_users(
-    # Returns the elements in the list that come after the specified global ID.
+    # Returns the elements in the list that come after the specified cursor.
     after: String
 
-    # Returns the elements in the list that come before the specified global ID.
+    # Returns the elements in the list that come before the specified cursor.
     before: String
 
     # Returns the first _n_ elements from the list.
@@ -6857,10 +6863,10 @@ type User implements Node & ResourceInterface {
   impact_percentile: Float
   invitation_preference: InvitationPreferenceTypeEnum
   invitation_queues(
-    # Returns the elements in the list that come after the specified global ID.
+    # Returns the elements in the list that come after the specified cursor.
     after: String
 
-    # Returns the elements in the list that come before the specified global ID.
+    # Returns the elements in the list that come before the specified cursor.
     before: String
     filter: String = null
 
@@ -6875,10 +6881,10 @@ type User implements Node & ResourceInterface {
   member_of_verified_team: Boolean
   membership(team_handle: String!): TeamMember
   memberships(
-    # Returns the elements in the list that come after the specified global ID.
+    # Returns the elements in the list that come after the specified cursor.
     after: String
 
-    # Returns the elements in the list that come before the specified global ID.
+    # Returns the elements in the list that come before the specified cursor.
     before: String
 
     # Returns the first _n_ elements from the list.
@@ -6897,10 +6903,10 @@ type User implements Node & ResourceInterface {
   profile_picture(size: ProfilePictureSizes!): String!
   profile_pictures: Hash!
   program_health_acknowledgements(
-    # Returns the elements in the list that come after the specified global ID.
+    # Returns the elements in the list that come after the specified cursor.
     after: String
 
-    # Returns the elements in the list that come before the specified global ID.
+    # Returns the elements in the list that come before the specified cursor.
     before: String
 
     # Returns the first _n_ elements from the list.
@@ -6913,10 +6919,10 @@ type User implements Node & ResourceInterface {
   rank: Int
   remaining_reports(team_handle: String!): Int
   report_retest_users(
-    # Returns the elements in the list that come after the specified global ID.
+    # Returns the elements in the list that come after the specified cursor.
     after: String
 
-    # Returns the elements in the list that come before the specified global ID.
+    # Returns the elements in the list that come before the specified cursor.
     before: String
     completed: Boolean
 
@@ -6927,10 +6933,10 @@ type User implements Node & ResourceInterface {
     last: Int
   ): ReportRetestUserConnection
   reports(
-    # Returns the elements in the list that come after the specified global ID.
+    # Returns the elements in the list that come after the specified cursor.
     after: String
 
-    # Returns the elements in the list that come before the specified global ID.
+    # Returns the elements in the list that come before the specified cursor.
     before: String
     database_id: Int = null
     filter: ReportFilterInput
@@ -6965,10 +6971,10 @@ type User implements Node & ResourceInterface {
   reputation: Int
   saml_enabled: Boolean
   sessions(
-    # Returns the elements in the list that come after the specified global ID.
+    # Returns the elements in the list that come after the specified cursor.
     after: String
 
-    # Returns the elements in the list that come before the specified global ID.
+    # Returns the elements in the list that come before the specified cursor.
     before: String
 
     # Returns the first _n_ elements from the list.
@@ -6980,10 +6986,10 @@ type User implements Node & ResourceInterface {
   signal: Float
   signal_percentile: Float
   soft_launch_invitations(
-    # Returns the elements in the list that come after the specified global ID.
+    # Returns the elements in the list that come after the specified cursor.
     after: String
 
-    # Returns the elements in the list that come before the specified global ID.
+    # Returns the elements in the list that come before the specified cursor.
     before: String
 
     # Returns the first _n_ elements from the list.
@@ -6996,10 +7002,10 @@ type User implements Node & ResourceInterface {
     team_handle: String = null
   ): SoftLaunchConnection
   swag(
-    # Returns the elements in the list that come after the specified global ID.
+    # Returns the elements in the list that come after the specified cursor.
     after: String
 
-    # Returns the elements in the list that come before the specified global ID.
+    # Returns the elements in the list that come before the specified cursor.
     before: String
 
     # Returns the first _n_ elements from the list.
@@ -7010,10 +7016,10 @@ type User implements Node & ResourceInterface {
   ): SwagConnection
   tax_form: TaxForm
   teams(
-    # Returns the elements in the list that come after the specified global ID.
+    # Returns the elements in the list that come after the specified cursor.
     after: String
 
-    # Returns the elements in the list that come before the specified global ID.
+    # Returns the elements in the list that come before the specified cursor.
     before: String
 
     # Returns the first _n_ elements from the list.
@@ -7038,10 +7044,10 @@ type User implements Node & ResourceInterface {
   vpn_instances: [VpnInstance]
   website: String
   whitelisted_teams(
-    # Returns the elements in the list that come after the specified global ID.
+    # Returns the elements in the list that come after the specified cursor.
     after: String
 
-    # Returns the elements in the list that come before the specified global ID.
+    # Returns the elements in the list that come before the specified cursor.
     before: String
 
     # Returns the first _n_ elements from the list.
@@ -7062,8 +7068,13 @@ type UserConnection {
   # A list of edges.
   edges: [UserEdge]
 
+  # A list of nodes.
+  nodes: [User]
+
   # Information to aid in pagination.
   pageInfo: PageInfo!
+
+  # Int
   total_count: Int!
 }
 
@@ -7163,10 +7174,10 @@ type VpnInstance implements Node {
 type Weakness implements Node {
   _id: ID!
   clusters(
-    # Returns the elements in the list that come after the specified global ID.
+    # Returns the elements in the list that come after the specified cursor.
     after: String
 
-    # Returns the elements in the list that come before the specified global ID.
+    # Returns the elements in the list that come before the specified cursor.
     before: String
 
     # Returns the first _n_ elements from the list.
@@ -7193,16 +7204,6 @@ input WeaknessOrder {
 # Fields on which a collection of weaknesses can be ordered
 enum WeaknessOrderField {
   name
-}
-
-# The connection type for User.
-type WhitelistedHackerConnection {
-  # A list of edges.
-  edges: [UserEdge]
-
-  # Information to aid in pagination.
-  pageInfo: PageInfo!
-  total_count: Int!
 }
 
 # The connection type for Team.
