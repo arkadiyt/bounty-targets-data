@@ -2773,7 +2773,7 @@ type HackerPublished implements HacktivityItemInterface & Node & ResourceInterfa
   id: ID!
   latest_disclosable_activity_at: DateTime
   report: Report!
-  reporter: User!
+  reporter: User
   team: Team
   url: URI!
 }
@@ -3527,7 +3527,7 @@ type PubliclyDisclosed implements HacktivityItemInterface & Node & ResourceInter
   latest_disclosable_action: String
   latest_disclosable_activity_at: DateTime
   report: Report!
-  reporter: User!
+  reporter: User
   team: Team
   total_awarded_amount: Float
   url: URI!
@@ -5867,7 +5867,7 @@ type Undisclosed implements HacktivityItemInterface & Node & ResourceInterface {
   id: ID!
   latest_disclosable_action: String
   latest_disclosable_activity_at: DateTime
-  reporter: User!
+  reporter: User
   team: Team
   total_awarded_amount: Float
   url: URI!
