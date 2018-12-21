@@ -2774,6 +2774,7 @@ type HackerPublished implements HacktivityItemInterface & Node & ResourceInterfa
   latest_disclosable_activity_at: DateTime
   report: Report!
   reporter: User
+  severity_rating: SeverityRatingEnum
   team: Team
   url: URI!
 }
@@ -3528,6 +3529,7 @@ type PubliclyDisclosed implements HacktivityItemInterface & Node & ResourceInter
   latest_disclosable_activity_at: DateTime
   report: Report!
   reporter: User
+  severity_rating: SeverityRatingEnum
   team: Team
   total_awarded_amount: Float
   url: URI!
