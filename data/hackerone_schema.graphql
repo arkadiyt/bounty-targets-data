@@ -4695,7 +4695,7 @@ type SurveyAnswer implements Node {
 
     # Returns the last _n_ elements from the list.
     last: Int
-  ): SurveyStructuredResponseConnectionType
+  ): SurveyStructuredResponsesConnectionType
   team: Team
   updated_at: DateTime
   user: User
@@ -4805,6 +4805,16 @@ enum SurveyStructuredResponseTypeEnum {
   specialization
   uninteresting
   unresponsive
+}
+
+# The connection type for SurveyStructuredResponse.
+type SurveyStructuredResponsesConnectionType {
+  # A list of edges.
+  edges: [SurveyStructuredResponseEdge]
+
+  # Information to aid in pagination.
+  pageInfo: PageInfo!
+  total_count: Int!
 }
 
 # A HackerOne swag awarded for a report
