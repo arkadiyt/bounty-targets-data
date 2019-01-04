@@ -839,6 +839,9 @@ type ActivityConnection {
   edges: [ActivityUnionEdge]
   max_updated_at: DateTime
 
+  # A list of nodes.
+  nodes: [ActivityUnion]
+
   # Information to aid in pagination.
   pageInfo: PageInfo!
   total_count: Int!
@@ -2832,9 +2835,12 @@ type HackeroneToJiraEventsConfiguration implements Node {
 }
 
 # The connection type for HacktivityItemUnion.
-type HacktivityItemConnectionType {
+type HacktivityItemConnection {
   # A list of edges.
   edges: [HacktivityItemUnionEdge]
+
+  # A list of nodes.
+  nodes: [HacktivityItemUnion]
 
   # Information to aid in pagination.
   pageInfo: PageInfo!
@@ -2969,6 +2975,9 @@ union InvitationUnion = InvitationsSoftLaunch
 type InvitationUnionConnection {
   # A list of edges.
   edges: [InvitationUnionEdge]
+
+  # A list of nodes.
+  nodes: [InvitationUnion]
 
   # Information to aid in pagination.
   pageInfo: PageInfo!
@@ -3375,6 +3384,9 @@ type ParticipantConnection {
   # A list of edges.
   edges: [ParticipantWithReputationEdge]
 
+  # A list of nodes.
+  nodes: [User]
+
   # Information to aid in pagination.
   pageInfo: PageInfo!
   total_count: Int!
@@ -3658,7 +3670,7 @@ type Query implements Node {
     query: String
     secure_order_by: FiltersHacktivityItemFilterOrder
     where: FiltersHacktivityItemFilterInput
-  ): HacktivityItemConnectionType
+  ): HacktivityItemConnection
   id: ID!
   me: User
 
@@ -3738,7 +3750,7 @@ type Query implements Node {
 
     # Returns the last _n_ elements from the list.
     last: Int
-  ): SurveyConnectionType
+  ): SurveyConnection
   team(handle: String!): Team
   teams(
     # Returns the elements in the list that come after the specified cursor.
@@ -4269,6 +4281,9 @@ type SlaSnapshotConnection {
   edges: [SlaSnapshotEdge]
   group_by(period: SlaSnapshotIntervalEnum): [AggregatedSlaSnapshot]
 
+  # A list of nodes.
+  nodes: [SlaSnapshot]
+
   # Information to aid in pagination.
   pageInfo: PageInfo!
 }
@@ -4309,6 +4324,9 @@ type SlaStatus implements Node {
 type SlaStatusConnection {
   # A list of edges.
   edges: [SlaStatusEdge]
+
+  # A list of nodes.
+  nodes: [SlaStatus]
 
   # Information to aid in pagination.
   pageInfo: PageInfo!
@@ -4395,6 +4413,9 @@ type SlackPipelineConnection {
   # A list of edges.
   edges: [SlackPipelineEdge]
 
+  # A list of nodes.
+  nodes: [SlackPipeline]
+
   # Information to aid in pagination.
   pageInfo: PageInfo!
   total_count: Int!
@@ -4426,6 +4447,9 @@ type SoftLaunchConnection {
   # A list of edges.
   edges: [InvitationsSoftLaunchEdge]
 
+  # A list of nodes.
+  nodes: [InvitationsSoftLaunch]
+
   # Information to aid in pagination.
   pageInfo: PageInfo!
   total_count: Int!
@@ -4446,6 +4470,9 @@ type StaticParticipant implements Node {
 type StaticParticipantConnection {
   # A list of edges.
   edges: [StaticParticipantEdge]
+
+  # A list of nodes.
+  nodes: [StaticParticipant]
 
   # Information to aid in pagination.
   pageInfo: PageInfo!
@@ -4598,6 +4625,9 @@ type StructuredScopeConnection {
   # A list of edges.
   edges: [StructuredScopeEdge]
 
+  # A list of nodes.
+  nodes: [StructuredScope]
+
   # Information to aid in pagination.
   pageInfo: PageInfo!
   total_count: Int!
@@ -4630,6 +4660,9 @@ type StructuredScopeVersionConnection {
   edges: [StructuredScopeVersionEdge]
   max_updated_at: DateTime
 
+  # A list of nodes.
+  nodes: [StructuredScopeVersion]
+
   # Information to aid in pagination.
   pageInfo: PageInfo!
 }
@@ -4648,6 +4681,9 @@ type StructuredScopesConnection {
   # A list of edges.
   edges: [StructuredScopeEdge]
   max_updated_at: DateTime
+
+  # A list of nodes.
+  nodes: [StructuredScope]
 
   # Information to aid in pagination.
   pageInfo: PageInfo!
@@ -4714,7 +4750,7 @@ type Survey implements Node & ResourceInterface {
 
     # Returns the last _n_ elements from the list.
     last: Int
-  ): SurveyStructuredResponseConnectionType
+  ): SurveyStructuredResponseConnection
   url: URI!
 }
 
@@ -4737,7 +4773,7 @@ type SurveyAnswer implements Node {
 
     # Returns the last _n_ elements from the list.
     last: Int
-  ): SurveyStructuredResponsesConnectionType
+  ): SurveyStructuredResponseConnection
   team: Team
   updated_at: DateTime
   user: User
@@ -4747,6 +4783,9 @@ type SurveyAnswer implements Node {
 type SurveyAnswerConnection {
   # A list of edges.
   edges: [SurveyAnswerEdge]
+
+  # A list of nodes.
+  nodes: [SurveyAnswer]
 
   # Information to aid in pagination.
   pageInfo: PageInfo!
@@ -4786,9 +4825,12 @@ enum SurveyCategoryEnum {
 }
 
 # The connection type for Survey.
-type SurveyConnectionType {
+type SurveyConnection {
   # A list of edges.
   edges: [SurveyEdge]
+
+  # A list of nodes.
+  nodes: [Survey]
 
   # Information to aid in pagination.
   pageInfo: PageInfo!
@@ -4815,9 +4857,12 @@ type SurveyStructuredResponse implements Node {
 }
 
 # The connection type for SurveyStructuredResponse.
-type SurveyStructuredResponseConnectionType {
+type SurveyStructuredResponseConnection {
   # A list of edges.
   edges: [SurveyStructuredResponseEdge]
+
+  # A list of nodes.
+  nodes: [SurveyStructuredResponse]
 
   # Information to aid in pagination.
   pageInfo: PageInfo!
@@ -4847,16 +4892,6 @@ enum SurveyStructuredResponseTypeEnum {
   specialization
   uninteresting
   unresponsive
-}
-
-# The connection type for SurveyStructuredResponse.
-type SurveyStructuredResponsesConnectionType {
-  # A list of edges.
-  edges: [SurveyStructuredResponseEdge]
-
-  # Information to aid in pagination.
-  pageInfo: PageInfo!
-  total_count: Int!
 }
 
 # A HackerOne swag awarded for a report
@@ -5541,6 +5576,9 @@ type TeamConnection {
   # A list of edges.
   edges: [TeamEdge]
 
+  # A list of nodes.
+  nodes: [Team]
+
   # Information to aid in pagination.
   pageInfo: PageInfo!
   total_count: Int!
@@ -5599,6 +5637,9 @@ type TeamInboxViewConnection {
   # A list of edges.
   edges: [TeamInboxViewEdge]
 
+  # A list of nodes.
+  nodes: [TeamInboxView]
+
   # Information to aid in pagination.
   pageInfo: PageInfo!
   total_count: Int!
@@ -5642,6 +5683,9 @@ type TeamMember implements Node {
 type TeamMemberConnection {
   # A list of edges.
   edges: [TeamMemberEdge]
+
+  # A list of nodes.
+  nodes: [TeamMember]
 
   # Information to aid in pagination.
   pageInfo: PageInfo!
@@ -5697,6 +5741,9 @@ input TeamOrderInput {
 type TeamPostConnection {
   # A list of edges.
   edges: [PostEdge]
+
+  # A list of nodes.
+  nodes: [Post]
 
   # Information to aid in pagination.
   pageInfo: PageInfo!
@@ -5831,6 +5878,9 @@ type TriggerActionLogConnection {
   # A list of edges.
   edges: [TriggerActionLogEdge]
 
+  # A list of nodes.
+  nodes: [TriggerActionLog]
+
   # Information to aid in pagination.
   pageInfo: PageInfo!
   total_count: Int!
@@ -5849,6 +5899,9 @@ type TriggerActionLogEdge {
 type TriggerConnection {
   # A list of edges.
   edges: [TriggerEdge]
+
+  # A list of nodes.
+  nodes: [Trigger]
 
   # Information to aid in pagination.
   pageInfo: PageInfo!
@@ -7041,7 +7094,7 @@ type User implements Node & ResourceInterface {
 
     # Returns the last _n_ elements from the list.
     last: Int
-  ): UserSessionConnectionType
+  ): UserSessionConnection
   signal: Float
   signal_percentile: Float
   soft_launch_invitations(
@@ -7174,9 +7227,12 @@ type UserSession implements Node {
 }
 
 # The connection type for UserSession.
-type UserSessionConnectionType {
+type UserSessionConnection {
   # A list of edges.
   edges: [UserSessionEdge]
+
+  # A list of nodes.
+  nodes: [UserSession]
 
   # Information to aid in pagination.
   pageInfo: PageInfo!
@@ -7269,7 +7325,10 @@ enum WeaknessOrderField {
 # The connection type for Team.
 type WhitelistedTeamConnection {
   # A list of edges.
-  edges: [WhitelistedTeamInformationEdge]
+  edges: [WhitelistedTeamInformationEdgeType]
+
+  # A list of nodes.
+  nodes: [Team]
 
   # Information to aid in pagination.
   pageInfo: PageInfo!
@@ -7277,7 +7336,7 @@ type WhitelistedTeamConnection {
 }
 
 # An edge in a connection.
-type WhitelistedTeamInformationEdge {
+type WhitelistedTeamInformationEdgeType {
   # The participant's total bounty earned within the team
   bounty_earned: Float
 
