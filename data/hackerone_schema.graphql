@@ -1165,6 +1165,9 @@ type BountyConnection {
   # A list of edges.
   edges: [BountyEdge]
 
+  # A list of nodes.
+  nodes: [Bounty]
+
   # Information to aid in pagination.
   pageInfo: PageInfo!
   total_amount: Float!
@@ -1244,6 +1247,9 @@ type BountyTableRow implements Node & ResourceInterface {
 type BountyTableRowConnection {
   # A list of edges.
   edges: [BountyTableRowEdge]
+
+  # A list of nodes.
+  nodes: [BountyTableRow]
 
   # Information to aid in pagination.
   pageInfo: PageInfo!
@@ -1354,6 +1360,9 @@ type ClusterConnection {
   # A list of edges.
   edges: [ClusterEdge]
 
+  # A list of nodes.
+  nodes: [Cluster]
+
   # Information to aid in pagination.
   pageInfo: PageInfo!
   total_count: Int!
@@ -1382,6 +1391,9 @@ enum ClusterOrderField {
 type ClusterWeaknessConnection {
   # A list of edges.
   edges: [ClusterWeaknessEdge]
+
+  # A list of nodes.
+  nodes: [Weakness]
 
   # Information to aid in pagination.
   pageInfo: PageInfo!
@@ -1422,6 +1434,9 @@ type CommonResponse implements Node {
 type CommonResponseConnection {
   # A list of edges.
   edges: [CommonResponseEdge]
+
+  # A list of nodes.
+  nodes: [CommonResponse]
 
   # Information to aid in pagination.
   pageInfo: PageInfo!
@@ -2081,6 +2096,9 @@ type CredentialConnection {
   # A list of edges.
   edges: [CredentialEdge]
 
+  # A list of nodes.
+  nodes: [Credential]
+
   # Information to aid in pagination.
   pageInfo: PageInfo!
   total_count: Int!
@@ -2172,6 +2190,9 @@ enum CveRequestStateEnum {
 type CveRequestsConnection {
   # A list of edges.
   edges: [CveRequestEdge]
+
+  # A list of nodes.
+  nodes: [CveRequest]
 
   # Information to aid in pagination.
   pageInfo: PageInfo!
@@ -2350,6 +2371,9 @@ type DeprecatedTeamWeaknessConnection {
   # A list of edges.
   edges: [DeprecatedTeamWeaknessEdge]
 
+  # A list of nodes.
+  nodes: [Weakness]
+
   # Information to aid in pagination.
   pageInfo: PageInfo!
   total_count: Int!
@@ -2409,9 +2433,12 @@ type EmbeddedSubmissionDomain {
 }
 
 # The connection type for EmbeddedSubmissionDomain.
-type EmbeddedSubmissionDomainConnectionType {
+type EmbeddedSubmissionDomainConnection {
   # A list of edges.
   edges: [EmbeddedSubmissionDomainEdge]
+
+  # A list of nodes.
+  nodes: [EmbeddedSubmissionDomain]
 
   # Information to aid in pagination.
   pageInfo: PageInfo!
@@ -2435,9 +2462,12 @@ type EmbeddedSubmissionForm implements Node {
 }
 
 # The connection type for EmbeddedSubmissionForm.
-type EmbeddedSubmissionFormConnectionType {
+type EmbeddedSubmissionFormConnection {
   # A list of edges.
   edges: [EmbeddedSubmissionFormEdge]
+
+  # A list of nodes.
+  nodes: [EmbeddedSubmissionForm]
 
   # Information to aid in pagination.
   pageInfo: PageInfo!
@@ -2479,6 +2509,9 @@ type Error implements Node {
 type ErrorConnection {
   # A list of edges.
   edges: [ErrorEdge]
+
+  # A list of nodes.
+  nodes: [Error]
 
   # Information to aid in pagination.
   pageInfo: PageInfo!
@@ -2884,6 +2917,9 @@ type InvitationQueue implements Node {
 type InvitationQueueConnection {
   # A list of edges.
   edges: [InvitationQueueEdge]
+
+  # A list of nodes.
+  nodes: [InvitationQueue]
 
   # Information to aid in pagination.
   pageInfo: PageInfo!
@@ -3437,6 +3473,9 @@ type ProfileMetricsSnapshotConnection {
   # A list of edges.
   edges: [ProfileMetricsSnapshotEdge]
 
+  # A list of nodes.
+  nodes: [ProfileMetricsSnapshot]
+
   # Information to aid in pagination.
   pageInfo: PageInfo!
   total_count: Int!
@@ -3480,6 +3519,9 @@ type ProgramHealthAcknowledgement implements Node {
 type ProgramHealthAcknowledgementConnection {
   # A list of edges.
   edges: [ProgramHealthAcknowledgementEdge]
+
+  # A list of nodes.
+  nodes: [ProgramHealthAcknowledgement]
 
   # Information to aid in pagination.
   pageInfo: PageInfo!
@@ -5012,7 +5054,7 @@ type Team implements Node & ResourceInterface {
 
     # Returns the last _n_ elements from the list.
     last: Int
-  ): EmbeddedSubmissionDomainConnectionType
+  ): EmbeddedSubmissionDomainConnection
   embedded_submission_form_enabled: Boolean!
   embedded_submission_forms(
     # Returns the elements in the list that come after the specified cursor.
@@ -5026,7 +5068,7 @@ type Team implements Node & ResourceInterface {
 
     # Returns the last _n_ elements from the list.
     last: Int
-  ): EmbeddedSubmissionFormConnectionType
+  ): EmbeddedSubmissionFormConnection
   external_program: ExternalProgram
   external_url: String
   fancy_slack_integration: Boolean
@@ -5706,6 +5748,9 @@ type TeamWeakness implements Node {
 type TeamWeaknessConnection {
   # A list of edges.
   edges: [TeamWeaknessEdge]
+
+  # A list of nodes.
+  nodes: [TeamWeakness]
 
   # Information to aid in pagination.
   pageInfo: PageInfo!
