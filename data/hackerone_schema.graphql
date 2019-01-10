@@ -6421,10 +6421,13 @@ enum TeamMemberOrderField {
 # Fields on which a collection of Teams can be ordered
 enum TeamOrderField {
   average_bounty_amount
+  bounty_earned_by_user
   last_invitation_accepted_at
   minimum_bounty
   name
   reports_resolved
+  reports_submitted_by_user
+  valid_reports_submitted_by_user
 }
 
 input TeamOrderInput {
