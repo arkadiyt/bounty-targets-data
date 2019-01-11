@@ -5772,6 +5772,7 @@ type Team implements Node & ResourceInterface {
     # Returns the last _n_ elements from the list.
     last: Int
   ): CveRequestsConnection
+  cwe_field_hidden: Boolean!
   embedded_submission_domains(
     # Returns the elements in the list that come after the specified cursor.
     after: String
