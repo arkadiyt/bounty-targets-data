@@ -1562,13 +1562,13 @@
           "max_severity": "medium"
         },
         {
-          "asset_identifier": "Another Mail.Ru subdomain",
+          "asset_identifier": "Another Mail.Ru subdomain (except subdomains delegated to external entities)",
           "asset_type": "OTHER",
           "availability_requirement": "medium",
           "confidentiality_requirement": "medium",
-          "eligible_for_bounty": false,
+          "eligible_for_bounty": true,
           "eligible_for_submission": true,
-          "instruction": "Reports for non-listed Mail.Ru projects are accepted, but are not currently eligible for bounty.\nIn some cases, bounty may be awarded on the individual basis for high-severity serverside vulnerabilities.\nPlease read program rules for categories of the bugs accepted.",
+          "instruction": "Reports for non-listed Mail.Ru projects are accepted, but only critical serverside vulnerabilities (RCE, XXE/SQLi,, etc) are eligible for bounty. Clientside vulnerabilities (XSS, CSRF) and application-specific business logic vulnerabilities are accepted without bounty.\nPlease read program rules for categories of the bugs accepted.",
           "integrity_requirement": "medium",
           "max_severity": "critical"
         },
@@ -1577,9 +1577,9 @@
           "asset_type": "OTHER",
           "availability_requirement": "medium",
           "confidentiality_requirement": "medium",
-          "eligible_for_bounty": false,
+          "eligible_for_bounty": true,
           "eligible_for_submission": true,
-          "instruction": "Reports for acquired non-listed Mail.Ru projects, including, but not limited to delivery-club.ru, beepcar.ru, youla.io, maps.me, etc are accepted, but are not currently eligible for bounty.\nIn some cases, bounty may be awarded on the individual basis for high-severity serverside vulnerabilities.\nPlease read program rules for categories of the bugs accepted.",
+          "instruction": "Reports for acquired non-listed Mail.Ru projects, including, but not limited to beepcar.ru, youla.io, maps.me, etc are accepted, but only critical serverside vulnerabilities (RCE, XXE/SQLi,, etc) are eligible for bounty. Clientside vulnerabilities (XSS, CSRF) and application-specific business logic vulnerabilities are accepted without bounty.\nPlease read program rules for categories of the bugs accepted.",
           "integrity_requirement": "medium",
           "max_severity": "critical"
         },
@@ -1610,9 +1610,9 @@
           "asset_type": "OTHER",
           "availability_requirement": "medium",
           "confidentiality_requirement": "medium",
-          "eligible_for_bounty": false,
+          "eligible_for_bounty": true,
           "eligible_for_submission": true,
-          "instruction": "Reports for non-listed My.Com projects are accepted, but are not currently eligible for bounty.\nIn some cases, bounty may be awarded on the individual basis for high-severity serverside vulnerabilities.\nPlease read program rules for categories of the bugs accepted.",
+          "instruction": "Reports for non-listed My.Com projects are accepted, but only critical serverside vulnerabilities (RCE, XXE/SQLi,, etc) are eligible for bounty. Clientside vulnerabilities (XSS, CSRF) and application-specific business logic vulnerabilities are accepted without bounty.\nPlease read program rules for categories of the bugs accepted.",
           "integrity_requirement": "medium",
           "max_severity": "critical"
         },
@@ -9238,6 +9238,17 @@
     "targets": {
       "in_scope": [
         {
+          "asset_identifier": "lp.reverb.com",
+          "asset_type": "URL",
+          "availability_requirement": "medium",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
           "asset_identifier": "sandbox.reverb.com",
           "asset_type": "URL",
           "availability_requirement": null,
@@ -9250,17 +9261,6 @@
         }
       ],
       "out_of_scope": [
-        {
-          "asset_identifier": "lp.reverb.com",
-          "asset_type": "URL",
-          "availability_requirement": "medium",
-          "confidentiality_requirement": "high",
-          "eligible_for_bounty": false,
-          "eligible_for_submission": false,
-          "instruction": "",
-          "integrity_requirement": "high",
-          "max_severity": "none"
-        },
         {
           "asset_identifier": "reverbsites.com",
           "asset_type": "URL",
