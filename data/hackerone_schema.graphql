@@ -4462,6 +4462,7 @@ input FiltersTeamFilterInput {
   name: StringPredicateInput
   offers_bounties: BooleanPredicateInput
   policy: StringPredicateInput
+  reporters: FiltersUserFilterInput
   response_efficiency_percentage: IntPredicateInput
   state: TeamStatePredicateInput
   structured_scopes: FiltersStructuredScopeFilterInput
@@ -7951,6 +7952,11 @@ type Team implements Node & ResourceInterface {
     last: Int
   ): UserConnection
   bounty_awarded_staleness_threshold: Int
+
+  """
+  The participant's total bounty earned within the team
+  """
+  bounty_earned_for_user: Float
   bounty_table: BountyTable
   bounty_time: Float
   bug_count: Int
@@ -8230,12 +8236,27 @@ type Team implements Node & ResourceInterface {
   jira_integration: JiraIntegration
   jira_oauth: JiraOauth
   jira_webhook: JiraWebhook
+
+  """
+  The participant's date of accepted the teams invitation
+  """
+  last_invitation_accepted_at_for_user: DateTime
   launch_link: String
   maximum_number_of_team_mediation_requests: Float
   minimum_bounty: Int
   name: String!
   new_staleness_threshold: Int
   new_staleness_threshold_limit: Int
+
+  """
+  The participant's number of reports within the team
+  """
+  number_of_reports_for_user: Int
+
+  """
+  The participant's number of valid reports within the team
+  """
+  number_of_valid_reports_for_user: Int
   offers_bounties: Boolean
   offers_swag: Boolean
   only_cleared_hackers: Boolean
