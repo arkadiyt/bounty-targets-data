@@ -2599,6 +2599,7 @@ input CreateOrUpdateJiraIntegrationInput {
   issue_type: Int!
   labels: String
   pid: Int!
+  project_selection_enabled: Boolean
   summary: String!
   team_id: ID!
 }
@@ -4938,6 +4939,7 @@ type JiraIntegration implements Node {
   issue_type: Int!
   labels: String
   pid: Int!
+  project_selection_enabled: Boolean!
   summary: String!
   team: Team!
   updated_at: DateTime!
