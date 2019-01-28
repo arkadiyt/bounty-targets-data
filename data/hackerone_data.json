@@ -1551,7 +1551,7 @@
           "max_severity": "critical"
         },
         {
-          "asset_identifier": "Another Mail.Ru subdomain (except subdomains delegated to external entities)",
+          "asset_identifier": "Another Mail.Ru project (except subdomains delegated to external entities)",
           "asset_type": "OTHER",
           "availability_requirement": "medium",
           "confidentiality_requirement": "medium",
@@ -1647,6 +1647,17 @@
           "eligible_for_submission": true,
           "instruction": "Do not use this asset for reporting",
           "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "Sendbox (mailer.i.bizml.ru)",
+          "asset_type": "OTHER",
+          "availability_requirement": "medium",
+          "confidentiality_requirement": "medium",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Reports for Sendbox projects are accepted, but only critical serverside vulnerabilities (RCE, XXE/SQLi,, etc) are eligible for bounty. Clientside vulnerabilities (XSS, CSRF) and application-specific business logic vulnerabilities are accepted without bounty. Self-XSS vulnerabilities within organization boundaries are not accepted.\nPlease read program rules for categories of the bugs accepted.",
+          "integrity_requirement": "medium",
           "max_severity": "critical"
         },
         {
