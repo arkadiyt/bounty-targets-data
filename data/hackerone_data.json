@@ -25534,6 +25534,65 @@
     }
   },
   {
+    "id": 36866,
+    "name": "FileZilla (European Commission - DIGIT)",
+    "handle": "filezilla_h1c",
+    "url": "https://hackerone.com/filezilla_h1c",
+    "offers_bounties": false,
+    "quick_to_bounty": false,
+    "quick_to_first_response": false,
+    "targets": {
+      "in_scope": [
+        {
+          "asset_identifier": "https://svn.filezilla-project.org/svn/FileZilla3/trunk/",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://svn.filezilla-project.org/svn/FileZilla3/trunk/src/putty",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "**Note**: The code in this directory is based on PuTTY, with modifications specific to FileZilla. Only submissions concerning the FileZilla-specific code are accepted.",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://svn.filezilla-project.org/svn/libfilezilla/trunk",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "asset_identifier": "https://svn.filezilla-project.org/svn/FileZilla3/trunk/src/storj/",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        }
+      ]
+    }
+  },
+  {
     "id": 36867,
     "name": "Apache Kafka (European Commission - DIGIT)",
     "handle": "apache_kafka_h1c",
