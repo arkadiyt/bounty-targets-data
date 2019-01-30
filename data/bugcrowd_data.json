@@ -2955,6 +2955,53 @@
     }
   },
   {
+    "name": "Segment",
+    "url": "https://bugcrowd.com/segment",
+    "allows_disclosure": false,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "website",
+          "target": "Any host / web property verified to be owned by Segment (domains/IP space/etc.)"
+        },
+        {
+          "type": "other",
+          "target": "Source code of Website, Mobile, or Server Libraries (https://segment.com/docs/sources/)"
+        },
+        {
+          "type": "api",
+          "target": "api.segment.io"
+        },
+        {
+          "type": "website",
+          "target": "app.segment.com"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "other",
+          "target": "*.redshift.segment.com"
+        },
+        {
+          "type": "other",
+          "target": "*.sql.segment.com"
+        },
+        {
+          "type": "website",
+          "target": "community.segment.com"
+        },
+        {
+          "type": "website",
+          "target": "segment.com/contact"
+        },
+        {
+          "type": "website",
+          "target": "segment.com/jobs"
+        }
+      ]
+    }
+  },
+  {
     "name": "SendSafely",
     "url": "https://bugcrowd.com/sendsafely",
     "allows_disclosure": false,
