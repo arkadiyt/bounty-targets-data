@@ -4611,7 +4611,7 @@ type HackerPublished implements HacktivityItemInterface & Node {
   reporter: User
   severity_rating: SeverityRatingEnum
   team: Team
-  upvoted_by_current_user: Boolean!
+  upvoted_by_current_user: Boolean
   votes(
     """
     Returns the elements in the list that come after the specified cursor.
@@ -4687,7 +4687,7 @@ interface HacktivityItemInterface {
   _id: ID!
   created_at: DateTime
   id: ID!
-  upvoted_by_current_user: Boolean!
+  upvoted_by_current_user: Boolean
   votes(
     """
     Returns the elements in the list that come after the specified cursor.
@@ -5964,7 +5964,7 @@ type PubliclyDisclosed implements HacktivityItemInterface & Node {
   severity_rating: SeverityRatingEnum
   team: Team
   total_awarded_amount: Float
-  upvoted_by_current_user: Boolean!
+  upvoted_by_current_user: Boolean
   votes(
     """
     Returns the elements in the list that come after the specified cursor.
@@ -9470,7 +9470,7 @@ type Undisclosed implements HacktivityItemInterface & Node {
   requires_view_privilege: Boolean!
   team: Team
   total_awarded_amount: Float
-  upvoted_by_current_user: Boolean!
+  upvoted_by_current_user: Boolean
   votes(
     """
     Returns the elements in the list that come after the specified cursor.
