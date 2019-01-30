@@ -18852,17 +18852,6 @@
           "max_severity": "critical"
         },
         {
-          "asset_identifier": "dapi.grammarly.com",
-          "asset_type": "URL",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "Store various user settings and properties\n",
-          "integrity_requirement": null,
-          "max_severity": "critical"
-        },
-        {
           "asset_identifier": "data.grammarly.com",
           "asset_type": "URL",
           "availability_requirement": null,
@@ -18929,6 +18918,17 @@
           "max_severity": "low"
         },
         {
+          "asset_identifier": "institution.grammarly.com",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
           "asset_identifier": "irbis.grammarly.com",
           "asset_type": "URL",
           "availability_requirement": null,
@@ -18948,6 +18948,17 @@
           "eligible_for_submission": true,
           "instruction": "",
           "integrity_requirement": "medium",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "subscription.grammarly.com",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": "high",
           "max_severity": "critical"
         },
         {
@@ -19030,6 +19041,50 @@
           "max_severity": "none"
         },
         {
+          "asset_identifier": "beamlink.grammarly.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "Third party external service",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "calendar.grammarly.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "Third party external service\n\n",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "campaign.grammarly.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "Third party external service",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "email.grammarly.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "Third party external service",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
           "asset_identifier": "send.grammarly.com",
           "asset_type": "URL",
           "availability_requirement": "none",
@@ -19038,6 +19093,17 @@
           "eligible_for_submission": false,
           "instruction": "Third party external service",
           "integrity_requirement": "none",
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "status.grammarly.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "Third party external service",
+          "integrity_requirement": null,
           "max_severity": "none"
         },
         {
@@ -22469,20 +22535,21 @@
           "instruction": "Miniclip welcomes working with the security community to resolve security vulnerabilities in order to keep our customers safe. We will make a best effort to respond to incoming reports and keep you informed about our progress toward resolving any issues.\n\n# Vulnerability Disclosure\n\n* If you have identified a potential security vulnerability in our technology, please submit us a detailed report with reproducible steps.\n* Follow HackerOne's [disclosure guidelines](https://hackerone.com/disclosure-guidelines).\n* Social engineering (e.g. phishing, vishing, smishing) is prohibited.\n* Make a good faith effort to avoid privacy violations, destruction of data, and interruption or degradation of our service. Only interact with accounts you own or with explicit permission of the account holder.\n\n# Rewards\n\n* We do not offer a bug bounty at this time, but certain vulnerabilities with a working proof of concept on some of our Android mobile app(s) may qualify for a bounty through the [Google Play Security Rewards Program](https://hackerone.com/googleplay). To see which apps and vulnerabilities may qualify for a bounty, please refer to the [Google Play Security Rewards Program’s Scope and Vulnerability Criteria](https://hackerone.com/googleplay).\n",
           "integrity_requirement": "low",
           "max_severity": "critical"
-        }
-      ],
-      "out_of_scope": [
+        },
         {
-          "asset_identifier": "*.miniclip.com",
+          "asset_identifier": "www.miniclip.com",
           "asset_type": "URL",
           "availability_requirement": "medium",
           "confidentiality_requirement": "medium",
           "eligible_for_bounty": false,
-          "eligible_for_submission": false,
+          "eligible_for_submission": true,
           "instruction": "",
           "integrity_requirement": "medium",
-          "max_severity": "none"
+          "max_severity": "critical"
         }
+      ],
+      "out_of_scope": [
+
       ]
     }
   },
