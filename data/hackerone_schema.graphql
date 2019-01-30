@@ -4421,6 +4421,7 @@ input FiltersHacktivityItemFilterInput {
   _or: [FiltersHacktivityItemFilterInput]
   id: IntPredicateInput
   report: FiltersReportFilterInput
+  reporter: FiltersUserFilterInput
   team: FiltersTeamFilterInput
   total_awarded_amount: StringPredicateInput
 }
@@ -4511,6 +4512,7 @@ input FiltersUserFilterInput {
   _or: [FiltersUserFilterInput]
   id: IntPredicateInput
   is_me: Boolean
+  username: StringPredicateInput
 }
 
 input FiltersWeaknessFilterInput {
@@ -5899,6 +5901,8 @@ type ProgramStatistic implements Node {
   interval_start: Date!
   is_complete: Boolean!
   resolved_reports: Int!
+  submitted_reports: Int!
+  triaged_reports: Int!
 }
 
 """
