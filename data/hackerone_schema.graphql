@@ -2608,6 +2608,7 @@ input CreateOrUpdateJiraIntegrationInput {
   issue_type: Int!
   labels: String
   pid: Int!
+  priority_rating_ids: [ID]
   project_selection_enabled: Boolean
   summary: String!
   team_id: ID!
@@ -4976,6 +4977,7 @@ type JiraOauth implements Node {
   id: ID!
   issue_types: [Hash]
   jwt: Boolean!
+  priorities: [Hash]
   projects: [Hash]
   site: String
   team: Team!
@@ -5897,11 +5899,15 @@ type ProgramHealthAcknowledgementSeenPayload implements MutationResult {
 Statistics for a certain interval for a certain team
 """
 type ProgramStatistic implements Node {
+  duplicate_reports: Int!
   id: ID!
+  informative_reports: Int!
   interval: ProgramStatisticIntervalEnum!
   interval_start: Date!
   is_complete: Boolean!
+  not_applicable_reports: Int!
   resolved_reports: Int!
+  spam_reports: Int!
   submitted_reports: Int!
   triaged_reports: Int!
   valid_critical_severity_reports: Int!
