@@ -4955,6 +4955,7 @@ type JiraIntegration implements Node {
   custom: String
   description: String!
   id: ID!
+  issue_statuses: [Hash]
   issue_type: Int!
   labels: String
   pid: Int!
@@ -4988,6 +4989,7 @@ type JiraOauth implements Node {
 A JIRA webhook for a team
 """
 type JiraWebhook implements Node {
+  close_status_id: String
   created_at: DateTime!
   id: ID!
   last_event_received_at: DateTime
@@ -10135,6 +10137,7 @@ input UpdateJiraWebhookInput {
   A unique identifier for the client performing the mutation.
   """
   clientMutationId: String
+  close_status_id: String
   jira_webhook_id: ID!
   process_assignee_change: Boolean
   process_comment_add: Boolean
