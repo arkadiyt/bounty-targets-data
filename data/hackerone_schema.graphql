@@ -5917,6 +5917,27 @@ type ProgramStatistic implements Node {
   valid_low_severity_reports: Int!
   valid_medium_severity_reports: Int!
   valid_no_severity_reports: Int!
+  valid_reports_per_scope(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+  ): ReportsCountPerScopeConnection
 }
 
 """
@@ -6795,6 +6816,46 @@ input ReportStateEnumPredicateInput {
   _lte: ReportStateEnum
   _neq: ReportStateEnum
   _nin: [ReportStateEnum]
+}
+
+"""
+Number of reports per scope of specific program
+"""
+type ReportsCountPerScope implements Node {
+  asset_identifier: String!
+  id: ID!
+  reports_count: Int!
+}
+
+"""
+The connection type for ReportsCountPerScope.
+"""
+type ReportsCountPerScopeConnection {
+  """
+  A list of edges.
+  """
+  edges: [ReportsCountPerScopeEdge]
+
+  """
+  Information to aid in pagination.
+  """
+  pageInfo: PageInfo!
+  total_count: Int!
+}
+
+"""
+An edge in a connection.
+"""
+type ReportsCountPerScopeEdge {
+  """
+  A cursor for use in pagination.
+  """
+  cursor: String!
+
+  """
+  The item at the end of the edge.
+  """
+  node: ReportsCountPerScope
 }
 
 """
