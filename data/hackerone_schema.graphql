@@ -2255,6 +2255,7 @@ input CreateCveRequestInput {
   product_version: String!
   references: [String]
   report_id: Int
+  request_type: String
   team_handle: String!
   vulnerability_discovered_at: String!
   weakness_name: String!
@@ -3463,6 +3464,7 @@ type CveRequest implements Node & ResourceInterface {
   product_version: String
   references: [String]
   report: Report
+  request_type: String!
   state: CveRequestStateEnum!
   team: Team!
   updated_at: DateTime
@@ -6138,6 +6140,7 @@ type Query implements Node {
     last: Int
     search_input: String
   ): ExternalProgramConnection
+  global_features: [Feature]
   hacktivity_items(
     """
     Returns the elements in the list that come after the specified cursor.
