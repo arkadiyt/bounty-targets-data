@@ -2609,7 +2609,7 @@ input CreateOrUpdateJiraIntegrationInput {
   issue_type: Int!
   labels: String
   pid: Int!
-  priority_rating_ids: [ID]
+  priority_rating_ids: JiraPrioritySeverityInput
   project_selection_enabled: Boolean
   summary: String!
   team_id: ID!
@@ -4959,6 +4959,27 @@ type JiraIntegration implements Node {
   id: ID!
   issue_statuses: [Hash]
   issue_type: Int!
+  jira_priority_to_severity_ratings(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+  ): JiraPriorityToSeverityRatingConnection
   labels: String
   pid: Int!
   project_selection_enabled: Boolean!
@@ -4985,6 +5006,66 @@ type JiraOauth implements Node {
   site: String
   team: Team!
   updated_at: DateTime!
+}
+
+input JiraPrioritySeverityInput {
+  critical: ID
+  high: ID
+  low: ID
+  medium: ID
+  none: ID
+}
+
+"""
+A map of JIRA Priority to HackerOne Severity Rating
+"""
+type JiraPriorityToSeverityRating implements Node {
+  created_at: DateTime!
+  id: ID!
+  jira_integration: JiraIntegration!
+  priority_id: ID
+  severity_rating: SeverityRatingEnum!
+  updated_at: DateTime!
+}
+
+"""
+The connection type for JiraPriorityToSeverityRating.
+"""
+type JiraPriorityToSeverityRatingConnection {
+  """
+  A list of edges.
+  """
+  edges: [JiraPriorityToSeverityRatingEdge]
+
+  """
+  A list of nodes.
+  """
+  nodes: [JiraPriorityToSeverityRating]
+
+  """
+  Information to aid in pagination.
+  """
+  pageInfo: PageInfo!
+
+  """
+  Int
+  """
+  total_count: Int!
+}
+
+"""
+An edge in a connection.
+"""
+type JiraPriorityToSeverityRatingEdge {
+  """
+  A cursor for use in pagination.
+  """
+  cursor: String!
+
+  """
+  The item at the end of the edge.
+  """
+  node: JiraPriorityToSeverityRating
 }
 
 """
