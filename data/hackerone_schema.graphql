@@ -6003,6 +6003,7 @@ type ProgramStatistic implements Node {
   valid_low_severity_reports: Int!
   valid_medium_severity_reports: Int!
   valid_no_severity_reports: Int!
+  valid_reports: Int!
   valid_reports_per_scope(
     """
     Returns the elements in the list that come after the specified cursor.
@@ -6382,6 +6383,27 @@ type Query implements Node {
     """
     last: Int
   ): SurveyConnection
+  tasks(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+  ): TaskConnection
   team(handle: String!): Team
   teams(
     """
@@ -8242,6 +8264,63 @@ type SwagEdge {
   The item at the end of the edge.
   """
   node: Swag
+}
+
+"""
+Task
+"""
+type Task implements Node & ResourceInterface {
+  _id: ID!
+  completed: Boolean
+  description: String!
+  id: ID!
+  key: TaskKeyEnum!
+  url: URI!
+}
+
+"""
+The connection type for Task.
+"""
+type TaskConnection {
+  """
+  A list of edges.
+  """
+  edges: [TaskEdge]
+
+  """
+  Information to aid in pagination.
+  """
+  pageInfo: PageInfo!
+
+  """
+  Int
+  """
+  total_count: Int!
+}
+
+"""
+An edge in a connection.
+"""
+type TaskEdge {
+  """
+  A cursor for use in pagination.
+  """
+  cursor: String!
+
+  """
+  The item at the end of the edge.
+  """
+  node: Task
+}
+
+"""
+All valid task keys
+"""
+enum TaskKeyEnum {
+  BOOKMARK_PROGRAMS
+  PARTAKE_CTF
+  UPVOTE_HACKTIVITY
+  VALID_REPORT
 }
 
 """
