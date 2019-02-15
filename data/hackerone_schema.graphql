@@ -4448,6 +4448,13 @@ enum FilterOrderDirectionEnum {
   DESC
 }
 
+input FiltersBountyFilterInput {
+  _and: [FiltersBountyFilterInput]
+  _or: [FiltersBountyFilterInput]
+  created_at: DateTimePredicateInput
+  id: IntPredicateInput
+}
+
 input FiltersExternalProgramFilterInput {
   _and: [FiltersExternalProgramFilterInput]
   _or: [FiltersExternalProgramFilterInput]
@@ -4482,6 +4489,7 @@ input FiltersReportFilterInput {
   _and: [FiltersReportFilterInput]
   _or: [FiltersReportFilterInput]
   bounty_awarded_at: DateTimePredicateInput
+  closed_at: DateTimePredicateInput
   disclosed_at: DateTimePredicateInput
   hacker_published: BooleanPredicateInput
   id: IntPredicateInput
@@ -12011,6 +12019,7 @@ type User implements Node & ResourceInterface {
     Returns the last _n_ elements from the list.
     """
     last: Int
+    where: FiltersBountyFilterInput
   ): BountyConnection
   calendar_token: String
   created_at: DateTime!
