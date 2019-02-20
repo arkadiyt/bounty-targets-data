@@ -6491,7 +6491,6 @@ type Query implements Node {
     last: Int
     order_by: TeamOrderInput
     permissions: [PermissionEnum] = []
-    search: String
     secure_order_by: FiltersTeamFilterOrder
     where: FiltersTeamFilterInput
   ): TeamConnection
@@ -8673,7 +8672,6 @@ type Team implements Node & ResourceInterface {
     last: Int
     order_by: TeamOrderInput
     permissions: [PermissionEnum] = []
-    search: String
     secure_order_by: FiltersTeamFilterOrder
     where: FiltersTeamFilterInput
   ): TeamConnection
@@ -12361,7 +12359,6 @@ type User implements Node & ResourceInterface {
     last: Int
     order_by: TeamOrderInput
     permissions: [PermissionEnum] = []
-    search: String
     secure_order_by: FiltersTeamFilterOrder
     where: FiltersTeamFilterInput
   ): TeamConnection
@@ -12398,7 +12395,6 @@ type User implements Node & ResourceInterface {
     last: Int
     order_by: TeamOrderInput
     permissions: [PermissionEnum] = []
-    search: String
     secure_order_by: FiltersTeamFilterOrder
     where: FiltersTeamFilterInput
   ): WhitelistedTeamConnection
