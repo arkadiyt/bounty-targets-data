@@ -6105,7 +6105,7 @@ type ProgramStatistic implements Node {
   valid_high_severity_reports: Int!
   valid_low_severity_reports: Int!
   valid_medium_severity_reports: Int!
-  valid_no_severity_reports: Int!
+  valid_none_severity_reports: Int!
   valid_reports: Int!
   valid_reports_per_scope(
     """
@@ -6149,6 +6149,9 @@ type ProgramStatistic implements Node {
     """
     last: Int
   ): ReportsCountPerWeaknessConnection
+  valid_reports_without_scope: Int!
+  valid_reports_without_weakness: Int!
+  valid_without_severity_reports: Int!
 }
 
 """
