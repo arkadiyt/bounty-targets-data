@@ -12400,7 +12400,7 @@ type User implements Node & ResourceInterface {
     permissions: [PermissionEnum] = []
     secure_order_by: FiltersTeamFilterOrder
     where: FiltersTeamFilterInput
-  ): WhitelistedTeamConnection
+  ): TeamConnection
   year_in_review_published_at: DateTime
 }
 
@@ -12699,60 +12699,4 @@ Fields on which a collection of weaknesses can be ordered
 """
 enum WeaknessOrderField {
   name
-}
-
-"""
-The connection type for Team.
-"""
-type WhitelistedTeamConnection {
-  """
-  A list of edges.
-  """
-  edges: [WhitelistedTeamInformationEdgeType]
-
-  """
-  A list of nodes.
-  """
-  nodes: [Team]
-
-  """
-  Information to aid in pagination.
-  """
-  pageInfo: PageInfo!
-  total_count: Int!
-}
-
-"""
-An edge in a connection.
-"""
-type WhitelistedTeamInformationEdgeType {
-  """
-  The participant's total bounty earned within the team
-  """
-  bounty_earned: Float
-
-  """
-  A cursor for use in pagination.
-  """
-  cursor: String!
-
-  """
-  The participant's date of accepted the teams invitation
-  """
-  last_invitation_accepted_at: DateTime
-
-  """
-  The item at the end of the edge.
-  """
-  node: Team
-
-  """
-  The participant's number of reports within the team
-  """
-  number_of_reports: Int
-
-  """
-  The participant's number of valid reports within the team
-  """
-  number_of_valid_reports: Int
 }

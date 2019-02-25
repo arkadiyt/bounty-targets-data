@@ -1,5 +1,71 @@
 [
   {
+    "name": "Acorns Grow, Inc.",
+    "url": "https://bugcrowd.com/acorns",
+    "allows_disclosure": false,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "other",
+          "target": "Acorns for Android"
+        },
+        {
+          "type": "other",
+          "target": "Acorns for iOS"
+        },
+        {
+          "type": "other",
+          "target": "https://app.acorns.com"
+        },
+        {
+          "type": "other",
+          "target": "https://client.acorns.com"
+        },
+        {
+          "type": "website",
+          "target": "https://signup.acorns.com/"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "other",
+          "target": "https://api.acorns.com"
+        },
+        {
+          "type": "other",
+          "target": "https://dev-app.acorns.com"
+        }
+      ]
+    }
+  },
+  {
+    "name": "1Password",
+    "url": "https://bugcrowd.com/agilebits",
+    "allows_disclosure": true,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "other",
+          "target": "<Account (Business, Family) signup page --> https://start.1password.com"
+        },
+        {
+          "type": "other",
+          "target": "<White Box Test team --> https://bugcrowd-test.1password.com"
+        },
+        {
+          "type": "other",
+          "target": "<Your own 1Password subdomain --> https://<your account domain>.1password.com/"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "website",
+          "target": "*.agilebits.com"
+        }
+      ]
+    }
+  },
+  {
     "name": "Arkose Labs",
     "url": "https://bugcrowd.com/arkose-labs",
     "allows_disclosure": false,
@@ -35,6 +101,410 @@
     }
   },
   {
+    "name": "arlo Cash Rewards",
+    "url": "https://bugcrowd.com/arlo",
+    "allows_disclosure": false,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "iot",
+          "target": "Arlo"
+        },
+        {
+          "type": "api",
+          "target": "Arlo APIs"
+        },
+        {
+          "type": "android",
+          "target": "Arlo Android App"
+        },
+        {
+          "type": "iot",
+          "target": "Arlo Baby"
+        },
+        {
+          "type": "iot",
+          "target": "Arlo Base Station"
+        },
+        {
+          "type": "iot",
+          "target": "Arlo Bridge"
+        },
+        {
+          "type": "iot",
+          "target": "Arlo Go"
+        },
+        {
+          "type": "iot",
+          "target": "Arlo Pro"
+        },
+        {
+          "type": "iot",
+          "target": "Arlo Pro 2"
+        },
+        {
+          "type": "iot",
+          "target": "Arlo Q"
+        },
+        {
+          "type": "iot",
+          "target": "Arlo Q+"
+        },
+        {
+          "type": "iot",
+          "target": "Arlo Security Light"
+        },
+        {
+          "type": "website",
+          "target": "Arlo Web App"
+        },
+        {
+          "type": "ios",
+          "target": "Arlo iOS App"
+        },
+        {
+          "type": "website",
+          "target": "https://arlo-device.messaging.netgear.com"
+        },
+        {
+          "type": "website",
+          "target": "https://arlo.netgear.com"
+        },
+        {
+          "type": "website",
+          "target": "https://updates.netgear.com/arlo"
+        },
+        {
+          "type": "website",
+          "target": "https://www.arlo.com"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
+    "name": "arlo Kudos Rewards",
+    "url": "https://bugcrowd.com/arlokudos",
+    "allows_disclosure": false,
+    "targets": {
+      "in_scope": [
+
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
+    "name": "Atlassian",
+    "url": "https://bugcrowd.com/atlassian",
+    "allows_disclosure": true,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "other",
+          "target": "Any associated *.atlassian.io or *.atl-paas.net domain that can be exploited DIRECTLY from the *.atlassian.net instance"
+        },
+        {
+          "type": "other",
+          "target": "Bamboo"
+        },
+        {
+          "type": "website",
+          "target": "Bitbucket Pipelines (https://bitbucket.org/product/features/pipelines)"
+        },
+        {
+          "type": "other",
+          "target": "Bitbucket Server"
+        },
+        {
+          "type": "other",
+          "target": "Confluence"
+        },
+        {
+          "type": "website",
+          "target": "Confluence (bugbounty-test-<bugcrowd-name>.atlassian.net/wiki)"
+        },
+        {
+          "type": "android",
+          "target": "Confluence Cloud Mobile App for Android"
+        },
+        {
+          "type": "ios",
+          "target": "Confluence Cloud Mobile App for iOS"
+        },
+        {
+          "type": "other",
+          "target": "Confluence Questions"
+        },
+        {
+          "type": "website",
+          "target": "Confluence Team Calendars (https://www.atlassian.com/software/confluence/team-calendars)"
+        },
+        {
+          "type": "other",
+          "target": "Crowd"
+        },
+        {
+          "type": "other",
+          "target": "Crucible"
+        },
+        {
+          "type": "other",
+          "target": "FishEye"
+        },
+        {
+          "type": "website",
+          "target": "JIRA (bugbounty-test-<bugcrowd-name>.atlassian.net)"
+        },
+        {
+          "type": "other",
+          "target": "JIRA Core"
+        },
+        {
+          "type": "other",
+          "target": "JIRA Service Desk"
+        },
+        {
+          "type": "website",
+          "target": "JIRA Service Desk (bugbounty-test-<bugcrowd-name>.atlassian.net)"
+        },
+        {
+          "type": "other",
+          "target": "JIRA Software"
+        },
+        {
+          "type": "android",
+          "target": "Jira Cloud Mobile App for Android"
+        },
+        {
+          "type": "ios",
+          "target": "Jira Cloud Mobile App for iOS"
+        },
+        {
+          "type": "other",
+          "target": "Jira Portfolio"
+        },
+        {
+          "type": "other",
+          "target": "Other - (all other Atlassian targets)"
+        },
+        {
+          "type": "other",
+          "target": "SourceTree (https://www.sourcetreeapp.com/)"
+        },
+        {
+          "type": "website",
+          "target": "https://admin.atlassian.com/atlassian-access"
+        },
+        {
+          "type": "website",
+          "target": "https://bitbucket.org/"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "website",
+          "target": "*.bitbucket.io"
+        },
+        {
+          "type": "website",
+          "target": "Any internal or development services."
+        },
+        {
+          "type": "website",
+          "target": "Any repository that you are not an owner of - do not impact Atlassian customers in any way."
+        },
+        {
+          "type": "website",
+          "target": "Third party add-ons from the marketplace are strictly excluded (vulnerabilities that exist within third party apps in any way) - we will pass on any vulnerabilities found, however they will not be eligible for bounty."
+        },
+        {
+          "type": "website",
+          "target": "bytebucket.org"
+        },
+        {
+          "type": "website",
+          "target": "https://blog.bitbucket.org"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Appliances - Barracuda Networks, Inc.",
+    "url": "https://bugcrowd.com/barracuda",
+    "allows_disclosure": true,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "other",
+          "target": "Barracuda ADC"
+        },
+        {
+          "type": "other",
+          "target": "Barracuda Firewall"
+        },
+        {
+          "type": "other",
+          "target": "Barracuda Message Archiver"
+        },
+        {
+          "type": "other",
+          "target": "Barracuda NG Firewall"
+        },
+        {
+          "type": "other",
+          "target": "Barracuda SSLVPN"
+        },
+        {
+          "type": "other",
+          "target": "Barracuda Spam & Virus Firewall"
+        },
+        {
+          "type": "other",
+          "target": "Barracuda Web Application Firewall"
+        },
+        {
+          "type": "other",
+          "target": "Barracuda Web Filter"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
+    "name": "Binance",
+    "url": "https://bugcrowd.com/binance",
+    "allows_disclosure": false,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "website",
+          "target": "*.binance.com"
+        },
+        {
+          "type": "api",
+          "target": "api.binance.com"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "website",
+          "target": "support.binance.com"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Bitdefender",
+    "url": "https://bugcrowd.com/bitdefender",
+    "allows_disclosure": false,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "website",
+          "target": "*.bitdefender.com"
+        },
+        {
+          "type": "website",
+          "target": "*.bitdefender.net"
+        },
+        {
+          "type": "other",
+          "target": "Bitdefender GravityZone Business Security"
+        },
+        {
+          "type": "other",
+          "target": "Bitdefender Total Security 2019"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "website",
+          "target": "cloud.bitdefender.net"
+        },
+        {
+          "type": "website",
+          "target": "community.bitdefender.com"
+        },
+        {
+          "type": "website",
+          "target": "countrypartners.bitdefender.com"
+        },
+        {
+          "type": "website",
+          "target": "dlab-box.bitdefender.net"
+        },
+        {
+          "type": "website",
+          "target": "elearning.bitdefender.com"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Bitdefender Box v2",
+    "url": "https://bugcrowd.com/bitdefenderbox2",
+    "allows_disclosure": false,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "iot",
+          "target": "Bitdefender BOX v2"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "android",
+          "target": "Bitdefender Central (Android App)"
+        },
+        {
+          "type": "ios",
+          "target": "Bitdefender Central (iOS App)"
+        },
+        {
+          "type": "website",
+          "target": "https://central.bitdefender.com"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Blend",
+    "url": "https://bugcrowd.com/blend",
+    "allows_disclosure": false,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "api",
+          "target": "https://api.pentest.blendlabs.com/"
+        },
+        {
+          "type": "other",
+          "target": "https://knox.blendlabs.com"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "website",
+          "target": "https://blend.com"
+        },
+        {
+          "type": "website",
+          "target": "https://www.blend.com"
+        },
+        {
+          "type": "website",
+          "target": "https://www.blendlabs.com"
+        }
+      ]
+    }
+  },
+  {
     "name": "Blockport's Vulnerability Disclosure",
     "url": "https://bugcrowd.com/blockport",
     "allows_disclosure": false,
@@ -59,6 +529,568 @@
     }
   },
   {
+    "name": "Blue Jeans Network",
+    "url": "https://bugcrowd.com/bluejeans",
+    "allows_disclosure": false,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "android",
+          "target": "BlueJeans Android Application"
+        },
+        {
+          "type": "other",
+          "target": "BlueJeans Browser-based Web Meeting Clients"
+        },
+        {
+          "type": "other",
+          "target": "BlueJeans Mac Client"
+        },
+        {
+          "type": "other",
+          "target": "BlueJeans Windows Client"
+        },
+        {
+          "type": "ios",
+          "target": "BlueJeans iOS Application"
+        },
+        {
+          "type": "website",
+          "target": "https://a2m.bluejeans.com"
+        },
+        {
+          "type": "api",
+          "target": "https://api.bluejeans.com/"
+        },
+        {
+          "type": "website",
+          "target": "https://bluejeans.com/"
+        },
+        {
+          "type": "other",
+          "target": "https://huddle.bluejeans.com"
+        },
+        {
+          "type": "website",
+          "target": "https://primetime.bluejeans.com"
+        },
+        {
+          "type": "other",
+          "target": "https://static.bluejeans.com/"
+        },
+        {
+          "type": "website",
+          "target": "https://www.bluejeans.com/"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "website",
+          "target": "https://a.bluejeans.com/"
+        },
+        {
+          "type": "website",
+          "target": "https://community.bluejeans.com"
+        },
+        {
+          "type": "website",
+          "target": "https://hub.bluejeans.com"
+        },
+        {
+          "type": "website",
+          "target": "https://www-a.bluejeans.com/"
+        },
+        {
+          "type": "website",
+          "target": "https://www-dev.bluejeans.com/"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Bugcrowd",
+    "url": "https://bugcrowd.com/bugcrowd",
+    "allows_disclosure": true,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "api",
+          "target": "api.bugcrowd.com"
+        },
+        {
+          "type": "website",
+          "target": "bugcrowd.com"
+        },
+        {
+          "type": "website",
+          "target": "tracker.bugcrowd.com"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "website",
+          "target": "blog.bugcrowd.com"
+        },
+        {
+          "type": "website",
+          "target": "docs.bugcrowd.com"
+        },
+        {
+          "type": "website",
+          "target": "email.bugcrowd.com"
+        },
+        {
+          "type": "website",
+          "target": "email.forum.bugcrowd.com"
+        },
+        {
+          "type": "website",
+          "target": "forum.bugcrowd.com"
+        },
+        {
+          "type": "website",
+          "target": "go.bugcrowd.com"
+        },
+        {
+          "type": "website",
+          "target": "pages.bugcrowd.com"
+        },
+        {
+          "type": "website",
+          "target": "researcherdocs.bugcrowd.com"
+        },
+        {
+          "type": "website",
+          "target": "www.bugcrowd.com"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Caffeine",
+    "url": "https://bugcrowd.com/caffeine",
+    "allows_disclosure": false,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "other",
+          "target": "*.rtcdn.caffeine.tv"
+        },
+        {
+          "type": "ios",
+          "target": "Caffeine iOS Application"
+        },
+        {
+          "type": "other",
+          "target": "caffeine-helper.x64.exe"
+        },
+        {
+          "type": "other",
+          "target": "caffeine-helper.x86.exe"
+        },
+        {
+          "type": "other",
+          "target": "caffeine.exe"
+        },
+        {
+          "type": "api",
+          "target": "https://api.caffeine.tv/"
+        },
+        {
+          "type": "website",
+          "target": "https://build.caffeine.tv/"
+        },
+        {
+          "type": "api",
+          "target": "https://images.caffeine.tv/"
+        },
+        {
+          "type": "api",
+          "target": "https://payments.caffeine.tv"
+        },
+        {
+          "type": "website",
+          "target": "https://preview.caffeine.tv/"
+        },
+        {
+          "type": "api",
+          "target": "https://realtime.caffeine.tv/"
+        },
+        {
+          "type": "other",
+          "target": "https://static.caffeine.tv/"
+        },
+        {
+          "type": "website",
+          "target": "https://www.caffeine.tv/"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "website",
+          "target": "Any Third Party Software Applications (Zendesk, etc)"
+        },
+        {
+          "type": "api",
+          "target": "https://events.caffeine.tv/"
+        }
+      ]
+    }
+  },
+  {
+    "name": "CARD.com",
+    "url": "https://bugcrowd.com/card",
+    "allows_disclosure": false,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "other",
+          "target": "Card Android Mobile Application"
+        },
+        {
+          "type": "other",
+          "target": "Card iOS Mobile Application"
+        },
+        {
+          "type": "other",
+          "target": "https://www.card.com"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
+    "name": "Centrify",
+    "url": "https://bugcrowd.com/centrify",
+    "allows_disclosure": false,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "ios",
+          "target": "Centrify  iOS App"
+        },
+        {
+          "type": "other",
+          "target": "Centrify Agent for Windows"
+        },
+        {
+          "type": "android",
+          "target": "Centrify Android App"
+        },
+        {
+          "type": "other",
+          "target": "Centrify Browser Extension"
+        },
+        {
+          "type": "other",
+          "target": "Centrify Cloud Connector"
+        },
+        {
+          "type": "website",
+          "target": "Centrify Identity Service / Centrify Privilege Service Portals"
+        },
+        {
+          "type": "api",
+          "target": "Centrify Service API"
+        },
+        {
+          "type": "other",
+          "target": "Local Client Launcher"
+        },
+        {
+          "type": "website",
+          "target": "https://www.centrify.com"
+        },
+        {
+          "type": "website",
+          "target": "pod12.centrify.com"
+        },
+        {
+          "type": "website",
+          "target": "pod23.centrify.com"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
+    "name": "Cisco Meraki",
+    "url": "https://bugcrowd.com/ciscomeraki",
+    "allows_disclosure": false,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "website",
+          "target": "*.ikarem.io"
+        },
+        {
+          "type": "website",
+          "target": "*.meraki.com"
+        },
+        {
+          "type": "website",
+          "target": "*.network-auth.com"
+        },
+        {
+          "type": "other",
+          "target": "Cisco Meraki Dashboard Mobile Application (iOS and Android)"
+        },
+        {
+          "type": "hardware",
+          "target": "Cisco Meraki MC Phones"
+        },
+        {
+          "type": "hardware",
+          "target": "Cisco Meraki MR Access Points"
+        },
+        {
+          "type": "hardware",
+          "target": "Cisco Meraki MS Switches"
+        },
+        {
+          "type": "hardware",
+          "target": "Cisco Meraki MV Security Cameras"
+        },
+        {
+          "type": "hardware",
+          "target": "Cisco Meraki MX Security Appliances"
+        },
+        {
+          "type": "other",
+          "target": "Cisco Meraki Systems Manager"
+        },
+        {
+          "type": "other",
+          "target": "Cisco Meraki Virtual Security Appliances"
+        },
+        {
+          "type": "website",
+          "target": "meraki.cisco.com"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "website",
+          "target": "community.meraki.com"
+        },
+        {
+          "type": "website",
+          "target": "developers.meraki.com"
+        },
+        {
+          "type": "website",
+          "target": "meraki.cisco.com/form/contact"
+        },
+        {
+          "type": "website",
+          "target": "merakipartners.com"
+        },
+        {
+          "type": "website",
+          "target": "smhelp.meraki.com"
+        }
+      ]
+    }
+  },
+  {
+    "name": "SAP Concur",
+    "url": "https://bugcrowd.com/concur",
+    "allows_disclosure": false,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "other",
+          "target": "All services officially provided by Concur are in scope and eligible for the responsible disclosure program, including mobile applications."
+        },
+        {
+          "type": "android",
+          "target": "Tripit Mobile Application: Android"
+        },
+        {
+          "type": "ios",
+          "target": "Tripit Mobile Application: iOS"
+        },
+        {
+          "type": "api",
+          "target": "Tripit Mobile Web Services/Public web services used by the Tripit Mobile applications: https://api.tripit.com/"
+        },
+        {
+          "type": "website",
+          "target": "Tripit Teams: https://www.tripit.com/teams/"
+        },
+        {
+          "type": "website",
+          "target": "Tripit Web Application: https://www.tripit.com"
+        },
+        {
+          "type": "website",
+          "target": "https://m.tripit.com/"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "other",
+          "target": "Sites and companies not owned by, maintained by, or under the control of Concur"
+        },
+        {
+          "type": "website",
+          "target": "concurmobile.freshdesk.com"
+        },
+        {
+          "type": "website",
+          "target": "forum.developer.concur.com"
+        },
+        {
+          "type": "website",
+          "target": "help.expenseit.com"
+        },
+        {
+          "type": "website",
+          "target": "http://store.hipmunk.com"
+        },
+        {
+          "type": "website",
+          "target": "media.hipmunk.com"
+        },
+        {
+          "type": "website",
+          "target": "sentry.hipmunk.com"
+        },
+        {
+          "type": "website",
+          "target": "tmcservices.co.in"
+        },
+        {
+          "type": "website",
+          "target": "www.concurinc.com"
+        },
+        {
+          "type": "website",
+          "target": "www.tmcservices.net"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Constant Contact, Inc.",
+    "url": "https://bugcrowd.com/constantcontact",
+    "allows_disclosure": true,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "other",
+          "target": "All API SDKs"
+        },
+        {
+          "type": "other",
+          "target": "All Constant Contact APIs - api.constantcontact.com"
+        },
+        {
+          "type": "other",
+          "target": "All Constant Contact websites - *.constantcontact.com"
+        },
+        {
+          "type": "other",
+          "target": "All Single Platform websites - *.singleplatform.com"
+        },
+        {
+          "type": "other",
+          "target": "Constant Contact mobile applications [iOS and Android]"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
+    "name": "Credit Karma",
+    "url": "https://bugcrowd.com/creditkarma",
+    "allows_disclosure": false,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "android",
+          "target": "Credit Karma Android Mobile Application"
+        },
+        {
+          "type": "ios",
+          "target": "Credit Karma Canada iOS App"
+        },
+        {
+          "type": "ios",
+          "target": "Credit Karma iOS Mobile Application"
+        },
+        {
+          "type": "api",
+          "target": "api.creditkarma.com"
+        },
+        {
+          "type": "website",
+          "target": "https://*.creditkarma.com"
+        },
+        {
+          "type": "website",
+          "target": "https://accounts.creditkarma.com"
+        },
+        {
+          "type": "website",
+          "target": "https://blog.creditkarma.com/"
+        },
+        {
+          "type": "website",
+          "target": "https://help.creditkarma.com/"
+        },
+        {
+          "type": "website",
+          "target": "https://tax.creditkarma.com"
+        },
+        {
+          "type": "website",
+          "target": "https://www.creditkarma.ca/"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "website",
+          "target": "appsflyer.com"
+        },
+        {
+          "type": "website",
+          "target": "crashlytics.com"
+        },
+        {
+          "type": "website",
+          "target": "http://socialverification.creditkarma.com/"
+        },
+        {
+          "type": "website",
+          "target": "http://socialverification.stage.creditkarma.com/"
+        },
+        {
+          "type": "website",
+          "target": "https://www.creditkarma.com/all/advice"
+        },
+        {
+          "type": "website",
+          "target": "https://www.creditkarma.com/article/*"
+        },
+        {
+          "type": "website",
+          "target": "https://www.creditkarma.com/reviews/"
+        },
+        {
+          "type": "website",
+          "target": "taplytics.com"
+        }
+      ]
+    }
+  },
+  {
     "name": "DarkMatter",
     "url": "https://bugcrowd.com/darkmatterae",
     "allows_disclosure": false,
@@ -75,6 +1107,57 @@
         {
           "type": "website",
           "target": "xen1thlabs.com"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
+    "name": "Dash Digital Cash",
+    "url": "https://bugcrowd.com/dashdigitalcash",
+    "allows_disclosure": false,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "other",
+          "target": "Dash Core"
+        },
+        {
+          "type": "android",
+          "target": "Dash Wallet Mobile Application for Android"
+        },
+        {
+          "type": "ios",
+          "target": "Dash Wallet Mobile Application for iOS"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "website",
+          "target": "https://d-msg.com/"
+        }
+      ]
+    }
+  },
+  {
+    "name": "DigitalOcean",
+    "url": "https://bugcrowd.com/digitalocean",
+    "allows_disclosure": false,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "api",
+          "target": "*.digitaloceanspaces.com"
+        },
+        {
+          "type": "api",
+          "target": "https://api.digitalocean.com"
+        },
+        {
+          "type": "website",
+          "target": "https://cloud.digitalocean.com"
         }
       ],
       "out_of_scope": [
@@ -122,6 +1205,620 @@
     }
   },
   {
+    "name": "eero",
+    "url": "https://bugcrowd.com/eero",
+    "allows_disclosure": false,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "api",
+          "target": "eero APIs"
+        },
+        {
+          "type": "android",
+          "target": "eero Android Mobile Application"
+        },
+        {
+          "type": "hardware",
+          "target": "eero Node"
+        },
+        {
+          "type": "ios",
+          "target": "eero iOS Mobile Application"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "website",
+          "target": "http://foo.eero.com/"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Etsy",
+    "url": "https://bugcrowd.com/etsy",
+    "allows_disclosure": false,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "api",
+          "target": "Etsy API (see documentation below)"
+        },
+        {
+          "type": "android",
+          "target": "Etsy Mobile Application (Android)"
+        },
+        {
+          "type": "ios",
+          "target": "Etsy Mobile Application (iPhone)"
+        },
+        {
+          "type": "website",
+          "target": "blog.etsy.com (payouts are half for this target, and do not include vulns in WP itself or its plugins)"
+        },
+        {
+          "type": "website",
+          "target": "community.etsy.com (payouts are half for this target)"
+        },
+        {
+          "type": "api",
+          "target": "icht.etsysecure.com"
+        },
+        {
+          "type": "website",
+          "target": "www.etsy.com"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
+    "name": "Fiat Chrysler Automobiles",
+    "url": "https://bugcrowd.com/fca",
+    "allows_disclosure": false,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "other",
+          "target": "Vehicle Head Units, TPMS sensors, remote keyless entry, and any other system that is present in a hardware product that you own or are authorized to test against"
+        },
+        {
+          "type": "other",
+          "target": "https://itunes.apple.com/gb/app/uconnect-live/id881830261?mt=8 (iOS)"
+        },
+        {
+          "type": "other",
+          "target": "https://itunes.apple.com/pl/app/panda-uconnect/id1117321678?mt=8"
+        },
+        {
+          "type": "ios",
+          "target": "https://itunes.apple.com/us/app/uconnect/id1229236724?mt=8 (iOS Ver. 3.1.3)"
+        },
+        {
+          "type": "other",
+          "target": "https://play.google.com/store/apps/details?id=com.acn.uc&hl=en (Android)"
+        },
+        {
+          "type": "other",
+          "target": "https://play.google.com/store/apps/details?id=com.acn.uconnectmobile&hl=en (Android)"
+        },
+        {
+          "type": "android",
+          "target": "https://play.google.com/store/apps/details?id=com.fcagroup.us.uconnect (Android Ver. 3.1.3)"
+        },
+        {
+          "type": "other",
+          "target": "www.driveuconnect.com"
+        },
+        {
+          "type": "other",
+          "target": "www.driveuconnect.eu"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "other",
+          "target": "m.driveuconnect.eu"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Fitbit",
+    "url": "https://bugcrowd.com/fitbit",
+    "allows_disclosure": true,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "android",
+          "target": "\"Fitbit Coach\" app for Android"
+        },
+        {
+          "type": "other",
+          "target": "\"Fitbit Coach\" app for Windows 10 & Mobile"
+        },
+        {
+          "type": "ios",
+          "target": "\"Fitbit Coach\" app for iOS"
+        },
+        {
+          "type": "android",
+          "target": "\"Fitbit\" app for Android"
+        },
+        {
+          "type": "other",
+          "target": "\"Fitbit\" app for Windows 10 & Mobile"
+        },
+        {
+          "type": "ios",
+          "target": "\"Fitbit\" app for iOS"
+        },
+        {
+          "type": "ios",
+          "target": "\"Fitstar Yoga\" app for iOS"
+        },
+        {
+          "type": "other",
+          "target": "Fitbit Connect for MacOS & Windows"
+        },
+        {
+          "type": "iot",
+          "target": "Fitbit Ionic"
+        },
+        {
+          "type": "iot",
+          "target": "Fitbit OS"
+        },
+        {
+          "type": "iot",
+          "target": "Fitbit Versa"
+        },
+        {
+          "type": "website",
+          "target": "android-api.fitbit.com"
+        },
+        {
+          "type": "website",
+          "target": "android-client.fitbit.com"
+        },
+        {
+          "type": "website",
+          "target": "api.fitbit.com"
+        },
+        {
+          "type": "website",
+          "target": "api.fitstar.com"
+        },
+        {
+          "type": "website",
+          "target": "coach.fitbit.com"
+        },
+        {
+          "type": "website",
+          "target": "corporate.fitbit.com"
+        },
+        {
+          "type": "website",
+          "target": "desktop-api.fitbit.com"
+        },
+        {
+          "type": "website",
+          "target": "desktop-client.fitbit.com"
+        },
+        {
+          "type": "website",
+          "target": "dev.fitbit.com"
+        },
+        {
+          "type": "website",
+          "target": "iphone-api.fitbit.com"
+        },
+        {
+          "type": "website",
+          "target": "iphone-client.fitbit.com"
+        },
+        {
+          "type": "website",
+          "target": "studio.fitbit.com"
+        },
+        {
+          "type": "api",
+          "target": "web-api.fitbit.com"
+        },
+        {
+          "type": "website",
+          "target": "www.fitbit.com"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
+    "name": "FoxyCart",
+    "url": "https://bugcrowd.com/foxycart",
+    "allows_disclosure": true,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "other",
+          "target": "*-bugcrowd.foxycart.com (read below for details)"
+        },
+        {
+          "type": "other",
+          "target": "api-sandbox.foxycart.com"
+        },
+        {
+          "type": "other",
+          "target": "api.foxycart.com"
+        },
+        {
+          "type": "other",
+          "target": "https://admin.foxycart.com"
+        },
+        {
+          "type": "other",
+          "target": "https://foxycart-demo.foxycart.com"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
+    "name": "SecureDrop",
+    "url": "https://bugcrowd.com/freedomofpress",
+    "allows_disclosure": false,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "other",
+          "target": "https://github.com/freedomofpress/securedrop"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
+    "name": "GO-JEK",
+    "url": "https://bugcrowd.com/gojek",
+    "allows_disclosure": false,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "api",
+          "target": "*.gojekapi.com"
+        },
+        {
+          "type": "android",
+          "target": "GO-JEK Android"
+        },
+        {
+          "type": "ios",
+          "target": "GO-JEK iOS"
+        },
+        {
+          "type": "api",
+          "target": "api.gojek.co.id"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "website",
+          "target": "go-jek.com"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Hack Me!",
+    "url": "https://bugcrowd.com/hackme",
+    "allows_disclosure": false,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "other",
+          "target": "Testing the Bugcrowd platform"
+        },
+        {
+          "type": "website",
+          "target": "www.bugcrowd.com"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
+    "name": "Heroku",
+    "url": "https://bugcrowd.com/heroku",
+    "allows_disclosure": true,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "other",
+          "target": "Source code (excluding demo and deprecated repos) only available at github.com/heroku/"
+        },
+        {
+          "type": "other",
+          "target": "Vulnerabilities which affect multi-tenant integrity of the Heroku Platform"
+        },
+        {
+          "type": "website",
+          "target": "addons-next.heroku.com"
+        },
+        {
+          "type": "website",
+          "target": "http://registry.heroku.com/"
+        },
+        {
+          "type": "other",
+          "target": "http://status.heroku.com/"
+        },
+        {
+          "type": "other",
+          "target": "https://addons.heroku.com"
+        },
+        {
+          "type": "other",
+          "target": "https://api.heroku.com"
+        },
+        {
+          "type": "other",
+          "target": "https://connect.heroku.com"
+        },
+        {
+          "type": "other",
+          "target": "https://dashboard.heroku.com"
+        },
+        {
+          "type": "other",
+          "target": "https://data.heroku.com"
+        },
+        {
+          "type": "other",
+          "target": "https://dataclips.heroku.com"
+        },
+        {
+          "type": "other",
+          "target": "https://devcenter.heroku.com"
+        },
+        {
+          "type": "other",
+          "target": "https://elements.heroku.com"
+        },
+        {
+          "type": "website",
+          "target": "https://git.heroku.com/"
+        },
+        {
+          "type": "other",
+          "target": "https://help.heroku.com"
+        },
+        {
+          "type": "other",
+          "target": "https://id.heroku.com"
+        },
+        {
+          "type": "website",
+          "target": "https://particleboard.heroku.com"
+        },
+        {
+          "type": "other",
+          "target": "https://provider.heroku.com"
+        },
+        {
+          "type": "other",
+          "target": "https://signup.heroku.com"
+        },
+        {
+          "type": "other",
+          "target": "https://telex.heroku.com/"
+        },
+        {
+          "type": "other",
+          "target": "https://toolbelt.heroku.com"
+        },
+        {
+          "type": "other",
+          "target": "https://www.heroku.com"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "website",
+          "target": "Heroku Customer Applications (*.herokuapp.com)"
+        },
+        {
+          "type": "website",
+          "target": "https://github.com/heroku/windmil"
+        }
+      ]
+    }
+  },
+  {
+    "name": "HubSpot Responsible Disclosure",
+    "url": "https://bugcrowd.com/hubspot",
+    "allows_disclosure": true,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "website",
+          "target": "*.hs-sites.com"
+        },
+        {
+          "type": "other",
+          "target": "*.hubapi.com"
+        },
+        {
+          "type": "other",
+          "target": "*.hubspot.com"
+        },
+        {
+          "type": "other",
+          "target": "*.hubspot.net"
+        },
+        {
+          "type": "android",
+          "target": "HubSpot Mobile Application: Android"
+        },
+        {
+          "type": "ios",
+          "target": "HubSpot Mobile Application: iOS"
+        },
+        {
+          "type": "website",
+          "target": "growth.org"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "other",
+          "target": "*.getsidekick.com"
+        },
+        {
+          "type": "other",
+          "target": "*.inbound.org"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Humble Bundle",
+    "url": "https://bugcrowd.com/humblebundle",
+    "allows_disclosure": false,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "other",
+          "target": "https://www.humblebundle.com/"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
+    "name": "Indeed",
+    "url": "https://bugcrowd.com/indeed",
+    "allows_disclosure": true,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "other",
+          "target": "*.indeed.com/*"
+        },
+        {
+          "type": "other",
+          "target": "https://itunes.apple.com/us/app/job-search/id309735670?mt=8"
+        },
+        {
+          "type": "other",
+          "target": "https://play.google.com/store/apps/details?id=com.indeed.android.jobsearch"
+        },
+        {
+          "type": "other",
+          "target": "https://play.google.com/store/apps/details?id=com.indeed.androidemployers"
+        },
+        {
+          "type": "other",
+          "target": "https://play.google.com/store/apps/details?id=com.indeed.jobsnearby&hl=en"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
+    "name": "Intercom",
+    "url": "https://bugcrowd.com/intercom",
+    "allows_disclosure": false,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "other",
+          "target": "*.intercomassets.com / *.intercomcdn.com"
+        },
+        {
+          "type": "android",
+          "target": "Android SDK"
+        },
+        {
+          "type": "other",
+          "target": "https://api.intercom.io"
+        },
+        {
+          "type": "other",
+          "target": "https://app.intercom.io/"
+        },
+        {
+          "type": "ios",
+          "target": "iOS SDK"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
+    "name": "InVision",
+    "url": "https://bugcrowd.com/invision",
+    "allows_disclosure": false,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "other",
+          "target": "Muz.li Browser Add-Ons (Chrome & Safari)"
+        },
+        {
+          "type": "website",
+          "target": "https://muz.li"
+        },
+        {
+          "type": "other",
+          "target": "https://projects.invisionapp.com"
+        },
+        {
+          "type": "website",
+          "target": "https://www.invisionapp.com"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "website",
+          "target": "https://brand.ai"
+        },
+        {
+          "type": "website",
+          "target": "https://invisionapp.com/blog"
+        },
+        {
+          "type": "website",
+          "target": "marketplace.invisionapp.com"
+        },
+        {
+          "type": "website",
+          "target": "support.invisionapp.com"
+        },
+        {
+          "type": "website",
+          "target": "trackduck.com"
+        }
+      ]
+    }
+  },
+  {
     "name": "IOTA Trinity Wallet",
     "url": "https://bugcrowd.com/iota",
     "allows_disclosure": false,
@@ -138,6 +1835,50 @@
         {
           "type": "ios",
           "target": "IOTA iOS Client"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
+    "name": "(ISC)²",
+    "url": "https://bugcrowd.com/isc2",
+    "allows_disclosure": true,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "website",
+          "target": "https://community.isc2.org"
+        },
+        {
+          "type": "website",
+          "target": "https://isc2latamcongress.com"
+        },
+        {
+          "type": "website",
+          "target": "https://learn.isc2.org"
+        },
+        {
+          "type": "other",
+          "target": "https://vulnerability.isc2.org"
+        },
+        {
+          "type": "other",
+          "target": "https://webportal.isc2.org"
+        },
+        {
+          "type": "other",
+          "target": "https://www.isc2.org"
+        },
+        {
+          "type": "website",
+          "target": "iamcybersafe.org"
+        },
+        {
+          "type": "website",
+          "target": "safeandsecure.org"
         }
       ],
       "out_of_scope": [
@@ -178,6 +1919,164 @@
       ],
       "out_of_scope": [
 
+      ]
+    }
+  },
+  {
+    "name": "Keeper Security Vulnerability Disclosure Program",
+    "url": "https://bugcrowd.com/keepersecurity",
+    "allows_disclosure": true,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "other",
+          "target": "Keeper Backend API (Keeper Commander)"
+        },
+        {
+          "type": "other",
+          "target": "Keeper Desktop Application for Mac and PC"
+        },
+        {
+          "type": "android",
+          "target": "Keeper Password Manager for Android"
+        },
+        {
+          "type": "other",
+          "target": "Keeper Password Manager for BlackBerry"
+        },
+        {
+          "type": "other",
+          "target": "Keeper Password Manager for Windows Mobile"
+        },
+        {
+          "type": "other",
+          "target": "Keeper Password Manager for Windows Store"
+        },
+        {
+          "type": "ios",
+          "target": "Keeper Password Manager for iOS"
+        },
+        {
+          "type": "website",
+          "target": "Keeper Security Website (keepersecurity.com | .eu)"
+        },
+        {
+          "type": "website",
+          "target": "KeeperChat Website (keeperchat.com | .eu)"
+        },
+        {
+          "type": "android",
+          "target": "KeeperChat for Android"
+        },
+        {
+          "type": "other",
+          "target": "KeeperChat for Mac"
+        },
+        {
+          "type": "other",
+          "target": "KeeperChat for Windows"
+        },
+        {
+          "type": "ios",
+          "target": "KeeperChat for iOS"
+        },
+        {
+          "type": "other",
+          "target": "KeeperFill Browser Extension (Chrome, Safari, Firefox, Edge, IE)"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
+    "name": "Kenna Security",
+    "url": "https://bugcrowd.com/kennasecurity",
+    "allows_disclosure": false,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "other",
+          "target": "Any host verified to be owned by Kenna (domains/IP space/etc.)"
+        },
+        {
+          "type": "website",
+          "target": "https://[your-subdomain].kennasecurity.com"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "website",
+          "target": "Any Kenna Security customer subdomain not created by you"
+        }
+      ]
+    }
+  },
+  {
+    "name": "LastPass",
+    "url": "https://bugcrowd.com/lastpass",
+    "allows_disclosure": true,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "android",
+          "target": "Android mobile app"
+        },
+        {
+          "type": "android",
+          "target": "LastPass Authenticator Android app"
+        },
+        {
+          "type": "ios",
+          "target": "LastPass Authenticator iOS app"
+        },
+        {
+          "type": "other",
+          "target": "LastPass browser extensions"
+        },
+        {
+          "type": "other",
+          "target": "Local computer apps, e.g. OS X App, Window App, Windows/Mac Installers"
+        },
+        {
+          "type": "other",
+          "target": "https://lastpass.com"
+        },
+        {
+          "type": "ios",
+          "target": "iOS Mobile app"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "other",
+          "target": "LastPass Authenticator Windows Phone app"
+        },
+        {
+          "type": "other",
+          "target": "Lastpass cli tool"
+        },
+        {
+          "type": "other",
+          "target": "Windows Phone app"
+        },
+        {
+          "type": "website",
+          "target": "https://blog.lastpass.com/"
+        },
+        {
+          "type": "website",
+          "target": "https://enterprise.lastpass.com/"
+        },
+        {
+          "type": "website",
+          "target": "https://forums.lastpass.com/"
+        },
+        {
+          "type": "website",
+          "target": "https://helpdesk.lastpass.com/"
+        }
       ]
     }
   },
@@ -281,6 +2180,128 @@
     }
   },
   {
+    "name": "MasterCard",
+    "url": "https://bugcrowd.com/mastercard",
+    "allows_disclosure": false,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "website",
+          "target": "Core Priceless.com - www.priceless.com"
+        },
+        {
+          "type": "website",
+          "target": "MasterCard.ch - (French) - www.mastercard.ch/fr-ch.html"
+        },
+        {
+          "type": "website",
+          "target": "MasterCard.ch - (German) - www.mastercard.ch/de-ch.html"
+        },
+        {
+          "type": "website",
+          "target": "MasterCard.com.au - www.mastercard.com.au/en-au.html"
+        },
+        {
+          "type": "website",
+          "target": "MasterCard.nl - www.mastercard.nl/nl-nl.html"
+        },
+        {
+          "type": "website",
+          "target": "MasterCard.ru - www.mastercard.ru/ru-ru.html"
+        },
+        {
+          "type": "website",
+          "target": "MasterCard.us - www.mastercard.us/en-us.html"
+        },
+        {
+          "type": "website",
+          "target": "Simplify Commerce - www.simplify.com/commerce/"
+        },
+        {
+          "type": "website",
+          "target": "https://developer.mastercard.com"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "api",
+          "target": "All Available Mastercard Developer APIs"
+        }
+      ]
+    }
+  },
+  {
+    "name": "MemoTrader Vulnerability Disclosure",
+    "url": "https://bugcrowd.com/memotrader",
+    "allows_disclosure": false,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "website",
+          "target": "https://d-msg.com/"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
+    "name": "Moneytree KK",
+    "url": "https://bugcrowd.com/moneytreekkog",
+    "allows_disclosure": false,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "ios",
+          "target": "Moneytree iOS Mobile Application (production; see below)"
+        },
+        {
+          "type": "android",
+          "target": "Moneytree staging Android Mobile Application (see below)"
+        },
+        {
+          "type": "website",
+          "target": "app-staging.getmoneytree.com"
+        },
+        {
+          "type": "api",
+          "target": "au-api-staging.getmoneytree.com"
+        },
+        {
+          "type": "api",
+          "target": "jp-api-staging.getmoneytree.com"
+        },
+        {
+          "type": "api",
+          "target": "myaccount-staging.getmoneytree.com"
+        },
+        {
+          "type": "website",
+          "target": "wwws-staging.moneytree.jp/link/"
+        },
+        {
+          "type": "website",
+          "target": "wwws-staging.moneytree.jp/link/mobile/"
+        },
+        {
+          "type": "website",
+          "target": "wwws-staging.moneytree.jp/link/mobile/#/signup?client_id=38d99a6e8e9fc87c866f5aa82bdc2569c464b2323a55e0b28f658efa678e9623&redirect_uri=https://wwws-staging.moneytree.jp/link/mobile/callback&response_type=token&scope=guest_read+accounts_read+transactions_read+request_refresh"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "website",
+          "target": "Any production asset of Moneytree KK (excepting the iOS app)"
+        },
+        {
+          "type": "website",
+          "target": "moneytree.jp"
+        }
+      ]
+    }
+  },
+  {
     "name": "Netflix",
     "url": "https://bugcrowd.com/netflix",
     "allows_disclosure": true,
@@ -357,6 +2378,91 @@
     }
   },
   {
+    "name": "NETGEAR Cash Rewards",
+    "url": "https://bugcrowd.com/netgear",
+    "allows_disclosure": false,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "android",
+          "target": "Insight Android App"
+        },
+        {
+          "type": "website",
+          "target": "Insight Cloud Portal"
+        },
+        {
+          "type": "iot",
+          "target": "Insight Managed Smart Cloud Wireless Access Point"
+        },
+        {
+          "type": "ios",
+          "target": "Insight iOS App"
+        },
+        {
+          "type": "android",
+          "target": "Nighthawk Android App"
+        },
+        {
+          "type": "iot",
+          "target": "Nighthawk Pro Gaming Router"
+        },
+        {
+          "type": "iot",
+          "target": "Nighthawk Pro Gaming Switch"
+        },
+        {
+          "type": "iot",
+          "target": "Nighthawk Router"
+        },
+        {
+          "type": "iot",
+          "target": "Nighthawk Switch"
+        },
+        {
+          "type": "ios",
+          "target": "Nighthawk iOS App"
+        },
+        {
+          "type": "iot",
+          "target": "Orbi"
+        },
+        {
+          "type": "android",
+          "target": "Orbi Android App"
+        },
+        {
+          "type": "ios",
+          "target": "Orbi iOS App"
+        },
+        {
+          "type": "api",
+          "target": "https://api.netgear.com"
+        },
+        {
+          "type": "website",
+          "target": "https://updates.netgear.com"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
+    "name": "NETGEAR Kudos Rewards",
+    "url": "https://bugcrowd.com/netgearkudos",
+    "allows_disclosure": false,
+    "targets": {
+      "in_scope": [
+
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
     "name": "Okta",
     "url": "https://bugcrowd.com/okta",
     "allows_disclosure": true,
@@ -389,6 +2495,202 @@
         {
           "type": "other",
           "target": "bugcrowd-%username%-2.oktapreview.com"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
+    "name": "1Password Game | All prizes found",
+    "url": "https://bugcrowd.com/onepasswordgame",
+    "allows_disclosure": false,
+    "targets": {
+      "in_scope": [
+
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
+    "name": "Optimizely",
+    "url": "https://bugcrowd.com/optimizely",
+    "allows_disclosure": false,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "api",
+          "target": "https://api.optimizely.com/"
+        },
+        {
+          "type": "website",
+          "target": "https://app.optimizely.com/"
+        },
+        {
+          "type": "website",
+          "target": "https://cdn-pci.optimizely.com/"
+        },
+        {
+          "type": "website",
+          "target": "https://cdn.optimizely.com/"
+        },
+        {
+          "type": "website",
+          "target": "https://www.optimizely.com/"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
+    "name": "Overstock's Vulnerability Disclosure Page!",
+    "url": "https://bugcrowd.com/overstockvdp",
+    "allows_disclosure": false,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "other",
+          "target": "*.overstock.com"
+        },
+        {
+          "type": "other",
+          "target": "Overstock Android Mobile App"
+        },
+        {
+          "type": "other",
+          "target": "Overstock iOS Mobile App"
+        },
+        {
+          "type": "website",
+          "target": "cars.overstock.com"
+        },
+        {
+          "type": "other",
+          "target": "https://api.overstock.com"
+        },
+        {
+          "type": "website",
+          "target": "pets.overstock.com"
+        },
+        {
+          "type": "website",
+          "target": "www.overstock.com"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "website",
+          "target": "blog.overstock.com"
+        },
+        {
+          "type": "website",
+          "target": "financehub.overstock.com"
+        },
+        {
+          "type": "website",
+          "target": "help.overstock.com"
+        },
+        {
+          "type": "website",
+          "target": "hotels.overstock.com"
+        },
+        {
+          "type": "website",
+          "target": "investors.overstock.com"
+        },
+        {
+          "type": "other",
+          "target": "miq.overstock.com"
+        },
+        {
+          "type": "website",
+          "target": "snow.overstock.com"
+        }
+      ]
+    }
+  },
+  {
+    "name": "OWASP CSRFGuard",
+    "url": "https://bugcrowd.com/owaspcrsfguard",
+    "allows_disclosure": true,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "other",
+          "target": "https://github.com/OWASP/OWASPBugBounty/tree/master/CRSFGuard"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
+    "name": "OWASP Java Encoder",
+    "url": "https://bugcrowd.com/owaspjavaencoder",
+    "allows_disclosure": true,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "other",
+          "target": "https://github.com/OWASP/OWASPBugBounty/tree/master/JavaEncoder"
+        },
+        {
+          "type": "other",
+          "target": "https://github.com/OWASP/OWASPBugBounty/tree/master/JavaEncoder/war-files"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
+    "name": "OWASP Java HTML Sanitizer",
+    "url": "https://bugcrowd.com/owaspjavasanitizer",
+    "allows_disclosure": true,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "other",
+          "target": "https://github.com/OWASP/OWASPBugBounty/tree/master/JavaHTMLSanitizer/war-files"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
+    "name": "OWASP ZAP",
+    "url": "https://bugcrowd.com/owaspzap",
+    "allows_disclosure": true,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "other",
+          "target": "Latest ZAP version (2.7.0)"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
+    "name": "Pantheon",
+    "url": "https://bugcrowd.com/pantheon",
+    "allows_disclosure": true,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "other",
+          "target": "https://dashboard.pantheon.io"
         }
       ],
       "out_of_scope": [
@@ -473,6 +2775,61 @@
     }
   },
   {
+    "name": "PureVPN",
+    "url": "https://bugcrowd.com/purevpn",
+    "allows_disclosure": false,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "android",
+          "target": "PureVPN Android App"
+        },
+        {
+          "type": "other",
+          "target": "PureVPN Chrome Extension"
+        },
+        {
+          "type": "other",
+          "target": "PureVPN DDwrt Applet"
+        },
+        {
+          "type": "other",
+          "target": "PureVPN Firefox Extension"
+        },
+        {
+          "type": "other",
+          "target": "PureVPN Kodi Add-on"
+        },
+        {
+          "type": "other",
+          "target": "PureVPN Linux App"
+        },
+        {
+          "type": "other",
+          "target": "PureVPN MAC App"
+        },
+        {
+          "type": "other",
+          "target": "PureVPN Windows App"
+        },
+        {
+          "type": "ios",
+          "target": "PureVPN iOS App"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "other",
+          "target": "*.purevpn.com"
+        },
+        {
+          "type": "website",
+          "target": "www.purevpn.com"
+        }
+      ]
+    }
+  },
+  {
     "name": "SEEK",
     "url": "https://bugcrowd.com/seek",
     "allows_disclosure": false,
@@ -521,6 +2878,84 @@
     }
   },
   {
+    "name": "Segment",
+    "url": "https://bugcrowd.com/segment",
+    "allows_disclosure": false,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "website",
+          "target": "Any host / web property verified to be owned by Segment (domains/IP space/etc.)"
+        },
+        {
+          "type": "other",
+          "target": "Source code of Website, Mobile, or Server Libraries (https://segment.com/docs/sources/)"
+        },
+        {
+          "type": "api",
+          "target": "api.segment.io"
+        },
+        {
+          "type": "website",
+          "target": "app.segment.com"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "website",
+          "target": "community.segment.com"
+        },
+        {
+          "type": "website",
+          "target": "segment.com/contact"
+        },
+        {
+          "type": "website",
+          "target": "segment.com/jobs"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Simple",
+    "url": "https://bugcrowd.com/simple",
+    "allows_disclosure": false,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "other",
+          "target": "*.simple.com"
+        },
+        {
+          "type": "android",
+          "target": "Simple for Android"
+        },
+        {
+          "type": "ios",
+          "target": "Simple for iOS"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "website",
+          "target": "All third party applications not under Simple's control."
+        },
+        {
+          "type": "website",
+          "target": "cmail.simple.com"
+        },
+        {
+          "type": "website",
+          "target": "email.simple.com"
+        },
+        {
+          "type": "website",
+          "target": "links.simple.com"
+        }
+      ]
+    }
+  },
+  {
     "name": "Skyscanner",
     "url": "https://bugcrowd.com/skyscanner",
     "allows_disclosure": false,
@@ -559,6 +2994,241 @@
         {
           "type": "website",
           "target": "Subdomains (*.skyscanner.net/*)"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Smartsheet",
+    "url": "https://bugcrowd.com/smartsheet",
+    "allows_disclosure": true,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "other",
+          "target": "https://api.smartsheet.com/1.1"
+        },
+        {
+          "type": "other",
+          "target": "https://api.smartsheet.com/2.0"
+        },
+        {
+          "type": "other",
+          "target": "https://app.smartsheet.com/"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
+    "name": "SmartThings Vulnerability Disclosure",
+    "url": "https://bugcrowd.com/smartthings",
+    "allows_disclosure": false,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "website",
+          "target": "SmartThings Graph Console"
+        },
+        {
+          "type": "iot",
+          "target": "SmartThings Hub"
+        },
+        {
+          "type": "android",
+          "target": "SmartThings Mobile Application for Android"
+        },
+        {
+          "type": "ios",
+          "target": "SmartThings Mobile Application for iOS"
+        },
+        {
+          "type": "api",
+          "target": "SmartThings Rest APIs"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
+    "name": "Socrata",
+    "url": "https://bugcrowd.com/socrata",
+    "allows_disclosure": true,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "other",
+          "target": "https://opendata-demo.test-socrata.com"
+        },
+        {
+          "type": "other",
+          "target": "https://opendata.test-socrata.com"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
+    "name": "Sophos",
+    "url": "https://bugcrowd.com/sophos",
+    "allows_disclosure": false,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "other",
+          "target": "*.astaro-tech.com"
+        },
+        {
+          "type": "other",
+          "target": "*.astaro.at"
+        },
+        {
+          "type": "other",
+          "target": "*.astaro.ch"
+        },
+        {
+          "type": "website",
+          "target": "*.astaro.com"
+        },
+        {
+          "type": "other",
+          "target": "*.astaro.de"
+        },
+        {
+          "type": "other",
+          "target": "*.astaro.info"
+        },
+        {
+          "type": "other",
+          "target": "*.astaro.net"
+        },
+        {
+          "type": "other",
+          "target": "*.astaro.org"
+        },
+        {
+          "type": "website",
+          "target": "*.cyberoam.com"
+        },
+        {
+          "type": "other",
+          "target": "*.fw-notify.net"
+        },
+        {
+          "type": "other",
+          "target": "*.hitmanpro.com"
+        },
+        {
+          "type": "other",
+          "target": "*.hitmanpro.nl"
+        },
+        {
+          "type": "other",
+          "target": "*.mojave.net"
+        },
+        {
+          "type": "other",
+          "target": "*.myastaro.com"
+        },
+        {
+          "type": "other",
+          "target": "*.reflexion.net"
+        },
+        {
+          "type": "other",
+          "target": "*.sophos.com"
+        },
+        {
+          "type": "other",
+          "target": "*.surfright.nl"
+        },
+        {
+          "type": "other",
+          "target": "*.who-is-using-me.com"
+        },
+        {
+          "type": "other",
+          "target": "Invincea X NextGen Anti-Virus"
+        },
+        {
+          "type": "other",
+          "target": "astaro.uservoice.com"
+        },
+        {
+          "type": "website",
+          "target": "dev.phishthreat.com"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "website",
+          "target": "*.Sandboxie.com (including downloadable product)"
+        },
+        {
+          "type": "other",
+          "target": "*.astaro-security.com"
+        },
+        {
+          "type": "other",
+          "target": "*.astaroedu.com"
+        },
+        {
+          "type": "website",
+          "target": "*.ddns.cyberoam.com"
+        },
+        {
+          "type": "website",
+          "target": "*.releaseportal.cyberoam.com"
+        },
+        {
+          "type": "website",
+          "target": "*.spotflux.com (including downloadable product)"
+        },
+        {
+          "type": "website",
+          "target": "*eventreg.sophos.com"
+        },
+        {
+          "type": "website",
+          "target": "app.reflexion.net"
+        },
+        {
+          "type": "other",
+          "target": "autodiscover.hitmanpro.com"
+        },
+        {
+          "type": "other",
+          "target": "lyncdiscover.hitmanpro.com"
+        },
+        {
+          "type": "website",
+          "target": "mev.hitmanpro.com"
+        },
+        {
+          "type": "other",
+          "target": "shop.hitmanpro.com"
+        },
+        {
+          "type": "other",
+          "target": "sip.hitmanpro.com"
+        },
+        {
+          "type": "other",
+          "target": "support.hitmanpro.com"
+        },
+        {
+          "type": "website",
+          "target": "surveys.sophos.com"
+        },
+        {
+          "type": "website",
+          "target": "tickets.reflexion.net"
         }
       ]
     }
@@ -647,6 +3317,141 @@
           "type": "website",
           "target": "sproutsocial.com/wp-includes"
         }
+      ]
+    }
+  },
+  {
+    "name": "Square",
+    "url": "https://bugcrowd.com/square",
+    "allows_disclosure": false,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "website",
+          "target": "*.cash.me"
+        },
+        {
+          "type": "website",
+          "target": "*.square.com"
+        },
+        {
+          "type": "other",
+          "target": "*.squareup.com"
+        },
+        {
+          "type": "android",
+          "target": "Cash App Mobile Application for Android"
+        },
+        {
+          "type": "ios",
+          "target": "Cash App Mobile Application for iOS"
+        },
+        {
+          "type": "android",
+          "target": "Square Point of Sale Mobile Application for Android"
+        },
+        {
+          "type": "ios",
+          "target": "Square Point of Sale Mobile Application for iOS"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "website",
+          "target": "Any vulnerabilities found in Third-party software"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Square Open Source",
+    "url": "https://bugcrowd.com/squareopensource",
+    "allows_disclosure": false,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "other",
+          "target": "https://github.com/square/ghostunnel"
+        },
+        {
+          "type": "other",
+          "target": "https://github.com/square/git-fastclone"
+        },
+        {
+          "type": "other",
+          "target": "https://github.com/square/go-jose"
+        },
+        {
+          "type": "other",
+          "target": "https://github.com/square/js-jose"
+        },
+        {
+          "type": "other",
+          "target": "https://github.com/square/keysync"
+        },
+        {
+          "type": "other",
+          "target": "https://github.com/square/keywhiz"
+        },
+        {
+          "type": "other",
+          "target": "https://github.com/square/keywhiz-fs"
+        },
+        {
+          "type": "other",
+          "target": "https://github.com/square/okhttp"
+        },
+        {
+          "type": "other",
+          "target": "https://github.com/square/okio"
+        },
+        {
+          "type": "other",
+          "target": "https://github.com/square/pam_krb_cache"
+        },
+        {
+          "type": "other",
+          "target": "https://github.com/square/rails-auth"
+        },
+        {
+          "type": "other",
+          "target": "https://github.com/square/retrofit"
+        },
+        {
+          "type": "other",
+          "target": "https://github.com/square/squalor"
+        },
+        {
+          "type": "other",
+          "target": "https://github.com/square/valet"
+        },
+        {
+          "type": "other",
+          "target": "https://github.com/square/wire"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
+    "name": "Statuspage",
+    "url": "https://bugcrowd.com/statuspage",
+    "allows_disclosure": false,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "website",
+          "target": "*.statuspage.io"
+        },
+        {
+          "type": "website",
+          "target": "manage.statuspage.io"
+        }
+      ],
+      "out_of_scope": [
+
       ]
     }
   },
@@ -826,6 +3631,124 @@
     }
   },
   {
+    "name": "Tesla",
+    "url": "https://bugcrowd.com/tesla",
+    "allows_disclosure": true,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "website",
+          "target": "*.tesla.cn"
+        },
+        {
+          "type": "website",
+          "target": "*.tesla.com"
+        },
+        {
+          "type": "website",
+          "target": "*.tesla.services"
+        },
+        {
+          "type": "website",
+          "target": "*.teslamotors.com"
+        },
+        {
+          "type": "hardware",
+          "target": "A hardware product that you own or are authorized to test against (Vehicle/PowerWall/etc.)"
+        },
+        {
+          "type": "website",
+          "target": "Any host verified to be owned by Tesla Motors Inc. (domains/IP space/etc.)"
+        },
+        {
+          "type": "android",
+          "target": "Official Tesla Android apps"
+        },
+        {
+          "type": "ios",
+          "target": "Official Tesla iOS apps"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "website",
+          "target": "Any SolarCity property, including *.solarcity.com"
+        },
+        {
+          "type": "website",
+          "target": "Any other third-party websites hosted by non-Tesla entities"
+        },
+        {
+          "type": "website",
+          "target": "employeefeedback.tesla.com"
+        },
+        {
+          "type": "website",
+          "target": "energysupport.tesla.com (you can report vulnerabilities to bugbounty.zoho.com)"
+        },
+        {
+          "type": "website",
+          "target": "feedback.teslamotors.com"
+        },
+        {
+          "type": "website",
+          "target": "ir.tesla.com"
+        },
+        {
+          "type": "website",
+          "target": "ir.teslamotors.com"
+        },
+        {
+          "type": "website",
+          "target": "mkto.teslamotors.com"
+        },
+        {
+          "type": "website",
+          "target": "shop.eu.teslamotors.com"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Trello",
+    "url": "https://bugcrowd.com/trello",
+    "allows_disclosure": true,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "website",
+          "target": "*.trello.services"
+        },
+        {
+          "type": "website",
+          "target": "api.trello.com"
+        },
+        {
+          "type": "website",
+          "target": "https://butlerfortrello.com/"
+        },
+        {
+          "type": "website",
+          "target": "trello.com"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "website",
+          "target": "e.trello.com"
+        },
+        {
+          "type": "website",
+          "target": "help.trello.com"
+        },
+        {
+          "type": "website",
+          "target": "trello-attachments.s3.amazonaws.com"
+        }
+      ]
+    }
+  },
+  {
     "name": "TripAdvisor Vulnerability Disclosure Program",
     "url": "https://bugcrowd.com/tripadvisor-vdp",
     "allows_disclosure": false,
@@ -964,6 +3887,153 @@
     }
   },
   {
+    "name": "UNDER ARMOUR",
+    "url": "https://bugcrowd.com/underarmour",
+    "allows_disclosure": false,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "android",
+          "target": "Endomondo Android"
+        },
+        {
+          "type": "ios",
+          "target": "Endomondo iOS"
+        },
+        {
+          "type": "android",
+          "target": "MapMyFitness Android"
+        },
+        {
+          "type": "ios",
+          "target": "MapMyFitness iOS"
+        },
+        {
+          "type": "android",
+          "target": "MyFitnessPal Android"
+        },
+        {
+          "type": "ios",
+          "target": "MyFitnessPal iOS"
+        },
+        {
+          "type": "other",
+          "target": "UA Gemini Record Equipped running shoe that you own or have authorization to test"
+        },
+        {
+          "type": "website",
+          "target": "UA HOVR Equipped running shoe that you own or have authorization to test"
+        },
+        {
+          "type": "android",
+          "target": "UA Record Android"
+        },
+        {
+          "type": "ios",
+          "target": "UA Record iOS"
+        },
+        {
+          "type": "android",
+          "target": "UA Shop Android"
+        },
+        {
+          "type": "ios",
+          "target": "UA Shop iOS"
+        },
+        {
+          "type": "other",
+          "target": "api.myfitnesspal.com/v2/"
+        },
+        {
+          "type": "other",
+          "target": "https://record.underarmour.com/"
+        },
+        {
+          "type": "website",
+          "target": "https://www.endomondo.com/"
+        },
+        {
+          "type": "other",
+          "target": "https://www.mapmyfitness.com"
+        },
+        {
+          "type": "other",
+          "target": "https://www.mapmyride.com"
+        },
+        {
+          "type": "other",
+          "target": "https://www.mapmyrun.com"
+        },
+        {
+          "type": "other",
+          "target": "https://www.mapmywalk.com"
+        },
+        {
+          "type": "other",
+          "target": "https://www.myfitnesspal.com"
+        },
+        {
+          "type": "website",
+          "target": "https://www.underarmour.co.uk"
+        },
+        {
+          "type": "website",
+          "target": "https://www.underarmour.com"
+        },
+        {
+          "type": "other",
+          "target": "mapmyfitness.api.ua.com"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
+    "name": "Upwork",
+    "url": "https://bugcrowd.com/upwork",
+    "allows_disclosure": false,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "other",
+          "target": "*.upwork.com"
+        },
+        {
+          "type": "other",
+          "target": "Upwork - iOS and Android Applications"
+        },
+        {
+          "type": "other",
+          "target": "Upwork Dash Messanger Desktop Version (www.upwork.com/downloads)"
+        },
+        {
+          "type": "api",
+          "target": "https://www.upwork.com/api"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "website",
+          "target": "Any Third-party Services"
+        },
+        {
+          "type": "other",
+          "target": "Any subdomain/domain/property not listed in the 'in scope' section, is out of scope."
+        },
+        {
+          "type": "website",
+          "target": "community.upwork.com"
+        },
+        {
+          "type": "website",
+          "target": "support.upwork.com (Any vuln related to a support ticket)"
+        }
+      ]
+    }
+  },
+  {
     "name": "USAA",
     "url": "https://bugcrowd.com/usaa",
     "allows_disclosure": false,
@@ -996,6 +4066,301 @@
     }
   },
   {
+    "name": "Western Union",
+    "url": "https://bugcrowd.com/westernunion",
+    "allows_disclosure": false,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "android",
+          "target": "Western Union Android app (link below)"
+        },
+        {
+          "type": "ios",
+          "target": "Western Union iOS app (link below)"
+        },
+        {
+          "type": "website",
+          "target": "corporate.westernunion.com"
+        },
+        {
+          "type": "website",
+          "target": "http://agenttraining.westernunion.com"
+        },
+        {
+          "type": "website",
+          "target": "http://globalpay.westernunion.com"
+        },
+        {
+          "type": "website",
+          "target": "https://agentportal.westernunion.com"
+        },
+        {
+          "type": "website",
+          "target": "https://auth.globalpay.westernunion.com"
+        },
+        {
+          "type": "website",
+          "target": "https://business.westernunion.com/"
+        },
+        {
+          "type": "other",
+          "target": "https://cuba.westernunion.com"
+        },
+        {
+          "type": "website",
+          "target": "https://ebanking.westernunionbank.com"
+        },
+        {
+          "type": "other",
+          "target": "https://egypt.westernunion.com"
+        },
+        {
+          "type": "website",
+          "target": "https://foundation.westernunion.com"
+        },
+        {
+          "type": "website",
+          "target": "https://gpfi.globalpay.westernunion.com"
+        },
+        {
+          "type": "other",
+          "target": "https://hk.westernunion.com"
+        },
+        {
+          "type": "other",
+          "target": "https://india.westernunion.com"
+        },
+        {
+          "type": "other",
+          "target": "https://jamaica.westernunion.com"
+        },
+        {
+          "type": "other",
+          "target": "https://locations.westernunion.com"
+        },
+        {
+          "type": "other",
+          "target": "https://m.westernunion.com"
+        },
+        {
+          "type": "website",
+          "target": "https://online.westernunion.com/mp.en/pages/loginform.aspx"
+        },
+        {
+          "type": "website",
+          "target": "https://onlinefx.westernunion.com/"
+        },
+        {
+          "type": "website",
+          "target": "https://partners.westernunion.com"
+        },
+        {
+          "type": "website",
+          "target": "https://paymentstatus.westernunion.com"
+        },
+        {
+          "type": "website",
+          "target": "https://paynow40.speedpay.com"
+        },
+        {
+          "type": "website",
+          "target": "https://paynow7.speedpay.com/"
+        },
+        {
+          "type": "website",
+          "target": "https://rewardcircle.westernunion.com"
+        },
+        {
+          "type": "other",
+          "target": "https://senegal.westernunion.com"
+        },
+        {
+          "type": "other",
+          "target": "https://sg.westernunion.com"
+        },
+        {
+          "type": "website",
+          "target": "https://westernunionbank.com"
+        },
+        {
+          "type": "website",
+          "target": "https://wuagentportal.westernunion.com"
+        },
+        {
+          "type": "other",
+          "target": "https://www.westernunion.at"
+        },
+        {
+          "type": "other",
+          "target": "https://www.westernunion.be"
+        },
+        {
+          "type": "other",
+          "target": "https://www.westernunion.ca"
+        },
+        {
+          "type": "other",
+          "target": "https://www.westernunion.ch"
+        },
+        {
+          "type": "other",
+          "target": "https://www.westernunion.co.nz"
+        },
+        {
+          "type": "other",
+          "target": "https://www.westernunion.co.uk"
+        },
+        {
+          "type": "other",
+          "target": "https://www.westernunion.com"
+        },
+        {
+          "type": "other",
+          "target": "https://www.westernunion.com.au"
+        },
+        {
+          "type": "other",
+          "target": "https://www.westernunion.de"
+        },
+        {
+          "type": "other",
+          "target": "https://www.westernunion.dk"
+        },
+        {
+          "type": "other",
+          "target": "https://www.westernunion.ee"
+        },
+        {
+          "type": "other",
+          "target": "https://www.westernunion.es"
+        },
+        {
+          "type": "other",
+          "target": "https://www.westernunion.fi"
+        },
+        {
+          "type": "other",
+          "target": "https://www.westernunion.fr"
+        },
+        {
+          "type": "other",
+          "target": "https://www.westernunion.gr"
+        },
+        {
+          "type": "other",
+          "target": "https://www.westernunion.ie"
+        },
+        {
+          "type": "other",
+          "target": "https://www.westernunion.it"
+        },
+        {
+          "type": "other",
+          "target": "https://www.westernunion.lu"
+        },
+        {
+          "type": "other",
+          "target": "https://www.westernunion.nl"
+        },
+        {
+          "type": "other",
+          "target": "https://www.westernunion.no"
+        },
+        {
+          "type": "other",
+          "target": "https://www.westernunion.pl"
+        },
+        {
+          "type": "other",
+          "target": "https://www.westernunion.pt"
+        },
+        {
+          "type": "other",
+          "target": "https://www.westernunion.se"
+        },
+        {
+          "type": "website",
+          "target": "https://www.wuprepaid.at/"
+        },
+        {
+          "type": "other",
+          "target": "https://www2.westernunion.com"
+        },
+        {
+          "type": "website",
+          "target": "iwgo.westernunion.com"
+        },
+        {
+          "type": "website",
+          "target": "masspay.api.westernunion.com"
+        },
+        {
+          "type": "website",
+          "target": "partnernet.westernunion.com"
+        },
+        {
+          "type": "website",
+          "target": "payee.globalpay.westernunion.com"
+        },
+        {
+          "type": "website",
+          "target": "payments.westernunion.com"
+        },
+        {
+          "type": "website",
+          "target": "remoteaccess.westernunion.com"
+        },
+        {
+          "type": "website",
+          "target": "secure.westernunion.com"
+        },
+        {
+          "type": "website",
+          "target": "secureauth.westernunion.com"
+        },
+        {
+          "type": "website",
+          "target": "trackpayments.westernunion.com"
+        },
+        {
+          "type": "website",
+          "target": "transvision.westernunion.com"
+        },
+        {
+          "type": "website",
+          "target": "wucare.westernunion.com"
+        },
+        {
+          "type": "website",
+          "target": "wuinsights.westernunion.com"
+        },
+        {
+          "type": "website",
+          "target": "www.speedpay.com"
+        },
+        {
+          "type": "website",
+          "target": "www.wuedge.com"
+        },
+        {
+          "type": "website",
+          "target": "www.wuprepaid.de"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "website",
+          "target": "Any asset not listed above as 'In Scope'"
+        },
+        {
+          "type": "other",
+          "target": "https://www.inmateservices.westernunion.com"
+        }
+      ]
+    }
+  },
+  {
     "name": "Western Union Kudos",
     "url": "https://bugcrowd.com/westernunion-kudos",
     "allows_disclosure": false,
@@ -1016,6 +4381,50 @@
       ],
       "out_of_scope": [
 
+      ]
+    }
+  },
+  {
+    "name": "WHMCS Client Management Portal",
+    "url": "https://bugcrowd.com/whmcs",
+    "allows_disclosure": false,
+    "targets": {
+      "in_scope": [
+
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
+    "name": "You Need a Budget (YNAB)",
+    "url": "https://bugcrowd.com/ynab",
+    "allows_disclosure": true,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "website",
+          "target": "*.youneedabudget.com"
+        },
+        {
+          "type": "website",
+          "target": "https://ynab-api-staging.herokuapp.com"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "website",
+          "target": "http://docs.youneedabudget.com/"
+        },
+        {
+          "type": "website",
+          "target": "https://app.youneedabudget.com/"
+        },
+        {
+          "type": "website",
+          "target": "https://forum.youneedabudget.com/"
+        }
       ]
     }
   },
