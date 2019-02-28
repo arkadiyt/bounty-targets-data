@@ -2535,6 +2535,33 @@
     }
   },
   {
+    "name": "Atlassian Opsgenie",
+    "url": "https://bugcrowd.com/opsgenie",
+    "allows_disclosure": false,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "website",
+          "target": "*.opsgeni.us"
+        },
+        {
+          "type": "website",
+          "target": "app.opsgeni.us"
+        },
+        {
+          "type": "website",
+          "target": "mobileapp.opsgeni.us"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "other",
+          "target": "Ops Genie Production (*.opsgenie.com, billing systems, third parties)"
+        }
+      ]
+    }
+  },
+  {
     "name": "Optimizely",
     "url": "https://bugcrowd.com/optimizely",
     "allows_disclosure": false,
