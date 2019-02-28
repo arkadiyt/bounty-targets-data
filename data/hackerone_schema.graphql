@@ -6383,6 +6383,10 @@ Root entity of the Hackerone Schema
 type Query implements Node {
   application: Application!
   bank_transfer_reference: BankTransferReference
+
+  """
+  A Resolver for Clusters
+  """
   clusters(
     """
     Returns the elements in the list that come after the specified cursor.
@@ -12813,6 +12817,10 @@ The type of vulnerability on a HackerOne report
 """
 type Weakness implements Node {
   _id: ID!
+
+  """
+  A Resolver for Clusters
+  """
   clusters(
     """
     Returns the elements in the list that come after the specified cursor.
