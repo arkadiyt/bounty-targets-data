@@ -7252,7 +7252,7 @@
           "confidentiality_requirement": null,
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
-          "instruction": "GitHub uses a mix of our own physical infrastructure, cloud-platforms and third-party services to keep everything running smoothly. Keeping credentials and access tokens secure for these services is paramount. These include:\n\n* Credentials allowing access to package managers, cloud services and GitHub personal access tokens.\n* Credentials accidentally made public in repositories.\n* Credentials exposed by a third-party service.\n\nPlease review our [guidance for handling PII](https://bounty.github.com/#handling_personally_identifiable_information_pii) before investigating credentials. Reward amount is based on the impact of the leaked credential which will be determined by the GitHub Security team.",
+          "instruction": "GitHub, Inc. uses a mix of our own physical infrastructure, cloud platforms and third-party services to keep everything running smoothly. Keeping credentials and access tokens secure for these resources is paramount to the security of our employees and users.\n\n* Credentials allowing access to cloud services, package managers and other resources used by GitHub, Inc employees\n* Credentials accidentally made public in repositories which allow access to GitHub, Inc resources. This does *not* include credentials exposed by our users and credentials which do not allow access to GitHub, Inc resources.\n* Credentials exposed by third-party services which allow access to GitHub, Inc resources\n\nPlease review our [guidance for handling PII](https://bounty.github.com/#handling_personally_identifiable_information_pii) before investigating credentials allowing access to GitHub, Inc resources. The reward amount is based on the impact of the leaked credential which will be determined by the GitHub Security team.",
           "integrity_requirement": null,
           "max_severity": "critical"
         },
@@ -8380,10 +8380,118 @@
     "quick_to_first_response": true,
     "targets": {
       "in_scope": [
-
+        {
+          "asset_identifier": "*.soundtrap.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Soundtrap was acquired by Spotify in 2017.",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "*.spotify.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "The spotify.com domain is used for product and corporation-focused websites.",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "com.soundtrap.studioapp",
+          "asset_type": "APPLE_STORE_APP_ID",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "com.soundtrap.studioapp",
+          "asset_type": "GOOGLE_PLAY_APP_ID",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Soundtrap - Make Music Online\n\nhttps://play.google.com/store/apps/details?id=com.soundtrap.studioapp",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "com.spotify.client",
+          "asset_type": "APPLE_STORE_APP_ID",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Spotify - Music and Podcasts\n\nhttps://itunes.apple.com/us/app/spotify-music-and-podcasts/id324684580",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "com.spotify.music",
+          "asset_type": "APPLE_STORE_APP_ID",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Spotify - Music and Podcasts\n\nhttps://play.google.com/store/apps/details?id=com.spotify.music",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "com.spotify.s4a",
+          "asset_type": "APPLE_STORE_APP_ID",
+          "availability_requirement": null,
+          "confidentiality_requirement": "none",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Spotify for Artists\n\nhttps://itunes.apple.com/us/app/spotify-for-artists/id1222021797",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "com.spotify.s4a",
+          "asset_type": "GOOGLE_PLAY_APP_ID",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Spotify for Artists\n\nhttps://play.google.com/store/apps/details?id=com.spotify.s4a",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "com.spotify.tv.android",
+          "asset_type": "GOOGLE_PLAY_APP_ID",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Spotify Music - for Android TV\n\nhttps://play.google.com/store/apps/details?id=com.spotify.tv.android",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        }
       ],
       "out_of_scope": [
-
+        {
+          "asset_identifier": "assets.spotify.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        }
       ]
     }
   },
