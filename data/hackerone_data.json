@@ -8398,7 +8398,29 @@
           "confidentiality_requirement": null,
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
-          "instruction": "The spotify.com domain is used for product and corporation-focused websites.",
+          "instruction": "The spotify.com domain is used for product and corporate-focused websites.\n\nThis includes, but is not limited to, the webplayer at http://play.spotify.com/, https://open.spotify.com/browse, and https://accounts.spotify.com",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "Other Spotify websites",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Please use this asset for non *.spotify.com websites. This includes sites in the domans forspotify.com, tospotify.com, fromspotify.com and atspotify.com.",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "api.spotify.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Based on simple REST principles, the Spotify Web API endpoints return JSON metadata about music artists, albums, and tracks, directly from the Spotify Data Catalogue.\n\nWeb API also provides access to user related data, like playlists and music that the user saves in the Your Music library. Such access should be enabled through selective authorization, by the user.\n\nA full list of the objects returned by the endpoints of the Spotify Web API - https://developer.spotify.com/documentation/web-api/reference/object-model/ ",
           "integrity_requirement": null,
           "max_severity": "critical"
         },
@@ -8409,7 +8431,7 @@
           "confidentiality_requirement": null,
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
-          "instruction": "",
+          "instruction": "Soundtrap \n\nhttps://itunes.apple.com/us/app/soundtrap/id991031323",
           "integrity_requirement": null,
           "max_severity": "critical"
         },
@@ -8437,7 +8459,7 @@
         },
         {
           "asset_identifier": "com.spotify.music",
-          "asset_type": "APPLE_STORE_APP_ID",
+          "asset_type": "GOOGLE_PLAY_APP_ID",
           "availability_requirement": null,
           "confidentiality_requirement": null,
           "eligible_for_bounty": true,
@@ -8476,6 +8498,17 @@
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
           "instruction": "Spotify Music - for Android TV\n\nhttps://play.google.com/store/apps/details?id=com.spotify.tv.android",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://developer.spotify.com/",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "#Spotify SDKs\n\nSpotify for developers home is at https://developer.spotify.com/\n\n##iOS SDK\n* https://developer.spotify.com/documentation/ios/ \n* https://github.com/spotify/ios-sdk \n* https://github.com/spotify/ios-streaming-sdk \n\n##Android SDK\n* https://developer.spotify.com/documentation/android/ \n* https://github.com/spotify/android-sdk \n* https://github.com/spotify/android-streaming-sdk \n\n##Web Playback SDK\n* https://developer.spotify.com/documentation/web-playback-sdk/",
           "integrity_requirement": null,
           "max_severity": "critical"
         }
