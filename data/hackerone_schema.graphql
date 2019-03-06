@@ -6839,6 +6839,7 @@ type Query implements Node {
     state: ReportStateEnum
     substate: ReportStateEnum
     triage_dashboard_tab: String = null
+    undismissed: Boolean = null
     where: FiltersReportFilterInput
     without_scope: Boolean = null
   ): ReportConnection
@@ -8281,6 +8282,7 @@ type StructuredScope implements Node & ResourceInterface {
     state: ReportStateEnum
     substate: ReportStateEnum
     triage_dashboard_tab: String = null
+    undismissed: Boolean = null
     where: FiltersReportFilterInput
     without_scope: Boolean = null
   ): ReportConnection
@@ -9060,6 +9062,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
     """
     last: Int
   ): CustomFieldAttributeConnection
+  customized_report_template: Boolean!
   cve_requests(
     """
     Returns the elements in the list that come after the specified cursor.
@@ -9488,6 +9491,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
     state: ReportStateEnum
     substate: ReportStateEnum
     triage_dashboard_tab: String = null
+    undismissed: Boolean = null
     violates_minimum_sla: SlaTypeEnum
     where: FiltersReportFilterInput
     without_scope: Boolean = null
@@ -12836,6 +12840,7 @@ type User implements Node & ResourceInterface {
     state: ReportStateEnum
     substate: ReportStateEnum
     triage_dashboard_tab: String = null
+    undismissed: Boolean = null
     where: FiltersReportFilterInput
     without_scope: Boolean = null
   ): ReportConnection
