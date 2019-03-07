@@ -3879,6 +3879,11 @@ type CustomFieldAttributeEdge {
   node: CustomFieldAttribute
 }
 
+input CustomFieldInput {
+  label__eq: String!
+  value__eq: String!
+}
+
 """
 Status which reflect the state of a bounty
 """
@@ -7295,6 +7300,7 @@ input ReportFilterInput {
   closed_at__null: Boolean
   created_at__gt: DateTime
   created_at__lt: DateTime
+  custom_fields: [CustomFieldInput]
   disclosed_at__gt: DateTime
   disclosed_at__lt: DateTime
   disclosed_at__null: Boolean
