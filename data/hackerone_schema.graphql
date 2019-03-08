@@ -2519,7 +2519,27 @@ type CreateCustomFieldAttributePayload implements MutationResult {
   A unique identifier for the client performing the mutation.
   """
   clientMutationId: String
-  custom_field: CustomFieldAttribute
+  custom_fields(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+  ): CustomFieldAttributeConnection
   errors(
     """
     Returns the elements in the list that come after the specified cursor.
@@ -2542,6 +2562,7 @@ type CreateCustomFieldAttributePayload implements MutationResult {
     last: Int
     types: [ErrorTypeEnum]
   ): ErrorConnection!
+  new_custom_field: CustomFieldAttributeEdge
   team: Team
   was_successful: Boolean!
 }
@@ -6943,6 +6964,28 @@ type Query implements Node {
     secure_order_by: FiltersTeamFilterOrder
     where: FiltersTeamFilterInput
   ): TeamConnection
+  triage_inbox_items(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+    oldest_undismissed_by_report: Boolean = false
+  ): TriageInboxItemConnection!
   user(username: String!): User
   users(
     """
@@ -9767,7 +9810,6 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
     """
     last: Int
     order_by: TriggersOrder = {direction: DESC, field: created_at}
-    search: String = null
   ): TriggerConnection
   twitter_handle: String
   updated_at: DateTime
@@ -10224,6 +10266,51 @@ enum TeamWeaknessStates {
   disabled
   enabled
   hidden
+}
+
+"""
+A Triage Inbox Item
+"""
+type TriageInboxItem implements Node {
+  _id: ID!
+  activity: ActivityUnion!
+  created_at: DateTime!
+  id: ID!
+}
+
+"""
+The connection type for TriageInboxItem.
+"""
+type TriageInboxItemConnection {
+  """
+  A list of edges.
+  """
+  edges: [TriageInboxItemEdge]
+
+  """
+  A list of nodes.
+  """
+  nodes: [TriageInboxItem]
+
+  """
+  Information to aid in pagination.
+  """
+  pageInfo: PageInfo!
+}
+
+"""
+An edge in a connection.
+"""
+type TriageInboxItemEdge {
+  """
+  A cursor for use in pagination.
+  """
+  cursor: String!
+
+  """
+  The item at the end of the edge.
+  """
+  node: TriageInboxItem
 }
 
 """
