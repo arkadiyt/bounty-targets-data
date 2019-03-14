@@ -83,6 +83,7 @@ type ActivitiesAgreedOnGoingPublic implements ActivityInterface & Node & ReportA
   markdown_message: String
   message: String
   report: Report
+  triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
 }
 
@@ -105,6 +106,7 @@ type ActivitiesBountyAwarded implements ActivityInterface & Node & ReportActivit
   markdown_message: String
   message: String
   report: Report
+  triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
 }
 
@@ -127,6 +129,7 @@ type ActivitiesBountySuggested implements ActivityInterface & Node & ReportActiv
   markdown_message: String
   message: String
   report: Report
+  triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
 }
 
@@ -148,6 +151,7 @@ type ActivitiesBugCloned implements ActivityInterface & Node & ReportActivityInt
   original_report: Report
   original_report_id: Int
   report: Report
+  triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
 }
 
@@ -169,6 +173,7 @@ type ActivitiesBugDuplicate implements ActivityInterface & Node & ReportActivity
   original_report: Report
   original_report_id: Int
   report: Report
+  triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
 }
 
@@ -188,6 +193,7 @@ type ActivitiesBugFiled implements ActivityInterface & Node & ReportActivityInte
   markdown_message: String
   message: String
   report: Report
+  triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
 }
 
@@ -207,6 +213,7 @@ type ActivitiesBugInactive implements ActivityInterface & Node & ReportActivityI
   markdown_message: String
   message: String
   report: Report
+  triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
 }
 
@@ -226,6 +233,7 @@ type ActivitiesBugInformative implements ActivityInterface & Node & ReportActivi
   markdown_message: String
   message: String
   report: Report
+  triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
 }
 
@@ -245,6 +253,7 @@ type ActivitiesBugNeedsMoreInfo implements ActivityInterface & Node & ReportActi
   markdown_message: String
   message: String
   report: Report
+  triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
 }
 
@@ -264,6 +273,7 @@ type ActivitiesBugNew implements ActivityInterface & Node & ReportActivityInterf
   markdown_message: String
   message: String
   report: Report
+  triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
 }
 
@@ -283,6 +293,7 @@ type ActivitiesBugNotApplicable implements ActivityInterface & Node & ReportActi
   markdown_message: String
   message: String
   report: Report
+  triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
 }
 
@@ -302,6 +313,7 @@ type ActivitiesBugReopened implements ActivityInterface & Node & ReportActivityI
   markdown_message: String
   message: String
   report: Report
+  triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
 }
 
@@ -321,6 +333,7 @@ type ActivitiesBugResolved implements ActivityInterface & Node & ReportActivityI
   markdown_message: String
   message: String
   report: Report
+  triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
 }
 
@@ -340,6 +353,7 @@ type ActivitiesBugSpam implements ActivityInterface & Node & ReportActivityInter
   markdown_message: String
   message: String
   report: Report
+  triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
 }
 
@@ -359,6 +373,7 @@ type ActivitiesBugTriaged implements ActivityInterface & Node & ReportActivityIn
   markdown_message: String
   message: String
   report: Report
+  triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
 }
 
@@ -378,6 +393,7 @@ type ActivitiesCancelledDisclosureRequest implements ActivityInterface & Node & 
   markdown_message: String
   message: String
   report: Report
+  triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
 }
 
@@ -399,6 +415,39 @@ type ActivitiesChangedScope implements ActivityInterface & Node & ReportActivity
   new_scope: StructuredScope
   old_scope: StructuredScope
   report: Report
+  triage_inbox_item: TriageInboxItem
+  updated_at: DateTime!
+}
+
+"""
+A Activities::ChecklistCheckClaimed activity for a checklist_check
+"""
+type ActivitiesChecklistCheckClaimed implements ActivityInterface & Node {
+  _id: ID!
+  actor: ActorUnion
+  created_at: DateTime!
+  i_can_edit: Boolean!
+  id: ID!
+  internal: Boolean
+  markdown_message: String
+  message: String
+  triage_inbox_item: TriageInboxItem
+  updated_at: DateTime!
+}
+
+"""
+A Activities::ChecklistCheckRevoked activity for a checklist_check
+"""
+type ActivitiesChecklistCheckRevoked implements ActivityInterface & Node {
+  _id: ID!
+  actor: ActorUnion
+  created_at: DateTime!
+  i_can_edit: Boolean!
+  id: ID!
+  internal: Boolean
+  markdown_message: String
+  message: String
+  triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
 }
 
@@ -418,6 +467,7 @@ type ActivitiesComment implements ActivityInterface & Node & ReportActivityInter
   markdown_message: String
   message: String
   report: Report
+  triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
 }
 
@@ -437,6 +487,7 @@ type ActivitiesCommentsClosed implements ActivityInterface & Node & ReportActivi
   markdown_message: String
   message: String
   report: Report
+  triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
 }
 
@@ -457,6 +508,7 @@ type ActivitiesCveIdAdded implements ActivityInterface & Node & ReportActivityIn
   markdown_message: String
   message: String
   report: Report
+  triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
 }
 
@@ -476,6 +528,7 @@ type ActivitiesExternalAdvisoryAdded implements ActivityInterface & Node & Repor
   markdown_message: String
   message: String
   report: Report
+  triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
 }
 
@@ -496,6 +549,7 @@ type ActivitiesExternalUserInvitationCancelled implements ActivityInterface & No
   markdown_message: String
   message: String
   report: Report
+  triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
 }
 
@@ -516,6 +570,7 @@ type ActivitiesExternalUserInvited implements ActivityInterface & Node & ReportA
   markdown_message: String
   message: String
   report: Report
+  triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
 }
 
@@ -537,6 +592,7 @@ type ActivitiesExternalUserJoined implements ActivityInterface & Node & ReportAc
   markdown_message: String
   message: String
   report: Report
+  triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
 }
 
@@ -557,6 +613,7 @@ type ActivitiesExternalUserRemoved implements ActivityInterface & Node & ReportA
   message: String
   removed_user: User!
   report: Report
+  triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
 }
 
@@ -578,6 +635,7 @@ type ActivitiesGroupAssignedToBug implements ActivityInterface & Node & ReportAc
   markdown_message: String
   message: String
   report: Report
+  triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
 }
 
@@ -597,6 +655,7 @@ type ActivitiesHackerRequestedMediation implements ActivityInterface & Node & Re
   markdown_message: String
   message: String
   report: Report
+  triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
 }
 
@@ -653,6 +712,7 @@ type ActivitiesManuallyDisclosed implements ActivityInterface & Node & ReportAct
   markdown_message: String
   message: String
   report: Report
+  triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
 }
 
@@ -672,6 +732,7 @@ type ActivitiesMediationRequested implements ActivityInterface & Node & ReportAc
   markdown_message: String
   message: String
   report: Report
+  triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
 }
 
@@ -691,6 +752,7 @@ type ActivitiesNobodyAssignedToBug implements ActivityInterface & Node & ReportA
   markdown_message: String
   message: String
   report: Report
+  triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
 }
 
@@ -710,6 +772,7 @@ type ActivitiesNotEligibleForBounty implements ActivityInterface & Node & Report
   markdown_message: String
   message: String
   report: Report
+  triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
 }
 
@@ -729,6 +792,7 @@ type ActivitiesProgramInactive implements ActivityInterface & Node & ReportActiv
   markdown_message: String
   message: String
   report: Report
+  triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
 }
 
@@ -748,6 +812,7 @@ type ActivitiesReassignedToTeam implements ActivityInterface & Node & ReportActi
   markdown_message: String
   message: String
   report: Report
+  triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
 }
 
@@ -769,6 +834,7 @@ type ActivitiesReferenceIdAdded implements ActivityInterface & Node & ReportActi
   reference: String
   reference_url: String
   report: Report
+  triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
 }
 
@@ -788,6 +854,7 @@ type ActivitiesReportBecamePublic implements ActivityInterface & Node & ReportAc
   markdown_message: String
   message: String
   report: Report
+  triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
 }
 
@@ -807,6 +874,7 @@ type ActivitiesReportCollaboratorInvited implements ActivityInterface & Node & R
   markdown_message: String
   message: String
   report: Report
+  triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
 }
 
@@ -826,6 +894,7 @@ type ActivitiesReportCollaboratorJoined implements ActivityInterface & Node & Re
   markdown_message: String
   message: String
   report: Report
+  triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
 }
 
@@ -845,6 +914,7 @@ type ActivitiesReportSeverityUpdated implements ActivityInterface & Node & Repor
   markdown_message: String
   message: String
   report: Report
+  triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
 }
 
@@ -866,6 +936,7 @@ type ActivitiesReportTitleUpdated implements ActivityInterface & Node & ReportAc
   new_title: String!
   old_title: String!
   report: Report
+  triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
 }
 
@@ -887,6 +958,7 @@ type ActivitiesReportVulnerabilityTypesUpdated implements ActivityInterface & No
   new_weakness: Weakness
   old_weakness: Weakness
   report: Report
+  triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
 }
 
@@ -907,6 +979,7 @@ type ActivitiesSwagAwarded implements ActivityInterface & Node & ReportActivityI
   message: String
   report: Report
   swag: Swag!
+  triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
 }
 
@@ -922,6 +995,7 @@ type ActivitiesTeamBountyTableUpdated implements ActivityInterface & Node {
   internal: Boolean
   markdown_message: String
   message: String
+  triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
 }
 
@@ -937,6 +1011,7 @@ type ActivitiesTeamPolicyUpdated implements ActivityInterface & Node {
   internal: Boolean
   markdown_message: String
   message: String
+  triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
 }
 
@@ -952,6 +1027,7 @@ type ActivitiesTeamPostCreated implements ActivityInterface & Node {
   internal: Boolean
   markdown_message: String
   message: String
+  triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
 }
 
@@ -967,6 +1043,7 @@ type ActivitiesTeamPublished implements ActivityInterface & Node {
   internal: Boolean
   markdown_message: String
   message: String
+  triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
 }
 
@@ -982,6 +1059,7 @@ type ActivitiesTeamStructuredScopeUpdated implements ActivityInterface & Node {
   internal: Boolean
   markdown_message: String
   message: String
+  triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
 }
 
@@ -1002,6 +1080,7 @@ type ActivitiesUserAssignedToBug implements ActivityInterface & Node & ReportAct
   markdown_message: String
   message: String
   report: Report
+  triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
 }
 
@@ -1022,6 +1101,7 @@ type ActivitiesUserBannedFromProgram implements ActivityInterface & Node & Repor
   message: String
   removed_user: User!
   report: Report
+  triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
 }
 
@@ -1041,6 +1121,7 @@ type ActivitiesUserCompletedRetest implements ActivityInterface & Node & ReportA
   markdown_message: String
   message: String
   report: Report
+  triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
 }
 
@@ -1056,6 +1137,7 @@ type ActivitiesUserJoined implements ActivityInterface & Node {
   internal: Boolean
   markdown_message: String
   message: String
+  triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
 }
 
@@ -1089,9 +1171,11 @@ interface ActivityInterface {
   actor: ActorUnion
   created_at: DateTime!
   i_can_edit: Boolean!
+  id: ID!
   internal: Boolean
   markdown_message: String
   message: String
+  triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
 }
 
@@ -1129,6 +1213,8 @@ enum ActivityTypes {
   BugTriaged
   CancelledDisclosureRequest
   ChangedScope
+  ChecklistCheckClaimed
+  ChecklistCheckRevoked
   Comment
   CommentsClosed
   CveIdAdded
@@ -1167,7 +1253,7 @@ enum ActivityTypes {
 """
 Activities can be of multiple types
 """
-union ActivityUnion = ActivitiesAgreedOnGoingPublic | ActivitiesBountyAwarded | ActivitiesBountySuggested | ActivitiesBugCloned | ActivitiesBugDuplicate | ActivitiesBugFiled | ActivitiesBugInactive | ActivitiesBugInformative | ActivitiesBugNeedsMoreInfo | ActivitiesBugNew | ActivitiesBugNotApplicable | ActivitiesBugReopened | ActivitiesBugResolved | ActivitiesBugSpam | ActivitiesBugTriaged | ActivitiesCancelledDisclosureRequest | ActivitiesChangedScope | ActivitiesComment | ActivitiesCommentsClosed | ActivitiesCveIdAdded | ActivitiesExternalAdvisoryAdded | ActivitiesExternalUserInvitationCancelled | ActivitiesExternalUserInvited | ActivitiesExternalUserJoined | ActivitiesExternalUserRemoved | ActivitiesGroupAssignedToBug | ActivitiesHackerRequestedMediation | ActivitiesManuallyDisclosed | ActivitiesMediationRequested | ActivitiesNobodyAssignedToBug | ActivitiesNotEligibleForBounty | ActivitiesProgramInactive | ActivitiesReassignedToTeam | ActivitiesReferenceIdAdded | ActivitiesReportBecamePublic | ActivitiesReportCollaboratorInvited | ActivitiesReportCollaboratorJoined | ActivitiesReportSeverityUpdated | ActivitiesReportTitleUpdated | ActivitiesReportVulnerabilityTypesUpdated | ActivitiesSwagAwarded | ActivitiesTeamBountyTableUpdated | ActivitiesTeamPolicyUpdated | ActivitiesTeamPostCreated | ActivitiesTeamPublished | ActivitiesTeamStructuredScopeUpdated | ActivitiesUserAssignedToBug | ActivitiesUserBannedFromProgram | ActivitiesUserCompletedRetest | ActivitiesUserJoined
+union ActivityUnion = ActivitiesAgreedOnGoingPublic | ActivitiesBountyAwarded | ActivitiesBountySuggested | ActivitiesBugCloned | ActivitiesBugDuplicate | ActivitiesBugFiled | ActivitiesBugInactive | ActivitiesBugInformative | ActivitiesBugNeedsMoreInfo | ActivitiesBugNew | ActivitiesBugNotApplicable | ActivitiesBugReopened | ActivitiesBugResolved | ActivitiesBugSpam | ActivitiesBugTriaged | ActivitiesCancelledDisclosureRequest | ActivitiesChangedScope | ActivitiesChecklistCheckClaimed | ActivitiesChecklistCheckRevoked | ActivitiesComment | ActivitiesCommentsClosed | ActivitiesCveIdAdded | ActivitiesExternalAdvisoryAdded | ActivitiesExternalUserInvitationCancelled | ActivitiesExternalUserInvited | ActivitiesExternalUserJoined | ActivitiesExternalUserRemoved | ActivitiesGroupAssignedToBug | ActivitiesHackerRequestedMediation | ActivitiesManuallyDisclosed | ActivitiesMediationRequested | ActivitiesNobodyAssignedToBug | ActivitiesNotEligibleForBounty | ActivitiesProgramInactive | ActivitiesReassignedToTeam | ActivitiesReferenceIdAdded | ActivitiesReportBecamePublic | ActivitiesReportCollaboratorInvited | ActivitiesReportCollaboratorJoined | ActivitiesReportSeverityUpdated | ActivitiesReportTitleUpdated | ActivitiesReportVulnerabilityTypesUpdated | ActivitiesSwagAwarded | ActivitiesTeamBountyTableUpdated | ActivitiesTeamPolicyUpdated | ActivitiesTeamPostCreated | ActivitiesTeamPublished | ActivitiesTeamStructuredScopeUpdated | ActivitiesUserAssignedToBug | ActivitiesUserBannedFromProgram | ActivitiesUserCompletedRetest | ActivitiesUserJoined
 
 """
 An edge in a connection.
@@ -1903,6 +1989,117 @@ type ChallengeSetting implements Node {
 }
 
 """
+A checklist
+"""
+type Checklist implements Node {
+  checklist_checks(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+  ): ChecklistCheckConnection
+  id: ID!
+  team: Team
+}
+
+"""
+A checklist check
+"""
+type ChecklistCheck implements Node {
+  checklist: Checklist
+  cluster: Cluster
+  id: ID!
+  state: ChecklistCheckStateEnum
+  submitted_checklist_check_response: ChecklistCheckResponse
+  user: User
+}
+
+"""
+The connection type for ChecklistCheck.
+"""
+type ChecklistCheckConnection {
+  """
+  A list of edges.
+  """
+  edges: [ChecklistCheckEdge]
+
+  """
+  A list of nodes.
+  """
+  nodes: [ChecklistCheck]
+
+  """
+  Information to aid in pagination.
+  """
+  pageInfo: PageInfo!
+
+  """
+  Int
+  """
+  total_count: Int!
+}
+
+"""
+An edge in a connection.
+"""
+type ChecklistCheckEdge {
+  """
+  A cursor for use in pagination.
+  """
+  cursor: String!
+
+  """
+  The item at the end of the edge.
+  """
+  node: ChecklistCheck
+}
+
+"""
+A checklist check response
+"""
+type ChecklistCheckResponse implements Node {
+  checklist_check: ChecklistCheck
+  id: ID!
+  state: ChecklistCheckResponseStateEnum
+  user: User
+  vulnerability_found: Boolean
+}
+
+"""
+ChecklistCheckResponse state enum
+"""
+enum ChecklistCheckResponseStateEnum {
+  approved
+  pending
+  rejected
+}
+
+"""
+ChackelistCheck state enum
+"""
+enum ChecklistCheckStateEnum {
+  claimed
+  completed
+  not_claimed
+  responded
+}
+
+"""
 Autogenerated input type of ClaimCredential
 """
 input ClaimCredentialInput {
@@ -1955,6 +2152,7 @@ input ClaimReportInput {
   A unique identifier for the client performing the mutation.
   """
   clientMutationId: String
+  force_claim: Boolean
   report_id: ID!
 }
 
@@ -3908,7 +4106,7 @@ input CustomFieldInput {
 }
 
 """
-Status which reflect the state of a bounty
+A simple name that reflects the type of a custom field
 """
 enum CustomFieldTypeEnum {
   custom_field_attributes_list
@@ -9064,6 +9262,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
   bug_count: Int
   can_toggle_bounty_splitting: Boolean!
   challenge_setting: ChallengeSetting
+  checklist: Checklist
   child_teams(
     """
     Returns the elements in the list that come after the specified cursor.
@@ -9146,6 +9345,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
     Returns the elements in the list that come before the specified cursor.
     """
     before: String
+    database_id: Int = null
 
     """
     Returns the first _n_ elements from the list.
@@ -9722,7 +9922,6 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
     """
     after: String
     archived: Boolean = null
-    asset_type: String = null
 
     """
     Returns the elements in the list that come before the specified cursor.
@@ -10365,6 +10564,7 @@ type TriageInboxItem implements Node {
   _id: ID!
   activity: ActivityUnion!
   created_at: DateTime!
+  dismissed_at: DateTime
   id: ID!
 }
 
@@ -11112,7 +11312,9 @@ input UpdateCustomFieldAttributeInput {
   A unique identifier for the client performing the mutation.
   """
   clientMutationId: String
+  configuration: String
   id: ID!
+  label: String
 }
 
 """
