@@ -4852,6 +4852,7 @@ type DismissTriageInboxItemsPayload implements MutationResult {
     last: Int
     types: [ErrorTypeEnum]
   ): ErrorConnection!
+  report: Report
   was_successful: Boolean!
 }
 
