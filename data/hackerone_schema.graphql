@@ -431,7 +431,21 @@ type ActivitiesChecklistCheckClaimed implements ActivityInterface & Node {
   internal: Boolean
   markdown_message: String
   message: String
-  triage_inbox_item: TriageInboxItem
+  updated_at: DateTime!
+}
+
+"""
+A Activities::ChecklistCheckReleased activity for a checklist_check
+"""
+type ActivitiesChecklistCheckReleased implements ActivityInterface & Node {
+  _id: ID!
+  actor: ActorUnion
+  created_at: DateTime!
+  i_can_edit: Boolean!
+  id: ID!
+  internal: Boolean
+  markdown_message: String
+  message: String
   updated_at: DateTime!
 }
 
@@ -447,23 +461,6 @@ type ActivitiesChecklistCheckResponseCreated implements ActivityInterface & Node
   internal: Boolean
   markdown_message: String
   message: String
-  triage_inbox_item: TriageInboxItem
-  updated_at: DateTime!
-}
-
-"""
-A Activities::ChecklistCheckRevoked activity for a checklist_check
-"""
-type ActivitiesChecklistCheckRevoked implements ActivityInterface & Node {
-  _id: ID!
-  actor: ActorUnion
-  created_at: DateTime!
-  i_can_edit: Boolean!
-  id: ID!
-  internal: Boolean
-  markdown_message: String
-  message: String
-  triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
 }
 
@@ -1011,7 +1008,6 @@ type ActivitiesTeamBountyTableUpdated implements ActivityInterface & Node {
   internal: Boolean
   markdown_message: String
   message: String
-  triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
 }
 
@@ -1027,7 +1023,6 @@ type ActivitiesTeamPolicyUpdated implements ActivityInterface & Node {
   internal: Boolean
   markdown_message: String
   message: String
-  triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
 }
 
@@ -1043,7 +1038,6 @@ type ActivitiesTeamPostCreated implements ActivityInterface & Node {
   internal: Boolean
   markdown_message: String
   message: String
-  triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
 }
 
@@ -1059,7 +1053,6 @@ type ActivitiesTeamPublished implements ActivityInterface & Node {
   internal: Boolean
   markdown_message: String
   message: String
-  triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
 }
 
@@ -1075,7 +1068,6 @@ type ActivitiesTeamStructuredScopeUpdated implements ActivityInterface & Node {
   internal: Boolean
   markdown_message: String
   message: String
-  triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
 }
 
@@ -1153,7 +1145,6 @@ type ActivitiesUserJoined implements ActivityInterface & Node {
   internal: Boolean
   markdown_message: String
   message: String
-  triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
 }
 
@@ -1191,7 +1182,6 @@ interface ActivityInterface {
   internal: Boolean
   markdown_message: String
   message: String
-  triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
 }
 
@@ -1230,8 +1220,8 @@ enum ActivityTypes {
   CancelledDisclosureRequest
   ChangedScope
   ChecklistCheckClaimed
+  ChecklistCheckReleased
   ChecklistCheckResponseCreated
-  ChecklistCheckRevoked
   Comment
   CommentsClosed
   CveIdAdded
@@ -1270,7 +1260,7 @@ enum ActivityTypes {
 """
 Activities can be of multiple types
 """
-union ActivityUnion = ActivitiesAgreedOnGoingPublic | ActivitiesBountyAwarded | ActivitiesBountySuggested | ActivitiesBugCloned | ActivitiesBugDuplicate | ActivitiesBugFiled | ActivitiesBugInactive | ActivitiesBugInformative | ActivitiesBugNeedsMoreInfo | ActivitiesBugNew | ActivitiesBugNotApplicable | ActivitiesBugReopened | ActivitiesBugResolved | ActivitiesBugSpam | ActivitiesBugTriaged | ActivitiesCancelledDisclosureRequest | ActivitiesChangedScope | ActivitiesChecklistCheckClaimed | ActivitiesChecklistCheckResponseCreated | ActivitiesChecklistCheckRevoked | ActivitiesComment | ActivitiesCommentsClosed | ActivitiesCveIdAdded | ActivitiesExternalAdvisoryAdded | ActivitiesExternalUserInvitationCancelled | ActivitiesExternalUserInvited | ActivitiesExternalUserJoined | ActivitiesExternalUserRemoved | ActivitiesGroupAssignedToBug | ActivitiesHackerRequestedMediation | ActivitiesManuallyDisclosed | ActivitiesMediationRequested | ActivitiesNobodyAssignedToBug | ActivitiesNotEligibleForBounty | ActivitiesProgramInactive | ActivitiesReassignedToTeam | ActivitiesReferenceIdAdded | ActivitiesReportBecamePublic | ActivitiesReportCollaboratorInvited | ActivitiesReportCollaboratorJoined | ActivitiesReportSeverityUpdated | ActivitiesReportTitleUpdated | ActivitiesReportVulnerabilityTypesUpdated | ActivitiesSwagAwarded | ActivitiesTeamBountyTableUpdated | ActivitiesTeamPolicyUpdated | ActivitiesTeamPostCreated | ActivitiesTeamPublished | ActivitiesTeamStructuredScopeUpdated | ActivitiesUserAssignedToBug | ActivitiesUserBannedFromProgram | ActivitiesUserCompletedRetest | ActivitiesUserJoined
+union ActivityUnion = ActivitiesAgreedOnGoingPublic | ActivitiesBountyAwarded | ActivitiesBountySuggested | ActivitiesBugCloned | ActivitiesBugDuplicate | ActivitiesBugFiled | ActivitiesBugInactive | ActivitiesBugInformative | ActivitiesBugNeedsMoreInfo | ActivitiesBugNew | ActivitiesBugNotApplicable | ActivitiesBugReopened | ActivitiesBugResolved | ActivitiesBugSpam | ActivitiesBugTriaged | ActivitiesCancelledDisclosureRequest | ActivitiesChangedScope | ActivitiesChecklistCheckClaimed | ActivitiesChecklistCheckReleased | ActivitiesChecklistCheckResponseCreated | ActivitiesComment | ActivitiesCommentsClosed | ActivitiesCveIdAdded | ActivitiesExternalAdvisoryAdded | ActivitiesExternalUserInvitationCancelled | ActivitiesExternalUserInvited | ActivitiesExternalUserJoined | ActivitiesExternalUserRemoved | ActivitiesGroupAssignedToBug | ActivitiesHackerRequestedMediation | ActivitiesManuallyDisclosed | ActivitiesMediationRequested | ActivitiesNobodyAssignedToBug | ActivitiesNotEligibleForBounty | ActivitiesProgramInactive | ActivitiesReassignedToTeam | ActivitiesReferenceIdAdded | ActivitiesReportBecamePublic | ActivitiesReportCollaboratorInvited | ActivitiesReportCollaboratorJoined | ActivitiesReportSeverityUpdated | ActivitiesReportTitleUpdated | ActivitiesReportVulnerabilityTypesUpdated | ActivitiesSwagAwarded | ActivitiesTeamBountyTableUpdated | ActivitiesTeamPolicyUpdated | ActivitiesTeamPostCreated | ActivitiesTeamPublished | ActivitiesTeamStructuredScopeUpdated | ActivitiesUserAssignedToBug | ActivitiesUserBannedFromProgram | ActivitiesUserCompletedRetest | ActivitiesUserJoined
 
 """
 An edge in a connection.
@@ -2114,6 +2104,53 @@ enum ChecklistCheckStateEnum {
   completed
   not_claimed
   responded
+}
+
+"""
+Autogenerated input type of ClaimChecklistCheck
+"""
+input ClaimChecklistCheckInput {
+  checklist_check_id: ID!
+
+  """
+  A unique identifier for the client performing the mutation.
+  """
+  clientMutationId: String
+}
+
+"""
+Autogenerated return type of ClaimChecklistCheck
+"""
+type ClaimChecklistCheckPayload implements MutationResult {
+  checklist_check: ChecklistCheck
+
+  """
+  A unique identifier for the client performing the mutation.
+  """
+  clientMutationId: String
+  errors(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+    types: [ErrorTypeEnum]
+  ): ErrorConnection!
+  was_successful: Boolean!
 }
 
 """
@@ -6294,6 +6331,7 @@ type Mutation {
   acknowledgeProgramHealthAcknowledgement(input: AcknowledgeProgramHealthAcknowledgementInput!): AcknowledgeProgramHealthAcknowledgementPayload
   archiveStructuredScope(input: ArchiveStructuredScopeInput!): ArchiveStructuredScopePayload
   cancelTwoFactorAuthenticationReset(input: CancelTwoFactorAuthenticationResetInput!): CancelTwoFactorAuthenticationResetPayload
+  claimChecklistCheck(input: ClaimChecklistCheckInput!): ClaimChecklistCheckPayload
   claimCredential(input: ClaimCredentialInput!): ClaimCredentialPayload
   claimReport(input: ClaimReportInput!): ClaimReportPayload
   completeReportRetestUser(input: CompleteReportRetestUserInput!): CompleteReportRetestUserPayload
@@ -7528,7 +7566,9 @@ interface ReportActivityInterface {
   attachments: [Attachment]
   automated_response: Boolean
   genius_execution_id: ID
+  id: ID!
   report: Report
+  triage_inbox_item: TriageInboxItem
 }
 
 """
@@ -9960,6 +10000,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
   ): StructuredScopesConnection
   submission_requirements: SubmissionRequirements
   submission_state: SubmissionStateEnum
+  subscribed: Boolean!
   survey_answers(
     """
     Returns the elements in the list that come after the specified cursor.
@@ -10538,7 +10579,7 @@ input ToggleTeamUpdatesSubscriptionInput {
   A unique identifier for the client performing the mutation.
   """
   clientMutationId: String
-  team_id: ID!
+  handle: String!
 }
 
 """
@@ -10571,7 +10612,7 @@ type ToggleTeamUpdatesSubscriptionPayload implements MutationResult {
     last: Int
     types: [ErrorTypeEnum]
   ): ErrorConnection!
-  team_policy_subscription: TeamPolicySubscription
+  team: Team
   was_successful: Boolean!
 }
 
