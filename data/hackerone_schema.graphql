@@ -3184,6 +3184,7 @@ input CreateOrUpdateJiraIntegrationInput {
   custom: String
   description: String!
   generate_webhook_in_jira_if_does_not_exist: Boolean
+  issue_fields: [JiraFieldInputType!]
   issue_type: Int!
   labels: String
   pid: Int!
@@ -5812,6 +5813,22 @@ type InvitationsSoftLaunchEdge {
 }
 
 """
+A field of JIRA issue type
+"""
+type JiraField implements Node {
+  field_type: String!
+  id: ID!
+  name: String!
+  value: String!
+}
+
+input JiraFieldInputType {
+  field_type: String!
+  name: String!
+  value: String!
+}
+
+"""
 A JIRA integration for a team
 """
 type JiraIntegration implements Node {
@@ -5823,6 +5840,7 @@ type JiraIntegration implements Node {
   id: ID!
   issue_statuses: [Hash]
   issue_type: Int!
+  jira_fields: [JiraField]
   jira_priority_to_severity_ratings(
     """
     Returns the elements in the list that come after the specified cursor.
@@ -5862,6 +5880,7 @@ type JiraOauth implements Node {
   assignables(project_id: Int!): [Hash]
   configured: Boolean!
   created_at: DateTime!
+  fields: [Hash]
   id: ID!
   issue_types: [Hash]
   jwt: Boolean!
