@@ -9516,7 +9516,6 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
     """
     last: Int
   ): EmbeddedSubmissionDomainConnection
-  embedded_submission_form_enabled: Boolean!
   embedded_submission_forms(
     """
     Returns the elements in the list that come after the specified cursor.
@@ -9541,7 +9540,6 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
   external_program: ExternalProgram
   external_url: String
   fancy_slack_integration: Boolean
-  fancy_slack_integration_enabled: Boolean!
   first_response_time(date_start: DateTime = null): Float
   goal_valid_reports: Int
   grace_period_remaining_in_days: Int
