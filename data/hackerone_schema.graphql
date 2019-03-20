@@ -5266,11 +5266,30 @@ enum FilterOrderDirectionEnum {
   DESC
 }
 
+input FilterOrderPredicateInput {
+  _direction: FilterOrderDirectionEnum
+}
+
 input FiltersBountyFilterInput {
   _and: [FiltersBountyFilterInput]
   _or: [FiltersBountyFilterInput]
   created_at: DateTimePredicateInput
   id: IntPredicateInput
+}
+
+input FiltersDerivedTeamAverageBountyAmountFilterOrder {
+  amount: FilterOrderPredicateInput
+  team_id: FilterOrderPredicateInput
+}
+
+input FiltersDerivedTeamMinimumBountyFilterOrder {
+  amount: FilterOrderPredicateInput
+  team_id: FilterOrderPredicateInput
+}
+
+input FiltersDerivedTeamReportResolvedCountFilterOrder {
+  resolved_count: FilterOrderPredicateInput
+  team_id: FilterOrderPredicateInput
 }
 
 input FiltersExternalProgramFilterInput {
@@ -5294,13 +5313,8 @@ input FiltersHacktivityItemFilterInput {
 }
 
 input FiltersHacktivityItemFilterOrder {
-  direction: FilterOrderDirectionEnum = ASC
-  field: FiltersHacktivityItemFilterOrderField = id
-}
-
-enum FiltersHacktivityItemFilterOrderField {
-  id
-  latest_disclosable_activity_at
+  id: FilterOrderPredicateInput
+  latest_disclosable_activity_at: FilterOrderPredicateInput
 }
 
 input FiltersReportFilterInput {
@@ -5320,12 +5334,7 @@ input FiltersReportFilterInput {
 }
 
 input FiltersReportFilterOrder {
-  direction: FilterOrderDirectionEnum = ASC
-  field: FiltersReportFilterOrderField = id
-}
-
-enum FiltersReportFilterOrderField {
-  id
+  id: FilterOrderPredicateInput
 }
 
 input FiltersStructuredScopeFilterInput {
@@ -5358,14 +5367,13 @@ input FiltersTeamFilterInput {
 }
 
 input FiltersTeamFilterOrder {
-  direction: FilterOrderDirectionEnum = ASC
-  field: FiltersTeamFilterOrderField = id
-}
-
-enum FiltersTeamFilterOrderField {
-  cached_response_efficiency_percentage
-  id
-  started_accepting_at
+  average_bounties: FiltersDerivedTeamAverageBountyAmountFilterOrder
+  id: FilterOrderPredicateInput
+  minimum_bounties: FiltersDerivedTeamMinimumBountyFilterOrder
+  name: FilterOrderPredicateInput
+  reports: FiltersDerivedTeamReportResolvedCountFilterOrder
+  response_efficiency_percentage: FilterOrderPredicateInput
+  started_accepting_at: FilterOrderPredicateInput
 }
 
 input FiltersTriageSubscriptionFilterInput {
@@ -10466,12 +10474,8 @@ enum TeamMemberOrderField {
 Fields on which a collection of Teams can be ordered
 """
 enum TeamOrderField {
-  average_bounty_amount
   bounty_earned_by_user
   last_invitation_accepted_at
-  minimum_bounty
-  name
-  reports_resolved
   reports_submitted_by_user
   valid_reports_submitted_by_user
 }
