@@ -942,13 +942,13 @@
         {
           "asset_identifier": "*.wordpress.net",
           "asset_type": "URL",
-          "availability_requirement": "low",
-          "confidentiality_requirement": "low",
+          "availability_requirement": "none",
+          "confidentiality_requirement": "none",
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
-          "instruction": "All WordPress.net domains, including (but not limited to) jobs.wordpress.net.\n\nThese are generally low-value targets, so we're usually only interested in high- and medium- severity issues.",
+          "instruction": "All WordPress.net domains, including (but not limited to) jobs.wordpress.net.\n\nThis is a shared-hosting environment, and these are generally low-value targets, so we're usually only interested in high- and medium- severity issues that affect the entire server (not just an individual site).",
           "integrity_requirement": "low",
-          "max_severity": "medium"
+          "max_severity": "low"
         },
         {
           "asset_identifier": "*.wordpress.org",
@@ -1063,13 +1063,13 @@
         {
           "asset_identifier": "irclogs.wordpress.org",
           "asset_type": "URL",
-          "availability_requirement": "low",
+          "availability_requirement": "none",
           "confidentiality_requirement": "none",
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
-          "instruction": "We are not interested in vulnerabilities unless they have a severe impact.",
+          "instruction": "These are public logs of very old conversations. We are not interested in vulnerabilities unless they have a severe impact (e.g., RCE, XSS, modifying the logs, etc). DoS is not severe in this case.",
           "integrity_requirement": "low",
-          "max_severity": "medium"
+          "max_severity": "low"
         },
         {
           "asset_identifier": "lists.wordpress.org",
@@ -1086,23 +1086,23 @@
           "asset_identifier": "mercantile.wordpress.org",
           "asset_type": "URL",
           "availability_requirement": "none",
-          "confidentiality_requirement": "medium",
+          "confidentiality_requirement": "low",
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
           "instruction": "This site runs uses [the WooCommerce plugin](https://woocommerce.com/), but we don't accept reports for that. We only accept reports for our custom code. If you find any vulnerabilities that are also present in WooCommerce itself, please [report them to Automattic](/automattic).",
           "integrity_requirement": "low",
-          "max_severity": "high"
+          "max_severity": "medium"
         },
         {
           "asset_identifier": "munin-*.wordpress.org",
           "asset_type": "URL",
-          "availability_requirement": "low",
+          "availability_requirement": "none",
           "confidentiality_requirement": "none",
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
           "instruction": "We are not interested in vulnerabilities unless they have a severe impact (e.g., RCE, SSRF). Metrics data is intentionally made public.",
           "integrity_requirement": "low",
-          "max_severity": "medium"
+          "max_severity": "low"
         },
         {
           "asset_identifier": "planet.wordpress.org",
@@ -1119,7 +1119,7 @@
           "asset_identifier": "wordpressfoundation.org",
           "asset_type": "URL",
           "availability_requirement": "low",
-          "confidentiality_requirement": "low",
+          "confidentiality_requirement": "none",
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
           "instruction": "",
