@@ -3648,6 +3648,37 @@
     }
   },
   {
+    "name": "StackPath",
+    "url": "https://bugcrowd.com/stackpath",
+    "allows_disclosure": false,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "website",
+          "target": "*.stackpath.com"
+        },
+        {
+          "type": "website",
+          "target": "*.stackpath.net"
+        },
+        {
+          "type": "website",
+          "target": "Any product/service offered by StackPath (CDN/DNS/WAF/etc)"
+        },
+        {
+          "type": "website",
+          "target": "Any publicly facing host owned by StackPath - (ip space, domains, etc)"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "website",
+          "target": "StackPath customer instances (e.g. *.stackpathdns.com)"
+        }
+      ]
+    }
+  },
+  {
     "name": "Statuspage",
     "url": "https://bugcrowd.com/statuspage",
     "allows_disclosure": false,
