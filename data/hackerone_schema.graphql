@@ -9856,6 +9856,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
     """
     last: Int
     start_date: Date!
+    structured_scope_ids: [ID!]
   ): ProgramStatisticConnection!
   report_submission_form_intro: String
   report_submission_form_intro_html: String

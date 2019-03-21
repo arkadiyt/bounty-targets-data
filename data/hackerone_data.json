@@ -5859,17 +5859,6 @@
           "max_severity": "critical"
         },
         {
-          "asset_identifier": "935740658",
-          "asset_type": "APPLE_STORE_APP_ID",
-          "availability_requirement": "medium",
-          "confidentiality_requirement": "medium",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "",
-          "integrity_requirement": "medium",
-          "max_severity": "critical"
-        },
-        {
           "asset_identifier": "Branded Customer Android Apps",
           "asset_type": "OTHER",
           "availability_requirement": "medium",
@@ -5936,17 +5925,6 @@
           "max_severity": "critical"
         },
         {
-          "asset_identifier": "tv.vhx",
-          "asset_type": "GOOGLE_PLAY_APP_ID",
-          "availability_requirement": "medium",
-          "confidentiality_requirement": "medium",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "",
-          "integrity_requirement": "medium",
-          "max_severity": "critical"
-        },
-        {
           "asset_identifier": "vhx.tv",
           "asset_type": "URL",
           "availability_requirement": "medium",
@@ -5959,7 +5937,28 @@
         }
       ],
       "out_of_scope": [
-
+        {
+          "asset_identifier": "935740658",
+          "asset_type": "APPLE_STORE_APP_ID",
+          "availability_requirement": "medium",
+          "confidentiality_requirement": "medium",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "The base VHX app is no longer in scope as of 3/15/2019. Please test on branded apps.",
+          "integrity_requirement": "medium",
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "tv.vhx",
+          "asset_type": "GOOGLE_PLAY_APP_ID",
+          "availability_requirement": "medium",
+          "confidentiality_requirement": "medium",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "This is out of scope effective 3/15/2019. Please use branded apps for testing.",
+          "integrity_requirement": "medium",
+          "max_severity": "none"
+        }
       ]
     }
   },
