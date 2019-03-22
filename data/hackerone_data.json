@@ -26679,6 +26679,220 @@
     }
   },
   {
+    "id": 36247,
+    "name": "InnoGames",
+    "handle": "innogames_bb",
+    "url": "https://hackerone.com/innogames_bb",
+    "offers_bounties": true,
+    "quick_to_bounty": true,
+    "quick_to_first_response": true,
+    "targets": {
+      "in_scope": [
+        {
+          "asset_identifier": "*.igpayment.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "This is our payment environment used in all of our games. Steps to test:\n\n* Register an account in one of our web-based browser games (the test markets cannot be used for this)\n* When in the game launch the payment process by clicking the \"+\" symbol next to your diamond count\n* You're now in the payment process where you can select different diamond packages\n* Find the iframe referencing www.igpayment.com within the page source\n* The iframe URL looks like this:\n\n```\nhttps://www.igpayment.com/api/providers/creditcard-wpg/purchase/{sessionId}\n```\n\n* You can also use the voucher system to execute requests.\n* Happy Fuzzing",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "*.innogames.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "On *.innogames.com all customer facing services can be found.\n\n**Notes for www.innogames.com**\n\nThis is our company homepage using typo3\n\n* If you find bugs in Typo3 please report them directly, these are not covered by this program, unless a new Typo Version has been released for more than 30 days\n* The settings, custom built extensions and integrations are covered under this program\n* Vulnerability resulting from outdated versions are covered under this program\n**Please DO NOT test the contact form at https://www.innogames.com/company/contact/**\n\n**Notes for support.innogames.com** \n\n* Please avoid creating many new tickets, but instead concentrate your testing on the ticket contents.",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "*.innogames.de",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "On *.innogames.de Corporate and Community Tools can be found.\n\n**Notes for login.innogames.de** \nThis is our central login and account management tool\n\n* We do not provide accounts for this service and there are no registration pages available. \n* That said, feel free to try and break it from a blackbox perspective.\n- **Brute-force testing is not allowed on login.innogames.de**",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "air.com.innogames.grepolis.com",
+          "asset_type": "OTHER_APK",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "Sign up on HockeyApp and download the special app for BugBounty testing:\nhttps://rink.hockeyapp.net/recruit/0c3e99df06b24a919b8ec8de1b0c4843",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "com.innogames.enterprise.elvenar",
+          "asset_type": "OTHER_APK",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Sign up on HockeyApp and download the special app for BugBounty testing:\nhttps://rink.hockeyapp.net/recruit/0c3e99df06b24a919b8ec8de1b0c4843",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "com.innogames.enterprise.elvenar",
+          "asset_type": "OTHER_IPA",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Sign up on HockeyApp and download the special app for BugBounty testing:\nhttps://rink.hockeyapp.net/recruit/0c3e99df06b24a919b8ec8de1b0c4843",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "com.innogames.enterprise.grepolis.com",
+          "asset_type": "OTHER_IPA",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "Sign up on HockeyApp and download the special app for BugBounty testing:\nhttps://rink.hockeyapp.net/recruit/0c3e99df06b24a919b8ec8de1b0c4843",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "com.innogames.enterprise.iforge",
+          "asset_type": "OTHER_IPA",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Sign up on HockeyApp and download the special app for BugBounty testing:\nhttps://rink.hockeyapp.net/recruit/0c3e99df06b24a919b8ec8de1b0c4843",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "com.innogames.foeandroid",
+          "asset_type": "OTHER_APK",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Sign up on HockeyApp and download the special app for BugBounty testing:\nhttps://rink.hockeyapp.net/recruit/0c3e99df06b24a919b8ec8de1b0c4843",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "xs.elvenar.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "This is our game landing page system which is used to signup, login and get news about the game\n\n**Dedicated testing system**\n* Request limit does not apply\n* The game worlds will be reset and updated regularly without any advance notice\n* All users on these systems are testers so you will not impact any players",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "xs.forgeofempires.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "This is our game landing page system which is used to signup, login and get news about the game\n\n**Dedicated testing system**\n* Request limit does not apply\n* The game worlds will be reset and updated regularly without any advance notice\n* All users on these systems are testers so you will not impact any players",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "xs.grepolis.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "This is our game landing page system which is used to signup, login and get news about the game\n\n**Dedicated testing system**\n* Request limit does not apply\n* The game worlds will be reset and updated regularly without any advance notice\n* All users on these systems are testers so you will not impact any players",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "xs0.elvenar.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "This is our game master server which stores information about all worlds available - in this case only xs1\n\n**Dedicated testing system**\n* Request limit does not apply\n* The game worlds will be reset and updated regularly without any advance notice\n* All users on these systems are testers so you will not impact any players",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "xs0.forgeofempires.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "This is our game master server which stores information about all worlds available - in this case only xs1\n\n**Dedicated testing system**\n* Request limit does not apply\n* The game worlds will be reset and updated regularly without any advance notice\n* All users on these systems are testers so you will not impact any players",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "xs0.grepolis.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "This is our game master server which stores information about all worlds available - in this case only xs1\n\n**Dedicated testing system**\n* Request limit does not apply\n* The game worlds will be reset and updated regularly without any advance notice\n* All users on these systems are testers so you will not impact any players",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "xs1.elvenar.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "This is the actual game world where all the game logic resides and the player gets redirected to\n\n**Dedicated testing system**\n* Request limit does not apply\n* The game worlds will be reset and updated regularly without any advance notice\n* All users on these systems are testers so you will not impact any players\n\nNote on Flash/HTML5 Versions\nWe do currently run two versions of the game: one is Flash-based and deprecated and one is based on HTML5. We have enforced the HTML5 version on the in-scope assets and only accept vulnerabilities affecting the HTML5 version. (which is to say the flash version is out-of-scope)",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "xs1.forgeofempires.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "This is the actual game world where all the game logic resides and the player gets redirected to\n\n**Dedicated testing system**\n* Request limit does not apply\n* The game worlds will be reset and updated regularly without any advance notice\n* All users on these systems are testers so you will not impact any players",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "xs1.grepolis.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "This is the actual game world where all the game logic resides and the player gets redirected to\n\n**Dedicated testing system**\n* Request limit does not apply\n* The game worlds will be reset and updated regularly without any advance notice\n* All users on these systems are testers so you will not impact any players",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
     "id": 36863,
     "name": "VLC (European Commission - DIGIT)",
     "handle": "vlc_h1c",
