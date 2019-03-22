@@ -6894,6 +6894,7 @@ type ProgramHealthAcknowledgementSeenPayload implements MutationResult {
 Statistics for a certain interval for a certain team
 """
 type ProgramStatistic implements Node {
+  closed_reports: Int!
   duplicate_reports: Int!
   id: ID!
   informative_reports: Int!
@@ -6906,11 +6907,17 @@ type ProgramStatistic implements Node {
   submitted_reports: Int!
   triaged_reports: Int!
   valid_critical_severity_reports: Int!
+  valid_critical_severity_reports_bounties: Int!
   valid_high_severity_reports: Int!
+  valid_high_severity_reports_bounties: Int!
   valid_low_severity_reports: Int!
+  valid_low_severity_reports_bounties: Int!
   valid_medium_severity_reports: Int!
+  valid_medium_severity_reports_bounties: Int!
   valid_none_severity_reports: Int!
+  valid_none_severity_reports_bounties: Int!
   valid_reports: Int!
+  valid_reports_bounties: Int!
   valid_reports_per_scope(
     """
     Returns the elements in the list that come after the specified cursor.
@@ -6956,6 +6963,7 @@ type ProgramStatistic implements Node {
   valid_reports_without_scope: Int!
   valid_reports_without_weakness: Int!
   valid_without_severity_reports: Int!
+  valid_without_severity_reports_bounties: Int!
 }
 
 """
@@ -7875,6 +7883,7 @@ Number of reports per scope of specific program
 """
 type ReportsCountPerScope implements Node {
   asset_identifier: String!
+  bounties: Int!
   id: ID!
   reports_count: Int!
 }
@@ -7914,6 +7923,7 @@ type ReportsCountPerScopeEdge {
 Number of reports per weakness of specific program
 """
 type ReportsCountPerWeakness implements Node {
+  bounties: Int!
   id: ID!
   reports_count: Int!
   weakness: Weakness!
