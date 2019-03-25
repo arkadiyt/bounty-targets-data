@@ -2098,13 +2098,12 @@ enum ChecklistCheckResponseStateEnum {
 }
 
 """
-ChackelistCheck state enum
+ChecklistCheck state enum
 """
 enum ChecklistCheckStateEnum {
   claimed
   completed
   not_claimed
-  responded
 }
 
 """
@@ -9610,6 +9609,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
   hackers_thanked_count: Int!
   handle: String!
   has_avatar: Boolean
+  has_hierarchy_thanks_page: Boolean!
   has_policy: Boolean
   has_structured_policy: Boolean
   hide_bounty_amounts: Boolean
