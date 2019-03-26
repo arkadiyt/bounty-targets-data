@@ -6839,6 +6839,17 @@
           "max_severity": "critical"
         },
         {
+          "asset_identifier": "*.grabpay.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
           "asset_identifier": "*.grabtaxi.com",
           "asset_type": "URL",
           "availability_requirement": "low",
@@ -6881,6 +6892,17 @@
           "instruction": "Grab Driver",
           "integrity_requirement": null,
           "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "1343620481",
+          "asset_type": "APPLE_STORE_APP_ID",
+          "availability_requirement": "none",
+          "confidentiality_requirement": "low",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "GrabPay Merchant",
+          "integrity_requirement": "low",
+          "max_severity": "medium"
         },
         {
           "asset_identifier": "1353289014",
@@ -6945,6 +6967,17 @@
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
           "instruction": "GrabFood",
+          "integrity_requirement": "low",
+          "max_severity": "medium"
+        },
+        {
+          "asset_identifier": "com.grabpay.merchant",
+          "asset_type": "GOOGLE_PLAY_APP_ID",
+          "availability_requirement": "low",
+          "confidentiality_requirement": "low",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "GrabPay Merchant",
           "integrity_requirement": "low",
           "max_severity": "medium"
         },
@@ -7048,6 +7081,17 @@
           "max_severity": "critical"
         },
         {
+          "asset_identifier": "mos.grabpay.com",
+          "asset_type": "URL",
+          "availability_requirement": "none",
+          "confidentiality_requirement": "low",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": "low",
+          "max_severity": "medium"
+        },
+        {
           "asset_identifier": "p.grabtaxi.com",
           "asset_type": "URL",
           "availability_requirement": "high",
@@ -7055,6 +7099,17 @@
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
           "instruction": "**What it does:** Grab iOS and Android apps communicate with this service while you use Grab. This endpoint acts as an API gateway proxy to all of our services. This API exposes the largest attack surface of any service here at Grab.\n\n**What to look for:** Much like our external API, p.grabtaxi.com is a RESTful API performed over certificate-pinned HTTPS requests. The best way to hunt for bugs here is to use your own auth token via the X-mts-ssid header and look for authorization and access control issues, user enumeration, business logic etc. Please keep in mind that you should only ever perform this testing against accounts you own, failure to do so could result in ban from the program, which nobody wants!.\n\n**What it runs on:** Golang",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "xtramile.grabpay.com",
+          "asset_type": "URL",
+          "availability_requirement": "low",
+          "confidentiality_requirement": "none",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
           "integrity_requirement": "high",
           "max_severity": "critical"
         }
