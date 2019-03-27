@@ -7011,7 +7011,6 @@ type ProgramStatistic implements Node {
     """
     last: Int
   ): ReportsCountPerWeaknessConnection
-  valid_reports_without_scope: Int!
   valid_reports_without_weakness: Int!
   valid_without_severity_reports: Int!
   valid_without_severity_reports_bounties: Int!
@@ -7934,7 +7933,7 @@ input ReportStateEnumPredicateInput {
 Number of reports per scope of specific program
 """
 type ReportsCountPerScope implements Node {
-  asset_identifier: String!
+  asset_identifier: String
   bounties: Int!
   id: ID!
   reports_count: Int!
