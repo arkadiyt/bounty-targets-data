@@ -7028,7 +7028,6 @@ type ProgramStatistic implements Node {
     """
     last: Int
   ): ReportsCountPerWeaknessConnection
-  valid_reports_without_weakness: Int!
   valid_without_severity_reports: Int!
   valid_without_severity_reports_bounties: Int!
 }
@@ -8041,7 +8040,7 @@ type ReportsCountPerWeakness implements Node {
   bounties: Int!
   id: ID!
   reports_count: Int!
-  weakness: Weakness!
+  weakness: Weakness
 }
 
 """
