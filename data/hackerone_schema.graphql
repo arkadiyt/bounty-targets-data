@@ -5958,11 +5958,11 @@ type JiraOauth implements Node {
   assignables(project_id: Int!): [Hash]
   configured: Boolean!
   created_at: DateTime!
-  fields: [Hash]
   id: ID!
   issue_types: [Hash]
   jwt: Boolean!
   priorities: [Hash]
+  project_meta(project_id: Int!): [Hash]
   projects: [Hash]
   site: String
   team: Team!
