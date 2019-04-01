@@ -2045,11 +2045,15 @@ type Checklist implements Node {
 A checklist check
 """
 type ChecklistCheck implements Node {
+  award_amount: Int!
   checklist: Checklist
   cluster: Cluster
+  description: String!
   id: ID!
+  instruction: String!
   state: ChecklistCheckStateEnum
   submitted_checklist_check_response: ChecklistCheckResponse
+  title: String!
   user: User
 }
 
