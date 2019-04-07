@@ -1731,7 +1731,30 @@ type BountyTable implements Node & ResourceInterface {
     Returns the last _n_ elements from the list.
     """
     last: Int
+    order_by: BountyTableHistoryOrder = {direction: DESC, field: created_at}
   ): BountyTableHistoryConnection
+  bounty_table_row_histories(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+    order_by: BountyTableRowHistoryOrder = {direction: DESC, field: created_at}
+  ): BountyTableRowHistoryConnection
   bounty_table_rows(
     """
     Returns the elements in the list that come after the specified cursor.
@@ -1761,6 +1784,7 @@ type BountyTable implements Node & ResourceInterface {
   low_label: String!
   medium_label: String!
   team: Team!
+  updated_at: DateTime!
   url: URI!
 }
 
@@ -1774,8 +1798,9 @@ type BountyTableHistory implements Node & ResourceInterface {
   created_at: DateTime!
   description_after: String
   description_before: String
+  description_html_after: String
+  description_html_before: String
   id: ID!
-  team: Team!
   updated_at: DateTime
   url: URI!
 }
@@ -1816,38 +1841,30 @@ type BountyTableHistoryEdge {
   node: BountyTableHistory
 }
 
+input BountyTableHistoryOrder {
+  direction: OrderDirection!
+  field: BountyTableHistoryOrderField!
+}
+
+"""
+Fields on which a collection of bounty table histories can be ordered
+"""
+enum BountyTableHistoryOrderField {
+  created_at
+}
+
 """
 BountyTableRow
 """
 type BountyTableRow implements Node & ResourceInterface {
   _id: ID!
-  bounty_table_row_histories(
-    """
-    Returns the elements in the list that come after the specified cursor.
-    """
-    after: String
-
-    """
-    Returns the elements in the list that come before the specified cursor.
-    """
-    before: String
-
-    """
-    Returns the first _n_ elements from the list.
-    """
-    first: Int
-
-    """
-    Returns the last _n_ elements from the list.
-    """
-    last: Int
-  ): BountyTableRowHistoryConnection
   critical: Int
   high: Int
   id: ID!
   low: Int
   medium: Int
   structured_scope: StructuredScope
+  updated_at: DateTime
   url: URI!
 }
 
@@ -1894,6 +1911,7 @@ type BountyTableRowHistory implements Node & ResourceInterface {
   _id: ID!
   action: String!
   bounty_table_row: BountyTableRow
+  bounty_table_row_id: Int
   created_at: DateTime!
   critical_after: Int
   critical_before: Int
@@ -1906,7 +1924,8 @@ type BountyTableRowHistory implements Node & ResourceInterface {
   maximum_before: Int
   medium_after: Int
   medium_before: Int
-  team: Team!
+  structured_scope_after: StructuredScope
+  structured_scope_before: StructuredScope
   updated_at: DateTime
   url: URI!
 }
@@ -1945,6 +1964,18 @@ type BountyTableRowHistoryEdge {
   The item at the end of the edge.
   """
   node: BountyTableRowHistory
+}
+
+input BountyTableRowHistoryOrder {
+  direction: OrderDirection!
+  field: BountyTableRowHistoryOrderField!
+}
+
+"""
+Fields on which a collection of bounty table row histories can be ordered
+"""
+enum BountyTableRowHistoryOrderField {
+  created_at
 }
 
 input BountyTableRowInput {
@@ -3679,6 +3710,7 @@ input CreateStructuredScopeInput {
   eligible_for_submission: Boolean
   instruction: String
   integrity_requirement: String
+  notify_subscribers_of_changes: Boolean
   reference: String
   team_id: ID!
 }
@@ -5894,6 +5926,7 @@ type InvitationsSoftLaunchEdge {
 A field of JIRA issue type
 """
 type JiraField implements Node {
+  description: String!
   field_type: String!
   id: ID!
   name: String!
@@ -5901,6 +5934,7 @@ type JiraField implements Node {
 }
 
 input JiraFieldInputType {
+  description: String!
   field_type: String!
   name: String!
   value: String!
@@ -5959,7 +5993,6 @@ type JiraOauth implements Node {
   configured: Boolean!
   created_at: DateTime!
   id: ID!
-  issue_types: [Hash]
   jwt: Boolean!
   priorities: [Hash]
   project_meta(project_id: Int!): [Hash]
@@ -6519,6 +6552,7 @@ type Mutation {
   updateBookmarkedTeam(input: UpdateBookmarkedTeamInput!): UpdateBookmarkedTeamPayload
   updateBountyTable(input: UpdateBountyTableInput!): UpdateBountyTablePayload
   updateChallengeSetting(input: UpdateChallengeSettingInput!): UpdateChallengeSettingPayload
+  updateChecklistCheckResponse(input: UpdateChecklistCheckResponseInput!): UpdateChecklistCheckResponsePayload
   updateCredentialAccountDetails(input: UpdateCredentialAccountDetailInput!): UpdateCredentialAccountDetailPayload
   updateCredentialInstruction(input: UpdateCredentialInstructionInput!): UpdateCredentialInstructionPayload
   updateCustomFieldAttribute(input: UpdateCustomFieldAttributeInput!): UpdateCustomFieldAttributePayload
@@ -6529,6 +6563,7 @@ type Mutation {
   updateJiraWebhook(input: UpdateJiraWebhookInput!): UpdateJiraWebhookPayload
   updateLastViewedNewFeaturesAt(input: UpdateLastViewedNewFeaturesAtInput!): UpdateLastViewedNewFeaturesAtPayload
   updateMe(input: UpdateMeInput!): UpdateMePayload
+  updateNotificationPreferences(input: UpdateNotificationPreferencesInput!): UpdateNotificationPreferencesPayload
   updatePhabricatorIntegration(input: UpdatePhabricatorIntegrationInput!): UpdatePhabricatorIntegrationPayload
   updateReportCloseComments(input: UpdateReportCloseCommentsInput!): UpdateReportCloseCommentsPayload
   updateReportCustomFieldValues(input: UpdateReportCustomFieldValuesInput!): UpdateReportCustomFieldValuesPayload
@@ -9972,6 +10007,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
     Returns the elements in the list that come before the specified cursor.
     """
     before: String
+    child_team_ids: [ID!]
     end_date: Date!
 
     """
@@ -10722,6 +10758,14 @@ input TeamStatePredicateInput {
 }
 
 """
+Possible preferences of team updates delivery
+"""
+enum TeamUpdateDeliveryPreferences {
+  notifications
+  notifications_and_emails
+}
+
+"""
 Team configuration of a weakness
 """
 type TeamWeakness implements Node {
@@ -11391,6 +11435,7 @@ input UpdateBountyTableInput {
   high_label: String!
   low_label: String!
   medium_label: String!
+  notify_subscribers_of_changes: Boolean
   team_id: ID!
 }
 
@@ -11446,6 +11491,57 @@ Autogenerated return type of UpdateChallengeSetting
 """
 type UpdateChallengeSettingPayload implements MutationResult {
   challenge_setting: ChallengeSetting
+
+  """
+  A unique identifier for the client performing the mutation.
+  """
+  clientMutationId: String
+  errors(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+    types: [ErrorTypeEnum]
+  ): ErrorConnection!
+  was_successful: Boolean!
+}
+
+"""
+Autogenerated input type of UpdateChecklistCheckResponse
+"""
+input UpdateChecklistCheckResponseInput {
+  attachment_ids: [Int!]
+  checklist_check_response_id: ID!
+
+  """
+  A unique identifier for the client performing the mutation.
+  """
+  clientMutationId: String
+  message: String
+  report_ids: [Int!]
+  vulnerability_found: Boolean
+}
+
+"""
+Autogenerated return type of UpdateChecklistCheckResponse
+"""
+type UpdateChecklistCheckResponsePayload implements MutationResult {
+  checklist_check_response: ChecklistCheckResponse
 
   """
   A unique identifier for the client performing the mutation.
@@ -11901,6 +11997,54 @@ input UpdateMeInput {
 Autogenerated return type of UpdateMe
 """
 type UpdateMePayload implements MutationResult {
+  """
+  A unique identifier for the client performing the mutation.
+  """
+  clientMutationId: String
+  errors(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+    types: [ErrorTypeEnum]
+  ): ErrorConnection!
+  me: User
+  was_successful: Boolean!
+}
+
+"""
+Autogenerated input type of UpdateNotificationPreferences
+"""
+input UpdateNotificationPreferencesInput {
+  """
+  A unique identifier for the client performing the mutation.
+  """
+  clientMutationId: String
+  receive_bounty_update_notifications: Boolean
+  receive_policy_update_notifications: Boolean
+  receive_structured_scope_update_notifications: Boolean
+  receive_team_update_delivery_preference: TeamUpdateDeliveryPreferences
+}
+
+"""
+Autogenerated return type of UpdateNotificationPreferences
+"""
+type UpdateNotificationPreferencesPayload implements MutationResult {
   """
   A unique identifier for the client performing the mutation.
   """
@@ -12445,6 +12589,7 @@ input UpdateStructuredScopeInput {
   eligible_for_submission: Boolean
   instruction: String
   integrity_requirement: String
+  notify_subscribers_of_changes: Boolean = true
   reference: String
   structured_scope_id: ID!
 }
@@ -13473,6 +13618,10 @@ type User implements Node & ResourceInterface {
     throttle_time: Int
   ): ProgramHealthAcknowledgementConnection
   rank: Int
+  receive_bounty_update_notifications: Boolean
+  receive_policy_update_notifications: Boolean
+  receive_structured_scope_update_notifications: Boolean
+  receive_team_update_delivery_preference: TeamUpdateDeliveryPreferences
   remaining_reports(team_handle: String!): Int
   report_retest_users(
     """

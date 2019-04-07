@@ -662,7 +662,7 @@
   {
     "name": "Bugcrowd",
     "url": "https://bugcrowd.com/bugcrowd",
-    "allows_disclosure": true,
+    "allows_disclosure": false,
     "targets": {
       "in_scope": [
         {
@@ -2017,6 +2017,45 @@
     }
   },
   {
+    "name": "iRobot",
+    "url": "https://bugcrowd.com/irobot",
+    "allows_disclosure": false,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "website",
+          "target": "http://www.irobot.com"
+        },
+        {
+          "type": "ios",
+          "target": "https://itunes.apple.com/us/app/irobot-home/id1012014442?mt=8"
+        },
+        {
+          "type": "android",
+          "target": "https://play.google.com/store/apps/details?id=com.irobot.home"
+        },
+        {
+          "type": "website",
+          "target": "https://store.irobot.com"
+        },
+        {
+          "type": "hardware",
+          "target": "iRobot cloud-connected robot that you own (e.g., i7, 980, 960, 690, Braava, etc.)"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "website",
+          "target": "https://homesupport.irobot.com"
+        },
+        {
+          "type": "website",
+          "target": "irobot.in"
+        }
+      ]
+    }
+  },
+  {
     "name": "(ISC)²",
     "url": "https://bugcrowd.com/isc2",
     "allows_disclosure": true,
@@ -2981,28 +3020,16 @@
     "targets": {
       "in_scope": [
         {
+          "type": "other",
+          "target": "ATOM SDK"
+        },
+        {
           "type": "android",
           "target": "PureVPN Android App"
         },
         {
           "type": "other",
-          "target": "PureVPN Chrome Extension"
-        },
-        {
-          "type": "other",
           "target": "PureVPN DDwrt Applet"
-        },
-        {
-          "type": "other",
-          "target": "PureVPN Firefox Extension"
-        },
-        {
-          "type": "other",
-          "target": "PureVPN Kodi Add-on"
-        },
-        {
-          "type": "other",
-          "target": "PureVPN Linux App"
         },
         {
           "type": "other",
@@ -3015,17 +3042,26 @@
         {
           "type": "ios",
           "target": "PureVPN iOS App"
-        }
-      ],
-      "out_of_scope": [
+        },
         {
-          "type": "other",
-          "target": "*.purevpn.com"
+          "type": "api",
+          "target": "api.purevpn.com"
         },
         {
           "type": "website",
-          "target": "www.purevpn.com"
+          "target": "https://my.purevpn.com"
+        },
+        {
+          "type": "website",
+          "target": "https://support.purevpn.com"
+        },
+        {
+          "type": "website",
+          "target": "https://www.purevpn.com"
         }
+      ],
+      "out_of_scope": [
+
       ]
     }
   },
@@ -3221,7 +3257,7 @@
   {
     "name": "Skyscanner",
     "url": "https://bugcrowd.com/skyscanner",
-    "allows_disclosure": false,
+    "allows_disclosure": true,
     "targets": {
       "in_scope": [
         {
@@ -4722,7 +4758,7 @@
       "in_scope": [
         {
           "type": "other",
-          "target": "Moonlet wallet Chrome extension (https://github.com/cryptolandtech/moonlet/releases/tag/v0.3.0)"
+          "target": "Moonlet wallet Chrome extension (https://github.com/cryptolandtech/moonlet/releases)"
         },
         {
           "type": "other",

@@ -16,7 +16,7 @@
           "confidentiality_requirement": "high",
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
-          "instruction": "The HackerOne hacker VPN is used by hackers and HackerOne personnel. We'd be most interested in vulnerabilities that allow you to route traffic to other clients (lack of client isolation), routing traffic to internal HackerOne / Amazon networks, and bypassing [sslsplit](https://github.com/droe/sslsplit). Traffic routed through the VPN will originate from `66.232.20.0/23` (a HackerOne net block). The VPN is based on OpenVPN.",
+          "instruction": "The HackerOne hacker VPN is used by hackers and HackerOne personnel. We'd be most interested in vulnerabilities that allow you to route traffic to other clients (lack of client isolation), routing traffic to internal HackerOne / Amazon networks, and bypassing [sslsplit](https://github.com/droe/sslsplit). Traffic routed through the VPN will originate from `66.232.20.0/23` or `206.166.248.0/23` (HackerOne netblocks). The VPN is based on OpenVPN.",
           "integrity_requirement": "high",
           "max_severity": "critical"
         },
@@ -345,7 +345,7 @@
           "confidentiality_requirement": null,
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
-          "instruction": "* [Yahoo Finance Android](https://play.google.com/store/apps/details?id=com.yahoo.mobile.client.android.finance)\n* [Yahoo Finance iOS](https://itunes.apple.com/us/app/yahoo-finance/id328412701?mt=8)\n* [Yahoo Finance (web)](https://finance.yahoo.com)",
+          "instruction": "* [iOS](https://itunes.apple.com/us/app/yahoo-finance/id328412701?mt=8)\n* [Android](https://play.google.com/store/apps/details?id=com.yahoo.mobile.client.android.finance&hl=en_US)\n* *.finance.yahoo.com\n* OBI Premium Checkout: https://checkout.finance.yahoo.com/checkout/v1\n* API WebSockets Streaming Market Data: http://streamer.finance.yahoo.com\n* finance.mobile.yahoo.com\n* finance.query.yahoo.com",
           "integrity_requirement": null,
           "max_severity": "critical"
         },
@@ -785,7 +785,7 @@
     "url": "https://hackerone.com/ibb-apache",
     "offers_bounties": true,
     "quick_to_bounty": false,
-    "quick_to_first_response": false,
+    "quick_to_first_response": true,
     "targets": {
       "in_scope": [
 
@@ -3907,6 +3907,17 @@
           "max_severity": "critical"
         },
         {
+          "asset_identifier": "jss.greenhouse.io",
+          "asset_type": "URL",
+          "availability_requirement": "medium",
+          "confidentiality_requirement": "medium",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": "medium",
+          "max_severity": "critical"
+        },
+        {
           "asset_identifier": "onboarding.greenhouse.io",
           "asset_type": "URL",
           "availability_requirement": "high",
@@ -6030,7 +6041,7 @@
     "url": "https://hackerone.com/moneybird",
     "offers_bounties": false,
     "quick_to_bounty": false,
-    "quick_to_first_response": false,
+    "quick_to_first_response": true,
     "targets": {
       "in_scope": [
         {
@@ -7362,7 +7373,7 @@
     "handle": "github",
     "url": "https://hackerone.com/github",
     "offers_bounties": true,
-    "quick_to_bounty": false,
+    "quick_to_bounty": true,
     "quick_to_first_response": true,
     "targets": {
       "in_scope": [
@@ -9158,17 +9169,6 @@
           "max_severity": "critical"
         },
         {
-          "asset_identifier": "techniekbijdemarine.nl",
-          "asset_type": "URL",
-          "availability_requirement": "none",
-          "confidentiality_requirement": "none",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "This is an old site running legacy flash code which is iframed on www2.werkenbijdefensie.nl.\nPlease only report severe issues regarding server take-over, RCE, website defacing, SQL injections and similar issues which can cause a mass data leakage or internet disruption (becoming zombie/spambot for example).\nWe are aware this domain isn't served over https as it's to old to support a secure protocol.",
-          "integrity_requirement": "low",
-          "max_severity": "low"
-        },
-        {
           "asset_identifier": "werkenbijdefensie.nl",
           "asset_type": "URL",
           "availability_requirement": "high",
@@ -9202,26 +9202,15 @@
           "max_severity": "critical"
         },
         {
-          "asset_identifier": "www.paspoortspel.nl",
+          "asset_identifier": "www.werkenbijbakertilly.nl",
           "asset_type": "URL",
-          "availability_requirement": "none",
-          "confidentiality_requirement": "none",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
-          "instruction": "This is an old site running legacy flash code which is iframed on www2.werkenbijdefensie.nl.\nPlease only report severe issues regarding server take-over, RCE, website defacing, SQL injections and similar issues which can cause a mass data leakage or internet disruption (becoming zombie/spambot for example).\nWe are aware this domain isn't served over https as it's to old to support a secure protocol.",
-          "integrity_requirement": "low",
-          "max_severity": "low"
-        },
-        {
-          "asset_identifier": "www.wereldwijdactief.nl",
-          "asset_type": "URL",
-          "availability_requirement": "none",
-          "confidentiality_requirement": "none",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "This is an old site running legacy flash code which is iframed on www2.werkenbijdefensie.nl.\nPlease only report severe issues regarding server take-over, RCE, website defacing, SQL injections and similar issues which can cause a mass data leakage or internet disruption (becoming zombie/spambot for example).\nWe are aware this domain isn't served over https as it's to old to support a secure protocol.",
-          "integrity_requirement": "low",
-          "max_severity": "low"
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "critical"
         }
       ],
       "out_of_scope": [
@@ -9232,9 +9221,9 @@
           "confidentiality_requirement": null,
           "eligible_for_bounty": false,
           "eligible_for_submission": false,
-          "instruction": "This domain points to mailchimps servers. For issue please refer to: https://hackerone.com/mailchimp",
+          "instruction": "This domain points to mailchimps servers. For issues please refer to: https://hackerone.com/mailchimp",
           "integrity_requirement": null,
-          "max_severity": "critical"
+          "max_severity": "none"
         },
         {
           "asset_identifier": "maximum.com",
@@ -9243,20 +9232,9 @@
           "confidentiality_requirement": null,
           "eligible_for_bounty": false,
           "eligible_for_submission": false,
-          "instruction": "this domain not ours but in control of a Chinese organization",
+          "instruction": "this domain is not ours but in control of a Chinese organization",
           "integrity_requirement": null,
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "socialrecruitmentmonitor.com",
-          "asset_type": "URL",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": false,
-          "eligible_for_submission": false,
-          "instruction": "",
-          "integrity_requirement": null,
-          "max_severity": "critical"
+          "max_severity": "none"
         }
       ]
     }
@@ -10332,7 +10310,7 @@
     "url": "https://hackerone.com/codeigniter",
     "offers_bounties": false,
     "quick_to_bounty": false,
-    "quick_to_first_response": true,
+    "quick_to_first_response": false,
     "targets": {
       "in_scope": [
         {
@@ -10470,6 +10448,17 @@
           "eligible_for_bounty": false,
           "eligible_for_submission": false,
           "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "gsg-uk.goldman.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "Do not pentest",
           "integrity_requirement": null,
           "max_severity": "none"
         },
@@ -11600,7 +11589,7 @@
     "url": "https://hackerone.com/mariadb",
     "offers_bounties": false,
     "quick_to_bounty": false,
-    "quick_to_first_response": true,
+    "quick_to_first_response": false,
     "targets": {
       "in_scope": [
         {
@@ -13821,7 +13810,7 @@
     "handle": "brave",
     "url": "https://hackerone.com/brave",
     "offers_bounties": true,
-    "quick_to_bounty": true,
+    "quick_to_bounty": false,
     "quick_to_first_response": true,
     "targets": {
       "in_scope": [
@@ -15560,6 +15549,230 @@
       ],
       "out_of_scope": [
 
+      ]
+    }
+  },
+  {
+    "id": 17716,
+    "name": "Trustpilot",
+    "handle": "trustpilot",
+    "url": "https://hackerone.com/trustpilot",
+    "offers_bounties": true,
+    "quick_to_bounty": false,
+    "quick_to_first_response": true,
+    "targets": {
+      "in_scope": [
+        {
+          "asset_identifier": "*api.trustpilot.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "*authenticate.trustpilot.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "*b2b.trustpilot.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "*business.trustpilot.com",
+          "asset_type": "URL",
+          "availability_requirement": "low",
+          "confidentiality_requirement": "low",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": "low",
+          "max_severity": "medium"
+        },
+        {
+          "asset_identifier": "*consumer-auth.trustpilot.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "*emailsignature.trustpilot.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Exploit dynamically generated images shown on customers email signatures and newsletter templates. ",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "*invitations-api.trustpilot.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "*locale.trustpilot.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "*share.trustpilot.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Example: Intercept and replace images shared on social media. ",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "*signup.business.trustpilot.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Out of scope vulnerability: Claiming email provider using matching domain. ",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "*widget.trustpilot.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "*www.trustpilot.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "asset_identifier": "*api-doc.trustpilot.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "*apps.trustpilot.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "*b2b.trustpilot.com/#/labs/*",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "*blog.trustpilot.com/*",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "*jobs.trustpilot.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "*press.trustpilot.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "*support.trustpilot.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        }
       ]
     }
   },
@@ -19673,6 +19886,17 @@
           "max_severity": "critical"
         },
         {
+          "asset_identifier": "atool.proofit.grammarlyaws.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
           "asset_identifier": "auth.grammarly.com",
           "asset_type": "URL",
           "availability_requirement": null,
@@ -22826,6 +23050,17 @@
     "targets": {
       "in_scope": [
         {
+          "asset_identifier": "BBAC",
+          "asset_type": "OTHER",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
           "asset_identifier": "Personal machine",
           "asset_type": "HARDWARE",
           "availability_requirement": "high",
@@ -24649,17 +24884,6 @@
           "max_severity": "critical"
         },
         {
-          "asset_identifier": "lob.com",
-          "asset_type": "URL",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "",
-          "integrity_requirement": null,
-          "max_severity": "critical"
-        },
-        {
           "asset_identifier": "mock.lob.com",
           "asset_type": "URL",
           "availability_requirement": "none",
@@ -24759,17 +24983,6 @@
           "max_severity": "critical"
         },
         {
-          "asset_identifier": "wp.lob.com",
-          "asset_type": "URL",
-          "availability_requirement": "none",
-          "confidentiality_requirement": "none",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "",
-          "integrity_requirement": "none",
-          "max_severity": "none"
-        },
-        {
           "asset_identifier": "www.lob.com",
           "asset_type": "URL",
           "availability_requirement": "high",
@@ -24782,17 +24995,6 @@
         }
       ],
       "out_of_scope": [
-        {
-          "asset_identifier": "Comments form on wp.lob.com & lob.com/blog blog posts",
-          "asset_type": "OTHER",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": false,
-          "eligible_for_submission": false,
-          "instruction": "Please do not submit comments with payloads on our blog posts.",
-          "integrity_requirement": null,
-          "max_severity": "none"
-        },
         {
           "asset_identifier": "cio.lob.com",
           "asset_type": "URL",
@@ -24838,13 +25040,13 @@
           "max_severity": "none"
         },
         {
-          "asset_identifier": "https://lob.com/careers/*/apply",
+          "asset_identifier": "https://lob.com/careers/*",
           "asset_type": "URL",
           "availability_requirement": null,
           "confidentiality_requirement": null,
           "eligible_for_bounty": false,
           "eligible_for_submission": false,
-          "instruction": "Please do not submit the job application form on this page.",
+          "instruction": "Please do not test against or submit any job applications.",
           "integrity_requirement": null,
           "max_severity": "none"
         },
@@ -24880,6 +25082,17 @@
           "instruction": "",
           "integrity_requirement": null,
           "max_severity": "none"
+        },
+        {
+          "asset_identifier": "wp.lob.com and lob.com/blog",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "none"
         }
       ]
     }
@@ -24890,7 +25103,7 @@
     "handle": "pivx-project",
     "url": "https://hackerone.com/pivx-project",
     "offers_bounties": true,
-    "quick_to_bounty": false,
+    "quick_to_bounty": true,
     "quick_to_first_response": true,
     "targets": {
       "in_scope": [
@@ -24939,7 +25152,7 @@
     "url": "https://hackerone.com/liberapay",
     "offers_bounties": true,
     "quick_to_bounty": false,
-    "quick_to_first_response": true,
+    "quick_to_first_response": false,
     "targets": {
       "in_scope": [
         {
@@ -25185,7 +25398,7 @@
     "url": "https://hackerone.com/arkadiyt-projects",
     "offers_bounties": false,
     "quick_to_bounty": false,
-    "quick_to_first_response": true,
+    "quick_to_first_response": false,
     "targets": {
       "in_scope": [
         {
@@ -26567,7 +26780,7 @@
     "url": "https://hackerone.com/aeternity",
     "offers_bounties": true,
     "quick_to_bounty": false,
-    "quick_to_first_response": true,
+    "quick_to_first_response": false,
     "targets": {
       "in_scope": [
         {
@@ -27658,13 +27871,51 @@
     }
   },
   {
+    "id": 38470,
+    "name": "Smartsheet",
+    "handle": "smartsheet",
+    "url": "https://hackerone.com/smartsheet",
+    "offers_bounties": true,
+    "quick_to_bounty": true,
+    "quick_to_first_response": true,
+    "targets": {
+      "in_scope": [
+        {
+          "asset_identifier": "api.smartsheet.com/2.0",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Programmatic access to the Smartsheet application. \n[API documentation found here.](https://smartsheet-platform.github.io/api-docs/)\n[How to generate API token](https://smartsheet-platform.github.io/api-docs/#authentication-and-access-tokens)",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "app.smartsheet.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Web interface for the Smartsheet platform.\n[Sign up for a non-expiring developer account using your wearehackerone.com email.](https://developers.smartsheet.com/register/)\nAdditional accounts can be created using yourusername+whatever@wearehackerone.com\nOnly test using @wearehackerone.com accounts \n[Sign into the application.](https://app.smartsheet.com/b/home)\n[Checkout platform features.](https://help.smartsheet.com/topics/sheet-basics)\nBe the first to hack our new features, by reading the [Release Notes.](https://www.smartsheet.com/release-notes)",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
     "id": 38489,
     "name": "50m-ctf",
     "handle": "50m-ctf",
     "url": "https://hackerone.com/50m-ctf",
     "offers_bounties": false,
     "quick_to_bounty": false,
-    "quick_to_first_response": true,
+    "quick_to_first_response": false,
     "targets": {
       "in_scope": [
 
