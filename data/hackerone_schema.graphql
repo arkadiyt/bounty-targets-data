@@ -5355,9 +5355,41 @@ A HackerOne feature
 """
 type Feature implements Node {
   _id: ID!
+  disabled: Boolean!
   enabled: Boolean!
+  global: Boolean!
   id: ID!
   key: String!
+}
+
+"""
+The connection type for Feature.
+"""
+type FeatureConnection {
+  """
+  A list of edges.
+  """
+  edges: [FeatureEdge]
+
+  """
+  Information to aid in pagination.
+  """
+  pageInfo: PageInfo!
+}
+
+"""
+An edge in a connection.
+"""
+type FeatureEdge {
+  """
+  A cursor for use in pagination.
+  """
+  cursor: String!
+
+  """
+  The item at the end of the edge.
+  """
+  node: Feature
 }
 
 """
@@ -7234,7 +7266,27 @@ type Query implements Node {
     last: Int
     search_input: String
   ): ExternalProgramConnection
-  global_features: [Feature]
+  features(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+  ): FeatureConnection
   hacktivity_items(
     """
     Returns the elements in the list that come after the specified cursor.
