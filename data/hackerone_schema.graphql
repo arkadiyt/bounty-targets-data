@@ -7490,8 +7490,9 @@ type Query implements Node {
     Returns the last _n_ elements from the list.
     """
     last: Int
-    latest_dismissed_by_report: Boolean = false
-    oldest_undismissed_by_report: Boolean = false
+    latest_dismissed: Boolean = false
+    oldest_undismissed: Boolean = false
+    report_state: ReportStateEnum = null
   ): TriageInboxItemConnection!
   user(username: String!): User
   users(
