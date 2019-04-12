@@ -9555,52 +9555,20 @@
     "quick_to_first_response": true,
     "targets": {
       "in_scope": [
+
+      ],
+      "out_of_scope": [
         {
           "asset_identifier": "*.goodhire.com",
           "asset_type": "URL",
           "availability_requirement": null,
           "confidentiality_requirement": null,
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
           "instruction": "",
           "integrity_requirement": null,
-          "max_severity": "critical"
+          "max_severity": "none"
         },
-        {
-          "asset_identifier": "api.goodhire.com",
-          "asset_type": "URL",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "",
-          "integrity_requirement": null,
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "app.goodhire.com",
-          "asset_type": "URL",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "",
-          "integrity_requirement": null,
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "www.goodhire.com",
-          "asset_type": "URL",
-          "availability_requirement": "high",
-          "confidentiality_requirement": "high",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "Please note that www.goodhire.com is hosted on HubSpot. Depending on the nature of the vulnerability you find, we may direct you to HubSpot's bug bounty program instead.",
-          "integrity_requirement": "high",
-          "max_severity": "critical"
-        }
-      ],
-      "out_of_scope": [
         {
           "asset_identifier": "*.identity.com",
           "asset_type": "URL",
@@ -9624,7 +9592,29 @@
           "max_severity": "none"
         },
         {
+          "asset_identifier": "api.goodhire.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
           "asset_identifier": "api.identity.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "app.goodhire.com",
           "asset_type": "URL",
           "availability_requirement": null,
           "confidentiality_requirement": null,
@@ -9654,6 +9644,17 @@
           "eligible_for_submission": false,
           "instruction": "Any vulnerabilities discovered in the Auth0 platform should be reported to Auth0 directly: https://auth0.com/whitehat",
           "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "www.goodhire.com",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "Please note that www.goodhire.com is hosted on HubSpot. Depending on the nature of the vulnerability you find, we may direct you to HubSpot's bug bounty program instead.",
+          "integrity_requirement": "high",
           "max_severity": "none"
         },
         {
