@@ -24372,7 +24372,7 @@
           "confidentiality_requirement": "high",
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
-          "instruction": "The regular Nimiq Testnet can be used for the purposes of this program and it consists of our official client implementation running on the following servers:\n\n* seed1.nimiqtest.net:8080\n* seed2.nimiqtest.net:8080\n* seed3.nimiqtest.net:8080\n* seed4.nimiqtest.net:8080\n\nThe easiest way to connect to the testnet is by downloading the [`master` branch](https://github.com/nimiq-network/core/tree/master/src) of our official code repository and following the [Quickstart Guide](https://github.com/nimiq-network/core#quickstart) to get a web client (step 7), or if you prefer, you can also [build a nodeJS client](https://github.com/nimiq-network/core#nodejs-client) afterwards. Very important: Make sure to change the `--network=` parameter to `test` before attempting anything.\n\nOf course, you are also encouraged to find security problems by connecting directly to the 8080 port on those servers with any other tools that you consider useful. Please keep in mind that security issues on other services (i.e. not our client on port 8080) running on these servers are out of scope.\n",
+          "instruction": "The regular Nimiq Testnet can be used for the purposes of this program and it consists of our official client implementation running on the following servers:\n\n* seed1.nimiqtest.net:8080 (JavaScript implementation)\n* seed2.nimiqtest.net:8080 (JavaScript implementation)\n* seed3.nimiqtest.net:8080 (JavaScript implementation)\n* seed4.nimiqtest.net:8080 (Rust implementation)\n\nThe easiest way to connect to the testnet is by downloading the [`master` branch](https://github.com/nimiq-network/core/tree/master/src) of our official code repository and following the [Quickstart Guide](https://github.com/nimiq-network/core#quickstart) to get a web client (step 7), or if you prefer, you can also [build a nodeJS client](https://github.com/nimiq-network/core#nodejs-client) afterwards. Very important: Make sure to change the `--network=` parameter to `test` before attempting anything.\n\nOf course, you are also encouraged to find security problems by connecting directly to the 8080 port on those servers with any other tools that you consider useful. Please keep in mind that security issues on other services (i.e. not our client on port 8080) running on these servers are out of scope.\n",
           "integrity_requirement": "high",
           "max_severity": "critical"
         },
@@ -24394,7 +24394,18 @@
           "confidentiality_requirement": "high",
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
-          "instruction": "The `src/` folder on the `master` branch of our repository has all the source code from our official implementation that we look forward to be tested.",
+          "instruction": "The `src/` folder on the `master` branch of this repository has all the source code for our official JavaScript implementation that we look forward to be tested.\n\nThere is also a running version of this code in the testnet, you can find the instructions to test against it in the \"Blockchain testnet\" section below.\n",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://github.com/nimiq/core-rs/",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "The `master` branch of this repository has all the source code for our official Rust implementation that we look forward to be tested.\n\nThere is also a running version of this code in the testnet, you can find the instructions to test against it in the \"Blockchain testnet\" section below.\n",
           "integrity_requirement": "high",
           "max_severity": "critical"
         },
