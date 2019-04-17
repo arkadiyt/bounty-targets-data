@@ -450,9 +450,39 @@ type ActivitiesChecklistCheckReleased implements ActivityInterface & Node {
 }
 
 """
+A Activities::ChecklistCheckResponseApproved activity for a checklist_check
+"""
+type ActivitiesChecklistCheckResponseApproved implements ActivityInterface & Node {
+  _id: ID!
+  actor: ActorUnion
+  created_at: DateTime!
+  i_can_edit: Boolean!
+  id: ID!
+  internal: Boolean
+  markdown_message: String
+  message: String
+  updated_at: DateTime!
+}
+
+"""
 A Activities::ChecklistCheckResponseCreated activity for a checklist_check
 """
 type ActivitiesChecklistCheckResponseCreated implements ActivityInterface & Node {
+  _id: ID!
+  actor: ActorUnion
+  created_at: DateTime!
+  i_can_edit: Boolean!
+  id: ID!
+  internal: Boolean
+  markdown_message: String
+  message: String
+  updated_at: DateTime!
+}
+
+"""
+A Activities::ChecklistCheckResponseRejected activity for a checklist_check
+"""
+type ActivitiesChecklistCheckResponseRejected implements ActivityInterface & Node {
   _id: ID!
   actor: ActorUnion
   created_at: DateTime!
@@ -1236,7 +1266,9 @@ enum ActivityTypes {
   ChangedScope
   ChecklistCheckClaimed
   ChecklistCheckReleased
+  ChecklistCheckResponseApproved
   ChecklistCheckResponseCreated
+  ChecklistCheckResponseRejected
   ChecklistCheckResponseUpdated
   Comment
   CommentsClosed
@@ -1276,7 +1308,7 @@ enum ActivityTypes {
 """
 Activities can be of multiple types
 """
-union ActivityUnion = ActivitiesAgreedOnGoingPublic | ActivitiesBountyAwarded | ActivitiesBountySuggested | ActivitiesBugCloned | ActivitiesBugDuplicate | ActivitiesBugFiled | ActivitiesBugInactive | ActivitiesBugInformative | ActivitiesBugNeedsMoreInfo | ActivitiesBugNew | ActivitiesBugNotApplicable | ActivitiesBugReopened | ActivitiesBugResolved | ActivitiesBugSpam | ActivitiesBugTriaged | ActivitiesCancelledDisclosureRequest | ActivitiesChangedScope | ActivitiesChecklistCheckClaimed | ActivitiesChecklistCheckReleased | ActivitiesChecklistCheckResponseCreated | ActivitiesChecklistCheckResponseUpdated | ActivitiesComment | ActivitiesCommentsClosed | ActivitiesCveIdAdded | ActivitiesExternalAdvisoryAdded | ActivitiesExternalUserInvitationCancelled | ActivitiesExternalUserInvited | ActivitiesExternalUserJoined | ActivitiesExternalUserRemoved | ActivitiesGroupAssignedToBug | ActivitiesHackerRequestedMediation | ActivitiesManuallyDisclosed | ActivitiesMediationRequested | ActivitiesNobodyAssignedToBug | ActivitiesNotEligibleForBounty | ActivitiesProgramInactive | ActivitiesReassignedToTeam | ActivitiesReferenceIdAdded | ActivitiesReportBecamePublic | ActivitiesReportCollaboratorInvited | ActivitiesReportCollaboratorJoined | ActivitiesReportSeverityUpdated | ActivitiesReportTitleUpdated | ActivitiesReportVulnerabilityTypesUpdated | ActivitiesSwagAwarded | ActivitiesTeamBountyTableUpdated | ActivitiesTeamPolicyUpdated | ActivitiesTeamPostCreated | ActivitiesTeamPublished | ActivitiesTeamStructuredScopeUpdated | ActivitiesUserAssignedToBug | ActivitiesUserBannedFromProgram | ActivitiesUserCompletedRetest | ActivitiesUserJoined
+union ActivityUnion = ActivitiesAgreedOnGoingPublic | ActivitiesBountyAwarded | ActivitiesBountySuggested | ActivitiesBugCloned | ActivitiesBugDuplicate | ActivitiesBugFiled | ActivitiesBugInactive | ActivitiesBugInformative | ActivitiesBugNeedsMoreInfo | ActivitiesBugNew | ActivitiesBugNotApplicable | ActivitiesBugReopened | ActivitiesBugResolved | ActivitiesBugSpam | ActivitiesBugTriaged | ActivitiesCancelledDisclosureRequest | ActivitiesChangedScope | ActivitiesChecklistCheckClaimed | ActivitiesChecklistCheckReleased | ActivitiesChecklistCheckResponseApproved | ActivitiesChecklistCheckResponseCreated | ActivitiesChecklistCheckResponseRejected | ActivitiesChecklistCheckResponseUpdated | ActivitiesComment | ActivitiesCommentsClosed | ActivitiesCveIdAdded | ActivitiesExternalAdvisoryAdded | ActivitiesExternalUserInvitationCancelled | ActivitiesExternalUserInvited | ActivitiesExternalUserJoined | ActivitiesExternalUserRemoved | ActivitiesGroupAssignedToBug | ActivitiesHackerRequestedMediation | ActivitiesManuallyDisclosed | ActivitiesMediationRequested | ActivitiesNobodyAssignedToBug | ActivitiesNotEligibleForBounty | ActivitiesProgramInactive | ActivitiesReassignedToTeam | ActivitiesReferenceIdAdded | ActivitiesReportBecamePublic | ActivitiesReportCollaboratorInvited | ActivitiesReportCollaboratorJoined | ActivitiesReportSeverityUpdated | ActivitiesReportTitleUpdated | ActivitiesReportVulnerabilityTypesUpdated | ActivitiesSwagAwarded | ActivitiesTeamBountyTableUpdated | ActivitiesTeamPolicyUpdated | ActivitiesTeamPostCreated | ActivitiesTeamPublished | ActivitiesTeamStructuredScopeUpdated | ActivitiesUserAssignedToBug | ActivitiesUserBannedFromProgram | ActivitiesUserCompletedRetest | ActivitiesUserJoined
 
 """
 An edge in a connection.
@@ -2132,6 +2164,7 @@ type ChecklistCheckEdge {
 A checklist check response
 """
 type ChecklistCheckResponse implements Node {
+  activity: ActivityInterface
   checklist_check: ChecklistCheck
   id: ID!
   state: ChecklistCheckResponseStateEnum
