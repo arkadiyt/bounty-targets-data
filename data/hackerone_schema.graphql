@@ -3739,6 +3739,7 @@ input CreateStructuredScopeInput {
   """
   clientMutationId: String
   confidentiality_requirement: String
+  custom_message: String = ""
   eligible_for_bounty: Boolean
   eligible_for_submission: Boolean
   instruction: String
@@ -12647,6 +12648,7 @@ input UpdateStructuredScopeInput {
   """
   clientMutationId: String
   confidentiality_requirement: String
+  custom_message: String = ""
   eligible_for_bounty: Boolean
   eligible_for_submission: Boolean
   instruction: String
