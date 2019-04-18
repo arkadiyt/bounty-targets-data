@@ -28692,6 +28692,153 @@
     }
   },
   {
+    "id": 39174,
+    "name": "ZEIT",
+    "handle": "zeit",
+    "url": "https://hackerone.com/zeit",
+    "offers_bounties": false,
+    "quick_to_bounty": false,
+    "quick_to_first_response": false,
+    "targets": {
+      "in_scope": [
+        {
+          "asset_identifier": "*.now.systems",
+          "asset_type": "URL",
+          "availability_requirement": "medium",
+          "confidentiality_requirement": "low",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "Various services internal to Now are hosted under this domain.",
+          "integrity_requirement": "medium",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "*.zeit.co",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "This is the main domain.\nThe website and dashboard lives at the apex.\nThe API is reachable under api subdomain as well as zeit.co/api.",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "*.zeit.sh",
+          "asset_type": "URL",
+          "availability_requirement": "low",
+          "confidentiality_requirement": "medium",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "Some of the services that keeps Now running are hosted under this domain.",
+          "integrity_requirement": "medium",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://github.com/zeit/now-cli",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": "none",
+          "confidentiality_requirement": "none",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "This is the CLI tool users can use to interact with Now.",
+          "integrity_requirement": "low",
+          "max_severity": "low"
+        },
+        {
+          "asset_identifier": "zeit-cdn.net",
+          "asset_type": "URL",
+          "availability_requirement": "low",
+          "confidentiality_requirement": "none",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "This domain is used by the Cloudflare CDN integration.",
+          "integrity_requirement": "low",
+          "max_severity": "medium"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "asset_identifier": "*.now.sh",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "These subdomains are assigned to the users of Now.",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "*.zeit-world.co.uk",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "DNS servers are out of scope.",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "*.zeit-world.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "DNS servers are out of scope.",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "*.zeit-world.net",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "DNS servers are out of scope.",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "*.zeit-world.org",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "DNS servers are out of scope.",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "*.zeit.world",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "DNS servers are out of scope.",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "*.zeitworld.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "DNS servers are out of scope.",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        }
+      ]
+    }
+  },
+  {
     "id": 39424,
     "name": "TomTom",
     "handle": "tomtom",
