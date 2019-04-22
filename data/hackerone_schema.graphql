@@ -13877,6 +13877,8 @@ type User implements Node & ResourceInterface {
   tax_form: TaxForm
   team_policy_subscription(handle: String!): TeamPolicySubscription
   team_policy_subscriptions(
+    active: Boolean
+
     """
     Returns the elements in the list that come after the specified cursor.
     """
