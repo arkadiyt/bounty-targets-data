@@ -1482,6 +1482,143 @@
     }
   },
   {
+    "id": 59,
+    "name": "Priceline",
+    "handle": "priceline",
+    "url": "https://hackerone.com/priceline",
+    "offers_bounties": true,
+    "quick_to_bounty": true,
+    "quick_to_first_response": true,
+    "targets": {
+      "in_scope": [
+        {
+          "asset_identifier": "336381998",
+          "asset_type": "APPLE_STORE_APP_ID",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "[iOS App](https://itunes.apple.com/us/app/priceline-hotel-travel-deals/id336381998?mt=8)",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "admin.rezserver.com",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "**Policy Guidance**\nWe are not currently providing credentials for this asset.\n\n**Rules of Engagement**\n- In request headers use 'hackerone-{your username}' for user-agent\n- Keep low volume of requests - Automated testing is not permitted\n- Do not Fuzz Contact forms\n- Do not Fuzz \"Request Account Activation\" & \"Request Product Activation\"\n- Do not Fuzz request for \"Change Request under Sites\" \n- Do not modify other hacker_* user accounts under Hacker one test account\n\n**Non-Qualifying Vulnerabilities and Exclusions**\n- CSRF ",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "api.rezserver.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "**Rezserver API**\n_Policy Guidance_\nWe are not currently providing credentials for this asset.\n\n_Rules_\n- Don't use automated tools or scanners\n- Don't DDoS\n\n_Out of scope vulnerabilities_\n- Missing best practices in HTTP header configuration.\n- Any activity that could lead to the disruption of our service (DoS)\n- Missing best practices in SSL/TLS configuration\n- Account/email enumeration issues\n- Disclosure of software version numbers (we maintain forks of several tools, and apply security patches accordingly)\n- Content Spoofing/Text Injection that cannot be leveraged for XSS or sensitive data disclosure\n\n_Endpoints out of scope_\n- Hotel: BookRequest\n- Air: All endpoints\n- Car: All endpoints\n- Custom: All endpoints\n",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "com.priceline.android.negotiator",
+          "asset_type": "GOOGLE_PLAY_APP_ID",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "cruises.priceline.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "reservations.rezserver.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "secure.rezserver.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "www.airportrentalcars.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Please be careful with the APP. There is no rate control for the reservations!\n**Please avoid submitting multiple reservations!**\n**If you submit a reservation, please make sure you are cancelling it.**\n",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "www.bookingholdings.com",
+          "asset_type": "URL",
+          "availability_requirement": "low",
+          "confidentiality_requirement": "none",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": "medium",
+          "max_severity": "high"
+        },
+        {
+          "asset_identifier": "www.priceline.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "www.priceline.com/vp-web/* ",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "Path www.priceline.com/vp-web/* will be decommissioned soon so it is not eligible for bounty",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
     "id": 60,
     "name": "concrete5",
     "handle": "concrete5",
@@ -8782,6 +8919,17 @@
       "in_scope": [
         {
           "asset_identifier": "*.loudr.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Loudr was acquired by Spotify in 2018.",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "*.loudr.fm",
           "asset_type": "URL",
           "availability_requirement": null,
           "confidentiality_requirement": null,
