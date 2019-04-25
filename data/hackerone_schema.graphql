@@ -5247,10 +5247,20 @@ type EnableUserPayload {
 An error
 """
 type Error implements Node {
+  error_code: ErrorCodeEnum
   field: String
   id: ID!
   message: String!
   type: ErrorTypeEnum!
+}
+
+"""
+Specific errors that can occur
+"""
+enum ErrorCodeEnum {
+  access_denied
+  demo_member_cannot_leave_sandbox_team
+  program_must_have_one_admin
 }
 
 """
@@ -10587,6 +10597,9 @@ Cached metrics of a Team
 """
 type TeamCachedProfile {
   _id: ID!
+  active_subscribers_to_bounty_table_updates_count: Int
+  active_subscribers_to_policy_updates_count: Int
+  active_subscribers_to_structured_scope_updates_count: Int
   disclosed_reports_in_last_year_count: Int
   hackers_accepted_all_time_count: Int
   hackers_invited_all_time_count: Int
@@ -10827,6 +10840,7 @@ type TeamPolicySubscription implements Node & ResourceInterface {
   _id: ID!
   created_at: DateTime!
   id: ID!
+  source_type: String
   team: Team!
   unsubscribed_at: DateTime
   updated_at: DateTime
@@ -11602,6 +11616,7 @@ input UpdateBountyTableInput {
   """
   clientMutationId: String
   critical_label: String!
+  custom_message: String
   description: String
   high_label: String!
   low_label: String!
