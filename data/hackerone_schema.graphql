@@ -5433,6 +5433,8 @@ type ExternalProgram implements Node {
   """
   _id: ID!
   about: String
+  disclosure_email: String
+  disclosure_url: String
   handle: String!
   id: ID!
   name: String!
@@ -9705,6 +9707,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
   allow_all_hacker_invitations: Boolean
   allow_email_and_automatic_invitations: Boolean
   allows_bounty_splitting: Boolean!
+  allows_disclosure_assistance: Boolean!
   allows_private_disclosure: Boolean
   automatic_invites: Boolean
   average_bounty_lower_amount: Int
@@ -9790,6 +9793,8 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
     last: Int
     order_by: CommonResponseOrder = {direction: ASC, field: title}
   ): CommonResponseConnection
+  cover_color: String
+  cover_photo_url: String
   created_at: DateTime
   credential_instruction: String
   credential_instruction_html: String
@@ -9908,6 +9913,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
   ): EmbeddedSubmissionFormConnection
   external_program: ExternalProgram
   external_url: String
+  facebook_team: Boolean
   fancy_slack_integration: Boolean
   first_response_time(date_start: DateTime = null): Float
   goal_valid_reports: Int
@@ -9941,22 +9947,31 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
   hackers_thanked_count: Int!
   handle: String!
   has_avatar: Boolean
+  has_cover_photo: Boolean
+  has_cover_video: Boolean
   has_hierarchy_thanks_page: Boolean!
   has_policy: Boolean
   has_structured_policy: Boolean
   hide_bounty_amounts: Boolean
   i_can_create_jira_webhook: Boolean
+  i_can_create_report: Boolean
   i_can_destroy_jira_webhook: Boolean!
+  i_can_edit_program_profile: Boolean
   i_can_manage_program: Boolean!
   i_can_view_base_bounty: Boolean
   i_can_view_bounty_table: Boolean
   i_can_view_critical_submissions_enabled: Boolean
+  i_can_view_hacktivity: Boolean
   i_can_view_invite_hackers: Boolean!
   i_can_view_jira_integration: Boolean
   i_can_view_jira_webhook: Boolean
   i_can_view_phabricator_integration: Boolean
+  i_can_view_private: Boolean
+  i_can_view_private_program_application_requirement: Boolean
+  i_can_view_program_info: Boolean
   i_can_view_reports_resolved: Boolean
   i_can_view_weaknesses: Boolean
+  i_reached_abuse_limit: Boolean
   id: ID!
   inbox_views(
     """
@@ -10067,6 +10082,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
   number_of_valid_reports_for_user: Int
   offers_bounties: Boolean
   offers_swag: Boolean
+  offers_thanks: Boolean
   only_cleared_hackers: Boolean
   participants(
     """
@@ -13632,6 +13648,7 @@ type User implements Node & ResourceInterface {
   account_recovery_phone_number_sent_at: DateTime
   account_recovery_phone_number_verified_at: DateTime
   account_recovery_unverified_phone_number: String
+  active_ban: Boolean
   address: Address
   anc_triager: Boolean
   authentication_service: AuthenticationServiceEnum!
