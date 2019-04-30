@@ -24768,17 +24768,6 @@
           "max_severity": "critical"
         },
         {
-          "asset_identifier": "https://github.com/nimiq-network/blue-app-nimiq",
-          "asset_type": "SOURCE_CODE",
-          "availability_requirement": "high",
-          "confidentiality_requirement": "high",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "The Nimiq Ledger App is designed to allow [Ledger Nano S](https://www.ledgerwallet.com/products/ledger-nano-s) users to create a Nimiq Account with the private key safely stored in their hardware wallet.\n\nFor this particular asset we're looking to find bugs that would allow an attacker to get an user's private key (or any other secret data that can be used to validly sign transactions) or that would allow an attacker to create a transaction with fields that would be displayed incorrectly on the Ledger's screen in a way that would result in a valid transaction to a different address or with a different amount than what the user expected.\n\nOther less critical bugs could also be valid (for example a bug that can cause the app to \"freeze\" or \"crash\").\n\nOnly bugs in the Nimiq Ledger App itself are valid, more general bugs that apply to the Ledger Nano S or its Operating System should be [sent to Ledger directly](https://www.ledger.fr/bounty-program/).",
-          "integrity_requirement": "high",
-          "max_severity": "critical"
-        },
-        {
           "asset_identifier": "https://github.com/nimiq-network/core/tree/master/src",
           "asset_type": "SOURCE_CODE",
           "availability_requirement": "high",
@@ -24797,6 +24786,17 @@
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
           "instruction": "The `master` branch of this repository has all the source code for our official Rust implementation that we look forward to be tested.\n\nThere is also a running version of this code in the testnet, you can find the instructions to test against it in the \"Blockchain testnet\" section below.\n",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://github.com/nimiq/ledger-app-nimiq",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "The Nimiq Ledger App is designed to allow [Ledger Nano S](https://www.ledgerwallet.com/products/ledger-nano-s) users to create a Nimiq Account with the private key safely stored in their hardware wallet.\n\nFor this particular asset we're looking to find bugs that would allow an attacker to get an user's private key (or any other secret data that can be used to validly sign transactions) or that would allow an attacker to create a transaction with fields that would be displayed incorrectly on the Ledger's screen in a way that would result in a valid transaction to a different address or with a different amount than what the user expected.\n\nOther less critical bugs could also be valid (for example a bug that can cause the app to \"freeze\" or \"crash\").\n\nOnly bugs in the Nimiq Ledger App itself are valid, more general bugs that apply to the Ledger Nano S or its Operating System should be [sent to Ledger directly](https://www.ledger.fr/bounty-program/).",
           "integrity_requirement": "high",
           "max_severity": "critical"
         },
