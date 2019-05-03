@@ -1580,17 +1580,6 @@
           "max_severity": "critical"
         },
         {
-          "asset_identifier": "www.airportrentalcars.com",
-          "asset_type": "URL",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "Please be careful with the APP. There is no rate control for the reservations!\n**Please avoid submitting multiple reservations!**\n**If you submit a reservation, please make sure you are cancelling it.**\n",
-          "integrity_requirement": null,
-          "max_severity": "critical"
-        },
-        {
           "asset_identifier": "www.bookingholdings.com",
           "asset_type": "URL",
           "availability_requirement": "low",
@@ -1625,7 +1614,17 @@
         }
       ],
       "out_of_scope": [
-
+        {
+          "asset_identifier": "www.airportrentalcars.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "\nAirportrentalcars.com is current *not* in scope. Please do not test it. \n",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        }
       ]
     }
   },
