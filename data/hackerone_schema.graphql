@@ -7181,6 +7181,14 @@ type ProgramHealthAcknowledgementSeenPayload implements MutationResult {
 }
 
 """
+Metrics for a certain team
+"""
+type ProgramMetric implements Node {
+  id: ID!
+  total_submissions: Int!
+}
+
+"""
 Statistics for a certain interval for a certain team
 """
 type ProgramStatistic implements Node {
@@ -10216,6 +10224,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
     """
     start_date: String
   ): SurveyAnswerConnection
+  program_metrics(child_team_ids: [ID!], end_date: Date!, start_date: Date!, structured_scope_ids: [ID!]): ProgramMetric!
   program_statistics(
     """
     Returns the elements in the list that come after the specified cursor.
