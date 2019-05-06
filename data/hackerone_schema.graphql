@@ -7184,8 +7184,13 @@ type ProgramHealthAcknowledgementSeenPayload implements MutationResult {
 Metrics for a certain team
 """
 type ProgramMetric implements Node {
+  average_response_time: Int
+  average_triage_time: Int
+  closed_reports: Int!
+  hackers_thanked: Int!
   id: ID!
   open_reports: Int!
+  reports_resolved: Int!
   reports_rewarded: Int!
   total_submissions: Int!
 }
