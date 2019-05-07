@@ -512,6 +512,21 @@ type ActivitiesChecklistCheckResponseUpdated implements ActivityInterface & Atta
 }
 
 """
+A Activities::ChecklistCheckRevoked activity for a checklist_check
+"""
+type ActivitiesChecklistCheckRevoked implements ActivityInterface & Node {
+  _id: ID!
+  actor: ActorUnion
+  created_at: DateTime!
+  i_can_edit: Boolean!
+  id: ID!
+  internal: Boolean
+  markdown_message: String
+  message: String
+  updated_at: DateTime!
+}
+
+"""
 A Activities::Comment activity for a report
 """
 type ActivitiesComment implements ActivityInterface & Node & ReportActivityInterface {
@@ -1272,6 +1287,7 @@ enum ActivityTypes {
   ChecklistCheckResponseCreated
   ChecklistCheckResponseRejected
   ChecklistCheckResponseUpdated
+  ChecklistCheckRevoked
   Comment
   CommentsClosed
   CveIdAdded
@@ -1310,7 +1326,7 @@ enum ActivityTypes {
 """
 Activities can be of multiple types
 """
-union ActivityUnion = ActivitiesAgreedOnGoingPublic | ActivitiesBountyAwarded | ActivitiesBountySuggested | ActivitiesBugCloned | ActivitiesBugDuplicate | ActivitiesBugFiled | ActivitiesBugInactive | ActivitiesBugInformative | ActivitiesBugNeedsMoreInfo | ActivitiesBugNew | ActivitiesBugNotApplicable | ActivitiesBugReopened | ActivitiesBugResolved | ActivitiesBugSpam | ActivitiesBugTriaged | ActivitiesCancelledDisclosureRequest | ActivitiesChangedScope | ActivitiesChecklistCheckClaimed | ActivitiesChecklistCheckReleased | ActivitiesChecklistCheckResponseApproved | ActivitiesChecklistCheckResponseCreated | ActivitiesChecklistCheckResponseRejected | ActivitiesChecklistCheckResponseUpdated | ActivitiesComment | ActivitiesCommentsClosed | ActivitiesCveIdAdded | ActivitiesExternalAdvisoryAdded | ActivitiesExternalUserInvitationCancelled | ActivitiesExternalUserInvited | ActivitiesExternalUserJoined | ActivitiesExternalUserRemoved | ActivitiesGroupAssignedToBug | ActivitiesHackerRequestedMediation | ActivitiesManuallyDisclosed | ActivitiesMediationRequested | ActivitiesNobodyAssignedToBug | ActivitiesNotEligibleForBounty | ActivitiesProgramInactive | ActivitiesReassignedToTeam | ActivitiesReferenceIdAdded | ActivitiesReportBecamePublic | ActivitiesReportCollaboratorInvited | ActivitiesReportCollaboratorJoined | ActivitiesReportSeverityUpdated | ActivitiesReportTitleUpdated | ActivitiesReportVulnerabilityTypesUpdated | ActivitiesSwagAwarded | ActivitiesTeamBountyTableUpdated | ActivitiesTeamPolicyUpdated | ActivitiesTeamPostCreated | ActivitiesTeamPublished | ActivitiesTeamStructuredScopeUpdated | ActivitiesUserAssignedToBug | ActivitiesUserBannedFromProgram | ActivitiesUserCompletedRetest | ActivitiesUserJoined
+union ActivityUnion = ActivitiesAgreedOnGoingPublic | ActivitiesBountyAwarded | ActivitiesBountySuggested | ActivitiesBugCloned | ActivitiesBugDuplicate | ActivitiesBugFiled | ActivitiesBugInactive | ActivitiesBugInformative | ActivitiesBugNeedsMoreInfo | ActivitiesBugNew | ActivitiesBugNotApplicable | ActivitiesBugReopened | ActivitiesBugResolved | ActivitiesBugSpam | ActivitiesBugTriaged | ActivitiesCancelledDisclosureRequest | ActivitiesChangedScope | ActivitiesChecklistCheckClaimed | ActivitiesChecklistCheckReleased | ActivitiesChecklistCheckResponseApproved | ActivitiesChecklistCheckResponseCreated | ActivitiesChecklistCheckResponseRejected | ActivitiesChecklistCheckResponseUpdated | ActivitiesChecklistCheckRevoked | ActivitiesComment | ActivitiesCommentsClosed | ActivitiesCveIdAdded | ActivitiesExternalAdvisoryAdded | ActivitiesExternalUserInvitationCancelled | ActivitiesExternalUserInvited | ActivitiesExternalUserJoined | ActivitiesExternalUserRemoved | ActivitiesGroupAssignedToBug | ActivitiesHackerRequestedMediation | ActivitiesManuallyDisclosed | ActivitiesMediationRequested | ActivitiesNobodyAssignedToBug | ActivitiesNotEligibleForBounty | ActivitiesProgramInactive | ActivitiesReassignedToTeam | ActivitiesReferenceIdAdded | ActivitiesReportBecamePublic | ActivitiesReportCollaboratorInvited | ActivitiesReportCollaboratorJoined | ActivitiesReportSeverityUpdated | ActivitiesReportTitleUpdated | ActivitiesReportVulnerabilityTypesUpdated | ActivitiesSwagAwarded | ActivitiesTeamBountyTableUpdated | ActivitiesTeamPolicyUpdated | ActivitiesTeamPostCreated | ActivitiesTeamPublished | ActivitiesTeamStructuredScopeUpdated | ActivitiesUserAssignedToBug | ActivitiesUserBannedFromProgram | ActivitiesUserCompletedRetest | ActivitiesUserJoined
 
 """
 An edge in a connection.
