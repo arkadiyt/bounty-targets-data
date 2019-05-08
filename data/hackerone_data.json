@@ -7276,17 +7276,6 @@
           "max_severity": "medium"
         },
         {
-          "asset_identifier": "1360970802",
-          "asset_type": "APPLE_STORE_APP_ID",
-          "availability_requirement": "low",
-          "confidentiality_requirement": "low",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "GrabFood Driver",
-          "integrity_requirement": "low",
-          "max_severity": "medium"
-        },
-        {
           "asset_identifier": "647268330",
           "asset_type": "APPLE_STORE_APP_ID",
           "availability_requirement": "high",
@@ -7307,17 +7296,6 @@
           "instruction": "**What it does:** Grab iOS and Android apps communicate with this service while you use Grab specifically for newer payment features. This endpoint acts as an API gateway proxy to all of our services. This API exposes the largest attack surface of any service here at GrabPay.\n\n**What to look for:** Much like our external API, `api.grabpay.com` is a RESTful API performed over HTTPS requests. The best way to hunt for bugs here is to use your own auth token via the `X-mts-ssid` header and look for authorization and access control issues, business logic and etc. Please keep in mind that you should only ever perform this testing against accounts you own, accessing any data not owned by you can result in disqualification. \n\n**What it runs on:** Golang / Java",
           "integrity_requirement": "high",
           "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "com.grab.food.dax",
-          "asset_type": "GOOGLE_PLAY_APP_ID",
-          "availability_requirement": "low",
-          "confidentiality_requirement": "low",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "GrabFood Driver",
-          "integrity_requirement": "low",
-          "max_severity": "medium"
         },
         {
           "asset_identifier": "com.grabpay.merchant",
