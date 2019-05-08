@@ -2145,9 +2145,9 @@ type ChecklistCheck implements Node {
   checklist: Checklist
   checklist_check_response(id: ID!): ChecklistCheckResponse
   cluster: Cluster
-  description: String!
   id: ID!
-  instruction: String!
+  markdown_description: String
+  markdown_instruction: String
   state: ChecklistCheckStateEnum
   submitted_checklist_check_response: ChecklistCheckResponse
   title: String!
