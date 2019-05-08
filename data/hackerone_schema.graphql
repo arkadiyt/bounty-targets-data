@@ -7200,6 +7200,7 @@ type ProgramHealthAcknowledgementSeenPayload implements MutationResult {
 Metrics for a certain team
 """
 type ProgramMetric implements Node {
+  average_bounty_time: Int
   average_response_time: Int
   average_triage_time: Int
   closed_reports: Int!
@@ -10004,7 +10005,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
   has_avatar: Boolean
   has_cover_photo: Boolean
   has_cover_video: Boolean
-  has_hierarchy_thanks_page: Boolean!
+  has_hierarchy_thanks_page: Boolean
   has_policy: Boolean
   has_structured_policy: Boolean
   hide_bounty_amounts: Boolean
