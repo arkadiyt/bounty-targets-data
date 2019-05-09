@@ -5721,6 +5721,7 @@ input FiltersStructuredScopeFilterInput {
   asset_identifier: StringPredicateInput
   asset_type: StructuredScopeAssetTypeEnumPredicateInput
   id: IntPredicateInput
+  is_archived: Boolean
 }
 
 input FiltersTeamFilterInput {
@@ -11208,11 +11209,11 @@ A Triage Inbox Item
 """
 type TriageInboxItem implements Node {
   _id: ID!
-  activity: ActivityUnion!
+  activity: ActivityUnion
   created_at: DateTime!
   dismissed_at: DateTime
   id: ID!
-  report: Report!
+  report: Report
 }
 
 """
