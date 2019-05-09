@@ -2131,6 +2131,7 @@ type Checklist implements Node {
     """
     last: Int
     order_by: ChecklistCheckOrderInput = {direction: ASC, field: title}
+    where: FiltersChecklistCheckFilterInput
   ): ChecklistCheckConnection
   id: ID!
   team: Team
@@ -2268,12 +2269,64 @@ type ChecklistCheckResponse implements Node {
 }
 
 """
+The connection type for ChecklistCheckResponse.
+"""
+type ChecklistCheckResponseConnection {
+  """
+  A list of edges.
+  """
+  edges: [ChecklistCheckResponseEdge]
+
+  """
+  A list of nodes.
+  """
+  nodes: [ChecklistCheckResponse]
+
+  """
+  Information to aid in pagination.
+  """
+  pageInfo: PageInfo!
+
+  """
+  Int
+  """
+  total_count: Int!
+}
+
+"""
+An edge in a connection.
+"""
+type ChecklistCheckResponseEdge {
+  """
+  A cursor for use in pagination.
+  """
+  cursor: String!
+
+  """
+  The item at the end of the edge.
+  """
+  node: ChecklistCheckResponse
+}
+
+"""
 ChecklistCheckResponse state enum
 """
 enum ChecklistCheckResponseStateEnum {
   approved
   pending
   rejected
+}
+
+input ChecklistCheckResponseStateEnumPredicateInput {
+  _eq: ChecklistCheckResponseStateEnum
+  _gt: ChecklistCheckResponseStateEnum
+  _gte: ChecklistCheckResponseStateEnum
+  _in: [ChecklistCheckResponseStateEnum]
+  _is_null: Boolean
+  _lt: ChecklistCheckResponseStateEnum
+  _lte: ChecklistCheckResponseStateEnum
+  _neq: ChecklistCheckResponseStateEnum
+  _nin: [ChecklistCheckResponseStateEnum]
 }
 
 """
@@ -2283,6 +2336,18 @@ enum ChecklistCheckStateEnum {
   claimed
   completed
   not_claimed
+}
+
+input ChecklistCheckStateEnumPredicateInput {
+  _eq: ChecklistCheckStateEnum
+  _gt: ChecklistCheckStateEnum
+  _gte: ChecklistCheckStateEnum
+  _in: [ChecklistCheckStateEnum]
+  _is_null: Boolean
+  _lt: ChecklistCheckStateEnum
+  _lte: ChecklistCheckStateEnum
+  _neq: ChecklistCheckStateEnum
+  _nin: [ChecklistCheckStateEnum]
 }
 
 """
@@ -5576,6 +5641,20 @@ input FiltersBountyFilterInput {
   id: IntPredicateInput
 }
 
+input FiltersChecklistCheckFilterInput {
+  _and: [FiltersChecklistCheckFilterInput]
+  _or: [FiltersChecklistCheckFilterInput]
+  id: IntPredicateInput
+  state: ChecklistCheckStateEnumPredicateInput
+}
+
+input FiltersChecklistCheckResponseFilterInput {
+  _and: [FiltersChecklistCheckResponseFilterInput]
+  _or: [FiltersChecklistCheckResponseFilterInput]
+  id: IntPredicateInput
+  state: ChecklistCheckResponseStateEnumPredicateInput
+}
+
 input FiltersDerivedTeamAverageBountyAmountFilterOrder {
   amount: FilterOrderPredicateInput
   team_id: FilterOrderPredicateInput
@@ -7201,6 +7280,7 @@ Metrics for a certain team
 """
 type ProgramMetric implements Node {
   average_bounty_time: Int
+  average_resolution_time: Int
   average_response_time: Int
   average_triage_time: Int
   closed_reports: Int!
@@ -13875,6 +13955,59 @@ type User implements Node & ResourceInterface {
   ): BountyConnection
   calendar_token: String
   can_view_program_awareness: Boolean!
+
+  """
+  A Resolver for ChecklistCheckResponses
+  """
+  checklist_check_responses(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+    where: FiltersChecklistCheckResponseFilterInput
+  ): ChecklistCheckResponseConnection
+
+  """
+  A Resolver for ChecklistChecks
+  """
+  checklist_checks(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+    order_by: ChecklistCheckOrderInput = {direction: ASC, field: title}
+    where: FiltersChecklistCheckFilterInput
+  ): ChecklistCheckConnection
   created_at: DateTime!
   demo_hacker: Boolean!
   disabled: Boolean!
