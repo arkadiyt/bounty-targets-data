@@ -4567,7 +4567,7 @@
     "handle": "algolia",
     "url": "https://hackerone.com/algolia",
     "offers_bounties": true,
-    "quick_to_bounty": true,
+    "quick_to_bounty": false,
     "quick_to_first_response": true,
     "targets": {
       "in_scope": [
@@ -9539,7 +9539,7 @@
     "handle": "postmates",
     "url": "https://hackerone.com/postmates",
     "offers_bounties": true,
-    "quick_to_bounty": true,
+    "quick_to_bounty": false,
     "quick_to_first_response": false,
     "targets": {
       "in_scope": [
@@ -17149,13 +17149,13 @@
           "max_severity": "medium"
         },
         {
-          "asset_identifier": "admin.corp.cuvva.co",
+          "asset_identifier": "api.prod.cuv-prod.app",
           "asset_type": "URL",
-          "availability_requirement": "medium",
+          "availability_requirement": "high",
           "confidentiality_requirement": "high",
           "eligible_for_bounty": false,
           "eligible_for_submission": true,
-          "instruction": "",
+          "instruction": "api.sandbox.cuv-nonprod.app is equivalent",
           "integrity_requirement": "high",
           "max_severity": "critical"
         },
@@ -17182,18 +17182,7 @@
           "max_severity": "medium"
         },
         {
-          "asset_identifier": "ops.corp.cuvva.co",
-          "asset_type": "URL",
-          "availability_requirement": "low",
-          "confidentiality_requirement": "high",
-          "eligible_for_bounty": false,
-          "eligible_for_submission": true,
-          "instruction": "",
-          "integrity_requirement": "medium",
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "service-proxy.prod.ext.cuvva.co",
+          "asset_identifier": "ops.cuvva.com",
           "asset_type": "URL",
           "availability_requirement": "high",
           "confidentiality_requirement": "high",
@@ -28854,6 +28843,17 @@
         {
           "asset_identifier": "api.tomtom.com",
           "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "com.tomtom.gplay.navapp",
+          "asset_type": "GOOGLE_PLAY_APP_ID",
           "availability_requirement": null,
           "confidentiality_requirement": null,
           "eligible_for_bounty": false,
