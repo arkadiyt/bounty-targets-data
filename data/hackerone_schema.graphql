@@ -2146,6 +2146,7 @@ type ChecklistCheck implements Node {
   checklist: Checklist
   checklist_check_response(id: ID!): ChecklistCheckResponse
   cluster: Cluster
+  description: String
   id: ID!
   markdown_description: String
   markdown_instruction: String
@@ -7247,6 +7248,7 @@ type ProgramMetric implements Node {
   rejected_invites: Int!
   reports_resolved: Int!
   reports_rewarded: Int!
+  top_20_bountied: [ProgramMetricReportBounty!]!
   top_20_earners: [ProgramMetricEarner!]!
   total_bounties: Float
   total_invites: Int!
@@ -7261,6 +7263,15 @@ type ProgramMetricEarner implements Node {
   id: ID!
   teams: [Team!]!
   user: User!
+}
+
+"""
+Amount of money that was awarded for a specific report
+"""
+type ProgramMetricReportBounty implements Node {
+  amount: Float!
+  id: ID!
+  report: Report!
 }
 
 """
