@@ -1461,15 +1461,8 @@ An audit log item
 type AuditLogItem implements Node {
   _id: ID!
   created_at: DateTime!
-  event: String!
-  extra: AuditLogItemExtra!
   id: ID!
-  source: User
-  source_id: Int
-  source_type: String!
-  subject_id: Int!
-  subject_type: String!
-  updated_at: DateTime!
+  log: String!
 }
 
 """
@@ -1506,14 +1499,6 @@ type AuditLogItemEdge {
   The item at the end of the edge.
   """
   node: AuditLogItem
-}
-
-"""
-Extra fields stored on an Audit Log Item
-"""
-type AuditLogItemExtra {
-  identifier: String
-  team_member_group_names: [String]
 }
 
 """
