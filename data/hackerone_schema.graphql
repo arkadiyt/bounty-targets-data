@@ -2194,7 +2194,7 @@ type Checklist implements Node {
     Returns the last _n_ elements from the list.
     """
     last: Int
-    order_by: ChecklistCheckOrderInput = {direction: ASC, field: title}
+    secure_order_by: FiltersChecklistCheckFilterOrder
     where: FiltersChecklistCheckFilterInput
   ): ChecklistCheckConnection
   id: ID!
@@ -2210,6 +2210,7 @@ type ChecklistCheck implements Node {
   checklist: Checklist
   checklist_check_response(id: ID!): ChecklistCheckResponse
   cluster: Cluster
+  cluster_id: Int!
   description: String
   id: ID!
   markdown_description: String
@@ -2258,18 +2259,6 @@ type ChecklistCheckEdge {
   The item at the end of the edge.
   """
   node: ChecklistCheck
-}
-
-"""
-Fields on which a collection of ChecklistCheck can be ordered
-"""
-enum ChecklistCheckOrderField {
-  title
-}
-
-input ChecklistCheckOrderInput {
-  direction: OrderDirection!
-  field: ChecklistCheckOrderField!
 }
 
 """
@@ -5665,6 +5654,11 @@ input FiltersChecklistCheckFilterInput {
   _or: [FiltersChecklistCheckFilterInput]
   id: IntPredicateInput
   state: ChecklistCheckStateEnumPredicateInput
+}
+
+input FiltersChecklistCheckFilterOrder {
+  cluster_id: FilterOrderPredicateInput
+  id: FilterOrderPredicateInput
 }
 
 input FiltersChecklistCheckResponseFilterInput {
@@ -14126,7 +14120,7 @@ type User implements Node & ResourceInterface {
     Returns the last _n_ elements from the list.
     """
     last: Int
-    order_by: ChecklistCheckOrderInput = {direction: ASC, field: title}
+    secure_order_by: FiltersChecklistCheckFilterOrder
     where: FiltersChecklistCheckFilterInput
   ): ChecklistCheckConnection
   created_at: DateTime!
