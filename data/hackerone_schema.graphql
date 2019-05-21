@@ -1706,6 +1706,7 @@ type BeneficiaryRequiredField implements Node {
   field: String!
   id: ID!
   regex: String!
+  section: String!
 }
 
 """
@@ -9881,6 +9882,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
     updated_at_after: String
   ): ActivityConnection
   agile_accelerator_integration: AgileAcceleratorIntegration
+  agile_accelerator_integration_enabled: Boolean
   allow_all_hacker_invitations: Boolean
   allow_email_and_automatic_invitations: Boolean
   allows_bounty_splitting: Boolean!
