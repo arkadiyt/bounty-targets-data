@@ -1386,6 +1386,7 @@ type AgileAcceleratorIntegration implements Node {
   created_at: DateTime!
   field_prefix: String
   id: ID!
+  investigation_type_id: String!
   product_tag: String!
   team: Team!
   updated_at: DateTime!
@@ -2322,6 +2323,7 @@ ChecklistCheckResponse state enum
 """
 enum ChecklistCheckResponseStateEnum {
   approved
+  in_progress
   pending
   rejected
 }
@@ -12825,6 +12827,7 @@ input UpdateSfdcAgileAcceleratorSettingsInput {
   """
   clientMutationId: String
   field_prefix: String
+  investigation_type_id: String!
   product_tag: String!
   team_id: ID!
 }
