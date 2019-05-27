@@ -8074,6 +8074,7 @@ type Report implements ActivitiesInterface & Node & ResourceInterface {
   cve_ids: [String]
   disclosed_at: DateTime
   first_program_activity_at: DateTime
+  hacker_published: Boolean
   i_can_anc_review: Boolean
   id: ID!
   latest_activity_at: DateTime
@@ -8233,6 +8234,7 @@ input ReportFilterInput {
   first_program_activity_at__gt: DateTime
   first_program_activity_at__lt: DateTime
   first_program_activity_at__null: Boolean
+  hacker_published: Boolean
   id: [Int]
   last_activity_at__gt: DateTime
   last_activity_at__lt: DateTime
