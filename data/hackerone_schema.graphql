@@ -6305,7 +6305,7 @@ type JiraOauth implements Node {
   id: ID!
   jwt: Boolean!
   priorities: [Hash]
-  project_meta(project_id: Int!): [Hash]
+  project_meta(issue_type: Int, project_id: Int!): [Hash]
   projects: [Hash]
   site: String
   team: Team!
