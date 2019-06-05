@@ -422,7 +422,7 @@ type ActivitiesChangedScope implements ActivityInterface & Node & ReportActivity
 """
 A Activities::ChecklistCheckClaimed activity for a checklist_check
 """
-type ActivitiesChecklistCheckClaimed implements ActivityInterface & Node {
+type ActivitiesChecklistCheckClaimed implements ChecklistCheckResponseActivityInterface & Node {
   _id: ID!
   actor: ActorUnion
   created_at: DateTime!
@@ -431,13 +431,16 @@ type ActivitiesChecklistCheckClaimed implements ActivityInterface & Node {
   internal: Boolean
   markdown_message: String
   message: String
+  name: String
+  profile_picture(size: ProfilePictureSizes!): String!
+  slug: String
   updated_at: DateTime!
 }
 
 """
 A Activities::ChecklistCheckReleased activity for a checklist_check
 """
-type ActivitiesChecklistCheckReleased implements ActivityInterface & Node {
+type ActivitiesChecklistCheckReleased implements ChecklistCheckResponseActivityInterface & Node {
   _id: ID!
   actor: ActorUnion
   created_at: DateTime!
@@ -446,13 +449,16 @@ type ActivitiesChecklistCheckReleased implements ActivityInterface & Node {
   internal: Boolean
   markdown_message: String
   message: String
+  name: String
+  profile_picture(size: ProfilePictureSizes!): String!
+  slug: String
   updated_at: DateTime!
 }
 
 """
 A Activities::ChecklistCheckResponseApproved activity for a checklist_check
 """
-type ActivitiesChecklistCheckResponseApproved implements ActivityInterface & Node {
+type ActivitiesChecklistCheckResponseApproved implements ChecklistCheckResponseActivityInterface & Node {
   _id: ID!
   actor: ActorUnion
   created_at: DateTime!
@@ -461,28 +467,35 @@ type ActivitiesChecklistCheckResponseApproved implements ActivityInterface & Nod
   internal: Boolean
   markdown_message: String
   message: String
+  name: String
+  profile_picture(size: ProfilePictureSizes!): String!
+  slug: String
   updated_at: DateTime!
 }
 
 """
 A Activities::ChecklistCheckResponseComment activity for a checklist_check
 """
-type ActivitiesChecklistCheckResponseComment implements ActivityInterface & Node {
+type ActivitiesChecklistCheckResponseComment implements AttachmentActivityInterface & ChecklistCheckResponseActivityInterface & Node {
   _id: ID!
   actor: ActorUnion
+  attachments: [Attachment]
   created_at: DateTime!
   i_can_edit: Boolean!
   id: ID!
   internal: Boolean
   markdown_message: String
   message: String
+  name: String
+  profile_picture(size: ProfilePictureSizes!): String!
+  slug: String
   updated_at: DateTime!
 }
 
 """
 A Activities::ChecklistCheckResponseCreated activity for a checklist_check
 """
-type ActivitiesChecklistCheckResponseCreated implements ActivityInterface & AttachmentActivityInterface & Node {
+type ActivitiesChecklistCheckResponseCreated implements AttachmentActivityInterface & ChecklistCheckResponseActivityInterface & Node {
   _id: ID!
   actor: ActorUnion
   attachments: [Attachment]
@@ -492,13 +505,16 @@ type ActivitiesChecklistCheckResponseCreated implements ActivityInterface & Atta
   internal: Boolean
   markdown_message: String
   message: String
+  name: String
+  profile_picture(size: ProfilePictureSizes!): String!
+  slug: String
   updated_at: DateTime!
 }
 
 """
 A Activities::ChecklistCheckResponseRejected activity for a checklist_check
 """
-type ActivitiesChecklistCheckResponseRejected implements ActivityInterface & Node {
+type ActivitiesChecklistCheckResponseRejected implements ChecklistCheckResponseActivityInterface & Node {
   _id: ID!
   actor: ActorUnion
   created_at: DateTime!
@@ -507,13 +523,16 @@ type ActivitiesChecklistCheckResponseRejected implements ActivityInterface & Nod
   internal: Boolean
   markdown_message: String
   message: String
+  name: String
+  profile_picture(size: ProfilePictureSizes!): String!
+  slug: String
   updated_at: DateTime!
 }
 
 """
 A Activities::ChecklistCheckResponseUpdated activity for a checklist_check
 """
-type ActivitiesChecklistCheckResponseUpdated implements ActivityInterface & AttachmentActivityInterface & Node {
+type ActivitiesChecklistCheckResponseUpdated implements AttachmentActivityInterface & ChecklistCheckResponseActivityInterface & Node {
   _id: ID!
   actor: ActorUnion
   attachments: [Attachment]
@@ -523,13 +542,16 @@ type ActivitiesChecklistCheckResponseUpdated implements ActivityInterface & Atta
   internal: Boolean
   markdown_message: String
   message: String
+  name: String
+  profile_picture(size: ProfilePictureSizes!): String!
+  slug: String
   updated_at: DateTime!
 }
 
 """
 A Activities::ChecklistCheckRevoked activity for a checklist_check
 """
-type ActivitiesChecklistCheckRevoked implements ActivityInterface & Node {
+type ActivitiesChecklistCheckRevoked implements ChecklistCheckResponseActivityInterface & Node {
   _id: ID!
   actor: ActorUnion
   created_at: DateTime!
@@ -538,6 +560,9 @@ type ActivitiesChecklistCheckRevoked implements ActivityInterface & Node {
   internal: Boolean
   markdown_message: String
   message: String
+  name: String
+  profile_picture(size: ProfilePictureSizes!): String!
+  slug: String
   updated_at: DateTime!
 }
 
@@ -2326,6 +2351,24 @@ type ChecklistCheckResponse implements ActivitiesInterface & Node {
 }
 
 """
+A interface for checklist check response
+"""
+interface ChecklistCheckResponseActivityInterface {
+  _id: ID!
+  actor: ActorUnion
+  created_at: DateTime!
+  i_can_edit: Boolean!
+  id: ID!
+  internal: Boolean
+  markdown_message: String
+  message: String
+  name: String
+  profile_picture(size: ProfilePictureSizes!): String!
+  slug: String
+  updated_at: DateTime!
+}
+
+"""
 The connection type for ChecklistCheckResponse.
 """
 type ChecklistCheckResponseConnection {
@@ -3031,7 +3074,7 @@ Autogenerated input type of CreateChecklistCheckResponse
 """
 input CreateChecklistCheckResponseInput {
   attachment_ids: [Int!]
-  checklist_check_id: ID!
+  checklist_check_response_id: ID!
 
   """
   A unique identifier for the client performing the mutation.
@@ -3046,7 +3089,28 @@ input CreateChecklistCheckResponseInput {
 Autogenerated return type of CreateChecklistCheckResponse
 """
 type CreateChecklistCheckResponsePayload implements MutationResult {
-  checklist_check: ChecklistCheck
+  activities(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+  ): ActivityConnection
+  checklist_check_response: ChecklistCheckResponse
 
   """
   A unique identifier for the client performing the mutation.
@@ -3074,6 +3138,7 @@ type CreateChecklistCheckResponsePayload implements MutationResult {
     last: Int
     types: [ErrorTypeEnum]
   ): ErrorConnection!
+  new_activity: ActivityUnionEdge
   was_successful: Boolean!
 }
 
@@ -5791,6 +5856,11 @@ input FiltersChecklistCheckResponseFilterInput {
   state: ChecklistCheckResponseStateEnumPredicateInput
 }
 
+input FiltersChecklistCheckResponseFilterOrder {
+  created_at: FilterOrderPredicateInput
+  id: FilterOrderPredicateInput
+}
+
 input FiltersDerivedTeamAverageBountyAmountFilterOrder {
   amount: FilterOrderPredicateInput
   team_id: FilterOrderPredicateInput
@@ -6963,6 +7033,7 @@ type Mutation {
   updateAssigneeToGroup(input: UpdateAssigneeToGroupInput!): UpdateAssigneeToGroupPayload
   updateAssigneeToNobody(input: UpdateAssigneeToNobodyInput!): UpdateAssigneeToNobodyPayload
   updateAssigneeToUser(input: UpdateAssigneeToUserInput!): UpdateAssigneeToUserPayload
+  updateAttachmentToInternalOnly(input: UpdateAttachmentToInternalOnlyInput!): UpdateAttachmentToInternalOnlyPayload
   updateAutomaticInvites(input: UpdateAutomaticInvitesInput!): UpdateAutomaticInvitesPayload
   updateBookmarkedTeam(input: UpdateBookmarkedTeamInput!): UpdateBookmarkedTeamPayload
   updateBountyTable(input: UpdateBountyTableInput!): UpdateBountyTablePayload
@@ -8018,7 +8089,7 @@ type RejectInvitationPayload {
 Autogenerated input type of ReleaseChecklistCheck
 """
 input ReleaseChecklistCheckInput {
-  checklist_check_id: ID!
+  checklist_check_response_id: ID!
 
   """
   A unique identifier for the client performing the mutation.
@@ -8030,12 +8101,11 @@ input ReleaseChecklistCheckInput {
 Autogenerated return type of ReleaseChecklistCheck
 """
 type ReleaseChecklistCheckPayload implements MutationResult {
-  checklist_check: ChecklistCheck
-
   """
   A unique identifier for the client performing the mutation.
   """
   clientMutationId: String
+  deleted_checklist_check_response_id: ID
   errors(
     """
     Returns the elements in the list that come after the specified cursor.
@@ -8058,6 +8128,7 @@ type ReleaseChecklistCheckPayload implements MutationResult {
     last: Int
     types: [ErrorTypeEnum]
   ): ErrorConnection!
+  me: User
   was_successful: Boolean!
 }
 
@@ -11883,6 +11954,52 @@ type UpdateAssigneeToUserPayload {
 }
 
 """
+Autogenerated input type of UpdateAttachmentToInternalOnly
+"""
+input UpdateAttachmentToInternalOnlyInput {
+  attachment_id: String!
+
+  """
+  A unique identifier for the client performing the mutation.
+  """
+  clientMutationId: String
+}
+
+"""
+Autogenerated return type of UpdateAttachmentToInternalOnly
+"""
+type UpdateAttachmentToInternalOnlyPayload implements MutationResult {
+  """
+  A unique identifier for the client performing the mutation.
+  """
+  clientMutationId: String
+  errors(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+    types: [ErrorTypeEnum]
+  ): ErrorConnection!
+  report: Report
+  was_successful: Boolean!
+}
+
+"""
 Autogenerated input type of UpdateAutomaticInvites
 """
 input UpdateAutomaticInvitesInput {
@@ -14225,6 +14342,7 @@ type User implements Node & ResourceInterface {
     Returns the last _n_ elements from the list.
     """
     last: Int
+    secure_order_by: FiltersChecklistCheckResponseFilterOrder
     where: FiltersChecklistCheckResponseFilterInput
   ): ChecklistCheckResponseConnection
 
