@@ -1520,6 +1520,7 @@ An audit log item
 """
 type AuditLogItem implements Node {
   _id: ID!
+  actor: User
   created_at: DateTime!
   event: String!
   id: ID!
@@ -5878,6 +5879,15 @@ input FilterOrderPredicateInput {
   _direction: FilterOrderDirectionEnum
 }
 
+input FiltersAuditLogItemFilterInput {
+  _and: [FiltersAuditLogItemFilterInput]
+  _or: [FiltersAuditLogItemFilterInput]
+  actor: FiltersUserFilterInput
+  created_at: DateTimePredicateInput
+  event: StringPredicateInput
+  id: IntPredicateInput
+}
+
 input FiltersBountyFilterInput {
   _and: [FiltersBountyFilterInput]
   _or: [FiltersBountyFilterInput]
@@ -10177,6 +10187,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
     Returns the last _n_ elements from the list.
     """
     last: Int
+    where: FiltersAuditLogItemFilterInput
   ): AuditLogItemConnection
   automatic_invites: Boolean
   average_bounty_lower_amount: Int
