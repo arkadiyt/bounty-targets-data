@@ -8082,11 +8082,14 @@ type Query implements Node {
     Returns the elements in the list that come after the specified cursor.
     """
     after: String
+    aggregate_by: TriageInboxItemAggregateByEnum = null
 
     """
     Returns the elements in the list that come before the specified cursor.
     """
     before: String
+    blocked_filter: Boolean = null
+    dismissal_filter: TriageInboxItemDismissalFilterEnum = null
 
     """
     Returns the first _n_ elements from the list.
@@ -8097,9 +8100,7 @@ type Query implements Node {
     Returns the last _n_ elements from the list.
     """
     last: Int
-    latest_dismissed: Boolean = false
-    oldest_undismissed: Boolean = false
-    report_state: ReportStateEnum = null
+    report_substate_filter: TriageInboxItemReportSubstateFilterEnum = null
   ): TriageInboxItemConnection!
   user(username: String!): User
   users(
@@ -11622,6 +11623,14 @@ type TriageInboxItem implements Node {
 }
 
 """
+Valid directions to aggregate triage inbox items by
+"""
+enum TriageInboxItemAggregateByEnum {
+  newest
+  oldest
+}
+
+"""
 The connection type for TriageInboxItem.
 """
 type TriageInboxItemConnection {
@@ -11642,6 +11651,14 @@ type TriageInboxItemConnection {
 }
 
 """
+Valid values for the dismissal filter of triage inbox items
+"""
+enum TriageInboxItemDismissalFilterEnum {
+  dismissed
+  undismissed
+}
+
+"""
 An edge in a connection.
 """
 type TriageInboxItemEdge {
@@ -11654,6 +11671,21 @@ type TriageInboxItemEdge {
   The item at the end of the edge.
   """
   node: TriageInboxItem
+}
+
+"""
+Valid values for the Report Substate filter of triage inbox items
+"""
+enum TriageInboxItemReportSubstateFilterEnum {
+  duplicate
+  informative
+  needs_more_info
+  new
+  not_applicable
+  pre_submission
+  resolved
+  spam
+  triaged
 }
 
 """
