@@ -8217,6 +8217,7 @@ type Query implements Node {
     Returns the last _n_ elements from the list.
     """
     last: Int
+    product_edition_filter: TriageInboxItemProductEditionFilterEnum = null
     report_substate_filter: TriageInboxItemReportSubstateFilterEnum = null
   ): TriageInboxItemConnection!
   user(username: String!): User
@@ -11824,6 +11825,14 @@ type TriageInboxItemEdge {
   The item at the end of the edge.
   """
   node: TriageInboxItem
+}
+
+"""
+Valid values for the product edition filter of triage inbox items
+"""
+enum TriageInboxItemProductEditionFilterEnum {
+  Enterprise
+  Professional
 }
 
 """
