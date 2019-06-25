@@ -1810,6 +1810,7 @@ type Bounty implements Node {
   bonus_amount: String!
   created_at: DateTime!
   id: ID!
+  invitations: [InvitationsClaimBounty!]
   report: Report!
   status: BountyStatusEnum!
 }
@@ -3816,7 +3817,7 @@ input CreateProgramBountyInput {
   """
   clientMutationId: String
   program_id: ID!
-  recipient: String!
+  recipient: String
   reference: String!
   title: String!
 }
@@ -6524,6 +6525,20 @@ type InvitationUnionEdge {
   The item at the end of the edge.
   """
   node: InvitationUnion
+}
+
+"""
+An invitation to perform a bounty claim
+"""
+type InvitationsClaimBounty implements InvitationInterface & Node {
+  _id: ID!
+  accepted_at: DateTime
+  bounty: Bounty!
+  email: String
+  expires_at: DateTime
+  id: ID!
+  team: Team!
+  token: String
 }
 
 """
