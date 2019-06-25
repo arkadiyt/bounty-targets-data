@@ -1519,13 +1519,16 @@ An audit log item
 """
 type AuditLogItem implements Node {
   _id: ID!
+  abbreviated_user_agent: String
   actor: User
+  country: CountryDetails
   created_at: DateTime!
   event: String!
   id: ID!
   log: String!
   source: String!
   subject: String!
+  user_agent: String
 }
 
 """
@@ -2854,6 +2857,16 @@ type Country implements Node {
   currency_code: String
   id: ID!
   name: String!
+}
+
+"""
+Country details specified in a HackerOne object
+"""
+type CountryDetails implements Node {
+  abbreviation: String
+  flag: String
+  id: ID!
+  name: String
 }
 
 """
@@ -15145,7 +15158,7 @@ A HackerOne user's session history
 type UserSession implements Node {
   _id: ID!
   abbreviated_user_agent: String
-  country: UserSessionCountry
+  country: CountryDetails
   created_at: DateTime!
   current: Boolean!
   deactivated_at: DateTime
@@ -15175,16 +15188,6 @@ type UserSessionConnection {
   """
   pageInfo: PageInfo!
   total_count: Int!
-}
-
-"""
-Country of a HackerOne user's session
-"""
-type UserSessionCountry implements Node {
-  abbreviation: String
-  flag: String
-  id: ID!
-  name: String
 }
 
 """
