@@ -5996,6 +5996,11 @@ input FiltersAuditLogItemFilterInput {
   id: IntPredicateInput
 }
 
+input FiltersAuditLogItemFilterOrder {
+  created_at: FilterOrderPredicateInput
+  id: FilterOrderPredicateInput
+}
+
 input FiltersBountyFilterInput {
   _and: [FiltersBountyFilterInput]
   _or: [FiltersBountyFilterInput]
@@ -10436,6 +10441,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
     Returns the last _n_ elements from the list.
     """
     last: Int
+    secure_order_by: FiltersAuditLogItemFilterOrder
     where: FiltersAuditLogItemFilterInput
   ): AuditLogItemConnection
   automatic_invites: Boolean
@@ -10808,6 +10814,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
   launch_link: String
   maximum_number_of_team_mediation_requests: Float
   minimum_bounty: Int
+  most_recent_sla_snapshot: SlaSnapshot
   name: String!
   new_staleness_threshold: Int
   new_staleness_threshold_limit: Int
