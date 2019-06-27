@@ -7846,6 +7846,7 @@ Amount of money a specific user earned in a set of programs
 type ProgramMetricEarner implements Node {
   amount: Float!
   id: ID!
+  report_count: Int!
   teams: [Team!]!
   user: User!
 }
