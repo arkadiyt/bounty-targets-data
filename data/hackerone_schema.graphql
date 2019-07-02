@@ -11501,6 +11501,8 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
     order_by: TeamMemberOrder = {direction: ASC, field: username}
   ): TeamMemberConnection
   team_profile: TeamCachedProfile
+  top_bounty_lower_amount: Int
+  top_bounty_upper_amount: Int
   triage_active: Boolean
   triage_bounty_management: String
   triage_enabled: Boolean
