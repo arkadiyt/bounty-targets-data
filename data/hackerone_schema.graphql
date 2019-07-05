@@ -8406,15 +8406,11 @@ type Query implements Node {
     Returns the elements in the list that come after the specified cursor.
     """
     after: String
-    aggregate_by: TriageInboxItemAggregateByEnum = null
-    assigned_to_triage_filter: Boolean = null
 
     """
     Returns the elements in the list that come before the specified cursor.
     """
     before: String
-    blocked_filter: TriageInboxItemBlockedFilterEnum = null
-    dismissal_filter: TriageInboxItemDismissalFilterEnum = null
 
     """
     Returns the first _n_ elements from the list.
@@ -8425,9 +8421,8 @@ type Query implements Node {
     Returns the last _n_ elements from the list.
     """
     last: Int
-    pristine_filter: TriageInboxItemPristineFilterEnum = null
     product_edition_filter: TriageInboxItemProductEditionFilterEnum = null
-    report_substate_filter: TriageInboxItemReportSubstateFilterEnum = null
+    view: TriageInboxItemViewEnum!
   ): TriageInboxItemConnection!
   user(username: String!): User
   users(
@@ -11503,6 +11498,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
   team_profile: TeamCachedProfile
   top_bounty_lower_amount: Int
   top_bounty_upper_amount: Int
+  total_bounties_paid_amount: Int
   triage_active: Boolean
   triage_bounty_management: String
   triage_enabled: Boolean
@@ -12057,22 +12053,6 @@ type TriageInboxItem implements Node {
 }
 
 """
-Valid directions to aggregate triage inbox items by
-"""
-enum TriageInboxItemAggregateByEnum {
-  newest
-  oldest
-}
-
-"""
-Valid values for the blocked filter of triage inbox items
-"""
-enum TriageInboxItemBlockedFilterEnum {
-  blocked
-  unblocked
-}
-
-"""
 The connection type for TriageInboxItem.
 """
 type TriageInboxItemConnection {
@@ -12095,14 +12075,6 @@ type TriageInboxItemConnection {
 }
 
 """
-Valid values for the dismissal filter of triage inbox items
-"""
-enum TriageInboxItemDismissalFilterEnum {
-  dismissed
-  undismissed
-}
-
-"""
 An edge in a connection.
 """
 type TriageInboxItemEdge {
@@ -12118,14 +12090,6 @@ type TriageInboxItemEdge {
 }
 
 """
-Valid values for the pristine filter of triage inbox items
-"""
-enum TriageInboxItemPristineFilterEnum {
-  pristine
-  soiled
-}
-
-"""
 Valid values for the product edition filter of triage inbox items
 """
 enum TriageInboxItemProductEditionFilterEnum {
@@ -12134,18 +12098,15 @@ enum TriageInboxItemProductEditionFilterEnum {
 }
 
 """
-Valid values for the Report Substate filter of triage inbox items
+Valid views for the triage inbox item connection
 """
-enum TriageInboxItemReportSubstateFilterEnum {
-  duplicate
-  informative
-  needs_more_info
-  new
-  not_applicable
-  pre_submission
-  resolved
-  spam
-  triaged
+enum TriageInboxItemViewEnum {
+  assigned_to_triage
+  blocked
+  newest_dismissed
+  oldest_undismissed
+  oldest_undismissed_new
+  pristine
 }
 
 """
