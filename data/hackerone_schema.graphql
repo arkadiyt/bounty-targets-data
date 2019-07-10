@@ -2277,6 +2277,7 @@ type Checklist implements Node {
     secure_order_by: FiltersChecklistCheckFilterOrder
     where: FiltersChecklistCheckFilterInput
   ): ChecklistCheckConnection
+  i_have_unsubmitted_checklist_check_responses: Boolean!
   id: ID!
   team: Team
 }
