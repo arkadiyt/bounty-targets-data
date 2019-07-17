@@ -5010,6 +5010,15 @@ type CveRequestsConnection {
 }
 
 """
+Data point object
+"""
+type DataPoint {
+  id: ID!
+  x: Int!
+  y: Int!
+}
+
+"""
 Converts a date to iso8601
 """
 scalar Date
@@ -8434,6 +8443,7 @@ type Query implements Node {
     order_by: SlaStatusOrder = {field: TRIAGER_ROLE_AND_SLA_STATUS}
     team_states: [TeamState]
   ): SlaStatusConnection
+  statistics(from: String!, group_by: StatisticsSelectInput!, select: StatisticsSelectInput!, where: FiltersReportFilterInput!): [DataPoint]
   surveys(
     """
     Returns the elements in the list that come after the specified cursor.
@@ -9945,6 +9955,12 @@ type StaticParticipantEdge {
   The item at the end of the edge.
   """
   node: StaticParticipant
+}
+
+input StatisticsSelectInput {
+  dim: String!
+  func: String!
+  func_params: String
 }
 
 """
