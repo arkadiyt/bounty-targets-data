@@ -2264,6 +2264,7 @@ type ChallengeSetting implements Node {
   id: ID!
   not_started: Boolean
   policy: String
+  stops_at: DateTime
 }
 
 """
@@ -2331,6 +2332,8 @@ type ChecklistCheckConnection {
   A list of edges.
   """
   edges: [ChecklistCheckEdge]
+  max_award_amount: Int
+  min_award_amount: Int
 
   """
   A list of nodes.
