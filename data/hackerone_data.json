@@ -13437,9 +13437,9 @@
   },
   {
     "id": 13031,
-    "name": "BrickFTP",
-    "handle": "brickftp",
-    "url": "https://hackerone.com/brickftp",
+    "name": "Files.com",
+    "handle": "filesdotcom",
+    "url": "https://hackerone.com/filesdotcom",
     "offers_bounties": true,
     "quick_to_bounty": true,
     "quick_to_first_response": false,
@@ -13452,7 +13452,7 @@
           "confidentiality_requirement": null,
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
-          "instruction": "**Files.com Web Application** -- note that https://files.com/ (with no subdomain) is our marketing site and not part of this asset.",
+          "instruction": "**Files.com Web Application** \n\n**Please review the Out of Scope assets** -- note that not all subdomains of https://*.files.com are in scope for this asset.  Please review the listing of assets marked Out of Scope prior to any testing.  This list will change so please refer back during all phases of testing.\n\nThe actual application URL will be created as https://*subdomain*.files.com when you create the trial account using the [BUGBOUNTY] process outlined in the Policy section.",
           "integrity_requirement": null,
           "max_severity": "critical"
         },
@@ -13488,17 +13488,39 @@
           "instruction": "Files.com Web Application",
           "integrity_requirement": null,
           "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "www.files.com",
+          "asset_type": "URL",
+          "availability_requirement": "none",
+          "confidentiality_requirement": "low",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "This is the main marketing site for Files.com.  ",
+          "integrity_requirement": "none",
+          "max_severity": "low"
         }
       ],
       "out_of_scope": [
         {
-          "asset_identifier": "www.files.com",
+          "asset_identifier": "https://developers.files.com/",
           "asset_type": "URL",
           "availability_requirement": null,
           "confidentiality_requirement": null,
           "eligible_for_bounty": false,
           "eligible_for_submission": false,
-          "instruction": "The Files.com marketing site is out of scope unless a vulnerability there leads to an issue with the main application.",
+          "instruction": "https://developers.files.com/ is a documentation site and is out of scope for the bounty program.",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "https://status.files.com/",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "https://status.files.com/ is a status site and is out of scope for this bounty program.",
           "integrity_requirement": null,
           "max_severity": "none"
         }
