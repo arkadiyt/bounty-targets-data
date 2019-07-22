@@ -2405,6 +2405,7 @@ type ChecklistCheckResponse implements ActivitiesInterface & Node {
   ): ActivityConnection
   attachments: [Attachment]
   checklist_check: ChecklistCheck
+  expires_at: DateTime
   id: ID!
   message: String
   reports: [Report]
@@ -10962,6 +10963,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
   challenge_setting: ChallengeSetting
   checklist: Checklist
   checklist_check(id: ID!): ChecklistCheck
+  checklist_check_response(checklist_check_id: ID!): ChecklistCheckResponse
   child_teams(
     """
     Returns the elements in the list that come after the specified cursor.
