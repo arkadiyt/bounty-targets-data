@@ -7988,53 +7988,6 @@ type ProductEdition {
 }
 
 """
-Profile Metrics snapshot of a Team
-"""
-type ProfileMetricsSnapshot implements Node {
-  bounties_count: Float
-  bounties_paid: Float
-  id: ID!
-  month: Int!
-  year: Int!
-}
-
-"""
-The connection type for ProfileMetricsSnapshot.
-"""
-type ProfileMetricsSnapshotConnection {
-  """
-  A list of edges.
-  """
-  edges: [ProfileMetricsSnapshotEdge]
-
-  """
-  A list of nodes.
-  """
-  nodes: [ProfileMetricsSnapshot]
-
-  """
-  Information to aid in pagination.
-  """
-  pageInfo: PageInfo!
-  total_count: Int!
-}
-
-"""
-An edge in a connection.
-"""
-type ProfileMetricsSnapshotEdge {
-  """
-  A cursor for use in pagination.
-  """
-  cursor: String!
-
-  """
-  The item at the end of the edge.
-  """
-  node: ProfileMetricsSnapshot
-}
-
-"""
 Different possible profile picture sizes
 """
 enum ProfilePictureSizes {
@@ -11216,27 +11169,6 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
     order_by: TeamInboxViewOrder = {direction: ASC, field: position}
     visible: Boolean
   ): TeamInboxViewConnection
-  insights_team_weaknesses(
-    """
-    Returns the elements in the list that come after the specified cursor.
-    """
-    after: String
-
-    """
-    Returns the elements in the list that come before the specified cursor.
-    """
-    before: String
-
-    """
-    Returns the first _n_ elements from the list.
-    """
-    first: Int
-
-    """
-    Returns the last _n_ elements from the list.
-    """
-    last: Int
-  ): TeamWeaknessConnection
   internet_bug_bounty: Boolean
   invitation_rejection_survey_answers(
     """
@@ -11360,27 +11292,6 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
     order_by: TeamPostOrderInput = {direction: DESC, field: created_at}
   ): TeamPostConnection
   product_edition: ProductEdition
-  profile_metrics_snapshots(
-    """
-    Returns the elements in the list that come after the specified cursor.
-    """
-    after: String
-
-    """
-    Returns the elements in the list that come before the specified cursor.
-    """
-    before: String
-
-    """
-    Returns the first _n_ elements from the list.
-    """
-    first: Int
-
-    """
-    Returns the last _n_ elements from the list.
-    """
-    last: Int
-  ): ProfileMetricsSnapshotConnection
   profile_picture(size: ProfilePictureSizes!): String!
   program_leave_survey_answers(
     """
@@ -11752,7 +11663,6 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
     last: Int
     order_by: TeamMemberOrder = {direction: ASC, field: username}
   ): TeamMemberConnection
-  team_profile: TeamCachedProfile
   top_bounty_lower_amount: Int
   top_bounty_upper_amount: Int
   total_bounties_paid_amount: Int
@@ -11836,24 +11746,6 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
     """
     last: Int
   ): UserConnection
-}
-
-"""
-Cached metrics of a Team
-"""
-type TeamCachedProfile {
-  _id: ID!
-  active_subscribers_to_bounty_table_updates_count: Int
-  active_subscribers_to_policy_updates_count: Int
-  active_subscribers_to_structured_scope_updates_count: Int
-  disclosed_reports_in_last_year_count: Int
-  hackers_accepted_all_time_count: Int
-  hackers_invited_all_time_count: Int
-  id: ID!
-  latest_report_created_at: DateTime
-  latest_serious_report_triaged_at: DateTime
-  recently_participating_hackers_count: Int
-  reports_received_in_three_months_count: Int
 }
 
 """
@@ -12227,42 +12119,6 @@ type TeamWeakness implements Node {
   state: TeamWeaknessStates
   team: Team!
   weakness: Weakness!
-}
-
-"""
-The connection type for TeamWeakness.
-"""
-type TeamWeaknessConnection {
-  """
-  A list of edges.
-  """
-  edges: [TeamWeaknessEdge]
-
-  """
-  A list of nodes.
-  """
-  nodes: [TeamWeakness]
-
-  """
-  Information to aid in pagination.
-  """
-  pageInfo: PageInfo!
-  total_count: Int!
-}
-
-"""
-An edge in a connection.
-"""
-type TeamWeaknessEdge {
-  """
-  A cursor for use in pagination.
-  """
-  cursor: String!
-
-  """
-  The item at the end of the edge.
-  """
-  node: TeamWeakness
 }
 
 """
