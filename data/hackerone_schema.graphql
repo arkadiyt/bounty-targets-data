@@ -4659,6 +4659,7 @@ Credentials of a team
 type Credential implements Node {
   _id: ID!
   account_details: String
+  claimed_at: DateTime
   credentials: Hash
   id: ID!
   revoked: Boolean!
@@ -4699,6 +4700,18 @@ type CredentialEdge {
   The item at the end of the edge.
   """
   node: Credential
+}
+
+input CredentialOrder {
+  direction: OrderDirection!
+  field: CredentialOrderFieldEnum!
+}
+
+"""
+Fields on which a collection of credentials can be ordered
+"""
+enum CredentialOrderFieldEnum {
+  claimed_at
 }
 
 """
@@ -10988,6 +11001,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
     Returns the last _n_ elements from the list.
     """
     last: Int
+    order_by: CredentialOrder
   ): CredentialConnection
   credentials_available_count: Int
   credentials_set_up: Boolean
