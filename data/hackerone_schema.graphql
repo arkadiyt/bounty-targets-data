@@ -11100,6 +11100,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
   facebook_team: Boolean
   fancy_slack_integration: Boolean
   first_response_time(date_start: DateTime = null): Float
+  formatted_total_bounties_paid_amount: Int
   goal_valid_reports: Int
   grace_period_remaining_in_days: Int
   hackerone_to_jira_events_configuration: HackeroneToJiraEventsConfiguration
@@ -11680,7 +11681,6 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
   ): TeamMemberConnection
   top_bounty_lower_amount: Int
   top_bounty_upper_amount: Int
-  total_bounties_paid_amount: Int
   triage_active: Boolean
   triage_bounty_management: String
   triage_enabled: Boolean
