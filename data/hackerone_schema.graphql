@@ -3382,7 +3382,7 @@ type CreateCustomFieldAttributePayload implements MutationResult {
     last: Int
     types: [ErrorTypeEnum]
   ): ErrorConnection!
-  new_custom_field: CustomFieldAttributeUnionEdge
+  new_custom_field: CustomFieldAttributeEdge
   team: Team
   was_successful: Boolean!
 }
@@ -3457,7 +3457,7 @@ type CreateCveRequestPayload implements MutationResult {
     last: Int
     types: [ErrorTypeEnum]
   ): ErrorConnection!
-  new_cve_request: CveRequestEdge
+  new_cve_request: CveRequestsEdge
   team: Team
   was_successful: Boolean!
 }
@@ -4764,7 +4764,7 @@ type CustomFieldAttributeConnection {
   """
   A list of edges.
   """
-  edges: [CustomFieldAttributeUnionEdge]
+  edges: [CustomFieldAttributeEdge]
 
   """
   A list of nodes.
@@ -4776,6 +4776,21 @@ type CustomFieldAttributeConnection {
   """
   pageInfo: PageInfo!
   total_count: Int!
+}
+
+"""
+An edge in a connection.
+"""
+type CustomFieldAttributeEdge {
+  """
+  A cursor for use in pagination.
+  """
+  cursor: String!
+
+  """
+  The item at the end of the edge.
+  """
+  node: CustomFieldAttributeUnion
 }
 
 """
@@ -4816,21 +4831,6 @@ interface CustomFieldAttributeInterface {
 CustomFieldAttributes can be of multiple types
 """
 union CustomFieldAttributeUnion = CustomFieldAttributesList | CustomFieldAttributesText
-
-"""
-An edge in a connection.
-"""
-type CustomFieldAttributeUnionEdge {
-  """
-  A cursor for use in pagination.
-  """
-  cursor: String!
-
-  """
-  The item at the end of the edge.
-  """
-  node: CustomFieldAttributeUnion
-}
 
 type CustomFieldAttributesList implements CustomFieldAttributeInterface & Node {
   _id: ID!
@@ -4979,21 +4979,6 @@ type CveRequest implements Node & ResourceInterface {
 }
 
 """
-An edge in a connection.
-"""
-type CveRequestEdge {
-  """
-  A cursor for use in pagination.
-  """
-  cursor: String!
-
-  """
-  The item at the end of the edge.
-  """
-  node: CveRequest
-}
-
-"""
 States of a CVE Request
 """
 enum CveRequestStateEnum {
@@ -5012,7 +4997,7 @@ type CveRequestsConnection {
   """
   A list of edges.
   """
-  edges: [CveRequestEdge]
+  edges: [CveRequestsEdge]
 
   """
   A list of nodes.
@@ -5024,6 +5009,21 @@ type CveRequestsConnection {
   """
   pageInfo: PageInfo!
   total_count: Int!
+}
+
+"""
+An edge in a connection.
+"""
+type CveRequestsEdge {
+  """
+  A cursor for use in pagination.
+  """
+  cursor: String!
+
+  """
+  The item at the end of the edge.
+  """
+  node: CveRequest
 }
 
 """
@@ -6804,21 +6804,6 @@ type InvitationsSoftLaunch implements InvitationInterface & Node {
 }
 
 """
-An edge in a connection.
-"""
-type InvitationsSoftLaunchEdge {
-  """
-  A cursor for use in pagination.
-  """
-  cursor: String!
-
-  """
-  The item at the end of the edge.
-  """
-  node: InvitationsSoftLaunch
-}
-
-"""
 A field of JIRA issue type
 """
 type JiraField implements Node {
@@ -7974,21 +7959,6 @@ type Post {
   id: ID!
   markdown_message: String
   title: String
-}
-
-"""
-An edge in a connection.
-"""
-type PostEdge {
-  """
-  A cursor for use in pagination.
-  """
-  cursor: String!
-
-  """
-  The item at the end of the edge.
-  """
-  node: Post
 }
 
 """
@@ -9955,7 +9925,7 @@ type SoftLaunchConnection {
   """
   A list of edges.
   """
-  edges: [InvitationsSoftLaunchEdge]
+  edges: [SoftLaunchEdge]
 
   """
   A list of nodes.
@@ -9967,6 +9937,21 @@ type SoftLaunchConnection {
   """
   pageInfo: PageInfo!
   total_count: Int!
+}
+
+"""
+An edge in a connection.
+"""
+type SoftLaunchEdge {
+  """
+  A cursor for use in pagination.
+  """
+  cursor: String!
+
+  """
+  The item at the end of the edge.
+  """
+  node: InvitationsSoftLaunch
 }
 
 """
@@ -12068,7 +12053,7 @@ type TeamPostConnection {
   """
   A list of edges.
   """
-  edges: [PostEdge]
+  edges: [TeamPostEdge]
 
   """
   A list of nodes.
@@ -12080,6 +12065,21 @@ type TeamPostConnection {
   """
   pageInfo: PageInfo!
   total_count: Int!
+}
+
+"""
+An edge in a connection.
+"""
+type TeamPostEdge {
+  """
+  A cursor for use in pagination.
+  """
+  cursor: String!
+
+  """
+  The item at the end of the edge.
+  """
+  node: Post
 }
 
 """
