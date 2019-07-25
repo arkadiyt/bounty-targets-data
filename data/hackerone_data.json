@@ -1116,7 +1116,7 @@
           "confidentiality_requirement": "high",
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
-          "instruction": "All source code that isn't behind authentication is intended to be public. The source code itself has `High` CVSS impact scores. The applications that manage the code (Trac, Git, SVN, etc) have `Low` scores, except for vulnerabilities that allow modifications to the source code.\n\nMost of the source code in these domains is contained in the \"meta\" repository: `git clone git://meta.git.wordpress.org/`",
+          "instruction": "**Do _not_ pentest Trac instances**, it's very annoying to clean up after. Setup a local environment instead; the custom source code is available via the Git command below, in the `trac.wordpress.org` subfolder. **If you ignore this you'll forfeit any bounty.**\n\nOnly report vulnerabilities in our custom code, don't report vulnerabilities that only exist upstream in Trac itself. Report those directly to info@edgewall.com.\n\nAll source code that isn't behind authentication is intended to be public. The source code itself has `High` CVSS impact scores. The applications that manage the code (Trac, Git, SVN, etc) have `Low` scores, except for vulnerabilities that allow modifications to the source code.\n\nMost of the source code in these domains is contained in the \"meta\" repository: `git clone git://meta.git.wordpress.org/`",
           "integrity_requirement": "high",
           "max_severity": "critical"
         },
