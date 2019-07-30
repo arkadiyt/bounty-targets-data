@@ -6496,6 +6496,18 @@ type HackerPublished implements HacktivityItemInterface & Node {
 }
 
 """
+A HackerOne Hacker Ban Type
+"""
+type HackerTempBan implements Node & ResourceInterface {
+  _id: ID!
+  duration_in_days: Int
+  ends_at: DateTime
+  id: ID!
+  starts_at: DateTime
+  url: URI!
+}
+
+"""
 A HackeronePayroll Payout Preference
 """
 type HackeronePayrollPayoutPreferenceType implements Node & PayoutPreferenceInterface {
@@ -13577,6 +13589,7 @@ input UpdateReportNotificationPreferencesInput {
   """
   clientMutationId: String
   enabled: Boolean!
+  none: Boolean
   notification_preference_id: ID!
 }
 
@@ -15010,7 +15023,7 @@ type User implements Node & ResourceInterface {
   account_recovery_phone_number_sent_at: DateTime
   account_recovery_phone_number_verified_at: DateTime
   account_recovery_unverified_phone_number: String
-  active_ban: Boolean
+  active_ban: HackerTempBan
   address: Address
   anc_triager: Boolean
   authentication_service: AuthenticationServiceEnum!
@@ -15146,6 +15159,7 @@ type User implements Node & ResourceInterface {
   features: [Feature]
   hacker_invitations_profile: HackerInvitationsProfile
   hackerone_triager: Boolean
+  has_active_ban: Boolean
   has_checklist_check_responses: Boolean
   i_can_update_invitation_profile: Boolean
   i_can_update_username: Boolean
