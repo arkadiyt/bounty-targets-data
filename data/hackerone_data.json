@@ -19949,17 +19949,6 @@
           "max_severity": "critical"
         },
         {
-          "asset_identifier": "com.pandora.android",
-          "asset_type": "GOOGLE_PLAY_APP_ID",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "Pandora - security@pandora.com",
-          "integrity_requirement": null,
-          "max_severity": "critical"
-        },
-        {
           "asset_identifier": "com.paypal.android.p2pmobile",
           "asset_type": "GOOGLE_PLAY_APP_ID",
           "availability_requirement": null,
@@ -30592,7 +30581,7 @@
           "confidentiality_requirement": null,
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
-          "instruction": "https://github.com/dapphub/ds-weth/blob/master/src/weth9.sol",
+          "instruction": "https://github.com/dapphub/ds-weth/blob/master/src/weth9.sol\n\nNote: We are aware that the balance of the contract may be different than the total amount that is deposited if users send ETH directly to the contract.  We do not believe this has a negative impact on the system and so unless a report can show how having a **higher** balance does have negative consequences we will consider reports on the actual balance being higher than the sum of `balanceOf` values out of scope. ",
           "integrity_requirement": null,
           "max_severity": "critical"
         },
@@ -30636,7 +30625,7 @@
           "confidentiality_requirement": null,
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
-          "instruction": "All adapters\nhttps://github.com/makerdao/dss-deploy/blob/master/src/join.sol",
+          "instruction": "All adapters\nhttps://github.com/makerdao/dss-deploy/blob/master/src/join.sol\n\nNote: For all adapters, we are aware that the balance (ETH or token) of the contract may be different than the total amount that is joined through the contract if users send tokens or ETH directly to the contract.  We do not believe this has a negative impact on the system and so unless a report can show how having a **higher** balance does have negative consequences we will consider reports on the actual balance being higher than the sum of tokens 'join'ed out of scope. ",
           "integrity_requirement": null,
           "max_severity": "critical"
         },
