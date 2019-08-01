@@ -11530,6 +11530,21 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
     Returns the last _n_ elements from the list.
     """
     last: Int
+
+    """
+    Relay classic does not have support for starting paginationsomewhere in the
+    middle, see https://github.com/facebook/relay/issues/1312 Workaround is to
+    add a page argument till Relay supports this
+    """
+    limit: Int = null
+
+    """
+    Relay classic does not have support for starting paginationsomewhere in the
+    middle, see https://github.com/facebook/relay/issues/1312 Workaround is to
+    add a page argument till Relay supports this
+    """
+    page: Int = null
+    where: FiltersUserFilterInput
   ): UserConnection
   reports(
     """
