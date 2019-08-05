@@ -2426,6 +2426,7 @@ type ChecklistCheckResponse implements ActivitiesInterface & Node {
     """
     updated_at_after: String
   ): ActivityConnection
+  approved_at: DateTime
   attachments: [Attachment]
   checklist_check: ChecklistCheck
   expires_at: DateTime
@@ -2481,6 +2482,7 @@ type ChecklistCheckResponseConnection {
   Int
   """
   total_count: Int!
+  total_payment_amount: Int!
 }
 
 """
@@ -6279,6 +6281,7 @@ input FiltersChecklistCheckResponseFilterInput {
 }
 
 input FiltersChecklistCheckResponseFilterOrder {
+  approved_at: FilterOrderPredicateInput
   created_at: FilterOrderPredicateInput
   id: FilterOrderPredicateInput
 }
