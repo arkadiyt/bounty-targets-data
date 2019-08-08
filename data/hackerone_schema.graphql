@@ -11102,6 +11102,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
     """
     last: Int
   ): UserConnection
+  bounties_paid_last_90_days: Int
   bounties_total: String
   bounty_awarded_staleness_threshold: Int
 
@@ -11646,6 +11647,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
     where: FiltersReportFilterInput
     without_scope: Boolean = null
   ): ReportConnection
+  reports_received_last_90_days: Int
   resolution_time(date_start: DateTime = null): Float
   resolved_report_count: Int
   resolved_staleness_threshold: Int
