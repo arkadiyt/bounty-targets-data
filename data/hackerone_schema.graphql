@@ -10339,16 +10339,12 @@ type StructuredScope implements Node & ResourceInterface {
   availability_requirement: SeveritySecurityRequirementEnum
   confidentiality_requirement: SeveritySecurityRequirementEnum
   created_at: DateTime!
-  critical_severity_resolved_reports_count: Int
   eligible_for_bounty: Boolean
   eligible_for_submission: Boolean
-  high_severity_resolved_reports_count: Int
   id: ID!
   instruction: String
   integrity_requirement: SeveritySecurityRequirementEnum
-  low_severity_resolved_reports_count: Int
   max_severity: SeverityRatingEnum
-  medium_severity_resolved_reports_count: Int
   reference: String
   rendered_instruction: String
   reports(
