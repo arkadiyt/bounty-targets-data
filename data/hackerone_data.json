@@ -923,9 +923,20 @@
     "targets": {
       "in_scope": [
         {
+          "asset_identifier": "*.backblaze.com",
+          "asset_type": "URL",
+          "availability_requirement": "medium",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "This includes all backblaze.com web pages and api endpoints that require authentication. Most content on www.backblaze.com does not require authentication and is *excluded* from this asset (www.backblaze.com is listed separately).",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
           "asset_identifier": "*.backblazeb2.com",
           "asset_type": "URL",
-          "availability_requirement": "high",
+          "availability_requirement": "medium",
           "confidentiality_requirement": "high",
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
@@ -936,7 +947,7 @@
         {
           "asset_identifier": "com.backblaze.BzBackupBrowser",
           "asset_type": "APPLE_STORE_APP_ID",
-          "availability_requirement": "high",
+          "availability_requirement": "low",
           "confidentiality_requirement": "high",
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
@@ -947,7 +958,7 @@
         {
           "asset_identifier": "com.backblaze.android",
           "asset_type": "GOOGLE_PLAY_APP_ID",
-          "availability_requirement": "high",
+          "availability_requirement": "low",
           "confidentiality_requirement": "high",
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
@@ -959,12 +970,23 @@
           "asset_identifier": "https://github.com/Backblaze/B2_Command_Line_Tool",
           "asset_type": "SOURCE_CODE",
           "availability_requirement": "none",
-          "confidentiality_requirement": "none",
+          "confidentiality_requirement": "high",
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
           "instruction": "",
-          "integrity_requirement": "medium",
-          "max_severity": "high"
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://github.com/Backblaze/b2-sdk-java",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": "none",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
         },
         {
           "asset_identifier": "https://secure.backblaze.com/api/restore_downloader",
@@ -974,13 +996,13 @@
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
           "instruction": "",
-          "integrity_requirement": "medium",
+          "integrity_requirement": "high",
           "max_severity": "critical"
         },
         {
           "asset_identifier": "https://secure.backblaze.com/mac/install_backblaze.dmg",
           "asset_type": "DOWNLOADABLE_EXECUTABLES",
-          "availability_requirement": "high",
+          "availability_requirement": "low",
           "confidentiality_requirement": "high",
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
@@ -991,7 +1013,7 @@
         {
           "asset_identifier": "https://secure.backblaze.com/win32/install_backblaze.exe",
           "asset_type": "DOWNLOADABLE_EXECUTABLES",
-          "availability_requirement": "high",
+          "availability_requirement": "low",
           "confidentiality_requirement": "high",
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
@@ -1007,17 +1029,6 @@
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
           "instruction": "",
-          "integrity_requirement": "medium",
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "secure.backblaze.com",
-          "asset_type": "URL",
-          "availability_requirement": "high",
-          "confidentiality_requirement": "high",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "",
           "integrity_requirement": "high",
           "max_severity": "critical"
         },
@@ -1025,12 +1036,12 @@
           "asset_identifier": "www.backblaze.com",
           "asset_type": "URL",
           "availability_requirement": "medium",
-          "confidentiality_requirement": "none",
+          "confidentiality_requirement": "low",
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
-          "instruction": "",
-          "integrity_requirement": "low",
-          "max_severity": "high"
+          "instruction": "This includes all web pages and api endpoints which do *not* require authentication. If authentication is required then use the *.backblaze.com asset instead.",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
         }
       ],
       "out_of_scope": [
