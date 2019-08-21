@@ -12712,7 +12712,17 @@
     "quick_to_first_response": false,
     "targets": {
       "in_scope": [
-
+        {
+          "asset_identifier": "faa.st",
+          "asset_type": "URL",
+          "availability_requirement": "none",
+          "confidentiality_requirement": "low",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "#faast\n\nFaast is a simple API service allows for swapping of one cryptocurrency to another. The documentation of this api is available here: https://api.faa.st\n\n#Risks\nThe major risk with this API are:\n- Double payout\n- Private information leak\n\n#Scope & Off Limits:\nDO NOT:\n- DDoS the service\n- Generate thousands of swaps for fun\n\nIf you do this, you will be banned from our program and API promptly\n\nDO:\n- Use the service like a regular user would\n- Play with requests & authentication\n- Try to get the service to pay you more than you are owed\n\n#Double Payouts, Over-payout\nThe biggest risk of this API are double payouts. What that means is, creating a swap, making a single deposit, and getting more than a single payout (for that one deposit)\n\nAnother risk would be being able to manipulate pricing of swaps. For example, creating a swap for 1 ETH, depositing 0.1 ETH, and having the system thing you actually deposited 1 ETH.\n\n#Private information\nFaast collects very little information currently, so private information in scarce. There is a chance you can try to leak another users IP address. We don't think its possible.\n\n#Test API\nThere is a test API available at:\n- https://testapi.faa.st\n\nIt is highly experimental, but if you want to try to play with Testnet BTC or ETH, have fun. Please note that only vulnerabilities which can be replicated on production are eligible for bounties.\n",
+          "integrity_requirement": "low",
+          "max_severity": "medium"
+        }
       ],
       "out_of_scope": [
 
