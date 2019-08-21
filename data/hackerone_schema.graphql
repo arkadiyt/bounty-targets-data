@@ -3952,6 +3952,7 @@ input CreateProgramBountyInput {
   A unique identifier for the client performing the mutation.
   """
   clientMutationId: String
+  not_paid_through_hackerone: Boolean
   program_id: ID!
   recipient: String
   reference: String!
@@ -4051,11 +4052,16 @@ input CreateReportInput {
   A unique identifier for the client performing the mutation.
   """
   clientMutationId: String
-  facebook_user_id: String!
-  severity: String
+  facebook_user_id: String
+  impact: String
+  severity_rating: String
+  source: String
+  structured_scope_id: Int
+  submitted_via_api: Boolean
   team_handle: String!
   title: String!
   vulnerability_information: String!
+  weakness_id: Int
 }
 
 """
