@@ -8900,6 +8900,7 @@ type Query implements Node {
     """
     last: Int
     product_edition_filter: TriageInboxItemProductEditionFilterEnum = null
+    team_filter: String = null
     view: TriageInboxItemViewEnum!
   ): TriageInboxItemConnection!
   user(username: String!): User
@@ -12605,6 +12606,7 @@ type TriageInboxItemConnection {
   Information to aid in pagination.
   """
   pageInfo: PageInfo!
+  teams: [Team]
 }
 
 """
