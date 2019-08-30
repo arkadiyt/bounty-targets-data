@@ -13911,7 +13911,7 @@ input UpdateNotificationDeliveryPreferenceInput {
   """
   clientMutationId: String
   delivery_preference: String!
-  notification_delivery_preference_id: ID!
+  preference_type: String!
 }
 
 """
@@ -13944,7 +13944,7 @@ type UpdateNotificationDeliveryPreferencePayload implements MutationResult {
     last: Int
     types: [ErrorTypeEnum]
   ): ErrorConnection!
-  notification_delivery_preference: NotificationDeliveryPreferenceInterface
+  me: User
   was_successful: Boolean!
 }
 
