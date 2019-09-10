@@ -16531,6 +16531,7 @@ type User implements Node & ResourceInterface {
   ): ReportConnection
   reputation: Int
   reputations_grouped_by_last_months(last: Int!): [LabeledIntegerPair]
+  resolved_report_count: Int
   saml_enabled: Boolean
   sessions(
     """
