@@ -10713,10 +10713,14 @@ A versioned log of a scope of a HackerOne program
 type StructuredScopeVersion implements Node & ResourceInterface {
   _id: ID!
   archived_at: DateTime
+  asset_identifier: String
   created_at: DateTime!
+  eligible_for_bounty: Boolean
+  eligible_for_submission: Boolean
   id: ID!
   instruction: String
   max_severity: String
+  structured_scope_id: ID!
   team: Team
   url: URI!
 }
@@ -12632,6 +12636,10 @@ type ThanksItemConnection {
   Information to aid in pagination.
   """
   pageInfo: PageInfo!
+
+  """
+  Int
+  """
   total_count: Int!
 }
 
