@@ -6771,15 +6771,26 @@
           "max_severity": "medium"
         },
         {
-          "asset_identifier": "Other Shopify Apps",
+          "asset_identifier": "Shopify Developed Apps",
           "asset_type": "OTHER",
-          "availability_requirement": "none",
-          "confidentiality_requirement": "none",
-          "eligible_for_bounty": false,
+          "availability_requirement": "low",
+          "confidentiality_requirement": "low",
+          "eligible_for_bounty": true,
           "eligible_for_submission": true,
-          "instruction": "Shopify apps otherwise not listed as in scope. These are not eligible for a bounty.",
+          "instruction": "Shopify apps and sales channels means everything installed via the following linkhttps://apps.shopify.com/collections/made-by-shopify **EXCEPT Oberlo, Return Magic and Shopify Order Printer App**",
           "integrity_requirement": "low",
-          "max_severity": "low"
+          "max_severity": "medium"
+        },
+        {
+          "asset_identifier": "Shopify Mobile Applications",
+          "asset_type": "OTHER",
+          "availability_requirement": "low",
+          "confidentiality_requirement": "low",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Android: https://play.google.com/store/apps/dev?id=8929232438554100687\niOS: https://itunes.apple.com/ca/developer/shopify-inc/id371294475\n\nNote: any services operated by a third party without a proof of concept demonstrating impact on Shopify users will likely be ineligible for a bounty.",
+          "integrity_requirement": "low",
+          "max_severity": "medium"
         },
         {
           "asset_identifier": "Shopify Third Party Apps",
@@ -6815,259 +6826,6 @@
           "max_severity": "critical"
         },
         {
-          "asset_identifier": "apps.shopify.com",
-          "asset_type": "URL",
-          "availability_requirement": "low",
-          "confidentiality_requirement": "low",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "Shopify App Store",
-          "integrity_requirement": "low",
-          "max_severity": "medium"
-        },
-        {
-          "asset_identifier": "com.jadedlabs.frenzy",
-          "asset_type": "APPLE_STORE_APP_ID",
-          "availability_requirement": "none",
-          "confidentiality_requirement": "low",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "Frenzy iOS app, available in the [iTunes store](https://itunes.apple.com/ca/app/frenzy-buy-sneakers-and-more/id1140572698)",
-          "integrity_requirement": "low",
-          "max_severity": "medium"
-        },
-        {
-          "asset_identifier": "com.jadedpixel.pos",
-          "asset_type": "APPLE_STORE_APP_ID",
-          "availability_requirement": "low",
-          "confidentiality_requirement": "low",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "Shopify POS for iOS, available in the [iTunes store](https://itunes.apple.com/ca/app/shopify-pos-point-sale-for/id686830644?mt=8)\n",
-          "integrity_requirement": "low",
-          "max_severity": "medium"
-        },
-        {
-          "asset_identifier": "com.jadedpixel.shopify",
-          "asset_type": "APPLE_STORE_APP_ID",
-          "availability_requirement": "low",
-          "confidentiality_requirement": "low",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "Mobile Shopify for iOS, available in the [iTunes store](https://itunes.apple.com/ca/app/shopify-mobile/id371294472?mt=8)",
-          "integrity_requirement": "low",
-          "max_severity": "medium"
-        },
-        {
-          "asset_identifier": "com.shopify.arrive",
-          "asset_type": "APPLE_STORE_APP_ID",
-          "availability_requirement": "none",
-          "confidentiality_requirement": "low",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "Arrive iOS app, available in the [iTunes store](https://itunes.apple.com/ca/app/arrive-package-tracker/id1223471316?mt=8)",
-          "integrity_requirement": "low",
-          "max_severity": "medium"
-        },
-        {
-          "asset_identifier": "com.shopify.mobile",
-          "asset_type": "GOOGLE_PLAY_APP_ID",
-          "availability_requirement": "low",
-          "confidentiality_requirement": "low",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "Mobile Shopify for Android, available in the [Play store](https://play.google.com/store/apps/details?id=com.shopify.mobile)\n",
-          "integrity_requirement": "low",
-          "max_severity": "medium"
-        },
-        {
-          "asset_identifier": "com.shopify.pos",
-          "asset_type": "GOOGLE_PLAY_APP_ID",
-          "availability_requirement": "low",
-          "confidentiality_requirement": "low",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "Shopify POS for Android, available in the [Play store](https://play.google.com/store/apps/details?id=com.shopify.pos)\n",
-          "integrity_requirement": "low",
-          "max_severity": "medium"
-        },
-        {
-          "asset_identifier": "com.shopify.pos.customerview",
-          "asset_type": "GOOGLE_PLAY_APP_ID",
-          "availability_requirement": "low",
-          "confidentiality_requirement": "low",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "Shopify Customer View App for POS, available in the [Play store](https://play.google.com/store/apps/details?id=com.shopify.pos.customerview)\n",
-          "integrity_requirement": "low",
-          "max_severity": "medium"
-        },
-        {
-          "asset_identifier": "experts.shopify.com",
-          "asset_type": "URL",
-          "availability_requirement": "low",
-          "confidentiality_requirement": "low",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "Shopify Experts",
-          "integrity_requirement": "low",
-          "max_severity": "medium"
-        },
-        {
-          "asset_identifier": "https://apps.shopify.com/advanced-cash-on-delivery",
-          "asset_type": "URL",
-          "availability_requirement": "none",
-          "confidentiality_requirement": "low",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "After creating a test store, you may install this app from the Shopify app store to test it as well.",
-          "integrity_requirement": "low",
-          "max_severity": "medium"
-        },
-        {
-          "asset_identifier": "https://apps.shopify.com/apple-business-chat",
-          "asset_type": "URL",
-          "availability_requirement": "none",
-          "confidentiality_requirement": "low",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "After creating a test store, you may install this app from the Shopify app store to test it as well.",
-          "integrity_requirement": "low",
-          "max_severity": "medium"
-        },
-        {
-          "asset_identifier": "https://apps.shopify.com/digital-downloads",
-          "asset_type": "URL",
-          "availability_requirement": "low",
-          "confidentiality_requirement": "low",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "Digital Downloads is an app that can be installed from the Shopify app store https://apps.shopify.com/digital-downloads",
-          "integrity_requirement": "low",
-          "max_severity": "medium"
-        },
-        {
-          "asset_identifier": "https://apps.shopify.com/product-reviews",
-          "asset_type": "URL",
-          "availability_requirement": "none",
-          "confidentiality_requirement": "low",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "After creating a test store, you may install this app from the Shopify app store to test it as well.",
-          "integrity_requirement": "low",
-          "max_severity": "medium"
-        },
-        {
-          "asset_identifier": "https://apps.shopify.com/shopify-widgets",
-          "asset_type": "URL",
-          "availability_requirement": "low",
-          "confidentiality_requirement": "low",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "Buy Button is an app that can be installed from the Shopify app store https://apps.shopify.com/shopify-widgets",
-          "integrity_requirement": "low",
-          "max_severity": "medium"
-        },
-        {
-          "asset_identifier": "https://exchangemarketplace.com/",
-          "asset_type": "URL",
-          "availability_requirement": "none",
-          "confidentiality_requirement": "low",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "When testing Exchange, be sure to **unpublish** any listings you create after your testing is finished.",
-          "integrity_requirement": "low",
-          "max_severity": "medium"
-        },
-        {
-          "asset_identifier": "https://flow.shopifycloud.com",
-          "asset_type": "URL",
-          "availability_requirement": "none",
-          "confidentiality_requirement": "low",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "Flow is an app that can be installed from the Shopify app store https://apps.shopify.com/flow",
-          "integrity_requirement": "low",
-          "max_severity": "medium"
-        },
-        {
-          "asset_identifier": "https://google-shopping.shopifycloud.com",
-          "asset_type": "URL",
-          "availability_requirement": "low",
-          "confidentiality_requirement": "low",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "Google Shopping is a sales channel which can added to your store from https://apps.shopify.com/google-shopping",
-          "integrity_requirement": "low",
-          "max_severity": "medium"
-        },
-        {
-          "asset_identifier": "https://instagram-commerce.shopifycloud.com",
-          "asset_type": "URL",
-          "availability_requirement": "low",
-          "confidentiality_requirement": "low",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "Instagram Commerce is a sales channel which can be installed on your store from https://apps.shopify.com/instagram",
-          "integrity_requirement": "low",
-          "max_severity": "medium"
-        },
-        {
-          "asset_identifier": "https://messenger-commerce.shopifycloud.com",
-          "asset_type": "URL",
-          "availability_requirement": "low",
-          "confidentiality_requirement": "low",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "Messenger Commerce is a sales channel which can be installed on your store from https://apps.shopify.com/messenger",
-          "integrity_requirement": "low",
-          "max_severity": "medium"
-        },
-        {
-          "asset_identifier": "https://sell-on-amazon.shopifycloud.com",
-          "asset_type": "URL",
-          "availability_requirement": "low",
-          "confidentiality_requirement": "low",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "Sell on Amazon is a sales channel which can be installed on your store from https://apps.shopify.com/amazon",
-          "integrity_requirement": "low",
-          "max_severity": "medium"
-        },
-        {
-          "asset_identifier": "https://wholesale.shopifycloud.com/",
-          "asset_type": "URL",
-          "availability_requirement": "none",
-          "confidentiality_requirement": "low",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "Wholesale is a sales channel which can be installed on your store by visiting `/admin` and clicking the `+` beside `Sales Channels` in the menu on the left.",
-          "integrity_requirement": "low",
-          "max_severity": "medium"
-        },
-        {
-          "asset_identifier": "https://www.kitcrm.com",
-          "asset_type": "URL",
-          "availability_requirement": "low",
-          "confidentiality_requirement": "low",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "Kit can be installed from https://apps.shopify.com/kit",
-          "integrity_requirement": "low",
-          "max_severity": "medium"
-        },
-        {
-          "asset_identifier": "oberlo.com",
-          "asset_type": "URL",
-          "availability_requirement": "none",
-          "confidentiality_requirement": "low",
-          "eligible_for_bounty": false,
-          "eligible_for_submission": true,
-          "instruction": "",
-          "integrity_requirement": "low",
-          "max_severity": "medium"
-        },
-        {
           "asset_identifier": "partners.shopify.com",
           "asset_type": "URL",
           "availability_requirement": "high",
@@ -7077,17 +6835,6 @@
           "instruction": "",
           "integrity_requirement": "high",
           "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "themes.shopify.com",
-          "asset_type": "URL",
-          "availability_requirement": "low",
-          "confidentiality_requirement": "low",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "Shopify Theme Store",
-          "integrity_requirement": "low",
-          "max_severity": "medium"
         },
         {
           "asset_identifier": "your-store.myshopify.com",
