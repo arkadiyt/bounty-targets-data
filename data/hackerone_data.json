@@ -15644,384 +15644,6 @@
     }
   },
   {
-    "id": 16707,
-    "name": "Razer US",
-    "handle": "razer_us",
-    "url": "https://hackerone.com/razer_us",
-    "offers_bounties": false,
-    "quick_to_bounty": false,
-    "quick_to_first_response": true,
-    "targets": {
-      "in_scope": [
-        {
-          "asset_identifier": "akmedia.zvault.razerzone.com",
-          "asset_type": "URL",
-          "availability_requirement": "high",
-          "confidentiality_requirement": "high",
-          "eligible_for_bounty": false,
-          "eligible_for_submission": true,
-          "instruction": "API server supporting the zVault platform.  These are normally accessed via REST API.",
-          "integrity_requirement": "high",
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "bill.zvault.razerzone.com",
-          "asset_type": "URL",
-          "availability_requirement": "high",
-          "confidentiality_requirement": "high",
-          "eligible_for_bounty": false,
-          "eligible_for_submission": true,
-          "instruction": "API server supporting the zVault platform.  These are normally accessed via REST API.",
-          "integrity_requirement": "high",
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "careers.razerzone.com",
-          "asset_type": "URL",
-          "availability_requirement": "high",
-          "confidentiality_requirement": "high",
-          "eligible_for_bounty": false,
-          "eligible_for_submission": true,
-          "instruction": "",
-          "integrity_requirement": "high",
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "deals.razerzone.com",
-          "asset_type": "URL",
-          "availability_requirement": "medium",
-          "confidentiality_requirement": "medium",
-          "eligible_for_bounty": false,
-          "eligible_for_submission": true,
-          "instruction": "Supports the Cortex application.",
-          "integrity_requirement": "medium",
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "developer.razerzone.com",
-          "asset_type": "URL",
-          "availability_requirement": "high",
-          "confidentiality_requirement": "high",
-          "eligible_for_bounty": false,
-          "eligible_for_submission": true,
-          "instruction": "",
-          "integrity_requirement": "high",
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "dl.razerzone.com",
-          "asset_type": "URL",
-          "availability_requirement": "medium",
-          "confidentiality_requirement": "none",
-          "eligible_for_bounty": false,
-          "eligible_for_submission": true,
-          "instruction": "Backend server hosting software downloads.",
-          "integrity_requirement": "high",
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "downloads.razerzone.com",
-          "asset_type": "URL",
-          "availability_requirement": "medium",
-          "confidentiality_requirement": "none",
-          "eligible_for_bounty": false,
-          "eligible_for_submission": true,
-          "instruction": "Backend server hosting software downloads",
-          "integrity_requirement": "high",
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "ec.razerzone.com",
-          "asset_type": "URL",
-          "availability_requirement": "high",
-          "confidentiality_requirement": "high",
-          "eligible_for_bounty": false,
-          "eligible_for_submission": true,
-          "instruction": "Part of the Razer ID ecosystem.  These are normally accessed from Razer applications and web properties via REST API.\n",
-          "integrity_requirement": "high",
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "ep.zvault.razerzone.com",
-          "asset_type": "URL",
-          "availability_requirement": "high",
-          "confidentiality_requirement": "high",
-          "eligible_for_bounty": false,
-          "eligible_for_submission": true,
-          "instruction": "API server supporting the zVault platform.  These are normally accessed via REST API.",
-          "integrity_requirement": "high",
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "gw.zvault.razerzone.com",
-          "asset_type": "URL",
-          "availability_requirement": "high",
-          "confidentiality_requirement": "high",
-          "eligible_for_bounty": false,
-          "eligible_for_submission": true,
-          "instruction": "API server supporting the zVault platform.  These are normally accessed via REST API.",
-          "integrity_requirement": "high",
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "https://www.razerzone.com/cortex",
-          "asset_type": "OTHER",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": false,
-          "eligible_for_submission": true,
-          "instruction": "Link to download the Windows Cortex client for user game deals.  The Windows client is normally found in C:\\Program Files (x86)\\Razer\\Razer Cortex.\n\nWith the installation of Cortex, the user should also receive Razer Central, which is a Razer platform management client which supports Cortex, Gamecaster, and Game booster.  This is normally found in C:\\Program Files (x86)\\Razer\\Razer Services and C:\\Program Files (x86)\\Razer\\InGameEngine.  ",
-          "integrity_requirement": null,
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "https://www.razerzone.com/synapse",
-          "asset_type": "OTHER",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": false,
-          "eligible_for_submission": true,
-          "instruction": "Download link for the Windows and Mac client for peripheral and related profile management.  The Synapse Windows client, when installed, is typically found in C:\\Program Files (x86)\\Razer\\Synapse and C:\\Program Files (x86)\\Razer\\Razer_Common_Driver",
-          "integrity_requirement": null,
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "https://www.razerzone.com/synapse-3",
-          "asset_type": "DOWNLOADABLE_EXECUTABLES",
-          "availability_requirement": "high",
-          "confidentiality_requirement": "high",
-          "eligible_for_bounty": false,
-          "eligible_for_submission": true,
-          "instruction": "Link to download the Synapse 3 client software (currently in beta).  The Windows client is normally found in C:\\Program Files (x86)\\Razer\\Synapse3, with some number of support files in the C:\\Program Files (x86)\\Razer folder as well.\n\nWith the installation of Synapse 3, the user should also receive Razer Central, which is a Razer platform management client.  This is normally found in C:\\Program Files (x86)\\Razer\\Razer Services and C:\\Program Files (x86)\\Razer\\InGameEngine.  ",
-          "integrity_requirement": "high",
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "insider.razerzone.com",
-          "asset_type": "URL",
-          "availability_requirement": "high",
-          "confidentiality_requirement": "high",
-          "eligible_for_bounty": false,
-          "eligible_for_submission": true,
-          "instruction": "Discussion forums and blogs",
-          "integrity_requirement": "high",
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "media.zvault.razerzone.com",
-          "asset_type": "URL",
-          "availability_requirement": "high",
-          "confidentiality_requirement": "high",
-          "eligible_for_bounty": false,
-          "eligible_for_submission": true,
-          "instruction": "API server supporting the zVault platform.  These are normally accessed via REST API.",
-          "integrity_requirement": "high",
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "merchant.zvault.razerzone.com",
-          "asset_type": "URL",
-          "availability_requirement": "high",
-          "confidentiality_requirement": "high",
-          "eligible_for_bounty": false,
-          "eligible_for_submission": true,
-          "instruction": "API server supporting the zVault platform.  These are normally accessed via REST API.",
-          "integrity_requirement": "high",
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "mobileservices.razerzone.com",
-          "asset_type": "URL",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": false,
-          "eligible_for_submission": true,
-          "instruction": "",
-          "integrity_requirement": null,
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "music.razerzone.com",
-          "asset_type": "URL",
-          "availability_requirement": "high",
-          "confidentiality_requirement": "high",
-          "eligible_for_bounty": false,
-          "eligible_for_submission": true,
-          "instruction": "",
-          "integrity_requirement": "high",
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "oauth2.razerzone.com",
-          "asset_type": "URL",
-          "availability_requirement": "high",
-          "confidentiality_requirement": "high",
-          "eligible_for_bounty": false,
-          "eligible_for_submission": true,
-          "instruction": "Part of the Razer ID ecosystem.  These are normally accessed from Razer applications and web properties via REST API.\n",
-          "integrity_requirement": "high",
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "pay.zvault.razerzone.com",
-          "asset_type": "URL",
-          "availability_requirement": "high",
-          "confidentiality_requirement": "high",
-          "eligible_for_bounty": false,
-          "eligible_for_submission": true,
-          "instruction": "API server supporting the zVault platform.  These are normally accessed via REST API.",
-          "integrity_requirement": "high",
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "press.razerzone.com",
-          "asset_type": "URL",
-          "availability_requirement": "high",
-          "confidentiality_requirement": "high",
-          "eligible_for_bounty": false,
-          "eligible_for_submission": true,
-          "instruction": "",
-          "integrity_requirement": "high",
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "razer-id.razerzone.com",
-          "asset_type": "URL",
-          "availability_requirement": "high",
-          "confidentiality_requirement": "high",
-          "eligible_for_bounty": false,
-          "eligible_for_submission": true,
-          "instruction": "Part of the Razer ID ecosystem.  These are normally accessed from Razer applications and web properties via REST API.\n",
-          "integrity_requirement": "high",
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "store.razerzone.com",
-          "asset_type": "URL",
-          "availability_requirement": "high",
-          "confidentiality_requirement": "high",
-          "eligible_for_bounty": false,
-          "eligible_for_submission": true,
-          "instruction": "Razer storefront.  Related servers may differ according to region.  \nNote that in some cases links may lead to third party servers (e.g. payment processing) which should be considered out of scope; a good rule of thumb is that if a storefront linked server does not reverse DNS to the parent domain razerzone.com, it is not in scope.\n",
-          "integrity_requirement": "high",
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "support.razerzone.com",
-          "asset_type": "URL",
-          "availability_requirement": "high",
-          "confidentiality_requirement": "high",
-          "eligible_for_bounty": false,
-          "eligible_for_submission": true,
-          "instruction": "",
-          "integrity_requirement": "high",
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "themes.razerzone.com",
-          "asset_type": "URL",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": false,
-          "eligible_for_submission": true,
-          "instruction": "Theme store for developers.",
-          "integrity_requirement": null,
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "tp.zvault.razerzone.com",
-          "asset_type": "URL",
-          "availability_requirement": "high",
-          "confidentiality_requirement": "high",
-          "eligible_for_bounty": false,
-          "eligible_for_submission": true,
-          "instruction": "API server supporting the zVault platform.  These are normally accessed via REST API.",
-          "integrity_requirement": "high",
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "wa.zvault.razerzone.com",
-          "asset_type": "URL",
-          "availability_requirement": "high",
-          "confidentiality_requirement": "high",
-          "eligible_for_bounty": false,
-          "eligible_for_submission": true,
-          "instruction": "API server supporting the zVault platform.  These are normally accessed via REST API.",
-          "integrity_requirement": "high",
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "www.razerzone.com",
-          "asset_type": "URL",
-          "availability_requirement": "high",
-          "confidentiality_requirement": "medium",
-          "eligible_for_bounty": false,
-          "eligible_for_submission": true,
-          "instruction": "Razer main page largely with marketing related content.  Note that links on this site may redirect to other servers.\n",
-          "integrity_requirement": "high",
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "www2.razerzone.com",
-          "asset_type": "URL",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": false,
-          "eligible_for_submission": true,
-          "instruction": "",
-          "integrity_requirement": null,
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "zd.zvault.razerzone.com",
-          "asset_type": "URL",
-          "availability_requirement": "high",
-          "confidentiality_requirement": "high",
-          "eligible_for_bounty": false,
-          "eligible_for_submission": true,
-          "instruction": "API server supporting the zVault platform.  These are normally accessed via REST API.",
-          "integrity_requirement": "high",
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "zvault.razerzone.com",
-          "asset_type": "URL",
-          "availability_requirement": "high",
-          "confidentiality_requirement": "high",
-          "eligible_for_bounty": false,
-          "eligible_for_submission": true,
-          "instruction": "Consumer web portal for the zVault platform.",
-          "integrity_requirement": "high",
-          "max_severity": "critical"
-        }
-      ],
-      "out_of_scope": [
-        {
-          "asset_identifier": "sourcecode.razer.com",
-          "asset_type": "SOURCE_CODE",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": false,
-          "eligible_for_submission": false,
-          "instruction": "This is a placeholder asset.",
-          "integrity_requirement": null,
-          "max_severity": "none"
-        },
-        {
-          "asset_identifier": "zv.razerzone.com",
-          "asset_type": "URL",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": false,
-          "eligible_for_submission": false,
-          "instruction": "",
-          "integrity_requirement": null,
-          "max_severity": "none"
-        }
-      ]
-    }
-  },
-  {
     "id": 16780,
     "name": "MapsMarker.com e.U.",
     "handle": "mapsmarker_com_e_u",
@@ -28414,6 +28036,253 @@
           "eligible_for_submission": true,
           "instruction": "ESLint's Jenkins server is used to carry out releases of ESLint-maintained packages. As such, it has access to several confidential resources, including an npm token and ssh key with access to all of ESLint's packages and repositories, respectively.\n\nThe Jenkins server is intended to be locked down such that only authorized ESLint team members can view build information/logs and start releases. We'd be interested in hearing about any issues that would allow an unauthorized user to gain access to build information or configure/start builds.",
           "integrity_requirement": "high",
+          "max_severity": "critical"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
+    "id": 32400,
+    "name": "Razer",
+    "handle": "razer",
+    "url": "https://hackerone.com/razer",
+    "offers_bounties": true,
+    "quick_to_bounty": false,
+    "quick_to_first_response": true,
+    "targets": {
+      "in_scope": [
+        {
+          "asset_identifier": "* Razer Merchant Services (MOLPay) Mobile SDK",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "**Group 1 client assets**\n* Code vulnerabilities in the Razer Merchant Services (MOLPay) Mobile SDK that could lead to a compromise of user data: https://www.molpay.com/v3/features/mobile-xdk/\n",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "Cortex, including backend infrastructure",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "**Group 2 assets**\n* Cortex version 9.x client\n* Cortex platform:\n   * https://deals.razer.com\n",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "Group 1 client assets - $1,500 - $250 (Rewards based on Impact)",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Please **refer to our bounty table** for the list of eligible assets and the potential value.",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "Group 1 web assets - $2,000 - $250 (Rewards based on Impact)",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Please **refer to our bounty table** for the list of eligible assets and the potential value.",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "Group 2 assets $1,500 - $250 (Rewards based on Impact)",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Please **refer to our bounty table** for the list of eligible assets and the potential value.\n\n",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "Razer Gold Assets",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "**Group 1 web assets**\n* _In Scope Razer Gold Assets_\n   * https://gold.razer.com\n   * https://pay.gold.razer.com\n   * https://global.gold.razer.com\n   * https://paychannel.gold.razer.com\n   * https://reward.gold.razer.com\n   * https://topupapi.gold.razer.com\n   * https://webhookapi.gold.razer.com\n   * https://cms.gold.razer.com\n   * https://console.gold.razer.com\n   * https://silverconsole.gold.razer.com\n   * https://voucherconsole.gold.razer.com\n   * https://merchant.gold.razer.com\n   * https://zmerchant.gold.razer.com\n   * https://silvermerchant.gold.razer.com\n   * https://media.gold.razer.com\n   * https://ubuild.gold.razer.com\n   * https://wbuild.gold.razer.com\n",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "Razer ID infrastructure (authentication platform)",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "**Group 1 web assets**\n* _In-Scope Razer ID infrastructure assets:_\n   * https://ec.razerzone.com \n   * https://oauth2.razerzone.com \n   * https://razer-id.razer.com\n\nNOTE: Part of the Razer ID ecosystem. These are normally accessed from Razer applications and web properties via REST API.\n",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "Razer Pay MY backend infrastructure",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "**Group 1 web assets**",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "Razer Pay SG backend infrastructure",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "**Group 1 web assets**",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "Razer Peripherals (firmware)  - $1,000 - $250",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "**Group 2 assets**",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "Razer Phone or Razer Phone 2 - $1,000 - $250",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "**Group 2 asset**",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "Razer Store",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "**Group 1 web assets**\n* In-Scope Razer Store assets\n   * https://store.razer.com (Note that different regional settings may redirect to different servers)\n",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "Razer Systems (e.g. Blade laptops)  - $1,000 - $250 ",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "**Group 2 assets**",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "Razer web properties NOT in Group 1 - e.g. deals.razer.com, developer.razer.com   - $500 - $150",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "**Group 2 assets**\n* deals.razer.com\n* developer.razer.com",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "RazerPay MY Android",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "**Group 1 client assets**\nPlayStore: https://play.google.com/store/apps/details?id=com.mol.molwallet&hl=None\n",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "RazerPay SG Android",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "**Group 1 client assets**\n",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "S3 bucket exposure  -  $250",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "**Group 2 assets**",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "Source code exposure  - $1,500 - $500",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "**Group 2 asset**",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "Synapse 2 client",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "**Group 1 client assets**",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "Synapse 3 client",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "**Group 1 client assets**\nLink to download the Synapse 3 client: https://www.razerzone.com/synapse-3\n\nThe Windows client is normally found in C:\\Program Files (x86)\\Razer\\Synapse3, with some number of support files in the C:\\Program Files (x86)\\Razer folder as well.\n\nWith the installation of Synapse 3, the user should also receive Razer Central, which is a Razer platform management client. This is normally found in C:\\Program Files (x86)\\Razer\\Razer Services and C:\\Program Files (x86)\\Razer\\InGameEngine.\n\n",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "Tier 3 assets - $300 - $150 (Rewards based on Impact)",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Please **refer to our bounty table** for the list of eligible assets and the potential value.\n\n* Other Razer Applications, e.g. Surround  - **$300 - $150**\n",
+          "integrity_requirement": null,
           "max_severity": "critical"
         }
       ],
