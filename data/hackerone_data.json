@@ -306,50 +306,6 @@
           "max_severity": "critical"
         },
         {
-          "asset_identifier": "Tumblr Blog Network",
-          "asset_type": "OTHER",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "*.tumblr.com\n\n*Note: Blogs are cached for 1 minute after first request (60s from first request); content is re-loaded into cache when a new request is submitted after the 61st second.*\n\nHow to identify you are looking at the Blog Network:\n* Header: `X-tumblr-user` can be used to identify if the domain is a blog on the Blog Network\n* View the domain in a browser, there will be a Tumblr banner visible. \n\nExclusions for this asset:\n* JavaScript is allowed; XSS is excluded from eligibility.\n* Pages can be framed; Clickjacking or other X-Frame-Options attacks are excluded from eligibility.",
-          "integrity_requirement": null,
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "Tumblr Dashboard",
-          "asset_type": "OTHER",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "Web Dashboard\n* www.tumblr.com\n\nMobile Dashboard\n* www.tumblr.com\n* Must use mobile device user-agent to access when testing with desktop browser. It's a completely new architecture, different tech stack from regular web dashboard.\t\n\nAPIs\n* api.tumblr.com",
-          "integrity_requirement": null,
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "Tumblr Mobile",
-          "asset_type": "OTHER",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "[Tumblr iOS](https://itunes.apple.com/us/app/tumblr/id305343404?mt=8)\n* com.tumblr.tumblr\n* Minimum OS version: iOS 11\n\n[Tumblr Android](https://play.google.com/store/apps/details?id=com.tumblr&hl=en_US)\n* com.tumblr\n* Minimum OS version: API 21\n\nExclusions:\n* Twitter api key in code\n* Certificate pinning",
-          "integrity_requirement": null,
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "Tumblr Services",
-          "asset_type": "OTHER",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "Tumblr Micro-Services \n* t.umblr.com - A link-redirection service domain.\n* *.tumblr.com - The site itself, the API, sub-services, S3 buckets and more.\n* *.srvcs.tumblr.com - Various micro-services domains used for logging and metrics, messaging, etc.\n* *.txmblr.com - Various safe-domains used to host UGC that could be malicious (e.g. safe.txmblr.com).\n\nTumblr Support\n* secure.tumblr.com\n* assets.tumblr.com\n* safe.tumblr.com\n* embed.tumblr.com\n\n**Tumblr SSRF Server**\nWe've set up a server inside our network that you can use for verifying SSRF vulnerabilities. It has the following assets you can target:\n* https://ssrf-server.tumblr.net\n* https://ssrf-server.tumblr.net/mp3_audio.mp3\n* https://ssrf-server.tumblr.net/mp4_video.mp4\n* https://ssrf-server.tumblr.net/gif_image.gif\n* https://ssrf-server.tumblr.net/png_image.png\n* https://ssrf-server.tumblr.net/html_document.html\n* https://ssrf-server.tumblr.net/javascript_document.js\n* https://ssrf-server.tumblr.net/text_document.txt\n* https://ssrf-server.tumblr.net/xml_document.xml",
-          "integrity_requirement": null,
-          "max_severity": "critical"
-        },
-        {
           "asset_identifier": "Verizon Media",
           "asset_type": "OTHER",
           "availability_requirement": null,
@@ -10864,7 +10820,7 @@
           "asset_type": "URL",
           "availability_requirement": "high",
           "confidentiality_requirement": "high",
-          "eligible_for_bounty": false,
+          "eligible_for_bounty": true,
           "eligible_for_submission": true,
           "instruction": "",
           "integrity_requirement": "high",
