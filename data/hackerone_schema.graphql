@@ -9096,6 +9096,7 @@ type Query implements Node {
     last: Int
     product_edition_filter: TriageInboxItemProductEditionFilterEnum = null
     team_filter: String = null
+    team_type: TriageInboxItemTeamTypeEnum = null
     view: TriageInboxItemViewEnum!
   ): TriageInboxItemConnection!
   user(username: String!): User
@@ -12924,6 +12925,14 @@ Valid values for the product edition filter of triage inbox items
 enum TriageInboxItemProductEditionFilterEnum {
   Enterprise
   Professional
+}
+
+"""
+Valid values for the team types of triage inbox items
+"""
+enum TriageInboxItemTeamTypeEnum {
+  all_low_volume_teams
+  all_teams
 }
 
 """
