@@ -21140,34 +21140,45 @@
         {
           "asset_identifier": " MS Office Add-In",
           "asset_type": "OTHER",
-          "availability_requirement": "medium",
-          "confidentiality_requirement": "medium",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
-          "instruction": "Grammarly add-on (works with MS Word and Outlook for Windows), where authorized users can check their Word documents or emails, including the auto-update functionality (can be tested on an [older version](https://download-office.grammarly.com/installer/GrammarlyAddInSetup6.6.110.exe)). Prerequisites: MS Word/Outlook, .NET Framework 4.5\n",
-          "integrity_requirement": "medium",
+          "instruction": "Grammarly add-on (works with MS Word and Outlook for Windows), where authorized users can check their Word documents or emails. Auto-update functionality can be tested on an [older version](https://download-office.grammarly.com/installer/GrammarlyAddInSetup6.6.110.exe). Prerequisites: MS Word/Outlook, .NET Framework 4.5.\n\nVulnerabilities are eligible for submission if they’re reproducible on **any version of** Word/Outlook on Windows 10 with **all latest security patches applied**. The vulnerability should be tested on a system without additional SDKs and development kits. We cover your expenses on a Word/Outlook license if the report appears being valid.\n",
+          "integrity_requirement": "high",
           "max_severity": "critical"
         },
         {
           "asset_identifier": "*.grammarly.io",
           "asset_type": "URL",
-          "availability_requirement": "medium",
+          "availability_requirement": "high",
           "confidentiality_requirement": "high",
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
           "instruction": "",
-          "integrity_requirement": "medium",
+          "integrity_requirement": "high",
           "max_severity": "critical"
         },
         {
           "asset_identifier": "*.grammarly.net",
           "asset_type": "URL",
-          "availability_requirement": "medium",
-          "confidentiality_requirement": "medium",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
           "instruction": "",
-          "integrity_requirement": "medium",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "*.proofit.com",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": "high",
           "max_severity": "critical"
         },
         {
@@ -21188,7 +21199,7 @@
           "confidentiality_requirement": "high",
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
-          "instruction": "Executable can be downloaded from [our website](https://download-editor.grammarly.com/osx/Grammarly.dmg):",
+          "instruction": "Executable can be downloaded from [our website](https://download-editor.grammarly.com/osx/Grammarly.dmg):\n\nOnly **remotely exploitable** issues in Desktop Editor are eligible for reporting.",
           "integrity_requirement": "high",
           "max_severity": "critical"
         },
@@ -21199,7 +21210,7 @@
           "confidentiality_requirement": "high",
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
-          "instruction": "Executable can be downloaded from [our website](https://download-editor.grammarly.com/windows/GrammarlySetup.exe)\n",
+          "instruction": "Executable can be downloaded from [our website](https://download-editor.grammarly.com/windows/GrammarlySetup.exe)\n\nOnly **remotely exploitable** issues in Desktop Editor are eligible for reporting.",
           "integrity_requirement": "high",
           "max_severity": "critical"
         },
@@ -21254,7 +21265,7 @@
           "confidentiality_requirement": null,
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
-          "instruction": "Check and process text, available for example at https://www.grammarly.com/plagiarism\n",
+          "instruction": "",
           "integrity_requirement": null,
           "max_severity": "critical"
         },
@@ -21265,7 +21276,7 @@
           "confidentiality_requirement": "high",
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
-          "instruction": "",
+          "instruction": "Vulnerabilities in Grammarly Mobile Keyboard for Android with a working proof of concept may qualify for an additional bounty through the [Google Play Security Rewards Program](https://hackerone.com/googleplay). To see which vulnerabilities may qualify for a bounty, please refer to the Google Play Security Rewards Program’s [Vulnerability Criteria](https://hackerone.com/googleplay).\n",
           "integrity_requirement": "high",
           "max_severity": "critical"
         },
@@ -21342,7 +21353,7 @@
           "confidentiality_requirement": "none",
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
-          "instruction": "",
+          "instruction": "This service doesn't handle, store or transfer any internal data or data of our users. Additionally, it is located in a separate VPC and isn't part of our infrastructure.\nWe accept only **critical submissions**(SSRF, XXE, SQLi, RCE) with a clearly reproducible **proof of concept code**.\n​\n _Reports that don't match these criteria will be closed as \"N/A\"._ ",
           "integrity_requirement": "low",
           "max_severity": "low"
         },
@@ -21364,7 +21375,7 @@
           "confidentiality_requirement": null,
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
-          "instruction": "Manage user subscriptions, upgrading to premium plan, etc.",
+          "instruction": "",
           "integrity_requirement": null,
           "max_severity": "critical"
         },
@@ -21459,57 +21470,24 @@
           "max_severity": "none"
         },
         {
-          "asset_identifier": "Password and email policy",
+          "asset_identifier": "Third party external services",
           "asset_type": "OTHER",
           "availability_requirement": null,
           "confidentiality_requirement": null,
           "eligible_for_bounty": false,
           "eligible_for_submission": false,
-          "instruction": "Please do not check for:\n- password length and complexity requirements\n- email validation feature\n\nWe are aware of the fact that these features are rather simple at the moment. This is a subject of an ongoing product work. We will update them in the future to ensure more strict rules.",
+          "instruction": "- `send.grammarly.com`\n- `calendar.grammarly.com`\n- `support.grammarly.com`\n- `status.grammarly.com`\n",
           "integrity_requirement": null,
           "max_severity": "none"
         },
         {
-          "asset_identifier": "calendar.grammarly.com",
+          "asset_identifier": "anagram.grammarly.io",
           "asset_type": "URL",
           "availability_requirement": null,
           "confidentiality_requirement": null,
           "eligible_for_bounty": false,
           "eligible_for_submission": false,
-          "instruction": "Third party external service\n\n",
-          "integrity_requirement": null,
-          "max_severity": "none"
-        },
-        {
-          "asset_identifier": "send.grammarly.com",
-          "asset_type": "URL",
-          "availability_requirement": "none",
-          "confidentiality_requirement": "none",
-          "eligible_for_bounty": false,
-          "eligible_for_submission": false,
-          "instruction": "Third party external service",
-          "integrity_requirement": "none",
-          "max_severity": "none"
-        },
-        {
-          "asset_identifier": "status.grammarly.com",
-          "asset_type": "URL",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": false,
-          "eligible_for_submission": false,
-          "instruction": "Third party external service",
-          "integrity_requirement": null,
-          "max_severity": "none"
-        },
-        {
-          "asset_identifier": "support.grammarly.com",
-          "asset_type": "URL",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": false,
-          "eligible_for_submission": false,
-          "instruction": "Third party external service.\n",
+          "instruction": "",
           "integrity_requirement": null,
           "max_severity": "none"
         },
