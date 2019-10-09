@@ -2362,6 +2362,7 @@ type Checklist implements Node {
     secure_order_by: FiltersChecklistCheckFilterOrder
     where: FiltersChecklistCheckFilterInput
   ): ChecklistCheckConnection
+  expiration_date: Date!
   i_have_unsubmitted_checklist_check_responses: Boolean!
   id: ID!
   name: String
@@ -5186,8 +5187,8 @@ Data point object
 """
 type DataPoint {
   id: ID!
-  x: Int!
-  y: Int!
+  x: String!
+  y: Float!
 }
 
 """
@@ -8552,6 +8553,39 @@ enum ProfilePictureSizes {
   xtralarge
 }
 
+input ProgramAnalyticsFilterInput {
+  asset_identifier: ProgramAnalyticsFilterStringInput
+  severity: ProgramAnalyticsFilterStringInput
+  weakness_external_id: ProgramAnalyticsFilterStringInput
+}
+
+input ProgramAnalyticsFilterStringInput {
+  eq: String
+  in: [String!]
+  is_null: Boolean
+}
+
+enum ProgramAnalyticsFromEnum {
+  response_targets
+}
+
+enum ProgramAnalyticsGroupEnum {
+  month_resolved_at
+  month_submitted_at
+  quarter_resolved_at
+  quarter_submitted_at
+  week_resolved_at
+  week_submitted_at
+  year_resolved_at
+  year_submitted_at
+}
+
+enum ProgramAnalyticsSelectEnum {
+  avg_time_to_resolution
+  max_time_to_resolution
+  min_time_to_resolution
+}
+
 """
 A program_health_acknowledgement for a team_member
 """
@@ -9018,6 +9052,7 @@ type Query implements Node {
     id: ID!
   ): Node
   oauth_application(client_id: String!): OauthApplication
+  program_analytics(end_date: DateTime!, from: ProgramAnalyticsFromEnum!, group: ProgramAnalyticsGroupEnum!, select: ProgramAnalyticsSelectEnum!, start_date: DateTime!, teams: [Int!]!, where: ProgramAnalyticsFilterInput!): [DataPoint]
   query: Query!
   report(id: Int!): Report
   report_retest_user(activity_id: Int!): ReportRetestUser
@@ -9094,7 +9129,6 @@ type Query implements Node {
     order_by: SlaStatusOrder = {field: TRIAGER_ROLE_AND_SLA_STATUS}
     team_states: [TeamState]
   ): SlaStatusConnection
-  statistics(from: String!, group_by: StatisticsSelectInput!, select: StatisticsSelectInput!, where: FiltersReportFilterInput!): [DataPoint]
   surveys(
     """
     Returns the elements in the list that come after the specified cursor.
@@ -9736,6 +9770,7 @@ input ReportFilterInput {
   first_program_activity_at__null: Boolean
   hacker_published: Boolean
   id: [Int]
+  keyword: String
   last_activity_at__gt: DateTime
   last_activity_at__lt: DateTime
   last_program_activity_at__gt: DateTime
@@ -10721,12 +10756,6 @@ type StaticParticipantEdge {
   The item at the end of the edge.
   """
   node: StaticParticipant
-}
-
-input StatisticsSelectInput {
-  dim: String!
-  func: String!
-  func_params: String
 }
 
 """
