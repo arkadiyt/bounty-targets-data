@@ -1619,6 +1619,7 @@ type AuditLogItem implements Node {
   log: String!
   parameters: String!
   source: String!
+  source_is_hackerone_employee: Boolean
   source_user: User
   subject: String!
   user_agent: String
@@ -8581,6 +8582,7 @@ enum ProgramAnalyticsGroupEnum {
 }
 
 enum ProgramAnalyticsSelectEnum {
+  count_missed_resolution_targets
   p50_time_to_resolution
 }
 
@@ -11544,6 +11546,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
   allows_disclosure_assistance: Boolean!
   allows_private_disclosure: Boolean
   anc_enabled: Boolean
+  attachments: [Attachment]
   audit_log_items(
     """
     Returns the elements in the list that come after the specified cursor.
