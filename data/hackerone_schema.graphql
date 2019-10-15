@@ -2335,6 +2335,7 @@ type ChallengeSetting implements Node {
 A checklist
 """
 type Checklist implements Node {
+  _id: ID!
   checklist_check(id: ID!): ChecklistCheck
 
   """
@@ -2363,7 +2364,7 @@ type Checklist implements Node {
     secure_order_by: FiltersChecklistCheckFilterOrder
     where: FiltersChecklistCheckFilterInput
   ): ChecklistCheckConnection
-  expiration_date: Date!
+  expires_at: DateTime!
   i_have_unsubmitted_checklist_check_responses: Boolean!
   id: ID!
   name: String
@@ -11718,6 +11719,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
     secure_order_by: FiltersChecklistCheckResponseFilterOrder
     where: FiltersChecklistCheckResponseFilterInput
   ): ChecklistCheckResponseConnection
+  checklist_id: ID
   child_teams(
     """
     Returns the elements in the list that come after the specified cursor.
@@ -12566,6 +12568,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
   updated_at: DateTime
   url: URI!
   vpn_enabled: Boolean
+  vpn_suspended: Boolean
   weaknesses(
     """
     Returns the elements in the list that come after the specified cursor.
