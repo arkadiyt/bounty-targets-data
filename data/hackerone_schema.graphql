@@ -2361,6 +2361,7 @@ type Checklist implements Node {
     Returns the last _n_ elements from the list.
     """
     last: Int
+    order_by: ChecklistCheckOrderInput
     secure_order_by: FiltersChecklistCheckFilterOrder
     where: FiltersChecklistCheckFilterInput
   ): ChecklistCheckConnection
@@ -2457,6 +2458,19 @@ type ChecklistCheckEdge {
   The item at the end of the edge.
   """
   node: ChecklistCheck
+}
+
+"""
+Fields on which a collection of ChecklistCheck can be ordered
+"""
+enum ChecklistCheckOrderField {
+  expires_at
+  title
+}
+
+input ChecklistCheckOrderInput {
+  direction: OrderDirection!
+  field: ChecklistCheckOrderField!
 }
 
 """
@@ -3928,7 +3942,7 @@ input CreateOrUpdateJiraIntegrationInput {
   """
   clientMutationId: String
   custom: String
-  description: String!
+  description: String
   generate_webhook_in_jira_if_does_not_exist: Boolean
   issue_fields: [JiraFieldInputType!]
   issue_type: Int!
@@ -3936,7 +3950,7 @@ input CreateOrUpdateJiraIntegrationInput {
   pid: Int!
   priority_rating_ids: JiraPrioritySeverityInput
   project_selection_enabled: Boolean
-  summary: String!
+  summary: String
   team_id: ID!
 }
 
@@ -7184,8 +7198,8 @@ type InvitationsSoftLaunch implements InvitationInterface & Node {
 A field of JIRA issue type
 """
 type JiraField implements Node {
-  description: String!
-  field_type: String!
+  description: String
+  field_type: String
   id: ID!
   name: String!
   value: String!
@@ -8947,6 +8961,10 @@ type Query implements Node {
   bank_transfer_reference: BankTransferReference
   checklist_check(id: ID!): ChecklistCheck
   checklist_check_response(id: ID!): ChecklistCheckResponse
+
+  """
+  A Resolver for ChecklistChecks
+  """
   checklist_checks(
     """
     Returns the elements in the list that come after the specified cursor.
@@ -8967,6 +8985,9 @@ type Query implements Node {
     Returns the last _n_ elements from the list.
     """
     last: Int
+    order_by: ChecklistCheckOrderInput
+    secure_order_by: FiltersChecklistCheckFilterOrder
+    where: FiltersChecklistCheckFilterInput
   ): ChecklistCheckConnection
 
   """
@@ -17024,6 +17045,7 @@ type User implements Node & ResourceInterface {
     Returns the last _n_ elements from the list.
     """
     last: Int
+    order_by: ChecklistCheckOrderInput
     secure_order_by: FiltersChecklistCheckFilterOrder
     where: FiltersChecklistCheckFilterInput
   ): ChecklistCheckConnection
