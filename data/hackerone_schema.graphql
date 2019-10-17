@@ -6634,6 +6634,13 @@ input FiltersTeamFilterOrder {
   started_accepting_at: FilterOrderPredicateInput
 }
 
+input FiltersTeamMemberFilterInput {
+  _and: [FiltersTeamMemberFilterInput]
+  _or: [FiltersTeamMemberFilterInput]
+  concealed: BooleanPredicateInput
+  id: IntPredicateInput
+}
+
 input FiltersTriageSubscriptionFilterInput {
   _and: [FiltersTriageSubscriptionFilterInput]
   _or: [FiltersTriageSubscriptionFilterInput]
@@ -17143,6 +17150,7 @@ type User implements Node & ResourceInterface {
     last: Int
     order_by: MembershipOrderInput = {field: TEAM_NAME, direction: ASC}
     team_handles: [String] = []
+    where: FiltersTeamMemberFilterInput
   ): TeamMemberConnection
   name: String
   new_feature_notification: NewFeatureNotification
