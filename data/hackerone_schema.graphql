@@ -11155,9 +11155,10 @@ type StructuredScopesConnection {
 A HackerOne programs's submission requirements
 """
 type SubmissionRequirements implements Node {
+  created_at: DateTime
   id: ID!
-  mfa_required_at: String
-  terms_required_at: String
+  mfa_required_at: DateTime
+  terms_required_at: DateTime
 }
 
 """
@@ -12524,6 +12525,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
     last: Int
     order_by: TeamMemberOrder = {direction: ASC, field: username}
   ): TeamMemberConnection
+  terms_html: String
   thanks_items(
     """
     Returns the elements in the list that come after the specified cursor.
@@ -17110,6 +17112,7 @@ type User implements Node & ResourceInterface {
     secure_order_by: FiltersChecklistCheckFilterOrder
     where: FiltersChecklistCheckFilterInput
   ): ChecklistCheckConnection
+  cleared: Boolean!
   created_at: DateTime!
   demo_hacker: Boolean!
   disabled: Boolean!
