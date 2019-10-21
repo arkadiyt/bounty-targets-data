@@ -25449,6 +25449,230 @@
     }
   },
   {
+    "id": 25188,
+    "name": "Ping Identity",
+    "handle": "pingidentity",
+    "url": "https://hackerone.com/pingidentity",
+    "offers_bounties": true,
+    "quick_to_bounty": false,
+    "quick_to_first_response": true,
+    "targets": {
+      "in_scope": [
+        {
+          "asset_identifier": "https://api-staging.pingone.com/*",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "\n* **What it is:**\n   * REST API for configuring and managing your PingOne For Customers organization\n* **Specific things to look for:**  \n   * Privilege escalation (role descriptions)\n   * Data exfiltration\n   * Mass assignment vulnerabilities\n* **Test Plan:**\n   * Spider the API endpoints\n   * Fuzzing input values\n   * Probe authorization and permissions\n   * Examine any service-to-service interactions for potential CSRF/SSRF\n\nPlease note that this documentation points to **PROD**, which is out of scope for this engagement. To access the ORT environment URLs will have to be appended with -staging like the console link above.\n",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://apps-staging.pingone.com/*",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "* **What it is:**\n   * Cloudfront distribution for the PingOne for Customers login/authentication flow orchestration and self-service account/profile management user interfaces\n* **What it does:**\n   * Provides user interface for administrators to configure authentication flows and assign different authentication policies \n   * Provides interface for end users to manage their account profiles and settings \n* **Specific things to look for:**  \n   * Test UI for XSS\n   * CSRF/SSRF\n   * User Impersonation\n   * Privilege Escalation\n   * Session Management (Logout, account takeover, or impersonation issues)\n   * Access Control Misconfigurations\n   * Data Exfiltration\n   * Spider the site\n   * Authentication or authorization issues\n* **Test Plan:**\n      * To access apps-staging.pingone.com\n      * Log in to console-staging.pingone.com/?env={YOUR_ENVIORNMENT_ID_HERE}\n      * Click on the user icon in the top right corner\n      * Navigate to one of the My Account pages in the dropdown menu, either: Profile, Authentication, or Change Password, and the user will then be taken to the apps-staging.pingone.com endpoint.\n",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://console-staging.pingone.com/*",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "* **What it is:**\n   * Administrative console to the PingOne For Customers platform that manages user access, authentication types, and connected applications.\n   * **Here's how to add an application to your PingOne For Customer environment:**\n      https://youtu.be/TBA5VTfnsSE\n   * **Sample client-side app (Please note that the content of the github repository is out of scope):**\n      https://github.com/pingidentity/pingone-customers-sample-oidc\n\n* **What it does:**\n   * Allows administrators to configure authentication workflows and assign different authentication policies (SAML, OAuth2, and OpenID Connect are supported) to each of your applications.\n   * Supports Single-Sign-On (SSO) and Multi-Factor Authentication (MFA) across all connected applications.\n   * Offers robust user-management capabilities.\n* **Specific things to look for:**\n   * XSS\n   * CSRF/SSRF\n   * User token compromise that is kept in session storage\n   * Event passing to and from the iframe that hosts the app that bundles and renders the main page content.\n* **Test Plan:**\n   * Spider the site\n   * Test UI for XSS\n   * Check for client-side controls\n   * Check for authentication or authorization issues\n   * Check session management for:\n      * Logout, account takeover, or impersonation issues\n\n   * **You will be emailed a test account with a one-time-use password. Your login sign-on URL will include your environment ID. E.g. https://console-staging.pingone.com/?env=ENV_ID.**\n",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://ort-admin.pingone.com/*",
+          "asset_type": "URL",
+          "availability_requirement": "low",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "\n* **What it is:**\n   * Administrative web portal for PingOne For Enterprise (P14E)\n* **What it does:**\n   * Allows P14E administrators to manage all aspects of their enterprise user accounts\n* **Specific things to look for:**\n   * Privilege escalation ([role descriptions](https://documentation.pingidentity.com/pingone/employeeSsoAdminGuide/index.shtml#changeAdminRoles.html))\n   * XSS\n   * SSRF\n* **Test Plan:**\n   * [Typical web app test plan](https://github.com/OWASP/CheatSheetSeries/blob/master/cheatsheets/Web_Service_Security_Cheat_Sheet.md)",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://ort-authenticator.pingone.com/*",
+          "asset_type": "URL",
+          "availability_requirement": "none",
+          "confidentiality_requirement": "medium",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "\n* **What it is:**\n   * Multi-factor Authentication (MFA) authenticator service\n   * MFA is configured via the PingOne Desktop > Devices > My Device > Add.\n   * Ping Authenticator used for Multi-Factor Authentication (MFA)\n   * The authenticator is a service which provides multi-factor via PingID mobile applications available in the iTunes and Android app stores, Yubikey Series 4, PingID Desktop apps for OS X and Windows, or email.\n   * The authenticator service is a back-end hosted service.\n   * The client MFA applications are not in scope but the protocol data and authenticator service are, this includes requests and responses.\n\n* **What it does:**\n   * Employs MFA (typically [PingID](https://www.pingidentity.com/en/cloud/pingid.html)) to authenticate users and then pass control back to PingOne for Enterprise\n* **Specific things to look for:**\n   * Ways to break the authentication flow between the authenticator and other services\n   * MITM and replay attacks\n* **Test Plan:**\n   * Try to manually forge or alter JSON web tokens (JWT)\n   * MFA bypass\n\n\n* MFA is configured via the PingOne Desktop > Devices > My Device > Add.\n* The authenticator service is a back-end hosted service.\n* The client MFA applications are not in scope but the protocol data and authenticator service are, this includes requests and responses.",
+          "integrity_requirement": "low",
+          "max_severity": "high"
+        },
+        {
+          "asset_identifier": "https://ort-desktop.pingone.com/*",
+          "asset_type": "URL",
+          "availability_requirement": "none",
+          "confidentiality_requirement": "medium",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "\n* **What it is:** \n   * Central hub of Ping One For Enterprise, a cloud-based dock that provides users with secure SSO access to an expansive library of applications\n* **What it does:** \n   * Provides many pre-existing integrations with popular SaaS applications\n   * Leverages SAML, OIDC and other secure identity standards to integrate with any other cloud-based applications\nProvides the option of storing user identity data in PingOne’s cloud directory\n* **Specific things to look for:** \n   * User impersonation\n   * Privilege escalation ([role descriptions](https://documentation.pingidentity.com/pingone/employeeSsoAdminGuide/index.shtml#changeAdminRoles.html))\n   * Session management\n* **Test Plan:** \n   * [Typical web app test plan](https://github.com/OWASP/CheatSheetSeries/blob/master/cheatsheets/Web_Service_Security_Cheat_Sheet.md)",
+          "integrity_requirement": "low",
+          "max_severity": "high"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "asset_identifier": "https://*.pingidentity.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "https://*.pingidentity.io",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "https://*.pingidentity.net",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "https://admin.pingone.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "https://api.pingone.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "https://authenticator.pingone.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "https://console.pingone.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "https://desktop.pingone.com",
+          "asset_type": "URL",
+          "availability_requirement": "none",
+          "confidentiality_requirement": "none",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "",
+          "integrity_requirement": "none",
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "https://developer.pingidentity.com/*",
+          "asset_type": "URL",
+          "availability_requirement": "none",
+          "confidentiality_requirement": "low",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "",
+          "integrity_requirement": "low",
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "https://test-desktop.pingone.com",
+          "asset_type": "URL",
+          "availability_requirement": "none",
+          "confidentiality_requirement": "none",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "",
+          "integrity_requirement": "none",
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "https://test-sso.connect.pingidentity.com",
+          "asset_type": "URL",
+          "availability_requirement": "none",
+          "confidentiality_requirement": "none",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "",
+          "integrity_requirement": "none",
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "https://uploads-staging.pingone.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "https://uploads.pingone.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        }
+      ]
+    }
+  },
+  {
     "id": 25570,
     "name": "passhash",
     "handle": "passhash",
