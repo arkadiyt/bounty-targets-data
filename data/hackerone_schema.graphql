@@ -9369,6 +9369,7 @@ type Query implements Node {
     Returns the elements in the list that come before the specified cursor.
     """
     before: String
+    cleared: Boolean = false
 
     """
     Returns the first _n_ elements from the list.
