@@ -2545,6 +2545,7 @@ type ChecklistCheckResponse implements ActivitiesInterface & Node {
   attachments: [Attachment]
   checklist_check: ChecklistCheck
   expires_at: DateTime
+  i_can_update: Boolean!
   id: ID!
   message: String
   reports: [Report]
@@ -8682,6 +8683,16 @@ enum ProfilePictureSizes {
   xtralarge
 }
 
+input ProgramAnalyticsBenchmarkFilterInput {
+  industry: ProgramAnalyticsFilterStringInput
+  severity: ProgramAnalyticsFilterStringInput
+}
+
+enum ProgramAnalyticsBenchmarkGroupEnum {
+  quarter_resolved_at
+  year_resolved_at
+}
+
 input ProgramAnalyticsFilterInput {
   asset_identifier: ProgramAnalyticsFilterStringInput
   severity: ProgramAnalyticsFilterStringInput
@@ -9188,6 +9199,7 @@ type Query implements Node {
   ): Node
   oauth_application(client_id: String!): OauthApplication
   program_analytics(end_date: DateTime!, from: ProgramAnalyticsFromEnum!, group: ProgramAnalyticsGroupEnum!, select: ProgramAnalyticsSelectEnum!, start_date: DateTime!, teams: [Int!]!, where: ProgramAnalyticsFilterInput!): [DataPoint]
+  program_analytics_benchmarks(end_date: DateTime!, from: ProgramAnalyticsFromEnum!, group: ProgramAnalyticsBenchmarkGroupEnum!, select: ProgramAnalyticsSelectEnum!, start_date: DateTime!, where: ProgramAnalyticsBenchmarkFilterInput!): [DataPoint]
   query: Query!
   report(id: Int!): Report
   report_retest_user(activity_id: Int!): ReportRetestUser
@@ -12935,6 +12947,7 @@ type TeamMember implements Node & NotificationPreferencesInterface {
   auto_subscribe: Boolean
   concealed: Boolean
   created_at: DateTime!
+  groups: [TeamMemberGroup]
   i_can_leave_team: Boolean!
   id: ID!
   notification_preference: String
