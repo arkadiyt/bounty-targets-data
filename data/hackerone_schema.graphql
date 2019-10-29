@@ -11896,7 +11896,6 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
     """
     last: Int
   ): UserConnection
-  bounties_paid_last_90_days: Int
   bounties_total: String
   bounty_awarded_staleness_threshold: Int
 
@@ -12108,6 +12107,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
   facebook_team: Boolean
   fancy_slack_integration: Boolean
   first_response_time(date_start: DateTime = null): Float
+  formatted_bounties_paid_last_90_days: Int
   formatted_total_bounties_paid_amount: Int
   goal_valid_reports: Int
   grace_period_remaining_in_days: Int
