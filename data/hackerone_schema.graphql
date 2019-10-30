@@ -9245,7 +9245,7 @@ type Query implements Node {
     id: ID!
   ): Node
   oauth_application(client_id: String!): OauthApplication
-  program_analytics(end_date: DateTime!, from: ProgramAnalyticsFromEnum!, group: ProgramAnalyticsGroupEnum!, select: ProgramAnalyticsSelectEnum!, start_date: DateTime!, teams: [Int!]!, where: ProgramAnalyticsFilterInput!): [DataPoint]
+  program_analytics(end_date: DateTime!, from: ProgramAnalyticsFromEnum!, group: ProgramAnalyticsGroupEnum!, select: ProgramAnalyticsSelectEnum!, start_date: DateTime!, teams: [String!]!, where: ProgramAnalyticsFilterInput!): [DataPoint]
   program_analytics_benchmarks(end_date: DateTime!, from: ProgramAnalyticsFromEnum!, group: ProgramAnalyticsBenchmarkGroupEnum!, select: ProgramAnalyticsSelectEnum!, start_date: DateTime!, where: ProgramAnalyticsBenchmarkFilterInput!): [DataPoint]
   query: Query!
   report(id: Int!): Report
