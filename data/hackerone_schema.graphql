@@ -9519,7 +9519,6 @@ type Query implements Node {
     secure_order_by: FiltersReportFilterOrder
     state: ReportStateEnum
     substate: ReportStateEnum
-    triage_dashboard_tab: String = null
     where: FiltersReportFilterInput
     without_scope: Boolean = null
   ): ReportConnection
@@ -11432,7 +11431,6 @@ type StructuredScope implements Node & ResourceInterface {
     secure_order_by: FiltersReportFilterOrder
     state: ReportStateEnum
     substate: ReportStateEnum
-    triage_dashboard_tab: String = null
     where: FiltersReportFilterInput
     without_scope: Boolean = null
   ): ReportConnection
@@ -12765,7 +12763,6 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
     secure_order_by: FiltersReportFilterOrder
     state: ReportStateEnum
     substate: ReportStateEnum
-    triage_dashboard_tab: String = null
     violates_minimum_sla: SlaTypeEnum
     where: FiltersReportFilterInput
     without_scope: Boolean = null
@@ -17882,7 +17879,6 @@ type User implements Node & ResourceInterface {
     secure_order_by: FiltersReportFilterOrder
     state: ReportStateEnum
     substate: ReportStateEnum
-    triage_dashboard_tab: String = null
     where: FiltersReportFilterInput
     without_scope: Boolean = null
   ): ReportConnection
