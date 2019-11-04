@@ -6038,6 +6038,17 @@
           "max_severity": "critical"
         },
         {
+          "asset_identifier": "airtable.js SDK (https://www.npmjs.com/package/airtable)",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "- Install `airtable.js` via `npm install airtable`\n- Visit https://staging.airtable.com/account and generate an API key\n- Create a new Javascript file and add the following lines:\n\n```javascript\nconst Airtable = require('airtable');\nconst airtable = new Airtable({\n    apiKey: 'PUT YOUR API KEY HERE',\n    endpointUrl: 'https://api-staging.airtable.com', // IMPORTANT: you MUST set the endpointUrl attribute to this URL, or else you will be testing on airtable.com, which is out of scope\n});\n```\n\nSee https://staging.airtable.com/api for instructions on how to use the API, as well as [the source code on Github](https://github.com/airtable/airtable.js)\n\nPlease note that reports about outdated/vulnerable dependencies flagged by `npm audit` or `yarn audit` are **out of scope**. Vulnerabilities discovered via manual code audits are acceptable.",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
           "asset_identifier": "api-staging.airtable.com",
           "asset_type": "URL",
           "availability_requirement": null,
