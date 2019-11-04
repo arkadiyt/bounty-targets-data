@@ -6643,6 +6643,17 @@ input FiltersHacktivityItemFilterOrder {
   latest_disclosable_activity_at: FilterOrderPredicateInput
 }
 
+input FiltersPentestFilterInput {
+  _and: [FiltersPentestFilterInput]
+  _or: [FiltersPentestFilterInput]
+  id: IntPredicateInput
+  state: PentestStateEnumPredicateInput
+}
+
+input FiltersPentestFilterOrder {
+  id: FilterOrderPredicateInput
+}
+
 input FiltersReportFilterInput {
   _and: [FiltersReportFilterInput]
   _or: [FiltersReportFilterInput]
@@ -8665,6 +8676,192 @@ type PaypalPayoutPreferenceType implements Node & PayoutPreferenceInterface {
 }
 
 """
+A pentest
+"""
+type Pentest implements Node {
+  _id: ID!
+  award_amount: Int!
+  award_amount_lead: Int!
+  description: String!
+  ends_at: DateTime!
+  id: ID!
+  industry: String!
+  lead_pentester: Pentester
+  methodology: String!
+  name: String!
+  pentesters(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+  ): PentesterConnection
+  starts_at: DateTime!
+  state: PentestStateEnum
+  structured_scopes(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+    archived: Boolean = null
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+    eligible_for_submission: Boolean = null
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+    search: String = null
+  ): StructuredScopesConnection
+  team: Team!
+}
+
+"""
+The connection type for Pentest.
+"""
+type PentestConnection {
+  """
+  A list of edges.
+  """
+  edges: [PentestEdge]
+
+  """
+  A list of nodes.
+  """
+  nodes: [Pentest]
+
+  """
+  Information to aid in pagination.
+  """
+  pageInfo: PageInfo!
+
+  """
+  Int
+  """
+  total_count: Int!
+}
+
+"""
+An edge in a connection.
+"""
+type PentestEdge {
+  """
+  A cursor for use in pagination.
+  """
+  cursor: String!
+
+  """
+  The item at the end of the edge.
+  """
+  node: Pentest
+}
+
+"""
+Fields on which a collection of Pentests can be ordered
+"""
+enum PentestOrderField {
+  created_at
+  starts_at
+}
+
+input PentestOrderInput {
+  direction: OrderDirection!
+  field: PentestOrderField!
+}
+
+"""
+Pentest state enum
+"""
+enum PentestStateEnum {
+  draft
+  published
+}
+
+input PentestStateEnumPredicateInput {
+  _eq: PentestStateEnum
+  _in: [PentestStateEnum]
+  _is_null: Boolean
+  _neq: PentestStateEnum
+  _nin: [PentestStateEnum]
+}
+
+"""
+A pentester
+"""
+type Pentester implements Node {
+  _id: ID!
+  accepted_at: DateTime
+  applied_at: DateTime
+  id: ID!
+  pentest: Pentest!
+  revoked_at: DateTime
+  user: User!
+}
+
+"""
+The connection type for Pentester.
+"""
+type PentesterConnection {
+  """
+  A list of edges.
+  """
+  edges: [PentesterEdge]
+
+  """
+  A list of nodes.
+  """
+  nodes: [Pentester]
+
+  """
+  Information to aid in pagination.
+  """
+  pageInfo: PageInfo!
+
+  """
+  Int
+  """
+  total_count: Int!
+}
+
+"""
+An edge in a connection.
+"""
+type PentesterEdge {
+  """
+  A cursor for use in pagination.
+  """
+  cursor: String!
+
+  """
+  The item at the end of the edge.
+  """
+  node: Pentester
+}
+
+"""
 All available permissions
 """
 enum PermissionEnum {
@@ -9246,6 +9443,34 @@ type Query implements Node {
     id: ID!
   ): Node
   oauth_application(client_id: String!): OauthApplication
+
+  """
+  A Resolver for Pentests
+  """
+  pentests(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+    order_by: PentestOrderInput
+    secure_order_by: FiltersPentestFilterOrder
+    where: FiltersPentestFilterInput
+  ): PentestConnection
   program_analytics(end_date: DateTime!, from: ProgramAnalyticsFromEnum!, group: ProgramAnalyticsGroupEnum!, select: ProgramAnalyticsSelectEnum!, start_date: DateTime!, teams: [String!]!, where: ProgramAnalyticsFilterInput!): [DataPoint]
   program_analytics_benchmarks(end_date: DateTime!, from: ProgramAnalyticsFromEnum!, group: ProgramAnalyticsBenchmarkGroupEnum!, select: ProgramAnalyticsSelectEnum!, start_date: DateTime!, where: ProgramAnalyticsBenchmarkFilterInput!): [DataPoint]
   query: Query!
@@ -12340,6 +12565,34 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
     month: Int = null
     year: Int = null
   ): PaymentTransactionConnection
+
+  """
+  A Resolver for Pentests
+  """
+  pentests(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+    order_by: PentestOrderInput
+    secure_order_by: FiltersPentestFilterOrder
+    where: FiltersPentestFilterInput
+  ): PentestConnection
   phabricator_integration: PhabricatorIntegration
   policy: String
   policy_html: String
