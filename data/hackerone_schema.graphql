@@ -9066,13 +9066,8 @@ enum ProfilePictureSizes {
 }
 
 input ProgramAnalyticsBenchmarkFilterInput {
-  industry: ProgramAnalyticsFilterStringInput
+  industry_name: ProgramAnalyticsFilterStringInput
   severity: ProgramAnalyticsFilterStringInput
-}
-
-enum ProgramAnalyticsBenchmarkGroupEnum {
-  quarter_resolved_at
-  year_resolved_at
 }
 
 input ProgramAnalyticsFilterInput {
@@ -9609,7 +9604,7 @@ type Query implements Node {
     where: FiltersPentestFilterInput
   ): PentestConnection
   program_analytics(end_date: DateTime!, from: ProgramAnalyticsFromEnum!, group: ProgramAnalyticsGroupEnum!, select: ProgramAnalyticsSelectEnum!, start_date: DateTime!, teams: [String!]!, where: ProgramAnalyticsFilterInput!): [DataPoint]
-  program_analytics_benchmarks(end_date: DateTime!, from: ProgramAnalyticsFromEnum!, group: ProgramAnalyticsBenchmarkGroupEnum!, select: ProgramAnalyticsSelectEnum!, start_date: DateTime!, where: ProgramAnalyticsBenchmarkFilterInput!): [DataPoint]
+  program_analytics_benchmarks(end_date: DateTime!, from: ProgramAnalyticsFromEnum!, group: ProgramAnalyticsGroupEnum!, select: ProgramAnalyticsSelectEnum!, start_date: DateTime!, where: ProgramAnalyticsBenchmarkFilterInput!): [DataPoint]
   query: Query!
   report(id: Int!): Report
   report_retest_user(activity_id: Int!): ReportRetestUser
