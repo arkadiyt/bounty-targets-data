@@ -8851,6 +8851,7 @@ type Pentest implements Node {
   started: Boolean!
   starts_at: DateTime!
   state: PentestStateEnum
+  structured_scope_types: [String!]
   structured_scopes(
     """
     Returns the elements in the list that come after the specified cursor.
