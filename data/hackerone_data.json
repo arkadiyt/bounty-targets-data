@@ -1443,17 +1443,6 @@
           "max_severity": "critical"
         },
         {
-          "asset_identifier": "Vimeo.com/showcase",
-          "asset_type": "URL",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "",
-          "integrity_requirement": null,
-          "max_severity": "critical"
-        },
-        {
           "asset_identifier": "api.vimeo.com",
           "asset_type": "URL",
           "availability_requirement": "medium",
@@ -1506,6 +1495,17 @@
           "eligible_for_submission": true,
           "instruction": "Legacy API endpoints such as vimeo.com/api",
           "integrity_requirement": "medium",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "vimeo.com/create",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": null,
           "max_severity": "critical"
         },
         {
@@ -9523,24 +9523,13 @@
           "max_severity": "critical"
         },
         {
-          "asset_identifier": "Soundbetter",
-          "asset_type": "OTHER",
-          "availability_requirement": "high",
-          "confidentiality_requirement": "high",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "Soundbetter was acquired by Spotify in 2019.\n\nFind below a list of in-scope targets. Note that it is continuously updated:\n~~~\nsoundbetter.com",
-          "integrity_requirement": "high",
-          "max_severity": "critical"
-        },
-        {
           "asset_identifier": "Soundtrap",
           "asset_type": "OTHER",
           "availability_requirement": "high",
           "confidentiality_requirement": "high",
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
-          "instruction": "Soundtrap was acquired by Spotify in 2017.\n\nFind below a list of in-scope targets. Note that it is continuously updated:\n~~~\n15minutesoffame.com\nsoundtrap.com",
+          "instruction": "Soundtrap was acquired by Spotify in 2017.\n\nFind below a list of in-scope targets. Note that it is continuously updated:\n~~~\nsoundtrap.com",
           "integrity_requirement": "high",
           "max_severity": "critical"
         },
@@ -9675,6 +9664,17 @@
           "eligible_for_bounty": false,
           "eligible_for_submission": false,
           "instruction": "This scope should be selected if none of the scope above apply.",
+          "integrity_requirement": "high",
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "Soundbetter",
+          "asset_type": "OTHER",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "Soundbetter was acquired by Spotify in 2019.\n\nFind below a list of in-scope targets. Note that it is continuously updated:\n~~~\nsoundbetter.com",
           "integrity_requirement": "high",
           "max_severity": "none"
         },
@@ -16909,129 +16909,10 @@
     "quick_to_first_response": false,
     "targets": {
       "in_scope": [
-        {
-          "asset_identifier": "api.rbk.money",
-          "asset_type": "URL",
-          "availability_requirement": "high",
-          "confidentiality_requirement": "high",
-          "eligible_for_bounty": false,
-          "eligible_for_submission": true,
-          "instruction": "RBKmoney Public API",
-          "integrity_requirement": "high",
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "atlas-mirror.rbkmoney.com",
-          "asset_type": "URL",
-          "availability_requirement": "low",
-          "confidentiality_requirement": "none",
-          "eligible_for_bounty": false,
-          "eligible_for_submission": true,
-          "instruction": "Public VMs repository.",
-          "integrity_requirement": "low",
-          "max_severity": "medium"
-        },
-        {
-          "asset_identifier": "auth.rbk.money",
-          "asset_type": "URL",
-          "availability_requirement": "high",
-          "confidentiality_requirement": "high",
-          "eligible_for_bounty": false,
-          "eligible_for_submission": true,
-          "instruction": "RBKmoney Authentication center",
-          "integrity_requirement": "high",
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "checkout.rbk.money",
-          "asset_type": "URL",
-          "availability_requirement": "high",
-          "confidentiality_requirement": "high",
-          "eligible_for_bounty": false,
-          "eligible_for_submission": true,
-          "instruction": "RBKmoney Checkout gate",
-          "integrity_requirement": "high",
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "dashboard.rbk.money",
-          "asset_type": "URL",
-          "availability_requirement": "medium",
-          "confidentiality_requirement": "high",
-          "eligible_for_bounty": false,
-          "eligible_for_submission": true,
-          "instruction": "RBKmoney Merchant control center",
-          "integrity_requirement": "high",
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "insales.rbkmoney.com",
-          "asset_type": "URL",
-          "availability_requirement": "medium",
-          "confidentiality_requirement": "medium",
-          "eligible_for_bounty": false,
-          "eligible_for_submission": true,
-          "instruction": "Customer portal",
-          "integrity_requirement": "medium",
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "rbk.mn",
-          "asset_type": "URL",
-          "availability_requirement": "none",
-          "confidentiality_requirement": "low",
-          "eligible_for_bounty": false,
-          "eligible_for_submission": true,
-          "instruction": "RBKmoney URL shortener",
-          "integrity_requirement": "none",
-          "max_severity": "low"
-        },
-        {
-          "asset_identifier": "rbkmoney.com",
-          "asset_type": "URL",
-          "availability_requirement": "none",
-          "confidentiality_requirement": "low",
-          "eligible_for_bounty": false,
-          "eligible_for_submission": true,
-          "instruction": "Landing",
-          "integrity_requirement": "low",
-          "max_severity": "medium"
-        },
-        {
-          "asset_identifier": "welcome.rbk.money",
-          "asset_type": "URL",
-          "availability_requirement": "low",
-          "confidentiality_requirement": "none",
-          "eligible_for_bounty": false,
-          "eligible_for_submission": true,
-          "instruction": "Welcome page.",
-          "integrity_requirement": "low",
-          "max_severity": "medium"
-        }
+
       ],
       "out_of_scope": [
-        {
-          "asset_identifier": "*.rbkmoney.ru",
-          "asset_type": "URL",
-          "availability_requirement": "none",
-          "confidentiality_requirement": "none",
-          "eligible_for_bounty": false,
-          "eligible_for_submission": false,
-          "instruction": "Portal",
-          "integrity_requirement": "none",
-          "max_severity": "none"
-        },
-        {
-          "asset_identifier": "merchant.rbkmoney.com",
-          "asset_type": "URL",
-          "availability_requirement": "none",
-          "confidentiality_requirement": "none",
-          "eligible_for_bounty": false,
-          "eligible_for_submission": false,
-          "instruction": "Out of scope",
-          "integrity_requirement": "none",
-          "max_severity": "none"
-        }
+
       ]
     }
   },
