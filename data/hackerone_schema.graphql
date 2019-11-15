@@ -6778,8 +6778,8 @@ input FiltersPentestFilterOrder {
 input FiltersPentesterFilterInput {
   _and: [FiltersPentesterFilterInput]
   _or: [FiltersPentesterFilterInput]
-  accepted_at: DateTimePredicateInput
   id: IntPredicateInput
+  state: PentesterStateEnumPredicateInput
 }
 
 input FiltersReportFilterInput {
@@ -8860,6 +8860,7 @@ type Pentest implements Node {
   award_amount_lead: Int!
   description: String!
   ends_at: DateTime!
+  i_accepted: Boolean!
   i_applied: Boolean!
   i_can_apply: Boolean!
   i_can_revoke: Boolean!
@@ -8983,8 +8984,11 @@ input PentestOrderInput {
 Pentest state enum
 """
 enum PentestStateEnum {
+  delivered
   draft
+  ended
   published
+  scheduled
 }
 
 input PentestStateEnumPredicateInput {
@@ -9005,6 +9009,7 @@ type Pentester implements Node {
   id: ID!
   pentest: Pentest!
   revoked_at: DateTime
+  state: PentesterStateEnum!
   user: User!
 }
 
@@ -9046,6 +9051,23 @@ type PentesterEdge {
   The item at the end of the edge.
   """
   node: Pentester
+}
+
+"""
+Pentester state enum
+"""
+enum PentesterStateEnum {
+  accepted
+  applied
+  revoked
+}
+
+input PentesterStateEnumPredicateInput {
+  _eq: PentesterStateEnum
+  _in: [PentesterStateEnum]
+  _is_null: Boolean
+  _neq: PentesterStateEnum
+  _nin: [PentesterStateEnum]
 }
 
 """
