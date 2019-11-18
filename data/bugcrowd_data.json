@@ -4565,6 +4565,10 @@
     "targets": {
       "in_scope": [
         {
+          "type": "other",
+          "target": "*.highwinds.com"
+        },
+        {
           "type": "website",
           "target": "*.stackpath.com"
         },
@@ -4573,18 +4577,18 @@
           "target": "*.stackpath.net"
         },
         {
-          "type": "website",
+          "type": "other",
           "target": "Any product/service offered by StackPath (CDN/DNS/WAF/etc)"
         },
         {
-          "type": "website",
-          "target": "Any publicly facing host owned by StackPath - (ip space, domains, etc)"
+          "type": "other",
+          "target": "Any publicly facing host or service owned by StackPath - (ip space, domains, etc)"
         }
       ],
       "out_of_scope": [
         {
           "type": "website",
-          "target": "StackPath customer instances (e.g. *.stackpathdns.com)"
+          "target": "StackPath customer instances (e.g. *.stackpathdns.com, *.hwcdn.net)"
         }
       ]
     }
