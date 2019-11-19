@@ -10290,6 +10290,7 @@ type Report implements ActivitiesInterface & Node & ResourceInterface {
   first_program_activity_at: DateTime
   hacker_published: Boolean
   i_can_anc_review: Boolean
+  i_can_change_pentest: Boolean!
   id: ID!
   latest_activity_at: DateTime
   latest_public_activity_at: DateTime
@@ -10297,6 +10298,7 @@ type Report implements ActivitiesInterface & Node & ResourceInterface {
   latest_public_activity_of_team_at: DateTime
   mediation_requested_at: DateTime
   original_report: Report
+  pentest: Pentest
 
   """
   A post-submission trigger that notified the hacker after submission. This
@@ -12650,6 +12652,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
   has_structured_policy: Boolean
   hide_bounty_amounts: Boolean
   i_am_a_whitelisted_reporter: Boolean
+  i_can_assign_report_to_pentests: Boolean!
   i_can_create_jira_webhook: Boolean
   i_can_create_pentest: Boolean!
   i_can_create_report: Boolean
