@@ -1943,6 +1943,17 @@
           "max_severity": "critical"
         },
         {
+          "asset_identifier": "Delivery  Club",
+          "asset_type": "OTHER",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "[Delivery-Club](https://delivery-club.ru/): delivery-club.ru, *.delivery-club.ru, zakazaka.ru, *.zakazaka.ru\nexcept externally hosted / delegated domains or branded partner services",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
           "asset_identifier": "Ext O: Acquisitions, not integrated to Mail.Ru infrastructure",
           "asset_type": "OTHER",
           "availability_requirement": "medium",
@@ -1965,6 +1976,50 @@
           "max_severity": "medium"
         },
         {
+          "asset_identifier": "Ext. A Scope",
+          "asset_type": "OTHER",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Productivity, e-commerce, B2B and content/news projects:  \\*.mail.ru, \\*.my.com and dedicated project domains (\\*.pandao.ru, \\*.maps.me, \\*.am.ru, \\*.youla.ru, \\*.vseapteki.ru, \\*.seosan.io, etc) except delegated and externally hosted domains and branded partner services.\n\nExtended scope only awards critical serverside vulnerabilities, if it leads to compromise of infrastructure or sensitive data. Clientside vulnerabilities (XSS, CSRF) and business logic specific bugs are accepted without bounty.",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "Ext. B Scope",
+          "asset_type": "OTHER",
+          "availability_requirement": "medium",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Gaming, entertainment, recruitment, educational projects, realty services, taxi services and unlisted projects\n *.mail.ru, \\*.my.com,  and dedicated project domains (worki.ru, geekbrains.ru, 33slona.ru, relap.io, game domains within Mail.Ru infrastructure)\nExcept delegated domains, externally hosted projects, acquirements not integrated to Mail.Ru infrastructure and branded partner services. Reports for user introduced vulnerabilities in hosted systems or hosted student projects are considered as informative.\nExtended scope only awards critical serverside vulnerabilities, if it leads to compromise of infrastructure or sensitive data. Clientside vulnerabilities (XSS, CSRF) and business logic specific bugs are accepted without bounty.",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "Hosting",
+          "asset_type": "OTHER",
+          "availability_requirement": "none",
+          "confidentiality_requirement": "none",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "User-introduced vulnerabilities in hosted services (Mail.Ru hosting / colocation networks, MCS \"Infra\" public cloud computing hosts, gaming teams hosting, hosted student works for educational projects, etc) are considered as informative.\nHosting network can be identified by whois information or PTR name (e.g. customer host in MCS network may have ###.mcs.mail.ru PTR where ### is last octet from IP address).",
+          "integrity_requirement": "none",
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "Lootdog",
+          "asset_type": "OTHER",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "[Lootdog](https://lootdog.io/): lootdog.io, *.lootdog.io\n",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
           "asset_identifier": "Mail.Ru Cloud Solutions (MCS)",
           "asset_type": "OTHER",
           "availability_requirement": "high",
@@ -1972,6 +2027,17 @@
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
           "instruction": "mcs.mail.ru / *.mcs.mail.ru, infra.mail.ru / *.infra.mail.ru except customer-operated hosts in MCS Hosting networks. Reports for customer introduced vulnerabilities in MCS Hosting networks are considered as informative.",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "Main Scope",
+          "asset_type": "OTHER",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "[Main portal page](https://mail.ru/), [Mail.Ru Mail](https://e.mail.ru/), My.Com MyMail, [Cloud](https://cloud.mail.ru/), [Calendar](https://calendar.mail.ru), [Mail for Business](https://biz.mail.ru), Portal authorization center, [Mail.ru Mail for iOS](https://itunes.apple.com/en/app/pocta-mail.ru/id511310430), [Mail.ru Mail for Android](https://play.google.com/store/apps/details?id=ru.mail.mailapp), [Mail.ru Cloud for iOS](https://itunes.apple.com/en/app/oblako-mail.ru/id696551382), [Mail.ru Cloud for Android](https://play.google.com/store/apps/details?id=ru.mail.cloud), [Mail.ru Calendar for Android](https://play.google.com/store/apps/details?id=ru.mail.calendar), [Код Доступа Mail.Ru for Android](https://play.google.com/store/apps/details?id=ru.mail.auth.totp), [Код Доступа Mail.Ru for iOS](https://itunes.apple.com/us/app/id1158940459) , [MyMail for iOS](https://itunes.apple.com/us/app/mymail-email-for-hotmail-gmail/id722120997?mt=8),  [MyMail for Android](https://play.google.com/store/apps/details?id=com.my.mail&hl=en)|  mail.ru (without subdomains), e.mail.ru, *.e.mail.ru, touch.mail.ru, *.touch.mail.ru, m.mail.ru, *.m.mail.ru, tel.mail.ru, *.tel.mail.ru, light.mail.ru, *.light.mail.ru, octavius.mail.ru, *.octavius.mail.ru, smtp.mail.ru, mxs.mail.ru, pop.mail.ru, imap.mail.ru, cloud.mail.ru, *.cloud.mail.ru, calendar.mail.ru, *.calendar.mail.ru, biz.mail.ru, *.biz.mail.ru, edu.mail.ru, *.edu.mail.ru, auth.mail.ru, *.auth.mail.ru, o2.mail.ru, *.o2.mail.ru, account.mail.ru, *.account.mail.ru, swa.mail.ru, *.swa.mail.ru\nExcept MCS, externally hosted and branded partner services",
           "integrity_requirement": "high",
           "max_severity": "critical"
         },
@@ -9116,6 +9182,17 @@
           "max_severity": "critical"
         },
         {
+          "asset_identifier": "Android SDK",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "* https://developer.spotify.com/documentation/android/ \n* https://github.com/spotify/android-sdk \n* https://github.com/spotify/android-streaming-sdk ",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
           "asset_identifier": "Gimlet",
           "asset_type": "OTHER",
           "availability_requirement": "high",
@@ -9193,6 +9270,17 @@
           "max_severity": "critical"
         },
         {
+          "asset_identifier": "Spotify SDKs",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "For Spotify SDK (note: there is a specific scope for Web, Android and IOs SDK)\n* https://developer.spotify.com/\n",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
           "asset_identifier": "Spotify desktop application (Windows and Mac)",
           "asset_type": "DOWNLOADABLE_EXECUTABLES",
           "availability_requirement": null,
@@ -9201,6 +9289,17 @@
           "eligible_for_submission": true,
           "instruction": "",
           "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "Web Playback SDK",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "* https://developer.spotify.com/documentation/web-playback-sdk/",
+          "integrity_requirement": "high",
           "max_severity": "critical"
         },
         {
@@ -9248,6 +9347,39 @@
           "max_severity": "critical"
         },
         {
+          "asset_identifier": "com.spotify.kids",
+          "asset_type": "APPLE_STORE_APP_ID",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Spotify Kids\n\nhttps://apps.apple.com/ie/app/Spotify-Kids/id1470209570",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "com.spotify.kids",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Spotify Kids\n\nhttps://play.google.com/store/apps/details?id=com.spotify.kids",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "com.spotify.lite",
+          "asset_type": "GOOGLE_PLAY_APP_ID",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Spotify Lite\n\nhttps://play.google.com/store/apps/details?id=com.spotify.lite",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
           "asset_identifier": "com.spotify.music",
           "asset_type": "GOOGLE_PLAY_APP_ID",
           "availability_requirement": null,
@@ -9281,6 +9413,17 @@
           "max_severity": "critical"
         },
         {
+          "asset_identifier": "com.spotify.stations",
+          "asset_type": "APPLE_STORE_APP_ID",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Spotify Stations\n\nhttps://apps.apple.com/us/app/spotify-stations/id1453043471",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
           "asset_identifier": "com.spotify.tv.android",
           "asset_type": "GOOGLE_PLAY_APP_ID",
           "availability_requirement": null,
@@ -9292,14 +9435,25 @@
           "max_severity": "critical"
         },
         {
-          "asset_identifier": "https://developer.spotify.com/",
-          "asset_type": "SOURCE_CODE",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
+          "asset_identifier": "com.spotify.zerotap",
+          "asset_type": "GOOGLE_PLAY_APP_ID",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
-          "instruction": "#Spotify SDKs\n\nSpotify for developers home is at https://developer.spotify.com/\n\n##iOS SDK\n* https://developer.spotify.com/documentation/ios/ \n* https://github.com/spotify/ios-sdk \n* https://github.com/spotify/ios-streaming-sdk \n\n##Android SDK\n* https://developer.spotify.com/documentation/android/ \n* https://github.com/spotify/android-sdk \n* https://github.com/spotify/android-streaming-sdk \n\n##Web Playback SDK\n* https://developer.spotify.com/documentation/web-playback-sdk/",
-          "integrity_requirement": null,
+          "instruction": "Spotify Stations\n\nhttps://play.google.com/store/apps/details?id=com.spotify.zerotap",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "iOS SDK",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "* https://developer.spotify.com/documentation/ios/ \n* https://github.com/spotify/ios-sdk \n* https://github.com/spotify/ios-streaming-sdk ",
+          "integrity_requirement": "high",
           "max_severity": "critical"
         }
       ],
@@ -9433,6 +9587,17 @@
           "max_severity": "medium"
         },
         {
+          "asset_identifier": "prod.ros.rockstargames.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
           "asset_identifier": "rockstarnorth.com",
           "asset_type": "URL",
           "availability_requirement": "low",
@@ -9442,6 +9607,17 @@
           "instruction": "",
           "integrity_requirement": "low",
           "max_severity": "medium"
+        },
+        {
+          "asset_identifier": "socialclub.rockstargames.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "critical"
         },
         {
           "asset_identifier": "support.rockstargames.com",
