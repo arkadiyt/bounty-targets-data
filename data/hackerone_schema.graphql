@@ -8992,7 +8992,7 @@ type Pentest implements Node {
     last: Int
     where: FiltersPentesterFilterInput
   ): PentesterConnection
-  started: Boolean!
+  started: Boolean
   starts_at: DateTime!
   state: PentestStateEnum
   structured_scope_types: [String!]
@@ -9082,9 +9082,8 @@ Pentest state enum
 """
 enum PentestStateEnum {
   archived
-  delivered
+  completed
   draft
-  ended
   published
   scheduled
 }
