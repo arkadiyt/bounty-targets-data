@@ -4102,7 +4102,7 @@ input CreateOrUpdatePentestInput {
   methodology: String!
   name: String!
   start_date: DateTime!
-  state: PentestStateEnum!
+  state: PentestStateRestrictedEnum!
   structured_scope_ids: [Int]!
   team_id: ID
   time_zone: String!
@@ -9097,16 +9097,27 @@ input PentestStateEnumPredicateInput {
 }
 
 """
+Pentest state enum
+"""
+enum PentestStateRestrictedEnum {
+  draft
+  published
+}
+
+"""
 A pentester
 """
 type Pentester implements Node {
   _id: ID!
   accepted_at: DateTime
   applied_at: DateTime
+  award_amount: String!
+  completed_at: DateTime
   id: ID!
   pentest: Pentest!
   revoked_at: DateTime
   state: PentesterStateEnum!
+  status: BountyStatusEnum!
   user: User!
 }
 
@@ -9133,6 +9144,7 @@ type PentesterConnection {
   Int
   """
   total_count: Int!
+  total_payment_amount: Int!
 }
 
 """
@@ -9156,6 +9168,7 @@ Pentester state enum
 enum PentesterStateEnum {
   accepted
   applied
+  completed
   revoked
 }
 
@@ -9237,6 +9250,14 @@ enum ProfilePictureSizes {
 input ProgramAnalyticsBenchmarkFilterInput {
   industry: ProgramAnalyticsFilterStringInput
   severity: ProgramAnalyticsFilterStringInput
+  team_h1_clear: ProgramAnalyticsFilterBoolInput
+  team_offers_bounties: ProgramAnalyticsFilterBoolInput
+  team_state_str: ProgramAnalyticsFilterStringInput
+  team_vpn_enabled: ProgramAnalyticsFilterBoolInput
+}
+
+input ProgramAnalyticsFilterBoolInput {
+  eq: Boolean
 }
 
 input ProgramAnalyticsFilterInput {
@@ -18072,6 +18093,32 @@ type User implements Node & ResourceInterface {
     last: Int
   ): NotificationDeliveryPreferenceConnection
   payout_preferences: [PayoutPreferenceUnion]
+
+  """
+  A Resolver for Pentesters
+  """
+  pentesters(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+    where: FiltersPentesterFilterInput
+  ): PentesterConnection
   profile_picture(size: ProfilePictureSizes!): String!
   profile_pictures: Hash!
   program_health_acknowledgements(
