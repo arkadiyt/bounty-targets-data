@@ -1946,7 +1946,6 @@ type BountyConnection {
   A list of edges.
   """
   edges: [BountyEdge]
-  group_by_last_months(last: Int!): [LabeledIntegerPair]
 
   """
   A list of nodes.
@@ -1959,6 +1958,7 @@ type BountyConnection {
   pageInfo: PageInfo!
   total_amount: Float!
   total_awarded_amount: Float!
+  total_awarded_amount_by_month(year: Int!): [LabeledIntegerPair]
   total_count: Int!
 }
 
@@ -2650,8 +2650,6 @@ type ChecklistCheckResponseConnection {
   A list of edges.
   """
   edges: [ChecklistCheckResponseEdge]
-  group_award_amount_by_last_months(last: Int!): [LabeledIntegerPair]
-  group_by_last_months(last: Int!): [LabeledIntegerPair]
 
   """
   A list of nodes.
@@ -2662,11 +2660,13 @@ type ChecklistCheckResponseConnection {
   Information to aid in pagination.
   """
   pageInfo: PageInfo!
+  total_awarded_amount_by_month(year: Int!): [LabeledIntegerPair]
 
   """
   Int
   """
   total_count: Int!
+  total_count_by_month(year: Int!): [LabeledIntegerPair]
   total_payment_amount: Int!
 }
 
@@ -10507,7 +10507,6 @@ type ReportConnection {
   A list of edges.
   """
   edges: [ReportEdge]
-  group_by_resolved_last_months(last: Int!): [LabeledIntegerPair]
 
   """
   A list of nodes.
@@ -10523,6 +10522,7 @@ type ReportConnection {
   Int
   """
   total_count: Int!
+  total_resolved_by_month(year: Int!): [LabeledIntegerPair]
 }
 
 """
