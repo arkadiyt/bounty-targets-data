@@ -1709,18 +1709,7 @@ type Badge implements Node {
 }
 
 """
-Represents a badge earned by a user
-"""
-type BadgesUsers implements Node {
-  _id: ID!
-  badge: Badge!
-  created_at: DateTime!
-  id: ID!
-  user: User!
-}
-
-"""
-The connection type for BadgesUsers.
+The connection type for Badge.
 """
 type BadgesUsersConnection {
   """
@@ -1731,7 +1720,7 @@ type BadgesUsersConnection {
   """
   A list of nodes.
   """
-  nodes: [BadgesUsers]
+  nodes: [Badge]
 
   """
   Information to aid in pagination.
@@ -1743,6 +1732,8 @@ type BadgesUsersConnection {
 An edge in a connection.
 """
 type BadgesUsersEdge {
+  awarded_at: DateTime!
+
   """
   A cursor for use in pagination.
   """
@@ -1751,7 +1742,7 @@ type BadgesUsersEdge {
   """
   The item at the end of the edge.
   """
-  node: BadgesUsers
+  node: Badge
 }
 
 """
