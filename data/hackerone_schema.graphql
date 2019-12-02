@@ -12448,7 +12448,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
   allow_all_hacker_invitations: Boolean
   allow_email_and_automatic_invitations: Boolean
   allowed_to_use_saml_in_sandbox: Boolean
-  allows_bounty_splitting: Boolean!
+  allows_bounty_splitting: Boolean
   allows_disclosure_assistance: Boolean!
   allows_private_disclosure: Boolean
   anc_enabled: Boolean
@@ -12851,6 +12851,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
     start_date: String
   ): SurveyAnswerConnection
   is_ready_for_public_launch: Boolean
+  is_team_member: Boolean!
   jira_integration: JiraIntegration
   jira_oauth: JiraOauth
   jira_webhook: JiraWebhook
