@@ -1697,7 +1697,7 @@
   {
     "name": "Fitbit",
     "url": "https://bugcrowd.com/fitbit",
-    "allows_disclosure": true,
+    "allows_disclosure": false,
     "targets": {
       "in_scope": [
         {
@@ -2618,6 +2618,41 @@
         {
           "type": "website",
           "target": "https://support.logmeininc.com/lastpass"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Lime",
+    "url": "https://bugcrowd.com/lime",
+    "allows_disclosure": false,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "api",
+          "target": "https://api.lime.bike"
+        },
+        {
+          "type": "ios",
+          "target": "https://apps.apple.com/us/app/lime-your-ride-anytime/id1199780189"
+        },
+        {
+          "type": "api",
+          "target": "https://juicer.lime.bike"
+        },
+        {
+          "type": "android",
+          "target": "https://play.google.com/store/apps/details?id=com.limebike&hl=en_US"
+        },
+        {
+          "type": "api",
+          "target": "https://webviews.lime.bike"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "website",
+          "target": "https://www.li.me"
         }
       ]
     }
