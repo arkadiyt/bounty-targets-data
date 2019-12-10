@@ -9549,19 +9549,37 @@ enum ProgramAnalyticsFromEnum {
 }
 
 enum ProgramAnalyticsGroupEnum {
+  month_bounty_awarded_at
+  month_first_response_at
   month_resolved_at
   month_submitted_at
+  month_triaged_at
+  quarter_bounty_awarded_at
+  quarter_first_response_at
   quarter_resolved_at
   quarter_submitted_at
+  quarter_triaged_at
+  week_bounty_awarded_at
+  week_first_response_at
   week_resolved_at
   week_submitted_at
+  week_triaged_at
+  year_bounty_awarded_at
+  year_first_response_at
   year_resolved_at
   year_submitted_at
+  year_triaged_at
 }
 
 enum ProgramAnalyticsSelectEnum {
+  count_missed_bounty_targets
+  count_missed_first_response_targets
   count_missed_resolution_targets
+  count_missed_triage_targets
+  p50_time_to_bounty
+  p50_time_to_first_response
   p50_time_to_resolution
+  p50_time_to_triage
 }
 
 """
@@ -10692,6 +10710,7 @@ type Report implements ActivitiesInterface & Node & ResourceInterface {
   attachments: [Attachment]
   bounties: [Bounty]
   bounty_awarded_at: DateTime
+  bounty_awarded_staleness_threshold: Int
   bug_reporter_agreed_on_going_public_at: DateTime
   cloned_from: Report
   closed_at: DateTime
@@ -10730,6 +10749,7 @@ type Report implements ActivitiesInterface & Node & ResourceInterface {
   latest_public_activity_of_reporter_at: DateTime
   latest_public_activity_of_team_at: DateTime
   mediation_requested_at: DateTime
+  new_staleness_threshold: Int
   original_report: Report
   pentest: Pentest
 
@@ -10745,6 +10765,7 @@ type Report implements ActivitiesInterface & Node & ResourceInterface {
   report_share_tokens: [ReportShareToken!]!
   report_triage_blockers: [ReportTriageBlocker!]!
   reporter: User
+  resolution_staleness_threshold: Int
   severity: Severity
   singular_disclosure_allowed: Boolean
   singular_disclosure_disabled: Boolean
@@ -10761,16 +10782,21 @@ type Report implements ActivitiesInterface & Node & ResourceInterface {
   team_member_agreed_on_going_public_at: DateTime
   timer_bounty_awarded_elapsed_time: Int
   timer_bounty_awarded_miss_at: DateTime
+  timer_bounty_awarded_until_missed: Int
   timer_first_program_response_elapsed_time: Int
   timer_first_program_response_miss_at: DateTime
+  timer_first_program_response_until_missed: Int
   timer_report_resolved_elapsed_time: Int
   timer_report_resolved_miss_at: DateTime
+  timer_report_resolved_until_missed: Int
   timer_report_triage_elapsed_time: Int
   timer_report_triage_miss_at: DateTime
+  timer_report_triage_until_missed: Int
   title: String
   triage_inbox_items: [TriageInboxItem]!
   triage_meta: TriageMeta
   triaged_at: DateTime
+  triaged_staleness_threshold: Int
   url: URI!
   votes(
     """
@@ -10938,7 +10964,10 @@ enum ReportOrderField {
   last_reporter_activity_at
   latest_activity_at
   swag_awarded_at
+  timer_bounty_awarded_elapsed_time
+  timer_first_program_response_elapsed_time
   timer_report_resolved_elapsed_time
+  timer_report_triage_elapsed_time
   triaged_at
 }
 
