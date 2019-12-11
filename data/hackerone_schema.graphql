@@ -8442,6 +8442,15 @@ input MembershipOrderInput {
   field: MembershipOrderField!
 }
 
+"""
+Min Max object
+"""
+type MinMax {
+  id: ID!
+  max: Int
+  min: Int
+}
+
 type Mutation {
   acceptInvitation(input: AcceptInvitationInput!): AcceptInvitationPayload
   acknowledgeProgramHealthAcknowledgement(input: AcknowledgeProgramHealthAcknowledgementInput!): AcknowledgeProgramHealthAcknowledgementPayload
@@ -10151,6 +10160,7 @@ type Query implements Node {
     without_scope: Boolean = null
   ): ReportConnection
   resource(url: URI): ResourceInterface
+  response_target_benchmarks(response_target: Int!, response_target_type: ResponseTargetTypeEnum!, severity_rating: SeverityRatingEnum): MinMax
   session: Session
   severity_calculator: SeverityCalculator
   sla_statuses(
@@ -11362,6 +11372,13 @@ enum ResponseEfficiencyIndicatorEnum {
   failed
   missed
   ok
+}
+
+enum ResponseTargetTypeEnum {
+  bounty
+  new
+  resolution
+  triage
 }
 
 """
