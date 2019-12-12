@@ -33064,6 +33064,77 @@
     }
   },
   {
+    "id": 39487,
+    "name": "DataStax",
+    "handle": "datastax",
+    "url": "https://hackerone.com/datastax",
+    "offers_bounties": true,
+    "quick_to_bounty": true,
+    "quick_to_first_response": true,
+    "targets": {
+      "in_scope": [
+        {
+          "asset_identifier": "DataStax Desktop, DSE, Studio, DDAC, Opscenter",
+          "asset_type": "DOWNLOADABLE_EXECUTABLES",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "DataStax Desktop is a fully packaged version of DataStax products and services. The download for DataStax Desktop can be found here:\n\nhttps://downloads.datastax.com/#labs\n\nDataStax Desktop is a helper application that configures and runs DataStax Enterprise, and Studio in a Kubernetes pod. This application is not intended to be run in a production environment but is a helpful tool for experimenting with and familiarizing yourself with the different product offerings that Datastax makes available to the developer community at large.\n\nDataStax Desktop is merely an enabling method for configuring and running DataStax products to be run together, and not required for finding vulnerabilities in the in-scope products listed below. If you want to configure and run the products independent of DataStax Desktop we would accept and welcome any vulnerability that meets our criteria. \n\nApplications packaged and in scope are:\n* DataStax Enterprise (DSE) [Server, Analytics, Graph, Search]\n* Studio\n\nVulnerabilities in scope:\n* Loss of availability, confidentiality, or integrity of the data from unauthenticated side-channel or protocol attacks on the DSE server (attacks on the native or storage ports)\n* Privilege escalation, or loss of tenancy within CQL \n\nVulnerabilities out of scope:\n* JMX related vulnerabilities\n* DDOS attacks using large or high throughput payloads \n",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://academy.datastax.com/",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Sign ups are open, you may use any email address that can be verified to sign up for the academy.",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://docs.datastax.com/",
+          "asset_type": "URL",
+          "availability_requirement": "low",
+          "confidentiality_requirement": "low",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://downloads.datastax.com",
+          "asset_type": "URL",
+          "availability_requirement": "medium",
+          "confidentiality_requirement": "none",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Our downloads site available for the general public.",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://www.datastax.com/",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
     "id": 39489,
     "name": "ForeScout Technologies",
     "handle": "forescout_technologies",
