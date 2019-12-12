@@ -4248,7 +4248,7 @@ input CreateOrUpdatePentestInput {
   methodology: String!
   name: String!
   start_date: DateTime!
-  state: PentestStateRestrictedEnum!
+  state: String!
   structured_scope_ids: [Int]!
   team_id: ID
   time_zone: String!
@@ -9390,14 +9390,6 @@ input PentestStateEnumPredicateInput {
   _is_null: Boolean
   _neq: PentestStateEnum
   _nin: [PentestStateEnum]
-}
-
-"""
-Pentest state enum
-"""
-enum PentestStateRestrictedEnum {
-  draft
-  published
 }
 
 """
