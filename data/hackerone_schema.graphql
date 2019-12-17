@@ -6448,6 +6448,62 @@ type DismissTriageInboxItemsPayload implements MutationResult {
 }
 
 """
+An earning
+"""
+type Earning implements Node {
+  amount: Float!
+  bounty: Bounty
+  checklist_check_response: ChecklistCheckResponse
+  core_bundle_subscription_id: Int
+  id: ID!
+  payer_id: Int!
+  paying_team_id: Int!
+  pentester: Pentester
+  receiver_id: Int!
+  report_retest_user: ReportRetestUser
+}
+
+"""
+The connection type for Earning.
+"""
+type EarningConnection {
+  """
+  A list of edges.
+  """
+  edges: [EarningEdge]
+
+  """
+  A list of nodes.
+  """
+  nodes: [Earning]
+
+  """
+  Information to aid in pagination.
+  """
+  pageInfo: PageInfo!
+
+  """
+  Int
+  """
+  total_count: Int!
+}
+
+"""
+An edge in a connection.
+"""
+type EarningEdge {
+  """
+  A cursor for use in pagination.
+  """
+  cursor: String!
+
+  """
+  The item at the end of the edge.
+  """
+  node: Earning
+}
+
+"""
 Allowed domains for embedded submission forms
 """
 type EmbeddedSubmissionDomain {
@@ -9045,14 +9101,14 @@ type PaymentTransaction implements Node {
   activity_date: DateTime!
   activity_description: String!
   balance: Float!
-  bounty_award: Float!
-  bounty_fee: Float!
+  bounty_award: Float
+  bounty_fee: Float
   debit_or_credit_amount: Float
   id: ID!
   paid_to_hacker_date: DateTime
   payment_id: Int!
-  report_id: Int!
-  report_url: String!
+  report_id: Int
+  report_url: String
 }
 
 """
@@ -9093,6 +9149,58 @@ type PaymentTransactionEdge {
   The item at the end of the edge.
   """
   node: PaymentTransaction
+}
+
+"""
+A payout
+"""
+type Payout implements Node {
+  amount: Float!
+  id: ID!
+  payout_provider: String!
+  reference: String!
+  sent_at: String
+  status: String!
+}
+
+"""
+The connection type for Payout.
+"""
+type PayoutConnection {
+  """
+  A list of edges.
+  """
+  edges: [PayoutEdge]
+
+  """
+  A list of nodes.
+  """
+  nodes: [Payout]
+
+  """
+  Information to aid in pagination.
+  """
+  pageInfo: PageInfo!
+
+  """
+  Int
+  """
+  total_count: Int!
+}
+
+"""
+An edge in a connection.
+"""
+type PayoutEdge {
+  """
+  A cursor for use in pagination.
+  """
+  cursor: String!
+
+  """
+  The item at the end of the edge.
+  """
+  node: Payout
 }
 
 """
@@ -13165,31 +13273,6 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
   goal_valid_reports: Int
   grace_period_remaining_in_days: Int
   hackerone_to_jira_events_configuration: HackeroneToJiraEventsConfiguration
-  hackers_also_viewed(
-    """
-    Returns the elements in the list that come after the specified cursor.
-    """
-    after: String
-
-    """
-    Returns the elements in the list that come before the specified cursor.
-    """
-    before: String
-
-    """
-    Returns the first _n_ elements from the list.
-    """
-    first: Int
-
-    """
-    Returns the last _n_ elements from the list.
-    """
-    last: Int
-    order_by: TeamOrderInput
-    permissions: [PermissionEnum] = []
-    secure_order_by: FiltersTeamFilterOrder
-    where: FiltersTeamFilterInput
-  ): TeamConnection
   handle: String!
   has_avatar: Boolean
   has_billing_set_up: Boolean!
@@ -17986,7 +18069,6 @@ type UpdateUserDisplayOptionsPayload implements MutationResult {
     types: [ErrorTypeEnum]
   ): ErrorConnection!
   me: User
-  user_display_options: UserDisplayOptions
   was_successful: Boolean!
 }
 
@@ -18477,6 +18559,27 @@ type User implements Node & ResourceInterface {
     """
     last: Int
   ): UserConnection
+  earnings(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+  ): EarningConnection
   edit_unclaimed_profiles: Boolean
   email: String
   facebook_oauth_state: String
@@ -18574,6 +18677,27 @@ type User implements Node & ResourceInterface {
     last: Int
   ): NotificationDeliveryPreferenceConnection
   payout_preferences: [PayoutPreferenceUnion]
+  payouts(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+  ): PayoutConnection
 
   """
   A Resolver for Pentesters
