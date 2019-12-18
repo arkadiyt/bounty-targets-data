@@ -6454,13 +6454,11 @@ type Earning implements Node {
   amount: Float!
   bounty: Bounty
   checklist_check_response: ChecklistCheckResponse
-  core_bundle_subscription_id: Int
   id: ID!
-  payer_id: Int!
-  paying_team_id: Int!
   pentester: Pentester
-  receiver_id: Int!
   report_retest_user: ReportRetestUser
+  team: Team
+  type: EarningTypeEnum
 }
 
 """
@@ -6501,6 +6499,17 @@ type EarningEdge {
   The item at the end of the edge.
   """
   node: Earning
+}
+
+"""
+types of Earning
+"""
+enum EarningTypeEnum {
+  BountyEarned
+  ChecklistCheckCompleted
+  PentestCompleted
+  RetestCompleted
+  UnknownEarningType
 }
 
 """
