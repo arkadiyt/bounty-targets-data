@@ -1654,7 +1654,7 @@ input AssignPentestCheckPentestersInput {
   """
   clientMutationId: String
   pentest_check_id: ID!
-  pentester_ids: [ID]!
+  pentester_ids: [Int!]
 }
 
 """
@@ -4247,6 +4247,7 @@ input CreateOrUpdatePentestInput {
   industry: String!
   methodology: String!
   name: String!
+  slack_workspace_url: String
   start_date: DateTime!
   state: String!
   structured_scope_ids: [Int]!
@@ -9311,6 +9312,7 @@ type Pentest implements Node {
     last: Int
     where: FiltersPentesterFilterInput
   ): PentesterConnection
+  slack_workspace_url: String
   started: Boolean
   starts_at: DateTime!
   state: PentestStateEnum
@@ -9356,6 +9358,32 @@ type PentestCheck implements Node {
   markdown_message: String
   message: String
   pentest: Pentest
+
+  """
+  A Resolver for Pentesters
+  """
+  pentesters(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+    where: FiltersPentesterFilterInput
+  ): PentesterConnection
   result: String
   state: PentestCheckStateEnum
   title: String!
