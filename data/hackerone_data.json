@@ -229,6 +229,17 @@
           "max_severity": "critical"
         },
         {
+          "asset_identifier": "Athenz",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "###Review the Code\n* [Source Code](https://github.com/yahoo/athenz)\n* Submit a PR to fix/update the code - [fork](https://help.github.com/en/articles/fork-a-repo) the codebase then submit a [PR](https://help.github.com/en/articles/creating-a-pull-request-from-a-fork)\n\n\n###Out of Scope\n`yahoo/athenz/ui`, `yahoo/athenz/contributions`, and `yahoo/athenz/docker` are outdated from our own internal deployment because of our use of Okta and Duo which we are not able to deploy to you all for this event; this is why we stated the Athenz UI was out of scope during the scoping call. \nThe UI was just given out as a starting point so whoever needs it, can take it, integrate with their own authentication system and also provide all the necessary protections. Our UI devs worked with the Paranoids’ red team internally for quite some time to go through all this, addressing many different types of bug classes with our integration with Okta and Duo and that’s what we’re running in our production instance.",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
           "asset_identifier": "BUILD",
           "asset_type": "OTHER",
           "availability_requirement": null,
@@ -247,6 +258,17 @@
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
           "instruction": "# You MUST register for an account with your @wearehackerone email address or else your report will NOT be eligible for bounty.\n\n* *.builtbygirls.com\n",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "Ensemble",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "`*ensemble*.yahoo.com`",
           "integrity_requirement": null,
           "max_severity": "critical"
         },
@@ -284,6 +306,28 @@
           "max_severity": "critical"
         },
         {
+          "asset_identifier": "Membership",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "\n##In Scope\n* https://login.yahoo.com\n* https://login.aol.com\n* https://api.login.yahoo.com\n* https://api.login.aol.com\n\nSome documentation that may help:\nhttps://developer.yahoo.com/oauth2/guide/\n\nSpecific paths to target….\nFor `login.*.com`\n* /account/logout\n* /auth/2.0/credentials\n* /auth/1.0/\n* /saml2/\n* /account\n* /oauth2\n* /ylc\n* /account/challenges\n* /account/access\n* /oauth2/device_auth\n* /ctv\n* /activate\n* /forgot\n\nFor `api.login.*.com`\n* /api\n* /oauth2/get_token\n* /oauth2/web_session\n* /oauth2/device_sessions\n* /oauth2/device_authorization\n* /oauth2/device_auth\n* /oauth2/revoke\n* /oauth2/introspect\n\n##Out of Scope\n* Any rate limits for authentication attempts. \n* Any differentiated treatment based on account, browser, IP address etc.\n\n##Limits\n* Limit traffic against our services to < 10/second when probing or testing.",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "Moloch",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "###Review the Code\n* [Source Code](https://github.com/aol/moloch)\n* Submit a PR to fix/update the code - [fork](https://help.github.com/en/articles/fork-a-repo) the codebase then submit a [PR](https://help.github.com/en/articles/creating-a-pull-request-from-a-fork)\n* Visit our web page at https://molo.ch for pre-bulit rpm/deb and instructions for running yourself.\n\n##Out of Scope\n* Known unauthenticated endpoints such as `parliament.json` & `eshealth.json`\n* `www.molo.ch`\n* `demo.molo.ch`\n* `*.molo.ch` (production website)\n* UI based bugs on `parliament`",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
           "asset_identifier": "Newsroom",
           "asset_type": "OTHER",
           "availability_requirement": null,
@@ -291,6 +335,17 @@
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
           "instruction": "* [Newsroom Android](https://play.google.com/store/apps/details?id=com.yahoo.mobile.client.android.yahoo)\n* [Newsroom iOS](https://itunes.apple.com/us/app/newsroom-news-that-gets-you-talking/id304158842?mt=8)\n* Newsroom (web)",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "Omega",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "`*omega*.yahoo.com`",
           "integrity_requirement": null,
           "max_severity": "critical"
         },
@@ -313,6 +368,28 @@
           "eligible_for_bounty": false,
           "eligible_for_submission": true,
           "instruction": "Use this asset when nothing else can be reasonably selected. \n\nEveryone is eligible to submit bugs to hackerone.com/verizonmedia but we are currently only inviting a few people at a time into hackerone.com/verizonmedia-private. Bugs with Oath that are not in scope of hackerone.com/verizonmedia can still be submitted to this asset and *might* be eligible for award. ",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "Verizon Media Open Source Projects (misc)",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "Select open source projects are now eligible for bounties! The rest of our open source projects are technically in scope, but at a reduced rate for the time being. \n ",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "Yahoo Calendar",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "## In Scope\n* *.calendar.yahoo.com\n* *.caldav.calendar.yahoo.com\n\nSpecific paths to look at:\n* https://calendar.yahoo.com/ws/v3/users/\n* https://caldav.calendar.yahoo.com/principals/users/\n* https://caldav.calendar.yahoo.com/dav/*/calendar/\n\n## Limits\nLimit traffic against our services to < 10/second when probing or testing.",
           "integrity_requirement": null,
           "max_severity": "critical"
         },
@@ -559,6 +636,28 @@
           "max_severity": "critical"
         },
         {
+          "asset_identifier": "com.yahoo.aerogram",
+          "asset_type": "APPLE_STORE_APP_ID",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "[Yahoo Mail iOS](https://apps.apple.com/us/app/yahoo-mail-keeps-you-organized/id577586159)",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "com.yahoo.mobile.client.android.mail",
+          "asset_type": "GOOGLE_PLAY_APP_ID",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "* [Yahoo Mail Android](https://play.google.com/store/apps/details?id=com.yahoo.mobile.client.android.mail)\n* [Yahoo Mail AndroidGo](https://play.google.com/store/apps/details?id=com.yahoo.mobile.client.android.mail.lite)\n* [Yahoo Mail FireOS](https://www.amazon.com/Yahoo-Mail-Keeps-you-organized/dp/B00632HWOG/)\n* Sign up for the [Beta here](https://play.google.com/apps/testing/com.yahoo.mobile.client.android.mail)",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
           "asset_identifier": "data.mail.yahoo.com",
           "asset_type": "URL",
           "availability_requirement": null,
@@ -638,6 +737,17 @@
           "max_severity": "none"
         },
         {
+          "asset_identifier": "Challenge Coin",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "These are just for fun.\n[H1-213-2020](https://forms.gle/jG7uRzS6k7BWjAeUA) \n",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
           "asset_identifier": "Historical + Divestitures",
           "asset_type": "OTHER",
           "availability_requirement": null,
@@ -655,7 +765,7 @@
           "confidentiality_requirement": null,
           "eligible_for_bounty": false,
           "eligible_for_submission": false,
-          "instruction": "* *.aolcdn.com\n* *.yahoo.com.hk\n* Media Group One\n* Movies Hong Kong\n* Onwander\n* Volicon\n* Volicloud\n* Yahoo Operated WordPress blogs\n",
+          "instruction": "* *.aolcdn.com\n* *.yahoo.com.hk\n* Media Group One\n* Movies Hong Kong\n* Onwander\n* Volicon\n* Volicloud\n* Yahoo Operated WordPress blogs\n* files.molo.ch\n",
           "integrity_requirement": null,
           "max_severity": "none"
         },
