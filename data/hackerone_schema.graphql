@@ -9747,6 +9747,7 @@ input ProgramAnalyticsFilterBoolInput {
 input ProgramAnalyticsFilterInput {
   asset_identifier: ProgramAnalyticsFilterStringInput
   severity: ProgramAnalyticsFilterStringInput
+  source: ProgramAnalyticsFilterStringInput
   weakness_id: ProgramAnalyticsFilterStringInput
 }
 
@@ -13708,6 +13709,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
     start_date: Date!
     structured_scope_ids: [ID!]
   ): ProgramSubmissionMetricsConnection!
+  report_sources: [String!]
   report_submission_form_intro: String
   report_submission_form_intro_html: String
   report_template: String
