@@ -10259,14 +10259,9 @@ type Query implements Node {
   me: User
 
   """
-  Fetches an object given its ID.
+  Fetches an object given its ID
   """
-  node(
-    """
-    ID of the object.
-    """
-    id: ID!
-  ): Node
+  node(id: ID!): Node
   oauth_application(client_id: String!): OauthApplication
 
   """
@@ -13199,7 +13194,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
   """
   bounty_earned_for_user: Float
   bounty_table: BountyTable
-  bounty_time(date_start: DateTime = null): Float
+  bounty_time(date_start: DateTime): Float
   can_toggle_bounty_splitting: Boolean!
   challenge_setting: ChallengeSetting
   checklist: Checklist
@@ -13401,7 +13396,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
   external_url: String
   facebook_team: Boolean
   fancy_slack_integration: Boolean
-  first_response_time(date_start: DateTime = null): Float
+  first_response_time(date_start: DateTime): Float
   formatted_bounties_paid_last_90_days: Int
   formatted_total_bounties_paid_amount: Int
   goal_valid_reports: Int
@@ -13797,7 +13792,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
     without_scope: Boolean = null
   ): ReportConnection
   reports_received_last_90_days: Int
-  resolution_time(date_start: DateTime = null): Float
+  resolution_time(date_start: DateTime): Float
   resolved_report_count: Int
   resolved_staleness_threshold: Int
   response_efficiency_indicator: ResponseEfficiencyIndicatorEnum
@@ -13945,7 +13940,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
     Returns the last _n_ elements from the list.
     """
     last: Int
-    order_by: StructuredScopeOrder = null
+    order_by: StructuredScopeOrder
     search: String = null
   ): StructuredScopesConnection
   submission_requirements: SubmissionRequirements
@@ -14062,7 +14057,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
   triage_enabled: Boolean
   triage_note: String
   triage_note_html: String
-  triage_time(date_start: DateTime = null): Float
+  triage_time(date_start: DateTime): Float
   triaged_staleness_threshold: Int
   triaged_staleness_threshold_limit: Int
   triggers(
