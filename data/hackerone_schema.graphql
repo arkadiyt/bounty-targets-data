@@ -7152,6 +7152,7 @@ input FiltersReportFilterInput {
   id: IntPredicateInput
   id_like: Int
   ineligible_for_bounty: BooleanPredicateInput
+  pentest: FiltersPentestFilterInput
   reporter: FiltersUserFilterInput
   severity_rating: SeverityRatingEnumPredicateInput
   substate: ReportStateEnumPredicateInput
@@ -9432,6 +9433,7 @@ type PentestCheck implements Node {
     last: Int
     where: FiltersPentesterFilterInput
   ): PentesterConnection
+  report_ids: [ID]
   result: String
   state: PentestCheckStateEnum
   title: String!
