@@ -24915,6 +24915,208 @@
     }
   },
   {
+    "id": 24019,
+    "name": "LifeOmic",
+    "handle": "lifeomic",
+    "url": "https://hackerone.com/lifeomic",
+    "offers_bounties": true,
+    "quick_to_bounty": true,
+    "quick_to_first_response": true,
+    "targets": {
+      "in_scope": [
+        {
+          "asset_identifier": "*.dev.jupiterone.io",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "*.dev.lifeomic.com",
+          "asset_type": "URL",
+          "availability_requirement": "medium",
+          "confidentiality_requirement": "medium",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": "medium",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "*.infra.lifeomic.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "Scope Not Listed (See Instruction)",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "If you identify a bug on a scope not listed here, you can use this asset. Please indicate in the report any relevant information about that asset (e.g. domain name, etc.) so we can determine if we'd like to add it to the scope of the program.\n**PLEASE DO NOT TEST AGAINST OR SUBMIT BUGS ON ANYTHING EXPLICITLY LISTED AS OUT OF SCOPE.**",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "com.lifeomic.LIFEExtend",
+          "asset_type": "APPLE_STORE_APP_ID",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "LifeExtend in the iOS App Store.",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "com.lifeomic.life",
+          "asset_type": "APPLE_STORE_APP_ID",
+          "availability_requirement": "medium",
+          "confidentiality_requirement": "medium",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": "medium",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "com.lifeomic.lifeextend",
+          "asset_type": "GOOGLE_PLAY_APP_ID",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "LifeExtend in the Android App Store",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "com.lifeomic.lifefasting",
+          "asset_type": "GOOGLE_PLAY_APP_ID",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Life Fasting App in the Google Play Store",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://github.com/lifeomic/cli",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": "medium",
+          "confidentiality_requirement": "medium",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Only the opensource codebases developed by LifeOmic are included as in-scope. Forks, etc are not in scope.",
+          "integrity_requirement": "medium",
+          "max_severity": "critical"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "asset_identifier": "*.us.lifeomic.com",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "Please note: Our dev instance is identical to this (plus a few new features) so please only test in dev (*.dev.lifeomic.com).",
+          "integrity_requirement": "high",
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "https://jupiterone.io/",
+          "asset_type": "URL",
+          "availability_requirement": "medium",
+          "confidentiality_requirement": "medium",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "",
+          "integrity_requirement": "medium",
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "https://lifeapps.io",
+          "asset_type": "URL",
+          "availability_requirement": "medium",
+          "confidentiality_requirement": "medium",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "",
+          "integrity_requirement": "medium",
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "https://support.jupiterone.io",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "This is a third party service (Zendesk). Please do not test.",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "info.jupiterone.io",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "Please DO NOT test against this domain.",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "info.lifeomic.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "Please DO NOT test against this domain. ",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "jupiterone.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "lifeomic.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        }
+      ]
+    }
+  },
+  {
     "id": 24066,
     "name": "Augur",
     "handle": "augurproject",
