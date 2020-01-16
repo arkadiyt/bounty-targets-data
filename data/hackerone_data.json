@@ -8174,6 +8174,17 @@
           "max_severity": "critical"
         },
         {
+          "asset_identifier": "LGTM",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "LGTM is a code analysis platform for development teams to identify vulnerabilities early and prevent them from reaching production. It uses [CodeQL](https://semmle.com/ql)  which works by retrieving source code from version control systems, building it with custom tooling, and creating analysis results.\n\nLGTM uses Docker containers to isolate the build and analysis environment from the rest of the infrastructure. By nature this environment permits arbitrary code execution by any registered user, so the quality of isolation is a critical part of the security model. The public site includes two user types (user and admin user) as well as anonymous access.\n\n* [`lgtm-com.pentesting.semmle.net`](lgtm-com.pentesting.semmle.net) is a dedicated instance of LGTM for your research.\n\n* [`backend-dot-lgtm-penetration-testing.appspot.com`](backend-dot-lgtm-penetration-testing.appspot.com) is used for triggering automated tasks from other parts of the LGTM system. It does not provide a user interface.\n\n* [`downloads.lgtm.com`](downloads.lgtm.com)",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
           "asset_identifier": "api.github.com",
           "asset_type": "URL",
           "availability_requirement": "high",
@@ -8236,6 +8247,28 @@
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
           "instruction": "Get the skills you need without leaving GitHub. GitHub Learning Lab takes you through a series of fun and practical projects, sharing helpful feedback along the way.",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "semmle.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Our main domain for Semmle and LGTM services. All subdomains under semmle.com are in-scope **except**:\n* dev.semmle.com\n* git.semmle.com\n* jira.semmle.com\n* wiki.semmle.com",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "semmle.net",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Our domain for non-production Semmle services. All subdomains under `semmle.net` are in-scope.\n",
           "integrity_requirement": null,
           "max_severity": "critical"
         }
