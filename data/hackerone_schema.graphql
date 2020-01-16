@@ -7145,6 +7145,7 @@ input FiltersPentestFilterInput {
   _or: [FiltersPentestFilterInput]
   id: IntPredicateInput
   state: PentestStateEnumPredicateInput
+  team: FiltersTeamFilterInput
 }
 
 input FiltersPentestFilterOrder {
@@ -18919,6 +18920,34 @@ type User implements Node & ResourceInterface {
     last: Int
     where: FiltersPentesterFilterInput
   ): PentesterConnection
+
+  """
+  A Resolver for Pentests
+  """
+  pentests(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+    order_by: PentestOrderInput
+    secure_order_by: FiltersPentestFilterOrder
+    where: FiltersPentestFilterInput
+  ): PentestConnection
   profile_picture(size: ProfilePictureSizes!): String!
   profile_pictures: Hash!
   program_health_acknowledgements(
