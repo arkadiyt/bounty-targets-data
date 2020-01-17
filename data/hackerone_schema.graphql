@@ -4760,6 +4760,7 @@ input CreateStructuredScopeInput {
   eligible_for_submission: Boolean
   instruction: String
   integrity_requirement: String
+  label_ids: [ID!]
   notify_subscribers_of_changes: Boolean
   reference: String
   team_id: ID!
@@ -7960,6 +7961,125 @@ type JiraWebhook implements Node {
 }
 
 """
+Label of a structured scope
+"""
+type Label implements Node {
+  _id: ID!
+  id: ID!
+  name: String!
+}
+
+"""
+Label category of a structured scope
+"""
+type LabelCategory implements Node {
+  _id: ID!
+  id: ID!
+  labels(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+  ): LabelConnection
+  name: String!
+}
+
+"""
+The connection type for LabelCategory.
+"""
+type LabelCategoryConnection {
+  """
+  A list of edges.
+  """
+  edges: [LabelCategoryEdge]
+
+  """
+  A list of nodes.
+  """
+  nodes: [LabelCategory]
+
+  """
+  Information to aid in pagination.
+  """
+  pageInfo: PageInfo!
+
+  """
+  Int
+  """
+  total_count: Int!
+}
+
+"""
+An edge in a connection.
+"""
+type LabelCategoryEdge {
+  """
+  A cursor for use in pagination.
+  """
+  cursor: String!
+
+  """
+  The item at the end of the edge.
+  """
+  node: LabelCategory
+}
+
+"""
+The connection type for Label.
+"""
+type LabelConnection {
+  """
+  A list of edges.
+  """
+  edges: [LabelEdge]
+
+  """
+  A list of nodes.
+  """
+  nodes: [Label]
+
+  """
+  Information to aid in pagination.
+  """
+  pageInfo: PageInfo!
+
+  """
+  Int
+  """
+  total_count: Int!
+}
+
+"""
+An edge in a connection.
+"""
+type LabelEdge {
+  """
+  A cursor for use in pagination.
+  """
+  cursor: String!
+
+  """
+  The item at the end of the edge.
+  """
+  node: Label
+}
+
+"""
 A pair of a label and an integer
 """
 type LabeledIntegerPair {
@@ -10275,6 +10395,27 @@ type Query implements Node {
     where: FiltersHacktivityItemFilterInput
   ): HacktivityItemConnection
   id: ID!
+  label_categories(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+  ): LabelCategoryConnection!
   me: User
 
   """
@@ -12444,6 +12585,27 @@ type StructuredScope implements Node & ResourceInterface {
   id: ID!
   instruction: String
   integrity_requirement: SeveritySecurityRequirementEnum
+  labels(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+  ): LabelConnection
   max_severity: SeverityRatingEnum
   reference: String
   rendered_instruction: String
@@ -17366,6 +17528,7 @@ input UpdateStructuredScopeInput {
   eligible_for_submission: Boolean
   instruction: String
   integrity_requirement: String
+  label_ids: [ID!]
   notify_subscribers_of_changes: Boolean = true
   reference: String
   structured_scope_id: ID!
