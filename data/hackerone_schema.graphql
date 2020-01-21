@@ -1000,6 +1000,21 @@ type ActivitiesPentestCheckUpdated implements ActivityInterface & Node {
 }
 
 """
+A Activities::PentestStarted activity for a pentest
+"""
+type ActivitiesPentestStarted implements ActivityInterface & Node {
+  _id: ID!
+  actor: ActorUnion
+  created_at: DateTime!
+  i_can_edit: Boolean!
+  id: ID!
+  internal: Boolean
+  markdown_message: String
+  message: String
+  updated_at: DateTime!
+}
+
+"""
 A Activities::PentesterAwarded activity for a pentester
 """
 type ActivitiesPentesterAwarded implements ActivityInterface & Node {
@@ -1512,6 +1527,7 @@ enum ActivityTypes {
   PentestCheckCompleted
   PentestCheckUnassigned
   PentestCheckUpdated
+  PentestStarted
   PentesterAwarded
   ProgramInactive
   ReassignedToTeam
@@ -1539,7 +1555,7 @@ enum ActivityTypes {
 """
 Activities can be of multiple types
 """
-union ActivityUnion = ActivitiesAgreedOnGoingPublic | ActivitiesBountyAwarded | ActivitiesBountySuggested | ActivitiesBugCloned | ActivitiesBugDuplicate | ActivitiesBugFiled | ActivitiesBugInactive | ActivitiesBugInformative | ActivitiesBugNeedsMoreInfo | ActivitiesBugNew | ActivitiesBugNotApplicable | ActivitiesBugReopened | ActivitiesBugResolved | ActivitiesBugSpam | ActivitiesBugTriaged | ActivitiesCancelledDisclosureRequest | ActivitiesChangedScope | ActivitiesChecklistCheckClaimed | ActivitiesChecklistCheckExpired | ActivitiesChecklistCheckReleased | ActivitiesChecklistCheckResponseApproved | ActivitiesChecklistCheckResponseComment | ActivitiesChecklistCheckResponseCreated | ActivitiesChecklistCheckResponseRejected | ActivitiesChecklistCheckResponseUpdated | ActivitiesChecklistCheckRevoked | ActivitiesChecklistExpirationNotification | ActivitiesComment | ActivitiesCommentsClosed | ActivitiesCveIdAdded | ActivitiesExternalAdvisoryAdded | ActivitiesExternalUserInvitationCancelled | ActivitiesExternalUserInvited | ActivitiesExternalUserJoined | ActivitiesExternalUserRemoved | ActivitiesGroupAssignedToBug | ActivitiesHackerRequestedMediation | ActivitiesManuallyDisclosed | ActivitiesMediationRequested | ActivitiesNobodyAssignedToBug | ActivitiesNotEligibleForBounty | ActivitiesPentestCheckAssigned | ActivitiesPentestCheckCompleted | ActivitiesPentestCheckUnassigned | ActivitiesPentestCheckUpdated | ActivitiesPentesterAwarded | ActivitiesProgramInactive | ActivitiesReassignedToTeam | ActivitiesReferenceIdAdded | ActivitiesReportBecamePublic | ActivitiesReportCollaboratorInvited | ActivitiesReportCollaboratorJoined | ActivitiesReportSeverityUpdated | ActivitiesReportTitleUpdated | ActivitiesReportUndisclosed | ActivitiesReportVulnerabilityTypesUpdated | ActivitiesSwagAwarded | ActivitiesTeamBountyTableUpdated | ActivitiesTeamPolicyUpdated | ActivitiesTeamPostCreated | ActivitiesTeamPublished | ActivitiesTeamStructuredScopeUpdated | ActivitiesUserAssignedToBug | ActivitiesUserBannedFromProgram | ActivitiesUserCompletedRetest | ActivitiesUserJoined | ActivitiesUserLeftRetest
+union ActivityUnion = ActivitiesAgreedOnGoingPublic | ActivitiesBountyAwarded | ActivitiesBountySuggested | ActivitiesBugCloned | ActivitiesBugDuplicate | ActivitiesBugFiled | ActivitiesBugInactive | ActivitiesBugInformative | ActivitiesBugNeedsMoreInfo | ActivitiesBugNew | ActivitiesBugNotApplicable | ActivitiesBugReopened | ActivitiesBugResolved | ActivitiesBugSpam | ActivitiesBugTriaged | ActivitiesCancelledDisclosureRequest | ActivitiesChangedScope | ActivitiesChecklistCheckClaimed | ActivitiesChecklistCheckExpired | ActivitiesChecklistCheckReleased | ActivitiesChecklistCheckResponseApproved | ActivitiesChecklistCheckResponseComment | ActivitiesChecklistCheckResponseCreated | ActivitiesChecklistCheckResponseRejected | ActivitiesChecklistCheckResponseUpdated | ActivitiesChecklistCheckRevoked | ActivitiesChecklistExpirationNotification | ActivitiesComment | ActivitiesCommentsClosed | ActivitiesCveIdAdded | ActivitiesExternalAdvisoryAdded | ActivitiesExternalUserInvitationCancelled | ActivitiesExternalUserInvited | ActivitiesExternalUserJoined | ActivitiesExternalUserRemoved | ActivitiesGroupAssignedToBug | ActivitiesHackerRequestedMediation | ActivitiesManuallyDisclosed | ActivitiesMediationRequested | ActivitiesNobodyAssignedToBug | ActivitiesNotEligibleForBounty | ActivitiesPentestCheckAssigned | ActivitiesPentestCheckCompleted | ActivitiesPentestCheckUnassigned | ActivitiesPentestCheckUpdated | ActivitiesPentestStarted | ActivitiesPentesterAwarded | ActivitiesProgramInactive | ActivitiesReassignedToTeam | ActivitiesReferenceIdAdded | ActivitiesReportBecamePublic | ActivitiesReportCollaboratorInvited | ActivitiesReportCollaboratorJoined | ActivitiesReportSeverityUpdated | ActivitiesReportTitleUpdated | ActivitiesReportUndisclosed | ActivitiesReportVulnerabilityTypesUpdated | ActivitiesSwagAwarded | ActivitiesTeamBountyTableUpdated | ActivitiesTeamPolicyUpdated | ActivitiesTeamPostCreated | ActivitiesTeamPublished | ActivitiesTeamStructuredScopeUpdated | ActivitiesUserAssignedToBug | ActivitiesUserBannedFromProgram | ActivitiesUserCompletedRetest | ActivitiesUserJoined | ActivitiesUserLeftRetest
 
 """
 An edge in a connection.
@@ -9714,6 +9730,7 @@ enum PentestStateEnum {
   completed
   draft
   published
+  running
   scheduled
 }
 
