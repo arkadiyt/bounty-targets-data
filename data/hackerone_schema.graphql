@@ -4169,6 +4169,7 @@ input CreateOrUpdateHackeroneToJiraEventsConfigurationInput {
   """
   clientMutationId: String
   comments: Boolean
+  comments_include_link: Boolean
   public_disclosures: Boolean
   rewards: Boolean
   state_changes: Boolean
@@ -7523,6 +7524,7 @@ type HackeroneToJiraEventsConfiguration implements Node {
   assignee_changes: Boolean!
   attachments: Boolean!
   comments: Boolean!
+  comments_include_link: Boolean!
   id: ID!
   public_disclosures: Boolean!
   rewards: Boolean!
