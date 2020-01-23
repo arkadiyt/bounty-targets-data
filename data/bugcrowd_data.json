@@ -2570,20 +2570,12 @@
   {
     "name": "iRobot",
     "url": "https://bugcrowd.com/irobot",
-    "allows_disclosure": false,
+    "allows_disclosure": true,
     "managed_by_bugcrowd": true,
     "safe_harbor": "partial",
     "max_payout": 7500,
     "targets": {
       "in_scope": [
-        {
-          "type": "website",
-          "target": "http://www.irobot.com"
-        },
-        {
-          "type": "website",
-          "target": "https://homesupport.irobot.com"
-        },
         {
           "type": "ios",
           "target": "https://itunes.apple.com/us/app/irobot-home/id1012014442?mt=8"
@@ -2593,10 +2585,6 @@
           "target": "https://play.google.com/store/apps/details?id=com.irobot.home"
         },
         {
-          "type": "website",
-          "target": "https://store.irobot.com"
-        },
-        {
           "type": "hardware",
           "target": "iRobot cloud-connected robot that you own (e.g., i7, 980, 960, 690, Braava, etc.)"
         }
@@ -2604,7 +2592,19 @@
       "out_of_scope": [
         {
           "type": "website",
+          "target": "http://www.irobot.com"
+        },
+        {
+          "type": "website",
+          "target": "https://homesupport.irobot.com"
+        },
+        {
+          "type": "website",
           "target": "https://homesupport.irobot.com/app/chat/chat_launch"
+        },
+        {
+          "type": "website",
+          "target": "https://store.irobot.com"
         },
         {
           "type": "website",
