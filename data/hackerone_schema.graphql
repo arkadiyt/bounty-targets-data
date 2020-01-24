@@ -4225,7 +4225,6 @@ input CreateOrUpdateJiraIntegrationInput {
   generate_webhook_in_jira_if_does_not_exist: Boolean
   issue_fields: [JiraFieldInputType!]
   issue_type: Int!
-  labels: String
   pid: Int!
   priority_rating_ids: JiraPrioritySeverityInput
   project_selection_enabled: Boolean
@@ -7834,6 +7833,7 @@ input JiraFieldInputType {
   description: String!
   field_type: String!
   name: String!
+  required: Boolean
   value: String!
 }
 
