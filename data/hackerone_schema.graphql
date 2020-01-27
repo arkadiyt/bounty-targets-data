@@ -1000,6 +1000,21 @@ type ActivitiesPentestCheckUpdated implements ActivityInterface & Node {
 }
 
 """
+A Activities::PentestPublished activity for a pentest
+"""
+type ActivitiesPentestPublished implements ActivityInterface & Node {
+  _id: ID!
+  actor: ActorUnion
+  created_at: DateTime!
+  i_can_edit: Boolean!
+  id: ID!
+  internal: Boolean
+  markdown_message: String
+  message: String
+  updated_at: DateTime!
+}
+
+"""
 A Activities::PentestStarted activity for a pentest
 """
 type ActivitiesPentestStarted implements ActivityInterface & Node {
@@ -1088,6 +1103,21 @@ type ActivitiesReferenceIdAdded implements ActivityInterface & Node & ReportActi
   reference_url: String
   report: Report
   triage_inbox_item: TriageInboxItem
+  updated_at: DateTime!
+}
+
+"""
+A Activities::RemovedFromPentest activity for a pentest
+"""
+type ActivitiesRemovedFromPentest implements ActivityInterface & Node {
+  _id: ID!
+  actor: ActorUnion
+  created_at: DateTime!
+  i_can_edit: Boolean!
+  id: ID!
+  internal: Boolean
+  markdown_message: String
+  message: String
   updated_at: DateTime!
 }
 
@@ -1527,11 +1557,13 @@ enum ActivityTypes {
   PentestCheckCompleted
   PentestCheckUnassigned
   PentestCheckUpdated
+  PentestPublished
   PentestStarted
   PentesterAwarded
   ProgramInactive
   ReassignedToTeam
   ReferenceIdAdded
+  RemovedFromPentest
   ReportBecamePublic
   ReportCollaboratorInvited
   ReportCollaboratorJoined
@@ -1555,7 +1587,7 @@ enum ActivityTypes {
 """
 Activities can be of multiple types
 """
-union ActivityUnion = ActivitiesAgreedOnGoingPublic | ActivitiesBountyAwarded | ActivitiesBountySuggested | ActivitiesBugCloned | ActivitiesBugDuplicate | ActivitiesBugFiled | ActivitiesBugInactive | ActivitiesBugInformative | ActivitiesBugNeedsMoreInfo | ActivitiesBugNew | ActivitiesBugNotApplicable | ActivitiesBugReopened | ActivitiesBugResolved | ActivitiesBugSpam | ActivitiesBugTriaged | ActivitiesCancelledDisclosureRequest | ActivitiesChangedScope | ActivitiesChecklistCheckClaimed | ActivitiesChecklistCheckExpired | ActivitiesChecklistCheckReleased | ActivitiesChecklistCheckResponseApproved | ActivitiesChecklistCheckResponseComment | ActivitiesChecklistCheckResponseCreated | ActivitiesChecklistCheckResponseRejected | ActivitiesChecklistCheckResponseUpdated | ActivitiesChecklistCheckRevoked | ActivitiesChecklistExpirationNotification | ActivitiesComment | ActivitiesCommentsClosed | ActivitiesCveIdAdded | ActivitiesExternalAdvisoryAdded | ActivitiesExternalUserInvitationCancelled | ActivitiesExternalUserInvited | ActivitiesExternalUserJoined | ActivitiesExternalUserRemoved | ActivitiesGroupAssignedToBug | ActivitiesHackerRequestedMediation | ActivitiesManuallyDisclosed | ActivitiesMediationRequested | ActivitiesNobodyAssignedToBug | ActivitiesNotEligibleForBounty | ActivitiesPentestCheckAssigned | ActivitiesPentestCheckCompleted | ActivitiesPentestCheckUnassigned | ActivitiesPentestCheckUpdated | ActivitiesPentestStarted | ActivitiesPentesterAwarded | ActivitiesProgramInactive | ActivitiesReassignedToTeam | ActivitiesReferenceIdAdded | ActivitiesReportBecamePublic | ActivitiesReportCollaboratorInvited | ActivitiesReportCollaboratorJoined | ActivitiesReportSeverityUpdated | ActivitiesReportTitleUpdated | ActivitiesReportUndisclosed | ActivitiesReportVulnerabilityTypesUpdated | ActivitiesSwagAwarded | ActivitiesTeamBountyTableUpdated | ActivitiesTeamPolicyUpdated | ActivitiesTeamPostCreated | ActivitiesTeamPublished | ActivitiesTeamStructuredScopeUpdated | ActivitiesUserAssignedToBug | ActivitiesUserBannedFromProgram | ActivitiesUserCompletedRetest | ActivitiesUserJoined | ActivitiesUserLeftRetest
+union ActivityUnion = ActivitiesAgreedOnGoingPublic | ActivitiesBountyAwarded | ActivitiesBountySuggested | ActivitiesBugCloned | ActivitiesBugDuplicate | ActivitiesBugFiled | ActivitiesBugInactive | ActivitiesBugInformative | ActivitiesBugNeedsMoreInfo | ActivitiesBugNew | ActivitiesBugNotApplicable | ActivitiesBugReopened | ActivitiesBugResolved | ActivitiesBugSpam | ActivitiesBugTriaged | ActivitiesCancelledDisclosureRequest | ActivitiesChangedScope | ActivitiesChecklistCheckClaimed | ActivitiesChecklistCheckExpired | ActivitiesChecklistCheckReleased | ActivitiesChecklistCheckResponseApproved | ActivitiesChecklistCheckResponseComment | ActivitiesChecklistCheckResponseCreated | ActivitiesChecklistCheckResponseRejected | ActivitiesChecklistCheckResponseUpdated | ActivitiesChecklistCheckRevoked | ActivitiesChecklistExpirationNotification | ActivitiesComment | ActivitiesCommentsClosed | ActivitiesCveIdAdded | ActivitiesExternalAdvisoryAdded | ActivitiesExternalUserInvitationCancelled | ActivitiesExternalUserInvited | ActivitiesExternalUserJoined | ActivitiesExternalUserRemoved | ActivitiesGroupAssignedToBug | ActivitiesHackerRequestedMediation | ActivitiesManuallyDisclosed | ActivitiesMediationRequested | ActivitiesNobodyAssignedToBug | ActivitiesNotEligibleForBounty | ActivitiesPentestCheckAssigned | ActivitiesPentestCheckCompleted | ActivitiesPentestCheckUnassigned | ActivitiesPentestCheckUpdated | ActivitiesPentestPublished | ActivitiesPentestStarted | ActivitiesPentesterAwarded | ActivitiesProgramInactive | ActivitiesReassignedToTeam | ActivitiesReferenceIdAdded | ActivitiesRemovedFromPentest | ActivitiesReportBecamePublic | ActivitiesReportCollaboratorInvited | ActivitiesReportCollaboratorJoined | ActivitiesReportSeverityUpdated | ActivitiesReportTitleUpdated | ActivitiesReportUndisclosed | ActivitiesReportVulnerabilityTypesUpdated | ActivitiesSwagAwarded | ActivitiesTeamBountyTableUpdated | ActivitiesTeamPolicyUpdated | ActivitiesTeamPostCreated | ActivitiesTeamPublished | ActivitiesTeamStructuredScopeUpdated | ActivitiesUserAssignedToBug | ActivitiesUserBannedFromProgram | ActivitiesUserCompletedRetest | ActivitiesUserJoined | ActivitiesUserLeftRetest
 
 """
 An edge in a connection.
@@ -4056,6 +4088,59 @@ type CreateJiraWebhookTokenPayload implements MutationResult {
   team: Team
   was_successful: Boolean!
   webhook_url: String
+}
+
+"""
+Autogenerated input type of CreateJobListing
+"""
+input CreateJobListingInput {
+  """
+  A unique identifier for the client performing the mutation.
+  """
+  clientMutationId: String
+  contract: Boolean
+  description: String!
+  fulltime: Boolean
+  handle: String!
+  location: String!
+  promotion: Boolean
+  remote: Boolean
+  title: String!
+  url: String!
+}
+
+"""
+Autogenerated return type of CreateJobListing
+"""
+type CreateJobListingPayload implements MutationResult {
+  """
+  A unique identifier for the client performing the mutation.
+  """
+  clientMutationId: String
+  errors(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+    types: [ErrorTypeEnum]
+  ): ErrorConnection!
+  job_listing: JobListing
+  was_successful: Boolean!
 }
 
 """
@@ -7146,6 +7231,24 @@ input FiltersHacktivityItemFilterOrder {
   latest_disclosable_activity_at: FilterOrderPredicateInput
 }
 
+input FiltersJobListingFilterInput {
+  _and: [FiltersJobListingFilterInput]
+  _or: [FiltersJobListingFilterInput]
+  contract: BooleanPredicateInput
+  description: StringPredicateInput
+  fulltime: BooleanPredicateInput
+  id: IntPredicateInput
+  location: StringPredicateInput
+  remote: BooleanPredicateInput
+  team: FiltersTeamFilterInput
+  title: StringPredicateInput
+}
+
+input FiltersJobListingFilterOrder {
+  created_at: FilterOrderPredicateInput
+  id: FilterOrderPredicateInput
+}
+
 input FiltersPentestCheckFilterInput {
   _and: [FiltersPentestCheckFilterInput]
   _or: [FiltersPentestCheckFilterInput]
@@ -7979,6 +8082,60 @@ type JiraWebhook implements Node {
 }
 
 """
+A HackerOne job listing
+"""
+type JobListing implements Node {
+  _id: ID!
+  contract: Boolean
+  created_at: DateTime!
+  description: String!
+  description_html: String
+  fulltime: Boolean
+  id: ID!
+  location: String
+  remote: Boolean
+  team: Team!
+  title: String!
+  url: String!
+}
+
+"""
+The connection type for JobListing.
+"""
+type JobListingConnection {
+  """
+  A list of edges.
+  """
+  edges: [JobListingEdge]
+
+  """
+  A list of nodes.
+  """
+  nodes: [JobListing]
+
+  """
+  Information to aid in pagination.
+  """
+  pageInfo: PageInfo!
+  total_count: Int!
+}
+
+"""
+An edge in a connection.
+"""
+type JobListingEdge {
+  """
+  A cursor for use in pagination.
+  """
+  cursor: String!
+
+  """
+  The item at the end of the edge.
+  """
+  node: JobListing
+}
+
+"""
 Label of a structured scope
 """
 type Label implements Node {
@@ -8745,6 +8902,7 @@ type Mutation {
   createIssueTrackerReferenceId(input: CreateIssueTrackerReferenceIdInput!): CreateIssueTrackerReferenceIdPayload
   createJiraOauthUrl(input: CreateJiraOauthUrlInput!): CreateJiraOauthUrlPayload
   createJiraWebhookToken(input: CreateJiraWebhookTokenInput!): CreateJiraWebhookTokenPayload
+  createJobListing(input: CreateJobListingInput!): CreateJobListingPayload
   createLeaveProgramSurveyAnswer(input: CreateLeaveProgramSurveyAnswerInput!): CreateLeaveProgramSurveyAnswerPayload
   createMailingAddress(input: CreateMailingAddressInput!): CreateMailingAddressPayload
   createOrUpdateHackeroneToJiraEventsConfiguration(input: CreateOrUpdateHackeroneToJiraEventsConfigurationInput!): CreateOrUpdateHackeroneToJiraEventsConfigurationPayload
@@ -10414,6 +10572,30 @@ type Query implements Node {
     where: FiltersHacktivityItemFilterInput
   ): HacktivityItemConnection
   id: ID!
+  job_listing(id: ID!): JobListing
+  job_listings(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+    order_by: FiltersJobListingFilterOrder
+    where: FiltersJobListingFilterInput
+  ): JobListingConnection
   label_categories(
     """
     Returns the elements in the list that come after the specified cursor.
@@ -13708,6 +13890,27 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
   jira_integration: JiraIntegration
   jira_oauth: JiraOauth
   jira_webhook: JiraWebhook
+  job_listings(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+  ): JobListingConnection
 
   """
   The participant's date of accepted the teams invitation
