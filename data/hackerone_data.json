@@ -8117,6 +8117,154 @@
     }
   },
   {
+    "id": 1684,
+    "name": "GoodRx",
+    "handle": "goodrx",
+    "url": "https://hackerone.com/goodrx",
+    "offers_bounties": true,
+    "quick_to_bounty": true,
+    "quick_to_first_response": true,
+    "submission_state": "open",
+    "targets": {
+      "in_scope": [
+        {
+          "asset_identifier": "com.goodrx",
+          "asset_type": "GOOGLE_PLAY_APP_ID",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Playstore Download: https://play.google.com/store/apps/details?id=com.goodrx",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "com.goodrx.iphone",
+          "asset_type": "APPLE_STORE_APP_ID",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "iOS Download: https://itunes.apple.com/app/id485357017",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "gold.goodrx.com",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "A credit card is required for a free 30 day trial, however you can cancel at any time within the website without having the need to talk to an actual human.",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "heydoctor.goodrx.com",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "While this domain is in scope, please refrain from starting a doctor consultation and interacting with doctors for the sole sake of testing. Bounties are eligible for this host as it does handle live production traffic. Questions about acceptable scope for this host can be sent to: security@goodrx.com",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "m.goodrx.com",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "www.goodrx.com",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "This our primary site. No billing information is required to go through an account registration work-flow.",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "asset_identifier": "com.goodrx.doctors",
+          "asset_type": "APPLE_STORE_APP_ID",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "iOS Download: https://itunes.apple.com/app/id1122105489",
+          "integrity_requirement": "high",
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "com.goodrx.doctors",
+          "asset_type": "GOOGLE_PLAY_APP_ID",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "Playstore Download: https://play.google.com/store/apps/details?id=com.goodrx.doctors",
+          "integrity_requirement": "high",
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "com.goodrx.gold",
+          "asset_type": "APPLE_STORE_APP_ID",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "iOS Download: https://itunes.apple.com/app/id1249717355",
+          "integrity_requirement": "high",
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "com.goodrx.gold",
+          "asset_type": "GOOGLE_PLAY_APP_ID",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "Playstore Download: https://play.google.com/store/apps/details?id=com.goodrx.gold\n\nGold workflow and features are being migrated into the primary GoodRx consumer app. Bounties for the Gold application must be replicated within the core GoodRx application to qualify for a bounty.",
+          "integrity_requirement": "high",
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "sso.identity.goodrx.com",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "This sub-domain is manged by Auth0. Bugs hosted on this domain would be covered by Auth0's bug bounty program and not GoodRx's.",
+          "integrity_requirement": "high",
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "support.goodrx.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "This subdomain is managed by Zendesk. Any issues on this page would be covered by Zendesk's bug bounty program.",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        }
+      ]
+    }
+  },
+  {
     "id": 1711,
     "name": "Nokogiri",
     "handle": "nokogiri",
