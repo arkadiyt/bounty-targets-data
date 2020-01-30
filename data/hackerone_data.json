@@ -8172,24 +8172,13 @@
           "max_severity": "critical"
         },
         {
-          "asset_identifier": "m.goodrx.com",
-          "asset_type": "URL",
-          "availability_requirement": "high",
-          "confidentiality_requirement": "high",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "",
-          "integrity_requirement": "high",
-          "max_severity": "critical"
-        },
-        {
           "asset_identifier": "www.goodrx.com",
           "asset_type": "URL",
           "availability_requirement": "high",
           "confidentiality_requirement": "high",
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
-          "instruction": "This our primary site. No billing information is required to go through an account registration work-flow.",
+          "instruction": "This our primary site. No billing information is required to go through an account registration work-flow. Our mobile site m.goodrx.com is also covered by this scope.",
           "integrity_requirement": "high",
           "max_severity": "critical"
         }
@@ -27445,110 +27434,6 @@
     }
   },
   {
-    "id": 25889,
-    "name": "Nimiq",
-    "handle": "nimiq",
-    "url": "https://hackerone.com/nimiq",
-    "offers_bounties": true,
-    "quick_to_bounty": false,
-    "quick_to_first_response": true,
-    "submission_state": "disabled",
-    "targets": {
-      "in_scope": [
-        {
-          "asset_identifier": "Blockchain testnet",
-          "asset_type": "OTHER",
-          "availability_requirement": "medium",
-          "confidentiality_requirement": "high",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "The regular Nimiq Testnet can be used for the purposes of this program and it consists of our official client implementation running on the following servers:\n\n* seed1.nimiqtest.net:8080 (JavaScript implementation)\n* seed2.nimiqtest.net:8080 (JavaScript implementation)\n* seed3.nimiqtest.net:8080 (JavaScript implementation)\n* seed4.nimiqtest.net:8080 (Rust implementation)\n\nThe easiest way to connect to the testnet is by downloading the [`master` branch](https://github.com/nimiq-network/core/tree/master/src) of our official code repository and following the [Quickstart Guide](https://github.com/nimiq-network/core#quickstart) to get a web client (step 7), or if you prefer, you can also [build a nodeJS client](https://github.com/nimiq-network/core#nodejs-client) afterwards. Very important: Make sure to change the `--network=` parameter to `test` before attempting anything.\n\nOf course, you are also encouraged to find security problems by connecting directly to the 8080 port on those servers with any other tools that you consider useful. Please keep in mind that security issues on other services (i.e. not our client on port 8080) running on these servers are out of scope.\n",
-          "integrity_requirement": "high",
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "https://github.com/nimiq/core-js/",
-          "asset_type": "SOURCE_CODE",
-          "availability_requirement": "medium",
-          "confidentiality_requirement": "high",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "The `src/` folder on the `master` branch of this repository has all the source code for our official JavaScript implementation that we look forward to be tested.\n\nThere is also a running version of this code in the testnet, you can find the instructions to test against it in the \"Blockchain testnet\" section below.\n",
-          "integrity_requirement": "high",
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "https://github.com/nimiq/core-rs/",
-          "asset_type": "SOURCE_CODE",
-          "availability_requirement": "medium",
-          "confidentiality_requirement": "high",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "The `master` branch of this repository has all the source code for our official Rust implementation that we look forward to be tested.\n\nThere is also a running version of this code in the testnet, you can find the instructions to test against it in the \"Blockchain testnet\" section below.\n",
-          "integrity_requirement": "high",
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "https://github.com/nimiq/ledger-app-nimiq",
-          "asset_type": "SOURCE_CODE",
-          "availability_requirement": "low",
-          "confidentiality_requirement": "high",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "The Nimiq Ledger App is designed to allow [Ledger Nano S](https://www.ledgerwallet.com/products/ledger-nano-s) users to create a Nimiq Account with the private key safely stored in their hardware wallet.\n\nFor this particular asset we're looking to find bugs that would allow an attacker to get an user's private key (or any other secret data that can be used to validly sign transactions) or that would allow an attacker to create a transaction with fields that would be displayed incorrectly on the Ledger's screen in a way that would result in a valid transaction to a different address or with a different amount than what the user expected.\n\nOther less critical bugs could also be valid (for example a bug that can cause the app to \"freeze\" or \"crash\").\n\nOnly bugs in the Nimiq Ledger App itself are valid, more general bugs that apply to the Ledger Nano S or its Operating System should be [sent to Ledger directly](https://www.ledger.fr/bounty-program/).",
-          "integrity_requirement": "high",
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "https://keyguard.nimiq.com/",
-          "asset_type": "URL",
-          "availability_requirement": "medium",
-          "confidentiality_requirement": "high",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "The Nimiq Keyguard is designed to be the place where the keys of the users are stored (encrypted) if they are not using a supported hardware wallet and as such it is very important for us to make sure that the Keyguard is very secure. Examples of the kind of exploits we are interested in are: unauthorized key extraction, unauthorized signing of transactions, displaying information when signing a transaction that is different from the actual data in the signed transaction, etc. These exploits need to be due to a problem in the Keyguard itself, so things like social engineering or using malware on an user computer are not considered valid reports.\n\nThe source code for the Keyguard is available [here](https://github.com/nimiq/keyguard) in case it can help you to find security issues with it, but please keep in mind we're looking for bugs that can be actually exploitable in the current deployment of the Keyguard (i.e. in https://keyguard.nimiq.com/).",
-          "integrity_requirement": "high",
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "https://safe.nimiq.com/",
-          "asset_type": "URL",
-          "availability_requirement": "medium",
-          "confidentiality_requirement": "high",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "The Nimiq Safe is the main place where our users interact with the blockchain and with the funds protected by their keys (usually stored in the Keyguard) which means we expect it to be highly secure. Examples of the kind of exploits we're interested in are: opening a fake Keyguard from the Nimiq Safe which would allow an attacker to trick the user into entering their keys and stealing them, deleting a user's key without them explicitly wanting to, hijacking the \"copy to clipboard\" functionality to copy the wrong address or displaying the wrong address when the user is asked to verify the address on the Ledger Nano S.\n\nThe source code for the Safe is available [here](https://github.com/nimiq/safe) in case it can help you to find security issues with it, but please keep in mind we're looking for bugs that can be actually exploitable in the current deployment of the keyguard (i.e. in https://safe.nimiq.com/).",
-          "integrity_requirement": "high",
-          "max_severity": "critical"
-        }
-      ],
-      "out_of_scope": [
-        {
-          "asset_identifier": "*.nimiq.com",
-          "asset_type": "URL",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": false,
-          "eligible_for_submission": false,
-          "instruction": "",
-          "integrity_requirement": null,
-          "max_severity": "none"
-        },
-        {
-          "asset_identifier": "https://miner.nimiq.com/",
-          "asset_type": "URL",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": false,
-          "eligible_for_submission": false,
-          "instruction": "",
-          "integrity_requirement": null,
-          "max_severity": "none"
-        }
-      ]
-    }
-  },
-  {
     "id": 26602,
     "name": "Railto LLC",
     "handle": "railto",
@@ -37511,7 +37396,7 @@
   },
   {
     "id": 41648,
-    "name": "GovTech",
+    "name": "GovTech VDP",
     "handle": "sg-vdp",
     "url": "https://hackerone.com/sg-vdp",
     "offers_bounties": false,
