@@ -18092,6 +18092,88 @@
     }
   },
   {
+    "id": 18315,
+    "name": "bunq",
+    "handle": "bunq",
+    "url": "https://hackerone.com/bunq",
+    "offers_bounties": false,
+    "quick_to_bounty": false,
+    "quick_to_first_response": false,
+    "submission_state": "open",
+    "targets": {
+      "in_scope": [
+        {
+          "asset_identifier": "api.bunq.com",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "com.bunq.android",
+          "asset_type": "GOOGLE_PLAY_APP_ID",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "com.bunq.ios",
+          "asset_type": "APPLE_STORE_APP_ID",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "asset_identifier": "bunq.com",
+          "asset_type": "URL",
+          "availability_requirement": "none",
+          "confidentiality_requirement": "none",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "",
+          "integrity_requirement": "none",
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "doc.bunq.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "together.bunq.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        }
+      ]
+    }
+  },
+  {
     "id": 19264,
     "name": "Shipt",
     "handle": "shipt",
@@ -39383,6 +39465,45 @@
           "eligible_for_submission": true,
           "instruction": "Includes language-specific TLDs:\n`*.pubgesports.kr`\n`*.pubgesports.eu`\n...etc.",
           "integrity_requirement": "low",
+          "max_severity": "critical"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
+    "id": 44514,
+    "name": "REM-B Hydraulics",
+    "handle": "remb_hydraulics",
+    "url": "https://hackerone.com/remb_hydraulics",
+    "offers_bounties": false,
+    "quick_to_bounty": false,
+    "quick_to_first_response": true,
+    "submission_state": "open",
+    "targets": {
+      "in_scope": [
+        {
+          "asset_identifier": "hydraulics-group.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "Try to access our on-premise network and servers\nWe have several virtual servers. Please pay specific attention to:\n- ERP server (Dynamics NAV)\n- file server\n- QNAP backup server\n\nThis endpoint domain can be excluded: rembconnect.be",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "remb.sharepoint.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "Please ensure testing against this asset follows the Microsoft Rules of Engagement: https://www.microsoft.com/en-us/msrc/pentest-rules-of-engagement ",
+          "integrity_requirement": null,
           "max_severity": "critical"
         }
       ],
