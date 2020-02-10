@@ -8014,7 +8014,7 @@ input JiraFieldInputType {
   description: String!
   field_type: String!
   name: String!
-  required: Boolean
+  required: Boolean!
   value: String!
 }
 
@@ -13735,6 +13735,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
     last: Int
     order_by: CommonResponseOrder = {direction: ASC, field: title}
   ): CommonResponseConnection
+  company_headcount_range: String
   controlled_launch_team: Boolean
   cover_color: String
   cover_photo_url: String
@@ -13928,6 +13929,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
     order_by: TeamInboxViewOrder = {direction: ASC, field: position}
     visible: Boolean
   ): TeamInboxViewConnection
+  industries: [String!]
   industry: String
   internet_bug_bounty: Boolean
   invitation_rejection_survey_answers(
