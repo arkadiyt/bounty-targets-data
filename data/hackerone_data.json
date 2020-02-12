@@ -12565,8 +12565,8 @@
   {
     "id": 8252,
     "name": "Alibaba",
-    "handle": "alibaba",
-    "url": "https://hackerone.com/alibaba",
+    "handle": "alibaba_vdp",
+    "url": "https://hackerone.com/alibaba_vdp",
     "offers_bounties": false,
     "quick_to_bounty": false,
     "quick_to_first_response": false,
@@ -40064,6 +40064,56 @@
           "instruction": "",
           "integrity_requirement": null,
           "max_severity": "critical"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
+    "id": 43727,
+    "name": "CompanyHub",
+    "handle": "companyhub",
+    "url": "https://hackerone.com/companyhub",
+    "offers_bounties": false,
+    "quick_to_bounty": false,
+    "quick_to_first_response": true,
+    "submission_state": "open",
+    "targets": {
+      "in_scope": [
+        {
+          "asset_identifier": "*.companyhub.com",
+          "asset_type": "URL",
+          "availability_requirement": "medium",
+          "confidentiality_requirement": "medium",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "All app related issues fit in this. The exclusions are any other domains than accounts, t & user subdomain.",
+          "integrity_requirement": "low",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "com.companyhub.crm",
+          "asset_type": "GOOGLE_PLAY_APP_ID",
+          "availability_requirement": "low",
+          "confidentiality_requirement": "low",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": "low",
+          "max_severity": "medium"
+        },
+        {
+          "asset_identifier": "com.companyhub.crm",
+          "asset_type": "OTHER_IPA",
+          "availability_requirement": "low",
+          "confidentiality_requirement": "low",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": "low",
+          "max_severity": "medium"
         }
       ],
       "out_of_scope": [
