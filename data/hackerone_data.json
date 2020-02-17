@@ -40957,6 +40957,17 @@
     "targets": {
       "in_scope": [
         {
+          "asset_identifier": "919085610",
+          "asset_type": "APPLE_STORE_APP_ID",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "*Mobile Employee - Mobile App*\nThe iOS version of Visma Employee is available in the AppStore. Link to the app: https://itunes.apple.com/us/app/visma-employee/id919085610?mt=8\nSame login as for payslip.stag.visma.net asset.\n\n5 quick taps on bottom right of the app will show the environment selector and there you can select staging. This will make all interactions target https://mobileemployee.stag.visma.net/employee.\n\n*Asset added on 2020-02-17*",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
           "asset_identifier": "accountsettings.connect.identity.stagaws.visma.com",
           "asset_type": "URL",
           "availability_requirement": "high",
@@ -40975,6 +40986,17 @@
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
           "instruction": "See instructions for domain \"connect.identity.stagaws.visma.com\".",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "com.visma.vme.payslip",
+          "asset_type": "GOOGLE_PLAY_APP_ID",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "*Mobile Employee - Mobile App*\nThe Android version of the Visma Employee app is available in the Play Store. Link to the app: https://play.google.com/store/apps/details?id=com.visma.vme.payslip&hl=en\nSame login as for payslip.stag.visma.net asset.\n\nUse an interceptor to redirect the traffic to the staging environment, currently there is no environment selector in production for android. The play store version will target the production endpoints by default. The production API URLs start with https://mobileemployee.visma.net , and the host part needs to be changed to https://mobileemployee.stag.visma.net . Please see the description of the API mobileemployee.stag.visma.net/employee for more information. \n\n*Asset added on 2020-02-17*",
           "integrity_requirement": "high",
           "max_severity": "critical"
         },
@@ -41008,6 +41030,17 @@
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
           "instruction": "You reach this asset by creating and viewing a report under the Accounting/Reports menu as a logged on user in asset 'eaccounting.stage.vismaonline.com'.",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "mobileemployee.stag.visma.net/employee",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "*Mobile Employee Web API*\nVisma Employee is a mobile app developed for iOS and Android that supports employees in many recurring, administrative tasks. The apps rely on the employee Web API for all operations (except analytics traces). \n\nPlease see the documentation at https://mobileemployee.stag.visma.net/employee/Help .\n\nAll API operations require an Authentication header with the value \"Bearer <token>\". You fetch a valid token by invoking the https://mobileemployee.stag.visma.net/Employee/Help/Api/POST-api-v1-authorization-getaccesstoken endpoint with a valid user name and password. User name and password are the same as for the asset payslip.stag.visma.net\nAll subsequent requests to the API must include the Authentication header, and the Authentication header must use the Bearer scheme, passing the token you received in Base64 encoded form. \n\nPlease note that while https://mobileemployee.stag.visma.net/employee is considered the \"root\" of the API, it also serves a self test page that could possibly be used to try and abuse the system. Everything on this page is included in simple in-line JavaScript, for your reading convenience. While not meant to be terribly useful for outsiders, it may help in figuring out how one might try to attack the API. \n\n*Asset added on 2020-02-17*",
           "integrity_requirement": "high",
           "max_severity": "critical"
         }
