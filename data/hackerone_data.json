@@ -282,7 +282,7 @@
           "confidentiality_requirement": null,
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
-          "instruction": "# You MUST register for an account with your @wearehackerone email address or else your report will NOT be eligible for bounty.\n\n* *.builtbygirls.com\n",
+          "instruction": "## In Scope\n* *.builtbygirls.com\n\n## Notes\n* You MUST register for an account with your `@wearehackerone` email address or else your report will NOT be eligible for bounty.\n\n## Out of Scope\n* jobs.builtbygirls.com (3rd party, Jobboard.io)\n\n",
           "integrity_requirement": null,
           "max_severity": "critical"
         },
@@ -293,7 +293,7 @@
           "confidentiality_requirement": null,
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
-          "instruction": "## In Scope\n* [APIs](https://api.engadget.com/api)\n* *.engadget.com\n\n## Notes\n* Separate reports for the same or similar payload/issue against multiple international editions, will be marked as duplicates and paid only once for Engadget international editions.\n\n## Out of Scope\n* *.spot.im (3rd party, Spot.IM)\n* *.cn.engadget.com (Engadget International Edition)\n* *.chinese.engadget.com (Engadget International Edition)\n* *.japanese.engadget.com (Engadget International Edition)\n",
+          "instruction": "## In Scope\n* [APIs](https://api.engadget.com/api)\n* *.engadget.com\n\n## Notes\n* Separate reports for the same or similar payload/issue against multiple international editions, will be marked as duplicates and paid only once for Engadget international editions.\n\n## Out of Scope\n* *.spot.im (3rd party, Spot.IM)\n* *.cn.engadget.com (Engadget International Edition)\n* *.chinese.engadget.com (Engadget International Edition)\n* *.japanese.engadget.com (Engadget International Edition)\n* jobs.engadget.com (3rd party, Jobboard.io)\n",
           "integrity_requirement": null,
           "max_severity": "critical"
         },
@@ -551,6 +551,28 @@
           "max_severity": "critical"
         },
         {
+          "asset_identifier": "Yahoo Sports: Best Ball",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "## In Scope\n* https://bestball.fantasysports.yahoo.com/",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "Yahoo Sports: Daily Fantasy",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "## In Scope\n* https://sports.yahoo.com/dailyfantasy/\n* https://sports.yahoo.com/dailyfantasy/contest/create",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
           "asset_identifier": "Yahoo Sports: Editorial",
           "asset_type": "OTHER",
           "availability_requirement": null,
@@ -562,13 +584,57 @@
           "max_severity": "critical"
         },
         {
-          "asset_identifier": "Yahoo Sports: Fantasy",
+          "asset_identifier": "Yahoo Sports: Fantasy Games",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "## In Scope\n* https://sports.yahoo.com/fantasy/\n* [Fantasy Basketball](https://basketball.fantasysports.yahoo.com/)\n* [Fantasy Hockey](https://hockey.fantasysports.yahoo.com/)\n* [Fantasy User Profiles](https://profiles.sports.yahoo.com)\n* [Fantasy Football](https://football.fantasysports.yahoo.com/) (out of season)\n* [Public cookie-based API endpoints](https://pub-api-ro.fantasysports.yahoo.com) (used by some FE stacks)\n* [Public OAuth2 endpoints](https://fantasysports.yahooapis.com)\n* tournament.fantasysports.yahoo.com\n\n## Out of Scope\n* *.sendbird.com (Third Party, SendBird)",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "Yahoo Sports: Fantasy Slate/PicknWin",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "## In Scope\n* https://sports.yahoo.com/fantasyslate",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "Yahoo Sports: Fantasy Sports",
           "asset_type": "OTHER",
           "availability_requirement": null,
           "confidentiality_requirement": null,
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
           "instruction": "## In Scope\n* [Yahoo Fantasy Sports Android](https://play.google.com/store/apps/details?id=com.yahoo.mobile.client.android.fantasyfootball)\n* [Yahoo Fantasy Sports iOS](https://itunes.apple.com/us/app/yahoo-fantasy-sports/id328415391?mt=8)\n* [Yahoo Fantasy Sports (web)](https://sports.yahoo.com/fantasy/)\n* https://sports.yahoo.com/odds/\n\n## Notes\nThe betting feature in Fantasy is provided by a third party, BetMGM. `https://sports.yahoo.com/odds/`, is the page from where it redirects the user to the BetMGM. This is geographically restricted.",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "Yahoo Sports: Fantasy Wallet",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "## In Scope\n* https://sports.yahoo.com/dailyfantasy/account/addfunds",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "Yahoo Sports: Mobile",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "* [Yahoo Sports Android](https://play.google.com/store/apps/details?id=com.yahoo.mobile.client.android.sportacular)\n* [Yahoo Sports iOS](https://itunes.apple.com/us/app/yahoo-sports-teams-scores-news-highlights/id286058814?mt=8)\n* *.protrade.com",
           "integrity_requirement": null,
           "max_severity": "critical"
         },
@@ -806,13 +872,13 @@
           "max_severity": "none"
         },
         {
-          "asset_identifier": "Challenge Coin",
+          "asset_identifier": "Challenge Coins",
           "asset_type": "OTHER",
           "availability_requirement": null,
           "confidentiality_requirement": null,
           "eligible_for_bounty": false,
           "eligible_for_submission": false,
-          "instruction": "These are just for fun.\n[H1-213-2020](https://forms.gle/jG7uRzS6k7BWjAeUA) \n",
+          "instruction": "These are just for fun.\n* [H1-213-2019](https://forms.gle/jG7uRzS6k7BWjAeUA)\n* [H1-415-2020(coming soon)\n",
           "integrity_requirement": null,
           "max_severity": "none"
         },
@@ -912,17 +978,6 @@
           "eligible_for_bounty": false,
           "eligible_for_submission": false,
           "instruction": "*Yahoo Small Business* is operated under **Verizon**. Security issues should be reported to `https://www.verizon.com/info/reportsecurityvulnerability`\n\nThis includes `smallbusiness.yahoo.com`, `SiteBuilder`, `Access Manager`, `Store Editor`, `YSB Developer Network`, `Commerce Central`, `Localworks`, `Luminate` and all other apps/services under the Yahoo Small Business family of products.\n\nAlso includes:\n* *.store.*.yahoo.com",
-          "integrity_requirement": null,
-          "max_severity": "none"
-        },
-        {
-          "asset_identifier": "jobs.builtbygirls.com",
-          "asset_type": "URL",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": false,
-          "eligible_for_submission": false,
-          "instruction": "The jobs.builtbygirls.com is an interface for jobboard.io.",
           "integrity_requirement": null,
           "max_severity": "none"
         }
