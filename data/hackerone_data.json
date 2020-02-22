@@ -232,6 +232,17 @@
           "max_severity": "critical"
         },
         {
+          "asset_identifier": "AOL Mail",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "## In Scope\n* *.mail.aol.com (see exclusions below)\n* mail.aol.com/calsvc \n* rpc.mail.aol.com\n\n## Notes\n* oidc.mail.aol.com (Hosted by Mail, but belongs to `Membership`)\n\n## Out of Scope\n* [AOL iOS](https://apps.apple.com/us/app/aol-news-email-weather-video/id646100661)\n* [AOL Android](https://play.google.com/store/apps/details?id=com.aol.mobile.aolapp&hl=en_US)\n* [AOL FireOS](https://www.amazon.com/AOL-Inc-Mail-News-Video/dp/B011VYAGSY)\n* [AOL Desktop Gold](https://get.aol.com/aol-desktop-gold) \n* apis.mail.aol.com\n* test-apis.mail.aol.com\n* *.aolmail.com\n* mail.aol.com/classicab\n* mail.aol.com/getmydata\n* mail.aol.com/ws\n* *.aol.com",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
           "asset_identifier": "Athenz",
           "asset_type": "SOURCE_CODE",
           "availability_requirement": null,
@@ -239,6 +250,17 @@
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
           "instruction": "###Review the Code\n* [Source Code](https://github.com/yahoo/athenz)\n* Submit a PR to fix/update the code - [fork](https://help.github.com/en/articles/fork-a-repo) the codebase then submit a [PR](https://help.github.com/en/articles/creating-a-pull-request-from-a-fork)\n\n\n###Out of Scope\n`yahoo/athenz/ui`, `yahoo/athenz/contributions`, and `yahoo/athenz/docker` are outdated from our own internal deployment because of our use of Okta and Duo which we are not able to deploy to you all for this event; this is why we stated the Athenz UI was out of scope during the scoping call. \nThe UI was just given out as a starting point so whoever needs it, can take it, integrate with their own authentication system and also provide all the necessary protections. Our UI devs worked with the Paranoids’ red team internally for quite some time to go through all this, addressing many different types of bug classes with our integration with Okta and Duo and that’s what we’re running in our production instance.",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "Autoblog",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "## In Scope\n* www.autoblog.com\n\n## Out of Scope\n* *.spot.im (3rd party, Spot.IM)\n* Development-like environments for `autoblog.com` exist, but should not be tested; keep the testing in Production (`www.`).",
           "integrity_requirement": null,
           "max_severity": "critical"
         },
@@ -261,6 +283,17 @@
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
           "instruction": "# You MUST register for an account with your @wearehackerone email address or else your report will NOT be eligible for bounty.\n\n* *.builtbygirls.com\n",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "Engadget",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "## In Scope\n* [APIs](https://api.engadget.com/api)\n* *.engadget.com\n\n## Notes\n* Separate reports for the same or similar payload/issue against multiple international editions, will be marked as duplicates and paid only once for Engadget international editions.\n\n## Out of Scope\n* *.spot.im (3rd party, Spot.IM)\n* *.cn.engadget.com (Engadget International Edition)\n* *.chinese.engadget.com (Engadget International Edition)\n* *.japanese.engadget.com (Engadget International Edition)\n",
           "integrity_requirement": null,
           "max_severity": "critical"
         },
@@ -315,7 +348,7 @@
           "confidentiality_requirement": null,
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
-          "instruction": "\n##In Scope\n* https://login.yahoo.com\n* https://login.aol.com\n* https://api.login.yahoo.com\n* https://api.login.aol.com\n\nSome documentation that may help:\nhttps://developer.yahoo.com/oauth2/guide/\n\nSpecific paths to target….\nFor `login.*.com`\n* /account/logout\n* /auth/2.0/credentials\n* /auth/1.0/\n* /saml2/\n* /account\n* /oauth2\n* /ylc\n* /account/challenges\n* /account/access\n* /oauth2/device_auth\n* /ctv\n* /activate\n* /forgot\n\nFor `api.login.*.com`\n* /api\n* /oauth2/get_token\n* /oauth2/web_session\n* /oauth2/device_sessions\n* /oauth2/device_authorization\n* /oauth2/device_auth\n* /oauth2/revoke\n* /oauth2/introspect\n\n##Out of Scope\n* Any rate limits for authentication attempts. \n* Any differentiated treatment based on account, browser, IP address etc.\n\n##Limits\n* Limit traffic against our services to < 10/second when probing or testing.",
+          "instruction": "\n##In Scope\n* https://login.yahoo.com\n* https://login.aol.com\n* https://api.login.yahoo.com\n* https://api.login.aol.com\n* http://credstore.yahoo.com/\n\nSome documentation that may help:\nhttps://developer.yahoo.com/oauth2/guide/\n\nSpecific paths to target….\nFor `login.*.com`\n* /account/logout\n* /auth/2.0/credentials\n* /auth/1.0/\n* /saml2/\n* /account\n* /oauth2\n* /ylc\n* /account/challenges\n* /account/access\n* /oauth2/device_auth\n* /ctv\n* /activate\n* /forgot\n\nFor `api.login.*.com`\n* /api\n* /oauth2/get_token\n* /oauth2/web_session\n* /oauth2/device_sessions\n* /oauth2/device_authorization\n* /oauth2/device_auth\n* /oauth2/revoke\n* /oauth2/introspect\n\n##Out of Scope\n* Any rate limits for authentication attempts. \n* Any differentiated treatment based on account, browser, IP address etc.\n\n##Limits\n* Limit traffic against our services to < 10/second when probing or testing.",
           "integrity_requirement": null,
           "max_severity": "critical"
         },
@@ -349,6 +382,28 @@
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
           "instruction": "`*omega*.yahoo.com`",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "RYOT",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "## In Scope\n* RYOT Mobile SDK (iOS and Android) `https://s.yimg.com/cv/apiv2/ar_sdk/*\n* *.ryot.org (site under construction)\n\n## Notes\n* The RYOT Augmented Reality SDK is used by our major mobile apps. \n* `ryot.org` is hosted on WordPress; WP’s services are not in scope\n\n## Out of Scope\n* *.ryotfilms.com (third party)\n* *.ryot.com  (third party)\n* *.portal.ryot.com (third party)\n",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "TechCrunch",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "## In Scope\n* *.techcrunch.com\n* Custom endpoints: `https://techcrunch.com/wp-json/tc/v1/*` -- These are custom endpoints that use the WordPress architecture and output methods but modified for our uses with custom data.\n* Custom mobile endpoints: `https://techcrunch.com/wp-json/tc/mobile/v2/*` -- These are the endpoints that are used by the mobile apps to retrieve posts for the apps.\n* Default WordPress: `https://techcrunch.com/wp-json/wp/v2/*` -- We also leverage most of WordPress' out of the box endpoints with added custom data to augment the output.\n\n## Out of Scope\n* *.crunchbase.com (3rd party, Crunchbase)\n* *.tc-appunite.herokuapp.com (3rd party, Heroku now closed)\n* *.parsely.com (3rd party, Parse.ly)\n* *.swiftype.com (3rd party, Swiftype now closed)\n* *.marketo.com (3rd party, Marketo)\n* *.urbanairship.com (3rd party, Urban Airship)\n* *.sailthru.com (3rd party, Sailthru)\n* *.spot.im (3rd party, Spot.IM)\n* *.tcdisrupt.com (3rd party, App)\n* *.bit.ly (3rd party, Bit.ly)\n* *.thomsonreuters.com (3rd party, Open Calais)\n* *.tinypass.com (3rd party, Piano/Tinypass)\n",
           "integrity_requirement": null,
           "max_severity": "critical"
         },
@@ -393,17 +448,6 @@
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
           "instruction": "## In Scope\n* *.calendar.yahoo.com\n* *.caldav.calendar.yahoo.com\n\nSpecific paths to look at:\n* https://calendar.yahoo.com/ws/v3/users/\n* https://caldav.calendar.yahoo.com/principals/users/\n* https://caldav.calendar.yahoo.com/dav/*/calendar/\n\n## Limits\nLimit traffic against our services to < 10/second when probing or testing.",
-          "integrity_requirement": null,
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "Yahoo Fantasy Sports",
-          "asset_type": "OTHER",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "* [Yahoo Fantasy Sports Android](https://play.google.com/store/apps/details?id=com.yahoo.mobile.client.android.fantasyfootball)\n* [Yahoo Fantasy Sports iOS](https://itunes.apple.com/us/app/yahoo-fantasy-sports/id328415391?mt=8)\n* [Yahoo Fantasy Sports (web)](https://sports.yahoo.com/fantasy/)",
           "integrity_requirement": null,
           "max_severity": "critical"
         },
@@ -507,13 +551,46 @@
           "max_severity": "critical"
         },
         {
-          "asset_identifier": "Yahoo Sports",
+          "asset_identifier": "Yahoo Sports: Editorial",
           "asset_type": "OTHER",
           "availability_requirement": null,
           "confidentiality_requirement": null,
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
-          "instruction": "* [Yahoo Sports Android](https://play.google.com/store/apps/details?id=com.yahoo.mobile.client.android.sportacular)\n* [Yahoo Sports iOS](https://itunes.apple.com/us/app/yahoo-sports-teams-scores-news-highlights/id286058814?mt=8)\n* [Yahoo Sports tvOS](https://itunes.apple.com/us/app/yahoo-sports-teams-scores-news-highlights/id286058814?mt=8)\n* Yahoo Sports (web)",
+          "instruction": "## In Scope\n* https://sports.yahoo.com/\n* https://api-secure.sports.yahoo.com\n\n## Out of scope\n* shop.yahoosports.com (Third party)",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "Yahoo Sports: Fantasy",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "## In Scope\n* [Yahoo Fantasy Sports Android](https://play.google.com/store/apps/details?id=com.yahoo.mobile.client.android.fantasyfootball)\n* [Yahoo Fantasy Sports iOS](https://itunes.apple.com/us/app/yahoo-fantasy-sports/id328415391?mt=8)\n* [Yahoo Fantasy Sports (web)](https://sports.yahoo.com/fantasy/)\n* https://sports.yahoo.com/odds/\n\n## Notes\nThe betting feature in Fantasy is provided by a third party, BetMGM. `https://sports.yahoo.com/odds/`, is the page from where it redirects the user to the BetMGM. This is geographically restricted.",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "Yahoo Sports: Rivals",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "## In Scope\n* https://n.rivals.com\n* https://www.rivals.com/\n\n## Notes\nAll testing against rivals is to be **MANUAL only.** ZERO automated tools are allowed. **This notice is your warning.**\n\n## Out of Scope\n* *.rivalsfanstore.com (3rd party, Fanatics Inc.)\n* *.rivalscamps.com (3rd party)\n* *.rivalscampseries.com (3rd party)\n* [Rivals iOS](https://itunes.apple.com/us/app/rivals-com-no-1-college-sports-recruiting-news/id1069511855?mt=8)",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "Yahoo Sports: Rivals Forums",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "## In Scope\n* *.forums.rivals.com\n\n## Notes\n* All testing against rivals is to be **MANUAL only.** ZERO automated tools are allowed. **This notice is your warning.**\n* This is third party software and will be awarded at a 50% bounty rate.\n* Reports on this asset will not be eligible for bonuses.\n",
           "integrity_requirement": null,
           "max_severity": "critical"
         },
@@ -613,17 +690,6 @@
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
           "instruction": "Use this asset tag when a more specific brand/domain/property does not exist.",
-          "integrity_requirement": null,
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "api-secure.sports.yahoo.com",
-          "asset_type": "URL",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "",
           "integrity_requirement": null,
           "max_severity": "critical"
         },
@@ -769,17 +835,6 @@
           "eligible_for_bounty": false,
           "eligible_for_submission": false,
           "instruction": "* *.aolcdn.com\n* *.yahoo.com.hk\n* Media Group One\n* Movies Hong Kong\n* Onwander\n* Volicon\n* Volicloud\n* Yahoo Operated WordPress blogs\n* files.molo.ch\n",
-          "integrity_requirement": null,
-          "max_severity": "none"
-        },
-        {
-          "asset_identifier": "Rivals",
-          "asset_type": "OTHER",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": false,
-          "eligible_for_submission": false,
-          "instruction": "* [Rivals Android](https://play.google.com/store/apps/details?id=com.yahoo.rivals.android)\n* [Rivals iOS](https://itunes.apple.com/us/app/rivals-com-no-1-college-sports-recruiting-news/id1069511855?mt=8)\n* Rivals (web)",
           "integrity_requirement": null,
           "max_severity": "none"
         },
