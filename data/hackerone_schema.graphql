@@ -5525,6 +5525,7 @@ type CreateWebhookPayload implements MutationResult {
     last: Int
     types: [ErrorTypeEnum]
   ): ErrorConnection!
+  team: Team
   was_successful: Boolean!
   webhook: Webhook
 }
@@ -15518,7 +15519,6 @@ enum TriageInboxItemViewEnum {
 Triage meta
 """
 type TriageMeta implements Node & ResourceInterface {
-  assigned_triager: User
   id: ID!
   last_viewed_by_triager_at: DateTime
   last_viewing_triager: User
