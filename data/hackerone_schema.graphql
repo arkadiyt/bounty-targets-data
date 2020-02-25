@@ -7756,6 +7756,7 @@ Invitation settings for users
 """
 type HackerInvitationsProfile implements Node {
   bounty_programs_only: Boolean
+  exclude_crypto_programs: Boolean
   id: ID!
   min_bounty: Float
   receive_invites: Boolean
@@ -11121,6 +11122,7 @@ type Query implements Node {
     Returns the elements in the list that come before the specified cursor.
     """
     before: String
+    dismissal_state: TriageInboxItemDismissalStateEnum = undismissed
 
     """
     Returns the first _n_ elements from the list.
@@ -11131,8 +11133,8 @@ type Query implements Node {
     Returns the last _n_ elements from the list.
     """
     last: Int
-    product_edition_filter: TriageInboxItemProductEditionFilterEnum = null
-    team_filter: String = null
+    product_edition: TriageInboxItemProductEditionFilterEnum = null
+    team_handle: String = null
     team_type: TriageInboxItemTeamTypeEnum = null
     view: TriageInboxItemViewEnum!
   ): TriageInboxItemConnection!
@@ -15466,6 +15468,14 @@ type TriageInboxItemConnection {
 }
 
 """
+Valid values for the dismissal state of triage inbox items
+"""
+enum TriageInboxItemDismissalStateEnum {
+  dismissed
+  undismissed
+}
+
+"""
 An edge in a connection.
 """
 type TriageInboxItemEdge {
@@ -15511,7 +15521,6 @@ enum TriageInboxItemViewEnum {
   all_triaged
   assigned_to_triage
   blocked
-  dismissed
   pristine
 }
 
@@ -16733,6 +16742,7 @@ input UpdateInvitationPreferencesInput {
   A unique identifier for the client performing the mutation.
   """
   clientMutationId: String
+  exclude_crypto_programs: Boolean
   invitation_preference: InvitationPreferenceTypeEnum
   min_bounty: Float
   receive_invites: Boolean
@@ -20560,6 +20570,7 @@ type Webhook implements Node {
   deleted_at: DateTime
   id: ID!
   secret: String!
+  success: Boolean
   url: String!
   webhook_event_types(
     """
