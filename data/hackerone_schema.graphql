@@ -7981,6 +7981,19 @@ input IntPredicateInput {
 }
 
 """
+Configuration for integration events
+"""
+type IntegrationEventsConfiguration implements Node {
+  _id: ID!
+  hacker_joined_program: Boolean!
+  hacker_left_program: Boolean!
+  id: ID!
+  report_comment_created: Boolean!
+  report_created: Boolean!
+  report_state_changed: Boolean!
+}
+
+"""
 An interface for the common fields on a HackerOne Invitation
 """
 interface InvitationInterface {
@@ -13115,6 +13128,7 @@ type StructuredScope implements Node & ResourceInterface {
   asset_type: StructuredScopeAssetTypeEnum
   availability_requirement: SeveritySecurityRequirementEnum
   confidentiality_requirement: SeveritySecurityRequirementEnum
+  country: String
   created_at: DateTime!
   eligible_for_bounty: Boolean
   eligible_for_submission: Boolean
@@ -18183,6 +18197,7 @@ input UpdateStructuredScopeInput {
   """
   clientMutationId: String
   confidentiality_requirement: String
+  country: String
   custom_message: String = ""
   eligible_for_bounty: Boolean
   eligible_for_submission: Boolean
@@ -20569,6 +20584,7 @@ type Webhook implements Node {
   created_at: DateTime!
   deleted_at: DateTime
   id: ID!
+  integration_events_configuration: IntegrationEventsConfiguration!
   secret: String
   url: String!
   webhook_event_types(
