@@ -5433,7 +5433,7 @@ input CreateWebhookInput {
   A unique identifier for the client performing the mutation.
   """
   clientMutationId: String
-  integration_events_configuration_values: IntegrationEventsConfigurationInputType
+  integration_events_configuration: IntegrationEventsConfigurationInputType!
   secret: String!
   team_handle: String!
   url: String!
@@ -19398,7 +19398,7 @@ input UpdateWebhookInput {
   A unique identifier for the client performing the mutation.
   """
   clientMutationId: String
-  integration_events_configuration_values: IntegrationEventsConfigurationInputType
+  integration_events_configuration: IntegrationEventsConfigurationInputType!
   secret: String!
   url: String!
   webhook_event_types: [Int!]!
