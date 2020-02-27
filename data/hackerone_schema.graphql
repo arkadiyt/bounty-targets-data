@@ -7419,17 +7419,6 @@ input FiltersJobListingFilterOrder {
   id: FilterOrderPredicateInput
 }
 
-input FiltersPentestCheckFilterInput {
-  _and: [FiltersPentestCheckFilterInput]
-  _or: [FiltersPentestCheckFilterInput]
-  id: IntPredicateInput
-  state: PentestCheckStateEnumPredicateInput
-}
-
-input FiltersPentestCheckFilterOrder {
-  id: FilterOrderPredicateInput
-}
-
 input FiltersPentestFilterInput {
   _and: [FiltersPentestFilterInput]
   _or: [FiltersPentestFilterInput]
@@ -9840,40 +9829,14 @@ type Pentest implements Node {
   i_applied: Boolean!
   i_can_apply: Boolean!
   i_can_delete: Boolean!
+  i_can_manage: Boolean!
   i_can_revoke: Boolean!
   id: ID!
   industry: String!
   lead_pentester: Pentester
   markdown_description: String
   name: String!
-
-  """
-  A Resolver for Pentest Checks
-  """
-  pentest_checks(
-    """
-    Returns the elements in the list that come after the specified cursor.
-    """
-    after: String
-
-    """
-    Returns the elements in the list that come before the specified cursor.
-    """
-    before: String
-
-    """
-    Returns the first _n_ elements from the list.
-    """
-    first: Int
-
-    """
-    Returns the last _n_ elements from the list.
-    """
-    last: Int
-    order_by: PentestCheckOrderInput
-    secure_order_by: FiltersPentestCheckFilterOrder
-    where: FiltersPentestCheckFilterInput
-  ): PentestCheckConnection
+  pentest_checklist(id: ID!): PentestChecklist
   pentest_structured_scopes(
     """
     Returns the elements in the list that come after the specified cursor.
@@ -9980,6 +9943,11 @@ The connection type for PentestCheck.
 """
 type PentestCheckConnection {
   """
+  Int
+  """
+  completed_count: Int!
+
+  """
   A list of edges.
   """
   edges: [PentestCheckEdge]
@@ -10016,18 +9984,6 @@ type PentestCheckEdge {
 }
 
 """
-Fields on which a collection of Pentest Checks can be ordered
-"""
-enum PentestCheckOrderField {
-  created_at
-}
-
-input PentestCheckOrderInput {
-  direction: OrderDirection!
-  field: PentestCheckOrderField!
-}
-
-"""
 Pentest Check result enum
 """
 enum PentestCheckResultEnum {
@@ -10044,14 +10000,6 @@ enum PentestCheckStateEnum {
   pending
 }
 
-input PentestCheckStateEnumPredicateInput {
-  _eq: PentestCheckStateEnum
-  _in: [PentestCheckStateEnum]
-  _is_null: Boolean
-  _neq: PentestCheckStateEnum
-  _nin: [PentestCheckStateEnum]
-}
-
 """
 A pentest check
 """
@@ -10059,7 +10007,90 @@ type PentestChecklist implements Node {
   _id: ID!
   id: ID!
   methodology: String
+  pentest_check(id: ID!): PentestCheck
+  pentest_checks(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+  ): PentestCheckConnection
   pentest_structured_scope: PentestStructuredScope
+  reports(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+  ): ReportConnection
+}
+
+"""
+The connection type for PentestChecklist.
+"""
+type PentestChecklistConnection {
+  """
+  A list of edges.
+  """
+  edges: [PentestChecklistEdge]
+
+  """
+  A list of nodes.
+  """
+  nodes: [PentestChecklist]
+
+  """
+  Information to aid in pagination.
+  """
+  pageInfo: PageInfo!
+
+  """
+  Int
+  """
+  total_count: Int!
+}
+
+"""
+An edge in a connection.
+"""
+type PentestChecklistEdge {
+  """
+  A cursor for use in pagination.
+  """
+  cursor: String!
+
+  """
+  The item at the end of the edge.
+  """
+  node: PentestChecklist
 }
 
 """
@@ -10143,6 +10174,27 @@ type PentestStructuredScope implements Node {
   id: ID!
   methodologies: [String!]!
   pentest: Pentest
+  pentest_checklists(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+  ): PentestChecklistConnection
   structured_scope: StructuredScope
 }
 
@@ -10935,6 +10987,7 @@ type Query implements Node {
   """
   node(id: ID!): Node
   oauth_application(client_id: String!): OauthApplication
+  pentest(id: ID!): Pentest
 
   """
   A Resolver for Pentests
