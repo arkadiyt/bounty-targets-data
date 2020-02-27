@@ -11186,6 +11186,7 @@ type Query implements Node {
     """
     last: Int
     product_edition: TriageInboxItemProductEditionFilterEnum = null
+    report_substate: TriageInboxItemReportSubstateEnum = null
     team_handle: String = null
     team_type: TriageInboxItemTeamTypeEnum = null
     view: TriageInboxItemViewEnum!
@@ -15544,7 +15545,7 @@ type TriageInboxItemEdge {
 }
 
 """
-Valid values for the product edition filter of triage inbox items
+Valid values for the product edition of triage inbox items
 """
 enum TriageInboxItemProductEditionFilterEnum {
   Enterprise
@@ -15552,11 +15553,24 @@ enum TriageInboxItemProductEditionFilterEnum {
 }
 
 """
+Valid values for the report substate of triage inbox items
+"""
+enum TriageInboxItemReportSubstateEnum {
+  duplicate
+  informative
+  needs_more_info
+  new
+  not_applicable
+  resolved
+  spam
+  triaged
+}
+
+"""
 Valid values for the team types of triage inbox items
 """
 enum TriageInboxItemTeamTypeEnum {
-  all_low_volume_teams
-  all_teams
+  low_volume_customers
 }
 
 """
@@ -15564,14 +15578,6 @@ Valid views for the triage inbox item connection
 """
 enum TriageInboxItemViewEnum {
   all
-  all_duplicate
-  all_informative
-  all_needs_more_info
-  all_new
-  all_not_applicable
-  all_resolved
-  all_spam
-  all_triaged
   assigned_to_triage
   blocked
   pristine
