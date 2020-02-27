@@ -5433,6 +5433,7 @@ input CreateWebhookInput {
   A unique identifier for the client performing the mutation.
   """
   clientMutationId: String
+  integration_events_configuration_values: IntegrationEventsConfigurationInputType
   secret: String!
   team_handle: String!
   url: String!
@@ -7921,6 +7922,14 @@ type IntegrationEventsConfiguration implements Node {
   hacker_joined_program: Boolean!
   hacker_left_program: Boolean!
   id: ID!
+  report_comment_created: Boolean!
+  report_created: Boolean!
+  report_state_changed: Boolean!
+}
+
+input IntegrationEventsConfigurationInputType {
+  hacker_joined_program: Boolean!
+  hacker_left_program: Boolean!
   report_comment_created: Boolean!
   report_created: Boolean!
   report_state_changed: Boolean!
@@ -19389,6 +19398,7 @@ input UpdateWebhookInput {
   A unique identifier for the client performing the mutation.
   """
   clientMutationId: String
+  integration_events_configuration_values: IntegrationEventsConfigurationInputType
   secret: String!
   url: String!
   webhook_event_types: [Int!]!
