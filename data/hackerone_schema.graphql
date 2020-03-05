@@ -7568,6 +7568,12 @@ input FiltersTeamMemberFilterInput {
   id: IntPredicateInput
 }
 
+input FiltersTriageMetaFilterInput {
+  _and: [FiltersTriageMetaFilterInput]
+  _or: [FiltersTriageMetaFilterInput]
+  id: IntPredicateInput
+}
+
 input FiltersTriageSubscriptionFilterInput {
   _and: [FiltersTriageSubscriptionFilterInput]
   _or: [FiltersTriageSubscriptionFilterInput]
@@ -7580,6 +7586,7 @@ input FiltersUserFilterInput {
   _or: [FiltersUserFilterInput]
   id: IntPredicateInput
   is_me: Boolean
+  triage_metas: FiltersTriageMetaFilterInput
   username: StringPredicateInput
 }
 
@@ -11414,6 +11421,7 @@ type Query implements Node {
     Returns the last _n_ elements from the list.
     """
     last: Int
+    owner_username: String = null
     product_edition: TriageInboxItemProductEditionFilterEnum = null
     report_substate: TriageInboxItemReportSubstateEnum = null
     team_handle: String = null
@@ -11442,6 +11450,7 @@ type Query implements Node {
     Returns the last _n_ elements from the list.
     """
     last: Int
+    where: FiltersUserFilterInput
   ): UserConnection
   weaknesses(
     """
@@ -15790,6 +15799,7 @@ enum TriageInboxItemViewEnum {
   assigned_to_triage
   blocked
   owned_by_me
+  owned_by_triage
   pristine
 }
 
