@@ -20881,6 +20881,7 @@ Configuration for a webhook defined by a team.
 type Webhook implements Node {
   _id: ID!
   created_at: DateTime!
+  created_by: User!
   deleted_at: DateTime
   id: ID!
   integration_events_configuration: IntegrationEventsConfiguration!
