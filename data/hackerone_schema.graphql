@@ -7425,6 +7425,13 @@ input FiltersExternalProgramFilterInput {
   website: StringPredicateInput
 }
 
+input FiltersFollowedUserFilterInput {
+  _and: [FiltersFollowedUserFilterInput]
+  _or: [FiltersFollowedUserFilterInput]
+  id: IntPredicateInput
+  is_me: Boolean
+}
+
 input FiltersHacktivityItemFilterInput {
   _and: [FiltersHacktivityItemFilterInput]
   _or: [FiltersHacktivityItemFilterInput]
@@ -7572,6 +7579,7 @@ input FiltersTriageSubscriptionFilterInput {
 input FiltersUserFilterInput {
   _and: [FiltersUserFilterInput]
   _or: [FiltersUserFilterInput]
+  followers: FiltersFollowedUserFilterInput
   id: IntPredicateInput
   is_me: Boolean
   triage_metas: FiltersTriageMetaFilterInput
