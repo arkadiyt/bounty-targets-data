@@ -10117,6 +10117,7 @@ type Pentest implements Node {
   markdown_description: String
   name: String!
   pentest_checklist(id: ID!): PentestChecklist
+  pentest_form_answer(key: String!): PentestFormAnswer
   pentest_form_answers(
     """
     Returns the elements in the list that come after the specified cursor.
