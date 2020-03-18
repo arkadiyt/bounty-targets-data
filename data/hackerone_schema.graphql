@@ -8167,6 +8167,7 @@ type IntegrationEventsConfiguration implements Node {
   report_not_eligible_for_bounty: Boolean!
   report_reopened: Boolean!
   report_resolved: Boolean!
+  report_severity_changed: Boolean!
   report_swag_awarded: Boolean!
   report_title_changed: Boolean!
   report_triaged: Boolean!
@@ -8195,6 +8196,7 @@ input IntegrationEventsConfigurationInputType {
   report_not_eligible_for_bounty: Boolean!
   report_reopened: Boolean!
   report_resolved: Boolean!
+  report_severity_changed: Boolean!
   report_swag_awarded: Boolean!
   report_title_changed: Boolean!
   report_triaged: Boolean!
@@ -8305,6 +8307,11 @@ enum IntegrationEventsEnum {
   When a report is resolved.
   """
   report_resolved
+
+  """
+  When a report severity rating is updated by any user.
+  """
+  report_severity_changed
 
   """
   When a report is awarded swag.
