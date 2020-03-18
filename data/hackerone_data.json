@@ -41793,6 +41793,89 @@
     }
   },
   {
+    "id": 44612,
+    "name": "Myndr",
+    "handle": "myndr",
+    "url": "https://hackerone.com/myndr",
+    "offers_bounties": false,
+    "quick_to_bounty": false,
+    "quick_to_first_response": true,
+    "submission_state": "open",
+    "targets": {
+      "in_scope": [
+        {
+          "asset_identifier": "*.myndr.net",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "These (sub)domain(s) are used for our core services. We are extremely interested in any and all issues you can find within this scope.",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "*.myndr.nl",
+          "asset_type": "URL",
+          "availability_requirement": "none",
+          "confidentiality_requirement": "none",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "If the subdomain you found an issue on is not explicitly mentioned as scope than his is probably a testing-website. We use this to try out new things. \nThis should not be open to the public so we are very interested in your findings.",
+          "integrity_requirement": "none",
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "bibliotheek.myndr.nl",
+          "asset_type": "URL",
+          "availability_requirement": "low",
+          "confidentiality_requirement": "none",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "This is our knowledge-base website. You should not be able to do anything but browse and read here.\n\nWe are interested in any bugs that threaten the integrity of this website.",
+          "integrity_requirement": "low",
+          "max_severity": "medium"
+        },
+        {
+          "asset_identifier": "forum.myndr.nl",
+          "asset_type": "URL",
+          "availability_requirement": "none",
+          "confidentiality_requirement": "low",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "This is our forum website. Here, our customers can ask questions and help each other. You can do the following here:\n\n- Create an account\n- Login\n- Reply to questions\n- Post questions\n\nThis site is based on standard software (https://github.com/discourse/discourse). We are interested in bugs that threaten our customers data. ",
+          "integrity_requirement": "none",
+          "max_severity": "low"
+        },
+        {
+          "asset_identifier": "osd.myndr.nl",
+          "asset_type": "URL",
+          "availability_requirement": "low",
+          "confidentiality_requirement": "none",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "This is our open service directory website. We use this to gather information about intrusive online services. You can use it to:\n\n- Add a service description\n- Request a change to a service description\n\nWe're especially interested in bugs that affect the integrity of the website.",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "www.myndr.nl",
+          "asset_type": "URL",
+          "availability_requirement": "low",
+          "confidentiality_requirement": "none",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "This asset is our main website. You can do the following:\n\n- Buy our product\n\nWe are especially interested in bugs that affect our customers during the sales proces",
+          "integrity_requirement": "low",
+          "max_severity": "medium"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
     "id": 45008,
     "name": "Coingaming",
     "handle": "coingaming",
