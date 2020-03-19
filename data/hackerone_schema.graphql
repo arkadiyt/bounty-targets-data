@@ -5609,6 +5609,7 @@ input CreateWebhookInput {
   """
   clientMutationId: String
   integration_events_configuration: IntegrationEventsConfigurationInputType!
+  name: String!
   secret: String!
   team_handle: String!
   url: String!
@@ -20279,6 +20280,7 @@ input UpdateWebhookInput {
   """
   clientMutationId: String
   integration_events_configuration: IntegrationEventsConfigurationInputType!
+  name: String!
   secret: String!
   url: String!
   webhook_id: ID!
@@ -21610,6 +21612,7 @@ type Webhook implements Node {
   deleted_at: DateTime
   id: ID!
   integration_events_configuration: IntegrationEventsConfiguration!
+  name: String!
   secret: String
   url: String!
   webhook_requests(
