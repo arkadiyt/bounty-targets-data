@@ -7922,6 +7922,7 @@ type HackerInvitationsProfile implements Node {
   id: ID!
   min_bounty: Float
   receive_invites: Boolean
+  time_off_ends_at: DateTime
 }
 
 """
@@ -17558,6 +17559,7 @@ input UpdateInvitationPreferencesInput {
   invitation_preference: InvitationPreferenceTypeEnum
   min_bounty: Float
   receive_invites: Boolean
+  time_off_ends_at: DateTime
 }
 
 """
