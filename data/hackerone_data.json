@@ -11120,6 +11120,17 @@
           "max_severity": "none"
         },
         {
+          "asset_identifier": "ret.nl",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "this domain is not ours",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
           "asset_identifier": "werkenbijfacilicom.nl",
           "asset_type": "URL",
           "availability_requirement": "high",
@@ -38273,7 +38284,7 @@
           "confidentiality_requirement": "medium",
           "eligible_for_bounty": false,
           "eligible_for_submission": true,
-          "instruction": "This is our development environment. It has almost the same setup from the production environment, so any vulnerability found here, will probably be affecting both.\n\nGet in touch if you need test credentials to login to explore the app.\n\nPlease do not report issues for our website www.qulture.rocks, only for the app on https://qa.qulture.rocks\n\n# Login strategy\n\n1. We do not block or limit login attempts with invalid emails;\n2. For valid emails, if the password is incorrect, we activate recaptcha after 2 wrong attempts (only in production env);\n3. In order to avoid DDoS, valid users are never blocked due to failed login attempts.\n\n# Credentials\n\nNormal User: user@hackerone.com\nLeader User: leader@hackerone.com\nAdmin User: admin@hackerone.com\n\npwsd: Wick here tack done thin bier1!\n\n# TLS\n\nWe are already aware that the environment is not running with the latest TLS* version, and that should stay out of scope. Our production environment is using the latest version.\n\n# Contacting us\n\nWe kindly ask not to send us messages on emails that you may find on our website for issues related to this forum, prefer to send messages via hackerone platform.\n",
+          "instruction": "This is our development environment. It has almost the same setup from the production environment, so any vulnerability found here, will probably be affecting both.\n\nGet in touch if you need test credentials to login to explore the app.\n\nPlease do not report issues for our website www.qulture.rocks, only for the app on https://qa.qulture.rocks\n\n# Login strategy\n\n1. We do not block or limit login attempts with invalid emails;\n2. For valid emails, if the password is incorrect, we activate recaptcha after 2 wrong attempts (only in production env);\n3. In order to avoid DDoS, valid users are never blocked due to failed login attempts.\n\n# Credentials\n\nRequire the credentials by creating a report with title \"Credentials request\". We'll reply asap :)\n\n# TLS\n\nWe are already aware that the environment is not running with the latest TLS* version, and that should stay out of scope. Our production environment is using the latest version.\n\n# Contacting us\n\nWe kindly ask not to send us messages on emails that you may find on our website for issues related to this forum, prefer to send messages via hackerone platform.\n",
           "integrity_requirement": "high",
           "max_severity": "critical"
         }
