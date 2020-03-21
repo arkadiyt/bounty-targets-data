@@ -40892,17 +40892,6 @@
           "max_severity": "medium"
         },
         {
-          "asset_identifier": "forum.myndr.nl",
-          "asset_type": "URL",
-          "availability_requirement": "none",
-          "confidentiality_requirement": "low",
-          "eligible_for_bounty": false,
-          "eligible_for_submission": true,
-          "instruction": "This is our forum website. Here, our customers can ask questions and help each other. You can do the following here:\n\n- Create an account\n- Login\n- Reply to questions\n- Post questions\n\nThis site is based on standard software (https://github.com/discourse/discourse). We are interested in bugs that threaten our customers data. ",
-          "integrity_requirement": "none",
-          "max_severity": "low"
-        },
-        {
           "asset_identifier": "osd.myndr.nl",
           "asset_type": "URL",
           "availability_requirement": "low",
@@ -40926,7 +40915,17 @@
         }
       ],
       "out_of_scope": [
-
+        {
+          "asset_identifier": "forum.myndr.nl",
+          "asset_type": "URL",
+          "availability_requirement": "none",
+          "confidentiality_requirement": "low",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "This site is based on standard software, please take your report to https://hackerone.com/discourse/. ",
+          "integrity_requirement": "none",
+          "max_severity": "none"
+        }
       ]
     }
   },
