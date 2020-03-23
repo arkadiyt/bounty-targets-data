@@ -14424,7 +14424,7 @@
           "confidentiality_requirement": "medium",
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
-          "instruction": "The scope of the Console application is limited to the following:\n\n## Qualifying Vulnerabilities\n\n* Cross Site Request Forgery (CSRF)\n* Server-Side Request Forgery\n* Remote Code Execution\n* SQL Injection\n* View or modify database records outside of your organization scope\n\n## Non-Qualifying Vulnerabilities\n\n* console CLI is out of scope: https://github.com/helium/helium-console-cli\n* Vertical escalation and IDOR **Thank you for all your reports. We will be fixing this shortly.\n* Account Authentication/passwords/2FA ** Thank you for all your reports. We will be fixing this shortly.\n* Permissions-related issues (CRUD) ** Thank you for all your reports. We will be fixing this shortly. \n* Clickjacking on static websites\n* Cross Site Scripting (XSS)\n* Missing HTTP Headers which do not directly lead to a vulnerability\n* Password complexity policies\n* Password-reset and account-invitation expiration policies\n* Phishing and social engineering (of users and Helium employees)\n* Reports for out-of-date software (lacking a proof-of-concept)\n* SPF and DKIM records\n* SSL/TLS protocol vulnerabilities\n* Security best practice concerns\n\n",
+          "instruction": "The scope of the Console application is limited to the following:\n\n## Qualifying Vulnerabilities\n\n* Cross Site Request Forgery (CSRF)\n* Server-Side Request Forgery\n* Remote Code Execution\n* SQL Injection\n* View or modify database records outside of your organization scope\n\n## Non-Qualifying Vulnerabilities\n\n* console CLI is out of scope: https://github.com/helium/helium-console-cli\n* Account Authentication/passwords/2FA ** Thank you for all your reports. We will be fixing this shortly.\n* Permissions-related issues (CRUD) ** Thank you for all your reports. We will be fixing this shortly. \n* Clickjacking on static websites\n* Cross Site Scripting (XSS)\n* Missing HTTP Headers which do not directly lead to a vulnerability\n* Password complexity policies\n* Password-reset and account-invitation expiration policies\n* Phishing and social engineering (of users and Helium employees)\n* Reports for out-of-date software (lacking a proof-of-concept)\n* SPF and DKIM records\n* SSL/TLS protocol vulnerabilities\n* Security best practice concerns\n\n",
           "integrity_requirement": "low",
           "max_severity": "high"
         },
@@ -32296,6 +32296,132 @@
       ],
       "out_of_scope": [
 
+      ]
+    }
+  },
+  {
+    "id": 35713,
+    "name": "Fortmatic Inc.",
+    "handle": "fortmatic_inc",
+    "url": "https://hackerone.com/fortmatic_inc",
+    "offers_bounties": true,
+    "quick_to_bounty": false,
+    "quick_to_first_response": true,
+    "submission_state": "open",
+    "targets": {
+      "in_scope": [
+        {
+          "asset_identifier": "Account Settings",
+          "asset_type": "OTHER",
+          "availability_requirement": "medium",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "**Note that if you do not see the 'Account' link on the top right please perform a hard-reload in your browser**\n\n**Type:** Fortmatic Modal\n\n**What it runs on:**\n- React, Redux, Javascript, HTML, LESS\n\n**What it does:**\n- This provides users access to their personal settings, and offers critical features such as managing their PIN, recovery email, and exporting their private key. \n\n**What to look for:**\n- There is a host of private information being disclosed through this modal. Any web or access control vulnerabilities are of high risk here. Any attacks that can bypass, or skip layers of authentication allowing modification of a user's account is of high interest.\n**Test plan:**\n- You can gain access to the account settings by visiting www.fortmatic.com and hitting the `Account` link in the nav bar on the top right. Accessing and interacting with the modal will not require any cryptocurrencies or setup beyond a Fortmatic account.",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "api.fortmatic.com",
+          "asset_type": "URL",
+          "availability_requirement": "medium",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "**Any activity that could lead to the disruption of our service (DDOS) is explicitly out of scope.**\n\n**What it runs on:**\n- Python, Flask\n\n**What it does:**\n- This is our main API that serves the rest of the Fortmatic assets. As a result a lot of functionality is exposed here -- everything from creating/authenticating users to interacting with the blockchain can be found.\n\n**What to look for:**\n- We are interested in vulnerabilities which are caused by improper access control and can cause leakage/modification of user information. Please keep in mind to only ever test against your own accounts.\n\n**Test plan:**\n- Access our API by providing your API key to the `X-Fortmatic-API-Key` header. Endpoints under access control uses an authorization bearer token returned by the API once the user is able to successfully authenticate. Inspecting `x2.fortmatic.com`’s interactions with the API will provide a good idea of how the API can be invoked.\n\n**Known Issues**\n- Bugs involving bypass of SMS/2FA verification are known issues and will be considered duplicates\n",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "dashboard.fortmatic.com",
+          "asset_type": "URL",
+          "availability_requirement": "low",
+          "confidentiality_requirement": "low",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Navigate to dashboard.fortmatic.com for signup, at this time there is no way for us to pre-assign credentials for our hackers, apologies for the inconvenience.\n\n**Similar to our other scopes any DDoS based exploits are explicitly out of scope**\n\n**What it runs on:**\n- React, Javascript, HTML, LESS\n\n**What it does:**\n- Developers come in here to manage their access to the Fortmatic API. It contains features that are vital to the operation of the developers’ app -- domain verification, and obtaining/rolling their API keys. \n\n**What to look for:**\n- Any web vulnerabilities are of concern here e.g, cross-site scripting (XSS) or cross-site request forgery (CSRF) that could force the developer to commit unwanted actions or on behalf of another user. Also interested in vulnerabilities in the OAuth flow that occur for user sign-up/sign-in.\n\n**Test plan:**\n- This is a fairly standard web application, with no particular gotchas. Your standard tool kit should be all that you’d need here.\n",
+          "integrity_requirement": "medium",
+          "max_severity": "high"
+        },
+        {
+          "asset_identifier": "fortmatic.com",
+          "asset_type": "URL",
+          "availability_requirement": "low",
+          "confidentiality_requirement": "none",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "If you've previously visited this page, we highly recommend performing one hard reload when visiting this asset as an older version of the page may still be cached by your browser. ",
+          "integrity_requirement": "none",
+          "max_severity": "low"
+        },
+        {
+          "asset_identifier": "x2.fortmatic.com",
+          "asset_type": "URL",
+          "availability_requirement": "medium",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "This is our main product, X Modal. \nPlease follow the instructions on our documentation page - https://docs.fortmatic.com/. \n\n**What it is:**\n- User interface for the Fortmatic web3 provider. The constructor of the [SDK](https://www.npmjs.com/package/fortmatic) takes in an API key and an optional environment variable and constructs an iframe from the source https://x2.fortmatic.com with the passed in arguments as url parameters.\n- It runs inside an iframe element. The sdk configures the iframe inside the parent web application. It is invoked with URL parameters inside the sdk, from which the api key, ethereum environment and parent domains are parsed.\n\n**What to look for:**\n- We are highly interested in any access control, or privilege escalation vulnerabilities and consider them as very high risk issues Also keep an eye on other standard web vulnerabilities such as XSS for extracting held secrets in local storage. Please note to only ever test against your own account.\n\n**What it runs on:**\n- React, Redux, Javascript, HTML, LESS\n\n**Test plan:**\n- You can access the app on the Ethereum [testnet](https://demo-wallet--fortmatic.repl.co/) or [mainnet](https://demo-kitchen-sink--fortmatic.repl.co/). \n- You will require ETH to access the full set of the functionality offered. To get access to free test ethers, feel free to use the app on the [testnet](https://demo-wallet--fortmatic.repl.co/). \n- Try to invoke the iframe in different ways, with and without the sdk\n- It relies on a ‘message’ event listener to properly communicate actions to and from the iframe element.\n- Authenticated secrets such as the `user_session_token` are held in the browser’s local storage.\n",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "asset_identifier": "careers.fortmatic.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "Out of scope third-party hosted integration",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "developers.fortmatic.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "Out of scope third-party hosted integration",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "docs.fortmatic.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "email.fortmatic.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "static.fortmatic.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        }
       ]
     }
   },
