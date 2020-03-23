@@ -4774,7 +4774,7 @@
   {
     "name": "Sophos",
     "url": "https://bugcrowd.com/sophos",
-    "allows_disclosure": false,
+    "allows_disclosure": true,
     "managed_by_bugcrowd": true,
     "safe_harbor": "full",
     "max_payout": 3000,
@@ -5598,6 +5598,88 @@
         {
           "type": "website",
           "target": "shop.eu.teslamotors.com"
+        }
+      ]
+    }
+  },
+  {
+    "name": "TransferWise",
+    "url": "https://bugcrowd.com/transferwise",
+    "allows_disclosure": false,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "full",
+    "max_payout": 4000,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "other",
+          "target": "AWS infrastructure and services in use by TransferWise (eg: S3 buckets)"
+        },
+        {
+          "type": "android",
+          "target": "Latest version of Transferwise Android App"
+        },
+        {
+          "type": "ios",
+          "target": "Latest version of Transferwise iOS App"
+        },
+        {
+          "type": "api",
+          "target": "api.transferwise.com"
+        },
+        {
+          "type": "other",
+          "target": "github.com/transferwise/*"
+        },
+        {
+          "type": "website",
+          "target": "transferwise.com"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "website",
+          "target": "*.transferwise.tech"
+        },
+        {
+          "type": "website",
+          "target": "*.tw.com"
+        },
+        {
+          "type": "website",
+          "target": "*.tw.ee"
+        },
+        {
+          "type": "other",
+          "target": "Any Github asset not under the “transferwise” organization"
+        },
+        {
+          "type": "website",
+          "target": "Any subdomain of transferwise.com not explicitly listed as \"In Scope\""
+        },
+        {
+          "type": "android",
+          "target": "Non-current version of the Android app"
+        },
+        {
+          "type": "ios",
+          "target": "Non-current version of the iOS app"
+        },
+        {
+          "type": "website",
+          "target": "Third party authentication services (eg: Facebook and Google)"
+        },
+        {
+          "type": "website",
+          "target": "Third party services not hosted by TransferWise"
+        },
+        {
+          "type": "website",
+          "target": "TransferWise Affliate Program"
+        },
+        {
+          "type": "website",
+          "target": "https://transferwise.com/contact"
         }
       ]
     }
