@@ -4660,8 +4660,11 @@ input CreateOrUpdatePentesterProfileInput {
   """
   clientMutationId: String
   cobalt_handle: String!
+  compliance_frameworks: [String!]
+  led_pentest: Boolean
   linkedin_handle: String!
   name: String!
+  years_experience: String
 }
 
 """
@@ -4695,6 +4698,7 @@ type CreateOrUpdatePentesterProfilePayload implements MutationResult {
     types: [ErrorTypeEnum]
   ): ErrorConnection!
   pentester_profile: PentesterProfile
+  user: User
   was_successful: Boolean!
 }
 
