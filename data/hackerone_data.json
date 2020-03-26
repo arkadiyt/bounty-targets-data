@@ -20590,7 +20590,7 @@
     "handle": "bumble",
     "url": "https://hackerone.com/bumble",
     "offers_bounties": true,
-    "quick_to_bounty": false,
+    "quick_to_bounty": true,
     "quick_to_first_response": true,
     "submission_state": "open",
     "targets": {
@@ -29837,7 +29837,7 @@
     "url": "https://hackerone.com/eslint",
     "offers_bounties": false,
     "quick_to_bounty": false,
-    "quick_to_first_response": false,
+    "quick_to_first_response": true,
     "submission_state": "open",
     "targets": {
       "in_scope": [
@@ -31970,7 +31970,7 @@
     "url": "https://hackerone.com/iconloop_inc",
     "offers_bounties": true,
     "quick_to_bounty": false,
-    "quick_to_first_response": true,
+    "quick_to_first_response": false,
     "submission_state": "paused",
     "targets": {
       "in_scope": [
@@ -37084,8 +37084,8 @@
     "handle": "bmwgroup",
     "url": "https://hackerone.com/bmwgroup",
     "offers_bounties": false,
-    "quick_to_bounty": false,
-    "quick_to_first_response": false,
+    "quick_to_bounty": true,
+    "quick_to_first_response": true,
     "submission_state": "open",
     "targets": {
       "in_scope": [
@@ -41312,7 +41312,7 @@
           "confidentiality_requirement": "high",
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
-          "instruction": "*Dinero*\n\nDinero is an accounting software for sole traders and micro businesses based out of Denmark. Our only target group is danish companies and therefore the interface is in danish only.The application is a SaaS application hosted in the cloud and consists of a main application and a number of supportive microservices.\n\nSee the getting started document here: https://vismabugbountyprod.z16.web.core.windows.net/vismaDinero-hackerone-getting-started.pdf\n\nOut of scope:\n- CSRF issues are out of scope. We are aware of the existence of CSRFs on this asset and we are working to fix them.Please do not report.\n- The Cookie \".AspNet.Cookies\" is not set with HttpOnly which is a known vulnerability - please do not report it.\n\n\n*Asset added on 2020-03-02*",
+          "instruction": "*Dinero*\n\nDinero is an accounting software for sole traders and micro businesses based out of Denmark. Our only target group is danish companies and therefore the interface is in danish only.The application is a SaaS application hosted in the cloud and consists of a main application and a number of supportive microservices.\n\nSee the getting started document here: https://vismabugbountyprod.z16.web.core.windows.net/vismaDinero-hackerone-getting-started.pdf\n\nOut of scope:\n- CSRF issues are out of scope. We are aware of the existence of CSRFs on this asset and we are working to fix them.Please do not report.\n- The Cookie \".AspNet.Cookies\" is not set with HttpOnly which is a known vulnerability - please do not report it.\n-  Session invalidation issues (e.g. logout, password change, email change, role change, user deletion, etc).\n\n\n*Asset added on 2020-03-02*",
           "integrity_requirement": "high",
           "max_severity": "critical"
         },
@@ -41345,7 +41345,7 @@
           "confidentiality_requirement": "high",
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
-          "instruction": "This is \"Visma eAccounting\" (aka Visma eEkonomi / Visma ePasseli) which is an ERP system available in Sweden, Norway, Finland and The Netherlands.\n\nYou can read more on https://www.visma.no/eaccounting/english/\n\nYou need to register an user to test this system. The sign-up up process is described in this document:\n\nhttps://vismabugbountyprod.z16.web.core.windows.net/Visma%20eA%20Bug%20Bounty%20Onboarding%20Guide.pdf\n\nThis video also shows the entire setup (only Swedish audio) https://www.youtube.com/watch?v=kVr_CXgfhi0&t=4s\n\nTLDR: Goto https://admin.stage.vismaonline.com/Customer/StudentSignup.aspx?country=en&uilang=en&companyId= and sign up with the training code \"04h2v\"\n\nOut of scope: \n\"Session invalidation during password change\". This bug is known and the team is working on a fix.\nModification of gray-out fields when logged in with an admin account.",
+          "instruction": "This is \"Visma eAccounting\" (aka Visma eEkonomi / Visma ePasseli) which is an ERP system available in Sweden, Norway, Finland and The Netherlands.\n\nYou can read more on https://www.visma.no/eaccounting/english/\n\nYou need to register an user to test this system. The sign-up up process is described in this document:\n\nhttps://vismabugbountyprod.z16.web.core.windows.net/Visma%20eA%20Bug%20Bounty%20Onboarding%20Guide.pdf\n\nThis video also shows the entire setup (only Swedish audio) https://www.youtube.com/watch?v=kVr_CXgfhi0&t=4s\n\nTLDR: Goto https://admin.stage.vismaonline.com/Customer/StudentSignup.aspx?country=en&uilang=en&companyId= and sign up with the training code \"04h2v\"\n\n**Out of scope:**\n - Session invalidation issues (e.g. logout, password change, email change, role change, user deletion, etc).\n- Modification of gray-out fields when logged in with an admin account.\n",
           "integrity_requirement": "high",
           "max_severity": "critical"
         },
