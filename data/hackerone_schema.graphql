@@ -7234,18 +7234,6 @@ type DomainOwnershipEdge {
   node: DomainOwnership
 }
 
-input DomainOwnershipOrder {
-  direction: OrderDirection!
-  field: DomainOwnershipOrderFieldEnum!
-}
-
-"""
-Fields on which a collection of domain ownerships can be ordered
-"""
-enum DomainOwnershipOrderFieldEnum {
-  id
-}
-
 """
 An earning
 """
@@ -14919,7 +14907,6 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
     Returns the last _n_ elements from the list.
     """
     last: Int
-    order_by: DomainOwnershipOrder
   ): DomainOwnershipConnection
   embedded_submission_domains(
     """
