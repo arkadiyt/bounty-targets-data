@@ -7198,8 +7198,8 @@ input DismissTriageInboxItemsInput {
   A unique identifier for the client performing the mutation.
   """
   clientMutationId: String
+  dismissal_method: TriageInboxItemDismissalMethodEnum!
   triage_inbox_item_ids: [ID]!
-  with_comment: Boolean
 }
 
 """
@@ -7232,7 +7232,6 @@ type DismissTriageInboxItemsPayload implements MutationResult {
     last: Int
     types: [ErrorTypeEnum]
   ): ErrorConnection!
-  query: Query
   triage_inbox_items: [TriageInboxItem]
   was_successful: Boolean!
 }
@@ -12574,10 +12573,10 @@ type Report implements ActivitiesInterface & Node & ResourceInterface {
   timer_report_triage_miss_at: DateTime
   timer_report_triage_until_missed: Int
   title: String
-  triage_inbox_items: [TriageInboxItem]!
   triage_meta: TriageMeta
   triaged_at: DateTime
   triaged_staleness_threshold: Int
+  undismissed_triage_inbox_items: [TriageInboxItem]!
   url: URI!
   votes(
     """
@@ -16518,6 +16517,15 @@ type TriageInboxItemConnection {
   """
   pageInfo: PageInfo!
   teams: [Team]
+}
+
+"""
+Valid values for the dismissal method of triage inbox items
+"""
+enum TriageInboxItemDismissalMethodEnum {
+  triage_inbox_bulk_dismiss_button
+  triage_inbox_comment_and_dismiss
+  triage_inbox_dismiss_button
 }
 
 """
