@@ -12582,7 +12582,6 @@ type Report implements ActivitiesInterface & Node & ResourceInterface {
   reference: ID
   reference_link: String
   report_share_tokens: [ReportShareToken!]!
-  report_triage_blockers: [ReportTriageBlocker!]!
   reporter: User
   resolution_staleness_threshold: Int
   severity: Severity
@@ -12982,32 +12981,6 @@ input ReportStateEnumPredicateInput {
   _is_null: Boolean
   _neq: ReportStateEnum
   _nin: [ReportStateEnum]
-}
-
-"""
-A reason this report cannot be triaged
-"""
-type ReportTriageBlocker implements Node {
-  blocked_by: User
-  created_at: DateTime!
-  id: ID!
-  other_reason: String
-  reason: ReportTriageBlockerReasonEnum!
-  report: Report
-  unblocked_by: User
-}
-
-"""
-Reasons a report can be untriageable
-"""
-enum ReportTriageBlockerReasonEnum {
-  analyst_made_mistake
-  misbehaving_hacker
-  missing_credentials
-  other
-  program_unresponsive
-  requires_setup
-  unclear_policy
 }
 
 """
