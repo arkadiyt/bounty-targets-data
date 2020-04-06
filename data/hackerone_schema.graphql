@@ -12877,6 +12877,8 @@ A report retest
 """
 type ReportRetest {
   _id: ID!
+  asset_name: String
+  asset_type: String
   award_amount: String!
   created_at: DateTime
   created_by: User
@@ -12904,7 +12906,11 @@ type ReportRetest {
     last: Int
     visible: Boolean
   ): ReportRetestUserConnection
+  report_state: String
+  report_substate: String
+  severity_rating: String
   team: Team!
+  weakness_name: String
 }
 
 """
