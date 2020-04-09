@@ -12909,6 +12909,7 @@ type ReportRetest {
   report_state: String
   report_substate: String
   severity_rating: String
+  state: ReportRetestStateEnum
   team: Team!
   weakness_name: String
 }
@@ -12951,6 +12952,19 @@ type ReportRetestEdge {
   The item at the end of the edge.
   """
   node: ReportRetest
+}
+
+"""
+Report retest state enum
+"""
+enum ReportRetestStateEnum {
+  approved
+  assigned
+  claimed
+  needs_approval
+  rejected
+  unassigned
+  unclaimed
 }
 
 """
