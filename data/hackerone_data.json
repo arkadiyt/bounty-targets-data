@@ -18514,24 +18514,46 @@
           "max_severity": "critical"
         },
         {
+          "asset_identifier": "1116599239",
+          "asset_type": "APPLE_STORE_APP_ID",
+          "availability_requirement": "none",
+          "confidentiality_requirement": "low",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "[Apple Mac App Store](https://itunes.apple.com/us/app/vpn-by-nordvpn-web-security/id1116599239?mt=12)",
+          "integrity_requirement": "low",
+          "max_severity": "medium"
+        },
+        {
           "asset_identifier": "905953485",
           "asset_type": "APPLE_STORE_APP_ID",
           "availability_requirement": "none",
           "confidentiality_requirement": "low",
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
-          "instruction": "",
+          "instruction": "[Apple App Store](https://apps.apple.com/US/app/id905953485?mt=8)",
           "integrity_requirement": "low",
           "max_severity": "medium"
         },
         {
-          "asset_identifier": "NordVPN App",
+          "asset_identifier": "Linux Executable",
           "asset_type": "DOWNLOADABLE_EXECUTABLES",
           "availability_requirement": "none",
           "confidentiality_requirement": "low",
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
-          "instruction": "* Windows: https://nordvpn.com/download/windows/\n* Mac: https://nordvpn.com/download/mac/\n* Android sideload: https://nordvpn.com/download/android/\n* Linux: https://nordvpn.com/download/linux/",
+          "instruction": "[Direct Web Download](https://nordvpn.com/download/linux/)",
+          "integrity_requirement": "low",
+          "max_severity": "medium"
+        },
+        {
+          "asset_identifier": "MacOS Executable",
+          "asset_type": "DOWNLOADABLE_EXECUTABLES",
+          "availability_requirement": "none",
+          "confidentiality_requirement": "low",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "[Direct Web Download](https://nordvpn.com/download/mac/)",
           "integrity_requirement": "low",
           "max_severity": "medium"
         },
@@ -18547,13 +18569,35 @@
           "max_severity": "medium"
         },
         {
+          "asset_identifier": "Windows Executable",
+          "asset_type": "DOWNLOADABLE_EXECUTABLES",
+          "availability_requirement": "none",
+          "confidentiality_requirement": "low",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "[Direct Web Download]( https://nordvpn.com/download/windows/)\n",
+          "integrity_requirement": "low",
+          "max_severity": "medium"
+        },
+        {
           "asset_identifier": "com.nordvpn.android",
           "asset_type": "GOOGLE_PLAY_APP_ID",
           "availability_requirement": "none",
           "confidentiality_requirement": "low",
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
-          "instruction": "",
+          "instruction": "[Google Play Store](https://play.google.com/store/apps/details?id=com.nordvpn.android)",
+          "integrity_requirement": "low",
+          "max_severity": "medium"
+        },
+        {
+          "asset_identifier": "com.nordvpn.android",
+          "asset_type": "OTHER_APK",
+          "availability_requirement": "none",
+          "confidentiality_requirement": "low",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "[Android Sideload Download](https://nordvpn.com/download/android/)",
           "integrity_requirement": "low",
           "max_severity": "medium"
         }
@@ -21287,21 +21331,10 @@
     "targets": {
       "in_scope": [
         {
-          "asset_identifier": "*.upserve.com",
+          "asset_identifier": "api.breadcrumb.com",
           "asset_type": "URL",
           "availability_requirement": "high",
           "confidentiality_requirement": "high",
-          "eligible_for_bounty": false,
-          "eligible_for_submission": true,
-          "instruction": "Any asset that is not explicitly listed as out of scope or in scope will be considered on a case-by-case basis. We may elect to accept reports but not pay bounties depending on the impact of the asset and vulnerability. ",
-          "integrity_requirement": "high",
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "api.breadcrumb.com",
-          "asset_type": "URL",
-          "availability_requirement": "medium",
-          "confidentiality_requirement": "medium",
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
           "instruction": "",
@@ -21311,8 +21344,8 @@
         {
           "asset_identifier": "app.upserve.com",
           "asset_type": "URL",
-          "availability_requirement": "medium",
-          "confidentiality_requirement": "medium",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
           "instruction": "",
@@ -21324,61 +21357,6 @@
           "asset_type": "URL",
           "availability_requirement": "medium",
           "confidentiality_requirement": "high",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "",
-          "integrity_requirement": "high",
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "com.breadcrumb.live",
-          "asset_type": "APPLE_STORE_APP_ID",
-          "availability_requirement": "medium",
-          "confidentiality_requirement": "medium",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "This app is for merchants. Feel free to test against this, but we are not creating merchant test accounts at this time.",
-          "integrity_requirement": "high",
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "com.groupon.breadcrumbpro.production",
-          "asset_type": "APPLE_STORE_APP_ID",
-          "availability_requirement": "medium",
-          "confidentiality_requirement": "medium",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "This app is our point of sale app for merchants. Feel free to test against this, but we are not creating merchant test accounts at this time.",
-          "integrity_requirement": "high",
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "com.upserve.inventory",
-          "asset_type": "APPLE_STORE_APP_ID",
-          "availability_requirement": "medium",
-          "confidentiality_requirement": "medium",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "Upserve Inventory",
-          "integrity_requirement": "high",
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "com.upserve.inventory",
-          "asset_type": "GOOGLE_PLAY_APP_ID",
-          "availability_requirement": "medium",
-          "confidentiality_requirement": "medium",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "Upserve Inventory",
-          "integrity_requirement": "high",
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "com.upserve.live",
-          "asset_type": "GOOGLE_PLAY_APP_ID",
-          "availability_requirement": "medium",
-          "confidentiality_requirement": "medium",
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
           "instruction": "",
@@ -21410,8 +21388,8 @@
         {
           "asset_identifier": "hq.breadcrumb.com",
           "asset_type": "URL",
-          "availability_requirement": "medium",
-          "confidentiality_requirement": "medium",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
           "instruction": "This is a portal for merchants. Feel free to test against this, but we are not creating merchant test accounts at this time.",
@@ -21443,19 +21421,19 @@
         {
           "asset_identifier": "inventory.upserve.com",
           "asset_type": "URL",
-          "availability_requirement": "medium",
+          "availability_requirement": "low",
           "confidentiality_requirement": "medium",
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
           "instruction": "",
-          "integrity_requirement": "medium",
+          "integrity_requirement": "high",
           "max_severity": "critical"
         },
         {
           "asset_identifier": "mossy.breadcrumb.com",
           "asset_type": "URL",
-          "availability_requirement": "medium",
-          "confidentiality_requirement": "medium",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
           "instruction": "",
@@ -21465,7 +21443,7 @@
         {
           "asset_identifier": "orders.upserve.com",
           "asset_type": "URL",
-          "availability_requirement": "medium",
+          "availability_requirement": "high",
           "confidentiality_requirement": "low",
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
@@ -21498,7 +21476,7 @@
         {
           "asset_identifier": "pos.swipely.com",
           "asset_type": "URL",
-          "availability_requirement": "medium",
+          "availability_requirement": "none",
           "confidentiality_requirement": "medium",
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
@@ -21509,8 +21487,8 @@
         {
           "asset_identifier": "reports.breadcrumb.com",
           "asset_type": "URL",
-          "availability_requirement": "medium",
-          "confidentiality_requirement": "medium",
+          "availability_requirement": "none",
+          "confidentiality_requirement": "high",
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
           "instruction": "",
