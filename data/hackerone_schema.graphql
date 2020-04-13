@@ -16154,6 +16154,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
     last: Int
   ): WebhookConnection
   website: String
+  whitelisted_cidr_ranges: [String!]
   whitelisted_hackers(
     """
     Returns the elements in the list that come after the specified cursor.
