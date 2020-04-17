@@ -4597,6 +4597,22 @@
     }
   },
   {
+    "name": "Cloud Security Platform",
+    "url": "https://bugcrowd.com/programs/teasers/gaCPhg1rSBNy9AeVKnmbi9Rv",
+    "allows_disclosure": true,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "partial",
+    "max_payout": 0,
+    "targets": {
+      "in_scope": [
+
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
     "name": "Privacy matters!",
     "url": "https://bugcrowd.com/programs/teasers/hDw8EeYXfdQ3m5UncwUBEJBM",
     "allows_disclosure": true,
@@ -5828,12 +5844,20 @@
           "target": "*.highwinds.com"
         },
         {
+          "type": "other",
+          "target": "*.serverdensity.com API, Websites, etc.."
+        },
+        {
           "type": "website",
           "target": "*.stackpath.com"
         },
         {
           "type": "website",
           "target": "*.stackpath.net"
+        },
+        {
+          "type": "website",
+          "target": "<your-instance>.serverdensity.io"
         },
         {
           "type": "other",
@@ -5847,7 +5871,7 @@
       "out_of_scope": [
         {
           "type": "website",
-          "target": "StackPath customer instances (e.g. *.stackpathdns.com, *.hwcdn.net)"
+          "target": "StackPath customer instances (e.g. *.stackpathdns.com, *.hwcdn.net, <customer>.serverdensity.io)"
         }
       ]
     }
