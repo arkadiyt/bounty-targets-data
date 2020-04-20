@@ -3384,6 +3384,7 @@ type ClaimReportRetestPayload implements MutationResult {
     last: Int
     types: [ErrorTypeEnum]
   ): ErrorConnection!
+  report_retest: ReportRetest
   report_retest_user: ReportRetestUser
   was_successful: Boolean!
 }
@@ -13109,6 +13110,7 @@ type ReportRetest {
   severity_rating: String
   state: ReportRetestStateEnum
   team: Team!
+  time_to_finish: Int
   weakness_name: String
 }
 
@@ -21642,6 +21644,7 @@ type User implements Node & ResourceInterface {
     """
     last: Int
     left: Boolean
+    pending: Boolean
   ): ReportRetestUserConnection
   reports(
     """
