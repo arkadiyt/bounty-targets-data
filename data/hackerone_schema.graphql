@@ -11423,7 +11423,7 @@ enum ProfilePictureSizes {
 input ProgramAnalyticsBenchmarkFilterInput {
   company_headcount_range: ProgramAnalyticsFilterStringInput
   industries: ProgramAnalyticsFilterStringInput
-  severity: ProgramAnalyticsFilterStringInput
+  report_severity: ProgramAnalyticsFilterStringInput
   team_h1_clear: ProgramAnalyticsFilterBoolInput
   team_offers_bounties: ProgramAnalyticsFilterBoolInput
   team_state_str: ProgramAnalyticsFilterStringInput
@@ -11443,8 +11443,8 @@ input ProgramAnalyticsFilterCustomFieldInput {
 input ProgramAnalyticsFilterInput {
   asset_identifier: ProgramAnalyticsFilterStringInput
   custom_fields: [ProgramAnalyticsFilterCustomFieldInput!]
-  severity: ProgramAnalyticsFilterStringInput
-  source: ProgramAnalyticsFilterStringInput
+  report_severity: ProgramAnalyticsFilterStringInput
+  report_source: ProgramAnalyticsFilterStringInput
   weakness_id: ProgramAnalyticsFilterStringInput
 }
 
