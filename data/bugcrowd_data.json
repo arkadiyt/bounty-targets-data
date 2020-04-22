@@ -1103,6 +1103,40 @@
     }
   },
   {
+    "name": "CD Baby",
+    "url": "https://bugcrowd.com/cd-baby",
+    "allows_disclosure": false,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "full",
+    "max_payout": 2500,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "api",
+          "target": "https://api.cdbaby.com"
+        },
+        {
+          "type": "website",
+          "target": "https://app.soundrop.com"
+        },
+        {
+          "type": "website",
+          "target": "https://auth.cdbaby.com"
+        },
+        {
+          "type": "website",
+          "target": "https://members.cdbaby.com"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "other",
+          "target": "Music Player Widget"
+        }
+      ]
+    }
+  },
+  {
     "name": "Centrify",
     "url": "https://bugcrowd.com/centrify",
     "allows_disclosure": false,
