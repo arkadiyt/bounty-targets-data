@@ -11371,7 +11371,7 @@ type PentesterProfile implements Node {
   citizenship: [String!]
   compliance_frameworks: [String!]
   id: ID!
-  languages: Hash
+  languages: [Hash!]
   led_pentest: Boolean
   preferred_teammates(
     """
@@ -11543,11 +11543,11 @@ input ProgramAnalyticsFilterCustomFieldInput {
 }
 
 input ProgramAnalyticsFilterInput {
-  actor_is_hackerone_triager: [ProgramAnalyticsFilterBoolInput!]
+  actor_is_hackerone_triager: ProgramAnalyticsFilterBoolInput
   asset_identifier: ProgramAnalyticsFilterStringInput
   custom_fields: [ProgramAnalyticsFilterCustomFieldInput!]
-  report_current_substate: [ProgramAnalyticsFilterStringInput!]
-  report_disclosed_state: [ProgramAnalyticsFilterStringInput!]
+  report_current_substate: ProgramAnalyticsFilterStringInput
+  report_disclosed_state: ProgramAnalyticsFilterStringInput
   report_severity: ProgramAnalyticsFilterStringInput
   report_source: ProgramAnalyticsFilterStringInput
   weakness_id: ProgramAnalyticsFilterStringInput
