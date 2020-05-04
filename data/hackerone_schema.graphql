@@ -10932,6 +10932,7 @@ type Pentest implements Node {
     last: Int
     where: FiltersPentesterFilterInput
   ): PentesterConnection
+  salesforce_tpm_email: String
   slack_workspace_url: String
   started: Boolean
   starts_at: DateTime!
@@ -10939,6 +10940,7 @@ type Pentest implements Node {
   structured_scope_types: [String!]
   team: Team!
   time_zone: String
+  tpm: User
 }
 
 """
@@ -11617,8 +11619,11 @@ enum ProfilePictureSizes {
 }
 
 input ProgramAnalyticsBenchmarkFilterInput {
+  actor_is_hackerone_triager: ProgramAnalyticsFilterBoolInput
   company_headcount_range: ProgramAnalyticsFilterStringInput
   industries: ProgramAnalyticsFilterStringInput
+  report_current_substate: ProgramAnalyticsFilterStringInput
+  report_disclosed_state: ProgramAnalyticsFilterStringInput
   report_severity: ProgramAnalyticsFilterStringInput
   team_h1_clear: ProgramAnalyticsFilterBoolInput
   team_offers_bounties: ProgramAnalyticsFilterBoolInput
