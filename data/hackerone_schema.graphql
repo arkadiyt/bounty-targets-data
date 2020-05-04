@@ -12250,6 +12250,8 @@ type Query implements Node {
   report(id: Int!): Report
   report_retest_user(activity_id: Int!): ReportRetestUser
   report_retests(
+    active: Boolean = false
+
     """
     Returns the elements in the list that come after the specified cursor.
     """
@@ -12264,6 +12266,7 @@ type Query implements Node {
     Returns the first _n_ elements from the list.
     """
     first: Int
+    historic: Boolean = false
 
     """
     Returns the last _n_ elements from the list.
@@ -13374,6 +13377,7 @@ type ReportRetest {
     Returns the last _n_ elements from the list.
     """
     last: Int
+    new: Boolean
     visible: Boolean
   ): ReportRetestUserConnection
   report_state: String
@@ -13442,6 +13446,7 @@ A report retest user
 """
 type ReportRetestUser {
   _id: ID!
+  activity: ActivitiesUserCompletedRetest
   answered_can_be_reproduced: Boolean
   answered_fix_can_be_bypassed: Boolean
   bypass_report_id: Int
@@ -13449,6 +13454,7 @@ type ReportRetestUser {
   id: ID!
   invitation: InvitationsRetest
   report_retest: ReportRetest
+  state: String
   user: User
 }
 
@@ -21747,7 +21753,6 @@ type User implements Node & ResourceInterface {
   hackerone_triager: Boolean
   has_active_ban: Boolean
   has_checklist_check_responses: Boolean
-  has_claimable_report_retests: Boolean
   has_ctf_flags: Boolean
   i_can_apply_as_pentester: Boolean!
   i_can_claim_a_security_check: Boolean!
@@ -21988,6 +21993,30 @@ type User implements Node & ResourceInterface {
     left: Boolean
     pending: Boolean
   ): ReportRetestUserConnection
+  report_retests(
+    active: Boolean = false
+
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+    historic: Boolean = false
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+  ): ReportRetestConnection
   reports(
     """
     Returns the elements in the list that come after the specified cursor.
