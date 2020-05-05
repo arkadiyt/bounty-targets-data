@@ -8584,6 +8584,8 @@ type GenerateTaxFormUrlPayload implements MutationResult {
   was_successful: Boolean!
 }
 
+scalar GraphqlScalar
+
 """
 Invitation settings for users
 """
@@ -10932,6 +10934,53 @@ type Pentest implements Node {
     last: Int
     where: FiltersPentesterFilterInput
   ): PentesterConnection
+  report_count_by_weakness_day: GraphqlScalar
+  reports(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+    database_id: Int = null
+    filter: ReportFilterInput
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+    hackerone_hacker_submissions: Boolean = false
+    handle: String
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+
+    """
+    Relay classic does not have support for starting paginationsomewhere in the
+    middle, see https://github.com/facebook/relay/issues/1312 Workaround is to
+    add a page argument till Relay supports this
+    """
+    limit: Int = null
+    order_by: ReportOrderInput = {direction: DESC, field: id}
+
+    """
+    Relay classic does not have support for starting paginationsomewhere in the
+    middle, see https://github.com/facebook/relay/issues/1312 Workaround is to
+    add a page argument till Relay supports this
+    """
+    page: Int = null
+    pre_submission_review_states: [ReportPreSubmissionReviewStateEnum] = null
+    secure_order_by: FiltersReportFilterOrder
+    state: ReportStateEnum
+    substate: ReportStateEnum
+    where: FiltersReportFilterInput
+    without_scope: Boolean = null
+  ): ReportConnection
   salesforce_tpm_email: String
   slack_workspace_url: String
   started: Boolean
