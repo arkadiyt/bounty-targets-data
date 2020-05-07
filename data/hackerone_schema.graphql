@@ -5465,6 +5465,7 @@ type CreateSeverityPayload implements MutationResult {
     last: Int
     types: [ErrorTypeEnum]
   ): ErrorConnection!
+  report: Report
   severity: Severity
   was_successful: Boolean!
 }
@@ -17309,6 +17310,7 @@ type TriageInboxItem implements Node {
   activity: ActivityUnion
   created_at: DateTime!
   dismissed_at: DateTime
+  dismissed_by: User
   id: ID!
   report: Report
   report_id: ID!
