@@ -10853,6 +10853,7 @@ type Pentest implements Node {
   award_amount_lead: Int
   completed_at: DateTime
   description: String
+  end_date: Date
   ends_at: DateTime
   i_accepted: Boolean!
   i_applied: Boolean!
@@ -10957,6 +10958,7 @@ type Pentest implements Node {
     last: Int
     where: FiltersPentesterFilterInput
   ): PentesterConnection
+  report_count_by_substate_severity_rating: GraphqlScalar
   report_count_by_weakness_day: GraphqlScalar
   report_retests(
     """
@@ -11028,6 +11030,7 @@ type Pentest implements Node {
   ): ReportConnection
   salesforce_tpm_email: String
   slack_workspace_url: String
+  start_date: Date
   started: Boolean
   starts_at: DateTime
   state: PentestStateEnum
