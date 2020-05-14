@@ -11006,6 +11006,7 @@ type Pentest implements Node {
   ): PentesterConnection
   report_count_by_substate_severity_rating: GraphqlScalar
   report_count_by_weakness_day: GraphqlScalar
+  report_count_by_weakness_severity_rating: GraphqlScalar
   report_retests(
     """
     Returns the elements in the list that come after the specified cursor.
@@ -12629,7 +12630,7 @@ type Query implements Node {
     report_substate: TriageInboxItemReportSubstateEnum = null
     team_handle: String = null
     team_type: TriageInboxItemTeamTypeEnum = null
-    view: TriageInboxItemViewEnum!
+    view: TriageInboxItemViewEnum = null
   ): TriageInboxItemConnection
   user(username: String!): User
   users(
@@ -21934,7 +21935,6 @@ type User implements Node & ResourceInterface {
   has_ctf_flags: Boolean
   i_can_apply_as_pentester: Boolean!
   i_can_claim_a_security_check: Boolean!
-  i_can_request_endorsements: Boolean
   i_can_update_invitation_profile: Boolean
   i_can_update_username: Boolean
   id: ID!
