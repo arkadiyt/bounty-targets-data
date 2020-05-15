@@ -13557,6 +13557,7 @@ enum ReportOrderField {
   last_public_activity_at
   last_reporter_activity_at
   latest_activity_at
+  substate
   swag_awarded_at
   timer_bounty_awarded_elapsed_time
   timer_first_program_response_elapsed_time
@@ -17635,10 +17636,10 @@ type TriageWorkflow {
   _id: ID!
   custom_triage_summary_templates: [String!]!
   id: ID!
+  ignore_triaged_substate: Boolean
   jira_escalation: TriageWorkflowJiraEscalationEnum
   require_credentials: Boolean
   require_custom_fields: Boolean
-  require_triaged_substate: Boolean
   team: Team!
 }
 
