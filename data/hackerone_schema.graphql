@@ -9096,15 +9096,6 @@ input InvitationOrderInput {
 }
 
 """
-User invitation preference type
-"""
-enum InvitationPreferenceTypeEnum {
-  always
-  bounty_only
-  never
-}
-
-"""
 A HackerOne invitation queue slot earned by a hacker
 """
 type InvitationQueue implements Node {
@@ -18916,7 +18907,6 @@ input UpdateInvitationPreferencesInput {
   """
   clientMutationId: String
   exclude_crypto_programs: Boolean
-  invitation_preference: InvitationPreferenceTypeEnum
   min_bounty: Float
   receive_invites: Boolean
   time_off_ends_at: DateTime
@@ -22029,7 +22019,6 @@ type User implements Node & ResourceInterface {
   impact_percentile: Float
   intro: String
   intro_html: String
-  invitation_preference: InvitationPreferenceTypeEnum
   invitation_queues(
     """
     Returns the elements in the list that come after the specified cursor.
