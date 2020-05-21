@@ -16625,17 +16625,6 @@
     "targets": {
       "in_scope": [
         {
-          "asset_identifier": "api.plaid.com",
-          "asset_type": "URL",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "Plaid's legacy developer API. Docs: https://plaid.com/docs/legacy/api/",
-          "integrity_requirement": null,
-          "max_severity": "critical"
-        },
-        {
           "asset_identifier": "cdn.plaid.com",
           "asset_type": "URL",
           "availability_requirement": null,
@@ -16669,7 +16658,7 @@
           "max_severity": "medium"
         },
         {
-          "asset_identifier": "https://github.com/plaid/link",
+          "asset_identifier": "https://github.com/plaid/plaid-link-ios",
           "asset_type": "SOURCE_CODE",
           "availability_requirement": null,
           "confidentiality_requirement": null,
@@ -16697,7 +16686,7 @@
           "confidentiality_requirement": "high",
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
-          "instruction": "Portal for customers to access their information as seen by Plaid apps they have permissioned.",
+          "instruction": "Portal for customers to access their information as seen by Plaid apps they have permissioned. https://my.plaid.com",
           "integrity_requirement": "high",
           "max_severity": "critical"
         },
@@ -41531,23 +41520,33 @@
     "offers_bounties": false,
     "quick_to_bounty": false,
     "quick_to_first_response": false,
-    "submission_state": "paused",
+    "submission_state": "open",
     "targets": {
       "in_scope": [
+        {
+          "asset_identifier": "*.bountypay.h1ctf.com",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "h1-2008 CTF",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        }
+      ],
+      "out_of_scope": [
         {
           "asset_identifier": "https://h1-415.h1ctf.com",
           "asset_type": "URL",
           "availability_requirement": "high",
           "confidentiality_requirement": "high",
           "eligible_for_bounty": false,
-          "eligible_for_submission": true,
-          "instruction": "",
+          "eligible_for_submission": false,
+          "instruction": "Archived - H1-415-2020 CTF",
           "integrity_requirement": "high",
-          "max_severity": "critical"
+          "max_severity": "none"
         }
-      ],
-      "out_of_scope": [
-
       ]
     }
   },
