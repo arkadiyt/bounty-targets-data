@@ -12164,6 +12164,7 @@ Statistics for a certain interval for a certain team
 type ProgramSubmissionMetrics implements Node {
   closed_reports: Int!
   duplicate_reports: Int!
+  exclude_imported: Boolean!
   id: ID!
   informative_reports: Int!
   interval: ProgramSubmissionMetricIntervalEnum!
@@ -16413,6 +16414,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
     before: String
     child_team_ids: [ID!]
     end_date: Date!
+    exclude_imported: Boolean
 
     """
     Returns the first _n_ elements from the list.
