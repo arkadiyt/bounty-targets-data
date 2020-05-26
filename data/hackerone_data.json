@@ -8096,6 +8096,34 @@
     }
   },
   {
+    "id": 1387,
+    "name": "Invision Power Services, Inc.",
+    "handle": "ips",
+    "url": "https://hackerone.com/ips",
+    "offers_bounties": false,
+    "quick_to_bounty": false,
+    "quick_to_first_response": false,
+    "submission_state": "disabled",
+    "targets": {
+      "in_scope": [
+        {
+          "asset_identifier": "https://d18papeh5u7ohm.cloudfront.net",
+          "asset_type": "URL",
+          "availability_requirement": "low",
+          "confidentiality_requirement": "none",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "We are in the alpha testing phase of the latest release of our community platform: Invision Community 4.5. \n\nWe are launching this campaign for penetration and vulnerability testing. \n\nWe ask that the scope of your testing be focused on the following: \n\n- The AdminCP area of the software. This version removes session IDs from URLs and instead utilizes cookie and database based session management. Every actionable link in the AdminCP should be protected by CSRF tokenization. The scope would involve bypassing CSRF protection which could allow for an unsuspecting administrator to follow a destructive link. \n\n- Platform and infrastructure security. It should not be possible to execute any arbitrary code that would access the infrastructure or permit \"breaking out\" of the test environment, which is housed in /var/www/html - Please alert us if you have found a way to circumvent these protections. \n\n- GraphQL \nThis version includes a GraphQL API, accessible by guests (via Basic authentication with an API key) and members (via an OAuth2 authorization code). It should not be possible to access any data or system settings to which the authenticated user (or guest) does not have access normally, or to perform any mutation/action for which the authenticated user (or guest) does not have permission normally. In addition, GraphQL requests should not have the ability to impact the integrity or stability of the site in general.\n\nGraphQL requests are only accepted at the https://d18papeh5u7ohm.cloudfront.net/api/graphql/ endpoint. An API key has been set up to access the site as a guest user: 21b746f7d5411ddc112636e8df6eb59f\n\nYou may exclusively use https://d18papeh5u7ohm.cloudfront.net for the purpose of your testing. \nAdmin username: admin\nPassword: password123\n\nAll other URLs are considered out of scope. \n",
+          "integrity_requirement": "medium",
+          "max_severity": "high"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
     "id": 1453,
     "name": "Boozt Fashion AB",
     "handle": "boozt",
