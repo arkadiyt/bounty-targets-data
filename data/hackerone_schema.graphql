@@ -13352,6 +13352,7 @@ type Report implements ActivitiesInterface & Node & ResourceInterface {
   mediation_requested_at: DateTime
   new_staleness_threshold: Int
   original_report: Report
+  pending_action_from: ReportPendingActionFromEnum
   pentest: Pentest
 
   """
@@ -13622,6 +13623,14 @@ enum ReportOrderField {
 input ReportOrderInput {
   direction: OrderDirection!
   field: ReportOrderField!
+}
+
+"""
+Parties that a report can be pending action from
+"""
+enum ReportPendingActionFromEnum {
+  pending_action_from_team
+  pending_action_from_triage
 }
 
 """
