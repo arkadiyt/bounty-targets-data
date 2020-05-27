@@ -408,6 +408,83 @@
           "max_severity": "critical"
         },
         {
+          "asset_identifier": "TW Media: Front Page",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "## In Scope\n* tw.mobi.yahoo.com\n* tw.yahoo.com\n* Content API: https://ncp-gw-abu.media.yahoo.com/\n\n## Out of Scope\n* *.yahoo.com.tw",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "TW Media: News",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "## In Scope\n* [Yahoo TW News Android](https://play.google.com/store/apps/details?id=com.yahoo.mobile.client.android.newstw)\n* [Yahoo TW News iOS](https://itunes.apple.com/tw/app/yahoo%E5%A5%87%E6%91%A9-%E7%9B%B4%E6%92%ADlive-%E5%8D%B3%E6%99%82%E6%96%B0%E8%81%9E/id864844562?mt=8)\n* Yahoo TW News \n  * *.tw.news.yahoo.com\n  * Backend API: https://news-app.abumedia.yql.yahoo.com:443/ \n  * Web: https://tw.news.yahoo.com\n  * Content API: https://ncp-gw-abu.media.yahoo.com/\n\n## Out of Scope\n* news.campaign.yahoo.com.tw\n* *.yahoo.com.tw",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "TW Media: Stock",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "## In Scope\n* [Yahoo TW Stock Android](https://play.google.com/store/apps/details?id=com.yahoo.mobile.client.android.TWStock)\n* [Yahoo TW Stock iOS](https://itunes.apple.com/tw/app/yahoo%E5%A5%87%E6%91%A9%E8%82%A1%E5%B8%82/id790214428?mt=8)\n* Yahoo TW Stock\n  * tw.stock.yahoo.com\n  * API: https://stock-app.abumedia.yql.yahoo.com\n  * API: https://tw-finance-yql.media.yahoo.com\n\n## Notes\n* `stock.yahoo.com` and `finance.yahoo.com` are identical; Reports will NOT be credited same-bug-different-host bonuses when issues are found on both domains.\n* TW Stock Apps have a strong dependency with third party SDK(s) for receiving the real-time quote data in the market. Every page containing values (volume, prices, up/down flag, …) of index, tickers, etfs, …, ticker information, line chart, notifications setting are all from the SDK. And the connection with the SDK service is established when the app launches and lasts the app's whole lifetime. **These SDK service(s) are out of scope.**\n\n## Out of Scope\n* *.yahoo.com.tw\n* tw.finance.yahoo.com\n* Quote SDK (from Systex inc.)\n",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "TW eCommerce: Auctions",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "## In Scope\n* [Yahoo TW Auctions Android](https://play.google.com/store/apps/details?id=com.yahoo.mobile.client.android.ecauction)\n* [Yahoo TW Auctions iOS](https://itunes.apple.com/tw/app/yahoo%E6%8B%8D%E8%B3%A3-%E5%88%8A%E7%99%BB%E5%85%8D%E8%B2%BB/id1033771352?mt=8)\n* Yahoo TW Auctions: \n  * *.bid.yahoo.com\n  * https://tw.bid.yahoo.com\n* Yahoo TW Auctions APIs:\n  * https://tw.bid.yahoo.com/api/\n  * https://tw.api.bid.yahoo.com:4443\n* Search API: tw.search.ec.yahoo.com\n\n## Notes\n* Access to the Taiwan sites from some countries in Europe may be blocked. \n* `Buyer` accounts can be set up for any Yahoo user.\n* `Seller` accounts require a TW phone number and 2FA.\n* **Do not** use fake data (like nid) when operating the cash functions, it may cause real money to be stuck; **we will hold you accountable for broken workflows.**\n* You are required to clean up all the testing data related to posting new products. \n* You **must** include the following “test” label in **ALL** posts (in the most visible location)  to prevent regular users from interacting with hacker-created content: `[PARANOIDS-勿下標][TEST]` -- *Any reports identified that are missing this label, will not receive a bounty.*\n\n## Out of Scope\n* *.yahoo.com.tw\n* ismarus-ap-94600.tw.juiker.net\n* *.tw.juiker.net\n*  auth.tw.juiker.net/oauth2/getUserTokenByTurnkey\n* *.straas.net\n* iOS: JuikerIMSDK.framework, StraaS-iOS-SDK\n* Android: io.straas.android.sdk\n* ecfme.famiport.com.tw (Third Party)\n",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "TW eCommerce: Shopping",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "## In Scope\n* [Yahoo TW Shopping Android](https://play.google.com/store/apps/details?id=com.yahoo.mobile.client.android.ecshopping)\n* [Yahoo TW Shopping iOS](https://itunes.apple.com/tw/app/yahoo%E5%A5%87%E6%91%A9%E8%B3%BC%E7%89%A9%E4%B8%AD%E5%BF%83/id1061577845?mt=8)\n* Yahoo TW Shopping\n  * twpay.buy.yahoo.com \n  * Web: https://tw.buy.yahoo.com/\n  * Mobile Web: https://m.tw.buy.yahoo.com/\n  * API: https://tw.mapi.shp.yahoo.com\n* Search API: tw.search.ec.yahoo.com\n* Rushbuy API: rushbuy.buy.yahoo.com\n\n## Out of Scope\n* *.yahoo.com.tw\n* iOS: TPDirect.framework\n* Android: tech.cherri.tpdirect.api\n",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "TW eCommerce: Store",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "## In Scope\n* [Yahoo TW Store Android](https://play.google.com/store/apps/details?id=com.yahoo.mobile.client.android.ecstore)\n* [Yahoo TW Store iOS](https://itunes.apple.com/tw/app/yahoo%E5%A5%87%E6%91%A9%E8%B6%85%E7%B4%9A%E5%95%86%E5%9F%8E/id778296354?mt=8)\n* Yahoo TW Store\n  * *.tw.mall.yahoo.com\n  * m.mall.yahoo.com\n  * Web: https://tw.mall.yahoo.com/\n  * Mobile Web: https://m.tw.mall.yahoo.com/\n  * API: https://tw.ews.mall.yahooapis.com/\n* Search API: tw.search.ec.yahoo.com\n\n## Out of Scope\n* *.yahoo.com.tw",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "TW eCommerce: Used Car",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "## In Scope\n* tw.usedcar.yahoo.com\n\n## Notes\nRefer to the **Notes** section in the `TW eCommerce: Auctions` listing.\n\n## Out of Scope\n* *.yahoo.com.tw\n* autos.yahoo.com.tw\n* tw.serviceplus.yahoo.com",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
           "asset_identifier": "TechCrunch",
           "asset_type": "OTHER",
           "availability_requirement": null,
@@ -478,7 +555,7 @@
           "asset_type": "OTHER",
           "availability_requirement": null,
           "confidentiality_requirement": null,
-          "eligible_for_bounty": true,
+          "eligible_for_bounty": false,
           "eligible_for_submission": true,
           "instruction": "* *.groups.yahoo.com (main site)\n* *.rtn.groups.yahoodns.net (returned bounced email)\n* *.xa.yimg.com (images)\n* *.yahoogroups.com (smtp - mail relay)",
           "integrity_requirement": null,
@@ -672,61 +749,6 @@
           "max_severity": "critical"
         },
         {
-          "asset_identifier": "Yahoo TW Auction",
-          "asset_type": "OTHER",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "* [Yahoo TW Auction Android](https://play.google.com/store/apps/details?id=com.yahoo.mobile.client.android.ecauction)\n* [Yahoo TW Auction iOS](https://itunes.apple.com/tw/app/yahoo%E6%8B%8D%E8%B3%A3-%E5%88%8A%E7%99%BB%E5%85%8D%E8%B2%BB/id1033771352?mt=8)\n* Yahoo TW Auction (web)",
-          "integrity_requirement": null,
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "Yahoo TW News",
-          "asset_type": "OTHER",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "* [Yahoo TW News Android](https://play.google.com/store/apps/details?id=com.yahoo.mobile.client.android.newstw)\n* [Yahoo TW News iOS](https://itunes.apple.com/tw/app/yahoo%E5%A5%87%E6%91%A9-%E7%9B%B4%E6%92%ADlive-%E5%8D%B3%E6%99%82%E6%96%B0%E8%81%9E/id864844562?mt=8)\n* Yahoo TW News (web)",
-          "integrity_requirement": null,
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "Yahoo TW Shopping",
-          "asset_type": "OTHER",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "* [Yahoo TW Shopping Android](https://play.google.com/store/apps/details?id=com.yahoo.mobile.client.android.ecshopping)\n* [Yahoo TW Shopping iOS](https://itunes.apple.com/tw/app/yahoo%E5%A5%87%E6%91%A9%E8%B3%BC%E7%89%A9%E4%B8%AD%E5%BF%83/id1061577845?mt=8)\n* Yahoo TW Shopping (web)",
-          "integrity_requirement": null,
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "Yahoo TW Stock",
-          "asset_type": "OTHER",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "* [Yahoo TW Stock Android](https://play.google.com/store/apps/details?id=com.yahoo.mobile.client.android.TWStock)\n* [Yahoo TW Stock iOS](https://itunes.apple.com/tw/app/yahoo%E5%A5%87%E6%91%A9%E8%82%A1%E5%B8%82/id790214428?mt=8)\n* tw.stock.yahoo.com\n* *.stock.yahoo.com",
-          "integrity_requirement": null,
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "Yahoo TW Store",
-          "asset_type": "OTHER",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "* [Yahoo TW Store](https://play.google.com/store/apps/details?id=com.yahoo.mobile.client.android.ecstore)\n* [Yahoo TW Store](https://itunes.apple.com/tw/app/yahoo%E5%A5%87%E6%91%A9%E8%B6%85%E7%B4%9A%E5%95%86%E5%9F%8E/id778296354?mt=8)\n* Yahoo TW Store (web)",
-          "integrity_requirement": null,
-          "max_severity": "critical"
-        },
-        {
           "asset_identifier": "Yahoo Video",
           "asset_type": "OTHER",
           "availability_requirement": null,
@@ -878,7 +900,7 @@
           "confidentiality_requirement": null,
           "eligible_for_bounty": false,
           "eligible_for_submission": false,
-          "instruction": "These are just for fun.\n* [H1-213-2019](https://forms.gle/jG7uRzS6k7BWjAeUA)\n* [H1-415-2020(coming soon)\n",
+          "instruction": "These are just for fun.\n* [H1-213-2019](https://forms.gle/jG7uRzS6k7BWjAeUA)\n* [H1-415-2020](coming soon)\n* [H1-2004-2020](coming soon)\n",
           "integrity_requirement": null,
           "max_severity": "none"
         },
@@ -10710,7 +10732,7 @@
         },
         {
           "asset_identifier": "com.spotify.kids",
-          "asset_type": "URL",
+          "asset_type": "GOOGLE_PLAY_APP_ID",
           "availability_requirement": "high",
           "confidentiality_requirement": "high",
           "eligible_for_bounty": true,
