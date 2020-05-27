@@ -17695,6 +17695,46 @@ type TriageRating {
 }
 
 """
+The connection type for TriageRating.
+"""
+type TriageRatingConnection {
+  """
+  A list of edges.
+  """
+  edges: [TriageRatingEdge]
+
+  """
+  A list of nodes.
+  """
+  nodes: [TriageRating]
+
+  """
+  Information to aid in pagination.
+  """
+  pageInfo: PageInfo!
+
+  """
+  Int
+  """
+  total_count: Int!
+}
+
+"""
+An edge in a connection.
+"""
+type TriageRatingEdge {
+  """
+  A cursor for use in pagination.
+  """
+  cursor: String!
+
+  """
+  The item at the end of the edge.
+  """
+  node: TriageRating
+}
+
+"""
 Triage Workflow
 """
 type TriageWorkflow {
@@ -22552,7 +22592,28 @@ type User implements Node & ResourceInterface {
   ): ThanksItemConnection
   totp_enabled: Boolean
   totp_supported: Boolean
-  triage_ratings: [TriageRating]
+  triage_ratings(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+    report_id: ID
+  ): TriageRatingConnection
   triage_user: Boolean
   tshirt_size: TshirtSizeEnum
   twitter_handle: String
