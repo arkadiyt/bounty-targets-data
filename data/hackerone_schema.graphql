@@ -8262,6 +8262,7 @@ input FilterOrderPredicateInput {
 
 input FiltersAuditLogItemFilterInput {
   _and: [FiltersAuditLogItemFilterInput]
+  _not: FiltersAuditLogItemFilterInput
   _or: [FiltersAuditLogItemFilterInput]
   created_at: DateTimePredicateInput
   event: StringPredicateInput
@@ -8277,6 +8278,7 @@ input FiltersAuditLogItemFilterOrder {
 
 input FiltersBountyFilterInput {
   _and: [FiltersBountyFilterInput]
+  _not: FiltersBountyFilterInput
   _or: [FiltersBountyFilterInput]
   created_at: DateTimePredicateInput
   id: IntPredicateInput
@@ -8284,6 +8286,7 @@ input FiltersBountyFilterInput {
 
 input FiltersChecklistCheckFilterInput {
   _and: [FiltersChecklistCheckFilterInput]
+  _not: FiltersChecklistCheckFilterInput
   _or: [FiltersChecklistCheckFilterInput]
   id: IntPredicateInput
   state: ChecklistCheckStateEnumPredicateInput
@@ -8296,6 +8299,7 @@ input FiltersChecklistCheckFilterOrder {
 
 input FiltersChecklistCheckResponseFilterInput {
   _and: [FiltersChecklistCheckResponseFilterInput]
+  _not: FiltersChecklistCheckResponseFilterInput
   _or: [FiltersChecklistCheckResponseFilterInput]
   id: IntPredicateInput
   state: ChecklistCheckResponseStateEnumPredicateInput
@@ -8324,6 +8328,7 @@ input FiltersDerivedTeamReportResolvedCountFilterOrder {
 
 input FiltersExternalProgramFilterInput {
   _and: [FiltersExternalProgramFilterInput]
+  _not: FiltersExternalProgramFilterInput
   _or: [FiltersExternalProgramFilterInput]
   id: IntPredicateInput
   name: StringPredicateInput
@@ -8334,6 +8339,7 @@ input FiltersExternalProgramFilterInput {
 
 input FiltersFollowedUserFilterInput {
   _and: [FiltersFollowedUserFilterInput]
+  _not: FiltersFollowedUserFilterInput
   _or: [FiltersFollowedUserFilterInput]
   id: IntPredicateInput
   is_me: Boolean
@@ -8341,6 +8347,7 @@ input FiltersFollowedUserFilterInput {
 
 input FiltersHacktivityItemFilterInput {
   _and: [FiltersHacktivityItemFilterInput]
+  _not: FiltersHacktivityItemFilterInput
   _or: [FiltersHacktivityItemFilterInput]
   id: IntPredicateInput
   report: FiltersReportFilterInput
@@ -8356,6 +8363,7 @@ input FiltersHacktivityItemFilterOrder {
 
 input FiltersJobListingFilterInput {
   _and: [FiltersJobListingFilterInput]
+  _not: FiltersJobListingFilterInput
   _or: [FiltersJobListingFilterInput]
   contract: BooleanPredicateInput
   description: StringPredicateInput
@@ -8374,6 +8382,7 @@ input FiltersJobListingFilterOrder {
 
 input FiltersPentestFilterInput {
   _and: [FiltersPentestFilterInput]
+  _not: FiltersPentestFilterInput
   _or: [FiltersPentestFilterInput]
   id: IntPredicateInput
   state: PentestStateEnumPredicateInput
@@ -8386,6 +8395,7 @@ input FiltersPentestFilterOrder {
 
 input FiltersPentesterFilterInput {
   _and: [FiltersPentesterFilterInput]
+  _not: FiltersPentesterFilterInput
   _or: [FiltersPentesterFilterInput]
   id: IntPredicateInput
   state: PentesterStateEnumPredicateInput
@@ -8393,6 +8403,7 @@ input FiltersPentesterFilterInput {
 
 input FiltersReportFilterInput {
   _and: [FiltersReportFilterInput]
+  _not: FiltersReportFilterInput
   _or: [FiltersReportFilterInput]
   bounty_awarded_at: DateTimePredicateInput
   closed_at: DateTimePredicateInput
@@ -8425,6 +8436,7 @@ input FiltersReportFilterOrder {
 
 input FiltersRetestSubscriptionAggregateFilterInput {
   _and: [FiltersRetestSubscriptionAggregateFilterInput]
+  _not: FiltersRetestSubscriptionAggregateFilterInput
   _or: [FiltersRetestSubscriptionAggregateFilterInput]
   id: IntPredicateInput
   is_active: Boolean
@@ -8437,6 +8449,7 @@ input FiltersSamlProviderDomainFilterOrder {
 
 input FiltersSamlTestFilterInput {
   _and: [FiltersSamlTestFilterInput]
+  _not: FiltersSamlTestFilterInput
   _or: [FiltersSamlTestFilterInput]
   id: IntPredicateInput
   state: SamlTestStateEnumPredicateInput
@@ -8449,6 +8462,7 @@ input FiltersSamlTestFilterOrder {
 
 input FiltersStructuredScopeFilterInput {
   _and: [FiltersStructuredScopeFilterInput]
+  _not: FiltersStructuredScopeFilterInput
   _or: [FiltersStructuredScopeFilterInput]
   asset_identifier: StringPredicateInput
   asset_type: StructuredScopeAssetTypeEnumPredicateInput
@@ -8458,6 +8472,7 @@ input FiltersStructuredScopeFilterInput {
 
 input FiltersTeamFilterInput {
   _and: [FiltersTeamFilterInput]
+  _not: FiltersTeamFilterInput
   _or: [FiltersTeamFilterInput]
   bookmarked_team_users: FiltersUserFilterInput
   external_program: FiltersExternalProgramFilterInput
@@ -8490,6 +8505,7 @@ input FiltersTeamFilterOrder {
 
 input FiltersTeamMemberFilterInput {
   _and: [FiltersTeamMemberFilterInput]
+  _not: FiltersTeamMemberFilterInput
   _or: [FiltersTeamMemberFilterInput]
   concealed: BooleanPredicateInput
   id: IntPredicateInput
@@ -8497,6 +8513,7 @@ input FiltersTeamMemberFilterInput {
 
 input FiltersTeamMemberGroupFilterInput {
   _and: [FiltersTeamMemberGroupFilterInput]
+  _not: FiltersTeamMemberGroupFilterInput
   _or: [FiltersTeamMemberGroupFilterInput]
   id: IntPredicateInput
   name: StringPredicateInput
@@ -8509,6 +8526,7 @@ input FiltersTeamMemberGroupFilterOrder {
 
 input FiltersTriageSubscriptionFilterInput {
   _and: [FiltersTriageSubscriptionFilterInput]
+  _not: FiltersTriageSubscriptionFilterInput
   _or: [FiltersTriageSubscriptionFilterInput]
   id: IntPredicateInput
   is_active: Boolean
@@ -8516,6 +8534,7 @@ input FiltersTriageSubscriptionFilterInput {
 
 input FiltersUserFilterInput {
   _and: [FiltersUserFilterInput]
+  _not: FiltersUserFilterInput
   _or: [FiltersUserFilterInput]
   followers: FiltersFollowedUserFilterInput
   id: IntPredicateInput
@@ -8532,6 +8551,7 @@ input FiltersUserFilterOrder {
 
 input FiltersWeaknessFilterInput {
   _and: [FiltersWeaknessFilterInput]
+  _not: FiltersWeaknessFilterInput
   _or: [FiltersWeaknessFilterInput]
   id: IntPredicateInput
   name: StringPredicateInput
@@ -8539,6 +8559,7 @@ input FiltersWeaknessFilterInput {
 
 input FiltersWebhookResponseFilterInput {
   _and: [FiltersWebhookResponseFilterInput]
+  _not: FiltersWebhookResponseFilterInput
   _or: [FiltersWebhookResponseFilterInput]
   id: IntPredicateInput
 }
@@ -10115,6 +10136,51 @@ type MarkReportAsSignalPayload implements MutationResult {
 }
 
 """
+Autogenerated input type of MarkReportMetadataAsReviewed
+"""
+input MarkReportMetadataAsReviewedInput {
+  """
+  A unique identifier for the client performing the mutation.
+  """
+  clientMutationId: String
+  report_id: ID!
+}
+
+"""
+Autogenerated return type of MarkReportMetadataAsReviewed
+"""
+type MarkReportMetadataAsReviewedPayload implements MutationResult {
+  """
+  A unique identifier for the client performing the mutation.
+  """
+  clientMutationId: String
+  errors(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+    types: [ErrorTypeEnum]
+  ): ErrorConnection!
+  report: Report
+  was_successful: Boolean!
+}
+
+"""
 Autogenerated input type of MarkSwagAsSent
 """
 input MarkSwagAsSentInput {
@@ -10278,6 +10344,7 @@ type Mutation {
   markReportAsNeedsMoreInfo(input: MarkReportAsNeedsMoreInfoInput!): MarkReportAsNeedsMoreInfoPayload
   markReportAsNoise(input: MarkReportAsNoiseInput!): MarkReportAsNoisePayload
   markReportAsSignal(input: MarkReportAsSignalInput!): MarkReportAsSignalPayload
+  markReportMetadataAsReviewed(input: MarkReportMetadataAsReviewedInput!): MarkReportMetadataAsReviewedPayload
   markSwagAsSent(input: MarkSwagAsSentInput!): MarkSwagAsSentPayload
   programHealthAcknowledgementSeen(input: ProgramHealthAcknowledgementSeenInput!): ProgramHealthAcknowledgementSeenPayload
   reassignReportToTeam(input: ReassignReportToTeamInput!): ReassignReportToTeamPayload
@@ -11707,6 +11774,7 @@ A pentester profile
 """
 type PentesterProfile implements Node {
   _id: ID!
+  approved: Boolean!
   bio: String
   certifications_pentester_profiles(
     """
@@ -13611,6 +13679,7 @@ enum ReportOrderField {
   last_public_activity_at
   last_reporter_activity_at
   latest_activity_at
+  severity_rating
   substate
   swag_awarded_at
   timer_bounty_awarded_elapsed_time
@@ -17679,6 +17748,7 @@ type TriageMeta implements Node & ResourceInterface {
   id: ID!
   owned_by: User
   pristine: Boolean
+  report_metadata_reviewed_at: DateTime
   url: URI!
 }
 
