@@ -16478,7 +16478,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
     """
     start_date: String
   ): SurveyAnswerConnection
-  program_statistics(child_team_ids: [ID!], end_date: Date!, start_date: Date!, view_by: ProgramSubmissionMetricViewByEnum): ProgramStatistics!
+  program_statistics(child_team_ids: [ID!], end_date: Date!, exclude_imported: Boolean, start_date: Date!, view_by: ProgramSubmissionMetricViewByEnum): ProgramStatistics!
   program_submission_metrics(
     """
     Returns the elements in the list that come after the specified cursor.
