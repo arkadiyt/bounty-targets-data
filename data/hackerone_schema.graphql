@@ -8528,6 +8528,30 @@ input FiltersReportFilterOrder {
   id: FilterOrderPredicateInput
 }
 
+input FiltersReportRetestFilterInput {
+  _and: [FiltersReportRetestFilterInput]
+  _not: FiltersReportRetestFilterInput
+  _or: [FiltersReportRetestFilterInput]
+  id: IntPredicateInput
+  report_retest_users: FiltersReportRetestUserFilterInput
+  state: ReportRetestStateEnumPredicateInput
+  team: FiltersTeamFilterInput
+}
+
+input FiltersReportRetestFilterOrder {
+  created_at: FilterOrderPredicateInput
+  id: FilterOrderPredicateInput
+}
+
+input FiltersReportRetestUserFilterInput {
+  _and: [FiltersReportRetestUserFilterInput]
+  _not: FiltersReportRetestUserFilterInput
+  _or: [FiltersReportRetestUserFilterInput]
+  id: IntPredicateInput
+  state: ReportRetestUserStateEnumPredicateInput
+  user: FiltersUserFilterInput
+}
+
 input FiltersRetestSubscriptionAggregateFilterInput {
   _and: [FiltersRetestSubscriptionAggregateFilterInput]
   _not: FiltersRetestSubscriptionAggregateFilterInput
@@ -12703,8 +12727,6 @@ type Query implements Node {
   report(id: Int!): Report
   report_retest_user(activity_id: Int!): ReportRetestUser
   report_retests(
-    active: Boolean = false
-
     """
     Returns the elements in the list that come after the specified cursor.
     """
@@ -12719,12 +12741,13 @@ type Query implements Node {
     Returns the first _n_ elements from the list.
     """
     first: Int
-    historic: Boolean = false
 
     """
     Returns the last _n_ elements from the list.
     """
     last: Int
+    order_by: FiltersReportRetestFilterOrder
+    where: FiltersReportRetestFilterInput
   ): ReportRetestConnection
   reports(
     """
@@ -13850,8 +13873,6 @@ type ReportRetest {
     new: Boolean
     visible: Boolean
   ): ReportRetestUserConnection
-  report_state: String
-  report_substate: String
   severity_rating: String
   state: ReportRetestStateEnum
   team: Team!
@@ -13916,6 +13937,14 @@ enum ReportRetestStateEnum {
   unclaimed
 }
 
+input ReportRetestStateEnumPredicateInput {
+  _eq: ReportRetestStateEnum
+  _in: [ReportRetestStateEnum]
+  _is_null: Boolean
+  _neq: ReportRetestStateEnum
+  _nin: [ReportRetestStateEnum]
+}
+
 """
 A report retest user
 """
@@ -13978,6 +14007,28 @@ type ReportRetestUserEdge {
   The item at the end of the edge.
   """
   node: ReportRetestUser
+}
+
+"""
+Report retest user state enum
+"""
+enum ReportRetestUserStateEnum {
+  approved
+  assigned
+  claimed
+  expired
+  needs_approval
+  opted_out
+  rejected
+  unassigned
+}
+
+input ReportRetestUserStateEnumPredicateInput {
+  _eq: ReportRetestUserStateEnum
+  _in: [ReportRetestUserStateEnum]
+  _is_null: Boolean
+  _neq: ReportRetestUserStateEnum
+  _nin: [ReportRetestUserStateEnum]
 }
 
 """
@@ -22602,8 +22653,6 @@ type User implements Node & ResourceInterface {
     pending: Boolean
   ): ReportRetestUserConnection
   report_retests(
-    active: Boolean = false
-
     """
     Returns the elements in the list that come after the specified cursor.
     """
@@ -22618,12 +22667,13 @@ type User implements Node & ResourceInterface {
     Returns the first _n_ elements from the list.
     """
     first: Int
-    historic: Boolean = false
 
     """
     Returns the last _n_ elements from the list.
     """
     last: Int
+    order_by: FiltersReportRetestFilterOrder
+    where: FiltersReportRetestFilterInput
   ): ReportRetestConnection
   reports(
     """
