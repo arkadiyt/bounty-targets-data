@@ -11281,6 +11281,7 @@ type Pentest implements Node {
     first: Int
     hackerone_hacker_submissions: Boolean = false
     handle: String
+    has_retests: Boolean
 
     """
     Returns the last _n_ elements from the list.
@@ -11302,7 +11303,6 @@ type Pentest implements Node {
     """
     page: Int = null
     pre_submission_review_states: [ReportPreSubmissionReviewStateEnum] = null
-    retested: Boolean
     secure_order_by: FiltersReportFilterOrder
     state: ReportStateEnum
     substate: ReportStateEnum
@@ -11767,6 +11767,7 @@ type PentestStructuredScope implements Node {
     first: Int
     hackerone_hacker_submissions: Boolean = false
     handle: String
+    has_retests: Boolean
 
     """
     Returns the last _n_ elements from the list.
@@ -11788,7 +11789,6 @@ type PentestStructuredScope implements Node {
     """
     page: Int = null
     pre_submission_review_states: [ReportPreSubmissionReviewStateEnum] = null
-    retested: Boolean
     secure_order_by: FiltersReportFilterOrder
     state: ReportStateEnum
     substate: ReportStateEnum
@@ -12768,6 +12768,7 @@ type Query implements Node {
     first: Int
     hackerone_hacker_submissions: Boolean = false
     handle: String
+    has_retests: Boolean
 
     """
     Returns the last _n_ elements from the list.
@@ -12789,7 +12790,6 @@ type Query implements Node {
     """
     page: Int = null
     pre_submission_review_states: [ReportPreSubmissionReviewStateEnum] = null
-    retested: Boolean
     secure_order_by: FiltersReportFilterOrder
     state: ReportStateEnum
     substate: ReportStateEnum
@@ -15383,6 +15383,7 @@ type StructuredScope implements Node & ResourceInterface {
     first: Int
     hackerone_hacker_submissions: Boolean = false
     handle: String
+    has_retests: Boolean
 
     """
     Returns the last _n_ elements from the list.
@@ -15404,7 +15405,6 @@ type StructuredScope implements Node & ResourceInterface {
     """
     page: Int = null
     pre_submission_review_states: [ReportPreSubmissionReviewStateEnum] = null
-    retested: Boolean
     secure_order_by: FiltersReportFilterOrder
     state: ReportStateEnum
     substate: ReportStateEnum
@@ -16767,6 +16767,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
     first: Int
     hackerone_hacker_submissions: Boolean = false
     handle: String
+    has_retests: Boolean
 
     """
     Returns the last _n_ elements from the list.
@@ -16788,7 +16789,6 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
     """
     page: Int = null
     pre_submission_review_states: [ReportPreSubmissionReviewStateEnum] = null
-    retested: Boolean
     secure_order_by: FiltersReportFilterOrder
     state: ReportStateEnum
     substate: ReportStateEnum
@@ -22695,6 +22695,7 @@ type User implements Node & ResourceInterface {
     first: Int
     hackerone_hacker_submissions: Boolean = false
     handle: String
+    has_retests: Boolean
 
     """
     Returns the last _n_ elements from the list.
@@ -22716,7 +22717,6 @@ type User implements Node & ResourceInterface {
     """
     page: Int = null
     pre_submission_review_states: [ReportPreSubmissionReviewStateEnum] = null
-    retested: Boolean
     secure_order_by: FiltersReportFilterOrder
     state: ReportStateEnum
     substate: ReportStateEnum
