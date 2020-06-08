@@ -11317,6 +11317,29 @@ type Pentest implements Node {
   state: PentestStateEnum
   structured_scope_types: [String!]
   summary_report: Attachment
+  survey_ratings(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+    completed: Boolean
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+    sent_to_current_user: Boolean
+  ): SurveyRatingsConnection
   team: Team!
   time_zone: String
   tpm: User
@@ -15802,6 +15825,124 @@ type SurveyEdge {
   The item at the end of the edge.
   """
   node: Survey
+}
+
+"""
+A survey rating
+"""
+type SurveyRating implements Node {
+  _id: ID!
+  created_at: DateTime!
+  id: ID!
+  survey_rating_items(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+  ): SurveyRatingItemsConnection
+  updated_at: DateTime
+}
+
+"""
+A survey rating item
+"""
+type SurveyRatingItem implements Node {
+  _id: ID!
+  created_at: DateTime!
+  id: ID!
+  key: String!
+  rating_out_of: Int!
+  updated_at: DateTime
+}
+
+"""
+The connection type for SurveyRatingItem.
+"""
+type SurveyRatingItemsConnection {
+  """
+  A list of edges.
+  """
+  edges: [SurveyRatingItemsEdge]
+
+  """
+  A list of nodes.
+  """
+  nodes: [SurveyRatingItem]
+
+  """
+  Information to aid in pagination.
+  """
+  pageInfo: PageInfo!
+
+  """
+  Int
+  """
+  total_count: Int!
+}
+
+"""
+An edge in a connection.
+"""
+type SurveyRatingItemsEdge {
+  """
+  A cursor for use in pagination.
+  """
+  cursor: String!
+
+  """
+  The item at the end of the edge.
+  """
+  node: SurveyRatingItem
+}
+
+"""
+The connection type for SurveyRating.
+"""
+type SurveyRatingsConnection {
+  """
+  A list of edges.
+  """
+  edges: [SurveyRatingsEdge]
+
+  """
+  A list of nodes.
+  """
+  nodes: [SurveyRating]
+
+  """
+  Information to aid in pagination.
+  """
+  pageInfo: PageInfo!
+}
+
+"""
+An edge in a connection.
+"""
+type SurveyRatingsEdge {
+  """
+  A cursor for use in pagination.
+  """
+  cursor: String!
+
+  """
+  The item at the end of the edge.
+  """
+  node: SurveyRating
 }
 
 """
