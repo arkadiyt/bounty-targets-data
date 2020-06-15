@@ -22782,6 +22782,7 @@ type User implements Node & ResourceInterface {
     secure_order_by: FiltersPentestFilterOrder
     where: FiltersPentestFilterInput
   ): PentestConnection
+  profile_activated: Boolean
   profile_picture(size: ProfilePictureSizes!): String!
   profile_pictures: Hash!
   program_health_acknowledgements(
