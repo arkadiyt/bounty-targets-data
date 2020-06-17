@@ -23004,6 +23004,7 @@ type User implements Node & ResourceInterface {
     team_handle: String = null
     terms_accepted: Boolean = null
   ): SoftLaunchConnection
+  statistics_snapshot(snapshot_type: UserStatisticsSnapshotTypeEnum!): UserStatisticsSnapshot
   subscribed_for_monthly_digest: Boolean
   subscribed_for_team_messages: Boolean
   swag(
@@ -23283,6 +23284,25 @@ type UserSessionEdge {
   The item at the end of the edge.
   """
   node: UserSession
+}
+
+"""
+Statistics snapshots for user
+"""
+type UserStatisticsSnapshot implements Node {
+  _id: ID!
+  id: ID!
+  impact: Float
+  reputation: Int
+  signal: Float
+}
+
+"""
+types available for user statistics
+"""
+enum UserStatisticsSnapshotTypeEnum {
+  last_90_days
+  past_year
 }
 
 """
