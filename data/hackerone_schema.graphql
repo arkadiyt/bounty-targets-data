@@ -7730,6 +7730,27 @@ enum DomainVerificationMethodEnum {
 }
 
 """
+The connection type for Report.
+"""
+type DuplicateReportsConnection {
+  """
+  A list of edges.
+  """
+  edges: [ReportWithSimilarityScoreEdgeType]
+
+  """
+  A list of nodes.
+  """
+  nodes: [Report]
+
+  """
+  Information to aid in pagination.
+  """
+  pageInfo: PageInfo!
+  total_count: Int!
+}
+
+"""
 An earning
 """
 type Earning implements Node {
@@ -8298,6 +8319,19 @@ type ExternalProgramEdge {
   The item at the end of the edge.
   """
   node: ExternalProgram
+}
+
+"""
+ExtractedReportData
+"""
+type ExtractedReportData implements Node {
+  _id: ID!
+  hosts: [String]
+  id: ID!
+  ip_addresses: [String]
+  paths: [String]
+  query_parameters: [String]
+  report: Report!
 }
 
 """
@@ -12594,6 +12628,29 @@ type Query implements Node {
     last: Int
     order_by: ClusterOrder = {direction: ASC, field: BROWSING_FRIENDLY}
   ): ClusterConnection
+  duplicate_reports(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+    search: ReportSimilaritySearch
+    where: FiltersReportFilterInput
+  ): DuplicateReportsConnection
   embedded_submission_form(uuid: String!): EmbeddedSubmissionForm
   external_program(handle: String!): ExternalProgram
   external_programs(
@@ -13553,6 +13610,7 @@ type Report implements ActivitiesInterface & Node & ResourceInterface {
   ): CustomFieldValueConnection
   cve_ids: [String]
   disclosed_at: DateTime
+  extracted_report_data: ExtractedReportData
   first_program_activity_at: DateTime
   hacker_published: Boolean
   i_am_subscribed: Boolean
@@ -14076,6 +14134,14 @@ type ReportShareToken implements Node {
   usable: Boolean!
 }
 
+input ReportSimilaritySearch {
+  hosts: [String]
+  ip_addresses: [String]
+  paths: [String]
+  query_parameters: [String]
+  vulnerability_information: String
+}
+
 """
 States a report can be in
 """
@@ -14108,6 +14174,26 @@ Visibility of a shared report
 enum ReportVisibilityEnum {
   full
   limited
+}
+
+"""
+An edge in a connection.
+"""
+type ReportWithSimilarityScoreEdgeType {
+  """
+  A cursor for use in pagination.
+  """
+  cursor: String!
+
+  """
+  The item at the end of the edge.
+  """
+  node: Report
+
+  """
+  The possible duplicate report's similarity score
+  """
+  similarity_score: Float
 }
 
 """
@@ -22629,7 +22715,7 @@ type User implements Node & ResourceInterface {
   i_can_update_username: Boolean
   id: ID!
   impact: Float
-  impact_percentile: Float
+  impact_percentile: Int
   intro: String
   intro_html: String
   invitation_queues(
@@ -22959,7 +23045,7 @@ type User implements Node & ResourceInterface {
     last: Int
   ): UserSessionConnection
   signal: Float
-  signal_percentile: Float
+  signal_percentile: Int
   skills(
     """
     Returns the elements in the list that come after the specified cursor.
@@ -23295,8 +23381,10 @@ type UserStatisticsSnapshot implements Node {
   _id: ID!
   id: ID!
   impact: Float
+  impact_percentile: Int
   reputation: Int
   signal: Float
+  signal_percentile: Int
 }
 
 """
