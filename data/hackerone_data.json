@@ -33228,6 +33228,28 @@
           "max_severity": "critical"
         },
         {
+          "asset_identifier": "api.magic.link",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "**Any activity that could lead to the disruption of our service (DDOS) is explicitly out of scope.**\n\n**What it does:**\n- This is our main API that serves the rest of the Magic assets. As a result a lot of functionality is exposed here -- everything from creating/authenticating users to supporting our [dashboard](dashboard.magic.link) functionalities can be found here.\n\n**What to look for:**\n- We are interested in vulnerabilities which are caused by improper access control and can cause leakage/modification of user information. Please keep in mind to only ever test against your own accounts.\n\n**Test plan:**\n- Grab a set of API keys from our [dashboard](dashboard.magic.link)\n- Access our API by providing your API key to the `X-Magic-API-Key` header. Endpoints under access control uses an authorization bearer token returned by the API once the user is able to successfully authenticate. Inspecting `auth.magic.link`’s or `dashboard.magic.link`'s interactions with the API will provide a good idea of how the API can be invoked.",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "auth.magic.link",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "This is our main product, orchestrating the one-click passwordless login experience. \nFollow the instructions on our [documentation page](https://docs.magic.link/), and please keep our [out of scope vulnerabilities](https://hackerone.com/fortmatic_inc) in mind while testing.\n\n**What it is:**\n- User interface and authentication relayer to enable passwordless authentication using magic links. The main way to interact with this interface will be through our [client SDK](https://www.npmjs.com/package/magic-sdk), our [docs](https://docs.magic.link/get-started) will help you to quickly get up and running!\n\n**What to look for:**\n- We are highly interested in any access control, token enumerations, or privilege escalation vulnerabilities and consider them as very high risk issues. Also keep an eye on other standard web vulnerabilities such as XSS/CSRF for extracting held secrets in local storage/cookies. Please note to only ever test against your own account.\n\n**What it runs on:**\n- Javascript ES6, TypeScript, React, Redux, HTML, CSS, LESS, \n\n**Test plan:**\n- Get your API keys from our [dashboard](https://dashboard.magic.link).\n- Fork our [demo app](https://go.magic.link/hello-world-code), and run with your test publishable API keys from our dashboard. \n- Inputting an email will start the login process, and you'll be off to the races!\n",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
           "asset_identifier": "dashboard.fortmatic.com",
           "asset_type": "URL",
           "availability_requirement": "low",
@@ -33237,6 +33259,17 @@
           "instruction": "Navigate to dashboard.fortmatic.com for signup, at this time there is no way for us to pre-assign credentials for our hackers, apologies for the inconvenience.\n\n**Similar to our other scopes any DDoS based exploits are explicitly out of scope**\n\n**What it runs on:**\n- HTML, LESS\n\n**What it does:**\n- Developers come in here to manage their access to the Fortmatic API. It contains features that are vital to the operation of the developers’ app -- domain verification, and obtaining/rolling their API keys. \n\n**What to look for:**\n- Any web vulnerabilities are of concern here e.g, cross-site scripting (XSS) or cross-site request forgery (CSRF) that could force the developer to commit unwanted actions or on behalf of another user. Also interested in vulnerabilities in the OAuth flow that occur for user sign-up/sign-in.\n\n**Test plan:**\n- This is a fairly standard web application, with no particular gotchas. Your standard tool kit should be all that you’d need here.\n",
           "integrity_requirement": "medium",
           "max_severity": "high"
+        },
+        {
+          "asset_identifier": "dashboard.magic.link",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Navigate to our [dashboard](dashboard.magic.link) for signup, at this time there is no way for us to pre-assign credentials for our testers, apologies for the inconvenience. Please keep our [out of scope vulnerabilities](https://hackerone.com/fortmatic_inc) in mind while testing.\n\n**Similar to our other scopes any DDoS based exploits are explicitly out of scope**\n\n**What it runs on:**\n- React, Redux, Javascript, Typescript, HTML, CSS, LESS\n\n**What it does:**\n- Developers come in here to manage their access to the Magic API. It contains features that are vital to the operation of the developers’ app -- billing setup, branding customizations*, and obtaining/rolling their API keys, to name a few. \n\n**What to look for:**\n- Any web vulnerabilities are of concern here e.g, cross-site scripting (XSS) or cross-site request forgery (CSRF) that could force the developer to commit unwanted actions or on behalf of another user. Access control bypasses are also of interest to us, can you maybe bypass payments to get access to branding, or access to other higher paid tier features?\n\n**Test plan:**\n- This is a fairly standard web application, with no particular gotchas. Your standard tool kit should be all that you’d need here.\n\n*Branding is available to developer tier and up. However a free trial can be used to access any paid tier features.",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
         },
         {
           "asset_identifier": "fortmatic.com",
