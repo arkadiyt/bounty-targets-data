@@ -1301,6 +1301,7 @@ type ActivitiesReportSeverityUpdated implements ActivityInterface & Node & Repor
   markdown_message: String
   message: String
   report: Report
+  severity: Severity
   triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
 }
@@ -23383,6 +23384,7 @@ type UserStatisticsSnapshot implements Node {
   id: ID!
   impact: Float
   impact_percentile: Int
+  rank: Int
   reputation: Int
   signal: Float
   signal_percentile: Int
