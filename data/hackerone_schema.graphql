@@ -17282,6 +17282,28 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
   ): TeamMemberConnection
   target_signal: Float
   team_display_options: TeamDisplayOptions
+  team_integrations(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+    integration_type: TeamIntegrationType = null
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+  ): TeamIntegrationConnection
   team_member_groups: [TeamMemberGroup]
   team_members(
     """
@@ -17585,6 +17607,107 @@ Fields on which a collection of team inbox views can be ordered
 """
 enum TeamInboxViewOrderField {
   position
+}
+
+"""
+The connection type for TeamIntegrationUnion.
+"""
+type TeamIntegrationConnection {
+  """
+  A list of edges.
+  """
+  edges: [TeamIntegrationUnionEdge]
+
+  """
+  A list of nodes.
+  """
+  nodes: [TeamIntegrationUnion]
+
+  """
+  Information to aid in pagination.
+  """
+  pageInfo: PageInfo!
+  total_count: Int!
+}
+
+"""
+An interface for the common fields on an HackerOne Team Integration
+"""
+interface TeamIntegrationInterface {
+  _id: ID!
+  active: Boolean!
+  id: ID!
+  team: Team!
+}
+
+"""
+Possible types for Team Integrations
+"""
+enum TeamIntegrationType {
+  Jira
+  Slack
+  Tray
+  Webhook
+}
+
+"""
+TeamIntegrations can be of multiple types
+"""
+union TeamIntegrationUnion = TeamIntegrationsJira | TeamIntegrationsSlack | TeamIntegrationsTray | TeamIntegrationsWebhook
+
+"""
+An edge in a connection.
+"""
+type TeamIntegrationUnionEdge {
+  """
+  A cursor for use in pagination.
+  """
+  cursor: String!
+
+  """
+  The item at the end of the edge.
+  """
+  node: TeamIntegrationUnion
+}
+
+"""
+A TeamIntegrations object for Jira
+"""
+type TeamIntegrationsJira implements Node & TeamIntegrationInterface {
+  _id: ID!
+  active: Boolean!
+  id: ID!
+  team: Team!
+}
+
+"""
+A TeamIntegrations object for Slack
+"""
+type TeamIntegrationsSlack implements Node & TeamIntegrationInterface {
+  _id: ID!
+  active: Boolean!
+  id: ID!
+  team: Team!
+}
+
+"""
+A TeamIntegrations object for Tray
+"""
+type TeamIntegrationsTray implements Node & TeamIntegrationInterface {
+  _id: ID!
+  active: Boolean!
+  id: ID!
+  team: Team!
+}
+
+"""
+A TeamIntegrations object for Webhooks
+"""
+type TeamIntegrationsWebhook implements Node & TeamIntegrationInterface {
+  _id: ID!
+  active: Boolean!
+  id: ID!
+  team: Team!
 }
 
 """
