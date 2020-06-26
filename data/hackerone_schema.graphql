@@ -17702,8 +17702,10 @@ A TeamIntegrations object for Tray
 type TeamIntegrationsTray implements Node & TeamIntegrationInterface {
   _id: ID!
   active: Boolean!
+  config_url: String
   id: ID!
   team: Team!
+  tray_profile: TrayProfile
 }
 
 """
@@ -18279,6 +18281,14 @@ type TrackerIncrementPayload implements MutationResult {
     types: [ErrorTypeEnum]
   ): ErrorConnection!
   was_successful: Boolean!
+}
+
+"""
+A Tray Profile object
+"""
+type TrayProfile implements Node {
+  id: ID!
+  tray_user_id: String
 }
 
 """
