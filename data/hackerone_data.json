@@ -7940,7 +7940,7 @@
     "targets": {
       "in_scope": [
         {
-          "asset_identifier": "api.vk.com",
+          "asset_identifier": "*.vk.cc",
           "asset_type": "URL",
           "availability_requirement": "high",
           "confidentiality_requirement": "high",
@@ -7951,7 +7951,18 @@
           "max_severity": "critical"
         },
         {
-          "asset_identifier": "login.vk.com",
+          "asset_identifier": "*.vk.com",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "`vk.com`, `m.vk.com`, `api.vk.com`, `login.vk.com`, `oauth.vk.com`",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "*.vk.link",
           "asset_type": "URL",
           "availability_requirement": "high",
           "confidentiality_requirement": "high",
@@ -7962,7 +7973,7 @@
           "max_severity": "critical"
         },
         {
-          "asset_identifier": "m.vk.com",
+          "asset_identifier": "*.vk.me",
           "asset_type": "URL",
           "availability_requirement": "high",
           "confidentiality_requirement": "high",
@@ -7973,40 +7984,29 @@
           "max_severity": "critical"
         },
         {
-          "asset_identifier": "oauth.vk.com",
+          "asset_identifier": "*.vkpay.io",
           "asset_type": "URL",
           "availability_requirement": "high",
           "confidentiality_requirement": "high",
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
-          "instruction": "",
+          "instruction": "VK Pay: https://vk.com/vkpay ",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "connect.vk.com",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "VK Connect: https://connect.vk.com/promo ",
           "integrity_requirement": "high",
           "max_severity": "critical"
         },
         {
           "asset_identifier": "vk.cc",
-          "asset_type": "URL",
-          "availability_requirement": "high",
-          "confidentiality_requirement": "high",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "",
-          "integrity_requirement": "high",
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "vk.com",
-          "asset_type": "URL",
-          "availability_requirement": "high",
-          "confidentiality_requirement": "high",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "",
-          "integrity_requirement": "high",
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "vk.me",
           "asset_type": "URL",
           "availability_requirement": "high",
           "confidentiality_requirement": "high",
