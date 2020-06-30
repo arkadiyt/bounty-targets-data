@@ -4974,6 +4974,7 @@ input CreateOrUpdatePentestInput {
   id: ID
   industry: String!
   name: String!
+  retesting_end_date: String
   slack_workspace_url: String
   start_date: String!
   state: String!
@@ -11353,6 +11354,8 @@ type Pentest implements Node {
     where: FiltersReportFilterInput
     without_scope: Boolean = null
   ): ReportConnection
+  retesting_end_date: Date
+  retesting_ends_at: DateTime
   salesforce_tpm_email: String
   slack_workspace_url: String
   start_date: Date
