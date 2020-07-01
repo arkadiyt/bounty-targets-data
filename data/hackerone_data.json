@@ -43257,6 +43257,55 @@
     }
   },
   {
+    "id": 48781,
+    "name": "SMTP2GO",
+    "handle": "smtp2go",
+    "url": "https://hackerone.com/smtp2go",
+    "offers_bounties": false,
+    "quick_to_bounty": false,
+    "quick_to_first_response": true,
+    "submission_state": "open",
+    "targets": {
+      "in_scope": [
+        {
+          "asset_identifier": "app.smtp2go.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "Flask based app running on Python 2.7, some pages are VueJS but most are scripted with custom JQuery.\nCreate a free account in order to gain login access.",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "smtp2go.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "Standard wordpress site hosted with WPEngine, scripting is all custom JQuery based.",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "asset_identifier": "support.smtp2go.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        }
+      ]
+    }
+  },
+  {
     "id": 49048,
     "name": "Matic Network",
     "handle": "matic-network",
