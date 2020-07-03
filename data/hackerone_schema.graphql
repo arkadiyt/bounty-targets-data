@@ -13010,6 +13010,7 @@ type Query implements Node {
     where: FiltersTeamFilterInput
   ): TeamConnection
   time_zones: [Hash!]!
+  tray_solution_instance_url(integration_id: ID!, solution_instance_id: String!): String!
 
   """
   A resolver for triage inbox items
@@ -14171,7 +14172,7 @@ input ReportSimilaritySearch {
   ip_addresses: [String]
   paths: [String]
   query_parameters: [String]
-  vulnerability_information: String
+  vulnerability_information: [String]
 }
 
 """
@@ -15299,6 +15300,72 @@ type SoftLaunchEdge {
   The item at the end of the edge.
   """
   node: InvitationsSoftLaunch
+}
+
+"""
+Tray::Solution
+"""
+type Solution implements Node & ResourceInterface {
+  _id: ID!
+  custom_fields: Hash
+  description: String
+  id: ID!
+  title: String!
+  url: URI!
+}
+
+"""
+Tray::SolutionInstance
+"""
+type SolutionInstance implements Node & ResourceInterface {
+  _id: ID!
+  created: DateTime
+  edit_url: String!
+  enabled: Boolean!
+  id: ID!
+  name: String!
+  solution: Solution!
+  url: URI!
+}
+
+"""
+The connection type for SolutionInstance.
+"""
+type SolutionInstanceConnection {
+  """
+  A list of edges.
+  """
+  edges: [SolutionInstanceEdge]
+
+  """
+  A list of nodes.
+  """
+  nodes: [SolutionInstance]
+
+  """
+  Information to aid in pagination.
+  """
+  pageInfo: PageInfo!
+
+  """
+  Int
+  """
+  total_count: Int!
+}
+
+"""
+An edge in a connection.
+"""
+type SolutionInstanceEdge {
+  """
+  A cursor for use in pagination.
+  """
+  cursor: String!
+
+  """
+  The item at the end of the edge.
+  """
+  node: SolutionInstance
 }
 
 """
@@ -17729,6 +17796,28 @@ type TeamIntegrationsTray implements Node & TeamIntegrationInterface {
   active: Boolean!
   config_url: String
   id: ID!
+  solution_instances(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+    solution_id: String = null
+  ): SolutionInstanceConnection
   team: Team!
   tray_profile: TrayProfile
 }
