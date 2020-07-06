@@ -8116,7 +8116,7 @@
     "url": "https://hackerone.com/moneybird",
     "offers_bounties": false,
     "quick_to_bounty": false,
-    "quick_to_first_response": false,
+    "quick_to_first_response": true,
     "submission_state": "open",
     "targets": {
       "in_scope": [
@@ -34949,7 +34949,7 @@
     "url": "https://hackerone.com/starling_bank",
     "offers_bounties": false,
     "quick_to_bounty": false,
-    "quick_to_first_response": true,
+    "quick_to_first_response": false,
     "submission_state": "open",
     "targets": {
       "in_scope": [
@@ -37711,6 +37711,17 @@
         },
         {
           "asset_identifier": "*lcms.engelvoelkers.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "eventapp.engelvoelkers.com",
           "asset_type": "URL",
           "availability_requirement": null,
           "confidentiality_requirement": null,
@@ -43196,6 +43207,143 @@
       ],
       "out_of_scope": [
 
+      ]
+    }
+  },
+  {
+    "id": 47507,
+    "name": "Ozon",
+    "handle": "ozon",
+    "url": "https://hackerone.com/ozon",
+    "offers_bounties": true,
+    "quick_to_bounty": true,
+    "quick_to_first_response": true,
+    "submission_state": "open",
+    "targets": {
+      "in_scope": [
+        {
+          "asset_identifier": "www.ozon.ru",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "**What it does:**  e-commerce! Our main site.\n\n**What security issues best to look for:**  Critical server-side application security flaws from OWASP Top 10\n\n**What it runs on:** \n* HTML, NodeJS, JavaScript with Vue.js\n* Go, C#",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "asset_identifier": "*.ozon.ru",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "All other subdomains are **currently** out of scope",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "*.ozon.travel",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "Other OZON services are currently out of scope",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "*.ozone.ru",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "Because it is domain for CDN",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "1451809471",
+          "asset_type": "APPLE_STORE_APP_ID",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "OZON Card mobile application\nhttps://itunes.apple.com/app/id1451809471 Mobile applications are **currently** out of scope. Stay tuned.",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "407804998",
+          "asset_type": "APPLE_STORE_APP_ID",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "OZON mobile application\nhttps://apps.apple.com/us/app/id407804998. Mobile applications are **currently** out of scope. Stay tuned.",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "959592459",
+          "asset_type": "APPLE_STORE_APP_ID",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "OZON Travel mobile application\nhttps://apps.apple.com/app/id959592459 Mobile applications are **currently** out of scope. Stay tuned.",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "api.ozon.ru",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "You can look for vulnerabilities in: `https://www.ozon.ru/api/*`. It is alias for `api.ozon.ru`",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "ru.ozon.app.android",
+          "asset_type": "GOOGLE_PLAY_APP_ID",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "OZON mobile application\n\nMobile applications are **currently** out of scope. Stay tuned.",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "ru.ozon.card",
+          "asset_type": "GOOGLE_PLAY_APP_ID",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "OZON Card mobile application\n\nMobile applications are **currently** out of scope. Stay tuned.",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "travel.ozon.mobile",
+          "asset_type": "GOOGLE_PLAY_APP_ID",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "OZON Travel mobile application\n\nMobile applications are **currently** out of scope. Stay tuned.",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        }
       ]
     }
   },
