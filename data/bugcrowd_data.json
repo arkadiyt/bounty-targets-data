@@ -7705,10 +7705,36 @@
     "max_payout": 5000,
     "targets": {
       "in_scope": [
-
+        {
+          "type": "other",
+          "target": "Researcher owned WHMCS Instance"
+        }
       ],
       "out_of_scope": [
-
+        {
+          "type": "website",
+          "target": "*.whmcs.com"
+        },
+        {
+          "type": "other",
+          "target": "Live production instance of WHMCS (Any instances not owned by you)"
+        },
+        {
+          "type": "android",
+          "target": "WHMCS Android App"
+        },
+        {
+          "type": "other",
+          "target": "WHMCS Windows mobile app"
+        },
+        {
+          "type": "ios",
+          "target": "WHMCS iOS app"
+        },
+        {
+          "type": "website",
+          "target": "whmcs.community"
+        }
       ]
     }
   },
