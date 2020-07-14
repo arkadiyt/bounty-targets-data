@@ -8379,8 +8379,13 @@ type ExternalProgram implements Node {
   handle: String!
   id: ID!
   name: String!
+  offers_rewards: Boolean
+  policy: String
+  policy_html: String
+  policy_url: String
   profile_picture(size: ProfilePictureSizes!): String!
   team: Team
+  thanks_url: String
 }
 
 """
@@ -17392,6 +17397,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
     search: String = null
   ): StructuredScopesConnection
   submission_requirements: SubmissionRequirements
+  submission_requirements_enabled: Boolean
   submission_state: SubmissionStateEnum
   subscribed: Boolean!
   survey_answers(
