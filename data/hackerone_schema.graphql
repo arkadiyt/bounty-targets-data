@@ -17160,6 +17160,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
   report_submission_form_intro: String
   report_submission_form_intro_html: String
   report_template: String
+  report_transparency_opt_out: Boolean!
   reporters(
     """
     Returns the elements in the list that come after the specified cursor.
@@ -21329,7 +21330,7 @@ input UpdateReportWeaknessInput {
   """
   clientMutationId: String
   report_id: ID!
-  weakness_id: Int!
+  weakness_id: Int
 }
 
 """
