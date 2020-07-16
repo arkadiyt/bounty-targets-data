@@ -12760,6 +12760,7 @@ type Query implements Node {
     """
     last: Int
     search: ReportSimilaritySearch
+    store_on: Int
     where: FiltersReportFilterInput
   ): DuplicateReportsConnection
   embedded_submission_form(uuid: String!): EmbeddedSubmissionForm
