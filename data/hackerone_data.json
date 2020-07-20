@@ -13672,7 +13672,7 @@
     "url": "https://hackerone.com/rubygems",
     "offers_bounties": true,
     "quick_to_bounty": false,
-    "quick_to_first_response": true,
+    "quick_to_first_response": false,
     "submission_state": "open",
     "targets": {
       "in_scope": [
@@ -41203,6 +41203,385 @@
     }
   },
   {
+    "id": 43746,
+    "name": "Clario",
+    "handle": "clario",
+    "url": "https://hackerone.com/clario",
+    "offers_bounties": true,
+    "quick_to_bounty": true,
+    "quick_to_first_response": true,
+    "submission_state": "open",
+    "targets": {
+      "in_scope": [
+        {
+          "asset_identifier": "*.kromtech.com",
+          "asset_type": "URL",
+          "availability_requirement": "low",
+          "confidentiality_requirement": "low",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": "low",
+          "max_severity": "medium"
+        },
+        {
+          "asset_identifier": "*.mackeeper.com",
+          "asset_type": "URL",
+          "availability_requirement": "low",
+          "confidentiality_requirement": "low",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": "low",
+          "max_severity": "medium"
+        },
+        {
+          "asset_identifier": "co.clario.android",
+          "asset_type": "GOOGLE_PLAY_APP_ID",
+          "availability_requirement": "low",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": "low",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "co.clario.clario.ios",
+          "asset_type": "APPLE_STORE_APP_ID",
+          "availability_requirement": "low",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": "low",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://account.mackeeper.com",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://adblocking.clario.co",
+          "asset_type": "URL",
+          "availability_requirement": "medium",
+          "confidentiality_requirement": "medium",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": "low",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://api-ne.clario.co",
+          "asset_type": "URL",
+          "availability_requirement": "medium",
+          "confidentiality_requirement": "medium",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": "low",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://api.account.opendoor.ltd",
+          "asset_type": "URL",
+          "availability_requirement": "low",
+          "confidentiality_requirement": "medium",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "# Base instruction\nFor registration, you need to create a user with POST /v1/user, in response you have jwt token, and you can make activity. For auth to create user please use X-API-KEY as a header. \n\n## Note that!\nThis service only for the H1 test, you can't public anywhere. Also, this works in the test environment, that service doesn't contain any prod data.\n\n## Header\nX-API-KEY eyJhbGciOiJSUzI1NiIsImtpZCI6IiJ9.eyJiaSI6ImgxIiwidmVyIjoiMS4wLjAifQ.ee6yYKs0gZXcsG8VpiwxvTcsGx4y36ihUuiK7bdpU0vBEO53cvVNG7_Fx4N_OGtU0ZrIilZT2nNVzQkr14VJExYCqWJE7-dEZDhrMv-gERV6i6ydODCguCB4YhucKnl0WZK10xM56Se7PptTETnVDhPpAP4IZ5VjwyqKS5xcMRkIgRytI4D9GW28jEXH2YzvLXJqGL_q_zDBJYzFCR-Txx-JKUiGuQ5RSiilkjtYP03aFOEizVFGLqPeMRRUoEGoGKeKaf8rMVanW-KipTfIgDPX5GDv0_WT_c151nvrtTQdo2K1n-qNmyfBwACPjqx9Eh-uK_rOk6v6zUkrxqhL8kSuPhe_orUpXSyMbSDhMOwWnnKYyZQYMk1w90QFXQFY80Hqzb80xt0G9rPRJQL1mLXpTJOsnypcSqhWBpcLln0eHmTCPB6YILS0bbHUlMCWwYCbE6pkpB-UnYpYHVR1Nqq6IY7Z0gDZOdAbXHnp_0-EETa9woRyY6ticERBVWC6UBycQcw0SLd4I-zLhOYZ2C9vXLONRyLZ1FcVU4MSPjzLmYm7rG8BZIjz-eXXoa_aUIbYNfYyKwiXopiEXQy1nBZIZeaKvyF54t36RdKOWLhJvxDncXnzqNGIoDS-XmnACHFlGkPPHfNh-DrYwqY1fgUwKNWPM-HsACkGrOXHEKs\n\nAuthorization API\nsignup/login/reset access\n\n\nPOST ​/v1​/user​/email\nCheck that email exists in database\n{\n  \"email\": \"user@example.com\",\n  \"device_id\": \"sdfsadfasdfsdaf\"\n}\n\nPOST ​/v1​/user\nCreate new user and return auth and refresh token.\n{\n  \"email\": \"user@example.com\",\n  \"password\": \"secretpass1\",\n  \"name\": \"Jimm Worm\",\n  \"device_id\": \"sdfsadfasdfsdaf\",\n  \"consents\": {\n    \"marketing_name\": true,\n    \"app_statistics\": false,\n    \"marketing_emails\": true\n  }\n}\n\nPOST ​/v1​/user​/login\nLogin user and return auth token, invalidate previous session.\n{\n  \"email\": \"user@example.com\",\n  \"password\": \"secretpass1\",\n  \"device_id\": \"sdfsadfasdfsdaf\"\n}\n\nPATCH ​/v1​/user​/password\nChange users password.\n{\n  \"previous_password\": \"secretpass1\",\n  \"password\": \"secretpass1\"\n}\n\nPUT ​/v1​/user​/password\nReset users password.\n{\n  \"password\": \"secretpass1\"\n}\n\nDELETE ​/v1​/user​/token\nRevoke auth & refresh tokens.\n\nPATCH ​/v1​/user​/token\nRefresh auth & refresh tokens.\n\nPOST ​/v1​/check​/access-token\nCheck access token of user\naccessToken *\nstring\nuser's access token\n\n### User API\nPossible operations with user\n\n\nPATCH ​/v1​/user\nChange user object properties.\n{\n  \"name\": \"Jimm Worm\"\n}\n\nGET ​/v1​/user\nGet user profile information\n\nPATCH ​/v1​/user​/attach-device\nLink user with device.\n{\n  \"device_id\": \"sdfsadfasdfsdaf\"\n}\n\nPATCH ​/v1​/user​/personalization\nAdd personalization information to user.\n{\n  \"area1\": {\n    \"options\": [],\n    \"skipped\": false\n  },\n  \"area2\": {\n    \"options\": [],\n    \"skipped\": true\n  },\n  \"area3\": {\n    \"options\": [\n      \"i_have_problems_with_network\"\n    ],\n    \"skipped\": false\n  }\n}\n\nPATCH ​/v1​/user​/consents\nChange consent information in user profile.\n{\n  \"marketing_name\": true,\n  \"app_statistics\": true,\n  \"marketing_emails\": true\n}\n\n\nPOST ​/v1​/verification-code​/forgot-password\nSend email verification code to user\n{\n  \"email\": \"user@example.com\",\n  \"device_id\": \"sdfsadfasdfsdaf\"\n}\n\nPOST ​/v1​/verification-code​/auth\nCheck email verification code\n{\n  \"code\": \"45FG\",\n  \"device_id\": \"sdfsadfasdfsdaf\"\n}\n\n\n### Device API\nregister device API\n\n\nPUT ​/v1​/device\nUpdate device info.\n{\n  \"device_id\": \"sdfsadfasdfsdaf\",\n  \"device_model\": \"iPhone\",\n  \"system_name\": \"IOS\",\n  \"system_version\": \"12.0.1\",\n  \"language_code\": \"en\",\n  \"country_code\": \"US\",\n  \"timezone_id\": \"America/New_York\",\n  \"token\": \"dsfnsdkjnfjsdk3423kld\"\n}\n\n\n### Idtg API\napi for Id Theft Guard service\n\n\nPOST ​/v1​/idtg​/scan-item\nAdds new scanItem, that later will be scanned at IDTG service.\n{\n  \"type\": \"email\",\n  \"value\": \"test@gmail.com|+380662323255\",\n  \"monitoring_enabled\": true\n}\n\nGET ​/v1​/idtg​/scan-item\nPerforms manually triggered scan of all added scanItems for the breaches and returns the array of each scanned scanItem statistic.\n\nPATCH ​/v1​/idtg​/scan-item​/{scanItemId}\nUpdates ScanItem monitoring_enabled parameter value\n{\n  \"monitoring_enabled\": true\n}\n\nDELETE ​/v1​/idtg​/scan-item​/{scanItemId}\nRemoves ScanItem for user.\n\nPOST ​/v1​/idtg​/scan-item​/{scanItemId}​/scan\nPerforms manual scan for the breaches for a given scanItem and returns scanned ScanItem statistics.\n{\n  \"id\": \"871556ad-dbd8-429d-8335-0d4668b96dd9\",\n  \"type\": \"email\",\n  \"value\": \"test@gmail.com|+380662323255\",\n  \"is_verified\": true,\n  \"monitoring_enabled\": true,\n  \"breach_count\": 10,\n  \"fixed_breach_count\": 10,\n  \"new_breach_count\": 10,\n  \"scan_date\": 1568351,\n  \"updated_at\": 156835145\n}\n\nPOST ​/v1​/idtg​/scan-item​/{scanItemId}​/verification-code\nSends verification code to user's specified scanItem\n\nPOST ​/v1​/idtg​/scan-item​/{scanItemId}​/verification-code​/verify\nVerifies code to allow user to see breaches of specified scanItem\n{\n  \"code\": \"RFQT\"\n}\n\nGET ​/v1​/idtg​/scan-item​/{scanItemId}​/breach\nGet information about user's breaches\n\nPATCH ​/v1​/idtg​/scan-item​/{scanItemId}​/breach\nMark as changed of user's breach\n{\n  \"breach_ids\": [\n    \"5defadc9d0a0e2973b8b45ea\"\n  ],\n  \"status\": \"seen\"\n}",
+          "integrity_requirement": "medium",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://chat-crm.clario.co",
+          "asset_type": "URL",
+          "availability_requirement": "medium",
+          "confidentiality_requirement": "medium",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": "low",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://chat.clario.co",
+          "asset_type": "URL",
+          "availability_requirement": "medium",
+          "confidentiality_requirement": "medium",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": "low",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://clario.co",
+          "asset_type": "URL",
+          "availability_requirement": "low",
+          "confidentiality_requirement": "medium",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": "medium",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://clario.co/link/90549c9e-aca6-11ea-acb7-127369ec21d1",
+          "asset_type": "DOWNLOADABLE_EXECUTABLES",
+          "availability_requirement": "medium",
+          "confidentiality_requirement": "medium",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Download and test application Clario.1.0.0.pkg",
+          "integrity_requirement": "low",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://crm.clario.co",
+          "asset_type": "URL",
+          "availability_requirement": "medium",
+          "confidentiality_requirement": "medium",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": "low",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://dcs.clario.co",
+          "asset_type": "URL",
+          "availability_requirement": "medium",
+          "confidentiality_requirement": "medium",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": "low",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://dl.clario.co",
+          "asset_type": "URL",
+          "availability_requirement": "medium",
+          "confidentiality_requirement": "medium",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": "low",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://event.clario.co",
+          "asset_type": "URL",
+          "availability_requirement": "medium",
+          "confidentiality_requirement": "medium",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": "low",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://get-unbounce.clario.co",
+          "asset_type": "URL",
+          "availability_requirement": "medium",
+          "confidentiality_requirement": "medium",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": "low",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://inapp.clario.co",
+          "asset_type": "URL",
+          "availability_requirement": "medium",
+          "confidentiality_requirement": "medium",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": "low",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://mackeeper.com/mk/download/",
+          "asset_type": "DOWNLOADABLE_EXECUTABLES",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Download Mackeeper.<latest.pkg> and install it.",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://static-cdn.clario.co",
+          "asset_type": "URL",
+          "availability_requirement": "medium",
+          "confidentiality_requirement": "medium",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": "low",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://sz.clario.co",
+          "asset_type": "URL",
+          "availability_requirement": "medium",
+          "confidentiality_requirement": "medium",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": "low",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://updater.clario.co",
+          "asset_type": "URL",
+          "availability_requirement": "medium",
+          "confidentiality_requirement": "medium",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": "low",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://updatetracker.clario.co",
+          "asset_type": "URL",
+          "availability_requirement": "medium",
+          "confidentiality_requirement": "medium",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": "low",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://webapi.clario.co",
+          "asset_type": "URL",
+          "availability_requirement": "medium",
+          "confidentiality_requirement": "medium",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": "low",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://yapi.clario.co",
+          "asset_type": "URL",
+          "availability_requirement": "medium",
+          "confidentiality_requirement": "medium",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": "low",
+          "max_severity": "critical"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "asset_identifier": "*.email.mackeeper.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "Third-Party assets, we strictly forbid any activity on these resources.",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "e.mackeeper.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "https://account.clario.co",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "we forbid any activity on this service",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "https://api.account.clario.co",
+          "asset_type": "URL",
+          "availability_requirement": "low",
+          "confidentiality_requirement": "medium",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "we forbid any activity on this service",
+          "integrity_requirement": "medium",
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "https://connect.clario.co",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "we forbid any activity on this service",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "https://kibana-logs.clario.co",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "we forbid any activity on this service",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "https://vpn.clario.co",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "we forbid any activity on this service",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "store.mackeeper.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "This is not our resource",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        }
+      ]
+    }
+  },
+  {
     "id": 43928,
     "name": "HCL Software Inc.",
     "handle": "hcl_software",
@@ -42156,6 +42535,17 @@
     "targets": {
       "in_scope": [
         {
+          "asset_identifier": "*.hydraulics-group.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "Try to access our on-premise network and servers\nWe have several virtual servers. Please pay specific attention to:\n- ERP server (Dynamics NAV)\n- file server\n- QNAP backup server\n",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
           "asset_identifier": "hydass.be",
           "asset_type": "URL",
           "availability_requirement": null,
@@ -42163,17 +42553,6 @@
           "eligible_for_bounty": false,
           "eligible_for_submission": true,
           "instruction": "",
-          "integrity_requirement": null,
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "hydraulics-group.com",
-          "asset_type": "URL",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": false,
-          "eligible_for_submission": true,
-          "instruction": "Try to access our on-premise network and servers\nWe have several virtual servers. Please pay specific attention to:\n- ERP server (Dynamics NAV)\n- file server\n- QNAP backup server\n",
           "integrity_requirement": null,
           "max_severity": "critical"
         },
