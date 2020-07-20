@@ -8646,6 +8646,7 @@ input FiltersReportFilterInput {
   pentest: FiltersPentestFilterInput
   reporter: FiltersUserFilterInput
   severity_rating: SeverityRatingEnumPredicateInput
+  state: ReportStateEnumPredicateInput
   substate: ReportStateEnumPredicateInput
   team: FiltersTeamFilterInput
   timer_bounty_awarded_elapsed_time: IntPredicateInput
@@ -11665,16 +11666,42 @@ type PentestChecklist implements Node {
     Returns the elements in the list that come before the specified cursor.
     """
     before: String
+    database_id: Int = null
+    filter: ReportFilterInput
 
     """
     Returns the first _n_ elements from the list.
     """
     first: Int
+    hackerone_hacker_submissions: Boolean = false
+    handle: String
+    has_retests: Boolean
 
     """
     Returns the last _n_ elements from the list.
     """
     last: Int
+
+    """
+    Relay classic does not have support for starting paginationsomewhere in the
+    middle, see https://github.com/facebook/relay/issues/1312 Workaround is to
+    add a page argument till Relay supports this
+    """
+    limit: Int = null
+    order_by: ReportOrderInput = {direction: DESC, field: id}
+
+    """
+    Relay classic does not have support for starting paginationsomewhere in the
+    middle, see https://github.com/facebook/relay/issues/1312 Workaround is to
+    add a page argument till Relay supports this
+    """
+    page: Int = null
+    pre_submission_review_states: [ReportPreSubmissionReviewStateEnum] = null
+    secure_order_by: FiltersReportFilterOrder
+    state: ReportStateEnum
+    substate: ReportStateEnum
+    where: FiltersReportFilterInput
+    without_scope: Boolean = null
   ): ReportConnection
 }
 
@@ -14093,7 +14120,6 @@ type ReportRetest {
     new: Boolean
     visible: Boolean
   ): ReportRetestUserConnection
-  severity_rating: String
   state: ReportRetestStateEnum
   team: Team!
   weakness_name: String
@@ -14281,7 +14307,9 @@ States a report can be in
 """
 enum ReportStateEnum {
   closed
+  draft
   duplicate
+  editing
   informative
   needs_more_info
   new
