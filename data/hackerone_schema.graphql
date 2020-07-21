@@ -16577,6 +16577,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
     where: FiltersAuditLogItemFilterInput
   ): AuditLogItemConnection
   automatic_invites: Boolean
+  available_integrations: Hash!
   average_bounty_lower_amount: Int
   average_bounty_upper_amount: Int
 
@@ -23085,6 +23086,7 @@ type User implements Node & ResourceInterface {
   account_recovery_unverified_phone_number: String
   active_ban: HackerTempBan
   address: Address
+  allow_pentester_application: Boolean!
   anc_triager: Boolean
   authentication_service: AuthenticationServiceEnum!
   badges(
@@ -23297,7 +23299,6 @@ type User implements Node & ResourceInterface {
   has_active_ban: Boolean
   has_checklist_check_responses: Boolean
   has_ctf_flags: Boolean
-  i_can_apply_as_pentester: Boolean!
   i_can_claim_a_security_check: Boolean!
   i_can_update_invitation_profile: Boolean
   i_can_update_username: Boolean
