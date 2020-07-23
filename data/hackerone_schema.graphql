@@ -8541,6 +8541,14 @@ input FiltersChecklistCheckResponseFilterOrder {
   id: FilterOrderPredicateInput
 }
 
+input FiltersDerivedReportRetestFilterInput {
+  _and: [FiltersDerivedReportRetestFilterInput]
+  _not: FiltersDerivedReportRetestFilterInput
+  _or: [FiltersDerivedReportRetestFilterInput]
+  report_retest_id: IntPredicateInput
+  team: FiltersTeamFilterInput
+}
+
 input FiltersDerivedTeamAverageBountyAmountFilterOrder {
   amount: FilterOrderPredicateInput
   team_id: FilterOrderPredicateInput
@@ -8670,10 +8678,10 @@ input FiltersReportRetestFilterInput {
   _and: [FiltersReportRetestFilterInput]
   _not: FiltersReportRetestFilterInput
   _or: [FiltersReportRetestFilterInput]
+  derived_report_retest: FiltersDerivedReportRetestFilterInput
   id: IntPredicateInput
   report_retest_users: FiltersReportRetestUserFilterInput
   state: ReportRetestStateEnumPredicateInput
-  team: FiltersTeamFilterInput
 }
 
 input FiltersReportRetestFilterOrder {
@@ -8744,6 +8752,7 @@ input FiltersTeamFilterInput {
   state: TeamStatePredicateInput
   structured_scopes: FiltersStructuredScopeFilterInput
   submission_state: SubmissionStateEnumPredicateInput
+  team_members: FiltersTeamMemberFilterInput
   triage_subscriptions: FiltersTriageSubscriptionFilterInput
   vpn_enabled: BooleanPredicateInput
   website: StringPredicateInput
@@ -8766,6 +8775,7 @@ input FiltersTeamMemberFilterInput {
   _or: [FiltersTeamMemberFilterInput]
   concealed: BooleanPredicateInput
   id: IntPredicateInput
+  user: FiltersUserFilterInput
 }
 
 input FiltersTeamMemberGroupFilterInput {
