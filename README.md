@@ -13,11 +13,12 @@ Extra files:
 - [hackerone_data.json](https://github.com/arkadiyt/bounty-targets-data/blob/master/data/hackerone_data.json): raw [Hackerone](https://hackerone.com) data.
 - [federacy_data.json](https://github.com/arkadiyt/bounty-targets-data/blob/master/data/federacy_data.json): raw [Federacy](https://federacy.com) data.
 - [hackenproof_data.json](https://github.com/arkadiyt/bounty-targets-data/blob/master/data/hackenproof_data.json): raw [Hackenproof](https://hackenproof.com) data.
+- [intigriti_data.json](https://github.com/arkadiyt/bounty-targets-data/blob/master/data/intigriti_data.json): raw [Intigriti](https://www.intigriti.com) data.
 - [hackerone_schema.graphql](https://github.com/arkadiyt/bounty-targets-data/blob/master/data/hackerone_schema.graphql): Hackerone's graphql api schema.
 
 ### Status
 
-The last change was detected on `Sunday 07/26/2020 17:15 (UTC)`. New changes (if any) are picked up hourly.
+The last change was detected on `Sunday 07/26/2020 19:16 (UTC)`. New changes (if any) are picked up hourly.
 
 ### Code
 
