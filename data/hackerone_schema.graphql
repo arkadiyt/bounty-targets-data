@@ -5040,6 +5040,7 @@ input CreateOrUpdatePentesterProfileInput {
   skills: [ID!]!
   time_zone: String
   tools: [String!]
+  visible_in_directory: Boolean
   weekdays: [String!]
   work_schedule: [String!]
   years_experience: String!
@@ -12185,6 +12186,7 @@ type PentesterProfile implements Node {
   time_zone: String
   tools: [String!]
   user: User!
+  visible_in_directory: Boolean
   weekdays: [String!]
   work_schedule: [String!]
   years_experience: String
@@ -16853,6 +16855,27 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
   external_program: ExternalProgram
   external_url: String
   facebook_team: Boolean
+  family_tree(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+  ): TeamConnection
   fancy_slack_integration: Boolean
   features: [Feature]
   first_response_time(date_start: DateTime): Float
