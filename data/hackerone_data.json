@@ -43861,6 +43861,77 @@
     }
   },
   {
+    "id": 48354,
+    "name": "A.S. Watson Group ",
+    "handle": "watson_group",
+    "url": "https://hackerone.com/watson_group",
+    "offers_bounties": true,
+    "quick_to_bounty": false,
+    "quick_to_first_response": false,
+    "submission_state": "open",
+    "targets": {
+      "in_scope": [
+        {
+          "asset_identifier": "*.superdrug.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "Subdomains for our websites are not the main scope for this program. We do however welcome reports that display security vulnerabilities.",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://www.superdrug.com/blog",
+          "asset_type": "URL",
+          "availability_requirement": "medium",
+          "confidentiality_requirement": "none",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "This is our Blog section of the website that runs on Wordpress.",
+          "integrity_requirement": "none",
+          "max_severity": "high"
+        },
+        {
+          "asset_identifier": "www.superdrug.com",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Superdrug is one of our leading e-commerce websites in health and beauty.  If you are testing functionality that requires you to be authenticated, please ensure you register with your @wearehackerone.com email address.\n",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "asset_identifier": "https://appt.healthclinics.superdrug.com/",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "Out of scope.",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "https://healthclinics.superdrug.com/",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "Out of scope.",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        }
+      ]
+    }
+  },
+  {
     "id": 48781,
     "name": "SMTP2GO",
     "handle": "smtp2go",
