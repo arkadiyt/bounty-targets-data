@@ -2395,8 +2395,14 @@ type BlogPostEdge {
 
 input BooleanPredicateInput {
   _eq: Boolean
+  _gt: Boolean
+  _gte: Boolean
+  _in: [Boolean]
   _is_null: Boolean
+  _lt: Boolean
+  _lte: Boolean
   _neq: Boolean
+  _nin: [Boolean]
 }
 
 """
