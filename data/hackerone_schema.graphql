@@ -97,6 +97,7 @@ type ActivitiesAddedToPentest implements ActivityInterface & Node {
   actor: ActorUnion
   created_at: DateTime!
   i_can_edit: Boolean!
+  i_can_flag: Boolean!
   id: ID!
   internal: Boolean
   markdown_message: String
@@ -116,6 +117,7 @@ type ActivitiesAgreedOnGoingPublic implements ActivityInterface & Node & ReportA
   first_to_agree: Boolean!
   genius_execution_id: ID
   i_can_edit: Boolean!
+  i_can_flag: Boolean!
   id: ID!
   internal: Boolean
   markdown_message: String
@@ -139,6 +141,7 @@ type ActivitiesBountyAwarded implements ActivityInterface & Node & ReportActivit
   created_at: DateTime!
   genius_execution_id: ID
   i_can_edit: Boolean!
+  i_can_flag: Boolean!
   id: ID!
   internal: Boolean
   markdown_message: String
@@ -162,6 +165,7 @@ type ActivitiesBountySuggested implements ActivityInterface & Node & ReportActiv
   created_at: DateTime!
   genius_execution_id: ID
   i_can_edit: Boolean!
+  i_can_flag: Boolean!
   id: ID!
   internal: Boolean
   markdown_message: String
@@ -182,6 +186,7 @@ type ActivitiesBugCloned implements ActivityInterface & Node & ReportActivityInt
   created_at: DateTime!
   genius_execution_id: ID
   i_can_edit: Boolean!
+  i_can_flag: Boolean!
   id: ID!
   internal: Boolean
   markdown_message: String
@@ -204,6 +209,7 @@ type ActivitiesBugDuplicate implements ActivityInterface & Node & ReportActivity
   created_at: DateTime!
   genius_execution_id: ID
   i_can_edit: Boolean!
+  i_can_flag: Boolean!
   id: ID!
   internal: Boolean
   markdown_message: String
@@ -226,6 +232,7 @@ type ActivitiesBugFiled implements ActivityInterface & Node & ReportActivityInte
   created_at: DateTime!
   genius_execution_id: ID
   i_can_edit: Boolean!
+  i_can_flag: Boolean!
   id: ID!
   internal: Boolean
   markdown_message: String
@@ -246,6 +253,7 @@ type ActivitiesBugInactive implements ActivityInterface & Node & ReportActivityI
   created_at: DateTime!
   genius_execution_id: ID
   i_can_edit: Boolean!
+  i_can_flag: Boolean!
   id: ID!
   internal: Boolean
   markdown_message: String
@@ -266,6 +274,7 @@ type ActivitiesBugInformative implements ActivityInterface & Node & ReportActivi
   created_at: DateTime!
   genius_execution_id: ID
   i_can_edit: Boolean!
+  i_can_flag: Boolean!
   id: ID!
   internal: Boolean
   markdown_message: String
@@ -286,6 +295,7 @@ type ActivitiesBugNeedsMoreInfo implements ActivityInterface & Node & ReportActi
   created_at: DateTime!
   genius_execution_id: ID
   i_can_edit: Boolean!
+  i_can_flag: Boolean!
   id: ID!
   internal: Boolean
   markdown_message: String
@@ -306,6 +316,7 @@ type ActivitiesBugNew implements ActivityInterface & Node & ReportActivityInterf
   created_at: DateTime!
   genius_execution_id: ID
   i_can_edit: Boolean!
+  i_can_flag: Boolean!
   id: ID!
   internal: Boolean
   markdown_message: String
@@ -326,6 +337,7 @@ type ActivitiesBugNotApplicable implements ActivityInterface & Node & ReportActi
   created_at: DateTime!
   genius_execution_id: ID
   i_can_edit: Boolean!
+  i_can_flag: Boolean!
   id: ID!
   internal: Boolean
   markdown_message: String
@@ -346,6 +358,7 @@ type ActivitiesBugReopened implements ActivityInterface & Node & ReportActivityI
   created_at: DateTime!
   genius_execution_id: ID
   i_can_edit: Boolean!
+  i_can_flag: Boolean!
   id: ID!
   internal: Boolean
   markdown_message: String
@@ -366,6 +379,7 @@ type ActivitiesBugResolved implements ActivityInterface & Node & ReportActivityI
   created_at: DateTime!
   genius_execution_id: ID
   i_can_edit: Boolean!
+  i_can_flag: Boolean!
   id: ID!
   internal: Boolean
   markdown_message: String
@@ -386,6 +400,7 @@ type ActivitiesBugRetesting implements ActivityInterface & Node & ReportActivity
   created_at: DateTime!
   genius_execution_id: ID
   i_can_edit: Boolean!
+  i_can_flag: Boolean!
   id: ID!
   internal: Boolean
   markdown_message: String
@@ -406,6 +421,7 @@ type ActivitiesBugSpam implements ActivityInterface & Node & ReportActivityInter
   created_at: DateTime!
   genius_execution_id: ID
   i_can_edit: Boolean!
+  i_can_flag: Boolean!
   id: ID!
   internal: Boolean
   markdown_message: String
@@ -426,6 +442,7 @@ type ActivitiesBugTriaged implements ActivityInterface & Node & ReportActivityIn
   created_at: DateTime!
   genius_execution_id: ID
   i_can_edit: Boolean!
+  i_can_flag: Boolean!
   id: ID!
   internal: Boolean
   markdown_message: String
@@ -446,6 +463,7 @@ type ActivitiesCancelledDisclosureRequest implements ActivityInterface & Node & 
   created_at: DateTime!
   genius_execution_id: ID
   i_can_edit: Boolean!
+  i_can_flag: Boolean!
   id: ID!
   internal: Boolean
   markdown_message: String
@@ -466,6 +484,7 @@ type ActivitiesChangedScope implements ActivityInterface & Node & ReportActivity
   created_at: DateTime!
   genius_execution_id: ID
   i_can_edit: Boolean!
+  i_can_flag: Boolean!
   id: ID!
   internal: Boolean
   markdown_message: String
@@ -485,6 +504,7 @@ type ActivitiesChecklistCheckClaimed implements ChecklistCheckResponseActivityIn
   actor: ActorUnion
   created_at: DateTime!
   i_can_edit: Boolean!
+  i_can_flag: Boolean!
   id: ID!
   internal: Boolean
   markdown_message: String
@@ -503,6 +523,7 @@ type ActivitiesChecklistCheckExpired implements ChecklistCheckResponseActivityIn
   actor: ActorUnion
   created_at: DateTime!
   i_can_edit: Boolean!
+  i_can_flag: Boolean!
   id: ID!
   internal: Boolean
   markdown_message: String
@@ -521,6 +542,7 @@ type ActivitiesChecklistCheckReleased implements ChecklistCheckResponseActivityI
   actor: ActorUnion
   created_at: DateTime!
   i_can_edit: Boolean!
+  i_can_flag: Boolean!
   id: ID!
   internal: Boolean
   markdown_message: String
@@ -539,6 +561,7 @@ type ActivitiesChecklistCheckResponseApproved implements ChecklistCheckResponseA
   actor: ActorUnion
   created_at: DateTime!
   i_can_edit: Boolean!
+  i_can_flag: Boolean!
   id: ID!
   internal: Boolean
   markdown_message: String
@@ -558,6 +581,7 @@ type ActivitiesChecklistCheckResponseComment implements AttachmentActivityInterf
   attachments: [Attachment]
   created_at: DateTime!
   i_can_edit: Boolean!
+  i_can_flag: Boolean!
   id: ID!
   internal: Boolean
   markdown_message: String
@@ -577,6 +601,7 @@ type ActivitiesChecklistCheckResponseCreated implements AttachmentActivityInterf
   attachments: [Attachment]
   created_at: DateTime!
   i_can_edit: Boolean!
+  i_can_flag: Boolean!
   id: ID!
   internal: Boolean
   markdown_message: String
@@ -595,6 +620,7 @@ type ActivitiesChecklistCheckResponseRejected implements ChecklistCheckResponseA
   actor: ActorUnion
   created_at: DateTime!
   i_can_edit: Boolean!
+  i_can_flag: Boolean!
   id: ID!
   internal: Boolean
   markdown_message: String
@@ -614,6 +640,7 @@ type ActivitiesChecklistCheckResponseUpdated implements AttachmentActivityInterf
   attachments: [Attachment]
   created_at: DateTime!
   i_can_edit: Boolean!
+  i_can_flag: Boolean!
   id: ID!
   internal: Boolean
   markdown_message: String
@@ -632,6 +659,7 @@ type ActivitiesChecklistCheckRevoked implements ChecklistCheckResponseActivityIn
   actor: ActorUnion
   created_at: DateTime!
   i_can_edit: Boolean!
+  i_can_flag: Boolean!
   id: ID!
   internal: Boolean
   markdown_message: String
@@ -667,6 +695,7 @@ type ActivitiesComment implements ActivityInterface & Node & ReportActivityInter
   created_at: DateTime!
   genius_execution_id: ID
   i_can_edit: Boolean!
+  i_can_flag: Boolean!
   id: ID!
   internal: Boolean
   markdown_message: String
@@ -687,6 +716,7 @@ type ActivitiesCommentsClosed implements ActivityInterface & Node & ReportActivi
   created_at: DateTime!
   genius_execution_id: ID
   i_can_edit: Boolean!
+  i_can_flag: Boolean!
   id: ID!
   internal: Boolean
   markdown_message: String
@@ -708,6 +738,7 @@ type ActivitiesCveIdAdded implements ActivityInterface & Node & ReportActivityIn
   cve_ids: [String]
   genius_execution_id: ID
   i_can_edit: Boolean!
+  i_can_flag: Boolean!
   id: ID!
   internal: Boolean
   markdown_message: String
@@ -728,6 +759,7 @@ type ActivitiesDraftStarted implements ActivityInterface & Node & ReportActivity
   created_at: DateTime!
   genius_execution_id: ID
   i_can_edit: Boolean!
+  i_can_flag: Boolean!
   id: ID!
   internal: Boolean
   markdown_message: String
@@ -748,6 +780,7 @@ type ActivitiesExternalAdvisoryAdded implements ActivityInterface & Node & Repor
   created_at: DateTime!
   genius_execution_id: ID
   i_can_edit: Boolean!
+  i_can_flag: Boolean!
   id: ID!
   internal: Boolean
   markdown_message: String
@@ -769,6 +802,7 @@ type ActivitiesExternalUserInvitationCancelled implements ActivityInterface & No
   email: String
   genius_execution_id: ID
   i_can_edit: Boolean!
+  i_can_flag: Boolean!
   id: ID!
   internal: Boolean
   markdown_message: String
@@ -790,6 +824,7 @@ type ActivitiesExternalUserInvited implements ActivityInterface & Node & ReportA
   email: String
   genius_execution_id: ID
   i_can_edit: Boolean!
+  i_can_flag: Boolean!
   id: ID!
   internal: Boolean
   markdown_message: String
@@ -812,6 +847,7 @@ type ActivitiesExternalUserJoined implements ActivityInterface & Node & ReportAc
   duplicate_report_id: Int
   genius_execution_id: ID
   i_can_edit: Boolean!
+  i_can_flag: Boolean!
   id: ID!
   internal: Boolean
   markdown_message: String
@@ -832,6 +868,7 @@ type ActivitiesExternalUserRemoved implements ActivityInterface & Node & ReportA
   created_at: DateTime!
   genius_execution_id: ID
   i_can_edit: Boolean!
+  i_can_flag: Boolean!
   id: ID!
   internal: Boolean
   markdown_message: String
@@ -855,6 +892,7 @@ type ActivitiesGroupAssignedToBug implements ActivityInterface & Node & ReportAc
   genius_execution_id: ID
   group: TeamMemberGroup
   i_can_edit: Boolean!
+  i_can_flag: Boolean!
   id: ID!
   internal: Boolean
   markdown_message: String
@@ -875,6 +913,7 @@ type ActivitiesHackerRequestedMediation implements ActivityInterface & Node & Re
   created_at: DateTime!
   genius_execution_id: ID
   i_can_edit: Boolean!
+  i_can_flag: Boolean!
   id: ID!
   internal: Boolean
   markdown_message: String
@@ -932,6 +971,7 @@ type ActivitiesManuallyDisclosed implements ActivityInterface & Node & ReportAct
   created_at: DateTime!
   genius_execution_id: ID
   i_can_edit: Boolean!
+  i_can_flag: Boolean!
   id: ID!
   internal: Boolean
   markdown_message: String
@@ -952,6 +992,7 @@ type ActivitiesMediationRequested implements ActivityInterface & Node & ReportAc
   created_at: DateTime!
   genius_execution_id: ID
   i_can_edit: Boolean!
+  i_can_flag: Boolean!
   id: ID!
   internal: Boolean
   markdown_message: String
@@ -972,6 +1013,7 @@ type ActivitiesNobodyAssignedToBug implements ActivityInterface & Node & ReportA
   created_at: DateTime!
   genius_execution_id: ID
   i_can_edit: Boolean!
+  i_can_flag: Boolean!
   id: ID!
   internal: Boolean
   markdown_message: String
@@ -992,6 +1034,7 @@ type ActivitiesNotEligibleForBounty implements ActivityInterface & Node & Report
   created_at: DateTime!
   genius_execution_id: ID
   i_can_edit: Boolean!
+  i_can_flag: Boolean!
   id: ID!
   internal: Boolean
   markdown_message: String
@@ -1009,6 +1052,7 @@ type ActivitiesPentestCheckAssigned implements ActivityInterface & Node {
   actor: ActorUnion
   created_at: DateTime!
   i_can_edit: Boolean!
+  i_can_flag: Boolean!
   id: ID!
   internal: Boolean
   markdown_message: String
@@ -1024,6 +1068,7 @@ type ActivitiesPentestCheckCompleted implements ActivityInterface & Node {
   actor: ActorUnion
   created_at: DateTime!
   i_can_edit: Boolean!
+  i_can_flag: Boolean!
   id: ID!
   internal: Boolean
   markdown_message: String
@@ -1039,6 +1084,7 @@ type ActivitiesPentestCheckUnassigned implements ActivityInterface & Node {
   actor: ActorUnion
   created_at: DateTime!
   i_can_edit: Boolean!
+  i_can_flag: Boolean!
   id: ID!
   internal: Boolean
   markdown_message: String
@@ -1054,6 +1100,7 @@ type ActivitiesPentestCheckUpdated implements ActivityInterface & Node {
   actor: ActorUnion
   created_at: DateTime!
   i_can_edit: Boolean!
+  i_can_flag: Boolean!
   id: ID!
   internal: Boolean
   markdown_message: String
@@ -1069,6 +1116,7 @@ type ActivitiesPentestPublished implements ActivityInterface & Node {
   actor: ActorUnion
   created_at: DateTime!
   i_can_edit: Boolean!
+  i_can_flag: Boolean!
   id: ID!
   internal: Boolean
   markdown_message: String
@@ -1084,6 +1132,7 @@ type ActivitiesPentestStarted implements ActivityInterface & Node {
   actor: ActorUnion
   created_at: DateTime!
   i_can_edit: Boolean!
+  i_can_flag: Boolean!
   id: ID!
   internal: Boolean
   markdown_message: String
@@ -1099,6 +1148,7 @@ type ActivitiesPentesterAwarded implements ActivityInterface & Node {
   actor: ActorUnion
   created_at: DateTime!
   i_can_edit: Boolean!
+  i_can_flag: Boolean!
   id: ID!
   internal: Boolean
   markdown_message: String
@@ -1114,6 +1164,7 @@ type ActivitiesProgramHackerJoined implements ActivityInterface & Node {
   actor: ActorUnion
   created_at: DateTime!
   i_can_edit: Boolean!
+  i_can_flag: Boolean!
   id: ID!
   internal: Boolean
   markdown_message: String
@@ -1130,6 +1181,7 @@ type ActivitiesProgramHackerLeft implements ActivityInterface & Node {
   actor: ActorUnion
   created_at: DateTime!
   i_can_edit: Boolean!
+  i_can_flag: Boolean!
   id: ID!
   internal: Boolean
   markdown_message: String
@@ -1149,6 +1201,7 @@ type ActivitiesProgramInactive implements ActivityInterface & Node & ReportActiv
   created_at: DateTime!
   genius_execution_id: ID
   i_can_edit: Boolean!
+  i_can_flag: Boolean!
   id: ID!
   internal: Boolean
   markdown_message: String
@@ -1169,6 +1222,7 @@ type ActivitiesReassignedToTeam implements ActivityInterface & Node & ReportActi
   created_at: DateTime!
   genius_execution_id: ID
   i_can_edit: Boolean!
+  i_can_flag: Boolean!
   id: ID!
   internal: Boolean
   markdown_message: String
@@ -1189,6 +1243,7 @@ type ActivitiesReferenceIdAdded implements ActivityInterface & Node & ReportActi
   created_at: DateTime!
   genius_execution_id: ID
   i_can_edit: Boolean!
+  i_can_flag: Boolean!
   id: ID!
   internal: Boolean
   markdown_message: String
@@ -1208,6 +1263,7 @@ type ActivitiesRemovedFromPentest implements ActivityInterface & Node {
   actor: ActorUnion
   created_at: DateTime!
   i_can_edit: Boolean!
+  i_can_flag: Boolean!
   id: ID!
   internal: Boolean
   markdown_message: String
@@ -1226,6 +1282,7 @@ type ActivitiesReportBecamePublic implements ActivityInterface & Node & ReportAc
   created_at: DateTime!
   genius_execution_id: ID
   i_can_edit: Boolean!
+  i_can_flag: Boolean!
   id: ID!
   internal: Boolean
   markdown_message: String
@@ -1246,6 +1303,7 @@ type ActivitiesReportCollaboratorInvited implements ActivityInterface & Node & R
   created_at: DateTime!
   genius_execution_id: ID
   i_can_edit: Boolean!
+  i_can_flag: Boolean!
   id: ID!
   internal: Boolean
   markdown_message: String
@@ -1266,6 +1324,7 @@ type ActivitiesReportCollaboratorJoined implements ActivityInterface & Node & Re
   created_at: DateTime!
   genius_execution_id: ID
   i_can_edit: Boolean!
+  i_can_flag: Boolean!
   id: ID!
   internal: Boolean
   markdown_message: String
@@ -1283,6 +1342,7 @@ type ActivitiesReportRetestApproved implements ActivityInterface & Node {
   actor: ActorUnion
   created_at: DateTime!
   i_can_edit: Boolean!
+  i_can_flag: Boolean!
   id: ID!
   internal: Boolean
   markdown_message: String
@@ -1298,6 +1358,7 @@ type ActivitiesReportRetestRejected implements ActivityInterface & Node {
   actor: ActorUnion
   created_at: DateTime!
   i_can_edit: Boolean!
+  i_can_flag: Boolean!
   id: ID!
   internal: Boolean
   markdown_message: String
@@ -1316,6 +1377,7 @@ type ActivitiesReportSeverityUpdated implements ActivityInterface & Node & Repor
   created_at: DateTime!
   genius_execution_id: ID
   i_can_edit: Boolean!
+  i_can_flag: Boolean!
   id: ID!
   internal: Boolean
   markdown_message: String
@@ -1336,6 +1398,7 @@ type ActivitiesReportTitleUpdated implements ActivityInterface & Node & ReportAc
   created_at: DateTime!
   genius_execution_id: ID
   i_can_edit: Boolean!
+  i_can_flag: Boolean!
   id: ID!
   internal: Boolean
   markdown_message: String
@@ -1358,6 +1421,7 @@ type ActivitiesReportUndisclosed implements ActivityInterface & Node & ReportAct
   created_at: DateTime!
   genius_execution_id: ID
   i_can_edit: Boolean!
+  i_can_flag: Boolean!
   id: ID!
   internal: Boolean
   markdown_message: String
@@ -1378,6 +1442,7 @@ type ActivitiesReportVulnerabilityTypesUpdated implements ActivityInterface & No
   created_at: DateTime!
   genius_execution_id: ID
   i_can_edit: Boolean!
+  i_can_flag: Boolean!
   id: ID!
   internal: Boolean
   markdown_message: String
@@ -1400,6 +1465,7 @@ type ActivitiesRetestUserExpired implements ActivityInterface & Node & ReportAct
   created_at: DateTime!
   genius_execution_id: ID
   i_can_edit: Boolean!
+  i_can_flag: Boolean!
   id: ID!
   internal: Boolean
   markdown_message: String
@@ -1420,6 +1486,7 @@ type ActivitiesSwagAwarded implements ActivityInterface & Node & ReportActivityI
   created_at: DateTime!
   genius_execution_id: ID
   i_can_edit: Boolean!
+  i_can_flag: Boolean!
   id: ID!
   internal: Boolean
   markdown_message: String
@@ -1438,6 +1505,7 @@ type ActivitiesTeamBountyTableUpdated implements ActivityInterface & Node {
   actor: ActorUnion
   created_at: DateTime!
   i_can_edit: Boolean!
+  i_can_flag: Boolean!
   id: ID!
   internal: Boolean
   markdown_message: String
@@ -1453,6 +1521,7 @@ type ActivitiesTeamPolicyUpdated implements ActivityInterface & Node {
   actor: ActorUnion
   created_at: DateTime!
   i_can_edit: Boolean!
+  i_can_flag: Boolean!
   id: ID!
   internal: Boolean
   markdown_message: String
@@ -1468,6 +1537,7 @@ type ActivitiesTeamPostCreated implements ActivityInterface & Node {
   actor: ActorUnion
   created_at: DateTime!
   i_can_edit: Boolean!
+  i_can_flag: Boolean!
   id: ID!
   internal: Boolean
   markdown_message: String
@@ -1483,6 +1553,7 @@ type ActivitiesTeamPublished implements ActivityInterface & Node {
   actor: ActorUnion
   created_at: DateTime!
   i_can_edit: Boolean!
+  i_can_flag: Boolean!
   id: ID!
   internal: Boolean
   markdown_message: String
@@ -1498,6 +1569,7 @@ type ActivitiesTeamStructuredScopeUpdated implements ActivityInterface & Node {
   actor: ActorUnion
   created_at: DateTime!
   i_can_edit: Boolean!
+  i_can_flag: Boolean!
   id: ID!
   internal: Boolean
   markdown_message: String
@@ -1517,6 +1589,7 @@ type ActivitiesUserAssignedToBug implements ActivityInterface & Node & ReportAct
   created_at: DateTime!
   genius_execution_id: ID
   i_can_edit: Boolean!
+  i_can_flag: Boolean!
   id: ID!
   internal: Boolean
   markdown_message: String
@@ -1537,6 +1610,7 @@ type ActivitiesUserBannedFromProgram implements ActivityInterface & Node & Repor
   created_at: DateTime!
   genius_execution_id: ID
   i_can_edit: Boolean!
+  i_can_flag: Boolean!
   id: ID!
   internal: Boolean
   markdown_message: String
@@ -1558,6 +1632,7 @@ type ActivitiesUserCompletedRetest implements ActivityInterface & Node & ReportA
   created_at: DateTime!
   genius_execution_id: ID
   i_can_edit: Boolean!
+  i_can_flag: Boolean!
   id: ID!
   internal: Boolean
   markdown_message: String
@@ -1575,6 +1650,7 @@ type ActivitiesUserJoined implements ActivityInterface & Node {
   actor: ActorUnion
   created_at: DateTime!
   i_can_edit: Boolean!
+  i_can_flag: Boolean!
   id: ID!
   internal: Boolean
   markdown_message: String
@@ -1593,6 +1669,7 @@ type ActivitiesUserLeftRetest implements ActivityInterface & Node & ReportActivi
   created_at: DateTime!
   genius_execution_id: ID
   i_can_edit: Boolean!
+  i_can_flag: Boolean!
   id: ID!
   internal: Boolean
   markdown_message: String
@@ -1632,6 +1709,7 @@ interface ActivityInterface {
   actor: ActorUnion
   created_at: DateTime!
   i_can_edit: Boolean!
+  i_can_flag: Boolean!
   id: ID!
   internal: Boolean
   markdown_message: String
@@ -3285,6 +3363,7 @@ interface ChecklistCheckResponseActivityInterface {
   actor: ActorUnion
   created_at: DateTime!
   i_can_edit: Boolean!
+  i_can_flag: Boolean!
   id: ID!
   internal: Boolean
   markdown_message: String
@@ -6110,6 +6189,54 @@ type CreateUserBountiesReportPayload implements MutationResult {
     types: [ErrorTypeEnum]
   ): ErrorConnection!
   me: User
+  was_successful: Boolean!
+}
+
+"""
+Autogenerated input type of CreateUserFlag
+"""
+input CreateUserFlagInput {
+  category: UserFlagCategoryEnum!
+
+  """
+  A unique identifier for the client performing the mutation.
+  """
+  clientMutationId: String
+  note: String!
+  username: String!
+}
+
+"""
+Autogenerated return type of CreateUserFlag
+"""
+type CreateUserFlagPayload implements MutationResult {
+  """
+  A unique identifier for the client performing the mutation.
+  """
+  clientMutationId: String
+  errors(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+    types: [ErrorTypeEnum]
+  ): ErrorConnection!
+  user: User
   was_successful: Boolean!
 }
 
@@ -10601,6 +10728,7 @@ type Mutation {
   createTrigger(input: CreateTriggerInput!): CreateTriggerPayload
   createTwoFactorAuthenticationCredentials(input: CreateTwoFactorAuthenticationCredentialsInput!): CreateTwoFactorAuthenticationCredentialsPayload
   createUserBountiesReport(input: CreateUserBountiesReportInput!): CreateUserBountiesReportPayload
+  createUserFlag(input: CreateUserFlagInput!): CreateUserFlagPayload
   createUserLufthansaAccount(input: CreateUserLufthansaAccountInput!): CreateUserLufthansaAccountPayload
   createUserPayoutsReport(input: CreateUserPayoutsReportInput!): CreateUserPayoutsReportPayload
   createUserTwoFactorReset(input: CreateUserTwoFactorResetInput!): CreateUserTwoFactorResetPayload
@@ -23936,6 +24064,13 @@ User Email Subscription Enum
 enum UserEmailSubscriptionEnum {
   subscribed_for_monthly_digest
   subscribed_for_team_messages
+}
+
+"""
+User flag categories
+"""
+enum UserFlagCategoryEnum {
+  abuse
 }
 
 """
