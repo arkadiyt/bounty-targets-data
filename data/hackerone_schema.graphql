@@ -9819,7 +9819,6 @@ type JiraIntegration implements Node {
   ): JiraPriorityToSeverityRatingConnection
   pid: Int!
   project_selection_enabled: Boolean!
-  stored_project_meta: [Hash]
   summary: String!
   team: Team!
   updated_at: DateTime!
@@ -9829,17 +9828,10 @@ type JiraIntegration implements Node {
 A JIRA Oauth for a team
 """
 type JiraOauth implements Node {
-  """
-  Assignables for a project
-  """
-  assignables(project_id: Int!): [Hash]
   configured: Boolean!
   created_at: DateTime!
   id: ID!
   jwt: Boolean!
-  priorities: [Hash]
-  project_meta(issue_type: Int, project_id: Int): [Hash]
-  projects: [Hash]
   site: String
   team: Team!
   updated_at: DateTime!
@@ -17055,6 +17047,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
   hide_bounty_amounts: Boolean
   i_am_a_whitelisted_reporter: Boolean
   i_can_assign_report_to_pentests: Boolean!
+  i_can_create_draft_reports: Boolean!
   i_can_create_jira_webhook: Boolean
   i_can_create_pentest: Boolean!
   i_can_create_report: Boolean
@@ -18121,7 +18114,17 @@ A TeamIntegrations object for Jira
 type TeamIntegrationsJira implements Node & TeamIntegrationInterface {
   _id: ID!
   active: Boolean!
+
+  """
+  Assignables for a project
+  """
+  assignables(project_id: Int!): [Hash]
+  has_authentication: Boolean
   id: ID!
+  priorities: [Hash]
+  project_meta(issue_type: Int, project_id: Int): [Hash]
+  projects: [Hash]
+  stored_project_meta: [Hash]
   team: Team!
 }
 
