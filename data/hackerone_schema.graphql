@@ -12204,7 +12204,7 @@ type Pentester implements Node {
   award_amount: String!
   completed_at: DateTime
   id: ID!
-  pentest: Pentest!
+  pentest: Pentest
   revoked_at: DateTime
   state: PentesterStateEnum!
   user: User!
@@ -16316,8 +16316,10 @@ A survey rating
 """
 type SurveyRating implements Node {
   _id: ID!
+  completed_at: DateTime
   created_at: DateTime!
   id: ID!
+  respondent: User
   state: String
   survey_rating_items(
     """
@@ -16357,8 +16359,35 @@ type SurveyRatingItem implements Node {
   public_comment: String
   rating: Int
   rating_out_of: Int!
+  subject: SurveyRatingItemSubjectUnion
+  survey_rating: SurveyRating
   team: Team
   updated_at: DateTime
+}
+
+"""
+The connection type for SurveyRatingItem.
+"""
+type SurveyRatingItemConnection {
+  """
+  A list of edges.
+  """
+  edges: [SurveyRatingItemsEdge]
+
+  """
+  A list of nodes.
+  """
+  nodes: [SurveyRatingItem]
+
+  """
+  Information to aid in pagination.
+  """
+  pageInfo: PageInfo!
+
+  """
+  Int
+  """
+  total_count: Int!
 }
 
 input SurveyRatingItemResultInput {
@@ -16367,6 +16396,11 @@ input SurveyRatingItemResultInput {
   public_comment: String
   rating: Int
 }
+
+"""
+The actor of an survey rating item
+"""
+union SurveyRatingItemSubjectUnion = Pentest | Pentester | Team
 
 """
 The connection type for SurveyRatingItem.
@@ -23858,6 +23892,27 @@ type User implements Node & ResourceInterface {
   statistics_snapshot(snapshot_type: UserStatisticsSnapshotTypeEnum!): UserStatisticsSnapshot
   subscribed_for_monthly_digest: Boolean
   subscribed_for_team_messages: Boolean
+  survey_rating_items(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+  ): SurveyRatingItemConnection
   swag(
     """
     Returns the elements in the list that come after the specified cursor.
@@ -24076,6 +24131,18 @@ User flag categories
 """
 enum UserFlagCategoryEnum {
   abuse
+  abusive_language
+  contacting_security_team_oob
+  discussing_private_program_details
+  exposing_pii
+  extortion
+  h1_clear_violation
+  reputation_farming
+  service_degradation
+  spam
+  unauthorized_disclosure
+  unauthorized_impersonation
+  unprofessional_behavior
 }
 
 """
