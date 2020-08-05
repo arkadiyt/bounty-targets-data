@@ -1340,7 +1340,7 @@
     "allows_disclosure": false,
     "managed_by_bugcrowd": true,
     "safe_harbor": "full",
-    "max_payout": 2500,
+    "max_payout": 7000,
     "targets": {
       "in_scope": [
         {
@@ -1361,6 +1361,14 @@
         }
       ],
       "out_of_scope": [
+        {
+          "type": "other",
+          "target": "Support tickets"
+        },
+        {
+          "type": "website testing",
+          "target": "https://cloudinary.com/console/api/v1/user/send_feedback"
+        },
         {
           "type": "website testing",
           "target": "https://support.cloudinary.com"
@@ -2362,7 +2370,7 @@
     "name": "Hack Me!",
     "url": "https://bugcrowd.com/hackme",
     "allows_disclosure": false,
-    "managed_by_bugcrowd": false,
+    "managed_by_bugcrowd": true,
     "safe_harbor": "partial",
     "max_payout": 2500,
     "targets": {
@@ -2376,7 +2384,7 @@
           "target": "All IT-Managed Third-Party Services and Infrastructure"
         },
         {
-          "type": "other",
+          "type": "api testing",
           "target": "Testing the Bugcrowd platform"
         }
       ],
