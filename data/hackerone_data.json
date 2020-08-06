@@ -2637,7 +2637,7 @@
     "handle": "coinbase",
     "url": "https://hackerone.com/coinbase",
     "offers_bounties": true,
-    "quick_to_bounty": false,
+    "quick_to_bounty": true,
     "quick_to_first_response": false,
     "submission_state": "open",
     "targets": {
@@ -12959,6 +12959,17 @@
           "eligible_for_submission": true,
           "instruction": "",
           "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "*.zomans.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "This domain is mainly used for internal applications that are hosted in AWS. Our area of interest is any issue that can potentially give anyone unrestricted access or expose internal or confidential data.",
+          "integrity_requirement": null,
           "max_severity": "critical"
         },
         {
@@ -35963,7 +35974,7 @@
     "handle": "monolith",
     "url": "https://hackerone.com/monolith",
     "offers_bounties": true,
-    "quick_to_bounty": false,
+    "quick_to_bounty": true,
     "quick_to_first_response": true,
     "submission_state": "open",
     "targets": {
