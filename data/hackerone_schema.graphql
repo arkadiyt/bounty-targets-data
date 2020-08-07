@@ -5672,8 +5672,10 @@ input CreateSlackPipelineInput {
   notification_report_not_eligible_for_bounty: Boolean!
   notification_report_public_comment_added: Boolean!
   notification_report_reopened: Boolean!
+  notification_report_retesting: Boolean!
   notification_report_swag_awarded: Boolean!
   notification_report_triaged: Boolean!
+  notification_report_user_completed_retest: Boolean!
   team_id: ID!
 }
 
@@ -15516,8 +15518,10 @@ type SlackPipeline implements Node & ResourceInterface {
   notification_report_not_eligible_for_bounty: Boolean!
   notification_report_public_comment_added: Boolean!
   notification_report_reopened: Boolean!
+  notification_report_retesting: Boolean!
   notification_report_swag_awarded: Boolean!
   notification_report_triaged: Boolean!
+  notification_report_user_completed_retest: Boolean!
   team: Team!
   updated_at: DateTime!
   url: URI!
@@ -21867,8 +21871,10 @@ input UpdateSlackPipelineInput {
   notification_report_not_eligible_for_bounty: Boolean!
   notification_report_public_comment_added: Boolean!
   notification_report_reopened: Boolean!
+  notification_report_retesting: Boolean!
   notification_report_swag_awarded: Boolean!
   notification_report_triaged: Boolean!
+  notification_report_user_completed_retest: Boolean!
   slack_pipeline_id: ID!
 }
 
