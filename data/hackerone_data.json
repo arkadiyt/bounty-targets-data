@@ -27235,17 +27235,6 @@
     "targets": {
       "in_scope": [
         {
-          "asset_identifier": "*.dev.jupiterone.io",
-          "asset_type": "URL",
-          "availability_requirement": "high",
-          "confidentiality_requirement": "high",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "",
-          "integrity_requirement": "high",
-          "max_severity": "critical"
-        },
-        {
           "asset_identifier": "*.dev.lifeomic.com",
           "asset_type": "URL",
           "availability_requirement": "medium",
@@ -27342,6 +27331,17 @@
           "eligible_for_submission": true,
           "instruction": "Only the opensource codebases developed by LifeOmic are included as in-scope. Forks, etc are not in scope.",
           "integrity_requirement": "medium",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://lifeology.dev.lifeomic.com",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": "high",
           "max_severity": "critical"
         }
       ],
@@ -28420,6 +28420,88 @@
           "eligible_for_bounty": false,
           "eligible_for_submission": false,
           "instruction": "Coalition's www site is hosted by Webflow.  Security bugs in Webflow may be reported to the service provider.",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        }
+      ]
+    }
+  },
+  {
+    "id": 24883,
+    "name": "Affirm",
+    "handle": "affirm",
+    "url": "https://hackerone.com/affirm",
+    "offers_bounties": true,
+    "quick_to_bounty": false,
+    "quick_to_first_response": true,
+    "submission_state": "open",
+    "targets": {
+      "in_scope": [
+        {
+          "asset_identifier": "com.affirm.central.audit",
+          "asset_type": "GOOGLE_PLAY_APP_ID",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "This is the Android testing app built for HackerOne. It's distributed through Google Play Store.",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "com.affirm.internal.hackerone",
+          "asset_type": "OTHER",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "This is the testing iOS app built for HackerOne. It is distributed through Crashlytics.",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "http://hackerone.affirm-odin.com/",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://direct-hackerone.affirm-odin.com/",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "It is an example integration that demonstrates how our application integration works with a merchant. In general, websites will integrate with Affirm for payments. This domain is simply a testing site to show how the API works and to test the flow of taking out a loan for buying an item. It intentionally has no ACLs, or permissions. The endpoints that you access to at the end of a checkout emulate what websites who integrate with us have access to.",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://vcn-hackerone.affirm-odin.com/",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "It is an example integration that demonstrates how our application integration works with a merchant. In general, websites will integrate with Affirm for payments. This domain is simply a testing site to show how the API works and to test the flow of taking out a loan for buying an item. It intentionally has no ACLs, or permissions. The endpoints that you access to at the end of a checkout emulate what websites who integrate with us have access to.",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "asset_identifier": "*.affirm.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "",
           "integrity_requirement": null,
           "max_severity": "none"
         }
