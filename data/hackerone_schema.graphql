@@ -114,7 +114,7 @@ type ActivitiesAgreedOnGoingPublic implements ActivityInterface & Node & ReportA
   attachments: [Attachment]
   automated_response: Boolean
   created_at: DateTime!
-  first_to_agree: Boolean!
+  first_to_agree: Boolean
   genius_execution_id: ID
   i_can_edit: Boolean!
   i_can_flag: Boolean!
@@ -1341,32 +1341,42 @@ type ActivitiesReportCollaboratorJoined implements ActivityInterface & Node & Re
 """
 An Activities::ReportRetestApproved activity for a Report
 """
-type ActivitiesReportRetestApproved implements ActivityInterface & Node {
+type ActivitiesReportRetestApproved implements ActivityInterface & Node & ReportActivityInterface {
   _id: ID!
   actor: ActorUnion
+  attachments: [Attachment]
+  automated_response: Boolean
   created_at: DateTime!
+  genius_execution_id: ID
   i_can_edit: Boolean!
   i_can_flag: Boolean!
   id: ID!
   internal: Boolean
   markdown_message: String
   message: String
+  report: Report
+  triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
 }
 
 """
 An Activities::ReportRetestRejected activity for a Report
 """
-type ActivitiesReportRetestRejected implements ActivityInterface & Node {
+type ActivitiesReportRetestRejected implements ActivityInterface & Node & ReportActivityInterface {
   _id: ID!
   actor: ActorUnion
+  attachments: [Attachment]
+  automated_response: Boolean
   created_at: DateTime!
+  genius_execution_id: ID
   i_can_edit: Boolean!
   i_can_flag: Boolean!
   id: ID!
   internal: Boolean
   markdown_message: String
   message: String
+  report: Report
+  triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
 }
 
@@ -1909,16 +1919,11 @@ type Address implements Node {
 """
 An SLA snapshot aggregate
 """
-type AggregatedSlaSnapshot implements Node {
+type AggregatedSlaSnapshot {
   average_time_to_bounty_awarded: Float
   average_time_to_first_program_response: Float
   average_time_to_report_resolved: Float
   average_time_to_report_triage: Float
-
-  """
-  ID of the object.
-  """
-  id: ID!
   timestamp: DateTime!
 }
 
@@ -3367,7 +3372,7 @@ type ChecklistCheckResponse implements ActivitiesInterface & Node {
 }
 
 """
-A interface for the common fields on an HackerOne Activity
+A interface for checklist check response
 """
 interface ChecklistCheckResponseActivityInterface {
   _id: ID!
@@ -6881,7 +6886,7 @@ type CveRequestsEdge {
 """
 Data point object
 """
-type DataPoint implements Node {
+type DataPoint {
   id: ID!
   report_ids: [Int!]
   report_ids_missed_sla: [Int!]
@@ -8095,7 +8100,7 @@ enum EarningTypeEnum {
 """
 Allowed domains for embedded submission forms
 """
-type EmbeddedSubmissionDomain implements Node {
+type EmbeddedSubmissionDomain {
   _id: ID!
   created_by: User
   domain: String!
@@ -9483,6 +9488,10 @@ type IntegrationEventsConfiguration implements Node {
   report_not_eligible_for_bounty: Boolean!
   report_reopened: Boolean!
   report_resolved: Boolean!
+  report_retest_approved: Boolean!
+  report_retest_rejected: Boolean!
+  report_retest_user_expired: Boolean!
+  report_retest_user_left: Boolean!
   report_retesting: Boolean!
   report_severity_changed: Boolean!
   report_swag_awarded: Boolean!
@@ -9490,6 +9499,7 @@ type IntegrationEventsConfiguration implements Node {
   report_triaged: Boolean!
   report_undisclosed: Boolean!
   report_user_assigned: Boolean!
+  report_user_completed_retest: Boolean!
 }
 
 input IntegrationEventsConfigurationInputType {
@@ -9513,6 +9523,10 @@ input IntegrationEventsConfigurationInputType {
   report_not_eligible_for_bounty: Boolean!
   report_reopened: Boolean!
   report_resolved: Boolean!
+  report_retest_approved: Boolean!
+  report_retest_rejected: Boolean!
+  report_retest_user_expired: Boolean!
+  report_retest_user_left: Boolean!
   report_retesting: Boolean!
   report_severity_changed: Boolean!
   report_swag_awarded: Boolean!
@@ -9520,6 +9534,7 @@ input IntegrationEventsConfigurationInputType {
   report_triaged: Boolean!
   report_undisclosed: Boolean!
   report_user_assigned: Boolean!
+  report_user_completed_retest: Boolean!
 }
 
 """
@@ -9627,6 +9642,26 @@ enum IntegrationEventsEnum {
   report_resolved
 
   """
+  When a report retest is approved by a team member.
+  """
+  report_retest_approved
+
+  """
+  When a retest is rejected by a team member.
+  """
+  report_retest_rejected
+
+  """
+  When a hacker has taken too long to complete their claimed retest.
+  """
+  report_retest_user_expired
+
+  """
+  When a hacker declines a claimed retesting opportunity.
+  """
+  report_retest_user_left
+
+  """
   When a report is being retested.
   """
   report_retesting
@@ -9660,6 +9695,11 @@ enum IntegrationEventsEnum {
   When a report is assigned to a user.
   """
   report_user_assigned
+
+  """
+  When a report retest is completed by a hacker.
+  """
+  report_user_completed_retest
 }
 
 """
@@ -10188,11 +10228,7 @@ type LabelEdge {
 """
 A pair of a label and an integer
 """
-type LabeledIntegerPair implements Node {
-  """
-  ID of the object.
-  """
-  id: ID!
+type LabeledIntegerPair {
   label: String!
   value: Int
 }
@@ -10757,13 +10793,13 @@ input MembershipOrderInput {
 """
 Min Max object
 """
-type MinMax implements Node {
+type MinMax {
   id: ID!
   max: Int
   min: Int
 }
 
-type Mutation implements Node {
+type Mutation {
   acceptInvitation(input: AcceptInvitationInput!): AcceptInvitationPayload
   acknowledgeProgramHealthAcknowledgement(input: AcknowledgeProgramHealthAcknowledgementInput!): AcknowledgeProgramHealthAcknowledgementPayload
   addReportParticipant(input: AddReportParticipantInput!): AddReportParticipantPayload
@@ -10858,11 +10894,6 @@ type Mutation implements Node {
   forgetFacebookCredentials(input: ForgetFacebookCredentialInput!): ForgetFacebookCredentialPayload
   generateReportShareToken(input: GenerateReportShareTokenInput!): GenerateReportShareTokenPayload
   generateTaxFormUrl(input: GenerateTaxFormUrlInput!): GenerateTaxFormUrlPayload
-
-  """
-  ID of the object.
-  """
-  id: ID!
   launchTeam(input: LaunchTeamInput!): LaunchTeamPayload
   launchTeamPublicly(input: LaunchTeamPubliclyInput!): LaunchTeamPubliclyPayload
   leavePrivateProgram(input: LeavePrivateProgramInput!): LeavePrivateProgramPayload
@@ -11310,13 +11341,8 @@ type NotificationPreferencesMention implements Node & NotificationPreferenceInte
 """
 An OAuth Application that can use a 'Sign in using HackerOne' flow and be given OAuth Access Tokens.
 """
-type OauthApplication implements Node {
+type OauthApplication {
   client_id: String
-
-  """
-  ID of the object.
-  """
-  id: ID!
   name: String
   scopes: [String]
 }
@@ -12511,7 +12537,7 @@ type PhabricatorIntegration implements Node {
   updated_at: DateTime!
 }
 
-type Post implements Node {
+type Post {
   created_at: DateTime!
   id: ID!
   markdown_message: String
@@ -12521,7 +12547,7 @@ type Post implements Node {
 """
 Product Edition of a Team
 """
-type ProductEdition implements Node {
+type ProductEdition {
   display_name: String!
   gate_saml_opened: Boolean!
   hacker_invitations_enabled: Boolean!
@@ -14370,7 +14396,7 @@ enum ReportPreSubmissionReviewStateEnum {
 """
 A report retest
 """
-type ReportRetest implements Node {
+type ReportRetest {
   _id: ID!
   asset_name: String
   asset_type: String
@@ -14478,7 +14504,7 @@ input ReportRetestStateEnumPredicateInput {
 """
 A report retest user
 """
-type ReportRetestUser implements Node {
+type ReportRetestUser {
   _id: ID!
   activity: ActivitiesUserCompletedRetest
   answered_fix_can_be_bypassed: Boolean
@@ -14935,7 +14961,7 @@ type RevokeReportShareTokenPayload implements MutationResult {
   was_successful: Boolean!
 }
 
-type SamlProvider implements Node {
+type SamlProvider {
   alternative_certificate: String
   alternative_certificate_fingerprint: String
   approval_requested_at: DateTime
@@ -15046,7 +15072,7 @@ type SamlProviderDomainEdge {
   node: SamlProviderDomain
 }
 
-type SamlResponseLog implements Node {
+type SamlResponseLog {
   id: ID!
   response: String!
   status: String
@@ -15419,7 +15445,7 @@ type SkillEdge {
 """
 Resolution SLA settings for a HackerOne team
 """
-type SlaSetting implements Node {
+type SlaSetting {
   _id: ID!
   critical_severity_resolved_staleness_threshold: Int!
   high_severity_resolved_staleness_threshold: Int!
@@ -16388,11 +16414,7 @@ input SurveyAnswerOrderInput {
 """
 Statistics for a reason hackers have selected in a survey
 """
-type SurveyAnswerStatistics implements Node {
-  """
-  ID of the object.
-  """
-  id: ID!
+type SurveyAnswerStatistics {
   survey_structured_response: SurveyStructuredResponse
   total_count: Int
 }
@@ -18147,7 +18169,7 @@ type TeamConnection {
 """
 Display options for a HackerOne team
 """
-type TeamDisplayOptions implements Node {
+type TeamDisplayOptions {
   _id: ID!
   id: ID!
   show_average_bounty: Boolean!
@@ -19169,7 +19191,7 @@ type TriageMeta implements Node & ResourceInterface {
 """
 A HackerOne report triage rating
 """
-type TriageRating implements Node {
+type TriageRating {
   _id: ID!
   comment: String!
   id: ID!
@@ -19221,7 +19243,7 @@ type TriageRatingEdge {
 """
 Triage Workflow
 """
-type TriageWorkflow implements Node {
+type TriageWorkflow {
   _id: ID!
   allow_participants_for_duplicate_reports: Boolean
   custom_triage_summary_templates: [String!]!
@@ -24227,6 +24249,10 @@ type User implements Node & ResourceInterface {
     secure_order_by: FiltersTeamFilterOrder
     where: FiltersTeamFilterInput
   ): TeamConnection
+
+  """
+  A Resolver for SurveyRatingItems
+  """
   testimonials(
     """
     Returns the elements in the list that come after the specified cursor.
@@ -24362,7 +24388,7 @@ type UserConnection {
 """
 Display options for a user
 """
-type UserDisplayOptions implements Node {
+type UserDisplayOptions {
   _id: ID!
   id: ID!
   show_bounty_amounts: Boolean!
