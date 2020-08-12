@@ -45137,21 +45137,20 @@
           "instruction": "IMPORTANT! Please read the \"Out of scope vulnerabilities\" section before testing this domain.This domain is considered untrustworthy and most bugs affecting this domain are false-positives. ",
           "integrity_requirement": null,
           "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "calc.buggywebsite.com",
-          "asset_type": "URL",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "**LIMITED TIME ONLY XSS CHALLENGE!** - [http://calc.buggywebsite.com](http://calc.buggywebsite.com)\n*08/07 - 08/11*\n\nWays to Win:\n\n1. **$500** to 1st valid submission \n1. **$400** to 2nd valid submission \n1. **$300** to 3rd valid submission \n1. **$200** to best blog write-up *(submit via Twitter on 08/12)*\n1. **$100** to 6 raffle winners  *(randomly chosen on 08/12)*\n\nRules:\n\n1. You must pop an `alert(domain)` showing `calc.buggywebsite.com`\n1. You must **bypass CSP**\n1. It must be reproducible using the latest version of *Chrome*\n1. You must provide a working proof-of-concept on [bugpoc.com](https://bugpoc.com)\n\nFAQ:\n\n**Q: Can I publicly talk about this challenge?**\n*A: Yes! But please do not disclose your solution until 08/12*\n\n**Q: Can I get a hint?**\n*A: Yes! Follow @bugpoc_official on Twitter for hints*\n\n**Q: How do I enter the raffle?**\n*A: All valid solutions submitted before 08/12 will automatically be entered into the raffle*\n\n**Q: How to I submit my blog write-up**\n*A: Mention @bugpoc_official on Twitter on 08/12 with a link*",
-          "integrity_requirement": null,
-          "max_severity": "critical"
         }
       ],
       "out_of_scope": [
-
+        {
+          "asset_identifier": "*.buggywebsite.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        }
       ]
     }
   },
