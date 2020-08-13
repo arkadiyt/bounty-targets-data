@@ -17090,6 +17090,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
     where: FiltersChecklistCheckResponseFilterInput
   ): ChecklistCheckResponseConnection
   checklist_id: ID
+  child_program_directory_enabled: Boolean
   child_teams(
     """
     Returns the elements in the list that come after the specified cursor.
