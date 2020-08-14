@@ -8898,6 +8898,20 @@ input FiltersPentesterFilterInput {
   state: PentesterStateEnumPredicateInput
 }
 
+input FiltersPentesterProfileFilterInput {
+  _and: [FiltersPentesterProfileFilterInput]
+  _not: FiltersPentesterProfileFilterInput
+  _or: [FiltersPentesterProfileFilterInput]
+  id: IntPredicateInput
+  state: PentesterProfileStateEnumPredicateInput
+  visible_in_directory: BooleanPredicateInput
+}
+
+input FiltersPentesterProfileFilterOrder {
+  id: FilterOrderPredicateInput
+  pentest_activity: FilterOrderPredicateInput
+}
+
 input FiltersReportFilterInput {
   _and: [FiltersReportFilterInput]
   _not: FiltersReportFilterInput
@@ -12501,9 +12515,10 @@ type PentesterProfile implements Node {
     """
     last: Int
   ): SkillConnection
+  state: String
   time_zone: String
   tools: [String!]
-  user: User!
+  user: User
   visible_in_directory: Boolean
   weekdays: [String!]
   work_schedule: [String!]
@@ -12517,9 +12532,65 @@ input PentesterProfileCertificationInput {
   starts_at: DateTime
 }
 
+"""
+The connection type for PentesterProfile.
+"""
+type PentesterProfileConnection {
+  """
+  A list of edges.
+  """
+  edges: [PentesterProfileEdge]
+
+  """
+  A list of nodes.
+  """
+  nodes: [PentesterProfile]
+
+  """
+  Information to aid in pagination.
+  """
+  pageInfo: PageInfo!
+
+  """
+  Int
+  """
+  total_count: Int!
+}
+
+"""
+An edge in a connection.
+"""
+type PentesterProfileEdge {
+  """
+  A cursor for use in pagination.
+  """
+  cursor: String!
+
+  """
+  The item at the end of the edge.
+  """
+  node: PentesterProfile
+}
+
 input PentesterProfileLanguageInput {
   fluency: String!
   name: String!
+}
+
+"""
+PentesterProfile state enum
+"""
+enum PentesterProfileStateEnum {
+  applied
+  approved
+}
+
+input PentesterProfileStateEnumPredicateInput {
+  _eq: PentesterProfileStateEnum
+  _in: [PentesterProfileStateEnum]
+  _is_null: Boolean
+  _neq: PentesterProfileStateEnum
+  _nin: [PentesterProfileStateEnum]
 }
 
 """
@@ -13255,6 +13326,29 @@ type Query implements Node {
   node(id: ID!): Node
   oauth_application(client_id: String!): OauthApplication
   pentest(id: ID!): Pentest
+  pentester_profiles(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+    order_by: FiltersPentesterProfileFilterOrder
+    where: FiltersPentesterProfileFilterInput
+  ): PentesterProfileConnection
 
   """
   A Resolver for Pentests
