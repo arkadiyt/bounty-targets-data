@@ -854,6 +854,7 @@ type ActivitiesExternalUserJoined implements ActivityInterface & Node & ReportAc
   markdown_message: String
   message: String
   report: Report
+  report_retest_user: User
   triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
 }
@@ -19303,6 +19304,7 @@ enum TriageInboxItemReportSubstateEnum {
   new
   not_applicable
   resolved
+  retesting
   spam
   triaged
 }
@@ -23880,6 +23882,7 @@ type User implements Node & ResourceInterface {
   ): ChecklistCheckConnection
   cleared: Boolean!
   cobalt_handle: String
+  country: String
   created_at: DateTime!
   current_sign_in_at: DateTime
   demo_hacker: Boolean!
