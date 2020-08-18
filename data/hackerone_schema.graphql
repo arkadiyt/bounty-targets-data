@@ -17233,7 +17233,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
   controlled_launch_team: Boolean
   cover_color: String
   cover_photo_url: String
-  coverage_analytics_summary(end_date: Date!, start_date: Date!): CoverageAnalyticsSummary!
+  coverage_analytics_summary(asset_id: ID = null, end_date: Date!, start_date: Date!): CoverageAnalyticsSummary!
   created_at: DateTime
   credential_instruction: String
   credential_instruction_html: String
