@@ -17398,17 +17398,7 @@
         }
       ],
       "out_of_scope": [
-        {
-          "asset_identifier": "199.193.158.0/23, 199.193.156.0/24",
-          "asset_type": "OTHER",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": false,
-          "eligible_for_submission": false,
-          "instruction": "These are hosting networks for our customers",
-          "integrity_requirement": null,
-          "max_severity": "none"
-        }
+
       ]
     }
   },
@@ -18058,17 +18048,6 @@
           "instruction": "We host non-production servers in our \"quantshack.com\" domain, primarily www.quantshack.com.\n\nYou shouldn't be able to access front-end pages on www.quantshack.com, because it is restricted by an IP whitelist and anyone not on the whitelist should get redirected automatically to www.quantopian.com. If you are able to bypass that whitelist and access any functionality other than an error page, that's certainly a reportable issue. Note that _functionality_ is key; static assets (i.e., JavaScript files style sheets, images, etc.) on www.quantshack.com are not protected by a whitelist, so please do not submit reports about them.\n\nWe will also accept reports about issues you discover on any other resources you discover in this domain.\n\nPlease do not submit reports about DMARC, DKIM, or SPF on this domain.",
           "integrity_requirement": "low",
           "max_severity": "medium"
-        },
-        {
-          "asset_identifier": "blog.quantopian.com",
-          "asset_type": "URL",
-          "availability_requirement": "medium",
-          "confidentiality_requirement": "medium",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "### DO NOT SUBMIT: \n* xmlrpc.php on our blog; we know it's enabled and [we are not going to disable it](https://www.wordfence.com/blog/2015/10/should-you-disable-xml-rpc-on-wordpress/);\n* attacks requiring a victim's device to be compromised by malware, a rootkit, etc;\n* security vulnerabilities in third-party components made public within the past 14 days;\n* issues that you have not actually confirmed are present; or\n* issues without a clearly defined security impact.",
-          "integrity_requirement": "medium",
-          "max_severity": "critical"
         },
         {
           "asset_identifier": "www.quantopian.com",
@@ -38305,7 +38284,7 @@
           "confidentiality_requirement": null,
           "eligible_for_bounty": false,
           "eligible_for_submission": true,
-          "instruction": "Please select this asset to report automotive-related vulnerabilities and please consider our __policy__ regarding \"out of scope vulnerabilities\", __the safe harbor clause__ and that this asset is out of scope of the program and not eligible for bounty. This asset is eligible for submission, therefore, it is shown as \"In Scope\".\n",
+          "instruction": "Please select this asset to report automotive-related vulnerabilities and please consider our __policy__ regarding \"out of scope vulnerabilities\" and a potentially deviating application of the __safe harbor clause__.  As this asset is eligible for submission it is shown as \"In Scope\". However, please note that this asset is out of scope of the bug bounty program and, therefore, not eligible for bounty. \n",
           "integrity_requirement": null,
           "max_severity": "critical"
         },
@@ -38316,7 +38295,7 @@
           "confidentiality_requirement": null,
           "eligible_for_bounty": false,
           "eligible_for_submission": true,
-          "instruction": "Please select this asset to report other vulnerabilities and please consider our __policy__ regarding \"out of scope vulnerabilities\", __the safe harbor clause__ and that this asset is out of scope of the program and not eligible for bounty. This asset is eligible for submission, therefore, it is shown as \"In Scope\".\n",
+          "instruction": "Please select this asset to report vulnerabilities not matching any of the assets stated above and note our __policy__ regarding \"out of scope vulnerabilities\" and a potentially deviating application of the __safe harbor clause__. As this asset is eligible for submission it is shown as \"In Scope\". However, please note that this asset is out of scope of the bug bounty program and, therefore, not eligible for bounty. \n",
           "integrity_requirement": null,
           "max_severity": "critical"
         },
