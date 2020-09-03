@@ -855,6 +855,7 @@ type ActivitiesExternalUserJoined implements ActivityInterface & Node & ReportAc
   message: String
   report: Report
   report_retest_user: User
+  report_retest_user_id: Int
   triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
 }
@@ -1421,8 +1422,8 @@ type ActivitiesReportTitleUpdated implements ActivityInterface & Node & ReportAc
   internal: Boolean
   markdown_message: String
   message: String
-  new_title: String!
-  old_title: String!
+  new_title: String
+  old_title: String
   report: Report
   triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
@@ -7561,7 +7562,7 @@ type Demo implements LeaderboardEntryInterface & Node {
   id: ID!
   impact: Float
   previous_rank: Int
-  rank: Int!
+  rank: Int
   reputation: Int!
   signal: Float
   user: User!
@@ -10419,7 +10420,7 @@ interface LeaderboardEntryInterface {
   _id: ID!
   id: ID!
   previous_rank: Int
-  rank: Int!
+  rank: Int
   user: User!
 }
 
@@ -10427,7 +10428,7 @@ interface LeaderboardEntryInterface {
 The different types of leaderboards that exist. Type that is returned is based
 on the key that is passed, and is linked to LeaderboardKeyEnum
 """
-union LeaderboardEntryUnion = Demo
+union LeaderboardEntryUnion = Demo | Reputation
 
 """
 An edge in a connection.
@@ -10449,6 +10450,7 @@ Types of leaderboards
 """
 enum LeaderboardKeyEnum {
   DEMO
+  HIGHEST_REPUTATION
 }
 
 """
@@ -14321,6 +14323,7 @@ type Report implements ActivitiesInterface & Node & ResourceInterface {
   id: ID!
   jira_escalation_last_state_change_at: DateTime
   jira_escalation_state: String
+  last_internal_activity_at: DateTime
   latest_activity_at: DateTime
   latest_public_activity_at: DateTime
   latest_public_activity_of_reporter_at: DateTime
@@ -14609,6 +14612,7 @@ input ReportOrderInput {
 Parties that a report can be pending action from
 """
 enum ReportPendingActionFromEnum {
+  pending_action_from_hacker
   pending_action_from_team
   pending_action_from_triage
 }
@@ -14983,6 +14987,20 @@ type ReportsCountPerWeaknessEdge {
   The item at the end of the edge.
   """
   node: ReportsCountPerWeakness
+}
+
+"""
+Reputation leaderboard entries
+"""
+type Reputation implements LeaderboardEntryInterface & Node {
+  _id: ID!
+  id: ID!
+  impact: Float
+  previous_rank: Int
+  rank: Int
+  reputation: Int!
+  signal: Float
+  user: User!
 }
 
 """
