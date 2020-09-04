@@ -3522,41 +3522,6 @@
     }
   },
   {
-    "name": "Indeed",
-    "url": "https://bugcrowd.com/indeed",
-    "allows_disclosure": true,
-    "managed_by_bugcrowd": true,
-    "safe_harbor": "partial",
-    "max_payout": 10000,
-    "targets": {
-      "in_scope": [
-        {
-          "type": "other",
-          "target": "*.indeed.com/*"
-        },
-        {
-          "type": "other",
-          "target": "https://itunes.apple.com/us/app/job-search/id309735670?mt=8"
-        },
-        {
-          "type": "other",
-          "target": "https://play.google.com/store/apps/details?id=com.indeed.android.jobsearch"
-        },
-        {
-          "type": "other",
-          "target": "https://play.google.com/store/apps/details?id=com.indeed.androidemployers"
-        },
-        {
-          "type": "other",
-          "target": "https://play.google.com/store/apps/details?id=com.indeed.jobsnearby&hl=en"
-        }
-      ],
-      "out_of_scope": [
-
-      ]
-    }
-  },
-  {
     "name": "Intercom",
     "url": "https://bugcrowd.com/intercom",
     "allows_disclosure": false,
@@ -5361,7 +5326,26 @@
     "allows_disclosure": false,
     "managed_by_bugcrowd": true,
     "safe_harbor": "full",
-    "max_payout": 3000,
+    "max_payout": 4000,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "website testing",
+          "target": "https://devstaging.pcapcloud.com/*"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
+    "name": "Personal Capital",
+    "url": "https://bugcrowd.com/personalcapital",
+    "allows_disclosure": false,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "full",
+    "max_payout": 4000,
     "targets": {
       "in_scope": [
         {
