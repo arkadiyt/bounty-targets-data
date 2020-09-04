@@ -9201,13 +9201,13 @@
         {
           "asset_identifier": "*.shopifykloud.com",
           "asset_type": "URL",
-          "availability_requirement": "none",
-          "confidentiality_requirement": "high",
+          "availability_requirement": "low",
+          "confidentiality_requirement": "medium",
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
           "instruction": "Shopify Kloud includes all *.shopifykloud.com applications. Please note, there may be developer test or third party applications launched on the domain which may have low security implications for Shopify. If you are unsure about a subdomain on *.shopifykloud.com and it looks like a test application, email us at bugbounty AT shopify.com before spending time on it.",
           "integrity_requirement": "low",
-          "max_severity": "critical"
+          "max_severity": "high"
         },
         {
           "asset_identifier": "Shopify Developed Apps",
@@ -9256,12 +9256,12 @@
         {
           "asset_identifier": "accounts.shopify.com",
           "asset_type": "URL",
-          "availability_requirement": "high",
-          "confidentiality_requirement": "high",
+          "availability_requirement": "medium",
+          "confidentiality_requirement": "medium",
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
           "instruction": "",
-          "integrity_requirement": "high",
+          "integrity_requirement": "medium",
           "max_severity": "critical"
         },
         {
@@ -9278,23 +9278,23 @@
         {
           "asset_identifier": "partners.shopify.com",
           "asset_type": "URL",
-          "availability_requirement": "high",
-          "confidentiality_requirement": "high",
+          "availability_requirement": "medium",
+          "confidentiality_requirement": "medium",
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
           "instruction": "",
-          "integrity_requirement": "high",
+          "integrity_requirement": "medium",
           "max_severity": "critical"
         },
         {
           "asset_identifier": "your-store.myshopify.com",
           "asset_type": "URL",
-          "availability_requirement": "high",
-          "confidentiality_requirement": "high",
+          "availability_requirement": "medium",
+          "confidentiality_requirement": "medium",
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
           "instruction": "Your development store hosted at `*.myshopify.com`. Create a development store by signing up at https://partners.shopify.com/",
-          "integrity_requirement": "high",
+          "integrity_requirement": "medium",
           "max_severity": "critical"
         }
       ],
@@ -44475,6 +44475,88 @@
       ],
       "out_of_scope": [
 
+      ]
+    }
+  },
+  {
+    "id": 45675,
+    "name": "Faraday, Inc.",
+    "handle": "faraday_inc",
+    "url": "https://hackerone.com/faraday_inc",
+    "offers_bounties": true,
+    "quick_to_bounty": false,
+    "quick_to_first_response": false,
+    "submission_state": "open",
+    "targets": {
+      "in_scope": [
+        {
+          "asset_identifier": "app.faraday.io",
+          "asset_type": "URL",
+          "availability_requirement": "low",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": "medium",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "s3://faraday-secret",
+          "asset_type": "OTHER",
+          "availability_requirement": "none",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": "none",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "s3://faraday-uploads",
+          "asset_type": "OTHER",
+          "availability_requirement": "none",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": "none",
+          "max_severity": "critical"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "asset_identifier": "faraday.io",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "pay.faraday.io",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "www.faraday.io",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        }
       ]
     }
   },
