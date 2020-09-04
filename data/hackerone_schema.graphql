@@ -1922,11 +1922,16 @@ type Address implements Node {
 """
 An SLA snapshot aggregate
 """
-type AggregatedSlaSnapshot {
+type AggregatedSlaSnapshot implements Node {
   average_time_to_bounty_awarded: Float
   average_time_to_first_program_response: Float
   average_time_to_report_resolved: Float
   average_time_to_report_triage: Float
+
+  """
+  ID of the object.
+  """
+  id: ID!
   timestamp: DateTime!
 }
 
@@ -3378,7 +3383,7 @@ type ChecklistCheckResponse implements ActivitiesInterface & Node {
 }
 
 """
-A interface for checklist check response
+A interface for the common fields on an HackerOne Activity
 """
 interface ChecklistCheckResponseActivityInterface {
   _id: ID!
@@ -6892,7 +6897,7 @@ type CveRequestsEdge {
 """
 Data point object
 """
-type DataPoint {
+type DataPoint implements Node {
   id: ID!
   report_ids: [Int!]
   report_ids_missed_sla: [Int!]
@@ -8121,7 +8126,7 @@ enum EarningTypeEnum {
 """
 Allowed domains for embedded submission forms
 """
-type EmbeddedSubmissionDomain {
+type EmbeddedSubmissionDomain implements Node {
   _id: ID!
   created_by: User
   domain: String!
@@ -8414,7 +8419,7 @@ type EscalateToJiraPayload implements MutationResult {
 """
 Experience by OWASP categories type
 """
-type ExperienceByOwaspCategories {
+type ExperienceByOwaspCategories implements Node {
   a10_flags: Int
   a10_submissions: Int
   a1_flags: Int
@@ -8792,6 +8797,14 @@ input FiltersBountyFilterInput {
   id: IntPredicateInput
 }
 
+input FiltersBundleSubscriptionsRetestSubscriptionFilterInput {
+  _and: [FiltersBundleSubscriptionsRetestSubscriptionFilterInput]
+  _not: FiltersBundleSubscriptionsRetestSubscriptionFilterInput
+  _or: [FiltersBundleSubscriptionsRetestSubscriptionFilterInput]
+  id: IntPredicateInput
+  tag: RetestSubscriptionTagPredicateInput
+}
+
 input FiltersChecklistCheckFilterInput {
   _and: [FiltersChecklistCheckFilterInput]
   _not: FiltersChecklistCheckFilterInput
@@ -8973,6 +8986,7 @@ input FiltersReportRetestFilterInput {
   derived_report_retest: FiltersDerivedReportRetestFilterInput
   id: IntPredicateInput
   report_retest_users: FiltersReportRetestUserFilterInput
+  retest_subscription: FiltersBundleSubscriptionsRetestSubscriptionFilterInput
   state: ReportRetestStateEnumPredicateInput
 }
 
@@ -8995,7 +9009,7 @@ input FiltersRetestSubscriptionAggregateFilterInput {
   _not: FiltersRetestSubscriptionAggregateFilterInput
   _or: [FiltersRetestSubscriptionAggregateFilterInput]
   id: IntPredicateInput
-  is_active: Boolean
+  tag: RetestSubscriptionTagPredicateInput
 }
 
 input FiltersSamlProviderDomainFilterOrder {
@@ -10289,7 +10303,11 @@ type LabelEdge {
 """
 A pair of a label and an integer
 """
-type LabeledIntegerPair {
+type LabeledIntegerPair implements Node {
+  """
+  ID of the object.
+  """
+  id: ID!
   label: String!
   value: Int
 }
@@ -10915,13 +10933,13 @@ input MembershipOrderInput {
 """
 Min Max object
 """
-type MinMax {
+type MinMax implements Node {
   id: ID!
   max: Int
   min: Int
 }
 
-type Mutation {
+type Mutation implements Node {
   acceptInvitation(input: AcceptInvitationInput!): AcceptInvitationPayload
   acknowledgeProgramHealthAcknowledgement(input: AcknowledgeProgramHealthAcknowledgementInput!): AcknowledgeProgramHealthAcknowledgementPayload
   addReportParticipant(input: AddReportParticipantInput!): AddReportParticipantPayload
@@ -11016,6 +11034,11 @@ type Mutation {
   forgetFacebookCredentials(input: ForgetFacebookCredentialInput!): ForgetFacebookCredentialPayload
   generateReportShareToken(input: GenerateReportShareTokenInput!): GenerateReportShareTokenPayload
   generateTaxFormUrl(input: GenerateTaxFormUrlInput!): GenerateTaxFormUrlPayload
+
+  """
+  ID of the object.
+  """
+  id: ID!
   launchTeam(input: LaunchTeamInput!): LaunchTeamPayload
   launchTeamPublicly(input: LaunchTeamPubliclyInput!): LaunchTeamPubliclyPayload
   leavePrivateProgram(input: LeavePrivateProgramInput!): LeavePrivateProgramPayload
@@ -11464,8 +11487,13 @@ type NotificationPreferencesMention implements Node & NotificationPreferenceInte
 """
 An OAuth Application that can use a 'Sign in using HackerOne' flow and be given OAuth Access Tokens.
 """
-type OauthApplication {
+type OauthApplication implements Node {
   client_id: String
+
+  """
+  ID of the object.
+  """
+  id: ID!
   name: String
   scopes: [String]
 }
@@ -12717,7 +12745,7 @@ type PhabricatorIntegration implements Node {
   updated_at: DateTime!
 }
 
-type Post {
+type Post implements Node {
   created_at: DateTime!
   id: ID!
   markdown_message: String
@@ -12727,7 +12755,7 @@ type Post {
 """
 Product Edition of a Team
 """
-type ProductEdition {
+type ProductEdition implements Node {
   display_name: String!
   gate_saml_opened: Boolean!
   hacker_invitations_enabled: Boolean!
@@ -13399,10 +13427,6 @@ type Query implements Node {
     last: Int
   ): LabelCategoryConnection!
   languages: [Hash!]!
-
-  """
-  A Resolver for Leaderboard entries
-  """
   leaderboard_entries(
     """
     Returns the elements in the list that come after the specified cursor.
@@ -14630,7 +14654,7 @@ enum ReportPreSubmissionReviewStateEnum {
 """
 A report retest
 """
-type ReportRetest {
+type ReportRetest implements Node {
   _id: ID!
   asset_name: String
   asset_type: String
@@ -14738,7 +14762,7 @@ input ReportRetestStateEnumPredicateInput {
 """
 A report retest user
 """
-type ReportRetestUser {
+type ReportRetestUser implements Node {
   _id: ID!
   activity: ActivitiesUserCompletedRetest
   answered_fix_can_be_bypassed: Boolean
@@ -15075,6 +15099,23 @@ enum ResponseTargetTypeEnum {
 }
 
 """
+Different types of a retesting subscription
+"""
+enum RetestSubscriptionTag {
+  legacy
+  new
+  triage
+}
+
+input RetestSubscriptionTagPredicateInput {
+  _eq: RetestSubscriptionTag
+  _in: [RetestSubscriptionTag]
+  _is_null: Boolean
+  _neq: RetestSubscriptionTag
+  _nin: [RetestSubscriptionTag]
+}
+
+"""
 Autogenerated input type of RevokeCredential
 """
 input RevokeCredentialInput {
@@ -15209,7 +15250,7 @@ type RevokeReportShareTokenPayload implements MutationResult {
   was_successful: Boolean!
 }
 
-type SamlProvider {
+type SamlProvider implements Node {
   alternative_certificate: String
   alternative_certificate_fingerprint: String
   approval_requested_at: DateTime
@@ -15320,7 +15361,7 @@ type SamlProviderDomainEdge {
   node: SamlProviderDomain
 }
 
-type SamlResponseLog {
+type SamlResponseLog implements Node {
   id: ID!
   response: String!
   status: String
@@ -15693,7 +15734,7 @@ type SkillEdge {
 """
 Resolution SLA settings for a HackerOne team
 """
-type SlaSetting {
+type SlaSetting implements Node {
   _id: ID!
   critical_severity_resolved_staleness_threshold: Int!
   high_severity_resolved_staleness_threshold: Int!
@@ -16662,7 +16703,11 @@ input SurveyAnswerOrderInput {
 """
 Statistics for a reason hackers have selected in a survey
 """
-type SurveyAnswerStatistics {
+type SurveyAnswerStatistics implements Node {
+  """
+  ID of the object.
+  """
+  id: ID!
   survey_structured_response: SurveyStructuredResponse
   total_count: Int
 }
@@ -16753,6 +16798,7 @@ A survey rating item
 type SurveyRatingItem implements Node {
   _id: ID!
   created_at: DateTime!
+  i_can_toggle_survey_rating_item: Boolean!
   id: ID!
   key: String!
   pentester: Pentester
@@ -17359,7 +17405,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
   controlled_launch_team: Boolean
   cover_color: String
   cover_photo_url: String
-  coverage_analytics_summary(end_date: Date!, start_date: Date!, structured_scope_id: ID = null): CoverageAnalyticsSummary!
+  coverage_analytics_summary(end_date: DateTime!, start_date: DateTime!, structured_scope_id: Int = null): CoverageAnalyticsSummary!
   created_at: DateTime
   credential_instruction: String
   credential_instruction_html: String
@@ -18441,7 +18487,7 @@ type TeamConnection {
 """
 Display options for a HackerOne team
 """
-type TeamDisplayOptions {
+type TeamDisplayOptions implements Node {
   _id: ID!
   id: ID!
   show_average_bounty: Boolean!
@@ -19466,7 +19512,7 @@ type TriageMeta implements Node & ResourceInterface {
 """
 A HackerOne report triage rating
 """
-type TriageRating {
+type TriageRating implements Node {
   _id: ID!
   comment: String!
   id: ID!
@@ -19518,7 +19564,7 @@ type TriageRatingEdge {
 """
 Triage Workflow
 """
-type TriageWorkflow {
+type TriageWorkflow implements Node {
   _id: ID!
   allow_participants_for_duplicate_reports: Boolean
   custom_triage_summary_templates: [String!]!
@@ -24172,6 +24218,7 @@ type User implements Node & ResourceInterface {
     """
     last: Int
   ): InvitationQueueConnection
+  leaderboard_entry(key: LeaderboardKeyEnum!, quarter: Int, year: Int!): LeaderboardEntryUnion
   linkedin_handle: String
   location: String
   lufthansa_account: LufthansaAccount
@@ -24575,10 +24622,6 @@ type User implements Node & ResourceInterface {
     secure_order_by: FiltersTeamFilterOrder
     where: FiltersTeamFilterInput
   ): TeamConnection
-
-  """
-  A Resolver for SurveyRatingItems
-  """
   testimonials(
     """
     Returns the elements in the list that come after the specified cursor.
@@ -24714,7 +24757,7 @@ type UserConnection {
 """
 Display options for a user
 """
-type UserDisplayOptions {
+type UserDisplayOptions implements Node {
   _id: ID!
   id: ID!
   show_bounty_amounts: Boolean!
