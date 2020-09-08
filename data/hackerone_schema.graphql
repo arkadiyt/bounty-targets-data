@@ -9526,6 +9526,20 @@ enum HacktivityOrderFieldEnum {
 
 scalar Hash
 
+"""
+Entry for the highest reputation leaderboard
+"""
+type HighestReputationLeaderboardEntry implements LeaderboardEntryInterface & Node {
+  _id: ID!
+  id: ID!
+  impact: Float
+  previous_rank: Int
+  rank: Int
+  reputation: Int!
+  signal: Float
+  user: User!
+}
+
 input IntPredicateInput {
   _eq: Int
   _gt: Int
@@ -10447,7 +10461,7 @@ interface LeaderboardEntryInterface {
 The different types of leaderboards that exist. Type that is returned is based
 on the key that is passed, and is linked to LeaderboardKeyEnum
 """
-union LeaderboardEntryUnion = Demo | Reputation
+union LeaderboardEntryUnion = Demo | HighestReputationLeaderboardEntry | OwaspTopTenLeaderboardEntry
 
 """
 An edge in a connection.
@@ -10470,6 +10484,7 @@ Types of leaderboards
 enum LeaderboardKeyEnum {
   DEMO
   HIGHEST_REPUTATION
+  OWASP_TOP_10
 }
 
 """
@@ -11506,6 +11521,20 @@ Possible directions for sorting a collection
 enum OrderDirection {
   ASC
   DESC
+}
+
+"""
+Entry for the Owasp top 10 leaderboard
+"""
+type OwaspTopTenLeaderboardEntry implements LeaderboardEntryInterface & Node {
+  _id: ID!
+  id: ID!
+  impact: Float
+  previous_rank: Int
+  rank: Int
+  reputation: Int!
+  signal: Float
+  user: User!
 }
 
 """
@@ -13439,6 +13468,7 @@ type Query implements Node {
     Returns the elements in the list that come before the specified cursor.
     """
     before: String
+    filter: String
 
     """
     Returns the first _n_ elements from the list.
@@ -15013,20 +15043,6 @@ type ReportsCountPerWeaknessEdge {
   The item at the end of the edge.
   """
   node: ReportsCountPerWeakness
-}
-
-"""
-Reputation leaderboard entries
-"""
-type Reputation implements LeaderboardEntryInterface & Node {
-  _id: ID!
-  id: ID!
-  impact: Float
-  previous_rank: Int
-  rank: Int
-  reputation: Int!
-  signal: Float
-  user: User!
 }
 
 """
@@ -24267,7 +24283,7 @@ type User implements Node & ResourceInterface {
     """
     last: Int
   ): InvitationQueueConnection
-  leaderboard_entry(key: LeaderboardKeyEnum!, quarter: Int, year: Int!): LeaderboardEntryUnion
+  leaderboard_entry(filter: String, key: LeaderboardKeyEnum!, quarter: Int, year: Int!): LeaderboardEntryUnion
   linkedin_handle: String
   location: String
   lufthansa_account: LufthansaAccount
