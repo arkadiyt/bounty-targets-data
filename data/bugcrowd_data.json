@@ -2388,6 +2388,40 @@
     }
   },
   {
+    "name": "eero",
+    "url": "https://bugcrowd.com/eero",
+    "allows_disclosure": false,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "partial",
+    "max_payout": 0,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "api testing",
+          "target": "eero APIs"
+        },
+        {
+          "type": "android",
+          "target": "eero Android Mobile Application"
+        },
+        {
+          "type": "hardware testing",
+          "target": "eero Node"
+        },
+        {
+          "type": "ios",
+          "target": "eero iOS Mobile Application"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "website testing",
+          "target": "http://foo.eero.com/"
+        }
+      ]
+    }
+  },
+  {
     "name": "Etsy",
     "url": "https://bugcrowd.com/etsy",
     "allows_disclosure": false,
@@ -7967,100 +8001,6 @@
         {
           "type": "website testing",
           "target": "https://www.wayra.co.uk"
-        }
-      ]
-    }
-  },
-  {
-    "name": "Tesla",
-    "url": "https://bugcrowd.com/tesla",
-    "allows_disclosure": true,
-    "managed_by_bugcrowd": true,
-    "safe_harbor": "partial",
-    "max_payout": 15000,
-    "targets": {
-      "in_scope": [
-        {
-          "type": "website testing",
-          "target": "*.tesla.cn"
-        },
-        {
-          "type": "website testing",
-          "target": "*.tesla.com"
-        },
-        {
-          "type": "website testing",
-          "target": "*.tesla.services"
-        },
-        {
-          "type": "website testing",
-          "target": "*.teslainsuranceservices.com"
-        },
-        {
-          "type": "website testing",
-          "target": "*.teslamotors.com"
-        },
-        {
-          "type": "hardware testing",
-          "target": "A hardware product that you own or are authorized to test against (Vehicle/PowerWall/etc.)"
-        },
-        {
-          "type": "website testing",
-          "target": "Any host verified to be owned by Tesla Motors Inc. (domains/IP space/etc.)"
-        },
-        {
-          "type": "android",
-          "target": "Official Tesla Android apps"
-        },
-        {
-          "type": "ios",
-          "target": "Official Tesla iOS apps"
-        }
-      ],
-      "out_of_scope": [
-        {
-          "type": "website testing",
-          "target": "Any SolarCity property, including *.solarcity.com"
-        },
-        {
-          "type": "website testing",
-          "target": "Any domains from acquisitions, such as maxwell.com"
-        },
-        {
-          "type": "website testing",
-          "target": "Any other third-party websites hosted by non-Tesla entities"
-        },
-        {
-          "type": "website testing",
-          "target": "employeefeedback.tesla.com"
-        },
-        {
-          "type": "website testing",
-          "target": "energysupport.tesla.com (you can report vulnerabilities to bugbounty.zoho.com)"
-        },
-        {
-          "type": "website testing",
-          "target": "feedback.tesla.com"
-        },
-        {
-          "type": "website testing",
-          "target": "feedback.teslamotors.com"
-        },
-        {
-          "type": "website testing",
-          "target": "ir.tesla.com"
-        },
-        {
-          "type": "website testing",
-          "target": "ir.teslamotors.com"
-        },
-        {
-          "type": "website testing",
-          "target": "mkto.teslamotors.com"
-        },
-        {
-          "type": "website testing",
-          "target": "shop.eu.teslamotors.com"
         }
       ]
     }
