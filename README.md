@@ -19,7 +19,7 @@ Extra files:
 
 ### Status
 
-The last change was detected on `Wednesday 09/09/2020 00:30 (UTC)`. New changes (if any) are picked up hourly.
+The last change was detected on `Wednesday 09/09/2020 08:30 (UTC)`. New changes (if any) are picked up hourly.
 
 ### Code
 
