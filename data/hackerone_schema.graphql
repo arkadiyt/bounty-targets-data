@@ -9529,6 +9529,20 @@ scalar Hash
 """
 Entry for the highest reputation leaderboard
 """
+type HighCritReputationLeaderboardEntry implements LeaderboardEntryInterface & Node {
+  _id: ID!
+  id: ID!
+  impact: Float
+  previous_rank: Int
+  rank: Int
+  reputation: Int!
+  signal: Float
+  user: User!
+}
+
+"""
+Entry for the highest reputation leaderboard
+"""
 type HighestReputationLeaderboardEntry implements LeaderboardEntryInterface & Node {
   _id: ID!
   id: ID!
@@ -10461,7 +10475,7 @@ interface LeaderboardEntryInterface {
 The different types of leaderboards that exist. Type that is returned is based
 on the key that is passed, and is linked to LeaderboardKeyEnum
 """
-union LeaderboardEntryUnion = Demo | HighestReputationLeaderboardEntry | OwaspTopTenLeaderboardEntry
+union LeaderboardEntryUnion = Demo | HighCritReputationLeaderboardEntry | HighestReputationLeaderboardEntry | OwaspTopTenLeaderboardEntry
 
 """
 An edge in a connection.
@@ -10484,6 +10498,7 @@ Types of leaderboards
 enum LeaderboardKeyEnum {
   DEMO
   HIGHEST_REPUTATION
+  HIGH_CRIT_REPUTATION
   OWASP_TOP_10
 }
 
