@@ -1230,6 +1230,36 @@
     }
   },
   {
+    "name": "Blend",
+    "url": "https://bugcrowd.com/blend-vdp",
+    "allows_disclosure": false,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "full",
+    "max_payout": 0,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "website testing",
+          "target": "https://knox.beta.blendlabs.com"
+        },
+        {
+          "type": "website testing",
+          "target": "https://send.blend.com/"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "api testing",
+          "target": "https://api.pentest.blendlabs.com/"
+        },
+        {
+          "type": "website testing",
+          "target": "https://blend.com/"
+        }
+      ]
+    }
+  },
+  {
     "name": "Blue Jeans Network",
     "url": "https://bugcrowd.com/bluejeans",
     "allows_disclosure": false,
@@ -2148,45 +2178,6 @@
           "type": "website testing",
           "target": "taplytics.com"
         }
-      ]
-    }
-  },
-  {
-    "name": "Cybrary",
-    "url": "https://bugcrowd.com/cybrary",
-    "allows_disclosure": false,
-    "managed_by_bugcrowd": true,
-    "safe_harbor": "full",
-    "max_payout": 0,
-    "targets": {
-      "in_scope": [
-        {
-          "type": "android",
-          "target": "Android App"
-        },
-        {
-          "type": "api testing",
-          "target": "api-auth.cybrary.it/*"
-        },
-        {
-          "type": "api testing",
-          "target": "api-courses.cybrary.it/*"
-        },
-        {
-          "type": "website testing",
-          "target": "app.cybrary.it/*"
-        },
-        {
-          "type": "ios",
-          "target": "iOS App"
-        },
-        {
-          "type": "website testing",
-          "target": "www.cybrary.it/*"
-        }
-      ],
-      "out_of_scope": [
-
       ]
     }
   },
