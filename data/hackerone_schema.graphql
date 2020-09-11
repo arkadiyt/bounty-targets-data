@@ -1358,6 +1358,7 @@ type ActivitiesReportRetestApproved implements ActivityInterface & Node & Report
   markdown_message: String
   message: String
   report: Report
+  report_retest_user: ReportRetestUser!
   triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
 }
@@ -2891,6 +2892,16 @@ input BountyTableRowInput {
   maximum: Int
   medium: Int
   structured_scope_id: ID
+}
+
+"""
+BundleSubscription
+"""
+type BundleSubscription implements Node & ResourceInterface {
+  _id: ID!
+  id: ID!
+  tag: RetestSubscriptionTag!
+  url: URI!
 }
 
 """
@@ -14737,6 +14748,7 @@ type ReportRetest implements Node {
     new: Boolean
     visible: Boolean
   ): ReportRetestUserConnection
+  retest_subscription: BundleSubscription
   state: ReportRetestStateEnum
   team: Team!
   weakness_name: String
