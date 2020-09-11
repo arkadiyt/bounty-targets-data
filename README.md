@@ -2,7 +2,7 @@
 
 ### What's it for
 
-This repo contains data dumps of Hackerone and Bugcrowd scopes (i.e. the domains that are eligible for bug bounty reports). The files provided are:
+This repo contains data dumps of Hackerone, Bugcrowd, Intigrit, YesWeHack and Federacy scopes (i.e. the domains that are eligible for bug bounty reports). The files provided are:
 
 Main files:
 - [domains.txt](https://github.com/arkadiyt/bounty-targets-data/blob/master/data/domains.txt): full list of domains, without wildcards.
