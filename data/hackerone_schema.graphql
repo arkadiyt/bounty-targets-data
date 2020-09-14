@@ -9552,6 +9552,20 @@ type HighCritReputationLeaderboardEntry implements LeaderboardEntryInterface & N
 }
 
 """
+Entry for the highest reputation by country leaderboard
+"""
+type HighestReputationByCountryLeaderboardEntry implements LeaderboardEntryInterface & Node {
+  _id: ID!
+  id: ID!
+  impact: Float
+  previous_rank: Int
+  rank: Int
+  reputation: Int!
+  signal: Float
+  user: User!
+}
+
+"""
 Entry for the highest reputation leaderboard
 """
 type HighestReputationLeaderboardEntry implements LeaderboardEntryInterface & Node {
@@ -10486,7 +10500,7 @@ interface LeaderboardEntryInterface {
 The different types of leaderboards that exist. Type that is returned is based
 on the key that is passed, and is linked to LeaderboardKeyEnum
 """
-union LeaderboardEntryUnion = Demo | HighCritReputationLeaderboardEntry | HighestReputationLeaderboardEntry | OwaspTopTenLeaderboardEntry
+union LeaderboardEntryUnion = Demo | HighCritReputationLeaderboardEntry | HighestReputationByCountryLeaderboardEntry | HighestReputationLeaderboardEntry | OwaspTopTenLeaderboardEntry
 
 """
 An edge in a connection.
@@ -10509,6 +10523,7 @@ Types of leaderboards
 enum LeaderboardKeyEnum {
   DEMO
   HIGHEST_REPUTATION
+  HIGHEST_REPUTATION_BY_COUNTRY
   HIGH_CRIT_REPUTATION
   OWASP_TOP_10
 }
