@@ -6636,6 +6636,18 @@ enum CredentialOrderFieldEnum {
 }
 
 """
+Entry for the ctf points leaderboard
+"""
+type CtfPointsLeaderboardEntry implements LeaderboardEntryInterface & Node {
+  _id: ID!
+  id: ID!
+  points: Int!
+  previous_rank: Int
+  rank: Int
+  user: User!
+}
+
+"""
 A currency as defined by ISO 4217
 """
 type Currency implements Node {
@@ -10551,7 +10563,7 @@ interface LeaderboardEntryInterface {
 The different types of leaderboards that exist. Type that is returned is based
 on the key that is passed, and is linked to LeaderboardKeyEnum
 """
-union LeaderboardEntryUnion = Demo | HighCritReputationLeaderboardEntry | HighestReputationByCountryLeaderboardEntry | HighestReputationLeaderboardEntry | OwaspTopTenLeaderboardEntry
+union LeaderboardEntryUnion = CtfPointsLeaderboardEntry | Demo | HighCritReputationLeaderboardEntry | HighestReputationByCountryLeaderboardEntry | HighestReputationLeaderboardEntry | OwaspTopTenLeaderboardEntry
 
 """
 An edge in a connection.
@@ -10572,6 +10584,7 @@ type LeaderboardEntryUnionEdge {
 Types of leaderboards
 """
 enum LeaderboardKeyEnum {
+  CTF_POINTS
   DEMO
   HIGHEST_REPUTATION
   HIGHEST_REPUTATION_BY_COUNTRY
