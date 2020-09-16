@@ -3304,6 +3304,7 @@ type ChecklistCheck implements Node {
   cluster_id: Int!
   description: String
   id: ID!
+  instruction: String
   markdown_description: String
   markdown_instruction: String
   state: ChecklistCheckStateEnum
@@ -12887,6 +12888,7 @@ type Post implements Node {
   created_at: DateTime!
   id: ID!
   markdown_message: String
+  message: String
   title: String
 }
 
