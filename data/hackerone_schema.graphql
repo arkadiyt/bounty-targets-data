@@ -903,7 +903,7 @@ type ActivitiesExternalUserRemoved implements ActivityInterface & Node & ReportA
   internal: Boolean
   markdown_message: String
   message: String
-  removed_user: User!
+  removed_user: User
   report: Report
   triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
@@ -1559,7 +1559,7 @@ type ActivitiesSwagAwarded implements ActivityInterface & Node & ReportActivityI
   markdown_message: String
   message: String
   report: Report
-  swag: Swag!
+  swag: Swag
   triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
 }
@@ -1651,7 +1651,7 @@ type ActivitiesUserAssignedToBug implements ActivityInterface & Node & ReportAct
   _id: ID!
   activity_attachments: [Attachment]
   actor: ActorUnion
-  assigned_user: User!
+  assigned_user: User
   attachments: [Attachment]
   automated_response: Boolean
   created_at: DateTime!
@@ -1684,7 +1684,7 @@ type ActivitiesUserBannedFromProgram implements ActivityInterface & Node & Repor
   internal: Boolean
   markdown_message: String
   message: String
-  removed_user: User!
+  removed_user: User
   report: Report
   triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
@@ -7635,21 +7635,6 @@ type DeleteWebhookPayload implements MutationResult {
 }
 
 """
-Demo leaderboard entries
-"""
-type Demo implements LeaderboardEntryInterface & Node {
-  _id: ID!
-  id: ID!
-  impact: Float
-  previous_rank: Int
-  rank: Int
-  reputation: Int!
-  signal: Float
-  user: User!
-  votes: Int
-}
-
-"""
 The connection type for Weakness.
 """
 type DeprecatedTeamWeaknessConnection {
@@ -10564,7 +10549,7 @@ interface LeaderboardEntryInterface {
 The different types of leaderboards that exist. Type that is returned is based
 on the key that is passed, and is linked to LeaderboardKeyEnum
 """
-union LeaderboardEntryUnion = CtfPointsLeaderboardEntry | Demo | HighCritReputationLeaderboardEntry | HighestReputationByCountryLeaderboardEntry | HighestReputationLeaderboardEntry | OwaspTopTenLeaderboardEntry
+union LeaderboardEntryUnion = CtfPointsLeaderboardEntry | HighCritReputationLeaderboardEntry | HighestReputationByCountryLeaderboardEntry | HighestReputationLeaderboardEntry | OwaspTopTenLeaderboardEntry
 
 """
 An edge in a connection.
@@ -10586,7 +10571,6 @@ Types of leaderboards
 """
 enum LeaderboardKeyEnum {
   CTF_POINTS
-  DEMO
   HIGHEST_REPUTATION
   HIGHEST_REPUTATION_BY_COUNTRY
   HIGH_CRIT_REPUTATION
