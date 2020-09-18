@@ -45614,6 +45614,17 @@
           "max_severity": "critical"
         },
         {
+          "asset_identifier": "api.courier.com",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "This API is used by Courier customers to programmatically send notifications to their users; this is the core use case for our product, without which Courier is of limited value.",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
           "asset_identifier": "api.trycourier.app",
           "asset_type": "URL",
           "availability_requirement": "high",
@@ -45625,6 +45636,17 @@
           "max_severity": "critical"
         },
         {
+          "asset_identifier": "www.courier.com",
+          "asset_type": "URL",
+          "availability_requirement": "low",
+          "confidentiality_requirement": "none",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "This is our public-facing website. It is a static site, and open source:\n\nhttps://github.com/trycourier/website",
+          "integrity_requirement": "medium",
+          "max_severity": "high"
+        },
+        {
           "asset_identifier": "www.trycourier.app",
           "asset_type": "URL",
           "availability_requirement": "medium",
@@ -45634,21 +45656,53 @@
           "instruction": "This is our web application, which customers use to design & configure the notifications they will send via our API.",
           "integrity_requirement": "high",
           "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "www.trycourier.com",
-          "asset_type": "URL",
-          "availability_requirement": "low",
-          "confidentiality_requirement": "none",
-          "eligible_for_bounty": false,
-          "eligible_for_submission": true,
-          "instruction": "This is our public-facing website. It is a static site, and open source:\n\nhttps://github.com/trycourier/website",
-          "integrity_requirement": "medium",
-          "max_severity": "high"
         }
       ],
       "out_of_scope": [
-
+        {
+          "asset_identifier": "docs.courier.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "Our technical documentation portal, hosted by Readme.com.",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "help.courier.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "Our user-documentation portal, hosted by Intercom.",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "status.courier.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "updates.courier.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        }
       ]
     }
   },
