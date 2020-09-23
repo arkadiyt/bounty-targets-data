@@ -9074,6 +9074,7 @@ input FiltersReportFilterInput {
   reporter: FiltersUserFilterInput
   severity_rating: SeverityRatingEnumPredicateInput
   state: ReportStateEnumPredicateInput
+  submitted_at: DateTimePredicateInput
   substate: ReportStateEnumPredicateInput
   team: FiltersTeamFilterInput
   timer_bounty_awarded_elapsed_time: IntPredicateInput
@@ -9635,6 +9636,18 @@ Fields on which a collection of HacktivityItems can be ordered
 """
 enum HacktivityOrderFieldEnum {
   popular
+}
+
+"""
+Entry for the upvotes leaderboard
+"""
+type HacktivityUpvotesLeaderboardEntry implements LeaderboardEntryInterface & Node {
+  _id: ID!
+  id: ID!
+  previous_rank: Int
+  rank: Int
+  user: User!
+  votes: Int!
 }
 
 scalar Hash
@@ -10603,7 +10616,7 @@ interface LeaderboardEntryInterface {
 The different types of leaderboards that exist. Type that is returned is based
 on the key that is passed, and is linked to LeaderboardKeyEnum
 """
-union LeaderboardEntryUnion = CtfPointsLeaderboardEntry | HighCritReputationLeaderboardEntry | HighestReputationByCountryLeaderboardEntry | HighestReputationLeaderboardEntry | OwaspTopTenLeaderboardEntry
+union LeaderboardEntryUnion = CtfPointsLeaderboardEntry | HacktivityUpvotesLeaderboardEntry | HighCritReputationLeaderboardEntry | HighestReputationByCountryLeaderboardEntry | HighestReputationLeaderboardEntry | OwaspTopTenLeaderboardEntry
 
 """
 An edge in a connection.
@@ -10625,6 +10638,7 @@ Types of leaderboards
 """
 enum LeaderboardKeyEnum {
   CTF_POINTS
+  HACKTIVITY_UPVOTES
   HIGHEST_REPUTATION
   HIGHEST_REPUTATION_BY_COUNTRY
   HIGH_CRIT_REPUTATION
@@ -12129,6 +12143,7 @@ type PentestCheck implements Node {
   attachments: [Attachment]
   description: String
   id: ID!
+  instruction: String
   markdown_description: String
   markdown_instruction: String
   markdown_message: String
@@ -18520,6 +18535,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
     """
     last: Int
   ): TeamWeaknessConnection
+  terms: String
   terms_html: String
   thanks_items(
     """
