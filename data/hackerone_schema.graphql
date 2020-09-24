@@ -4058,10 +4058,12 @@ Coverage Analytics Summary type
 """
 type CoverageAnalyticsSummary implements Node {
   finders: Int!
+  group_by_val: String
   hits: Int!
   id: ID!
   minutes: Int!
   report_count: Int!
+  structured_scope_id: Int
 }
 
 """
@@ -9074,6 +9076,7 @@ input FiltersReportFilterInput {
   reporter: FiltersUserFilterInput
   severity_rating: SeverityRatingEnumPredicateInput
   state: ReportStateEnumPredicateInput
+  structured_scope_id: IntPredicateInput
   submitted_at: DateTimePredicateInput
   substate: ReportStateEnumPredicateInput
   team: FiltersTeamFilterInput
@@ -17611,7 +17614,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
     start_date: DateTime!
     structured_scope_id: Int!
   ): CoverageAnalyticsDetailsConnection
-  coverage_analytics_summary(end_date: DateTime!, start_date: DateTime!, structured_scope_id: Int = null): CoverageAnalyticsSummary!
+  coverage_analytics_summary(end_date: DateTime!, group_by: String = null, start_date: DateTime!, structured_scope_id: Int = null): [CoverageAnalyticsSummary!]!
   created_at: DateTime
   credential_instruction: String
   credential_instruction_html: String
