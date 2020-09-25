@@ -8827,6 +8827,7 @@ ExtractedReportData
 """
 type ExtractedReportData implements Node {
   _id: ID!
+  host_scope_matches: [ReportHostScopeMatch]
   hosts: [String]
   id: ID!
   ip_addresses: [String]
@@ -14796,6 +14797,17 @@ input ReportFilterInput {
   triaged_at__lt: DateTime
   triaged_at__null: Boolean
   weakness_id: [Int]
+}
+
+"""
+A match between a host mentioned in a report and the program's structured scope
+"""
+type ReportHostScopeMatch implements Node {
+  host: String!
+  id: ID!
+  match: String!
+  scope: String!
+  structured_scope_asset_identifier: String!
 }
 
 """
