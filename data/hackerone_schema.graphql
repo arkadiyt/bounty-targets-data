@@ -2568,6 +2568,11 @@ type BlogPostEdge {
   node: BlogPost
 }
 
+input BoolQueryInput {
+  filter: FilterInput
+  must: MustInput
+}
+
 input BooleanPredicateInput {
   _eq: Boolean
   _gt: Boolean
@@ -8087,6 +8092,11 @@ type DismissTriageInboxItemsPayload implements MutationResult {
 }
 
 """
+ElasticSearch Document can be of different types
+"""
+union DocumentUnion = ReportDocument
+
+"""
 A domain ownership object
 """
 type DomainOwnership implements Node {
@@ -8876,6 +8886,10 @@ type FeatureEdge {
   The item at the end of the edge.
   """
   node: Feature
+}
+
+input FilterInput {
+  terms: TermsFilterInput
 }
 
 """
@@ -9696,6 +9710,13 @@ type HighestReputationLeaderboardEntry implements LeaderboardEntryInterface & No
   reputation: Int!
   signal: Float
   user: User!
+}
+
+"""
+Available ElasticSearch indexes
+"""
+enum IndexEnum {
+  DuplicateDetectorReportsIndex
 }
 
 input IntPredicateInput {
@@ -11115,6 +11136,15 @@ type MinMax implements Node {
   id: ID!
   max: Int
   min: Int
+}
+
+input MultiMatchInput {
+  fields: [String!]
+  query: String!
+}
+
+input MustInput {
+  multi_match: MultiMatchInput
 }
 
 type Mutation implements Node {
@@ -13785,6 +13815,7 @@ type Query implements Node {
   ): ReportConnection
   resource(url: URI): ResourceInterface
   response_target_benchmarks(response_target: Int!, response_target_type: ResponseTargetTypeEnum!, severity_rating: SeverityRatingEnum, teams: [String!]!): MinMax
+  search(index: IndexEnum!, limit: Int, query: QueryInput): [DocumentUnion!]
   session: Session
   severity_calculator: SeverityCalculator
   skills(
@@ -13982,6 +14013,10 @@ type Query implements Node {
     order_by: WeaknessOrder = {direction: ASC, field: name}
   ): WeaknessConnection
   webhook(id: ID!): Webhook
+}
+
+input QueryInput {
+  bool: BoolQueryInput
 }
 
 """
@@ -14717,6 +14752,14 @@ type ReportConnection {
   """
   total_count: Int!
   total_resolved_by_month(year: Int!): [LabeledIntegerPair]
+}
+
+type ReportDocument implements Node {
+  """
+  ID of the object.
+  """
+  id: ID!
+  report: Report!
 }
 
 """
@@ -19375,6 +19418,10 @@ enum TeamWeaknessStates {
   disabled
   enabled
   hidden
+}
+
+input TermsFilterInput {
+  team_id: [Int!]
 }
 
 """
