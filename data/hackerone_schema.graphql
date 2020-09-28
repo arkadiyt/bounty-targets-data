@@ -4064,12 +4064,17 @@ Coverage Analytics Summary type
 """
 type CoverageAnalyticsSummary implements Node {
   finders: Int!
+  finders_list: [Int!]
   group_by_val: String
   hits: Int!
   id: ID!
+  last_seen: String
   minutes: Int!
   report_count: Int!
   structured_scope_id: Int
+  user_id: Int
+  username: String
+  username_list: [String!]
 }
 
 """
@@ -7034,6 +7039,7 @@ type CveRequestsEdge {
 Data point object
 """
 type DataPoint implements Node {
+  additional_data: Hash
   id: ID!
   report_ids: [Int!]
   report_ids_missed_sla: [Int!]
@@ -13049,6 +13055,7 @@ input ProgramAnalyticsFilterCustomFieldInput {
 
 input ProgramAnalyticsFilterInput {
   actor_is_hackerone_triager: ProgramAnalyticsFilterBoolInput
+  asset_id: ProgramAnalyticsFilterStringInput
   asset_identifier: ProgramAnalyticsFilterStringInput
   custom_fields: [ProgramAnalyticsFilterCustomFieldInput!]
   report_current_substate: ProgramAnalyticsFilterStringInput
@@ -13072,6 +13079,7 @@ enum ProgramAnalyticsFromEnum {
 }
 
 enum ProgramAnalyticsGroupEnum {
+  day_activity_created_at
   day_occurred_date
   month_activity_created_at
   month_bounty_awarded_at
@@ -14761,6 +14769,8 @@ type ReportDocument implements Node {
   """
   id: ID!
   report: Report!
+  report_id: Int!
+  title: String!
 }
 
 """
