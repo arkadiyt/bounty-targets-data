@@ -154,6 +154,40 @@
     }
   },
   {
+    "name": "Arkose Labs",
+    "url": "https://bugcrowd.com/arkose-labs",
+    "allows_disclosure": false,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "partial",
+    "max_payout": 2000,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "api testing",
+          "target": "client-api.arkoselabs.com"
+        },
+        {
+          "type": "api testing",
+          "target": "customer-sessions.arkoselabs.com"
+        },
+        {
+          "type": "website testing",
+          "target": "dashboard.arkoselabs.com"
+        },
+        {
+          "type": "website testing",
+          "target": "www.arkoselabs.com"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "website testing",
+          "target": "status.arkoselabs.com"
+        }
+      ]
+    }
+  },
+  {
     "name": "Arlo Cash Rewards",
     "url": "https://bugcrowd.com/arlo",
     "allows_disclosure": false,
