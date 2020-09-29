@@ -4007,67 +4007,16 @@ type CountryDetails implements Node {
 }
 
 """
-Coverage Analytics Details type
-"""
-type CoverageAnalyticsDetails implements Node {
-  finders: Int!
-  hits: Int!
-  http_host: String
-  id: ID!
-  ip_dest: String!
-  minutes: Int!
-  structured_scope_id: Int!
-}
-
-"""
-The connection type for CoverageAnalyticsDetails.
-"""
-type CoverageAnalyticsDetailsConnection {
-  """
-  A list of edges.
-  """
-  edges: [CoverageAnalyticsDetailsEdge]
-
-  """
-  A list of nodes.
-  """
-  nodes: [CoverageAnalyticsDetails]
-
-  """
-  Information to aid in pagination.
-  """
-  pageInfo: PageInfo!
-
-  """
-  Int
-  """
-  total_count: Int!
-}
-
-"""
-An edge in a connection.
-"""
-type CoverageAnalyticsDetailsEdge {
-  """
-  A cursor for use in pagination.
-  """
-  cursor: String!
-
-  """
-  The item at the end of the edge.
-  """
-  node: CoverageAnalyticsDetails
-}
-
-"""
 Coverage Analytics Summary type
 """
 type CoverageAnalyticsSummary implements Node {
   finders: Int!
   finders_list: [Int!]
-  group_by_val: String
+  group_by_val: [Hash]
   hits: Int!
+  http_host: String
   id: ID!
+  ip_dest: String
   last_seen: String
   minutes: Int!
   report_count: Int!
@@ -10648,7 +10597,7 @@ interface LeaderboardEntryInterface {
 The different types of leaderboards that exist. Type that is returned is based
 on the key that is passed, and is linked to LeaderboardKeyEnum
 """
-union LeaderboardEntryUnion = CtfPointsLeaderboardEntry | HacktivityUpvotesLeaderboardEntry | HighCritReputationLeaderboardEntry | HighestReputationByCountryLeaderboardEntry | HighestReputationLeaderboardEntry | OwaspTopTenLeaderboardEntry
+union LeaderboardEntryUnion = CtfPointsLeaderboardEntry | HacktivityUpvotesLeaderboardEntry | HighCritReputationLeaderboardEntry | HighestReputationByCountryLeaderboardEntry | HighestReputationLeaderboardEntry | OwaspTopTenLeaderboardEntry | UpAndComersLeaderboardEntry
 
 """
 An edge in a connection.
@@ -10675,6 +10624,7 @@ enum LeaderboardKeyEnum {
   HIGHEST_REPUTATION_BY_COUNTRY
   HIGH_CRIT_REPUTATION
   OWASP_TOP_10
+  UP_AND_COMERS
 }
 
 """
@@ -14764,6 +14714,8 @@ type ReportConnection {
 }
 
 type ReportDocument implements Node {
+  _score: Float!
+
   """
   ID of the object.
   """
@@ -17656,31 +17608,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
   controlled_launch_team: Boolean
   cover_color: String
   cover_photo_url: String
-  coverage_analytics_details(
-    """
-    Returns the elements in the list that come after the specified cursor.
-    """
-    after: String
-
-    """
-    Returns the elements in the list that come before the specified cursor.
-    """
-    before: String
-    end_date: DateTime!
-
-    """
-    Returns the first _n_ elements from the list.
-    """
-    first: Int
-
-    """
-    Returns the last _n_ elements from the list.
-    """
-    last: Int
-    start_date: DateTime!
-    structured_scope_id: Int!
-  ): CoverageAnalyticsDetailsConnection
-  coverage_analytics_summary(end_date: DateTime!, group_by: String = null, start_date: DateTime!, structured_scope_id: Int = null): [CoverageAnalyticsSummary!]!
+  coverage_analytics_summary(end_date: DateTime!, group_by: [String] = [], start_date: DateTime!, structured_scope_id: Int = null): [CoverageAnalyticsSummary!]!
   created_at: DateTime
   credential_instruction: String
   credential_instruction_html: String
@@ -20285,6 +20213,18 @@ type UnsubscribeMailingListPayload implements MutationResult {
   ): ErrorConnection!
   me: User
   was_successful: Boolean!
+}
+
+"""
+Entry for the up and comers leaderboard
+"""
+type UpAndComersLeaderboardEntry implements LeaderboardEntryInterface & Node {
+  _id: ID!
+  id: ID!
+  previous_rank: Int
+  rank: Int
+  reputation: Int!
+  user: User!
 }
 
 """
