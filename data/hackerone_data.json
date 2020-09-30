@@ -39521,6 +39521,17 @@
           "instruction": "For the sake of clarity, the scope covers both domains:\n• activate.codefi.network (Frontend application)\n• api.activate.codefi.network (Backend API)\n\nEventually the following restrictions will apply - but these restrictions are currently not activated:\n\nParticipation in the token launch is not possible for the following excluded jurisdictions,  where the auction and/or trading of respective tokens is prohibited, restricted or unauthorized in any form and/or Wyre is prohibited from transacting and servicing users:\nAfghanistan\nAngola\nBelarus\nBosnia & Herzegovina\nCentral African Republic\nPeople’s Republic of China\nCongo (DRC)\nCote d’Ivoire (Ivory Coast)\nCuba\nEcuador\nEritrea\nEthiopia\nGuinea-Bissau\nGuyana\nHaiti\nIran\nIraq\nKosovo\nLaos\nLebanon\nLiberia\nLibya\nMacedonia\nMyanmar\nNigeria\nNorth-Korea\nPapua NG\nRepublic of Crimea\nSerbia\nSomalia\nSudan\nSyria\nTurkmenistan\nUkraine\nUzbekistan\nVanuatu\nVenezuela\nYemen\nZimbabwe\n\nAs well as the following US states:\nNew York\n\n\n\n",
           "integrity_requirement": "high",
           "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "assets-paris-demo.codefi.network",
+          "asset_type": "URL",
+          "availability_requirement": "low",
+          "confidentiality_requirement": "low",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "The program should be focused specifically on domain assets-paris-demo.codefi.network and no other sub-domain or domain of codefi.network.\n\nThe application is composed of:\n• A backend microservices API in node.js/Typescript that relies on a private blockchain network on BaaS platform (this specific BaaS platform is out of scope).\n• A frontend application accessible at the root of the domain that can be used from any browser\n\nThe following postman documentation outlines the purpose and how to use the API\nhttps://documenter.getpostman.com/view/5733481/SW7T8XSY?version=latest#2860d3d9-7b3a-4e37-b26d-cc1829a90e84",
+          "integrity_requirement": "medium",
+          "max_severity": "high"
         }
       ],
       "out_of_scope": [
