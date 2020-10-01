@@ -10946,7 +10946,7 @@
     "handle": "paypal",
     "url": "https://hackerone.com/paypal",
     "offers_bounties": false,
-    "quick_to_bounty": true,
+    "quick_to_bounty": false,
     "quick_to_first_response": true,
     "submission_state": "open",
     "targets": {
@@ -14929,6 +14929,17 @@
           "max_severity": "critical"
         },
         {
+          "asset_identifier": "asiointi.lahitapiola.fi",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "This service is part of the customer engagement layer - a new customer self service portal.\n\nThis site contains customer information which is only accessible to customers.  We are primarily interested in issues that are a direct threat to the integrity of our customers or their information - meaning stealing information, modifying information or deleting information. Also privacy issues are high on our list of critical issues.\n\nTo be a successful reporter, you need to have an account on this website and understand the basics of the industry we do business in. If you want to understand our reasoning behind assessing reports, read up on risk management to understand the basic concepts of impact and probability. \n\nNo automated portscanning or bruteforcing allowed - you will have very limited success and you will be blocked. Copy-pasted reports from vulnerability scanners or Kali-scripts where no business impact is proven will not be awarded.\n\nThere are no demo or test accounts.",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
           "asset_identifier": "ext-gw.lahitapiola.fi",
           "asset_type": "URL",
           "availability_requirement": "low",
@@ -15047,17 +15058,6 @@
           "eligible_for_submission": true,
           "instruction": "This application is for reporting Fatca-information. This is a service that can be accessed directly using the URL.",
           "integrity_requirement": "high",
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "viestinta.lahitapiola.fi",
-          "asset_type": "URL",
-          "availability_requirement": "low",
-          "confidentiality_requirement": "medium",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "This is another (and very much secondary) public website. It is built using both customized off-the-shelf tools (you can find out which tools by reading disclosed reports!). This site does (and should not) contain any customer information. We are interested in issues affecting continuity and integrity, misconfigurations that might lead to phishing or other attacks against our customers. Planting misinformation or using our public website for sharing malware would be a serious issue.\n\nIf you understand what a public website is, in which country we operate in and the basics of the industry we do business in you will have a better chance of submitting reports successfully. If you want to understand our reasoning behind assessing reports, read up on risk management to understand the basic concepts of impact and probability. \n\nNo automated portscanning or bruteforcing allowed - you will have very limited success and you will be blocked. Copy-pasted reports from vulnerability scanners or Kali-scripts where no business impact is proven will not be awarded.",
-          "integrity_requirement": "medium",
           "max_severity": "critical"
         },
         {
@@ -15269,6 +15269,17 @@
           "eligible_for_submission": false,
           "instruction": "This is a shared SaaS-service. This domain is part of authentication but no hacking attempts are allowed.",
           "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "viestinta.lahitapiola.fi",
+          "asset_type": "URL",
+          "availability_requirement": "low",
+          "confidentiality_requirement": "medium",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "This is another (and very much secondary) public website. It is built using both customized off-the-shelf tools (you can find out which tools by reading disclosed reports!). This site does (and should not) contain any customer information. We are interested in issues affecting continuity and integrity, misconfigurations that might lead to phishing or other attacks against our customers. Planting misinformation or using our public website for sharing malware would be a serious issue.\n\nIf you understand what a public website is, in which country we operate in and the basics of the industry we do business in you will have a better chance of submitting reports successfully. If you want to understand our reasoning behind assessing reports, read up on risk management to understand the basic concepts of impact and probability. \n\nNo automated portscanning or bruteforcing allowed - you will have very limited success and you will be blocked. Copy-pasted reports from vulnerability scanners or Kali-scripts where no business impact is proven will not be awarded.",
+          "integrity_requirement": "medium",
           "max_severity": "none"
         },
         {
