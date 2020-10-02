@@ -110,7 +110,6 @@ A Activities::AgreedOnGoingPublic activity for a report
 """
 type ActivitiesAgreedOnGoingPublic implements ActivityInterface & Node & ReportActivityInterface {
   _id: ID!
-  activity_attachments: [Attachment]
   actor: ActorUnion
   attachments: [Attachment]
   automated_response: Boolean
@@ -133,7 +132,6 @@ A Activities::BountyAwarded activity for a report
 """
 type ActivitiesBountyAwarded implements ActivityInterface & Node & ReportActivityInterface {
   _id: ID!
-  activity_attachments: [Attachment]
   actor: ActorUnion
   attachments: [Attachment]
   automated_response: Boolean
@@ -159,7 +157,6 @@ A Activities::BountySuggested activity for a report
 """
 type ActivitiesBountySuggested implements ActivityInterface & Node & ReportActivityInterface {
   _id: ID!
-  activity_attachments: [Attachment]
   actor: ActorUnion
   attachments: [Attachment]
   automated_response: Boolean
@@ -184,7 +181,6 @@ A Activities::BugCloned activity for a report
 """
 type ActivitiesBugCloned implements ActivityInterface & Node & ReportActivityInterface {
   _id: ID!
-  activity_attachments: [Attachment]
   actor: ActorUnion
   attachments: [Attachment]
   automated_response: Boolean
@@ -208,7 +204,6 @@ A Activities::BugDuplicate activity for a report
 """
 type ActivitiesBugDuplicate implements ActivityInterface & Node & ReportActivityInterface {
   _id: ID!
-  activity_attachments: [Attachment]
   actor: ActorUnion
   attachments: [Attachment]
   automated_response: Boolean
@@ -232,7 +227,6 @@ A Activities::BugFiled activity for a report
 """
 type ActivitiesBugFiled implements ActivityInterface & Node & ReportActivityInterface {
   _id: ID!
-  activity_attachments: [Attachment]
   actor: ActorUnion
   attachments: [Attachment]
   automated_response: Boolean
@@ -254,7 +248,6 @@ A Activities::BugInactive activity for a report
 """
 type ActivitiesBugInactive implements ActivityInterface & Node & ReportActivityInterface {
   _id: ID!
-  activity_attachments: [Attachment]
   actor: ActorUnion
   attachments: [Attachment]
   automated_response: Boolean
@@ -276,7 +269,6 @@ A Activities::BugInformative activity for a report
 """
 type ActivitiesBugInformative implements ActivityInterface & Node & ReportActivityInterface {
   _id: ID!
-  activity_attachments: [Attachment]
   actor: ActorUnion
   attachments: [Attachment]
   automated_response: Boolean
@@ -298,7 +290,6 @@ A Activities::BugNeedsMoreInfo activity for a report
 """
 type ActivitiesBugNeedsMoreInfo implements ActivityInterface & Node & ReportActivityInterface {
   _id: ID!
-  activity_attachments: [Attachment]
   actor: ActorUnion
   attachments: [Attachment]
   automated_response: Boolean
@@ -320,7 +311,6 @@ A Activities::BugNew activity for a report
 """
 type ActivitiesBugNew implements ActivityInterface & Node & ReportActivityInterface {
   _id: ID!
-  activity_attachments: [Attachment]
   actor: ActorUnion
   attachments: [Attachment]
   automated_response: Boolean
@@ -342,7 +332,6 @@ A Activities::BugNotApplicable activity for a report
 """
 type ActivitiesBugNotApplicable implements ActivityInterface & Node & ReportActivityInterface {
   _id: ID!
-  activity_attachments: [Attachment]
   actor: ActorUnion
   attachments: [Attachment]
   automated_response: Boolean
@@ -364,7 +353,6 @@ A Activities::BugReopened activity for a report
 """
 type ActivitiesBugReopened implements ActivityInterface & Node & ReportActivityInterface {
   _id: ID!
-  activity_attachments: [Attachment]
   actor: ActorUnion
   attachments: [Attachment]
   automated_response: Boolean
@@ -386,7 +374,6 @@ A Activities::BugResolved activity for a report
 """
 type ActivitiesBugResolved implements ActivityInterface & Node & ReportActivityInterface {
   _id: ID!
-  activity_attachments: [Attachment]
   actor: ActorUnion
   attachments: [Attachment]
   automated_response: Boolean
@@ -408,7 +395,6 @@ An Activities::BugRetesting activity for a bug
 """
 type ActivitiesBugRetesting implements ActivityInterface & Node & ReportActivityInterface {
   _id: ID!
-  activity_attachments: [Attachment]
   actor: ActorUnion
   attachments: [Attachment]
   automated_response: Boolean
@@ -430,7 +416,6 @@ A Activities::BugSpam activity for a report
 """
 type ActivitiesBugSpam implements ActivityInterface & Node & ReportActivityInterface {
   _id: ID!
-  activity_attachments: [Attachment]
   actor: ActorUnion
   attachments: [Attachment]
   automated_response: Boolean
@@ -452,7 +437,6 @@ A Activities::BugTriaged activity for a report
 """
 type ActivitiesBugTriaged implements ActivityInterface & Node & ReportActivityInterface {
   _id: ID!
-  activity_attachments: [Attachment]
   actor: ActorUnion
   attachments: [Attachment]
   automated_response: Boolean
@@ -474,7 +458,6 @@ A Activities::CancelledDisclosureRequest activity for a report
 """
 type ActivitiesCancelledDisclosureRequest implements ActivityInterface & Node & ReportActivityInterface {
   _id: ID!
-  activity_attachments: [Attachment]
   actor: ActorUnion
   attachments: [Attachment]
   automated_response: Boolean
@@ -496,7 +479,6 @@ A Activities::ChangedScope activity for a report
 """
 type ActivitiesChangedScope implements ActivityInterface & Node & ReportActivityInterface {
   _id: ID!
-  activity_attachments: [Attachment]
   actor: ActorUnion
   attachments: [Attachment]
   automated_response: Boolean
@@ -708,7 +690,6 @@ A Activities::Comment activity for a report
 """
 type ActivitiesComment implements ActivityInterface & Node & ReportActivityInterface {
   _id: ID!
-  activity_attachments: [Attachment]
   actor: ActorUnion
   attachments: [Attachment]
   automated_response: Boolean
@@ -730,7 +711,6 @@ A Activities::CommentsClosed activity for a report
 """
 type ActivitiesCommentsClosed implements ActivityInterface & Node & ReportActivityInterface {
   _id: ID!
-  activity_attachments: [Attachment]
   actor: ActorUnion
   attachments: [Attachment]
   automated_response: Boolean
@@ -752,7 +732,6 @@ A Activities::CveIdAdded activity for a report
 """
 type ActivitiesCveIdAdded implements ActivityInterface & Node & ReportActivityInterface {
   _id: ID!
-  activity_attachments: [Attachment]
   actor: ActorUnion
   attachments: [Attachment]
   automated_response: Boolean
@@ -775,7 +754,6 @@ A Activities::DraftStarted activity for a report
 """
 type ActivitiesDraftStarted implements ActivityInterface & Node & ReportActivityInterface {
   _id: ID!
-  activity_attachments: [Attachment]
   actor: ActorUnion
   attachments: [Attachment]
   automated_response: Boolean
@@ -797,7 +775,6 @@ A Activities::ExternalAdvisoryAdded activity for a report
 """
 type ActivitiesExternalAdvisoryAdded implements ActivityInterface & Node & ReportActivityInterface {
   _id: ID!
-  activity_attachments: [Attachment]
   actor: ActorUnion
   attachments: [Attachment]
   automated_response: Boolean
@@ -819,7 +796,6 @@ A Activities::ExternalUserInvitationCancelled activity for a report
 """
 type ActivitiesExternalUserInvitationCancelled implements ActivityInterface & Node & ReportActivityInterface {
   _id: ID!
-  activity_attachments: [Attachment]
   actor: ActorUnion
   attachments: [Attachment]
   automated_response: Boolean
@@ -842,7 +818,6 @@ A Activities::ExternalUserInvited activity for a report
 """
 type ActivitiesExternalUserInvited implements ActivityInterface & Node & ReportActivityInterface {
   _id: ID!
-  activity_attachments: [Attachment]
   actor: ActorUnion
   attachments: [Attachment]
   automated_response: Boolean
@@ -866,7 +841,6 @@ A Activities::ExternalUserJoined activity for a report
 """
 type ActivitiesExternalUserJoined implements ActivityInterface & Node & ReportActivityInterface {
   _id: ID!
-  activity_attachments: [Attachment]
   actor: ActorUnion
   attachments: [Attachment]
   automated_response: Boolean
@@ -892,7 +866,6 @@ A Activities::ExternalUserRemoved activity for a report
 """
 type ActivitiesExternalUserRemoved implements ActivityInterface & Node & ReportActivityInterface {
   _id: ID!
-  activity_attachments: [Attachment]
   actor: ActorUnion
   attachments: [Attachment]
   automated_response: Boolean
@@ -915,7 +888,6 @@ A Activities::GroupAssignedToBug activity for a report
 """
 type ActivitiesGroupAssignedToBug implements ActivityInterface & Node & ReportActivityInterface {
   _id: ID!
-  activity_attachments: [Attachment]
   actor: ActorUnion
   assigned_group: TeamMemberGroup
   attachments: [Attachment]
@@ -939,7 +911,6 @@ A Activities::HackerRequestedMediation activity for a report
 """
 type ActivitiesHackerRequestedMediation implements ActivityInterface & Node & ReportActivityInterface {
   _id: ID!
-  activity_attachments: [Attachment]
   actor: ActorUnion
   attachments: [Attachment]
   automated_response: Boolean
@@ -999,7 +970,6 @@ A Activities::ManuallyDisclosed activity for a report
 """
 type ActivitiesManuallyDisclosed implements ActivityInterface & Node & ReportActivityInterface {
   _id: ID!
-  activity_attachments: [Attachment]
   actor: ActorUnion
   attachments: [Attachment]
   automated_response: Boolean
@@ -1021,7 +991,6 @@ A Activities::MediationRequested activity for a report
 """
 type ActivitiesMediationRequested implements ActivityInterface & Node & ReportActivityInterface {
   _id: ID!
-  activity_attachments: [Attachment]
   actor: ActorUnion
   attachments: [Attachment]
   automated_response: Boolean
@@ -1043,7 +1012,6 @@ An Activities::NobodyAssignedToBug activity for a report
 """
 type ActivitiesNobodyAssignedToBug implements ActivityInterface & Node & ReportActivityInterface {
   _id: ID!
-  activity_attachments: [Attachment]
   actor: ActorUnion
   attachments: [Attachment]
   automated_response: Boolean
@@ -1065,7 +1033,6 @@ A Activities::NotEligibleForBounty activity for a report
 """
 type ActivitiesNotEligibleForBounty implements ActivityInterface & Node & ReportActivityInterface {
   _id: ID!
-  activity_attachments: [Attachment]
   actor: ActorUnion
   attachments: [Attachment]
   automated_response: Boolean
@@ -1233,7 +1200,6 @@ A Activities::ProgramInactive activity for a report
 """
 type ActivitiesProgramInactive implements ActivityInterface & Node & ReportActivityInterface {
   _id: ID!
-  activity_attachments: [Attachment]
   actor: ActorUnion
   attachments: [Attachment]
   automated_response: Boolean
@@ -1255,7 +1221,6 @@ A Activities::ReassignedToTeam activity for a report
 """
 type ActivitiesReassignedToTeam implements ActivityInterface & Node & ReportActivityInterface {
   _id: ID!
-  activity_attachments: [Attachment]
   actor: ActorUnion
   attachments: [Attachment]
   automated_response: Boolean
@@ -1279,7 +1244,6 @@ A Activities::ReferenceIdAdded activity for a report
 """
 type ActivitiesReferenceIdAdded implements ActivityInterface & Node & ReportActivityInterface {
   _id: ID!
-  activity_attachments: [Attachment]
   actor: ActorUnion
   attachments: [Attachment]
   automated_response: Boolean
@@ -1319,7 +1283,6 @@ A Activities::ReportBecamePublic activity for a report
 """
 type ActivitiesReportBecamePublic implements ActivityInterface & Node & ReportActivityInterface {
   _id: ID!
-  activity_attachments: [Attachment]
   actor: ActorUnion
   attachments: [Attachment]
   automated_response: Boolean
@@ -1341,7 +1304,6 @@ A Activities::ReportCollaboratorInvited activity for a report
 """
 type ActivitiesReportCollaboratorInvited implements ActivityInterface & Node & ReportActivityInterface {
   _id: ID!
-  activity_attachments: [Attachment]
   actor: ActorUnion
   attachments: [Attachment]
   automated_response: Boolean
@@ -1364,7 +1326,6 @@ A Activities::ReportCollaboratorJoined activity for a report
 """
 type ActivitiesReportCollaboratorJoined implements ActivityInterface & Node & ReportActivityInterface {
   _id: ID!
-  activity_attachments: [Attachment]
   actor: ActorUnion
   attachments: [Attachment]
   automated_response: Boolean
@@ -1386,7 +1347,6 @@ An Activities::ReportRetestApproved activity for a Report
 """
 type ActivitiesReportRetestApproved implements ActivityInterface & Node & ReportActivityInterface {
   _id: ID!
-  activity_attachments: [Attachment]
   actor: ActorUnion
   attachments: [Attachment]
   automated_response: Boolean
@@ -1409,7 +1369,6 @@ An Activities::ReportRetestRejected activity for a Report
 """
 type ActivitiesReportRetestRejected implements ActivityInterface & Node & ReportActivityInterface {
   _id: ID!
-  activity_attachments: [Attachment]
   actor: ActorUnion
   attachments: [Attachment]
   automated_response: Boolean
@@ -1431,7 +1390,6 @@ A Activities::ReportSeverityUpdated activity for a report
 """
 type ActivitiesReportSeverityUpdated implements ActivityInterface & Node & ReportActivityInterface {
   _id: ID!
-  activity_attachments: [Attachment]
   actor: ActorUnion
   attachments: [Attachment]
   automated_response: Boolean
@@ -1455,7 +1413,6 @@ A Activities::ReportTitleUpdated activity for a report
 """
 type ActivitiesReportTitleUpdated implements ActivityInterface & Node & ReportActivityInterface {
   _id: ID!
-  activity_attachments: [Attachment]
   actor: ActorUnion
   attachments: [Attachment]
   automated_response: Boolean
@@ -1479,7 +1436,6 @@ A Activities::ReportUndisclosed activity for a report
 """
 type ActivitiesReportUndisclosed implements ActivityInterface & Node & ReportActivityInterface {
   _id: ID!
-  activity_attachments: [Attachment]
   actor: ActorUnion
   attachments: [Attachment]
   automated_response: Boolean
@@ -1501,7 +1457,6 @@ A Activities::ReportVulnerabilityTypesUpdated activity for a report
 """
 type ActivitiesReportVulnerabilityTypesUpdated implements ActivityInterface & Node & ReportActivityInterface {
   _id: ID!
-  activity_attachments: [Attachment]
   actor: ActorUnion
   attachments: [Attachment]
   automated_response: Boolean
@@ -1525,7 +1480,6 @@ A Activities::RetestUserExpired activity for a report
 """
 type ActivitiesRetestUserExpired implements ActivityInterface & Node & ReportActivityInterface {
   _id: ID!
-  activity_attachments: [Attachment]
   actor: ActorUnion
   attachments: [Attachment]
   automated_response: Boolean
@@ -1547,7 +1501,6 @@ A Activities::SwagAwarded activity for a report
 """
 type ActivitiesSwagAwarded implements ActivityInterface & Node & ReportActivityInterface {
   _id: ID!
-  activity_attachments: [Attachment]
   actor: ActorUnion
   attachments: [Attachment]
   automated_response: Boolean
@@ -1650,7 +1603,6 @@ A Activities::UserAssignedToBug activity for a report
 """
 type ActivitiesUserAssignedToBug implements ActivityInterface & Node & ReportActivityInterface {
   _id: ID!
-  activity_attachments: [Attachment]
   actor: ActorUnion
   assigned_user: User
   attachments: [Attachment]
@@ -1673,7 +1625,6 @@ A Activities::UserBannedFromProgram activity for a report
 """
 type ActivitiesUserBannedFromProgram implements ActivityInterface & Node & ReportActivityInterface {
   _id: ID!
-  activity_attachments: [Attachment]
   actor: ActorUnion
   attachments: [Attachment]
   automated_response: Boolean
@@ -1696,7 +1647,6 @@ A Activities::UserCompletedRetest activity for a report
 """
 type ActivitiesUserCompletedRetest implements ActivityInterface & Node & ReportActivityInterface {
   _id: ID!
-  activity_attachments: [Attachment]
   actor: ActorUnion
   attachments: [Attachment]
   automated_response: Boolean
@@ -1734,7 +1684,6 @@ A Activities::UserLeftRetest activity for a report
 """
 type ActivitiesUserLeftRetest implements ActivityInterface & Node & ReportActivityInterface {
   _id: ID!
-  activity_attachments: [Attachment]
   actor: ActorUnion
   attachments: [Attachment]
   automated_response: Boolean
@@ -14625,12 +14574,13 @@ type Report implements ActivitiesInterface & Node & ResourceInterface {
 A interface for the common fields on an HackerOne Report Activity
 """
 interface ReportActivityInterface {
-  activity_attachments: [Attachment]
   attachments: [Attachment]
   automated_response: Boolean
   genius_execution_id: ID
   id: ID!
   internal: Boolean
+  markdown_message: String
+  message: String
   report: Report
   triage_inbox_item: TriageInboxItem
 }
