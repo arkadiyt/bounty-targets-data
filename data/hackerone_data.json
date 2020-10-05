@@ -19944,6 +19944,253 @@
     }
   },
   {
+    "id": 16388,
+    "name": "Enjin",
+    "handle": "enjin",
+    "url": "https://hackerone.com/enjin",
+    "offers_bounties": true,
+    "quick_to_bounty": false,
+    "quick_to_first_response": false,
+    "submission_state": "open",
+    "targets": {
+      "in_scope": [
+        {
+          "asset_identifier": "Enjin - Ethereum ERC-1155 Contract",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Mainnet Contract: 0xfaaFDc07907ff5120a76b34b731b278c38d6043C\nKovan Contract: 0x44B8326616C2a7Ac37A2d2719E067d5aA8DaD0ba\n\n**Background**\nThis contract is the official ERC-1155 contract, used by Enjin, for the creation of assets within the Enjin ecosystem.\n\n**Additional Conditions**\nAll testing must be conducted on the Kovan (testnet) contract. The deployed contract is identical to that of the Mainnet contract.",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "Enjin Coin - Ethereum ERC-20 Contract",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Mainnet Contract: 0xF629cBd94d3791C9250152BD8dfBDF380E2a3B9c\nKovan Contract: 0xf6fe970533fe5C63d196139B14522Eb2956f8621\n\n**Background**\nEnjin Coin (ENJ) is an Ethereum-based cryptocurrency used to directly back the value of next-generation blockchain assets. It is the gold standard for digital assets.\n\n**Additional Conditions**\nAll testing must be conducted on the Kovan (testnet) contract. The deployed contract is identical to that of the Mainnet contract.",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "assets.enjin.io,cdn.enjin.io,cdn.enjin.cn,cdn.enjinx.io,cdn.enjinx.cn",
+          "asset_type": "URL",
+          "availability_requirement": "low",
+          "confidentiality_requirement": "none",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "https://assets.enjin.io | https://cdn.enjin.io | https://cdn.enjin.cn | https://cdn.enjinx.io | https://cdn.enjinx.cn\n\n**Out of Scope**\nThis asset is not available for a bounty as a third-party service (AWS S3) is responsible for the running and maintenance of this domain. However, any vulnerabilities or issues identified will be resolved.",
+          "integrity_requirement": "none",
+          "max_severity": "low"
+        },
+        {
+          "asset_identifier": "beam.enjin.io",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "https://beam.enjin.io\n\n**Background**\nEnjin Beam is a QR-powered blockchain asset distribution service.",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "cloud.enjin.io,kovan.cloud.enjin.io",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "https://kovan.cloud.enjin.io\n\n**Background**\nThe Enjin Platform is a robust blockchain PaaS (Platform-as-a-Service) that enables developers to fund, promote, monetize, and design video games in previously impossible ways.\n\n**Additional Conditions**\nAll testing must be conducted on the Kovan (testnet). The build running on this domain is identical to that of the Mainnet domain.",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "com.enjin.mobile",
+          "asset_type": "APPLE_STORE_APP_ID",
+          "availability_requirement": "low",
+          "confidentiality_requirement": "none",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "https://apps.apple.com/us/app/enjin-community-for-gamers/id1103331595\n\n**Out of Scope**\nThis asset is part of the Enjin Network, which is out-of-scope for bounties.",
+          "integrity_requirement": "none",
+          "max_severity": "low"
+        },
+        {
+          "asset_identifier": "com.enjin.mobile",
+          "asset_type": "GOOGLE_PLAY_APP_ID",
+          "availability_requirement": "low",
+          "confidentiality_requirement": "none",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "https://play.google.com/store/apps/details?id=com.enjin.mobile\n\n**Out of Scope**\nThis asset is part of the Enjin Network, which is out-of-scope for bounties.",
+          "integrity_requirement": "none",
+          "max_severity": "low"
+        },
+        {
+          "asset_identifier": "com.enjin.mobile.wallet",
+          "asset_type": "APPLE_STORE_APP_ID",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "https://apps.apple.com/us/app/enjin-cryptocurrency-wallet/id1349078375\n\n**Background**\nThe Enjin Wallet is a secure, feature-packed, and convenient blockchain asset wallet built for traders, gamers, and developers.",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "com.enjin.mobile.wallet",
+          "asset_type": "GOOGLE_PLAY_APP_ID",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "https://play.google.com/store/apps/details?id=com.enjin.mobile.wallet\n\n**Background**\nThe Enjin Wallet is a secure, feature-packed, and convenient blockchain asset wallet built for traders, gamers, and developers.",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "enjin.com,*.enjin.com",
+          "asset_type": "URL",
+          "availability_requirement": "low",
+          "confidentiality_requirement": "none",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "https://www.enjin.com\n\n**Out of Scope**\nThis asset is part of the Enjin Network, which is out-of-scope for bounties.\n\n**Additional Conditions**\nCustomer domains are also out-of-scope.",
+          "integrity_requirement": "none",
+          "max_severity": "low"
+        },
+        {
+          "asset_identifier": "enjinx.io,enjinx.cn,api.enjinx.io,api.enjinx.cn,*.api.enjinx.io,*.api.enjinx.cn",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "https://enjinx.io\n\n**Background**\nUsers can search for transactions, addresses, blocks, and coins with an ad-free, seamless browsing experience on the integrated blockchain explorer.",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "kovan.faucet.enjin.io",
+          "asset_type": "URL",
+          "availability_requirement": "low",
+          "confidentiality_requirement": "none",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "https://kovan.faucet.enjin.io\n\n**Out of Scope**\nThis asset is not available for a bounty. However, any vulnerabilities or issues identified will be resolved.\n\n**Background**\nThe faucet is available to acquire small amounts of test coins for testing purposes.",
+          "integrity_requirement": "none",
+          "max_severity": "low"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "asset_identifier": "blog.enjin.io",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "This asset is out-of-scope as a third-party service (Ghost) is responsible for the running and maintenance of this website.",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "docs.enjin.io",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "This asset is out-of-scope as a third-party service (Ghost) is responsible for the running and maintenance of this website.",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "enj.in",
+          "asset_type": "URL",
+          "availability_requirement": "low",
+          "confidentiality_requirement": "none",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "This asset is out-of-scope as a third-party service is responsible for the running and maintenance of this website.",
+          "integrity_requirement": "none",
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "enjin.io",
+          "asset_type": "URL",
+          "availability_requirement": "low",
+          "confidentiality_requirement": "none",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "This asset is out-of-scope as a third-party service (Webflow) is responsible for the running and maintenance of this website.",
+          "integrity_requirement": "none",
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "envoy.enjin.io",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "This asset is out-of-scope as a third-party service (Rewardful) is responsible for the running and maintenance of this domain.",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "feedback.enjin.io",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "This asset is out-of-scope as a third-party service (Canny) is responsible for the running and maintenance of this domain.",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "forum.enjin.io,oldforum.enjin.io",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "This asset is out-of-scope as a third-party service is responsible for the running and maintenance of this website.",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "mint.enjin.io",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "This asset is out-of-scope as a third-party service (Shopify) is responsible for the running and maintenance of this domain.",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "support.enjin.io",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "This asset is out-of-scope as a third-party service (GrooveHQ) is responsible for the running and maintenance of this domain.",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        }
+      ]
+    }
+  },
+  {
     "id": 16420,
     "name": "Alvosec",
     "handle": "alvosec",
