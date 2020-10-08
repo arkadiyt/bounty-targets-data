@@ -13416,6 +13416,7 @@ type ProgramSubmissionMetricsEdge {
 Root entity of the Hackerone Schema
 """
 type Query implements Node {
+  activity(id: Int!): ActivityUnion
   application: Application!
   assignable_teams(
     """
