@@ -23758,7 +23758,7 @@
     "url": "https://hackerone.com/redtube",
     "offers_bounties": true,
     "quick_to_bounty": false,
-    "quick_to_first_response": true,
+    "quick_to_first_response": false,
     "submission_state": "open",
     "targets": {
       "in_scope": [
@@ -32274,7 +32274,7 @@
     "handle": "chainlink",
     "url": "https://hackerone.com/chainlink",
     "offers_bounties": true,
-    "quick_to_bounty": false,
+    "quick_to_bounty": true,
     "quick_to_first_response": true,
     "submission_state": "open",
     "targets": {
@@ -46745,6 +46745,17 @@
     "targets": {
       "in_scope": [
         {
+          "asset_identifier": "*.fortress.com.hk",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "Subdomains for our websites are not the main scope for this program. We do however welcome reports that display security vulnerabilities.",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
           "asset_identifier": "*.parknshop.com",
           "asset_type": "URL",
           "availability_requirement": "high",
@@ -46774,6 +46785,17 @@
           "eligible_for_bounty": false,
           "eligible_for_submission": true,
           "instruction": "Subdomains for our websites are not the main scope for this program. We do however welcome reports that display security vulnerabilities.",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://www.fortress.com.hk",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
           "integrity_requirement": null,
           "max_severity": "critical"
         },
