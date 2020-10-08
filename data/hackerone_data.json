@@ -36242,6 +36242,121 @@
     }
   },
   {
+    "id": 35929,
+    "name": "Status.im",
+    "handle": "status_im",
+    "url": "https://hackerone.com/status_im",
+    "offers_bounties": true,
+    "quick_to_bounty": false,
+    "quick_to_first_response": true,
+    "submission_state": "open",
+    "targets": {
+      "in_scope": [
+        {
+          "asset_identifier": "Android APK",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Download the most recent version here: https://status.im/",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "Desktop Wallet",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": "low",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Status Desktop Wallet bugs that my lead to compromised private keys are rewarded with higher bounties :)\n\n https://github.com/status-im/nim-status-client/tree/master/src/status/wallet",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "Status Desktop",
+          "asset_type": "DOWNLOADABLE_EXECUTABLES",
+          "availability_requirement": "none",
+          "confidentiality_requirement": "medium",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Please find the source code of Status Desktop here:  https://github.com/status-im/nim-status-client\n\nAll findings are eligible to bounties. \n\nHappy hacking!",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://github.com/status-im/status-go",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Not in scope are: \n\n- vulnerabilities considering software distribution\n- vulnerabilities due to altered/compromised source code \n- vulnerabilities due to a compromised device\n- vulnerabilities requiring a user to ignore warnings and or safe/best practices",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://github.com/status-im/status-react",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "none",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Vulnerabilities that can be  triggered with code in the repo exclusively and directly  lead to a compromised private keys or user loss of funds are considered eligeble for a bounty. \nSpecifically not in scope are: \n\n- vulnerabilities considering software distribution\n- vulnerabilities due to altered/compromised source code \n- vulnerabilities due to a compromised device\n- vulnerabilities requiring a user to ignore warnings and or safe/best practices",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://status.im/",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "none",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "In scope:\n- availability of site\n- integrity of download links for Status mobile apps",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "im.status.ethereum",
+          "asset_type": "APPLE_STORE_APP_ID",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "[iOS Download link](https://apps.apple.com/us/app/status-private-communication/id1178893006)",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "im.status.ethereum",
+          "asset_type": "GOOGLE_PLAY_APP_ID",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "none",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "[Android Playstore Download](https://play.google.com/store/apps/details?id=im.status.ethereum)",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "asset_identifier": "*.status.im",
+          "asset_type": "URL",
+          "availability_requirement": "none",
+          "confidentiality_requirement": "none",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "In general, sub domains of *.status.im are out of scope of the program . However, if  a critical vulnerability is identified **and demonstrated** with a high risk for the status organization, on a case by case basis a  higher bounty may be awarded depending on the severity and quality of the  report. ",
+          "integrity_requirement": "low",
+          "max_severity": "none"
+        }
+      ]
+    }
+  },
+  {
     "id": 36247,
     "name": "InnoGames",
     "handle": "innogames",
