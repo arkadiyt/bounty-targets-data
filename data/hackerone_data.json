@@ -3940,9 +3940,9 @@
           "asset_type": "URL",
           "availability_requirement": "high",
           "confidentiality_requirement": "high",
-          "eligible_for_bounty": true,
+          "eligible_for_bounty": false,
           "eligible_for_submission": true,
-          "instruction": "",
+          "instruction": "Only High and Critical Severity bugs will be eligible for bounty",
           "integrity_requirement": "high",
           "max_severity": "critical"
         },
@@ -3993,17 +3993,6 @@
         {
           "asset_identifier": "com.qiwi.cashier.ru",
           "asset_type": "GOOGLE_PLAY_APP_ID",
-          "availability_requirement": "high",
-          "confidentiality_requirement": "high",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "",
-          "integrity_requirement": "high",
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "com.qiwi.sovest",
-          "asset_type": "APPLE_STORE_APP_ID",
           "availability_requirement": "high",
           "confidentiality_requirement": "high",
           "eligible_for_bounty": true,
@@ -4088,21 +4077,31 @@
           "instruction": "",
           "integrity_requirement": "high",
           "max_severity": "critical"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "asset_identifier": "com.qiwi.sovest",
+          "asset_type": "APPLE_STORE_APP_ID",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "",
+          "integrity_requirement": "high",
+          "max_severity": "none"
         },
         {
           "asset_identifier": "ru.sovest",
           "asset_type": "GOOGLE_PLAY_APP_ID",
           "availability_requirement": "high",
           "confidentiality_requirement": "high",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "Accept only High and Critical Severity bugs",
           "integrity_requirement": "high",
-          "max_severity": "critical"
+          "max_severity": "none"
         }
-      ],
-      "out_of_scope": [
-
       ]
     }
   },
@@ -15551,7 +15550,7 @@
     "handle": "mainwp",
     "url": "https://hackerone.com/mainwp",
     "offers_bounties": false,
-    "quick_to_bounty": false,
+    "quick_to_bounty": true,
     "quick_to_first_response": false,
     "submission_state": "open",
     "targets": {
@@ -31751,7 +31750,7 @@
     "handle": "chaturbate",
     "url": "https://hackerone.com/chaturbate",
     "offers_bounties": true,
-    "quick_to_bounty": true,
+    "quick_to_bounty": false,
     "quick_to_first_response": true,
     "submission_state": "open",
     "targets": {
