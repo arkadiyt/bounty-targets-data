@@ -13104,6 +13104,7 @@ input ProgramAnalyticsFilterInput {
   asset_id: ProgramAnalyticsFilterStringInput
   asset_identifier: ProgramAnalyticsFilterStringInput
   custom_fields: [ProgramAnalyticsFilterCustomFieldInput!]
+  http_host: ProgramAnalyticsFilterStringInput
   report_current_substate: ProgramAnalyticsFilterStringInput
   report_disclosed_state: ProgramAnalyticsFilterStringInput
   report_severity: ProgramAnalyticsFilterStringInput
@@ -17721,7 +17722,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
   controlled_launch_team: Boolean
   cover_color: String
   cover_photo_url: String
-  coverage_analytics_summary(end_date: DateTime!, group_by: [String] = [], start_date: DateTime!, structured_scope_id: Int = null): [CoverageAnalyticsSummary!]!
+  coverage_analytics_summary(end_date: DateTime!, group_by: [String] = [], http_host: String = null, start_date: DateTime!): [CoverageAnalyticsSummary!]!
   created_at: DateTime
   credential_instruction: String
   credential_instruction_html: String
