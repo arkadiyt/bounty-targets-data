@@ -17941,6 +17941,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
   i_can_view_weaknesses: Boolean
   i_reached_abuse_limit: Boolean
   id: ID!
+  ignored_hosts_in_reports: [String]
   inbox_views(
     """
     Returns the elements in the list that come after the specified cursor.
