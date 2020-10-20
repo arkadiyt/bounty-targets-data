@@ -6969,6 +6969,54 @@ input CustomFieldValueInput {
 }
 
 """
+custom remediation guidance for a report
+"""
+type CustomRemediationGuidance implements Node {
+  _id: ID!
+  author: User!
+  created_at: DateTime!
+  id: ID!
+  message: String
+  report: Report!
+  updated_at: DateTime!
+}
+
+"""
+The connection type for CustomRemediationGuidance.
+"""
+type CustomRemediationGuidanceConnection {
+  """
+  A list of edges.
+  """
+  edges: [CustomRemediationGuidanceEdge]
+
+  """
+  A list of nodes.
+  """
+  nodes: [CustomRemediationGuidance]
+
+  """
+  Information to aid in pagination.
+  """
+  pageInfo: PageInfo!
+}
+
+"""
+An edge in a connection.
+"""
+type CustomRemediationGuidanceEdge {
+  """
+  A cursor for use in pagination.
+  """
+  cursor: String!
+
+  """
+  The item at the end of the edge.
+  """
+  node: CustomRemediationGuidance
+}
+
+"""
 A request for a CVE
 """
 type CveRequest implements Node & ResourceInterface {
@@ -8951,6 +8999,18 @@ input FiltersChecklistCheckResponseFilterInput {
 
 input FiltersChecklistCheckResponseFilterOrder {
   approved_at: FilterOrderPredicateInput
+  created_at: FilterOrderPredicateInput
+  id: FilterOrderPredicateInput
+}
+
+input FiltersCustomRemediationGuidanceFilterInput {
+  _and: [FiltersCustomRemediationGuidanceFilterInput]
+  _not: FiltersCustomRemediationGuidanceFilterInput
+  _or: [FiltersCustomRemediationGuidanceFilterInput]
+  id: IntPredicateInput
+}
+
+input FiltersCustomRemediationGuidanceFilterOrder {
   created_at: FilterOrderPredicateInput
   id: FilterOrderPredicateInput
 }
@@ -14603,6 +14663,29 @@ type Report implements ActivitiesInterface & Node & ResourceInterface {
     """
     last: Int
   ): CustomFieldValueConnection
+  custom_remediation_guidances(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+    secure_order_by: FiltersCustomRemediationGuidanceFilterOrder
+    where: FiltersCustomRemediationGuidanceFilterInput
+  ): CustomRemediationGuidanceConnection
   cve_ids: [String]
   disclosed_at: DateTime
   duplicates(
