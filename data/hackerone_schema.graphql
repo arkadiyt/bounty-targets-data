@@ -9034,6 +9034,7 @@ input FiltersBundleSubscriptionsRetestSubscriptionFilterInput {
   _and: [FiltersBundleSubscriptionsRetestSubscriptionFilterInput]
   _not: FiltersBundleSubscriptionsRetestSubscriptionFilterInput
   _or: [FiltersBundleSubscriptionsRetestSubscriptionFilterInput]
+  has_retest_usage_nudges: Boolean
   id: IntPredicateInput
   tag: RetestSubscriptionTagPredicateInput
 }
@@ -9240,6 +9241,7 @@ input FiltersReportRetestFilterInput {
 input FiltersReportRetestFilterOrder {
   created_at: FilterOrderPredicateInput
   id: FilterOrderPredicateInput
+  needs_approval_at: FilterOrderPredicateInput
 }
 
 input FiltersReportRetestUserFilterInput {
@@ -15148,6 +15150,7 @@ type ReportRetest implements Node {
   created_at: DateTime
   created_by: User
   id: ID!
+  needs_approval_at: DateTime
   report: Report
   report_retest_users(
     """
