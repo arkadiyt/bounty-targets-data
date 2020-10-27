@@ -812,8 +812,40 @@
     }
   },
   {
+    "id": "tchap",
+    "name": "TChap",
+    "public": true,
+    "disabled": false,
+    "managed": false,
+    "min_bounty": 50,
+    "max_bounty": 1500,
+    "targets": {
+      "in_scope": [
+        {
+          "target": "https://matrix.agent.*.tchap.gouv.fr",
+          "type": "api"
+        },
+        {
+          "target": "https://play.google.com/store/apps/details?id=fr.gouv.tchap.a&hl=fr",
+          "type": "mobile-application-android"
+        },
+        {
+          "target": "https://apps.apple.com/fr/app/tchap/id1446253779",
+          "type": "mobile-application-ios"
+        },
+        {
+          "target": "https://www.tchap.gouv.fr",
+          "type": "web-application"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
     "id": "stopcovid-bugbounty-program",
-    "name": "StopCovid France Bug Bounty program",
+    "name": "TousAntiCovid Bug Bounty program",
     "public": true,
     "disabled": false,
     "managed": false,
@@ -840,38 +872,6 @@
         {
           "target": "bonjour.stopcovid.gouv.fr",
           "type": "api"
-        }
-      ],
-      "out_of_scope": [
-
-      ]
-    }
-  },
-  {
-    "id": "tchap",
-    "name": "TChap",
-    "public": true,
-    "disabled": false,
-    "managed": false,
-    "min_bounty": 50,
-    "max_bounty": 1500,
-    "targets": {
-      "in_scope": [
-        {
-          "target": "https://matrix.agent.*.tchap.gouv.fr",
-          "type": "api"
-        },
-        {
-          "target": "https://play.google.com/store/apps/details?id=fr.gouv.tchap.a&hl=fr",
-          "type": "mobile-application-android"
-        },
-        {
-          "target": "https://apps.apple.com/fr/app/tchap/id1446253779",
-          "type": "mobile-application-ios"
-        },
-        {
-          "target": "https://www.tchap.gouv.fr",
-          "type": "web-application"
         }
       ],
       "out_of_scope": [
