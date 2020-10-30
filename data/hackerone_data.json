@@ -2273,7 +2273,7 @@
           "confidentiality_requirement": "high",
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
-          "instruction": "Foodplex applications, `ucs.ru`, `*.ucs.ru`, `plazius.ru`, `*.plazius.ru`, `sberfood.ru`, `*.sberfood.ru`, `sbertips.ru`, `*.sbertips.ru`, `*.r-keeper.ru` except delegated and externally hosted domains and branded partner services.\n\n`sandbox-*` API endpoints are externally available sandboxes for integration testing and may lack authentication or have public testing accounts available. These endpoints are not intended to store any sensitive information, any data available via these endpoints is not considered  as sensitive. Reports for ability to access these endpoints and information disclosure reports for these endpoints are not accepted. Another critical serverside vulnerabilities (RCE, SQLi, etc) are accepted under bounty conditions of **Ext.O** scope if vulnerability is specific to sandbox API endpoint.\n\n==Foodplex scope only awards critical serverside vulnerabilities, if vulnerability compromises the infrastructure (e.g. RCE, SQLi, LFR, SSRF, etc) or data outside of project's scope (e.g. personal information) via serverside vector.==\n\nClientside vulnerabilities (XSS, CSRF) and business logic specific bugs, including privilege escalations within the product are accepted without bounty.\n\nMitM and local attacks, user enumeration on registration/recovery, open redirections, insufficient session expiration, cookies working after logout etc are not accepted unless there are additional vectors identified (e.g. ability to steal the session token via remote vector for open redirection)",
+          "instruction": "Foodplex applications, `ucs.ru`, `*.ucs.ru`, `plazius.ru`, `*.plazius.ru`, `sberfood.ru`, `*.sberfood.ru`, `sbertips.ru`, `*.sbertips.ru`, `*.r-keeper.ru`, `*.rkeeper.ru` except delegated and externally hosted domains and branded partner services.\n\n`sandbox-*` API endpoints are externally available sandboxes for integration testing and may lack authentication or have public testing accounts available. These endpoints are not intended to store any sensitive information, any data available via these endpoints is not considered  as sensitive. Reports for ability to access these endpoints and information disclosure reports for these endpoints are not accepted. Another critical serverside vulnerabilities (RCE, SQLi, etc) are accepted under bounty conditions of **Ext.O** scope if vulnerability is specific to sandbox API endpoint.\n\n==Foodplex scope only awards critical serverside vulnerabilities, if vulnerability compromises the infrastructure (e.g. RCE, SQLi, LFR, SSRF, etc) or data outside of project's scope (e.g. personal information) via serverside vector.==\n\nClientside vulnerabilities (XSS, CSRF) and business logic specific bugs, including privilege escalations within the product are accepted without bounty.\n\nMitM and local attacks, user enumeration on registration/recovery, open redirections, insufficient session expiration, cookies working after logout etc are not accepted unless there are additional vectors identified (e.g. ability to steal the session token via remote vector for open redirection)",
           "integrity_requirement": "high",
           "max_severity": "critical"
         },
@@ -6749,7 +6749,7 @@
     "handle": "dropbox",
     "url": "https://hackerone.com/dropbox",
     "offers_bounties": true,
-    "quick_to_bounty": false,
+    "quick_to_bounty": true,
     "quick_to_first_response": true,
     "submission_state": "open",
     "targets": {
@@ -13027,7 +13027,7 @@
     "handle": "postmates",
     "url": "https://hackerone.com/postmates",
     "offers_bounties": true,
-    "quick_to_bounty": false,
+    "quick_to_bounty": true,
     "quick_to_first_response": false,
     "submission_state": "open",
     "targets": {
@@ -18699,7 +18699,7 @@
     "offers_bounties": true,
     "quick_to_bounty": true,
     "quick_to_first_response": false,
-    "submission_state": "paused",
+    "submission_state": "disabled",
     "targets": {
       "in_scope": [
         {
@@ -38812,7 +38812,7 @@
     "handle": "googleapi",
     "url": "https://hackerone.com/googleapi",
     "offers_bounties": true,
-    "quick_to_bounty": true,
+    "quick_to_bounty": false,
     "quick_to_first_response": true,
     "submission_state": "open",
     "targets": {
@@ -45568,7 +45568,7 @@
     "offers_bounties": false,
     "quick_to_bounty": false,
     "quick_to_first_response": true,
-    "submission_state": "open",
+    "submission_state": "disabled",
     "targets": {
       "in_scope": [
         {
@@ -47248,7 +47248,7 @@
     "handle": "alibaba",
     "url": "https://hackerone.com/alibaba",
     "offers_bounties": true,
-    "quick_to_bounty": true,
+    "quick_to_bounty": false,
     "quick_to_first_response": true,
     "submission_state": "open",
     "targets": {
@@ -49047,6 +49047,24 @@
           "integrity_requirement": null,
           "max_severity": "critical"
         }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
+    "id": 50348,
+    "name": "Nubank",
+    "handle": "nubank",
+    "url": "https://hackerone.com/nubank",
+    "offers_bounties": false,
+    "quick_to_bounty": false,
+    "quick_to_first_response": false,
+    "submission_state": "open",
+    "targets": {
+      "in_scope": [
+
       ],
       "out_of_scope": [
 

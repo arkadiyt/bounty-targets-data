@@ -4102,6 +4102,7 @@ type CoverageAnalyticsSummary implements Node {
   minutes: Int!
   report_count: Int!
   structured_scope_id: Int
+  url_count: Int!
   user_id: Int
   username: String
   username_list: [String!]
@@ -8341,6 +8342,17 @@ enum DomainVerificationMethodEnum {
   dns
   html_meta_tag
   http_file
+}
+
+input DuplicateDetectionPageStateInput {
+  selectedEndpoints: [String!]!
+  selectedHosts: [String!]!
+  selectedIpAddresses: [String!]!
+  selectedParameters: [String!]!
+  selectedReportRank: Int!
+  selectedSearchParamsGroups: [String!]!
+  selectedTeamIds: [String!]!
+  selectedTextQueries: [String!]!
 }
 
 """
@@ -15631,6 +15643,7 @@ enum RetestSubscriptionTag {
   demo
   legacy
   new
+  pentest
   pentest_legacy
   triage
 }
@@ -22487,6 +22500,7 @@ input UpdateReportStateToDuplicateInput {
   A unique identifier for the client performing the mutation.
   """
   clientMutationId: String
+  duplicate_detection_page_state: DuplicateDetectionPageStateInput
   message: String!
   original_report_id: Int
   report_id: ID!
