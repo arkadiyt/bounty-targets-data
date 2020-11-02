@@ -1998,16 +1998,11 @@ type Address implements Node {
 """
 An SLA snapshot aggregate
 """
-type AggregatedSlaSnapshot implements Node {
+type AggregatedSlaSnapshot {
   average_time_to_bounty_awarded: Float
   average_time_to_first_program_response: Float
   average_time_to_report_resolved: Float
   average_time_to_report_triage: Float
-
-  """
-  ID of the object.
-  """
-  id: ID!
   timestamp: DateTime!
 }
 
@@ -10765,11 +10760,7 @@ type LabelEdge {
 """
 A pair of a label and an integer
 """
-type LabeledIntegerPair implements Node {
-  """
-  ID of the object.
-  """
-  id: ID!
+type LabeledIntegerPair {
   label: String!
   value: Int
 }
@@ -17285,11 +17276,7 @@ input SurveyAnswerOrderInput {
 """
 Statistics for a reason hackers have selected in a survey
 """
-type SurveyAnswerStatistics implements Node {
-  """
-  ID of the object.
-  """
-  id: ID!
+type SurveyAnswerStatistics {
   survey_structured_response: SurveyStructuredResponse
   total_count: Int
 }
