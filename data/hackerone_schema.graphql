@@ -4088,11 +4088,11 @@ Coverage Analytics Summary type
 type CoverageAnalyticsSummary implements Node {
   finders: Int!
   finders_list: [Int!]
-  first_level_path: String
   group_by_val: [Hash]
   hits: Int!
   http_host: String
   id: ID!
+  last_path_level: String
   last_seen: String
   minutes: Int!
   report_count: Int!
@@ -13310,6 +13310,7 @@ input ProgramAnalyticsFilterInput {
   actor_is_hackerone_triager: ProgramAnalyticsFilterBoolInput
   asset_id: ProgramAnalyticsFilterStringInput
   asset_identifier: ProgramAnalyticsFilterStringInput
+  current_path: ProgramAnalyticsFilterStringInput
   custom_fields: [ProgramAnalyticsFilterCustomFieldInput!]
   http_host: ProgramAnalyticsFilterStringInput
   report_current_substate: ProgramAnalyticsFilterStringInput
@@ -17974,7 +17975,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
   controlled_launch_team: Boolean
   cover_color: String
   cover_photo_url: String
-  coverage_analytics_summary(end_date: DateTime!, group_by: [String] = [], http_host: String = null, start_date: DateTime!): [CoverageAnalyticsSummary!]!
+  coverage_analytics_summary(current_path: String = null, end_date: DateTime!, group_by: [String] = [], http_host: String = null, start_date: DateTime!): [CoverageAnalyticsSummary!]!
   created_at: DateTime
   credential_instruction: String
   credential_instruction_html: String
