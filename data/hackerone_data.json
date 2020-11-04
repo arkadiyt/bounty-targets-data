@@ -44133,6 +44133,88 @@
     }
   },
   {
+    "id": 43825,
+    "name": "Exodus",
+    "handle": "exodus",
+    "url": "https://hackerone.com/exodus",
+    "offers_bounties": true,
+    "quick_to_bounty": true,
+    "quick_to_first_response": true,
+    "submission_state": "open",
+    "targets": {
+      "in_scope": [
+        {
+          "asset_identifier": "*.a.exodus.io",
+          "asset_type": "URL",
+          "availability_requirement": "low",
+          "confidentiality_requirement": "low",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Everything underneath the `*-s.a.exodus.io` is generally considered our staging environment and is okay/safe for performing simple/basic attack vectors against our wallet and our backends.  Add `-s` to any asset/service name to hit our staging environment, for example bitcoin-s.a.exodus.io.\n\n**WARNING/INFO**: Our wallet typically communicates with `*.exodus-prod.io` endpoints which are considered **out of scope**.  The stage endpoints should be considered comparable as the prod endpoints, there are numerous (40+) subdomains underneath the stage endpoint which can be enumerated by usage of our wallet or simple scanning techniques.\n\n**KNOWN ISSUES**\n1. Please do not re-submit reports disclosing XSS attacks on outdated openapi/swaggerhub version embedded in the various open source blockchain APIs that we host.  This is a known issue, posting here for clarity to prevent wasted cycles on your end and ours.\n1. API keys that are hardcoded in our wallet involving 3rd party blockchain APIs (ex. bitcoin, tezos, waves etc) are similarly a known/non issue.  These are effectively public APIs and no changes will be made to these endpoints.\n\n\n",
+          "integrity_requirement": "medium",
+          "max_severity": "high"
+        },
+        {
+          "asset_identifier": "*.exodus.io",
+          "asset_type": "URL",
+          "availability_requirement": "medium",
+          "confidentiality_requirement": "low",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Any domains or subdomains underneath exodus.io are considered our public \"face\" of our company, including our website, subdomains, download links, etc.  Please review our policy for things that are considered in-scope and will result in bounties.",
+          "integrity_requirement": "low",
+          "max_severity": "high"
+        },
+        {
+          "asset_identifier": "Exodus Desktop Wallet",
+          "asset_type": "DOWNLOADABLE_EXECUTABLES",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Currently Disabled/Archived - To be enabled for submission later\n\nDesktop Download Link: [Exodus Crypto Wallet](https://apps.apple.com/us/app/exodus-crypto-wallet/id1414384820)\n\nThis is the official Exodus Crypto Wallet for the Desktop (Mac/Win/Linux) which itself stores and manages a user's cryptocurrency.  This has much higher Environmental Score and potential attack vectors especially due to its desktop-computer nature.\n\n**NOTE:** Please make sure to read our Program Policy, as certain attack vectors are considered out of scope (eg: OS-related attacks).\n\n",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "exodus-movement.exodus",
+          "asset_type": "APPLE_STORE_APP_ID",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "App Store: [Exodus Crypto Wallet](https://apps.apple.com/us/app/exodus-crypto-wallet/id1414384820)\n\nThis is the official Exodus Crypto Wallet, which itself stores and manages a user's cryptocurrency.  This has much higher Environmental Score and potential attack vectors.\n\nThe most critical thing we want to help ensure is that our users are never vulnerable to getting their money/wallet stolen, and that users can always use their wallet to view/manage/exchange crypto.\n\n**NOTE:** Please make sure to read our Program Policy, as certain attack vectors are considered out of scope (eg: OS-related attacks).\n\n",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "exodusmovement.exodus",
+          "asset_type": "GOOGLE_PLAY_APP_ID",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Google Play Store: [Exodus Crypto Wallet](https://play.google.com/store/apps/details?id=exodusmovement.exodus&hl=en)\n\nThis is the official Exodus Crypto Wallet, which itself stores and manages a user's cryptocurrency.  This has much higher Environmental Score and potential attack vectors.\n\nThe most critical thing we want to help ensure is that our users are never vulnerable to getting their money/wallet stolen, and that users can always use their wallet to view/manage/exchange crypto.\n\n**NOTE:** Please make sure to read our Program Policy, as certain attack vectors are considered out of scope (eg: OS-related attacks).\n\n",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "asset_identifier": "support.exodus.io",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "Domain is not in scope for testing",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        }
+      ]
+    }
+  },
+  {
     "id": 43928,
     "name": "HCL Software Inc.",
     "handle": "hcl_software",
