@@ -3023,6 +3023,7 @@ BundleSubscription
 """
 type BundleSubscription implements Node & ResourceInterface {
   _id: ID!
+  awarding_retesters: Boolean!
   id: ID!
   tag: RetestSubscriptionTag!
   triage: Boolean!
@@ -9382,6 +9383,7 @@ input FiltersRetestSubscriptionAggregateFilterInput {
   _not: FiltersRetestSubscriptionAggregateFilterInput
   _or: [FiltersRetestSubscriptionAggregateFilterInput]
   id: IntPredicateInput
+  public_visibility_and_filtering: Boolean
   tag: RetestSubscriptionTagPredicateInput
 }
 
@@ -17850,7 +17852,6 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
   allows_bounty_splitting: Boolean
   allows_disclosure_assistance: Boolean!
   allows_private_disclosure: Boolean
-  allows_retesting: Boolean
   anc_enabled: Boolean
   attachments: [Attachment]
   audit_log_items(
@@ -18535,6 +18536,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
     structured_scope_ids: [ID!]
     view_by: ProgramSubmissionMetricViewByEnum
   ): ProgramSubmissionMetricsConnection!
+  publicly_visible_retesting: Boolean
   remediation_guidance_enabled: Boolean!
   report_sources: [String!]
   report_submission_form_intro: String
