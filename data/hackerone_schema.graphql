@@ -4129,6 +4129,23 @@ type CountryDetails implements Node {
 }
 
 """
+Fields on which a collection of Coverage summaries can be ordered
+"""
+enum CoverageAnalyticsOrderField {
+  finders
+  hits
+  http_host
+  last_path_level
+  minutes
+  url_count
+}
+
+input CoverageAnalyticsOrderInput {
+  direction: OrderDirection!
+  field: CoverageAnalyticsOrderField!
+}
+
+"""
 Coverage Analytics Summary type
 """
 type CoverageAnalyticsSummary implements Node {
@@ -18024,7 +18041,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
   controlled_launch_team: Boolean
   cover_color: String
   cover_photo_url: String
-  coverage_analytics_summary(current_path: String = null, end_date: DateTime!, group_by: [String] = [], http_host: String = null, start_date: DateTime!): [CoverageAnalyticsSummary!]!
+  coverage_analytics_summary(current_path: String = null, end_date: DateTime, group_by: [String] = [], http_host: String = null, order_by: CoverageAnalyticsOrderInput = {}, page: Int = null, start_date: DateTime): [CoverageAnalyticsSummary!]!
   created_at: DateTime
   credential_instruction: String
   credential_instruction_html: String
