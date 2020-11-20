@@ -9071,13 +9071,15 @@ ExtractedReportData
 type ExtractedReportData implements Node {
   _id: ID!
   filtered_hosts: [String]
+  filtered_paths: [String]
+  filtered_query_parameters: [String]
   host_scope_matches: [ReportHostScopeMatch]
+  hosts: [String]
   id: ID!
   ip_addresses: [String]
   paths: [String]
   query_parameters: [String]
   report: Report!
-  unfiltered_hosts: [String]
 }
 
 """
