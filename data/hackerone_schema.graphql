@@ -10563,18 +10563,6 @@ type JiraIntegration implements Node {
   updated_at: DateTime!
 }
 
-"""
-A JIRA Oauth for a team
-"""
-type JiraOauth implements Node {
-  configured: Boolean!
-  created_at: DateTime!
-  id: ID!
-  site: String
-  team: Team!
-  updated_at: DateTime!
-}
-
 input JiraPrioritySeverityInput {
   critical: ID
   high: ID
@@ -18390,7 +18378,6 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
   is_ready_for_public_launch: Boolean
   is_team_member: Boolean!
   jira_integration: JiraIntegration
-  jira_oauth: JiraOauth
   jira_team_integration: TeamIntegrationsJira
   jira_webhook: JiraWebhook
   job_listings(
@@ -19392,6 +19379,7 @@ An interface for the common fields on an HackerOne Team Integration
 interface TeamIntegrationInterface {
   _id: ID!
   active: Boolean!
+  authentication_type: String
   id: ID!
   team: Team!
 }
@@ -19437,6 +19425,7 @@ type TeamIntegrationsJira implements Node & TeamIntegrationInterface {
   Assignables for a project
   """
   assignables(project_id: Int!): [Hash]
+  authentication_type: String
   has_authentication: Boolean
   id: ID!
   priorities: [Hash]
@@ -19453,6 +19442,7 @@ A TeamIntegrations object for Slack
 type TeamIntegrationsSlack implements Node & TeamIntegrationInterface {
   _id: ID!
   active: Boolean!
+  authentication_type: String
   id: ID!
   team: Team!
 }
@@ -19463,6 +19453,7 @@ A TeamIntegrations object for Tray
 type TeamIntegrationsTray implements Node & TeamIntegrationInterface {
   _id: ID!
   active: Boolean!
+  authentication_type: String
   config_url: String
   id: ID!
   solution_instances(
@@ -19497,6 +19488,7 @@ A TeamIntegrations object for Webhooks
 type TeamIntegrationsWebhook implements Node & TeamIntegrationInterface {
   _id: ID!
   active: Boolean!
+  authentication_type: String
   id: ID!
   team: Team!
 }
