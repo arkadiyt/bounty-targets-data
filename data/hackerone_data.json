@@ -3560,21 +3560,20 @@
           "instruction": "Any plugin listed on my WordPress.org profile is within scope, **except** for these:\n\n* Email Post Changes and Jetpack should be submitted to [Automattic](https://hackerone.com/automattic) instead.\n* CampTix, CampTix Network Tools, P2 New Post Categories, Tagregator, and SupportFlow should be submitted to [WordPress](https://hackerone.com/wordpress) instead, because they're [Meta team](https://make.wordpress.org/meta/) projects.\n* Manage Tags Capabilities is not covered, since I don't have commit access to it.\n",
           "integrity_requirement": null,
           "max_severity": "critical"
-        },
+        }
+      ],
+      "out_of_scope": [
         {
           "asset_identifier": "iandunn.name",
           "asset_type": "URL",
           "availability_requirement": "none",
           "confidentiality_requirement": "none",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "I'm mainly interested in high-severity vulnerabilities, like RCE, SQLi, and XSS. Low-severity reports like clickjacking, missing HTTP headers, will probably be closed as `Informative`.\n\nAny potential vulnerabilities in WordPress itself should be reported to [WordPress' HackerOne program](/wordpress).",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "",
           "integrity_requirement": "none",
           "max_severity": "none"
         }
-      ],
-      "out_of_scope": [
-
       ]
     }
   },
