@@ -6120,7 +6120,8 @@ type CreateSolutionInstancePayload implements MutationResult {
     last: Int
     types: [ErrorTypeEnum]
   ): ErrorConnection!
-  team: Team
+  new_solution_instance_id: String!
+  team: Team!
   was_successful: Boolean!
 }
 
@@ -8120,6 +8121,7 @@ input DisableSamlProviderInput {
   A unique identifier for the client performing the mutation.
   """
   clientMutationId: String
+  create_notifications: Boolean!
   team_id: ID!
 }
 
@@ -8586,6 +8588,7 @@ input EnableSamlProviderInput {
   A unique identifier for the client performing the mutation.
   """
   clientMutationId: String
+  create_notifications: Boolean!
   team_id: ID!
 }
 
@@ -10039,6 +10042,19 @@ type HighestReputationLeaderboardEntry implements LeaderboardEntryInterface & No
   reputation: Int!
   signal: Float
   user: User!
+}
+
+input HighlightFieldOptionsInput {
+  type: String
+}
+
+input HighlightFieldsInput {
+  vulnerability_information: HighlightFieldOptionsInput
+}
+
+input HighlightInput {
+  fields: [HighlightFieldsInput!]
+  number_of_fragments: Int
 }
 
 """
@@ -12371,6 +12387,27 @@ type Pentest implements Node {
     """
     last: Int
   ): PentestStructuredScopeConnection
+  pentest_tasks(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+  ): PentestTaskConnection
 
   """
   A Resolver for Pentesters
@@ -13046,6 +13083,67 @@ type PentestStructuredScopeEdge {
   The item at the end of the edge.
   """
   node: PentestStructuredScope
+}
+
+"""
+A pentest task
+"""
+type PentestTask implements Node {
+  _id: ID!
+  group_key: String!
+  id: ID!
+  key: String!
+  label: String
+  state: PentestTaskStateEnum
+}
+
+"""
+The connection type for PentestTask.
+"""
+type PentestTaskConnection {
+  """
+  A list of edges.
+  """
+  edges: [PentestTaskEdge]
+
+  """
+  A list of nodes.
+  """
+  nodes: [PentestTask]
+
+  """
+  Information to aid in pagination.
+  """
+  pageInfo: PageInfo!
+
+  """
+  Int
+  """
+  total_count: Int!
+}
+
+"""
+An edge in a connection.
+"""
+type PentestTaskEdge {
+  """
+  A cursor for use in pagination.
+  """
+  cursor: String!
+
+  """
+  The item at the end of the edge.
+  """
+  node: PentestTask
+}
+
+"""
+Pentest task state enum
+"""
+enum PentestTaskStateEnum {
+  completed
+  in_progress
+  incomplete
 }
 
 """
@@ -14148,6 +14246,7 @@ type Query implements Node {
     Returns the first _n_ elements from the list.
     """
     first: Int
+    highlight: HighlightInput
     index: IndexEnum!
 
     """
@@ -14202,6 +14301,7 @@ type Query implements Node {
     order_by: SlaStatusOrder = {field: TRIAGER_ROLE_AND_SLA_STATUS}
     team_states: [TeamState]
   ): SlaStatusConnection
+  solution(solution_id: String!): Solution
   surveys(
     """
     Returns the elements in the list that come after the specified cursor.
@@ -15200,6 +15300,7 @@ type ReportDocument implements Node {
   report: Report!
   report_id: Int!
   title: String!
+  vulnerability_information_highlight: String
 }
 
 """
@@ -19050,6 +19151,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
   ): ThanksItemConnection
   top_bounty_lower_amount: Int
   top_bounty_upper_amount: Int
+  tray_integration: TeamIntegrationsTray
   triage_active: Boolean
   triage_bounty_management: String
   triage_enabled: Boolean
