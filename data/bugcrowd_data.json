@@ -381,6 +381,60 @@
     }
   },
   {
+    "name": "Asana",
+    "url": "https://bugcrowd.com/asana",
+    "allows_disclosure": true,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "full",
+    "max_payout": 2500,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "website testing",
+          "target": "*.app.asana.com"
+        },
+        {
+          "type": "website testing",
+          "target": "*.asana.biz"
+        },
+        {
+          "type": "website testing",
+          "target": "*.asana.plus"
+        },
+        {
+          "type": "android",
+          "target": "Asana Android app"
+        },
+        {
+          "type": "ios",
+          "target": "Asana iOS app"
+        },
+        {
+          "type": "website testing",
+          "target": "app.asana.com"
+        },
+        {
+          "type": "website testing",
+          "target": "asana.com"
+        },
+        {
+          "type": "website testing",
+          "target": "form.asana.com"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "website testing",
+          "target": "Other subdomains of asana.com"
+        },
+        {
+          "type": "other",
+          "target": "Social engineering against Asana Support"
+        }
+      ]
+    }
+  },
+  {
     "name": "Atlassian",
     "url": "https://bugcrowd.com/atlassian",
     "allows_disclosure": true,
