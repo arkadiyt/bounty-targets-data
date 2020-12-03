@@ -3619,7 +3619,7 @@
     "handle": "glassdoor",
     "url": "https://hackerone.com/glassdoor",
     "offers_bounties": true,
-    "quick_to_bounty": false,
+    "quick_to_bounty": true,
     "quick_to_first_response": true,
     "submission_state": "open",
     "targets": {
@@ -49737,6 +49737,56 @@
           "eligible_for_submission": true,
           "instruction": "",
           "integrity_requirement": "high",
+          "max_severity": "critical"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
+    "id": 49778,
+    "name": "Sixt GmbH & Co. Autovermietung KG BBP",
+    "handle": "sixt_bbp",
+    "url": "https://hackerone.com/sixt_bbp",
+    "offers_bounties": true,
+    "quick_to_bounty": true,
+    "quick_to_first_response": true,
+    "submission_state": "open",
+    "targets": {
+      "in_scope": [
+        {
+          "asset_identifier": "295079411",
+          "asset_type": "APPLE_STORE_APP_ID",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Self-explaining booking funnel and registration.",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "com.sixt.reservation",
+          "asset_type": "GOOGLE_PLAY_APP_ID",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Self-explaining booking funnel and registration.",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://www.sixt.com/plus/#",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "We offer the product Sixt+ in Germany, UK, France, US, the Netherlands and Austria.\nIf you use one of those domain, you will also considered for bounty.\n\nSpecific remark:\nAny asset outside Sixt+ will not be considered for bounty. A connection to this product needs to be validated.\n",
+          "integrity_requirement": null,
           "max_severity": "critical"
         }
       ],
