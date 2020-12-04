@@ -8407,6 +8407,7 @@ enum DomainVerificationMethodEnum {
 }
 
 input DuplicateDetectionPageStateInput {
+  isExactMatch: Boolean!
   selectedEndpoints: [String!]!
   selectedHosts: [String!]!
   selectedIpAddresses: [String!]!
@@ -11488,6 +11489,7 @@ input MoreLikeThisInput {
 input MultiMatchInput {
   fields: [String!]
   query: String!
+  type: String
 }
 
 input MustInput {
