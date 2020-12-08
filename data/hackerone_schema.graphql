@@ -9508,6 +9508,7 @@ input FiltersTeamFilterInput {
   reporters: FiltersUserFilterInput
   response_efficiency_percentage: IntPredicateInput
   retest_subscription: FiltersRetestSubscriptionAggregateFilterInput
+  roles: [FiltersTeamFilterRoles]
   state: TeamStatePredicateInput
   structured_scopes: FiltersStructuredScopeFilterInput
   submission_state: SubmissionStateEnumPredicateInput
@@ -9526,6 +9527,42 @@ input FiltersTeamFilterOrder {
   reports: FiltersDerivedTeamReportResolvedCountFilterOrder
   response_efficiency_percentage: FilterOrderPredicateInput
   started_accepting_at: FilterOrderPredicateInput
+}
+
+enum FiltersTeamFilterRoles {
+  is_anc_triager
+  is_approved_pentester
+  is_check_responder
+  is_creditkarma
+  is_enabled_embedded_submissions
+  is_gate_credential_management
+  is_h1_pentester
+  is_h1_triager
+  is_has_published_external_program
+  is_invitation_recipient_with_satisfied_requirements
+  is_invitation_recipient_with_unsatisfied_requirements
+  is_not_sandboxed
+  is_offers_bounties
+  is_private
+  is_private_team_with_checklist
+  is_private_team_with_public_checks
+  is_private_with_public_thanks
+  is_provided_embedded_submission_form_uuid
+  is_public
+  is_report_collaborator
+  is_sandboxed
+  is_shows_minimum_bounty
+  is_shows_response_efficiency_indicator
+  is_someone_who_has_submitted_a_report
+  is_someone_who_has_submitted_a_retest
+  is_submissions_open
+  is_team_manager
+  is_team_member
+  is_team_member_of_a_child
+  is_team_member_of_a_parent
+  is_team_with_published_pentests
+  is_whitelisted_reporter
+  is_with_hierarchy_thanks
 }
 
 input FiltersTeamMemberFilterInput {
