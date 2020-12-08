@@ -8168,6 +8168,27 @@ type Disclosed implements HacktivityItemInterface & Node {
   id: ID!
   latest_disclosable_action: String
   latest_disclosable_activity_at: DateTime
+  recommended_hacktivity_items(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+  ): HacktivityItemConnection
   report: Report
   reporter: User
   severity_rating: SeverityRatingEnum
@@ -9731,6 +9752,27 @@ type HackerPublished implements HacktivityItemInterface & Node {
   created_at: DateTime
   id: ID!
   latest_disclosable_activity_at: DateTime
+  recommended_hacktivity_items(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+  ): HacktivityItemConnection
   report: Report!
   reporter: User
   severity_rating: SeverityRatingEnum
@@ -9932,6 +9974,27 @@ interface HacktivityItemInterface {
   _id: ID!
   created_at: DateTime
   id: ID!
+  recommended_hacktivity_items(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+  ): HacktivityItemConnection
   upvoted_by_current_user: Boolean
   votes(
     """
@@ -15263,6 +15326,7 @@ type Report implements ActivitiesInterface & Node & ResourceInterface {
   vulnerability_information: String
   vulnerability_information_html: String
   weakness: Weakness
+  weakness_suggestion: WeaknessSuggestion
 }
 
 """
@@ -20813,6 +20877,27 @@ type Undisclosed implements HacktivityItemInterface & Node {
   id: ID!
   latest_disclosable_action: String
   latest_disclosable_activity_at: DateTime
+  recommended_hacktivity_items(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+  ): HacktivityItemConnection
   reporter: User
   requires_view_privilege: Boolean!
   team: Team
@@ -25712,6 +25797,27 @@ type User implements Node & ResourceInterface {
   receive_policy_update_notifications: Boolean
   receive_structured_scope_update_notifications: Boolean
   receive_team_update_delivery_preference: TeamUpdateDeliveryPreferences
+  recommended_hacktivity_items(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+  ): HacktivityItemConnection
   remaining_otp_backup_code_count: Int
   remaining_reports(team_handle: String!): Int
   report_retest_users(
@@ -26602,6 +26708,20 @@ Fields on which a collection of weaknesses can be ordered
 enum WeaknessOrderField {
   name
   report_count
+}
+
+"""
+The type of vulnerability on a HackerOne report
+"""
+type WeaknessSuggestion implements Node {
+  _id: ID!
+  id: ID!
+  weakness_1: Weakness!
+  weakness_1_confidence: Float!
+  weakness_2: Weakness
+  weakness_2_confidence: Float
+  weakness_3: Weakness
+  weakness_3_confidence: Float
 }
 
 """
