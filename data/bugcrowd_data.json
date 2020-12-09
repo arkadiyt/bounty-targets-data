@@ -825,6 +825,68 @@
     }
   },
   {
+    "name": "Bigbank",
+    "url": "https://bugcrowd.com/bigbank-mbb",
+    "allows_disclosure": false,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "partial",
+    "max_payout": 4000,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "website testing",
+          "target": "auth.bigbank.eu"
+        },
+        {
+          "type": "website testing",
+          "target": "banking.bigbank.at"
+        },
+        {
+          "type": "website testing",
+          "target": "banking.bigbank.ee"
+        },
+        {
+          "type": "website testing",
+          "target": "bigbank.eu"
+        },
+        {
+          "type": "api testing",
+          "target": "brokers.bigbank.fi"
+        },
+        {
+          "type": "website testing",
+          "target": "ca.bigbank.eu"
+        },
+        {
+          "type": "website testing",
+          "target": "partner-api.bigbank.ee"
+        },
+        {
+          "type": "website testing",
+          "target": "partnerid.bigbank.ee"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "website testing",
+          "target": "Any sites which resolve to 185.235.160.18"
+        },
+        {
+          "type": "website testing",
+          "target": "Any subdomain of bigbank.* not explicitly listed as \"In Scope\""
+        },
+        {
+          "type": "other",
+          "target": "DMARC // SPF"
+        },
+        {
+          "type": "other",
+          "target": "any Github asset under https://github.com/bigbank-as"
+        }
+      ]
+    }
+  },
+  {
     "name": "Binance",
     "url": "https://bugcrowd.com/binance",
     "allows_disclosure": false,
