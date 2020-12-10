@@ -41556,13 +41556,23 @@
           "confidentiality_requirement": "medium",
           "eligible_for_bounty": false,
           "eligible_for_submission": true,
-          "instruction": "",
+          "instruction": "Please refrain from attempting to break the www subdomain, which is a third party service hosting our marketing website. All other subdomains are fair game! Thanks!",
           "integrity_requirement": "medium",
           "max_severity": "critical"
         }
       ],
       "out_of_scope": [
-
+        {
+          "asset_identifier": "www.blueboard.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "Please refrain from attempting to break this subdomain!",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        }
       ]
     }
   },
