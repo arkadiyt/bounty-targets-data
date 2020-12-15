@@ -14505,7 +14505,7 @@ type Query implements Node {
     order_by: SlaStatusOrder = {field: TRIAGER_ROLE_AND_SLA_STATUS}
     team_states: [TeamState]
   ): SlaStatusConnection
-  solution(solution_id: String!): Solution
+  solution(handle: String!, solution_id: String!): Solution
   surveys(
     """
     Returns the elements in the list that come after the specified cursor.
