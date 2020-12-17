@@ -15365,7 +15365,6 @@ type Report implements ActivitiesInterface & Node & ResourceInterface {
   id: ID!
   jira_escalation_last_state_change_at: DateTime
   jira_escalation_state: String
-  last_internal_activity_at: DateTime
   latest_activity_at: DateTime
   latest_public_activity_at: DateTime
   latest_public_activity_of_reporter_at: DateTime
@@ -15386,6 +15385,7 @@ type Report implements ActivitiesInterface & Node & ResourceInterface {
   previous_substate: String
   reference: ID
   reference_link: String
+  report_pending_party_last_activity: DateTime
   report_share_tokens: [ReportShareToken!]!
   reporter: User
   resolution_staleness_threshold: Int
