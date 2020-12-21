@@ -46161,7 +46161,7 @@
     "offers_bounties": false,
     "quick_to_bounty": false,
     "quick_to_first_response": true,
-    "submission_state": "open",
+    "submission_state": "disabled",
     "targets": {
       "in_scope": [
         {
@@ -49122,7 +49122,7 @@
     "offers_bounties": true,
     "quick_to_bounty": true,
     "quick_to_first_response": true,
-    "submission_state": "open",
+    "submission_state": "disabled",
     "targets": {
       "in_scope": [
 
@@ -53060,6 +53060,99 @@
           "eligible_for_bounty": false,
           "eligible_for_submission": false,
           "instruction": "All desktop and mobile versions of ShareFile are out of scope. Full list is here: https://www.citrix.com/support/product-lifecycle/product-matrix.html.",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        }
+      ]
+    }
+  },
+  {
+    "id": 51543,
+    "name": "WHO COVID-19 Mobile App",
+    "handle": "who-covid-19-mobile-app",
+    "url": "https://hackerone.com/who-covid-19-mobile-app",
+    "offers_bounties": false,
+    "quick_to_bounty": false,
+    "quick_to_first_response": false,
+    "submission_state": "open",
+    "targets": {
+      "in_scope": [
+        {
+          "asset_identifier": "*.whocoronavirus.org",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "hack.whocoronavirus.org",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://github.com/WorldHealthOrganization/app",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "int.who.WHOMyHealth",
+          "asset_type": "APPLE_STORE_APP_ID",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "org.who.WHOMyHealth",
+          "asset_type": "GOOGLE_PLAY_APP_ID",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "asset_identifier": "*.who.int",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "covid19app.who.int",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "",
           "integrity_requirement": null,
           "max_severity": "none"
         }
