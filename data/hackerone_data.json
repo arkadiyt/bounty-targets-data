@@ -9549,7 +9549,7 @@
     "name": "Airtable",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 87,
+    "response_efficiency_percentage": 85,
     "submission_state": "open",
     "url": "https://hackerone.com/airtable",
     "targets": {
@@ -19564,7 +19564,7 @@
     "name": "Nextcloud",
     "offers_bounties": true,
     "offers_swag": true,
-    "response_efficiency_percentage": 65,
+    "response_efficiency_percentage": 67,
     "submission_state": "open",
     "url": "https://hackerone.com/nextcloud",
     "targets": {
@@ -23024,7 +23024,7 @@
     "offers_bounties": true,
     "offers_swag": true,
     "response_efficiency_percentage": 100,
-    "submission_state": "paused",
+    "submission_state": "open",
     "url": "https://hackerone.com/enjin",
     "targets": {
       "in_scope": [
@@ -50994,6 +50994,83 @@
           "eligible_for_submission": true,
           "instruction": "",
           "integrity_requirement": null,
+          "max_severity": "critical"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
+    "allows_bounty_splitting": false,
+    "average_time_to_bounty_awarded": null,
+    "average_time_to_first_program_response": 4.0,
+    "average_time_to_report_resolved": 88.0,
+    "handle": "doppler",
+    "id": 44515,
+    "managed_program": false,
+    "name": "Doppler",
+    "offers_bounties": false,
+    "offers_swag": false,
+    "response_efficiency_percentage": 100,
+    "submission_state": "open",
+    "url": "https://hackerone.com/doppler",
+    "targets": {
+      "in_scope": [
+        {
+          "asset_identifier": "api.doppler.com",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "This domain hosts our public API. It's used by the Doppler CLI as well as by customers directly. All APIs and supported auth schemes are [documented](https://docs.doppler.com/reference) in our Docs hub.",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "dashboard.doppler.com",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "This web app provides the ability to view and manage your secrets, team members, and account. You can read about additional functionality in our [docs](https://docs.doppler.com/).\n\nSupported auth methods:\n- Email/password. Optional: Authy/OTP MFA and/or WebAuthn\n- Google Auth\n- SAML SSO\n",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "doppler",
+          "asset_type": "DOWNLOADABLE_EXECUTABLES",
+          "availability_requirement": "low",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "This is the pre-built binary based on the Doppler CLI [source code](https://github.com/DopplerHQ/cli) (also in scope). You can find all builds on [cli.doppler.com](https://cli.doppler.com/download) or on [GitHub](https://github.com/DopplerHQ/cli/releases).\n\nThe CLI can be installed via brew, scoop, apt, yum, sh + curl/wget, and [more](https://github.com/DopplerHQ/cli/blob/master/INSTALL.md).",
+          "integrity_requirement": "medium",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "doppler.team",
+          "asset_type": "URL",
+          "availability_requirement": "none",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "This domain hosts our internal tools for managing Workplace plans and features. It does not provide access to user secrets.\n\nAccess is protected via Cloudflare Access. Users must authenticate with a valid GSuite account, and must additionally be on the Admin allowlist. For this asset, we're especially interested in any bypass of our access controls.",
+          "integrity_requirement": "medium",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://github.com/DopplerHQ/cli",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": "low",
+          "confidentiality_requirement": "medium",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "The Doppler CLI is the primary agent for retrieving secrets and executing your applications. It communicates with the Doppler API, which is also in scope.  You can read more about the CLI on our [Docs hub](https://docs.doppler.com/docs/cli), or [Install](https://cli.doppler.com/download) it and give it a spin.\n\nNotable commands we're especially interested in:\n- `doppler login`: orchestrates the auth flow\n- `doppler run`: executes the specified process with secrets injected as environment variables\n- `doppler update`: installs the latest CLI\n\nBuild instructions can be found on [GitHub](https://github.com/DopplerHQ/cli/blob/master/BUILD.md) and only require installing `go`.\n",
+          "integrity_requirement": "medium",
           "max_severity": "critical"
         }
       ],
