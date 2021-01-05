@@ -5857,7 +5857,7 @@
     "name": "Greenhouse.io",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 84,
+    "response_efficiency_percentage": 79,
     "submission_state": "open",
     "url": "https://hackerone.com/greenhouse",
     "targets": {
@@ -48362,6 +48362,17 @@
     "targets": {
       "in_scope": [
         {
+          "asset_identifier": "accounts-auth0.topcoder.com",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "Topcoder has move to Auth0 \"Lock\"  for authenticatio.",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
           "asset_identifier": "accounts.topcoder.com",
           "asset_type": "URL",
           "availability_requirement": null,
@@ -51217,7 +51228,17 @@
         }
       ],
       "out_of_scope": [
-
+        {
+          "asset_identifier": "doppler.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "This is our marketing website built on Webflow.",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        }
       ]
     }
   },
