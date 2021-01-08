@@ -3624,7 +3624,7 @@
     "name": "AT&T",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 97,
+    "response_efficiency_percentage": 98,
     "submission_state": "open",
     "url": "https://hackerone.com/att",
     "targets": {
@@ -39252,7 +39252,7 @@
     "name": "Credit Karma",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 81,
+    "response_efficiency_percentage": 77,
     "submission_state": "open",
     "url": "https://hackerone.com/creditkarma",
     "targets": {
@@ -46876,6 +46876,61 @@
           "availability_requirement": "medium",
           "confidentiality_requirement": "medium",
           "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": "medium",
+          "max_severity": "critical"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
+    "allows_bounty_splitting": false,
+    "average_time_to_bounty_awarded": 250.0,
+    "average_time_to_first_program_response": 33.0,
+    "average_time_to_report_resolved": 1146.0,
+    "handle": "panther_labs",
+    "id": 41626,
+    "managed_program": false,
+    "name": "Panther Labs",
+    "offers_bounties": true,
+    "offers_swag": false,
+    "response_efficiency_percentage": 25,
+    "submission_state": "open",
+    "url": "https://hackerone.com/panther_labs",
+    "targets": {
+      "in_scope": [
+        {
+          "asset_identifier": "*.runpanther.com",
+          "asset_type": "URL",
+          "availability_requirement": "low",
+          "confidentiality_requirement": "low",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": "low",
+          "max_severity": "medium"
+        },
+        {
+          "asset_identifier": "*.runpanther.io",
+          "asset_type": "URL",
+          "availability_requirement": "medium",
+          "confidentiality_requirement": "medium",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": "medium",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://github.com/panther-labs/panther",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": "medium",
+          "confidentiality_requirement": "medium",
+          "eligible_for_bounty": true,
           "eligible_for_submission": true,
           "instruction": "",
           "integrity_requirement": "medium",
