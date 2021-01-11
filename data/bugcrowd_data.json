@@ -2149,6 +2149,56 @@
     }
   },
   {
+    "name": "Docusign: Vulnerability Disclosure Program",
+    "url": "https://bugcrowd.com/docusign-vdp",
+    "allows_disclosure": true,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "full",
+    "max_payout": 0,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "other",
+          "target": "All Docusign apps and assets not listed under the Out of Scope list"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "website testing",
+          "target": "Any Docusign Customer Tenant"
+        },
+        {
+          "type": "website testing",
+          "target": "http://www.rooms.docusign.com/*"
+        },
+        {
+          "type": "website testing",
+          "target": "https://account.docusign.com/"
+        },
+        {
+          "type": "website testing",
+          "target": "https://admin.docusign.com"
+        },
+        {
+          "type": "website testing",
+          "target": "https://app.docusign.com/"
+        },
+        {
+          "type": "website testing",
+          "target": "https://www.docusign.net/Signing/"
+        },
+        {
+          "type": "api testing",
+          "target": "https://www.docusign.net/api/3.0/*"
+        },
+        {
+          "type": "api testing",
+          "target": "https://www.docusign.net/restapi/*"
+        }
+      ]
+    }
+  },
+  {
     "name": "eero",
     "url": "https://bugcrowd.com/eero",
     "allows_disclosure": false,
