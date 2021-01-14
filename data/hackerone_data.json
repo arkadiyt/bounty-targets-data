@@ -162,17 +162,6 @@
       ],
       "out_of_scope": [
         {
-          "asset_identifier": "https://events.hackerone.com",
-          "asset_type": "URL",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": false,
-          "eligible_for_submission": false,
-          "instruction": "This asset is hosted by BigMarker, and as such these reports should be submitted to them directly.",
-          "integrity_requirement": null,
-          "max_severity": "none"
-        },
-        {
           "asset_identifier": "https://go.hacker.one",
           "asset_type": "URL",
           "availability_requirement": "low",
@@ -281,6 +270,39 @@
           "max_severity": "critical"
         },
         {
+          "asset_identifier": "AOL (misc)",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "## In Scope\n* *.aol.com\n\n## Notes\nOnly use this asset when nothing else can be reasonably selected.\n\nBugs with AOL that are not listed in scope of our other AOL-related assets can still be submitted to this asset and **_*might*_** be eligible for award, at the sole discretion of the Verizon Media Bug Bounty team.\n",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "AOL Help",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "## In Scope\n* help.aol.com\n* assistance.aol.fr\n* help.aol.co.uk\n* hilfe.aol.de\n\n## Notes\nAny bugs found in non-production environments will **not** be eligible for the `Same Bug Different Host` bonus if the issue also exists in production.\n\n## Out of Scope\n* assist.aol.com (2nd party service)\n* helpisp.netscape.com\n* helpconnect.netscape.com\n* help.compuserve.com\n",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "AOL Homepage",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "## In Scope\n* www.aol.fr\n* www.aol.de\n* www.aol.co.uk\n* www.aol.jp\n* www.aol.in\n* www.aol.ca\n* www.aol.com\n* www.aol.com/*\n* AOL Games Landing Page - https://www.aol.com/games/ -> **see 3rd Party Notes Below**\n\n## Notes\n**OOS Exception:** 3rd party components that affect aol.com (e.g. XSS executes in AOL.com domain resulting from abuse of TravelZoo module on Travel page)\n\n## Out of Scope\nFirst Party Things:\n* https://ottr.video.yahoo.com/v1/video-exp/schedule\n* https://s.yimg.com/rb/screwdriver/ctv/ve-module/builds/prod/aol/dist/vem.js\n\nSecond Party Things:\n* [DataMask by AOL](https://get.aol.com/datamask/) (White Label app)\n* [AOL OnePoint](https://get.aol.com/onepoint) (White Label app)\n* [Private WiFi by AOL](https://get.aol.com/privatewifi/) (White Label app)\n* [AOL Games](https://www.aol.com/games) (White Label app)\n\nThird Party Things:\n* 3rd Party Ad Integration. (Third Party, Taboola)\n* `Popular in the Community`, `More Conversations for You`, Commenting on articles (and more) (Third Party, OpenWeb)\n* spot.im (Third Party, OpenWeb)\n* Individual AOL Games pages are rendered by us, but we iFrame in the Masque game urls. (Third Party, Masque)\n* games.com, fungames.aol.com & fungames.com (Third Party, Masque)\n* Comparecards.aol.com is CNAME’d to our own ATS cluster which forward maps requests to the comparecards cloudfront distribution. (Third Party, CompareCards)\n* JS widget on the AOL.com homepage providing news stories. (Third Party, Zergnet)\n* Serverside rendered module on aol.com/real-estate, data comes from Zillow api. (Third Party, Zillow)\n* Serverside rendered module on www.aol.com/travel, data comes from TravelZoo api. (Third Party, Travel Zoo)\n* rezserver.com (Third Party, Travel Zoo)\n",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
           "asset_identifier": "AOL Mail",
           "asset_type": "OTHER",
           "availability_requirement": null,
@@ -288,6 +310,28 @@
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
           "instruction": "## In Scope\n* *.mail.aol.com (see exclusions below)\n* rpc.mail.aol.com\n\n## Notes\n* oidc.mail.aol.com (Hosted by Mail, but belongs to `Membership`)\n\n## Out of Scope\n* mail.aol.com/calsvc\n* [AOL iOS](https://apps.apple.com/us/app/aol-news-email-weather-video/id646100661)\n* [AOL Android](https://play.google.com/store/apps/details?id=com.aol.mobile.aolapp&hl=en_US)\n* [AOL FireOS](https://www.amazon.com/AOL-Inc-Mail-News-Video/dp/B011VYAGSY)\n* [AOL Desktop Gold](https://get.aol.com/aol-desktop-gold) \n* apis.mail.aol.com\n* test-apis.mail.aol.com\n* *.aolmail.com\n* mail.aol.com/classicab\n* mail.aol.com/getmydata\n* mail.aol.com/ws\n* *.aol.com",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "AOL Mobile Apps",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "## Out of Scope\n* Apps from the app stores are not in scope.",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "AOL Search",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "## In Scope\n* search.aol.ca\n* search.aol.co.uk\n* search.aol.com\n* recherche.aol.fr\n* suche.aol.de\n\n## Notes\nAny bugs found in non-production environments will **not** be eligible for the `Same Bug Different Host` bonus if the issue also exists in production.\n",
           "integrity_requirement": null,
           "max_severity": "critical"
         },
@@ -398,6 +442,28 @@
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
           "instruction": "* *.makers.com",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "Media Platform Marketing Website",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "## In Scope\n* *.verizondigitalmedia.com\n* www.verizondigitalmedia.com (prod)\n* stage-www.verizondigitalmedia.com (staging, only non-english content)\n* research.verizondigitalmedia.com\n\n## Notes\n* The staging environment of `www.verizondigitalmedia.com` only hosts non-english translations of content served on www. \n* Do not spam our Support Request team (our-company/request-support/ our-company/customer-support/)\n\n## Out of Scope\n* *.verizonmedia.com (Company home page)\n* info.verizondigitalmedia.com (Third Party, Pardot/Salesforce)\n* status.verizondigitalmedia.com (Third Party, Status.io)\n\nThe pages listed under these URL paths (Third Party, instapage.com):\n* www.verizondigitalmedia.com/announcement/*\n* www.verizondigitalmedia.com/campaign/*\n* www.verizondigitalmedia.com/case-study/*\n* www.verizondigitalmedia.com/e-book/*\n* www.verizondigitalmedia.com/free-trial/*\n* www.verizondigitalmedia.com/infographic/*\n* www.verizondigitalmedia.com/internal/*\n* www.verizondigitalmedia.com/landing/*\n* www.verizondigitalmedia.com/platform-updates/*\n* www.verizondigitalmedia.com/referral/*\n* www.verizondigitalmedia.com/report/*\n* www.verizondigitalmedia.com/rsvp/*\n* www.verizondigitalmedia.com/television-academy/*\n* www.verizondigitalmedia.com/webinar/*\n* www.verizondigitalmedia.com/white-paper/*",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "Media Platforms Engineering Blog",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "## In Scope\n* eng.verizondigitalmedia.com\n* eng-staging.verizondigitalmedia.com\n\n## Notes\nBugs present on both Staging and production will not be awarded `Same Bug Different Host` bonus.",
           "integrity_requirement": null,
           "max_severity": "critical"
         },
@@ -585,6 +651,17 @@
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
           "instruction": "## In Scope\n* *.calendar.yahoo.com\n* *.caldav.calendar.yahoo.com\n\nSpecific paths to look at:\n* https://calendar.yahoo.com/ws/v3/users/\n* https://caldav.calendar.yahoo.com/principals/users/\n* https://caldav.calendar.yahoo.com/dav/*/calendar/\n\n## Limits\nLimit traffic against our services to < 10/second when probing or testing.",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "Yahoo Elections",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "## In Scope\n*Note: you MUST include the* `ref=electionsNight` *parameter to hit the right in-scope pages.*\n* https://www.yahoo.com/elections?ref=electionsNight\n* https://www.yahoo.com/elections/senate?ref=electionsNight\n* https://www.yahoo.com/elections/house?ref=electionsNight\n* https://www.yahoo.com/elections/state/al?ref=electionsNight (and all other US state pages)\n\n## Notes\nAny bugs found in non-production environments will **not** be eligible for the `Same Bug Different Host` bonus if the issue also exists in production.\n\n## Out of Scope\n* elections.yahoo.com (First Party, Yahoo Search)\n* yahoo.com/elections (First Party, Yahoo Search)\n* yahoo.turbovote.org (Third Party, Turbovote)\n* Historical Race Feed: https://www.realclearpolitics.com/poll/race/903/historical_data.json (Third Party, Real Clear Politics)\n* Presidential RCP Feed: https://www.realclearpolitics.com/syn/verizon_2020_president_trump_vs_/main.json (Third Party, Real Clear Politics)\n* Trump Approval RCP Feed: https://www.realclearpolitics.com/syn/verizon_president_trump_approval_ratings/main.json (Third Party, Real Clear Politics)\n* Senate RCP Feed: https://www.realclearpolitics.com/syn/verizon_2020_senate/main.json (Third Party, Real Clear Politics)\n* House RCP Feed: https://www.realclearpolitics.com/syn/verizon_house_2020/main.json (Third Party, Real Clear Politics)\n* Associated Press, Third Party\n* Scribble Live, Third Party\n",
           "integrity_requirement": null,
           "max_severity": "critical"
         },
@@ -54519,7 +54596,7 @@
     "name": "O1 Labs",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 100,
+    "response_efficiency_percentage": 96,
     "submission_state": "open",
     "url": "https://hackerone.com/o1-labs",
     "targets": {
@@ -55739,7 +55816,7 @@
     "name": "U.S. General Services Administration",
     "offers_bounties": false,
     "offers_swag": false,
-    "response_efficiency_percentage": 92,
+    "response_efficiency_percentage": 91,
     "submission_state": "open",
     "url": "https://hackerone.com/gsa_vdp",
     "targets": {
