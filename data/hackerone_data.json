@@ -46926,28 +46926,6 @@
     "targets": {
       "in_scope": [
         {
-          "asset_identifier": "*.runpanther.com",
-          "asset_type": "URL",
-          "availability_requirement": "low",
-          "confidentiality_requirement": "low",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "",
-          "integrity_requirement": "low",
-          "max_severity": "medium"
-        },
-        {
-          "asset_identifier": "*.runpanther.io",
-          "asset_type": "URL",
-          "availability_requirement": "low",
-          "confidentiality_requirement": "low",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "Our website chat (Hubspot) is NOT in scope",
-          "integrity_requirement": "medium",
-          "max_severity": "high"
-        },
-        {
           "asset_identifier": "https://github.com/panther-labs/panther",
           "asset_type": "SOURCE_CODE",
           "availability_requirement": "medium",
@@ -46957,6 +46935,28 @@
           "instruction": "",
           "integrity_requirement": "medium",
           "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "runpanther.com",
+          "asset_type": "URL",
+          "availability_requirement": "low",
+          "confidentiality_requirement": "low",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Note: Our DMARC records have been set and are now out of scope.",
+          "integrity_requirement": "low",
+          "max_severity": "medium"
+        },
+        {
+          "asset_identifier": "runpanther.io",
+          "asset_type": "URL",
+          "availability_requirement": "low",
+          "confidentiality_requirement": "low",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "When testing the website, please keep the following exclusions in scope:\n\n* Website Chat (Hubspot)\n* Website Forms (Hubspot)\n\nNote: Our DMARC records have been set and are now out of scope.",
+          "integrity_requirement": "medium",
+          "max_severity": "high"
         }
       ],
       "out_of_scope": [
@@ -47392,7 +47392,7 @@
     "name": "MTN Group",
     "offers_bounties": false,
     "offers_swag": false,
-    "response_efficiency_percentage": 28,
+    "response_efficiency_percentage": 27,
     "submission_state": "open",
     "url": "https://hackerone.com/mtn_group",
     "targets": {
