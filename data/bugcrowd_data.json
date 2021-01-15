@@ -3042,12 +3042,12 @@
     }
   },
   {
-    "name": "HubSpot Responsible Disclosure",
+    "name": "HubSpot",
     "url": "https://bugcrowd.com/hubspot",
-    "allows_disclosure": true,
+    "allows_disclosure": false,
     "managed_by_bugcrowd": true,
     "safe_harbor": "partial",
-    "max_payout": 0,
+    "max_payout": 1500,
     "targets": {
       "in_scope": [
         {
@@ -3065,6 +3065,10 @@
         {
           "type": "other",
           "target": "*.hubspot.net"
+        },
+        {
+          "type": "website testing",
+          "target": "*.piesync.com"
         },
         {
           "type": "android",
