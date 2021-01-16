@@ -18473,6 +18473,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
     """
     last: Int
   ): BountyConnection
+  bounties_awarded_in_period(end_date: DateTime, start_date: DateTime): Float
   bounties_total: String
   bounty_awarded_staleness_threshold: Int
 
