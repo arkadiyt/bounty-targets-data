@@ -17050,7 +17050,9 @@ enum SlaStatusOrderField {
 SLA types
 """
 enum SlaTypeEnum {
+  bounty_awarded
   first_program_response
+  report_resolved
   report_triage
 }
 
@@ -19132,6 +19134,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
     Returns the elements in the list that come after the specified cursor.
     """
     after: String
+    approaching_sla_violation: SlaTypeEnum
 
     """
     Returns the elements in the list that come before the specified cursor.
