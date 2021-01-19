@@ -10950,6 +10950,7 @@ A JIRA webhook for a team
 type JiraWebhook implements Node {
   close_status_id: String
   created_at: DateTime!
+  has_received_events: Boolean!
   id: ID!
   last_event_received_at: DateTime
   last_token_issued_at: DateTime
