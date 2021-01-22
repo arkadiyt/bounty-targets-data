@@ -3081,6 +3081,7 @@ BundleSubscription
 type BundleSubscription implements Node & ResourceInterface {
   _id: ID!
   awarding_retesters: Boolean!
+  handled_by_triage: Boolean!
   id: ID!
   tag: RetestSubscriptionTag!
   triage: Boolean!
@@ -16225,6 +16226,7 @@ Different types of a retesting subscription
 """
 enum RetestSubscriptionTag {
   demo
+  hacker_powered_h1b_h1c
   legacy
   new
   pentest
