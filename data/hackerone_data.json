@@ -8378,7 +8378,7 @@
     "name": "Yelp",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 86,
+    "response_efficiency_percentage": 85,
     "submission_state": "open",
     "url": "https://hackerone.com/yelp",
     "targets": {
@@ -17878,7 +17878,7 @@
     "name": "LocalTapiola",
     "offers_bounties": true,
     "offers_swag": true,
-    "response_efficiency_percentage": 69,
+    "response_efficiency_percentage": 71,
     "submission_state": "open",
     "url": "https://hackerone.com/localtapiola",
     "targets": {
@@ -19417,7 +19417,7 @@
     "name": "Helium",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 77,
+    "response_efficiency_percentage": 78,
     "submission_state": "open",
     "url": "https://hackerone.com/helium",
     "targets": {
@@ -21694,7 +21694,7 @@
     "name": "Intel Corporation",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 45,
+    "response_efficiency_percentage": 47,
     "submission_state": "open",
     "url": "https://hackerone.com/intel",
     "targets": {
@@ -41443,7 +41443,7 @@
           "confidentiality_requirement": "high",
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
-          "instruction": "* Source code from latest release available in [Github](https://github.com/Xilinx/bootgen).\n* More information about Bootgen is available in [UG1283](https://www.xilinx.com/support/documentation/sw_manuals/xilinx2020_1/ug1283-bootgen-user-guide.pdf).\n* Security implementation issues in Bootgen library which compromise the security posture of the system.\n* Exceptions:\n  * Malformed BIF files.\n  * Not using header encryption for Zynq/ZU+.\n  * Using different version than OpenSSL 1.1.1b.\n  * Using unique key/IV pairs for encryption:\n      * It is a security requirement to not use unique key/IV pairs, but is implemented for ZU+ only, and not for Zynq SoC.\n      * It is recommended to use different seed for key generation.\n      * The code does not check if any keys specified by the user are repeated.",
+          "instruction": "* Security bugs in Bootgen code that can allow the boot image running on the device to be hacked and gain unauthorized access to deploy rogue software on the SoC that can cause device to malfunction.\n* Source code from latest release available in [Github](https://github.com/Xilinx/bootgen).\n* Refer to [Xilinx UG1283](https://www.xilinx.com/support/documentation/sw_manuals/xilinx2020_1/ug1283-bootgen-user-guide.pdf) for details about how a Boot Image can be created and loaded onto a Xilinx SoC.\n* Exceptions:\n  * It is assumed that the input files passed to Bootgen are verified and trusted. Using any malformed input files to tamper with the device boot or security is not in scope.\n  * Not using header encryption for Zynq/ZU+.\n  * Using different version than OpenSSL 1.1.1b.\n  * Using unique key/IV pairs for encryption:\n      * It is a security requirement to not use unique key/IV pairs, but is implemented for ZU+ only, and not for Zynq SoC.\n      * It is recommended to use different seed for key generation.\n      * The code does not check if any keys specified by the user are repeated.",
           "integrity_requirement": "high",
           "max_severity": "critical"
         },
