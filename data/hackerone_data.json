@@ -1856,7 +1856,7 @@
     "name": "Vimeo",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 98,
+    "response_efficiency_percentage": 99,
     "submission_state": "open",
     "url": "https://hackerone.com/vimeo",
     "targets": {
@@ -13057,7 +13057,7 @@
     "name": "Matomo",
     "offers_bounties": true,
     "offers_swag": true,
-    "response_efficiency_percentage": 36,
+    "response_efficiency_percentage": 44,
     "submission_state": "open",
     "url": "https://hackerone.com/matomo",
     "targets": {
@@ -22780,7 +22780,7 @@
     "name": "Xiaomi",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 96,
+    "response_efficiency_percentage": 97,
     "submission_state": "open",
     "url": "https://hackerone.com/xiaomi",
     "targets": {
@@ -29497,7 +29497,7 @@
     "name": "MyCrypto",
     "offers_bounties": false,
     "offers_swag": true,
-    "response_efficiency_percentage": 100,
+    "response_efficiency_percentage": null,
     "submission_state": "disabled",
     "url": "https://hackerone.com/mycrypto",
     "targets": {
@@ -52534,7 +52534,7 @@
     "name": "Staging.every.org",
     "offers_bounties": false,
     "offers_swag": false,
-    "response_efficiency_percentage": 100,
+    "response_efficiency_percentage": 80,
     "submission_state": "open",
     "url": "https://hackerone.com/stagingdoteverydotorg",
     "targets": {
@@ -55567,6 +55567,137 @@
       ],
       "out_of_scope": [
 
+      ]
+    }
+  },
+  {
+    "allows_bounty_splitting": false,
+    "average_time_to_bounty_awarded": null,
+    "average_time_to_first_program_response": 6.0,
+    "average_time_to_report_resolved": null,
+    "handle": "hudapp",
+    "id": 50090,
+    "managed_program": true,
+    "name": "Hud App",
+    "offers_bounties": false,
+    "offers_swag": false,
+    "response_efficiency_percentage": 88,
+    "submission_state": "open",
+    "url": "https://hackerone.com/hudapp",
+    "targets": {
+      "in_scope": [
+        {
+          "asset_identifier": "1042814349",
+          "asset_type": "APPLE_STORE_APP_ID",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "[**Hud™ | #1 Hookup & Casual Dating App** on the Apple App Store](https://apps.apple.com/app/hud-1-hookup-app/id1042814349)",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "cnztech.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "The company’s website. ",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "com.hookupdating",
+          "asset_type": "GOOGLE_PLAY_APP_ID",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "[**Hud™ | #1 Hookup & Casual Dating App** on the Google Play Store](https://play.google.com/store/apps/details?id=com.hookupdating)",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://cdn.hookupdating.mobi/",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "A CDN used for serving in-app multimedia. ",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://console.huddatingapp.com/",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "This is the admin panel of the Hud app for custom relationship management.",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://haveafling.s3.amazonaws.com/",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "This is the S3 bucket for storing customers’ photos.",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://prod-cloud.hookupdating.mobi/",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "This is the primary API of the Hud app, the v1 version is the latest version. (Currently, we do not plan on providing documentation for this API)",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://prod-realtime.hookupdating.mobi/",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "This is the realtime API of the Hud app for chatting, messages and application events. (Currently, we do not plan on providing documentation for this API)",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "www.hudapp.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "This is Hud’s website, which previously hosted a web version of our application. This has since been removed.",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "asset_identifier": "https://blog.hudapp.com/",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        }
       ]
     }
   },
