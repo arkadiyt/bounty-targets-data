@@ -14746,6 +14746,7 @@ type Query implements Node {
     report_substate: TriageInboxItemReportSubstateEnum = null
     team_handle: String = null
     team_type: TriageInboxItemTeamTypeEnum = null
+    unowned: Boolean = false
     view: TriageInboxItemViewEnum = null
   ): TriageInboxItemConnection
   user(username: String!): User
