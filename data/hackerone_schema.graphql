@@ -15592,6 +15592,15 @@ interface ReportActivityInterface {
 }
 
 """
+Report Burndown type
+"""
+type ReportBurndown implements Node {
+  counts: Hash!
+  id: ID!
+  series: Hash!
+}
+
+"""
 The connection type for Report.
 """
 type ReportConnection {
@@ -19105,6 +19114,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
   ): ProgramSubmissionMetricsConnection!
   publicly_visible_retesting: Boolean
   remediation_guidance_enabled: Boolean!
+  report_burndown: ReportBurndown!
   report_sources: [String!]
   report_submission_form_intro: String
   report_submission_form_intro_html: String
