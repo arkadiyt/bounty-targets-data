@@ -6625,6 +6625,7 @@ input CreateUserFlagInput {
   """
   clientMutationId: String
   note: String!
+  priority: UserFlagPriorityEnum
   username: String!
 }
 
@@ -15538,7 +15539,7 @@ interface ReportActivityInterface {
 Report Burndown type
 """
 type ReportBurndown implements Node {
-  counts: Hash!
+  counts: [Hash!]!
   id: ID!
   series: Hash!
 }
@@ -26812,6 +26813,17 @@ enum UserFlagCategoryEnum {
   unauthorized_disclosure
   unauthorized_impersonation
   unprofessional_behavior
+}
+
+"""
+User flag priority
+"""
+enum UserFlagPriorityEnum {
+  priority_1
+  priority_2
+  priority_3
+  priority_4
+  priority_5
 }
 
 """
