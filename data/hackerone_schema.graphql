@@ -9538,6 +9538,7 @@ input FiltersReportFilterInput {
   timer_report_triage_elapsed_time: IntPredicateInput
   timer_report_triage_miss_at: DateTimePredicateInput
   title: StringPredicateInput
+  triaged_at: DateTimePredicateInput
   vulnerability_information: StringPredicateInput
   weakness: FiltersWeaknessFilterInput
 }
@@ -15599,6 +15600,7 @@ type ReportConnection {
   Groups and counts reports by the severity rating
   """
   count_by_severity: [CountBySeverity]!
+  count_by_substate_severity_rating: GraphqlScalar
 
   """
   A list of edges.
