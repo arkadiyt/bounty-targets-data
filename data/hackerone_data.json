@@ -55386,6 +55386,192 @@
   },
   {
     "allows_bounty_splitting": false,
+    "average_time_to_bounty_awarded": 158.0,
+    "average_time_to_first_program_response": 9.0,
+    "average_time_to_report_resolved": 611.0,
+    "handle": "chime",
+    "id": 48983,
+    "managed_program": true,
+    "name": "Chime",
+    "offers_bounties": true,
+    "offers_swag": false,
+    "response_efficiency_percentage": 100,
+    "submission_state": "open",
+    "url": "https://hackerone.com/chime",
+    "targets": {
+      "in_scope": [
+        {
+          "asset_identifier": "*.1debit.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Production Environment",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "*.chime.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Production Environment",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "*.chimebank.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Production Environment",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "*.chimecard.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Production Environment",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "Android Chime App Development Environment",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Development Environment Android Chime App:\nhttps://app.bitrise.io/artifact/62998755/p/18c7ecb61c723ffa7fca84d88a614f82",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "com.1debit.ChimeProdApp",
+          "asset_type": "APPLE_STORE_APP_ID",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Production Environment iOS Chime App:\nhttps://apps.apple.com/us/app/chime-mobile-banking/id836215269",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "com.onedebit.chime",
+          "asset_type": "GOOGLE_PLAY_APP_ID",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Production Environment Android Chime App:\nhttps://play.google.com/store/apps/details?id=com.onedebit.chime",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "iOS Chime App Development Environment",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Development Environment iOS Chime App:\nhttps://app.bitrise.io/artifact/62991675/p/8787ddff0d1d5c82d86974f7e529f2a2",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "qa1.chime.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Development Environment",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "test.1debit.com",
+          "asset_type": "URL",
+          "availability_requirement": "medium",
+          "confidentiality_requirement": "medium",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Development Environment",
+          "integrity_requirement": "medium",
+          "max_severity": "critical"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "asset_identifier": "dev-chime.pantheonsite.io",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "WordPress website (not authenticated user) is out of scope. Please test after signing in",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "test-galileo.1debit.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "Development Environment",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "test-wp.1debit.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "WordPress website (not authenticated user) is out of scope. Please test after signing in",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "test.1debit.com/admin/become/",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "/admin/become/ endpoint on Development Environment",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "test.1debit.com/qa_only/users",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "/qa_only/users endpoint on Development Environment",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        }
+      ]
+    }
+  },
+  {
+    "allows_bounty_splitting": false,
     "average_time_to_bounty_awarded": 102.0,
     "average_time_to_first_program_response": 30.0,
     "average_time_to_report_resolved": 365.0,
