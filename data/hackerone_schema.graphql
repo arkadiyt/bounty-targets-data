@@ -11827,244 +11827,1409 @@ input MustInput {
 }
 
 type Mutation implements Node {
-  acceptInvitation(input: AcceptInvitationInput!): AcceptInvitationPayload
-  acknowledgeProgramHealthAcknowledgement(input: AcknowledgeProgramHealthAcknowledgementInput!): AcknowledgeProgramHealthAcknowledgementPayload
-  addReportParticipant(input: AddReportParticipantInput!): AddReportParticipantPayload
-  approveReportRetest(input: ApproveReportRetestInput!): ApproveReportRetestPayload
-  archiveJobListing(input: ArchiveJobListingInput!): ArchiveJobListingPayload
-  archiveStructuredScope(input: ArchiveStructuredScopeInput!): ArchiveStructuredScopePayload
-  assignPentestCheckPentesters(input: AssignPentestCheckPentestersInput!): AssignPentestCheckPentestersPayload
-  cancelDomainOwnership(input: CancelDomainOwnershipInput!): CancelDomainOwnershipPayload
-  cancelReportDisclosureRequest(input: CancelReportDisclosureRequestInput!): CancelReportDisclosureRequestPayload
-  cancelTwoFactorAuthenticationReset(input: CancelTwoFactorAuthenticationResetInput!): CancelTwoFactorAuthenticationResetPayload
-  changeReportPentest(input: ChangeReportPentestInput!): ChangeReportPentestPayload
-  claimChecklistCheck(input: ClaimChecklistCheckInput!): ClaimChecklistCheckPayload
-  claimCredential(input: ClaimCredentialInput!): ClaimCredentialPayload
-  claimReportRetest(input: ClaimReportRetestInput!): ClaimReportRetestPayload
-  clearCustomRemediationGuidance(input: ClearCustomRemediationGuidanceInput!): ClearCustomRemediationGuidancePayload
-  completeReportRetest(input: CompleteReportRetestInput!): CompleteReportRetestPayload
-  completeReportRetestUser(input: CompleteReportRetestUserInput!): CompleteReportRetestUserPayload
-  completeTutorial(input: CompleteTutorialInput!): CompleteTutorialPayload
-  createActivityComment(input: CreateActivityCommentInput!): CreateActivityCommentPayload
-  createApiUser(input: CreateApiUserInput!): CreateApiUserPayload
-  createBounty(input: CreateBountyInput!): CreateBountyPayload
-  createBountySuggestion(input: CreateBountySuggestionInput!): CreateBountySuggestionPayload
-  createChecklistCheckResponseComment(input: CreateChecklistCheckResponseCommentInput!): CreateChecklistCheckResponseCommentPayload
-  createChecklistCheckResponseSubmission(input: CreateChecklistCheckResponseSubmissionInput!): CreateChecklistCheckResponseSubmissionPayload
-  createCoinbasePayoutPreference(input: CreateCoinbasePayoutPreferenceInput!): CreateCoinbasePayoutPreferencePayload
-  createCurrencycloudBankTransferPayoutPreference(input: CreateCurrencycloudBankTransferPayoutPreferenceInput!): CreateCurrencycloudBankTransferPayoutPreferencePayload
-  createCustomFieldAttribute(input: CreateCustomFieldAttributeInput!): CreateCustomFieldAttributePayload
-  createCustomRemediationGuidance(input: CreateCustomRemediationGuidanceInput!): CreateCustomRemediationGuidancePayload
-  createCveRequest(input: CreateCveRequestInput!): CreateCveRequestPayload
-  createDomainOwnership(input: CreateDomainOwnershipInput!): CreateDomainOwnershipPayload
-  createExternalReport(input: CreateExternalReportInput!): CreateExternalReportPayload
-  createHackerTriageRating(input: CreateHackerTriageRatingInput!): CreateHackerTriageRatingPayload
-  createIncident(input: CreateIncidentInput!): CreateIncidentPayload
-  createIssueTrackerReferenceId(input: CreateIssueTrackerReferenceIdInput!): CreateIssueTrackerReferenceIdPayload
-  createJiraOauthUrl(input: CreateJiraOauthUrlInput!): CreateJiraOauthUrlPayload
-  createJiraWebhookToken(input: CreateJiraWebhookTokenInput!): CreateJiraWebhookTokenPayload
-  createJobListing(input: CreateJobListingInput!): CreateJobListingPayload
-  createLeaveProgramSurveyAnswer(input: CreateLeaveProgramSurveyAnswerInput!): CreateLeaveProgramSurveyAnswerPayload
-  createMailingAddress(input: CreateMailingAddressInput!): CreateMailingAddressPayload
-  createOrUpdateHackeroneToJiraEventsConfiguration(input: CreateOrUpdateHackeroneToJiraEventsConfigurationInput!): CreateOrUpdateHackeroneToJiraEventsConfigurationPayload
-  createOrUpdateJiraIntegration(input: CreateOrUpdateJiraIntegrationInput!): CreateOrUpdateJiraIntegrationPayload
-  createOrUpdatePentest(input: CreateOrUpdatePentestInput!): CreateOrUpdatePentestPayload
-  createOrUpdatePentesterProfile(input: CreateOrUpdatePentesterProfileInput!): CreateOrUpdatePentesterProfilePayload
-  createPaypalPreference(input: CreatePaypalPreferenceInput!): CreatePaypalPreferencePayload
-  createPentester(input: CreatePentesterInput!): CreatePentesterPayload
-  createProgramBounty(input: CreateProgramBountyInput!): CreateProgramBountyPayload
-  createRejectionSurveyAnswer(input: CreateRejectionSurveyAnswerInput!): CreateRejectionSurveyAnswerPayload
-  createReport(input: CreateReportInput!): CreateReportPayload
-  createReportSummary(input: CreateReportSummaryInput!): CreateReportSummaryPayload
-  createSamlProvider(input: CreateSamlProviderInput!): CreateSamlProviderPayload
-  createSamlTest(input: CreateSamlTestInput!): CreateSamlTestPayload
-  createSeverity(input: CreateSeverityInput!): CreateSeverityPayload
-  createSlackPipeline(input: CreateSlackPipelineInput!): CreateSlackPipelinePayload
-  createSolutionInstance(input: CreateSolutionInstanceInput!): CreateSolutionInstancePayload
-  createStructuredScope(input: CreateStructuredScopeInput!): CreateStructuredScopePayload
-  createSwag(input: CreateSwagInput!): CreateSwagPayload
-  createTaxForm(input: CreateTaxFormInput!): CreateTaxFormPayload
-  createTeam(input: CreateTeamInput!): CreateTeamPayload
-  createTriageRating(input: CreateTriageRatingInput!): CreateTriageRatingPayload
-  createTrigger(input: CreateTriggerInput!): CreateTriggerPayload
-  createTwoFactorAuthenticationCredentials(input: CreateTwoFactorAuthenticationCredentialsInput!): CreateTwoFactorAuthenticationCredentialsPayload
-  createUserBountiesReport(input: CreateUserBountiesReportInput!): CreateUserBountiesReportPayload
-  createUserFlag(input: CreateUserFlagInput!): CreateUserFlagPayload
-  createUserLufthansaAccount(input: CreateUserLufthansaAccountInput!): CreateUserLufthansaAccountPayload
-  createUserPayoutsReport(input: CreateUserPayoutsReportInput!): CreateUserPayoutsReportPayload
-  createUserTwoFactorReset(input: CreateUserTwoFactorResetInput!): CreateUserTwoFactorResetPayload
-  createVpnCredentials(input: CreateVpnCredentialsInput!): CreateVpnCredentialsPayload
-  createWebhook(input: CreateWebhookInput!): CreateWebhookPayload
-  deleteAgileAcceleratorIntegration(input: DeleteAgileAcceleratorIntegrationInput!): DeleteAgileAcceleratorIntegrationPayload
-  deleteBiDirectionalJiraIntegration(input: DeleteBiDirectionalJiraIntegrationInput!): DeleteBiDirectionalJiraIntegrationPayload
-  deleteJiraWebhook(input: DeleteJiraWebhookInput!): DeleteJiraWebhookPayload
-  deleteMailingAddress(input: DeleteMailingAddressInput!): DeleteMailingAddressPayload
-  deletePentest(input: DeletePentestInput!): DeletePentestPayload
-  deletePhabricatorIntegration(input: DeletePhabricatorIntegrationInput!): DeletePhabricatorIntegrationPayload
-  deleteSlackPipeline(input: DeleteSlackPipelineInput!): DeleteSlackPipelinePayload
-  deleteTeamMember(input: DeleteTeamMemberInput!): DeleteTeamMemberPayload
-  deleteTeamSlackIntegration(input: DeleteTeamSlackIntegrationInput!): DeleteTeamSlackIntegrationPayload
-  deleteTrigger(input: DeleteTriggerInput!): DeleteTriggerPayload
-  deleteUnclaimedReportWithDependencies(input: DeleteUnclaimedReportWithDependenciesInput!): DeleteUnclaimedReportWithDependenciesPayload
-  deleteUserLufthansaAccount(input: DeleteUserLufthansaAccountInput!): DeleteUserLufthansaAccountPayload
-  deleteUserSession(input: DeleteUserSessionInput!): DeleteUserSessionPayload
-  deleteWebhook(input: DeleteWebhookInput!): DeleteWebhookPayload
-  destroyApiUser(input: DestroyApiUserInput!): DestroyApiUserPayload
-  destroyTwoFactorAuthenticationCredentials(input: DestroyTwoFactorAuthenticationCredentialsInput!): DestroyTwoFactorAuthenticationCredentialsPayload
-  destroyUpvote(input: DestroyUpvoteInput!): DestroyUpvotePayload
-  disableSamlProvider(input: DisableSamlProviderInput!): DisableSamlProviderPayload
-  dismissProgramHealthAcknowledgement(input: DismissProgramHealthAcknowledgementInput!): DismissProgramHealthAcknowledgementPayload
-  dismissReport(input: DismissReportInput!): DismissReportPayload
-  dismissTriageInboxItems(input: DismissTriageInboxItemsInput!): DismissTriageInboxItemsPayload
-  enableSamlProvider(input: EnableSamlProviderInput!): EnableSamlProviderPayload
-  escalateReport(input: EscalateReportInput!): EscalateReportPayload
-  escalateToJira(input: EscalateToJiraInput!): EscalateToJiraPayload
-  exportLifetimeAuditLogItems(input: ExportLifetimeAuditLogItemsInput!): ExportLifetimeAuditLogItemsPayload
-  exportLifetimeReports(input: ExportLifetimeReportsInput!): ExportLifetimeReportsPayload
-  exportReportsForPentest(input: ExportReportsForPentestInput!): ExportReportsForPentestPayload
-  forgetFacebookCredentials(input: ForgetFacebookCredentialInput!): ForgetFacebookCredentialPayload
-  generateReportShareToken(input: GenerateReportShareTokenInput!): GenerateReportShareTokenPayload
-  generateTaxFormUrl(input: GenerateTaxFormUrlInput!): GenerateTaxFormUrlPayload
+  acceptInvitation(
+    """
+    Parameters for AcceptInvitation
+    """
+    input: AcceptInvitationInput!
+  ): AcceptInvitationPayload
+  acknowledgeProgramHealthAcknowledgement(
+    """
+    Parameters for AcknowledgeProgramHealthAcknowledgement
+    """
+    input: AcknowledgeProgramHealthAcknowledgementInput!
+  ): AcknowledgeProgramHealthAcknowledgementPayload
+  addReportParticipant(
+    """
+    Parameters for AddReportParticipant
+    """
+    input: AddReportParticipantInput!
+  ): AddReportParticipantPayload
+  approveReportRetest(
+    """
+    Parameters for ApproveReportRetest
+    """
+    input: ApproveReportRetestInput!
+  ): ApproveReportRetestPayload
+  archiveJobListing(
+    """
+    Parameters for ArchiveJobListing
+    """
+    input: ArchiveJobListingInput!
+  ): ArchiveJobListingPayload
+  archiveStructuredScope(
+    """
+    Parameters for ArchiveStructuredScope
+    """
+    input: ArchiveStructuredScopeInput!
+  ): ArchiveStructuredScopePayload
+  assignPentestCheckPentesters(
+    """
+    Parameters for AssignPentestCheckPentesters
+    """
+    input: AssignPentestCheckPentestersInput!
+  ): AssignPentestCheckPentestersPayload
+  cancelDomainOwnership(
+    """
+    Parameters for CancelDomainOwnership
+    """
+    input: CancelDomainOwnershipInput!
+  ): CancelDomainOwnershipPayload
+  cancelReportDisclosureRequest(
+    """
+    Parameters for CancelReportDisclosureRequest
+    """
+    input: CancelReportDisclosureRequestInput!
+  ): CancelReportDisclosureRequestPayload
+  cancelTwoFactorAuthenticationReset(
+    """
+    Parameters for CancelTwoFactorAuthenticationReset
+    """
+    input: CancelTwoFactorAuthenticationResetInput!
+  ): CancelTwoFactorAuthenticationResetPayload
+  changeReportPentest(
+    """
+    Parameters for ChangeReportPentest
+    """
+    input: ChangeReportPentestInput!
+  ): ChangeReportPentestPayload
+  claimChecklistCheck(
+    """
+    Parameters for ClaimChecklistCheck
+    """
+    input: ClaimChecklistCheckInput!
+  ): ClaimChecklistCheckPayload
+  claimCredential(
+    """
+    Parameters for ClaimCredential
+    """
+    input: ClaimCredentialInput!
+  ): ClaimCredentialPayload
+  claimReportRetest(
+    """
+    Parameters for ClaimReportRetest
+    """
+    input: ClaimReportRetestInput!
+  ): ClaimReportRetestPayload
+  clearCustomRemediationGuidance(
+    """
+    Parameters for ClearCustomRemediationGuidance
+    """
+    input: ClearCustomRemediationGuidanceInput!
+  ): ClearCustomRemediationGuidancePayload
+  completeReportRetest(
+    """
+    Parameters for CompleteReportRetest
+    """
+    input: CompleteReportRetestInput!
+  ): CompleteReportRetestPayload
+  completeReportRetestUser(
+    """
+    Parameters for CompleteReportRetestUser
+    """
+    input: CompleteReportRetestUserInput!
+  ): CompleteReportRetestUserPayload
+  completeTutorial(
+    """
+    Parameters for CompleteTutorial
+    """
+    input: CompleteTutorialInput!
+  ): CompleteTutorialPayload
+  createActivityComment(
+    """
+    Parameters for CreateActivityComment
+    """
+    input: CreateActivityCommentInput!
+  ): CreateActivityCommentPayload
+  createApiUser(
+    """
+    Parameters for CreateApiUser
+    """
+    input: CreateApiUserInput!
+  ): CreateApiUserPayload
+  createBounty(
+    """
+    Parameters for CreateBounty
+    """
+    input: CreateBountyInput!
+  ): CreateBountyPayload
+  createBountySuggestion(
+    """
+    Parameters for CreateBountySuggestion
+    """
+    input: CreateBountySuggestionInput!
+  ): CreateBountySuggestionPayload
+  createChecklistCheckResponseComment(
+    """
+    Parameters for CreateChecklistCheckResponseComment
+    """
+    input: CreateChecklistCheckResponseCommentInput!
+  ): CreateChecklistCheckResponseCommentPayload
+  createChecklistCheckResponseSubmission(
+    """
+    Parameters for CreateChecklistCheckResponseSubmission
+    """
+    input: CreateChecklistCheckResponseSubmissionInput!
+  ): CreateChecklistCheckResponseSubmissionPayload
+  createCoinbasePayoutPreference(
+    """
+    Parameters for CreateCoinbasePayoutPreference
+    """
+    input: CreateCoinbasePayoutPreferenceInput!
+  ): CreateCoinbasePayoutPreferencePayload
+  createCurrencycloudBankTransferPayoutPreference(
+    """
+    Parameters for CreateCurrencycloudBankTransferPayoutPreference
+    """
+    input: CreateCurrencycloudBankTransferPayoutPreferenceInput!
+  ): CreateCurrencycloudBankTransferPayoutPreferencePayload
+  createCustomFieldAttribute(
+    """
+    Parameters for CreateCustomFieldAttribute
+    """
+    input: CreateCustomFieldAttributeInput!
+  ): CreateCustomFieldAttributePayload
+  createCustomRemediationGuidance(
+    """
+    Parameters for CreateCustomRemediationGuidance
+    """
+    input: CreateCustomRemediationGuidanceInput!
+  ): CreateCustomRemediationGuidancePayload
+  createCveRequest(
+    """
+    Parameters for CreateCveRequest
+    """
+    input: CreateCveRequestInput!
+  ): CreateCveRequestPayload
+  createDomainOwnership(
+    """
+    Parameters for CreateDomainOwnership
+    """
+    input: CreateDomainOwnershipInput!
+  ): CreateDomainOwnershipPayload
+  createExternalReport(
+    """
+    Parameters for CreateExternalReport
+    """
+    input: CreateExternalReportInput!
+  ): CreateExternalReportPayload
+  createHackerTriageRating(
+    """
+    Parameters for CreateHackerTriageRating
+    """
+    input: CreateHackerTriageRatingInput!
+  ): CreateHackerTriageRatingPayload
+  createIncident(
+    """
+    Parameters for CreateIncident
+    """
+    input: CreateIncidentInput!
+  ): CreateIncidentPayload
+  createIssueTrackerReferenceId(
+    """
+    Parameters for CreateIssueTrackerReferenceId
+    """
+    input: CreateIssueTrackerReferenceIdInput!
+  ): CreateIssueTrackerReferenceIdPayload
+  createJiraOauthUrl(
+    """
+    Parameters for CreateJiraOauthUrl
+    """
+    input: CreateJiraOauthUrlInput!
+  ): CreateJiraOauthUrlPayload
+  createJiraWebhookToken(
+    """
+    Parameters for CreateJiraWebhookToken
+    """
+    input: CreateJiraWebhookTokenInput!
+  ): CreateJiraWebhookTokenPayload
+  createJobListing(
+    """
+    Parameters for CreateJobListing
+    """
+    input: CreateJobListingInput!
+  ): CreateJobListingPayload
+  createLeaveProgramSurveyAnswer(
+    """
+    Parameters for CreateLeaveProgramSurveyAnswer
+    """
+    input: CreateLeaveProgramSurveyAnswerInput!
+  ): CreateLeaveProgramSurveyAnswerPayload
+  createMailingAddress(
+    """
+    Parameters for CreateMailingAddress
+    """
+    input: CreateMailingAddressInput!
+  ): CreateMailingAddressPayload
+  createOrUpdateHackeroneToJiraEventsConfiguration(
+    """
+    Parameters for CreateOrUpdateHackeroneToJiraEventsConfiguration
+    """
+    input: CreateOrUpdateHackeroneToJiraEventsConfigurationInput!
+  ): CreateOrUpdateHackeroneToJiraEventsConfigurationPayload
+  createOrUpdateJiraIntegration(
+    """
+    Parameters for CreateOrUpdateJiraIntegration
+    """
+    input: CreateOrUpdateJiraIntegrationInput!
+  ): CreateOrUpdateJiraIntegrationPayload
+  createOrUpdatePentest(
+    """
+    Parameters for CreateOrUpdatePentest
+    """
+    input: CreateOrUpdatePentestInput!
+  ): CreateOrUpdatePentestPayload
+  createOrUpdatePentesterProfile(
+    """
+    Parameters for CreateOrUpdatePentesterProfile
+    """
+    input: CreateOrUpdatePentesterProfileInput!
+  ): CreateOrUpdatePentesterProfilePayload
+  createPaypalPreference(
+    """
+    Parameters for CreatePaypalPreference
+    """
+    input: CreatePaypalPreferenceInput!
+  ): CreatePaypalPreferencePayload
+  createPentester(
+    """
+    Parameters for CreatePentester
+    """
+    input: CreatePentesterInput!
+  ): CreatePentesterPayload
+  createProgramBounty(
+    """
+    Parameters for CreateProgramBounty
+    """
+    input: CreateProgramBountyInput!
+  ): CreateProgramBountyPayload
+  createRejectionSurveyAnswer(
+    """
+    Parameters for CreateRejectionSurveyAnswer
+    """
+    input: CreateRejectionSurveyAnswerInput!
+  ): CreateRejectionSurveyAnswerPayload
+  createReport(
+    """
+    Parameters for CreateReport
+    """
+    input: CreateReportInput!
+  ): CreateReportPayload
+  createReportSummary(
+    """
+    Parameters for CreateReportSummary
+    """
+    input: CreateReportSummaryInput!
+  ): CreateReportSummaryPayload
+  createSamlProvider(
+    """
+    Parameters for CreateSamlProvider
+    """
+    input: CreateSamlProviderInput!
+  ): CreateSamlProviderPayload
+  createSamlTest(
+    """
+    Parameters for CreateSamlTest
+    """
+    input: CreateSamlTestInput!
+  ): CreateSamlTestPayload
+  createSeverity(
+    """
+    Parameters for CreateSeverity
+    """
+    input: CreateSeverityInput!
+  ): CreateSeverityPayload
+  createSlackPipeline(
+    """
+    Parameters for CreateSlackPipeline
+    """
+    input: CreateSlackPipelineInput!
+  ): CreateSlackPipelinePayload
+  createSolutionInstance(
+    """
+    Parameters for CreateSolutionInstance
+    """
+    input: CreateSolutionInstanceInput!
+  ): CreateSolutionInstancePayload
+  createStructuredScope(
+    """
+    Parameters for CreateStructuredScope
+    """
+    input: CreateStructuredScopeInput!
+  ): CreateStructuredScopePayload
+  createSwag(
+    """
+    Parameters for CreateSwag
+    """
+    input: CreateSwagInput!
+  ): CreateSwagPayload
+  createTaxForm(
+    """
+    Parameters for CreateTaxForm
+    """
+    input: CreateTaxFormInput!
+  ): CreateTaxFormPayload
+  createTeam(
+    """
+    Parameters for CreateTeam
+    """
+    input: CreateTeamInput!
+  ): CreateTeamPayload
+  createTriageRating(
+    """
+    Parameters for CreateTriageRating
+    """
+    input: CreateTriageRatingInput!
+  ): CreateTriageRatingPayload
+  createTrigger(
+    """
+    Parameters for CreateTrigger
+    """
+    input: CreateTriggerInput!
+  ): CreateTriggerPayload
+  createTwoFactorAuthenticationCredentials(
+    """
+    Parameters for CreateTwoFactorAuthenticationCredentials
+    """
+    input: CreateTwoFactorAuthenticationCredentialsInput!
+  ): CreateTwoFactorAuthenticationCredentialsPayload
+  createUserBountiesReport(
+    """
+    Parameters for CreateUserBountiesReport
+    """
+    input: CreateUserBountiesReportInput!
+  ): CreateUserBountiesReportPayload
+  createUserFlag(
+    """
+    Parameters for CreateUserFlag
+    """
+    input: CreateUserFlagInput!
+  ): CreateUserFlagPayload
+  createUserLufthansaAccount(
+    """
+    Parameters for CreateUserLufthansaAccount
+    """
+    input: CreateUserLufthansaAccountInput!
+  ): CreateUserLufthansaAccountPayload
+  createUserPayoutsReport(
+    """
+    Parameters for CreateUserPayoutsReport
+    """
+    input: CreateUserPayoutsReportInput!
+  ): CreateUserPayoutsReportPayload
+  createUserTwoFactorReset(
+    """
+    Parameters for CreateUserTwoFactorReset
+    """
+    input: CreateUserTwoFactorResetInput!
+  ): CreateUserTwoFactorResetPayload
+  createVpnCredentials(
+    """
+    Parameters for CreateVpnCredentials
+    """
+    input: CreateVpnCredentialsInput!
+  ): CreateVpnCredentialsPayload
+  createWebhook(
+    """
+    Parameters for CreateWebhook
+    """
+    input: CreateWebhookInput!
+  ): CreateWebhookPayload
+  deleteAgileAcceleratorIntegration(
+    """
+    Parameters for DeleteAgileAcceleratorIntegration
+    """
+    input: DeleteAgileAcceleratorIntegrationInput!
+  ): DeleteAgileAcceleratorIntegrationPayload
+  deleteBiDirectionalJiraIntegration(
+    """
+    Parameters for DeleteBiDirectionalJiraIntegration
+    """
+    input: DeleteBiDirectionalJiraIntegrationInput!
+  ): DeleteBiDirectionalJiraIntegrationPayload
+  deleteJiraWebhook(
+    """
+    Parameters for DeleteJiraWebhook
+    """
+    input: DeleteJiraWebhookInput!
+  ): DeleteJiraWebhookPayload
+  deleteMailingAddress(
+    """
+    Parameters for DeleteMailingAddress
+    """
+    input: DeleteMailingAddressInput!
+  ): DeleteMailingAddressPayload
+  deletePentest(
+    """
+    Parameters for DeletePentest
+    """
+    input: DeletePentestInput!
+  ): DeletePentestPayload
+  deletePhabricatorIntegration(
+    """
+    Parameters for DeletePhabricatorIntegration
+    """
+    input: DeletePhabricatorIntegrationInput!
+  ): DeletePhabricatorIntegrationPayload
+  deleteSlackPipeline(
+    """
+    Parameters for DeleteSlackPipeline
+    """
+    input: DeleteSlackPipelineInput!
+  ): DeleteSlackPipelinePayload
+  deleteTeamMember(
+    """
+    Parameters for DeleteTeamMember
+    """
+    input: DeleteTeamMemberInput!
+  ): DeleteTeamMemberPayload
+  deleteTeamSlackIntegration(
+    """
+    Parameters for DeleteTeamSlackIntegration
+    """
+    input: DeleteTeamSlackIntegrationInput!
+  ): DeleteTeamSlackIntegrationPayload
+  deleteTrigger(
+    """
+    Parameters for DeleteTrigger
+    """
+    input: DeleteTriggerInput!
+  ): DeleteTriggerPayload
+  deleteUnclaimedReportWithDependencies(
+    """
+    Parameters for DeleteUnclaimedReportWithDependencies
+    """
+    input: DeleteUnclaimedReportWithDependenciesInput!
+  ): DeleteUnclaimedReportWithDependenciesPayload
+  deleteUserLufthansaAccount(
+    """
+    Parameters for DeleteUserLufthansaAccount
+    """
+    input: DeleteUserLufthansaAccountInput!
+  ): DeleteUserLufthansaAccountPayload
+  deleteUserSession(
+    """
+    Parameters for DeleteUserSession
+    """
+    input: DeleteUserSessionInput!
+  ): DeleteUserSessionPayload
+  deleteWebhook(
+    """
+    Parameters for DeleteWebhook
+    """
+    input: DeleteWebhookInput!
+  ): DeleteWebhookPayload
+  destroyApiUser(
+    """
+    Parameters for DestroyApiUser
+    """
+    input: DestroyApiUserInput!
+  ): DestroyApiUserPayload
+  destroyTwoFactorAuthenticationCredentials(
+    """
+    Parameters for DestroyTwoFactorAuthenticationCredentials
+    """
+    input: DestroyTwoFactorAuthenticationCredentialsInput!
+  ): DestroyTwoFactorAuthenticationCredentialsPayload
+  destroyUpvote(
+    """
+    Parameters for DestroyUpvote
+    """
+    input: DestroyUpvoteInput!
+  ): DestroyUpvotePayload
+  disableSamlProvider(
+    """
+    Parameters for DisableSamlProvider
+    """
+    input: DisableSamlProviderInput!
+  ): DisableSamlProviderPayload
+  dismissProgramHealthAcknowledgement(
+    """
+    Parameters for DismissProgramHealthAcknowledgement
+    """
+    input: DismissProgramHealthAcknowledgementInput!
+  ): DismissProgramHealthAcknowledgementPayload
+  dismissReport(
+    """
+    Parameters for DismissReport
+    """
+    input: DismissReportInput!
+  ): DismissReportPayload
+  dismissTriageInboxItems(
+    """
+    Parameters for DismissTriageInboxItems
+    """
+    input: DismissTriageInboxItemsInput!
+  ): DismissTriageInboxItemsPayload
+  enableSamlProvider(
+    """
+    Parameters for EnableSamlProvider
+    """
+    input: EnableSamlProviderInput!
+  ): EnableSamlProviderPayload
+  escalateReport(
+    """
+    Parameters for EscalateReport
+    """
+    input: EscalateReportInput!
+  ): EscalateReportPayload
+  escalateToJira(
+    """
+    Parameters for EscalateToJira
+    """
+    input: EscalateToJiraInput!
+  ): EscalateToJiraPayload
+  exportLifetimeAuditLogItems(
+    """
+    Parameters for ExportLifetimeAuditLogItems
+    """
+    input: ExportLifetimeAuditLogItemsInput!
+  ): ExportLifetimeAuditLogItemsPayload
+  exportLifetimeReports(
+    """
+    Parameters for ExportLifetimeReports
+    """
+    input: ExportLifetimeReportsInput!
+  ): ExportLifetimeReportsPayload
+  exportReportsForPentest(
+    """
+    Parameters for ExportReportsForPentest
+    """
+    input: ExportReportsForPentestInput!
+  ): ExportReportsForPentestPayload
+  forgetFacebookCredentials(
+    """
+    Parameters for ForgetFacebookCredential
+    """
+    input: ForgetFacebookCredentialInput!
+  ): ForgetFacebookCredentialPayload
+  generateReportShareToken(
+    """
+    Parameters for GenerateReportShareToken
+    """
+    input: GenerateReportShareTokenInput!
+  ): GenerateReportShareTokenPayload
+  generateTaxFormUrl(
+    """
+    Parameters for GenerateTaxFormUrl
+    """
+    input: GenerateTaxFormUrlInput!
+  ): GenerateTaxFormUrlPayload
 
   """
   ID of the object.
   """
   id: ID!
-  launchTeam(input: LaunchTeamInput!): LaunchTeamPayload
-  launchTeamPublicly(input: LaunchTeamPubliclyInput!): LaunchTeamPubliclyPayload
-  leavePrivateProgram(input: LeavePrivateProgramInput!): LeavePrivateProgramPayload
-  leaveReportRetestUser(input: LeaveReportRetestUserInput!): LeaveReportRetestUserPayload
-  linkReport(input: LinkReportInput!): LinkReportPayload
-  lockReport(input: LockReportInput!): LockReportPayload
-  markChecklistCheckResponseAsRead(input: MarkChecklistCheckResponseAsReadInput!): MarkChecklistCheckResponseAsReadPayload
-  markReportAsNeedsMoreInfo(input: MarkReportAsNeedsMoreInfoInput!): MarkReportAsNeedsMoreInfoPayload
-  markReportAsNoise(input: MarkReportAsNoiseInput!): MarkReportAsNoisePayload
-  markReportAsSignal(input: MarkReportAsSignalInput!): MarkReportAsSignalPayload
-  markReportMetadataAsReviewed(input: MarkReportMetadataAsReviewedInput!): MarkReportMetadataAsReviewedPayload
-  markSwagAsSent(input: MarkSwagAsSentInput!): MarkSwagAsSentPayload
-  programHealthAcknowledgementSeen(input: ProgramHealthAcknowledgementSeenInput!): ProgramHealthAcknowledgementSeenPayload
-  reassignReportToTeam(input: ReassignReportToTeamInput!): ReassignReportToTeamPayload
-  reclaimChecklistCheck(input: ReclaimChecklistCheckInput!): ReclaimChecklistCheckPayload
-  redactReport(input: RedactReportInput!): RedactReportPayload
-  regenerateCalendarToken(input: RegenerateCalendarTokenInput!): RegenerateCalendarTokenPayload
-  rejectInvitation(input: RejectInvitationInput!): RejectInvitationPayload
-  rejectReportRetest(input: RejectReportRetestInput!): RejectReportRetestPayload
-  releaseChecklistCheck(input: ReleaseChecklistCheckInput!): ReleaseChecklistCheckPayload
-  removeBountyTable(input: RemoveBountyTableInput!): RemoveBountyTablePayload
-  removeReference(input: RemoveReferenceInput!): RemoveReferencePayload
-  removeSolutionInstance(input: RemoveSolutionInstanceInput!): RemoveSolutionInstancePayload
-  requestReportDisclosure(input: RequestReportDisclosureInput!): RequestReportDisclosurePayload
-  revokeCredential(input: RevokeCredentialInput!): RevokeCredentialPayload
-  revokePentester(input: RevokePentesterInput!): RevokePentesterPayload
-  revokeReportShareToken(input: RevokeReportShareTokenInput!): RevokeReportShareTokenPayload
-  savePentestCheckResult(input: SavePentestCheckResultInput!): SavePentestCheckResultPayload
-  shareReportViaEmail(input: ShareReportViaEmailInput!): ShareReportViaEmailPayload
-  startVpnInstance(input: StartVpnInstanceInput!): StartVpnInstancePayload
-  stopVpnInstance(input: StopVpnInstanceInput!): StopVpnInstancePayload
-  swapCertificatesSamlProvider(input: SwapCertificatesSamlProviderMutationInput!): SwapCertificatesSamlProviderMutationPayload
-  testWebhook(input: TestWebhookRequestInput!): TestWebhookRequestPayload
-  toggleFollowUserMutation(input: ToggleFollowUserInput!): ToggleFollowUserPayload
-  toggleSurveyRatingItemVisibleOnUserProfile(input: ToggleSurveyRatingItemVisibleOnUserProfileInput!): ToggleSurveyRatingItemVisibleOnUserProfilePayload
-  toggleTeamUpdatesSubscription(input: ToggleTeamUpdatesSubscriptionInput!): ToggleTeamUpdatesSubscriptionPayload
-  trackerIncrement(input: TrackerIncrementInput!): TrackerIncrementPayload
-  unarchiveStructuredScope(input: UnarchiveStructuredScopeInput!): UnarchiveStructuredScopePayload
-  unclaimReportRetest(input: UnclaimReportRetestInput!): UnclaimReportRetestPayload
-  unsubscribeMailingList(input: UnsubscribeMailingListInput!): UnsubscribeMailingListPayload
-  updateAccountRecoveryPhoneNumber(input: UpdateAccountRecoveryPhoneNumberInput!): UpdateAccountRecoveryPhoneNumberPayload
-  updateActivity(input: UpdateActivityInput!): UpdateActivityPayload
-  updateAlternativeCertificateSamlProvider(input: UpdateAlternativeCertificateSamlProviderInput!): UpdateAlternativeCertificateSamlProviderPayload
-  updateAssigneeToGroup(input: UpdateAssigneeToGroupInput!): UpdateAssigneeToGroupPayload
-  updateAssigneeToNobody(input: UpdateAssigneeToNobodyInput!): UpdateAssigneeToNobodyPayload
-  updateAssigneeToUser(input: UpdateAssigneeToUserInput!): UpdateAssigneeToUserPayload
-  updateAttachmentToInternalOnly(input: UpdateAttachmentToInternalOnlyInput!): UpdateAttachmentToInternalOnlyPayload
-  updateAutomaticInvites(input: UpdateAutomaticInvitesInput!): UpdateAutomaticInvitesPayload
-  updateBookmarkedTeam(input: UpdateBookmarkedTeamInput!): UpdateBookmarkedTeamPayload
-  updateBountyTable(input: UpdateBountyTableInput!): UpdateBountyTablePayload
-  updateChallengeSetting(input: UpdateChallengeSettingInput!): UpdateChallengeSettingPayload
-  updateChecklistCheckResponseComment(input: UpdateChecklistCheckResponseCommentInput!): UpdateChecklistCheckResponseCommentPayload
-  updateChecklistCheckResponseSubmission(input: UpdateChecklistCheckResponseSubmissionInput!): UpdateChecklistCheckResponseSubmissionPayload
-  updateCredentialAccountDetails(input: UpdateCredentialAccountDetailInput!): UpdateCredentialAccountDetailPayload
-  updateCredentialInstruction(input: UpdateCredentialInstructionInput!): UpdateCredentialInstructionPayload
-  updateCustomFieldAttribute(input: UpdateCustomFieldAttributeInput!): UpdateCustomFieldAttributePayload
-  updateCveIds(input: UpdateCveIdsInput!): UpdateCveIdsPayload
-  updateCveRequest(input: UpdateCveRequestInput!): UpdateCveRequestPayload
-  updateEmbeddedSubmissionDomains(input: UpdateEmbeddedSubmissionDomainInput!): UpdateEmbeddedSubmissionDomainPayload
-  updateEmbeddedSubmissionForm(input: UpdateEmbeddedSubmissionFormInput!): UpdateEmbeddedSubmissionFormPayload
-  updateGatewayProgramState(input: UpdateGatewayProgramStateInput!): UpdateGatewayProgramStatePayload
-  updateGatewayUserState(input: UpdateGatewayUserStateInput!): UpdateGatewayUserStatePayload
-  updateHackerTriageRating(input: UpdateHackerTriageRatingInput!): UpdateHackerTriageRatingPayload
-  updateInvitationPreferences(input: UpdateInvitationPreferencesInput!): UpdateInvitationPreferencesPayload
-  updateJiraWebhook(input: UpdateJiraWebhookInput!): UpdateJiraWebhookPayload
-  updateJobListing(input: UpdateJobListingInput!): UpdateJobListingPayload
-  updateJobListingCounter(input: UpdateJobListingCounterInput!): UpdateJobListingCounterPayload
-  updateLastViewedNewFeaturesAt(input: UpdateLastViewedNewFeaturesAtInput!): UpdateLastViewedNewFeaturesAtPayload
-  updateMe(input: UpdateMeInput!): UpdateMePayload
-  updateNotificationDeliveryPreference(input: UpdateNotificationDeliveryPreferenceInput!): UpdateNotificationDeliveryPreferencePayload
-  updateNotificationPreferences(input: UpdateNotificationPreferencesInput!): UpdateNotificationPreferencesPayload
-  updatePaymentsUser(input: UpdatePaymentsUserMutationInput!): UpdatePaymentsUserMutationPayload
-  updatePentestFormAnswer(input: UpdatePentestFormAnswerInput!): UpdatePentestFormAnswerPayload
-  updatePentestTask(input: UpdatePentestTaskInput!): UpdatePentestTaskPayload
-  updatePhabricatorIntegration(input: UpdatePhabricatorIntegrationInput!): UpdatePhabricatorIntegrationPayload
-  updateProgramPolicy(input: UpdateProgramPolicyInput!): UpdateProgramPolicyPayload
-  updateRemediationGuidance(input: UpdateRemediationGuidanceInput!): UpdateRemediationGuidancePayload
-  updateReportCloseComments(input: UpdateReportCloseCommentsInput!): UpdateReportCloseCommentsPayload
-  updateReportCustomFieldValues(input: UpdateReportCustomFieldValuesInput!): UpdateReportCustomFieldValuesPayload
-  updateReportIneligibleForBounty(input: UpdateReportIneligibleForBountyInput!): UpdateReportIneligibleForBountyPayload
-  updateReportNotificationPreferences(input: UpdateReportNotificationPreferencesInput!): UpdateReportNotificationPreferencesPayload
-  updateReportStateToDuplicate(input: UpdateReportStateToDuplicateInput!): UpdateReportStateToDuplicatePayload
-  updateReportStateToInformative(input: UpdateReportStateToInformativeInput!): UpdateReportStateToInformativePayload
-  updateReportStateToNeedsMoreInfo(input: UpdateReportStateToNeedsMoreInfoInput!): UpdateReportStateToNeedsMoreInfoPayload
-  updateReportStateToNew(input: UpdateReportStateToNewInput!): UpdateReportStateToNewPayload
-  updateReportStateToNotApplicable(input: UpdateReportStateToNotApplicableInput!): UpdateReportStateToNotApplicablePayload
-  updateReportStateToResolved(input: UpdateReportStateToResolvedInput!): UpdateReportStateToResolvedPayload
-  updateReportStateToRetesting(input: UpdateReportStateToRetestingInput!): UpdateReportStateToRetestingPayload
-  updateReportStateToSpam(input: UpdateReportStateToSpamInput!): UpdateReportStateToSpamPayload
-  updateReportStateToTriaged(input: UpdateReportStateToTriagedInput!): UpdateReportStateToTriagedPayload
-  updateReportStructuredScope(input: UpdateReportStructuredScopeInput!): UpdateReportStructuredScopePayload
-  updateReportSubscription(input: UpdateReportSubscriptionInput!): UpdateReportSubscriptionPayload
-  updateReportTitle(input: UpdateReportTitleInput!): UpdateReportTitlePayload
-  updateReportVulnerabilityInformation(input: UpdateReportVulnerabilityInformationInput!): UpdateReportVulnerabilityInformationPayload
-  updateReportWeakness(input: UpdateReportWeaknessInput!): UpdateReportWeaknessPayload
-  updateSfdcAgileAcceleratorSettings(input: UpdateSfdcAgileAcceleratorSettingsInput!): UpdateSfdcAgileAcceleratorSettingsPayload
-  updateSlackPipeline(input: UpdateSlackPipelineInput!): UpdateSlackPipelinePayload
-  updateSlackUser(input: UpdateSlackUserInput!): UpdateSlackUserPayload
-  updateSolutionInstance(input: UpdateSolutionInstanceInput!): UpdateSolutionInstancePayload
-  updateStructuredPolicy(input: UpdateStructuredPolicyInput!): UpdateStructuredPolicyPayload
-  updateStructuredScope(input: UpdateStructuredScopeInput!): UpdateStructuredScopePayload
-  updateSubmissionRequirements(input: UpdateSubmissionRequirementsInput!): UpdateSubmissionRequirementsPayload
-  updateSurveyRating(input: UpdateSurveyRatingInput!): UpdateSurveyRatingPayload
-  updateTeamAllowsPrivateDisclosure(input: UpdateTeamAllowsPrivateDisclosureInput!): UpdateTeamAllowsPrivateDisclosurePayload
-  updateTeamAncEnabled(input: UpdateTeamAncEnabledInput!): UpdateTeamAncEnabledPayload
-  updateTeamBountySplittingSetting(input: UpdateTeamBountySplittingSettingInput!): UpdateTeamBountySplittingSettingPayload
-  updateTeamCohortRunStageItem(input: UpdateTeamCohortRunStageItemInput!): UpdateTeamCohortRunStageItemPayload
-  updateTeamCriticalSubmissionState(input: UpdateTeamCriticalSubmissionStateInput!): UpdateTeamCriticalSubmissionStatePayload
-  updateTeamDisplayOptions(input: UpdateTeamDisplayOptionsInput!): UpdateTeamDisplayOptionsPayload
-  updateTeamEmailSetting(input: UpdateTeamEmailSettingInput!): UpdateTeamEmailSettingPayload
-  updateTeamFancySlackIntegration(input: UpdateTeamFancySlackIntegrationInput!): UpdateTeamFancySlackIntegrationPayload
-  updateTeamGenius(input: UpdateTeamGeniusInput!): UpdateTeamGeniusPayload
-  updateTeamMemberVisibility(input: UpdateTeamMemberVisibilityInput!): UpdateTeamMemberVisibilityPayload
-  updateTeamResponseSla(input: UpdateTeamResponseSlaInput!): UpdateTeamResponseSlaPayload
-  updateTeamSubmissionState(input: UpdateTeamSubmissionStateInput!): UpdateTeamSubmissionStatePayload
-  updateTeamSuccessGoals(input: UpdateTeamSuccessGoalsInput!): UpdateTeamSuccessGoalsPayload
-  updateTeamTargetSignal(input: UpdateTeamTargetSignalInput!): UpdateTeamTargetSignalPayload
-  updateTeamTriageNote(input: UpdateTeamTriageNoteInput!): UpdateTeamTriageNotePayload
-  updateTeamWeakness(input: UpdateTeamWeaknessInput!): UpdateTeamWeaknessPayload
-  updateTriageInboxItemsOwnership(input: UpdateTriageInboxItemsOwnershipInput!): UpdateTriageInboxItemsOwnershipPayload
-  updateTrigger(input: UpdateTriggerInput!): UpdateTriggerPayload
-  updateTwoFactorAuthenticationBackupCodes(input: UpdateTwoFactorAuthenticationBackupCodesInput!): UpdateTwoFactorAuthenticationBackupCodesPayload
-  updateTwoFactorAuthenticationCredentials(input: UpdateTwoFactorAuthenticationCredentialsInput!): UpdateTwoFactorAuthenticationCredentialsPayload
-  updateUserDisplayOptions(input: UpdateUserDisplayOptionsInput!): UpdateUserDisplayOptionsPayload
-  updateUserEmail(input: UpdateUserEmailInput!): UpdateUserEmailPayload
-  updateUserLufthansaAccount(input: UpdateUserLufthansaAccountInput!): UpdateUserLufthansaAccountPayload
-  updateUserPassword(input: UpdateUserPasswordInput!): UpdateUserPasswordPayload
-  updateUserType(input: UpdateUserTypeInput!): UpdateUserTypePayload
-  updateViewingReport(input: UpdateViewingReportInput!): UpdateViewingReportPayload
-  updateWebhook(input: UpdateWebhookInput!): UpdateWebhookPayload
-  uploadProgramPolicyAttachment(input: UploadProgramPolicyAttachmentInput!): UploadProgramPolicyAttachmentPayload
-  upvote(input: UpvoteInput!): UpvotePayload
-  verifyAccountRecoveryPhoneNumber(input: VerifyAccountRecoveryPhoneNumberInput!): VerifyAccountRecoveryPhoneNumberPayload
-  verifyDomainOwnership(input: VerifyDomainOwnershipInput!): VerifyDomainOwnershipPayload
-  verifySamlProvider(input: VerifySamlProviderInput!): VerifySamlProviderPayload
+  launchTeam(
+    """
+    Parameters for LaunchTeam
+    """
+    input: LaunchTeamInput!
+  ): LaunchTeamPayload
+  launchTeamPublicly(
+    """
+    Parameters for LaunchTeamPublicly
+    """
+    input: LaunchTeamPubliclyInput!
+  ): LaunchTeamPubliclyPayload
+  leavePrivateProgram(
+    """
+    Parameters for LeavePrivateProgram
+    """
+    input: LeavePrivateProgramInput!
+  ): LeavePrivateProgramPayload
+  leaveReportRetestUser(
+    """
+    Parameters for LeaveReportRetestUser
+    """
+    input: LeaveReportRetestUserInput!
+  ): LeaveReportRetestUserPayload
+  linkReport(
+    """
+    Parameters for LinkReport
+    """
+    input: LinkReportInput!
+  ): LinkReportPayload
+  lockReport(
+    """
+    Parameters for LockReport
+    """
+    input: LockReportInput!
+  ): LockReportPayload
+  markChecklistCheckResponseAsRead(
+    """
+    Parameters for MarkChecklistCheckResponseAsRead
+    """
+    input: MarkChecklistCheckResponseAsReadInput!
+  ): MarkChecklistCheckResponseAsReadPayload
+  markReportAsNeedsMoreInfo(
+    """
+    Parameters for MarkReportAsNeedsMoreInfo
+    """
+    input: MarkReportAsNeedsMoreInfoInput!
+  ): MarkReportAsNeedsMoreInfoPayload
+  markReportAsNoise(
+    """
+    Parameters for MarkReportAsNoise
+    """
+    input: MarkReportAsNoiseInput!
+  ): MarkReportAsNoisePayload
+  markReportAsSignal(
+    """
+    Parameters for MarkReportAsSignal
+    """
+    input: MarkReportAsSignalInput!
+  ): MarkReportAsSignalPayload
+  markReportMetadataAsReviewed(
+    """
+    Parameters for MarkReportMetadataAsReviewed
+    """
+    input: MarkReportMetadataAsReviewedInput!
+  ): MarkReportMetadataAsReviewedPayload
+  markSwagAsSent(
+    """
+    Parameters for MarkSwagAsSent
+    """
+    input: MarkSwagAsSentInput!
+  ): MarkSwagAsSentPayload
+  programHealthAcknowledgementSeen(
+    """
+    Parameters for ProgramHealthAcknowledgementSeen
+    """
+    input: ProgramHealthAcknowledgementSeenInput!
+  ): ProgramHealthAcknowledgementSeenPayload
+  reassignReportToTeam(
+    """
+    Parameters for ReassignReportToTeam
+    """
+    input: ReassignReportToTeamInput!
+  ): ReassignReportToTeamPayload
+  reclaimChecklistCheck(
+    """
+    Parameters for ReclaimChecklistCheck
+    """
+    input: ReclaimChecklistCheckInput!
+  ): ReclaimChecklistCheckPayload
+  redactReport(
+    """
+    Parameters for RedactReport
+    """
+    input: RedactReportInput!
+  ): RedactReportPayload
+  regenerateCalendarToken(
+    """
+    Parameters for RegenerateCalendarToken
+    """
+    input: RegenerateCalendarTokenInput!
+  ): RegenerateCalendarTokenPayload
+  rejectInvitation(
+    """
+    Parameters for RejectInvitation
+    """
+    input: RejectInvitationInput!
+  ): RejectInvitationPayload
+  rejectReportRetest(
+    """
+    Parameters for RejectReportRetest
+    """
+    input: RejectReportRetestInput!
+  ): RejectReportRetestPayload
+  releaseChecklistCheck(
+    """
+    Parameters for ReleaseChecklistCheck
+    """
+    input: ReleaseChecklistCheckInput!
+  ): ReleaseChecklistCheckPayload
+  removeBountyTable(
+    """
+    Parameters for RemoveBountyTable
+    """
+    input: RemoveBountyTableInput!
+  ): RemoveBountyTablePayload
+  removeReference(
+    """
+    Parameters for RemoveReference
+    """
+    input: RemoveReferenceInput!
+  ): RemoveReferencePayload
+  removeSolutionInstance(
+    """
+    Parameters for RemoveSolutionInstance
+    """
+    input: RemoveSolutionInstanceInput!
+  ): RemoveSolutionInstancePayload
+  requestReportDisclosure(
+    """
+    Parameters for RequestReportDisclosure
+    """
+    input: RequestReportDisclosureInput!
+  ): RequestReportDisclosurePayload
+  revokeCredential(
+    """
+    Parameters for RevokeCredential
+    """
+    input: RevokeCredentialInput!
+  ): RevokeCredentialPayload
+  revokePentester(
+    """
+    Parameters for RevokePentester
+    """
+    input: RevokePentesterInput!
+  ): RevokePentesterPayload
+  revokeReportShareToken(
+    """
+    Parameters for RevokeReportShareToken
+    """
+    input: RevokeReportShareTokenInput!
+  ): RevokeReportShareTokenPayload
+  savePentestCheckResult(
+    """
+    Parameters for SavePentestCheckResult
+    """
+    input: SavePentestCheckResultInput!
+  ): SavePentestCheckResultPayload
+  shareReportViaEmail(
+    """
+    Parameters for ShareReportViaEmail
+    """
+    input: ShareReportViaEmailInput!
+  ): ShareReportViaEmailPayload
+  startVpnInstance(
+    """
+    Parameters for StartVpnInstance
+    """
+    input: StartVpnInstanceInput!
+  ): StartVpnInstancePayload
+  stopVpnInstance(
+    """
+    Parameters for StopVpnInstance
+    """
+    input: StopVpnInstanceInput!
+  ): StopVpnInstancePayload
+  swapCertificatesSamlProvider(
+    """
+    Parameters for SwapCertificatesSamlProviderMutation
+    """
+    input: SwapCertificatesSamlProviderMutationInput!
+  ): SwapCertificatesSamlProviderMutationPayload
+  testWebhook(
+    """
+    Parameters for TestWebhookRequest
+    """
+    input: TestWebhookRequestInput!
+  ): TestWebhookRequestPayload
+  toggleFollowUserMutation(
+    """
+    Parameters for ToggleFollowUser
+    """
+    input: ToggleFollowUserInput!
+  ): ToggleFollowUserPayload
+  toggleSurveyRatingItemVisibleOnUserProfile(
+    """
+    Parameters for ToggleSurveyRatingItemVisibleOnUserProfile
+    """
+    input: ToggleSurveyRatingItemVisibleOnUserProfileInput!
+  ): ToggleSurveyRatingItemVisibleOnUserProfilePayload
+  toggleTeamUpdatesSubscription(
+    """
+    Parameters for ToggleTeamUpdatesSubscription
+    """
+    input: ToggleTeamUpdatesSubscriptionInput!
+  ): ToggleTeamUpdatesSubscriptionPayload
+  trackerIncrement(
+    """
+    Parameters for TrackerIncrement
+    """
+    input: TrackerIncrementInput!
+  ): TrackerIncrementPayload
+  unarchiveStructuredScope(
+    """
+    Parameters for UnarchiveStructuredScope
+    """
+    input: UnarchiveStructuredScopeInput!
+  ): UnarchiveStructuredScopePayload
+  unclaimReportRetest(
+    """
+    Parameters for UnclaimReportRetest
+    """
+    input: UnclaimReportRetestInput!
+  ): UnclaimReportRetestPayload
+  unsubscribeMailingList(
+    """
+    Parameters for UnsubscribeMailingList
+    """
+    input: UnsubscribeMailingListInput!
+  ): UnsubscribeMailingListPayload
+  updateAccountRecoveryPhoneNumber(
+    """
+    Parameters for UpdateAccountRecoveryPhoneNumber
+    """
+    input: UpdateAccountRecoveryPhoneNumberInput!
+  ): UpdateAccountRecoveryPhoneNumberPayload
+  updateActivity(
+    """
+    Parameters for UpdateActivity
+    """
+    input: UpdateActivityInput!
+  ): UpdateActivityPayload
+  updateAlternativeCertificateSamlProvider(
+    """
+    Parameters for UpdateAlternativeCertificateSamlProvider
+    """
+    input: UpdateAlternativeCertificateSamlProviderInput!
+  ): UpdateAlternativeCertificateSamlProviderPayload
+  updateAssigneeToGroup(
+    """
+    Parameters for UpdateAssigneeToGroup
+    """
+    input: UpdateAssigneeToGroupInput!
+  ): UpdateAssigneeToGroupPayload
+  updateAssigneeToNobody(
+    """
+    Parameters for UpdateAssigneeToNobody
+    """
+    input: UpdateAssigneeToNobodyInput!
+  ): UpdateAssigneeToNobodyPayload
+  updateAssigneeToUser(
+    """
+    Parameters for UpdateAssigneeToUser
+    """
+    input: UpdateAssigneeToUserInput!
+  ): UpdateAssigneeToUserPayload
+  updateAttachmentToInternalOnly(
+    """
+    Parameters for UpdateAttachmentToInternalOnly
+    """
+    input: UpdateAttachmentToInternalOnlyInput!
+  ): UpdateAttachmentToInternalOnlyPayload
+  updateAutomaticInvites(
+    """
+    Parameters for UpdateAutomaticInvites
+    """
+    input: UpdateAutomaticInvitesInput!
+  ): UpdateAutomaticInvitesPayload
+  updateBookmarkedTeam(
+    """
+    Parameters for UpdateBookmarkedTeam
+    """
+    input: UpdateBookmarkedTeamInput!
+  ): UpdateBookmarkedTeamPayload
+  updateBountyTable(
+    """
+    Parameters for UpdateBountyTable
+    """
+    input: UpdateBountyTableInput!
+  ): UpdateBountyTablePayload
+  updateChallengeSetting(
+    """
+    Parameters for UpdateChallengeSetting
+    """
+    input: UpdateChallengeSettingInput!
+  ): UpdateChallengeSettingPayload
+  updateChecklistCheckResponseComment(
+    """
+    Parameters for UpdateChecklistCheckResponseComment
+    """
+    input: UpdateChecklistCheckResponseCommentInput!
+  ): UpdateChecklistCheckResponseCommentPayload
+  updateChecklistCheckResponseSubmission(
+    """
+    Parameters for UpdateChecklistCheckResponseSubmission
+    """
+    input: UpdateChecklistCheckResponseSubmissionInput!
+  ): UpdateChecklistCheckResponseSubmissionPayload
+  updateCredentialAccountDetails(
+    """
+    Parameters for UpdateCredentialAccountDetail
+    """
+    input: UpdateCredentialAccountDetailInput!
+  ): UpdateCredentialAccountDetailPayload
+  updateCredentialInstruction(
+    """
+    Parameters for UpdateCredentialInstruction
+    """
+    input: UpdateCredentialInstructionInput!
+  ): UpdateCredentialInstructionPayload
+  updateCustomFieldAttribute(
+    """
+    Parameters for UpdateCustomFieldAttribute
+    """
+    input: UpdateCustomFieldAttributeInput!
+  ): UpdateCustomFieldAttributePayload
+  updateCveIds(
+    """
+    Parameters for UpdateCveIds
+    """
+    input: UpdateCveIdsInput!
+  ): UpdateCveIdsPayload
+  updateCveRequest(
+    """
+    Parameters for UpdateCveRequest
+    """
+    input: UpdateCveRequestInput!
+  ): UpdateCveRequestPayload
+  updateEmbeddedSubmissionDomains(
+    """
+    Parameters for UpdateEmbeddedSubmissionDomain
+    """
+    input: UpdateEmbeddedSubmissionDomainInput!
+  ): UpdateEmbeddedSubmissionDomainPayload
+  updateEmbeddedSubmissionForm(
+    """
+    Parameters for UpdateEmbeddedSubmissionForm
+    """
+    input: UpdateEmbeddedSubmissionFormInput!
+  ): UpdateEmbeddedSubmissionFormPayload
+  updateGatewayProgramState(
+    """
+    Parameters for UpdateGatewayProgramState
+    """
+    input: UpdateGatewayProgramStateInput!
+  ): UpdateGatewayProgramStatePayload
+  updateGatewayUserState(
+    """
+    Parameters for UpdateGatewayUserState
+    """
+    input: UpdateGatewayUserStateInput!
+  ): UpdateGatewayUserStatePayload
+  updateHackerTriageRating(
+    """
+    Parameters for UpdateHackerTriageRating
+    """
+    input: UpdateHackerTriageRatingInput!
+  ): UpdateHackerTriageRatingPayload
+  updateInvitationPreferences(
+    """
+    Parameters for UpdateInvitationPreferences
+    """
+    input: UpdateInvitationPreferencesInput!
+  ): UpdateInvitationPreferencesPayload
+  updateJiraWebhook(
+    """
+    Parameters for UpdateJiraWebhook
+    """
+    input: UpdateJiraWebhookInput!
+  ): UpdateJiraWebhookPayload
+  updateJobListing(
+    """
+    Parameters for UpdateJobListing
+    """
+    input: UpdateJobListingInput!
+  ): UpdateJobListingPayload
+  updateJobListingCounter(
+    """
+    Parameters for UpdateJobListingCounter
+    """
+    input: UpdateJobListingCounterInput!
+  ): UpdateJobListingCounterPayload
+  updateLastViewedNewFeaturesAt(
+    """
+    Parameters for UpdateLastViewedNewFeaturesAt
+    """
+    input: UpdateLastViewedNewFeaturesAtInput!
+  ): UpdateLastViewedNewFeaturesAtPayload
+  updateMe(
+    """
+    Parameters for UpdateMe
+    """
+    input: UpdateMeInput!
+  ): UpdateMePayload
+  updateNotificationDeliveryPreference(
+    """
+    Parameters for UpdateNotificationDeliveryPreference
+    """
+    input: UpdateNotificationDeliveryPreferenceInput!
+  ): UpdateNotificationDeliveryPreferencePayload
+  updateNotificationPreferences(
+    """
+    Parameters for UpdateNotificationPreferences
+    """
+    input: UpdateNotificationPreferencesInput!
+  ): UpdateNotificationPreferencesPayload
+  updatePaymentsUser(
+    """
+    Parameters for UpdatePaymentsUserMutation
+    """
+    input: UpdatePaymentsUserMutationInput!
+  ): UpdatePaymentsUserMutationPayload
+  updatePentestFormAnswer(
+    """
+    Parameters for UpdatePentestFormAnswer
+    """
+    input: UpdatePentestFormAnswerInput!
+  ): UpdatePentestFormAnswerPayload
+  updatePentestTask(
+    """
+    Parameters for UpdatePentestTask
+    """
+    input: UpdatePentestTaskInput!
+  ): UpdatePentestTaskPayload
+  updatePhabricatorIntegration(
+    """
+    Parameters for UpdatePhabricatorIntegration
+    """
+    input: UpdatePhabricatorIntegrationInput!
+  ): UpdatePhabricatorIntegrationPayload
+  updateProgramPolicy(
+    """
+    Parameters for UpdateProgramPolicy
+    """
+    input: UpdateProgramPolicyInput!
+  ): UpdateProgramPolicyPayload
+  updateRemediationGuidance(
+    """
+    Parameters for UpdateRemediationGuidance
+    """
+    input: UpdateRemediationGuidanceInput!
+  ): UpdateRemediationGuidancePayload
+  updateReportCloseComments(
+    """
+    Parameters for UpdateReportCloseComments
+    """
+    input: UpdateReportCloseCommentsInput!
+  ): UpdateReportCloseCommentsPayload
+  updateReportCustomFieldValues(
+    """
+    Parameters for UpdateReportCustomFieldValues
+    """
+    input: UpdateReportCustomFieldValuesInput!
+  ): UpdateReportCustomFieldValuesPayload
+  updateReportIneligibleForBounty(
+    """
+    Parameters for UpdateReportIneligibleForBounty
+    """
+    input: UpdateReportIneligibleForBountyInput!
+  ): UpdateReportIneligibleForBountyPayload
+  updateReportNotificationPreferences(
+    """
+    Parameters for UpdateReportNotificationPreferences
+    """
+    input: UpdateReportNotificationPreferencesInput!
+  ): UpdateReportNotificationPreferencesPayload
+  updateReportStateToDuplicate(
+    """
+    Parameters for UpdateReportStateToDuplicate
+    """
+    input: UpdateReportStateToDuplicateInput!
+  ): UpdateReportStateToDuplicatePayload
+  updateReportStateToInformative(
+    """
+    Parameters for UpdateReportStateToInformative
+    """
+    input: UpdateReportStateToInformativeInput!
+  ): UpdateReportStateToInformativePayload
+  updateReportStateToNeedsMoreInfo(
+    """
+    Parameters for UpdateReportStateToNeedsMoreInfo
+    """
+    input: UpdateReportStateToNeedsMoreInfoInput!
+  ): UpdateReportStateToNeedsMoreInfoPayload
+  updateReportStateToNew(
+    """
+    Parameters for UpdateReportStateToNew
+    """
+    input: UpdateReportStateToNewInput!
+  ): UpdateReportStateToNewPayload
+  updateReportStateToNotApplicable(
+    """
+    Parameters for UpdateReportStateToNotApplicable
+    """
+    input: UpdateReportStateToNotApplicableInput!
+  ): UpdateReportStateToNotApplicablePayload
+  updateReportStateToResolved(
+    """
+    Parameters for UpdateReportStateToResolved
+    """
+    input: UpdateReportStateToResolvedInput!
+  ): UpdateReportStateToResolvedPayload
+  updateReportStateToRetesting(
+    """
+    Parameters for UpdateReportStateToRetesting
+    """
+    input: UpdateReportStateToRetestingInput!
+  ): UpdateReportStateToRetestingPayload
+  updateReportStateToSpam(
+    """
+    Parameters for UpdateReportStateToSpam
+    """
+    input: UpdateReportStateToSpamInput!
+  ): UpdateReportStateToSpamPayload
+  updateReportStateToTriaged(
+    """
+    Parameters for UpdateReportStateToTriaged
+    """
+    input: UpdateReportStateToTriagedInput!
+  ): UpdateReportStateToTriagedPayload
+  updateReportStructuredScope(
+    """
+    Parameters for UpdateReportStructuredScope
+    """
+    input: UpdateReportStructuredScopeInput!
+  ): UpdateReportStructuredScopePayload
+  updateReportSubscription(
+    """
+    Parameters for UpdateReportSubscription
+    """
+    input: UpdateReportSubscriptionInput!
+  ): UpdateReportSubscriptionPayload
+  updateReportTitle(
+    """
+    Parameters for UpdateReportTitle
+    """
+    input: UpdateReportTitleInput!
+  ): UpdateReportTitlePayload
+  updateReportVulnerabilityInformation(
+    """
+    Parameters for UpdateReportVulnerabilityInformation
+    """
+    input: UpdateReportVulnerabilityInformationInput!
+  ): UpdateReportVulnerabilityInformationPayload
+  updateReportWeakness(
+    """
+    Parameters for UpdateReportWeakness
+    """
+    input: UpdateReportWeaknessInput!
+  ): UpdateReportWeaknessPayload
+  updateSfdcAgileAcceleratorSettings(
+    """
+    Parameters for UpdateSfdcAgileAcceleratorSettings
+    """
+    input: UpdateSfdcAgileAcceleratorSettingsInput!
+  ): UpdateSfdcAgileAcceleratorSettingsPayload
+  updateSlackPipeline(
+    """
+    Parameters for UpdateSlackPipeline
+    """
+    input: UpdateSlackPipelineInput!
+  ): UpdateSlackPipelinePayload
+  updateSlackUser(
+    """
+    Parameters for UpdateSlackUser
+    """
+    input: UpdateSlackUserInput!
+  ): UpdateSlackUserPayload
+  updateSolutionInstance(
+    """
+    Parameters for UpdateSolutionInstance
+    """
+    input: UpdateSolutionInstanceInput!
+  ): UpdateSolutionInstancePayload
+  updateStructuredPolicy(
+    """
+    Parameters for UpdateStructuredPolicy
+    """
+    input: UpdateStructuredPolicyInput!
+  ): UpdateStructuredPolicyPayload
+  updateStructuredScope(
+    """
+    Parameters for UpdateStructuredScope
+    """
+    input: UpdateStructuredScopeInput!
+  ): UpdateStructuredScopePayload
+  updateSubmissionRequirements(
+    """
+    Parameters for UpdateSubmissionRequirements
+    """
+    input: UpdateSubmissionRequirementsInput!
+  ): UpdateSubmissionRequirementsPayload
+  updateSurveyRating(
+    """
+    Parameters for UpdateSurveyRating
+    """
+    input: UpdateSurveyRatingInput!
+  ): UpdateSurveyRatingPayload
+  updateTeamAllowsPrivateDisclosure(
+    """
+    Parameters for UpdateTeamAllowsPrivateDisclosure
+    """
+    input: UpdateTeamAllowsPrivateDisclosureInput!
+  ): UpdateTeamAllowsPrivateDisclosurePayload
+  updateTeamAncEnabled(
+    """
+    Parameters for UpdateTeamAncEnabled
+    """
+    input: UpdateTeamAncEnabledInput!
+  ): UpdateTeamAncEnabledPayload
+  updateTeamBountySplittingSetting(
+    """
+    Parameters for UpdateTeamBountySplittingSetting
+    """
+    input: UpdateTeamBountySplittingSettingInput!
+  ): UpdateTeamBountySplittingSettingPayload
+  updateTeamCohortRunStageItem(
+    """
+    Parameters for UpdateTeamCohortRunStageItem
+    """
+    input: UpdateTeamCohortRunStageItemInput!
+  ): UpdateTeamCohortRunStageItemPayload
+  updateTeamCriticalSubmissionState(
+    """
+    Parameters for UpdateTeamCriticalSubmissionState
+    """
+    input: UpdateTeamCriticalSubmissionStateInput!
+  ): UpdateTeamCriticalSubmissionStatePayload
+  updateTeamDisplayOptions(
+    """
+    Parameters for UpdateTeamDisplayOptions
+    """
+    input: UpdateTeamDisplayOptionsInput!
+  ): UpdateTeamDisplayOptionsPayload
+  updateTeamEmailSetting(
+    """
+    Parameters for UpdateTeamEmailSetting
+    """
+    input: UpdateTeamEmailSettingInput!
+  ): UpdateTeamEmailSettingPayload
+  updateTeamFancySlackIntegration(
+    """
+    Parameters for UpdateTeamFancySlackIntegration
+    """
+    input: UpdateTeamFancySlackIntegrationInput!
+  ): UpdateTeamFancySlackIntegrationPayload
+  updateTeamGenius(
+    """
+    Parameters for UpdateTeamGenius
+    """
+    input: UpdateTeamGeniusInput!
+  ): UpdateTeamGeniusPayload
+  updateTeamMemberVisibility(
+    """
+    Parameters for UpdateTeamMemberVisibility
+    """
+    input: UpdateTeamMemberVisibilityInput!
+  ): UpdateTeamMemberVisibilityPayload
+  updateTeamResponseSla(
+    """
+    Parameters for UpdateTeamResponseSla
+    """
+    input: UpdateTeamResponseSlaInput!
+  ): UpdateTeamResponseSlaPayload
+  updateTeamSubmissionState(
+    """
+    Parameters for UpdateTeamSubmissionState
+    """
+    input: UpdateTeamSubmissionStateInput!
+  ): UpdateTeamSubmissionStatePayload
+  updateTeamSuccessGoals(
+    """
+    Parameters for UpdateTeamSuccessGoals
+    """
+    input: UpdateTeamSuccessGoalsInput!
+  ): UpdateTeamSuccessGoalsPayload
+  updateTeamTargetSignal(
+    """
+    Parameters for UpdateTeamTargetSignal
+    """
+    input: UpdateTeamTargetSignalInput!
+  ): UpdateTeamTargetSignalPayload
+  updateTeamTriageNote(
+    """
+    Parameters for UpdateTeamTriageNote
+    """
+    input: UpdateTeamTriageNoteInput!
+  ): UpdateTeamTriageNotePayload
+  updateTeamWeakness(
+    """
+    Parameters for UpdateTeamWeakness
+    """
+    input: UpdateTeamWeaknessInput!
+  ): UpdateTeamWeaknessPayload
+  updateTriageInboxItemsOwnership(
+    """
+    Parameters for UpdateTriageInboxItemsOwnership
+    """
+    input: UpdateTriageInboxItemsOwnershipInput!
+  ): UpdateTriageInboxItemsOwnershipPayload
+  updateTrigger(
+    """
+    Parameters for UpdateTrigger
+    """
+    input: UpdateTriggerInput!
+  ): UpdateTriggerPayload
+  updateTwoFactorAuthenticationBackupCodes(
+    """
+    Parameters for UpdateTwoFactorAuthenticationBackupCodes
+    """
+    input: UpdateTwoFactorAuthenticationBackupCodesInput!
+  ): UpdateTwoFactorAuthenticationBackupCodesPayload
+  updateTwoFactorAuthenticationCredentials(
+    """
+    Parameters for UpdateTwoFactorAuthenticationCredentials
+    """
+    input: UpdateTwoFactorAuthenticationCredentialsInput!
+  ): UpdateTwoFactorAuthenticationCredentialsPayload
+  updateUserDisplayOptions(
+    """
+    Parameters for UpdateUserDisplayOptions
+    """
+    input: UpdateUserDisplayOptionsInput!
+  ): UpdateUserDisplayOptionsPayload
+  updateUserEmail(
+    """
+    Parameters for UpdateUserEmail
+    """
+    input: UpdateUserEmailInput!
+  ): UpdateUserEmailPayload
+  updateUserLufthansaAccount(
+    """
+    Parameters for UpdateUserLufthansaAccount
+    """
+    input: UpdateUserLufthansaAccountInput!
+  ): UpdateUserLufthansaAccountPayload
+  updateUserPassword(
+    """
+    Parameters for UpdateUserPassword
+    """
+    input: UpdateUserPasswordInput!
+  ): UpdateUserPasswordPayload
+  updateUserType(
+    """
+    Parameters for UpdateUserType
+    """
+    input: UpdateUserTypeInput!
+  ): UpdateUserTypePayload
+  updateViewingReport(
+    """
+    Parameters for UpdateViewingReport
+    """
+    input: UpdateViewingReportInput!
+  ): UpdateViewingReportPayload
+  updateWebhook(
+    """
+    Parameters for UpdateWebhook
+    """
+    input: UpdateWebhookInput!
+  ): UpdateWebhookPayload
+  uploadProgramPolicyAttachment(
+    """
+    Parameters for UploadProgramPolicyAttachment
+    """
+    input: UploadProgramPolicyAttachmentInput!
+  ): UploadProgramPolicyAttachmentPayload
+  upvote(
+    """
+    Parameters for Upvote
+    """
+    input: UpvoteInput!
+  ): UpvotePayload
+  verifyAccountRecoveryPhoneNumber(
+    """
+    Parameters for VerifyAccountRecoveryPhoneNumber
+    """
+    input: VerifyAccountRecoveryPhoneNumberInput!
+  ): VerifyAccountRecoveryPhoneNumberPayload
+  verifyDomainOwnership(
+    """
+    Parameters for VerifyDomainOwnership
+    """
+    input: VerifyDomainOwnershipInput!
+  ): VerifyDomainOwnershipPayload
+  verifySamlProvider(
+    """
+    Parameters for VerifySamlProvider
+    """
+    input: VerifySamlProviderInput!
+  ): VerifySamlProviderPayload
 }
 
 interface MutationResult {
