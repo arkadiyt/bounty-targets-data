@@ -2674,6 +2674,20 @@ type Bounty implements Node {
 }
 
 """
+Calculate bounty amount
+"""
+type BountyCalculator implements Node {
+  amount: Int
+  bounty_range: [Float!]
+  bounty_table_row: BountyTableRow
+  currency: String!
+  id: ID!
+  ranged_amount: Int
+  report: Report!
+  severity_score_range: [Float!]
+}
+
+"""
 The connection type for Bounty.
 """
 type BountyConnection {
@@ -16555,6 +16569,7 @@ type Report implements ActivitiesInterface & Node & ResourceInterface {
   bounties: [Bounty]
   bounty_awarded_at: DateTime
   bounty_awarded_staleness_threshold: Int
+  bounty_calculator: BountyCalculator!
   bug_reporter_agreed_on_going_public_at: DateTime
   cloned_from: Report
   closed_at: DateTime
