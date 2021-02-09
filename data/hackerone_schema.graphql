@@ -13273,6 +13273,17 @@ interface MutationResult {
 }
 
 """
+Net Report Workload Type
+"""
+type NetReportWorkload {
+  closed_month: String
+  closed_year: String
+  submitted_month: String!
+  submitted_year: String
+  total: Int
+}
+
+"""
 A feature notification for all users
 """
 type NewFeatureNotification implements Node {
@@ -16778,15 +16789,6 @@ interface ReportActivityInterface {
 }
 
 """
-Report Burndown type
-"""
-type ReportBurndown implements Node {
-  counts: [Hash!]!
-  id: ID!
-  series: Hash!
-}
-
-"""
 The connection type for Report.
 """
 type ReportConnection {
@@ -16847,6 +16849,7 @@ type ReportConnection {
   A list of edges.
   """
   edges: [ReportEdge]
+  net_report_workload_by_month(end_date: Date, start_date: Date!): [NetReportWorkload]!
 
   """
   A list of nodes.
@@ -20300,7 +20303,6 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
   ): ProgramSubmissionMetricsConnection!
   publicly_visible_retesting: Boolean
   remediation_guidance_enabled: Boolean!
-  report_burndown: ReportBurndown!
   report_sources: [String!]
   report_submission_form_intro: String
   report_submission_form_intro_html: String
