@@ -5455,6 +5455,7 @@ input CreateOrUpdateJiraIntegrationInput {
   generate_webhook_in_jira_if_does_not_exist: Boolean
   issue_fields: [JiraFieldInputType!]
   issue_type: Int!
+  legacy_integration: Boolean
   pid: Int!
   priority_rating_ids: JiraPrioritySeverityInput
   project_selection_enabled: Boolean
@@ -9570,13 +9571,40 @@ input FiltersReportRetestFilterInput {
   id: IntPredicateInput
   report_retest_users: FiltersReportRetestUserFilterInput
   retest_subscription: FiltersBundleSubscriptionsRetestSubscriptionFilterInput
+  roles: [FiltersReportRetestFilterRoles]
   state: ReportRetestStateEnumPredicateInput
+  use_case: [FiltersReportRetestFilterUseCases]
 }
 
 input FiltersReportRetestFilterOrder {
   created_at: FilterOrderPredicateInput
   id: FilterOrderPredicateInput
   needs_approval_at: FilterOrderPredicateInput
+}
+
+enum FiltersReportRetestFilterRoles {
+  is_deprecated_visibility
+  is_hacker_powered_visibility
+  is_pentest_claimable
+  is_pentest_visibility
+  is_private_claimable
+  is_public_claimable
+  is_report_anc_triager
+  is_report_external_user
+  is_report_participating_retester
+  is_report_participating_retester_deprecated
+  is_report_report_collaborator
+  is_report_reporter
+  is_report_someone_visiting_a_public_report
+  is_report_team_member
+  is_retester
+  is_triage_visibility
+}
+
+enum FiltersReportRetestFilterUseCases {
+  HISTORIC
+  INBOX
+  MARKETPLACE
 }
 
 input FiltersReportRetestUserFilterInput {
@@ -9835,6 +9863,53 @@ type ForgetFacebookCredentialPayload implements MutationResult {
   ): ErrorConnection!
   me: User
   was_successful: Boolean!
+}
+
+"""
+Forwarded email type for a team
+"""
+type ForwardedEmails implements Node {
+  body: String
+  created_at: DateTime!
+  id: ID!
+  subject: String
+  team: Team!
+}
+
+"""
+The connection type for ForwardedEmails.
+"""
+type ForwardedEmailsConnection {
+  """
+  A list of edges.
+  """
+  edges: [ForwardedEmailsEdge]
+
+  """
+  A list of nodes.
+  """
+  nodes: [ForwardedEmails]
+
+  """
+  Information to aid in pagination.
+  """
+  pageInfo: PageInfo!
+  total_count: Int!
+}
+
+"""
+An edge in a connection.
+"""
+type ForwardedEmailsEdge {
+  """
+  A cursor for use in pagination.
+  """
+  cursor: String!
+
+  """
+  The item at the end of the edge.
+  """
+  node: ForwardedEmails
 }
 
 """
@@ -19955,6 +20030,27 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
   formatted_bounties_paid_last_90_days: Int
   formatted_total_bounties_paid_amount: Int
   formatted_total_bounties_paid_prefix: String
+  forwarded_emails(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+  ): ForwardedEmailsConnection
   goal_valid_reports: Int
   grace_period_remaining_in_days: Int
   hackerone_to_jira_events_configuration: HackeroneToJiraEventsConfiguration
@@ -21311,6 +21407,7 @@ type TeamIntegrationsJira implements Node & TeamIntegrationInterface {
   authentication_type: String
   has_authentication: Boolean
   id: ID!
+  legacy_integration: Boolean
   linkable: Boolean!
   name: String!
   priorities: [Hash]
