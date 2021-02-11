@@ -16925,6 +16925,9 @@ type ReportConnection {
   A list of edges.
   """
   edges: [ReportEdge]
+  median_time_to_first_response: Int
+  median_time_to_resolved: Int
+  median_time_to_triage: Int
   net_report_workload_by_month(end_date: Date, start_date: Date!): [NetReportWorkload]!
 
   """
