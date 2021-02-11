@@ -21209,7 +21209,7 @@
     "name": "Blockstack",
     "offers_bounties": true,
     "offers_swag": true,
-    "response_efficiency_percentage": 67,
+    "response_efficiency_percentage": 73,
     "submission_state": "open",
     "url": "https://hackerone.com/blockstack",
     "targets": {
@@ -26002,47 +26002,14 @@
     "targets": {
       "in_scope": [
         {
-          "asset_identifier": "*.corp.cuvva.co",
+          "asset_identifier": "*.cuv-prod.app",
           "asset_type": "URL",
-          "availability_requirement": "low",
+          "availability_requirement": "high",
           "confidentiality_requirement": "high",
           "eligible_for_bounty": false,
           "eligible_for_submission": true,
-          "instruction": "",
-          "integrity_requirement": "medium",
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "*.int.cuvva.co",
-          "asset_type": "URL",
-          "availability_requirement": "low",
-          "confidentiality_requirement": "high",
-          "eligible_for_bounty": false,
-          "eligible_for_submission": true,
-          "instruction": "",
+          "instruction": "equivalent is *.cuv-nonprod.app",
           "integrity_requirement": "high",
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "*.sys.cuvva.co",
-          "asset_type": "URL",
-          "availability_requirement": "low",
-          "confidentiality_requirement": "high",
-          "eligible_for_bounty": false,
-          "eligible_for_submission": true,
-          "instruction": "",
-          "integrity_requirement": "high",
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "*.vendor.cuvva.co",
-          "asset_type": "URL",
-          "availability_requirement": "low",
-          "confidentiality_requirement": "high",
-          "eligible_for_bounty": false,
-          "eligible_for_submission": true,
-          "instruction": "",
-          "integrity_requirement": "medium",
           "max_severity": "critical"
         },
         {
@@ -26063,7 +26030,7 @@
           "confidentiality_requirement": "high",
           "eligible_for_bounty": false,
           "eligible_for_submission": true,
-          "instruction": "api.sandbox.cuv-nonprod.app is equivalent",
+          "instruction": "api.ephemeral.cuv-nonprod.app is equivalent",
           "integrity_requirement": "high",
           "max_severity": "critical"
         },
@@ -26112,13 +26079,13 @@
           "max_severity": "critical"
         },
         {
-          "asset_identifier": "vpn.corp.cuvva.com",
+          "asset_identifier": "wg.g.cuv-prod.app",
           "asset_type": "URL",
           "availability_requirement": "low",
           "confidentiality_requirement": "high",
           "eligible_for_bounty": false,
           "eligible_for_submission": true,
-          "instruction": "",
+          "instruction": "Wireguard server\n\n`wg-data-warehouse.g.cuv-prod.app` is similar",
           "integrity_requirement": "low",
           "max_severity": "critical"
         },
@@ -26135,6 +26102,17 @@
         }
       ],
       "out_of_scope": [
+        {
+          "asset_identifier": "feedback.cuvva.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
         {
           "asset_identifier": "status.cuvva.com",
           "asset_type": "URL",
