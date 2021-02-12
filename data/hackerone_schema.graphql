@@ -9567,6 +9567,7 @@ input FiltersReportRetestFilterInput {
   _and: [FiltersReportRetestFilterInput]
   _not: FiltersReportRetestFilterInput
   _or: [FiltersReportRetestFilterInput]
+  approved_at: DateTimePredicateInput
   derived_report_retest: FiltersDerivedReportRetestFilterInput
   id: IntPredicateInput
   report_retest_users: FiltersReportRetestUserFilterInput
@@ -17175,6 +17176,11 @@ type ReportRetestConnection {
   Int
   """
   total_count: Int!
+
+  """
+  Int
+  """
+  unique_report_count: Int!
 }
 
 """
