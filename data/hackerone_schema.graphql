@@ -9555,6 +9555,7 @@ input FiltersReportFilterInput {
   timer_report_triage_miss_at: DateTimePredicateInput
   title: StringPredicateInput
   triaged_at: DateTimePredicateInput
+  violated_sla: SlaTypeEnum
   vulnerability_information: StringPredicateInput
   weakness: FiltersWeaknessFilterInput
 }
@@ -20482,6 +20483,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
     add a page argument till Relay supports this
     """
     limit: Int = null
+    not_approaching_any_sla_violation: Boolean
     order_by: ReportOrderInput = {direction: DESC, field: id}
 
     """
