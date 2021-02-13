@@ -52266,6 +52266,17 @@
           "instruction": "The Doppler CLI is the primary agent for retrieving secrets and executing your applications. It communicates with the Doppler API, which is also in scope.  You can read more about the CLI on our [Docs hub](https://docs.doppler.com/docs/cli), or [Install](https://cli.doppler.com/download) it and give it a spin.\n\nNotable commands we're especially interested in:\n- `doppler login`: orchestrates the auth flow\n- `doppler run`: executes the specified process with secrets injected as environment variables\n- `doppler update`: installs the latest CLI\n\nBuild instructions can be found on [GitHub](https://github.com/DopplerHQ/cli/blob/master/BUILD.md) and only require installing `go`.\n",
           "integrity_requirement": "medium",
           "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "share.doppler.com",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "This web app allows users to anonymously share end-to-end (E2E) encrypted secrets. All key generation/operations occur client-side in the user's browser. The server only receives the encrypted secret (cipher text) and a SHA256 hash of the passphrase used to derive the key. You can read more about the design in our [docs](https://docs.doppler.com/docs/share-security).",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
         }
       ],
       "out_of_scope": [
