@@ -7948,7 +7948,7 @@
     "name": "Informatica",
     "offers_bounties": false,
     "offers_swag": false,
-    "response_efficiency_percentage": 95,
+    "response_efficiency_percentage": 94,
     "submission_state": "open",
     "url": "https://hackerone.com/informatica",
     "targets": {
@@ -9242,7 +9242,7 @@
     "name": "Ubiquiti Inc.",
     "offers_bounties": true,
     "offers_swag": true,
-    "response_efficiency_percentage": 84,
+    "response_efficiency_percentage": 85,
     "submission_state": "open",
     "url": "https://hackerone.com/ui",
     "targets": {
@@ -39964,7 +39964,7 @@
     "name": "Credit Karma",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 71,
+    "response_efficiency_percentage": 85,
     "submission_state": "open",
     "url": "https://hackerone.com/creditkarma",
     "targets": {
@@ -42655,6 +42655,17 @@
           "max_severity": "critical"
         },
         {
+          "asset_identifier": "(*).endlessgroup.org",
+          "asset_type": "URL",
+          "availability_requirement": "medium",
+          "confidentiality_requirement": "medium",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": "medium",
+          "max_severity": "critical"
+        },
+        {
           "asset_identifier": "(*).itsendless.org",
           "asset_type": "URL",
           "availability_requirement": null,
@@ -42674,6 +42685,28 @@
           "eligible_for_submission": true,
           "instruction": "Excluding ns1/ns2/autodiscover/autoconfig (no sites are served from these subdomains)",
           "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "185.86.231.0/24",
+          "asset_type": "CIDR",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "Both customer and corporate services live on this range. Exercise caution when attempting to target specific addresses, as you may be targeting services not owned by Endless Group, which are out of scope.",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://github.com/EndlessHosting",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "A decent portion of our public code lives here. Our bigger and more noteworthy projects are currently private, but we hope to change that soon.",
+          "integrity_requirement": null,
           "max_severity": "critical"
         }
       ],
@@ -42701,7 +42734,7 @@
           "max_severity": "none"
         },
         {
-          "asset_identifier": "Publically Editable GitHub Wiki",
+          "asset_identifier": "Publicly Editable GitHub Wiki",
           "asset_type": "OTHER",
           "availability_requirement": null,
           "confidentiality_requirement": null,
@@ -42712,18 +42745,7 @@
           "max_severity": "none"
         },
         {
-          "asset_identifier": "Signups Form",
-          "asset_type": "OTHER",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": false,
-          "eligible_for_submission": false,
-          "instruction": "We manually review sign-ups currently, and having to deal with unnecessary spam and tickets is something we don't want.",
-          "integrity_requirement": null,
-          "max_severity": "none"
-        },
-        {
-          "asset_identifier": "i-told-you.itsendless.org",
+          "asset_identifier": "no-mans-land.theendlessweb.com",
           "asset_type": "URL",
           "availability_requirement": null,
           "confidentiality_requirement": null,
@@ -56140,7 +56162,7 @@
     "name": "Zivver",
     "offers_bounties": false,
     "offers_swag": false,
-    "response_efficiency_percentage": 96,
+    "response_efficiency_percentage": 92,
     "submission_state": "open",
     "url": "https://hackerone.com/zivver",
     "targets": {
