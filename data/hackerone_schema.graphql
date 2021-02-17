@@ -7091,6 +7091,7 @@ interface CustomFieldAttributeInterface {
     last: Int
   ): CustomFieldValueConnection
   id: ID!
+  internal: Boolean!
   key: String!
   label: String!
   updated_at: DateTime!
@@ -7136,6 +7137,7 @@ type CustomFieldAttributesList implements CustomFieldAttributeInterface & Node {
     last: Int
   ): CustomFieldValueConnection
   id: ID!
+  internal: Boolean!
   items: [String]!
   key: String!
   label: String!
@@ -7168,6 +7170,7 @@ type CustomFieldAttributesText implements CustomFieldAttributeInterface & Node {
     last: Int
   ): CustomFieldValueConnection
   id: ID!
+  internal: Boolean!
   key: String!
   label: String!
   updated_at: DateTime!
@@ -9385,6 +9388,15 @@ input FiltersChecklistCheckResponseFilterOrder {
   approved_at: FilterOrderPredicateInput
   created_at: FilterOrderPredicateInput
   id: FilterOrderPredicateInput
+}
+
+input FiltersCustomFieldAttributeFilterInput {
+  _and: [FiltersCustomFieldAttributeFilterInput]
+  _not: FiltersCustomFieldAttributeFilterInput
+  _or: [FiltersCustomFieldAttributeFilterInput]
+  attribute_type: CustomFieldAttributeTypes
+  id: IntPredicateInput
+  internal: BooleanPredicateInput
 }
 
 input FiltersCustomRemediationGuidanceFilterInput {
@@ -16095,6 +16107,7 @@ input ReassignReportToTeamInput {
   A unique identifier for the client performing the mutation.
   """
   clientMutationId: String
+  no_notifications: Boolean
   report_id: ID!
   target_team_id: ID!
 }
@@ -19905,13 +19918,11 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
     Returns the elements in the list that come after the specified cursor.
     """
     after: String
-    attribute_type: CustomFieldAttributeTypes = null
 
     """
     Returns the elements in the list that come before the specified cursor.
     """
     before: String
-    database_id: Int = null
 
     """
     Returns the first _n_ elements from the list.
@@ -19922,6 +19933,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
     Returns the last _n_ elements from the list.
     """
     last: Int
+    where: FiltersCustomFieldAttributeFilterInput
   ): CustomFieldAttributeConnection
   customized_report_template: Boolean!
   cve_requests(
