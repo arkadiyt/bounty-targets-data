@@ -24035,7 +24035,7 @@
     "name": "Nutanix",
     "offers_bounties": false,
     "offers_swag": false,
-    "response_efficiency_percentage": 89,
+    "response_efficiency_percentage": 90,
     "submission_state": "open",
     "url": "https://hackerone.com/nutanix",
     "targets": {
@@ -50984,6 +50984,17 @@
           "max_severity": "high"
         },
         {
+          "asset_identifier": "*.exodus.com",
+          "asset_type": "URL",
+          "availability_requirement": "medium",
+          "confidentiality_requirement": "none",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "This is basically a marketing site while our product API is still pointing to `*.exodus.io`, Some of `exodus.io` subdomain should be redirected to `exodus.com` such as `www.exodus.io`  --> `www.exodus.com` ",
+          "integrity_requirement": "low",
+          "max_severity": "high"
+        },
+        {
           "asset_identifier": "*.exodus.io",
           "asset_type": "URL",
           "availability_requirement": "medium",
@@ -51030,7 +51041,7 @@
       ],
       "out_of_scope": [
         {
-          "asset_identifier": "get.exodus.io",
+          "asset_identifier": "get.exodus.*",
           "asset_type": "URL",
           "availability_requirement": null,
           "confidentiality_requirement": null,
@@ -51063,7 +51074,7 @@
           "max_severity": "none"
         },
         {
-          "asset_identifier": "support.exodus.io",
+          "asset_identifier": "support.exodus.com",
           "asset_type": "URL",
           "availability_requirement": null,
           "confidentiality_requirement": null,
@@ -53424,7 +53435,7 @@
     "name": "Staging.every.org",
     "offers_bounties": false,
     "offers_swag": false,
-    "response_efficiency_percentage": 83,
+    "response_efficiency_percentage": 86,
     "submission_state": "open",
     "url": "https://hackerone.com/stagingdoteverydotorg",
     "targets": {
