@@ -8250,6 +8250,7 @@ type Disclosed implements HacktivityItemInterface & Node {
   created_at: DateTime
   currency: String
   id: ID!
+  is_collaboration: Boolean
   latest_disclosable_action: String
   latest_disclosable_activity_at: DateTime
   recommended_hacktivity_items(
@@ -9472,6 +9473,7 @@ input FiltersHacktivityItemFilterInput {
   _not: FiltersHacktivityItemFilterInput
   _or: [FiltersHacktivityItemFilterInput]
   id: IntPredicateInput
+  is_collaboration: BooleanPredicateInput
   report: FiltersReportFilterInput
   reporter: FiltersUserFilterInput
   team: FiltersTeamFilterInput
@@ -9886,6 +9888,7 @@ Forwarded email type for a team
 """
 type ForwardedEmails implements Node {
   body: String
+  body_html: String
   created_at: DateTime!
   id: ID!
   subject: String
@@ -10049,6 +10052,7 @@ type HackerPublished implements HacktivityItemInterface & Node {
   _id: ID!
   created_at: DateTime
   id: ID!
+  is_collaboration: Boolean
   latest_disclosable_activity_at: DateTime
   recommended_hacktivity_items(
     """
@@ -10272,6 +10276,7 @@ interface HacktivityItemInterface {
   _id: ID!
   created_at: DateTime
   id: ID!
+  is_collaboration: Boolean
   recommended_hacktivity_items(
     """
     Returns the elements in the list that come after the specified cursor.
@@ -22735,6 +22740,7 @@ type Undisclosed implements HacktivityItemInterface & Node {
   created_at: DateTime
   currency: String
   id: ID!
+  is_collaboration: Boolean
   latest_disclosable_action: String
   latest_disclosable_activity_at: DateTime
   recommended_hacktivity_items(
