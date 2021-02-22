@@ -15331,7 +15331,7 @@
     "name": "Keybase",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 40,
+    "response_efficiency_percentage": 45,
     "submission_state": "open",
     "url": "https://hackerone.com/keybase",
     "targets": {
@@ -38565,6 +38565,17 @@
           "max_severity": "critical"
         },
         {
+          "asset_identifier": "*.logitech.io",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "Other domains under logitech.io not explicitly listed.",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
           "asset_identifier": "*.logitechauthorization.com",
           "asset_type": "URL",
           "availability_requirement": "low",
@@ -48696,7 +48707,7 @@
     "name": "InvestNext",
     "offers_bounties": false,
     "offers_swag": false,
-    "response_efficiency_percentage": 100,
+    "response_efficiency_percentage": 86,
     "submission_state": "open",
     "url": "https://hackerone.com/investnext",
     "targets": {
@@ -54256,12 +54267,12 @@
           "asset_identifier": "https://demo.openmage.org/",
           "asset_type": "URL",
           "availability_requirement": "none",
-          "confidentiality_requirement": "high",
+          "confidentiality_requirement": "low",
           "eligible_for_bounty": false,
           "eligible_for_submission": true,
           "instruction": "This \"demo site\" is the OpenMage LTS source code hosted on a server donated by a third-party. It does not contain sensitive data but for the purpose of this program may be considered as a live shopping cart target.\n\nOnly the website on **port 443** is in-scope for this HackerOne program!\n\n**Please do not connect to or scan any ports other than 443.**\n*Reports that are not applicable to the web service on port 443 will be closed as Not Applicable.*\n\nPlease do not report other issues that might be expected to be handled on a production-grade installation such as:\n\n- Lack of rate-limiting\n- Lack of intrusion detection/prevention\n- Lack of anti-spam measures\n- Lack of other features like 2FA which would improve security\n\n*We are aware of these shortcomings but are interested in the security of the OpenMage LTS software as it relates to the functioning of the open-source source code and consider these features to be outside the scope of this software project.*\n\nIn general, we consider the session IDs (the value in the `om_frontend` or `adminhtml` cookies) to be safely stored in the browser (the cookies have the HttpOnly and Secure flags) and safely transmitted to the server over https. We are not interested in vulnerabilities caused by the user's system or network being deeply compromised  such that these session IDs become known to the attacker. Reports with this premise will be closed as Not Applicable.",
-          "integrity_requirement": "medium",
-          "max_severity": "critical"
+          "integrity_requirement": "low",
+          "max_severity": "medium"
         },
         {
           "asset_identifier": "https://github.com/OpenMage/magento-lts",
