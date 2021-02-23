@@ -7094,6 +7094,7 @@ interface CustomFieldAttributeInterface {
   internal: Boolean!
   key: String!
   label: String!
+  position: Int
   updated_at: DateTime!
 }
 
@@ -7141,6 +7142,7 @@ type CustomFieldAttributesList implements CustomFieldAttributeInterface & Node {
   items: [String]!
   key: String!
   label: String!
+  position: Int
   updated_at: DateTime!
 }
 
@@ -7173,6 +7175,7 @@ type CustomFieldAttributesText implements CustomFieldAttributeInterface & Node {
   internal: Boolean!
   key: String!
   label: String!
+  position: Int
   updated_at: DateTime!
 }
 
@@ -9890,7 +9893,12 @@ type ForwardedEmails implements Node {
   body: String
   body_html: String
   created_at: DateTime!
+  dkim_passed: Boolean
+  email_signature_valid: Boolean!
+  headers: String
   id: ID!
+  is_nonce: Boolean
+  spf_passed: Boolean
   subject: String
   team: Team!
 }
@@ -23647,6 +23655,7 @@ input UpdateCustomFieldAttributeInput {
   configuration: String
   id: ID!
   label: String
+  position: Int
 }
 
 """

@@ -1571,7 +1571,7 @@
     "name": "WordPress",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 93,
+    "response_efficiency_percentage": 92,
     "submission_state": "open",
     "url": "https://hackerone.com/wordpress",
     "targets": {
@@ -4587,7 +4587,7 @@
     "name": "Zendesk",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 92,
+    "response_efficiency_percentage": 93,
     "submission_state": "open",
     "url": "https://hackerone.com/zendesk",
     "targets": {
@@ -30363,7 +30363,7 @@
     "name": "Node.js",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 67,
+    "response_efficiency_percentage": 60,
     "submission_state": "open",
     "url": "https://hackerone.com/nodejs",
     "targets": {
@@ -36726,7 +36726,7 @@
     "name": "Tron Foundation",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 100,
+    "response_efficiency_percentage": 71,
     "submission_state": "open",
     "url": "https://hackerone.com/tronfoundation",
     "targets": {
@@ -44148,29 +44148,6 @@
           "integrity_requirement": null,
           "max_severity": "none"
         }
-      ]
-    }
-  },
-  {
-    "allows_bounty_splitting": false,
-    "average_time_to_bounty_awarded": 787.0,
-    "average_time_to_first_program_response": 4.0,
-    "average_time_to_report_resolved": 2710.0,
-    "handle": "googleapi",
-    "id": 39301,
-    "managed_program": false,
-    "name": "Google API Security Rewards Program",
-    "offers_bounties": true,
-    "offers_swag": false,
-    "response_efficiency_percentage": 75,
-    "submission_state": "paused",
-    "url": "https://hackerone.com/googleapi",
-    "targets": {
-      "in_scope": [
-
-      ],
-      "out_of_scope": [
-
       ]
     }
   },
@@ -56899,6 +56876,28 @@
           "eligible_for_bounty": false,
           "eligible_for_submission": true,
           "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://api.mydriver.com/",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://api.orange.sixt.com/v1/b2b-data-manager/customer/reservationData?paymentMerchant=RAC_1_ECOM",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "curl -v -X GET \\\n  'https://api-stage.goorange.sixt.com/v1/b2b-data-manager/customer/reservationData?paymentMerchant=RAC_1_ECOM' \\\n  -H 'Authorization: CorporateLogin 9834491:vatten10!' \\\n  -H 'Content-Type: application/json' \\\n  -H 'Postman-Token: 842d7036-1721-4d37-8487-f896a45e7f61' \\\n  -H 'cache-control: no-cache' \\\n  -H 'accept-language: en'",
           "integrity_requirement": null,
           "max_severity": "critical"
         },
