@@ -5699,7 +5699,7 @@
     "name": "GitLab",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 99,
+    "response_efficiency_percentage": 98,
     "submission_state": "open",
     "url": "https://hackerone.com/gitlab",
     "targets": {
@@ -40413,7 +40413,7 @@
     "name": "FanDuel",
     "offers_bounties": true,
     "offers_swag": true,
-    "response_efficiency_percentage": 45,
+    "response_efficiency_percentage": 46,
     "submission_state": "open",
     "url": "https://hackerone.com/fanduel",
     "targets": {
@@ -47833,17 +47833,6 @@
           "instruction": "When testing the website, please keep the following exclusions in scope:\n\n* Website Chat (Hubspot)\n* Website Forms (Hubspot)\n\nNote: Our DMARC records have been set and are now out of scope.",
           "integrity_requirement": "medium",
           "max_severity": "high"
-        },
-        {
-          "asset_identifier": "https://github.com/panther-labs/panther",
-          "asset_type": "SOURCE_CODE",
-          "availability_requirement": "medium",
-          "confidentiality_requirement": "medium",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "When providing submissions on our source code:\n\n* Provide the link to the exact line and file in question\n* BE MINDFUL OF UNIT TEST FILES. They will often contain mock secrets and PII. Do not report these unless they are valid looking secrets\n\nWhen adding submissions on the application:\n\n* Provide a screencap showing the vulnerability and full context ",
-          "integrity_requirement": "medium",
-          "max_severity": "critical"
         }
       ],
       "out_of_scope": [
@@ -47867,6 +47856,17 @@
           "eligible_for_submission": false,
           "instruction": "",
           "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "https://github.com/panther-labs/panther",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": "medium",
+          "confidentiality_requirement": "medium",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "Out of scope.",
+          "integrity_requirement": "medium",
           "max_severity": "none"
         },
         {
