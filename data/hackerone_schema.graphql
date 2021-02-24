@@ -9398,6 +9398,7 @@ input FiltersCustomFieldAttributeFilterInput {
   _and: [FiltersCustomFieldAttributeFilterInput]
   _not: FiltersCustomFieldAttributeFilterInput
   _or: [FiltersCustomFieldAttributeFilterInput]
+  archived_at: ISO8601DatePredicateInput
   attribute_type: CustomFieldAttributeTypes
   id: IntPredicateInput
   internal: BooleanPredicateInput
@@ -10429,6 +10430,23 @@ input HighlightFieldsInput {
 input HighlightInput {
   fields: [HighlightFieldsInput!]
   number_of_fragments: Int
+}
+
+"""
+An ISO 8601-encoded date
+"""
+scalar ISO8601Date
+
+input ISO8601DatePredicateInput {
+  _eq: ISO8601Date
+  _gt: ISO8601Date
+  _gte: ISO8601Date
+  _in: [ISO8601Date]
+  _is_null: Boolean
+  _lt: ISO8601Date
+  _lte: ISO8601Date
+  _neq: ISO8601Date
+  _nin: [ISO8601Date]
 }
 
 """
