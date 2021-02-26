@@ -4695,7 +4695,12 @@ input CreateCustomFieldAttributeInput {
   """
   clientMutationId: String
   configuration: String
+  error_message: String
+  helper_text: String
+  internal: Boolean
   label: String!
+  regex: String
+  required: Boolean
   team_id: ID!
   type: String!
 }
@@ -9723,6 +9728,7 @@ input FiltersTeamFilterInput {
   submission_state: SubmissionStateEnumPredicateInput
   team_members: FiltersTeamMemberFilterInput
   triage_subscriptions: FiltersTriageSubscriptionFilterInput
+  use_case: [FiltersTeamFilterUseCases]
   vpn_enabled: BooleanPredicateInput
   website: StringPredicateInput
   whitelisted_hackers: FiltersUserFilterInput
@@ -9773,6 +9779,10 @@ enum FiltersTeamFilterRoles {
   is_team_with_published_pentests
   is_whitelisted_reporter
   is_with_hierarchy_thanks
+}
+
+enum FiltersTeamFilterUseCases {
+  REPORTING_VISIBILITY
 }
 
 input FiltersTeamMemberFilterInput {
@@ -20958,6 +20968,27 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
     last: Int
     state: VpnInstanceSuspendedEnum = null
   ): VpnInstanceConnection
+  users_open_for_collaboration(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+  ): UserConnection
   vpn_behind_cdn: Boolean
   vpn_blocked_for_me: Boolean
   vpn_enabled: Boolean
@@ -27561,6 +27592,7 @@ type User implements Node & ResourceInterface {
   ): EarningConnection
   edit_unclaimed_profiles: Boolean
   email: String
+  email_alias: String
   experience_by_owasp_categories: ExperienceByOwaspCategories
   facebook_oauth_state: String
   facebook_user_id: String
