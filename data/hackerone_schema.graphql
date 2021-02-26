@@ -9887,6 +9887,18 @@ type ForgetFacebookCredentialPayload implements MutationResult {
 }
 
 """
+Fields on which a collection of forwarded emails can be ordered
+"""
+enum ForwardedEmailOrderField {
+  created_at
+}
+
+input ForwardedEmailOrderInput {
+  direction: OrderDirection!
+  field: ForwardedEmailOrderField!
+}
+
+"""
 Forwarded email type for a team
 """
 type ForwardedEmails implements Node {
@@ -19078,6 +19090,7 @@ A HackerOne summary for a report
 """
 type Summary implements Node {
   _id: ID!
+  attachments: [Attachment]
   category: String!
   content: String!
   created_at: DateTime!
@@ -20094,6 +20107,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
     Returns the last _n_ elements from the list.
     """
     last: Int
+    order_by: ForwardedEmailOrderInput = {direction: DESC, field: created_at}
   ): ForwardedEmailsConnection
   goal_valid_reports: Int
   grace_period_remaining_in_days: Int
