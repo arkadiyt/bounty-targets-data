@@ -2907,6 +2907,7 @@ type BountyTableRow implements Node & ResourceInterface {
   id: ID!
   low: Int
   medium: Int
+  smart_rewards_start_at: DateTime
   structured_scope: StructuredScope
   updated_at: DateTime
   url: URI!
@@ -20688,7 +20689,6 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
     """
     last: Int
   ): SlackPipelineConnection
-  smart_pricing_enabled: Boolean
   soft_launch_invitations(
     """
     Returns the elements in the list that come after the specified cursor.
