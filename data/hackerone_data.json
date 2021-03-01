@@ -27357,7 +27357,7 @@
     "name": "Bumble",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 99,
+    "response_efficiency_percentage": 98,
     "submission_state": "open",
     "url": "https://hackerone.com/bumble",
     "targets": {
@@ -40640,6 +40640,214 @@
       ],
       "out_of_scope": [
 
+      ]
+    }
+  },
+  {
+    "allows_bounty_splitting": false,
+    "average_time_to_bounty_awarded": 561.0,
+    "average_time_to_first_program_response": 9.0,
+    "average_time_to_report_resolved": 680.0,
+    "handle": "mattermost",
+    "id": 35268,
+    "managed_program": false,
+    "name": "Mattermost",
+    "offers_bounties": true,
+    "offers_swag": true,
+    "response_efficiency_percentage": 100,
+    "submission_state": "open",
+    "url": "https://hackerone.com/mattermost",
+    "targets": {
+      "in_scope": [
+        {
+          "asset_identifier": "*.mattermost.com",
+          "asset_type": "URL",
+          "availability_requirement": "low",
+          "confidentiality_requirement": "low",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": "low",
+          "max_severity": "medium"
+        },
+        {
+          "asset_identifier": "*.test.mattermost.cloud",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "**Sign Up Instructions:**\n1. Open https://portal.test.cloud.mattermost.com/cloud/signup?beta_code=privatebetabugbash\n2. Create an account and configure your instance\n3. Start testing!\n4. (Optional) If testing payment flows, you can use the Stripe Test Cards found here: https://stripe.com/docs/testing#cards\n\n**In-Scope Assets:**\n1. SignUp Portal (https://portal.test.cloud.mattermost.com/cloud/signup?beta_code=privatebetabugbash)\n2. Customer Console (https://portal.test.cloud.mattermost.com/console)\n3. Customer Instance (URL created during SignUp flow)",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "Other publicly-released plugins",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "This asset is for plugins that Mattermost doesn't officially support.\nAs informational only, we accept reports about important security issues with community plugins. Mattermost will handle contacting the plugin author and will provide guidance for the community member to implement a fix.",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "mattermost/desktop",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Binary downloads available: https://mattermost.com/download/ or https://github.com/mattermost/desktop/releases\nSource Code: https://github.com/mattermost/desktop\nDeveloper setup instructions: https://developers.mattermost.com/contribute/desktop/developer-setup/\nGeneral documentation: https://docs.mattermost.com",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "mattermost/mattermost-mobile",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Binary downloads available\n- IOS: https://itunes.apple.com/us/app/mattermost/id1257222717\n- Android: https://play.google.com/store/apps/details?id=com.mattermost.rn\n- APK and IMA: https://github.com/mattermost/mattermost-mobile/releases\n\nSource Code: https://github.com/mattermost/mattermost-mobile\nDeveloper setup instructions: https://developers.mattermost.com/contribute/mobile/developer-setup/\nGeneral documentation: https://docs.mattermost.com",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "mattermost/mattermost-plugin-autolink",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Source Code: https://github.com/mattermost/mattermost-plugin-autolink\nDocumentation and setup instructions are available in the README of the repository.\nGeneral documentation: https://docs.mattermost.com",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "mattermost/mattermost-plugin-aws-SNS",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Source Code: https://github.com/mattermost/mattermost-plugin-aws-SNS\nDocumentation and setup instructions are available in the README of the repository.\nGeneral documentation: https://docs.mattermost.com",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "mattermost/mattermost-plugin-custom-attributes",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Source Code: mattermost/mattermost-plugin-custom-attributes\nDocumentation and setup instructions are available in the README of the repository.\nGeneral documentation: https://docs.mattermost.com",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "mattermost/mattermost-plugin-github",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Source Code: https://github.com/mattermost/mattermost-plugin-github\nDocumentation and setup instructions are available in the README of the repository.\nGeneral documentation: https://docs.mattermost.com",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "mattermost/mattermost-plugin-jira",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Source Code: https://github.com/mattermost/mattermost-plugin-jira\nDocumentation and setup instructions are available in the README of the repository.\nGeneral documentation: https://docs.mattermost.com",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "mattermost/mattermost-plugin-welcomebot",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Source Code: https://github.com/mattermost/mattermost-plugin-welcomebot\nDocumentation and setup instructions are available in the README of the repository.\nGeneral documentation: https://docs.mattermost.com",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "mattermost/mattermost-plugin-zoom",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Source Code: https://github.com/mattermost/mattermost-plugin-zoom\nDocumentation and setup instructions are available in the README of the repository.\nGeneral documentation: https://docs.mattermost.com",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "mattermost/mattermost-push-proxy",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Source Code: https://github.com/mattermost/mattermost-push-proxy\nDocumentation and setup instructions are available in the README of the repository.\nGeneral documentation: https://docs.mattermost.com",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "mattermost/mattermost-redux",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Shared redux code between our web app and mobile app.\nSource Code: https://github.com/mattermost/mattermost-redux\nDeveloper setup instructions: https://developers.mattermost.com/contribute/redux/developer-setup/\nGeneral documentation: https://docs.mattermost.com",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "mattermost/mattermost-server",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Binary downloads available: https://mattermost.com/download/\nSource Code: https://github.com/mattermost/mattermost-server\nDeveloper setup instructions: https://developers.mattermost.com/contribute/server/developer-setup/\nServer setup instructions: https://docs.mattermost.com/guides/administrator.html\nGeneral documentation: https://docs.mattermost.com",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "mattermost/mattermost-webapp",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Binary downloads available: https://mattermost.com/download/\nSource Code: https://github.com/mattermost/mattermost-webapp\nDeveloper setup instructions: https://developers.mattermost.com/contribute/webapp/developer-setup/\nGeneral documentation: https://docs.mattermost.com",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "asset_identifier": "mattermost.(com/org)",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "We don't accept reports for our website here.",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        }
       ]
     }
   },
