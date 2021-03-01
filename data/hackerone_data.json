@@ -655,17 +655,6 @@
           "max_severity": "critical"
         },
         {
-          "asset_identifier": "The Huffington Post",
-          "asset_type": "OTHER",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "# In Scope\n* *.huffingtonpost.com\n* *.huffpost.com\n* *.huffpost.net\n* *.huffingtonpost.co.uk\n* *.huffingtonpost.ca\n* *.huffingtonpost.es\n* *.huffingtonpost.fr\n* *.huffingtonpost.gr\n* *.huffingtonpost.in\n* *.huffingtonpost.it\n* *.huffingtonpost.jp\n* *.huffingtonpost.kr\n* *.huffingtonpost.com.au\n* *.huffingtonpost.co.za\n* *.huffpostbrasil.com\n* *.huffpostmaghreb.com\n* *.huffpost.co.uk\n* *.huffpost.ca\n* *.huffpost.es\n* *.huffpost.fr\n* *.huffpost.gr\n* *.huffpost.in\n* *.huffpost.it\n* *.huffpost.jp\n* *.huffpost.kr\n* *.huffpost.com.au\n* *.huffpost.co.za\n* *.huffingtonpost.de (decommissioned edition)\n* *.huffingtonpost.com.mx (decommissioned edition)\n* *.huffpost.de (decommissioned edition)\n* *.huffpost.com.mx (decommissioned edition)\n* *.huffpostarabi.com (decommissioned edition)\n* *.huffpo.net (anything here will likely will exist on some other domain with very few exceptions)\n* [HuffPost iOS App](https://itunes.apple.com/us/app/huffpost-news-politics-entertainment/id306621789?mt=8)\n* [HuffPost Android App](https://play.google.com/store/apps/details?id=com.huffingtonpost.android)\n\nNotes\n* Mobile Apps and APIs included \n* HuffPost Plus (no reimbursement will be provided)\n* *Any accounts you need will be self-service signup.*\n* Please consolidate your reports. Separate reports for the same or similar payload/issue against multiple international editions, will be marked as duplicates and paid only once for Huffington Post international editions.\n\n\n# Out of Scope\n* **DO NOT** use/select/test “Emergency” on the support forms. This will earn you a strike.\n* news.huffingtonpost.com (3rd party, CampaignMonitor)\n* coupons.huffpost.com (3rd party, Groupon)\n* huffpost.atlassian.net (3rd party, Atlassian)\n* huffpoststuff.com (3rd party, StackCommerce)\n* subscribe.huffpost.com (3rd party, Epsilon)\n",
-          "integrity_requirement": null,
-          "max_severity": "critical"
-        },
-        {
           "asset_identifier": "Verizon Media (misc)",
           "asset_type": "OTHER",
           "availability_requirement": null,
@@ -1070,7 +1059,7 @@
           "confidentiality_requirement": null,
           "eligible_for_bounty": false,
           "eligible_for_submission": false,
-          "instruction": "This is a list of products and companies which were previously owned but have been shut down or sold and are not in scope of **Verizon Media**.\n\n* About.me\n* Flickr\n* Go90\n* MovieFone\n* Oath: Impact\n* Patch Media\n* PawNation\n* Polyvore\n* Shoutcast\n* Style Me Pretty\n* Winamp\n* Yahoo Groups\n* Yahoo Play\n* Yahoo Together (Squirrel)\n* Yahoo TW eSports",
+          "instruction": "This is a list of products and companies which were previously owned but have been shut down or sold and are not in scope of **Verizon Media**.\n\n* About.me\n* Flickr\n* Go90\n* MovieFone\n* Oath: Impact\n* HuffPost\n* Patch Media\n* PawNation\n* Polyvore\n* Shoutcast\n* Style Me Pretty\n* Winamp\n* Yahoo Groups\n* Yahoo Play\n* Yahoo Together (Squirrel)\n* Yahoo TW eSports",
           "integrity_requirement": null,
           "max_severity": "none"
         },
@@ -1115,6 +1104,17 @@
           "eligible_for_bounty": false,
           "eligible_for_submission": false,
           "instruction": "# SSRF Test Servers\n\nIf you think you've got an SSRF attack against our network, please use these two groups of servers to prove it to us. There's a whole bunch of different file formats on these servers and they're all identical. To prove your SSRF, please send your attacks in a way that attempt to read or write content to/from one of these servers in each network segment (Prod + Corp). The difference between each host within each category is just their geolocation, which in most circumstances does not matter what you target.  HTTPS is also enabled on these servers.\n\nProduction Network\n* banana.stand.ne1.prod.oath (banana.stand.ne1.yahoo.com)\n* banana.stand.gq1.prod.oath (banana.stand.gq1.yahoo.com)\n* banana.stand.bf1.prod.oath (banana.stand.bf1.yahoo.com)\n* banana.stand.bf2.prod.oath (banana.stand.bf2.yahoo.com)\n* banana.stand.sg3.prod.oath (banana.stand.sg3.yahoo.com)\n* banana.stand.ir2.prod.oath (banana.stand.ir2.yahoo.com)\n* banana.stand.tw1.prod.oath (banana.stand.tw1.yahoo.com)\n* banana.stand.tp2.prod.oath (banana.stand.tp2.yahoo.com)\n\nCorporate Network\n* banana.stand.corp.gq1.cic.oath (banana.stand.cgq1.yahoo.com)\n* banana.stand.corp.bf1.cic.oath (banana.stand.cbf1.yahoo.com)\n* banana.stand.corp.sg3.cic.oath (banana.stand.csg3.yahoo.com)\n* banana.stand.corp.ne1.cic.oath (banana.stand.cne1.yahoo.com)\n\nFiles to target take the filename format of `<extension>_###.<extension>`. For example: `txt_001.txt` and `zip_001.zip`. We've put up a bunch of different file formats that can be targeted for your testing needs.  \n\nFile types available include: \navi, bmp, css, csv, doc, docx, dtd, flv, gif, html, icns, ics, ico, jar, jpg, js, json, md, mkv, mov, mp3, mp4, odp, ods, odt, ogg, pdf, php, png, ppt, rss, svg, tiff, txt, wav, wmv, xls, xlsx, xml, xsl, zip\n\nWe’ve also set the 404 error page to show you that you’ve hit the bananastand and not just some other unknown host: `<html>...404 no bananas for you!...</html>`\n\n**When testing**, it would be super helpful if (along with the file you pull down) you try to fetch `http://<hostname>/hackerone-<username>` so that we can identify **your** activity in the logs more easily.\n\n**When submitting a report** (in addition to all the usual details) please make sure to:\n1. Attach a copy of the file you fetched.\n2. Include the timestamp you fetched the file.\n3. Note the SSRF server that you fetched the file from.\n\n---\n\n### The Fine Print\nIf you can’t hit these servers but can hit something else inside our network, you must provide a working POC and understand that we will individually evaluate impact of the host you tested with.\n\nWe reserve the right to award a $0 bounty for any SSRF (or similar) reports that are not able to touch these servers.\n\nAlso, we will periodically review the logs on these servers and may reach out to hackers that have hit the server but not submitted a report. If this happens, you will be eligible for **a maximum award of 10%** for the report.\n",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "The Huffington Post",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "HuffPost is no longer a Verizon Media asset.\n\n* *.huffingtonpost.com\n* *.huffpost.com\n* *.huffpost.net\n* *.huffingtonpost.co.uk\n* *.huffingtonpost.ca\n* *.huffingtonpost.es\n* *.huffingtonpost.fr\n* *.huffingtonpost.gr\n* *.huffingtonpost.in\n* *.huffingtonpost.it\n* *.huffingtonpost.jp\n* *.huffingtonpost.kr\n* *.huffingtonpost.com.au\n* *.huffingtonpost.co.za\n* *.huffpostbrasil.com\n* *.huffpostmaghreb.com\n* *.huffpost.co.uk\n* *.huffpost.ca\n* *.huffpost.es\n* *.huffpost.fr\n* *.huffpost.gr\n* *.huffpost.in\n* *.huffpost.it\n* *.huffpost.jp\n* *.huffpost.kr\n* *.huffpost.com.au\n* *.huffpost.co.za\n* *.huffingtonpost.de (decommissioned edition)\n* *.huffingtonpost.com.mx (decommissioned edition)\n* *.huffpost.de (decommissioned edition)\n* *.huffpost.com.mx (decommissioned edition)\n* *.huffpostarabi.com (decommissioned edition)\n* *.huffpo.net (anything here will likely will exist on some other domain with very few exceptions)\n* [HuffPost iOS App](https://itunes.apple.com/us/app/huffpost-news-politics-entertainment/id306621789?mt=8)\n* [HuffPost Android App](https://play.google.com/store/apps/details?id=com.huffingtonpost.android)\n\nNotes\n* Mobile Apps and APIs included \n* HuffPost Plus (no reimbursement will be provided)\n* *Any accounts you need will be self-service signup.*\n* Please consolidate your reports. Separate reports for the same or similar payload/issue against multiple international editions, will be marked as duplicates and paid only once for Huffington Post international editions.\n\n\n# Out of Scope\n* **DO NOT** use/select/test “Emergency” on the support forms. This will earn you a strike.\n* news.huffingtonpost.com (3rd party, CampaignMonitor)\n* coupons.huffpost.com (3rd party, Groupon)\n* huffpost.atlassian.net (3rd party, Atlassian)\n* huffpoststuff.com (3rd party, StackCommerce)\n* subscribe.huffpost.com (3rd party, Epsilon)\n",
           "integrity_requirement": null,
           "max_severity": "none"
         },
@@ -9242,7 +9242,7 @@
     "name": "Ubiquiti Inc.",
     "offers_bounties": true,
     "offers_swag": true,
-    "response_efficiency_percentage": 84,
+    "response_efficiency_percentage": 83,
     "submission_state": "open",
     "url": "https://hackerone.com/ui",
     "targets": {
@@ -40260,7 +40260,7 @@
     "name": "RMS",
     "offers_bounties": false,
     "offers_swag": false,
-    "response_efficiency_percentage": 95,
+    "response_efficiency_percentage": 98,
     "submission_state": "open",
     "url": "https://hackerone.com/rms_inc",
     "targets": {
@@ -46359,7 +46359,7 @@
     "name": "BMW Group",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 93,
+    "response_efficiency_percentage": 94,
     "submission_state": "open",
     "url": "https://hackerone.com/bmwgroup",
     "targets": {
@@ -48925,7 +48925,7 @@
     "name": "InvestNext",
     "offers_bounties": false,
     "offers_swag": false,
-    "response_efficiency_percentage": 88,
+    "response_efficiency_percentage": 86,
     "submission_state": "open",
     "url": "https://hackerone.com/investnext",
     "targets": {
