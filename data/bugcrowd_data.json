@@ -7341,7 +7341,7 @@
     }
   },
   {
-    "name": "TransferWise",
+    "name": "Wise (ex-TransferWise)",
     "url": "https://bugcrowd.com/wise",
     "allows_disclosure": false,
     "managed_by_bugcrowd": true,
@@ -7351,19 +7351,23 @@
       "in_scope": [
         {
           "type": "other",
-          "target": "AWS infrastructure and services in use by TransferWise (eg: S3 buckets)"
+          "target": "AWS infrastructure and services in use by Wise (eg: S3 buckets)"
         },
         {
           "type": "android",
-          "target": "Latest version of Transferwise Android App"
+          "target": "Latest version of Wise Android App"
         },
         {
           "type": "ios",
-          "target": "Latest version of Transferwise iOS App"
+          "target": "Latest version of Wise iOS App"
         },
         {
           "type": "api",
           "target": "api.transferwise.com"
+        },
+        {
+          "type": "api",
+          "target": "api.wise.com"
         },
         {
           "type": "other",
@@ -7397,7 +7401,7 @@
         },
         {
           "type": "website",
-          "target": "Any subdomain of transferwise.com not explicitly listed as \"In Scope\""
+          "target": "Any subdomain of transferwise.com or wise.com not explicitly listed as \"In Scope\""
         },
         {
           "type": "android",
@@ -7413,15 +7417,19 @@
         },
         {
           "type": "website",
-          "target": "Third party services not hosted by TransferWise"
+          "target": "Third party services not hosted by Wise"
         },
         {
           "type": "website",
-          "target": "TransferWise Affliate Program"
+          "target": "Wise Affiliate Program"
         },
         {
           "type": "website",
-          "target": "https://transferwise.com/contact "
+          "target": "https://transferwise.com/help/contact"
+        },
+        {
+          "type": "website",
+          "target": "https://wise.com/help/contact"
         }
       ]
     }
