@@ -9713,6 +9713,7 @@ input FiltersReportFilterInput {
   timer_report_triage_miss_at: DateTimePredicateInput
   title: StringPredicateInput
   triaged_at: DateTimePredicateInput
+  violated_sla: SlaTypeEnum
   vulnerability_information: StringPredicateInput
   weakness: FiltersWeaknessFilterInput
 }
@@ -17187,9 +17188,6 @@ type ReportConnection {
   """
   total_count: Int!
   total_resolved_by_month(year: Int!): [LabeledIntegerPair]
-  violated_sla_first_response_count: GraphqlScalar
-  violated_sla_report_resolved_count: GraphqlScalar
-  violated_sla_report_triage_count: GraphqlScalar
 }
 
 type ReportDocument implements Node {
