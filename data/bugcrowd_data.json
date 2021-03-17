@@ -3720,6 +3720,48 @@
     }
   },
   {
+    "name": "Mastercard SRC",
+    "url": "https://bugcrowd.com/mastercard-src",
+    "allows_disclosure": true,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "partial",
+    "max_payout": 3000,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "website",
+          "target": "SRC integration on https://masterpassteststore.com/. Only the masterpass checkout functionality is in scope"
+        },
+        {
+          "type": "website",
+          "target": "https://src.mastercard.com/*"
+        },
+        {
+          "type": "website",
+          "target": "https://src.mastercard.com/profile/enroll"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "website",
+          "target": "https://checkout.mastercard.com/"
+        },
+        {
+          "type": "website",
+          "target": "https://masterpassteststore.com/"
+        },
+        {
+          "type": "website",
+          "target": "https://secure.checkout.visa.com/*"
+        },
+        {
+          "type": "website",
+          "target": "https://www.mastercard.us/en-us/personal/ways-to-pay/click-to-pay.html"
+        }
+      ]
+    }
+  },
+  {
     "name": "MasterCard VDP",
     "url": "https://bugcrowd.com/mastercard-vdp",
     "allows_disclosure": false,
