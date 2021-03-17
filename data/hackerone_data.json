@@ -1209,7 +1209,7 @@
     "name": "The Internet",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 94,
+    "response_efficiency_percentage": 95,
     "submission_state": "open",
     "url": "https://hackerone.com/internet",
     "targets": {
@@ -19883,17 +19883,6 @@
           "instruction": "PLEASE MAKE SURE YOU ARE TESTING ON staging-console.helium.com\n\nThe scope of the Console application is limited to the following:\n\n## Qualifying Vulnerabilities\n\n* Cross Site Request Forgery (CSRF)\n* Server-Side Request Forgery\n* Remote Code Execution\n* SQL Injection\n* View or modify database records outside of your organization scope\n\n## Non-Qualifying Vulnerabilities\n\n* Third-party tools including those used for support, and chat, e.g., Intercom related features (chat, articles, file upload etc.).\n*validation that the email address of the invite and the email used to register are the same\n* browser session expiration\n* auth.helium.com\n* HTTP request Smuggling\n* console CLI is out of scope: https://github.com/helium/helium-console-cli\n* Clickjacking on static websites\n* Cross Site Scripting (XSS)\n* Missing HTTP Headers which do not directly lead to a vulnerability\n* Phishing and social engineering (of users and Helium employees)\n* Reports for out-of-date software (lacking a proof-of-concept)\n* SPF and DKIM records\n* SSL/TLS protocol vulnerabilities\n* Security best practice concerns\n* Overly permissive Google API keys\n",
           "integrity_requirement": "low",
           "max_severity": "high"
-        },
-        {
-          "asset_identifier": "www.helium.com",
-          "asset_type": "URL",
-          "availability_requirement": "none",
-          "confidentiality_requirement": "none",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "The scope of helium.com is restricted to the following:\n\n## Qualifying Vulnerabilities\n\n* Cross Site Scripting (XSS)\n* Cross Site Request Forgery (CSRF)\n* Server-Side Request Forgery\n* Remote Code Execution\n* Ability to modify content\n\n## Non-Qualifying Vulnerabilities\n\n* Clickjacking on static websites\n* Missing HTTP Headers which do not directly lead to a vulnerability\n* Phishing and social engineering (of users and Helium employees)\n* Reports for out-of-date software (lacking a proof-of-concept)\n* SPF and DKIM records\n* SSL/TLS protocol vulnerabilities\n* Security best practice concerns\n* Overly permissions Google API keys\n",
-          "integrity_requirement": "low",
-          "max_severity": "low"
         }
       ],
       "out_of_scope": [
@@ -20008,6 +19997,17 @@
           "max_severity": "none"
         },
         {
+          "asset_identifier": "helium.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
           "asset_identifier": "https://github.com/helium/helium-console-cli",
           "asset_type": "OTHER",
           "availability_requirement": null,
@@ -20049,6 +20049,17 @@
           "eligible_for_submission": false,
           "instruction": "whitepaper.helium.com and its associated public AWS buckets are out of scope.",
           "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "www.helium.com",
+          "asset_type": "URL",
+          "availability_requirement": "none",
+          "confidentiality_requirement": "none",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "",
+          "integrity_requirement": "low",
           "max_severity": "none"
         },
         {
@@ -54861,7 +54872,7 @@
           "confidentiality_requirement": "low",
           "eligible_for_bounty": false,
           "eligible_for_submission": true,
-          "instruction": "This \"demo site\" is the OpenMage LTS source code hosted on a server donated by a third-party. It does not contain sensitive data but for the purpose of this program may be considered as a live shopping cart target.\n\nOnly the website on **port 443** is in-scope for this HackerOne program!\n\n**Please do not connect to or scan any ports other than 443.**\n*Reports that are not applicable to the web service on port 443 will be closed as Not Applicable.*\n\nPlease do not report other issues that might be expected to be handled on a production-grade installation such as:\n\n- Lack of rate-limiting\n- Lack of intrusion detection/prevention\n- Lack of anti-spam measures\n- Lack of other features like 2FA which would improve security\n\n*We are aware of these shortcomings but are interested in the security of the OpenMage LTS software as it relates to the functioning of the open-source source code and consider these features to be outside the scope of this software project.*\n\nIn general, we consider the session IDs (the value in the `om_frontend` or `adminhtml` cookies) to be safely stored in the browser (the cookies have the HttpOnly and Secure flags) and safely transmitted to the server over https. We are not interested in vulnerabilities caused by the user's system or network being deeply compromised  such that these session IDs become known to the attacker. Reports with this premise will be closed as Not Applicable.",
+          "instruction": "This \"demo site\" is the OpenMage LTS source code hosted on a server donated by a third-party. It does not contain sensitive data but for the purpose of this program may be considered as a live shopping cart target.\n\nOnly the website on **port 443** is in-scope for this HackerOne program!\n\n**Please do not connect to or scan any ports other than 443.**\n*Reports that are not applicable to the web service on port 443 will be closed as Not Applicable.*\n\nPlease do not report other issues that might be expected to be handled on a production-grade installation such as:\n\n- Lack of rate-limiting\n- Lack of intrusion detection/prevention\n- Lack of anti-spam measures\n- Lack of other features like 2FA which would improve security\n\n*We are aware of these shortcomings but are interested in the security of the OpenMage LTS software as it relates to the functioning of the open-source source code and consider these features to be outside the scope of this software project.*\n\nIn general, we consider the session IDs (the value in the `om_frontend` or `adminhtml` cookies) to be safely stored in the browser (the cookies have the HttpOnly and Secure flags) and safely transmitted to the server over https. We are not interested in vulnerabilities caused by the user's system or network being deeply compromised  such that these session IDs become known to the attacker (session fixation). Reports with this premise will be closed as Not Applicable.",
           "integrity_requirement": "low",
           "max_severity": "medium"
         },
@@ -54883,7 +54894,7 @@
           "confidentiality_requirement": "low",
           "eligible_for_bounty": false,
           "eligible_for_submission": true,
-          "instruction": "This asset is hosted by Github Pages. Please observe [Github's security program](https://hackerone.com/github) and report directly to them if any issues are found with the underlying technologies. Only issues directly affecting the security or privacy of the OpenMage organization should be submitted to this program.",
+          "instruction": "This asset is hosted by Github Pages. Please observe [Github's security program](https://hackerone.com/github) and report directly to them if any issues are found with the underlying technologies. Only issues directly affecting the security or privacy of the OpenMage organization should be submitted to this program.\n\n### Email services for the openmage.org domain are not in scope! Reports relating to SPF and DMARC will be closed immediately as N/A.",
           "integrity_requirement": "low",
           "max_severity": "medium"
         }
