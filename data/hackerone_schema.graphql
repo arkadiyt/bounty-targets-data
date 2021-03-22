@@ -18161,6 +18161,28 @@ type RevokeReportShareTokenPayload implements MutationResult {
   was_successful: Boolean!
 }
 
+"""
+Salesforce Account Consumption Tier type
+"""
+type SalesforceAccountConsumptionTier implements Node {
+  account_id: String
+  account_name: String!
+  bounty_during_sub_sum: Float!
+  days_start_to_end: Int!
+
+  """
+  ID of the object.
+  """
+  id: ID!
+  order_type: String!
+  p_consumption_tier: Float!
+  percent_of_sub: Float!
+  percent_of_tier_awarded: Float!
+  sub_end_date: Date!
+  sub_start_date: Date!
+  team_id: ID!
+}
+
 type SamlProvider implements Node {
   alternative_certificate: String
   alternative_certificate_fingerprint: String
@@ -21014,6 +21036,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
   response_efficiency_percentage: Int
   review_rejected_at: DateTime
   review_requested_at: DateTime
+  salesforce_account_consumption_tier: SalesforceAccountConsumptionTier
   saml_provider: SamlProvider
   settings_disabled: Boolean
   settings_link: String
