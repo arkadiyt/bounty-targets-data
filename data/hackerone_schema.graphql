@@ -9698,6 +9698,7 @@ input FiltersReportFilterInput {
   _not: FiltersReportFilterInput
   _or: [FiltersReportFilterInput]
   bounty_awarded_at: DateTimePredicateInput
+  bug_reporter_agreed_on_going_public_at: DateTimePredicateInput
   closed_at: DateTimePredicateInput
   disclosed_at: DateTimePredicateInput
   hacker_published: BooleanPredicateInput
@@ -9713,6 +9714,7 @@ input FiltersReportFilterInput {
   submitted_at: DateTimePredicateInput
   substate: ReportStateEnumPredicateInput
   team: FiltersTeamFilterInput
+  team_member_agreed_on_going_public_at: DateTimePredicateInput
   timer_bounty_awarded_elapsed_time: IntPredicateInput
   timer_bounty_awarded_miss_at: DateTimePredicateInput
   timer_first_program_response_elapsed_time: IntPredicateInput
@@ -9729,6 +9731,7 @@ input FiltersReportFilterInput {
 }
 
 input FiltersReportFilterOrder {
+  created_at: FilterOrderPredicateInput
   id: FilterOrderPredicateInput
 }
 
@@ -17293,6 +17296,11 @@ type ReportConnection {
   """
   count_by_severity: [CountBySeverity]!
   count_by_substate_severity_rating: GraphqlScalar
+
+  """
+  Count of resolved reports requested for disclosure (for teams allowing disclosure)
+  """
+  disclosure_open_request_count: Int
 
   """
   A list of edges.
