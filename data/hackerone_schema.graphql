@@ -5574,6 +5574,10 @@ input CreateOrUpdatePentestInput {
   name: String!
   published_description: String
   retesting_end_date: String
+  schedule_day_restrictions: [String]
+  schedule_restrictions: String
+  schedule_time_restrictions_end: String
+  schedule_time_restrictions_start: String
   slack_workspace_url: String
   start_date: String!
   state: String!
@@ -14414,6 +14418,10 @@ type Pentest implements Node {
   retesting_end_date: Date
   retesting_ends_at: DateTime
   salesforce_tpm_email: String
+  schedule_day_restrictions: [String!]!
+  schedule_restrictions: String
+  schedule_time_restrictions_end: String!
+  schedule_time_restrictions_start: String!
   slack_workspace_url: String
   start_date: Date
   started: Boolean
@@ -14446,6 +14454,7 @@ type Pentest implements Node {
   ): SurveyRatingsConnection
   team: Team!
   time_zone: String
+  time_zone_code: String
   tpm: User
 }
 
@@ -23064,8 +23073,10 @@ type TriageWorkflow implements Node {
   ignore_triaged_substate: Boolean
   jira_escalation: TriageWorkflowJiraEscalationEnum
   last_state_for_triage: String
+  priority: String
   require_credentials: Boolean
   require_custom_fields: Boolean
+  require_triage_summary: Boolean
   team: Team!
 }
 
