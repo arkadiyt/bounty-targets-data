@@ -47237,7 +47237,7 @@
     "name": "Replyify",
     "offers_bounties": false,
     "offers_swag": false,
-    "response_efficiency_percentage": 55,
+    "response_efficiency_percentage": 44,
     "submission_state": "open",
     "url": "https://hackerone.com/replyify",
     "targets": {
@@ -47795,7 +47795,7 @@
     "name": "Codefi",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 93,
+    "response_efficiency_percentage": 92,
     "submission_state": "open",
     "url": "https://hackerone.com/codefi_bbp",
     "targets": {
@@ -47832,6 +47832,17 @@
           "instruction": "The following domains and sub-domains are in scope for this asset:\n• bridge.codefi.network\n• api.bridge-convert.codefi.network\n\nThe purpose of the application is to convert FIL (from Filecoin network) into renFIL (on Ethereum mainnet) via the Ren protocol.\n\nKnown issues:\n• All api.* sub-domains like api.bridge-convert.codefi.network currently still display their Swagger documentation\n",
           "integrity_requirement": "medium",
           "max_severity": "high"
+        },
+        {
+          "asset_identifier": "mmi-test.codefi.network",
+          "asset_type": "URL",
+          "availability_requirement": "medium",
+          "confidentiality_requirement": "medium",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "This API is the backend for  MetaMask for Institutions (https://consensys.net/blog/press-release/metamask-early-adopter-program-enables-institutional-access-to-defi/). MetaMask for Insitutions is a fork of MetaMask for institutional users who want to use crypto/DeFi Dapps on Ethereum while retaining their crypto under custody (w/ Curv currently and soon other custodians).\n\nWe have doing different authentication types for different endpoints. Specifically, the /v1/sse endpoint does its own JWT verification, as these tokens are not from Auth0, but signed by a client.  The rest relies on JWTs issued by Auth0.\n\nNon authenticated users should not be able to do anything, read/write any data or monitor/scan any form of activity of users interacting with this API.\n\nThe CRUD endpoints are for administrative purpose only and used by ConsenSys.\nThe SSE interaction is with the browser extension of MetaMask for Institutions.\nThe /v1/webhook/curv endpoint is accessed by a custodian (Curv) to update on the status of Ethereum transactions triggered from the MetaMask for Insitutions extension.\n\nKnow issues:\n• This particular environment is not DDOS protected using Cloudflare (but production would be)\n• There is an exposed endpoint with Swagger documentation: https://mmi-test.codefi.network/docs/ \n",
+          "integrity_requirement": "medium",
+          "max_severity": "critical"
         },
         {
           "asset_identifier": "staking.codefi.network",
