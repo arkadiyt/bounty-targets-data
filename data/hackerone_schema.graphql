@@ -14252,6 +14252,7 @@ type Pentest implements Node {
   i_can_edit_pentest_tasks: Boolean!
   i_can_manage: Boolean!
   i_can_revoke: Boolean!
+  i_can_update_description: Boolean!
   id: ID!
   industry: String
   lead_pentester: Pentester
@@ -21199,7 +21200,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
     last: Int
   ): InvitationUnionConnection
   solution(solution_id: String!): Solution
-  spark_line(end_date: Date!, spark_line_type: SparkLineEnum!, start_date: Date!): [Int!]
+  spark_line(end_date: DateTime!, spark_line_type: SparkLineEnum!, start_date: DateTime!): [Int!]
   started_accepting_at: DateTime
   state: TeamState
   static_participants(
