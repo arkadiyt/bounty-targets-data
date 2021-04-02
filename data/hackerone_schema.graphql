@@ -16451,6 +16451,7 @@ type Query implements Node {
     """
     last: Int
     owner_username: String = null
+    priority: TriageInboxItemPriorityEnum = null
     product_edition: TriageInboxItemProductEditionFilterEnum = null
     report_substate: TriageInboxItemReportSubstateEnum = null
     team_handle: String = null
@@ -23009,6 +23010,14 @@ type TriageInboxItemEdge {
   The item at the end of the edge.
   """
   node: TriageInboxItem
+}
+
+"""
+Valid values for the report priority of triage inbox items
+"""
+enum TriageInboxItemPriorityEnum {
+  high
+  regular
 }
 
 """
