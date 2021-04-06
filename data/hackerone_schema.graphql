@@ -8730,9 +8730,11 @@ input DuplicateDetectionPageStateInput {
 An earning
 """
 type Earning implements Node {
+  _id: ID!
   amount: Float!
   bounty: Bounty
   checklist_check_response: ChecklistCheckResponse
+  created_at: DateTime!
   id: ID!
   pentester: Pentester
   report_retest_user: ReportRetestUser
