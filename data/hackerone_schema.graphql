@@ -9762,9 +9762,11 @@ input FiltersReportFilterInput {
   closed_at: DateTimePredicateInput
   disclosed_at: DateTimePredicateInput
   hacker_published: BooleanPredicateInput
+  hackerone_hacker_submissions: Boolean
   has_pentest: Boolean
   id: IntPredicateInput
   id_like: Int
+  imported: BooleanPredicateInput
   ineligible_for_bounty: BooleanPredicateInput
   pentest: FiltersPentestFilterInput
   reporter: FiltersUserFilterInput
