@@ -1492,6 +1492,7 @@ type ActivitiesReportRetestCanceled implements ActivityInterface & Node & Report
   markdown_message: String
   message: String
   report: Report
+  report_retest_user: ReportRetestUser
   triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
 }
@@ -17120,6 +17121,7 @@ type Report implements ActivitiesInterface & Node & ResourceInterface {
   bounty_awarded_staleness_threshold: Int
   bounty_calculator: BountyCalculator!
   bug_reporter_agreed_on_going_public_at: DateTime
+  can_manage: Boolean
   cloned_from: Report
   closed_at: DateTime
   comments_closed: Boolean
@@ -17306,6 +17308,7 @@ type Report implements ActivitiesInterface & Node & ResourceInterface {
   triaged_staleness_threshold: Int
   undismissed_triage_inbox_items: [TriageInboxItem]!
   url: URI!
+  visibility: String
   votes(
     """
     Returns the elements in the list that come after the specified cursor.
