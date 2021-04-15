@@ -7239,7 +7239,7 @@
     "name": "Algolia",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 95,
+    "response_efficiency_percentage": 98,
     "submission_state": "open",
     "url": "https://hackerone.com/algolia",
     "website": "https://algolia.com",
@@ -14094,7 +14094,7 @@
     "name": "Keybase",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 50,
+    "response_efficiency_percentage": 53,
     "submission_state": "open",
     "url": "https://hackerone.com/keybase",
     "website": "https://keybase.io",
@@ -56024,17 +56024,19 @@
           "instruction": "We are open-source, and  keep all our infrastructure setup in [Pulumi](https://www.pulumi.com) code. The repository with our infrastructure code is at https://www.gitlab.com/upchieve/grand-central-station",
           "integrity_requirement": null,
           "max_severity": "critical"
-        },
+        }
+      ],
+      "out_of_scope": [
         {
           "asset_identifier": "app.upchieve.org",
           "asset_type": "URL",
           "availability_requirement": null,
           "confidentiality_requirement": null,
           "eligible_for_bounty": false,
-          "eligible_for_submission": true,
+          "eligible_for_submission": false,
           "instruction": "We are open source; source code for this application can be found at https://gitlab.com/upchieve/subway\n\nThe Helm chart deployment code for the app is at https://gitlab.com/upchieve/port-authority",
           "integrity_requirement": null,
-          "max_severity": "critical"
+          "max_severity": "none"
         },
         {
           "asset_identifier": "argocd.upchieve.org",
@@ -56042,14 +56044,11 @@
           "availability_requirement": null,
           "confidentiality_requirement": null,
           "eligible_for_bounty": false,
-          "eligible_for_submission": true,
+          "eligible_for_submission": false,
           "instruction": "",
           "integrity_requirement": null,
-          "max_severity": "critical"
+          "max_severity": "none"
         }
-      ],
-      "out_of_scope": [
-
       ]
     }
   },
