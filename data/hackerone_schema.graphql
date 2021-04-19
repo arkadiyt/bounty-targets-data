@@ -19219,6 +19219,7 @@ type SolutionInstance implements Node & ResourceInterface {
   edit_url: String!
   enabled: Boolean!
   id: ID!
+  linkable: Boolean!
   name: String!
   solution: Solution!
   url: URI!
@@ -21572,6 +21573,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
   top_bounty_upper_amount: Int
   top_hacker_engagement_trend: [TopHackerEngagementTrend!]
   tray_integration: TeamIntegrationsTray
+  tray_integration_enabled: Boolean
   triage_active: Boolean
   triage_bounty_management: String
   triage_enabled: Boolean
