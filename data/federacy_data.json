@@ -294,10 +294,24 @@
     "url": "https://www.federacy.com/polymesh-bug-bounty-program",
     "targets": {
       "in_scope": [
-
+        {
+          "type": "website",
+          "target": "https://github.com/PolymathNetwork/Polymesh/releases/tag/v3.0.0"
+        },
+        {
+          "type": "website",
+          "target": "https://github.com/PolymathNetwork/cryptography/tree/da06e1db8b6d907dd81bd63c5f26e18c77836081/confidential-identity"
+        }
       ],
       "out_of_scope": [
-
+        {
+          "type": "website",
+          "target": "https://github.com/PolymathNetwork/Polymesh/tree/develop/pallets/contracts"
+        },
+        {
+          "type": "website",
+          "target": "https://github.com/PolymathNetwork/Polymesh/tree/develop/contracts"
+        }
       ]
     }
   },
