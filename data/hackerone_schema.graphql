@@ -9779,6 +9779,14 @@ input FiltersPentesterProfileFilterOrder {
   pentest_activity: FilterOrderPredicateInput
 }
 
+input FiltersPolicySettingFilterInput {
+  _and: [FiltersPolicySettingFilterInput]
+  _not: FiltersPolicySettingFilterInput
+  _or: [FiltersPolicySettingFilterInput]
+  id: IntPredicateInput
+  policy: StringPredicateInput
+}
+
 input FiltersReportCustomFieldFilterInput {
   _and: [FiltersReportCustomFieldFilterInput]
   _not: FiltersReportCustomFieldFilterInput
@@ -9981,7 +9989,7 @@ input FiltersTeamFilterInput {
   internet_bug_bounty: BooleanPredicateInput
   name: StringPredicateInput
   offers_bounties: BooleanPredicateInput
-  policy: StringPredicateInput
+  policy_setting: FiltersPolicySettingFilterInput
   reporters: FiltersUserFilterInput
   response_efficiency_percentage: IntPredicateInput
   retest_subscription: FiltersRetestSubscriptionAggregateFilterInput
@@ -10045,6 +10053,7 @@ enum FiltersTeamFilterRoles {
 }
 
 enum FiltersTeamFilterUseCases {
+  CAN_VIEW_EMBEDDED_SUBMISSION_FORM
   REPORTING_VISIBILITY
 }
 
@@ -15545,6 +15554,27 @@ type PhabricatorIntegration implements Node {
   updated_at: DateTime!
 }
 
+"""
+An engagement policy setting
+"""
+type PolicySetting implements Node {
+  """
+  The primary key from the database
+  """
+  _id: ID!
+  has_policy: Boolean
+  has_structured_policy: Boolean
+  i_can_subscribe_to_policy_changes: Boolean!
+  i_can_view_policy_versions: Boolean!
+  id: ID!
+  last_policy_change_at: DateTime
+  policy: String
+  policy_html: String
+  policy_markdown_html: String
+  structured_policy: StructuredPolicy
+  subscribed: Boolean!
+}
+
 type Post implements Node {
   created_at: DateTime!
   id: ID!
@@ -20846,8 +20876,6 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
   has_credit_card_enabled: Boolean
   has_hierarchy_thanks_page: Boolean
   has_payment_method: Boolean
-  has_policy: Boolean
-  has_structured_policy: Boolean
   hide_bounty_amounts: Boolean
   i_am_a_whitelisted_reporter: Boolean
   i_can_assign_report_to_pentests: Boolean!
@@ -20864,7 +20892,6 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
   i_can_manage_program: Boolean!
   i_can_manage_references: Boolean!
   i_can_manage_system_users: Boolean!
-  i_can_subscribe_to_policy_changes: Boolean!
   i_can_toggle_anc: Boolean
   i_can_view_base_bounty: Boolean
   i_can_view_bounty_table: Boolean
@@ -20877,7 +20904,6 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
   i_can_view_jira_webhook: Boolean
   i_can_view_pentests: Boolean!
   i_can_view_phabricator_integration: Boolean
-  i_can_view_policy_versions: Boolean!
   i_can_view_private: Boolean
   i_can_view_private_program_application_requirement: Boolean
   i_can_view_program_analytics: Boolean!
@@ -20985,7 +21011,6 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
   The participant's date of accepted the teams invitation
   """
   last_invitation_accepted_at_for_user: DateTime
-  last_policy_change_at: DateTime
   last_report_resolved_at: DateTime
   last_team_cohort_run: TeamCohortRun
   launch_link: String
@@ -21090,10 +21115,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
     where: FiltersPentestFilterInput
   ): PentestConnection
   phabricator_integration: PhabricatorIntegration
-  policy: String
-  policy_feature_enabled: Boolean
-  policy_html: String
-  policy_markdown_html: String
+  policy_setting: PolicySetting
   posts(
     """
     Returns the elements in the list that come after the specified cursor.
@@ -21384,7 +21406,6 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
     """
     last: Int
   ): StaticParticipantConnection
-  structured_policy: StructuredPolicy
   structured_scope_versions(
     """
     Returns the elements in the list that come after the specified cursor.
@@ -21436,7 +21457,6 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
   submission_requirements: SubmissionRequirements
   submission_requirements_enabled: Boolean
   submission_state: SubmissionStateEnum
-  subscribed: Boolean!
   survey_answers(
     """
     Returns the elements in the list that come after the specified cursor.
