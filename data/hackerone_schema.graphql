@@ -17230,7 +17230,6 @@ type Report implements ActivitiesInterface & Node & ResourceInterface {
   closed_at: DateTime
   comments_closed: Boolean
   created_at: DateTime!
-  credential: Credential
   custom_field_values(
     """
     Returns the elements in the list that come after the specified cursor.
@@ -17350,15 +17349,12 @@ type Report implements ActivitiesInterface & Node & ResourceInterface {
   i_can_anc_review: Boolean
   i_can_change_pentest: Boolean
   i_can_change_structured_scope: Boolean
-  i_can_manage_collaborators: Boolean
-  i_can_manage_link_sharing: Boolean
   i_can_post_hacker_triage_rating: Boolean
   i_can_post_triage_rating: Boolean
   i_can_update_custom_field_values: Boolean
   i_can_view_hacker_facing_custom_fields: Boolean
   id: ID!
   is_external_bug: Boolean
-  is_link_sharing_enabled: Boolean
   jira_escalation_last_state_change_at: DateTime
   jira_escalation_state: String
   latest_activity_at: DateTime
@@ -18929,11 +18925,6 @@ type ShareReportViaEmailPayload implements MutationResult {
   ): ErrorConnection!
   report: Report
   was_successful: Boolean!
-}
-
-type SignalRequirementsSetting implements Node {
-  id: ID!
-  target_signal: Float
 }
 
 """
@@ -21320,7 +21311,6 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
   settings_disabled: Boolean
   settings_link: String
   setup_guide_completed: Boolean
-  signal_requirements_setting: SignalRequirementsSetting
   sla_failed_count: Int
   sla_setting: SlaSetting
   sla_snapshots(
@@ -21567,6 +21557,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
     """
     last: Int
   ): TeamMemberConnection
+  target_signal: Float
   team_display_options: TeamDisplayOptions
   team_genii(
     """
