@@ -449,7 +449,31 @@
         },
         {
           "type": "other",
-          "target": "Any associated *.atlassian.io or *.atl-paas.net domain that can be exploited DIRECTLY from the *.atlassian.net instance"
+          "target": "Any associated *.atlassian.com or *.atl-paas.net domain that can be exploited DIRECTLY from the *.atlassian.net instance"
+        },
+        {
+          "type": "website",
+          "target": "Any other *.atlassian.com or *.atl-paas.net domain that cannot be exploited directly from a *.atlassian.net instance"
+        },
+        {
+          "type": "website",
+          "target": "Atlassian Access (https://admin.atlassian.com/atlassian-access)"
+        },
+        {
+          "type": "website",
+          "target": "Atlassian Admin (https://admin.atlassian.com/)"
+        },
+        {
+          "type": "website",
+          "target": "Atlassian Identity (https://id.atlassian.com/login)"
+        },
+        {
+          "type": "website",
+          "target": "Atlassian Marketplace (https://marketplace.atlassian.com)"
+        },
+        {
+          "type": "website",
+          "target": "Atlassian Start (https://start.atlassian.com)"
         },
         {
           "type": "other",
@@ -457,23 +481,15 @@
         },
         {
           "type": "website",
-          "target": "Bitbucket Cloud (including Bitbucket Pipelines)"
+          "target": "Bitbucket Cloud including Bitbucket Pipelines (https://bitbucket.org)"
         },
         {
           "type": "other",
           "target": "Bitbucket Server"
         },
         {
-          "type": "ios",
-          "target": "Conflience Cloud iOS"
-        },
-        {
           "type": "website",
           "target": "Confluence Cloud (bugbounty-test-<bugcrowd-name>.atlassian.net/wiki)"
-        },
-        {
-          "type": "android",
-          "target": "Confluence Cloud Android"
         },
         {
           "type": "android",
@@ -484,16 +500,12 @@
           "target": "Confluence Cloud Mobile App for iOS"
         },
         {
-          "type": "ios",
-          "target": "Confluence Cloud iOS"
+          "type": "website",
+          "target": "Confluence Cloud Premium (bugbounty-test-<bugcrowd-name>.atlassian.net/wiki)"
         },
         {
           "type": "other",
-          "target": "Confluence Companion App"
-        },
-        {
-          "type": "website",
-          "target": "Confluence Premium - https://www.atlassian.com/software/confluence/premium"
+          "target": "Confluence Companion App for macOS and Windows"
         },
         {
           "type": "other",
@@ -501,11 +513,11 @@
         },
         {
           "type": "android",
-          "target": "Confluence Server Android App"
+          "target": "Confluence Server Mobile App for Android"
         },
         {
           "type": "ios",
-          "target": "Confluence Server iOS App"
+          "target": "Confluence Server Mobile App for iOS"
         },
         {
           "type": "other",
@@ -520,14 +532,6 @@
           "target": "FishEye"
         },
         {
-          "type": "website",
-          "target": "Jira Cloud (bugbounty-test-<bugcrowd-name>.atlassian.net)"
-        },
-        {
-          "type": "android",
-          "target": "Jira Cloud Android"
-        },
-        {
           "type": "android",
           "target": "Jira Cloud Mobile App for Android"
         },
@@ -536,64 +540,44 @@
           "target": "Jira Cloud Mobile App for iOS"
         },
         {
-          "type": "ios",
-          "target": "Jira Cloud iOS"
-        },
-        {
           "type": "other",
           "target": "Jira Core Server"
         },
         {
-          "type": "other",
-          "target": "Jira Portfolio"
-        },
-        {
           "type": "android",
-          "target": "Jira Server Android App"
+          "target": "Jira Server Mobile App for Android"
         },
         {
           "type": "ios",
-          "target": "Jira Server iOS App"
+          "target": "Jira Server Mobile App for iOS"
+        },
+        {
+          "type": "website",
+          "target": "Jira Service Management Cloud (bugbounty-test-<bugcrowd-name>.atlassian.net)"
         },
         {
           "type": "other",
-          "target": "Jira Service Desk Server"
+          "target": "Jira Service Management Server"
+        },
+        {
+          "type": "website",
+          "target": "Jira Software Cloud (bugbounty-test-<bugcrowd-name>.atlassian.net)"
         },
         {
           "type": "other",
           "target": "Jira Software Server"
         },
         {
+          "type": "website",
+          "target": "Jira Work Management Cloud formerly Jira Core (bugbounty-test-<bugcrowd-name>.atlassian.net)"
+        },
+        {
           "type": "other",
           "target": "Other - (all other Atlassian targets)"
         },
         {
-          "type": "website",
-          "target": "SourceTree (for macOS and Windows)"
-        },
-        {
           "type": "other",
-          "target": "Sourcetree (https://www.sourcetreeapp.com/)"
-        },
-        {
-          "type": "website",
-          "target": "https://admin.atlassian.com/atlassian-access"
-        },
-        {
-          "type": "ios",
-          "target": "https://apps.apple.com/us/app/confluence-server/id1288365159"
-        },
-        {
-          "type": "website",
-          "target": "https://id.atlassian.com/login"
-        },
-        {
-          "type": "website",
-          "target": "https://marketplace.atlassian.com"
-        },
-        {
-          "type": "android",
-          "target": "https://play.google.com/store/apps/details?id=com.atlassian.confluence.server"
+          "target": "Sourcetree for macOS and Windows (https://www.sourcetreeapp.com/)"
         }
       ],
       "out_of_scope": [
@@ -607,10 +591,6 @@
         },
         {
           "type": "website",
-          "target": "AgileCraft and any Related Assets"
-        },
-        {
-          "type": "website",
           "target": "Any internal or development services."
         },
         {
@@ -618,20 +598,16 @@
           "target": "Any repository that you are not an owner of - do not impact Atlassian customers in any way."
         },
         {
-          "type": "other",
-          "target": "Confluence Questions"
-        },
-        {
           "type": "website",
-          "target": "Confluence Team Calendars"
-        },
-        {
-          "type": "website",
-          "target": "First and third party add-ons from the marketplace are excluded from this bounty but may be in scope for https://bugcrowd.com/atlassianapps"
+          "target": "First and third party apps and plugins from the marketplace are excluded from this bounty but may be in scope for https://bugcrowd.com/atlassianapps"
         },
         {
           "type": "other",
           "target": "HipChat (inc. HipChat Data Center, HipChat Desktop, HipChat Mobile)"
+        },
+        {
+          "type": "website",
+          "target": "Jira Align (formerly AgileCraft) and any Related Assets"
         },
         {
           "type": "other",
@@ -2964,12 +2940,12 @@
     "targets": {
       "in_scope": [
         {
-          "type": "website",
-          "target": "app.gusto-demo.com"
+          "type": "api",
+          "target": "api.gusto-demo.com"
         },
         {
-          "type": "api",
-          "target": "https://app.gusto-demo.com/"
+          "type": "website",
+          "target": "app.gusto-demo.com"
         },
         {
           "type": "website",
@@ -4604,11 +4580,11 @@
       "in_scope": [
         {
           "type": "other",
-          "target": "118.143.229.114 | China, Shenzhen | Hong Kong Internet | Juniper SRX240H2"
+          "target": "118.143.229.122 | China, Shenzhen | Hong Kong Internet | Palo Alto Model 850"
         },
         {
           "type": "other",
-          "target": "12.207.197.2 | US, San Jose | San Jose ATT Internet | Juniper SRX240H2"
+          "target": "12.207.197.2 | US, San Jose | San Jose ATT Internet | Palo Alto Model 850"
         },
         {
           "type": "other",
@@ -4616,19 +4592,7 @@
         },
         {
           "type": "other",
-          "target": "122.249.69.25 | Japan, Takao | Takao NTT Internet | Juniper SRX240H2"
-        },
-        {
-          "type": "other",
-          "target": "122.249.69.26 | Japan, Takao | Takao NTT Internet | Cisco ASA5515"
-        },
-        {
-          "type": "other",
-          "target": "14.21.44.66 | China, Shenzhen | China Telecom Internet | Juniper SRX550-645AP"
-        },
-        {
-          "type": "other",
-          "target": "14.21.44.71 | China, Shenzhen | China Telecom Internet | Cisco ASA5525"
+          "target": "14.21.44.66 | China, Shenzhen | China Telecom Internet | Palo Alto Model 850"
         },
         {
           "type": "other",
@@ -4648,7 +4612,7 @@
         },
         {
           "type": "other",
-          "target": "50.202.127.206 | US, San Jose | San Jose ComCast Internet | Juniper SRX240H2"
+          "target": "50.203.70.2 | US, San Jose | San Jose Comcast Internet | Palo Alto Model 850"
         },
         {
           "type": "other",
