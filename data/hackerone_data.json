@@ -382,6 +382,28 @@
           "max_severity": "critical"
         },
         {
+          "asset_identifier": "EdgeCast - Customers",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "Self-registered accounts will be limited to demonstration zones and are subject to automatic blocks or removal. This asset is not eligible for bounty through our public bug bounty program.\n\n* my.edgecast.com\n* api.edgecast.com/v2/mcc",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "EdgeCast - Partners",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "Self-registered accounts will be limited to demonstration zones and are subject to automatic blocks or removal. This asset is not eligible for bounty through our public bug bounty program.\n\n* partner.edgecast.com\n* api.edgecast.com/v2/pcc",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
           "asset_identifier": "Engadget",
           "asset_type": "OTHER",
           "availability_requirement": null,
@@ -631,6 +653,17 @@
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
           "instruction": "## In Scope\n* *.techcrunch.com\n* Custom endpoints: `https://techcrunch.com/wp-json/tc/v1/*` -- These are custom endpoints that use the WordPress architecture and output methods but modified for our uses with custom data.\n* Custom mobile endpoints: `https://techcrunch.com/wp-json/tc/mobile/v2/*` -- These are the endpoints that are used by the mobile apps to retrieve posts for the apps.\n* Default WordPress: `https://techcrunch.com/wp-json/wp/v2/*` -- We also leverage most of WordPress' out of the box endpoints with added custom data to augment the output.\n\n## Out of Scope\n* *.crunchbase.com (3rd party, Crunchbase)\n* *.tc-appunite.herokuapp.com (3rd party, Heroku now closed)\n* *.parsely.com (3rd party, Parse.ly)\n* *.swiftype.com (3rd party, Swiftype now closed)\n* *.marketo.com (3rd party, Marketo)\n* *.urbanairship.com (3rd party, Urban Airship)\n* *.sailthru.com (3rd party, Sailthru)\n* *.spot.im (3rd party, Spot.IM)\n* *.tcdisrupt.com (3rd party, App)\n* *.bit.ly (3rd party, Bit.ly)\n* *.thomsonreuters.com (3rd party, Open Calais)\n* *.tinypass.com (3rd party, Piano/Tinypass)\n",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "Uplynk",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "* *.downlynk.com\n* *.uplynk.net\n* *.uplynk.com\n\nThis asset is not in eligible for bounty through our public bug bounty program.",
           "integrity_requirement": null,
           "max_severity": "critical"
         },
@@ -22170,7 +22203,7 @@
     "name": "Nutanix",
     "offers_bounties": false,
     "offers_swag": false,
-    "response_efficiency_percentage": 94,
+    "response_efficiency_percentage": 95,
     "submission_state": "open",
     "url": "https://hackerone.com/nutanix",
     "website": "https://www.nutanix.com",
@@ -24739,7 +24772,7 @@
     "name": "TTS Bug Bounty",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 87,
+    "response_efficiency_percentage": 91,
     "submission_state": "open",
     "url": "https://hackerone.com/tts",
     "website": "https://18f.gsa.gov",
@@ -35426,7 +35459,7 @@
     "name": "Central Security Project",
     "offers_bounties": false,
     "offers_swag": false,
-    "response_efficiency_percentage": 89,
+    "response_efficiency_percentage": 78,
     "submission_state": "open",
     "url": "https://hackerone.com/central-security-project",
     "website": "https://www.sonatype.com/central-security-project",
@@ -38383,7 +38416,7 @@
     "name": "Kubernetes",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 88,
+    "response_efficiency_percentage": 89,
     "submission_state": "open",
     "url": "https://hackerone.com/kubernetes",
     "website": "https://kubernetes.io/",
@@ -41395,7 +41428,7 @@
     "name": "Codefi",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 87,
+    "response_efficiency_percentage": 88,
     "submission_state": "open",
     "url": "https://hackerone.com/codefi_bbp",
     "website": "https://codefi.consensys.net/",
@@ -47860,7 +47893,7 @@
     "name": "OpenMage",
     "offers_bounties": false,
     "offers_swag": false,
-    "response_efficiency_percentage": 76,
+    "response_efficiency_percentage": 78,
     "submission_state": "open",
     "url": "https://hackerone.com/openmage",
     "website": "https://www.openmage.org/",
@@ -48982,30 +49015,29 @@
           "max_severity": "critical"
         },
         {
+          "asset_identifier": "jobazbuka.ru",
+          "asset_type": "URL",
+          "availability_requirement": "low",
+          "confidentiality_requirement": "low",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": "low",
+          "max_severity": "medium"
+        }
+      ],
+      "out_of_scope": [
+        {
           "asset_identifier": "av.market",
           "asset_type": "URL",
           "availability_requirement": null,
           "confidentiality_requirement": null,
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
           "instruction": "",
           "integrity_requirement": null,
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "jobazbuka.ru",
-          "asset_type": "URL",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "",
-          "integrity_requirement": null,
-          "max_severity": "critical"
+          "max_severity": "none"
         }
-      ],
-      "out_of_scope": [
-
       ]
     }
   },
@@ -51389,7 +51421,7 @@
     "name": "Nubank",
     "offers_bounties": false,
     "offers_swag": false,
-    "response_efficiency_percentage": 96,
+    "response_efficiency_percentage": 95,
     "submission_state": "open",
     "url": "https://hackerone.com/nubank",
     "website": "http://nubank.com.br",
