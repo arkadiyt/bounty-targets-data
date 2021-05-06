@@ -17528,6 +17528,7 @@ type Report implements ActivitiesInterface & Node & ResourceInterface {
   i_can_change_pentest: Boolean
   i_can_change_structured_scope: Boolean
   i_can_change_subscription: Boolean
+  i_can_change_weakness: Boolean
   i_can_create_severity: Boolean
   i_can_manage_collaborators: Boolean
   i_can_manage_link_sharing: Boolean
@@ -21274,6 +21275,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
     month: Int = null
     year: Int = null
   ): PaymentTransactionConnection
+  pentest_feature_enabled: Boolean!
 
   """
   A Resolver for Pentests
