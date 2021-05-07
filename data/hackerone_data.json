@@ -13503,7 +13503,7 @@
     "average_time_to_report_resolved": 1543.0,
     "handle": "ibm",
     "id": 2060,
-    "managed_program": false,
+    "managed_program": true,
     "name": "IBM",
     "offers_bounties": false,
     "offers_swag": false,
@@ -17966,7 +17966,7 @@
     "name": "Files.com",
     "offers_bounties": true,
     "offers_swag": true,
-    "response_efficiency_percentage": 91,
+    "response_efficiency_percentage": 89,
     "submission_state": "open",
     "url": "https://hackerone.com/files",
     "website": "https://www.files.com/",
@@ -41501,6 +41501,17 @@
           "max_severity": "high"
         },
         {
+          "asset_identifier": "genesis-drop-backend.palm-uat.xyz",
+          "asset_type": "URL",
+          "availability_requirement": "medium",
+          "confidentiality_requirement": "low",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "This application enables users to register to an upcoming NFT raffle drop by e-mail. The goal is to prevent malicious or automated registration.\n\nThe frontend is accessible here: https://genesis-drop.palm-uat.xyz/\n\nAt this initial stage, the application is very simple:\n• You can register for the drop by clicking \"Apply Now\" in the bottom right corner\n• You can also check your status by clicking \"check your status\" just above \"Apply Now\"\nIt will have more functionality at a later stage (registering wallets, claiming any NFT for the raffle winners).\n\nWe are trying to ensure that no malicious behaviour or bot operates on the application and registers illegitimate addresses. \n\nKnown issues: beyond the program settings, Prometheus metrics might be exposed",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
           "asset_identifier": "mmi-test.codefi.network",
           "asset_type": "URL",
           "availability_requirement": "medium",
@@ -55509,6 +55520,17 @@
           "max_severity": "critical"
         },
         {
+          "asset_identifier": "137.83.108.2",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "Endpoint",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
           "asset_identifier": "144.129.134.234",
           "asset_type": "OTHER",
           "availability_requirement": null,
@@ -56852,6 +56874,17 @@
         },
         {
           "asset_identifier": "https://www.ssai.org",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://www.theclearing.com",
           "asset_type": "URL",
           "availability_requirement": null,
           "confidentiality_requirement": null,
