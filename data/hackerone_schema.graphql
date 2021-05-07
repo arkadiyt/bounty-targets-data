@@ -4313,6 +4313,15 @@ type CompleteTutorialPayload implements MutationResult {
 }
 
 """
+Controlled launch setting
+"""
+type ControlledLaunchSetting implements Node {
+  controlled_launch_team: Boolean
+  id: ID!
+  is_ready_for_public_launch: Boolean
+}
+
+"""
 Will only return values for valid SeverityRatingEnum and null.
 """
 scalar CountBySeverity
@@ -20858,7 +20867,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
     order_by: CommonResponseOrder = {direction: ASC, field: title}
   ): CommonResponseConnection
   company_headcount_range: String
-  controlled_launch_team: Boolean
+  controlled_launch_setting: ControlledLaunchSetting
   cover_color: String
   cover_photo_url: String
   coverage_analytics_summary(current_path: String = null, end_date: DateTime, group_by: [String] = [], http_host: String = null, order_by: CoverageAnalyticsOrderInput = {}, page: Int = null, start_date: DateTime): [CoverageAnalyticsSummary!]!
@@ -21165,7 +21174,6 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
     """
     start_date: String
   ): SurveyAnswerConnection
-  is_ready_for_public_launch: Boolean
   is_team_member: Boolean!
   jira_integration: JiraIntegration
   jira_team_integration: TeamIntegrationsJira
