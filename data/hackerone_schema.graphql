@@ -9094,7 +9094,9 @@ Specific errors that can occur
 enum ErrorCodeEnum {
   access_denied
   demo_member_cannot_leave_sandbox_team
+  permanent_ban
   program_must_have_one_admin
+  temporary_ban
 }
 
 """
@@ -9890,14 +9892,6 @@ input FiltersPentesterProfileFilterOrder {
   pentest_activity: FilterOrderPredicateInput
 }
 
-input FiltersPolicySettingFilterInput {
-  _and: [FiltersPolicySettingFilterInput]
-  _not: FiltersPolicySettingFilterInput
-  _or: [FiltersPolicySettingFilterInput]
-  id: IntPredicateInput
-  policy: StringPredicateInput
-}
-
 input FiltersReportCustomFieldFilterInput {
   _and: [FiltersReportCustomFieldFilterInput]
   _not: FiltersReportCustomFieldFilterInput
@@ -10050,6 +10044,14 @@ input FiltersSamlTestFilterOrder {
   id: FilterOrderPredicateInput
 }
 
+input FiltersSearchableContentFilterInput {
+  _and: [FiltersSearchableContentFilterInput]
+  _not: FiltersSearchableContentFilterInput
+  _or: [FiltersSearchableContentFilterInput]
+  id: IntPredicateInput
+  policy: StringPredicateInput
+}
+
 input FiltersStructuredScopeFilterInput {
   _and: [FiltersStructuredScopeFilterInput]
   _not: FiltersStructuredScopeFilterInput
@@ -10100,11 +10102,11 @@ input FiltersTeamFilterInput {
   internet_bug_bounty: BooleanPredicateInput
   name: StringPredicateInput
   offers_bounties: BooleanPredicateInput
-  policy_setting: FiltersPolicySettingFilterInput
   reporters: FiltersUserFilterInput
   response_efficiency_percentage: IntPredicateInput
   retest_subscription: FiltersRetestSubscriptionAggregateFilterInput
   roles: [FiltersTeamFilterRoles]
+  searchable_content: FiltersSearchableContentFilterInput
   state: TeamStatePredicateInput
   structured_scopes: FiltersStructuredScopeFilterInput
   submission_state: SubmissionStateEnumPredicateInput
