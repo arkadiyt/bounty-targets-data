@@ -17335,7 +17335,7 @@
     "name": "Deliveroo",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 92,
+    "response_efficiency_percentage": 95,
     "submission_state": "open",
     "url": "https://hackerone.com/deliveroo",
     "website": "http://deliveroo.co.uk/",
@@ -35896,6 +35896,39 @@
     "targets": {
       "in_scope": [
         {
+          "asset_identifier": "*.redditblog.com",
+          "asset_type": "URL",
+          "availability_requirement": "low",
+          "confidentiality_requirement": "low",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": "medium",
+          "max_severity": "high"
+        },
+        {
+          "asset_identifier": "*.redditgifts.com",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "RedditGifts is not eligible for bounty awards at this time.",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "*.reddithelp.com",
+          "asset_type": "URL",
+          "availability_requirement": "low",
+          "confidentiality_requirement": "low",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": "medium",
+          "max_severity": "high"
+        },
+        {
           "asset_identifier": "*.redditinc.com",
           "asset_type": "URL",
           "availability_requirement": "low",
@@ -36183,39 +36216,7 @@
         }
       ],
       "out_of_scope": [
-        {
-          "asset_identifier": "*.redditblog.com",
-          "asset_type": "URL",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": false,
-          "eligible_for_submission": false,
-          "instruction": "The Reddit Blog is not eligible for bounty awards at this time.",
-          "integrity_requirement": null,
-          "max_severity": "none"
-        },
-        {
-          "asset_identifier": "*.redditgifts.com",
-          "asset_type": "URL",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": false,
-          "eligible_for_submission": false,
-          "instruction": "RedditGifts is not eligible for bounty awards at this time.",
-          "integrity_requirement": null,
-          "max_severity": "none"
-        },
-        {
-          "asset_identifier": "*.reddithelp.com",
-          "asset_type": "URL",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": false,
-          "eligible_for_submission": false,
-          "instruction": "Reddithelp.com is not eligible for bounty awards at this time.",
-          "integrity_requirement": null,
-          "max_severity": "none"
-        }
+
       ]
     }
   },
@@ -39703,7 +39704,7 @@
     "name": "ForeScout Technologies",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 87,
+    "response_efficiency_percentage": 88,
     "submission_state": "open",
     "url": "https://hackerone.com/forescout_technologies",
     "website": "https://forescout.com",
@@ -44755,7 +44756,7 @@
     "name": "Clario",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 98,
+    "response_efficiency_percentage": 99,
     "submission_state": "open",
     "url": "https://hackerone.com/clario",
     "website": "https://clario.co/",
@@ -49302,61 +49303,6 @@
         },
         {
           "asset_identifier": "status.launchdarkly.com",
-          "asset_type": "URL",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": false,
-          "eligible_for_submission": false,
-          "instruction": "",
-          "integrity_requirement": null,
-          "max_severity": "none"
-        }
-      ]
-    }
-  },
-  {
-    "allows_bounty_splitting": false,
-    "average_time_to_bounty_awarded": null,
-    "average_time_to_first_program_response": 26.0,
-    "average_time_to_report_resolved": 2310.0,
-    "handle": "smtp2go",
-    "id": 48781,
-    "managed_program": true,
-    "name": "SMTP2GO",
-    "offers_bounties": false,
-    "offers_swag": false,
-    "response_efficiency_percentage": 100,
-    "submission_state": "open",
-    "url": "https://hackerone.com/smtp2go",
-    "website": "http://smtp2go.com",
-    "targets": {
-      "in_scope": [
-        {
-          "asset_identifier": "app.smtp2go.com",
-          "asset_type": "URL",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": false,
-          "eligible_for_submission": true,
-          "instruction": "Flask based app running on Python 2.7, some pages are VueJS but most are scripted with custom JQuery.\nCreate a free account in order to gain login access.",
-          "integrity_requirement": null,
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "smtp2go.com",
-          "asset_type": "URL",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": false,
-          "eligible_for_submission": true,
-          "instruction": "Standard wordpress site hosted with WPEngine, scripting is all custom JQuery based.",
-          "integrity_requirement": null,
-          "max_severity": "critical"
-        }
-      ],
-      "out_of_scope": [
-        {
-          "asset_identifier": "support.smtp2go.com",
           "asset_type": "URL",
           "availability_requirement": null,
           "confidentiality_requirement": null,
