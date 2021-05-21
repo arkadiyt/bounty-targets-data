@@ -28987,15 +28987,12 @@ input UpdateVdpLaunchConfigurationPolicyInput {
   A unique identifier for the client performing the mutation.
   """
   clientMutationId: String
-  new_staleness_threshold: Int
   policy_brand_promise: String
   policy_disclosure_policies: String
   policy_out_of_scope: String
   policy_safe_harbor: String
   policy_scope: String
-  resolved_staleness_threshold: Int
   team_id: ID!
-  triaged_staleness_threshold: Int
 }
 
 """
@@ -29028,7 +29025,7 @@ type UpdateVdpLaunchConfigurationPolicyPayload implements MutationResult {
     last: Int
     types: [ErrorTypeEnum]
   ): ErrorConnection!
-  team: Team
+  vdp_launch_configuration: VdpLaunchConfiguration
   was_successful: Boolean!
 }
 
@@ -30291,7 +30288,6 @@ type VdpLaunchConfiguration implements Node {
   has_changed_brand_promise: Boolean!
   has_changed_disclosure_policies: Boolean!
   has_changed_out_of_scope: Boolean!
-  has_changed_response_targets: Boolean!
   has_changed_safe_harbor: Boolean!
   has_changed_scope: Boolean!
   id: ID!
@@ -30300,7 +30296,6 @@ type VdpLaunchConfiguration implements Node {
   policy_brand_promise: String
   policy_disclosure_policies: String
   policy_out_of_scope: String
-  policy_response_targets: String
   policy_safe_harbor: String
   policy_scope: String
 }
