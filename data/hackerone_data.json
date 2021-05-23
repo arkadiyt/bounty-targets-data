@@ -2609,6 +2609,28 @@
       ],
       "out_of_scope": [
         {
+          "asset_identifier": "Reports considered as informative:",
+          "asset_type": "OTHER",
+          "availability_requirement": "none",
+          "confidentiality_requirement": "none",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "- User-introduced vulnerabilities in hosted services (Mail.Ru hosting network, MCS \"Infra\" public cloud computing hosts, gaming teams hosting, hosted student works for educational projects, etc)\n- Information on compromised accounts of external users for Mail.Ru services",
+          "integrity_requirement": "none",
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "We do not accept/review reports with:",
+          "asset_type": "OTHER",
+          "availability_requirement": "none",
+          "confidentiality_requirement": "none",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "- Vulnerability scanners and another automated tools reports\n- Disclosure of non sensitive information, such as product version\n- Disclosure of public user information, such as nick name / screen name\n- Reports based on product/protocol version without demonstration of real vulnerability presence\n- Reports of missed protection mechanism / best current practice (e.g. no CSRF token, framing/clickjacking protection) without demonstration of real security impact for user or system\n- Reports regarding published and non-published SPF and DMARC policies\n- Logout CSRF\n- Vulnerabilities of partner products or services if Mail.Ru users / accounts are not directly affected\n- Missed SSL or another BCP for products beyond the main scope\n- Security of rooted, jailbreaked or otherwise modified devices and applications\n- Ability to reverse-engineer an application, lack of binary protection\n- Open redirections are only accepted if security impact, e.g. ability to steal authentication token is identified. \n- Plain text, sound, image, video injection into server's reply outside of UI (e.g. in JSON data or error message) if it doesn't lead to UI spoofing, UI behavior modification or another negative impact.\n- Same site scripting, reflected download and similar attacks with questionable impact\n- CSP related reports for domains without CSP and domain policies with unsafe eval and/or unsafe inline\n- IDN homograph attacks\n- XSPA (IP/port scanning to external networks)\n- Excel CSV formula injection, scripting within PDF documents\n- Attack which require full access to local account or browser profile\n- Attacks with scenarios where vulnerability in a 3rd party site or application is required as a prerequisite and is not demonstrated\n- Theoretical attacks without proof of exploitability\n- Denial of Service vulnerabilities\n- Ability to send large amount of messages\n- Ability to send spam or malware file\n- Information disclosure via external references outside of Mail.Ru control (e.g. search dorks to private robots.txt protected areas)\n- Disclosure of unused or properly restricted JS API keys (e.g. API key for external map service)\n- Ability to perform an action unavailable via user interface without identified security risks ",
+          "integrity_requirement": "none",
+          "max_severity": "none"
+        },
+        {
           "asset_identifier": "love.mail.ru",
           "asset_type": "URL",
           "availability_requirement": "none",
@@ -16142,7 +16164,7 @@
     "name": "RubyGems",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 90,
+    "response_efficiency_percentage": 71,
     "submission_state": "open",
     "url": "https://hackerone.com/rubygems",
     "website": "https://rubygems.org",
