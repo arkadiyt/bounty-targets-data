@@ -100,7 +100,6 @@ type ActivitiesAddedToPentest implements ActivityInterface & Node {
   i_can_flag: Boolean!
   id: ID!
   internal: Boolean
-  markdown_message: String
   message: String
   updated_at: DateTime!
 }
@@ -121,7 +120,6 @@ type ActivitiesAgreedOnGoingPublic implements ActivityInterface & Node & ReportA
   i_can_flag: Boolean!
   id: ID!
   internal: Boolean
-  markdown_message: String
   message: String
   report: Report
   triage_inbox_item: TriageInboxItem
@@ -147,7 +145,6 @@ type ActivitiesBountyAwarded implements ActivityInterface & Node & ReportActivit
   i_can_flag: Boolean!
   id: ID!
   internal: Boolean
-  markdown_message: String
   message: String
   report: Report
   triage_inbox_item: TriageInboxItem
@@ -172,7 +169,6 @@ type ActivitiesBountySuggested implements ActivityInterface & Node & ReportActiv
   i_can_flag: Boolean!
   id: ID!
   internal: Boolean
-  markdown_message: String
   message: String
   report: Report
   triage_inbox_item: TriageInboxItem
@@ -194,7 +190,6 @@ type ActivitiesBugCloned implements ActivityInterface & Node & ReportActivityInt
   i_can_flag: Boolean!
   id: ID!
   internal: Boolean
-  markdown_message: String
   message: String
   original_report: Report
   original_report_id: Int
@@ -218,7 +213,6 @@ type ActivitiesBugDuplicate implements ActivityInterface & Node & ReportActivity
   i_can_flag: Boolean!
   id: ID!
   internal: Boolean
-  markdown_message: String
   message: String
   original_report: Report
   original_report_id: Int
@@ -242,7 +236,6 @@ type ActivitiesBugFiled implements ActivityInterface & Node & ReportActivityInte
   i_can_flag: Boolean!
   id: ID!
   internal: Boolean
-  markdown_message: String
   message: String
   report: Report
   triage_inbox_item: TriageInboxItem
@@ -264,7 +257,6 @@ type ActivitiesBugInactive implements ActivityInterface & Node & ReportActivityI
   i_can_flag: Boolean!
   id: ID!
   internal: Boolean
-  markdown_message: String
   message: String
   report: Report
   triage_inbox_item: TriageInboxItem
@@ -286,7 +278,6 @@ type ActivitiesBugInformative implements ActivityInterface & Node & ReportActivi
   i_can_flag: Boolean!
   id: ID!
   internal: Boolean
-  markdown_message: String
   message: String
   report: Report
   triage_inbox_item: TriageInboxItem
@@ -308,7 +299,6 @@ type ActivitiesBugNeedsMoreInfo implements ActivityInterface & Node & ReportActi
   i_can_flag: Boolean!
   id: ID!
   internal: Boolean
-  markdown_message: String
   message: String
   report: Report
   triage_inbox_item: TriageInboxItem
@@ -330,7 +320,6 @@ type ActivitiesBugNew implements ActivityInterface & Node & ReportActivityInterf
   i_can_flag: Boolean!
   id: ID!
   internal: Boolean
-  markdown_message: String
   message: String
   report: Report
   triage_inbox_item: TriageInboxItem
@@ -352,7 +341,6 @@ type ActivitiesBugNotApplicable implements ActivityInterface & Node & ReportActi
   i_can_flag: Boolean!
   id: ID!
   internal: Boolean
-  markdown_message: String
   message: String
   report: Report
   triage_inbox_item: TriageInboxItem
@@ -374,7 +362,6 @@ type ActivitiesBugPendingProgramReview implements ActivityInterface & Node & Rep
   i_can_flag: Boolean!
   id: ID!
   internal: Boolean
-  markdown_message: String
   message: String
   report: Report
   triage_inbox_item: TriageInboxItem
@@ -396,7 +383,6 @@ type ActivitiesBugReopened implements ActivityInterface & Node & ReportActivityI
   i_can_flag: Boolean!
   id: ID!
   internal: Boolean
-  markdown_message: String
   message: String
   report: Report
   triage_inbox_item: TriageInboxItem
@@ -418,7 +404,6 @@ type ActivitiesBugResolved implements ActivityInterface & Node & ReportActivityI
   i_can_flag: Boolean!
   id: ID!
   internal: Boolean
-  markdown_message: String
   message: String
   report: Report
   triage_inbox_item: TriageInboxItem
@@ -440,7 +425,6 @@ type ActivitiesBugRetesting implements ActivityInterface & Node & ReportActivity
   i_can_flag: Boolean!
   id: ID!
   internal: Boolean
-  markdown_message: String
   message: String
   report: Report
   report_retest: ReportRetest
@@ -463,7 +447,6 @@ type ActivitiesBugSpam implements ActivityInterface & Node & ReportActivityInter
   i_can_flag: Boolean!
   id: ID!
   internal: Boolean
-  markdown_message: String
   message: String
   report: Report
   triage_inbox_item: TriageInboxItem
@@ -485,7 +468,6 @@ type ActivitiesBugTriaged implements ActivityInterface & Node & ReportActivityIn
   i_can_flag: Boolean!
   id: ID!
   internal: Boolean
-  markdown_message: String
   message: String
   report: Report
   triage_inbox_item: TriageInboxItem
@@ -507,7 +489,6 @@ type ActivitiesCancelledDisclosureRequest implements ActivityInterface & Node & 
   i_can_flag: Boolean!
   id: ID!
   internal: Boolean
-  markdown_message: String
   message: String
   report: Report
   triage_inbox_item: TriageInboxItem
@@ -529,7 +510,6 @@ type ActivitiesChangedScope implements ActivityInterface & Node & ReportActivity
   i_can_flag: Boolean!
   id: ID!
   internal: Boolean
-  markdown_message: String
   message: String
   new_scope: StructuredScope
   old_scope: StructuredScope
@@ -549,7 +529,6 @@ type ActivitiesChecklistCheckClaimed implements ChecklistCheckResponseActivityIn
   i_can_flag: Boolean!
   id: ID!
   internal: Boolean
-  markdown_message: String
   message: String
   name: String
   profile_picture(size: ProfilePictureSizes!): String!
@@ -568,7 +547,6 @@ type ActivitiesChecklistCheckExpired implements ChecklistCheckResponseActivityIn
   i_can_flag: Boolean!
   id: ID!
   internal: Boolean
-  markdown_message: String
   message: String
   name: String
   profile_picture(size: ProfilePictureSizes!): String!
@@ -587,7 +565,6 @@ type ActivitiesChecklistCheckReleased implements ChecklistCheckResponseActivityI
   i_can_flag: Boolean!
   id: ID!
   internal: Boolean
-  markdown_message: String
   message: String
   name: String
   profile_picture(size: ProfilePictureSizes!): String!
@@ -606,7 +583,6 @@ type ActivitiesChecklistCheckResponseApproved implements ChecklistCheckResponseA
   i_can_flag: Boolean!
   id: ID!
   internal: Boolean
-  markdown_message: String
   message: String
   name: String
   profile_picture(size: ProfilePictureSizes!): String!
@@ -626,7 +602,6 @@ type ActivitiesChecklistCheckResponseComment implements AttachmentActivityInterf
   i_can_flag: Boolean!
   id: ID!
   internal: Boolean
-  markdown_message: String
   message: String
   name: String
   profile_picture(size: ProfilePictureSizes!): String!
@@ -646,7 +621,6 @@ type ActivitiesChecklistCheckResponseCreated implements AttachmentActivityInterf
   i_can_flag: Boolean!
   id: ID!
   internal: Boolean
-  markdown_message: String
   message: String
   name: String
   profile_picture(size: ProfilePictureSizes!): String!
@@ -665,7 +639,6 @@ type ActivitiesChecklistCheckResponseRejected implements ChecklistCheckResponseA
   i_can_flag: Boolean!
   id: ID!
   internal: Boolean
-  markdown_message: String
   message: String
   name: String
   profile_picture(size: ProfilePictureSizes!): String!
@@ -685,7 +658,6 @@ type ActivitiesChecklistCheckResponseUpdated implements AttachmentActivityInterf
   i_can_flag: Boolean!
   id: ID!
   internal: Boolean
-  markdown_message: String
   message: String
   name: String
   profile_picture(size: ProfilePictureSizes!): String!
@@ -704,7 +676,6 @@ type ActivitiesChecklistCheckRevoked implements ChecklistCheckResponseActivityIn
   i_can_flag: Boolean!
   id: ID!
   internal: Boolean
-  markdown_message: String
   message: String
   name: String
   profile_picture(size: ProfilePictureSizes!): String!
@@ -741,7 +712,6 @@ type ActivitiesComment implements ActivityInterface & Node & ReportActivityInter
   i_can_flag: Boolean!
   id: ID!
   internal: Boolean
-  markdown_message: String
   message: String
   report: Report
   triage_inbox_item: TriageInboxItem
@@ -763,7 +733,6 @@ type ActivitiesCommentsClosed implements ActivityInterface & Node & ReportActivi
   i_can_flag: Boolean!
   id: ID!
   internal: Boolean
-  markdown_message: String
   message: String
   report: Report
   triage_inbox_item: TriageInboxItem
@@ -786,7 +755,6 @@ type ActivitiesCveIdAdded implements ActivityInterface & Node & ReportActivityIn
   i_can_flag: Boolean!
   id: ID!
   internal: Boolean
-  markdown_message: String
   message: String
   report: Report
   triage_inbox_item: TriageInboxItem
@@ -808,7 +776,6 @@ type ActivitiesDraftStarted implements ActivityInterface & Node & ReportActivity
   i_can_flag: Boolean!
   id: ID!
   internal: Boolean
-  markdown_message: String
   message: String
   report: Report
   triage_inbox_item: TriageInboxItem
@@ -830,7 +797,6 @@ type ActivitiesExternalAdvisoryAdded implements ActivityInterface & Node & Repor
   i_can_flag: Boolean!
   id: ID!
   internal: Boolean
-  markdown_message: String
   message: String
   report: Report
   triage_inbox_item: TriageInboxItem
@@ -853,7 +819,6 @@ type ActivitiesExternalUserInvitationCancelled implements ActivityInterface & No
   i_can_flag: Boolean!
   id: ID!
   internal: Boolean
-  markdown_message: String
   message: String
   report: Report
   triage_inbox_item: TriageInboxItem
@@ -876,7 +841,6 @@ type ActivitiesExternalUserInvited implements ActivityInterface & Node & ReportA
   i_can_flag: Boolean!
   id: ID!
   internal: Boolean
-  markdown_message: String
   message: String
   report: Report
   report_retest_user_id: String
@@ -901,7 +865,6 @@ type ActivitiesExternalUserJoined implements ActivityInterface & Node & ReportAc
   i_can_flag: Boolean!
   id: ID!
   internal: Boolean
-  markdown_message: String
   message: String
   report: Report
   report_retest_user: User
@@ -925,7 +888,6 @@ type ActivitiesExternalUserRemoved implements ActivityInterface & Node & ReportA
   i_can_flag: Boolean!
   id: ID!
   internal: Boolean
-  markdown_message: String
   message: String
   removed_user: User
   report: Report
@@ -950,7 +912,6 @@ type ActivitiesGroupAssignedToBug implements ActivityInterface & Node & ReportAc
   i_can_flag: Boolean!
   id: ID!
   internal: Boolean
-  markdown_message: String
   message: String
   report: Report
   triage_inbox_item: TriageInboxItem
@@ -972,7 +933,6 @@ type ActivitiesHackerRequestedMediation implements ActivityInterface & Node & Re
   i_can_flag: Boolean!
   id: ID!
   internal: Boolean
-  markdown_message: String
   message: String
   report: Report
   triage_inbox_item: TriageInboxItem
@@ -1032,7 +992,6 @@ type ActivitiesManuallyDisclosed implements ActivityInterface & Node & ReportAct
   i_can_flag: Boolean!
   id: ID!
   internal: Boolean
-  markdown_message: String
   message: String
   report: Report
   triage_inbox_item: TriageInboxItem
@@ -1054,7 +1013,6 @@ type ActivitiesMediationRequested implements ActivityInterface & Node & ReportAc
   i_can_flag: Boolean!
   id: ID!
   internal: Boolean
-  markdown_message: String
   message: String
   report: Report
   triage_inbox_item: TriageInboxItem
@@ -1076,7 +1034,6 @@ type ActivitiesNobodyAssignedToBug implements ActivityInterface & Node & ReportA
   i_can_flag: Boolean!
   id: ID!
   internal: Boolean
-  markdown_message: String
   message: String
   report: Report
   triage_inbox_item: TriageInboxItem
@@ -1098,7 +1055,6 @@ type ActivitiesNotEligibleForBounty implements ActivityInterface & Node & Report
   i_can_flag: Boolean!
   id: ID!
   internal: Boolean
-  markdown_message: String
   message: String
   report: Report
   triage_inbox_item: TriageInboxItem
@@ -1116,7 +1072,6 @@ type ActivitiesPentestCheckAssigned implements ActivityInterface & Node {
   i_can_flag: Boolean!
   id: ID!
   internal: Boolean
-  markdown_message: String
   message: String
   updated_at: DateTime!
 }
@@ -1132,7 +1087,6 @@ type ActivitiesPentestCheckCompleted implements ActivityInterface & Node {
   i_can_flag: Boolean!
   id: ID!
   internal: Boolean
-  markdown_message: String
   message: String
   updated_at: DateTime!
 }
@@ -1148,7 +1102,6 @@ type ActivitiesPentestCheckUnassigned implements ActivityInterface & Node {
   i_can_flag: Boolean!
   id: ID!
   internal: Boolean
-  markdown_message: String
   message: String
   updated_at: DateTime!
 }
@@ -1164,7 +1117,6 @@ type ActivitiesPentestCheckUpdated implements ActivityInterface & Node {
   i_can_flag: Boolean!
   id: ID!
   internal: Boolean
-  markdown_message: String
   message: String
   updated_at: DateTime!
 }
@@ -1180,7 +1132,6 @@ type ActivitiesPentestPublished implements ActivityInterface & Node {
   i_can_flag: Boolean!
   id: ID!
   internal: Boolean
-  markdown_message: String
   message: String
   updated_at: DateTime!
 }
@@ -1196,7 +1147,6 @@ type ActivitiesPentestStarted implements ActivityInterface & Node {
   i_can_flag: Boolean!
   id: ID!
   internal: Boolean
-  markdown_message: String
   message: String
   updated_at: DateTime!
 }
@@ -1212,7 +1162,6 @@ type ActivitiesPentesterAwarded implements ActivityInterface & Node {
   i_can_flag: Boolean!
   id: ID!
   internal: Boolean
-  markdown_message: String
   message: String
   updated_at: DateTime!
 }
@@ -1228,7 +1177,6 @@ type ActivitiesProgramHackerJoined implements ActivityInterface & Node {
   i_can_flag: Boolean!
   id: ID!
   internal: Boolean
-  markdown_message: String
   message: String
   team: Team!
   updated_at: DateTime!
@@ -1245,7 +1193,6 @@ type ActivitiesProgramHackerLeft implements ActivityInterface & Node {
   i_can_flag: Boolean!
   id: ID!
   internal: Boolean
-  markdown_message: String
   message: String
   team: Team!
   updated_at: DateTime!
@@ -1266,7 +1213,6 @@ type ActivitiesProgramInactive implements ActivityInterface & Node & ReportActiv
   i_can_flag: Boolean!
   id: ID!
   internal: Boolean
-  markdown_message: String
   message: String
   report: Report
   triage_inbox_item: TriageInboxItem
@@ -1288,7 +1234,6 @@ type ActivitiesReassignedToTeam implements ActivityInterface & Node & ReportActi
   i_can_flag: Boolean!
   id: ID!
   internal: Boolean
-  markdown_message: String
   message: String
   new_team: Team
   old_team: Team
@@ -1312,7 +1257,6 @@ type ActivitiesReferenceIdAdded implements ActivityInterface & Node & ReportActi
   i_can_flag: Boolean!
   id: ID!
   internal: Boolean
-  markdown_message: String
   message: String
   reference: String
   reference_url: String
@@ -1332,7 +1276,6 @@ type ActivitiesRemovedFromPentest implements ActivityInterface & Node {
   i_can_flag: Boolean!
   id: ID!
   internal: Boolean
-  markdown_message: String
   message: String
   updated_at: DateTime!
 }
@@ -1352,7 +1295,6 @@ type ActivitiesReportBecamePublic implements ActivityInterface & Node & ReportAc
   i_can_flag: Boolean!
   id: ID!
   internal: Boolean
-  markdown_message: String
   message: String
   report: Report
   triage_inbox_item: TriageInboxItem
@@ -1375,7 +1317,6 @@ type ActivitiesReportCollaboratorInvited implements ActivityInterface & Node & R
   i_can_flag: Boolean!
   id: ID!
   internal: Boolean
-  markdown_message: String
   message: String
   report: Report
   triage_inbox_item: TriageInboxItem
@@ -1397,7 +1338,6 @@ type ActivitiesReportCollaboratorJoined implements ActivityInterface & Node & Re
   i_can_flag: Boolean!
   id: ID!
   internal: Boolean
-  markdown_message: String
   message: String
   report: Report
   triage_inbox_item: TriageInboxItem
@@ -1420,7 +1360,6 @@ type ActivitiesReportCustomFieldValueUpdated implements ActivityInterface & Node
   i_can_flag: Boolean!
   id: ID!
   internal: Boolean
-  markdown_message: String
   message: String
   new_value: String
   old_value: String
@@ -1444,7 +1383,6 @@ type ActivitiesReportRemediationGuidanceUpdated implements ActivityInterface & N
   i_can_flag: Boolean!
   id: ID!
   internal: Boolean
-  markdown_message: String
   message: String
   report: Report
   triage_inbox_item: TriageInboxItem
@@ -1466,7 +1404,6 @@ type ActivitiesReportRetestApproved implements ActivityInterface & Node & Report
   i_can_flag: Boolean!
   id: ID!
   internal: Boolean
-  markdown_message: String
   message: String
   report: Report
   report_retest_user: ReportRetestUser
@@ -1489,7 +1426,6 @@ type ActivitiesReportRetestCanceled implements ActivityInterface & Node & Report
   i_can_flag: Boolean!
   id: ID!
   internal: Boolean
-  markdown_message: String
   message: String
   report: Report
   report_retest_user: ReportRetestUser
@@ -1512,7 +1448,6 @@ type ActivitiesReportRetestRejected implements ActivityInterface & Node & Report
   i_can_flag: Boolean!
   id: ID!
   internal: Boolean
-  markdown_message: String
   message: String
   report: Report
   triage_inbox_item: TriageInboxItem
@@ -1534,7 +1469,6 @@ type ActivitiesReportSeverityUpdated implements ActivityInterface & Node & Repor
   i_can_flag: Boolean!
   id: ID!
   internal: Boolean
-  markdown_message: String
   message: String
   new_severity: Severity
   old_severity: Severity
@@ -1558,7 +1492,6 @@ type ActivitiesReportTitleUpdated implements ActivityInterface & Node & ReportAc
   i_can_flag: Boolean!
   id: ID!
   internal: Boolean
-  markdown_message: String
   message: String
   new_title: String
   old_title: String
@@ -1582,7 +1515,6 @@ type ActivitiesReportUndisclosed implements ActivityInterface & Node & ReportAct
   i_can_flag: Boolean!
   id: ID!
   internal: Boolean
-  markdown_message: String
   message: String
   report: Report
   triage_inbox_item: TriageInboxItem
@@ -1604,7 +1536,6 @@ type ActivitiesReportVulnerabilityTypesUpdated implements ActivityInterface & No
   i_can_flag: Boolean!
   id: ID!
   internal: Boolean
-  markdown_message: String
   message: String
   new_weakness: Weakness
   old_weakness: Weakness
@@ -1628,7 +1559,6 @@ type ActivitiesRetestUserExpired implements ActivityInterface & Node & ReportAct
   i_can_flag: Boolean!
   id: ID!
   internal: Boolean
-  markdown_message: String
   message: String
   report: Report
   triage_inbox_item: TriageInboxItem
@@ -1650,7 +1580,6 @@ type ActivitiesSwagAwarded implements ActivityInterface & Node & ReportActivityI
   i_can_flag: Boolean!
   id: ID!
   internal: Boolean
-  markdown_message: String
   message: String
   report: Report
   swag: Swag
@@ -1669,7 +1598,6 @@ type ActivitiesTeamBountyTableUpdated implements ActivityInterface & Node {
   i_can_flag: Boolean!
   id: ID!
   internal: Boolean
-  markdown_message: String
   message: String
   updated_at: DateTime!
 }
@@ -1685,7 +1613,6 @@ type ActivitiesTeamPolicyUpdated implements ActivityInterface & Node {
   i_can_flag: Boolean!
   id: ID!
   internal: Boolean
-  markdown_message: String
   message: String
   updated_at: DateTime!
 }
@@ -1701,7 +1628,6 @@ type ActivitiesTeamPostCreated implements ActivityInterface & Node {
   i_can_flag: Boolean!
   id: ID!
   internal: Boolean
-  markdown_message: String
   message: String
   updated_at: DateTime!
 }
@@ -1717,7 +1643,6 @@ type ActivitiesTeamPublished implements ActivityInterface & Node {
   i_can_flag: Boolean!
   id: ID!
   internal: Boolean
-  markdown_message: String
   message: String
   updated_at: DateTime!
 }
@@ -1733,7 +1658,6 @@ type ActivitiesTeamStructuredScopeUpdated implements ActivityInterface & Node {
   i_can_flag: Boolean!
   id: ID!
   internal: Boolean
-  markdown_message: String
   message: String
   updated_at: DateTime!
 }
@@ -1754,7 +1678,6 @@ type ActivitiesUserAssignedToBug implements ActivityInterface & Node & ReportAct
   i_can_flag: Boolean!
   id: ID!
   internal: Boolean
-  markdown_message: String
   message: String
   report: Report
   triage_inbox_item: TriageInboxItem
@@ -1776,7 +1699,6 @@ type ActivitiesUserBannedFromProgram implements ActivityInterface & Node & Repor
   i_can_flag: Boolean!
   id: ID!
   internal: Boolean
-  markdown_message: String
   message: String
   removed_user: User
   report: Report
@@ -1799,7 +1721,6 @@ type ActivitiesUserCompletedRetest implements ActivityInterface & Node & ReportA
   i_can_flag: Boolean!
   id: ID!
   internal: Boolean
-  markdown_message: String
   message: String
   report: Report
   triage_inbox_item: TriageInboxItem
@@ -1817,7 +1738,6 @@ type ActivitiesUserJoined implements ActivityInterface & Node {
   i_can_flag: Boolean!
   id: ID!
   internal: Boolean
-  markdown_message: String
   message: String
   updated_at: DateTime!
 }
@@ -1837,7 +1757,6 @@ type ActivitiesUserLeftRetest implements ActivityInterface & Node & ReportActivi
   i_can_flag: Boolean!
   id: ID!
   internal: Boolean
-  markdown_message: String
   message: String
   report: Report
   triage_inbox_item: TriageInboxItem
@@ -1877,7 +1796,6 @@ interface ActivityInterface {
   i_can_flag: Boolean!
   id: ID!
   internal: Boolean
-  markdown_message: String
   message: String
   updated_at: DateTime!
 }
@@ -3580,8 +3498,6 @@ type ChecklistCheck implements Node {
   description: String
   id: ID!
   instruction: String
-  markdown_description: String
-  markdown_instruction: String
   state: ChecklistCheckStateEnum
   structured_scopes(
     """
@@ -3731,7 +3647,6 @@ interface ChecklistCheckResponseActivityInterface {
   i_can_flag: Boolean!
   id: ID!
   internal: Boolean
-  markdown_message: String
   message: String
   name: String
   profile_picture(size: ProfilePictureSizes!): String!
@@ -9639,7 +9554,6 @@ type ExternalProgram implements Node {
   name: String!
   offers_rewards: Boolean
   policy: String
-  policy_html: String
   policy_url: String
   profile_picture(size: ProfilePictureSizes!): String!
   team: Team
@@ -10392,7 +10306,6 @@ Forwarded email type for a team
 """
 type ForwardedEmails implements Node {
   body: String
-  body_html: String
   created_at: DateTime!
   dkim_passed: Boolean
   email_signature_valid: Boolean!
@@ -11429,7 +11342,6 @@ type InvitationsSoftLaunch implements InvitationInterface & Node {
   _id: ID!
   expires_at: DateTime
   id: ID!
-  markdown_message: String
   message: String
   source: InvitationSourceEnum
   state: InvitationStateEnum
@@ -11612,7 +11524,6 @@ type JobListing implements Node {
   contract: Boolean
   created_at: DateTime!
   description: String!
-  description_html: String
   fulltime: Boolean
   id: ID!
   location: String
@@ -14780,7 +14691,6 @@ type Pentest implements Node {
   citizenship_restrictions: [String!]
   completed_at: DateTime
   description: String
-  description_html: String
   end_date: Date
   ends_at: DateTime
   geographic_restrictions: String
@@ -14936,7 +14846,6 @@ type Pentest implements Node {
     where: FiltersPentesterFilterInput
   ): PentesterConnection
   published_description: String
-  published_description_html: String
   report_count_by_substate_severity_rating: GraphqlScalar
   report_count_by_weakness_day: GraphqlScalar
   report_count_by_weakness_severity_rating: GraphqlScalar
@@ -15059,9 +14968,6 @@ type PentestCheck implements Node {
   description: String
   id: ID!
   instruction: String
-  markdown_description: String
-  markdown_instruction: String
-  markdown_message: String
   message: String
   pentest_checklist: PentestChecklist
 
@@ -16024,8 +15930,6 @@ type PolicySetting implements Node {
   id: ID!
   last_policy_change_at: DateTime
   policy: String
-  policy_html: String
-  policy_markdown_html: String
   structured_policy: StructuredPolicy
   subscribed: Boolean!
 }
@@ -16033,7 +15937,6 @@ type PolicySetting implements Node {
 type Post implements Node {
   created_at: DateTime!
   id: ID!
-  markdown_message: String
   message: String
   title: String
 }
@@ -17991,7 +17894,6 @@ type Report implements ActivitiesInterface & Node & ResourceInterface {
     last: Int
   ): VoteConnection
   vulnerability_information: String
-  vulnerability_information_html: String
   weakness: Weakness
   weakness_suggestion: WeaknessSuggestion
 }
@@ -18006,7 +17908,6 @@ interface ReportActivityInterface {
   genius_execution_id: ID
   id: ID!
   internal: Boolean
-  markdown_message: String
   message: String
   report: Report
   triage_inbox_item: TriageInboxItem
@@ -20220,7 +20121,6 @@ type StructuredScope implements Node & ResourceInterface {
   ): LabelConnection
   max_severity: SeverityRatingEnum
   reference: String
-  rendered_instruction: String
   report_count_by_substate_severity_rating: GraphqlScalar
   reports(
     """
@@ -20489,7 +20389,7 @@ A HackerOne summary for a report
 type Summary implements Node {
   _id: ID!
   attachments: [Attachment]
-  category: String!
+  category: String
   content: String!
   created_at: DateTime!
   id: ID!
@@ -21344,7 +21244,6 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
   coverage_analytics_summary(current_path: String = null, end_date: DateTime, group_by: [String] = [], http_host: String = null, order_by: CoverageAnalyticsOrderInput = {}, page: Int = null, start_date: DateTime): [CoverageAnalyticsSummary!]!
   created_at: DateTime
   credential_instruction: String
-  credential_instruction_html: String
   credentials(
     """
     Returns the elements in the list that come after the specified cursor.
@@ -21875,7 +21774,6 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
   remediation_guidance_enabled: Boolean!
   report_sources: [String!]
   report_submission_form_intro: String
-  report_submission_form_intro_html: String
   report_template: String
   reporters(
     """
@@ -22290,7 +22188,6 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
     last: Int
   ): TeamWeaknessConnection
   terms: String
-  terms_html: String
   thanks_items(
     """
     Returns the elements in the list that come after the specified cursor.
@@ -22321,7 +22218,6 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
   triage_bounty_management: String
   triage_enabled: Boolean
   triage_note: String
-  triage_note_html: String
   triage_retesting: Boolean
   triage_time(date_start: DateTime): Float
   triage_workflow: TriageWorkflow
@@ -23346,7 +23242,6 @@ Team configuration of a weakness
 type TeamWeakness implements Node {
   id: ID!
   instruction: String
-  rendered_instruction: String
   state: TeamWeaknessStates
   team: Team!
   weakness: Weakness
@@ -29652,7 +29547,6 @@ type User implements Node & ResourceInterface {
   impact: Float
   impact_percentile: Int
   intro: String
-  intro_html: String
   invitation_queues(
     """
     Returns the elements in the list that come after the specified cursor.
