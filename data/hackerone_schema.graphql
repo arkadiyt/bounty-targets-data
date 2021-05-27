@@ -2868,7 +2868,6 @@ type BountyTable implements Node & ResourceInterface {
   ): BountyTableRowConnection
   critical_label: String!
   description: String
-  description_html: String
   high_label: String!
   id: ID!
   low_label: String!
@@ -2888,8 +2887,6 @@ type BountyTableHistory implements Node & ResourceInterface {
   created_at: DateTime!
   description_after: String
   description_before: String
-  description_html_after: String
-  description_html_before: String
   id: ID!
   updated_at: DateTime
   url: URI!
