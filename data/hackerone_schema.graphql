@@ -14414,6 +14414,7 @@ type Organization implements Node {
     Returns the last _n_ elements from the list.
     """
     last: Int
+    order_by: FiltersUserFilterOrder = {username: {_direction: ASC}}
     where: FiltersUserFilterInput
   ): UserConnection
 }
@@ -16976,6 +16977,7 @@ type Query implements Node {
     Returns the last _n_ elements from the list.
     """
     last: Int
+    order_by: FiltersUserFilterOrder = {username: {_direction: ASC}}
     where: FiltersUserFilterInput
   ): UserConnection
   weaknesses(
