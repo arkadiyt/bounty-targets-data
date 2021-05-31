@@ -11354,6 +11354,7 @@ An invitation to join a program as a member
 type InvitationsTeamMember implements InvitationInterface & Node {
   _id: ID!
   accepted_at: DateTime
+  created_at: DateTime
   email: String
   expires_at: DateTime
   id: ID!
@@ -21606,6 +21607,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
   offers_swag: Boolean
   offers_thanks: Boolean
   only_cleared_hackers: Boolean
+  organization: Organization
   participants(
     """
     Returns the elements in the list that come after the specified cursor.
