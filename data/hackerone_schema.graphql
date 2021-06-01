@@ -14305,6 +14305,8 @@ An organization object
 type Organization implements Node {
   _id: ID!
   handle: String!
+  i_can_edit_user_access: Boolean!
+  i_can_remove_user_access: Boolean!
   id: ID!
   name: String!
   pending_team_member_invitations(
@@ -21461,6 +21463,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
   i_can_manage_program: Boolean!
   i_can_manage_references: Boolean!
   i_can_manage_system_users: Boolean!
+  i_can_manage_team_members: Boolean!
   i_can_toggle_anc: Boolean
   i_can_view_base_bounty: Boolean
   i_can_view_bounty_table: Boolean
