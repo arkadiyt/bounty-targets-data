@@ -10166,6 +10166,7 @@ enum FiltersTeamFilterRoles {
   is_team_member
   is_team_member_of_a_child
   is_team_member_of_a_parent
+  is_team_with_published_pentests
   is_whitelisted_reporter
   is_with_hierarchy_thanks
 }
@@ -22251,6 +22252,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
     order_by: TriggersOrder = {direction: DESC, field: created_at}
   ): TriggerConnection
   twitter_handle: String
+  type: String
   updated_at: DateTime
   url: URI!
   user_open_to_collaboration: Boolean
