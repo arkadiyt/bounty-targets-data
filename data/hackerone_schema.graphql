@@ -9604,6 +9604,7 @@ type ExtractedReportData implements Node {
   hosts: [String]
   id: ID!
   ip_addresses: [String]
+  ip_scope_matches: [ReportIpScopeMatch]
   paths: [String]
   query_parameters: [String]
   report: Report!
@@ -18165,6 +18166,17 @@ A match between a host mentioned in a report and the program's structured scope
 type ReportHostScopeMatch implements Node {
   host: String!
   id: ID!
+  match: String!
+  scope: String!
+  structured_scope_asset_identifier: String!
+}
+
+"""
+A match between an IP address mentioned in a report and the program's structured scope CIDR
+"""
+type ReportIpScopeMatch implements Node {
+  id: ID!
+  ip: String!
   match: String!
   scope: String!
   structured_scope_asset_identifier: String!
