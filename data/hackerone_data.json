@@ -4311,7 +4311,7 @@
     "name": "Zendesk",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 79,
+    "response_efficiency_percentage": 80,
     "submission_state": "open",
     "url": "https://hackerone.com/zendesk",
     "website": "https://www.zendesk.com",
@@ -15473,7 +15473,7 @@
     "name": "Bime",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 75,
+    "response_efficiency_percentage": 63,
     "submission_state": "open",
     "url": "https://hackerone.com/bime",
     "website": "https://www.bimeanalytics.com",
@@ -17979,6 +17979,17 @@
           "instruction": "",
           "integrity_requirement": null,
           "max_severity": "none"
+        },
+        {
+          "asset_identifier": "zodiac.helium.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "none"
         }
       ]
     }
@@ -20381,7 +20392,7 @@
     "name": "Intel Corporation",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 59,
+    "response_efficiency_percentage": 21,
     "submission_state": "open",
     "url": "https://hackerone.com/intel",
     "website": "http://www.intel.com/security",
@@ -28109,7 +28120,7 @@
     "name": "Netlify",
     "offers_bounties": true,
     "offers_swag": true,
-    "response_efficiency_percentage": 100,
+    "response_efficiency_percentage": 99,
     "submission_state": "open",
     "url": "https://hackerone.com/netlify",
     "website": "https://www.netlify.com",
@@ -36302,6 +36313,17 @@
           "max_severity": "critical"
         },
         {
+          "asset_identifier": "sh.reddit.com",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
           "asset_identifier": "strapi.reddit.com",
           "asset_type": "URL",
           "availability_requirement": "high",
@@ -38391,7 +38413,7 @@
     "name": "ImpressCMS",
     "offers_bounties": false,
     "offers_swag": true,
-    "response_efficiency_percentage": 5,
+    "response_efficiency_percentage": 10,
     "submission_state": "open",
     "url": "https://hackerone.com/impresscms",
     "website": "https://www.impresscms.org",
@@ -48077,7 +48099,7 @@
     "name": "Cirrus Insight",
     "offers_bounties": false,
     "offers_swag": false,
-    "response_efficiency_percentage": 38,
+    "response_efficiency_percentage": 39,
     "submission_state": "open",
     "url": "https://hackerone.com/cirrusinsight",
     "website": "http://www.cirrusinsight.com",
@@ -48407,6 +48429,72 @@
       ],
       "out_of_scope": [
 
+      ]
+    }
+  },
+  {
+    "allows_bounty_splitting": false,
+    "average_time_to_bounty_awarded": null,
+    "average_time_to_first_program_response": 3.0,
+    "average_time_to_report_resolved": null,
+    "handle": "h1-ctf",
+    "id": 46757,
+    "managed_program": false,
+    "name": "h1-ctf",
+    "offers_bounties": true,
+    "offers_swag": false,
+    "response_efficiency_percentage": 100,
+    "submission_state": "open",
+    "url": "https://hackerone.com/h1-ctf",
+    "website": "",
+    "targets": {
+      "in_scope": [
+        {
+          "asset_identifier": "*.ccc.h1ctf.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "asset_identifier": "*.bountypay.h1ctf.com",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "h1-2006 CTF",
+          "integrity_requirement": "high",
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "hackyholidays.h1ctf.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "https://h1-415.h1ctf.com",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "Archived - H1-415-2020 CTF",
+          "integrity_requirement": "high",
+          "max_severity": "none"
+        }
       ]
     }
   },
