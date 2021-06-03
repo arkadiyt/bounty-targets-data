@@ -14390,6 +14390,7 @@ type Organization implements Node {
     """
     last: Int
   ): TeamMemberInvitationConnection
+  profile_picture(size: ProfilePictureSizes!): String
   team_member_groups(
     """
     Returns the elements in the list that come after the specified cursor.
