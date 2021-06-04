@@ -14389,6 +14389,7 @@ type Organization implements Node {
     Returns the last _n_ elements from the list.
     """
     last: Int
+    recipient_username: String
   ): TeamMemberInvitationConnection
   profile_picture(size: ProfilePictureSizes!): String
   team_member_groups(
