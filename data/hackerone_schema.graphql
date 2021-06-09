@@ -6471,6 +6471,7 @@ type CreateStructuredScopePayload implements MutationResult {
     types: [ErrorTypeEnum]
   ): ErrorConnection!
   new_structured_scope: StructuredScopeEdge
+  structured_scope: StructuredScope
   structured_scopes(
     """
     Returns the elements in the list that come after the specified cursor.
