@@ -4106,10 +4106,19 @@ type ClusterWeaknessEdge {
 }
 
 """
+Valid types of crypto payout via Coinbase
+"""
+enum CoinbaseCurrencyEnum {
+  BTC
+  USDC
+}
+
+"""
 A Coinbase Payout Preference
 """
 type CoinbasePayoutPreferenceType implements Node & PayoutPreferenceInterface {
   _id: ID!
+  currency: String
   default: Boolean
   email: String
   id: ID!
@@ -4744,6 +4753,7 @@ input CreateCoinbasePayoutPreferenceInput {
   A unique identifier for the client performing the mutation.
   """
   clientMutationId: String
+  coinbase_currency: CoinbaseCurrencyEnum!
   coinbase_email: String!
   default_method: Boolean!
 }
