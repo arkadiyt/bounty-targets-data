@@ -158,10 +158,10 @@ type ActivitiesBountyRecalled implements ActivityInterface & Node & ReportActivi
   _id: ID!
   actor: ActorUnion
   actor_is_customer: Boolean!
+  amount: String
   attachments: [Attachment]
   automated_response: Boolean
   bonus_amount: String
-  bounty_amount: String
   bounty_currency: String
   created_at: DateTime!
   genius_execution_id: ID
@@ -185,10 +185,10 @@ type ActivitiesBountyScheduled implements ActivityInterface & Node & ReportActiv
   action_object_id: Int
   actor: ActorUnion
   actor_is_customer: Boolean!
+  amount: String
   attachments: [Attachment]
   automated_response: Boolean
   bonus_amount: String
-  bounty_amount: String
   bounty_currency: String
   created_at: DateTime!
   genius_execution_id: ID
@@ -10416,6 +10416,7 @@ input FiltersUserFilterInput {
   is_hackerone_triager: Boolean
   is_me: Boolean
   name: StringPredicateInput
+  system: BooleanPredicateInput
   username: StringPredicateInput
 }
 
