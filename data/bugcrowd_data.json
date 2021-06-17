@@ -2535,6 +2535,25 @@
     }
   },
   {
+    "name": "HostGator",
+    "url": "https://bugcrowd.com/endurance-hostgator",
+    "allows_disclosure": true,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "full",
+    "max_payout": 0,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "website",
+          "target": "https://hostgator.com"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
     "name": "Host Gator LATAM",
     "url": "https://bugcrowd.com/endurance-hostgatorlatam",
     "allows_disclosure": true,
@@ -5219,6 +5238,44 @@
     }
   },
   {
+    "name": "Reseller Club VDP Pro",
+    "url": "https://bugcrowd.com/newfold-resellerclub-vdp",
+    "allows_disclosure": true,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "full",
+    "max_payout": 0,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "android",
+          "target": "ResellerClub Android Mobile App"
+        },
+        {
+          "type": "ios",
+          "target": "ResellerClub iOS Mobile App"
+        },
+        {
+          "type": "api",
+          "target": "httpapi.com"
+        },
+        {
+          "type": "website",
+          "target": "manage.resellerclub.com"
+        },
+        {
+          "type": "website",
+          "target": "obmobileapp.com"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "website",
+          "target": "Any asset not explicitly listed as 'In Scope' above is explicitly out of scope"
+        }
+      ]
+    }
+  },
+  {
     "name": "Octopus",
     "url": "https://bugcrowd.com/octopus-og",
     "allows_disclosure": false,
@@ -7717,6 +7774,10 @@
         },
         {
           "type": "website",
+          "target": "*.tripadvisor.cn"
+        },
+        {
+          "type": "website",
           "target": "*.tripadvisormediamanager.*"
         },
         {
@@ -7758,10 +7819,6 @@
         {
           "type": "website",
           "target": "spotlight.tripadvisor.*"
-        },
-        {
-          "type": "website",
-          "target": "www.tripadvisor.cn"
         }
       ]
     }
