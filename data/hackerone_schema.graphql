@@ -8900,7 +8900,7 @@ type DismissTriageInboxItemsPayload implements MutationResult {
 """
 ElasticSearch Document can be of different types
 """
-union DocumentUnion = ReportDocument
+union DocumentUnion = OrganizationMemberDocument | ReportDocument
 
 """
 A domain ownership object
@@ -11070,6 +11070,7 @@ Available ElasticSearch indexes
 """
 enum IndexEnum {
   DuplicateDetectorReportsIndex
+  OrganizationMembersIndex
 }
 
 input IntPredicateInput {
@@ -14676,6 +14677,11 @@ type OrganizationEdge {
   The item at the end of the edge.
   """
   node: Organization
+}
+
+type OrganizationMemberDocument implements Node {
+  id: ID!
+  user: User!
 }
 
 """
@@ -22455,6 +22461,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
     last: Int
   ): TeamIntegrationConnection
   team_member_groups: [TeamMemberGroup]
+  team_member_invite_rate_limited: Boolean
   team_members(
     """
     Returns the elements in the list that come after the specified cursor.
@@ -23605,6 +23612,7 @@ enum TeamWeaknessStates {
 }
 
 input TermsFilterInput {
+  organization_id: [Int!]
   team_id: [Int!]
 }
 
