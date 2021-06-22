@@ -16301,6 +16301,12 @@ enum ProgramAnalyticsSecondaryGroupEnum {
   weakness_id
 }
 
+input ProgramAnalyticsSecondaryGroupInput {
+  column: ProgramAnalyticsSecondaryGroupEnum!
+  limit: Int
+  order_direction: OrderDirection
+}
+
 enum ProgramAnalyticsSelectEnum {
   count_bounty_awarded_activity
   count_bug_filed_activity
@@ -16960,7 +16966,7 @@ type Query implements Node {
     secure_order_by: FiltersPentestFilterOrder
     where: FiltersPentestFilterInput
   ): PentestConnection
-  program_analytics(end_date: DateTime!, from: ProgramAnalyticsFromEnum!, group: ProgramAnalyticsGroupEnum!, secondary_group: ProgramAnalyticsSecondaryGroupEnum, select: ProgramAnalyticsSelectEnum!, start_date: DateTime!, teams: [String!]!, where: ProgramAnalyticsFilterInput!): [DataPoint]
+  program_analytics(end_date: DateTime!, from: ProgramAnalyticsFromEnum!, group: ProgramAnalyticsGroupEnum!, secondary_group: ProgramAnalyticsSecondaryGroupInput, select: ProgramAnalyticsSelectEnum!, start_date: DateTime!, teams: [String!]!, where: ProgramAnalyticsFilterInput!): [DataPoint]
   program_analytics_benchmarks(end_date: DateTime!, from: ProgramAnalyticsFromEnum!, group: ProgramAnalyticsGroupEnum!, select: ProgramAnalyticsBenchmarkSelectEnum!, start_date: DateTime!, teams: [String!]!, where: ProgramAnalyticsBenchmarkFilterInput!): [DataPoint]
   query: Query!
   report(id: Int!): Report
