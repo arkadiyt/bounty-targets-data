@@ -2736,7 +2736,7 @@ type BlogPostEdge {
 }
 
 input BoolQueryInput {
-  filter: FilterInput
+  filter: [FilterInput!]
   must: MustInput
 }
 
@@ -9855,6 +9855,7 @@ type FeatureEdge {
 }
 
 input FilterInput {
+  term: TermFilterInput
   terms: TermsFilterInput
 }
 
@@ -14523,7 +14524,9 @@ An organization object
 type Organization implements Node {
   _id: ID!
   handle: String!
+  i_can_edit_api_user_access: Boolean!
   i_can_edit_user_access: Boolean!
+  i_can_remove_api_user_access: Boolean!
   i_can_remove_user_access: Boolean!
   id: ID!
   name: String!
@@ -23617,6 +23620,10 @@ enum TeamWeaknessStates {
   hidden
 }
 
+input TermFilterInput {
+  system: Boolean
+}
+
 input TermsFilterInput {
   organization_id: [Int!]
   team_id: [Int!]
@@ -30293,6 +30300,7 @@ type User implements Node & ResourceInterface {
     """
     last: Int
   ): SwagConnection
+  system: Boolean
   tax_form: TaxForm
   team_policy_subscription(handle: String!): TeamPolicySubscription
   team_policy_subscriptions(
