@@ -16298,6 +16298,11 @@ enum ProgramAnalyticsGroupEnum {
   year_triaged_at
 }
 
+enum ProgramAnalyticsSecondaryGroupAggregationEnum {
+  count
+  sum_bounty
+}
+
 enum ProgramAnalyticsSecondaryGroupEnum {
   asset_id
   report_severity
@@ -16305,6 +16310,7 @@ enum ProgramAnalyticsSecondaryGroupEnum {
 }
 
 input ProgramAnalyticsSecondaryGroupInput {
+  aggregation: ProgramAnalyticsSecondaryGroupAggregationEnum
   column: ProgramAnalyticsSecondaryGroupEnum!
   limit: Int
   order_direction: OrderDirection
