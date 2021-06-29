@@ -2440,6 +2440,84 @@
     }
   },
   {
+    "name": "Endurance",
+    "url": "https://bugcrowd.com/endurance",
+    "allows_disclosure": true,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "full",
+    "max_payout": 0,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "website",
+          "target": "Endurance"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "website",
+          "target": "*.bluehost.com"
+        },
+        {
+          "type": "website",
+          "target": "*.domain.com"
+        },
+        {
+          "type": "website",
+          "target": "*.logicboxes.com"
+        },
+        {
+          "type": "other",
+          "target": "All API SDKs"
+        },
+        {
+          "type": "other",
+          "target": "All Constant Contact APIs - api.constantcontact.com"
+        },
+        {
+          "type": "other",
+          "target": "All Constant Contact websites - *.constantcontact.com"
+        },
+        {
+          "type": "other",
+          "target": "All Single Platform websites - *.singleplatform.com"
+        },
+        {
+          "type": "website",
+          "target": "All Single Platform websites - *.singleplatform.com\t"
+        },
+        {
+          "type": "other",
+          "target": "Constant Contact mobile applications [iOS and Android]"
+        },
+        {
+          "type": "website",
+          "target": "customer sites / accounts from customer accounts"
+        },
+        {
+          "type": "website",
+          "target": "hostgator.com.br"
+        },
+        {
+          "type": "website",
+          "target": "https://blog.buehost.com"
+        },
+        {
+          "type": "website",
+          "target": "https://www.bluehost.com/cgi/partner/signup"
+        },
+        {
+          "type": "website",
+          "target": "https://www.bluehost.com/contact"
+        },
+        {
+          "type": "website",
+          "target": "login.websitebuilder.com"
+        }
+      ]
+    }
+  },
+  {
     "name": "Bluehost",
     "url": "https://bugcrowd.com/endurance-bluehost",
     "allows_disclosure": true,
@@ -2789,7 +2867,39 @@
         },
         {
           "type": "website",
+          "target": "FireEye Email Security EU"
+        },
+        {
+          "type": "website",
+          "target": "FireEye Email Security GovCloud"
+        },
+        {
+          "type": "website",
+          "target": "FireEye Email Security US"
+        },
+        {
+          "type": "website",
+          "target": "FireEye Helix EU"
+        },
+        {
+          "type": "website",
+          "target": "FireEye Helix US"
+        },
+        {
+          "type": "website",
+          "target": "FireEye Intelligence Portal"
+        },
+        {
+          "type": "website",
           "target": "Localized FireEye Websites (fireeye.de, fireeye.jp, etc.)"
+        },
+        {
+          "type": "website",
+          "target": "Managed Defense Portal"
+        },
+        {
+          "type": "website",
+          "target": "Mandiant Advantage"
         }
       ],
       "out_of_scope": [
@@ -2800,10 +2910,6 @@
         {
           "type": "website",
           "target": "FireEye Ambassadors"
-        },
-        {
-          "type": "other",
-          "target": "FireEye systems or products in AWS GovCloud"
         },
         {
           "type": "website",
@@ -4459,7 +4565,7 @@
       "in_scope": [
         {
           "type": "website",
-          "target": "SRC integration on https://masterpassteststore.com/. Only the masterpass checkout functionality is in scope"
+          "target": "SRC integration on https://masterpassteststore.com/. Only the Masterpass checkout functionality is in scope"
         },
         {
           "type": "website",
@@ -4725,6 +4831,29 @@
         {
           "type": "api",
           "target": "https://stage.services.mastercard.com/dxp/twitter/timeline?screenName=MastercardUK"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
+    "name": "Memsource Vulnerability Disclosure Program",
+    "url": "https://bugcrowd.com/memsource-vdp",
+    "allows_disclosure": false,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "partial",
+    "max_payout": 0,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "website",
+          "target": "https://cloud9.memsource.com/"
+        },
+        {
+          "type": "api",
+          "target": "https://cloud9.memsource.com/web/docs/api"
         }
       ],
       "out_of_scope": [
@@ -8417,7 +8546,7 @@
           "target": "Upwork Dash Messenger Desktop Version (www.upwork.com/downloads)"
         },
         {
-          "type": "ios",
+          "type": "api",
           "target": "api.upwork.com/graphql"
         },
         {
