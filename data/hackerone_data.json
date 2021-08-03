@@ -1,8 +1,351 @@
 [
   {
+    "allows_bounty_splitting": false,
+    "average_time_to_bounty_awarded": null,
+    "average_time_to_first_program_response": 12.0,
+    "average_time_to_report_resolved": 4861.0,
+    "handle": "finra",
+    "id": 0,
+    "managed_program": true,
+    "name": "FINRA Response",
+    "offers_bounties": false,
+    "offers_swag": false,
+    "response_efficiency_percentage": 100,
+    "submission_state": "open",
+    "url": "https://hackerone.com/finra",
+    "website": "http://finra.org",
+    "targets": {
+      "in_scope": [
+        {
+          "asset_identifier": "*.finra.org",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://ews.qa.finra.org/*",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "asset_identifier": "*.fip.finra.org",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "https://ews.finra.org/*",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        }
+      ]
+    }
+  },
+  {
+    "allows_bounty_splitting": false,
+    "average_time_to_bounty_awarded": null,
+    "average_time_to_first_program_response": 32.0,
+    "average_time_to_report_resolved": null,
+    "handle": "digitalocean",
+    "id": 0,
+    "managed_program": true,
+    "name": "DigitalOcean",
+    "offers_bounties": false,
+    "offers_swag": false,
+    "response_efficiency_percentage": 95,
+    "submission_state": "open",
+    "url": "https://hackerone.com/digitalocean",
+    "website": "http://digitalocean.com",
+    "targets": {
+      "in_scope": [
+        {
+          "asset_identifier": "*.digitalocean.com",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "*.digitaloceanspaces.com",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "Security vulnerabilities in the contents of an individual user's spaces are out of scope\n",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "DigitalOcean products associated with an account you created (e.g. droplets, load balancers, etc.)",
+          "asset_type": "OTHER",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "http://169.254.169.254/",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "Metadata service available at http://169.254.169.254/ from Droplets\n",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://api.digitalocean.com/",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://business.digitalocean.com/",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://cloud.digitalocean.com/",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://marketplace.digitalocean.com/",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "asset_identifier": "Assets created by other DigitalOcean customers",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "Any asset (Droplet, Space, or otherwise) created by other DigitalOcean customers are _**not**_ to be tested under any circumstances",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        }
+      ]
+    }
+  },
+  {
+    "allows_bounty_splitting": false,
+    "average_time_to_bounty_awarded": null,
+    "average_time_to_first_program_response": 31.0,
+    "average_time_to_report_resolved": null,
+    "handle": "evernote",
+    "id": 0,
+    "managed_program": true,
+    "name": "Evernote",
+    "offers_bounties": false,
+    "offers_swag": false,
+    "response_efficiency_percentage": 97,
+    "submission_state": "open",
+    "url": "https://hackerone.com/evernote",
+    "website": "https://evernote.com",
+    "targets": {
+      "in_scope": [
+        {
+          "asset_identifier": "*.evernote.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "281796108",
+          "asset_type": "APPLE_STORE_APP_ID",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "Download [here](https://apps.apple.com/us/app/evernote/id281796108)",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "406056744",
+          "asset_type": "DOWNLOADABLE_EXECUTABLES",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "MacOS. Download [here](https://apps.apple.com/app/id406056744)",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "9wzdncrfj3mb",
+          "asset_type": "WINDOWS_APP_STORE_APP_ID",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "Download [here](https://www.microsoft.com/en-us/p/evernote/9wzdncrfj3mb?activetab=pivot%3Aoverviewtab)",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "WebClipper Extension for Chrome",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "Download [here](https://chrome.google.com/webstore/detail/evernote-web-clipper/pioclpoplcdbaefihamjohnefbikjilc#)",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "WebClipper Extension for Firefox",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "Download [here](https://addons.mozilla.org/en-US/firefox/addon/evernote-web-clipper/)",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "WebClipper Extension for Safari",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "Download [here](https://apps.apple.com/us/app/evernote-web-clipper/id1481669779?ls=1&mt=12)",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "com.evernote",
+          "asset_type": "GOOGLE_PLAY_APP_ID",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "Download [here](https://play.google.com/store/apps/details?id=com.evernote&hl=en_US)",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "evernote.jira.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
+    "allows_bounty_splitting": false,
+    "average_time_to_bounty_awarded": null,
+    "average_time_to_first_program_response": 17.0,
+    "average_time_to_report_resolved": null,
+    "handle": "cloudflare",
+    "id": 0,
+    "managed_program": true,
+    "name": "Cloudflare Vulnerability Disclosure",
+    "offers_bounties": false,
+    "offers_swag": true,
+    "response_efficiency_percentage": 100,
+    "submission_state": "open",
+    "url": "https://hackerone.com/cloudflare",
+    "website": "https://www.cloudflare.com/disclosure",
+    "targets": {
+      "in_scope": [
+
+      ],
+      "out_of_scope": [
+        {
+          "asset_identifier": "support.cloudflare.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "This asset is hosted by Zendesk, and as such these reports should be submitted to their program instead via @zendesk.",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        }
+      ]
+    }
+  },
+  {
     "allows_bounty_splitting": true,
     "average_time_to_bounty_awarded": 195.0,
-    "average_time_to_first_program_response": 13.0,
+    "average_time_to_first_program_response": 14.0,
     "average_time_to_report_resolved": 518.0,
     "handle": "security",
     "id": 13,
@@ -1293,40 +1636,6 @@
   {
     "allows_bounty_splitting": false,
     "average_time_to_bounty_awarded": null,
-    "average_time_to_first_program_response": 17.0,
-    "average_time_to_report_resolved": null,
-    "handle": "cloudflare",
-    "id": 41,
-    "managed_program": true,
-    "name": "Cloudflare Vulnerability Disclosure",
-    "offers_bounties": false,
-    "offers_swag": true,
-    "response_efficiency_percentage": 100,
-    "submission_state": "open",
-    "url": "https://hackerone.com/cloudflare",
-    "website": "https://www.cloudflare.com/disclosure",
-    "targets": {
-      "in_scope": [
-
-      ],
-      "out_of_scope": [
-        {
-          "asset_identifier": "support.cloudflare.com",
-          "asset_type": "URL",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": false,
-          "eligible_for_submission": false,
-          "instruction": "This asset is hosted by Zendesk, and as such these reports should be submitted to their program instead via @zendesk.",
-          "integrity_requirement": null,
-          "max_severity": "none"
-        }
-      ]
-    }
-  },
-  {
-    "allows_bounty_splitting": false,
-    "average_time_to_bounty_awarded": null,
     "average_time_to_first_program_response": null,
     "average_time_to_report_resolved": null,
     "handle": "wordpress",
@@ -1656,8 +1965,8 @@
   },
   {
     "allows_bounty_splitting": true,
-    "average_time_to_bounty_awarded": 281.0,
-    "average_time_to_first_program_response": 13.0,
+    "average_time_to_bounty_awarded": 234.0,
+    "average_time_to_first_program_response": 14.0,
     "average_time_to_report_resolved": 326.0,
     "handle": "vimeo",
     "id": 56,
@@ -1877,7 +2186,7 @@
   {
     "allows_bounty_splitting": false,
     "average_time_to_bounty_awarded": 32.0,
-    "average_time_to_first_program_response": 15.0,
+    "average_time_to_first_program_response": 16.0,
     "average_time_to_report_resolved": 4644.0,
     "handle": "priceline",
     "id": 59,
@@ -2076,7 +2385,7 @@
     "allows_bounty_splitting": true,
     "average_time_to_bounty_awarded": 493.0,
     "average_time_to_first_program_response": 9.0,
-    "average_time_to_report_resolved": 1807.0,
+    "average_time_to_report_resolved": 1820.0,
     "handle": "twitter",
     "id": 61,
     "managed_program": false,
@@ -2240,8 +2549,8 @@
   {
     "allows_bounty_splitting": true,
     "average_time_to_bounty_awarded": 116.0,
-    "average_time_to_first_program_response": 25.0,
-    "average_time_to_report_resolved": 2538.0,
+    "average_time_to_first_program_response": 26.0,
+    "average_time_to_report_resolved": 2517.0,
     "handle": "mailru",
     "id": 65,
     "managed_program": false,
@@ -3561,7 +3870,7 @@
   {
     "allows_bounty_splitting": false,
     "average_time_to_bounty_awarded": null,
-    "average_time_to_first_program_response": 11.0,
+    "average_time_to_first_program_response": 12.0,
     "average_time_to_report_resolved": null,
     "handle": "att",
     "id": 122,
@@ -4105,7 +4414,7 @@
     "allows_bounty_splitting": true,
     "average_time_to_bounty_awarded": 123.0,
     "average_time_to_first_program_response": 26.0,
-    "average_time_to_report_resolved": 1677.0,
+    "average_time_to_report_resolved": 1659.0,
     "handle": "glassdoor",
     "id": 204,
     "managed_program": true,
@@ -4181,7 +4490,7 @@
   },
   {
     "allows_bounty_splitting": true,
-    "average_time_to_bounty_awarded": 1010.0,
+    "average_time_to_bounty_awarded": 966.0,
     "average_time_to_first_program_response": 11.0,
     "average_time_to_report_resolved": null,
     "handle": "zendesk",
@@ -4601,9 +4910,9 @@
   },
   {
     "allows_bounty_splitting": true,
-    "average_time_to_bounty_awarded": 143.0,
+    "average_time_to_bounty_awarded": 141.0,
     "average_time_to_first_program_response": 8.0,
-    "average_time_to_report_resolved": 1279.0,
+    "average_time_to_report_resolved": 1247.0,
     "handle": "qiwi",
     "id": 215,
     "managed_program": false,
@@ -5228,7 +5537,7 @@
   },
   {
     "allows_bounty_splitting": false,
-    "average_time_to_bounty_awarded": 690.0,
+    "average_time_to_bounty_awarded": 679.0,
     "average_time_to_first_program_response": 15.0,
     "average_time_to_report_resolved": 2471.0,
     "handle": "gitlab",
@@ -8423,7 +8732,7 @@
   {
     "allows_bounty_splitting": false,
     "average_time_to_bounty_awarded": 440.0,
-    "average_time_to_first_program_response": 20.0,
+    "average_time_to_first_program_response": 21.0,
     "average_time_to_report_resolved": 669.0,
     "handle": "scopely",
     "id": 567,
@@ -10344,7 +10653,7 @@
     "allows_bounty_splitting": false,
     "average_time_to_bounty_awarded": 108.0,
     "average_time_to_first_program_response": 20.0,
-    "average_time_to_report_resolved": 700.0,
+    "average_time_to_report_resolved": 745.0,
     "handle": "shopify",
     "id": 1382,
     "managed_program": false,
@@ -11282,7 +11591,7 @@
   {
     "allows_bounty_splitting": false,
     "average_time_to_bounty_awarded": 0.0,
-    "average_time_to_first_program_response": 28.0,
+    "average_time_to_first_program_response": 29.0,
     "average_time_to_report_resolved": 219.0,
     "handle": "goodrx",
     "id": 1684,
@@ -11702,9 +12011,9 @@
   },
   {
     "allows_bounty_splitting": true,
-    "average_time_to_bounty_awarded": 758.0,
+    "average_time_to_bounty_awarded": 778.0,
     "average_time_to_first_program_response": 20.0,
-    "average_time_to_report_resolved": 859.0,
+    "average_time_to_report_resolved": 878.0,
     "handle": "github",
     "id": 1894,
     "managed_program": false,
@@ -12098,9 +12407,9 @@
   },
   {
     "allows_bounty_splitting": true,
-    "average_time_to_bounty_awarded": 294.0,
+    "average_time_to_bounty_awarded": 289.0,
     "average_time_to_first_program_response": 11.0,
-    "average_time_to_report_resolved": 1188.0,
+    "average_time_to_report_resolved": 1166.0,
     "handle": "paypal",
     "id": 1915,
     "managed_program": true,
@@ -12759,7 +13068,7 @@
   {
     "allows_bounty_splitting": true,
     "average_time_to_bounty_awarded": 150.0,
-    "average_time_to_first_program_response": 10.0,
+    "average_time_to_first_program_response": 11.0,
     "average_time_to_report_resolved": 3372.0,
     "handle": "starbucks",
     "id": 1989,
@@ -13210,9 +13519,9 @@
   },
   {
     "allows_bounty_splitting": true,
-    "average_time_to_bounty_awarded": 994.0,
+    "average_time_to_bounty_awarded": 981.0,
     "average_time_to_first_program_response": 13.0,
-    "average_time_to_report_resolved": 1150.0,
+    "average_time_to_report_resolved": 1173.0,
     "handle": "spotify",
     "id": 2010,
     "managed_program": true,
@@ -13662,7 +13971,7 @@
   {
     "allows_bounty_splitting": false,
     "average_time_to_bounty_awarded": null,
-    "average_time_to_first_program_response": 12.0,
+    "average_time_to_first_program_response": 13.0,
     "average_time_to_report_resolved": 1802.0,
     "handle": "ibm",
     "id": 2060,
@@ -15485,7 +15794,7 @@
   {
     "allows_bounty_splitting": false,
     "average_time_to_bounty_awarded": 18.0,
-    "average_time_to_first_program_response": 15.0,
+    "average_time_to_first_program_response": 18.0,
     "average_time_to_report_resolved": 417.0,
     "handle": "fetlife",
     "id": 6820,
@@ -18037,7 +18346,7 @@
   {
     "allows_bounty_splitting": false,
     "average_time_to_bounty_awarded": null,
-    "average_time_to_first_program_response": 15.0,
+    "average_time_to_first_program_response": 16.0,
     "average_time_to_report_resolved": 2013.0,
     "handle": "drugs_com",
     "id": 12340,
@@ -18116,8 +18425,8 @@
   },
   {
     "allows_bounty_splitting": false,
-    "average_time_to_bounty_awarded": 210.0,
-    "average_time_to_first_program_response": 179.0,
+    "average_time_to_bounty_awarded": 184.0,
+    "average_time_to_first_program_response": 210.0,
     "average_time_to_report_resolved": 36.0,
     "handle": "files",
     "id": 13031,
@@ -18238,7 +18547,7 @@
   {
     "allows_bounty_splitting": false,
     "average_time_to_bounty_awarded": 471.0,
-    "average_time_to_first_program_response": 14.0,
+    "average_time_to_first_program_response": 15.0,
     "average_time_to_report_resolved": 632.0,
     "handle": "nextcloud",
     "id": 13291,
@@ -19848,7 +20157,7 @@
   },
   {
     "allows_bounty_splitting": true,
-    "average_time_to_bounty_awarded": 427.0,
+    "average_time_to_bounty_awarded": 399.0,
     "average_time_to_first_program_response": 24.0,
     "average_time_to_report_resolved": 1450.0,
     "handle": "kindred_group",
@@ -20555,7 +20864,7 @@
   },
   {
     "allows_bounty_splitting": false,
-    "average_time_to_bounty_awarded": 390.0,
+    "average_time_to_bounty_awarded": 315.0,
     "average_time_to_first_program_response": 6.0,
     "average_time_to_report_resolved": null,
     "handle": "portswigger",
@@ -21296,7 +21605,7 @@
     "allows_bounty_splitting": true,
     "average_time_to_bounty_awarded": 44.0,
     "average_time_to_first_program_response": 5.0,
-    "average_time_to_report_resolved": 1040.0,
+    "average_time_to_report_resolved": 1029.0,
     "handle": "semrush",
     "id": 15966,
     "managed_program": false,
@@ -21538,7 +21847,7 @@
   },
   {
     "allows_bounty_splitting": false,
-    "average_time_to_bounty_awarded": 89.0,
+    "average_time_to_bounty_awarded": 90.0,
     "average_time_to_first_program_response": 44.0,
     "average_time_to_report_resolved": 481.0,
     "handle": "xiaomi",
@@ -21914,9 +22223,9 @@
   },
   {
     "allows_bounty_splitting": false,
-    "average_time_to_bounty_awarded": 458.0,
-    "average_time_to_first_program_response": 3.0,
-    "average_time_to_report_resolved": 471.0,
+    "average_time_to_bounty_awarded": 12.0,
+    "average_time_to_first_program_response": 4.0,
+    "average_time_to_report_resolved": 357.0,
     "handle": "showmax",
     "id": 16159,
     "managed_program": false,
@@ -22484,7 +22793,7 @@
   {
     "allows_bounty_splitting": false,
     "average_time_to_bounty_awarded": 3.0,
-    "average_time_to_first_program_response": 8.0,
+    "average_time_to_first_program_response": 7.0,
     "average_time_to_report_resolved": 5099.0,
     "handle": "youporn",
     "id": 16885,
@@ -22805,7 +23114,7 @@
   },
   {
     "allows_bounty_splitting": true,
-    "average_time_to_bounty_awarded": 9.0,
+    "average_time_to_bounty_awarded": 8.0,
     "average_time_to_first_program_response": 14.0,
     "average_time_to_report_resolved": 1297.0,
     "handle": "newrelic",
@@ -23566,7 +23875,7 @@
   {
     "allows_bounty_splitting": false,
     "average_time_to_bounty_awarded": 0.0,
-    "average_time_to_first_program_response": 174.0,
+    "average_time_to_first_program_response": 170.0,
     "average_time_to_report_resolved": 327.0,
     "handle": "vanilla",
     "id": 17443,
@@ -23677,7 +23986,7 @@
   {
     "allows_bounty_splitting": false,
     "average_time_to_bounty_awarded": 253.0,
-    "average_time_to_first_program_response": 24.0,
+    "average_time_to_first_program_response": 25.0,
     "average_time_to_report_resolved": 248.0,
     "handle": "trustpilot",
     "id": 17716,
@@ -24295,7 +24604,7 @@
     "name": "Roblox",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 90,
+    "response_efficiency_percentage": 89,
     "submission_state": "open",
     "url": "https://hackerone.com/roblox",
     "website": "https://www.roblox.com",
@@ -26077,9 +26386,9 @@
   },
   {
     "allows_bounty_splitting": true,
-    "average_time_to_bounty_awarded": 235.0,
-    "average_time_to_first_program_response": 73.0,
-    "average_time_to_report_resolved": 1672.0,
+    "average_time_to_bounty_awarded": 322.0,
+    "average_time_to_first_program_response": 76.0,
+    "average_time_to_report_resolved": 1441.0,
     "handle": "yoti",
     "id": 21795,
     "managed_program": false,
@@ -26234,7 +26543,7 @@
   {
     "allows_bounty_splitting": false,
     "average_time_to_bounty_awarded": null,
-    "average_time_to_first_program_response": 18.0,
+    "average_time_to_first_program_response": 17.0,
     "average_time_to_report_resolved": 3031.0,
     "handle": "redtube",
     "id": 21831,
@@ -26390,7 +26699,7 @@
   {
     "allows_bounty_splitting": false,
     "average_time_to_bounty_awarded": 395.0,
-    "average_time_to_first_program_response": 12.0,
+    "average_time_to_first_program_response": 13.0,
     "average_time_to_report_resolved": 735.0,
     "handle": "upserve",
     "id": 21981,
@@ -27523,7 +27832,7 @@
   {
     "allows_bounty_splitting": false,
     "average_time_to_bounty_awarded": null,
-    "average_time_to_first_program_response": 31.0,
+    "average_time_to_first_program_response": 32.0,
     "average_time_to_report_resolved": 3538.0,
     "handle": "grammarly",
     "id": 22746,
@@ -27832,7 +28141,7 @@
   {
     "allows_bounty_splitting": false,
     "average_time_to_bounty_awarded": 54.0,
-    "average_time_to_first_program_response": 26.0,
+    "average_time_to_first_program_response": 27.0,
     "average_time_to_report_resolved": 2819.0,
     "handle": "netlify",
     "id": 22962,
@@ -28737,7 +29046,7 @@
   {
     "allows_bounty_splitting": true,
     "average_time_to_bounty_awarded": null,
-    "average_time_to_first_program_response": 24.0,
+    "average_time_to_first_program_response": 26.0,
     "average_time_to_report_resolved": null,
     "handle": "bitmex",
     "id": 24323,
@@ -29035,7 +29344,7 @@
     "allows_bounty_splitting": false,
     "average_time_to_bounty_awarded": null,
     "average_time_to_first_program_response": null,
-    "average_time_to_report_resolved": 440.0,
+    "average_time_to_report_resolved": null,
     "handle": "jamieweb",
     "id": 24397,
     "managed_program": false,
@@ -29526,7 +29835,7 @@
     "name": "Tendermint",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 38,
+    "response_efficiency_percentage": 0,
     "submission_state": "open",
     "url": "https://hackerone.com/tendermint",
     "website": "https://tendermint.com",
@@ -30523,7 +30832,7 @@
   {
     "allows_bounty_splitting": false,
     "average_time_to_bounty_awarded": null,
-    "average_time_to_first_program_response": null,
+    "average_time_to_first_program_response": 351.0,
     "average_time_to_report_resolved": null,
     "handle": "loofah",
     "id": 26813,
@@ -31561,7 +31870,7 @@
   {
     "allows_bounty_splitting": false,
     "average_time_to_bounty_awarded": 80.0,
-    "average_time_to_first_program_response": 27.0,
+    "average_time_to_first_program_response": 30.0,
     "average_time_to_report_resolved": 108.0,
     "handle": "chaturbate",
     "id": 30475,
@@ -31760,8 +32069,8 @@
   {
     "allows_bounty_splitting": false,
     "average_time_to_bounty_awarded": null,
-    "average_time_to_first_program_response": 10.0,
-    "average_time_to_report_resolved": 320.0,
+    "average_time_to_first_program_response": 11.0,
+    "average_time_to_report_resolved": 334.0,
     "handle": "marriott",
     "id": 30994,
     "managed_program": true,
@@ -32344,7 +32653,7 @@
   {
     "allows_bounty_splitting": false,
     "average_time_to_bounty_awarded": null,
-    "average_time_to_first_program_response": 46.0,
+    "average_time_to_first_program_response": 33.0,
     "average_time_to_report_resolved": null,
     "handle": "eslint",
     "id": 31752,
@@ -33952,7 +34261,7 @@
   {
     "allows_bounty_splitting": false,
     "average_time_to_bounty_awarded": 258.0,
-    "average_time_to_first_program_response": 14.0,
+    "average_time_to_first_program_response": 15.0,
     "average_time_to_report_resolved": 738.0,
     "handle": "magento",
     "id": 33043,
@@ -34713,7 +35022,7 @@
   {
     "allows_bounty_splitting": false,
     "average_time_to_bounty_awarded": 735.0,
-    "average_time_to_first_program_response": 14.0,
+    "average_time_to_first_program_response": 15.0,
     "average_time_to_report_resolved": null,
     "handle": "fanduel",
     "id": 34753,
@@ -34967,7 +35276,7 @@
   {
     "allows_bounty_splitting": false,
     "average_time_to_bounty_awarded": null,
-    "average_time_to_first_program_response": 24.0,
+    "average_time_to_first_program_response": 26.0,
     "average_time_to_report_resolved": null,
     "handle": "etoro",
     "id": 34959,
@@ -35652,7 +35961,7 @@
   },
   {
     "allows_bounty_splitting": false,
-    "average_time_to_bounty_awarded": 136.0,
+    "average_time_to_bounty_awarded": 139.0,
     "average_time_to_first_program_response": 21.0,
     "average_time_to_report_resolved": 755.0,
     "handle": "reddit",
@@ -36017,7 +36326,7 @@
   {
     "allows_bounty_splitting": false,
     "average_time_to_bounty_awarded": null,
-    "average_time_to_first_program_response": 24.0,
+    "average_time_to_first_program_response": 21.0,
     "average_time_to_report_resolved": null,
     "handle": "fortmatic_inc",
     "id": 35713,
@@ -37183,9 +37492,9 @@
   },
   {
     "allows_bounty_splitting": false,
-    "average_time_to_bounty_awarded": null,
-    "average_time_to_first_program_response": 45.0,
-    "average_time_to_report_resolved": 89.0,
+    "average_time_to_bounty_awarded": 8.0,
+    "average_time_to_first_program_response": 56.0,
+    "average_time_to_report_resolved": 48.0,
     "handle": "filezilla",
     "id": 36713,
     "managed_program": false,
@@ -37295,7 +37604,7 @@
   {
     "allows_bounty_splitting": false,
     "average_time_to_bounty_awarded": 203.0,
-    "average_time_to_first_program_response": 24.0,
+    "average_time_to_first_program_response": 25.0,
     "average_time_to_report_resolved": 1139.0,
     "handle": "ridewithvia",
     "id": 36980,
@@ -39292,7 +39601,7 @@
   {
     "allows_bounty_splitting": false,
     "average_time_to_bounty_awarded": null,
-    "average_time_to_first_program_response": 23.0,
+    "average_time_to_first_program_response": 25.0,
     "average_time_to_report_resolved": null,
     "handle": "tomtom",
     "id": 39424,
@@ -39391,7 +39700,7 @@
   {
     "allows_bounty_splitting": false,
     "average_time_to_bounty_awarded": 133.0,
-    "average_time_to_first_program_response": 33.0,
+    "average_time_to_first_program_response": 35.0,
     "average_time_to_report_resolved": 408.0,
     "handle": "datastax",
     "id": 39487,
@@ -39501,7 +39810,7 @@
   {
     "allows_bounty_splitting": false,
     "average_time_to_bounty_awarded": 2463.0,
-    "average_time_to_first_program_response": 21.0,
+    "average_time_to_first_program_response": 23.0,
     "average_time_to_report_resolved": 2632.0,
     "handle": "forescout_technologies",
     "id": 39489,
@@ -40515,7 +40824,7 @@
   {
     "allows_bounty_splitting": true,
     "average_time_to_bounty_awarded": null,
-    "average_time_to_first_program_response": 24.0,
+    "average_time_to_first_program_response": 26.0,
     "average_time_to_report_resolved": null,
     "handle": "curve",
     "id": 39838,
@@ -41346,7 +41655,7 @@
   {
     "allows_bounty_splitting": false,
     "average_time_to_bounty_awarded": 1679.0,
-    "average_time_to_first_program_response": 13.0,
+    "average_time_to_first_program_response": 14.0,
     "average_time_to_report_resolved": null,
     "handle": "codefi_bbp",
     "id": 40743,
@@ -41547,7 +41856,7 @@
     "allows_bounty_splitting": false,
     "average_time_to_bounty_awarded": null,
     "average_time_to_first_program_response": 14.0,
-    "average_time_to_report_resolved": 2143.0,
+    "average_time_to_report_resolved": 1939.0,
     "handle": "keybank",
     "id": 41089,
     "managed_program": true,
@@ -42530,7 +42839,7 @@
     "name": "MTN Group",
     "offers_bounties": false,
     "offers_swag": false,
-    "response_efficiency_percentage": 45,
+    "response_efficiency_percentage": 46,
     "submission_state": "open",
     "url": "https://hackerone.com/mtn_group",
     "website": "https://www.mtn.com/",
@@ -43495,7 +43804,7 @@
   {
     "allows_bounty_splitting": false,
     "average_time_to_bounty_awarded": null,
-    "average_time_to_first_program_response": 36.0,
+    "average_time_to_first_program_response": 37.0,
     "average_time_to_report_resolved": 2522.0,
     "handle": "topcoder",
     "id": 43330,
@@ -44597,7 +44906,7 @@
   {
     "allows_bounty_splitting": false,
     "average_time_to_bounty_awarded": 85.0,
-    "average_time_to_first_program_response": 22.0,
+    "average_time_to_first_program_response": 23.0,
     "average_time_to_report_resolved": 4916.0,
     "handle": "clario",
     "id": 43746,
@@ -45269,7 +45578,7 @@
   {
     "allows_bounty_splitting": false,
     "average_time_to_bounty_awarded": null,
-    "average_time_to_first_program_response": 17.0,
+    "average_time_to_first_program_response": 19.0,
     "average_time_to_report_resolved": 827.0,
     "handle": "hcl_software",
     "id": 43928,
@@ -45612,7 +45921,7 @@
     "allows_bounty_splitting": false,
     "average_time_to_bounty_awarded": 238.0,
     "average_time_to_first_program_response": 9.0,
-    "average_time_to_report_resolved": 975.0,
+    "average_time_to_report_resolved": 960.0,
     "handle": "amazonvrp",
     "id": 44002,
     "managed_program": true,
@@ -45908,7 +46217,7 @@
   {
     "allows_bounty_splitting": false,
     "average_time_to_bounty_awarded": null,
-    "average_time_to_first_program_response": 18.0,
+    "average_time_to_first_program_response": 22.0,
     "average_time_to_report_resolved": 10.0,
     "handle": "lemlist",
     "id": 44045,
@@ -45942,7 +46251,7 @@
   {
     "allows_bounty_splitting": false,
     "average_time_to_bounty_awarded": null,
-    "average_time_to_first_program_response": 22.0,
+    "average_time_to_first_program_response": 24.0,
     "average_time_to_report_resolved": 8239.0,
     "handle": "picsart",
     "id": 44134,
@@ -46186,128 +46495,6 @@
   {
     "allows_bounty_splitting": false,
     "average_time_to_bounty_awarded": null,
-    "average_time_to_first_program_response": 32.0,
-    "average_time_to_report_resolved": null,
-    "handle": "evernote",
-    "id": 44212,
-    "managed_program": true,
-    "name": "Evernote",
-    "offers_bounties": false,
-    "offers_swag": false,
-    "response_efficiency_percentage": 97,
-    "submission_state": "open",
-    "url": "https://hackerone.com/evernote",
-    "website": "https://evernote.com",
-    "targets": {
-      "in_scope": [
-        {
-          "asset_identifier": "*.evernote.com",
-          "asset_type": "URL",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": false,
-          "eligible_for_submission": true,
-          "instruction": "",
-          "integrity_requirement": null,
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "281796108",
-          "asset_type": "APPLE_STORE_APP_ID",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": false,
-          "eligible_for_submission": true,
-          "instruction": "Download [here](https://apps.apple.com/us/app/evernote/id281796108)",
-          "integrity_requirement": null,
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "406056744",
-          "asset_type": "DOWNLOADABLE_EXECUTABLES",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": false,
-          "eligible_for_submission": true,
-          "instruction": "MacOS. Download [here](https://apps.apple.com/app/id406056744)",
-          "integrity_requirement": null,
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "9wzdncrfj3mb",
-          "asset_type": "WINDOWS_APP_STORE_APP_ID",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": false,
-          "eligible_for_submission": true,
-          "instruction": "Download [here](https://www.microsoft.com/en-us/p/evernote/9wzdncrfj3mb?activetab=pivot%3Aoverviewtab)",
-          "integrity_requirement": null,
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "WebClipper Extension for Chrome",
-          "asset_type": "OTHER",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": false,
-          "eligible_for_submission": true,
-          "instruction": "Download [here](https://chrome.google.com/webstore/detail/evernote-web-clipper/pioclpoplcdbaefihamjohnefbikjilc#)",
-          "integrity_requirement": null,
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "WebClipper Extension for Firefox",
-          "asset_type": "OTHER",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": false,
-          "eligible_for_submission": true,
-          "instruction": "Download [here](https://addons.mozilla.org/en-US/firefox/addon/evernote-web-clipper/)",
-          "integrity_requirement": null,
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "WebClipper Extension for Safari",
-          "asset_type": "OTHER",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": false,
-          "eligible_for_submission": true,
-          "instruction": "Download [here](https://apps.apple.com/us/app/evernote-web-clipper/id1481669779?ls=1&mt=12)",
-          "integrity_requirement": null,
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "com.evernote",
-          "asset_type": "GOOGLE_PLAY_APP_ID",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": false,
-          "eligible_for_submission": true,
-          "instruction": "Download [here](https://play.google.com/store/apps/details?id=com.evernote&hl=en_US)",
-          "integrity_requirement": null,
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "evernote.jira.com",
-          "asset_type": "URL",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": false,
-          "eligible_for_submission": true,
-          "instruction": "",
-          "integrity_requirement": null,
-          "max_severity": "critical"
-        }
-      ],
-      "out_of_scope": [
-
-      ]
-    }
-  },
-  {
-    "allows_bounty_splitting": false,
-    "average_time_to_bounty_awarded": null,
     "average_time_to_first_program_response": 22.0,
     "average_time_to_report_resolved": 1357.0,
     "handle": "pubg",
@@ -46353,7 +46540,7 @@
   {
     "allows_bounty_splitting": false,
     "average_time_to_bounty_awarded": null,
-    "average_time_to_first_program_response": 11.0,
+    "average_time_to_first_program_response": 12.0,
     "average_time_to_report_resolved": 213.0,
     "handle": "doppler",
     "id": 44515,
@@ -48641,127 +48828,6 @@
   },
   {
     "allows_bounty_splitting": false,
-    "average_time_to_bounty_awarded": null,
-    "average_time_to_first_program_response": 32.0,
-    "average_time_to_report_resolved": null,
-    "handle": "digitalocean",
-    "id": 47236,
-    "managed_program": true,
-    "name": "DigitalOcean",
-    "offers_bounties": false,
-    "offers_swag": false,
-    "response_efficiency_percentage": 95,
-    "submission_state": "open",
-    "url": "https://hackerone.com/digitalocean",
-    "website": "http://digitalocean.com",
-    "targets": {
-      "in_scope": [
-        {
-          "asset_identifier": "*.digitalocean.com",
-          "asset_type": "URL",
-          "availability_requirement": "high",
-          "confidentiality_requirement": "high",
-          "eligible_for_bounty": false,
-          "eligible_for_submission": true,
-          "instruction": "",
-          "integrity_requirement": "high",
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "*.digitaloceanspaces.com",
-          "asset_type": "URL",
-          "availability_requirement": "high",
-          "confidentiality_requirement": "high",
-          "eligible_for_bounty": false,
-          "eligible_for_submission": true,
-          "instruction": "Security vulnerabilities in the contents of an individual user's spaces are out of scope\n",
-          "integrity_requirement": "high",
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "DigitalOcean products associated with an account you created (e.g. droplets, load balancers, etc.)",
-          "asset_type": "OTHER",
-          "availability_requirement": "high",
-          "confidentiality_requirement": "high",
-          "eligible_for_bounty": false,
-          "eligible_for_submission": true,
-          "instruction": "",
-          "integrity_requirement": "high",
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "http://169.254.169.254/",
-          "asset_type": "URL",
-          "availability_requirement": "high",
-          "confidentiality_requirement": "high",
-          "eligible_for_bounty": false,
-          "eligible_for_submission": true,
-          "instruction": "Metadata service available at http://169.254.169.254/ from Droplets\n",
-          "integrity_requirement": "high",
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "https://api.digitalocean.com/",
-          "asset_type": "URL",
-          "availability_requirement": "high",
-          "confidentiality_requirement": "high",
-          "eligible_for_bounty": false,
-          "eligible_for_submission": true,
-          "instruction": "",
-          "integrity_requirement": "high",
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "https://business.digitalocean.com/",
-          "asset_type": "URL",
-          "availability_requirement": "high",
-          "confidentiality_requirement": "high",
-          "eligible_for_bounty": false,
-          "eligible_for_submission": true,
-          "instruction": "",
-          "integrity_requirement": "high",
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "https://cloud.digitalocean.com/",
-          "asset_type": "URL",
-          "availability_requirement": "high",
-          "confidentiality_requirement": "high",
-          "eligible_for_bounty": false,
-          "eligible_for_submission": true,
-          "instruction": "",
-          "integrity_requirement": "high",
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "https://marketplace.digitalocean.com/",
-          "asset_type": "URL",
-          "availability_requirement": "high",
-          "confidentiality_requirement": "high",
-          "eligible_for_bounty": false,
-          "eligible_for_submission": true,
-          "instruction": "",
-          "integrity_requirement": "high",
-          "max_severity": "critical"
-        }
-      ],
-      "out_of_scope": [
-        {
-          "asset_identifier": "Assets created by other DigitalOcean customers",
-          "asset_type": "OTHER",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": false,
-          "eligible_for_submission": false,
-          "instruction": "Any asset (Droplet, Space, or otherwise) created by other DigitalOcean customers are _**not**_ to be tested under any circumstances",
-          "integrity_requirement": null,
-          "max_severity": "none"
-        }
-      ]
-    }
-  },
-  {
-    "allows_bounty_splitting": false,
     "average_time_to_bounty_awarded": 133.0,
     "average_time_to_first_program_response": 11.0,
     "average_time_to_report_resolved": 491.0,
@@ -49535,9 +49601,9 @@
   },
   {
     "allows_bounty_splitting": false,
-    "average_time_to_bounty_awarded": 775.0,
+    "average_time_to_bounty_awarded": 732.0,
     "average_time_to_first_program_response": 13.0,
-    "average_time_to_report_resolved": 2203.0,
+    "average_time_to_report_resolved": 2229.0,
     "handle": "watson_group",
     "id": 48354,
     "managed_program": true,
@@ -49713,7 +49779,7 @@
   {
     "allows_bounty_splitting": false,
     "average_time_to_bounty_awarded": 213.0,
-    "average_time_to_first_program_response": 25.0,
+    "average_time_to_first_program_response": 26.0,
     "average_time_to_report_resolved": 404.0,
     "handle": "figma",
     "id": 48739,
@@ -50010,74 +50076,8 @@
   },
   {
     "allows_bounty_splitting": false,
-    "average_time_to_bounty_awarded": null,
-    "average_time_to_first_program_response": 12.0,
-    "average_time_to_report_resolved": 4861.0,
-    "handle": "finra",
-    "id": 48980,
-    "managed_program": true,
-    "name": "FINRA Response",
-    "offers_bounties": false,
-    "offers_swag": false,
-    "response_efficiency_percentage": 100,
-    "submission_state": "open",
-    "url": "https://hackerone.com/finra",
-    "website": "http://finra.org",
-    "targets": {
-      "in_scope": [
-        {
-          "asset_identifier": "*.finra.org",
-          "asset_type": "URL",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": false,
-          "eligible_for_submission": true,
-          "instruction": "",
-          "integrity_requirement": null,
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "https://ews.qa.finra.org/*",
-          "asset_type": "URL",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": false,
-          "eligible_for_submission": true,
-          "instruction": "",
-          "integrity_requirement": null,
-          "max_severity": "critical"
-        }
-      ],
-      "out_of_scope": [
-        {
-          "asset_identifier": "*.fip.finra.org",
-          "asset_type": "URL",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": false,
-          "eligible_for_submission": false,
-          "instruction": "",
-          "integrity_requirement": null,
-          "max_severity": "none"
-        },
-        {
-          "asset_identifier": "https://ews.finra.org/*",
-          "asset_type": "URL",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": false,
-          "eligible_for_submission": false,
-          "instruction": "",
-          "integrity_requirement": null,
-          "max_severity": "none"
-        }
-      ]
-    }
-  },
-  {
-    "allows_bounty_splitting": false,
-    "average_time_to_bounty_awarded": 169.0,
-    "average_time_to_first_program_response": 24.0,
+    "average_time_to_bounty_awarded": 192.0,
+    "average_time_to_first_program_response": 25.0,
     "average_time_to_report_resolved": 1571.0,
     "handle": "chime",
     "id": 48983,
@@ -50286,7 +50286,7 @@
   {
     "allows_bounty_splitting": false,
     "average_time_to_bounty_awarded": null,
-    "average_time_to_first_program_response": 73.0,
+    "average_time_to_first_program_response": 71.0,
     "average_time_to_report_resolved": null,
     "handle": "o1-labs",
     "id": 48984,
@@ -50310,7 +50310,7 @@
   {
     "allows_bounty_splitting": false,
     "average_time_to_bounty_awarded": null,
-    "average_time_to_first_program_response": 17.0,
+    "average_time_to_first_program_response": 18.0,
     "average_time_to_report_resolved": null,
     "handle": "matic-network",
     "id": 49048,
@@ -51383,7 +51383,7 @@
     "allows_bounty_splitting": false,
     "average_time_to_bounty_awarded": 399.0,
     "average_time_to_first_program_response": 26.0,
-    "average_time_to_report_resolved": 501.0,
+    "average_time_to_report_resolved": 287.0,
     "handle": "blockfi",
     "id": 49756,
     "managed_program": true,
@@ -51548,7 +51548,7 @@
   {
     "allows_bounty_splitting": false,
     "average_time_to_bounty_awarded": null,
-    "average_time_to_first_program_response": 27.0,
+    "average_time_to_first_program_response": 30.0,
     "average_time_to_report_resolved": 2.0,
     "handle": "hudapp",
     "id": 50090,
@@ -52220,7 +52220,7 @@
   {
     "allows_bounty_splitting": false,
     "average_time_to_bounty_awarded": null,
-    "average_time_to_first_program_response": 29.0,
+    "average_time_to_first_program_response": 30.0,
     "average_time_to_report_resolved": null,
     "handle": "checkout",
     "id": 50158,
@@ -57072,7 +57072,7 @@
   {
     "allows_bounty_splitting": false,
     "average_time_to_bounty_awarded": null,
-    "average_time_to_first_program_response": 15.0,
+    "average_time_to_first_program_response": 16.0,
     "average_time_to_report_resolved": 559.0,
     "handle": "global-payments",
     "id": 51924,
@@ -59419,7 +59419,7 @@
     "allows_bounty_splitting": false,
     "average_time_to_bounty_awarded": null,
     "average_time_to_first_program_response": 21.0,
-    "average_time_to_report_resolved": 519.0,
+    "average_time_to_report_resolved": 297.0,
     "handle": "lumiradx",
     "id": 52057,
     "managed_program": true,
@@ -59752,8 +59752,8 @@
   {
     "allows_bounty_splitting": false,
     "average_time_to_bounty_awarded": null,
-    "average_time_to_first_program_response": 22.0,
-    "average_time_to_report_resolved": 48.0,
+    "average_time_to_first_program_response": 23.0,
+    "average_time_to_report_resolved": 83.0,
     "handle": "monzo",
     "id": 52467,
     "managed_program": true,
