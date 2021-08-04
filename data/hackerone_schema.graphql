@@ -8924,6 +8924,7 @@ type DestroyUserDevicePayload implements MutationResult {
     last: Int
     types: [ErrorTypeEnum]
   ): ErrorConnection!
+  force_auth: Boolean!
   me: User
   was_successful: Boolean!
 }
@@ -10377,6 +10378,20 @@ input FiltersOrganizationFilterInput {
   id: IntPredicateInput
 }
 
+input FiltersOrganizationMemberFilterInput {
+  _and: [FiltersOrganizationMemberFilterInput]
+  _not: FiltersOrganizationMemberFilterInput
+  _or: [FiltersOrganizationMemberFilterInput]
+  id: IntPredicateInput
+  organization_admin: BooleanPredicateInput
+  user: FiltersUserFilterInput
+}
+
+input FiltersOrganizationMemberFilterOrder {
+  id: FilterOrderPredicateInput
+  user: FiltersUserFilterOrder
+}
+
 input FiltersPentestFilterInput {
   _and: [FiltersPentestFilterInput]
   _not: FiltersPentestFilterInput
@@ -10633,6 +10648,7 @@ input FiltersTeamFilterInput {
   submission_state: SubmissionStateEnumPredicateInput
   team_members: FiltersTeamMemberFilterInput
   triage_subscriptions: FiltersTriageSubscriptionFilterInput
+  type: TeamTypeEnumPredicateInput
   use_case: [FiltersTeamFilterUseCases]
   vpn_enabled: BooleanPredicateInput
   website: StringPredicateInput
@@ -15005,6 +15021,29 @@ type Organization implements Node {
   i_can_manage_organization_members: Boolean!
   id: ID!
   name: String!
+  organization_members(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+    order_by: FiltersOrganizationMemberFilterOrder = {user: {username: {_direction: ASC}}}
+    where: FiltersOrganizationMemberFilterInput
+  ): OrganizationMemberConnection
   pending_team_member_invitations(
     """
     Returns the elements in the list that come after the specified cursor.
@@ -15157,9 +15196,60 @@ type OrganizationEdge {
   node: Organization
 }
 
+"""
+A HackerOne organization member
+"""
+type OrganizationMember implements Node & ResourceInterface {
+  _id: ID!
+  id: ID!
+  organization_admin: Boolean!
+  url: URI!
+  user: User!
+}
+
+"""
+The connection type for OrganizationMember.
+"""
+type OrganizationMemberConnection {
+  """
+  A list of edges.
+  """
+  edges: [OrganizationMemberEdge]
+
+  """
+  A list of nodes.
+  """
+  nodes: [OrganizationMember]
+
+  """
+  Information to aid in pagination.
+  """
+  pageInfo: PageInfo!
+
+  """
+  Int
+  """
+  total_count: Int!
+}
+
 type OrganizationMemberDocument implements Node {
   id: ID!
-  user: User
+  organization_member: OrganizationMember
+}
+
+"""
+An edge in a connection.
+"""
+type OrganizationMemberEdge {
+  """
+  A cursor for use in pagination.
+  """
+  cursor: String!
+
+  """
+  The item at the end of the edge.
+  """
+  node: OrganizationMember
 }
 
 """
@@ -24314,6 +24404,25 @@ input TeamStatePredicateInput {
 }
 
 """
+All possible engagement types
+"""
+enum TeamTypeEnum {
+  Assessment
+  BugBountyProgram
+  Challenge
+  Legacy
+  VulnerabilityDisclosureProgram
+}
+
+input TeamTypeEnumPredicateInput {
+  _eq: TeamTypeEnum
+  _in: [TeamTypeEnum]
+  _is_null: Boolean
+  _neq: TeamTypeEnum
+  _nin: [TeamTypeEnum]
+}
+
+"""
 Possible preferences of team updates delivery
 """
 enum TeamUpdateDeliveryPreferences {
@@ -27223,6 +27332,7 @@ input UpdateOrganizationUserInput {
   A unique identifier for the client performing the mutation.
   """
   clientMutationId: String
+  organization_admin: Boolean
   organization_id: ID!
   team_ids: [Int!]!
   team_member_group_ids: [Int!]
