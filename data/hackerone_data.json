@@ -4710,6 +4710,105 @@
   {
     "allows_bounty_splitting": false,
     "average_time_to_bounty_awarded": null,
+    "average_time_to_first_program_response": 56.0,
+    "average_time_to_report_resolved": null,
+    "handle": "who-covid-19-mobile-app",
+    "id": 0,
+    "managed_program": false,
+    "name": "WHO COVID-19 Mobile App",
+    "offers_bounties": false,
+    "offers_swag": false,
+    "response_efficiency_percentage": 100,
+    "submission_state": "open",
+    "url": "https://hackerone.com/who-covid-19-mobile-app",
+    "website": "",
+    "targets": {
+      "in_scope": [
+        {
+          "asset_identifier": "*.whocoronavirus.org",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "hack.whocoronavirus.org",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://github.com/WorldHealthOrganization/app",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "int.who.WHOMyHealth",
+          "asset_type": "APPLE_STORE_APP_ID",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "org.who.WHOMyHealth",
+          "asset_type": "GOOGLE_PLAY_APP_ID",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "asset_identifier": "*.who.int",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "covid19app.who.int",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        }
+      ]
+    }
+  },
+  {
+    "allows_bounty_splitting": false,
+    "average_time_to_bounty_awarded": null,
     "average_time_to_first_program_response": 9.0,
     "average_time_to_report_resolved": 4997.0,
     "handle": "lowes_vdp",
@@ -13640,6 +13739,62 @@
           "instruction": "",
           "integrity_requirement": "low",
           "max_severity": "medium"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
+    "allows_bounty_splitting": false,
+    "average_time_to_bounty_awarded": null,
+    "average_time_to_first_program_response": 3.0,
+    "average_time_to_report_resolved": null,
+    "handle": "central-security-project",
+    "id": 0,
+    "managed_program": false,
+    "name": "Central Security Project",
+    "offers_bounties": false,
+    "offers_swag": false,
+    "response_efficiency_percentage": 100,
+    "submission_state": "open",
+    "url": "https://hackerone.com/central-security-project",
+    "website": "https://www.sonatype.com/central-security-project",
+    "targets": {
+      "in_scope": [
+        {
+          "asset_identifier": "Java Component in search.maven.org",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "Use this asset for any component found using the [Central Search](https://search.maven.org) or the [OSS Index Search](https://ossindex.sonatpe.org) for maven components",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "Java component NOT in search.maven.org",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "Use this asset for an open source Java component that could not be found in [search.maven.org](search.maven.org).  Our security research team will verify it's a valid open source component available in a public repository.  If it is a valid component, we will accept and if it is not a valid component we will let you know. ",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "Suspected Java Component",
+          "asset_type": "DOWNLOADABLE_EXECUTABLES",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "Use this if you have a vulnerability that could not be mapped back to a open source project.  It was something found in an open source Java application, framework or component from penetration testing or other non source code deterministic testing methodology.  \n\n**Note:  Only use this if you have a vulnerability but can't identify the vulnerable project** ",
+          "integrity_requirement": null,
+          "max_severity": "critical"
         }
       ],
       "out_of_scope": [
@@ -47606,7 +47761,7 @@
     "name": "FanDuel",
     "offers_bounties": true,
     "offers_swag": true,
-    "response_efficiency_percentage": 92,
+    "response_efficiency_percentage": 91,
     "submission_state": "open",
     "url": "https://hackerone.com/fanduel",
     "website": "http://fanduel.com",
@@ -48060,62 +48215,6 @@
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
           "instruction": "",
-          "integrity_requirement": null,
-          "max_severity": "critical"
-        }
-      ],
-      "out_of_scope": [
-
-      ]
-    }
-  },
-  {
-    "allows_bounty_splitting": false,
-    "average_time_to_bounty_awarded": null,
-    "average_time_to_first_program_response": 3.0,
-    "average_time_to_report_resolved": null,
-    "handle": "central-security-project",
-    "id": 35524,
-    "managed_program": false,
-    "name": "Central Security Project",
-    "offers_bounties": false,
-    "offers_swag": false,
-    "response_efficiency_percentage": 100,
-    "submission_state": "open",
-    "url": "https://hackerone.com/central-security-project",
-    "website": "https://www.sonatype.com/central-security-project",
-    "targets": {
-      "in_scope": [
-        {
-          "asset_identifier": "Java Component in search.maven.org",
-          "asset_type": "SOURCE_CODE",
-          "availability_requirement": "high",
-          "confidentiality_requirement": "high",
-          "eligible_for_bounty": false,
-          "eligible_for_submission": true,
-          "instruction": "Use this asset for any component found using the [Central Search](https://search.maven.org) or the [OSS Index Search](https://ossindex.sonatpe.org) for maven components",
-          "integrity_requirement": "high",
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "Java component NOT in search.maven.org",
-          "asset_type": "SOURCE_CODE",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": false,
-          "eligible_for_submission": true,
-          "instruction": "Use this asset for an open source Java component that could not be found in [search.maven.org](search.maven.org).  Our security research team will verify it's a valid open source component available in a public repository.  If it is a valid component, we will accept and if it is not a valid component we will let you know. ",
-          "integrity_requirement": null,
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "Suspected Java Component",
-          "asset_type": "DOWNLOADABLE_EXECUTABLES",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": false,
-          "eligible_for_submission": true,
-          "instruction": "Use this if you have a vulnerability that could not be mapped back to a open source project.  It was something found in an open source Java application, framework or component from penetration testing or other non source code deterministic testing methodology.  \n\n**Note:  Only use this if you have a vulnerability but can't identify the vulnerable project** ",
           "integrity_requirement": null,
           "max_severity": "critical"
         }
@@ -59712,105 +59811,6 @@
       ],
       "out_of_scope": [
 
-      ]
-    }
-  },
-  {
-    "allows_bounty_splitting": false,
-    "average_time_to_bounty_awarded": null,
-    "average_time_to_first_program_response": 56.0,
-    "average_time_to_report_resolved": null,
-    "handle": "who-covid-19-mobile-app",
-    "id": 51543,
-    "managed_program": false,
-    "name": "WHO COVID-19 Mobile App",
-    "offers_bounties": false,
-    "offers_swag": false,
-    "response_efficiency_percentage": 100,
-    "submission_state": "open",
-    "url": "https://hackerone.com/who-covid-19-mobile-app",
-    "website": "",
-    "targets": {
-      "in_scope": [
-        {
-          "asset_identifier": "*.whocoronavirus.org",
-          "asset_type": "URL",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": false,
-          "eligible_for_submission": true,
-          "instruction": "",
-          "integrity_requirement": null,
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "hack.whocoronavirus.org",
-          "asset_type": "URL",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": false,
-          "eligible_for_submission": true,
-          "instruction": "",
-          "integrity_requirement": null,
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "https://github.com/WorldHealthOrganization/app",
-          "asset_type": "SOURCE_CODE",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": false,
-          "eligible_for_submission": true,
-          "instruction": "",
-          "integrity_requirement": null,
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "int.who.WHOMyHealth",
-          "asset_type": "APPLE_STORE_APP_ID",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": false,
-          "eligible_for_submission": true,
-          "instruction": "",
-          "integrity_requirement": null,
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "org.who.WHOMyHealth",
-          "asset_type": "GOOGLE_PLAY_APP_ID",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": false,
-          "eligible_for_submission": true,
-          "instruction": "",
-          "integrity_requirement": null,
-          "max_severity": "critical"
-        }
-      ],
-      "out_of_scope": [
-        {
-          "asset_identifier": "*.who.int",
-          "asset_type": "URL",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": false,
-          "eligible_for_submission": false,
-          "instruction": "",
-          "integrity_requirement": null,
-          "max_severity": "none"
-        },
-        {
-          "asset_identifier": "covid19app.who.int",
-          "asset_type": "URL",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": false,
-          "eligible_for_submission": false,
-          "instruction": "",
-          "integrity_requirement": null,
-          "max_severity": "none"
-        }
       ]
     }
   },
