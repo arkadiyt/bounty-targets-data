@@ -28774,24 +28774,35 @@
         {
           "asset_identifier": "*.binary.com",
           "asset_type": "URL",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
+          "availability_requirement": "low",
+          "confidentiality_requirement": "none",
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
           "instruction": "",
-          "integrity_requirement": null,
+          "integrity_requirement": "none",
+          "max_severity": "low"
+        },
+        {
+          "asset_identifier": "*.binaryws.com",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": "high",
           "max_severity": "critical"
         },
         {
           "asset_identifier": "binary.bot",
           "asset_type": "URL",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
+          "availability_requirement": "low",
+          "confidentiality_requirement": "medium",
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
           "instruction": "",
-          "integrity_requirement": null,
-          "max_severity": "critical"
+          "integrity_requirement": "low",
+          "max_severity": "high"
         },
         {
           "asset_identifier": "cashier.binary.com",
@@ -28812,6 +28823,17 @@
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
           "instruction": "",
+          "integrity_requirement": "low",
+          "max_severity": "medium"
+        },
+        {
+          "asset_identifier": "com.binary.ticktrade",
+          "asset_type": "OTHER_APK",
+          "availability_requirement": "low",
+          "confidentiality_requirement": "low",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "https://ticktrade.binary.com/download/ticktrade-app.apk",
           "integrity_requirement": "low",
           "max_severity": "medium"
         },
@@ -28862,16 +28884,27 @@
         {
           "asset_identifier": "webtrader.binary.com",
           "asset_type": "URL",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
+          "availability_requirement": "low",
+          "confidentiality_requirement": "medium",
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
           "instruction": "",
-          "integrity_requirement": null,
-          "max_severity": "critical"
+          "integrity_requirement": "low",
+          "max_severity": "high"
         }
       ],
       "out_of_scope": [
+        {
+          "asset_identifier": "*.binary.*",
+          "asset_type": "URL",
+          "availability_requirement": "none",
+          "confidentiality_requirement": "none",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "We will only accept reports for the **.com** TLD, all other TLDs like **.sx**, **.me** etc. will be marked out of scope.",
+          "integrity_requirement": "none",
+          "max_severity": "none"
+        },
         {
           "asset_identifier": "admin.binary.com",
           "asset_type": "URL",
