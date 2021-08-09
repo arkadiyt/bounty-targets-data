@@ -17661,6 +17661,7 @@ type Query implements Node {
     where: FiltersOrganizationFilterInput
   ): OrganizationConnection
   pentest(id: ID!): Pentest
+  pentest_opportunity_used(token: String!): Boolean
   pentester_profiles(
     """
     Returns the elements in the list that come after the specified cursor.
