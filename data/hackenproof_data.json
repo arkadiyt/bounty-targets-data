@@ -274,35 +274,8 @@
     }
   },
   {
-    "id": "/coinmetro/coinmetro-exchange",
-    "name": "CoinMetro Exchange",
-    "url": "https://hackenproof.com/coinmetro/coinmetro-exchange",
-    "archived": false,
-    "targets": {
-      "in_scope": [
-        {
-          "target": "*.coinmetro.com",
-          "type": "Web",
-          "instruction": "",
-          "severity": "Critical",
-          "reward": "Bounty"
-        },
-        {
-          "target": "API",
-          "type": "API",
-          "instruction": "https://github.com/CoinMetro/API-DOCS",
-          "severity": "Critical",
-          "reward": "Bounty"
-        }
-      ],
-      "out_of_scope": [
-
-      ]
-    }
-  },
-  {
     "id": "/coingecko/coingecko",
-    "name": "Coingecko",
+    "name": "CoinGecko",
     "url": "https://hackenproof.com/coingecko/coingecko",
     "archived": false,
     "targets": {
@@ -330,14 +303,14 @@
         },
         {
           "target": "iOS App",
-          "type": "iOS",
+          "type": "Web",
           "instruction": "https://apps.apple.com/us/app/coingecko-bitcoin-crypto-app/id1390323960",
           "severity": "Critical",
           "reward": "Bounty"
         },
         {
           "target": "Chrome Extension",
-          "type": "Extension",
+          "type": "Web",
           "instruction": "https://chrome.google.com/webstore/detail/coingecko-bitcoin-cryptoc/ofmoicejmilkphppeoekfhbpkleppdlb",
           "severity": "Critical",
           "reward": "Bounty"
@@ -379,6 +352,33 @@
           "severity": "None",
           "reward": "--"
         }
+      ]
+    }
+  },
+  {
+    "id": "/coinmetro/coinmetro-exchange",
+    "name": "CoinMetro Exchange",
+    "url": "https://hackenproof.com/coinmetro/coinmetro-exchange",
+    "archived": false,
+    "targets": {
+      "in_scope": [
+        {
+          "target": "*.coinmetro.com",
+          "type": "Web",
+          "instruction": "",
+          "severity": "Critical",
+          "reward": "Bounty"
+        },
+        {
+          "target": "API",
+          "type": "API",
+          "instruction": "https://github.com/CoinMetro/API-DOCS",
+          "severity": "Critical",
+          "reward": "Bounty"
+        }
+      ],
+      "out_of_scope": [
+
       ]
     }
   },

@@ -10379,6 +10379,11 @@ input FiltersOrganizationFilterInput {
   organization_members: FiltersOrganizationMemberFilterInput
 }
 
+input FiltersOrganizationFilterOrder {
+  id: FilterOrderPredicateInput
+  name: FilterOrderPredicateInput
+}
+
 input FiltersOrganizationMemberFilterInput {
   _and: [FiltersOrganizationMemberFilterInput]
   _not: FiltersOrganizationMemberFilterInput
@@ -17673,6 +17678,7 @@ type Query implements Node {
     Returns the last _n_ elements from the list.
     """
     last: Int
+    order_by: FiltersOrganizationFilterOrder
     where: FiltersOrganizationFilterInput
   ): OrganizationConnection
   pentest(id: ID!): Pentest
