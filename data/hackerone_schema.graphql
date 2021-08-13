@@ -11410,19 +11410,6 @@ type HighestReputationLeaderboardEntry implements LeaderboardEntryInterface & No
   user: User!
 }
 
-input HighlightFieldOptionsInput {
-  type: String
-}
-
-input HighlightFieldsInput {
-  vulnerability_information: HighlightFieldOptionsInput
-}
-
-input HighlightInput {
-  fields: [HighlightFieldsInput!]
-  number_of_fragments: Int
-}
-
 """
 An ISO 8601-encoded date
 """
@@ -17826,7 +17813,6 @@ type Query implements Node {
     Returns the first _n_ elements from the list.
     """
     first: Int
-    highlight: HighlightInput
     index: IndexEnum!
 
     """
@@ -19196,7 +19182,6 @@ type ReportDocument implements Node {
   report: Report!
   report_id: Int!
   title: String!
-  vulnerability_information_highlight: String
 }
 
 """
