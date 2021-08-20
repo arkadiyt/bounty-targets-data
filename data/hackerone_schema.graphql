@@ -10737,6 +10737,7 @@ input FiltersTeamMemberGroupFilterInput {
   _or: [FiltersTeamMemberGroupFilterInput]
   id: IntPredicateInput
   name: StringPredicateInput
+  team: FiltersTeamFilterInput
 }
 
 input FiltersTeamMemberGroupFilterOrder {
@@ -15093,6 +15094,8 @@ type Organization implements Node {
     Returns the last _n_ elements from the list.
     """
     last: Int
+    order_by: FiltersTeamMemberGroupFilterOrder
+    where: FiltersTeamMemberGroupFilterInput
   ): TeamMemberGroupConnection
   team_members(
     """
@@ -27494,6 +27497,7 @@ input UpdatePentestOpportunityInput {
   schedule_restrictions: String
   schedule_time_restrictions_end: String
   schedule_time_restrictions_start: String
+  scopes: String
   token: String!
 }
 
