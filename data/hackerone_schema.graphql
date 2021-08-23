@@ -10495,19 +10495,7 @@ input FiltersReportFilterOrder {
 }
 
 enum FiltersReportFilterRoles {
-  is_anc_triager
-  is_external_user
-  is_hacker_published
-  is_particip_retest_depr_with_inv
-  is_particip_retest_depr_without_inv
-  is_participating_retester
-  is_report_collaborator
   is_reporter
-  is_someone_visiting_a_limited_report_privately_disclosed
-  is_someone_visiting_a_public_limited_report
-  is_someone_visiting_a_public_report
-  is_someone_visiting_a_report_privately_disclosed_to_them
-  is_team_member
 }
 
 input FiltersReportRetestFilterInput {
@@ -10531,10 +10519,7 @@ input FiltersReportRetestFilterOrder {
 }
 
 enum FiltersReportRetestFilterRoles {
-  is_deprecated_visibility
-  is_hacker_powered_visibility
   is_pentest_claimable
-  is_pentest_visibility
   is_private_claimable
   is_public_claimable
   is_report_anc_triager
@@ -10547,7 +10532,6 @@ enum FiltersReportRetestFilterRoles {
   is_report_someone_visiting_a_public_report
   is_report_team_member
   is_retester
-  is_triage_visibility
 }
 
 enum FiltersReportRetestFilterUseCases {
@@ -10654,7 +10638,6 @@ input FiltersTeamFilterInput {
   reporters: FiltersUserFilterInput
   response_efficiency_percentage: IntPredicateInput
   retest_subscription: FiltersRetestSubscriptionAggregateFilterInput
-  roles: [FiltersTeamFilterRoles]
   searchable_content: FiltersSearchableContentFilterInput
   state: TeamStatePredicateInput
   structured_scopes: FiltersStructuredScopeFilterInput
@@ -10662,7 +10645,6 @@ input FiltersTeamFilterInput {
   team_members: FiltersTeamMemberFilterInput
   triage_subscriptions: FiltersTriageSubscriptionFilterInput
   type: TeamTypeEnumPredicateInput
-  use_case: [FiltersTeamFilterUseCases]
   vpn_enabled: BooleanPredicateInput
   website: StringPredicateInput
   whitelisted_hackers: FiltersUserFilterInput
@@ -10676,49 +10658,6 @@ input FiltersTeamFilterOrder {
   reports: FiltersDerivedTeamReportResolvedCountFilterOrder
   response_efficiency_percentage: FilterOrderPredicateInput
   started_accepting_at: FilterOrderPredicateInput
-}
-
-enum FiltersTeamFilterRoles {
-  is_anc_triager
-  is_approved_pentester
-  is_check_responder
-  is_creditkarma
-  is_enabled_embedded_submissions
-  is_external_user
-  is_gate_credential_management
-  is_h1_pentester
-  is_h1_triager
-  is_has_published_external_program
-  is_invitation_recipient_with_satisfied_requirements
-  is_invitation_recipient_with_unsatisfied_requirements
-  is_not_sandboxed
-  is_offers_bounties
-  is_organization_user_management
-  is_private
-  is_private_team_with_checklist
-  is_private_team_with_public_checks
-  is_private_with_public_thanks
-  is_provided_embedded_submission_form_uuid
-  is_public
-  is_report_collaborator
-  is_sandboxed
-  is_shows_minimum_bounty
-  is_shows_response_efficiency_indicator
-  is_someone_who_has_submitted_a_report
-  is_someone_who_has_submitted_a_retest
-  is_submissions_open
-  is_team_manager
-  is_team_member
-  is_team_member_of_a_child
-  is_team_member_of_a_parent
-  is_team_with_published_pentests
-  is_whitelisted_reporter
-  is_with_hierarchy_thanks
-}
-
-enum FiltersTeamFilterUseCases {
-  CAN_VIEW_EMBEDDED_SUBMISSION_FORM
-  REPORTING_VISIBILITY
 }
 
 input FiltersTeamMemberFilterInput {
@@ -15617,6 +15556,28 @@ type Pentest implements Node {
   most_common_weaknesses: Hash
   name: String
   pentest_checklist(id: ID!): PentestChecklist
+  pentest_checklists(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+    unique: Boolean
+  ): PentestChecklistConnection
   pentest_checks(
     """
     Returns the elements in the list that come after the specified cursor.
@@ -16037,7 +15998,7 @@ enum PentestCheckStateEnum {
 }
 
 """
-A pentest check
+A pentest checklist
 """
 type PentestChecklist implements Node {
   _id: ID!
