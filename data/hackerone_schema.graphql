@@ -16241,6 +16241,325 @@ type PentestFormAnswerEdge {
 }
 
 """
+A pentest opportunity
+"""
+type PentestOpportunity implements Node {
+  account_provisioning_needed: Boolean
+  api_scopes(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+  ): PentestOpportunityApiScopeConnection
+  authentication_mode: String
+  citizenship_restrictions: [String!]
+  company_name: String
+  compliance_framework: String
+  customer_email: String
+  external_network_scopes(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+  ): PentestOpportunityExternalNetworkScopeConnection
+  geographic_restrictions: String
+  id: ID!
+  location_restrictions: [String!]
+  mobile_app_scopes(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+  ): PentestOpportunityMobileAppScopeConnection
+  requested_start_date: DateTime
+  schedule_day_restrictions: [String!]
+  schedule_restrictions: String
+  schedule_time_restrictions_end: String
+  schedule_time_restrictions_start: String
+  state: String!
+  web_app_scopes(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+  ): PentestOpportunityWebAppScopeConnection
+}
+
+"""
+A pentest opportunity api scope
+"""
+type PentestOpportunityApiScope implements Node {
+  aws_services: [String!]
+  deployed_on_aws: Boolean
+  description: String
+  distinct_user_roles: [String!]
+  docs_exist: Boolean
+  docs_file_url: String
+  docs_page_url: String
+  environment: String
+  function_count: Int
+  id: ID!
+  url: String
+  user_role_count: Int
+}
+
+"""
+The connection type for PentestOpportunityApiScope.
+"""
+type PentestOpportunityApiScopeConnection {
+  """
+  A list of edges.
+  """
+  edges: [PentestOpportunityApiScopeEdge]
+
+  """
+  A list of nodes.
+  """
+  nodes: [PentestOpportunityApiScope]
+
+  """
+  Information to aid in pagination.
+  """
+  pageInfo: PageInfo!
+  total_count: Int!
+}
+
+"""
+An edge in a connection.
+"""
+type PentestOpportunityApiScopeEdge {
+  """
+  A cursor for use in pagination.
+  """
+  cursor: String!
+
+  """
+  The item at the end of the edge.
+  """
+  node: PentestOpportunityApiScope
+}
+
+"""
+A pentest opportunity external network scope
+"""
+type PentestOpportunityExternalNetworkScope implements Node {
+  id: ID!
+  live_ip_count_range: String
+  total_ip_address_count: Int
+  total_ip_address_ranges: String
+}
+
+"""
+The connection type for PentestOpportunityExternalNetworkScope.
+"""
+type PentestOpportunityExternalNetworkScopeConnection {
+  """
+  A list of edges.
+  """
+  edges: [PentestOpportunityExternalNetworkScopeEdge]
+
+  """
+  A list of nodes.
+  """
+  nodes: [PentestOpportunityExternalNetworkScope]
+
+  """
+  Information to aid in pagination.
+  """
+  pageInfo: PageInfo!
+  total_count: Int!
+}
+
+"""
+An edge in a connection.
+"""
+type PentestOpportunityExternalNetworkScopeEdge {
+  """
+  A cursor for use in pagination.
+  """
+  cursor: String!
+
+  """
+  The item at the end of the edge.
+  """
+  node: PentestOpportunityExternalNetworkScope
+}
+
+"""
+A pentest opportunity mobile app scope
+"""
+type PentestOpportunityMobileAppScope implements Node {
+  app_idenitifier: String
+  app_type: String
+  aws_servces: [String!]
+  can_detect_compromised_device: Boolean
+  can_detect_emulator: Boolean
+  can_security_be_disabled: Boolean
+  certificate_pinning_enabled: Boolean
+  code_obfuscated: Boolean
+  distinct_user_roles: [String!]
+  download_method: String
+  download_method_other: String
+  function_count: Int
+  id: ID!
+  identical_to_web_app: Boolean
+  identical_web_app_id: Int
+  interacts_with_aws: Boolean
+  native_status: String
+  os_version_restriction: Boolean
+}
+
+"""
+The connection type for PentestOpportunityMobileAppScope.
+"""
+type PentestOpportunityMobileAppScopeConnection {
+  """
+  A list of edges.
+  """
+  edges: [PentestOpportunityMobileAppScopeEdge]
+
+  """
+  A list of nodes.
+  """
+  nodes: [PentestOpportunityMobileAppScope]
+
+  """
+  Information to aid in pagination.
+  """
+  pageInfo: PageInfo!
+  total_count: Int!
+}
+
+"""
+An edge in a connection.
+"""
+type PentestOpportunityMobileAppScopeEdge {
+  """
+  A cursor for use in pagination.
+  """
+  cursor: String!
+
+  """
+  The item at the end of the edge.
+  """
+  node: PentestOpportunityMobileAppScope
+}
+
+"""
+A pentest opportunity web app scope
+"""
+type PentestOpportunityWebAppScope implements Node {
+  aws_services: [String!]
+  deployed_on_aws: Boolean
+  description: String
+  distinct_user_roles: [String!]
+  docs_exist: Boolean
+  docs_file_url: String
+  docs_page_url: String
+  environment: String
+  function_count: Int
+  id: ID!
+  publicly_accessible: Boolean
+  url: String
+}
+
+"""
+The connection type for PentestOpportunityWebAppScope.
+"""
+type PentestOpportunityWebAppScopeConnection {
+  """
+  A list of edges.
+  """
+  edges: [PentestOpportunityWebAppScopeEdge]
+
+  """
+  A list of nodes.
+  """
+  nodes: [PentestOpportunityWebAppScope]
+
+  """
+  Information to aid in pagination.
+  """
+  pageInfo: PageInfo!
+  total_count: Int!
+}
+
+"""
+An edge in a connection.
+"""
+type PentestOpportunityWebAppScopeEdge {
+  """
+  A cursor for use in pagination.
+  """
+  cursor: String!
+
+  """
+  The item at the end of the edge.
+  """
+  node: PentestOpportunityWebAppScope
+}
+
+"""
 Fields on which a collection of Pentests can be ordered
 """
 enum PentestOrderField {
@@ -17634,6 +17953,7 @@ type Query implements Node {
     where: FiltersOrganizationFilterInput
   ): OrganizationConnection
   pentest(id: ID!): Pentest
+  pentest_opportunity(token: String!): PentestOpportunity
   pentest_opportunity_used(token: String!): Boolean
   pentester_profiles(
     """
