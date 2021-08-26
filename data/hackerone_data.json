@@ -54228,7 +54228,7 @@
     "name": "Curve",
     "offers_bounties": true,
     "offers_swag": true,
-    "response_efficiency_percentage": 90,
+    "response_efficiency_percentage": 93,
     "submission_state": "open",
     "url": "https://hackerone.com/curve",
     "website": "https://curve.com",
@@ -60047,7 +60047,7 @@
     "name": "CS Money",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 87,
+    "response_efficiency_percentage": 84,
     "submission_state": "open",
     "url": "https://hackerone.com/cs_money",
     "website": "https://cs.money",
@@ -60752,7 +60752,7 @@
     "name": "O1 Labs",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 52,
+    "response_efficiency_percentage": 50,
     "submission_state": "open",
     "url": "https://hackerone.com/o1-labs",
     "website": "https://o1labs.org/",
@@ -62387,6 +62387,51 @@
           "integrity_requirement": "high",
           "max_severity": "none"
         }
+      ]
+    }
+  },
+  {
+    "allows_bounty_splitting": false,
+    "average_time_to_bounty_awarded": null,
+    "average_time_to_first_program_response": 28.0,
+    "average_time_to_report_resolved": null,
+    "handle": "cardano-foundation",
+    "id": 53276,
+    "managed_program": true,
+    "name": "Cardano Foundation",
+    "offers_bounties": true,
+    "offers_swag": false,
+    "response_efficiency_percentage": 100,
+    "submission_state": "open",
+    "url": "https://hackerone.com/cardano-foundation",
+    "website": "http://cardanofoundation.org",
+    "targets": {
+      "in_scope": [
+        {
+          "asset_identifier": "Cardano-Node",
+          "asset_type": "DOWNLOADABLE_EXECUTABLES",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Cardano-Node:\nhttps://github.com/input-output-hk/cardano-node\nThe latest release of the node is the version that is in scope.\n\nThere are multiple ways to get and run the Cardano Node (e.g. Pre-built binaries, build the node from source code, docker etc.). \nThe preferred way is to either build from source or use the pre-built binaries. \nBuild instructions can be found here: https://docs.cardano.org/getting-started/installing-the-cardano-node\n\nWhen you build you can also build the command line interface(CLI) and the Submit Api, both of which can be used to interface with the node. \n\n\nThe latest pre-built binaries for Cardano Node can be found here:\nhttps://hydra.iohk.io/jobset/Cardano/cardano-node\nWithin the build versions there will be a job called “cardano-deployment”, within that there will be a report that contains the configuration files for connecting to the network, for example https://hydra.iohk.io/build/6782523/download/1/index.html  \n\nThe node can be executed as follows:\n./cardano-node run --topology ./configFiles/testnet-topology.json --database-path ./state-testnet --port 3001 --config ./configFiles/testnet-config.json --socket-path ./cardano-testnet.socket\nPlease alter the paths referenced above to match your folder structure. For windows the socket path should look like this “ \\\\.\\pipe\\cardano-node”. The node can be run on Linux, Windows & MacOs. Only Linux is supported for Stake Pool activities, i.e. block production.\n\nThe node will open up port 3001 and also a file socket. \nCommunications protocols for the sockets are defined in the following document:\nhttps://hydra.iohk.io/build/4314538/download/2/network-spec.pdf\n\nDetails for getting Testnet Ada (tAda) are here:\nhttps://testnets.cardano.org/en/testnets/cardano/tools/faucet/\n",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "Cardano-Wallet",
+          "asset_type": "DOWNLOADABLE_EXECUTABLES",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Cardano-Wallet: \nhttps://github.com/input-output-hk/cardano-wallet\n\nCardano-Wallet exposes a REST api that allows wallet based functions like sending a transaction, delegation to a pool, list addresses and transactions etc. \nThe API documentation can be found here: https://input-output-hk.github.io/cardano-wallet/api/edge/\nThe latest release of Cardano-Wallet is the version that is in scope The node version in scope for testing wallet is the version that is included in the release assets, mentioned in the release notes. \n\nThe preferred way is to either build from source or use the pre-built binaries that are included in the release. The wallet is built with the \nThe wallet connects to the Cardano-Node via a file socket.\n\nThe wallet can be executed as follows:\n./cardano-wallet serve --node-socket ./cardano-testnet.socket --database ./wallet-db-testnet --listen-address 0.0.0.0 --testnet testnet/testnet-byron-genesis.json --port 8090 \n\nThe wallet supports both Byron (Legacy) wallets and addresses and Shelley (HD) wallets and addresses. Details on wallet and address formats can be found here:\nhttps://input-output-hk.github.io/adrestia/docs/key-concepts/hierarchical-deterministic-wallets/\nhttps://input-output-hk.github.io/adrestia/docs/key-concepts/addresses-byron/\n\nDetails for getting Testnet Ada (tAda) are here:\nhttps://testnets.cardano.org/en/testnets/cardano/tools/faucet/\n",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        }
+      ],
+      "out_of_scope": [
+
       ]
     }
   }
