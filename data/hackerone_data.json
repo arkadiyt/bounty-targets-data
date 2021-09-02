@@ -22638,7 +22638,7 @@
     "name": "Harvest",
     "offers_bounties": true,
     "offers_swag": true,
-    "response_efficiency_percentage": 22,
+    "response_efficiency_percentage": 16,
     "submission_state": "open",
     "url": "https://hackerone.com/harvest",
     "website": "http://getharvest.com",
@@ -51413,7 +51413,7 @@
     "name": "Xilinx BBP",
     "offers_bounties": true,
     "offers_swag": true,
-    "response_efficiency_percentage": 93,
+    "response_efficiency_percentage": 94,
     "submission_state": "open",
     "url": "https://hackerone.com/xilinx_bbp",
     "website": "http://xilinx.com",
@@ -56725,19 +56725,29 @@
           "max_severity": "critical"
         },
         {
+          "asset_identifier": "gmelius.io",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        }
+      ],
+      "out_of_scope": [
+        {
           "asset_identifier": "www.gmelius.com",
           "asset_type": "URL",
           "availability_requirement": "low",
           "confidentiality_requirement": "low",
           "eligible_for_bounty": false,
-          "eligible_for_submission": true,
-          "instruction": "",
+          "eligible_for_submission": false,
+          "instruction": "Gmelius' www site is hosted by Webflow. Security bugs in Webflow may be reported to the service provider.",
           "integrity_requirement": "low",
-          "max_severity": "medium"
+          "max_severity": "none"
         }
-      ],
-      "out_of_scope": [
-
       ]
     }
   },
