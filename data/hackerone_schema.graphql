@@ -3058,11 +3058,14 @@ BountyTableRow
 type BountyTableRow implements Node & ResourceInterface {
   _id: ID!
   critical: Int
+  critical_minimum: Int
   high: Int
+  high_minimum: Int
   id: ID!
   low: Int
+  low_minimum: Int
   medium: Int
-  minimum: Int
+  medium_minimum: Int
   smart_rewards_start_at: DateTime
   structured_scope: StructuredScope
   updated_at: DateTime
@@ -3116,17 +3119,23 @@ type BountyTableRowHistory implements Node & ResourceInterface {
   created_at: DateTime!
   critical_after: Int
   critical_before: Int
+  critical_minimum_after: Int
+  critical_minimum_before: Int
   high_after: Int
   high_before: Int
+  high_minimum_after: Int
+  high_minimum_before: Int
   id: ID!
   low_after: Int
   low_before: Int
+  low_minimum_after: Int
+  low_minimum_before: Int
   maximum_after: Int
   maximum_before: Int
   medium_after: Int
   medium_before: Int
-  minimum_after: Int
-  minimum_before: Int
+  medium_minimum_after: Int
+  medium_minimum_before: Int
   structured_scope_after: StructuredScope
   structured_scope_before: StructuredScope
   updated_at: DateTime
@@ -3183,13 +3192,16 @@ enum BountyTableRowHistoryOrderField {
 
 input BountyTableRowInput {
   critical: Int
+  critical_minimum: Int
   destroy: Boolean
   high: Int
+  high_minimum: Int
   id: ID
   low: Int
+  low_minimum: Int
   maximum: Int
   medium: Int
-  minimum: Int
+  medium_minimum: Int
   structured_scope_id: ID
 }
 
@@ -18308,6 +18320,7 @@ type Query implements Node {
     Returns the last _n_ elements from the list.
     """
     last: Int
+    order_by: TriageInboxItemOrderInput = null
     owner_username: String = null
     priority: TriageInboxItemPriorityEnum = null
     product_editions: [TriageInboxItemProductEditionFilterEnum!] = null
@@ -25609,6 +25622,19 @@ type TriageInboxItemEdge {
   The item at the end of the edge.
   """
   node: TriageInboxItem
+}
+
+"""
+Fields on which a collection of TriageInboxItems can be ordered
+"""
+enum TriageInboxItemOrderField {
+  timer_report_prioritized_fail_at
+  timer_report_validated_fail_at
+}
+
+input TriageInboxItemOrderInput {
+  direction: OrderDirection!
+  field: TriageInboxItemOrderField!
 }
 
 """
