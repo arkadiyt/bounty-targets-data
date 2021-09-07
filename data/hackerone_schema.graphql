@@ -16339,6 +16339,7 @@ type PentestOpportunity implements Node {
   citizenship_restrictions: [String!]
   company_name: String
   compliance_framework: String
+  compliance_framework_other: String
   customer_email: String
   customer_note: String
   external_network_scopes(
@@ -20296,6 +20297,7 @@ input ReviewPentestOpportunityInput {
   clientMutationId: String
   company_name: String
   compliance_framework: String
+  compliance_framework_other: String
   customer_email: String
   customer_note: String
   geographic_restrictions: String
@@ -22046,6 +22048,7 @@ input SubmitPentestOpportunityInput {
   clientMutationId: String
   company_name: String
   compliance_framework: String
+  compliance_framework_other: String
   customer_email: String
   customer_note: String
   geographic_restrictions: String
