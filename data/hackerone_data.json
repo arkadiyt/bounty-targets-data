@@ -10929,6 +10929,17 @@
           "max_severity": "critical"
         },
         {
+          "asset_identifier": "datacapture.acceptance.appservices.mendix.com",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
           "asset_identifier": "datalake-sync.apps.mendix.com",
           "asset_type": "URL",
           "availability_requirement": "high",
@@ -14485,7 +14496,7 @@
     "name": "PUBG",
     "offers_bounties": false,
     "offers_swag": true,
-    "response_efficiency_percentage": 97,
+    "response_efficiency_percentage": 96,
     "submission_state": "open",
     "url": "https://hackerone.com/pubg",
     "website": "http://pubg.com",
@@ -28194,6 +28205,73 @@
           "integrity_requirement": null,
           "max_severity": "none"
         }
+      ]
+    }
+  },
+  {
+    "allows_bounty_splitting": true,
+    "average_time_to_bounty_awarded": 1920.0,
+    "average_time_to_first_program_response": 49.0,
+    "average_time_to_report_resolved": 1475.0,
+    "handle": "torproject",
+    "id": 1800,
+    "managed_program": false,
+    "name": "Tor",
+    "offers_bounties": true,
+    "offers_swag": true,
+    "response_efficiency_percentage": 72,
+    "submission_state": "open",
+    "url": "https://hackerone.com/torproject",
+    "website": "https://www.torproject.org/",
+    "targets": {
+      "in_scope": [
+        {
+          "asset_identifier": "Orbot",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "Services (like the website, bug tracker, and server infrastructure)",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "Tor",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "https://gitlab.torproject.org/tpo/core/tor\n\nSupported versions for Tor can be found at https://trac.torproject.org/projects/tor/wiki/org/teams/NetworkTeam/CoreTorReleases.",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "Tor Browser",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "https://gitlab.torproject.org/tpo/applications/tor-browser\n\nIt's a good start to look at the latest stable, alpha, and nightly builds. The former can be found at https://www.torproject.org/download/ and nightlies can be obtained via http://f4amtbsowhix7rrf.onion/tor-browser-builds/.",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        }
+      ],
+      "out_of_scope": [
+
       ]
     }
   },
@@ -51596,40 +51674,6 @@
           "integrity_requirement": null,
           "max_severity": "none"
         }
-      ]
-    }
-  },
-  {
-    "allows_bounty_splitting": false,
-    "average_time_to_bounty_awarded": null,
-    "average_time_to_first_program_response": null,
-    "average_time_to_report_resolved": null,
-    "handle": "notepad-plus-plus",
-    "id": 36721,
-    "managed_program": false,
-    "name": "Notepad++",
-    "offers_bounties": false,
-    "offers_swag": false,
-    "response_efficiency_percentage": 67,
-    "submission_state": "open",
-    "url": "https://hackerone.com/notepad-plus-plus",
-    "website": "https://notepad-plus-plus.org",
-    "targets": {
-      "in_scope": [
-        {
-          "asset_identifier": "https://github.com/notepad-plus-plus/notepad-plus-plus",
-          "asset_type": "SOURCE_CODE",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": false,
-          "eligible_for_submission": true,
-          "instruction": "Older builds are explicitly out of scope.\n\n",
-          "integrity_requirement": null,
-          "max_severity": "critical"
-        }
-      ],
-      "out_of_scope": [
-
       ]
     }
   },
