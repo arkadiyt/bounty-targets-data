@@ -52705,7 +52705,7 @@
     "name": "Kubernetes",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 83,
+    "response_efficiency_percentage": 78,
     "submission_state": "open",
     "url": "https://hackerone.com/kubernetes",
     "website": "https://kubernetes.io/",
@@ -62359,6 +62359,369 @@
       ],
       "out_of_scope": [
 
+      ]
+    }
+  },
+  {
+    "allows_bounty_splitting": false,
+    "average_time_to_bounty_awarded": null,
+    "average_time_to_first_program_response": 26.0,
+    "average_time_to_report_resolved": null,
+    "handle": "zilliqa",
+    "id": 51016,
+    "managed_program": true,
+    "name": "Zilliqa",
+    "offers_bounties": true,
+    "offers_swag": false,
+    "response_efficiency_percentage": 100,
+    "submission_state": "open",
+    "url": "https://hackerone.com/zilliqa",
+    "website": "http://zilliqa.com",
+    "targets": {
+      "in_scope": [
+        {
+          "asset_identifier": "https://dev-api.zilliqa.com/",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "_CORE PROTOCOL AND LANGUAGE_\nThe Zilliqa public testnet is made available for testing. \n\nPlease do not conduct attacks that may result in a denial of service in the testnet, You may set up a local testnet by following the Readme at https://github.com/Zilliqa/Zilliqa. \n",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://dev-wallet.zilliqa.com/",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "This is a testnet web used to create Zilliqa test wallets. As this has no direct impact to Zilliqa production or mainnet, we will triage valid reports but they will not be eligible for bounty.",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://devex.zilliqa.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "_DEVELOPER TOOLING_\n**Devex explorer:** Developer focused lightweight blockchain explorer",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://github.com/Switcheo/switcheo-tradehub-zil/blob/main/contracts/LockProxySwitcheo.scilla ",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "*SMART CONTRACTS*\n\n**ZilBridge: LockProxy contract for locking or minting of ZRC-2 assets**\n",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://github.com/Switcheo/switcheo-tradehub-zil/blob/main/contracts/SwitcheoTokenZIL.scilla ",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "*SMART CONTRACTS*\n\n**ZilBridge: The bridged token (ZRC-2) token contract**\n",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://github.com/Switcheo/switcheo-tradehub-zil/blob/main/contracts/ZilCrossChainManager.scilla ",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "*SMART CONTRACTS*\n\n**ZilBridge: Cross chain manager contract**\n",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://github.com/Switcheo/switcheo-tradehub-zil/blob/main/contracts/ZilCrossChainManagerProxy.scilla ",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "*SMART CONTRACTS*\n\n**ZilBridge: ZilBridge Cross chain manager proxy contract**\n\nRelays transaction call to Cross chain manager contract\n",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://github.com/Zilliqa/Devex-apollo ",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "_DEVELOPER TOOLING_\n**GraphQL backend for Devex:** GraphQL backend for crawling blockchain data for Devex",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://github.com/Zilliqa/ZRC/blob/master/reference/FungibleToken.scilla",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "_SMART CONTRACTS_\n**ZRC-2 Fungible token contract**",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://github.com/Zilliqa/ZRC/blob/master/reference/multisig_wallet.scilla ",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "_SMART CONTRACTS_\n**Multisig wallet contract**",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://github.com/Zilliqa/ZRC/blob/master/reference/nonfungible-token.scilla",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "_SMART CONTRACTS_\n**ZRC-1 Non Fungible token contract**",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://github.com/Zilliqa/Zilliqa",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "_CORE PROTOCOL AND LANGUAGE_\n **Zilliqa codebase:** The Zilliqa core protocol source code can be found at https://github.com/Zilliqa/Zilliqa. \n\nFor the latest release, please the release page at https://github.com/Zilliqa/Zilliqa/releases \n\nWe will be accepting submissions for bugs that are found in the latest release and not yet fixed in the master branch. \n",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://github.com/Zilliqa/Zilliqa-JavaScript-Library",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "_DEVELOPER TOOLING_\n**Zilliqa Javascript library** ",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://github.com/Zilliqa/ceres",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "_DEVELOPER TOOLING_\n**Ceres:** \nCeres is a graphical user interface that runs different Zilliqa development tools under Docker containers without the need of user knowing how to use docker or run it's commands. You can focus on Scilla development while Ceres manages Zilliqa Tools for you.",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://github.com/Zilliqa/dev-explorer",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "_DEVELOPER TOOLING_\n**Devex explorer:** Developer focused lightweight blockchain explorer",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://github.com/Zilliqa/gozilliqa-sdk ",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "_DEVELOPER TOOLING_\n**Gozilliqa SDK** ",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://github.com/Zilliqa/nucleus-wallet",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "This is a testnet web used to create Zilliqa test wallets. As this has no direct impact to Zilliqa production or mainnet, we will triage valid reports but they will not be eligible for bounty.",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://github.com/Zilliqa/schnorr",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "_CORE PROTOCOL AND LANGUAGE_\n**Zilliqa Schnorr library codebase:** This is the Schnorr cryptographic library for Zilliqa and the code repository is at https://github.com/Zilliqa/schnorr.\n",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://github.com/Zilliqa/scilla",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "_CORE PROTOCOL AND LANGUAGE_\n**Scilla codebase and local testnet:** The Scilla smart contract interpreter source code can be found at https://github.com/Zilliqa/scilla",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://github.com/Zilliqa/staking-contract/blob/main/contracts/gzil.scilla",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "_STAKING RELATED ASSETS_\n**gZIL Token Contract:**\nA proxy contract that sits on top of the SSNList contract. Any call to the SSNList contract must come from SSNListProxy. This contract facilitates upgradeability of the SSNList contract in case a bug is found.\n\nDeployed contract (may not be the latest version on testnet):\nhttps://devex.zilliqa.com/address/zil1qht7zg0zqk5yhuw694s2ez3ysjqqllanrc6kvr?network=https%3A%2F%2Fdev-api.zilliqa.com ",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://github.com/Zilliqa/staking-contract/blob/main/contracts/multisig_wallet.scilla",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "_STAKING RELATED ASSETS_\n**Multisig Wallet Contract:**\nThis is tailored to work with the SSNListproxy contract. Certain transitions in the SSNListProxy contract can only be invoked when k-out-of-n users have agreed to do so. This logic is handled using the Wallet contract.\n\nDeployed contract (may not be the latest version on testnet):\nhttps://devex.zilliqa.com/address/zil1rddcvde5zu73fudw2vzjfplsnjqut4ae5t3fja?network=https%3A%2F%2Fdev-api.zilliqa.com ",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://github.com/Zilliqa/staking-contract/blob/main/contracts/proxy.scilla ",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "_STAKING RELATED ASSETS_\n**Seed Node Staking Proxy Contract:**\nA proxy contract that sits on top of the SSNList contract. Any call to the SSNList contract must come from SSNListProxy. This contract facilitates upgradeability of the SSNList contract in case a bug is found.\n\nDeployed contract (may not be the latest version on testnet):\nhttps://devex.zilliqa.com/address/zil1qht7zg0zqk5yhuw694s2ez3ysjqqllanrc6kvr?network=https%3A%2F%2Fdev-api.zilliqa.com ",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://github.com/Zilliqa/staking-contract/blob/main/contracts/ssnlist.scilla",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "_STAKING RELATED ASSETS_\n**Seed Node Staking Contract:** Staking contract, ssnlist.scilla, is where all the staking contracts logic is implemented. \n\nIt is the main contract that keeps track of Staked Seed Nodes aka SSNs, the delegators, the amount staked by a delegator with an SSN, and available rewards, etc.\n\nDeployed contract (may not be the latest version on testnet):\nhttps://devex.zilliqa.com/address/zil1qhpdmmpwg3y3vppkzvxtf7dcfh5l0mjm7hemjh?network=https%3A%2F%2Fdev-api.zilliqa.com\n\n",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://github.com/Zilliqa/zilliqa-multisig-wallet ",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "_SMART CONTRACTS_\n**Multisig wallet Web UI:** A multisig wallet contract and frontend for the wallet",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://ide.zilliqa.com/",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "_DEVELOPER TOOLING_\n**Neo-Savant IDE:** An IDE for writing anhttps://ide.zilliqa.com/ d deploying smart contract",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://learnscilla.com/",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "**Scilla education platform**",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://testnet-stake.zilliqa.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "_STAKING RELATED ASSETS_\n**Zillion Staking Web Portal:** Zillion is a web application that interacts with the staking smart contracts. ",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://zilswap.io/bridge",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "*WEB BASED APPLICATION*\n\n**ZilBridge: Frontend (testnet) for ZilBridge beta testing**\n\nSecurity researchers are encouraged to use this frontend to interact with the bridge contracts on testnet\n\nNote: The web based frontend scope is limited to this specific page only. \n",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "asset_identifier": "https://docs.zilliqa.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "This is our document repository and is currently in use. Please do not report hostile subdomain take over. \n",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "viewblock.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "This is an explorer provided by our ecosystem partner and infrastructure does not belong to Zilliqa. \n",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "www.zilliqa.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        }
       ]
     }
   },
