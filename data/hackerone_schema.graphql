@@ -16420,10 +16420,11 @@ type PentestOpportunity implements Node {
 A pentest opportunity api scope
 """
 type PentestOpportunityApiScope implements Node {
+  _id: ID!
+  attachments: [Attachment]
   aws_services: [String!]
   description: String
   distinct_user_roles: [String!]
-  docs_file_url: String
   docs_page_url: String
   function_count: Int
   id: ID!
@@ -16473,6 +16474,7 @@ type PentestOpportunityApiScopeEdge {
 A pentest opportunity external network scope
 """
 type PentestOpportunityExternalNetworkScope implements Node {
+  _id: ID!
   id: ID!
   live_ip_count_range: String
   scope_type: String
@@ -16520,6 +16522,7 @@ type PentestOpportunityExternalNetworkScopeEdge {
 A pentest opportunity mobile app scope
 """
 type PentestOpportunityMobileAppScope implements Node {
+  _id: ID!
   app_identifier: String
   app_type: String
   aws_services: [String!]
@@ -16582,6 +16585,7 @@ type PentestOpportunityMobileAppScopeEdge {
 A pentest opportunity web app scope
 """
 type PentestOpportunityWebAppScope implements Node {
+  _id: ID!
   aws_services: [String!]
   description: String
   distinct_user_roles: [String!]
