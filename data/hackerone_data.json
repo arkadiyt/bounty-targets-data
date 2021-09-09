@@ -5761,7 +5761,7 @@
     "name": "Hud App",
     "offers_bounties": false,
     "offers_swag": false,
-    "response_efficiency_percentage": 80,
+    "response_efficiency_percentage": 83,
     "submission_state": "open",
     "url": "https://hackerone.com/hudapp",
     "website": "https://www.hudapp.com",
@@ -6297,6 +6297,39 @@
     "targets": {
       "in_scope": [
         {
+          "asset_identifier": "*.CLOUD.GOV",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "Only the subdomains of `cloud.gov` explicitly listed are in scope; all other subdomains are excluded.",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "*.DATA.GOV",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": null,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "*.FMI.GOV",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": null,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
           "asset_identifier": "*.GSAADVANTAGE.GOV",
           "asset_type": "URL",
           "availability_requirement": null,
@@ -6309,6 +6342,17 @@
         },
         {
           "asset_identifier": "*.IDMANAGEMENT.GOV",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": null,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "*.LOGIN.GOV",
           "asset_type": "URL",
           "availability_requirement": null,
           "confidentiality_requirement": null,
@@ -6364,6 +6408,17 @@
         },
         {
           "asset_identifier": "*.SFTOOL.GOV",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": null,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "*.USA.GOV",
           "asset_type": "URL",
           "availability_requirement": null,
           "confidentiality_requirement": null,
@@ -6473,11 +6528,66 @@
           "max_severity": "critical"
         },
         {
+          "asset_identifier": "CLOUD.GOV",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": null,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "CODE.GOV",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": null,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "COMPUTERSFORLEARNING.GOV",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": null,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
           "asset_identifier": "FASCC.GSA.GOV)",
           "asset_type": "URL",
           "availability_requirement": null,
           "confidentiality_requirement": null,
           "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "FEDRAMP.GOV",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": null,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "FMI.GOV",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": null,
           "eligible_for_submission": true,
           "instruction": "",
           "integrity_requirement": null,
@@ -6522,6 +6632,17 @@
           "availability_requirement": null,
           "confidentiality_requirement": null,
           "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "USA.GOV",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": null,
           "eligible_for_submission": true,
           "instruction": "",
           "integrity_requirement": null,
@@ -9060,17 +9181,6 @@
           "max_severity": "none"
         },
         {
-          "asset_identifier": "*.CLOUD.GOV",
-          "asset_type": "URL",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": null,
-          "eligible_for_submission": false,
-          "instruction": null,
-          "integrity_requirement": null,
-          "max_severity": "none"
-        },
-        {
           "asset_identifier": "*.CODE.GOV",
           "asset_type": "URL",
           "availability_requirement": null,
@@ -9127,17 +9237,6 @@
         },
         {
           "asset_identifier": "*.CPARS.GOV",
-          "asset_type": "URL",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": null,
-          "eligible_for_submission": false,
-          "instruction": null,
-          "integrity_requirement": null,
-          "max_severity": "none"
-        },
-        {
-          "asset_identifier": "*.DATA.GOV",
           "asset_type": "URL",
           "availability_requirement": null,
           "confidentiality_requirement": null,
@@ -9358,17 +9457,6 @@
         },
         {
           "asset_identifier": "*.FIRSTGOV.GOV",
-          "asset_type": "URL",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": null,
-          "eligible_for_submission": false,
-          "instruction": null,
-          "integrity_requirement": null,
-          "max_severity": "none"
-        },
-        {
-          "asset_identifier": "*.FMI.GOV",
           "asset_type": "URL",
           "availability_requirement": null,
           "confidentiality_requirement": null,
@@ -9632,17 +9720,6 @@
           "max_severity": "none"
         },
         {
-          "asset_identifier": "*.LOGIN.GOV",
-          "asset_type": "URL",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": null,
-          "eligible_for_submission": false,
-          "instruction": null,
-          "integrity_requirement": null,
-          "max_severity": "none"
-        },
-        {
           "asset_identifier": "*.NIC.GOV",
           "asset_type": "URL",
           "availability_requirement": null,
@@ -9842,17 +9919,6 @@
         },
         {
           "asset_identifier": "*.US.GOV",
-          "asset_type": "URL",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": null,
-          "eligible_for_submission": false,
-          "instruction": null,
-          "integrity_requirement": null,
-          "max_severity": "none"
-        },
-        {
-          "asset_identifier": "*.USA.GOV",
           "asset_type": "URL",
           "availability_requirement": null,
           "confidentiality_requirement": null,
@@ -10083,39 +10149,6 @@
           "max_severity": "none"
         },
         {
-          "asset_identifier": "CLOUD.GOV",
-          "asset_type": "URL",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": null,
-          "eligible_for_submission": false,
-          "instruction": null,
-          "integrity_requirement": null,
-          "max_severity": "none"
-        },
-        {
-          "asset_identifier": "CODE.GOV",
-          "asset_type": "URL",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": null,
-          "eligible_for_submission": false,
-          "instruction": null,
-          "integrity_requirement": null,
-          "max_severity": "none"
-        },
-        {
-          "asset_identifier": "COMPUTERSFORLEARNING.GOV",
-          "asset_type": "URL",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": null,
-          "eligible_for_submission": false,
-          "instruction": null,
-          "integrity_requirement": null,
-          "max_severity": "none"
-        },
-        {
           "asset_identifier": "CONNECT.GOV",
           "asset_type": "URL",
           "availability_requirement": null,
@@ -10160,17 +10193,6 @@
           "max_severity": "none"
         },
         {
-          "asset_identifier": "FEDRAMP.GOV",
-          "asset_type": "URL",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": null,
-          "eligible_for_submission": false,
-          "instruction": null,
-          "integrity_requirement": null,
-          "max_severity": "none"
-        },
-        {
           "asset_identifier": "FEDROOMS.GOV",
           "asset_type": "URL",
           "availability_requirement": null,
@@ -10183,17 +10205,6 @@
         },
         {
           "asset_identifier": "FIRSTGOV.GOV",
-          "asset_type": "URL",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": null,
-          "eligible_for_submission": false,
-          "instruction": null,
-          "integrity_requirement": null,
-          "max_severity": "none"
-        },
-        {
-          "asset_identifier": "FMI.GOV",
           "asset_type": "URL",
           "availability_requirement": null,
           "confidentiality_requirement": null,
@@ -10304,17 +10315,6 @@
         },
         {
           "asset_identifier": "US.GOV",
-          "asset_type": "URL",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": null,
-          "eligible_for_submission": false,
-          "instruction": null,
-          "integrity_requirement": null,
-          "max_severity": "none"
-        },
-        {
-          "asset_identifier": "USA.GOV",
           "asset_type": "URL",
           "availability_requirement": null,
           "confidentiality_requirement": null,
@@ -29375,7 +29375,7 @@
     "name": "Starbucks",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 98,
+    "response_efficiency_percentage": 99,
     "submission_state": "open",
     "url": "https://hackerone.com/starbucks",
     "website": "http://www.starbucks.com",
@@ -51666,7 +51666,7 @@
     "name": "FileZilla",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 63,
+    "response_efficiency_percentage": 50,
     "submission_state": "open",
     "url": "https://hackerone.com/filezilla",
     "website": "https://filezilla-project.org/",
@@ -55621,7 +55621,7 @@
     "name": "CoinSpot",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 97,
+    "response_efficiency_percentage": 98,
     "submission_state": "open",
     "url": "https://hackerone.com/coinspot",
     "website": "http://coinspot.com.au",
