@@ -2105,9 +2105,9 @@ Entry for the all time reputation leaderboard
 type AllTimeReputationLeaderboardEntry implements LeaderboardEntryInterface & Node {
   _id: ID!
   id: ID!
-  points: Int!
   previous_rank: Int
   rank: Int
+  reputation: Int!
   user: User!
 }
 
@@ -31577,7 +31577,7 @@ type User implements Node & ResourceInterface {
     last: Int
   ): InvitationQueueConnection
   latest_mentions: [Notification!]
-  leaderboard_entry(filter: String, key: LeaderboardKeyEnum!, quarter: Int, year: Int!): LeaderboardEntryUnion
+  leaderboard_entry(filter: String, key: LeaderboardKeyEnum!, quarter: Int, year: Int): LeaderboardEntryUnion
   linkedin_handle: String
   location: String
   lufthansa_account: LufthansaAccount
