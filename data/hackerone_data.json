@@ -44282,7 +44282,7 @@
     "name": "Valve",
     "offers_bounties": true,
     "offers_swag": true,
-    "response_efficiency_percentage": 88,
+    "response_efficiency_percentage": 89,
     "submission_state": "open",
     "url": "https://hackerone.com/valve",
     "website": "https://www.valvesoftware.com",
@@ -62182,6 +62182,17 @@
           "max_severity": "critical"
         },
         {
+          "asset_identifier": "adm.cloud.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Please note that some UI elements and features of ADM may only become available when an organization has an ADC, MPX, SDX or VPX appliance to onboard into ADM. The most efficient and cost-effective way to do this would be setting up a \"Citrix ADC VPX Express – 20 Mbps\" from the AWS or Microsoft Azure marketplace which typically has an hourly running cost of 2-3 cents.\n\n - https://aws.amazon.com/marketplace/pp/B0796LD46X\n - https://azuremarketplace.microsoft.com/en-us/marketplace/apps/citrix.netscalervpx-130\n\nOverview - https://docs.citrix.com/en-us/citrix-application-delivery-management-service/overview.html. \n\nOnboarding instructions - https://docs.citrix.com/en-us/citrix-application-delivery-management-service/getting-started.html",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
           "asset_identifier": "ap-s.cloud.com",
           "asset_type": "URL",
           "availability_requirement": null,
@@ -62189,6 +62200,17 @@
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
           "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "api.adm.cloud.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "This is the API Gateway for Citrix Application Delivery Management. All traffic between an Agent and Application Delivery Management service is proxied via API Gateway. \n\nAPI Gateway is also responsible for API authorization checks for traffic from the Agent to Application Delivery Management. ",
           "integrity_requirement": null,
           "max_severity": "critical"
         },
