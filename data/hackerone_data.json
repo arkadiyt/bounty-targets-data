@@ -2,6 +2,72 @@
   {
     "allows_bounty_splitting": false,
     "average_time_to_bounty_awarded": null,
+    "average_time_to_first_program_response": 36.0,
+    "average_time_to_report_resolved": 8.0,
+    "handle": "lacework",
+    "id": 0,
+    "managed_program": true,
+    "name": "Lacework",
+    "offers_bounties": false,
+    "offers_swag": false,
+    "response_efficiency_percentage": 100,
+    "submission_state": "open",
+    "url": "https://hackerone.com/lacework",
+    "website": "http://www.lacework.com",
+    "targets": {
+      "in_scope": [
+        {
+          "asset_identifier": "*.lacework.net",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "support.lacework.com",
+          "asset_type": "URL",
+          "availability_requirement": "low",
+          "confidentiality_requirement": "medium",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "Our support site is hosted externally by Zendesk. Issues within this application or regarding our content should be reported here. No security testing should be done against the platform itself. Any security issues found within the platform should be reported [directly to Zendesk](https://hackerone.com/zendesk).",
+          "integrity_requirement": "low",
+          "max_severity": "high"
+        },
+        {
+          "asset_identifier": "www.lacework.com",
+          "asset_type": "URL",
+          "availability_requirement": "medium",
+          "confidentiality_requirement": "none",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "Our website is hosted externally by WPEngine. Issues within this application or regarding our content should be reported here. No security testing should be done against the platform itself. Any security issues found within the platform should be reported [directly to WPEngine](https://hackerone.com/wpengine).",
+          "integrity_requirement": "low",
+          "max_severity": "high"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "asset_identifier": "status.lacework.net",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "Our status site is hosted externally by Atlassian Statuspage. Issues within this application or regarding our content should be reported here. No security testing should be done against the platform itself. Any security issues found within the platform should be reported [directly to Atlassian](https://bugcrowd.com/atlassian).",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        }
+      ]
+    }
+  },
+  {
+    "allows_bounty_splitting": false,
+    "average_time_to_bounty_awarded": null,
     "average_time_to_first_program_response": 45.0,
     "average_time_to_report_resolved": null,
     "handle": "vanmoof",
@@ -10,7 +76,7 @@
     "name": "VanMoof",
     "offers_bounties": false,
     "offers_swag": false,
-    "response_efficiency_percentage": 94,
+    "response_efficiency_percentage": 96,
     "submission_state": "open",
     "url": "https://hackerone.com/vanmoof",
     "website": "https://www.vanmoof.com",
@@ -16212,7 +16278,7 @@
     "name": "IBM",
     "offers_bounties": false,
     "offers_swag": false,
-    "response_efficiency_percentage": 98,
+    "response_efficiency_percentage": 99,
     "submission_state": "open",
     "url": "https://hackerone.com/ibm",
     "website": "http://ibm.com",
@@ -53069,7 +53135,7 @@
     "name": "Kubernetes",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 79,
+    "response_efficiency_percentage": 78,
     "submission_state": "open",
     "url": "https://hackerone.com/kubernetes",
     "website": "https://kubernetes.io/",
