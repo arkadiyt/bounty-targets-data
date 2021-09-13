@@ -2580,17 +2580,25 @@ type BbpLaunchConfiguration implements Node {
   current_configuration_step: String
   has_changed_brand_promise: Boolean!
   has_changed_disclosure_policies: Boolean!
+  has_changed_faq: Boolean!
+  has_changed_legal: Boolean!
   has_changed_out_of_scope: Boolean!
+  has_changed_program_eligibility: Boolean!
+  has_changed_program_rules: Boolean!
+  has_changed_rewards: Boolean!
   has_changed_safe_harbor: Boolean!
-  has_changed_scope: Boolean!
   id: ID!
   launch_at: DateTime
   launch_requested_at: DateTime
   policy_brand_promise: String
   policy_disclosure_policies: String
+  policy_faq: String
+  policy_legal: String
   policy_out_of_scope: String
+  policy_program_eligibility: String
+  policy_program_rules: String
+  policy_rewards: String
   policy_safe_harbor: String
-  policy_scope: String
 }
 
 """
@@ -16313,6 +16321,7 @@ type PentestFormAnswerEdge {
 A pentest opportunity
 """
 type PentestOpportunity implements Node {
+  _id: ID!
   account_provisioning_needed: Boolean
   api_scopes(
     """
@@ -26705,9 +26714,13 @@ input UpdateBbpLaunchConfigurationPolicyInput {
   clientMutationId: String
   policy_brand_promise: String
   policy_disclosure_policies: String
+  policy_faq: String
+  policy_legal: String
   policy_out_of_scope: String
+  policy_program_eligibility: String
+  policy_program_rules: String
+  policy_rewards: String
   policy_safe_harbor: String
-  policy_scope: String
   team_id: ID!
 }
 
