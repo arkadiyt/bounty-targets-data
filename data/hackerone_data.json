@@ -49112,7 +49112,7 @@
           "confidentiality_requirement": "high",
           "eligible_for_bounty": false,
           "eligible_for_submission": true,
-          "instruction": "ESLint's Jenkins server is used to carry out releases of ESLint-maintained packages. As such, it has access to several confidential resources, including an npm token and ssh key with access to all of ESLint's packages and repositories, respectively.\n\nThe Jenkins server is intended to be locked down such that only authorized ESLint team members can view build information/logs and start releases. We'd be interested in hearing about any issues that would allow an unauthorized user to gain access to build information or configure/start builds.",
+          "instruction": "ESLint's Jenkins server is used to carry out releases of ESLint-maintained packages. As such, it has access to several confidential resources, including an npm token and ssh key with access to all of ESLint's packages and repositories, respectively.\n\nFor transparency, the build logs from each ESLint package release are publicly visible, but they should not contain any confidential information. Only authorized ESLint team members should be able to start releases or modify configuration. We'd be interested in hearing about any issues that would allow an unauthorized user to access sensitive information or start or configure builds.",
           "integrity_requirement": "high",
           "max_severity": "critical"
         }
