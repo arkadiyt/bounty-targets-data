@@ -3368,10 +3368,6 @@
       "in_scope": [
         {
           "type": "website",
-          "target": "*.boomi.com/*"
-        },
-        {
-          "type": "website",
           "target": "*.dell.com/*"
         },
         {
@@ -3396,14 +3392,14 @@
         },
         {
           "type": "website",
-          "target": "https://flow.manywho.com/da497693-4d02-45db-bc08-8ea16d2ccbdf/play/draw2/*"
-        },
-        {
-          "type": "website",
           "target": "secureworks.com/*"
         }
       ],
       "out_of_scope": [
+        {
+          "type": "website",
+          "target": "*.boomi.com/*"
+        },
         {
           "type": "website",
           "target": "*.manywho.com/*"
@@ -3431,10 +3427,6 @@
         {
           "type": "website",
           "target": "Sites, applications, services and products that are not explicitly identified as “in scope”"
-        },
-        {
-          "type": "website",
-          "target": "https://m.platform.boomi.com/graphql"
         },
         {
           "type": "website",
@@ -7935,7 +7927,10 @@
         }
       ],
       "out_of_scope": [
-
+        {
+          "type": "website",
+          "target": "oshrc.entellirak.com"
+        }
       ]
     }
   },
@@ -8651,6 +8646,40 @@
         {
           "type": "website",
           "target": "segment.com/jobs"
+        }
+      ]
+    }
+  },
+  {
+    "name": "1Shoppingcart.com",
+    "url": "https://bugcrowd.com/shoppingcart",
+    "allows_disclosure": false,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "partial",
+    "max_payout": 2500,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "website",
+          "target": "*.mcssl.com"
+        },
+        {
+          "type": "website",
+          "target": "1shoppingcart.com"
+        },
+        {
+          "type": "api",
+          "target": "http://mcssl.com/api"
+        },
+        {
+          "type": "website",
+          "target": "mcssl.com"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "website",
+          "target": "*.1shoppingcart.com"
         }
       ]
     }
