@@ -28,17 +28,6 @@
           "max_severity": "critical"
         },
         {
-          "asset_identifier": "support.lacework.com",
-          "asset_type": "URL",
-          "availability_requirement": "low",
-          "confidentiality_requirement": "medium",
-          "eligible_for_bounty": false,
-          "eligible_for_submission": true,
-          "instruction": "Our support site is hosted externally by Zendesk. Issues within this application or regarding our content should be reported here. No security testing should be done against the platform itself. Any security issues found within the platform should be reported [directly to Zendesk](https://hackerone.com/zendesk).",
-          "integrity_requirement": "low",
-          "max_severity": "high"
-        },
-        {
           "asset_identifier": "www.lacework.com",
           "asset_type": "URL",
           "availability_requirement": "medium",
@@ -60,6 +49,17 @@
           "eligible_for_submission": false,
           "instruction": "Our status site is hosted externally by Atlassian Statuspage. Issues within this application or regarding our content should be reported here. No security testing should be done against the platform itself. Any security issues found within the platform should be reported [directly to Atlassian](https://bugcrowd.com/atlassian).",
           "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "support.lacework.com",
+          "asset_type": "URL",
+          "availability_requirement": "low",
+          "confidentiality_requirement": "medium",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "Our support site is hosted externally by Zendesk. No security testing should be done against the platform itself. Any security issues found within the platform should be reported [directly to Zendesk](https://hackerone.com/zendesk).",
+          "integrity_requirement": "low",
           "max_severity": "none"
         }
       ]
@@ -23147,7 +23147,7 @@
     }
   },
   {
-    "allows_bounty_splitting": false,
+    "allows_bounty_splitting": true,
     "average_time_to_bounty_awarded": 1223.0,
     "average_time_to_first_program_response": 50.0,
     "average_time_to_report_resolved": 1033.0,
@@ -36442,6 +36442,17 @@
           "max_severity": "critical"
         },
         {
+          "asset_identifier": "Acronis Cyber Protect Home Office (formerly Acronis True Image)",
+          "asset_type": "DOWNLOADABLE_EXECUTABLES",
+          "availability_requirement": "low",
+          "confidentiality_requirement": "medium",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Acronis Cyber Protect Home Office is designed for protection of home computers. You may download a trial version [here](https://www.acronis.com/en-us/personal/computer-backup).",
+          "integrity_requirement": "medium",
+          "max_severity": "critical"
+        },
+        {
           "asset_identifier": "Acronis DeviceLock DLP",
           "asset_type": "DOWNLOADABLE_EXECUTABLES",
           "availability_requirement": "medium",
@@ -36461,17 +36472,6 @@
           "eligible_for_submission": true,
           "instruction": "Acronis Snap Deploy is designed to deploy and provision all of your servers and workstations at once. You may request a trial by completing [registration](https://www.acronis.com/en-us/products/snap-deploy/trial/).",
           "integrity_requirement": "high",
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "Acronis True Image",
-          "asset_type": "DOWNLOADABLE_EXECUTABLES",
-          "availability_requirement": "low",
-          "confidentiality_requirement": "medium",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "Acronis True Image is designed for protection of home computers. You may download a trial version [here](https://www.acronis.com/en-us/personal/computer-backup).",
-          "integrity_requirement": "medium",
           "max_severity": "critical"
         },
         {
@@ -37702,11 +37702,22 @@
           "max_severity": "critical"
         },
         {
+          "asset_identifier": "account.brave.com",
+          "asset_type": "URL",
+          "availability_requirement": "medium",
+          "confidentiality_requirement": "medium",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": "medium",
+          "max_severity": "critical"
+        },
+        {
           "asset_identifier": "basicattentiontoken.org",
           "asset_type": "URL",
           "availability_requirement": "medium",
           "confidentiality_requirement": "low",
-          "eligible_for_bounty": false,
+          "eligible_for_bounty": true,
           "eligible_for_submission": true,
           "instruction": "We are not generally interested in bugs on the static website hosted <basicattentiontoken.org>. Particularly severe bugs which threaten immediate user harm may be considered. Due to report volume, we do not guarantee responses to website-related submissions.",
           "integrity_requirement": "medium",
@@ -37717,7 +37728,7 @@
           "asset_type": "URL",
           "availability_requirement": "medium",
           "confidentiality_requirement": "none",
-          "eligible_for_bounty": false,
+          "eligible_for_bounty": true,
           "eligible_for_submission": true,
           "instruction": "We are not generally interested in bugs on <brave.com>. Particularly severe bugs which threaten immediate user harm may be considered. Due to report volume, we do not guarantee responses to website-related submissions.",
           "integrity_requirement": "medium",
