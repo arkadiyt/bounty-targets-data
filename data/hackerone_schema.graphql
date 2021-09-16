@@ -24588,6 +24588,7 @@ type TeamIntegrationsTray implements Node & TeamIntegrationInterface {
   _id: ID!
   active: Boolean!
   authentication_type: String
+  can_create_solution_instance(solution_id: String!): Boolean!
   config_url: String
   id: ID!
   linkable: Boolean!
