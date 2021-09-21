@@ -15098,6 +15098,7 @@ type Organization implements Node {
     recipient_username: String
   ): TeamMemberInvitationConnection
   profile_picture(size: ProfilePictureSizes!): String
+  profile_picture_filename: String
   team_member_groups(
     """
     Returns the elements in the list that come after the specified cursor.
