@@ -1194,7 +1194,7 @@
     "name": "Meredith",
     "offers_bounties": false,
     "offers_swag": true,
-    "response_efficiency_percentage": 89,
+    "response_efficiency_percentage": 88,
     "submission_state": "open",
     "url": "https://hackerone.com/meredith",
     "website": "https://meredith.com",
@@ -23311,7 +23311,7 @@
     "name": "GitLab",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 96,
+    "response_efficiency_percentage": 97,
     "submission_state": "open",
     "url": "https://hackerone.com/gitlab",
     "website": "https://about.gitlab.com",
@@ -27569,7 +27569,7 @@
     "name": "Udemy",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 88,
+    "response_efficiency_percentage": 89,
     "submission_state": "open",
     "url": "https://hackerone.com/udemy",
     "website": "http://udemy.com",
@@ -63325,6 +63325,117 @@
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
           "instruction": "Cardano-Wallet: \nhttps://github.com/input-output-hk/cardano-wallet\n\nCardano-Wallet exposes a REST api that allows wallet based functions like sending a transaction, delegation to a pool, list addresses and transactions etc. \nThe API documentation can be found here: https://input-output-hk.github.io/cardano-wallet/api/edge/\nThe latest release of Cardano-Wallet is the version that is in scope The node version in scope for testing wallet is the version that is included in the release assets, mentioned in the release notes. \n\nThe preferred way is to either build from source or use the pre-built binaries that are included in the release. The wallet is built with the \nThe wallet connects to the Cardano-Node via a file socket.\n\nThe wallet can be executed as follows:\n./cardano-wallet serve --node-socket ./cardano-testnet.socket --database ./wallet-db-testnet --listen-address 0.0.0.0 --testnet testnet/testnet-byron-genesis.json --port 8090 \n\nThe wallet supports both Byron (Legacy) wallets and addresses and Shelley (HD) wallets and addresses. Details on wallet and address formats can be found here:\nhttps://input-output-hk.github.io/adrestia/docs/key-concepts/hierarchical-deterministic-wallets/\nhttps://input-output-hk.github.io/adrestia/docs/key-concepts/addresses-byron/\n\nDetails for getting Testnet Ada (tAda) are here:\nhttps://testnets.cardano.org/en/testnets/cardano/tools/faucet/\n",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
+    "allows_bounty_splitting": false,
+    "average_time_to_bounty_awarded": null,
+    "average_time_to_first_program_response": null,
+    "average_time_to_report_resolved": null,
+    "handle": "ibb",
+    "id": 54349,
+    "managed_program": false,
+    "name": "Internet Bug Bounty",
+    "offers_bounties": true,
+    "offers_swag": false,
+    "response_efficiency_percentage": null,
+    "submission_state": "open",
+    "url": "https://hackerone.com/ibb",
+    "website": "https://www.hackerone.com/internet-bug-bounty",
+    "targets": {
+      "in_scope": [
+        {
+          "asset_identifier": "https://github.com/Electron",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Build cross platform desktop apps with JavaScript, HTML, and CSS. Disclosure instructions: https://github.com/electron/electron/security/policy",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://github.com/Nginx",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Disclosure instructions: http://nginx.org/en/security_advisories.html",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://github.com/curl/curl",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Curl language. Disclosure instructions: https://github.com/curl/curl/blob/master/docs/SECURITY-PROCESS.md",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://github.com/django",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "The Web framework for perfectionists with deadlines. Disclosure instructions: https://www.djangoproject.com/security/",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://github.com/openssl/openssl",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "OpenSSL. Disclosure instructions: https://www.openssl.org/news/vulnerabilities.html",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://github.com/rails",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Ruby on Rails. Disclosure Instructions: https://rubyonrails.org/security/",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://github.com/ruby",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "The Ruby Programming Language. Disclosure Instructions: https://www.ruby-lang.org/en/security/",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://github.com/rubygems/rubygems",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Library packaging and distribution for Ruby. Disclosure instructions: https://guides.rubygems.org/security/#reporting-security-vulnerabilities",
           "integrity_requirement": null,
           "max_severity": "critical"
         }
