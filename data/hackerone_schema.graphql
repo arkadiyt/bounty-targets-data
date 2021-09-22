@@ -10318,6 +10318,14 @@ input FiltersCustomFieldAttributeFilterInput {
   internal: BooleanPredicateInput
 }
 
+input FiltersCustomFieldValueFilterInput {
+  _and: [FiltersCustomFieldValueFilterInput]
+  _not: FiltersCustomFieldValueFilterInput
+  _or: [FiltersCustomFieldValueFilterInput]
+  id: IntPredicateInput
+  value: StringPredicateInput
+}
+
 input FiltersCustomRemediationGuidanceFilterInput {
   _and: [FiltersCustomRemediationGuidanceFilterInput]
   _not: FiltersCustomRemediationGuidanceFilterInput
@@ -10508,6 +10516,7 @@ input FiltersReportFilterInput {
   bounty_awarded_at: DateTimePredicateInput
   bug_reporter_agreed_on_going_public_at: DateTimePredicateInput
   closed_at: DateTimePredicateInput
+  custom_field_values: FiltersCustomFieldValueFilterInput
   disclosed_at: DateTimePredicateInput
   hacker_published: BooleanPredicateInput
   hackerone_hacker_submissions: Boolean
@@ -17326,6 +17335,7 @@ enum ProfilePictureSizes {
 }
 
 input ProgramAnalyticsBenchmarkFilterInput {
+  actor_is_hackerone_employee: ProgramAnalyticsFilterBoolInput
   actor_is_hackerone_triager: ProgramAnalyticsFilterBoolInput
   company_headcount_range: ProgramAnalyticsFilterStringInput
   industries: ProgramAnalyticsFilterStringInput
@@ -17357,6 +17367,7 @@ input ProgramAnalyticsFilterCustomFieldInput {
 }
 
 input ProgramAnalyticsFilterInput {
+  actor_is_hackerone_employee: ProgramAnalyticsFilterBoolInput
   actor_is_hackerone_triager: ProgramAnalyticsFilterBoolInput
   asset_id: ProgramAnalyticsFilterStringInput
   asset_identifier: ProgramAnalyticsFilterStringInput
