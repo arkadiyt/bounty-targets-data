@@ -30992,6 +30992,17 @@
           "max_severity": "critical"
         },
         {
+          "asset_identifier": "acme-challenge.nl",
+          "asset_type": "URL",
+          "availability_requirement": "low",
+          "confidentiality_requirement": "medium",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "This domain is used to fulfill the acme challenge type of let's encrypt in an aggregated place. This way there's only one domain to manage for all acme challenges",
+          "integrity_requirement": "medium",
+          "max_severity": "critical"
+        },
+        {
           "asset_identifier": "careers.evonik.com",
           "asset_type": "URL",
           "availability_requirement": "medium",
@@ -31007,7 +31018,7 @@
           "asset_type": "URL",
           "availability_requirement": "none",
           "confidentiality_requirement": "low",
-          "eligible_for_bounty": false,
+          "eligible_for_bounty": true,
           "eligible_for_submission": true,
           "instruction": "devmaximum.com is only used internally for 2 domains. hence it's impact is fairly minor",
           "integrity_requirement": "none",
@@ -31025,6 +31036,61 @@
           "max_severity": "critical"
         },
         {
+          "asset_identifier": "dropr.io",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "This domain runs a service for media (image, videos audio and document files) hosting, scaling, resizing and retrieving. For example view the source code of https://werken.belastingdienst.nl to see it's usage.",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "dropr.nl",
+          "asset_type": "URL",
+          "availability_requirement": "low",
+          "confidentiality_requirement": "low",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "This is an old domain which shouldn't be in use anymore.",
+          "integrity_requirement": "low",
+          "max_severity": "medium"
+        },
+        {
+          "asset_identifier": "maxcld.net",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "This domains runs a multitude of services (on subdomains) affiliated with Radancy NL internally for our organization and technical solutions. For example docs, zabbix, object store access etc.",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "maxcldapp.net",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "medium",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "This domain is used as CNAME target for domains managed by our clients. This way we are able to internally redirect domains to other backends without the need for customers to change their DNS settings.",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "maximumcdn.net",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "low",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "This domain is used as CDN to deliver web assets (js, css, images, videos etc.)",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
           "asset_identifier": "mijnkombijdepolitie.nl",
           "asset_type": "URL",
           "availability_requirement": "medium",
@@ -31034,6 +31100,28 @@
           "instruction": "",
           "integrity_requirement": "medium",
           "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "no-reply.cloud",
+          "asset_type": "URL",
+          "availability_requirement": "low",
+          "confidentiality_requirement": "medium",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "This domain is used as default email sender domain for our review, testing and staging environments. Sender addresses usually are in the form of `<custom-site-name>@no-reply.cloud`. For example: `workatmcdo.be@no-reply.cloud`",
+          "integrity_requirement": "medium",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "nossl.nl",
+          "asset_type": "URL",
+          "availability_requirement": "none",
+          "confidentiality_requirement": "medium",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "This domain is used as a fallback domain for non-configured backends. It is also used as default TLS response certificate when the domain is not configured and not used anywhere. This causes an intentional incorrect nossl.nl TLS certificate on domains.\nIgnoring the ssl certificate mismatch in your browser should give a \"This domain is not configured\" notice, just like https://nossl.nl/ itself.",
+          "integrity_requirement": "low",
+          "max_severity": "high"
         },
         {
           "asset_identifier": "werkenbijdefensie.nl",
@@ -31055,6 +31143,17 @@
           "eligible_for_submission": true,
           "instruction": "",
           "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "wp-mail.nl",
+          "asset_type": "URL",
+          "availability_requirement": "low",
+          "confidentiality_requirement": "medium",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "This domain is used as default email sender domain for our wordpress review, testing and staging environments. Sender addresses usually are in the form of `<custom-site-name>@wp-mail.nl`. For example: `werkenbijbdo@wp-mail.nl`",
+          "integrity_requirement": "medium",
           "max_severity": "critical"
         },
         {
@@ -37373,7 +37472,7 @@
     "name": "Intel Corporation",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 52,
+    "response_efficiency_percentage": 45,
     "submission_state": "open",
     "url": "https://hackerone.com/intel",
     "website": "http://www.intel.com/security",
@@ -47881,7 +47980,7 @@
     "name": "pixiv",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 89,
+    "response_efficiency_percentage": 88,
     "submission_state": "open",
     "url": "https://hackerone.com/pixiv",
     "website": "https://www.pixiv.net",
