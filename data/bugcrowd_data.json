@@ -10486,29 +10486,6 @@
     }
   },
   {
-    "name": "TripAdvisor Mobile",
-    "url": "https://bugcrowd.com/tripadvisor-mobile",
-    "allows_disclosure": true,
-    "managed_by_bugcrowd": true,
-    "safe_harbor": "full",
-    "max_payout": 3500,
-    "targets": {
-      "in_scope": [
-        {
-          "type": "android",
-          "target": "TripAdvisor Android App"
-        },
-        {
-          "type": "ios",
-          "target": "TripAdvisor iOS App"
-        }
-      ],
-      "out_of_scope": [
-
-      ]
-    }
-  },
-  {
     "name": "TripAdvisor",
     "url": "https://bugcrowd.com/tripadvisor-vdp",
     "allows_disclosure": false,
@@ -10518,12 +10495,56 @@
     "targets": {
       "in_scope": [
         {
+          "type": "other",
+          "target": "*.fkimg.net, *.flipke.com"
+        },
+        {
+          "type": "other",
+          "target": "*.flipkee.com, *.flipkeg.com, *.flipkey.biz, *.flipkey.co.uk, *.flipkey.info, *.flipkey.mobi, *.flipkey.net, *.flipkey.org, *.flipkey.us, *.flipkeybook.com, *.flipkeybookings.com, *.flipkeyconnect.com, *.flipkeyexchange.com, *.flipkeyinc.com, *.flipkeylistings.com, *.flipkeymail.com, *.flipkeypmsales.com, *.flipkeyprod.net, *.flipkeyrentals.com, *.flipkeys.com, *.flipkeys.net, *.flipkeys.org, *.flipkeysucks.com, *.flipkeyvacationrentals.com, *.flipky.com, *.flippkey.com, *.flopkey.com, *.myflipkey.com "
+        },
+        {
+          "type": "other",
+          "target": "*.flipkey.com"
+        },
+        {
+          "type": "other",
+          "target": "*.holidaylettings.co.uk"
+        },
+        {
+          "type": "other",
+          "target": "*.holidaylettings.com"
+        },
+        {
+          "type": "other",
+          "target": "*.housetrip.com"
+        },
+        {
+          "type": "other",
+          "target": "*.niumba.com"
+        },
+        {
+          "type": "website",
+          "target": "*.vacationhomerentals.com"
+        },
+        {
           "type": "website",
           "target": "Any localized version of www.tripadvisor.com available from the site's header or footer"
         },
         {
           "type": "website",
           "target": "Any publicly accessible TripAdvisor web asset or host (domains, ip space, etc) - except for what’s explicitly listed as Out-of-Scope below"
+        },
+        {
+          "type": "android",
+          "target": "TripAdvisor Android App"
+        },
+        {
+          "type": "ios",
+          "target": "TripAdvisor Owner APP (https://itunes.apple.com/us/app/vacation-rentals-owner-app-by-tripadvisor/id1045663228?mt=8)"
+        },
+        {
+          "type": "ios",
+          "target": "TripAdvisor iOS App"
         },
         {
           "type": "api",
@@ -10554,6 +10575,18 @@
           "target": "gwapi2.tripadvisor.com"
         },
         {
+          "type": "website",
+          "target": "https://www.tripadvisor.com/Hotel_Review-g52842-d730099-Reviews-Schrute_Farms-Honesdale_Pocono_Mountains_Region_Pennsylvania.html"
+        },
+        {
+          "type": "website",
+          "target": "https://www.tripadvisor.com/Plus"
+        },
+        {
+          "type": "website",
+          "target": "marlo.ext.tripadvisor.com"
+        },
+        {
           "type": "api",
           "target": "partnerapi.tapayments.com"
         },
@@ -10566,8 +10599,16 @@
           "target": "partnerapi2.tapayments.com"
         },
         {
+          "type": "website",
+          "target": "rentals.tripadvisor.com"
+        },
+        {
           "type": "api",
           "target": "service.platform.tripadvisor.com"
+        },
+        {
+          "type": "website",
+          "target": "spiti.holidaylettings.co.uk/"
         },
         {
           "type": "api",
@@ -10633,6 +10674,10 @@
         },
         {
           "type": "website",
+          "target": "https://propertymanagers.flipkey.com/, media-cdn.tripadvisor.com, *.vhrimg.com, *.newrelic.com, *.fkimg.com, *.bethanybeachguide.com"
+        },
+        {
+          "type": "website",
           "target": "https://www.cruisecritic.co.uk/rollcall/entry_cl.cfm.* "
         },
         {
@@ -10642,6 +10687,10 @@
         {
           "type": "website",
           "target": "https://www.cruisecritic.com/rollcall/entry_cl.cfm.* "
+        },
+        {
+          "type": "website",
+          "target": "images.flipkey.com, pm.flipkey.com, pages.flipkey.com, propertymanagers.flipkey.com"
         },
         {
           "type": "website",
