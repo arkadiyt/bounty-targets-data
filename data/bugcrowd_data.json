@@ -10804,9 +10804,25 @@
     "allows_disclosure": false,
     "managed_by_bugcrowd": true,
     "safe_harbor": "full",
-    "max_payout": 1000,
+    "max_payout": 5000,
     "targets": {
       "in_scope": [
+        {
+          "type": "api",
+          "target": "api.23andme.com"
+        },
+        {
+          "type": "api",
+          "target": "api.cag.us-west-2.int.23andme.us"
+        },
+        {
+          "type": "website",
+          "target": "auth.23andme.com"
+        },
+        {
+          "type": "website",
+          "target": "auth.cag.us-west-2.int.23andme.us"
+        },
         {
           "type": "website",
           "target": "blog.23andme.com"
@@ -10829,7 +10845,19 @@
         },
         {
           "type": "website",
+          "target": "store.23andme.com"
+        },
+        {
+          "type": "website",
           "target": "therapeutics.23andme.com"
+        },
+        {
+          "type": "website",
+          "target": "you.23andme.com"
+        },
+        {
+          "type": "website",
+          "target": "you.cag.us-west-2.int.23andme.us"
         }
       ],
       "out_of_scope": [
@@ -10840,6 +10868,10 @@
         {
           "type": "website",
           "target": "customercare.23andme.com"
+        },
+        {
+          "type": "website",
+          "target": "gis.23andme.com"
         },
         {
           "type": "website",
