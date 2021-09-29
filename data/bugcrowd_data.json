@@ -6481,60 +6481,6 @@
     }
   },
   {
-    "name": "Mailgun",
-    "url": "https://bugcrowd.com/mailgun",
-    "allows_disclosure": false,
-    "managed_by_bugcrowd": true,
-    "safe_harbor": "partial",
-    "max_payout": 1500,
-    "targets": {
-      "in_scope": [
-        {
-          "type": "api",
-          "target": "https://api.mailgun.net"
-        },
-        {
-          "type": "api",
-          "target": "https://api.mailjet.com/"
-        },
-        {
-          "type": "website",
-          "target": "https://app.mailgun.com"
-        },
-        {
-          "type": "website",
-          "target": "https://app.mailjet.com/"
-        },
-        {
-          "type": "other",
-          "target": "https://in.mailjet.com:587/"
-        },
-        {
-          "type": "website",
-          "target": "https://login.mailgun.com/"
-        },
-        {
-          "type": "website",
-          "target": "https://signup.mailgun.com"
-        },
-        {
-          "type": "website",
-          "target": "https://www.mailjet.com/"
-        }
-      ],
-      "out_of_scope": [
-        {
-          "type": "website",
-          "target": "https://documentation.mailgun.com"
-        },
-        {
-          "type": "website",
-          "target": "https://www.mailgun.com/"
-        }
-      ]
-    }
-  },
-  {
     "name": "Mail.ru Group",
     "url": "https://bugcrowd.com/mailru",
     "allows_disclosure": true,
@@ -9124,6 +9070,25 @@
         {
           "type": "api",
           "target": "SmartThings Rest APIs"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
+    "name": "SnapNames",
+    "url": "https://bugcrowd.com/snapnames",
+    "allows_disclosure": true,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "full",
+    "max_payout": 2500,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "website",
+          "target": "https://snapnames.com/"
         }
       ],
       "out_of_scope": [
