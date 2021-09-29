@@ -10799,6 +10799,88 @@
     }
   },
   {
+    "name": "23andMe",
+    "url": "https://bugcrowd.com/twentythree-and-me",
+    "allows_disclosure": false,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "full",
+    "max_payout": 2500,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "api",
+          "target": "api.cag.us-west-2.int.23andme.us"
+        },
+        {
+          "type": "website",
+          "target": "auth.cag.us-west-2.int.23andme.us"
+        },
+        {
+          "type": "website",
+          "target": "blog.23andme.com"
+        },
+        {
+          "type": "website",
+          "target": "education.23andme.com"
+        },
+        {
+          "type": "website",
+          "target": "fulfillment-integration.23andme.org"
+        },
+        {
+          "type": "website",
+          "target": "mediacenter.23andme.com"
+        },
+        {
+          "type": "website",
+          "target": "medical.23andme.com"
+        },
+        {
+          "type": "website",
+          "target": "research.23andme.com"
+        },
+        {
+          "type": "website",
+          "target": "store.23andme.com"
+        },
+        {
+          "type": "website",
+          "target": "therapeutics.23andme.com"
+        },
+        {
+          "type": "website",
+          "target": "you.cag.us-west-2.int.23andme.us"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "website",
+          "target": "23andme.mybrightsites.com"
+        },
+        {
+          "type": "website",
+          "target": "customercare.23andme.com"
+        },
+        {
+          "type": "website",
+          "target": "gis.us-west-2.live.23andme.us"
+        },
+        {
+          "type": "api",
+          "target": "https://api.23andme.com/"
+        },
+        {
+          "type": "website",
+          "target": "https://auth.23andme.com/"
+        },
+        {
+          "type": "website",
+          "target": "https://you.23andme.com/"
+        }
+      ]
+    }
+  },
+  {
     "name": "Twilio",
     "url": "https://bugcrowd.com/twilio",
     "allows_disclosure": false,
@@ -11016,6 +11098,25 @@
         {
           "type": "ios",
           "target": "tZERO Mobile Application (iOS)"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
+    "name": "Ubisoft VDP",
+    "url": "https://bugcrowd.com/ubisoft-vdp",
+    "allows_disclosure": false,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "partial",
+    "max_payout": 0,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "other",
+          "target": "Ubisoft services available from the internet and any software developed by Ubisoft that are not listed as Out of Scope. This includes our web applications, servers, and all our game(s) within 1 year of the last patch/update."
         }
       ],
       "out_of_scope": [
