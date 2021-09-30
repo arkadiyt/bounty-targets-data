@@ -2878,6 +2878,11 @@
     "targets": {
       "in_scope": [
         {
+          "type": "url",
+          "endpoint": "oauth.developers.stagaws.visma.com",
+          "description": "**Visma Developer Portal**\nVisma Developer Portal is used both internally and externally by developers for registering OAuth 2.0/OpenID Connect applications for Single-Sign-On with Visma (Visma Connect) and/or API integration.\n\nExisting Visma Connect users accounts can be used for testing. We also allow registration of new users if needed.\n\nUsers need to register an organization as part of the sign-in or to be added (invite) to an existing organization by organization's manager. The user which registers the organization also gets manager role assigned.\n\nEach organization has its own set of OAuth 2.0/OpenID Connect applications.\n\nPlease read the Getting Started Instructions here: https://vismabugbountyprod.z16.web.core.windows.net/VismaDeveloperPortal-getting-started.pdf\n\n\n\n**Out of scope:**\n* session invalidation across browsers/devices - this is how it is intended to work by design\n* issues related to other APIs except DevPortal Bug Bounty Interactive and DevPortal Bug Bounty Non-Interactive"
+        },
+        {
           "type": "ios",
           "endpoint": "564141518",
           "description": "**Visma Scanner**\nVisma Scanner is a mobile app used for sending receipts and invoices to your Visma accounting system.\nThe iOS version of the app can be found here:\nhttps://apps.apple.com/us/app/visma-scanner/id564141518\nPlease read and follow the steps in the Startup guide to create an account and start hacking: https://vismabugbountyprod.z16.web.core.windows.net/VismaScanner-getting-started.pdf\n\n**Out of scope:**\n* Session invalidation issues (e.g. logout, password change, email change, role change, user deletion, etc)\n* Private screen exposure in the app\n* Stack traces from api calls\n* Jailbroken devices is out of scope\n* All options for login are out of scope, except eAccounting (please see details in the \"Getting Started instructions document\"\n\n\n"
@@ -2885,7 +2890,7 @@
         {
           "type": "url",
           "endpoint": "accountsettings.connect.identity.stagaws.visma.com",
-          "description": "**Connect**\nSee instructions for domain \"connect.identity.stagaws.visma.com\".\n\n**Out of scope:**\n* Session invalidation during password change - this bug is known and the team is working on a fix.\n* Session invalidation after enabling 2FA - by design intended to work like this.\n* Tenant based consent not removed and may lead to unauthorized access; we are aware about this vulnerability and the development team is working to fix it."
+          "description": "**Connect**\nSee instructions for domain \"connect.identity.stagaws.visma.com\".\n\n**Out of scope:**\n* Session invalidation after enabling 2FA - by design intended to work like this\n"
         },
         {
           "type": "url",
@@ -2905,7 +2910,7 @@
         {
           "type": "url",
           "endpoint": "api.workbox.dk",
-          "description": "*Dinero*\nThis is Dinero's Public API.See instructions for \"app.workbox.dk\""
+          "description": "**Dinero**\nThis is Dinero's Public API.See instructions for \"app.workbox.dk\""
         },
         {
           "type": "url",
@@ -2940,7 +2945,7 @@
         {
           "type": "url",
           "endpoint": "connect.identity.stagaws.visma.com",
-          "description": "**Connect**\nVisma Connect is featurewise a small but critical component in the Visma portfolio. It is a single sign-on solution used by many Visma services. It is also the place where users manage security preferences such as passwords, MFA, 2FA, email and other account settings.\nUser accounts for testing can be created on https://connect.identity.stagaws.visma.com (this signup flow is not available in production).\nThe test accounts will not have access to any other services right now, so testing is limited to the login portal itself. In the upcoming months we will add several large services to the scope which will use the Visma Connect portal as a common authentication platform.\n\n**Out of scope:**\n* Session invalidation during password change - this bug is known and the team is working on a fix.\n* Session invalidation after enabling 2FA - by design intended to work like this.\n"
+          "description": "**Connect**\nVisma Connect is featurewise a small but critical component in the Visma portfolio. It is a single sign-on solution used by many Visma services. It is also the place where users manage security preferences such as passwords, MFA, 2FA, email and other account settings.\n\nUser accounts for testing can be created on https://connect.identity.stagaws.visma.com (this signup flow is not available in production).\n\nThe test accounts will not have access to any other services right now, so testing is limited to the login portal itself.\n\n**Out of scope:**\n* Session invalidation after enabling 2FA - by design intended to work like this.\n"
         },
         {
           "type": "url",
