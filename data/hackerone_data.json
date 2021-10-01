@@ -55882,7 +55882,7 @@
     "name": "MTN Group",
     "offers_bounties": false,
     "offers_swag": false,
-    "response_efficiency_percentage": 21,
+    "response_efficiency_percentage": 20,
     "submission_state": "open",
     "url": "https://hackerone.com/mtn_group",
     "website": "https://www.mtn.com/",
@@ -58646,6 +58646,128 @@
     "targets": {
       "in_scope": [
 
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
+    "allows_bounty_splitting": true,
+    "average_time_to_bounty_awarded": 661.0,
+    "average_time_to_first_program_response": 39.0,
+    "average_time_to_report_resolved": 1455.0,
+    "handle": "celo",
+    "id": 45143,
+    "managed_program": true,
+    "name": "Celo",
+    "offers_bounties": true,
+    "offers_swag": true,
+    "response_efficiency_percentage": 94,
+    "submission_state": "open",
+    "url": "https://hackerone.com/celo",
+    "website": "http://celo.org",
+    "targets": {
+      "in_scope": [
+        {
+          "asset_identifier": " https://github.com/celo-org/zexe",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "ZEXE (pronounced /zeksē/) is a Rust library for decentralized private computation.\n\nThis library was initially developed as part of the paper [\"ZEXE: Enabling Decentralized Private Computation\"](https://ia.cr/2018/962), and it is released under the MIT License and the Apache v2 License.\n\n**WARNING:** This is an academic proof-of-concept prototype, and in particular has not received careful code review. This implementation is NOT ready for production use.",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": " https://github.com/zviadm/celoterminal",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": "medium",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Desktop app to manage accounts and interact with the decentralized apps on the Celo blockchain.",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "*.celo.org",
+          "asset_type": "URL",
+          "availability_requirement": "low",
+          "confidentiality_requirement": "low",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Celo.org and all subdomains",
+          "integrity_requirement": "low",
+          "max_severity": "medium"
+        },
+        {
+          "asset_identifier": "*.clabs.co",
+          "asset_type": "URL",
+          "availability_requirement": "low",
+          "confidentiality_requirement": "low",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "clabs.co and all sub domains",
+          "integrity_requirement": "medium",
+          "max_severity": "high"
+        },
+        {
+          "asset_identifier": "Celo Protocol & Smart Contracts",
+          "asset_type": "OTHER",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Examples for Celo Protocol\n* Double spend by  getting the clients to accept a different chain (CRITICAL)\n* Double spend by validating malicious blocks (HIGH)\n* Tamper/manipulate blockchain history to invalidate transactions (MEDIUM)\n* Cause network to mint tokens to own account (CRITICAL)\n* Undermine consensus mechanism to split chain (CRITICAL)\n* Censorship (e.g. on votes) (CRITICAL)\n* Steal tokens from node (HIGH)\n* Get a phone number associated with you that you don't own (HIGH)\n* Prevent node from accessing the network (MEDIUM)\n* Abuse bugs in economic system to defraud other participants (e.g. avoid transaction fees to full nodes) (MEDIUM)\n* DDOS attack on consensus (reliability cause consensus mechanism to stall indef) (CRITICAL) \n* Shutdown network (CRITICAL)\n* Get ⅓ of validators elected (CRITICAL)\n* Get ⅔ of validators elected (HIGH)\n* Get 1 validator elected (MEDIUM)\n* Get elected by nefarious means (sneak into the kitchen door) (HIGH)\n* Get more rewards than you should (hand in the tilt/cash register) (HIGH)\n* Faking the uptime system / tricking the performance metric (“cooking” from the pub) (HIGH)\n* VG (or V) Impersonation attacks (pretend you work at the restaurant) - social eng. attack (CRITICAL)\n* DDOS on attestation service (MEDIUM)\n* Manipulate account balances (HIGH)\n* Steal Celo Gold from reserve (CRITICAL)\n",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://github.com/celo-org/bls-zexe",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Implements BLS signatures as described in [BDN18]. Used by the Celo protocol.",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://github.com/celo-org/celo-blockchain",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Official golang implementation of the Celo Blockchain, based off of the official [golang implementation of the Ethereum protocol](https://github.com/ethereum/go-ethereum).",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://github.com/celo-org/celo-monorepo",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Celo Monorepo - Official repository for core projects comprising the Celo platform\n\nThis repository contains the source code for the Celo core projects including the smart contracts, wallet app, and other packages. The source code for the Celo Blockchain which operates a node on the Celo Network is kept in a separate repo called [celo-blockchain](https://github.com/celo-org/celo-blockchain).",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://github.com/celo-org/celo-multisend",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Please contact bug-bounty@clabs.co for access to repo.",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        }
       ],
       "out_of_scope": [
 
