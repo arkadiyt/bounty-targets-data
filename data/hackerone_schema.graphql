@@ -22129,6 +22129,7 @@ type SubmissionRequirements implements Node {
   id: ID!
   mfa_required_at: DateTime
   severity_options: SeverityInputEnum!
+  severity_required_at: DateTime
   terms_required_at: DateTime
 }
 
@@ -29792,6 +29793,7 @@ input UpdateSubmissionRequirementsInput {
   clientMutationId: String
   mfa_required_at: String
   severity_options: SeverityInputEnum
+  severity_required_at: String
   team_id: ID!
 }
 
