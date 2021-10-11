@@ -25061,7 +25061,7 @@
     "name": "Dashlane",
     "offers_bounties": true,
     "offers_swag": true,
-    "response_efficiency_percentage": 79,
+    "response_efficiency_percentage": 80,
     "submission_state": "open",
     "url": "https://hackerone.com/dashlane",
     "website": "https://www.dashlane.com/",
@@ -52192,6 +52192,28 @@
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
           "instruction": "**Note that if you do not see the 'Account' link on the top right please perform a hard-reload in your browser**\n\n**Type:** Fortmatic Modal\n\n**What it runs on:**\n- Redux, HTML, LESS\n\n**What it does:**\n- This provides users access to their personal settings, and offers critical features such as managing their PIN, recovery email, and exporting their private key. \n\n**What to look for:**\n- There is a host of private information being disclosed through this modal. Any web or access control vulnerabilities are of high risk here. Any attacks that can bypass, or skip layers of authentication allowing modification of a user's account is of high interest.\n**Test plan:**\n- You can gain access to the account settings on our [landing page](www.fortmatic.com?ref=h1) and hitting the `Account` link in the nav bar on the top right. Accessing and interacting with the modal will not require any cryptocurrencies or setup beyond a Fortmatic account.",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "Login with SMS - Feature",
+          "asset_type": "OTHER",
+          "availability_requirement": "low",
+          "confidentiality_requirement": "medium",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Demo and Overview:\nhttps://magic.link/docs/login-methods/sms/build-a-demo/browser\n\nGetting started on React:\nhttps://magic.link/docs/login-methods/sms/integration/web\n\nGetting started on React Native:\nhttps://magic.link/docs/login-methods/sms/integration/react-native",
+          "integrity_requirement": "medium",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "Magic and Fortmatic Products",
+          "asset_type": "OTHER",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
           "integrity_requirement": "high",
           "max_severity": "critical"
         },
