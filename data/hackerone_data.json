@@ -28481,7 +28481,7 @@
     "name": "ok.ru",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 34,
+    "response_efficiency_percentage": 35,
     "submission_state": "open",
     "url": "https://hackerone.com/ok",
     "website": "http://ok.ru",
@@ -38252,7 +38252,7 @@
     "name": "Xiaomi",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 82,
+    "response_efficiency_percentage": 83,
     "submission_state": "open",
     "url": "https://hackerone.com/xiaomi",
     "website": "http://www.mi.com",
@@ -65348,6 +65348,160 @@
   },
   {
     "allows_bounty_splitting": false,
+    "average_time_to_bounty_awarded": 209.0,
+    "average_time_to_first_program_response": 73.0,
+    "average_time_to_report_resolved": 568.0,
+    "handle": "ninja-kiwi",
+    "id": 51622,
+    "managed_program": true,
+    "name": "Ninja Kiwi",
+    "offers_bounties": true,
+    "offers_swag": false,
+    "response_efficiency_percentage": 92,
+    "submission_state": "open",
+    "url": "https://hackerone.com/ninja-kiwi",
+    "website": "https://ninjakiwi.com",
+    "targets": {
+      "in_scope": [
+        {
+          "asset_identifier": "*.nkstatic.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "This domain hosts static content for Ninja Kiwi games and website.",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "analytics.ninjakiwi.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "This domain hosts the API that consumed analytics events from our game clients",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "api.ninjakiwi.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "This domain hosts the API for our mobile and PC games. Further details about the API can be found in the Test Plan section.",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "battles.tv",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Battles.tv is used to share replays from our Bloons TD Battles game. ",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "boomer2.ninjakiwi.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "This domain handles ad provider callbacks for our web games. This domain is only eligible for reduced bounty pay-outs which are outlined in the Policy.",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "ipa-auckland.ninja.kiwi",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "This domain hosts builds of Ninja Kiwi games for iOS devices.  \n \n**Areas of focus:**\n* The ability to download any valid build from this service will be considered a HIGH vulnerability. \n* We will reward any enumeration of available game builds with a CRITICAL bounty. \n",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "mynk.ninjakiwi.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "This is a legacy domain which powers our Flash games. This domain is only eligible for reduced bounty pay-outs which are outlined in the Policy.",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "ninja.kiwi",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "This domain is used by Ninja Kiwi for our URL shortener service, ie https://ninja.kiwi/h1. No subdomains are eligible for a bounty. ",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "relay-legacy.ninja.kiwi",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "This is our multiplayer relay server. To view and inspect real-life traffic to a legacy relay you can use a network monitoring tool (eg, Wireshark) and play a multiplayer game in any of the following Ninja Kiwi titles:\n* Bloons TD Battles (UDP)\n* SAS4: Zombie Assault (TCP)\n* Tower Keepers: (TCP)\n\nThe server uses port 1445 for both UDP and TCP traffic. ",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "relay-nksrv.ninja.kiwi",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "This is our multiplayer relay server. To view and inspect real-life traffic to a legacy relay you can use a network monitoring tool (eg, Wireshark) and play a multiplayer game in any of the following Ninja Kiwi titles:\n* Bloons TD 6\n* Counter Snipe\n\nThe server uses port 1445 over TCP.\n",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "asset_identifier": "*.souparea.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "ninjakiwi.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "The main Ninja Kiwi website is not in scope",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        }
+      ]
+    }
+  },
+  {
+    "allows_bounty_splitting": false,
     "average_time_to_bounty_awarded": null,
     "average_time_to_first_program_response": 8.0,
     "average_time_to_report_resolved": 2021.0,
@@ -65833,7 +65987,7 @@
     "name": "MyEtherWallet",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 91,
+    "response_efficiency_percentage": 90,
     "submission_state": "open",
     "url": "https://hackerone.com/myetherwallet",
     "website": "http://myetherwallet.com",
