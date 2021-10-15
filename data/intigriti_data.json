@@ -448,18 +448,28 @@
       "in_scope": [
         {
           "type": "url",
-          "endpoint": "www.vlaanderen.be",
+          "endpoint": "https://beta.gastwebsite-acm.burgerprofiel.ext-vlaanderen.be",
+          "description": "**Authenticated** demo environment for the widget platform. The website itself is just an illustrative example and should not be tested."
+        },
+        {
+          "type": "url",
+          "endpoint": "https://beta.gastwebsite.burgerprofiel.ext-vlaanderen.be",
+          "description": "**Unauthenticated** demo environment for the widget platform. The website itself is just an illustrative example and should not be tested."
+        },
+        {
+          "type": "url",
+          "endpoint": "https://beta.widgets.burgerprofiel.dev-vlaanderen.be/",
+          "description": "Embeddable portion of My Citizen Profile\n\nExample where the functionality has been embedded is: https://www.vlaanderen.be/\nYou can check in the network logs which requests are sent to the in scope service."
+        },
+        {
+          "type": "url",
+          "endpoint": "https://burgerprofiel.beta-vlaanderen.be",
+          "description": "My Citizen Profile (Mijn Burgerprofiel in Dutch) is the go-to spot for citizens to manage their affairs digitally with the government. Citizens can access their personal data, consult status reports, download certificates, and request new government services such as a permit of subsidy. My Citizen Profile is a plug-in that can be integrated into different official government websites, be it on a Flemish or local level.\n\nAvailable in Dutch - More information can also be found on https://www.vlaanderen.be/uw-overheid/mijn-burgerprofiel (only in Dutch).\n\nThis beta environment is equiped with a mock authentication (OpenID) service, which can generate tokens for different kinds of accounts. As such, the authentication flow of this mocked service is not in scope."
+        },
+        {
+          "type": "url",
+          "endpoint": "https://www.vlaanderen.be",
           "description": null
-        },
-        {
-          "type": "url",
-          "endpoint": "https://prod.widgets.burgerprofiel.vlaanderen.be/",
-          "description": "Embeddable portion of My Citizen Profile\n\nExample where the functionality has been embedded is: https://www.vlaanderen.be/\nYou can check in the network logs which requests are sent to the in scope service.\nNote: https://www.vlaanderen.be/ itself not in the scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "www.burgerprofiel.be",
-          "description": "My Citizen Profile (Mijn Burgerprofiel in Dutch) is the go-to spot for citizens to manage their affairs digitally with the government. Citizens can access their personal data, consult status reports, download certificates, and request new government services such as a permit of subsidy. My Citizen Profile is a plug-in that can be integrated into different official government websites, be it on a Flemish or local level.\n\nAvailable in Dutch - More information can also be found on https://www.vlaanderen.be/uw-overheid/mijn-burgerprofiel (only in Dutch).\n\nAnyone with a Belgian national registery/ID can log onto this service."
         }
       ],
       "out_of_scope": [
