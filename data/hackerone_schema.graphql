@@ -8083,6 +8083,58 @@ type CustomRemediationGuidanceEdge {
 }
 
 """
+CVE Affected Product type
+"""
+type CveAffectedProduct implements Node {
+  cpe_23_uri: String
+  cve_id: String!
+  id: ID!
+  product: String
+  vendor: String
+  version: String
+  version_end_excluding: String
+  version_end_including: String
+  version_start_excluding: String
+  version_start_including: String
+}
+
+"""
+The connection type for CveAffectedProduct.
+"""
+type CveAffectedProductConnection {
+  """
+  A list of edges.
+  """
+  edges: [CveAffectedProductEdge]
+
+  """
+  A list of nodes.
+  """
+  nodes: [CveAffectedProduct]
+
+  """
+  Information to aid in pagination.
+  """
+  pageInfo: PageInfo!
+  total_count: Int
+}
+
+"""
+An edge in a connection.
+"""
+type CveAffectedProductEdge {
+  """
+  A cursor for use in pagination.
+  """
+  cursor: String!
+
+  """
+  The item at the end of the edge.
+  """
+  node: CveAffectedProduct
+}
+
+"""
 A request for a CVE
 """
 type CveRequest implements Node & ResourceInterface {
@@ -17583,12 +17635,15 @@ input ProgramAnalyticsFilterInput {
   asset_identifier: ProgramAnalyticsFilterStringInput
   current_path: ProgramAnalyticsFilterStringInput
   custom_fields: [ProgramAnalyticsFilterCustomFieldInput!]
+  external_bug_id: ProgramAnalyticsFilterStringInput
   http_host: ProgramAnalyticsFilterStringInput
+  imported: ProgramAnalyticsFilterBoolInput
   report_current_substate: ProgramAnalyticsFilterStringInput
   report_disclosed_state: ProgramAnalyticsFilterStringInput
   report_severity: ProgramAnalyticsFilterStringInput
   report_source: ProgramAnalyticsFilterStringInput
   structured_scope_id: ProgramAnalyticsFilterStringInput
+  submitted_by_team_member: ProgramAnalyticsFilterBoolInput
   weakness_id: ProgramAnalyticsFilterStringInput
 }
 
@@ -18323,6 +18378,29 @@ type Query implements Node {
   program_analytics(end_date: DateTime!, from: ProgramAnalyticsFromEnum!, group: ProgramAnalyticsGroupEnum!, secondary_group: ProgramAnalyticsSecondaryGroupInput, select: ProgramAnalyticsSelectEnum!, start_date: DateTime!, teams: [String!]!, where: ProgramAnalyticsFilterInput!): [DataPoint]
   program_analytics_benchmarks(end_date: DateTime!, from: ProgramAnalyticsFromEnum!, group: ProgramAnalyticsGroupEnum!, select: ProgramAnalyticsBenchmarkSelectEnum!, start_date: DateTime!, teams: [String!]!, where: ProgramAnalyticsBenchmarkFilterInput!): [DataPoint]
   query: Query!
+  ranked_cve_entries(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+    limit: Int
+    offset: Int
+  ): RankedCveEntryConnection
   ranked_weaknesses_by_year(industry: String, year: Int): [RankedWeaknessByYear!]
   report(id: Int!): Report
   report_retest_user(activity_id: Int!): ReportRetestUser
@@ -18627,6 +18705,95 @@ type Query implements Node {
 
 input QueryInput {
   bool: BoolQueryInput
+}
+
+"""
+Ranked CVE Entry type
+"""
+type RankedCveEntry implements Node {
+  affected_products(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+  ): CveAffectedProductConnection
+  affected_products_count: Int!
+  cve_description: String!
+  cve_id: String!
+  cwe_id: String
+  cwe_name: String
+  id: ID!
+  rank: Int!
+  remediation_time_1_month: Int!
+  remediation_time_1_quarter: Int!
+  remediation_time_1_week: Int!
+  remediation_time_1_year: Int!
+  remediation_time_1_year_plus: Int!
+  remediation_time_24_hours: Int!
+  remediation_time_48_hours: Int!
+  remediation_time_72_hours: Int!
+  remediation_time_pending: Int!
+  reporter_submitted_count: Int!
+  reports_submitted_count: Int!
+  score: Float!
+  severity_count_critical: Int!
+  severity_count_high: Int!
+  severity_count_low: Int!
+  severity_count_medium: Int!
+  severity_count_none: Int!
+  severity_count_unknown: Int!
+  teams_submitted_count: Int!
+}
+
+"""
+The connection type for RankedCveEntry.
+"""
+type RankedCveEntryConnection {
+  """
+  A list of edges.
+  """
+  edges: [RankedCveEntryEdge]
+
+  """
+  A list of nodes.
+  """
+  nodes: [RankedCveEntry]
+
+  """
+  Information to aid in pagination.
+  """
+  pageInfo: PageInfo!
+  total_count: Int!
+}
+
+"""
+An edge in a connection.
+"""
+type RankedCveEntryEdge {
+  """
+  A cursor for use in pagination.
+  """
+  cursor: String!
+
+  """
+  The item at the end of the edge.
+  """
+  node: RankedCveEntry
 }
 
 """
