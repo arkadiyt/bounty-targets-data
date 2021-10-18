@@ -56804,7 +56804,7 @@
           "confidentiality_requirement": "low",
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
-          "instruction": "Any vulnerability affecting the main Consensy.net domain, including DNS records, email system, or other vulnerabilities. \n\nSubdomains are not within scope at this time.",
+          "instruction": "Any vulnerability affecting the main Consensy.net domain, including DNS records, email system, or other vulnerabilities. \n\nSubdomains are not within scope at this time, as a number of domains redirect to 3rd party solutions not managed by ConsenSys.",
           "integrity_requirement": "low",
           "max_severity": "high"
         },
@@ -56843,6 +56843,17 @@
         }
       ],
       "out_of_scope": [
+        {
+          "asset_identifier": "*.learn.consensys.net",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "The domain learn.consensys.net is explicitly out of scope as this is a 3rd party solution not managed by ConsenSys.",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
         {
           "asset_identifier": "community.infura.io",
           "asset_type": "URL",
