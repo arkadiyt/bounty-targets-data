@@ -24230,7 +24230,7 @@
     "name": "Algolia",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 94,
+    "response_efficiency_percentage": 91,
     "submission_state": "open",
     "url": "https://hackerone.com/algolia",
     "website": "https://algolia.com",
@@ -34025,7 +34025,7 @@
     "name": "bitaccess",
     "offers_bounties": true,
     "offers_swag": true,
-    "response_efficiency_percentage": 29,
+    "response_efficiency_percentage": 13,
     "submission_state": "open",
     "url": "https://hackerone.com/bitaccess",
     "website": "http://bitaccess.ca",
@@ -45044,7 +45044,7 @@
     "name": "Valve",
     "offers_bounties": true,
     "offers_swag": true,
-    "response_efficiency_percentage": 83,
+    "response_efficiency_percentage": 82,
     "submission_state": "open",
     "url": "https://hackerone.com/valve",
     "website": "https://www.valvesoftware.com",
@@ -54566,7 +54566,7 @@
     "name": "Smartsheet",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 89,
+    "response_efficiency_percentage": 87,
     "submission_state": "open",
     "url": "https://hackerone.com/smartsheet",
     "website": "http://smartsheet.com",
@@ -63978,7 +63978,7 @@
     "name": "BlockFi",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 94,
+    "response_efficiency_percentage": 93,
     "submission_state": "open",
     "url": "https://hackerone.com/blockfi",
     "website": "https://www.blockfi.com",
@@ -65243,6 +65243,95 @@
           "integrity_requirement": null,
           "max_severity": "none"
         }
+      ]
+    }
+  },
+  {
+    "allows_bounty_splitting": false,
+    "average_time_to_bounty_awarded": 161.0,
+    "average_time_to_first_program_response": 89.0,
+    "average_time_to_report_resolved": 2873.0,
+    "handle": "judgeme",
+    "id": 50842,
+    "managed_program": true,
+    "name": "Judge.me ",
+    "offers_bounties": true,
+    "offers_swag": true,
+    "response_efficiency_percentage": 77,
+    "submission_state": "open",
+    "url": "https://hackerone.com/judgeme",
+    "website": "https://judge.me",
+    "targets": {
+      "in_scope": [
+        {
+          "asset_identifier": "https://bigcommerce-adapter.judge.me/",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "This is a simple, lightweight server, basically just to connect BigCommerce websites to our main asset ​https://judge.me/.\n\nIts entry point is from installing our BigCommerce  app: https://www.bigcommerce.com/apps/product-reviews-by-judge-me/",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://cache.judge.me/",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "medium",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "This is a simple NodeJS server, using Hapi framework. It's basically to store and cache our public widgets' HTML content, so that when end users want to fetch our widget content, they can fetch from this server directly, which is faster and more resilient to spikes in number of requests.\n\nPlease see our [help desk article](https://support.judge.me/support/solutions/articles/44001816387-how-to-make-requests-to-the-judge-me-cache-server) on how to enable and use this server.",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://judge.me/",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "This is the core part of our system. It hosts our main app [Judge.me Product Reviews](https://apps.shopify.com/judgeme) and is also the central point of communication for other assets.",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://judge.me/reviews",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "This is our new product. It is user (reviewer) facing, unlike the other assets, which are merchant facing. Its entry point is https://judge.me/reviews, and its pages are prefixed with https://judge.me/reviews.",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://shop.judge.me/",
+          "asset_type": "URL",
+          "availability_requirement": "medium",
+          "confidentiality_requirement": "medium",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "This is lightweight, basically just to connect our other Shopify apps to our main asset ​https://judge.me/.\n\nIts entry point is https://shop.judge.me/login?app_key=ali_reviews or https://apps.shopify.com/aliexpress-review-importer",
+          "integrity_requirement": "medium",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://woocommerce-adapter.judge.me/",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "This is a simple, lightweight server, basically just to connect Wordpress websites (specifically WooCommerce websites) to our main asset ​https://judge.me/.\n\nIts entry point is from installing our Wordpress plugin: https://wordpress.org/plugins/judgeme-product-reviews-woocommerce/",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        }
+      ],
+      "out_of_scope": [
+
       ]
     }
   },
