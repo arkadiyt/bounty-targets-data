@@ -37908,7 +37908,7 @@
     "name": "Localize",
     "offers_bounties": true,
     "offers_swag": true,
-    "response_efficiency_percentage": 33,
+    "response_efficiency_percentage": 26,
     "submission_state": "open",
     "url": "https://hackerone.com/localizejs",
     "website": "https://localizestaging.com",
@@ -44799,6 +44799,17 @@
       "in_scope": [
         {
           "asset_identifier": "*.3lateral.com",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "***Note:*** This asset may contain endpoints not hosted by Epic Games (third party endpoints). These third party endpoints are not eligible for bounty. Please take note of the infrastructure you are assessing, if the endpoint is not hosted on AWS and/or the ASN is not associated with Epic Games then it is most likely not hosted by Epic Games.\nIf you are unsure whether or not an asset is considered third party please submit a preliminary finding for confirmation.",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "*.artstation.com",
           "asset_type": "URL",
           "availability_requirement": "high",
           "confidentiality_requirement": "high",
