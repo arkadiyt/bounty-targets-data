@@ -2543,6 +2543,36 @@
     }
   },
   {
+    "name": "Bullish exchange",
+    "url": "https://bugcrowd.com/bullish-exchange",
+    "allows_disclosure": false,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "full",
+    "max_payout": 25000,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "website",
+          "target": "https://bugbounty.bullish.com"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "website",
+          "target": "*.bullish.com/"
+        },
+        {
+          "type": "website",
+          "target": "Deposit & Withdrawals (Custody)"
+        },
+        {
+          "type": "api",
+          "target": "https://api.bugbounty.bullish.com"
+        }
+      ]
+    }
+  },
+  {
     "name": "Caffeine",
     "url": "https://bugcrowd.com/caffeine",
     "allows_disclosure": false,
