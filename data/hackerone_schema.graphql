@@ -2577,6 +2577,7 @@ type BankTransferReference implements Node {
 BBP launch configuration for a team
 """
 type BbpLaunchConfiguration implements Node {
+  attachment: Attachment
   current_configuration_step: String
   has_changed_brand_promise: Boolean!
   has_changed_disclosure_policies: Boolean!
@@ -2588,6 +2589,7 @@ type BbpLaunchConfiguration implements Node {
   has_changed_rewards: Boolean!
   has_changed_safe_harbor: Boolean!
   id: ID!
+  invoice_opt_in: Boolean!
   launch_at: DateTime
   launch_requested_at: DateTime
   policy_brand_promise: String
@@ -18951,11 +18953,22 @@ type RankedCveEntry implements Node {
     last: Int
   ): CveAffectedProductConnection
   affected_products_count: Int!
+  cve_age_in_days: Int
   cve_description: String!
   cve_id: String!
+  cve_published_date: Date
   cwe_id: String
   cwe_name: String
   id: ID!
+  p25_remediation_time: Int!
+  p25_severity_rating: String
+  p25_severity_rating_index: Int!
+  p50_remediation_time: Int!
+  p50_severity_rating: String
+  p50_severity_rating_index: Int!
+  p75_remediation_time: Int!
+  p75_severity_rating: String
+  p75_severity_rating_index: Int!
   rank: Int!
   remediation_time_1_month: Int!
   remediation_time_1_quarter: Int!
@@ -18975,6 +18988,18 @@ type RankedCveEntry implements Node {
   severity_count_medium: Int!
   severity_count_none: Int!
   severity_count_unknown: Int!
+  submission_count_10_weeks_ago: Int!
+  submission_count_11_weeks_ago: Int!
+  submission_count_12_weeks_ago: Int!
+  submission_count_1_week_ago: Int!
+  submission_count_2_weeks_ago: Int!
+  submission_count_3_weeks_ago: Int!
+  submission_count_4_weeks_ago: Int!
+  submission_count_5_weeks_ago: Int!
+  submission_count_6_weeks_ago: Int!
+  submission_count_7_weeks_ago: Int!
+  submission_count_8_weeks_ago: Int!
+  submission_count_9_weeks_ago: Int!
   teams_submitted_count: Int!
 }
 
