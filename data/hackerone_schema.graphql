@@ -10918,6 +10918,14 @@ input FiltersTeamMemberGroupFilterOrder {
   name: FilterOrderPredicateInput
 }
 
+input FiltersTeamWeaknessFilterInput {
+  _and: [FiltersTeamWeaknessFilterInput]
+  _not: FiltersTeamWeaknessFilterInput
+  _or: [FiltersTeamWeaknessFilterInput]
+  id: IntPredicateInput
+  is_hidden: Boolean
+}
+
 input FiltersTriageSubscriptionFilterInput {
   _and: [FiltersTriageSubscriptionFilterInput]
   _not: FiltersTriageSubscriptionFilterInput
@@ -18048,6 +18056,7 @@ type ProgramStatistics implements Node {
   hackers_thanked: Int!
   id: ID!
   open_reports: Int!
+  pending_invites: Int!
   rejected_invites: Int!
   reports_resolved: Int!
   reports_rewarded: Int!
@@ -18056,7 +18065,6 @@ type ProgramStatistics implements Node {
   total_bounties: Float
   total_invites: Int!
   total_submissions: Int!
-  unresponsive_invites: Int!
 }
 
 """
@@ -18345,6 +18353,7 @@ type Query implements Node {
     last: Int
     order_by: ClusterOrder = {direction: ASC, field: BROWSING_FRIENDLY}
   ): ClusterConnection
+  cve_entry(cve_id: String!): RankedCveEntry
   double_tap_requests(
     """
     Returns the elements in the list that come after the specified cursor.
@@ -24543,6 +24552,10 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
     last: Int
     order_by: TeamMemberOrder = {direction: ASC, field: username}
   ): TeamMemberConnection
+
+  """
+  A Resolver for TeamWeaknesses
+  """
   team_weaknesses(
     """
     Returns the elements in the list that come after the specified cursor.
@@ -24563,6 +24576,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
     Returns the last _n_ elements from the list.
     """
     last: Int
+    where: FiltersTeamWeaknessFilterInput
   ): TeamWeaknessConnection
   terms: String
   thanks_items(
