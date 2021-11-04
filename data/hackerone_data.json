@@ -818,6 +818,17 @@
           "instruction": "We are happy to accept reports regarding SPF, DKIM and DMARC misconfiguration, but **please** verify your results before submitting. We are perfectly aware that you can *send* e-mail using a spoofed domain (this is what SMTP does), but SPF, DKIM and DMARC are designed to prevent **delivery** of such spoofed e-mails (DMARC policy is enforced by the majority of reputable service providers).",
           "integrity_requirement": "medium",
           "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "ephemeris.oneweb.net",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "none",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "This service is in scope for testing, but there is no need to submit \"File indexing is enabled\" reports - this is by design, and there is no business impact as all files here are deliberately published.",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
         }
       ],
       "out_of_scope": [
@@ -26580,7 +26591,7 @@
     "name": "Dashlane",
     "offers_bounties": true,
     "offers_swag": true,
-    "response_efficiency_percentage": 72,
+    "response_efficiency_percentage": 69,
     "submission_state": "open",
     "url": "https://hackerone.com/dashlane",
     "website": "https://www.dashlane.com/",
