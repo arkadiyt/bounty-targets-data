@@ -10687,6 +10687,19 @@ input FiltersOrganizationMemberFilterOrder {
   user: FiltersUserFilterOrder
 }
 
+input FiltersOrganizationMemberGroupFilterInput {
+  _and: [FiltersOrganizationMemberGroupFilterInput]
+  _not: FiltersOrganizationMemberGroupFilterInput
+  _or: [FiltersOrganizationMemberGroupFilterInput]
+  id: IntPredicateInput
+  name: StringPredicateInput
+}
+
+input FiltersOrganizationMemberGroupFilterOrder {
+  id: FilterOrderPredicateInput
+  name: FilterOrderPredicateInput
+}
+
 input FiltersPentestFilterInput {
   _and: [FiltersPentestFilterInput]
   _not: FiltersPentestFilterInput
@@ -15391,6 +15404,8 @@ type Organization implements Node {
     Returns the last _n_ elements from the list.
     """
     last: Int
+    order_by: FiltersOrganizationMemberGroupFilterOrder
+    where: FiltersOrganizationMemberGroupFilterInput
   ): OrganizationMemberGroupConnection
   organization_members(
     """
@@ -15734,6 +15749,7 @@ type OrganizationMemberGroup implements Node & ResourceInterface {
     order_by: FiltersOrganizationMemberFilterOrder = {user: {username: {_direction: ASC}}}
     where: FiltersOrganizationMemberFilterInput
   ): OrganizationMemberConnection
+  permissions: [OrganizationPermissionsEnum!]!
   teams(
     """
     Returns the elements in the list that come after the specified cursor.
