@@ -17957,11 +17957,13 @@ type Post implements Node {
 Product Edition of a Team
 """
 type ProductEdition implements Node {
+  api_enabled: Boolean!
   display_name: String!
   gate_saml_opened: Boolean!
   hacker_invitations_enabled: Boolean!
   id: ID!
   saas_deal: Boolean!
+  team_member_groups_enabled: Boolean!
 }
 
 """
@@ -19221,6 +19223,7 @@ type RankedCveEntry implements Node {
   submission_count_7_weeks_ago: Int!
   submission_count_8_weeks_ago: Int!
   submission_count_9_weeks_ago: Int!
+  submission_count_trailing_12_to_24_weeks: Int!
   submission_count_trailing_12_weeks: Int!
   submission_end_date_10_weeks_ago: Date!
   submission_end_date_11_weeks_ago: Date!
@@ -19234,7 +19237,9 @@ type RankedCveEntry implements Node {
   submission_end_date_7_weeks_ago: Date!
   submission_end_date_8_weeks_ago: Date!
   submission_end_date_9_weeks_ago: Date!
+  submission_end_date_trailing_12_to_24_weeks: Date!
   submission_end_date_trailing_12_weeks: Date!
+  submission_pct_delta_trailing_12_weeks: Float
   submission_start_date_10_weeks_ago: Date!
   submission_start_date_11_weeks_ago: Date!
   submission_start_date_12_weeks_ago: Date!
@@ -19247,6 +19252,7 @@ type RankedCveEntry implements Node {
   submission_start_date_7_weeks_ago: Date!
   submission_start_date_8_weeks_ago: Date!
   submission_start_date_9_weeks_ago: Date!
+  submission_start_date_trailing_12_to_24_weeks: Date!
   submission_start_date_trailing_12_weeks: Date!
   teams_submitted_count: Int!
 }

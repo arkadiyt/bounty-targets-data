@@ -95,6 +95,13 @@
           "instruction": "",
           "severity": "None",
           "reward": "Bounty"
+        },
+        {
+          "target": "*.snowtrace.io",
+          "type": "Web",
+          "instruction": "",
+          "severity": "Critical",
+          "reward": "Bounty"
         }
       ],
       "out_of_scope": [
@@ -227,6 +234,81 @@
     }
   },
   {
+    "id": "/bitkub/bitkub",
+    "name": "Bitkub",
+    "url": "https://hackenproof.com/bitkub/bitkub",
+    "archived": false,
+    "targets": {
+      "in_scope": [
+        {
+          "target": "*.bitkub.com",
+          "type": "Web",
+          "instruction": "",
+          "severity": "Critical",
+          "reward": "Bounty"
+        },
+        {
+          "target": "iOS App",
+          "type": "iOS",
+          "instruction": "https://apps.apple.com/th/app/bitkub-buy-sell-bitcoin",
+          "severity": "Critical",
+          "reward": "Bounty"
+        },
+        {
+          "target": "Android App",
+          "type": "Android",
+          "instruction": "https://play.google.com/store/apps/details?id=com.bitkub",
+          "severity": "Critical",
+          "reward": "Bounty"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
+    "id": "/bitrue/bitrue",
+    "name": "Bitrue",
+    "url": "https://hackenproof.com/bitrue/bitrue",
+    "archived": false,
+    "targets": {
+      "in_scope": [
+        {
+          "target": "*.bitrue.com",
+          "type": "Web",
+          "instruction": "",
+          "severity": "Critical",
+          "reward": "Bounty"
+        },
+        {
+          "target": "https://github.com/Bitrue/bitrue-official-api-docs",
+          "type": "API",
+          "instruction": "",
+          "severity": "Critical",
+          "reward": "Bounty"
+        },
+        {
+          "target": "Android App",
+          "type": "Android",
+          "instruction": "https://play.google.com/store/apps/details?id=com.bitrue.currency.exchange&hl=en",
+          "severity": "Critical",
+          "reward": "Bounty"
+        },
+        {
+          "target": "iOS App",
+          "type": "iOS",
+          "instruction": "https://apps.apple.com/us/app/bitrue/id1435877386",
+          "severity": "Critical",
+          "reward": "Bounty"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
     "id": "/bunicorn/bunicorn-1",
     "name": "Bunicorn",
     "url": "https://hackenproof.com/bunicorn/bunicorn-1",
@@ -244,156 +326,6 @@
           "target": "Web",
           "type": "Web",
           "instruction": "staging.buni.finance",
-          "severity": "Critical",
-          "reward": "Bounty"
-        }
-      ],
-      "out_of_scope": [
-
-      ]
-    }
-  },
-  {
-    "id": "/coingecko/coingecko",
-    "name": "CoinGecko",
-    "url": "https://hackenproof.com/coingecko/coingecko",
-    "archived": false,
-    "targets": {
-      "in_scope": [
-        {
-          "target": "*.coingecko.com",
-          "type": "Web",
-          "instruction": "",
-          "severity": "Critical",
-          "reward": "Bounty"
-        },
-        {
-          "target": "api.coingecko.com",
-          "type": "API",
-          "instruction": "Documentation: https://www.coingecko.com/en/api",
-          "severity": "Critical",
-          "reward": "Bounty"
-        },
-        {
-          "target": "Android App",
-          "type": "Android",
-          "instruction": "https://play.google.com/store/apps/details?id=com.coingecko.coingeckoapp",
-          "severity": "Critical",
-          "reward": "Bounty"
-        },
-        {
-          "target": "iOS App",
-          "type": "Web",
-          "instruction": "https://apps.apple.com/us/app/coingecko-bitcoin-crypto-app/id1390323960",
-          "severity": "Critical",
-          "reward": "Bounty"
-        },
-        {
-          "target": "Chrome Extension",
-          "type": "Web",
-          "instruction": "https://chrome.google.com/webstore/detail/coingecko-bitcoin-cryptoc/ofmoicejmilkphppeoekfhbpkleppdlb",
-          "severity": "Critical",
-          "reward": "Bounty"
-        }
-      ],
-      "out_of_scope": [
-        {
-          "target": "blog.coingecko.com",
-          "type": "Web",
-          "instruction": "",
-          "severity": "None",
-          "reward": "Reputation"
-        },
-        {
-          "target": "landing.coingecko.com",
-          "type": "Web",
-          "instruction": "",
-          "severity": "None",
-          "reward": "Reputation"
-        },
-        {
-          "target": "assets.coingecko.com",
-          "type": "Web",
-          "instruction": "",
-          "severity": "None",
-          "reward": "Bounty"
-        },
-        {
-          "target": "newsletter.coingecko.com",
-          "type": "Web",
-          "instruction": "",
-          "severity": "None",
-          "reward": "Bounty"
-        },
-        {
-          "target": "selfserve.coingecko.com",
-          "type": "Web",
-          "instruction": "",
-          "severity": "None",
-          "reward": "Bounty"
-        }
-      ]
-    }
-  },
-  {
-    "id": "/coinmetro/coinmetro-exchange",
-    "name": "CoinMetro Exchange",
-    "url": "https://hackenproof.com/coinmetro/coinmetro-exchange",
-    "archived": false,
-    "targets": {
-      "in_scope": [
-        {
-          "target": "*.coinmetro.com",
-          "type": "Web",
-          "instruction": "",
-          "severity": "Critical",
-          "reward": "Bounty"
-        },
-        {
-          "target": "API",
-          "type": "API",
-          "instruction": "https://github.com/CoinMetro/API-DOCS",
-          "severity": "Critical",
-          "reward": "Bounty"
-        }
-      ],
-      "out_of_scope": [
-
-      ]
-    }
-  },
-  {
-    "id": "/coinsbit/coinsbit",
-    "name": "Coinsbit",
-    "url": "https://hackenproof.com/coinsbit/coinsbit",
-    "archived": false,
-    "targets": {
-      "in_scope": [
-        {
-          "target": "*.coinsbit.io",
-          "type": "Web",
-          "instruction": "",
-          "severity": "Critical",
-          "reward": "Bounty"
-        },
-        {
-          "target": "iOS App",
-          "type": "iOS",
-          "instruction": "https://apps.apple.com/ru/app/coinsbit-crypto-exchange/id1517008816",
-          "severity": "Critical",
-          "reward": "Bounty"
-        },
-        {
-          "target": "Android App",
-          "type": "Android",
-          "instruction": "https://play.google.com/store/apps/details?id=com.coinsbit.coinsbit",
-          "severity": "Critical",
-          "reward": "Bounty"
-        },
-        {
-          "target": "API",
-          "type": "API",
-          "instruction": "https://www.notion.so/API-COINSBIT-WS-API-COINSBIT-cf1044cff30646d49a0bab0e28f27a87",
           "severity": "Critical",
           "reward": "Bounty"
         }
@@ -585,6 +517,54 @@
           "severity": "None",
           "reward": "Bounty"
         }
+      ]
+    }
+  },
+  {
+    "id": "/openware/openware",
+    "name": "Openware",
+    "url": "https://hackenproof.com/openware/openware",
+    "archived": false,
+    "targets": {
+      "in_scope": [
+        {
+          "target": "https://www.yellow.com",
+          "type": "Web",
+          "instruction": "",
+          "severity": "Critical",
+          "reward": "Bounty"
+        },
+        {
+          "target": "https://exchange.intercore.trade",
+          "type": "Web",
+          "instruction": "",
+          "severity": "Critical",
+          "reward": "Bounty"
+        },
+        {
+          "target": "https://exchanger.finance",
+          "type": "Web",
+          "instruction": "",
+          "severity": "Critical",
+          "reward": "Bounty"
+        },
+        {
+          "target": "https://fair.fun",
+          "type": "Web",
+          "instruction": "",
+          "severity": "Critical",
+          "reward": "Bounty"
+        },
+        {
+          "target": "https://silwanaexchange.com",
+          "type": "Web",
+          "instruction": "",
+          "severity": "Critical",
+          "reward": "Bounty"
+        }
+      ],
+      "out_of_scope": [
+
       ]
     }
   }
