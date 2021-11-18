@@ -9533,7 +9533,7 @@ type DismissTriageInboxItemsPayload implements MutationResult {
 """
 ElasticSearch Document can be of different types
 """
-union DocumentUnion = OrganizationMemberDocument | ReportDocument
+union DocumentUnion = OrganizationMemberDocument | OrganizationMemberGroupDocument | ReportDocument
 
 """
 A domain ownership object
@@ -11773,6 +11773,7 @@ Available ElasticSearch indexes
 """
 enum IndexEnum {
   DuplicateDetectorReportsIndex
+  OrganizationMemberGroupsIndex
   OrganizationMembersIndex
 }
 
@@ -15921,6 +15922,11 @@ type OrganizationMemberGroupConnection {
   Int
   """
   total_count: Int!
+}
+
+type OrganizationMemberGroupDocument implements Node {
+  id: ID!
+  organization_member_group: OrganizationMemberGroup
 }
 
 """
