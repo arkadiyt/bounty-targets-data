@@ -8306,6 +8306,69 @@ type CveRequestsEdge {
 }
 
 """
+CWE Entry Type
+"""
+type CweEntry implements Node {
+  cve_ids: String!
+  cwe_description: String!
+  cwe_id: String!
+  cwe_name: String!
+  id: ID!
+  publicly_disclosed_report_ids: String!
+  submission_pct_10_weeks_ago: Int!
+  submission_pct_11_weeks_ago: Int!
+  submission_pct_12_weeks_ago: Int!
+  submission_pct_1_week_ago: Int!
+  submission_pct_2_weeks_ago: Int!
+  submission_pct_3_weeks_ago: Int!
+  submission_pct_4_weeks_ago: Int!
+  submission_pct_5_weeks_ago: Int!
+  submission_pct_6_weeks_ago: Int!
+  submission_pct_7_weeks_ago: Int!
+  submission_pct_8_weeks_ago: Int!
+  submission_pct_9_weeks_ago: Int!
+  submission_pct_end_date_10_weeks_ago: Date!
+  submission_pct_end_date_11_weeks_ago: Date!
+  submission_pct_end_date_12_weeks_ago: Date!
+  submission_pct_end_date_1_week_ago: Date!
+  submission_pct_end_date_2_weeks_ago: Date!
+  submission_pct_end_date_3_weeks_ago: Date!
+  submission_pct_end_date_4_weeks_ago: Date!
+  submission_pct_end_date_5_weeks_ago: Date!
+  submission_pct_end_date_6_weeks_ago: Date!
+  submission_pct_end_date_7_weeks_ago: Date!
+  submission_pct_end_date_8_weeks_ago: Date!
+  submission_pct_end_date_9_weeks_ago: Date!
+  submission_pct_remediation_time_1_month: Int!
+  submission_pct_remediation_time_1_quarter: Int!
+  submission_pct_remediation_time_1_week: Int!
+  submission_pct_remediation_time_1_year: Int!
+  submission_pct_remediation_time_1_year_plus: Int!
+  submission_pct_remediation_time_24_hours: Int!
+  submission_pct_remediation_time_48_hours: Int!
+  submission_pct_remediation_time_72_hours: Int!
+  submission_pct_remediation_time_pending: Int!
+  submission_pct_severity_critical: Int!
+  submission_pct_severity_high: Int!
+  submission_pct_severity_low: Int!
+  submission_pct_severity_medium: Int!
+  submission_pct_severity_none: Int!
+  submission_pct_severity_unknown: Int!
+  submission_pct_start_date_10_weeks_ago: Date!
+  submission_pct_start_date_11_weeks_ago: Date!
+  submission_pct_start_date_12_weeks_ago: Date!
+  submission_pct_start_date_1_week_ago: Date!
+  submission_pct_start_date_2_weeks_ago: Date!
+  submission_pct_start_date_3_weeks_ago: Date!
+  submission_pct_start_date_4_weeks_ago: Date!
+  submission_pct_start_date_5_weeks_ago: Date!
+  submission_pct_start_date_6_weeks_ago: Date!
+  submission_pct_start_date_7_weeks_ago: Date!
+  submission_pct_start_date_8_weeks_ago: Date!
+  submission_pct_start_date_9_weeks_ago: Date!
+}
+
+"""
 Data point object
 """
 type DataPoint implements Node {
@@ -18579,6 +18642,7 @@ type Query implements Node {
     order_by: ClusterOrder = {direction: ASC, field: BROWSING_FRIENDLY}
   ): ClusterConnection
   cve_entry(cve_id: String!): RankedCveEntry
+  cwe_entry(cwe_id: String!): CweEntry
   double_tap_requests(
     """
     Returns the elements in the list that come after the specified cursor.
@@ -19102,6 +19166,7 @@ type Query implements Node {
     owner_username: String = null
     priority: TriageInboxItemPriorityEnum = null
     product_editions: [TriageInboxItemProductEditionFilterEnum!] = null
+    report_id: Int
     report_substate: TriageInboxItemReportSubstateEnum = null
     report_title: String = null
     team_handle: String = null
