@@ -39187,7 +39187,7 @@
     "name": "Intel Corporation",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 51,
+    "response_efficiency_percentage": 52,
     "submission_state": "open",
     "url": "https://hackerone.com/intel",
     "website": "http://www.intel.com/security",
@@ -45634,29 +45634,18 @@
           "max_severity": "critical"
         },
         {
-          "asset_identifier": "Desktop Editor for MacOS",
+          "asset_identifier": "Grammarly Desktop for Windows",
           "asset_type": "DOWNLOADABLE_EXECUTABLES",
-          "availability_requirement": "high",
+          "availability_requirement": null,
           "confidentiality_requirement": "high",
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
-          "instruction": "Executable can be downloaded from [our website](https://download-editor.grammarly.com/osx/Grammarly.dmg):\n\nOnly **remotely exploitable** issues in Desktop Editor are eligible for reporting.",
-          "integrity_requirement": "high",
+          "instruction": "https://download-windows.grammarly.com/GrammarlyInstaller.exe",
+          "integrity_requirement": null,
           "max_severity": "critical"
         },
         {
-          "asset_identifier": "Desktop Editor for Windows",
-          "asset_type": "DOWNLOADABLE_EXECUTABLES",
-          "availability_requirement": "high",
-          "confidentiality_requirement": "high",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "Executable can be downloaded from [our website](https://download-editor.grammarly.com/windows/GrammarlySetup.exe)\n\nOnly **remotely exploitable** issues in Desktop Editor are eligible for reporting.",
-          "integrity_requirement": "high",
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "Grammarly Beta for macOS",
+          "asset_identifier": "Grammarly Desktop for macOS",
           "asset_type": "DOWNLOADABLE_EXECUTABLES",
           "availability_requirement": null,
           "confidentiality_requirement": "high",
@@ -45667,14 +45656,25 @@
           "max_severity": "critical"
         },
         {
-          "asset_identifier": "Grammarly Desktop",
+          "asset_identifier": "Grammarly Editor for MacOS",
           "asset_type": "DOWNLOADABLE_EXECUTABLES",
-          "availability_requirement": null,
+          "availability_requirement": "high",
           "confidentiality_requirement": "high",
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
-          "instruction": "https://www.grammarly.com/desktop",
-          "integrity_requirement": null,
+          "instruction": "[Download link](https://download-editor.grammarly.com/osx/Grammarly.dmg):\n\nOnly **remotely exploitable** issues in Grammarly Editor are eligible for reporting.",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "Grammarly Editor for Windows",
+          "asset_type": "DOWNLOADABLE_EXECUTABLES",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "[Download link](https://download-editor.grammarly.com/windows/GrammarlySetup.exe)\n\nOnly **remotely exploitable** issues in Grammarly Editor are eligible for reporting.",
+          "integrity_requirement": "high",
           "max_severity": "critical"
         },
         {
@@ -63110,7 +63110,7 @@
     "name": "OPPO",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 93,
+    "response_efficiency_percentage": 94,
     "submission_state": "open",
     "url": "https://hackerone.com/oppo",
     "website": "https://security.oppo.com/",
@@ -67845,7 +67845,7 @@
     "name": "Clubhouse",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 96,
+    "response_efficiency_percentage": 97,
     "submission_state": "open",
     "url": "https://hackerone.com/clubhouse",
     "website": "http://www.clubhouse.com",
@@ -68546,6 +68546,40 @@
           "eligible_for_submission": true,
           "instruction": "Disclosure instructions: https://xenproject.org/developers/security-policy/\n\nEligible scope only includes issues for which an XSA is issued.",
           "integrity_requirement": null,
+          "max_severity": "critical"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
+    "allows_bounty_splitting": false,
+    "average_time_to_bounty_awarded": null,
+    "average_time_to_first_program_response": 11.0,
+    "average_time_to_report_resolved": 22.0,
+    "handle": "horizen",
+    "id": 54792,
+    "managed_program": true,
+    "name": "Horizen",
+    "offers_bounties": true,
+    "offers_swag": true,
+    "response_efficiency_percentage": 100,
+    "submission_state": "open",
+    "url": "https://hackerone.com/horizen",
+    "website": "https://www.horizen.io",
+    "targets": {
+      "in_scope": [
+        {
+          "asset_identifier": "https://github.com/HorizenOfficial/zend_oo",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "* https://github.com/HorizenOfficial/zend_oo\n* The latest release/tag is the version that is in scope\n* There are multiple ways to get and run the Horizen Node (e.g., building from source, using pre-built binaries published under https://github.com/HorizenOfficial/zend_oo/releases, using docker https://hub.docker.com/repository/docker/zencash/zen-node)\n* Build instructions can be found here https://github.com/HorizenOfficial/zend_oo#building-from-source\n* The node can be run as follows if installed from deb: zen-fetch-params && zend -testnet=1\n* Details for getting testnet ZEN can be found here: https://heap.horizen.io/",
+          "integrity_requirement": "high",
           "max_severity": "critical"
         }
       ],
