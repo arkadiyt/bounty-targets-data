@@ -1324,7 +1324,7 @@
     "name": "Lacework",
     "offers_bounties": false,
     "offers_swag": false,
-    "response_efficiency_percentage": 100,
+    "response_efficiency_percentage": 98,
     "submission_state": "open",
     "url": "https://hackerone.com/lacework",
     "website": "http://www.lacework.com",
@@ -68645,6 +68645,73 @@
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
           "instruction": "* https://github.com/HorizenOfficial/zend_oo\n* The latest release/tag is the version that is in scope\n* There are multiple ways to get and run the Horizen Node (e.g., building from source, using pre-built binaries published under https://github.com/HorizenOfficial/zend_oo/releases, using docker https://hub.docker.com/repository/docker/zencash/zen-node)\n* Build instructions can be found here https://github.com/HorizenOfficial/zend_oo#building-from-source\n* The node can be run as follows if installed from deb: zen-fetch-params && zend -testnet=1\n* Details for getting testnet ZEN can be found here: https://heap.horizen.io/",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
+    "allows_bounty_splitting": false,
+    "average_time_to_bounty_awarded": null,
+    "average_time_to_first_program_response": null,
+    "average_time_to_report_resolved": null,
+    "handle": "agoric",
+    "id": 55361,
+    "managed_program": false,
+    "name": "Agoric",
+    "offers_bounties": true,
+    "offers_swag": false,
+    "response_efficiency_percentage": null,
+    "submission_state": "open",
+    "url": "https://hackerone.com/agoric",
+    "website": "http://agoric.com",
+    "targets": {
+      "in_scope": [
+        {
+          "asset_identifier": "https://github.com/Agoric/agoric-sdk/tree/master/packages/ERTP",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "ERTP (_Electronic Rights Transfer Protocol_) is Agoric’s token standard for digital assets in JavaScript. Using ERTP, you can easily create a wide variety of digital assets, all of which are transferred exactly the same way and with exactly the same security properties.\nERTP uses object capabilities to enforce access control. If your program has a reference to an object, it can call methods on that object. If it doesn’t have a reference, it can’t.\n\nIn order to understand the fundamentals of ERTP, it is important to understand the workings of the code that it builds on. Before digging into ERTP, it may help your bug finding efforts to become familiar with [Hardened JS/SES](https://agoric.com/documentation/guides/js-programming/ses/).\n\nThese resources should be helpful for building navigating ERTP: \n\n* [ERTP Guide](https://agoric.com/documentation/getting-started/ertp-introduction.html)\n* [ERTP API](https://agoric.com/documentation/ertp/api/)\n* [Agoric’s JavaScript Programming Guide](https://agoric.com/documentation/guides/js-programming/), which includes Agoric-specific additions and deletions to general JavaScript programming that reviewers will need to be aware of. \n* [Vats](https://agoric.com/documentation/guides/js-programming/vats.html) and [Far() and Remotable objects](https://agoric.com/documentation/guides/js-programming/far.html) are of note. \n* [Eventual Send](https://agoric.com/documentation/guides/js-programming/eventual-send.html) requires calling `E(object.method)`  for asynchronous communication between ERTP + Zoe. As a result of this, message ordering is important when communicating across vats, especially for ERTP. \n* The [assert](https://github.com/Agoric/agoric-sdk/tree/master/packages/assert), [marshal](https://github.com/Agoric/agoric-sdk/tree/master/packages/marshal), and [notifier](https://github.com/Agoric/agoric-sdk/tree/master/packages/notifier) dependencies of the `agoric-sdk` may be important for understanding ERTP, but they are not presently within the scope of this program.\n\n \n### Security Properties \n\nERTP purses have a deposit method which takes a payment as its argument. It first checks that the payment is genuine and the same asset brand as the purse\nIf everything passes the checks, the asset moves from the payment to the purse. If there’s a problem, it throws an error. \n\nAfter a successful deposit, ERTP guarantees:\n\n* The payment is deleted from its issuer’s records and no longer has any assets associated with it.\n* Its issuer no longer recognizes that payment.\n* The purse contains all digital assets that were in the payment.\n\nWhen the deposit call throws an error (i.e. something went wrong), ERTP guarantees the purse and the alleged payment were unaffected by that call.\n\nIn addition, you can create a _deposit facet_ for any purse. This is an object associated with a specific purse that can be sent to another party instead of a reference to the purse. The security advantage is that the other party can only make deposits to the associated purse via the deposit facet. They cannot make a withdrawal from or ask about the balance of a purse via its deposit facet.\n\nBreaking or violating any of these security properties would result in a significant security issue for the Agoric ecosystem, and issues in this code are high-value as Agoric moves towards launching a fully functional mainnet and economy. ",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://github.com/Agoric/agoric-sdk/tree/master/packages/treasury",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://github.com/Agoric/agoric-sdk/tree/master/packages/zoe",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Zoe is Agoric’s smart contract framework, which is built on our [Electronic Rights Transfer Protocol (ERTP)](https://agoric.com/documentation/getting-started/ertp-introduction.html). Becoming familiar with the token standard will make it easier to navigate and test the code. \n\nZoe can be used to:\n\n* *Run your code on-chain*\n* *Mint new digital assets*\n* *Credibly trade assets*\n\nZoe guarantees offer safety. When a user makes an  [offer](https://agoric.com/documentation/glossary/#offer)  and its payments are  [escrowed](https://agoric.com/documentation/glossary/#escrow)  with Zoe, Zoe guarantees that the user either gets what they said they wanted, or gets back (gets a refund) what they originally offered and escrowed. One reason this is possible is if a  [proposal](https://agoric.com/documentation/glossary/#proposal)  doesn’t match what the contract expects to do, it can immediately cause the  [seat](https://agoric.com/documentation/glossary/#seat)  to exit, getting back the amount it offered.\n\n* [Intro to Zoe](https://agoric.com/documentation/getting-started/intro-zoe.html)\n* [Zoe Contracts](https://agoric.com/documentation/zoe/guide/contracts/)\n* [Zoe API](https://agoric.com/documentation/zoe/api/)\n\n\nAs part of our work towards production readiness of the Agoric stack, we are most interested in ensuring that the security promises and guarantees offered by Zoe can not be violated. Additionally, we are interested in ensuring that some of the fundamental architectural components of the Agoric stack are adequately battle tested. We encourage reporters to look into two of the most important pre-built contracts in the platform, the Automatic Market Maker and Vaults/Treasury. ",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://github.com/endojs/endo/tree/master/packages/ses",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Hardened JavaScript is a tamper-proof JavaScript environment that allows safe execution of arbitrary programs in Compartments. It is the foundation of Agoric smart contracts, and a proposal to make this experimental this draft implementation an official language feature is currently a Stage 1 proposal to the ECMA TC39 committee. \n\nHardened JavaScript: \n* Is a JavaScript runtime library for safely running third-party code.\n* Addresses JavaScript’s lack of internal security, as JavaScript applications use and rely on third-party code (modules, packages, libraries, user-provided code for extensions and plug-ins, etc.).\n* Enforces best practices by removing hazardous features such as global mutable state and lack of encapsulation in sloppy mode.\n* Is a safe deterministic subset of “strict mode” JavaScript.\n* Does not include any IO objects that provide  [ambient authority (opens new window)](https://en.wikipedia.org/wiki/Ambient_authority) .\n* Removes non-determinism by modifying a few built-in objects.\n* Adds functionality to freeze and make immutable both built-in JavaScript objects and program created objects and make them immutable.\n\nHelpful resources include:\n* [HardenedJS/SES guide](https://agoric.com/documentation/guides/js-programming/ses/ses-guide.html#what-is-ses)\n* [Hardened JS/SES reference](https://agoric.com/documentation/guides/js-programming/ses/ses-reference.html#lockdown-and-harden)\n* [Purple Team Vulnerability Assessment](https://agoric.com/blog/technology/metamask-agoric-hardened-js-security-review/)\n\nDuring a collaborative bug hunting exercise with Agoric’s code maintainers, the MetaMask team identified the targets listed below as potential hot spots for issues in the code. \n\n* The evaluate function, including any of the transforms it performs, like re-inserting comments into trusted scope.\n* Exploring ways of acquiring the scope handler from within a Compartment. While this was possible using Firefox debug tools, the use of developer tools was out-of-scope for this assessment, and no other approach was found.\n* Experimenting with the ScopeProxy (which is reifiable), to try to get its feral eval function from it.\n* Explore the implications of the Compartment constructor and evaluator tripping get and have traps on the object it’s given, and whether or not a confined script could craft a Proxy to allow re-entrancy and access to feral values.\n\nIn addition to this list, the areas outlined below have the potential to yield issues. \n\n### Non-nested containment\n\nWhen creating a fully virtualized Linux virtual machine within another fully virtualized virtual machine, a sandbox escape from the second machine should only land you into its creator and not any higher. However in hardened JavaScript, Compartments created by Compartments are “siblings”, both children managed equally by the hardened JavaScript system. Since Compartments running untrusted code can create and configure their own child Compartments, The Compartment must be secure against bad constructor parameters and configuration. If there was a way to create a Compartment configured to disable sandboxing, an attacker could use this to access the start compartment. It may be possible and desirable to implement the shim such that the Compartment implementation is re-defined in the context of the parent compartment, preventing an escape from leading directly to the start compartment.\n\n### Compartment initialization could be interleaved by Component creator\n\nThe compartment initialization logic in the shim is particularly sensitive as it leverages the powerful eval. If an attacker was able to interleave malicious code at the right point during initialization, it may be able to access eval and break out to the start compartment. While this was not an active vulnerability at time of review, introducing this vulnerability only required a small code change. This attack was possible after a small change was introduced to the scopeProxyHandler implementation. \n\n```\nconst c = new Compartment()\nc.globalThis.__proto__ = new Proxy({}, { has (_, key) { debugger } })\n```\n \n### Obscure spec pitfalls\n\nMany of the security features of hardened JavaScript depend on core JavaScript functionality, and the ECMAScript specification is so large that even the most capable experts cannot know the spec in its entirety. A fundamental change to JavaScript itself could introduce attack surface or vulnerabilities into hardened JavaScript as uncommon or poorly understood facets of the specification could break assumptions that the security guarantees of hardened JS rely on. \n\nAn example of this is present in the hardened JS shim as it relies on the `with` statement. The `with` statement is augmented by a `Symbol.unscopables`  property, which is relatively obscure as it only augments the somewhat deprecated `with` statement. This could allow a breakage from the containment if it was not handled. In this case, JS does handle it. But in the `with ` statement section of the specification, there are no clear references to the `Symbol.unscopables` property and its effect on the `with` statement behavior. Other undocumented behaviors similar to this are likely exist in the specification, and significant changes to the spec that impact behaviors like this could introduce risk or vulnerability into hardened JavaScript.\n",
           "integrity_requirement": "high",
           "max_severity": "critical"
         }
