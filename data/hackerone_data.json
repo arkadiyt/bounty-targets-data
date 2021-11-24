@@ -39337,17 +39337,6 @@
     "targets": {
       "in_scope": [
         {
-          "asset_identifier": "*.web-security-academy.net",
-          "asset_type": "URL",
-          "availability_requirement": "low",
-          "confidentiality_requirement": "low",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "Access via https://portswigger.net/web-security\nPrivilege escalation to root and container escapes only.",
-          "integrity_requirement": "low",
-          "max_severity": "medium"
-        },
-        {
           "asset_identifier": "Burp Collaborator",
           "asset_type": "DOWNLOADABLE_EXECUTABLES",
           "availability_requirement": "none",
@@ -39435,6 +39424,17 @@
           "eligible_for_submission": false,
           "instruction": "Subdomains of portswigger.net that are not explicitly whitelisted are out of scope.",
           "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "*.web-security-academy.net",
+          "asset_type": "URL",
+          "availability_requirement": "low",
+          "confidentiality_requirement": "low",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "The Academy contains numerous intentional vulnerabilities, and is completely isolated from our other infrastructure.",
+          "integrity_requirement": "low",
           "max_severity": "none"
         }
       ]
@@ -55646,7 +55646,7 @@
     "average_time_to_bounty_awarded": null,
     "average_time_to_first_program_response": 15.0,
     "average_time_to_report_resolved": 3.0,
-    "handle": "agoric",
+    "handle": "agoric-vdp",
     "id": 37451,
     "managed_program": false,
     "name": "Agoric",
@@ -55654,7 +55654,7 @@
     "offers_swag": false,
     "response_efficiency_percentage": 100,
     "submission_state": "open",
-    "url": "https://hackerone.com/agoric",
+    "url": "https://hackerone.com/agoric-vdp",
     "website": "http://agoric.com",
     "targets": {
       "in_scope": [
@@ -66379,7 +66379,7 @@
     "name": "Citrix Systems",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 66,
+    "response_efficiency_percentage": 67,
     "submission_state": "open",
     "url": "https://hackerone.com/citrix",
     "website": "http://citrix.com",
