@@ -336,86 +336,79 @@
     }
   },
   {
-    "id": "/cryptology/cryptology",
-    "name": "Cryptology",
-    "url": "https://hackenproof.com/cryptology/cryptology",
+    "id": "/coingecko/coingecko",
+    "name": "CoinGecko",
+    "url": "https://hackenproof.com/coingecko/coingecko",
     "archived": false,
     "targets": {
       "in_scope": [
         {
-          "target": "cryptology.com",
+          "target": "*.coingecko.com",
           "type": "Web",
           "instruction": "",
           "severity": "Critical",
           "reward": "Bounty"
         },
         {
-          "target": "*.cryptology.com",
-          "type": "Web",
-          "instruction": "",
+          "target": "api.coingecko.com",
+          "type": "API",
+          "instruction": "Documentation: https://www.coingecko.com/en/api",
           "severity": "Critical",
           "reward": "Bounty"
         },
         {
-          "target": "*.prod.cryptology.com",
-          "type": "Web",
-          "instruction": "",
-          "severity": "Critical",
-          "reward": "Bounty"
-        },
-        {
-          "target": "https://docs.cryptology.com/",
-          "type": "Web",
-          "instruction": "",
-          "severity": "High",
-          "reward": "Bounty"
-        },
-        {
-          "target": "https://play.google.com/store/apps/details?id=com.cryptology.android",
+          "target": "Android App",
           "type": "Android",
-          "instruction": "",
+          "instruction": "https://play.google.com/store/apps/details?id=com.coingecko.coingeckoapp",
           "severity": "Critical",
           "reward": "Bounty"
         },
         {
-          "target": "https://apps.apple.com/GB/app/id1313186415",
-          "type": "iOS",
-          "instruction": "",
+          "target": "iOS App",
+          "type": "Web",
+          "instruction": "https://apps.apple.com/us/app/coingecko-bitcoin-crypto-app/id1390323960",
+          "severity": "Critical",
+          "reward": "Bounty"
+        },
+        {
+          "target": "Chrome Extension",
+          "type": "Web",
+          "instruction": "https://chrome.google.com/webstore/detail/coingecko-bitcoin-cryptoc/ofmoicejmilkphppeoekfhbpkleppdlb",
           "severity": "Critical",
           "reward": "Bounty"
         }
       ],
       "out_of_scope": [
         {
-          "target": "collector.prod.cryptology.com",
+          "target": "blog.coingecko.com",
           "type": "Web",
           "instruction": "",
           "severity": "None",
           "reward": ""
         },
         {
-          "target": "blog.cryptology.com",
+          "target": "landing.coingecko.com",
           "type": "Web",
           "instruction": "",
           "severity": "None",
           "reward": ""
         },
         {
-          "target": "*.dev.cryptology.com",
+          "target": "assets.coingecko.com",
           "type": "Web",
           "instruction": "",
           "severity": "None",
           "reward": ""
         },
         {
-          "target": "*.staging.cryptology.com",
+          "target": "newsletter.coingecko.com",
           "type": "Web",
           "instruction": "",
           "severity": "None",
           "reward": ""
         },
         {
-          "target": "sandbox.cryptology.com",
+          "target": "selfserve.coingecko.com",
           "type": "Web",
           "instruction": "",
           "severity": "None",
