@@ -19801,7 +19801,7 @@
     "name": "HackerOne",
     "offers_bounties": true,
     "offers_swag": true,
-    "response_efficiency_percentage": 99,
+    "response_efficiency_percentage": 98,
     "submission_state": "open",
     "url": "https://hackerone.com/security",
     "website": "https://hackerone.com",
@@ -43651,7 +43651,7 @@
     "name": "Stellar.org",
     "offers_bounties": false,
     "offers_swag": true,
-    "response_efficiency_percentage": 80,
+    "response_efficiency_percentage": 82,
     "submission_state": "open",
     "url": "https://hackerone.com/stellar",
     "website": "https://www.stellar.org",
@@ -58970,7 +58970,7 @@
     "name": "Consensys",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 96,
+    "response_efficiency_percentage": 95,
     "submission_state": "open",
     "url": "https://hackerone.com/consensys",
     "website": "http://consensys.net",
@@ -60192,7 +60192,7 @@
     "name": "MTN Group",
     "offers_bounties": false,
     "offers_swag": false,
-    "response_efficiency_percentage": 16,
+    "response_efficiency_percentage": 15,
     "submission_state": "open",
     "url": "https://hackerone.com/mtn_group",
     "website": "https://www.mtn.com/",
@@ -69064,6 +69064,237 @@
           "eligible_for_submission": false,
           "instruction": "Active link: https://beta.myetherwallet.com/\nCodebase can be found at: https://github.com/MyEtherWallet/MyEtherWallet/tree/v6/develop",
           "integrity_requirement": "high",
+          "max_severity": "none"
+        }
+      ]
+    }
+  },
+  {
+    "allows_bounty_splitting": false,
+    "average_time_to_bounty_awarded": null,
+    "average_time_to_first_program_response": 48.0,
+    "average_time_to_report_resolved": 881.0,
+    "handle": "krisp",
+    "id": 53084,
+    "managed_program": true,
+    "name": "Krisp",
+    "offers_bounties": true,
+    "offers_swag": false,
+    "response_efficiency_percentage": 100,
+    "submission_state": "open",
+    "url": "https://hackerone.com/krisp",
+    "website": "https://krisp.ai",
+    "targets": {
+      "in_scope": [
+        {
+          "asset_identifier": "*.krisp.ai",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "except for OOS domains",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "Other",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Anything that belongs to us and doesn't match any other scope.",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://account.krisp.ai",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "consider testing on stage.account.krisp.ai rather than on the main one",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://analytics.krisp.ai",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "consider testing on stage.analytics.krisp.ai rather than on the main one",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://api.krisp.ai",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "consider testing on stage.api.krisp.ai rather than on the main one",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://download.krisp.ai",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "consider testing on stage.download.krisp.ai rather than on the main one",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://download.krisp.ai/mac",
+          "asset_type": "DOWNLOADABLE_EXECUTABLES",
+          "availability_requirement": "medium",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "bypassing free minutes limitation via changing frontend applications' logic",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://download.krisp.ai/win",
+          "asset_type": "DOWNLOADABLE_EXECUTABLES",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "bypassing free minutes limitation via changing frontend applications' logic is out of scope",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://help.krisp.ai",
+          "asset_type": "URL",
+          "availability_requirement": "none",
+          "confidentiality_requirement": "none",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "Misconfigurations are in scope and may be awarded",
+          "integrity_requirement": "none",
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "https://jobs.krisp.ai",
+          "asset_type": "URL",
+          "availability_requirement": "none",
+          "confidentiality_requirement": "none",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "Misconfigurations are in scope and may be awarded",
+          "integrity_requirement": "none",
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "https://krisp.ai",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://teams.krisp.ai",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "consider testing on stage.teams.krisp.ai rather than on the main one",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://upld.krisp.ai",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "consider testing on stage.upld.krisp.ai rather than on the main one",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://whatsnew.krisp.ai",
+          "asset_type": "URL",
+          "availability_requirement": "none",
+          "confidentiality_requirement": "none",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "Misconfigurations are in scope and may be awarded",
+          "integrity_requirement": "none",
+          "max_severity": "none"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "asset_identifier": "*.env.krisp.ai",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "Development environment",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "*.feature-test.*.krisp.ai",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "Development environment",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "*.mdev.krisp.ai",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "Development environment",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "dev.*.krisp.ai",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "Development environment",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "new.*.krisp.ai",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "Development environment",
+          "integrity_requirement": null,
           "max_severity": "none"
         }
       ]
