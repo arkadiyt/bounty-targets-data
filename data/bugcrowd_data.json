@@ -2502,6 +2502,32 @@
     }
   },
   {
+    "name": "Braze Public BB",
+    "url": "https://bugcrowd.com/braze-bb",
+    "allows_disclosure": true,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "full",
+    "max_payout": 2500,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "website",
+          "target": "http://security-testing-env-dashboard.k8s.test-001.d-usw-2.braze.com"
+        },
+        {
+          "type": "api",
+          "target": "https://security-testing-env-api.k8s.test-001.d-usw-2.braze.com/"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "website",
+          "target": "https://bug-bounty.k8s.tools-001.p-use-1.braze.com/"
+        }
+      ]
+    }
+  },
+  {
     "name": "Bugcrowd",
     "url": "https://bugcrowd.com/bugcrowd",
     "allows_disclosure": true,
@@ -4740,6 +4766,25 @@
     }
   },
   {
+    "name": "EXIM - Vulnerability Disclosure Program",
+    "url": "https://bugcrowd.com/exim-vdp",
+    "allows_disclosure": true,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "full",
+    "max_payout": 0,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "website",
+          "target": "*.exim.gov"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
     "name": "ExpressVPN",
     "url": "https://bugcrowd.com/expressvpn",
     "allows_disclosure": true,
@@ -6071,6 +6116,18 @@
         {
           "type": "other",
           "target": "https://marketplace.atlassian.com/apps/1217608/scroll-documents-for-confluence?hosting=datacenter&tab=overview"
+        },
+        {
+          "type": "other",
+          "target": "https://marketplace.atlassian.com/apps/1226295/variants-for-scroll-documents?hosting=cloud"
+        },
+        {
+          "type": "other",
+          "target": "https://marketplace.atlassian.com/apps/1226295/variants-for-scroll-documents?hosting=datacenter"
+        },
+        {
+          "type": "other",
+          "target": "https://marketplace.atlassian.com/apps/1227131/orderly-databases-for-confluence?hosting=cloud"
         },
         {
           "type": "other",
@@ -8616,7 +8673,7 @@
       "in_scope": [
         {
           "type": "other",
-          "target": "Latest ZAP version (2.11.0)"
+          "target": "Latest ZAP version (2.11.1)"
         },
         {
           "type": "website",
@@ -9302,6 +9359,29 @@
           "type": "website",
           "target": "*.1shoppingcart.com"
         }
+      ]
+    }
+  },
+  {
+    "name": "Sisu Data",
+    "url": "https://bugcrowd.com/sisu",
+    "allows_disclosure": true,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "full",
+    "max_payout": 4500,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "website",
+          "target": "https://sisudata.com"
+        },
+        {
+          "type": "website",
+          "target": "https://vip.sisu.ai"
+        }
+      ],
+      "out_of_scope": [
+
       ]
     }
   },
@@ -11931,10 +12011,6 @@
         },
         {
           "type": "website",
-          "target": "promo.united.com"
-        },
-        {
-          "type": "website",
           "target": "secure.unitedmileageplus.com"
         },
         {
@@ -12900,6 +12976,10 @@
         {
           "type": "website",
           "target": "masspay.api.westernunion.com"
+        },
+        {
+          "type": "website",
+          "target": "mydesktop.wu.com"
         },
         {
           "type": "website",
