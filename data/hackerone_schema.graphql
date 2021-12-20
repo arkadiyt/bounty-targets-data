@@ -8529,6 +8529,18 @@ Converts a date to iso8601
 """
 scalar Date
 
+input DatePredicateInput {
+  _eq: Date
+  _gt: Date
+  _gte: Date
+  _in: [Date]
+  _is_null: Boolean
+  _lt: Date
+  _lte: Date
+  _neq: Date
+  _nin: [Date]
+}
+
 """
 Converts a datetime to iso8601
 """
@@ -11016,6 +11028,14 @@ input FiltersDerivedTeamAverageBountyAmountFilterOrder {
   team_id: FilterOrderPredicateInput
 }
 
+input FiltersDerivedTeamLastUpdatedDateFilterInput {
+  _and: [FiltersDerivedTeamLastUpdatedDateFilterInput]
+  _not: FiltersDerivedTeamLastUpdatedDateFilterInput
+  _or: [FiltersDerivedTeamLastUpdatedDateFilterInput]
+  last_updated_at: DatePredicateInput
+  team_id: IntPredicateInput
+}
+
 input FiltersDerivedTeamMinimumBountyFilterOrder {
   amount: FilterOrderPredicateInput
   team_id: FilterOrderPredicateInput
@@ -11385,6 +11405,8 @@ input FiltersTeamFilterInput {
   handle: StringPredicateInput
   id: IntPredicateInput
   internet_bug_bounty: BooleanPredicateInput
+  last_updated_date: FiltersDerivedTeamLastUpdatedDateFilterInput
+  launched_at: DatePredicateInput
   name: StringPredicateInput
   offers_bounties: BooleanPredicateInput
   reporters: FiltersUserFilterInput
