@@ -5663,6 +5663,33 @@
     }
   },
   {
+    "name": "Imperva Bug Bounty",
+    "url": "https://bugcrowd.com/imperva-mbb",
+    "allows_disclosure": true,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "full",
+    "max_payout": 2500,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "website",
+          "target": "https://*.cloudvector.com/"
+        },
+        {
+          "type": "website",
+          "target": "https://*.imperva.com"
+        },
+        {
+          "type": "api",
+          "target": "https://*.incapsula.com"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
     "name": "Indeed",
     "url": "https://bugcrowd.com/indeed",
     "allows_disclosure": true,
@@ -11276,6 +11303,10 @@
         {
           "type": "website",
           "target": "spotlight.tripadvisor.*"
+        },
+        {
+          "type": "website",
+          "target": "www.tripadvisor.com/blog"
         }
       ]
     }
