@@ -29177,7 +29177,7 @@
     "name": "Airbnb",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 94,
+    "response_efficiency_percentage": 95,
     "submission_state": "open",
     "url": "https://hackerone.com/airbnb",
     "website": "https://www.airbnb.com",
@@ -33638,15 +33638,15 @@
     "average_time_to_bounty_awarded": 130.0,
     "average_time_to_first_program_response": 74.0,
     "average_time_to_report_resolved": 46.0,
-    "handle": "maximum",
+    "handle": "radancy",
     "id": 2450,
     "managed_program": false,
-    "name": "Maximum",
+    "name": "Radancy",
     "offers_bounties": true,
     "offers_swag": true,
     "response_efficiency_percentage": 71,
     "submission_state": "open",
-    "url": "https://hackerone.com/maximum",
+    "url": "https://hackerone.com/radancy",
     "website": "https://radancy.nl",
     "targets": {
       "in_scope": [
@@ -33726,6 +33726,17 @@
           "instruction": "This domain is used as default email sender domain for our review, testing and staging environments. Sender addresses usually are in the form of `<custom-site-name>@no-reply.cloud`. For example: `workatmcdo.be@no-reply.cloud`",
           "integrity_requirement": "medium",
           "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "nossl.nl",
+          "asset_type": "URL",
+          "availability_requirement": "none",
+          "confidentiality_requirement": "medium",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "This domain is used as a fallback domain for non-configured backends. It is also used as default TLS response certificate when the domain is not configured and not used anywhere. This causes an intentional incorrect nossl.nl TLS certificate on domains.\nIgnoring the ssl certificate mismatch in your browser should give a \"This domain is not configured\" notice, just like https://nossl.nl/ itself.",
+          "integrity_requirement": "low",
+          "max_severity": "high"
         },
         {
           "asset_identifier": "ruddercms.nl",
@@ -33950,17 +33961,6 @@
           "max_severity": "none"
         },
         {
-          "asset_identifier": "nossl.nl",
-          "asset_type": "URL",
-          "availability_requirement": "none",
-          "confidentiality_requirement": "medium",
-          "eligible_for_bounty": false,
-          "eligible_for_submission": false,
-          "instruction": "This domain is used as a fallback domain for non-configured backends. It is also used as default TLS response certificate when the domain is not configured and not used anywhere. This causes an intentional incorrect nossl.nl TLS certificate on domains.\nIgnoring the ssl certificate mismatch in your browser should give a \"This domain is not configured\" notice, just like https://nossl.nl/ itself.",
-          "integrity_requirement": "low",
-          "max_severity": "none"
-        },
-        {
           "asset_identifier": "preprod.nl",
           "asset_type": "URL",
           "availability_requirement": "high",
@@ -33983,24 +33983,24 @@
           "max_severity": "none"
         },
         {
+          "asset_identifier": "radancy.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "This hackerone program is solely for the Dutch sites covered by us. Unfortunately radancy.nl is not in our control. Corporate bureaucracy will prevent any issue for ever being resolved. For this reason we'll have to keep both radancy.nl and radancy.com including any subdomains out of scope.",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
           "asset_identifier": "radancy.nl",
           "asset_type": "URL",
           "availability_requirement": null,
           "confidentiality_requirement": null,
           "eligible_for_bounty": false,
           "eligible_for_submission": false,
-          "instruction": "This domain is not in our control. Reports will be marked as Not Applicable without further explanation",
-          "integrity_requirement": null,
-          "max_severity": "none"
-        },
-        {
-          "asset_identifier": "ret.nl",
-          "asset_type": "URL",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": false,
-          "eligible_for_submission": false,
-          "instruction": "this domain is not ours",
+          "instruction": "This hackerone program is solely for the Dutch sites covered by us. Unfortunately radancy.nl is not in our control. Corporate bureaucracy will prevent any issue for ever being resolved. For this reason we'll have to keep both radancy.nl and radancy.com including any subdomains out of scope.",
           "integrity_requirement": null,
           "max_severity": "none"
         },
@@ -34024,17 +34024,6 @@
           "eligible_for_submission": false,
           "instruction": "This domain is in no way affiliated to this organization. Reports regarding this domain will not be taken under advisement. Findings can be reported here: https://hackerone.com/sap",
           "integrity_requirement": null,
-          "max_severity": "none"
-        },
-        {
-          "asset_identifier": "werkenbijfacilicom.nl",
-          "asset_type": "URL",
-          "availability_requirement": "high",
-          "confidentiality_requirement": "high",
-          "eligible_for_bounty": false,
-          "eligible_for_submission": false,
-          "instruction": "werkenbijfacilicom.nl is no longer under our control",
-          "integrity_requirement": "high",
           "max_severity": "none"
         }
       ]
@@ -64315,7 +64304,7 @@
     "name": "OPPO",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 85,
+    "response_efficiency_percentage": 84,
     "submission_state": "open",
     "url": "https://hackerone.com/oppo",
     "website": "https://security.oppo.com/",
