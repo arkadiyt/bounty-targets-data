@@ -991,7 +991,7 @@
     "name": "EPAM",
     "offers_bounties": false,
     "offers_swag": false,
-    "response_efficiency_percentage": 95,
+    "response_efficiency_percentage": 96,
     "submission_state": "open",
     "url": "https://hackerone.com/epam",
     "website": "http://epam.com",
@@ -42259,7 +42259,7 @@
     "name": "Nintendo",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 90,
+    "response_efficiency_percentage": 91,
     "submission_state": "open",
     "url": "https://hackerone.com/nintendo",
     "website": "http://www.nintendo.com",
@@ -63423,6 +63423,127 @@
           "eligible_for_bounty": false,
           "eligible_for_submission": false,
           "instruction": "Entering an email address at this URL initiates the arduous application process that includes KYC requirements. ",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        }
+      ]
+    }
+  },
+  {
+    "allows_bounty_splitting": false,
+    "average_time_to_bounty_awarded": null,
+    "average_time_to_first_program_response": null,
+    "average_time_to_report_resolved": null,
+    "handle": "doppler",
+    "id": 44515,
+    "managed_program": false,
+    "name": "Doppler",
+    "offers_bounties": false,
+    "offers_swag": false,
+    "response_efficiency_percentage": 100,
+    "submission_state": "open",
+    "url": "https://hackerone.com/doppler",
+    "website": "https://doppler.com",
+    "targets": {
+      "in_scope": [
+        {
+          "asset_identifier": "api.doppler.com",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "This domain hosts our public API. It's used by the Doppler CLI as well as by customers directly. All APIs and supported auth schemes are [documented](https://docs.doppler.com/reference) in our Docs hub.",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "dashboard.doppler.com",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "This web app provides the ability to view and manage your secrets, team members, and account. You can read about additional functionality in our [docs](https://docs.doppler.com/).\n\nSupported auth methods:\n- Email/password. Optional: Authy/OTP MFA and/or WebAuthn\n- Google Auth\n- SAML SSO\n",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "doppler",
+          "asset_type": "DOWNLOADABLE_EXECUTABLES",
+          "availability_requirement": "low",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "This is the pre-built binary based on the Doppler CLI [source code](https://github.com/DopplerHQ/cli) (also in scope). You can find all builds on [cli.doppler.com](https://cli.doppler.com/download) or on [GitHub](https://github.com/DopplerHQ/cli/releases).\n\nThe CLI can be installed via brew, scoop, apt, yum, sh + curl/wget, and [more](https://github.com/DopplerHQ/cli/blob/master/INSTALL.md).",
+          "integrity_requirement": "medium",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "doppler.team",
+          "asset_type": "URL",
+          "availability_requirement": "none",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "This domain hosts our internal tools for managing Workplace plans and features. It does not provide access to user secrets.\n\nAccess is protected via Cloudflare Access. Users must authenticate with a valid GSuite account, and must additionally be on the Admin allowlist. For this asset, we're especially interested in any bypass of our access controls.",
+          "integrity_requirement": "medium",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://github.com/DopplerHQ/cli",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": "low",
+          "confidentiality_requirement": "medium",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "The Doppler CLI is the primary agent for retrieving secrets and executing your applications. It communicates with the Doppler API, which is also in scope.  You can read more about the CLI on our [Docs hub](https://docs.doppler.com/docs/cli), or [Install](https://cli.doppler.com/download) it and give it a spin.\n\nNotable commands we're especially interested in:\n- `doppler login`: orchestrates the auth flow\n- `doppler run`: executes the specified process with secrets injected as environment variables\n- `doppler update`: installs the latest CLI\n\nBuild instructions can be found on [GitHub](https://github.com/DopplerHQ/cli/blob/master/BUILD.md) and only require installing `go`.\n",
+          "integrity_requirement": "medium",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "share.doppler.com",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "This web app allows users to anonymously share end-to-end (E2E) encrypted secrets. All key generation/operations occur client-side in the user's browser. The server only receives the encrypted secret (cipher text) and a SHA256 hash of the passphrase used to derive the key. You can read more about the design in our [docs](https://docs.doppler.com/docs/share-security).",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "asset_identifier": "community.doppler.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "This is our community hub hosted on Discourse.",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "docs.doppler.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "This subdomain points to our docs hosted on ReadMe.",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "doppler.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "This is our marketing website built on Webflow.",
           "integrity_requirement": null,
           "max_severity": "none"
         }
