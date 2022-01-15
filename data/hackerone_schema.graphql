@@ -8407,6 +8407,7 @@ type CweEntry implements Node {
   cwe_name: String!
   id: ID!
   publicly_disclosed_report_ids: String
+  submission_count: Int
   submission_count_10_weeks_ago: Int
   submission_count_11_weeks_ago: Int
   submission_count_12_weeks_ago: Int
@@ -8543,8 +8544,8 @@ Fields on which a collection of cwe entries can be ordered
 enum CweEntryOrderField {
   cwe_id
   cwe_name
+  submission_count
   submission_pct_1_week_ago
-  total_occurrences
 }
 
 input CweEntryOrderInput {
@@ -16808,6 +16809,7 @@ type Pentest implements Node {
   i_can_edit_pentest_tasks: Boolean!
   i_can_manage: Boolean!
   i_can_revoke: Boolean!
+  i_can_setup: Boolean!
   i_can_update_description: Boolean!
   id: ID!
   industry: String
