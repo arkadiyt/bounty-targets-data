@@ -999,10 +999,50 @@
     "archived": false,
     "targets": {
       "in_scope": [
-
+        {
+          "target": "kuna.io",
+          "type": "Web",
+          "instruction": "Main site",
+          "severity": "Critical",
+          "reward": "Bounty"
+        },
+        {
+          "target": "api.kuna.io",
+          "type": "API",
+          "instruction": "APIv3",
+          "severity": "High",
+          "reward": "Bounty"
+        },
+        {
+          "target": "money.kuna.io",
+          "type": "Web",
+          "instruction": "",
+          "severity": "Low",
+          "reward": "Reputation"
+        }
       ],
       "out_of_scope": [
-
+        {
+          "target": "eos.kuna.io",
+          "type": "Out of scope",
+          "instruction": "Hosted by third party",
+          "severity": "None",
+          "reward": ""
+        },
+        {
+          "target": "investors.kuna.io",
+          "type": "Out of scope",
+          "instruction": "Hosted by third party",
+          "severity": "None",
+          "reward": ""
+        },
+        {
+          "target": "*.kuna.io",
+          "type": "Out of scope",
+          "instruction": "Hosted by third party",
+          "severity": "None",
+          "reward": ""
+        }
       ]
     }
   },
@@ -1013,7 +1053,20 @@
     "archived": false,
     "targets": {
       "in_scope": [
-
+        {
+          "target": "*.LCX.com",
+          "type": "Web",
+          "instruction": "",
+          "severity": "Critical",
+          "reward": "Bounty"
+        },
+        {
+          "target": "API",
+          "type": "API",
+          "instruction": "https://exchange.lcx.com/v1/docs/",
+          "severity": "Critical",
+          "reward": "Bounty"
+        }
       ],
       "out_of_scope": [
 
