@@ -19505,29 +19505,6 @@ type Query implements Node {
     """
     last: Int
   ): SkillConnection!
-  sla_statuses(
-    """
-    Returns the elements in the list that come after the specified cursor.
-    """
-    after: String
-
-    """
-    Returns the elements in the list that come before the specified cursor.
-    """
-    before: String
-
-    """
-    Returns the first _n_ elements from the list.
-    """
-    first: Int
-
-    """
-    Returns the last _n_ elements from the list.
-    """
-    last: Int
-    order_by: SlaStatusOrder = {field: TRIAGER_ROLE_AND_SLA_STATUS}
-    team_states: [TeamState]
-  ): SlaStatusConnection
   surveys(
     """
     Returns the elements in the list that come after the specified cursor.
@@ -22969,66 +22946,6 @@ enum SlaSnapshotIntervalEnum {
 }
 
 """
-SLA Status of a Team
-"""
-type SlaStatus implements Node {
-  id: ID!
-  team: Team!
-  triage_sla_fail_in_hours: Int
-  triage_sla_failures_count: Int
-  triage_sla_misses_count: Int
-  triage_sla_ok_count: Int
-  user_id: Int
-}
-
-"""
-The connection type for SlaStatus.
-"""
-type SlaStatusConnection {
-  """
-  A list of edges.
-  """
-  edges: [SlaStatusEdge]
-
-  """
-  A list of nodes.
-  """
-  nodes: [SlaStatus]
-
-  """
-  Information to aid in pagination.
-  """
-  pageInfo: PageInfo!
-  total_count: Int!
-}
-
-"""
-An edge in a connection.
-"""
-type SlaStatusEdge {
-  """
-  A cursor for use in pagination.
-  """
-  cursor: String!
-
-  """
-  The item at the end of the edge.
-  """
-  node: SlaStatus
-}
-
-input SlaStatusOrder {
-  field: SlaStatusOrderField!
-}
-
-"""
-Fields on which a collection of SLA statuses can be ordered
-"""
-enum SlaStatusOrderField {
-  TRIAGER_ROLE_AND_SLA_STATUS
-}
-
-"""
 SLA types
 """
 enum SlaTypeEnum {
@@ -25360,7 +25277,6 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
     of: SlaSnapshotFilterField
     start_date: DateTime
   ): SlaSnapshotConnection
-  sla_status: SlaStatus
   slack_integration: SlackIntegration
   slack_pipelines(
     """
