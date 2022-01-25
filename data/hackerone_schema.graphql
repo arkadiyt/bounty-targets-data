@@ -2351,6 +2351,7 @@ An asset object
 """
 type Asset implements Node {
   _id: ID!
+  created_at: DateTime!
   description: String
   id: ID!
   implementation: AssetImplementationUnion!
@@ -2399,9 +2400,51 @@ A domain asset object
 type AssetImplementationDomain implements AssetImplementationInterface & Node {
   _id: ID!
   asset: Asset
+  child_domains(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+  ): DomainConnection
   created_at: DateTime
   domain_name: String
   id: ID!
+  structured_scopes(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+  ): StructuredScopesConnection
 }
 
 """
