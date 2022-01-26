@@ -11497,6 +11497,7 @@ enum FiltersReportRetestFilterRoles {
   is_pentest_claimable
   is_private_claimable
   is_public_claimable
+  is_report_access_granted_via_inbox
   is_report_anc_triager
   is_report_external_user
   is_report_particip_retest_depr_with_inv
@@ -21050,6 +21051,7 @@ type Report implements ActivitiesInterface & Node & ResourceInterface {
   extracted_report_data: ExtractedReportData
   first_program_activity_at: DateTime
   hacker_published: Boolean
+  i_am_organization_group_member: Boolean
   i_am_participant: Boolean
   i_am_subscribed: Boolean
   i_can_anc_review: Boolean
