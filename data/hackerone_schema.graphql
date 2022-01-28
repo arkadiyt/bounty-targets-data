@@ -17901,6 +17901,7 @@ type PentestOpportunity implements Node {
   schedule_restrictions: String
   schedule_time_restrictions_end: String
   schedule_time_restrictions_start: String
+  sold_at: DateTime
   state: String!
   web_app_scopes(
     """
@@ -18404,6 +18405,7 @@ A pentest task
 """
 type PentestTask implements Node {
   _id: ID!
+  description: String
   group_key: String!
   id: ID!
   key: String!
