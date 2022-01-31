@@ -11455,6 +11455,14 @@ input FiltersPentestFilterOrder {
   id: FilterOrderPredicateInput
 }
 
+input FiltersPentestTaskFilterInput {
+  _and: [FiltersPentestTaskFilterInput]
+  _not: FiltersPentestTaskFilterInput
+  _or: [FiltersPentestTaskFilterInput]
+  group_key: StringPredicateInput
+  id: IntPredicateInput
+}
+
 input FiltersPentesterFilterInput {
   _and: [FiltersPentesterFilterInput]
   _not: FiltersPentesterFilterInput
@@ -17239,6 +17247,10 @@ type Pentest implements Node {
     """
     last: Int
   ): PentestSummaryReportConnection
+
+  """
+  A Resolver for Pentest Tasks
+  """
   pentest_tasks(
     """
     Returns the elements in the list that come after the specified cursor.
@@ -17259,6 +17271,7 @@ type Pentest implements Node {
     Returns the last _n_ elements from the list.
     """
     last: Int
+    where: FiltersPentestTaskFilterInput
   ): PentestTaskConnection
   pentest_tasks_enabled: Boolean!
   pentester_cap: Int
