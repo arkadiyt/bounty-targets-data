@@ -11298,6 +11298,7 @@ input FiltersDerivedTeamLastUpdatedDateFilterInput {
   _and: [FiltersDerivedTeamLastUpdatedDateFilterInput]
   _not: FiltersDerivedTeamLastUpdatedDateFilterInput
   _or: [FiltersDerivedTeamLastUpdatedDateFilterInput]
+  bounty_table_updated_at: DatePredicateInput
   last_updated_at: DatePredicateInput
   team_id: IntPredicateInput
 }
@@ -25517,7 +25518,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
     """
     start_date: String
   ): SurveyAnswerConnection
-  program_statistics(child_team_ids: [ID!], end_date: Date!, exclude_imported: Boolean, start_date: Date!, view_by: ProgramSubmissionMetricViewByEnum): ProgramStatistics!
+  program_statistics(child_team_ids: [ID!], end_date: Date!, exclude_imported: Boolean, include_parent: Boolean, start_date: Date!, view_by: ProgramSubmissionMetricViewByEnum): ProgramStatistics!
   program_submission_metrics(
     """
     Returns the elements in the list that come after the specified cursor.
