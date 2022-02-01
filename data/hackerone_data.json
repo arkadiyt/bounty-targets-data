@@ -15966,7 +15966,7 @@
     "name": "PicsArt",
     "offers_bounties": false,
     "offers_swag": false,
-    "response_efficiency_percentage": 95,
+    "response_efficiency_percentage": 100,
     "submission_state": "open",
     "url": "https://hackerone.com/picsart",
     "website": "http://picsart.com",
@@ -30179,7 +30179,7 @@
     "name": "Imgur",
     "offers_bounties": true,
     "offers_swag": true,
-    "response_efficiency_percentage": 69,
+    "response_efficiency_percentage": 65,
     "submission_state": "open",
     "url": "https://hackerone.com/imgur",
     "website": "http://imgur.com",
@@ -52914,6 +52914,127 @@
   },
   {
     "allows_bounty_splitting": true,
+    "average_time_to_bounty_awarded": 176.0,
+    "average_time_to_first_program_response": 17.0,
+    "average_time_to_report_resolved": 2293.0,
+    "handle": "databricks",
+    "id": 24603,
+    "managed_program": true,
+    "name": "Databricks",
+    "offers_bounties": true,
+    "offers_swag": false,
+    "response_efficiency_percentage": 100,
+    "submission_state": "open",
+    "url": "https://hackerone.com/databricks",
+    "website": "https://databricks.com/",
+    "targets": {
+      "in_scope": [
+        {
+          "asset_identifier": "connect.databricks.com,databricks-staging-cloudfront.staging.cloud.databricks.com,docs-admin.databricks.com,docs-user.databricks.com,e.databricks.com,go.databricks.com,go.dev.databricks.com,homebrew-tap.dev.databricks.com,ideas.staging.databricks.com,info.databricks.com,it.corp.databricks.com,jamf-cdn.corp.databricks.com,ok.databricks.com,pages.databricks.com,partnermarketing.databricks.com,signup.cloud.mrkt.databricks.com,signup.dev.mrkt.databricks.com,ssh.databricks.com,ssh.spark-summit.org,staging.spark-summit.org,tools.sec-sf.databricks.com,training.databricks.com,uberlyft-ns.dev.databricks.com,waf-test.corp.databricks.com,academy.databricks.com,accounts.cloud.databricks.com,databricks-prod-cloudfront.cloud.databricks.com,delta.io,demo.cloud.databricks.com,docs.cloud.databricks.com,docs.databricks.com,docs.delta.io,files.training.databricks.com,ftp.databricks.com,go.corp.databricks.com,gw1-ap.corp.databricks.com,gw1-eu.corp.databricks.com,gw1-us.corp.databricks.com,gw2-us.corp.databricks.com,help.corp.databricks.com,help.databricks.com,ideas.databricks.com,jamf.corp.databricks.com,kb.azuredatabricks.net,kb.databricks.com,maintenance.databricks.com,partners.databricks.com,pgg11o.hubspot.databricks.com,preferences.databricks.com,sophos.corp.databricks.com,spark-portal.org,spark-summit.com,spark-summit.org,sparkhub.databricks.com,support.databricks.com,unsubscribe.corp.databricks.com,vpn-us.corp.databricks.com,www.databricks.com,www.sparkhub.databricks.com",
+          "asset_type": "URL",
+          "availability_requirement": "medium",
+          "confidentiality_requirement": "medium",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": "medium",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "databricks.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://dbc-a1ba5468-749b.staging.cloud.databricks.com,https://community.cloud.databricks.com/",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "###[Databrick Credentials](https://docs.google.com/forms/d/19MTqA21nc8K9DmdxDPh-NV2d9VdFXAHtxxWQhjqqFCc/edit)\n###Documentation\n* For information on using Databricks, please visit https://docs.azuredatabricks.net/.",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "asset_identifier": "*.azuredatabricks.net",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "*.cloud.databricks.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "Other subdomains of *.azuredatabricks.net and other ‘o’ parameters",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "feedback.databricks.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "forums.databricks.com",
+          "asset_type": "URL",
+          "availability_requirement": "none",
+          "confidentiality_requirement": "none",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "",
+          "integrity_requirement": "none",
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "go.databricks.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        }
+      ]
+    }
+  },
+  {
+    "allows_bounty_splitting": true,
     "average_time_to_bounty_awarded": null,
     "average_time_to_first_program_response": null,
     "average_time_to_report_resolved": null,
@@ -61597,7 +61718,7 @@
     "name": "Consensys",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 89,
+    "response_efficiency_percentage": 90,
     "submission_state": "open",
     "url": "https://hackerone.com/consensys",
     "website": "http://consensys.net",
@@ -62118,7 +62239,7 @@
     "name": "Lark Technologies",
     "offers_bounties": true,
     "offers_swag": true,
-    "response_efficiency_percentage": 97,
+    "response_efficiency_percentage": 98,
     "submission_state": "open",
     "url": "https://hackerone.com/lark_technologies",
     "website": "https://www.larksuite.com",
