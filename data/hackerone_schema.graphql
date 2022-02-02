@@ -16255,6 +16255,7 @@ type Organization implements Node {
     """
     last: Int
   ): DomainConnection
+  features: [Feature]
   handle: String!
   i_can_manage_organization_api_tokens: Boolean!
   i_can_manage_organization_inboxes: Boolean!
@@ -16776,6 +16777,7 @@ type OrganizationMemberGroupEdge {
 Organization permissions enum
 """
 enum OrganizationPermissionsEnum {
+  asset_manager
   program_admin
   read_only_member
   report_analyst
@@ -27710,11 +27712,16 @@ type TriageInboxItemConnection {
   nodes: [TriageInboxItem]
   oldest_undismissed_enterprise_created_at: DateTime
   oldest_undismissed_professional_created_at: DateTime
+  owned_by_me_total_count: Int!
+  owned_by_triage_total_count: Int!
 
   """
   Information to aid in pagination.
   """
   pageInfo: PageInfo!
+  prioritization_total_count: Int!
+  pristine_total_count: Int!
+  recently_dismissed_total_count: Int!
   teams: [Team]
 
   """
