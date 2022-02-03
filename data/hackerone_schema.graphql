@@ -24978,6 +24978,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
   allows_disclosure_assistance: Boolean!
   allows_private_disclosure: Boolean
   anc_enabled: Boolean
+  asset_credentials_set_up: Boolean
   attachments: [Attachment]
   audit_log_items(
     """
@@ -26222,7 +26223,6 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
     """
     last: Int
   ): UserConnection
-  using_asset_based_credentials: Boolean!
   vdp_launch_configuration: VdpLaunchConfiguration
   vpn_behind_cdn: Boolean
   vpn_blocked_for_me: Boolean
