@@ -19388,7 +19388,7 @@
     "name": "Nutanix",
     "offers_bounties": false,
     "offers_swag": false,
-    "response_efficiency_percentage": 100,
+    "response_efficiency_percentage": 95,
     "submission_state": "open",
     "url": "https://hackerone.com/nutanix",
     "website": "https://www.nutanix.com",
@@ -22029,248 +22029,6 @@
     }
   },
   {
-    "allows_bounty_splitting": false,
-    "average_time_to_bounty_awarded": null,
-    "average_time_to_first_program_response": 22.0,
-    "average_time_to_report_resolved": null,
-    "handle": "cloudflare",
-    "id": 0,
-    "managed_program": true,
-    "name": "Cloudflare Public Bug Bounty",
-    "offers_bounties": true,
-    "offers_swag": true,
-    "response_efficiency_percentage": 100,
-    "submission_state": "open",
-    "url": "https://hackerone.com/cloudflare",
-    "website": "https://www.cloudflare.com/disclosure",
-    "targets": {
-      "in_scope": [
-        {
-          "asset_identifier": "*.cloudflare.com",
-          "asset_type": "URL",
-          "availability_requirement": "high",
-          "confidentiality_requirement": "high",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "Excluding support.cloudflare.com",
-          "integrity_requirement": "high",
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "*.teams.cloudflare.com",
-          "asset_type": "URL",
-          "availability_requirement": "high",
-          "confidentiality_requirement": "high",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "",
-          "integrity_requirement": "high",
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "1.1.1.1 Resolver",
-          "asset_type": "OTHER",
-          "availability_requirement": "high",
-          "confidentiality_requirement": "high",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "\nA blazing fast DNS resolver built for private browsing.\nhttps://1.1.1.1/\nhttps://developers.cloudflare.com/1.1.1.1/what-is-1.1.1.1/\nhttps://developers.cloudflare.com/1.1.1.1/setting-up-1.1.1.1/",
-          "integrity_requirement": "high",
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "Argo Tunnel",
-          "asset_type": "OTHER",
-          "availability_requirement": "high",
-          "confidentiality_requirement": "high",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "Argo Tunnel offers an easy way to expose web servers securely to the internet, without opening up firewall ports and configuring ACLs.\n\nhttps://www.cloudflare.com/products/argo-tunnel/",
-          "integrity_requirement": "high",
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "Bot Management",
-          "asset_type": "OTHER",
-          "availability_requirement": "high",
-          "confidentiality_requirement": "high",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "Cloudflare enables you to manage bots with speed and accuracy by applying several detection methods: Behavioral analysis, machine learning, and fingerprinting.\nhttps://www.cloudflare.com/products/bot-management/",
-          "integrity_requirement": "high",
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "CDNJS",
-          "asset_type": "OTHER",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "CDNJS is a free and open source project to organize and provide popular front-end web development resources to developers via a fast CDN infrastructure without usage limitations and fees.\n\nhttps://github.com/cdnjs/cdnjs\nhttps://blog.cloudflare.com/an-update-on-cdnjs/",
-          "integrity_requirement": null,
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "Cloudflare Access",
-          "asset_type": "OTHER",
-          "availability_requirement": "high",
-          "confidentiality_requirement": "high",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "Cloudflare Access is an application that controls access to your sites and integrates with social and enterprise identity providers (IdP) for managing user credentials.\n\nhttps://www.cloudflare.com/products/cloudflare-access/\n\n",
-          "integrity_requirement": "high",
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "Cloudflare Pages",
-          "asset_type": "OTHER",
-          "availability_requirement": "high",
-          "confidentiality_requirement": "high",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "",
-          "integrity_requirement": "high",
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "Cloudflare for teams",
-          "asset_type": "OTHER",
-          "availability_requirement": "high",
-          "confidentiality_requirement": "high",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "",
-          "integrity_requirement": "high",
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "Load Balancing",
-          "asset_type": "OTHER",
-          "availability_requirement": "high",
-          "confidentiality_requirement": "high",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "\nCloudflare's Load Balancing automatically reduces latency by directing visitors to infrastructure closest to them.\n\nhttps://www.cloudflare.com/load-balancing/",
-          "integrity_requirement": "high",
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "Magic Transit",
-          "asset_type": "OTHER",
-          "availability_requirement": "high",
-          "confidentiality_requirement": "high",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "Magic Transit is a software-defined networking product that offers IP transit with DDoS protection, next-gen firewall, traffic acceleration and more for your on-premise and data center networks from a single, easy-to-use interface.\n\nhttps://www.cloudflare.com/magic-transit/",
-          "integrity_requirement": "high",
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "Open source tools from Cloudflare",
-          "asset_type": "OTHER",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "https://github.com/cloudflare",
-          "integrity_requirement": null,
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "Spectrum",
-          "asset_type": "OTHER",
-          "availability_requirement": "high",
-          "confidentiality_requirement": "high",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "\nSpectrum extends the power of Cloudflare's DDoS, TLS, and IP Firewall to TCP and UDP-based services, keeping them online and secure.\nhttps://www.cloudflare.com/products/cloudflare-spectrum/",
-          "integrity_requirement": "high",
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "Stream",
-          "asset_type": "OTHER",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "Cloudflare Stream is an easy-to-use, affordable, on-demand video streaming platform. Stream seamlessly integrates video storage, encoding, and a customizable player with Cloudflare’s fast, secure, and reliable global network.\n\nhttps://www.cloudflare.com/products/cloudflare-stream/",
-          "integrity_requirement": null,
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "WARP Mobile Apps",
-          "asset_type": "OTHER",
-          "availability_requirement": "high",
-          "confidentiality_requirement": "high",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "Download on Android: https://play.google.com/store/apps/details?id=com.cloudflare.onedotonedotonedotone\nDownload on iOS: https://itunes.apple.com/us/app/1-1-1-1-faster-internet/id1423538627\nWARP is a free VPN for mobile phones. The app can be used as a 1.1.1.1 DNS resolver or VPN or our premium paid service Warp+. It works on wireguard protocol. See documentation section for more details.\nAreas of interest:\nUpgrading to Warp+ without paying\nCan other apps snoop with Warp\nDowngrade of connections\nMisconfiguration in the apps or backend\nMITM attacks",
-          "integrity_requirement": "high",
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "api.cloudflare.com",
-          "asset_type": "URL",
-          "availability_requirement": "high",
-          "confidentiality_requirement": "high",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "",
-          "integrity_requirement": "high",
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "cloudflare.com/apps/",
-          "asset_type": "URL",
-          "availability_requirement": "high",
-          "confidentiality_requirement": "high",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "This is the Cloudflare Marketplace.\nOnly the platform itself and first-party apps (those created by Cloudflare) are considered in scope.",
-          "integrity_requirement": "high",
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "cloudflareworkers.com",
-          "asset_type": "URL",
-          "availability_requirement": "high",
-          "confidentiality_requirement": "high",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "This is a Cloudflare Workers test site.\nCloudflare Workers provides a lightweight JavaScript execution environment that allows developers to augment existing applications or create entirely new ones without configuring or maintaining infrastructure.\nhttps://www.cloudflare.com/products/cloudflare-workers/",
-          "integrity_requirement": "high",
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "dash.cloudflare.com",
-          "asset_type": "URL",
-          "availability_requirement": "high",
-          "confidentiality_requirement": "high",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "The Cloudflare dashboard (https://dash.cloudflare.com/) and any direct calls from the dashboard to other Cloudflare owned resources are considered in scope.",
-          "integrity_requirement": "high",
-          "max_severity": "critical"
-        }
-      ],
-      "out_of_scope": [
-        {
-          "asset_identifier": "support.cloudflare.com",
-          "asset_type": "URL",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": false,
-          "eligible_for_submission": false,
-          "instruction": "This asset is hosted by Zendesk, and as such these reports should be submitted to their program instead via @zendesk.",
-          "integrity_requirement": null,
-          "max_severity": "none"
-        }
-      ]
-    }
-  },
-  {
     "allows_bounty_splitting": true,
     "average_time_to_bounty_awarded": 174.0,
     "average_time_to_first_program_response": 22.0,
@@ -23503,6 +23261,248 @@
       ],
       "out_of_scope": [
 
+      ]
+    }
+  },
+  {
+    "allows_bounty_splitting": false,
+    "average_time_to_bounty_awarded": null,
+    "average_time_to_first_program_response": 22.0,
+    "average_time_to_report_resolved": null,
+    "handle": "cloudflare",
+    "id": 41,
+    "managed_program": true,
+    "name": "Cloudflare Public Bug Bounty",
+    "offers_bounties": true,
+    "offers_swag": true,
+    "response_efficiency_percentage": 100,
+    "submission_state": "open",
+    "url": "https://hackerone.com/cloudflare",
+    "website": "https://www.cloudflare.com/disclosure",
+    "targets": {
+      "in_scope": [
+        {
+          "asset_identifier": "*.cloudflare.com",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Excluding support.cloudflare.com",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "*.teams.cloudflare.com",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "1.1.1.1 Resolver",
+          "asset_type": "OTHER",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "\nA blazing fast DNS resolver built for private browsing.\nhttps://1.1.1.1/\nhttps://developers.cloudflare.com/1.1.1.1/what-is-1.1.1.1/\nhttps://developers.cloudflare.com/1.1.1.1/setting-up-1.1.1.1/",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "Argo Tunnel",
+          "asset_type": "OTHER",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Argo Tunnel offers an easy way to expose web servers securely to the internet, without opening up firewall ports and configuring ACLs.\n\nhttps://www.cloudflare.com/products/argo-tunnel/",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "Bot Management",
+          "asset_type": "OTHER",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Cloudflare enables you to manage bots with speed and accuracy by applying several detection methods: Behavioral analysis, machine learning, and fingerprinting.\nhttps://www.cloudflare.com/products/bot-management/",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "CDNJS",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "CDNJS is a free and open source project to organize and provide popular front-end web development resources to developers via a fast CDN infrastructure without usage limitations and fees.\n\nhttps://github.com/cdnjs/cdnjs\nhttps://blog.cloudflare.com/an-update-on-cdnjs/",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "Cloudflare Access",
+          "asset_type": "OTHER",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Cloudflare Access is an application that controls access to your sites and integrates with social and enterprise identity providers (IdP) for managing user credentials.\n\nhttps://www.cloudflare.com/products/cloudflare-access/\n\n",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "Cloudflare Pages",
+          "asset_type": "OTHER",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "Cloudflare for teams",
+          "asset_type": "OTHER",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "Load Balancing",
+          "asset_type": "OTHER",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "\nCloudflare's Load Balancing automatically reduces latency by directing visitors to infrastructure closest to them.\n\nhttps://www.cloudflare.com/load-balancing/",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "Magic Transit",
+          "asset_type": "OTHER",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Magic Transit is a software-defined networking product that offers IP transit with DDoS protection, next-gen firewall, traffic acceleration and more for your on-premise and data center networks from a single, easy-to-use interface.\n\nhttps://www.cloudflare.com/magic-transit/",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "Open source tools from Cloudflare",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "https://github.com/cloudflare",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "Spectrum",
+          "asset_type": "OTHER",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "\nSpectrum extends the power of Cloudflare's DDoS, TLS, and IP Firewall to TCP and UDP-based services, keeping them online and secure.\nhttps://www.cloudflare.com/products/cloudflare-spectrum/",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "Stream",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Cloudflare Stream is an easy-to-use, affordable, on-demand video streaming platform. Stream seamlessly integrates video storage, encoding, and a customizable player with Cloudflare’s fast, secure, and reliable global network.\n\nhttps://www.cloudflare.com/products/cloudflare-stream/",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "WARP Mobile Apps",
+          "asset_type": "OTHER",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Download on Android: https://play.google.com/store/apps/details?id=com.cloudflare.onedotonedotonedotone\nDownload on iOS: https://itunes.apple.com/us/app/1-1-1-1-faster-internet/id1423538627\nWARP is a free VPN for mobile phones. The app can be used as a 1.1.1.1 DNS resolver or VPN or our premium paid service Warp+. It works on wireguard protocol. See documentation section for more details.\nAreas of interest:\nUpgrading to Warp+ without paying\nCan other apps snoop with Warp\nDowngrade of connections\nMisconfiguration in the apps or backend\nMITM attacks",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "api.cloudflare.com",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "cloudflare.com/apps/",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "This is the Cloudflare Marketplace.\nOnly the platform itself and first-party apps (those created by Cloudflare) are considered in scope.",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "cloudflareworkers.com",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "This is a Cloudflare Workers test site.\nCloudflare Workers provides a lightweight JavaScript execution environment that allows developers to augment existing applications or create entirely new ones without configuring or maintaining infrastructure.\nhttps://www.cloudflare.com/products/cloudflare-workers/",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "dash.cloudflare.com",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "The Cloudflare dashboard (https://dash.cloudflare.com/) and any direct calls from the dashboard to other Cloudflare owned resources are considered in scope.",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "asset_identifier": "support.cloudflare.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "This asset is hosted by Zendesk, and as such these reports should be submitted to their program instead via @zendesk.",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        }
       ]
     }
   },
