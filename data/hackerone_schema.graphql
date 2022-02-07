@@ -11811,6 +11811,7 @@ input FiltersTeamFilterInput {
   state: TeamStatePredicateInput
   structured_scopes: FiltersStructuredScopeFilterInput
   submission_state: SubmissionStateEnumPredicateInput
+  team_industry: FiltersTeamIndustryFilterInput
   team_members: FiltersTeamMemberFilterInput
   triage_subscriptions: FiltersTriageSubscriptionFilterInput
   type: TeamTypeEnumPredicateInput
@@ -11828,6 +11829,14 @@ input FiltersTeamFilterOrder {
   reports: FiltersDerivedTeamReportResolvedCountFilterOrder
   response_efficiency_percentage: FilterOrderPredicateInput
   started_accepting_at: FilterOrderPredicateInput
+}
+
+input FiltersTeamIndustryFilterInput {
+  _and: [FiltersTeamIndustryFilterInput]
+  _not: FiltersTeamIndustryFilterInput
+  _or: [FiltersTeamIndustryFilterInput]
+  id: IntPredicateInput
+  industry: StringPredicateInput
 }
 
 input FiltersTeamMemberFilterInput {
@@ -34417,6 +34426,7 @@ type User implements Node & ResourceInterface {
     team_handles: [String] = []
     where: FiltersTeamMemberFilterInput
   ): TeamMemberConnection
+  most_hacked_on_team_recently: Team
   name: String
   new_feature_notification: NewFeatureNotification
   next_update_username_date: String
