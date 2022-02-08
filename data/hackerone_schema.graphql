@@ -11500,6 +11500,14 @@ input FiltersJobListingFilterOrder {
   id: FilterOrderPredicateInput
 }
 
+input FiltersLabelFilterInput {
+  _and: [FiltersLabelFilterInput]
+  _not: FiltersLabelFilterInput
+  _or: [FiltersLabelFilterInput]
+  id: IntPredicateInput
+  name: StringPredicateInput
+}
+
 input FiltersOrganizationFilterInput {
   _and: [FiltersOrganizationFilterInput]
   _not: FiltersOrganizationFilterInput
@@ -11759,6 +11767,7 @@ input FiltersStructuredScopeFilterInput {
   asset_type: StructuredScopeAssetTypeEnumPredicateInput
   id: IntPredicateInput
   is_archived: Boolean
+  labels: FiltersLabelFilterInput
 }
 
 input FiltersSurveyRatingFilterInput {
