@@ -19874,6 +19874,7 @@ type Query implements Node {
     year: Int
   ): LeaderboardEntryConnection!
   me: User
+  most_used_technologies: [Hash!]!
 
   """
   Fetches an object given its ID
@@ -30819,10 +30820,15 @@ input UpdatePentestInput {
   A unique identifier for the client performing the mutation.
   """
   clientMutationId: String
-  ends_at: String!
+  ends_at: String
   pentest_id: ID!
-  retesting_ends_at: String!
-  starts_at: String!
+  retesting_ends_at: String
+  schedule_day_restrictions: [String]
+  schedule_restrictions: String
+  schedule_time_restrictions_end: String
+  schedule_time_restrictions_start: String
+  starts_at: String
+  time_zone: String
 }
 
 """
