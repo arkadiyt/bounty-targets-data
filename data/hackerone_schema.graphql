@@ -2520,6 +2520,7 @@ enum AssetCoverageEnum {
   in_scope
   new
   out_of_scope
+  untested
 }
 
 type AssetDocument implements Node {
@@ -19976,6 +19977,7 @@ type Query implements Node {
     year: Int
   ): LeaderboardEntryConnection!
   me: User
+  most_used_asset_types: [Hash!]!
   most_used_technologies: [Hash!]!
 
   """
