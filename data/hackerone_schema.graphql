@@ -11732,6 +11732,11 @@ input FiltersDerivedTeamLastUpdatedDateFilterInput {
   team_id: IntPredicateInput
 }
 
+input FiltersDerivedTeamLastUpdatedDateFilterOrder {
+  last_updated_at: FilterOrderPredicateInput
+  team_id: FilterOrderPredicateInput
+}
+
 input FiltersDerivedTeamMinimumBountyFilterOrder {
   amount: FilterOrderPredicateInput
   team_id: FilterOrderPredicateInput
@@ -12143,6 +12148,7 @@ input FiltersTeamFilterInput {
 input FiltersTeamFilterOrder {
   average_bounties: FiltersDerivedTeamAverageBountyAmountFilterOrder
   id: FilterOrderPredicateInput
+  last_updated_date: FiltersDerivedTeamLastUpdatedDateFilterOrder
   launched_at: FilterOrderPredicateInput
   minimum_bounties: FiltersDerivedTeamMinimumBountyFilterOrder
   name: FilterOrderPredicateInput
