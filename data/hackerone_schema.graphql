@@ -2631,6 +2631,27 @@ type Asset implements Node {
     """
     last: Int
   ): StructuredScopesConnection
+  teams(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+  ): TeamScopeConnection
   updated_at: DateTime!
 }
 
@@ -27931,6 +27952,44 @@ enum TeamPostOrderField {
 input TeamPostOrderInput {
   direction: OrderDirection!
   field: TeamPostOrderField!
+}
+
+"""
+The connection type for Team.
+"""
+type TeamScopeConnection {
+  """
+  A list of edges.
+  """
+  edges: [TeamScopeEdge]
+
+  """
+  A list of nodes.
+  """
+  nodes: [Team]
+
+  """
+  Information to aid in pagination.
+  """
+  pageInfo: PageInfo!
+  total_count: Int!
+}
+
+"""
+An edge in a connection.
+"""
+type TeamScopeEdge {
+  coverage: String!
+
+  """
+  A cursor for use in pagination.
+  """
+  cursor: String!
+
+  """
+  The item at the end of the edge.
+  """
+  node: Team
 }
 
 """
