@@ -3428,11 +3428,6 @@
     "targets": {
       "in_scope": [
         {
-          "type": "android",
-          "endpoint": "https://play.google.com/store/apps/details?id=com.uphold.card",
-          "description": "Android application for the separate debit card functionality, to complement your Uphold platform experience. \n\nThis is currently installable on Jailbroken devices, please read the out-of-scope findings."
-        },
-        {
           "type": "ios",
           "endpoint": "1101145849",
           "description": "iOS application. This is currently installable on Jailbroken devices, please read the out-of-scope findings."
@@ -3440,7 +3435,12 @@
         {
           "type": "url",
           "endpoint": "api.uphold.com",
-          "description": "Production WebWallet Application. Do not test service degradation attacks or horizontal privilege here."
+          "description": "Production WebWallet Application. Do not test service degradation attacks or horizontal privilege here.\n\nOn the business app side, we allow you to create apps in sandbox, but you shouldn't be able to create them in Production."
+        },
+        {
+          "type": "android",
+          "endpoint": "https://play.google.com/store/apps/details?id=com.uphold.card",
+          "description": "Android application for the separate debit card functionality, to complement your Uphold platform experience. \n\nThis is currently installable on Jailbroken devices, please read the out-of-scope findings."
         },
         {
           "type": "android",
@@ -3455,7 +3455,7 @@
         {
           "type": "url",
           "endpoint": "api-sandbox.uphold.com",
-          "description": "Use this environment for financial transaction testing, degradation attacks, or horizontal privilege attacks. Fund with Crypto Testnet Faucet (e.g. https://coinfaucet.eu/en/btc-testnet/ for Bitcoin)"
+          "description": "Use this environment for financial transaction testing, degradation attacks, or horizontal privilege attacks. Fund with Crypto Testnet Faucet (e.g. https://coinfaucet.eu/en/btc-testnet/ for Bitcoin).\n\nOn the business app side, we allow you to create apps in sandbox, but you shouldn't be able to create them in Production."
         },
         {
           "type": "url",
