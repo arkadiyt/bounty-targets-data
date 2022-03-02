@@ -2513,6 +2513,17 @@ AsmTag of an asset
 """
 type AsmTag implements Node {
   _id: ID!
+  asm_tag_category: AsmTagCategory!
+  id: ID!
+  name: String!
+  name_with_category: String!
+}
+
+"""
+Category of an AsmTag
+"""
+type AsmTagCategory implements Node {
+  _id: ID!
   id: ID!
   name: String!
 }
