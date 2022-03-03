@@ -12699,6 +12699,7 @@ input FiltersReportFilterInput {
   timer_report_triage_miss_at: DateTimePredicateInput
   title: StringPredicateInput
   triaged_at: DateTimePredicateInput
+  use_case: [FiltersReportFilterUseCases]
   violated_sla: SlaTypeEnum
   vulnerability_information: StringPredicateInput
   weakness: FiltersWeaknessFilterInput
@@ -12711,6 +12712,10 @@ input FiltersReportFilterOrder {
 
 enum FiltersReportFilterRoles {
   is_reporter
+}
+
+enum FiltersReportFilterUseCases {
+  HACKER_DASHBOARD
 }
 
 input FiltersReportRetestFilterInput {
