@@ -18432,6 +18432,7 @@ A pentest
 """
 type Pentest implements Node {
   _id: ID!
+  analytics_id: String
   archived_at: DateTime
   asset_descriptions(
     """
@@ -19246,6 +19247,7 @@ A pentest opportunity
 type PentestOpportunity implements Node {
   _id: ID!
   account_provisioning_needed: Boolean
+  analytics_id: String
   api_scopes(
     """
     Returns the elements in the list that come after the specified cursor.
@@ -19366,6 +19368,8 @@ type PentestOpportunityApiScope implements Node {
   id: ID!
   interacts_with_aws: Boolean
   scope_type: String
+  standalone: Boolean
+  support_existing_app: Boolean
   url: String
   user_role_count: Int
 }
@@ -21078,7 +21082,7 @@ type Query implements Node {
   ): OrganizationConnection
   pentest(id: ID!): Pentest
   pentest_opportunity(token: String!): PentestOpportunity
-  pentest_opportunity_used(token: String!): Boolean
+  pentest_opportunity_used(token: String!): Hash
   pentester_profiles(
     """
     Returns the elements in the list that come after the specified cursor.
