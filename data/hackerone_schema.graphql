@@ -9191,6 +9191,15 @@ type CredentialEdge {
 }
 
 """
+Credential Inquiry of a Structured Scope
+"""
+type CredentialInquiry implements Node {
+  _id: ID!
+  description: String
+  id: ID!
+}
+
+"""
 Credential state enum
 """
 enum CredentialStateEnum {
@@ -12572,7 +12581,9 @@ input FiltersOrganizationInboxFilterInput {
   database_id: IntPredicateInput
   handle: StringPredicateInput
   id: IntPredicateInput
+  is_default: BooleanPredicateInput
   name: StringPredicateInput
+  organization_member_groups: FiltersOrganizationMemberGroupFilterInput
   team: FiltersTeamFilterInput
 }
 
@@ -12587,6 +12598,7 @@ input FiltersOrganizationMemberFilterInput {
   _or: [FiltersOrganizationMemberFilterInput]
   i_am_an_admin: Boolean
   id: IntPredicateInput
+  is_me: Boolean
   organization_admin: BooleanPredicateInput
   user: FiltersUserFilterInput
 }
@@ -12603,6 +12615,7 @@ input FiltersOrganizationMemberGroupFilterInput {
   database_id: IntPredicateInput
   id: IntPredicateInput
   name: StringPredicateInput
+  organization_members: FiltersOrganizationMemberFilterInput
 }
 
 input FiltersOrganizationMemberGroupFilterOrder {
@@ -17906,6 +17919,53 @@ type OrganizationInbox implements Node {
   ): OrganizationMemberGroupConnection
   profile_picture(size: ProfilePictureSizes!): String
   profile_picture_filename: String
+  reports(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+    database_id: Int = null
+    filter: ReportFilterInput
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+    hackerone_hacker_submissions: Boolean = false
+    handle: String
+    has_retests: Boolean
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+
+    """
+    Relay classic does not have support for starting paginationsomewhere in the
+    middle, see https://github.com/facebook/relay/issues/1312 Workaround is to
+    add a page argument till Relay supports this
+    """
+    limit: Int = null
+    order_by: ReportOrderInput = {direction: DESC, field: id}
+
+    """
+    Relay classic does not have support for starting paginationsomewhere in the
+    middle, see https://github.com/facebook/relay/issues/1312 Workaround is to
+    add a page argument till Relay supports this
+    """
+    page: Int = null
+    pre_submission_review_states: [ReportPreSubmissionReviewStateEnum] = null
+    secure_order_by: FiltersReportFilterOrder
+    state: ReportStateEnum
+    substate: ReportStateEnum
+    where: FiltersReportFilterInput
+    without_scope: Boolean = null
+  ): ReportConnection
   team: Team
 }
 
@@ -17958,6 +18018,29 @@ type OrganizationMember implements Node & ResourceInterface {
   id: ID!
   organization: Organization!
   organization_admin: Boolean!
+  organization_inboxes(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+    order_by: FiltersOrganizationInboxFilterOrder
+    where: FiltersOrganizationInboxFilterInput
+  ): OrganizationInboxConnection
   organization_member_groups(
     """
     Returns the elements in the list that come after the specified cursor.
@@ -25281,6 +25364,7 @@ type StructuredScope implements Node & ResourceInterface {
   confidentiality_requirement: SeveritySecurityRequirementEnum
   country: String
   created_at: DateTime!
+  credential_inquiry: CredentialInquiry
   credentials(
     """
     Returns the elements in the list that come after the specified cursor.
@@ -36117,6 +36201,7 @@ type User implements Node & ResourceInterface {
   reputation: Int
   reputations_grouped_by_last_months(last: Int!): [LabeledIntegerPair]
   resolved_report_count: Int
+  resolved_report_counts: UserResolvedReportCounts
   saml_enabled: Boolean
   sessions(
     """
@@ -36577,6 +36662,19 @@ enum UserOrderField {
 input UserOrderInput {
   direction: OrderDirection!
   field: UserOrderField!
+}
+
+"""
+User resolved report counts
+"""
+type UserResolvedReportCounts implements Node & ResourceInterface {
+  id: ID!
+  severity_critical_count: Int
+  severity_high_count: Int
+  severity_low_count: Int
+  severity_medium_count: Int
+  url: URI!
+  valid_vulnerability_count: Int
 }
 
 """
