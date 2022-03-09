@@ -55281,7 +55281,7 @@
     "name": "Logitech",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 91,
+    "response_efficiency_percentage": 92,
     "submission_state": "open",
     "url": "https://hackerone.com/logitech",
     "website": "https://www.logitech.com",
@@ -62991,7 +62991,7 @@
     "name": "MTN Group",
     "offers_bounties": false,
     "offers_swag": false,
-    "response_efficiency_percentage": 14,
+    "response_efficiency_percentage": 13,
     "submission_state": "open",
     "url": "https://hackerone.com/mtn_group",
     "website": "https://www.mtn.com/",
@@ -63695,7 +63695,7 @@
     "name": "Stripo Inc",
     "offers_bounties": false,
     "offers_swag": false,
-    "response_efficiency_percentage": 98,
+    "response_efficiency_percentage": 96,
     "submission_state": "open",
     "url": "https://hackerone.com/stripo",
     "website": "https://stripo.email",
@@ -72294,6 +72294,105 @@
           "eligible_for_bounty": false,
           "eligible_for_submission": false,
           "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        }
+      ]
+    }
+  },
+  {
+    "allows_bounty_splitting": false,
+    "average_time_to_bounty_awarded": null,
+    "average_time_to_first_program_response": 9.0,
+    "average_time_to_report_resolved": null,
+    "handle": "dragon",
+    "id": 55590,
+    "managed_program": true,
+    "name": "Dragon",
+    "offers_bounties": true,
+    "offers_swag": false,
+    "response_efficiency_percentage": 100,
+    "submission_state": "open",
+    "url": "https://hackerone.com/dragon",
+    "website": "https://getdragon.ch/",
+    "targets": {
+      "in_scope": [
+        {
+          "asset_identifier": "admin.dragonapp.io",
+          "asset_type": "URL",
+          "availability_requirement": "low",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "com.coblur.dragon",
+          "asset_type": "OTHER_APK",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "APK can be downloaded from https://releases.dragonapp.io/latest/application.apk\n\nApp runs only on [GrapheneOS](https://grapheneos.org/)\n\nThe subscription codes needed for registration in the app can be found in credential manager.",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "messenger2.dragonapp.io",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "This domain hosts API with the following endpoints:\n\n| Method    | URI        |                                                     \n|-----------|------------|                                                     \n| POST      | api/v3/batch                                                    |\n| POST      | api/v3/pusher-auth                                              |\n| POST      | api/v3/register                                                 |\n| DELETE    | api/v3/user/conversations                                       |\n| DELETE    | api/v3/user/delete                                              |\n| GET       | api/v3/user/me                                                  |\n| POST      | api/v3/user/prekeys                                             |\n| PATCH     | api/v3/user/settings                                            |\n| PATCH     | api/v3/user/status/{status}                                     |\n| PATCH     | api/v3/user/subscription/{code}                                 |\n| DELETE    | api/v3/user/unsubscribe-all                                     |\n| POST      | api/v3/user/{registration_id}/call/answer                       |\n| POST      | api/v3/user/{registration_id}/call/candidate/add                |\n| DELETE    | api/v3/user/{registration_id}/call/end                          |\n| DELETE    | api/v3/user/{registration_id}/call/reject                       |\n| POST      | api/v3/user/{registration_id}/call/start                        |\n| DELETE    | api/v3/user/{registration_id}/conversation                      |\n| PATCH     | api/v3/user/{registration_id}/file/accept                       |\n| POST      | api/v3/user/{registration_id}/file/offer                        |\n| GET       | api/v3/user/{registration_id}/last-seen                         |\n| GET       | api/v3/user/{registration_id}/prekey                            |\n| POST      | api/v3/user/{registration_id}/subscribe                         |\n| DELETE    | api/v3/user/{registration_id}/unsubscribe                       |\n| GET       | api/v3/user/{username}/existence                                |\n\nTo use this API you need to add HTTP header `User-Agent: wearehackerone-a31e0ec18bef4869821fa888e8115b5b` for all requests.\n\nTo access our API you need to create an account by calling `/api/v3/register` endpoint or use one of the accounts provided below:\n\n| Registration ID | Username | Access token                     |\n|-----------------|----------|----------------------------------|\n| 510891472       | A1U9TFBK | ddk5MXwY3hTcnHr1QTNODCaBudIMwRhK |\n| 896226708       | K17VA3GJ | lcDRtIbVVHINjv9BPCfD8EBrmJYk9sDQ |\n| 823127956       | XK6S3GZN | 0DlKgM1lYWiMNdjyxpJ2piW7Q93PaCKH |\n\nAccess token should be passed by adding HTTP header `Authorization: Bearer {accessToken}`",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "releases.dragonapp.io",
+          "asset_type": "URL",
+          "availability_requirement": "low",
+          "confidentiality_requirement": "none",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "This domain hosts Amazon S3 service",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "webrtc.dragonapp.io",
+          "asset_type": "URL",
+          "availability_requirement": "medium",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "These domains host COTURN servers needed for WebRTC communication.",
+          "integrity_requirement": "medium",
+          "max_severity": "critical"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "asset_identifier": "getdragon.ch",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "This asset is out of scope for now as it's currently under development.",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "wipe.dragonapp.io",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "This asset is out of scope for now as it's currently under development.",
           "integrity_requirement": null,
           "max_severity": "none"
         }
