@@ -4510,76 +4510,6 @@
     }
   },
   {
-    "name": "Endurance",
-    "url": "https://bugcrowd.com/endurance",
-    "allows_disclosure": true,
-    "managed_by_bugcrowd": true,
-    "safe_harbor": "full",
-    "max_payout": 0,
-    "targets": {
-      "in_scope": [
-        {
-          "type": "website",
-          "target": "Endurance"
-        }
-      ],
-      "out_of_scope": [
-        {
-          "type": "website",
-          "target": "*.bluehost.com"
-        },
-        {
-          "type": "website",
-          "target": "*.domain.com"
-        },
-        {
-          "type": "website",
-          "target": "*.logicboxes.com"
-        },
-        {
-          "type": "other",
-          "target": "All API SDKs"
-        },
-        {
-          "type": "other",
-          "target": "All Constant Contact APIs - api.constantcontact.com"
-        },
-        {
-          "type": "other",
-          "target": "All Constant Contact websites - *.constantcontact.com"
-        },
-        {
-          "type": "other",
-          "target": "Constant Contact mobile applications [iOS and Android]"
-        },
-        {
-          "type": "website",
-          "target": "customer sites / accounts from customer accounts"
-        },
-        {
-          "type": "website",
-          "target": "hostgator.com.br"
-        },
-        {
-          "type": "website",
-          "target": "https://blog.buehost.com"
-        },
-        {
-          "type": "website",
-          "target": "https://www.bluehost.com/cgi/partner/signup"
-        },
-        {
-          "type": "website",
-          "target": "https://www.bluehost.com/contact"
-        },
-        {
-          "type": "website",
-          "target": "login.websitebuilder.com"
-        }
-      ]
-    }
-  },
-  {
     "name": "Websitebuilder.com",
     "url": "https://bugcrowd.com/endurance-builder",
     "allows_disclosure": false,
@@ -4613,54 +4543,6 @@
         {
           "type": "website",
           "target": "*.hostgator.com"
-        }
-      ],
-      "out_of_scope": [
-        {
-          "type": "other",
-          "target": "Anything not explicitly listed in scope."
-        }
-      ]
-    }
-  },
-  {
-    "name": "Host Gator LATAM",
-    "url": "https://bugcrowd.com/endurance-hostgatorlatam",
-    "allows_disclosure": true,
-    "managed_by_bugcrowd": true,
-    "safe_harbor": "partial",
-    "max_payout": 0,
-    "targets": {
-      "in_scope": [
-        {
-          "type": "website",
-          "target": "*.hostgator.com.br.*"
-        }
-      ],
-      "out_of_scope": [
-        {
-          "type": "other",
-          "target": "Anything not explicitly listed in scope."
-        }
-      ]
-    }
-  },
-  {
-    "name": "LogicBoxes / OrderBox",
-    "url": "https://bugcrowd.com/endurance-orderbox",
-    "allows_disclosure": true,
-    "managed_by_bugcrowd": true,
-    "safe_harbor": "partial",
-    "max_payout": 0,
-    "targets": {
-      "in_scope": [
-        {
-          "type": "website",
-          "target": "*.logicboxes.com"
-        },
-        {
-          "type": "website",
-          "target": "https://httpapi.com"
         }
       ],
       "out_of_scope": [
@@ -5579,6 +5461,25 @@
           "type": "website",
           "target": "behtarkhao.healthifyme.com "
         }
+      ]
+    }
+  },
+  {
+    "name": "HostGator Latam Bug Bounty",
+    "url": "https://bugcrowd.com/hostgator-latam-bb",
+    "allows_disclosure": true,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "none",
+    "max_payout": 2500,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "website",
+          "target": "*.hostgator.com.br"
+        }
+      ],
+      "out_of_scope": [
+
       ]
     }
   },
