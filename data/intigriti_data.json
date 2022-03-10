@@ -708,15 +708,15 @@
       "currency": "EUR"
     },
     "max_bounty": {
-      "value": 5000.0,
+      "value": 6000.0,
       "currency": "EUR"
     },
     "targets": {
       "in_scope": [
         {
-          "type": "other",
-          "endpoint": "YADIFA authoritative name server",
-          "description": null
+          "type": "url",
+          "endpoint": "my.eurid.eu",
+          "description": "My .eu is the registrant or domain holder portal and requires a registered domain name in one of our supported scripts to access."
         },
         {
           "type": "url",
@@ -752,6 +752,11 @@
           "type": "url",
           "endpoint": "*.yadifa.eu",
           "description": null
+        },
+        {
+          "type": "other",
+          "endpoint": "YADIFA authoritative name server",
+          "description": "YADIFA is EURid's authoritative name server software which can be downloaded from the yadifa.eu website."
         }
       ],
       "out_of_scope": [
