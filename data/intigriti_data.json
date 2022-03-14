@@ -318,6 +318,65 @@
     }
   },
   {
+    "id": "0083a5bf-e54f-4f79-a972-12a795272c8b",
+    "name": "Canada Post + Purolator - Responsible Disclosure Program",
+    "company_handle": "innovapost",
+    "handle": "innovapost",
+    "url": "https://www.intigriti.com/programs/innovapost/innovapost/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "min_bounty": {
+      "value": 0.0,
+      "currency": "EUR"
+    },
+    "max_bounty": {
+      "value": 0.0,
+      "currency": "EUR"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "url",
+          "endpoint": "*.postescanada-canadapost.ca",
+          "description": "Any subdomain of postescanada-canadapost.ca (eg. www.postescanada-canadapost.ca)"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.canadapost-postescanada.ca",
+          "description": "Any subdomain of canadapost-postescanada.ca (eg. www.canadapost-postescanada.ca, sso-osu.canadapost-postescanada.ca and store.canadapost-postescanada.ca)"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.purolator.com",
+          "description": "Any subdomain of purolator.com (eg. www.purolator.com, eshiponline.purolator.com and billingcentre.purolator.com)"
+        },
+        {
+          "type": "ios",
+          "endpoint": "394391577",
+          "description": "Canada Post's mobile application for iOS"
+        },
+        {
+          "type": "ios",
+          "endpoint": "438701193",
+          "description": "Purolator's mobile application for iOS"
+        },
+        {
+          "type": "android",
+          "endpoint": "com.canadapost.android",
+          "description": "Canada Post's mobile application for Android"
+        },
+        {
+          "type": "android",
+          "endpoint": "com.purolator.mobileapp",
+          "description": "Purolator's mobile application for Android"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
     "id": "bb7f868b-94ad-436a-bc4f-9a1d72335092",
     "name": "Cryptpad",
     "company_handle": "cryptpad",
@@ -4390,7 +4449,7 @@
     "status": "open",
     "confidentiality_level": "public",
     "min_bounty": {
-      "value": 25.0,
+      "value": 0.0,
       "currency": "EUR"
     },
     "max_bounty": {
@@ -4399,6 +4458,11 @@
     },
     "targets": {
       "in_scope": [
+        {
+          "type": "url",
+          "endpoint": "*.ibood.com",
+          "description": "Many subdomains point to 3rd party services, which can often be recognized because they are CNAME records to out of scope domains.\nPlease check the out of scope section to verify what is in / out of scope regarding these."
+        },
         {
           "type": "ios",
           "endpoint": "1135288773",
@@ -4421,13 +4485,13 @@
         },
         {
           "type": "url",
-          "endpoint": "www.ibood.com",
-          "description": null
+          "endpoint": "*.forum.ibood.com",
+          "description": "Please use the following topic for testing purposes: \nhttp://uk-en.forum.ibood.com/contests/intigriti-comment-test-post-2/"
         },
         {
           "type": "url",
-          "endpoint": "*.forum.ibood.com",
-          "description": "Please use the following topic for testing purposes: \nhttp://uk-en.forum.ibood.com/contests/intigriti-comment-test-post-2/"
+          "endpoint": "www.ibood.com",
+          "description": null
         },
         {
           "type": "url",
