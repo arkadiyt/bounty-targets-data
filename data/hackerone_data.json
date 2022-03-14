@@ -2838,7 +2838,7 @@
     "name": "UPS VDP",
     "offers_bounties": false,
     "offers_swag": false,
-    "response_efficiency_percentage": 97,
+    "response_efficiency_percentage": 96,
     "submission_state": "open",
     "url": "https://hackerone.com/ups",
     "website": "https://www.ups.com",
@@ -38683,7 +38683,7 @@
     "name": "MainWP",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 50,
+    "response_efficiency_percentage": 83,
     "submission_state": "open",
     "url": "https://hackerone.com/mainwp",
     "website": "https://mainwp.com",
@@ -52714,8 +52714,8 @@
   },
   {
     "allows_bounty_splitting": true,
-    "average_time_to_bounty_awarded": null,
-    "average_time_to_first_program_response": null,
+    "average_time_to_bounty_awarded": 238.0,
+    "average_time_to_first_program_response": 20.0,
     "average_time_to_report_resolved": null,
     "handle": "crowdstrike",
     "id": 25172,
@@ -52741,13 +52741,35 @@
           "max_severity": "critical"
         },
         {
-          "asset_identifier": "DNS configuration Issues within the following domains",
+          "asset_identifier": "*.humio.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "**Excluding 3rd party maintained targets**",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "*.securecircle.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "**Excluding 3rd party maintained targets**",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "CrowdStrike public infrastructure",
           "asset_type": "OTHER",
           "availability_requirement": null,
           "confidentiality_requirement": null,
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
-          "instruction": "**DNS configuration Issues within the following domains:**\n* crowdstrike.com\n* crowdstrike.org\n* hybrid-analysis.com\n* falcon-sandbox.com\n* reverse.it\n",
+          "instruction": "**Excluding 3rd party maintained targets**",
           "integrity_requirement": null,
           "max_severity": "critical"
         },
@@ -52818,17 +52840,6 @@
           "max_severity": "critical"
         },
         {
-          "asset_identifier": "crowdstrikeracing.com",
-          "asset_type": "URL",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "",
-          "integrity_requirement": null,
-          "max_severity": "critical"
-        },
-        {
           "asset_identifier": "falcon-sandbox.com",
           "asset_type": "URL",
           "availability_requirement": "high",
@@ -52837,17 +52848,6 @@
           "eligible_for_submission": true,
           "instruction": "",
           "integrity_requirement": "high",
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "humio.com",
-          "asset_type": "URL",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "",
-          "integrity_requirement": null,
           "max_severity": "critical"
         },
         {
@@ -52874,17 +52874,7 @@
         }
       ],
       "out_of_scope": [
-        {
-          "asset_identifier": "www.humio.com",
-          "asset_type": "URL",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": false,
-          "eligible_for_submission": false,
-          "instruction": "",
-          "integrity_requirement": null,
-          "max_severity": "none"
-        }
+
       ]
     }
   },
