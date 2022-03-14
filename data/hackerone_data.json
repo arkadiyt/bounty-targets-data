@@ -42960,7 +42960,7 @@
     "name": "Xiaomi",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 78,
+    "response_efficiency_percentage": 80,
     "submission_state": "open",
     "url": "https://hackerone.com/xiaomi",
     "website": "http://www.mi.com",
@@ -52730,6 +52730,17 @@
     "targets": {
       "in_scope": [
         {
+          "asset_identifier": "*.crowdstrike.com",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "low",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "**Excluding 3rd party maintained targets**",
+          "integrity_requirement": "low",
+          "max_severity": "critical"
+        },
+        {
           "asset_identifier": "DNS configuration Issues within the following domains",
           "asset_type": "OTHER",
           "availability_requirement": null,
@@ -52737,17 +52748,6 @@
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
           "instruction": "**DNS configuration Issues within the following domains:**\n* crowdstrike.com\n* crowdstrike.org\n* hybrid-analysis.com\n* falcon-sandbox.com\n* reverse.it\n",
-          "integrity_requirement": null,
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "blog.crowdstrike.com",
-          "asset_type": "URL",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "**Blog Website**\n",
           "integrity_requirement": null,
           "max_severity": "critical"
         },
@@ -52771,6 +52771,17 @@
           "eligible_for_submission": true,
           "instruction": "",
           "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "crowdstrike.com.br",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": null,
           "max_severity": "critical"
         },
         {
@@ -52818,6 +52829,17 @@
           "max_severity": "critical"
         },
         {
+          "asset_identifier": "falcon-sandbox.com",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
           "asset_identifier": "humio.com",
           "asset_type": "URL",
           "availability_requirement": null,
@@ -52829,14 +52851,14 @@
           "max_severity": "critical"
         },
         {
-          "asset_identifier": "www.crowdstrike.com",
+          "asset_identifier": "hybrid-analysis.com",
           "asset_type": "URL",
-          "availability_requirement": "high",
-          "confidentiality_requirement": "low",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
-          "instruction": "**Primary Website**",
-          "integrity_requirement": "low",
+          "instruction": "",
+          "integrity_requirement": null,
           "max_severity": "critical"
         },
         {
@@ -52848,39 +52870,6 @@
           "eligible_for_submission": true,
           "instruction": "**CrowdStrike Foundation Website**\n",
           "integrity_requirement": null,
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "www.falcon-sandbox.com",
-          "asset_type": "URL",
-          "availability_requirement": "high",
-          "confidentiality_requirement": "high",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "",
-          "integrity_requirement": "high",
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "www.hybrid-analysis.com",
-          "asset_type": "URL",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "",
-          "integrity_requirement": null,
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "www.reverse.it",
-          "asset_type": "URL",
-          "availability_requirement": "high",
-          "confidentiality_requirement": "high",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "",
-          "integrity_requirement": "high",
           "max_severity": "critical"
         }
       ],
@@ -65487,7 +65476,7 @@
     "name": "SKALE Network",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 70,
+    "response_efficiency_percentage": 60,
     "submission_state": "open",
     "url": "https://hackerone.com/skale_network",
     "website": "https://skale.network",
