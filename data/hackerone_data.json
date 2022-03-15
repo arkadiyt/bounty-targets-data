@@ -43777,7 +43777,7 @@
     "name": "Nintendo",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 67,
+    "response_efficiency_percentage": 57,
     "submission_state": "open",
     "url": "https://hackerone.com/nintendo",
     "website": "http://www.nintendo.com",
@@ -71103,6 +71103,72 @@
       ],
       "out_of_scope": [
 
+      ]
+    }
+  },
+  {
+    "allows_bounty_splitting": false,
+    "average_time_to_bounty_awarded": 291.0,
+    "average_time_to_first_program_response": 51.0,
+    "average_time_to_report_resolved": 20.0,
+    "handle": "smtp2go",
+    "id": 52553,
+    "managed_program": true,
+    "name": "SMTP2GO BBP",
+    "offers_bounties": true,
+    "offers_swag": false,
+    "response_efficiency_percentage": 87,
+    "submission_state": "open",
+    "url": "https://hackerone.com/smtp2go",
+    "website": "http://smtp2go.com",
+    "targets": {
+      "in_scope": [
+        {
+          "asset_identifier": "api.smtp2go.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Most of the endpoints are handled by Flask on Python3 with Postgres as a main database.\nNewer endpoints use Go on Gin framework.\nRedis is mostly used for cache and ratelimitting.\n\nInstructions and documentations can be found here:\nhttps://apidoc.smtp2go.com/documentation/",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "app.smtp2go.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Flask based app running on Python 2.7, some pages are VueJS but most are scripted with custom JQuery.\nCreate a free account in order to gain login access.",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "smtp2go.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Standard Wordpress site hosted with WPEngine, scripting is all custom JQuery based.",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "asset_identifier": "support.smtp2go.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        }
       ]
     }
   },
