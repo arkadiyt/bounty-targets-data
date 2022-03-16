@@ -39720,6 +39720,205 @@
     }
   },
   {
+    "allows_bounty_splitting": true,
+    "average_time_to_bounty_awarded": 44.0,
+    "average_time_to_first_program_response": 8.0,
+    "average_time_to_report_resolved": 6739.0,
+    "handle": "exness",
+    "id": 12719,
+    "managed_program": false,
+    "name": "EXNESS",
+    "offers_bounties": true,
+    "offers_swag": true,
+    "response_efficiency_percentage": 100,
+    "submission_state": "open",
+    "url": "https://hackerone.com/exness",
+    "website": "https://www.exness.com",
+    "targets": {
+      "in_scope": [
+        {
+          "asset_identifier": "1359763701",
+          "asset_type": "APPLE_STORE_APP_ID",
+          "availability_requirement": "medium",
+          "confidentiality_requirement": "medium",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "https://apps.apple.com/id/app/exness-trader-trade-on-the-go/id1359763701\n\nFor all Submissions, please include:\nFull description of the vulnerability being reported, including the exploitability and impact\n\nEvidence and explanation of all steps required to reproduce the submission, which may include:\n\n- Videos/screenshots\n- Exploit code\n- Web/API requests and responses\n\nOut of scope mobile vulnerabilities:\n\n- Deeplink hijacking\n- Vulnerabilities requiring a rooted, jailbroken, or otherwise modified device\n- Exposure of non-sensitive data on the device\n- Vulnerabilities on third party libraries without showing specific impact to the target application (e.g. a CVE with no exploit)",
+          "integrity_requirement": "medium",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "1392465628",
+          "asset_type": "APPLE_STORE_APP_ID",
+          "availability_requirement": "low",
+          "confidentiality_requirement": "low",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Social trading:\ncom.exness.st.socialtrading\nhttps://apps.apple.com/id/app/exness-social-trading/id1392465628\n\nFor all Submissions, please include:\nFull description of the vulnerability being reported, including the exploitability and impact\n\nEvidence and explanation of all steps required to reproduce the submission, which may include:\n\n- Videos/screenshots\n- Exploit code\n- Web/API requests and responses\n\nOut of scope mobile vulnerabilities:\n\n- Deeplink hijacking\n- Vulnerabilities requiring a rooted, jailbroken, or otherwise modified device\n- Exposure of non-sensitive data on the device\n- Vulnerabilities on third party libraries without showing specific impact to the target application (e.g. a CVE with no exploit)",
+          "integrity_requirement": "low",
+          "max_severity": "medium"
+        },
+        {
+          "asset_identifier": "1579331769",
+          "asset_type": "APPLE_STORE_APP_ID",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "MoneyManagement\nhttps://apps.apple.com/id/app/exness-investor/id1579331769\ncom.exness.moneymanagement\n\nFor all Submissions, please include:\nFull description of the vulnerability being reported, including the exploitability and impact\n\nEvidence and explanation of all steps required to reproduce the submission, which may include:\n- Videos/screenshots\n- Exploit code\n- Web/API requests and responses\n\nOut of scope mobile vulnerabilities:\n- Deeplink hijacking\n- Vulnerabilities requiring a rooted, jailbroken, or otherwise modified device\n- Exposure of non-sensitive data on the device\n- Vulnerabilities on third-party libraries without showing specific impact to the target application (e.g. a CVE with no exploit)",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "Any subdomain application issue",
+          "asset_type": "OTHER",
+          "availability_requirement": "low",
+          "confidentiality_requirement": "medium",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "Exness subdomains of exness.(tld)",
+          "integrity_requirement": "medium",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "Any subdomain infrastructure issue",
+          "asset_type": "OTHER",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "low",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": "low",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "External service data leakage ",
+          "asset_type": "OTHER",
+          "availability_requirement": "medium",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "Feel free to search secrets on github/pastebin and other services, but keep in mind, that such issues could be posted earlier and are ineligible for a bounty for now",
+          "integrity_requirement": "none",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "Logical trading issues",
+          "asset_type": "OTHER",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "low",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Logical issues & fraud cases \n",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "Partnership",
+          "asset_type": "OTHER",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "exnessaffiliates.com\n",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "Personal Area for Web Trading",
+          "asset_type": "OTHER",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "my.exness.com\nmy.exness.asia\napi.exness.com\nexcalls.mobi\n...\n\nhttps://exness.com/member - is ineligible for a reward. \nAlso, your report might be a duplicate.\n",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "Portfolio Management",
+          "asset_type": "OTHER",
+          "availability_requirement": "low",
+          "confidentiality_requirement": "medium",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "my.exness.com/pim/*",
+          "integrity_requirement": "low",
+          "max_severity": "high"
+        },
+        {
+          "asset_identifier": "Public Area for Web Trading",
+          "asset_type": "OTHER",
+          "availability_requirement": "low",
+          "confidentiality_requirement": "low",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Public pages of domains listed below that are accessible from any browser from any country without a user session:\n- exness.com\n- api.exness.com\n- excalls.mobi",
+          "integrity_requirement": "low",
+          "max_severity": "medium"
+        },
+        {
+          "asset_identifier": "Social Trading",
+          "asset_type": "OTHER",
+          "availability_requirement": "low",
+          "confidentiality_requirement": "low",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "https://my.exness.com/pa/socialtrading\nmy.exness.com/st/*",
+          "integrity_requirement": "low",
+          "max_severity": "medium"
+        },
+        {
+          "asset_identifier": "Web Terminal",
+          "asset_type": "OTHER",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "https://my.exness.com/webtrading/",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "com.exness.android.pa",
+          "asset_type": "OTHER_APK",
+          "availability_requirement": "none",
+          "confidentiality_requirement": "medium",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "For all Submissions, please include:\nFull description of the vulnerability being reported, including the exploitability and impact\n\nEvidence and explanation of all steps required to reproduce the submission, which may include:\n- Videos/screenshots\n- Exploit code\n- Web/API requests and responses\n\nOut of scope mobile vulnerabilities:\n- Deeplink hijacking\n- Vulnerabilities requiring a rooted, jailbroken, or otherwise modified device\n- Exposure of non-sensitive data on the device\n- Vulnerabilities on third party libraries without showing specific impact to the target application (e.g. a CVE with no exploit)\n",
+          "integrity_requirement": "medium",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "com.exness.investments",
+          "asset_type": "GOOGLE_PLAY_APP_ID",
+          "availability_requirement": "low",
+          "confidentiality_requirement": "low",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "For all Submissions, please include:\nFull description of the vulnerability being reported, including the exploitability and impact\n\nEvidence and explanation of all steps required to reproduce the submission, which may include:\n- Videos/screenshots\n- Exploit code\n- Web/API requests and responses\n\nOut of scope mobile vulnerabilities:\n- Deeplink hijacking\n- Vulnerabilities requiring a rooted, jailbroken, or otherwise modified device\n- Exposure of non-sensitive data on the device\n- Vulnerabilities on third party libraries without showing specific impact to the target application (e.g. a CVE with no exploit)\n",
+          "integrity_requirement": "low",
+          "max_severity": "medium"
+        },
+        {
+          "asset_identifier": "com.exness.investor",
+          "asset_type": "GOOGLE_PLAY_APP_ID",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "For all Submissions, please include:\nFull description of the vulnerability being reported, including the exploitability and impact\n\nEvidence and explanation of all steps required to reproduce the submission, which may include:\n- Videos/screenshots\n- Exploit code\n- Web/API requests and responses\n\nOut of scope mobile vulnerabilities:\n- Deeplink hijacking\n- Vulnerabilities requiring a rooted, jailbroken, or otherwise modified device\n- Exposure of non-sensitive data on the device\n- Vulnerabilities on third-party libraries without showing specific impact to the target application (e.g. a CVE with no exploit)",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
     "allows_bounty_splitting": false,
     "average_time_to_bounty_awarded": null,
     "average_time_to_first_program_response": 118.0,
