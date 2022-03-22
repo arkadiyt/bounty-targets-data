@@ -7260,7 +7260,6 @@ input CreateOrUpdatePentestInput {
   clientMutationId: String
   description: String!
   end_date: String!
-  geographic_restrictions: String
   hour_cap: Int!
   id: ID
   industry: String!
@@ -13410,15 +13409,6 @@ type HackerApiCreateReportPayload implements MutationResult {
 }
 
 """
-A HackerOne hacker cohort
-"""
-type HackerCohort implements Node {
-  _id: ID!
-  id: ID!
-  name: String!
-}
-
-"""
 Invitation settings for users
 """
 type HackerInvitationsProfile implements Node {
@@ -17196,12 +17186,6 @@ type Mutation implements Node {
     """
     input: UpdateTeamBountySplittingSettingInput!
   ): UpdateTeamBountySplittingSettingPayload
-  updateTeamCohortRunStageItem(
-    """
-    Parameters for UpdateTeamCohortRunStageItem
-    """
-    input: UpdateTeamCohortRunStageItemInput!
-  ): UpdateTeamCohortRunStageItemPayload
   updateTeamCriticalSubmissionState(
     """
     Parameters for UpdateTeamCriticalSubmissionState
@@ -18862,7 +18846,6 @@ type Pentest implements Node {
   end_date: Date
   ends_at: DateTime
   findings_per_asset: Hash
-  geographic_restrictions: String
   high_critical_count: Int
   hour_cap: Int
   i_accepted: Boolean!
@@ -19628,7 +19611,6 @@ type PentestOpportunity implements Node {
     """
     last: Int
   ): PentestOpportunityExternalNetworkScopeConnection
-  geographic_restrictions: String
   id: ID!
   location_restrictions: [String!]
   mobile_app_scopes(
@@ -24189,7 +24171,6 @@ input ReviewCompletePentestOpportunityInput {
   compliance_framework_other: String
   customer_email: String
   customer_note: String
-  geographic_restrictions: String
   location_restrictions: [String!]
   pentest_opportunity_id: ID!
   pentester_hours: Int
@@ -24253,7 +24234,6 @@ input ReviewPentestOpportunityInput {
   compliance_framework_other: String
   customer_email: String
   customer_note: String
-  geographic_restrictions: String
   location_restrictions: [String!]
   pentest_opportunity_id: ID!
   pentester_hours: Int
@@ -26037,7 +26017,6 @@ input SubmitPentestOpportunityInput {
   compliance_framework_other: String
   customer_email: String
   customer_note: String
-  geographic_restrictions: String
   location_restrictions: [String!]
   requested_start_date: String
   schedule_day_restrictions: [String!]
@@ -27286,7 +27265,6 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
   """
   last_invitation_accepted_at_for_user: DateTime
   last_report_resolved_at: DateTime
-  last_team_cohort_run: TeamCohortRun
   last_updated_at: DateTime
   launch_link: String
   launched_at: DateTime
@@ -28088,192 +28066,6 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
     """
     last: Int
   ): UserConnection
-}
-
-"""
-A HackerOne team cohort run
-"""
-type TeamCohortRun implements Node {
-  _id: ID!
-  created_at: DateTime!
-  id: ID!
-  team: Team!
-  team_cohort_run_stages(
-    """
-    Returns the elements in the list that come after the specified cursor.
-    """
-    after: String
-
-    """
-    Returns the elements in the list that come before the specified cursor.
-    """
-    before: String
-
-    """
-    Returns the first _n_ elements from the list.
-    """
-    first: Int
-
-    """
-    Returns the last _n_ elements from the list.
-    """
-    last: Int
-  ): TeamCohortRunStageConnection!
-  updated_at: DateTime!
-}
-
-"""
-A HackerOne team cohort run stage
-"""
-type TeamCohortRunStage implements Node {
-  _id: ID!
-  id: ID!
-  stage: String!
-  team_cohort_run_stage_items(
-    """
-    Returns the elements in the list that come after the specified cursor.
-    """
-    after: String
-
-    """
-    Returns the elements in the list that come before the specified cursor.
-    """
-    before: String
-
-    """
-    Returns the first _n_ elements from the list.
-    """
-    first: Int
-
-    """
-    Returns the last _n_ elements from the list.
-    """
-    last: Int
-  ): TeamCohortRunStageItemConnection!
-}
-
-"""
-The connection type for TeamCohortRunStage.
-"""
-type TeamCohortRunStageConnection {
-  """
-  A list of edges.
-  """
-  edges: [TeamCohortRunStageEdge]
-
-  """
-  A list of nodes.
-  """
-  nodes: [TeamCohortRunStage]
-
-  """
-  Information to aid in pagination.
-  """
-  pageInfo: PageInfo!
-  total_count: Int
-}
-
-"""
-An edge in a connection.
-"""
-type TeamCohortRunStageEdge {
-  """
-  A cursor for use in pagination.
-  """
-  cursor: String!
-
-  """
-  The item at the end of the edge.
-  """
-  node: TeamCohortRunStage
-}
-
-"""
-A HackerOne team cohort run stage item
-"""
-type TeamCohortRunStageItem implements Node {
-  _id: ID!
-  hacker_cohort: HackerCohort!
-  id: ID!
-  reports(
-    """
-    Returns the elements in the list that come after the specified cursor.
-    """
-    after: String
-
-    """
-    Returns the elements in the list that come before the specified cursor.
-    """
-    before: String
-
-    """
-    Returns the first _n_ elements from the list.
-    """
-    first: Int
-
-    """
-    Returns the last _n_ elements from the list.
-    """
-    last: Int
-  ): ReportConnection
-  user_goal: Int
-  users(
-    """
-    Returns the elements in the list that come after the specified cursor.
-    """
-    after: String
-
-    """
-    Returns the elements in the list that come before the specified cursor.
-    """
-    before: String
-
-    """
-    Returns the first _n_ elements from the list.
-    """
-    first: Int
-
-    """
-    Returns the last _n_ elements from the list.
-    """
-    last: Int
-  ): UserConnection
-}
-
-"""
-The connection type for TeamCohortRunStageItem.
-"""
-type TeamCohortRunStageItemConnection {
-  """
-  A list of edges.
-  """
-  edges: [TeamCohortRunStageItemEdge]
-
-  """
-  A list of nodes.
-  """
-  nodes: [TeamCohortRunStageItem]
-
-  """
-  Information to aid in pagination.
-  """
-  pageInfo: PageInfo!
-  total_count: Int
-}
-
-"""
-An edge in a connection.
-"""
-type TeamCohortRunStageItemEdge {
-  """
-  A cursor for use in pagination.
-  """
-  cursor: String!
-
-  """
-  The item at the end of the edge.
-  """
-  node: TeamCohortRunStageItem
 }
 
 """
@@ -34571,52 +34363,6 @@ type UpdateTeamBountySplittingSettingPayload implements MutationResult {
     types: [ErrorTypeEnum]
   ): ErrorConnection!
   team: Team
-  was_successful: Boolean!
-}
-
-"""
-Autogenerated input type of UpdateTeamCohortRunStageItem
-"""
-input UpdateTeamCohortRunStageItemInput {
-  """
-  A unique identifier for the client performing the mutation.
-  """
-  clientMutationId: String
-  team_cohort_run_stage_item_id: ID!
-  user_goal: Int!
-}
-
-"""
-Autogenerated return type of UpdateTeamCohortRunStageItem
-"""
-type UpdateTeamCohortRunStageItemPayload implements MutationResult {
-  """
-  A unique identifier for the client performing the mutation.
-  """
-  clientMutationId: String
-  errors(
-    """
-    Returns the elements in the list that come after the specified cursor.
-    """
-    after: String
-
-    """
-    Returns the elements in the list that come before the specified cursor.
-    """
-    before: String
-
-    """
-    Returns the first _n_ elements from the list.
-    """
-    first: Int
-
-    """
-    Returns the last _n_ elements from the list.
-    """
-    last: Int
-    types: [ErrorTypeEnum]
-  ): ErrorConnection!
-  team_cohort_run_stage_item: TeamCohortRunStageItem
   was_successful: Boolean!
 }
 
