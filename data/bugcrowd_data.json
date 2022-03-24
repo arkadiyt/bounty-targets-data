@@ -2033,6 +2033,57 @@
     }
   },
   {
+    "name": "Backblaze",
+    "url": "https://bugcrowd.com/backblaze",
+    "allows_disclosure": true,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "none",
+    "max_payout": 4000,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "api",
+          "target": "B2 APIs (*.backblazeb2.com)"
+        },
+        {
+          "type": "android",
+          "target": "Backblaze Android mobile application"
+        },
+        {
+          "type": "website",
+          "target": "Backblaze Website (*.backblaze.com)"
+        },
+        {
+          "type": "ios",
+          "target": "Backblaze iOS mobile application"
+        },
+        {
+          "type": "other",
+          "target": "Git Repositories (b2-sdk-java & B2 Command Line Tool)"
+        },
+        {
+          "type": "other",
+          "target": "Mac Personal Backup Clients"
+        },
+        {
+          "type": "other",
+          "target": "Mac Restore Downloaders"
+        },
+        {
+          "type": "other",
+          "target": "Windows Personal Backup Clients"
+        },
+        {
+          "type": "other",
+          "target": "Windows Restore Downloaders"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
     "name": "Appliances - Barracuda Networks, Inc.",
     "url": "https://bugcrowd.com/barracuda",
     "allows_disclosure": true,
@@ -8256,9 +8307,9 @@
   {
     "name": "Octopus",
     "url": "https://bugcrowd.com/octopus-og",
-    "allows_disclosure": false,
+    "allows_disclosure": true,
     "managed_by_bugcrowd": true,
-    "safe_harbor": "full",
+    "safe_harbor": "none",
     "max_payout": 6000,
     "targets": {
       "in_scope": [
