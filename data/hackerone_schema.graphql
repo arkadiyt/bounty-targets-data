@@ -21796,6 +21796,7 @@ type Query implements Node {
     new_triage_inbox: Boolean = false
     ordered_by_timer: Boolean = true
     owner_username: String = null
+    plus: Boolean = false
     priority: TriageInboxItemPriorityEnum = null
     product_editions: [TriageInboxItemProductEditionFilterEnum!] = null
     report_id: Int
@@ -29863,6 +29864,7 @@ type TriageMeta implements Node & ResourceInterface {
   next_goal_miss_type: String
   noise_reason: String
   owned_by: User
+  plus: Boolean
   priority: String
   pristine: Boolean
   report_metadata_reviewed_at: DateTime
