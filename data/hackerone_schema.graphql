@@ -2800,6 +2800,47 @@ type AssetEdge {
 }
 
 """
+An asset group object
+"""
+type AssetGroup implements Node {
+  _id: ID!
+  assets(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+  ): AssetConnection
+  id: ID!
+  name: String!
+  organization: Organization!
+}
+
+type AssetGroupDocument implements Node {
+  asset_group: AssetGroup
+  assets: [AssetDocument!]
+  database_id: Int!
+  graphql_id: ID!
+  id: ID!
+  matched_queries: [String!]
+  name: String!
+}
+
+"""
 An android apk asset object
 """
 type AssetImplementationAndroidApk implements AssetImplementationInterface & Node {
@@ -11395,7 +11436,7 @@ type DismissTriageInboxItemsPayload implements MutationResult {
 """
 ElasticSearch Document can be of different types
 """
-union DocumentUnion = AssetDocument | DomainDocument | OrganizationMemberDocument | OrganizationMemberGroupDocument | ReportDocument
+union DocumentUnion = AssetDocument | AssetGroupDocument | DomainDocument | OrganizationMemberDocument | OrganizationMemberGroupDocument | ReportDocument
 
 """
 The connection type for AssetImplementationDomain.
@@ -13834,6 +13875,7 @@ input ISO8601DateInputPredicateInput {
 Available ElasticSearch indexes
 """
 enum IndexEnum {
+  AssetGroupsIndex
   AssetsIndex
   DomainsIndex
   DuplicateDetectorReportsIndex
@@ -29109,7 +29151,6 @@ input TermFilterInput {
 }
 
 input TermsFilterInput {
-  child_assets_coverage: [AssetCoverageEnum!]
   coverage: [AssetCoverageEnum!]
   organization_id: [Int!]
   team_id: [Int!]
