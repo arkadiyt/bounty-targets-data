@@ -7681,6 +7681,7 @@ type CreateOrganizationMemberInvitationPayload implements MutationResult {
     last: Int
     types: [ErrorTypeEnum]
   ): ErrorConnection!
+  invitation: InvitationsOrganizationMember
   organization: Organization
   was_successful: Boolean!
 }
@@ -14352,6 +14353,10 @@ type InvitationsOrganizationMember implements InvitationInterface & Node {
   email: String
   expires_at: DateTime
   id: ID!
+  invitation_data: String
+  organization: Organization
+  organization_admin: Boolean
+  organization_member_groups: [OrganizationMemberGroup!]
   recipient: User
   token: String
 }
