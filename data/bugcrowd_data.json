@@ -100,41 +100,40 @@
     }
   },
   {
-    "name": "Buildxact",
-    "url": "https://bugcrowd.com/buildxact-vdp",
-    "allows_disclosure": true,
+    "name": "Cloudinary",
+    "url": "https://bugcrowd.com/cloudinary",
+    "allows_disclosure": false,
     "managed_by_bugcrowd": true,
     "safe_harbor": "none",
-    "max_payout": 0,
+    "max_payout": 4000,
     "targets": {
       "in_scope": [
         {
-          "type": "website",
-          "target": "Buildxact App (app.buildxact.com)"
+          "type": "api",
+          "target": "https://api.cloudinary.com"
         },
         {
           "type": "website",
-          "target": "My Home (myhome.buildxact.com)"
+          "target": "https://cloudinary.com/console"
+        },
+        {
+          "type": "api",
+          "target": "https://res.cloudinary.com"
         },
         {
           "type": "website",
-          "target": "Wordpress marketing site (www.buildxact.ca)"
-        },
-        {
-          "type": "website",
-          "target": "Wordpress marketing site (www.buildxact.co.nz)"
-        },
-        {
-          "type": "website",
-          "target": "Wordpress marketing site (www.buildxact.com)"
-        },
-        {
-          "type": "website",
-          "target": "Wordpress marketing site (www.buildxact.com.au)"
+          "target": "widget.cloudinary.com"
         }
       ],
       "out_of_scope": [
-
+        {
+          "type": "website",
+          "target": "https://support.cloudinary.com"
+        },
+        {
+          "type": "website",
+          "target": "wiki.cloudinary.com"
+        }
       ]
     }
   },
