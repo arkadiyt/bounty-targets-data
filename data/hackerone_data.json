@@ -10,7 +10,7 @@
     "name": "Ziff Davis",
     "offers_bounties": false,
     "offers_swag": false,
-    "response_efficiency_percentage": 68,
+    "response_efficiency_percentage": 69,
     "submission_state": "open",
     "url": "https://hackerone.com/ziff-davis",
     "website": "http://ziffdavis.com",
@@ -994,7 +994,7 @@
     "name": "Auvik",
     "offers_bounties": false,
     "offers_swag": false,
-    "response_efficiency_percentage": 95,
+    "response_efficiency_percentage": 96,
     "submission_state": "open",
     "url": "https://hackerone.com/auvik",
     "website": "http://auvik.com",
@@ -58059,6 +58059,17 @@
           "max_severity": "critical"
         },
         {
+          "asset_identifier": "on-ramp.metaswap-dev.codefi.network",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "medium",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "# On-Ramp Aggregator HackerOne\n\n## Description\n\nThe goal of the On-Ramp Aggregator is to allow users to purchase cryptocurrencies from multiple providers. The aggregator takes a list of parameters (country, payment method, crypto currency, fiat, etc.) and retrieves quotations from the providers.\n\n## Scope\n\nThe scope of this HackerOne project is:\n\n- The API located at https://on-ramp.metaswap-dev.codefi.network\n- The associated SDK available at https://www.npmjs.com/package/@consensys/on-ramp-sdk\n\nVulnerabilities you may look for:\n\n- Getting access to personal information that is not yours\n- Getting access to secret API keys\n- Server crashes\n\n## Out of scope\n\nThe following are out of scope:\n\n- SDK technical errors\n- The Swagger UI located at https://on-ramp.metaswap-dev.codefi.network/docs (it is only available for your convenience on this test environment)\n- Server performance: this is a test infrastructure\n- Any SDK version < 0.0.21\n\nThe MetaMask mobile version uses the API and the SDK, and is associated to another HackerOne project.\n\n## How to test the API\n\nThe test environment provides a Swagger UI: https://on-ramp.metaswap-dev.codefi.network/docs. You can use it to list the available endpoints.\n\n### Health\n\nThese endpoints provide information about the status of the API: version, dependencies...\n\n### Regions\n\nThe `/regions/countries` endpoint provides information about support of most of the world countries.\n\nThe `/regions/{regionCode}` endpoint provides information about supported payment methods, fiat currencies, crypto currencies in a specific country. Exmaples of `{regionCode}` are provided by Swagger UI.\n\n### Translations\n\nThe `/translations/default` endpoint provides the translation template which can be used to translate the application. Only the English version (\"default\") is available. This endpoint shouldn't return any user-related information.\n\n### Order Management\n\nThe `/providers/{providerCode}/callback` endpoint allows to extract a purchase order ID from an URL. This URL is supposed to be provided by crypto currencies providers: Transak, Wyre, MoonPay...\n\nThe `/providers/{providerCode}/orders/{orderCode}` allows a user to retrieve information about their order. They need to provide the Order ID and the associated wallet (an ethereum address). Getting access to an order without both these parameters would be a vulnerability.\n\nThe `/providers/{providerCode}/buy-widget` displays the associated provider widget allowing to purchase crypto currency with the provided parameters. It only works for Moonpay. Here is an example of parameters:\n\n- providerCode: `moonpay`\n- regionId: `/regions/fr`\n- paymentMethodId: `/payments/debit-credit-card`\n- cryptoCurrencyId: `/currencies/crypto/1/eth`\n- fiatCurrencyId: `/currencies/fiat/eur`\n- amount: `50`\n- walletAddress: `0x58e5A5478bd302c2E8BEbCbF0342919EE4Aa0e6c`\n- redirectUrl: `https://www.google.com/`\n\n## How to test the SDK\n\nThe SDK is available here: https://www.npmjs.com/package/@consensys/on-ramp-sdk\n\nThe SDK is written in TypeScript, so you can use autocompletion to display the available methods.\n\n## For support\n\nPlease contact Kevin Le Jeune for technical questions: kevin.le-jeune@consensys.net",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
           "asset_identifier": "staking.codefi.network",
           "asset_type": "URL",
           "availability_requirement": "medium",
@@ -58113,17 +58124,6 @@
           "eligible_for_submission": false,
           "instruction": "The Infura status page is a hosted solution provided by a third party.",
           "integrity_requirement": "low",
-          "max_severity": "none"
-        },
-        {
-          "asset_identifier": "on-ramp.metaswap-dev.codefi.network",
-          "asset_type": "URL",
-          "availability_requirement": "high",
-          "confidentiality_requirement": "medium",
-          "eligible_for_bounty": false,
-          "eligible_for_submission": false,
-          "instruction": "",
-          "integrity_requirement": "high",
           "max_severity": "none"
         }
       ]
@@ -61103,7 +61103,7 @@
     "name": "lemlist",
     "offers_bounties": false,
     "offers_swag": false,
-    "response_efficiency_percentage": 67,
+    "response_efficiency_percentage": 50,
     "submission_state": "open",
     "url": "https://hackerone.com/lemlist",
     "website": "https://lemlist.com",
@@ -65436,7 +65436,7 @@
     "name": "Citrix Systems",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 92,
+    "response_efficiency_percentage": 91,
     "submission_state": "open",
     "url": "https://hackerone.com/citrix",
     "website": "http://citrix.com",
