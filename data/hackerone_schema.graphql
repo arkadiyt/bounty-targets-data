@@ -11645,7 +11645,7 @@ type DismissTriageInboxItemsPayload implements MutationResult {
 """
 ElasticSearch Document can be of different types
 """
-union DocumentUnion = AssetDocument | AssetGroupDocument | DomainDocument | OrganizationMemberDocument | OrganizationMemberGroupDocument | ReportDocument
+union DocumentUnion = AssetDocument | AssetGroupDocument | DomainDocument | OrganizationMemberDocument | OrganizationMemberGroupDocument | PolicyPageAssetGroupDocument | ReportDocument
 
 """
 The connection type for AssetImplementationDomain.
@@ -14136,6 +14136,7 @@ enum IndexEnum {
   DuplicateDetectorReportsIndex
   OrganizationMemberGroupsIndex
   OrganizationMembersIndex
+  PolicyPageAssetGroupsIndex
 }
 
 input InnerHitsInput {
@@ -20909,6 +20910,12 @@ type PhabricatorIntegration implements Node {
   updated_at: DateTime!
 }
 
+type PolicyPageAssetGroupDocument implements Node {
+  id: ID!
+  name: String!
+  structured_scopes: [StructuredScopeDocument!]
+}
+
 """
 An engagement policy setting
 """
@@ -26331,6 +26338,24 @@ input StructuredScopeAssetTypeEnumInputPredicateInput {
   _is_null: Boolean
   _neq: StructuredScopeAssetTypeEnumInput
   _nin: [StructuredScopeAssetTypeEnumInput]
+}
+
+type StructuredScopeDocument implements Node {
+  asm_technology_tags: [String!]
+  cvss_score: String
+  database_id: Int!
+  display_name: String!
+  eligible_for_bounty: Boolean!
+  eligible_for_submission: Boolean!
+  graphql_id: ID!
+
+  """
+  ID of the object.
+  """
+  id: ID!
+  identifier: String!
+  instruction: String
+  new: Boolean!
 }
 
 """
