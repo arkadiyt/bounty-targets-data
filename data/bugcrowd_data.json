@@ -2769,6 +2769,32 @@
     }
   },
   {
+    "name": "Bullish exchange",
+    "url": "https://bugcrowd.com/bullish-exchange",
+    "allows_disclosure": true,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "none",
+    "max_payout": 25000,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "api",
+          "target": "https://api.bugbounty.bullish-test.com"
+        },
+        {
+          "type": "website",
+          "target": "https://bugbounty.bullish-test.com"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "website",
+          "target": "*.bullish.com/"
+        }
+      ]
+    }
+  },
+  {
     "name": "Caffeine",
     "url": "https://bugcrowd.com/caffeine",
     "allows_disclosure": true,
