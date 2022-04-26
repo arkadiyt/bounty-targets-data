@@ -4053,12 +4053,12 @@
     }
   },
   {
-    "name": "Dell Technologies",
-    "url": "https://bugcrowd.com/dell",
-    "allows_disclosure": false,
+    "name": "Dell Technologies Application Bug Bounty",
+    "url": "https://bugcrowd.com/dell-com",
+    "allows_disclosure": true,
     "managed_by_bugcrowd": true,
     "safe_harbor": "none",
-    "max_payout": 0,
+    "max_payout": 2500,
     "targets": {
       "in_scope": [
         {
@@ -4067,66 +4067,61 @@
         },
         {
           "type": "website",
-          "target": "*.dellemc.com/*"
-        },
-        {
-          "type": "website",
-          "target": "*.delltechnologies.com/*"
-        },
-        {
-          "type": "website",
-          "target": "*.emc.com/*"
-        },
-        {
-          "type": "android",
-          "target": "Dell EMC E-Lab Navigator (Android)"
-        },
-        {
-          "type": "ios",
-          "target": "Dell EMC E-Lab Navigator (iOS)"
-        },
-        {
-          "type": "website",
-          "target": "secureworks.com/*"
+          "target": "*.delltechnologies.com/* "
         }
       ],
       "out_of_scope": [
         {
           "type": "website",
-          "target": "*.boomi.com/*"
+          "target": "educate.dell.com"
         },
         {
           "type": "website",
-          "target": "*.manywho.com/*"
+          "target": "https://console.delltechnologies.com/ "
         },
         {
           "type": "website",
-          "target": "*.rsa.com/*"
+          "target": "https://stage.delltechnologies.com/"
         },
+        {
+          "type": "website",
+          "target": "prm-ps3dmz.dell.com"
+        },
+        {
+          "type": "website",
+          "target": "prm.dell.com"
+        },
+        {
+          "type": "website",
+          "target": "prmdev.dell.com"
+        },
+        {
+          "type": "website",
+          "target": "prmstg.dell.com"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Dell Technologies' Products Bug Bounty Program",
+    "url": "https://bugcrowd.com/dell-product",
+    "allows_disclosure": true,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "partial",
+    "max_payout": 5000,
+    "targets": {
+      "in_scope": [
         {
           "type": "other",
-          "target": "Dell, Dell EMC and RSA products"
+          "target": "Actively Supported, Bounty Eligible Dell Products"
         },
         {
-          "type": "android",
-          "target": "RSA Conference Mobile Application (Android)"
-        },
-        {
-          "type": "ios",
-          "target": "RSA Conference Mobile Application (iOS) "
-        },
-        {
-          "type": "website",
-          "target": "Sites not owned by, maintained by, or under the control of Dell"
-        },
-        {
-          "type": "website",
-          "target": "Sites, applications, services and products that are not explicitly identified as “in scope”"
-        },
-        {
-          "type": "website",
-          "target": "https://www.rsaconference.com/"
+          "type": "hardware",
+          "target": "Actively Supported, Non-Reward Eligible Dell Products"
         }
+      ],
+      "out_of_scope": [
+
       ]
     }
   },
