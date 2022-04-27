@@ -19618,6 +19618,7 @@ type Pentest implements Node {
   state: PentestStateEnum
   structured_scope_types: [String!]
   summary_form_state: PentestSummaryFormStateEnum
+  summary_report_delivery_date: DateTime
   supporting_pentesters(
     """
     Returns the elements in the list that come after the specified cursor.
