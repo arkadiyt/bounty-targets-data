@@ -2613,8 +2613,70 @@ Category of an AsmTag
 """
 type AsmTagCategory implements Node {
   _id: ID!
+  asm_tags(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+    query: String
+  ): AsmTagConnection
   id: ID!
   name: String!
+}
+
+"""
+The connection type for AsmTagCategory.
+"""
+type AsmTagCategoryConnection {
+  """
+  A list of edges.
+  """
+  edges: [AsmTagCategoryEdge]
+
+  """
+  A list of nodes.
+  """
+  nodes: [AsmTagCategory]
+
+  """
+  Information to aid in pagination.
+  """
+  pageInfo: PageInfo!
+
+  """
+  Int
+  """
+  total_count: Int!
+}
+
+"""
+An edge in a connection.
+"""
+type AsmTagCategoryEdge {
+  """
+  A cursor for use in pagination.
+  """
+  cursor: String!
+
+  """
+  The item at the end of the edge.
+  """
+  node: AsmTagCategory
 }
 
 """
@@ -11725,7 +11787,7 @@ type DismissTriageInboxItemsPayload implements MutationResult {
 """
 ElasticSearch Document can be of different types
 """
-union DocumentUnion = AssetDocument | AssetGroupDocument | DomainDocument | OrganizationMemberDocument | OrganizationMemberGroupDocument | PolicyPageAssetGroupDocument | ReportDocument
+union DocumentUnion = AssetDocument | AssetGroupDocument | DomainDocument | OrganizationMemberDocument | OrganizationMemberGroupDocument | PolicyPageAssetGroupDocument | ReportDocument | StructuredScopeDocument
 
 """
 The connection type for AssetImplementationDomain.
@@ -14226,6 +14288,7 @@ enum IndexEnum {
   OrganizationMemberGroupsIndex
   OrganizationMembersIndex
   PolicyPageAssetGroupsIndex
+  StructuredScopesIndex
 }
 
 input InnerHitsInput {
@@ -18264,6 +18327,28 @@ An organization object
 type Organization implements Node {
   _id: ID!
   about: String
+  asm_tag_categories(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+    id: ID
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+  ): AsmTagCategoryConnection
   asm_tags(
     """
     Returns the elements in the list that come after the specified cursor.
@@ -21033,9 +21118,11 @@ type PhabricatorIntegration implements Node {
 }
 
 type PolicyPageAssetGroupDocument implements Node {
+  asset_group_id: Int!
   id: ID!
   name: String!
   structured_scopes: [StructuredScopeDocument!]
+  total_structured_scopes_count: Int
 }
 
 """
@@ -28413,6 +28500,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
     """
     last: Int
   ): StaticParticipantConnection
+  structured_scope_asset_types: [String!]
   structured_scope_stats: Hash
   structured_scope_versions(
     """
@@ -28442,6 +28530,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
     """
     after: String
     archived: Boolean = null
+    asset_type: String = null
 
     """
     Returns the elements in the list that come before the specified cursor.
