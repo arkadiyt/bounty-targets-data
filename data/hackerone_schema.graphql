@@ -2271,6 +2271,10 @@ type AggregatedSlaSnapshot {
   timestamp: DateTime!
 }
 
+input AggsInput {
+  results: ResultsAggsInput
+}
+
 """
 An Agile Accelerator escalation for a report
 """
@@ -2986,6 +2990,7 @@ type AssetGroupDocument implements Node {
   id: ID!
   matched_queries: [String!]
   name: String!
+  total_assets_count: Int
 }
 
 """
@@ -22199,6 +22204,7 @@ type Query implements Node {
     Returns the elements in the list that come after the specified cursor.
     """
     after: String
+    aggs: AggsInput
 
     """
     Returns the elements in the list that come before the specified cursor.
@@ -24882,6 +24888,13 @@ enum ResponseTargetTypeEnum {
   triaged
 }
 
+input ResultsAggsInput {
+  aggs: AggsInput
+  filter: FilterInput
+  nested: NestedInput
+  terms: TermsAggsInput
+}
+
 """
 Different types of a retesting subscription
 """
@@ -25546,6 +25559,8 @@ type SavePentestCheckResultPayload implements MutationResult {
 The connection type for DocumentUnion.
 """
 type SearchResultConnection {
+  aggs: Hash
+
   """
   A list of edges.
   """
@@ -29787,10 +29802,16 @@ enum TeamWeaknessStates {
 }
 
 input TermFilterInput {
+  asset_group_id: Int
   identifier: String
   organization_id: Int
   system: Boolean
   team_ids: [Int!]
+}
+
+input TermsAggsInput {
+  field: String!
+  size: Int
 }
 
 input TermsFilterInput {
