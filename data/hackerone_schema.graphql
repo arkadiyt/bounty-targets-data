@@ -14713,6 +14713,18 @@ enum InvitationStateEnum {
 }
 
 """
+Invitation statistics for a certain team
+"""
+type InvitationStatistics implements Node {
+  id: ID!
+  invitees_with_submissions: Int!
+  invitees_with_valid_submissions: Int!
+  invites_accepted: Int!
+  invites_sent: Int!
+  invites_viewed: Int!
+}
+
+"""
 Invitations can be of multiple types
 """
 union InvitationUnion = InvitationsSoftLaunch
@@ -28097,6 +28109,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
     """
     start_date: String
   ): SurveyAnswerConnection
+  invitation_statistics(end_date: Date!, start_date: Date!): InvitationStatistics!
   is_team_member: Boolean!
   jira_integration: JiraIntegration
   jira_team_integration: TeamIntegrationsJira
