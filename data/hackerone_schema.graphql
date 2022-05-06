@@ -10542,6 +10542,17 @@ input DateInputPredicateInput {
 }
 
 """
+Intervals that can be used for date series
+"""
+enum DateSeriesIntervalEnum {
+  day
+  month
+  quarter
+  week
+  year
+}
+
+"""
 Converts a datetime to iso8601
 """
 scalar DateTime
@@ -13950,6 +13961,18 @@ type HackerAsset implements Node {
   team: Team!
   updated_at: DateTime!
   user: User!
+}
+
+"""
+Hacker engagement statistics for a certain team
+"""
+type HackerEngagementStatistics implements Node {
+  hacker_participation: [Hash!]!
+  hackers: [Hash!]!
+  id: ID!
+  interval_series: [Hash!]!
+  leading_interval_end: Date!
+  leading_interval_start: Date!
 }
 
 """
@@ -28064,6 +28087,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
   ): ForwardedEmailsConnection
   goal_valid_reports: Int
   grace_period_remaining_in_days: Int
+  hacker_engagement_statistics(child_team_ids: [ID!], end_date: Date!, exclude_imported: Boolean, include_parent: Boolean, interval: DateSeriesIntervalEnum!, start_date: Date!): HackerEngagementStatistics!
   hackerone_to_jira_events_configuration: HackeroneToJiraEventsConfiguration
   handle: String!
   has_avatar: Boolean
@@ -28857,7 +28881,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
   ): ThanksItemConnection
   top_bounty_lower_amount: Int
   top_bounty_upper_amount: Int
-  top_hacker_engagement_trend: [TopHackerEngagementTrend!]
+  top_hacker_engagement_trend(category: TopHackerEngagementTrendCategoryEnum = valid_submissions): [TopHackerEngagementTrend!]
   tray_integration: TeamIntegrationsTray
   tray_integration_enabled: Boolean
   triage_active: Boolean
@@ -30384,10 +30408,19 @@ type ToggleTeamUpdatesSubscriptionPayload implements MutationResult {
 Top Hacker Engagement Trend type
 """
 type TopHackerEngagementTrend implements Node {
-  grouped_by_year_counts: Hash
+  grouped_by_year_values: Hash
   id: ID!
-  total_count: Int
+  total_value: Int
   user: User
+}
+
+"""
+Category of TopHackerEngagementTrend data
+"""
+enum TopHackerEngagementTrendCategoryEnum {
+  bounty
+  severity
+  valid_submissions
 }
 
 """
