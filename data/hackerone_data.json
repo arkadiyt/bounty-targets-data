@@ -4810,7 +4810,7 @@
     "name": "Costco",
     "offers_bounties": false,
     "offers_swag": false,
-    "response_efficiency_percentage": 98,
+    "response_efficiency_percentage": 96,
     "submission_state": "open",
     "url": "https://hackerone.com/costco",
     "website": "http://costco.com",
@@ -21522,7 +21522,7 @@
     "name": "Priceline",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 96,
+    "response_efficiency_percentage": 100,
     "submission_state": "open",
     "url": "https://hackerone.com/priceline",
     "website": "http://www.priceline.com/",
@@ -28132,7 +28132,7 @@
     "name": "Airbnb",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 95,
+    "response_efficiency_percentage": 96,
     "submission_state": "open",
     "url": "https://hackerone.com/airbnb",
     "website": "https://www.airbnb.com",
@@ -32465,7 +32465,7 @@
     "name": "Radancy",
     "offers_bounties": true,
     "offers_swag": true,
-    "response_efficiency_percentage": 93,
+    "response_efficiency_percentage": 94,
     "submission_state": "open",
     "url": "https://hackerone.com/radancy",
     "website": "https://radancy.nl",
@@ -55958,116 +55958,6 @@
           "eligible_for_bounty": false,
           "eligible_for_submission": false,
           "instruction": "",
-          "integrity_requirement": null,
-          "max_severity": "none"
-        }
-      ]
-    }
-  },
-  {
-    "allows_bounty_splitting": false,
-    "average_time_to_bounty_awarded": 62.0,
-    "average_time_to_first_program_response": 13.0,
-    "average_time_to_report_resolved": 51.0,
-    "handle": "status_im",
-    "id": 35929,
-    "managed_program": false,
-    "name": "Status.im",
-    "offers_bounties": true,
-    "offers_swag": false,
-    "response_efficiency_percentage": 100,
-    "submission_state": "open",
-    "url": "https://hackerone.com/status_im",
-    "website": "https://status.im",
-    "targets": {
-      "in_scope": [
-        {
-          "asset_identifier": "Desktop Wallet",
-          "asset_type": "SOURCE_CODE",
-          "availability_requirement": "low",
-          "confidentiality_requirement": "high",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "Status Desktop Wallet bugs that my lead to compromised private keys are rewarded with higher bounties :)\n\nhttps://github.com/status-im/status-desktop/tree/master/src/app/modules/main/wallet_section",
-          "integrity_requirement": "high",
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "Status Desktop",
-          "asset_type": "DOWNLOADABLE_EXECUTABLES",
-          "availability_requirement": "none",
-          "confidentiality_requirement": "medium",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "Please find the source code of Status Desktop here:  https://github.com/status-im/nim-status-client\n\nAll findings are eligible for bounties. \n\nHappy hacking!",
-          "integrity_requirement": "high",
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "https://github.com/status-im/status-go",
-          "asset_type": "SOURCE_CODE",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "Not in scope are: \n\n- vulnerabilities considering software distribution\n- vulnerabilities due to altered/compromised source code \n- vulnerabilities due to a compromised device\n- vulnerabilities requiring a user to ignore warnings and or safe/best practices",
-          "integrity_requirement": null,
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "https://github.com/status-im/status-react",
-          "asset_type": "SOURCE_CODE",
-          "availability_requirement": "high",
-          "confidentiality_requirement": "none",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "Vulnerabilities that can be  triggered with code in the repo exclusively and directly  lead to a compromised private keys or user loss of funds are considered eligeble for a bounty. \nSpecifically not in scope are: \n\n- vulnerabilities considering software distribution\n- vulnerabilities due to altered/compromised source code \n- vulnerabilities due to a compromised device\n- vulnerabilities requiring a user to ignore warnings and or safe/best practices",
-          "integrity_requirement": "high",
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "im.status.ethereum",
-          "asset_type": "APPLE_STORE_APP_ID",
-          "availability_requirement": "high",
-          "confidentiality_requirement": "high",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "[iOS Download link](https://apps.apple.com/us/app/status-private-communication/id1178893006)",
-          "integrity_requirement": "high",
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "im.status.ethereum",
-          "asset_type": "OTHER_APK",
-          "availability_requirement": "high",
-          "confidentiality_requirement": "high",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "We're highly interested in any CVSS errors in our mobile app wallet. Happy hunting :)",
-          "integrity_requirement": "high",
-          "max_severity": "critical"
-        }
-      ],
-      "out_of_scope": [
-        {
-          "asset_identifier": "*.status.im",
-          "asset_type": "URL",
-          "availability_requirement": "none",
-          "confidentiality_requirement": "none",
-          "eligible_for_bounty": false,
-          "eligible_for_submission": false,
-          "instruction": "In general, sub domains of *.status.im are out of scope of the program . However, if  a critical vulnerability is identified **and demonstrated** with a high risk for the status organization, on a case by case basis a  higher bounty may be awarded depending on the severity and quality of the  report. ",
-          "integrity_requirement": "low",
-          "max_severity": "none"
-        },
-        {
-          "asset_identifier": "infra.status.im",
-          "asset_type": "URL",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": false,
-          "eligible_for_submission": false,
-          "instruction": "Please do not engage with infrastructure hosted on infra.status.im and all subdomains as any scanning and testing activity is treated as an incident. Violations might lead to an exclusion from our program and might initiate  legal action.  ",
           "integrity_requirement": null,
           "max_severity": "none"
         }
