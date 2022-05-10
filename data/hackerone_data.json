@@ -56607,7 +56607,7 @@
           "confidentiality_requirement": null,
           "eligible_for_bounty": false,
           "eligible_for_submission": false,
-          "instruction": "This is the API endpoint of our Resource Plans product.\nAPI documentation found [here](https://github.com/10Kft/10kft-api).\nHow to [generate an API token](https://github.com/10Kft/10kft-api/blob/master/sections/first-things-first.md).",
+          "instruction": "",
           "integrity_requirement": null,
           "max_severity": "none"
         },
@@ -56629,7 +56629,7 @@
           "confidentiality_requirement": null,
           "eligible_for_bounty": false,
           "eligible_for_submission": false,
-          "instruction": "This is the primary URL for our Resource Plans product.\nUse your @wearehackerone.com email to sign up for a trial account.\nAdditional accounts can be created using yourusername+whatever@wearehackerone.com\nSign-in to the app.\n",
+          "instruction": "",
           "integrity_requirement": null,
           "max_severity": "none"
         },
@@ -68836,6 +68836,205 @@
           "eligible_for_bounty": false,
           "eligible_for_submission": true,
           "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
+    "allows_bounty_splitting": false,
+    "average_time_to_bounty_awarded": 143.0,
+    "average_time_to_first_program_response": 6.0,
+    "average_time_to_report_resolved": 328.0,
+    "handle": "gojek",
+    "id": 52437,
+    "managed_program": true,
+    "name": "Gojek",
+    "offers_bounties": true,
+    "offers_swag": false,
+    "response_efficiency_percentage": 100,
+    "submission_state": "open",
+    "url": "https://hackerone.com/gojek",
+    "website": "https://www.gojek.com/",
+    "targets": {
+      "in_scope": [
+        {
+          "asset_identifier": "*.findaya.co.id",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "**Tier 2 Asset**\n",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "*.findaya.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "**Tier 2 Asset**\n",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "*.gojekapi.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "**Tier 1 Asset**\n\n* What it does: Gojek iOS and Android apps communicate with this service while you use Gojek. This endpoint acts as an API gateway proxy to all of our services. This API exposes the largest attack surface of any service here at Gojek.\n* Please keep in mind that you should only ever perform this testing against accounts you own, failure to do so could result in ban from the program, which nobody wants.\n\n*Note that all of api.gojekapi.co.id will be considered  Tier 1, with the exception if it's coming from go-tix.id (Tier 2)*\n\n",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "*.gopayapi.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "**Tier 1 Asset**\n",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "*.mab.co.id",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "**Tier 2 Asset**\n",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "1573529788",
+          "asset_type": "APPLE_STORE_APP_ID",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "**Tier 1 Asset**\n\n[Download GoPartner App on the Apple App Store](https://apps.apple.com/app/gopartner/id1573529788)",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "944875099",
+          "asset_type": "APPLE_STORE_APP_ID",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "**Tier 1 Asset**\n\n[Download Gojek App on the Apple App Store](https://apps.apple.com/app/gojek/id944875099)",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "api.gojek.co.id",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "**Tier 1 Asset**\n\n\n*Note that all of api.gojek.co.id will be considered  Tier 1, with the exception if it's coming from go-tix.id (Tier 2)*\n",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "com.gojek.app",
+          "asset_type": "GOOGLE_PLAY_APP_ID",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "**Tier 1 Asset**\n\n[Download Gojek App on the  Android Play Store ](https://play.google.com/store/apps/details?id=com.gojek.app)",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "com.gojek.partner",
+          "asset_type": "GOOGLE_PLAY_APP_ID",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "**Tier 1 Asset**\n\n[Download GoPartner App on the  Android Play Store ](https://play.google.com/store/apps/details?id=com.gojek.partner)",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://go-tix.id/",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "**Tier 2 Asset**\n\n\nPlease note that any vulnerabilities found on Tier 1 API assets that are coming from go-tix.id will be considered as a Tier 2.",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://gocorp.gojek.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "**Tier 2 Asset**\n",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://gofood.co.id",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "**Tier 2 Asset**\n",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://gosend.id/",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "**Tier 2 Asset**\n",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://portal.gosend.id",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "**Tier 1 Asset**\n",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://www.gojek.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "**Tier 1 Asset**\n",
           "integrity_requirement": null,
           "max_severity": "critical"
         }
