@@ -7039,6 +7039,7 @@ input CreateHackerAssetInput {
   A unique identifier for the client performing the mutation.
   """
   clientMutationId: String
+  description: String
   identifier: String!
   team_handle: String!
 }
@@ -14161,6 +14162,7 @@ A HackerOne Hacker Asset Type
 type HackerAsset implements Node {
   _id: ID!
   created_at: DateTime!
+  description: String
   id: ID!
   identifier: String!
   status: String
