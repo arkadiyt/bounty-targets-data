@@ -31161,6 +31161,7 @@ Triage meta
 type TriageMeta implements Node & ResourceInterface {
   currently_viewing_triager: User
   id: ID!
+  last_activity_at: DateTime
   next_goal_miss_at: DateTime
   next_goal_miss_type: String
   noise_reason: String
@@ -31169,6 +31170,8 @@ type TriageMeta implements Node & ResourceInterface {
   priority: String
   pristine: Boolean
   report_metadata_reviewed_at: DateTime
+  timer_goal_in_hours: Int
+  timer_started_at: DateTime
   url: URI!
 }
 
