@@ -18910,6 +18910,7 @@ type Organization implements Node {
     """
     last: Int
   ): AsmTagConnection
+  assessments_consumption: [Hash!]
   asset_asm_tags(
     """
     Returns the elements in the list that come after the specified cursor.
@@ -19101,6 +19102,7 @@ type Organization implements Node {
     last: Int
     recipient_username: String
   ): TeamMemberInvitationConnection
+  pentest_opportunities: [PentestOpportunity]
   profile_picture(size: ProfilePictureSizes!): String
   profile_picture_filename: String
   team_member_groups(
@@ -20772,6 +20774,7 @@ type PentestOpportunity implements Node {
   schedule_time_restrictions_start: String
   sold_at: DateTime
   state: String!
+  token: String!
   web_app_scopes(
     """
     Returns the elements in the list that come after the specified cursor.
