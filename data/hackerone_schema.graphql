@@ -18906,6 +18906,7 @@ input OpportunitiesFilterInput {
 type OpportunityDocument implements Node {
   allows_bounty_splitting: Boolean
   allows_private_disclosure: Boolean
+  bounty_table_updated_at: DateTime
   cached_response_efficiency_percentage: Int
   currency: String
   database_id: Int!
@@ -18914,6 +18915,7 @@ type OpportunityDocument implements Node {
   graphql_id: ID!
   handle: String!
   id: ID!
+  industry: String
   last_updated_at: DateTime
   launched_at: DateTime
   maximum_bounty_table_value: Int
@@ -23057,6 +23059,7 @@ type Query implements Node {
 input QueryInput {
   bool: BoolQueryInput
   nested: NestedInput
+  range: RangeInput
   terms: TermsFilterInput
 }
 
@@ -23064,6 +23067,14 @@ input QueryStringInput {
   _name: String
   default_field: String
   query: String!
+}
+
+input RangeInput {
+  bounty_table_updated_at: RangeOperatorInput
+}
+
+input RangeOperatorInput {
+  gte: DateTime
 }
 
 """
@@ -30595,7 +30606,10 @@ enum TeamWeaknessStates {
 input TermFilterInput {
   asset_group_id: Int
   identifier: String
+  industry: String
+  offers_bounties: Boolean
   organization_id: Int
+  state: String
   system: Boolean
   team_ids: [Int!]
 }
