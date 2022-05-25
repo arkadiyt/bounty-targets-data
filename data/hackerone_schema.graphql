@@ -13397,6 +13397,7 @@ type FeatureEdge {
 
 input FilterInput {
   bool: BoolQueryInput
+  must_not: [MustNotInput!]
   term: TermFilterInput
   terms: TermsFilterInput
 }
@@ -16490,6 +16491,9 @@ input MoreLikeThisInput {
 input MultiMatchInput {
   _name: String
   fields: [String!]
+  fuzziness: String
+  minimum_should_match: Int
+  prefix_length: Int
   query: String!
   type: String
 }
@@ -30666,6 +30670,7 @@ input TermFilterInput {
   state: String
   system: Boolean
   team_ids: [Int!]
+  team_type: String
 }
 
 input TermsAggsInput {
