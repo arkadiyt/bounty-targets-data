@@ -21800,9 +21800,10 @@ type PhabricatorIntegration implements Node {
 type PolicyPageAssetGroupDocument implements Node {
   asset_group_id: Int!
   id: ID!
+  in_scope_count: Int!
   name: String!
-  structured_scopes: [StructuredScopeDocument!]
-  total_structured_scopes_count: Int
+  out_of_scope_count: Int!
+  structured_scopes_count: Int!
 }
 
 """
