@@ -24438,6 +24438,7 @@ type Report implements ActivitiesInterface & Node & ResourceInterface {
   bounty_awarded_staleness_threshold: Int
   bounty_calculator: BountyCalculator
   bug_reporter_agreed_on_going_public_at: DateTime
+  campaign: Campaign
   can_change_organization_inboxes: Boolean
   can_manage: Boolean
   cloned_from: Report
@@ -31427,6 +31428,8 @@ A Tray Profile object
 """
 type TrayProfile implements Node {
   id: ID!
+  solution_instance(solution_instance_id: String!): SolutionInstance!
+  solution_instance_url(solution_instance_id: String!): String!
   solution_instances(
     """
     Returns the elements in the list that come after the specified cursor.
@@ -31447,6 +31450,7 @@ type TrayProfile implements Node {
     Returns the last _n_ elements from the list.
     """
     last: Int
+    solution_name: String
   ): SolutionInstanceConnection
   team: Team
   tray_user_id: String
