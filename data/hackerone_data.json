@@ -2808,7 +2808,7 @@
     "name": "EPAM",
     "offers_bounties": false,
     "offers_swag": false,
-    "response_efficiency_percentage": 90,
+    "response_efficiency_percentage": 91,
     "submission_state": "open",
     "url": "https://hackerone.com/epam",
     "website": "http://epam.com",
@@ -32255,7 +32255,7 @@
     "name": "Global Payments",
     "offers_bounties": false,
     "offers_swag": false,
-    "response_efficiency_percentage": 94,
+    "response_efficiency_percentage": 93,
     "submission_state": "open",
     "url": "https://hackerone.com/global-payments",
     "website": "http://globalpaymentsinc.com",
@@ -47904,6 +47904,39 @@
     "targets": {
       "in_scope": [
         {
+          "asset_identifier": "*.hackerone-ext-content.com",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": null,
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "*.hackerone-user-content.com",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": null,
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "*.vpn.hackerone.net",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": null,
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
           "asset_identifier": "*.vpn.hackerone.net",
           "asset_type": "URL",
           "availability_requirement": "high",
@@ -47934,6 +47967,39 @@
           "eligible_for_submission": true,
           "instruction": "This net block is the origin of all traffic routed through the HackerOne hacker VPN. See the description for *.vpn.hackerone.net for the stack and vulnerabilities we're interested in.",
           "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "app.pullrequest.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": null,
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "ctf.hacker101.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": null,
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "hackerone-us-west-2-production-attachments.s3-us-west-2.amazonaws.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": null,
+          "integrity_requirement": null,
           "max_severity": "critical"
         },
         {
@@ -48045,9 +48111,31 @@
           "instruction": "This is our marketing website. It does not contain any report or customer information. It may store information about hackers, such as information collected through the [penetration tester sign up form](https://www.hackerone.com/hackers/pentest-community-application). The website runs Drupal with a few customizations.",
           "integrity_requirement": "low",
           "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "reviewer.pullrequest.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": null,
+          "integrity_requirement": null,
+          "max_severity": "critical"
         }
       ],
       "out_of_scope": [
+        {
+          "asset_identifier": "go.hacker.one",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": null,
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
         {
           "asset_identifier": "https://go.hacker.one",
           "asset_type": "URL",
@@ -48100,6 +48188,39 @@
           "eligible_for_bounty": false,
           "eligible_for_submission": false,
           "instruction": "This asset is hosted by Atlassian, and as such these reports should be submitted to their program instead via https://bugcrowd.com/statuspage. ",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "info.hacker.one",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": null,
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "ma.hacker.one",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": null,
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "www.hackeronestatus.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": null,
           "integrity_requirement": null,
           "max_severity": "none"
         }
@@ -57186,7 +57307,7 @@
     "name": "VHX",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 74,
+    "response_efficiency_percentage": 80,
     "submission_state": "open",
     "url": "https://hackerone.com/vhx",
     "website": "https://www.vhx.tv",
@@ -71764,7 +71885,7 @@
     "name": "Bitwarden",
     "offers_bounties": false,
     "offers_swag": false,
-    "response_efficiency_percentage": 67,
+    "response_efficiency_percentage": 71,
     "submission_state": "open",
     "url": "https://hackerone.com/bitwarden",
     "website": "https://bitwarden.com",
@@ -91714,7 +91835,7 @@
     "name": "Evernote",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 97,
+    "response_efficiency_percentage": 98,
     "submission_state": "open",
     "url": "https://hackerone.com/evernote",
     "website": "http://evernote.com",
