@@ -3067,18 +3067,16 @@ enum AssetCoverageEnum {
 }
 
 type AssetDocument implements Node {
+  _id: ID!
   archived_at: DateTime
   asm_tags: [String!]
   asset: Asset
-  child_assets: [AssetDocument!]
+  asset_id: ID!
   child_assets_count: Int!
   coverage: String!
   created_at: DateTime!
-  database_id: Int!
-  graphql_id: ID!
   id: ID!
   identifier: String!
-  matched_queries: [String!]
   open_vulnerabilities(
     """
     Returns the elements in the list that come after the specified cursor.
@@ -3171,10 +3169,9 @@ type AssetGroup implements Node {
 }
 
 type AssetGroupDocument implements Node {
+  _id: ID!
   asset_group: AssetGroup
   assets_count: Int!
-  database_id: Int!
-  graphql_id: ID!
   id: ID!
   in_scope_count: Int!
   name: String!
@@ -27994,14 +27991,13 @@ input StructuredScopeAssetTypeEnumInputPredicateInput {
 }
 
 type StructuredScopeDocument implements Node {
+  _id: ID!
   asm_technology_tags: [String!]
   cvss_score: String
-  database_id: Int!
   description: String
   display_name: String!
   eligible_for_bounty: Boolean!
   eligible_for_submission: Boolean!
-  graphql_id: ID!
   id: ID!
   identifier: String!
   new: Boolean!
