@@ -2955,27 +2955,6 @@ type Asset implements Node {
     last: Int
   ): AsmTagConnection
   availability_requirement: SeveritySecurityRequirementEnum
-  child_assets(
-    """
-    Returns the elements in the list that come after the specified cursor.
-    """
-    after: String
-
-    """
-    Returns the elements in the list that come before the specified cursor.
-    """
-    before: String
-
-    """
-    Returns the first _n_ elements from the list.
-    """
-    first: Int
-
-    """
-    Returns the last _n_ elements from the list.
-    """
-    last: Int
-  ): AssetConnection
   confidentiality_requirement: SeveritySecurityRequirementEnum
   coverage: AssetCoverageEnum!
   created_at: DateTime!
@@ -3073,7 +3052,6 @@ type AssetDocument implements Node {
   asm_tags: [String!]
   asset: Asset
   asset_id: ID!
-  child_assets_count: Int!
   coverage: String!
   created_at: DateTime!
   id: ID!
@@ -3220,30 +3198,6 @@ A domain asset object
 type AssetImplementationDomain implements AssetImplementationInterface & Node {
   _id: ID!
   asset: Asset
-  child_domains(
-    """
-    Returns the elements in the list that come after the specified cursor.
-    """
-    after: String
-    archived: Boolean = false
-
-    """
-    Returns the elements in the list that come before the specified cursor.
-    """
-    before: String
-    coverage: AssetCoverageEnum
-
-    """
-    Returns the first _n_ elements from the list.
-    """
-    first: Int
-
-    """
-    Returns the last _n_ elements from the list.
-    """
-    last: Int
-    only_parents: Boolean = false
-  ): DomainConnection
   coverage: AssetCoverageEnum!
   created_at: DateTime
   domain_name: String
@@ -19526,7 +19480,7 @@ type Organization implements Node {
     Returns the first _n_ elements from the list.
     """
     first: Int
-    id: [Int!] = []
+    id: [Int!] = null
 
     """
     Returns the last _n_ elements from the list.
@@ -19539,13 +19493,11 @@ type Organization implements Node {
     Returns the elements in the list that come after the specified cursor.
     """
     after: String
-    archived: Boolean = false
 
     """
     Returns the elements in the list that come before the specified cursor.
     """
     before: String
-    coverage: AssetCoverageEnum
 
     """
     Returns the first _n_ elements from the list.
@@ -19556,7 +19508,6 @@ type Organization implements Node {
     Returns the last _n_ elements from the list.
     """
     last: Int
-    only_parents: Boolean = false
   ): DomainConnection
   features: [Feature]
   handle: String!
