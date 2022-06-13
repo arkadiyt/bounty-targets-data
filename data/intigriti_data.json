@@ -2060,11 +2060,11 @@
     }
   },
   {
-    "id": "43c4b274-ccbd-4ea2-8047-d40b0b4205ac",
-    "name": "Libelle",
-    "company_handle": "dpgm",
-    "handle": "libelle",
-    "url": "https://www.intigriti.com/programs/dpgm/libelle/detail",
+    "id": "06ea3a06-58d5-4173-af0e-c2f1f98714c6",
+    "name": "Lansweeper",
+    "company_handle": "lansweeper",
+    "handle": "lansweeper1",
+    "url": "https://www.intigriti.com/programs/lansweeper/lansweeper1/detail",
     "status": "open",
     "confidentiality_level": "public",
     "min_bounty": {
@@ -2072,20 +2072,60 @@
       "currency": "EUR"
     },
     "max_bounty": {
-      "value": 3000.0,
+      "value": 5000.0,
       "currency": "EUR"
     },
     "targets": {
       "in_scope": [
         {
           "type": "url",
-          "endpoint": "*.libelle.nl",
-          "description": null
+          "endpoint": "edge.lansweeper.com",
+          "description": "Domain used during the two-way sync process between the local web console (on-premises software) and the cloud platform. \n\nYou can request your trial on our website: https://www.lansweeper.com/download/ but always use \"intigriti.me\" address for any user account\n\nWith this trial you get access to our cloud platform (app.lansweeper.com), our on-premises software and the sync process (edge.lansweeper.com) between these two. You have to install our on-premises software somewhere locally and this will allow you to scan your local network and push the results to the cloud platform via the sync process."
         },
         {
           "type": "url",
-          "endpoint": "www.libelle.nl",
-          "description": null
+          "endpoint": "api.lansweeper.com",
+          "description": "API used for integrations with our cloud platform (app.lansweeper.com). \nMore information about our API: https://docs.lansweeper.com/docs"
+        },
+        {
+          "type": "url",
+          "endpoint": "app.lansweeper.com",
+          "description": "The cloud Platform, this also includes lecstaticcontent.lansweeper.com\n\nYou can request your trial on our website: https://www.lansweeper.com/download/ but always use \"intigriti.me\" address for any user account\n\nWith this trial you get access to our cloud platform (app.lansweeper.com), our on-premises software and the sync process (edge.lansweeper.com) between these two. You have to install our on-premises software somewhere locally and this will allow you to scan your local network and push the results to the cloud platform via the sync process.\n"
+        },
+        {
+          "type": "url",
+          "endpoint": "backoffice.lansweeper.com",
+          "description": "Internal backoffice portal for cloud platform\nNo authorisation will be given"
+        },
+        {
+          "type": "url",
+          "endpoint": "autoupdateapi.lansweeper.com",
+          "description": "API for updating on-premise software"
+        },
+        {
+          "type": "url",
+          "endpoint": "docs.lansweeper.com",
+          "description": "Lansweeper's technical documentation"
+        },
+        {
+          "type": "url",
+          "endpoint": "login.lansweeper.com",
+          "description": "Auth0 identitiy provider for cloud platform.\nAlways use \"intigriti.me\" address for any user account\n\n"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.lansweeper.com",
+          "description": "Always use \"intigriti.me\" address for any web form\n\n**Out of scope for this domain:**\nStore.lansweeper.com\nwww.lansweeper.com/forum\nThird-party plug-ins (e.g. Pardot - CleverBridge - Botpress)\n"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.lansweeper.com",
+          "description": "Any other public-facing Lansweeper related URL"
+        },
+        {
+          "type": "url",
+          "endpoint": "on-premises software",
+          "description": "The on-premises software is the latest available version on our website (www.lansweeper.com/changelog).\n\nYou can request your trial on our website: https://www.lansweeper.com/download/ but always use \"intigriti.me\" address for any user account\n\nWith this trial you get access to our cloud platform (app.lansweeper.com), our on-premises software and the sync process (edge.lansweeper.com) between these two. You have to install our on-premises software somewhere locally and this will allow you to scan your local network and push the results to the cloud platform via the sync process."
         }
       ],
       "out_of_scope": [
