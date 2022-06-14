@@ -19849,17 +19849,13 @@ type OrganizationInbox implements Node {
     last: Int
 
     """
-    Relay classic does not have support for starting paginationsomewhere in the
-    middle, see https://github.com/facebook/relay/issues/1312 Workaround is to
-    add a page argument till Relay supports this
+    This argument is no longer supported
     """
     limit: Int = null
     order_by: ReportOrderInput = {direction: DESC, field: id}
 
     """
-    Relay classic does not have support for starting paginationsomewhere in the
-    middle, see https://github.com/facebook/relay/issues/1312 Workaround is to
-    add a page argument till Relay supports this
+    This argument is no longer supported
     """
     page: Int = null
     pre_submission_review_states: [ReportPreSubmissionReviewStateEnum] = null
@@ -20762,17 +20758,13 @@ type Pentest implements Node {
     last: Int
 
     """
-    Relay classic does not have support for starting paginationsomewhere in the
-    middle, see https://github.com/facebook/relay/issues/1312 Workaround is to
-    add a page argument till Relay supports this
+    This argument is no longer supported
     """
     limit: Int = null
     order_by: ReportOrderInput = {direction: DESC, field: id}
 
     """
-    Relay classic does not have support for starting paginationsomewhere in the
-    middle, see https://github.com/facebook/relay/issues/1312 Workaround is to
-    add a page argument till Relay supports this
+    This argument is no longer supported
     """
     page: Int = null
     pre_submission_review_states: [ReportPreSubmissionReviewStateEnum] = null
@@ -21078,17 +21070,13 @@ type PentestChecklist implements Node {
     last: Int
 
     """
-    Relay classic does not have support for starting paginationsomewhere in the
-    middle, see https://github.com/facebook/relay/issues/1312 Workaround is to
-    add a page argument till Relay supports this
+    This argument is no longer supported
     """
     limit: Int = null
     order_by: ReportOrderInput = {direction: DESC, field: id}
 
     """
-    Relay classic does not have support for starting paginationsomewhere in the
-    middle, see https://github.com/facebook/relay/issues/1312 Workaround is to
-    add a page argument till Relay supports this
+    This argument is no longer supported
     """
     page: Int = null
     pre_submission_review_states: [ReportPreSubmissionReviewStateEnum] = null
@@ -21730,17 +21718,13 @@ type PentestStructuredScope implements Node {
     last: Int
 
     """
-    Relay classic does not have support for starting paginationsomewhere in the
-    middle, see https://github.com/facebook/relay/issues/1312 Workaround is to
-    add a page argument till Relay supports this
+    This argument is no longer supported
     """
     limit: Int = null
     order_by: ReportOrderInput = {direction: DESC, field: id}
 
     """
-    Relay classic does not have support for starting paginationsomewhere in the
-    middle, see https://github.com/facebook/relay/issues/1312 Workaround is to
-    add a page argument till Relay supports this
+    This argument is no longer supported
     """
     page: Int = null
     pre_submission_review_states: [ReportPreSubmissionReviewStateEnum] = null
@@ -22892,7 +22876,6 @@ type Query implements Node {
     Returns the last _n_ elements from the list.
     """
     last: Int
-    limit: Int
     order_by: CweEntryOrderInput
   ): CweEntryConnection
   cwe_entry(cwe_id: String!): CweEntry
@@ -23223,7 +23206,6 @@ type Query implements Node {
     Returns the last _n_ elements from the list.
     """
     last: Int
-    limit: Int
     offset: Int
   ): RankedCveEntryConnection
   ranked_weaknesses_by_year(
@@ -23301,17 +23283,13 @@ type Query implements Node {
     last: Int
 
     """
-    Relay classic does not have support for starting paginationsomewhere in the
-    middle, see https://github.com/facebook/relay/issues/1312 Workaround is to
-    add a page argument till Relay supports this
+    This argument is no longer supported
     """
     limit: Int = null
     order_by: ReportOrderInput = {direction: DESC, field: id}
 
     """
-    Relay classic does not have support for starting paginationsomewhere in the
-    middle, see https://github.com/facebook/relay/issues/1312 Workaround is to
-    add a page argument till Relay supports this
+    This argument is no longer supported
     """
     page: Int = null
     pre_submission_review_states: [ReportPreSubmissionReviewStateEnum] = null
@@ -27902,17 +27880,13 @@ type StructuredScope implements Node & ResourceInterface {
     last: Int
 
     """
-    Relay classic does not have support for starting paginationsomewhere in the
-    middle, see https://github.com/facebook/relay/issues/1312 Workaround is to
-    add a page argument till Relay supports this
+    This argument is no longer supported
     """
     limit: Int = null
     order_by: ReportOrderInput = {direction: DESC, field: id}
 
     """
-    Relay classic does not have support for starting paginationsomewhere in the
-    middle, see https://github.com/facebook/relay/issues/1312 Workaround is to
-    add a page argument till Relay supports this
+    This argument is no longer supported
     """
     page: Int = null
     pre_submission_review_states: [ReportPreSubmissionReviewStateEnum] = null
@@ -29551,7 +29525,6 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
     Returns the last _n_ elements from the list.
     """
     last: Int
-    limit: Int = null
     order_by: UserOrderInput = {direction: DESC, field: reputation}
     year: Int = null
   ): ParticipantConnection
@@ -29722,16 +29695,12 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
     last: Int
 
     """
-    Relay classic does not have support for starting paginationsomewhere in the
-    middle, see https://github.com/facebook/relay/issues/1312 Workaround is to
-    add a page argument till Relay supports this
+    This argument is no longer supported
     """
     limit: Int = null
 
     """
-    Relay classic does not have support for starting paginationsomewhere in the
-    middle, see https://github.com/facebook/relay/issues/1312 Workaround is to
-    add a page argument till Relay supports this
+    This argument is no longer supported
     """
     page: Int = null
     where: FiltersUserFilterInput
@@ -29764,18 +29733,14 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
     last: Int
 
     """
-    Relay classic does not have support for starting paginationsomewhere in the
-    middle, see https://github.com/facebook/relay/issues/1312 Workaround is to
-    add a page argument till Relay supports this
+    This argument is no longer supported
     """
     limit: Int = null
     not_approaching_any_sla_violation: Boolean
     order_by: ReportOrderInput = {direction: DESC, field: id}
 
     """
-    Relay classic does not have support for starting paginationsomewhere in the
-    middle, see https://github.com/facebook/relay/issues/1312 Workaround is to
-    add a page argument till Relay supports this
+    This argument is no longer supported
     """
     page: Int = null
     pre_submission_review_states: [ReportPreSubmissionReviewStateEnum] = null
@@ -39012,17 +38977,13 @@ type User implements Node & ResourceInterface {
     last: Int
 
     """
-    Relay classic does not have support for starting paginationsomewhere in the
-    middle, see https://github.com/facebook/relay/issues/1312 Workaround is to
-    add a page argument till Relay supports this
+    This argument is no longer supported
     """
     limit: Int = null
     order_by: ReportOrderInput = {direction: DESC, field: id}
 
     """
-    Relay classic does not have support for starting paginationsomewhere in the
-    middle, see https://github.com/facebook/relay/issues/1312 Workaround is to
-    add a page argument till Relay supports this
+    This argument is no longer supported
     """
     page: Int = null
     pre_submission_review_states: [ReportPreSubmissionReviewStateEnum] = null
