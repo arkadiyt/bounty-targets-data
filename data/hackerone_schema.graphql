@@ -21284,6 +21284,7 @@ type PentestOpportunity implements Node {
   i_can_delete: Boolean!
   i_can_save_as_draft: Boolean!
   i_can_submit: Boolean!
+  i_can_update: Boolean!
   id: ID!
   location_restrictions: [String!]
   mobile_app_scopes(
@@ -29336,6 +29337,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
   has_credit_card_enabled: Boolean
   has_hierarchy_thanks_page: Boolean
   has_payment_method: Boolean
+  has_scheduled_hacker_meta_data_pipelines: Boolean
   hide_bounty_amounts: Boolean
   i_am_a_whitelisted_reporter: Boolean
   i_can_assign_report_to_pentests: Boolean!
