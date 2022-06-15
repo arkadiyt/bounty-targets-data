@@ -2395,6 +2395,10 @@ enum AnalyticsDirectionEnum {
 }
 
 enum AnalyticsFromEnum {
+  dim_report_activities
+  fixture_report_states
+  fixture_severity_ratings
+  fixture_years
   reports
 }
 
@@ -2451,6 +2455,27 @@ input AnalyticsQueryInputType {
 }
 
 enum AnalyticsSelectFieldEnum {
+  dim_report_activities__activity_event
+  dim_report_activities__activity_id
+  dim_report_activities__created_at
+  dim_report_activities__is_created_at_last_180_days
+  dim_report_activities__is_created_at_last_90_days
+  dim_report_activities__is_created_at_prior_90_days
+  dim_report_activities__is_triaged
+  dim_report_activities__is_updated
+  dim_report_activities__organization_id
+  dim_report_activities__report_id
+  dim_report_activities__team_id
+  dim_report_activities__updated_at
+  fixture_report_states__label
+  fixture_report_states__num_index
+  fixture_report_states__report_state
+  fixture_severity_ratings__label
+  fixture_severity_ratings__num_index
+  fixture_severity_ratings__severity_rating
+  fixture_years__end_at
+  fixture_years__start_at
+  fixture_years__year
   reports__is_submitted_last_14_days
   reports__is_submitted_last_180_days
   reports__is_submitted_last_30_days
@@ -2464,18 +2489,19 @@ enum AnalyticsSelectFieldEnum {
   reports__num_days_since_submitted_at
   reports__organization_id
   reports__report_id
+  reports__severity_rating
+  reports__state
   reports__submitted_at
   reports__team_id
   reports__weakness_id
   reports__weakness_name
+  reports__year_submitted_at
 }
 
 enum AnalyticsSelectFunctionEnum {
   array_agg
   avg
   count
-  count_eq
-  count_not_eq
   max
   min
   sum
@@ -2487,7 +2513,7 @@ input AnalyticsSelectInputType {
   distinct: Boolean
   field: AnalyticsSelectFieldEnum!
   function: AnalyticsSelectFunctionEnum
-  value: AnalyticsComplexInputType
+  where: AnalyticsWhereInputType
 }
 
 input AnalyticsWhereInputType {
@@ -3486,8 +3512,12 @@ enum AuditLogSourceTypeEnumInput {
 
 input AuditLogSourceTypeEnumInputPredicateInput {
   _eq: AuditLogSourceTypeEnumInput
+  _gt: AuditLogSourceTypeEnumInput
+  _gte: AuditLogSourceTypeEnumInput
   _in: [AuditLogSourceTypeEnumInput]
   _is_null: Boolean
+  _lt: AuditLogSourceTypeEnumInput
+  _lte: AuditLogSourceTypeEnumInput
   _neq: AuditLogSourceTypeEnumInput
   _nin: [AuditLogSourceTypeEnumInput]
 }
@@ -3858,14 +3888,8 @@ input BoolQueryInput {
 
 input BooleanPredicateInput {
   _eq: Boolean
-  _gt: Boolean
-  _gte: Boolean
-  _in: [Boolean]
   _is_null: Boolean
-  _lt: Boolean
-  _lte: Boolean
   _neq: Boolean
-  _nin: [Boolean]
 }
 
 """
@@ -4353,8 +4377,12 @@ enum CampaignStateEnumInput {
 
 input CampaignStateEnumInputPredicateInput {
   _eq: CampaignStateEnumInput
+  _gt: CampaignStateEnumInput
+  _gte: CampaignStateEnumInput
   _in: [CampaignStateEnumInput]
   _is_null: Boolean
+  _lt: CampaignStateEnumInput
+  _lte: CampaignStateEnumInput
   _neq: CampaignStateEnumInput
   _nin: [CampaignStateEnumInput]
 }
@@ -5026,8 +5054,12 @@ enum ChecklistCheckResponseStateEnumInput {
 
 input ChecklistCheckResponseStateEnumInputPredicateInput {
   _eq: ChecklistCheckResponseStateEnumInput
+  _gt: ChecklistCheckResponseStateEnumInput
+  _gte: ChecklistCheckResponseStateEnumInput
   _in: [ChecklistCheckResponseStateEnumInput]
   _is_null: Boolean
+  _lt: ChecklistCheckResponseStateEnumInput
+  _lte: ChecklistCheckResponseStateEnumInput
   _neq: ChecklistCheckResponseStateEnumInput
   _nin: [ChecklistCheckResponseStateEnumInput]
 }
@@ -5052,8 +5084,12 @@ enum ChecklistCheckStateEnumInput {
 
 input ChecklistCheckStateEnumInputPredicateInput {
   _eq: ChecklistCheckStateEnumInput
+  _gt: ChecklistCheckStateEnumInput
+  _gte: ChecklistCheckStateEnumInput
   _in: [ChecklistCheckStateEnumInput]
   _is_null: Boolean
+  _lt: ChecklistCheckStateEnumInput
+  _lte: ChecklistCheckStateEnumInput
   _neq: ChecklistCheckStateEnumInput
   _nin: [ChecklistCheckStateEnumInput]
 }
@@ -21611,8 +21647,12 @@ enum PentestStateEnumInput {
 
 input PentestStateEnumInputPredicateInput {
   _eq: PentestStateEnumInput
+  _gt: PentestStateEnumInput
+  _gte: PentestStateEnumInput
   _in: [PentestStateEnumInput]
   _is_null: Boolean
+  _lt: PentestStateEnumInput
+  _lte: PentestStateEnumInput
   _neq: PentestStateEnumInput
   _nin: [PentestStateEnumInput]
 }
@@ -22130,8 +22170,12 @@ enum PentesterProfileStateEnumInput {
 
 input PentesterProfileStateEnumInputPredicateInput {
   _eq: PentesterProfileStateEnumInput
+  _gt: PentesterProfileStateEnumInput
+  _gte: PentesterProfileStateEnumInput
   _in: [PentesterProfileStateEnumInput]
   _is_null: Boolean
+  _lt: PentesterProfileStateEnumInput
+  _lte: PentesterProfileStateEnumInput
   _neq: PentesterProfileStateEnumInput
   _nin: [PentesterProfileStateEnumInput]
 }
@@ -22158,8 +22202,12 @@ enum PentesterStateEnumInput {
 
 input PentesterStateEnumInputPredicateInput {
   _eq: PentesterStateEnumInput
+  _gt: PentesterStateEnumInput
+  _gte: PentesterStateEnumInput
   _in: [PentesterStateEnumInput]
   _is_null: Boolean
+  _lt: PentesterStateEnumInput
+  _lte: PentesterStateEnumInput
   _neq: PentesterStateEnumInput
   _nin: [PentesterStateEnumInput]
 }
@@ -25455,8 +25503,12 @@ enum ReportRetestStateEnumInput {
 
 input ReportRetestStateEnumInputPredicateInput {
   _eq: ReportRetestStateEnumInput
+  _gt: ReportRetestStateEnumInput
+  _gte: ReportRetestStateEnumInput
   _in: [ReportRetestStateEnumInput]
   _is_null: Boolean
+  _lt: ReportRetestStateEnumInput
+  _lte: ReportRetestStateEnumInput
   _neq: ReportRetestStateEnumInput
   _nin: [ReportRetestStateEnumInput]
 }
@@ -25543,8 +25595,12 @@ enum ReportRetestUserStateEnumInput {
 
 input ReportRetestUserStateEnumInputPredicateInput {
   _eq: ReportRetestUserStateEnumInput
+  _gt: ReportRetestUserStateEnumInput
+  _gte: ReportRetestUserStateEnumInput
   _in: [ReportRetestUserStateEnumInput]
   _is_null: Boolean
+  _lt: ReportRetestUserStateEnumInput
+  _lte: ReportRetestUserStateEnumInput
   _neq: ReportRetestUserStateEnumInput
   _nin: [ReportRetestUserStateEnumInput]
 }
@@ -25608,8 +25664,12 @@ enum ReportStateEnumInput {
 
 input ReportStateEnumInputPredicateInput {
   _eq: ReportStateEnumInput
+  _gt: ReportStateEnumInput
+  _gte: ReportStateEnumInput
   _in: [ReportStateEnumInput]
   _is_null: Boolean
+  _lt: ReportStateEnumInput
+  _lte: ReportStateEnumInput
   _neq: ReportStateEnumInput
   _nin: [ReportStateEnumInput]
 }
@@ -26044,8 +26104,12 @@ enum RetestSubscriptionTagInput {
 
 input RetestSubscriptionTagInputPredicateInput {
   _eq: RetestSubscriptionTagInput
+  _gt: RetestSubscriptionTagInput
+  _gte: RetestSubscriptionTagInput
   _in: [RetestSubscriptionTagInput]
   _is_null: Boolean
+  _lt: RetestSubscriptionTagInput
+  _lte: RetestSubscriptionTagInput
   _neq: RetestSubscriptionTagInput
   _nin: [RetestSubscriptionTagInput]
 }
@@ -26617,8 +26681,12 @@ enum SamlTestStateEnumInput {
 
 input SamlTestStateEnumInputPredicateInput {
   _eq: SamlTestStateEnumInput
+  _gt: SamlTestStateEnumInput
+  _gte: SamlTestStateEnumInput
   _in: [SamlTestStateEnumInput]
   _is_null: Boolean
+  _lt: SamlTestStateEnumInput
+  _lte: SamlTestStateEnumInput
   _neq: SamlTestStateEnumInput
   _nin: [SamlTestStateEnumInput]
 }
@@ -27056,8 +27124,12 @@ enum SeverityRatingEnumInput {
 
 input SeverityRatingEnumInputPredicateInput {
   _eq: SeverityRatingEnumInput
+  _gt: SeverityRatingEnumInput
+  _gte: SeverityRatingEnumInput
   _in: [SeverityRatingEnumInput]
   _is_null: Boolean
+  _lt: SeverityRatingEnumInput
+  _lte: SeverityRatingEnumInput
   _neq: SeverityRatingEnumInput
   _nin: [SeverityRatingEnumInput]
 }
@@ -27962,8 +28034,12 @@ enum StructuredScopeAssetTypeEnumInput {
 
 input StructuredScopeAssetTypeEnumInputPredicateInput {
   _eq: StructuredScopeAssetTypeEnumInput
+  _gt: StructuredScopeAssetTypeEnumInput
+  _gte: StructuredScopeAssetTypeEnumInput
   _in: [StructuredScopeAssetTypeEnumInput]
   _is_null: Boolean
+  _lt: StructuredScopeAssetTypeEnumInput
+  _lte: StructuredScopeAssetTypeEnumInput
   _neq: StructuredScopeAssetTypeEnumInput
   _nin: [StructuredScopeAssetTypeEnumInput]
 }
@@ -28127,8 +28203,12 @@ enum SubmissionStateEnumInput {
 
 input SubmissionStateEnumInputPredicateInput {
   _eq: SubmissionStateEnumInput
+  _gt: SubmissionStateEnumInput
+  _gte: SubmissionStateEnumInput
   _in: [SubmissionStateEnumInput]
   _is_null: Boolean
+  _lt: SubmissionStateEnumInput
+  _lte: SubmissionStateEnumInput
   _neq: SubmissionStateEnumInput
   _nin: [SubmissionStateEnumInput]
 }
@@ -28504,8 +28584,12 @@ enum SurveyRatingStateEnumInput {
 
 input SurveyRatingStateEnumInputPredicateInput {
   _eq: SurveyRatingStateEnumInput
+  _gt: SurveyRatingStateEnumInput
+  _gte: SurveyRatingStateEnumInput
   _in: [SurveyRatingStateEnumInput]
   _is_null: Boolean
+  _lt: SurveyRatingStateEnumInput
+  _lte: SurveyRatingStateEnumInput
   _neq: SurveyRatingStateEnumInput
   _nin: [SurveyRatingStateEnumInput]
 }
@@ -28522,8 +28606,12 @@ enum SurveyRatingTypesInput {
 
 input SurveyRatingTypesInputPredicateInput {
   _eq: SurveyRatingTypesInput
+  _gt: SurveyRatingTypesInput
+  _gte: SurveyRatingTypesInput
   _in: [SurveyRatingTypesInput]
   _is_null: Boolean
+  _lt: SurveyRatingTypesInput
+  _lte: SurveyRatingTypesInput
   _neq: SurveyRatingTypesInput
   _nin: [SurveyRatingTypesInput]
 }
@@ -31068,8 +31156,12 @@ enum TeamStateInput {
 
 input TeamStateInputPredicateInput {
   _eq: TeamStateInput
+  _gt: TeamStateInput
+  _gte: TeamStateInput
   _in: [TeamStateInput]
   _is_null: Boolean
+  _lt: TeamStateInput
+  _lte: TeamStateInput
   _neq: TeamStateInput
   _nin: [TeamStateInput]
 }
@@ -31087,8 +31179,12 @@ enum TeamTypeEnumInput {
 
 input TeamTypeEnumInputPredicateInput {
   _eq: TeamTypeEnumInput
+  _gt: TeamTypeEnumInput
+  _gte: TeamTypeEnumInput
   _in: [TeamTypeEnumInput]
   _is_null: Boolean
+  _lt: TeamTypeEnumInput
+  _lte: TeamTypeEnumInput
   _neq: TeamTypeEnumInput
   _nin: [TeamTypeEnumInput]
 }
