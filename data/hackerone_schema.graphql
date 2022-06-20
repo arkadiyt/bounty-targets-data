@@ -3035,27 +3035,7 @@ type AssetDocument implements Node {
   created_at: DateTime!
   id: ID!
   identifier: String!
-  open_vulnerabilities(
-    """
-    Returns the elements in the list that come after the specified cursor.
-    """
-    after: String
-
-    """
-    Returns the elements in the list that come before the specified cursor.
-    """
-    before: String
-
-    """
-    Returns the first _n_ elements from the list.
-    """
-    first: Int
-
-    """
-    Returns the last _n_ elements from the list.
-    """
-    last: Int
-  ): ReportConnection
+  open_vulnerabilities: Int
   owner: String
   teams(
     """
@@ -3288,6 +3268,25 @@ type AssetImplementationSourceCode implements AssetImplementationInterface & Nod
   available_from: String
   created_at: DateTime
   id: ID!
+}
+
+"""
+Asset type enum
+"""
+enum AssetImplementationTypeEnum {
+  AndroidApk
+  AndroidPlayStore
+  Cidr
+  Domain
+  Executable
+  Hardware
+  IosAppStore
+  IosIpa
+  IosTestflight
+  OtherAsset
+  SourceCode
+  Url
+  WindowsMicrosoftStore
 }
 
 """
@@ -14631,7 +14630,7 @@ type HackerAsset implements Node {
   description: String
   id: ID!
   identifier: String!
-  status: String
+  status: HackerAssetStatusEnum
   team: Team!
   updated_at: DateTime!
   user: User!
@@ -14675,6 +14674,16 @@ type HackerAssetEdge {
   The item at the end of the edge.
   """
   node: HackerAsset
+}
+
+"""
+Statuses a hacker asset can have
+"""
+enum HackerAssetStatusEnum {
+  accepted
+  duplicate
+  in_review
+  rejected
 }
 
 """
@@ -19538,6 +19547,33 @@ type Organization implements Node {
     """
     last: Int
   ): AssetConnection
+  assets_search(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+    asm_tag_ids: [Int]
+    asset_types: [AssetImplementationTypeEnum]
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+    coverage: AssetCoverageEnum
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+    from: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+    search_string: String
+    size: Int
+  ): SearchResultConnection
   available_organization_inboxes_count: Int
   domains(
     """
@@ -19581,6 +19617,11 @@ type Organization implements Node {
     Returns the last _n_ elements from the list.
     """
     last: Int
+
+    """
+    Filter hacker assets per status
+    """
+    status: HackerAssetStatusEnum
   ): HackerAssetConnection
   handle: String!
   i_can_manage_organization_api_tokens: Boolean!
