@@ -30162,6 +30162,33 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
     order_by: StructuredScopeOrder
     search: String = null
   ): StructuredScopesConnection
+  structured_scopes_search(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+    eligible_for_bounty: Boolean
+    eligible_for_submission: Boolean
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+    from: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+    min_severity_score: SeverityRatingEnum
+    search_string: String
+    size: Int
+  ): SearchResultConnection
   submission_requirements: SubmissionRequirements
   submission_requirements_enabled: Boolean
   submission_state: SubmissionStateEnum
@@ -39026,6 +39053,7 @@ type User implements Node & ResourceInterface {
   linkedin_handle: String
   location: String
   lufthansa_account: LufthansaAccount
+  member_of_any_team: Boolean
   member_of_verified_team: Boolean
   membership(team_handle: String!): TeamMember
   memberships(
