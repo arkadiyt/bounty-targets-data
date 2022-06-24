@@ -33769,20 +33769,31 @@
     "website": "http://nubank.com.br",
     "targets": {
       "in_scope": [
-
-      ],
-      "out_of_scope": [
         {
-          "asset_identifier": "*portal.nuinvest.com.br",
+          "asset_identifier": "*.investnews.com.br",
           "asset_type": "URL",
           "availability_requirement": null,
           "confidentiality_requirement": null,
           "eligible_for_bounty": false,
-          "eligible_for_submission": false,
-          "instruction": "This endpoint is out of scope for the program",
+          "eligible_for_submission": true,
+          "instruction": "",
           "integrity_requirement": null,
-          "max_severity": "none"
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "*.nuinvest.com.br",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "critical"
         }
+      ],
+      "out_of_scope": [
+
       ]
     }
   },
@@ -84317,7 +84328,7 @@
     "name": "Instacart",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 98,
+    "response_efficiency_percentage": 99,
     "submission_state": "open",
     "url": "https://hackerone.com/instacart",
     "website": "https://instacart.com",
