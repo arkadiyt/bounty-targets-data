@@ -570,6 +570,27 @@ type ActivitiesCancelledDisclosureRequest implements ActivityInterface & Node & 
 }
 
 """
+A Activities::ChangedCampaign activity for a report
+"""
+type ActivitiesChangedCampaign implements ActivityInterface & Node & ReportActivityInterface {
+  _id: ID!
+  actor: ActorUnion
+  actor_is_customer: Boolean!
+  attachments: [Attachment]
+  automated_response: Boolean
+  created_at: DateTime!
+  genius_execution_id: ID
+  i_can_edit: Boolean!
+  i_can_flag: Boolean!
+  id: ID!
+  internal: Boolean
+  message: String
+  report: Report
+  triage_inbox_item: TriageInboxItem
+  updated_at: DateTime!
+}
+
+"""
 A Activities::ChangedScope activity for a report
 """
 type ActivitiesChangedScope implements ActivityInterface & Node & ReportActivityInterface {
@@ -2007,6 +2028,7 @@ enum ActivityTypes {
   BugSpam
   BugTriaged
   CancelledDisclosureRequest
+  ChangedCampaign
   ChangedScope
   ChecklistCheckClaimed
   ChecklistCheckExpired
@@ -2073,7 +2095,7 @@ enum ActivityTypes {
 """
 Activities can be of multiple types
 """
-union ActivityUnion = ActivitiesAddedToPentest | ActivitiesAgreedOnGoingPublic | ActivitiesBountyAwarded | ActivitiesBountyRecalled | ActivitiesBountyScheduled | ActivitiesBountySuggested | ActivitiesBugCloned | ActivitiesBugDuplicate | ActivitiesBugFiled | ActivitiesBugInactive | ActivitiesBugInformative | ActivitiesBugNeedsMoreInfo | ActivitiesBugNew | ActivitiesBugNotApplicable | ActivitiesBugPendingProgramReview | ActivitiesBugPriorityChanged | ActivitiesBugReopened | ActivitiesBugResolved | ActivitiesBugRetesting | ActivitiesBugSpam | ActivitiesBugTriaged | ActivitiesCancelledDisclosureRequest | ActivitiesChangedScope | ActivitiesChecklistCheckClaimed | ActivitiesChecklistCheckExpired | ActivitiesChecklistCheckReleased | ActivitiesChecklistCheckResponseApproved | ActivitiesChecklistCheckResponseComment | ActivitiesChecklistCheckResponseCreated | ActivitiesChecklistCheckResponseRejected | ActivitiesChecklistCheckResponseUpdated | ActivitiesChecklistCheckRevoked | ActivitiesChecklistExpirationNotification | ActivitiesChecklistStarted | ActivitiesComment | ActivitiesCommentsClosed | ActivitiesCveIdAdded | ActivitiesDraftStarted | ActivitiesExternalAdvisoryAdded | ActivitiesExternalUserInvitationCancelled | ActivitiesExternalUserInvited | ActivitiesExternalUserJoined | ActivitiesExternalUserRemoved | ActivitiesGroupAssignedToBug | ActivitiesHackerRequestedMediation | ActivitiesManuallyDisclosed | ActivitiesMediationRequested | ActivitiesNobodyAssignedToBug | ActivitiesNotEligibleForBounty | ActivitiesPentestCheckAssigned | ActivitiesPentestCheckCompleted | ActivitiesPentestCheckUnassigned | ActivitiesPentestCheckUpdated | ActivitiesPentestPublished | ActivitiesPentestStarted | ActivitiesPentesterAwarded | ActivitiesProgramHackerJoined | ActivitiesProgramHackerLeft | ActivitiesProgramInactive | ActivitiesProgramStructuredScopesBulkUpdated | ActivitiesReassignedToTeam | ActivitiesReferenceIdAdded | ActivitiesRemovedFromPentest | ActivitiesReportBecamePublic | ActivitiesReportCollaboratorInvited | ActivitiesReportCollaboratorJoined | ActivitiesReportCustomFieldValueUpdated | ActivitiesReportOrganizationInboxesUpdated | ActivitiesReportRemediationGuidanceUpdated | ActivitiesReportRetestApproved | ActivitiesReportRetestCanceled | ActivitiesReportRetestRejected | ActivitiesReportSeverityUpdated | ActivitiesReportTitleUpdated | ActivitiesReportTriageSummaryCreated | ActivitiesReportUndisclosed | ActivitiesReportVulnerabilityTypesUpdated | ActivitiesRetestUserExpired | ActivitiesSwagAwarded | ActivitiesTeamBountyTableUpdated | ActivitiesTeamPolicyUpdated | ActivitiesTeamPostCreated | ActivitiesTeamPublished | ActivitiesTeamStructuredScopeUpdated | ActivitiesUserAssignedToBug | ActivitiesUserBannedFromProgram | ActivitiesUserCompletedRetest | ActivitiesUserJoined | ActivitiesUserLeftRetest
+union ActivityUnion = ActivitiesAddedToPentest | ActivitiesAgreedOnGoingPublic | ActivitiesBountyAwarded | ActivitiesBountyRecalled | ActivitiesBountyScheduled | ActivitiesBountySuggested | ActivitiesBugCloned | ActivitiesBugDuplicate | ActivitiesBugFiled | ActivitiesBugInactive | ActivitiesBugInformative | ActivitiesBugNeedsMoreInfo | ActivitiesBugNew | ActivitiesBugNotApplicable | ActivitiesBugPendingProgramReview | ActivitiesBugPriorityChanged | ActivitiesBugReopened | ActivitiesBugResolved | ActivitiesBugRetesting | ActivitiesBugSpam | ActivitiesBugTriaged | ActivitiesCancelledDisclosureRequest | ActivitiesChangedCampaign | ActivitiesChangedScope | ActivitiesChecklistCheckClaimed | ActivitiesChecklistCheckExpired | ActivitiesChecklistCheckReleased | ActivitiesChecklistCheckResponseApproved | ActivitiesChecklistCheckResponseComment | ActivitiesChecklistCheckResponseCreated | ActivitiesChecklistCheckResponseRejected | ActivitiesChecklistCheckResponseUpdated | ActivitiesChecklistCheckRevoked | ActivitiesChecklistExpirationNotification | ActivitiesChecklistStarted | ActivitiesComment | ActivitiesCommentsClosed | ActivitiesCveIdAdded | ActivitiesDraftStarted | ActivitiesExternalAdvisoryAdded | ActivitiesExternalUserInvitationCancelled | ActivitiesExternalUserInvited | ActivitiesExternalUserJoined | ActivitiesExternalUserRemoved | ActivitiesGroupAssignedToBug | ActivitiesHackerRequestedMediation | ActivitiesManuallyDisclosed | ActivitiesMediationRequested | ActivitiesNobodyAssignedToBug | ActivitiesNotEligibleForBounty | ActivitiesPentestCheckAssigned | ActivitiesPentestCheckCompleted | ActivitiesPentestCheckUnassigned | ActivitiesPentestCheckUpdated | ActivitiesPentestPublished | ActivitiesPentestStarted | ActivitiesPentesterAwarded | ActivitiesProgramHackerJoined | ActivitiesProgramHackerLeft | ActivitiesProgramInactive | ActivitiesProgramStructuredScopesBulkUpdated | ActivitiesReassignedToTeam | ActivitiesReferenceIdAdded | ActivitiesRemovedFromPentest | ActivitiesReportBecamePublic | ActivitiesReportCollaboratorInvited | ActivitiesReportCollaboratorJoined | ActivitiesReportCustomFieldValueUpdated | ActivitiesReportOrganizationInboxesUpdated | ActivitiesReportRemediationGuidanceUpdated | ActivitiesReportRetestApproved | ActivitiesReportRetestCanceled | ActivitiesReportRetestRejected | ActivitiesReportSeverityUpdated | ActivitiesReportTitleUpdated | ActivitiesReportTriageSummaryCreated | ActivitiesReportUndisclosed | ActivitiesReportVulnerabilityTypesUpdated | ActivitiesRetestUserExpired | ActivitiesSwagAwarded | ActivitiesTeamBountyTableUpdated | ActivitiesTeamPolicyUpdated | ActivitiesTeamPostCreated | ActivitiesTeamPublished | ActivitiesTeamStructuredScopeUpdated | ActivitiesUserAssignedToBug | ActivitiesUserBannedFromProgram | ActivitiesUserCompletedRetest | ActivitiesUserJoined | ActivitiesUserLeftRetest
 
 """
 An edge in a connection.
