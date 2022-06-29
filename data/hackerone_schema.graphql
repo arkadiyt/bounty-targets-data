@@ -25231,6 +25231,7 @@ type Report implements ActivitiesInterface & Node & ResourceInterface {
   reference: ID
   reference_link: String
   remediation_status_verbose: String
+  report_metadata: ReportMetadata
   report_pending_party_last_activity: DateTime
   report_share_tokens: [ReportShareToken!]!
   reporter: User
@@ -25548,6 +25549,15 @@ type ReportIpScopeMatch implements Node {
   match: String!
   scope: String!
   structured_scope_asset_identifier: String!
+}
+
+"""
+Report metadata
+"""
+type ReportMetadata implements Node {
+  _id: ID!
+  id: ID!
+  time_spent: Int
 }
 
 """
@@ -40432,6 +40442,7 @@ type Weakness implements Node {
     last: Int
   ): ReportConnection
   reputation_change: Int
+  time_spent: Int!
   updated_at: DateTime!
 }
 
