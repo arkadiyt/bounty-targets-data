@@ -14413,6 +14413,7 @@ input FiltersToolFilterInput {
   _and: [FiltersToolFilterInput]
   _not: FiltersToolFilterInput
   _or: [FiltersToolFilterInput]
+  database_id: IntPredicateInput
   description: StringPredicateInput
   id: IntPredicateInput
   is_accepted: Boolean
@@ -24028,7 +24029,7 @@ input RateToolInput {
   A unique identifier for the client performing the mutation.
   """
   clientMutationId: String
-  comment: String!
+  comment: String
   rating: Int!
   tool_id: ID!
 }
@@ -32282,6 +32283,7 @@ type ToolRatingConnection {
   A list of edges.
   """
   edges: [ToolRatingEdge]
+  grouped_rating: Hash!
 
   """
   A list of nodes.
