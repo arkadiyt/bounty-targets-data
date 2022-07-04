@@ -4351,6 +4351,21 @@ type Campaign implements Node {
 }
 
 """
+Campaign Banner for a team
+"""
+type CampaignBanner implements Node {
+  campaign_type: String!
+  critical: Float
+  end_date: DateTime
+  high: Float
+  id: ID!
+  low: Float
+  medium: Float
+  researchers_information: String
+  start_date: DateTime
+}
+
+"""
 The connection type for Campaign.
 """
 type CampaignConnection {
@@ -29526,6 +29541,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
   bounty_earned_for_user: Float
   bounty_table: BountyTable
   bounty_time(date_start: DateTime): Float
+  campaign_banner: CampaignBanner
   campaigns(
     """
     Returns the elements in the list that come after the specified cursor.
