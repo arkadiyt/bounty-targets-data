@@ -32191,6 +32191,7 @@ A HackerOne tool
 """
 type Tool implements Node {
   _id: ID!
+  accepted_at: DateTime
   created_at: DateTime
   description: String!
   hackerone_choice: Boolean
@@ -32198,6 +32199,7 @@ type Tool implements Node {
   link: String!
   name: String!
   rating_from_current_user: ToolRating
+  rejected_at: DateTime
   submitted_by: User
   tool_ratings(
     """
