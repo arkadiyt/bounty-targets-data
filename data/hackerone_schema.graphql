@@ -2966,6 +2966,7 @@ type Asset implements Node {
   identifier: String
   implementation: AssetImplementationUnion!
   integrity_requirement: SeveritySecurityRequirementEnum
+  last_tested_at: DateTime
   max_severity: String
   organization: Organization!
   owner: String
@@ -19799,6 +19800,7 @@ type Organization implements Node {
     Returns the last _n_ elements from the list.
     """
     last: Int
+    last_tested_range: String
     search_string: String
     size: Int
   ): SearchResultConnection
