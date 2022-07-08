@@ -82354,7 +82354,7 @@
     "name": "Logitech",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 94,
+    "response_efficiency_percentage": 93,
     "submission_state": "open",
     "url": "https://hackerone.com/logitech",
     "website": "https://www.logitech.com",
@@ -97677,7 +97677,7 @@
     "name": "Citrix Systems",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 97,
+    "response_efficiency_percentage": 99,
     "submission_state": "open",
     "url": "https://hackerone.com/citrix",
     "website": "http://citrix.com",
@@ -100907,13 +100907,24 @@
     "targets": {
       "in_scope": [
         {
-          "asset_identifier": "OpenSea’s Smart Contracts",
+          "asset_identifier": "OpenSea's Polygon and Klaytn contracts",
           "asset_type": "OTHER",
           "availability_requirement": "medium",
           "confidentiality_requirement": "none",
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
-          "instruction": "For a vulnerability to qualify for this asset, it needs to be in one of the core smart contracts powering OpenSea's marketplace and provide a means for an attacker to steal value from OpenSea users with zero interaction required on their behalf (i.e. phishing does not qualify).\n\n- On Ethereum\n    - OpenSea: Wyvern Exchange V2: `0x7f268357a8c2552623316e2562d90e642bb538e5`\n    - OpenSea Proxy Registry: `0xa5409ec958C83C3f309868babACA7c86DCB077c1`\n    - The Wrapped Ether Contract: `0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2`\n- On Polygon\n    - Contract address: `0xfede379e48c873c75f3cc0c81f7c784ad730a8f7`\n    - Fee wrapper address: `0xf715beb51ec8f63317d66f491e37e7bb048fcc2d`\n- On Klaytyn\n    - Contract address: `0xc109f40f688eb75711f51dac0b759957fe7d8ec7`\n    - Fee Wrapper Address: `0x41cff281b578f4cf45515d6e4efd535e47e76efd`\n- On Solana\n    - Metaplex Auction House: program address: `hausS13jsjafwWwGqZTUQRmWyvyxn9EQpqMwV1PBBmk`\n    - Metaplex Metadata Contract program address: `metaqbxxUerdq28cj1RbAWkYQm3ybzjb6a8bt518x1s`",
+          "instruction": "**Exclusions**:\n* Orders and transactions initiated and validated on opensea.io, these are covered by the opensea.io asset\n* Phishing or any user interaction style of attacks\n* Any attack that requires a user to interact with contract from an attacker controlled website\n\n**Explicitly**: this covers vulnerabilities that are purely executed on chain against the in scope contracts. \n\n- On Polygon\n    - Contract address: `0xfede379e48c873c75f3cc0c81f7c784ad730a8f7`\n    - Fee wrapper address: `0xf715beb51ec8f63317d66f491e37e7bb048fcc2d`\n- On Klaytn\n    - Contract address: `0xc109f40f688eb75711f51dac0b759957fe7d8ec7`\n    - Fee Wrapper Address: `0x41cff281b578f4cf45515d6e4efd535e47e76efd`",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "SeaPort Smart Contract",
+          "asset_type": "OTHER",
+          "availability_requirement": "medium",
+          "confidentiality_requirement": "none",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "**Exclusions**:\n* Orders and transactions initiated and validated on opensea.io, these are covered by the opensea.io asset\n* Phishing or any user interaction style of attacks\n* Any attack that requires a user to interact with contract from an attacker controlled website\n\n**Explicitly**: this covers vulnerabilities that are purely executed on chain against the in scope contracts. \n\nSee the current deployments [here](https://github.com/ProjectOpenSea/seaport#deployments). Currently the addresses are:\n* SeaPort: [0x00000000006c3852cbEf3e08E8dF289169EdE581](https://etherscan.io/address/0x00000000006c3852cbEf3e08E8dF289169EdE581)\n* ConduitController: [0x00000000F9490004C11Cef243f5400493c00Ad63](https://etherscan.io/address/0x00000000F9490004C11Cef243f5400493c00Ad63)\n* OpenSea's Conduit: [0x1e0049783f008a0085193e00003d00cd54003c71](https://etherscan.io/address/0x1e0049783f008a0085193e00003d00cd54003c71)\n",
           "integrity_requirement": "high",
           "max_severity": "critical"
         },
