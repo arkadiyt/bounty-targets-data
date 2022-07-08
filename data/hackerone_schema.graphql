@@ -14501,6 +14501,7 @@ input FiltersTeamWeaknessFilterInput {
   _or: [FiltersTeamWeaknessFilterInput]
   id: IntPredicateInput
   is_hidden: Boolean
+  states: [TeamWeaknessStates!]
 }
 
 input FiltersToolFilterInput {
@@ -31813,6 +31814,7 @@ enum TeamWeaknessStates {
   disabled
   enabled
   hidden
+  unused
 }
 
 input TermFilterInput {
