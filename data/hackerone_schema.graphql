@@ -12073,7 +12073,7 @@ type DerivedPentest implements Node {
   id: ID!
   name: String
   origin_type: String!
-  phase: String!
+  phase: String
   size: Int
   start_date: DateTime
   token: String
@@ -19814,6 +19814,7 @@ type Organization implements Node {
     Returns the elements in the list that come after the specified cursor.
     """
     after: String
+    asm_tag_category_ids: [Int]
     asm_tag_ids: [Int]
     asset_types: [AssetImplementationTypeEnum]
 
