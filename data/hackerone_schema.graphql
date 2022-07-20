@@ -12083,12 +12083,15 @@ A derived pentest - A view model representing either a pentest or pentest opport
 """
 type DerivedPentest implements Node {
   _id: ID!
+  aasm_state: String
+  i_can_delete: Boolean
   id: ID!
   name: String
   origin_type: String!
   phase: String
   size: Int
   start_date: DateTime
+  team: Team
   token: String
 }
 
@@ -21704,7 +21707,7 @@ type PentestOpportunity implements Node {
   ): PentestOpportunityMobileAppScopeConnection
   name: String
   organization: Organization
-  pentester_hours: Int
+  package_name: String
   requested_start_date: DateTime
   salesforce_account: String
   salesforce_opportunity: String
@@ -21716,6 +21719,7 @@ type PentestOpportunity implements Node {
   state: String!
   submitted_at: DateTime
   token: String!
+  total_pentester_awards: Int
   web_app_scopes(
     """
     Returns the elements in the list that come after the specified cursor.
@@ -26636,8 +26640,8 @@ input ReviewCompletePentestOpportunityInput {
   customer_email: String
   customer_note: String
   location_restrictions: [String!]
+  package_name: String
   pentest_opportunity_id: ID!
-  pentester_hours: Int
   requested_start_date: String
   salesforce_account: String
   salesforce_opportunity: String
@@ -26699,8 +26703,8 @@ input ReviewPentestOpportunityInput {
   customer_email: String
   customer_note: String
   location_restrictions: [String!]
+  package_name: String
   pentest_opportunity_id: ID!
-  pentester_hours: Int
   requested_start_date: String
   salesforce_account: String
   salesforce_opportunity: String
