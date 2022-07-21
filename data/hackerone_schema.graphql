@@ -12084,12 +12084,12 @@ A derived pentest - A view model representing either a pentest or pentest opport
 type DerivedPentest implements Node {
   _id: ID!
   aasm_state: String
+  hours: Int
   i_can_delete: Boolean
   id: ID!
   name: String
   origin_type: String!
   phase: String
-  size: Int
   start_date: DateTime
   team: Team
   token: String
@@ -34977,7 +34977,7 @@ input UpdateHackerPreferenceInput {
   A unique identifier for the client performing the mutation.
   """
   clientMutationId: String
-  level: String!
+  level: String
 }
 
 """
