@@ -2,6 +2,128 @@
   {
     "allows_bounty_splitting": false,
     "average_time_to_bounty_awarded": null,
+    "average_time_to_first_program_response": null,
+    "average_time_to_report_resolved": null,
+    "handle": "tokenweb3",
+    "id": 0,
+    "managed_program": false,
+    "name": "token.com",
+    "offers_bounties": false,
+    "offers_swag": false,
+    "response_efficiency_percentage": 100,
+    "submission_state": "open",
+    "url": "https://hackerone.com/tokenweb3",
+    "website": "https://token.com",
+    "targets": {
+      "in_scope": [
+        {
+          "asset_identifier": "*.prod.brazil.tkn.zone",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "Backend services for our token.com product are provided under this domain.",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "*.production.tkn.zone",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "Backend services for our Monolith product are provided under this domain.",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "com.token.android",
+          "asset_type": "GOOGLE_PLAY_APP_ID",
+          "availability_requirement": "none",
+          "confidentiality_requirement": "medium",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "This is our token.com mobile app for Android. Currently only available in Brazil, find it at https://play.google.com/store/apps/details?id=com.token.android.",
+          "integrity_requirement": "medium",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "com.token.ios",
+          "asset_type": "APPLE_STORE_APP_ID",
+          "availability_requirement": "none",
+          "confidentiality_requirement": "medium",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "This is our token.com mobile app for iOS. Currently only available in Brazil, find it at https://apps.apple.com/br/app/token-com/id1566878207.",
+          "integrity_requirement": "medium",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://github.com/tokencard/contracts/tree/master/contracts",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": "none",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "Smart contracts under <https://github.com/tokencard/contracts/tree/master/contracts> and previous released versions, excluding mocks and other test contracts.",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "io.tokencard.app.android",
+          "asset_type": "GOOGLE_PLAY_APP_ID",
+          "availability_requirement": "none",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "This is our Monolith mobile app for Android. You can find it at https://play.google.com/store/apps/details?id=io.tokencard.app.android.",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "io.tokencard.app.ios",
+          "asset_type": "APPLE_STORE_APP_ID",
+          "availability_requirement": "none",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "This is our Monolith mobile app for iOS. You can find it at https://apps.apple.com/GB/app/id1389841315?mt=8.",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "monolith.xyz",
+          "asset_type": "URL",
+          "availability_requirement": "low",
+          "confidentiality_requirement": "none",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "This is a marketing website only. We'll only consider vulnerabilities that lead to misleading content being shown. This means clickjacking, framing and similar attack vectors are out of scope.",
+          "integrity_requirement": "medium",
+          "max_severity": "high"
+        },
+        {
+          "asset_identifier": "token.com",
+          "asset_type": "URL",
+          "availability_requirement": "low",
+          "confidentiality_requirement": "none",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "This is a marketing website only. We'll only consider vulnerabilities that lead to misleading content being shown. This means clickjacking, framing and similar attack vectors are out of scope.",
+          "integrity_requirement": "medium",
+          "max_severity": "high"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
+    "allows_bounty_splitting": false,
+    "average_time_to_bounty_awarded": null,
     "average_time_to_first_program_response": 11.0,
     "average_time_to_report_resolved": 164.0,
     "handle": "ro",
@@ -50194,7 +50316,7 @@
     }
   },
   {
-    "allows_bounty_splitting": false,
+    "allows_bounty_splitting": true,
     "average_time_to_bounty_awarded": 382.0,
     "average_time_to_first_program_response": 13.0,
     "average_time_to_report_resolved": null,
@@ -50203,7 +50325,7 @@
     "managed_program": false,
     "name": "Cloudflare Public Bug Bounty",
     "offers_bounties": true,
-    "offers_swag": true,
+    "offers_swag": false,
     "response_efficiency_percentage": 99,
     "submission_state": "open",
     "url": "https://hackerone.com/cloudflare",
@@ -54345,6 +54467,50 @@
     "targets": {
       "in_scope": [
         {
+          "asset_identifier": "*.gitlab.net",
+          "asset_type": "URL",
+          "availability_requirement": "low",
+          "confidentiality_requirement": "low",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Hosts owned and operated by GitLab.",
+          "integrity_requirement": "low",
+          "max_severity": "medium"
+        },
+        {
+          "asset_identifier": "*.gitlab.org",
+          "asset_type": "URL",
+          "availability_requirement": "low",
+          "confidentiality_requirement": "low",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Hosts owned and operated by GitLab.",
+          "integrity_requirement": "low",
+          "max_severity": "medium"
+        },
+        {
+          "asset_identifier": "*.gitlap.com",
+          "asset_type": "URL",
+          "availability_requirement": "low",
+          "confidentiality_requirement": "low",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Hosts owned and operated by GitLab. gitla**p** with a p!",
+          "integrity_requirement": "low",
+          "max_severity": "medium"
+        },
+        {
+          "asset_identifier": "Other non-production infrastructure",
+          "asset_type": "OTHER",
+          "availability_requirement": "low",
+          "confidentiality_requirement": "low",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Hosts owned and operated by GitLab other than gitlab.com itself and our static websites.",
+          "integrity_requirement": "low",
+          "max_severity": "medium"
+        },
+        {
           "asset_identifier": "Your Own GitLab Instance",
           "asset_type": "OTHER",
           "availability_requirement": null,
@@ -54356,6 +54522,28 @@
           "max_severity": "critical"
         },
         {
+          "asset_identifier": "about.gitlab.com",
+          "asset_type": "URL",
+          "availability_requirement": "low",
+          "confidentiality_requirement": "none",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "There is no user data therefore no confidentiality impact is possible, however we want to know if you can modify the content or make it unavailable.",
+          "integrity_requirement": "low",
+          "max_severity": "medium"
+        },
+        {
+          "asset_identifier": "advisories.gitlab.com",
+          "asset_type": "URL",
+          "availability_requirement": "low",
+          "confidentiality_requirement": "none",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "There is no user data therefore no confidentiality impact is possible, however we want to know if you can modify the content or make it unavailable.",
+          "integrity_requirement": "low",
+          "max_severity": "medium"
+        },
+        {
           "asset_identifier": "customers.gitlab.com",
           "asset_type": "URL",
           "availability_requirement": null,
@@ -54365,6 +54553,28 @@
           "instruction": "",
           "integrity_requirement": null,
           "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "design.gitlab.com",
+          "asset_type": "URL",
+          "availability_requirement": "low",
+          "confidentiality_requirement": "none",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "There is no user data therefore no confidentiality impact is possible, however we want to know if you can modify the content or make it unavailable.",
+          "integrity_requirement": "low",
+          "max_severity": "medium"
+        },
+        {
+          "asset_identifier": "docs.gitlab.com",
+          "asset_type": "URL",
+          "availability_requirement": "low",
+          "confidentiality_requirement": "none",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "There is no user data therefore no confidentiality impact is possible, however we want to know if you can modify the content or make it unavailable.",
+          "integrity_requirement": "low",
+          "max_severity": "medium"
         },
         {
           "asset_identifier": "gitlab.com",
@@ -54457,39 +54667,6 @@
       ],
       "out_of_scope": [
         {
-          "asset_identifier": "*.gitlab.net",
-          "asset_type": "URL",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": false,
-          "eligible_for_submission": false,
-          "instruction": "",
-          "integrity_requirement": null,
-          "max_severity": "none"
-        },
-        {
-          "asset_identifier": "*.gitlap.com",
-          "asset_type": "URL",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": false,
-          "eligible_for_submission": false,
-          "instruction": "",
-          "integrity_requirement": null,
-          "max_severity": "none"
-        },
-        {
-          "asset_identifier": "about.gitlab.com",
-          "asset_type": "URL",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": false,
-          "eligible_for_submission": false,
-          "instruction": "",
-          "integrity_requirement": null,
-          "max_severity": "none"
-        },
-        {
           "asset_identifier": "alerts.gitlab.com",
           "asset_type": "URL",
           "availability_requirement": null,
@@ -54513,17 +54690,6 @@
         },
         {
           "asset_identifier": "dashboards.gitlab.com",
-          "asset_type": "URL",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": false,
-          "eligible_for_submission": false,
-          "instruction": "",
-          "integrity_requirement": null,
-          "max_severity": "none"
-        },
-        {
-          "asset_identifier": "docs.gitlab.com",
           "asset_type": "URL",
           "availability_requirement": null,
           "confidentiality_requirement": null,
@@ -54568,6 +54734,17 @@
         },
         {
           "asset_identifier": "ir.gitlab.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "levelup.gitlab.com",
           "asset_type": "URL",
           "availability_requirement": null,
           "confidentiality_requirement": null,
@@ -55557,7 +55734,7 @@
     "name": "Dropbox",
     "offers_bounties": true,
     "offers_swag": true,
-    "response_efficiency_percentage": 91,
+    "response_efficiency_percentage": 90,
     "submission_state": "open",
     "url": "https://hackerone.com/dropbox",
     "website": "https://www.dropbox.com",
@@ -64345,7 +64522,7 @@
     "name": "Livestream",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 95,
+    "response_efficiency_percentage": 94,
     "submission_state": "open",
     "url": "https://hackerone.com/livestream",
     "website": "http://www.livestream.com",
@@ -69409,7 +69586,7 @@
     "name": "Semrush",
     "offers_bounties": true,
     "offers_swag": true,
-    "response_efficiency_percentage": 94,
+    "response_efficiency_percentage": 93,
     "submission_state": "open",
     "url": "https://hackerone.com/semrush",
     "website": "https://www.semrush.com/",
@@ -72216,7 +72393,7 @@
     "name": "Rocket.Chat",
     "offers_bounties": false,
     "offers_swag": true,
-    "response_efficiency_percentage": 83,
+    "response_efficiency_percentage": 82,
     "submission_state": "open",
     "url": "https://hackerone.com/rocket_chat",
     "website": "https://rocket.chat",
@@ -79072,7 +79249,7 @@
     "name": "Affirm",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 82,
+    "response_efficiency_percentage": 83,
     "submission_state": "open",
     "url": "https://hackerone.com/affirm",
     "website": "http://www.affirm.com",
