@@ -15028,6 +15028,7 @@ A HackerOne hacker's preference
 """
 type HackerPreference implements Node {
   availability: String
+  collaboration: String
   id: ID!
   level: String
   opportunity_types: [String!]
@@ -30657,6 +30658,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
     Returns the elements in the list that come before the specified cursor.
     """
     before: String
+    eligible_for_bounty: Boolean = null
     eligible_for_submission: Boolean = null
 
     """
@@ -35056,6 +35058,7 @@ input UpdateHackerPreferenceInput {
   A unique identifier for the client performing the mutation.
   """
   clientMutationId: String
+  collaboration: String
   level: String
   opportunity_types: [String!]
 }
