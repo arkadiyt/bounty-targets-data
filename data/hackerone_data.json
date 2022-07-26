@@ -59928,7 +59928,7 @@
     "name": "GitHub",
     "offers_bounties": true,
     "offers_swag": true,
-    "response_efficiency_percentage": 86,
+    "response_efficiency_percentage": 87,
     "submission_state": "open",
     "url": "https://hackerone.com/github",
     "website": "https://bounty.github.com",
@@ -61017,7 +61017,7 @@
     "name": "Starbucks",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 96,
+    "response_efficiency_percentage": 95,
     "submission_state": "open",
     "url": "https://hackerone.com/starbucks",
     "website": "http://www.starbucks.com",
@@ -102117,6 +102117,17 @@
           "max_severity": "critical"
         },
         {
+          "asset_identifier": "*.lab.epam.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "*.lab.epam.com is a development staging environment, and please consider that fake PII data can be used there.\n\nWe will accept the following vulnerabilities as valid submissions for *.lab.epam.com:\n* SQL/NoSQL injection\n* RCE\n* SSRF\n* XXE Injections\n* Path traversal\n* Stored-cross site scripting\n* PII leakage issues\n* Security misconfigurations with demonstrated security impact\n* Any other vulnerabilities that will give the possibility threat actor to read files from the server/execute commands/retrieve sensitive information",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
           "asset_identifier": "1135407607",
           "asset_type": "APPLE_STORE_APP_ID",
           "availability_requirement": null,
@@ -102197,17 +102208,6 @@
       "out_of_scope": [
         {
           "asset_identifier": "*.infongen.com",
-          "asset_type": "URL",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": false,
-          "eligible_for_submission": false,
-          "instruction": "",
-          "integrity_requirement": null,
-          "max_severity": "none"
-        },
-        {
-          "asset_identifier": "*.lab.epam.com",
           "asset_type": "URL",
           "availability_requirement": null,
           "confidentiality_requirement": null,
