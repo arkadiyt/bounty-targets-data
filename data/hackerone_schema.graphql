@@ -12135,7 +12135,6 @@ type DerivedPentest implements Node {
   _id: ID!
   aasm_state: String
   details_date: DateTime
-  end_date: DateTime
   findings: Int
   hours: Int
   i_can_delete: Boolean
@@ -12170,8 +12169,10 @@ type DerivedPentest implements Node {
   ): PentestTaskConnection
   phase: String
   remediated: Int
+  retesting_ends_at: DateTime
   size: Int
   start_date: DateTime
+  summary_report: PentestSummaryReport
   team: Team
   token: String
 }
