@@ -20514,9 +20514,12 @@ A HackerOne organization member group
 """
 type OrganizationMemberGroup implements Node & ResourceInterface {
   _id: ID!
+  asset_inventory_permissions: [OrganizationPermissionsEnum!]!
   created_at: DateTime!
+  grants_access_to_asset_inventory: Boolean!
   id: ID!
-  name: String
+  inbox_permissions: [OrganizationPermissionsEnum!]!
+  name: String!
   organization_inboxes(
     """
     Returns the elements in the list that come after the specified cursor.
@@ -20539,7 +20542,7 @@ type OrganizationMemberGroup implements Node & ResourceInterface {
     last: Int
     order_by: FiltersOrganizationInboxFilterOrder
     where: FiltersOrganizationInboxFilterInput
-  ): OrganizationInboxConnection
+  ): OrganizationInboxConnection!
   organization_members(
     """
     Returns the elements in the list that come after the specified cursor.
@@ -20562,8 +20565,9 @@ type OrganizationMemberGroup implements Node & ResourceInterface {
     last: Int
     order_by: FiltersOrganizationMemberFilterOrder = {user: {username: {_direction: ASC}}}
     where: FiltersOrganizationMemberFilterInput
-  ): OrganizationMemberConnection
+  ): OrganizationMemberConnection!
   permissions: [OrganizationPermissionsEnum!]!
+  program_permissions: [OrganizationPermissionsEnum!]!
   teams(
     """
     Returns the elements in the list that come after the specified cursor.
@@ -20588,7 +20592,7 @@ type OrganizationMemberGroup implements Node & ResourceInterface {
     permissions: [PermissionEnum] = []
     secure_order_by: FiltersTeamFilterOrder
     where: FiltersTeamFilterInput
-  ): TeamConnection
+  ): TeamConnection!
   url: URI!
 }
 
@@ -20677,6 +20681,8 @@ type OrganizationMemberInvitationEdge {
 Organization permissions enum
 """
 enum OrganizationPermissionsEnum {
+  asset_inventory_manager
+  asset_inventory_viewer
   program_admin
   read_only_member
   report_analyst
