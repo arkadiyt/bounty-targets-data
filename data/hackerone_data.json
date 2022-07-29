@@ -52293,6 +52293,28 @@
           "max_severity": "critical"
         },
         {
+          "asset_identifier": "com.slack.slackmdm",
+          "asset_type": "APPLE_STORE_APP_ID",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Reports are accepted for vulnerabilities specific to the [Slack EMM/MDM version of the app](https://apps.apple.com/us/app/slack-for-emm/id1254292716).\n\nEMM client vulnerabilities in the absence of a valid MDM configuration via a supported MDM provider, (such as MobileIron), on an EMM-enabled Slack team are excluded.",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "com.tinyspeck.chatlyio",
+          "asset_type": "APPLE_STORE_APP_ID",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "The main Slack app is included: [Slack iOS App](https://apps.apple.com/us/app/slack/id618783545)\n\nOther versions of the app, such as the EMM and Intune versions, are not included.",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
           "asset_identifier": "edgeapi.slack.com",
           "asset_type": "URL",
           "availability_requirement": null,
@@ -52396,6 +52418,17 @@
         {
           "asset_identifier": "com.Slack.intune",
           "asset_type": "GOOGLE_PLAY_APP_ID",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "com.slack.slackintune",
+          "asset_type": "APPLE_STORE_APP_ID",
           "availability_requirement": null,
           "confidentiality_requirement": null,
           "eligible_for_bounty": false,
@@ -84606,7 +84639,7 @@
     "name": "Instacart",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 97,
+    "response_efficiency_percentage": 98,
     "submission_state": "open",
     "url": "https://hackerone.com/instacart",
     "website": "https://instacart.com",
