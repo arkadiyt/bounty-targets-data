@@ -127,6 +127,21 @@ type ActivitiesAgreedOnGoingPublic implements ActivityInterface & Node & ReportA
 }
 
 """
+An Activities::AssetCreated activity for a program
+"""
+type ActivitiesAssetCreated implements ActivityInterface & Node {
+  _id: ID!
+  actor: ActorUnion
+  created_at: DateTime!
+  i_can_edit: Boolean!
+  i_can_flag: Boolean!
+  id: ID!
+  internal: Boolean
+  message: String
+  updated_at: DateTime!
+}
+
+"""
 A Activities::BountyAwarded activity for a report
 """
 type ActivitiesBountyAwarded implements ActivityInterface & Node & ReportActivityInterface {
@@ -2095,7 +2110,7 @@ enum ActivityTypes {
 """
 Activities can be of multiple types
 """
-union ActivityUnion = ActivitiesAddedToPentest | ActivitiesAgreedOnGoingPublic | ActivitiesBountyAwarded | ActivitiesBountyRecalled | ActivitiesBountyScheduled | ActivitiesBountySuggested | ActivitiesBugCloned | ActivitiesBugDuplicate | ActivitiesBugFiled | ActivitiesBugInactive | ActivitiesBugInformative | ActivitiesBugNeedsMoreInfo | ActivitiesBugNew | ActivitiesBugNotApplicable | ActivitiesBugPendingProgramReview | ActivitiesBugPriorityChanged | ActivitiesBugReopened | ActivitiesBugResolved | ActivitiesBugRetesting | ActivitiesBugSpam | ActivitiesBugTriaged | ActivitiesCancelledDisclosureRequest | ActivitiesChangedCampaign | ActivitiesChangedScope | ActivitiesChecklistCheckClaimed | ActivitiesChecklistCheckExpired | ActivitiesChecklistCheckReleased | ActivitiesChecklistCheckResponseApproved | ActivitiesChecklistCheckResponseComment | ActivitiesChecklistCheckResponseCreated | ActivitiesChecklistCheckResponseRejected | ActivitiesChecklistCheckResponseUpdated | ActivitiesChecklistCheckRevoked | ActivitiesChecklistExpirationNotification | ActivitiesChecklistStarted | ActivitiesComment | ActivitiesCommentsClosed | ActivitiesCveIdAdded | ActivitiesDraftStarted | ActivitiesExternalAdvisoryAdded | ActivitiesExternalUserInvitationCancelled | ActivitiesExternalUserInvited | ActivitiesExternalUserJoined | ActivitiesExternalUserRemoved | ActivitiesGroupAssignedToBug | ActivitiesHackerRequestedMediation | ActivitiesManuallyDisclosed | ActivitiesMediationRequested | ActivitiesNobodyAssignedToBug | ActivitiesNotEligibleForBounty | ActivitiesPentestCheckAssigned | ActivitiesPentestCheckCompleted | ActivitiesPentestCheckUnassigned | ActivitiesPentestCheckUpdated | ActivitiesPentestPublished | ActivitiesPentestStarted | ActivitiesPentesterAwarded | ActivitiesProgramHackerJoined | ActivitiesProgramHackerLeft | ActivitiesProgramInactive | ActivitiesProgramStructuredScopesBulkUpdated | ActivitiesReassignedToTeam | ActivitiesReferenceIdAdded | ActivitiesRemovedFromPentest | ActivitiesReportBecamePublic | ActivitiesReportCollaboratorInvited | ActivitiesReportCollaboratorJoined | ActivitiesReportCustomFieldValueUpdated | ActivitiesReportOrganizationInboxesUpdated | ActivitiesReportRemediationGuidanceUpdated | ActivitiesReportRetestApproved | ActivitiesReportRetestCanceled | ActivitiesReportRetestRejected | ActivitiesReportSeverityUpdated | ActivitiesReportTitleUpdated | ActivitiesReportTriageSummaryCreated | ActivitiesReportUndisclosed | ActivitiesReportVulnerabilityTypesUpdated | ActivitiesRetestUserExpired | ActivitiesSwagAwarded | ActivitiesTeamBountyTableUpdated | ActivitiesTeamPolicyUpdated | ActivitiesTeamPostCreated | ActivitiesTeamPublished | ActivitiesTeamStructuredScopeUpdated | ActivitiesUserAssignedToBug | ActivitiesUserBannedFromProgram | ActivitiesUserCompletedRetest | ActivitiesUserJoined | ActivitiesUserLeftRetest
+union ActivityUnion = ActivitiesAddedToPentest | ActivitiesAgreedOnGoingPublic | ActivitiesAssetCreated | ActivitiesBountyAwarded | ActivitiesBountyRecalled | ActivitiesBountyScheduled | ActivitiesBountySuggested | ActivitiesBugCloned | ActivitiesBugDuplicate | ActivitiesBugFiled | ActivitiesBugInactive | ActivitiesBugInformative | ActivitiesBugNeedsMoreInfo | ActivitiesBugNew | ActivitiesBugNotApplicable | ActivitiesBugPendingProgramReview | ActivitiesBugPriorityChanged | ActivitiesBugReopened | ActivitiesBugResolved | ActivitiesBugRetesting | ActivitiesBugSpam | ActivitiesBugTriaged | ActivitiesCancelledDisclosureRequest | ActivitiesChangedCampaign | ActivitiesChangedScope | ActivitiesChecklistCheckClaimed | ActivitiesChecklistCheckExpired | ActivitiesChecklistCheckReleased | ActivitiesChecklistCheckResponseApproved | ActivitiesChecklistCheckResponseComment | ActivitiesChecklistCheckResponseCreated | ActivitiesChecklistCheckResponseRejected | ActivitiesChecklistCheckResponseUpdated | ActivitiesChecklistCheckRevoked | ActivitiesChecklistExpirationNotification | ActivitiesChecklistStarted | ActivitiesComment | ActivitiesCommentsClosed | ActivitiesCveIdAdded | ActivitiesDraftStarted | ActivitiesExternalAdvisoryAdded | ActivitiesExternalUserInvitationCancelled | ActivitiesExternalUserInvited | ActivitiesExternalUserJoined | ActivitiesExternalUserRemoved | ActivitiesGroupAssignedToBug | ActivitiesHackerRequestedMediation | ActivitiesManuallyDisclosed | ActivitiesMediationRequested | ActivitiesNobodyAssignedToBug | ActivitiesNotEligibleForBounty | ActivitiesPentestCheckAssigned | ActivitiesPentestCheckCompleted | ActivitiesPentestCheckUnassigned | ActivitiesPentestCheckUpdated | ActivitiesPentestPublished | ActivitiesPentestStarted | ActivitiesPentesterAwarded | ActivitiesProgramHackerJoined | ActivitiesProgramHackerLeft | ActivitiesProgramInactive | ActivitiesProgramStructuredScopesBulkUpdated | ActivitiesReassignedToTeam | ActivitiesReferenceIdAdded | ActivitiesRemovedFromPentest | ActivitiesReportBecamePublic | ActivitiesReportCollaboratorInvited | ActivitiesReportCollaboratorJoined | ActivitiesReportCustomFieldValueUpdated | ActivitiesReportOrganizationInboxesUpdated | ActivitiesReportRemediationGuidanceUpdated | ActivitiesReportRetestApproved | ActivitiesReportRetestCanceled | ActivitiesReportRetestRejected | ActivitiesReportSeverityUpdated | ActivitiesReportTitleUpdated | ActivitiesReportTriageSummaryCreated | ActivitiesReportUndisclosed | ActivitiesReportVulnerabilityTypesUpdated | ActivitiesRetestUserExpired | ActivitiesSwagAwarded | ActivitiesTeamBountyTableUpdated | ActivitiesTeamPolicyUpdated | ActivitiesTeamPostCreated | ActivitiesTeamPublished | ActivitiesTeamStructuredScopeUpdated | ActivitiesUserAssignedToBug | ActivitiesUserBannedFromProgram | ActivitiesUserCompletedRetest | ActivitiesUserJoined | ActivitiesUserLeftRetest
 
 """
 An edge in a connection.
@@ -2417,12 +2432,12 @@ enum AnalyticsDirectionEnum {
 
 enum AnalyticsFromEnum {
   dim_report_activities
+  dim_reports
   fixture_months
   fixture_quarters
   fixture_report_states
   fixture_severity_ratings
   fixture_years
-  reports
 }
 
 input AnalyticsHavingInputType {
@@ -2494,6 +2509,63 @@ enum AnalyticsSelectFieldEnum {
   dim_report_activities__report_id
   dim_report_activities__team_id
   dim_report_activities__updated_at
+  dim_reports__bounty_awarded_at
+  dim_reports__bounty_awarded_at_month
+  dim_reports__bounty_awarded_at_num_days_since
+  dim_reports__bounty_awarded_at_quarter
+  dim_reports__bounty_awarded_at_year
+  dim_reports__closed_at
+  dim_reports__closed_at_month
+  dim_reports__closed_at_num_days_since
+  dim_reports__closed_at_quarter
+  dim_reports__closed_at_year
+  dim_reports__is_bounty_awarded_report
+  dim_reports__is_imported
+  dim_reports__is_resolved_report
+  dim_reports__is_returning_reporter_last_14_days
+  dim_reports__is_returning_reporter_last_180_days
+  dim_reports__is_returning_reporter_last_30_days
+  dim_reports__is_returning_reporter_last_365_days
+  dim_reports__is_returning_reporter_last_60_days
+  dim_reports__is_returning_reporter_last_730_days
+  dim_reports__is_returning_reporter_last_7_days
+  dim_reports__is_returning_reporter_last_90_days
+  dim_reports__is_returning_reporter_prior_30_days
+  dim_reports__is_returning_reporter_prior_365_days
+  dim_reports__is_returning_reporter_prior_7_days
+  dim_reports__is_returning_reporter_prior_90_days
+  dim_reports__is_submitted_at_last_14_days
+  dim_reports__is_submitted_at_last_180_days
+  dim_reports__is_submitted_at_last_30_days
+  dim_reports__is_submitted_at_last_365_days
+  dim_reports__is_submitted_at_last_60_days
+  dim_reports__is_submitted_at_last_730_days
+  dim_reports__is_submitted_at_last_7_days
+  dim_reports__is_submitted_at_last_90_days
+  dim_reports__is_submitted_at_prior_30_days
+  dim_reports__is_submitted_at_prior_365_days
+  dim_reports__is_submitted_at_prior_7_days
+  dim_reports__is_submitted_at_prior_90_days
+  dim_reports__is_submitted_by_team_member
+  dim_reports__is_submitted_report
+  dim_reports__is_triaged_report
+  dim_reports__is_valid_report
+  dim_reports__organization_id
+  dim_reports__report_id
+  dim_reports__reporter_id
+  dim_reports__reporter_username
+  dim_reports__severity_rating
+  dim_reports__state
+  dim_reports__submitted_at
+  dim_reports__submitted_at_month
+  dim_reports__submitted_at_num_days_since
+  dim_reports__submitted_at_quarter
+  dim_reports__submitted_at_year
+  dim_reports__team_handle
+  dim_reports__team_id
+  dim_reports__total_bounty_amount
+  dim_reports__weakness_id
+  dim_reports__weakness_name
   fixture_months__end_at
   fixture_months__month
   fixture_months__start_at
@@ -2509,63 +2581,6 @@ enum AnalyticsSelectFieldEnum {
   fixture_years__end_at
   fixture_years__start_at
   fixture_years__year
-  reports__bounty_awarded_at
-  reports__bounty_awarded_at_month
-  reports__bounty_awarded_at_num_days_since
-  reports__bounty_awarded_at_quarter
-  reports__bounty_awarded_at_year
-  reports__closed_at
-  reports__closed_at_month
-  reports__closed_at_num_days_since
-  reports__closed_at_quarter
-  reports__closed_at_year
-  reports__is_bounty_awarded_report
-  reports__is_imported
-  reports__is_resolved_report
-  reports__is_returning_reporter_last_14_days
-  reports__is_returning_reporter_last_180_days
-  reports__is_returning_reporter_last_30_days
-  reports__is_returning_reporter_last_365_days
-  reports__is_returning_reporter_last_60_days
-  reports__is_returning_reporter_last_730_days
-  reports__is_returning_reporter_last_7_days
-  reports__is_returning_reporter_last_90_days
-  reports__is_returning_reporter_prior_30_days
-  reports__is_returning_reporter_prior_365_days
-  reports__is_returning_reporter_prior_7_days
-  reports__is_returning_reporter_prior_90_days
-  reports__is_submitted_at_last_14_days
-  reports__is_submitted_at_last_180_days
-  reports__is_submitted_at_last_30_days
-  reports__is_submitted_at_last_365_days
-  reports__is_submitted_at_last_60_days
-  reports__is_submitted_at_last_730_days
-  reports__is_submitted_at_last_7_days
-  reports__is_submitted_at_last_90_days
-  reports__is_submitted_at_prior_30_days
-  reports__is_submitted_at_prior_365_days
-  reports__is_submitted_at_prior_7_days
-  reports__is_submitted_at_prior_90_days
-  reports__is_submitted_by_team_member
-  reports__is_submitted_report
-  reports__is_triaged_report
-  reports__is_valid_report
-  reports__organization_id
-  reports__report_id
-  reports__reporter_id
-  reports__reporter_username
-  reports__severity_rating
-  reports__state
-  reports__submitted_at
-  reports__submitted_at_month
-  reports__submitted_at_num_days_since
-  reports__submitted_at_quarter
-  reports__submitted_at_year
-  reports__team_handle
-  reports__team_id
-  reports__total_bounty_amount
-  reports__weakness_id
-  reports__weakness_name
 }
 
 enum AnalyticsSelectFunctionEnum {
@@ -7055,12 +7070,12 @@ input CreateCveRequestInput {
   A unique identifier for the client performing the mutation.
   """
   clientMutationId: String
+  cve_entry_identifier: String
   description: String!
   product: String!
   product_version: String!
   references: [String]
   report_id: Int
-  request_type: String
   team_handle: String!
   vulnerability_discovered_at: String!
   weakness_name: String!
@@ -14649,7 +14664,7 @@ input FiltersUserFilterInput {
   _or: [FiltersUserFilterInput]
   followers: FiltersFollowedUserFilterInput
   id: IntPredicateInput
-  is_hackerone_triager: Boolean
+  is_hackerone_triager_or_owns_reports: Boolean
   is_me: Boolean
   name: StringPredicateInput
   system: BooleanPredicateInput
@@ -24010,7 +24025,7 @@ type Query implements Node {
     """
     last: Int
     ordered_by_timer: Boolean = true
-    owner_username: String = null
+    owner_usernames: [String!] = []
     plus: Boolean = false
     priority: TriageInboxItemPriorityEnum = null
     product_editions: [TriageInboxItemProductEditionFilterEnum!] = null
