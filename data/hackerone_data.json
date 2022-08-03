@@ -71595,7 +71595,7 @@
     "name": "Nord Security",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 96,
+    "response_efficiency_percentage": 97,
     "submission_state": "open",
     "url": "https://hackerone.com/nordsecurity",
     "website": "https://nordsecurity.com/",
@@ -85245,7 +85245,7 @@
     "name": "Reddit",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 99,
+    "response_efficiency_percentage": 98,
     "submission_state": "open",
     "url": "https://hackerone.com/reddit",
     "website": "https://www.reddit.com",
@@ -102614,6 +102614,17 @@
     "targets": {
       "in_scope": [
         {
+          "asset_identifier": "enkrypt.browser.extension",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Code base can be found: https://github.com/enkryptcom/enKrypt/\nChrome Web Store: https://chrome.google.com/webstore/detail/enkrypt-ethereum-and-polk/kkpllkodjeloidieedojogacfhpaihoh\n\nWe support more networks, please use extension to see full list.",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
           "asset_identifier": "mewcx.chrome.extension",
           "asset_type": "SOURCE_CODE",
           "availability_requirement": null,
@@ -102659,17 +102670,7 @@
         }
       ],
       "out_of_scope": [
-        {
-          "asset_identifier": "beta.myetherwallet.com",
-          "asset_type": "URL",
-          "availability_requirement": "high",
-          "confidentiality_requirement": "high",
-          "eligible_for_bounty": false,
-          "eligible_for_submission": false,
-          "instruction": "Active link: https://beta.myetherwallet.com/\nCodebase can be found at: https://github.com/MyEtherWallet/MyEtherWallet/tree/v6/develop",
-          "integrity_requirement": "high",
-          "max_severity": "none"
-        }
+
       ]
     }
   },
