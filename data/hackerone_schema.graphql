@@ -4765,6 +4765,7 @@ Pentest certification
 """
 type Certification implements Node {
   _id: ID!
+  h1_managed: Boolean!
   id: ID!
   name: String!
   short_name: String!
@@ -14081,6 +14082,14 @@ input FiltersCampaignFilterInput {
   status: CampaignStateEnumInputPredicateInput
 }
 
+input FiltersCertificationFilterInput {
+  _and: [FiltersCertificationFilterInput]
+  _not: FiltersCertificationFilterInput
+  _or: [FiltersCertificationFilterInput]
+  h1_managed: BooleanPredicateInput
+  id: IntPredicateInput
+}
+
 input FiltersChecklistCheckFilterInput {
   _and: [FiltersChecklistCheckFilterInput]
   _not: FiltersChecklistCheckFilterInput
@@ -23365,7 +23374,8 @@ type Query implements Node {
     Returns the last _n_ elements from the list.
     """
     last: Int
-  ): CertificationConnection!
+    where: FiltersCertificationFilterInput
+  ): CertificationConnection
   checklist_check(id: Int!): ChecklistCheck
   checklist_check_response(id: ID!): ChecklistCheckResponse
 
