@@ -1566,10 +1566,50 @@
     "archived": false,
     "targets": {
       "in_scope": [
-
+        {
+          "target": "kuna.io",
+          "type": "Web",
+          "instruction": "Main site",
+          "severity": "Critical",
+          "reward": "Bounty"
+        },
+        {
+          "target": "api.kuna.io",
+          "type": "API",
+          "instruction": "APIv3",
+          "severity": "High",
+          "reward": "Bounty"
+        },
+        {
+          "target": "money.kuna.io",
+          "type": "Web",
+          "instruction": "",
+          "severity": "Low",
+          "reward": "Reputation"
+        }
       ],
       "out_of_scope": [
-
+        {
+          "target": "eos.kuna.io",
+          "type": "Web",
+          "instruction": "Hosted by third party",
+          "severity": "None",
+          "reward": null
+        },
+        {
+          "target": "investors.kuna.io",
+          "type": "Web",
+          "instruction": "Hosted by third party",
+          "severity": "None",
+          "reward": null
+        },
+        {
+          "target": "*.kuna.io",
+          "type": "Web",
+          "instruction": "Hosted by third party",
+          "severity": "None",
+          "reward": null
+        }
       ]
     }
   },
@@ -1733,10 +1773,36 @@
     "archived": false,
     "targets": {
       "in_scope": [
-
+        {
+          "target": "p2pb2b.io",
+          "type": "Web",
+          "instruction": "",
+          "severity": "Critical",
+          "reward": "Bounty"
+        },
+        {
+          "target": "api.p2pb2b.io",
+          "type": "API",
+          "instruction": "",
+          "severity": "Critical",
+          "reward": "Bounty"
+        },
+        {
+          "target": "apiws.p2pb2b.io",
+          "type": "API",
+          "instruction": "https://p2pb2bwsspublic.docs.apiary.io/",
+          "severity": "Critical",
+          "reward": "Bounty"
+        }
       ],
       "out_of_scope": [
-
+        {
+          "target": "p2pb2b.io/blog/*",
+          "type": "Web3",
+          "instruction": "",
+          "severity": "Critical",
+          "reward": null
+        }
       ]
     }
   },
@@ -1967,20 +2033,7 @@
     "archived": true,
     "targets": {
       "in_scope": [
-        {
-          "target": "TTC SDK Android",
-          "type": "Android",
-          "instruction": "https://github.com/TTCECO/TTCSDK_Android",
-          "severity": "Critical",
-          "reward": "Bounty"
-        },
-        {
-          "target": "TTC SDK iOS",
-          "type": "iOS",
-          "instruction": "https://github.com/TTCECO/TTCSDK_iOS",
-          "severity": "Critical",
-          "reward": "Bounty"
-        }
+
       ],
       "out_of_scope": [
 
@@ -1994,20 +2047,7 @@
     "archived": true,
     "targets": {
       "in_scope": [
-        {
-          "target": "https://tickets.kz/",
-          "type": "Web",
-          "instruction": "",
-          "severity": "Critical",
-          "reward": "Bounty"
-        },
-        {
-          "target": "tickets.kz/my",
-          "type": "Web",
-          "instruction": "",
-          "severity": "Critical",
-          "reward": "Bounty"
-        }
+
       ],
       "out_of_scope": [
 
