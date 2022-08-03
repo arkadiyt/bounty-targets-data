@@ -2431,6 +2431,7 @@ enum AnalyticsDirectionEnum {
 }
 
 enum AnalyticsFromEnum {
+  dim_invitations
   dim_report_activities
   dim_reports
   fixture_months
@@ -2497,6 +2498,16 @@ input AnalyticsQueryInputType {
 }
 
 enum AnalyticsSelectFieldEnum {
+  dim_invitations__created_at
+  dim_invitations__created_at_month
+  dim_invitations__created_at_quarter
+  dim_invitations__created_at_year
+  dim_invitations__invitation_id
+  dim_invitations__is_accepted
+  dim_invitations__is_viewed
+  dim_invitations__organization_id
+  dim_invitations__team_id
+  dim_invitations__user_id
   dim_report_activities__activity_event
   dim_report_activities__activity_id
   dim_report_activities__created_at
