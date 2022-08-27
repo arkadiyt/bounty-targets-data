@@ -127,16 +127,6 @@
       "in_scope": [
         {
           "type": "url",
-          "endpoint": "*.ad.nl",
-          "description": "excluding abonnement.ad.nl"
-        },
-        {
-          "type": "url",
-          "endpoint": "login2.ad.nl",
-          "description": null
-        },
-        {
-          "type": "url",
           "endpoint": "myaccount.ad.nl",
           "description": null
         },
@@ -148,12 +138,17 @@
         {
           "type": "url",
           "endpoint": "www.ad.nl",
-          "description": null
+          "description": "excluding\n* ad.nl/service\n* ad.nl/inloggen\n* ad.nl/login\n* ad.nl/registreren"
         },
         {
           "type": "url",
           "endpoint": "www.ad.nl/abonnementen",
           "description": null
+        },
+        {
+          "type": "url",
+          "endpoint": "*.ad.nl",
+          "description": "excluding abonnement.ad.nl"
         }
       ],
       "out_of_scope": [
@@ -436,6 +431,35 @@
     }
   },
   {
+    "id": "cc8e6b5c-0aaf-497c-aecb-4c84f81b8b4d",
+    "name": "Challenge 0822 by BrunoModificato and aszx87410",
+    "company_handle": "intigriti",
+    "handle": "challenge0822",
+    "url": "https://www.intigriti.com/programs/intigriti/challenge0822/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "min_bounty": {
+      "value": 0.0,
+      "currency": "EUR"
+    },
+    "max_bounty": {
+      "value": 0.0,
+      "currency": "EUR"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "url",
+          "endpoint": "https://challenge-0822.intigriti.io/",
+          "description": null
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
     "id": "13cfc6fe-92b2-4a56-8577-855ff0bc2f1c",
     "name": "Cyber Security Coalition",
     "company_handle": "cybersecuritycoalition",
@@ -485,17 +509,17 @@
         {
           "type": "url",
           "endpoint": "*.dpgmedia.be",
-          "description": null
+          "description": "excluding\n* login.dpgmedia.be"
         },
         {
           "type": "url",
           "endpoint": "*.dpgmedia.nl",
-          "description": null
+          "description": "excluding\n* login.dpgmedia.nl"
         },
         {
           "type": "other",
           "endpoint": "Any related DPG media domain",
-          "description": "\n_Only applicable to domains that are 100% owned by DPG. For example, projects that are partly owned by DPG and partly owned by RTL (because of a joint venture between the two) are not in scope._\n\nWhois: \n\nDe Persgroep Publishing nv\nBrusselstesteenweg 347\n1730 Asse\nBelgië\n\nDPG Media Services NV \nMediaplein 1 \n2018 Antwerpen \nBelgium"
+          "description": "\n_Only applicable to domains that are **100% owned by DPG**.  \nFor example, projects that are partly owned by DPG and partly owned by RTL (because of a joint venture between the two) are **not** in scope._\n\nWhois: \n\nDe Persgroep Publishing nv\nBrusselstesteenweg 347\n1730 Asse\nBelgië\n\nDPG Media Services NV \nMediaplein 1 \n2018 Antwerpen \nBelgium"
         }
       ],
       "out_of_scope": [
@@ -641,16 +665,6 @@
       "in_scope": [
         {
           "type": "url",
-          "endpoint": "*.demorgen.be",
-          "description": "excluding abonnement.demorgen.be"
-        },
-        {
-          "type": "url",
-          "endpoint": "login2.demorgen.be",
-          "description": null
-        },
-        {
-          "type": "url",
           "endpoint": "myaccount.demorgen.be",
           "description": null
         },
@@ -662,12 +676,17 @@
         {
           "type": "url",
           "endpoint": "www.demorgen.be",
-          "description": null
+          "description": "excluding\n* demorgen.be/service\n* demorgen.be/inloggen\n* demorgen.be/login\n* demorgen.be/registreren"
         },
         {
           "type": "url",
           "endpoint": "www.demorgen.be/abonnementen",
           "description": null
+        },
+        {
+          "type": "url",
+          "endpoint": "*.demorgen.be",
+          "description": "excluding abonnement.demorgen.be"
         }
       ],
       "out_of_scope": [
@@ -695,16 +714,6 @@
       "in_scope": [
         {
           "type": "url",
-          "endpoint": "*.volkskrant.nl",
-          "description": "excluding abonnement.volkskrant.nl"
-        },
-        {
-          "type": "url",
-          "endpoint": "login2.volkskrant.nl",
-          "description": null
-        },
-        {
-          "type": "url",
           "endpoint": "myaccount.volkskrant.nl",
           "description": null
         },
@@ -721,12 +730,17 @@
         {
           "type": "url",
           "endpoint": "www.volkskrant.nl",
-          "description": "excluding www.volkskrant.nl/service"
+          "description": "excluding\n* volkskrant.nl/service\n* volkskrant.nl/inloggen\n* volkskrant.nl/login\n* volkskrant.nl/registreren"
         },
         {
           "type": "url",
           "endpoint": "www.volkskrant.nl/abonnementen",
           "description": null
+        },
+        {
+          "type": "url",
+          "endpoint": "*.volkskrant.nl",
+          "description": "excluding abonnement.volkskrant.nl"
         }
       ],
       "out_of_scope": [
@@ -972,6 +986,50 @@
     }
   },
   {
+    "id": "0bcc2455-bd63-490b-b725-890a93a1c678",
+    "name": "Fing",
+    "company_handle": "lansweeper",
+    "handle": "fing",
+    "url": "https://www.intigriti.com/programs/lansweeper/fing/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "min_bounty": {
+      "value": 50.0,
+      "currency": "EUR"
+    },
+    "max_bounty": {
+      "value": 3000.0,
+      "currency": "EUR"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "url",
+          "endpoint": "service.fing.com",
+          "description": "Our public cloud API for Device Recognition which can be requested on our website: https://app.fing.com/internet/business/devrecog/trial."
+        },
+        {
+          "type": "url",
+          "endpoint": "app.fing.com",
+          "description": "The Fing web application that gives you an overview of all monitored networks"
+        },
+        {
+          "type": "url",
+          "endpoint": "Fing desktop",
+          "description": "The free Fing App to identify connected devices, troubleshoot network and device issues, detect network intruders and run Wi-Fi and internet speed tests anywhere. It can be downloaded here: http://app.fing.com/app"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.fing.com ",
+          "description": "Always use \"intigriti.me\" address for any web form"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
     "id": "75e7d54b-c6e8-453b-bd0a-f8f6893bd3d8",
     "name": "Floriday",
     "company_handle": "royalfloraholland",
@@ -1138,7 +1196,7 @@
       "in_scope": [
         {
           "type": "url",
-          "endpoint": "login2.hln.be",
+          "endpoint": "hln.be",
           "description": null
         },
         {
@@ -1148,17 +1206,12 @@
         },
         {
           "type": "url",
-          "endpoint": "*.hln.be",
-          "description": null
-        },
-        {
-          "type": "url",
-          "endpoint": "hln.be",
-          "description": null
-        },
-        {
-          "type": "url",
           "endpoint": "www.hln.be",
+          "description": "excluding\n* hln.be/service\n* hln.be/inloggen\n* hln.be/login\n* hln.be/registreren"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.hln.be",
           "description": null
         }
       ],
@@ -1187,16 +1240,6 @@
       "in_scope": [
         {
           "type": "url",
-          "endpoint": "*.parool.nl",
-          "description": "excluding abonnement.parool.nl"
-        },
-        {
-          "type": "url",
-          "endpoint": "login2.parool.nl",
-          "description": null
-        },
-        {
-          "type": "url",
           "endpoint": "myaccount.parool.nl",
           "description": null
         },
@@ -1213,12 +1256,17 @@
         {
           "type": "url",
           "endpoint": "www.parool.nl",
-          "description": null
+          "description": "excluding\n* parool.nl/service\n* parool.nl/inloggen\n* parool.nl/login\n* parool.nl/registreren"
         },
         {
           "type": "url",
           "endpoint": "www.parool.nl/abonnementen",
           "description": null
+        },
+        {
+          "type": "url",
+          "endpoint": "*.parool.nl",
+          "description": "excluding abonnement.parool.nl"
         }
       ],
       "out_of_scope": [
@@ -1285,16 +1333,6 @@
       "in_scope": [
         {
           "type": "url",
-          "endpoint": "*.humo.be",
-          "description": "excluding abonnement.humo.be"
-        },
-        {
-          "type": "url",
-          "endpoint": "login2.humo.be",
-          "description": null
-        },
-        {
-          "type": "url",
           "endpoint": "myaccount.humo.be",
           "description": null
         },
@@ -1306,12 +1344,17 @@
         {
           "type": "url",
           "endpoint": "www.humo.be",
-          "description": null
+          "description": "excluding\n* humo.be/service\n* humo.be/inloggen\n* humo.be/login\n* humo.be/registreren"
         },
         {
           "type": "url",
           "endpoint": "www.humo.be/abonnementen",
           "description": null
+        },
+        {
+          "type": "url",
+          "endpoint": "*.humo.be",
+          "description": "excluding abonnement.humo.be"
         }
       ],
       "out_of_scope": [
@@ -2197,12 +2240,12 @@
       "in_scope": [
         {
           "type": "url",
-          "endpoint": "*.libelle.nl",
-          "description": null
+          "endpoint": "www.libelle.nl",
+          "description": "excluding\n* libelle.nl/service\n* libelle.nl/inloggen\n* libelle.nl/login\n* libelle.nl/registreren"
         },
         {
           "type": "url",
-          "endpoint": "www.libelle.nl",
+          "endpoint": "*.libelle.nl",
           "description": null
         }
       ],
@@ -3285,13 +3328,8 @@
           "description": "The entire Telenet SafeSpot product is in scope."
         },
         {
-          "type": "android",
-          "endpoint": "be.telenet.safespotgo",
-          "description": "The entire Telenet SafeSpot product is in scope."
-        },
-        {
           "type": "url",
-          "endpoint": "https://www2.telenet.be/nl/landing-pages/safespot",
+          "endpoint": "https://www2.telenet.be/nl/klantenservice/alles-over-safespot/",
           "description": "The entire Telenet SafeSpot product is in scope."
         },
         {
@@ -3666,16 +3704,6 @@
       "in_scope": [
         {
           "type": "url",
-          "endpoint": "*.trouw.nl",
-          "description": "excluding abonnement.trouw.nl"
-        },
-        {
-          "type": "url",
-          "endpoint": "login2.trouw.nl",
-          "description": null
-        },
-        {
-          "type": "url",
           "endpoint": "myaccount.trouw.nl",
           "description": null
         },
@@ -3692,12 +3720,17 @@
         {
           "type": "url",
           "endpoint": "www.trouw.nl",
-          "description": null
+          "description": "excluding\n* trouw.nl/service\n* trouw.nl/inloggen\n* trouw.nl/login\n* trouw.nl/registreren"
         },
         {
           "type": "url",
           "endpoint": "www.trouw.nl/abonnementen",
           "description": null
+        },
+        {
+          "type": "url",
+          "endpoint": "*.trouw.nl",
+          "description": "excluding abonnement.trouw.nl"
         }
       ],
       "out_of_scope": [
@@ -3974,11 +4007,6 @@
         {
           "type": "url",
           "endpoint": "files.uzleuven.be",
-          "description": null
-        },
-        {
-          "type": "url",
-          "endpoint": "jobs.uzleuven.be",
           "description": null
         },
         {
@@ -4484,11 +4512,6 @@
       "in_scope": [
         {
           "type": "url",
-          "endpoint": "login2.vtm.be",
-          "description": null
-        },
-        {
-          "type": "url",
           "endpoint": "myaccount.vtm.be",
           "description": null
         },
@@ -4500,7 +4523,7 @@
         {
           "type": "url",
           "endpoint": "vtmgo.be",
-          "description": null
+          "description": "excluding\n* vtmgo.be/service\n* vtmgo.be/inloggen\n* vtmgo.be/login\n* vtmgo.be/registreren"
         },
         {
           "type": "url",
@@ -4949,6 +4972,11 @@
     },
     "targets": {
       "in_scope": [
+        {
+          "type": "url",
+          "endpoint": "mento.finance",
+          "description": null
+        },
         {
           "type": "url",
           "endpoint": "https://celo.org",
