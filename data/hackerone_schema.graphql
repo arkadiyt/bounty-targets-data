@@ -115,7 +115,7 @@ type ActivitiesAgreedOnGoingPublic implements ActivityInterface & Node & ReportA
   automated_response: Boolean
   created_at: DateTime!
   first_to_agree: Boolean
-  genius_execution_id: ID
+  genius_execution_id: ID @deprecated(reason: "This is about to be replaced by .genius_execution")
   i_can_edit: Boolean!
   i_can_flag: Boolean!
   id: ID!
@@ -155,7 +155,7 @@ type ActivitiesBountyAwarded implements ActivityInterface & Node & ReportActivit
   bounty_currency: String
   collaborator: User
   created_at: DateTime!
-  genius_execution_id: ID
+  genius_execution_id: ID @deprecated(reason: "This is about to be replaced by .genius_execution")
   i_can_edit: Boolean!
   i_can_flag: Boolean!
   id: ID!
@@ -179,7 +179,7 @@ type ActivitiesBountyRecalled implements ActivityInterface & Node & ReportActivi
   bonus_amount: String
   bounty_currency: String
   created_at: DateTime!
-  genius_execution_id: ID
+  genius_execution_id: ID @deprecated(reason: "This is about to be replaced by .genius_execution")
   i_can_edit: Boolean!
   i_can_flag: Boolean!
   id: ID!
@@ -206,7 +206,7 @@ type ActivitiesBountyScheduled implements ActivityInterface & Node & ReportActiv
   bonus_amount: String
   bounty_currency: String
   created_at: DateTime!
-  genius_execution_id: ID
+  genius_execution_id: ID @deprecated(reason: "This is about to be replaced by .genius_execution")
   i_can_edit: Boolean!
   i_can_flag: Boolean!
   id: ID!
@@ -231,7 +231,7 @@ type ActivitiesBountySuggested implements ActivityInterface & Node & ReportActiv
   bounty_amount: String
   bounty_currency: String
   created_at: DateTime!
-  genius_execution_id: ID
+  genius_execution_id: ID @deprecated(reason: "This is about to be replaced by .genius_execution")
   i_can_edit: Boolean!
   i_can_flag: Boolean!
   id: ID!
@@ -252,7 +252,7 @@ type ActivitiesBugCloned implements ActivityInterface & Node & ReportActivityInt
   attachments: [Attachment]
   automated_response: Boolean
   created_at: DateTime!
-  genius_execution_id: ID
+  genius_execution_id: ID @deprecated(reason: "This is about to be replaced by .genius_execution")
   i_can_edit: Boolean!
   i_can_flag: Boolean!
   id: ID!
@@ -275,7 +275,7 @@ type ActivitiesBugDuplicate implements ActivityInterface & Node & ReportActivity
   attachments: [Attachment]
   automated_response: Boolean
   created_at: DateTime!
-  genius_execution_id: ID
+  genius_execution_id: ID @deprecated(reason: "This is about to be replaced by .genius_execution")
   i_can_edit: Boolean!
   i_can_flag: Boolean!
   id: ID!
@@ -298,7 +298,7 @@ type ActivitiesBugFiled implements ActivityInterface & Node & ReportActivityInte
   attachments: [Attachment]
   automated_response: Boolean
   created_at: DateTime!
-  genius_execution_id: ID
+  genius_execution_id: ID @deprecated(reason: "This is about to be replaced by .genius_execution")
   i_can_edit: Boolean!
   i_can_flag: Boolean!
   id: ID!
@@ -319,7 +319,7 @@ type ActivitiesBugInactive implements ActivityInterface & Node & ReportActivityI
   attachments: [Attachment]
   automated_response: Boolean
   created_at: DateTime!
-  genius_execution_id: ID
+  genius_execution_id: ID @deprecated(reason: "This is about to be replaced by .genius_execution")
   i_can_edit: Boolean!
   i_can_flag: Boolean!
   id: ID!
@@ -340,7 +340,7 @@ type ActivitiesBugInformative implements ActivityInterface & Node & ReportActivi
   attachments: [Attachment]
   automated_response: Boolean
   created_at: DateTime!
-  genius_execution_id: ID
+  genius_execution_id: ID @deprecated(reason: "This is about to be replaced by .genius_execution")
   i_can_edit: Boolean!
   i_can_flag: Boolean!
   id: ID!
@@ -361,7 +361,7 @@ type ActivitiesBugNeedsMoreInfo implements ActivityInterface & Node & ReportActi
   attachments: [Attachment]
   automated_response: Boolean
   created_at: DateTime!
-  genius_execution_id: ID
+  genius_execution_id: ID @deprecated(reason: "This is about to be replaced by .genius_execution")
   i_can_edit: Boolean!
   i_can_flag: Boolean!
   id: ID!
@@ -382,7 +382,7 @@ type ActivitiesBugNew implements ActivityInterface & Node & ReportActivityInterf
   attachments: [Attachment]
   automated_response: Boolean
   created_at: DateTime!
-  genius_execution_id: ID
+  genius_execution_id: ID @deprecated(reason: "This is about to be replaced by .genius_execution")
   i_can_edit: Boolean!
   i_can_flag: Boolean!
   id: ID!
@@ -403,7 +403,7 @@ type ActivitiesBugNotApplicable implements ActivityInterface & Node & ReportActi
   attachments: [Attachment]
   automated_response: Boolean
   created_at: DateTime!
-  genius_execution_id: ID
+  genius_execution_id: ID @deprecated(reason: "This is about to be replaced by .genius_execution")
   i_can_edit: Boolean!
   i_can_flag: Boolean!
   id: ID!
@@ -424,7 +424,7 @@ type ActivitiesBugPendingProgramReview implements ActivityInterface & Node & Rep
   attachments: [Attachment]
   automated_response: Boolean
   created_at: DateTime!
-  genius_execution_id: ID
+  genius_execution_id: ID @deprecated(reason: "This is about to be replaced by .genius_execution")
   i_can_edit: Boolean!
   i_can_flag: Boolean!
   id: ID!
@@ -445,7 +445,7 @@ type ActivitiesBugPriorityChanged implements ActivityInterface & Node & ReportAc
   attachments: [Attachment]
   automated_response: Boolean
   created_at: DateTime!
-  genius_execution_id: ID
+  genius_execution_id: ID @deprecated(reason: "This is about to be replaced by .genius_execution")
   i_can_edit: Boolean!
   i_can_flag: Boolean!
   id: ID!
@@ -467,7 +467,7 @@ type ActivitiesBugReopened implements ActivityInterface & Node & ReportActivityI
   attachments: [Attachment]
   automated_response: Boolean
   created_at: DateTime!
-  genius_execution_id: ID
+  genius_execution_id: ID @deprecated(reason: "This is about to be replaced by .genius_execution")
   i_can_edit: Boolean!
   i_can_flag: Boolean!
   id: ID!
@@ -488,7 +488,7 @@ type ActivitiesBugResolved implements ActivityInterface & Node & ReportActivityI
   attachments: [Attachment]
   automated_response: Boolean
   created_at: DateTime!
-  genius_execution_id: ID
+  genius_execution_id: ID @deprecated(reason: "This is about to be replaced by .genius_execution")
   i_can_edit: Boolean!
   i_can_flag: Boolean!
   id: ID!
@@ -509,7 +509,7 @@ type ActivitiesBugRetesting implements ActivityInterface & Node & ReportActivity
   attachments: [Attachment]
   automated_response: Boolean
   created_at: DateTime!
-  genius_execution_id: ID
+  genius_execution_id: ID @deprecated(reason: "This is about to be replaced by .genius_execution")
   i_can_edit: Boolean!
   i_can_flag: Boolean!
   id: ID!
@@ -531,7 +531,7 @@ type ActivitiesBugSpam implements ActivityInterface & Node & ReportActivityInter
   attachments: [Attachment]
   automated_response: Boolean
   created_at: DateTime!
-  genius_execution_id: ID
+  genius_execution_id: ID @deprecated(reason: "This is about to be replaced by .genius_execution")
   i_can_edit: Boolean!
   i_can_flag: Boolean!
   id: ID!
@@ -552,7 +552,7 @@ type ActivitiesBugTriaged implements ActivityInterface & Node & ReportActivityIn
   attachments: [Attachment]
   automated_response: Boolean
   created_at: DateTime!
-  genius_execution_id: ID
+  genius_execution_id: ID @deprecated(reason: "This is about to be replaced by .genius_execution")
   i_can_edit: Boolean!
   i_can_flag: Boolean!
   id: ID!
@@ -573,7 +573,7 @@ type ActivitiesCancelledDisclosureRequest implements ActivityInterface & Node & 
   attachments: [Attachment]
   automated_response: Boolean
   created_at: DateTime!
-  genius_execution_id: ID
+  genius_execution_id: ID @deprecated(reason: "This is about to be replaced by .genius_execution")
   i_can_edit: Boolean!
   i_can_flag: Boolean!
   id: ID!
@@ -594,7 +594,7 @@ type ActivitiesChangedCampaign implements ActivityInterface & Node & ReportActiv
   attachments: [Attachment]
   automated_response: Boolean
   created_at: DateTime!
-  genius_execution_id: ID
+  genius_execution_id: ID @deprecated(reason: "This is about to be replaced by .genius_execution")
   i_can_edit: Boolean!
   i_can_flag: Boolean!
   id: ID!
@@ -615,7 +615,7 @@ type ActivitiesChangedScope implements ActivityInterface & Node & ReportActivity
   attachments: [Attachment]
   automated_response: Boolean
   created_at: DateTime!
-  genius_execution_id: ID
+  genius_execution_id: ID @deprecated(reason: "This is about to be replaced by .genius_execution")
   i_can_edit: Boolean!
   i_can_flag: Boolean!
   id: ID!
@@ -817,7 +817,7 @@ type ActivitiesComment implements ActivityInterface & Node & ReportActivityInter
   attachments: [Attachment]
   automated_response: Boolean
   created_at: DateTime!
-  genius_execution_id: ID
+  genius_execution_id: ID @deprecated(reason: "This is about to be replaced by .genius_execution")
   i_can_edit: Boolean!
   i_can_flag: Boolean!
   id: ID!
@@ -838,7 +838,7 @@ type ActivitiesCommentsClosed implements ActivityInterface & Node & ReportActivi
   attachments: [Attachment]
   automated_response: Boolean
   created_at: DateTime!
-  genius_execution_id: ID
+  genius_execution_id: ID @deprecated(reason: "This is about to be replaced by .genius_execution")
   i_can_edit: Boolean!
   i_can_flag: Boolean!
   id: ID!
@@ -860,7 +860,7 @@ type ActivitiesCveIdAdded implements ActivityInterface & Node & ReportActivityIn
   automated_response: Boolean
   created_at: DateTime!
   cve_ids: [String]
-  genius_execution_id: ID
+  genius_execution_id: ID @deprecated(reason: "This is about to be replaced by .genius_execution")
   i_can_edit: Boolean!
   i_can_flag: Boolean!
   id: ID!
@@ -881,7 +881,7 @@ type ActivitiesDraftStarted implements ActivityInterface & Node & ReportActivity
   attachments: [Attachment]
   automated_response: Boolean
   created_at: DateTime!
-  genius_execution_id: ID
+  genius_execution_id: ID @deprecated(reason: "This is about to be replaced by .genius_execution")
   i_can_edit: Boolean!
   i_can_flag: Boolean!
   id: ID!
@@ -902,7 +902,7 @@ type ActivitiesExternalAdvisoryAdded implements ActivityInterface & Node & Repor
   attachments: [Attachment]
   automated_response: Boolean
   created_at: DateTime!
-  genius_execution_id: ID
+  genius_execution_id: ID @deprecated(reason: "This is about to be replaced by .genius_execution")
   i_can_edit: Boolean!
   i_can_flag: Boolean!
   id: ID!
@@ -924,7 +924,7 @@ type ActivitiesExternalUserInvitationCancelled implements ActivityInterface & No
   automated_response: Boolean
   created_at: DateTime!
   email: String
-  genius_execution_id: ID
+  genius_execution_id: ID @deprecated(reason: "This is about to be replaced by .genius_execution")
   i_can_edit: Boolean!
   i_can_flag: Boolean!
   id: ID!
@@ -946,7 +946,7 @@ type ActivitiesExternalUserInvited implements ActivityInterface & Node & ReportA
   automated_response: Boolean
   created_at: DateTime!
   email: String
-  genius_execution_id: ID
+  genius_execution_id: ID @deprecated(reason: "This is about to be replaced by .genius_execution")
   i_can_edit: Boolean!
   i_can_flag: Boolean!
   id: ID!
@@ -970,7 +970,7 @@ type ActivitiesExternalUserJoined implements ActivityInterface & Node & ReportAc
   created_at: DateTime!
   duplicate_report: Report
   duplicate_report_id: Int
-  genius_execution_id: ID
+  genius_execution_id: ID @deprecated(reason: "This is about to be replaced by .genius_execution")
   i_can_edit: Boolean!
   i_can_flag: Boolean!
   id: ID!
@@ -993,7 +993,7 @@ type ActivitiesExternalUserRemoved implements ActivityInterface & Node & ReportA
   attachments: [Attachment]
   automated_response: Boolean
   created_at: DateTime!
-  genius_execution_id: ID
+  genius_execution_id: ID @deprecated(reason: "This is about to be replaced by .genius_execution")
   i_can_edit: Boolean!
   i_can_flag: Boolean!
   id: ID!
@@ -1016,8 +1016,8 @@ type ActivitiesGroupAssignedToBug implements ActivityInterface & Node & ReportAc
   attachments: [Attachment]
   automated_response: Boolean
   created_at: DateTime!
-  genius_execution_id: ID
-  group: TeamMemberGroup
+  genius_execution_id: ID @deprecated(reason: "This is about to be replaced by .genius_execution")
+  group: TeamMemberGroup @deprecated(reason: "deprecated in favor of assigned group")
   i_can_edit: Boolean!
   i_can_flag: Boolean!
   id: ID!
@@ -1038,7 +1038,7 @@ type ActivitiesHackerRequestedMediation implements ActivityInterface & Node & Re
   attachments: [Attachment]
   automated_response: Boolean
   created_at: DateTime!
-  genius_execution_id: ID
+  genius_execution_id: ID @deprecated(reason: "This is about to be replaced by .genius_execution")
   i_can_edit: Boolean!
   i_can_flag: Boolean!
   id: ID!
@@ -1097,7 +1097,7 @@ type ActivitiesManuallyDisclosed implements ActivityInterface & Node & ReportAct
   attachments: [Attachment]
   automated_response: Boolean
   created_at: DateTime!
-  genius_execution_id: ID
+  genius_execution_id: ID @deprecated(reason: "This is about to be replaced by .genius_execution")
   i_can_edit: Boolean!
   i_can_flag: Boolean!
   id: ID!
@@ -1118,7 +1118,7 @@ type ActivitiesMediationRequested implements ActivityInterface & Node & ReportAc
   attachments: [Attachment]
   automated_response: Boolean
   created_at: DateTime!
-  genius_execution_id: ID
+  genius_execution_id: ID @deprecated(reason: "This is about to be replaced by .genius_execution")
   i_can_edit: Boolean!
   i_can_flag: Boolean!
   id: ID!
@@ -1139,7 +1139,7 @@ type ActivitiesNobodyAssignedToBug implements ActivityInterface & Node & ReportA
   attachments: [Attachment]
   automated_response: Boolean
   created_at: DateTime!
-  genius_execution_id: ID
+  genius_execution_id: ID @deprecated(reason: "This is about to be replaced by .genius_execution")
   i_can_edit: Boolean!
   i_can_flag: Boolean!
   id: ID!
@@ -1160,7 +1160,7 @@ type ActivitiesNotEligibleForBounty implements ActivityInterface & Node & Report
   attachments: [Attachment]
   automated_response: Boolean
   created_at: DateTime!
-  genius_execution_id: ID
+  genius_execution_id: ID @deprecated(reason: "This is about to be replaced by .genius_execution")
   i_can_edit: Boolean!
   i_can_flag: Boolean!
   id: ID!
@@ -1318,7 +1318,7 @@ type ActivitiesProgramInactive implements ActivityInterface & Node & ReportActiv
   attachments: [Attachment]
   automated_response: Boolean
   created_at: DateTime!
-  genius_execution_id: ID
+  genius_execution_id: ID @deprecated(reason: "This is about to be replaced by .genius_execution")
   i_can_edit: Boolean!
   i_can_flag: Boolean!
   id: ID!
@@ -1355,7 +1355,7 @@ type ActivitiesReassignedToTeam implements ActivityInterface & Node & ReportActi
   attachments: [Attachment]
   automated_response: Boolean
   created_at: DateTime!
-  genius_execution_id: ID
+  genius_execution_id: ID @deprecated(reason: "This is about to be replaced by .genius_execution")
   i_can_edit: Boolean!
   i_can_flag: Boolean!
   id: ID!
@@ -1378,7 +1378,7 @@ type ActivitiesReferenceIdAdded implements ActivityInterface & Node & ReportActi
   attachments: [Attachment]
   automated_response: Boolean
   created_at: DateTime!
-  genius_execution_id: ID
+  genius_execution_id: ID @deprecated(reason: "This is about to be replaced by .genius_execution")
   i_can_edit: Boolean!
   i_can_flag: Boolean!
   id: ID!
@@ -1416,7 +1416,7 @@ type ActivitiesReportBecamePublic implements ActivityInterface & Node & ReportAc
   attachments: [Attachment]
   automated_response: Boolean
   created_at: DateTime!
-  genius_execution_id: ID
+  genius_execution_id: ID @deprecated(reason: "This is about to be replaced by .genius_execution")
   i_can_edit: Boolean!
   i_can_flag: Boolean!
   id: ID!
@@ -1438,7 +1438,7 @@ type ActivitiesReportCollaboratorInvited implements ActivityInterface & Node & R
   automated_response: Boolean
   created_at: DateTime!
   email: String
-  genius_execution_id: ID
+  genius_execution_id: ID @deprecated(reason: "This is about to be replaced by .genius_execution")
   i_can_edit: Boolean!
   i_can_flag: Boolean!
   id: ID!
@@ -1459,7 +1459,7 @@ type ActivitiesReportCollaboratorJoined implements ActivityInterface & Node & Re
   attachments: [Attachment]
   automated_response: Boolean
   created_at: DateTime!
-  genius_execution_id: ID
+  genius_execution_id: ID @deprecated(reason: "This is about to be replaced by .genius_execution")
   i_can_edit: Boolean!
   i_can_flag: Boolean!
   id: ID!
@@ -1481,7 +1481,7 @@ type ActivitiesReportCustomFieldValueUpdated implements ActivityInterface & Node
   automated_response: Boolean
   created_at: DateTime!
   custom_field_attribute: CustomFieldAttributeInterface
-  genius_execution_id: ID
+  genius_execution_id: ID @deprecated(reason: "This is about to be replaced by .genius_execution")
   i_can_edit: Boolean!
   i_can_flag: Boolean!
   id: ID!
@@ -1504,7 +1504,7 @@ type ActivitiesReportOrganizationInboxesUpdated implements ActivityInterface & N
   attachments: [Attachment]
   automated_response: Boolean
   created_at: DateTime!
-  genius_execution_id: ID
+  genius_execution_id: ID @deprecated(reason: "This is about to be replaced by .genius_execution")
   i_can_edit: Boolean!
   i_can_flag: Boolean!
   id: ID!
@@ -1567,7 +1567,7 @@ type ActivitiesReportRemediationGuidanceUpdated implements ActivityInterface & N
   attachments: [Attachment]
   automated_response: Boolean
   created_at: DateTime!
-  genius_execution_id: ID
+  genius_execution_id: ID @deprecated(reason: "This is about to be replaced by .genius_execution")
   i_can_edit: Boolean!
   i_can_flag: Boolean!
   id: ID!
@@ -1588,7 +1588,7 @@ type ActivitiesReportRetestApproved implements ActivityInterface & Node & Report
   attachments: [Attachment]
   automated_response: Boolean
   created_at: DateTime!
-  genius_execution_id: ID
+  genius_execution_id: ID @deprecated(reason: "This is about to be replaced by .genius_execution")
   i_can_edit: Boolean!
   i_can_flag: Boolean!
   id: ID!
@@ -1610,7 +1610,7 @@ type ActivitiesReportRetestCanceled implements ActivityInterface & Node & Report
   attachments: [Attachment]
   automated_response: Boolean
   created_at: DateTime!
-  genius_execution_id: ID
+  genius_execution_id: ID @deprecated(reason: "This is about to be replaced by .genius_execution")
   i_can_edit: Boolean!
   i_can_flag: Boolean!
   id: ID!
@@ -1632,7 +1632,7 @@ type ActivitiesReportRetestRejected implements ActivityInterface & Node & Report
   attachments: [Attachment]
   automated_response: Boolean
   created_at: DateTime!
-  genius_execution_id: ID
+  genius_execution_id: ID @deprecated(reason: "This is about to be replaced by .genius_execution")
   i_can_edit: Boolean!
   i_can_flag: Boolean!
   id: ID!
@@ -1653,7 +1653,7 @@ type ActivitiesReportSeverityUpdated implements ActivityInterface & Node & Repor
   attachments: [Attachment]
   automated_response: Boolean
   created_at: DateTime!
-  genius_execution_id: ID
+  genius_execution_id: ID @deprecated(reason: "This is about to be replaced by .genius_execution")
   i_can_edit: Boolean!
   i_can_flag: Boolean!
   id: ID!
@@ -1676,7 +1676,7 @@ type ActivitiesReportTitleUpdated implements ActivityInterface & Node & ReportAc
   attachments: [Attachment]
   automated_response: Boolean
   created_at: DateTime!
-  genius_execution_id: ID
+  genius_execution_id: ID @deprecated(reason: "This is about to be replaced by .genius_execution")
   i_can_edit: Boolean!
   i_can_flag: Boolean!
   id: ID!
@@ -1699,7 +1699,7 @@ type ActivitiesReportTriageSummaryCreated implements ActivityInterface & Node & 
   attachments: [Attachment]
   automated_response: Boolean
   created_at: DateTime!
-  genius_execution_id: ID
+  genius_execution_id: ID @deprecated(reason: "This is about to be replaced by .genius_execution")
   i_can_edit: Boolean!
   i_can_flag: Boolean!
   id: ID!
@@ -1720,7 +1720,7 @@ type ActivitiesReportUndisclosed implements ActivityInterface & Node & ReportAct
   attachments: [Attachment]
   automated_response: Boolean
   created_at: DateTime!
-  genius_execution_id: ID
+  genius_execution_id: ID @deprecated(reason: "This is about to be replaced by .genius_execution")
   i_can_edit: Boolean!
   i_can_flag: Boolean!
   id: ID!
@@ -1741,7 +1741,7 @@ type ActivitiesReportVulnerabilityTypesUpdated implements ActivityInterface & No
   attachments: [Attachment]
   automated_response: Boolean
   created_at: DateTime!
-  genius_execution_id: ID
+  genius_execution_id: ID @deprecated(reason: "This is about to be replaced by .genius_execution")
   i_can_edit: Boolean!
   i_can_flag: Boolean!
   id: ID!
@@ -1764,7 +1764,7 @@ type ActivitiesRetestUserExpired implements ActivityInterface & Node & ReportAct
   attachments: [Attachment]
   automated_response: Boolean
   created_at: DateTime!
-  genius_execution_id: ID
+  genius_execution_id: ID @deprecated(reason: "This is about to be replaced by .genius_execution")
   i_can_edit: Boolean!
   i_can_flag: Boolean!
   id: ID!
@@ -1785,7 +1785,7 @@ type ActivitiesSwagAwarded implements ActivityInterface & Node & ReportActivityI
   attachments: [Attachment]
   automated_response: Boolean
   created_at: DateTime!
-  genius_execution_id: ID
+  genius_execution_id: ID @deprecated(reason: "This is about to be replaced by .genius_execution")
   i_can_edit: Boolean!
   i_can_flag: Boolean!
   id: ID!
@@ -1883,7 +1883,7 @@ type ActivitiesUserAssignedToBug implements ActivityInterface & Node & ReportAct
   attachments: [Attachment]
   automated_response: Boolean
   created_at: DateTime!
-  genius_execution_id: ID
+  genius_execution_id: ID @deprecated(reason: "This is about to be replaced by .genius_execution")
   i_can_edit: Boolean!
   i_can_flag: Boolean!
   id: ID!
@@ -1904,7 +1904,7 @@ type ActivitiesUserBannedFromProgram implements ActivityInterface & Node & Repor
   attachments: [Attachment]
   automated_response: Boolean
   created_at: DateTime!
-  genius_execution_id: ID
+  genius_execution_id: ID @deprecated(reason: "This is about to be replaced by .genius_execution")
   i_can_edit: Boolean!
   i_can_flag: Boolean!
   id: ID!
@@ -1926,7 +1926,7 @@ type ActivitiesUserCompletedRetest implements ActivityInterface & Node & ReportA
   attachments: [Attachment]
   automated_response: Boolean
   created_at: DateTime!
-  genius_execution_id: ID
+  genius_execution_id: ID @deprecated(reason: "This is about to be replaced by .genius_execution")
   i_can_edit: Boolean!
   i_can_flag: Boolean!
   id: ID!
@@ -1962,7 +1962,7 @@ type ActivitiesUserLeftRetest implements ActivityInterface & Node & ReportActivi
   attachments: [Attachment]
   automated_response: Boolean
   created_at: DateTime!
-  genius_execution_id: ID
+  genius_execution_id: ID @deprecated(reason: "This is about to be replaced by .genius_execution")
   i_can_edit: Boolean!
   i_can_flag: Boolean!
   id: ID!
@@ -2339,7 +2339,7 @@ type Address implements Node {
   postal_code: String!
   state: String!
   street: String!
-  tshirt_size: TshirtSizeEnum
+  tshirt_size: TshirtSizeEnum @deprecated(reason: "Query tshirt size on User instead")
 }
 
 """
@@ -2403,6 +2403,7 @@ type AllTimeReputationLeaderboardEntry implements LeaderboardEntryInterface & No
 input AnalyticsComplexInputType {
   boolean: Boolean
   from: String
+  null: Boolean
   number: Float
   numbers: [Float!]
   ref: AnalyticsSelectFieldEnum
@@ -2433,6 +2434,8 @@ enum AnalyticsFromEnum {
   dim_report_activities
   dim_reports
   dim_teams
+  fct_invitation_cohorts
+  fct_platform_benchmarks
   fixture_months
   fixture_quarters
   fixture_report_states
@@ -2532,6 +2535,7 @@ enum AnalyticsSelectFieldEnum {
   dim_reports__closed_at_num_days_since
   dim_reports__closed_at_quarter
   dim_reports__closed_at_year
+  dim_reports__cohort_invitation_id
   dim_reports__is_bounty_awarded_report
   dim_reports__is_imported
   dim_reports__is_resolved_report
@@ -2589,6 +2593,23 @@ enum AnalyticsSelectFieldEnum {
   dim_teams__team_created_at
   dim_teams__team_id
   dim_teams__vpn_enabled
+  fct_invitation_cohorts__cohort_created_at
+  fct_invitation_cohorts__cohort_created_at_month
+  fct_invitation_cohorts__cohort_created_at_quarter
+  fct_invitation_cohorts__cohort_created_at_year
+  fct_invitation_cohorts__cohort_id
+  fct_invitation_cohorts__num_users
+  fct_invitation_cohorts__num_users_accepted
+  fct_invitation_cohorts__num_users_viewed
+  fct_invitation_cohorts__organization_id
+  fct_invitation_cohorts__team_id
+  fct_platform_benchmarks__interval
+  fct_platform_benchmarks__is_forecast
+  fct_platform_benchmarks__p25_submission_count
+  fct_platform_benchmarks__p50_submission_count
+  fct_platform_benchmarks__p75_submission_count
+  fct_platform_benchmarks__p90_submission_count
+  fct_platform_benchmarks__start_at
   fixture_months__end_at
   fixture_months__month
   fixture_months__start_at
@@ -2912,6 +2933,7 @@ type AsmTagCategory implements Node {
     last: Int
     query: String
   ): AsmTagConnection
+  can_mutate_tags: Boolean
   id: ID!
   name: String!
 }
@@ -3044,6 +3066,7 @@ type Asset implements Node {
     """
     last: Int
   ): AsmTagConnection
+  asset_risks: [AssetRisk]
   attachments: [Attachment]
   availability_requirement: SeveritySecurityRequirementEnum
   confidentiality_requirement: SeveritySecurityRequirementEnum
@@ -3060,6 +3083,7 @@ type Asset implements Node {
   organization: Organization!
   owner: String
   reference: String
+  risk_rating: String
   source: String!
   structured_scopes(
     """
@@ -3150,6 +3174,7 @@ type AssetDocument implements Node {
   identifier: String!
   open_vulnerabilities: Int
   owner: String
+  risk_rating: String
   teams(
     """
     Returns the elements in the list that come after the specified cursor.
@@ -3447,6 +3472,21 @@ type AssetImplementationWindowsMicrosoftStore implements AssetImplementationInte
 }
 
 """
+An asset risk object
+"""
+type AssetRisk implements Node {
+  _id: ID!
+  asset: Asset!
+  description: String
+  evidence: String!
+  id: ID!
+  proposed_action: String!
+  rating: String!
+  readable_type: String!
+  title: String!
+}
+
+"""
 Periods applicable to the Attack Surface Coverage Dashboard
 """
 enum AssetStatisticPeriodEnum {
@@ -3461,11 +3501,50 @@ A container for asset statistics
 """
 type AssetStatistics implements Node {
   asset_counts: [Int!]!
+  category_insights(category_id: Int!): AssetStatisticsCategoryInsights
 
   """
   ID of the object.
   """
   id: ID!
+  in_scope_counts: [Int!]!
+  out_of_scope_counts: [Int!]!
+  risk_overviews: [AssetStatisticsRiskOverview!]!
+  untested_counts: [Int!]!
+}
+
+"""
+A container for asset statistics category insights
+"""
+type AssetStatisticsCategoryInsights implements Node {
+  asset_counts: [Int!]!
+  data: [AssetStatisticsRiskOverviewData!]!
+
+  """
+  ID of the object.
+  """
+  id: ID!
+  in_scope_counts: [Int!]!
+  out_of_scope_counts: [Int!]!
+}
+
+"""
+A breakdown of risk by tag and tag category
+"""
+type AssetStatisticsRiskOverview {
+  category_id: Int
+  category_name: String!
+  data: [AssetStatisticsRiskOverviewData!]!
+}
+
+"""
+The data for a risk overview category
+"""
+type AssetStatisticsRiskOverviewData {
+  bounties_paid: Float!
+  new_reports: Int!
+  percentage_change_reports: Float
+  tag_name: String!
 }
 
 """
@@ -4518,7 +4597,7 @@ type Campaign implements Node {
   _id: ID!
   bounty_pool_limit: Int
   bounty_spent: Float
-  bounty_table_row: BountyTableRow!
+  bounty_table_row: BountyTableRow
   campaign_type: String!
   critical: Float
   end_date: DateTime
@@ -11524,6 +11603,51 @@ type DeleteBiDirectionalJiraIntegrationPayload implements MutationResult {
 }
 
 """
+Autogenerated input type of DeleteCredentialInquiryInstruction
+"""
+input DeleteCredentialInquiryInstructionInput {
+  """
+  A unique identifier for the client performing the mutation.
+  """
+  clientMutationId: String
+  credential_inquiry_id: ID!
+}
+
+"""
+Autogenerated return type of DeleteCredentialInquiryInstruction
+"""
+type DeleteCredentialInquiryInstructionPayload implements MutationResult {
+  """
+  A unique identifier for the client performing the mutation.
+  """
+  clientMutationId: String
+  credential_inquiry: CredentialInquiry
+  errors(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+    types: [ErrorTypeEnum]
+  ): ErrorConnection!
+  was_successful: Boolean!
+}
+
+"""
 Autogenerated input type of DeleteJiraWebhook
 """
 input DeleteJiraWebhookInput {
@@ -12810,6 +12934,52 @@ type DismissTriageInboxItemsPayload implements MutationResult {
 }
 
 """
+Autogenerated input type of DismissTriageMeta
+"""
+input DismissTriageMetaInput {
+  """
+  A unique identifier for the client performing the mutation.
+  """
+  clientMutationId: String
+  dismissal_method: TriageInboxItemDismissalMethodEnum!
+  report_ids: [Int!]!
+}
+
+"""
+Autogenerated return type of DismissTriageMeta
+"""
+type DismissTriageMetaPayload implements MutationResult {
+  """
+  A unique identifier for the client performing the mutation.
+  """
+  clientMutationId: String
+  errors(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+    types: [ErrorTypeEnum]
+  ): ErrorConnection!
+  triage_inbox_items: [TriageInboxItem]
+  was_successful: Boolean!
+}
+
+"""
 ElasticSearch Document can be of different types
 """
 union DocumentUnion = AssetDocument | AssetGroupDocument | OpportunityDocument | OrganizationMemberDocument | OrganizationMemberGroupDocument | PolicyPageAssetGroupDocument | ReportDocument | StructuredScopeDocument
@@ -13125,6 +13295,52 @@ type EditTeamCredentialPayload implements MutationResult {
   """
   clientMutationId: String
   credential: Credential
+  errors(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+    types: [ErrorTypeEnum]
+  ): ErrorConnection!
+  team: Team
+  was_successful: Boolean!
+}
+
+"""
+Autogenerated input type of EditTeamName
+"""
+input EditTeamNameInput {
+  """
+  A unique identifier for the client performing the mutation.
+  """
+  clientMutationId: String
+  name: String!
+  team_id: ID!
+}
+
+"""
+Autogenerated return type of EditTeamName
+"""
+type EditTeamNamePayload implements MutationResult {
+  """
+  A unique identifier for the client performing the mutation.
+  """
+  clientMutationId: String
   errors(
     """
     Returns the elements in the list that come after the specified cursor.
@@ -14523,8 +14739,10 @@ input FiltersTeamFilterInput {
   _not: FiltersTeamFilterInput
   _or: [FiltersTeamFilterInput]
   allows_collaboration: BooleanPredicateInput
+  asset_credentials_set_up: BooleanPredicateInput
   bookmarked_team_users: FiltersUserFilterInput
   campaigns: FiltersCampaignFilterInput
+  credentials_set_up: BooleanPredicateInput
   external_program: FiltersExternalProgramFilterInput
   handle: StringPredicateInput
   id: IntPredicateInput
@@ -16791,6 +17009,15 @@ type LufthansaAccount implements Node {
 }
 
 """
+Platform maintenance banner
+"""
+type MaintenanceBanner implements Node {
+  end_at: DateTime
+  id: ID!
+  start_at: DateTime
+}
+
+"""
 A manual escalation for a report
 """
 type ManualEscalation implements Node {
@@ -17885,6 +18112,12 @@ type Mutation implements Node {
     """
     input: DeleteBiDirectionalJiraIntegrationInput!
   ): DeleteBiDirectionalJiraIntegrationPayload!
+  deleteCredentialInquiryInstruction(
+    """
+    Parameters for DeleteCredentialInquiryInstruction
+    """
+    input: DeleteCredentialInquiryInstructionInput!
+  ): DeleteCredentialInquiryInstructionPayload!
   deleteJiraWebhook(
     """
     Parameters for DeleteJiraWebhook
@@ -18035,6 +18268,12 @@ type Mutation implements Node {
     """
     input: DismissTriageInboxItemsInput!
   ): DismissTriageInboxItemsPayload!
+  dismissTriageMeta(
+    """
+    Parameters for DismissTriageMeta
+    """
+    input: DismissTriageMetaInput!
+  ): DismissTriageMetaPayload!
   editAsmTag(
     """
     Parameters for EditAsmTag
@@ -18053,6 +18292,12 @@ type Mutation implements Node {
     """
     input: EditTeamCredentialInput!
   ): EditTeamCredentialPayload!
+  editTeamName(
+    """
+    Parameters for EditTeamName
+    """
+    input: EditTeamNameInput!
+  ): EditTeamNamePayload!
   enableSamlProvider(
     """
     Parameters for EnableSamlProvider
@@ -19860,6 +20105,7 @@ type OpportunityDocument implements Node {
   currency: String
   database_id: Int!
   external_program_id: Int
+  external_program_name: String
   first_response_time: Float
   graphql_id: ID!
   handle: String!
@@ -19873,9 +20119,11 @@ type OpportunityDocument implements Node {
   offers_bounties: Boolean
   profile_picture: String!
   publicly_visible_retesting: Boolean
+  resolved_report_count: Int
   show_response_efficiency_indicator: Boolean!
   state: TeamState
   structured_scope_stats: Hash
+  submission_state: SubmissionStateEnum
   team_id: Int!
   team_type: String
   triage_active: Boolean
@@ -20560,6 +20808,7 @@ type OrganizationMemberGroup implements Node & ResourceInterface {
   grants_access_to_asset_inventory: Boolean!
   id: ID!
   inbox_permissions: [OrganizationPermissionsEnum!]!
+  key: String
   name: String!
   organization_inboxes(
     """
@@ -21796,6 +22045,7 @@ type PentestOpportunity implements Node {
     last: Int
   ): PentestOpportunityApiScopeConnection
   authentication_mode: String
+  auto_provision: Boolean
   citizenship_restrictions: [String!]
   company_name: String
   compliance_framework: String
@@ -23604,6 +23854,7 @@ type Query implements Node {
     quarter: Int
     year: Int
   ): LeaderboardEntryConnection!
+  maintenance_banner: MaintenanceBanner
   me: User
   most_used_asset_types: [Hash!]!
   most_used_technologies: [Hash!]!
@@ -23789,7 +24040,7 @@ type Query implements Node {
     last: Int
     year: Int
   ): RankedWeaknessByYearConnection
-  report(id: Int!): Report
+  report(id: Int!): Report @deprecated(reason: "Query for a Report node at the root level is not recommended.")
   report_retest_user(activity_id: Int!): ReportRetestUser
   report_retests(
     """
@@ -23885,7 +24136,7 @@ type Query implements Node {
     size: Int
     sort: SortInput
   ): SearchResultConnection
-  session: Session
+  session: Session @deprecated(reason: "This field is deprecated. This is consumed by HackerOne's legacy frontend.")
   severity_calculator: SeverityCalculator
   skills(
     """
@@ -23951,7 +24202,7 @@ type Query implements Node {
     """
     last: Int
   ): TaskConnection
-  team(handle: String!): Team
+  team(handle: String!): Team @deprecated(reason: "Query for a Team node at the root level is not recommended. Ref T12456")
   teams(
     """
     Returns the elements in the list that come after the specified cursor.
@@ -24042,7 +24293,7 @@ type Query implements Node {
     unowned: Boolean = false
     view: TriageInboxItemViewEnum = null
   ): TriageInboxItemConnection
-  user(username: String!): User
+  user(username: String!): User @deprecated(reason: "Query for a User node at the root level is not recommended. Ref T12456")
   users(
     """
     Returns the elements in the list that come after the specified cursor.
@@ -25667,7 +25918,7 @@ type Report implements ActivitiesInterface & Node & ResourceInterface {
   triage_meta: TriageMeta
   triaged_at: DateTime
   triaged_staleness_threshold: Int
-  undismissed_triage_inbox_items: [TriageInboxItem]!
+  undismissed_triage_inbox_items: [TriageInboxItem]! @deprecated(reason: "This field is deprecated.")
   url: URI!
   visibility: String
   votes(
@@ -25703,7 +25954,7 @@ interface ReportActivityInterface {
   actor_is_customer: Boolean!
   attachments: [Attachment]
   automated_response: Boolean
-  genius_execution_id: ID
+  genius_execution_id: ID @deprecated(reason: "This is about to be replaced by .genius_execution")
   id: ID!
   internal: Boolean
   message: String
@@ -27892,6 +28143,7 @@ type ShareReportViaEmailPayload implements MutationResult {
 
 input ShouldInput {
   bool: BoolQueryInput
+  exists: ExistsInput
   multi_match: MultiMatchInput
   nested: NestedInput
   range: RangeInput
@@ -28066,7 +28318,7 @@ type SlackChannel implements Node {
 A Slack integration for a team
 """
 type SlackIntegration implements Node {
-  channel: String
+  channel: String @deprecated(reason: "this field is not used in our new Slack integration")
   channels: [SlackChannel]
   id: ID!
   should_fetch_slack_channels: Boolean!
@@ -29009,7 +29261,7 @@ A HackerOne summary for a report
 type Summary implements Node {
   _id: ID!
   attachments: [Attachment]
-  category: String
+  category: String @deprecated(reason: "The implementation of this field contains hard to reason about polymorphism")
   content: String!
   created_at: DateTime!
   id: ID!
@@ -30143,6 +30395,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
   i_can_create_jira_webhook: Boolean
   i_can_create_pentest: Boolean!
   i_can_destroy_jira_webhook: Boolean!
+  i_can_edit_name: Boolean!
   i_can_edit_program_profile: Boolean
   i_can_manage_billing: Boolean!
   i_can_manage_custom_fields: Boolean
@@ -30631,7 +30884,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
     Returns the last _n_ elements from the list.
     """
     last: Int
-  ): InvitationUnionConnection
+  ): InvitationUnionConnection @deprecated(reason: "This should be a generic invitation connection. Used interim until generic invitation type is defined")
   solution(solution_id: String!): Solution
   spark_line(end_date: DateTime!, spark_line_type: SparkLineEnum!, start_date: DateTime!): [Int!]
   started_accepting_at: DateTime
@@ -31108,6 +31361,11 @@ type TeamConnection {
   edges: [TeamEdge]
 
   """
+  Boolean
+  """
+  exists: Boolean!
+
+  """
   A list of nodes.
   """
   nodes: [Team]
@@ -31455,7 +31713,7 @@ type TeamMember implements Node & NotificationPreferencesInterface {
   The primary key from the database
   """
   _id: ID!
-  auto_subscribe: Boolean
+  auto_subscribe: Boolean @deprecated(reason: "Query notification_preferences on TeamMember instead")
   concealed: Boolean
   created_at: DateTime!
   groups: [TeamMemberGroup]
@@ -32021,6 +32279,7 @@ input TermsFilterInput {
   coverage: [AssetCoverageEnum!]
   organization_id: [Int!]
   permissions: [OrganizationPermissionsEnum!]
+  submission_state: [SubmissionStateEnum!]
   team_id: [Int!]
   team_ids: [Int!]
 }
@@ -33064,7 +33323,7 @@ type Trigger implements Node & ResourceInterface {
   id: ID!
   seeded: Boolean!
   team: Team!
-  title: String
+  title: String @deprecated(reason: "It won't be used when new triggers launched")
   trigger_action_logs(
     """
     Returns the elements in the list that come after the specified cursor.
@@ -36301,7 +36560,7 @@ input UpdateProgramPolicyInput {
   """
   clientMutationId: String
   policy: String!
-  program_id: ID!
+  team_id: ID!
 }
 
 """
@@ -36334,7 +36593,7 @@ type UpdateProgramPolicyPayload implements MutationResult {
     last: Int
     types: [ErrorTypeEnum]
   ): ErrorConnection!
-  program: Team
+  team: Team
   was_successful: Boolean!
 }
 
@@ -39939,6 +40198,7 @@ type User implements Node & ResourceInterface {
   i_can_claim_a_security_check: Boolean!
   i_can_update_invitation_profile: Boolean
   i_can_update_username: Boolean
+  i_can_view_vpn_credentials: Boolean
   id: ID!
   impact: Float
   impact_percentile: Int
@@ -40101,9 +40361,10 @@ type User implements Node & ResourceInterface {
     secure_order_by: FiltersPentestFilterOrder
     where: FiltersPentestFilterInput
   ): PentestConnection
+  product_analytics: UserProductAnalytics
   profile_activated: Boolean
   profile_picture(size: ProfilePictureSizes!): String!
-  profile_pictures: Hash!
+  profile_pictures: Hash! @deprecated(reason: "Returns all the possible profile pictures instead of just the one you want use .profile_picture instead.")
   program_health_acknowledgements(
     """
     Returns the elements in the list that come after the specified cursor.
@@ -40781,6 +41042,14 @@ enum UserOrderField {
 input UserOrderInput {
   direction: OrderDirection!
   field: UserOrderField!
+}
+
+"""
+A HackerOne user product analytics object
+"""
+type UserProductAnalytics implements Node {
+  amplitude_id: String!
+  id: ID!
 }
 
 """
