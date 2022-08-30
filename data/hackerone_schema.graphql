@@ -20606,6 +20606,8 @@ type OrganizationInbox implements Node {
     Returns the last _n_ elements from the list.
     """
     last: Int
+    order_by: FiltersOrganizationMemberGroupFilterOrder
+    where: FiltersOrganizationMemberGroupFilterInput
   ): OrganizationMemberGroupConnection
   profile_picture(size: ProfilePictureSizes!): String
   profile_picture_filename: String
