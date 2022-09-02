@@ -3493,9 +3493,9 @@ type AssetRisk implements Node {
   _id: ID!
   asset: Asset!
   description: String
-  evidence: String!
+  evidence: String
   id: ID!
-  proposed_action: String!
+  proposed_action: String
   rating: String!
   readable_type: String!
   title: String!
@@ -14404,6 +14404,22 @@ input FiltersFollowedUserFilterInput {
   is_me: Boolean
 }
 
+input FiltersHackerAssetFilterInput {
+  _and: [FiltersHackerAssetFilterInput]
+  _not: FiltersHackerAssetFilterInput
+  _or: [FiltersHackerAssetFilterInput]
+  id: IntPredicateInput
+  identifier: StringPredicateInput
+  status: HackerAssetStatusEnumInputPredicateInput
+}
+
+input FiltersHackerAssetFilterOrder {
+  created_at: FilterOrderPredicateInput
+  id: FilterOrderPredicateInput
+  identifier: FilterOrderPredicateInput
+  status: FilterOrderPredicateInput
+}
+
 input FiltersHacktivityItemFilterInput {
   _and: [FiltersHacktivityItemFilterInput]
   _not: FiltersHacktivityItemFilterInput
@@ -15210,6 +15226,28 @@ enum HackerAssetStatusEnum {
   duplicate
   in_review
   rejected
+}
+
+"""
+Statuses a hacker asset can have
+"""
+enum HackerAssetStatusEnumInput {
+  accepted
+  duplicate
+  in_review
+  rejected
+}
+
+input HackerAssetStatusEnumInputPredicateInput {
+  _eq: HackerAssetStatusEnumInput
+  _gt: HackerAssetStatusEnumInput
+  _gte: HackerAssetStatusEnumInput
+  _in: [HackerAssetStatusEnumInput]
+  _is_null: Boolean
+  _lt: HackerAssetStatusEnumInput
+  _lte: HackerAssetStatusEnumInput
+  _neq: HackerAssetStatusEnumInput
+  _nin: [HackerAssetStatusEnumInput]
 }
 
 """
@@ -20305,11 +20343,8 @@ type Organization implements Node {
     Returns the last _n_ elements from the list.
     """
     last: Int
-
-    """
-    Filter hacker assets per status
-    """
-    status: HackerAssetStatusEnum
+    order_by: FiltersHackerAssetFilterOrder
+    where: FiltersHackerAssetFilterInput
   ): HackerAssetConnection
   handle: String!
   i_can_manage_organization_api_tokens: Boolean!
@@ -40179,6 +40214,8 @@ type User implements Node & ResourceInterface {
     Returns the last _n_ elements from the list.
     """
     last: Int
+    order_by: FiltersHackerAssetFilterOrder
+    where: FiltersHackerAssetFilterInput
   ): HackerAssetConnection
   hacker_invitations_profile: HackerInvitationsProfile
   hacker_preference: HackerPreference
