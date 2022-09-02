@@ -4546,6 +4546,7 @@ input BulkUpdateHackerAssetsInput {
   """
   clientMutationId: String
   hacker_asset_ids: [Int!]!
+  rejection_reason: String
   status: String!
 }
 
@@ -35367,6 +35368,7 @@ input UpdateHackerAssetInput {
   """
   clientMutationId: String
   hacker_asset_id: ID!
+  rejection_reason: String
   status: String!
 }
 
