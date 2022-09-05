@@ -308,6 +308,70 @@
     }
   },
   {
+    "id": "efd8bd86-a986-4b4a-9eda-c9a6a1a6b540",
+    "name": "CM.com",
+    "company_handle": "cmcom",
+    "handle": "cmcom",
+    "url": "https://www.intigriti.com/programs/cmcom/cmcom/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "min_bounty": {
+      "value": 25.0,
+      "currency": "EUR"
+    },
+    "max_bounty": {
+      "value": 2500.0,
+      "currency": "EUR"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "url",
+          "endpoint": "*.ticketing.cm.com",
+          "description": "Login to your account and go to https://www.cm.com/en-gb/app/ticketing/\nFrom here you can create tickets and much more!\nMake sure to take a look at the user-side ticket store as well (https://store.ticketing.cm.com/..)"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.cm.com",
+          "description": null
+        },
+        {
+          "type": "url",
+          "endpoint": "api.cmtelecom.com",
+          "description": "Some of the applications that are in our scope use our old api. \nIf you find a bug on this api and it is from a product that is in scope, it is valid."
+        },
+        {
+          "type": "url",
+          "endpoint": "login.cm.com",
+          "description": null
+        },
+        {
+          "type": "url",
+          "endpoint": "www.cm.com/[locale]/app/*",
+          "description": null
+        },
+        {
+          "type": "url",
+          "endpoint": "www.cm.com/[locale]/register",
+          "description": null
+        },
+        {
+          "type": "url",
+          "endpoint": "www.cm.com",
+          "description": null
+        },
+        {
+          "type": "url",
+          "endpoint": "*.cm.com",
+          "description": null
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
     "id": "0083a5bf-e54f-4f79-a972-12a795272c8b",
     "name": "Canada Post + Purolator - Responsible Disclosure Program",
     "company_handle": "innovapost",
@@ -3052,6 +3116,35 @@
         {
           "type": "url",
           "endpoint": "Any related Speakap domain",
+          "description": null
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
+    "id": "5ed6962a-7017-4d60-8805-e169b638528d",
+    "name": "Sqills",
+    "company_handle": "sqills",
+    "handle": "sqillscorporatewebsite",
+    "url": "https://www.intigriti.com/programs/sqills/sqillscorporatewebsite/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "min_bounty": {
+      "value": 0.0,
+      "currency": "EUR"
+    },
+    "max_bounty": {
+      "value": 2500.0,
+      "currency": "EUR"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "url",
+          "endpoint": "*.sqills.com",
           "description": null
         }
       ],
