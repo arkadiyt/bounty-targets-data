@@ -2469,6 +2469,7 @@ enum AnalyticsFromEnum {
   fixture_quarters
   fixture_report_states
   fixture_severity_ratings
+  fixture_weeks
   fixture_years
 }
 
@@ -2532,6 +2533,7 @@ enum AnalyticsSelectFieldEnum {
   dim_invitations__created_at
   dim_invitations__created_at_month
   dim_invitations__created_at_quarter
+  dim_invitations__created_at_week
   dim_invitations__created_at_year
   dim_invitations__invitation_id
   dim_invitations__is_accepted
@@ -2546,11 +2548,13 @@ enum AnalyticsSelectFieldEnum {
   dim_reports__bounty_awarded_at_month
   dim_reports__bounty_awarded_at_num_days_since
   dim_reports__bounty_awarded_at_quarter
+  dim_reports__bounty_awarded_at_week
   dim_reports__bounty_awarded_at_year
   dim_reports__closed_at
   dim_reports__closed_at_month
   dim_reports__closed_at_num_days_since
   dim_reports__closed_at_quarter
+  dim_reports__closed_at_week
   dim_reports__closed_at_year
   dim_reports__cohort_invitation_id
   dim_reports__is_bounty_awarded_report
@@ -2594,6 +2598,7 @@ enum AnalyticsSelectFieldEnum {
   dim_reports__submitted_at_month
   dim_reports__submitted_at_num_days_since
   dim_reports__submitted_at_quarter
+  dim_reports__submitted_at_week
   dim_reports__submitted_at_year
   dim_reports__team_handle
   dim_reports__team_id
@@ -2613,6 +2618,7 @@ enum AnalyticsSelectFieldEnum {
   fct_invitation_cohorts__cohort_created_at
   fct_invitation_cohorts__cohort_created_at_month
   fct_invitation_cohorts__cohort_created_at_quarter
+  fct_invitation_cohorts__cohort_created_at_week
   fct_invitation_cohorts__cohort_created_at_year
   fct_invitation_cohorts__cohort_id
   fct_invitation_cohorts__num_users
@@ -2639,6 +2645,9 @@ enum AnalyticsSelectFieldEnum {
   fixture_severity_ratings__label
   fixture_severity_ratings__num_index
   fixture_severity_ratings__severity_rating
+  fixture_weeks__end_at
+  fixture_weeks__start_at
+  fixture_weeks__week
   fixture_years__end_at
   fixture_years__start_at
   fixture_years__year
