@@ -8772,12 +8772,12 @@ input CreateOrganizationMemberGroupInput {
   A unique identifier for the client performing the mutation.
   """
   clientMutationId: String
+  eligibility_settings_id: ID
   name: String!
   organization_id: ID!
   organization_inbox_ids: [Int!]
   organization_member_ids: [Int!]
   permissions: [OrganizationPermissionsEnum!]!
-  team_eligibility_setting_id: ID
   team_ids: [Int!]
 }
 
@@ -20195,6 +20195,11 @@ type OpportunityDocument implements Node {
   allows_private_disclosure: Boolean
   bounty_table_updated_at: DateTime
   cached_response_efficiency_percentage: Int
+  campaign_critical: String
+  campaign_end_date: DateTime
+  campaign_id: Int
+  campaign_start_date: DateTime
+  campaign_type: String
   currency: String
   database_id: Int!
   external_program_id: Int
@@ -32397,6 +32402,7 @@ input TermsFilterInput {
   submission_state: [SubmissionStateEnum!]
   team_id: [Int!]
   team_ids: [Int!]
+  tech: [String!]
 }
 
 """
