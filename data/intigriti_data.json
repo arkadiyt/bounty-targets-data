@@ -2904,6 +2904,55 @@
     }
   },
   {
+    "id": "8eb61c74-d34c-4503-aad3-2766ef600550",
+    "name": "Rombit",
+    "company_handle": "rombit",
+    "handle": "rombit",
+    "url": "https://www.intigriti.com/programs/rombit/rombit/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "min_bounty": {
+      "value": 100.0,
+      "currency": "EUR"
+    },
+    "max_bounty": {
+      "value": 2500.0,
+      "currency": "EUR"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "url",
+          "endpoint": "https://intigriti.platform-preproduction.romware.com/",
+          "description": "A first isolated sandbox hosting the Romware platform frontend. Login credentials can be found in the FAQ."
+        },
+        {
+          "type": "url",
+          "endpoint": "https://intigriti-2.platform-preproduction.romware.com/",
+          "description": "A second isolated sandbox hosting the Romware platform frontend. Login credentials can be found in the FAQ."
+        },
+        {
+          "type": "url",
+          "endpoint": "https://developer-preproduction.romware.com",
+          "description": "The developer portal which hosts API-docs and code-examples. Login credentials can be found in the FAQ."
+        },
+        {
+          "type": "url",
+          "endpoint": "https://api-preproduction.romware.com",
+          "description": "Public facing API. You need a token from https://login-preproduction.romware.com before you can access these API-endpoints - please see FAQ"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://login-preproduction.romware.com",
+          "description": "Authentication entrypoint. You need a valid token from this service before you can start using the API please see FAQ"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
     "id": "fccdd23e-236d-45fc-8132-8015d4eae9f5",
     "name": "Royal FloraHolland",
     "company_handle": "royalfloraholland",
@@ -4588,7 +4637,7 @@
         {
           "type": "url",
           "endpoint": "app.workbox.dk",
-          "description": "**Dinero**\nDinero is an accounting software for sole traders and micro businesses based out of Denmark. Our only target group is danish companies and therefore the interface is in danish only.The application is a SaaS application hosted in the cloud and consists of a main application and a number of supportive microservices.\n\nSee the getting started document here: https://vismabugbountyprod.z16.web.core.windows.net/VismaDinero-getting-started.pdf\n\n**Out of scope:**\n* Issues related to login /user creation / forgot-password and /profile page\n* The Cookie \".AspNet.Cookies\" is not set with HttpOnly which is a known vulnerability - please do not report it.\n* Session invalidation issues (e.g. logout, password change, email change, role change, user deletion, etc).\n* Getting access to Pro features as Free user.\n* Inbox; Sending emails to the unique email located in /Archive\n\n"
+          "description": "**Dinero**\nDinero is an accounting software for sole traders and micro businesses based out of Denmark. Our only target group is danish companies and therefore the interface is in danish only.The application is a SaaS application hosted in the cloud and consists of a main application and a number of supportive microservices.\n\nSee the getting started document here: https://vismabugbountyprod.z16.web.core.windows.net/VismaDinero-getting-started.pdf\n\n**Out of scope:**\n* Issues related to login /user creation / forgot-password and /profile page\n* The Cookie \".AspNet.Cookies\" is not set with HttpOnly which is a known vulnerability - please do not report it.\n* Session invalidation issues (e.g. logout, password change, email change, role change, user deletion, etc).\n* Getting access to Pro features as Free user.\n\n\n"
         },
         {
           "type": "url",
