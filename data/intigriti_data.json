@@ -834,6 +834,60 @@
     }
   },
   {
+    "id": "43e4eb4b-f2c8-4307-80a6-7ce739469867",
+    "name": "Digitaal Vlaanderen",
+    "company_handle": "vod",
+    "handle": "digitaalvlaanderen",
+    "url": "https://www.intigriti.com/programs/vod/digitaalvlaanderen/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "min_bounty": {
+      "value": 0.0,
+      "currency": "EUR"
+    },
+    "max_bounty": {
+      "value": 0.0,
+      "currency": "EUR"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "url",
+          "endpoint": "*.vlaanderen.be",
+          "description": "All and any subsites of https://www.vlaanderen.be, for which authentication is not needed.\nFor some subsites, a government entity other than Digitaal Vlaanderen may be responsible. We can accept the disclosed vulnerability and relay the issue to the concerned entity, yet we then cannot guarantee they will (be able to) fix it.\n\nThe bibis$.vlaanderen.be sites and subsites are out-of-scope : examples are :\nbibis.vlaanderen.be\nbibis1.vlaanderen.be\nbibis3.vlaanderen.be\nbibis4.vlaanderen.be\nbibis5.vlaanderen.be\nbibis6.vlaanderen.be\nThese sites and subsites are legacy sites and will be taken out of production.\n\nThe (*.)formulieren.vlaanderen.be sites and subsites are out-of-scope : example is :\nformulieren.vlaanderen.be\nThese sites and subsites are legacy sites and will be taken out of production.\n\nThe (*.)formulieren-ti.vlaanderen.be sites and subsites are out-of-scope : examples are :\nbeheer.formulieren-ti.vlaanderen.be\nformulieren-ti.vlaanderen.be\nThese sites and subsites are legacy sites and will be taken out of production."
+        },
+        {
+          "type": "url",
+          "endpoint": "https://beta.gastwebsite-acm.burgerprofiel.ext-vlaanderen.be",
+          "description": "**Authenticated** demo environment for the widget platform. The website itself is just an illustrative example and should not be tested."
+        },
+        {
+          "type": "url",
+          "endpoint": "https://beta.gastwebsite.burgerprofiel.ext-vlaanderen.be",
+          "description": "**Unauthenticated** demo environment for the widget platform. The website itself is just an illustrative example and should not be tested."
+        },
+        {
+          "type": "url",
+          "endpoint": "https://beta.widgets.burgerprofiel.dev-vlaanderen.be/",
+          "description": "Embeddable portion of My Citizen Profile\n"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://burgerprofiel.beta-vlaanderen.be",
+          "description": "My Citizen Profile (Mijn Burgerprofiel in Dutch) is the go-to spot for citizens to manage their affairs digitally with the government. Citizens can access their personal data, consult status reports, download certificates, and request new government services such as a permit of subsidy. My Citizen Profile is a plug-in that can be integrated into different official government websites, be it on a Flemish or local level.\n\nAvailable in Dutch - More information can also be found on https://www.vlaanderen.be/uw-overheid/mijn-burgerprofiel (only in Dutch).\n\nThis beta environment is equiped with a mock authentication (OpenID) service, which can generate tokens for different kinds of accounts. As such, the authentication flow of this mocked service is not in scope."
+        },
+        {
+          "type": "url",
+          "endpoint": "https://vo-gebruikersbeheer.vlaanderen.be/",
+          "description": "User Management (IDM) is a platform with which you can manage the inflow and outflow of people and their rights to applications.\n\nIt is a central rights management for different applications within the entire Flemish administration. It controls the inflow and outflow of employees and their rights and is editable to be tailored to the tasks of each employee.\n\nMore information is available on www.vlaanderen.be/gebruikersbeheer. There is detailed product and technical information available for download (in Dutch only).\n\nTo be able to test the platform, you will need to create a (dummy) account in our test environment. You can only do this with your intigriti.me e-mail account via a self-registering system available at https://zelfregistratie-gebruikersbeheer-ti.vlaanderen.be/user/aanvraag_werkrelatie?dg=EA&oc=0415928179. You can register with “Kinepolis Group” as a \"Hoofd Lokale Beheerder\". When you do so, please send an e-mail to webidm@hbplus.be with in the subject line \"Project Intigriti\". We will inform you when the right has been given.\n\nThe application is also available in English via this link: https://gebruikersbeheer-ti.vlaanderen.be/webidm/?lang=en."
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
     "id": "d5c4e966-a80a-44f5-91c9-2bb9487b8762",
     "name": "EURid",
     "company_handle": "eurid",
