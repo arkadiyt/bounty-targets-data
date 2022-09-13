@@ -2556,22 +2556,22 @@ enum AnalyticsSelectFieldEnum {
   dim_reports__closed_at_quarter
   dim_reports__closed_at_week
   dim_reports__closed_at_year
-  dim_reports__cohort_invitation_id
-  dim_reports__is_bounty_awarded_report
+  dim_reports__invitation_cohort_id
+  dim_reports__is_bounty_awarded
   dim_reports__is_imported
+  dim_reports__is_reporter_prior_submitted_at_last_14_days
+  dim_reports__is_reporter_prior_submitted_at_last_180_days
+  dim_reports__is_reporter_prior_submitted_at_last_30_days
+  dim_reports__is_reporter_prior_submitted_at_last_365_days
+  dim_reports__is_reporter_prior_submitted_at_last_60_days
+  dim_reports__is_reporter_prior_submitted_at_last_730_days
+  dim_reports__is_reporter_prior_submitted_at_last_7_days
+  dim_reports__is_reporter_prior_submitted_at_last_90_days
+  dim_reports__is_reporter_prior_submitted_at_prior_30_days
+  dim_reports__is_reporter_prior_submitted_at_prior_365_days
+  dim_reports__is_reporter_prior_submitted_at_prior_7_days
+  dim_reports__is_reporter_prior_submitted_at_prior_90_days
   dim_reports__is_resolved_report
-  dim_reports__is_returning_reporter_last_14_days
-  dim_reports__is_returning_reporter_last_180_days
-  dim_reports__is_returning_reporter_last_30_days
-  dim_reports__is_returning_reporter_last_365_days
-  dim_reports__is_returning_reporter_last_60_days
-  dim_reports__is_returning_reporter_last_730_days
-  dim_reports__is_returning_reporter_last_7_days
-  dim_reports__is_returning_reporter_last_90_days
-  dim_reports__is_returning_reporter_prior_30_days
-  dim_reports__is_returning_reporter_prior_365_days
-  dim_reports__is_returning_reporter_prior_7_days
-  dim_reports__is_returning_reporter_prior_90_days
   dim_reports__is_submitted_at_last_14_days
   dim_reports__is_submitted_at_last_180_days
   dim_reports__is_submitted_at_last_30_days
@@ -2585,7 +2585,6 @@ enum AnalyticsSelectFieldEnum {
   dim_reports__is_submitted_at_prior_7_days
   dim_reports__is_submitted_at_prior_90_days
   dim_reports__is_submitted_by_team_member
-  dim_reports__is_submitted_report
   dim_reports__is_triaged_report
   dim_reports__is_valid_report
   dim_reports__organization_id
@@ -15136,6 +15135,19 @@ input FiltersTriageSubscriptionFilterInput {
   _or: [FiltersTriageSubscriptionFilterInput]
   id: IntPredicateInput
   is_active: Boolean
+}
+
+input FiltersUserAvailabilityFilterInput {
+  _and: [FiltersUserAvailabilityFilterInput]
+  _not: FiltersUserAvailabilityFilterInput
+  _or: [FiltersUserAvailabilityFilterInput]
+  available: BooleanPredicateInput
+  date: DateInputPredicateInput
+  id: IntPredicateInput
+}
+
+input FiltersUserAvailabilityFilterOrder {
+  id: FilterOrderPredicateInput
 }
 
 input FiltersUserFilterInput {
@@ -41116,6 +41128,33 @@ type User implements Node & ResourceInterface {
   twitter_handle: String
   unconfirmed_email: String
   url: URI!
+
+  """
+  A Resolver for User Availabilities
+  """
+  user_availabilities(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+    order_by: FiltersUserAvailabilityFilterOrder
+    where: FiltersUserAvailabilityFilterInput
+  ): UserAvailabilityConnection
   user_devices(
     """
     Returns the elements in the list that come after the specified cursor.
@@ -41190,6 +41229,53 @@ type User implements Node & ResourceInterface {
     where: FiltersTeamFilterInput
   ): TeamConnection
   year_in_review_published_at: DateTime
+}
+
+"""
+User availability for a day
+"""
+type UserAvailability implements Node {
+  _id: ID!
+  available: Boolean
+  date: Date!
+  id: ID!
+  user: User!
+}
+
+"""
+The connection type for UserAvailability.
+"""
+type UserAvailabilityConnection {
+  """
+  A list of edges.
+  """
+  edges: [UserAvailabilityEdge]
+
+  """
+  A list of nodes.
+  """
+  nodes: [UserAvailability]
+
+  """
+  Information to aid in pagination.
+  """
+  pageInfo: PageInfo!
+  total_count: Int
+}
+
+"""
+An edge in a connection.
+"""
+type UserAvailabilityEdge {
+  """
+  A cursor for use in pagination.
+  """
+  cursor: String!
+
+  """
+  The item at the end of the edge.
+  """
+  node: UserAvailability
 }
 
 """
