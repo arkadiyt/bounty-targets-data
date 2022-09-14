@@ -20447,6 +20447,7 @@ type OpportunityDocument implements Node {
   campaign_id: Int
   campaign_start_date: DateTime
   campaign_type: String
+  credentials_set_up: Boolean
   currency: String
   database_id: Int!
   external_program_id: Int
@@ -32691,6 +32692,7 @@ enum TeamWeaknessStates {
 
 input TermFilterInput {
   asset_group_id: Int
+  credentials_set_up: Boolean
   gold_standard: Int
   identifier: String
   industry: String
