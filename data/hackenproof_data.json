@@ -3039,6 +3039,53 @@
     }
   },
   {
+    "id": "/status-dot-im/waku",
+    "name": "Waku",
+    "url": "https://hackenproof.com/status-dot-im/waku",
+    "archived": false,
+    "targets": {
+      "in_scope": [
+        {
+          "target": "https://github.com/status-im/js-waku",
+          "type": "Code",
+          "instruction": "A JavaScript implementation of the Waku v2 protocol (https://rfc.vac.dev/spec/10/).",
+          "severity": "Medium",
+          "reward": "Bounty"
+        },
+        {
+          "target": "https://github.com/status-im/js-waku/tree/master/examples",
+          "type": "Code",
+          "instruction": "We are interested in finding vulnerabilities in the examples but will consider the severity lower",
+          "severity": "Low",
+          "reward": "Bounty"
+        },
+        {
+          "target": "https://github.com/status-im/go-waku",
+          "type": "Code",
+          "instruction": "",
+          "severity": "Medium",
+          "reward": "Bounty"
+        },
+        {
+          "target": "https://github.com/status-im/go-waku/tree/master/examples",
+          "type": "Code",
+          "instruction": "We are interested in finding vulnerabilities in the examples but will consider the severity lower",
+          "severity": "Low",
+          "reward": "Bounty"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "target": "https://github.com/status-im/go-waku/tree/master/waku/v2/protocol/rln",
+          "type": "Code",
+          "instruction": "",
+          "severity": "None",
+          "reward": null
+        }
+      ]
+    }
+  },
+  {
     "id": "/whitebit/whitebit",
     "name": "WhiteBIT",
     "url": "https://hackenproof.com/whitebit/whitebit",
