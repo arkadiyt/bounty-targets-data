@@ -20452,6 +20452,7 @@ type OpportunityDocument implements Node {
   external_program_id: Int
   external_program_name: String
   first_response_time: Float
+  gold_standard: Int
   graphql_id: ID!
   handle: String!
   id: ID!
@@ -24663,6 +24664,7 @@ type Query implements Node {
     where: FiltersToolFilterInput
   ): ToolConnection
   tray_solution_instance_url(integration_id: ID!, solution_instance_id: String!): String!
+  triage_inbox: TriageInbox
 
   """
   A resolver for triage inbox items
@@ -24672,14 +24674,13 @@ type Query implements Node {
     Returns the elements in the list that come after the specified cursor.
     """
     after: String
-    asset_category: String = null
-    assigned_to_triage: Boolean = false
+    asset_category: String
+    assigned_to_triage: Boolean
 
     """
     Returns the elements in the list that come before the specified cursor.
     """
     before: String
-    dismissal_state: TriageInboxItemDismissalStateEnum = undismissed
 
     """
     Returns the first _n_ elements from the list.
@@ -24690,18 +24691,16 @@ type Query implements Node {
     Returns the last _n_ elements from the list.
     """
     last: Int
-    ordered_by_timer: Boolean = true
-    owner_usernames: [String!] = []
-    plus: Boolean = false
-    priority: TriageInboxItemPriorityEnum = null
-    product_editions: [TriageInboxItemProductEditionFilterEnum!] = null
-    recently_claimed: Boolean = false
+    ordered_by_timer: Boolean
+    owner_usernames: [String!]
+    plus: Boolean
+    priority: TriageInboxItemPriorityEnum
+    product_editions: [TriageInboxItemProductEditionFilterEnum!]
     report_id: Int
-    report_substate: TriageInboxItemReportSubstateEnum = null
-    report_title: String = null
-    team_handle: [String!] = []
-    unowned: Boolean = false
-    view: TriageInboxItemViewEnum = null
+    report_substate: TriageInboxItemReportSubstateEnum
+    report_title: String
+    team_handle: [String!]
+    view: TriageInboxItemViewEnum
   ): TriageInboxItemConnection
   user(username: String!): User @deprecated(reason: "Query for a User node at the root level is not recommended. Ref T12456")
   users(
@@ -32692,6 +32691,7 @@ enum TeamWeaknessStates {
 
 input TermFilterInput {
   asset_group_id: Int
+  gold_standard: Int
   identifier: String
   industry: String
   offers_bounties: Boolean
@@ -33486,6 +33486,19 @@ type TrayProfile implements Node {
 }
 
 """
+Triage Inbox
+"""
+type TriageInbox implements Node {
+  id: ID!
+  owned_by_me_total_count: Int!
+  owned_by_triage_total_count: Int!
+  prioritization_total_count: Int!
+  pristine_total_count: Int!
+  recently_dismissed_total_count: Int!
+  teams: [Team]
+}
+
+"""
 A Triage Inbox Item
 """
 type TriageInboxItem implements Node {
@@ -33514,17 +33527,11 @@ type TriageInboxItemConnection {
   A list of nodes.
   """
   nodes: [TriageInboxItem]
-  owned_by_me_total_count: Int!
-  owned_by_triage_total_count: Int!
 
   """
   Information to aid in pagination.
   """
   pageInfo: PageInfo!
-  prioritization_total_count: Int!
-  pristine_total_count: Int!
-  recently_dismissed_total_count: Int!
-  teams: [Team]
 
   """
   Int
@@ -33545,14 +33552,6 @@ enum TriageInboxItemDismissalMethodEnum {
   triage_plus_inbox_list_item_dismisser
   triage_plus_inbox_report_drawer_dismisser
   triage_plus_inbox_state_changer
-}
-
-"""
-Valid values for the dismissal state of triage inbox items
-"""
-enum TriageInboxItemDismissalStateEnum {
-  dismissed
-  undismissed
 }
 
 """
@@ -33610,8 +33609,8 @@ enum TriageInboxItemViewEnum {
   owned_by_triage
   prioritization
   pristine
+  recently_claimed
   recently_dismissed
-  validation
 }
 
 """
@@ -33623,6 +33622,7 @@ type TriageMeta implements Node & ResourceInterface {
   noise_reason: String
   oldest_undismissed_triage_inbox_item: TriageInboxItem
   owned_by: User
+  owned_by_at: DateTime
   plus: Boolean
   priority: String
   priority_classification: String
