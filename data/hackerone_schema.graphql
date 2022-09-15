@@ -2433,7 +2433,7 @@ type AllTimeReputationLeaderboardEntry implements LeaderboardEntryInterface & No
 input AnalyticsComplexInputType {
   boolean: Boolean
   from: String
-  null: Boolean
+  nil: Boolean
   number: Float
   numbers: [Float!]
   ref: AnalyticsSelectFieldEnum
@@ -2460,6 +2460,8 @@ enum AnalyticsDirectionEnum {
 }
 
 enum AnalyticsFromEnum {
+  dim_custom_field_attributes
+  dim_custom_field_values
   dim_invitations
   dim_reports
   dim_teams
@@ -2530,6 +2532,17 @@ input AnalyticsQueryInputType {
 }
 
 enum AnalyticsSelectFieldEnum {
+  dim_custom_field_attributes__configuration
+  dim_custom_field_attributes__custom_field_attribute_id
+  dim_custom_field_attributes__label
+  dim_custom_field_attributes__organization_id
+  dim_custom_field_attributes__team_id
+  dim_custom_field_attributes__type
+  dim_custom_field_values__custom_field_attribute_id
+  dim_custom_field_values__organization_id
+  dim_custom_field_values__report_id
+  dim_custom_field_values__team_id
+  dim_custom_field_values__value
   dim_invitations__created_at
   dim_invitations__created_at_month
   dim_invitations__created_at_quarter
@@ -32223,6 +32236,7 @@ type TeamMemberEligibilitySettings implements Node {
   allowed_domains: [String!]!
   allowed_domains_enabled: Boolean!
   id: ID!
+  name: String
 }
 
 """
@@ -33492,6 +33506,7 @@ Triage Inbox
 """
 type TriageInbox implements Node {
   id: ID!
+  oldest_undismissed_at(product_editions: [TriageInboxItemProductEditionFilterEnum!]!, view: TriageInboxItemViewEnum!): DateTime
   owned_by_me_total_count: Int!
   owned_by_triage_total_count: Int!
   prioritization_total_count: Int!
@@ -33534,10 +33549,6 @@ type TriageInboxItemConnection {
   Information to aid in pagination.
   """
   pageInfo: PageInfo!
-
-  """
-  Int
-  """
   total_count: Int!
 }
 
