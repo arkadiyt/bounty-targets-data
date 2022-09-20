@@ -12655,6 +12655,7 @@ type DerivedPentest implements Node {
     where: FiltersPentestTaskFilterInput
   ): PentestTaskConnection
   phase: String
+  phase_weight: Int
   remediated: Int
   retesting_ends_at: DateTime
   size: Int
@@ -14738,6 +14739,8 @@ input FiltersDerivedPentestFilterInput {
 
 input FiltersDerivedPentestFilterOrder {
   id: FilterOrderPredicateInput
+  phase_weight: FilterOrderPredicateInput
+  start_date: FilterOrderPredicateInput
 }
 
 input FiltersDerivedReportRetestFilterInput {
