@@ -2514,6 +2514,7 @@ enum AnalyticsFromEnum {
   dim_teams
   fct_invitation_cohorts
   fct_platform_benchmarks
+  fixture_intervals
   fixture_months
   fixture_quarters
   fixture_report_states
@@ -2605,12 +2606,14 @@ enum AnalyticsSelectFieldEnum {
   dim_reports__asset_identifier
   dim_reports__asset_type
   dim_reports__bounty_awarded_at
+  dim_reports__bounty_awarded_at_day
   dim_reports__bounty_awarded_at_month
   dim_reports__bounty_awarded_at_num_days_since
   dim_reports__bounty_awarded_at_quarter
   dim_reports__bounty_awarded_at_week
   dim_reports__bounty_awarded_at_year
   dim_reports__closed_at
+  dim_reports__closed_at_day
   dim_reports__closed_at_month
   dim_reports__closed_at_num_days_since
   dim_reports__closed_at_quarter
@@ -2654,6 +2657,7 @@ enum AnalyticsSelectFieldEnum {
   dim_reports__severity_rating
   dim_reports__state
   dim_reports__submitted_at
+  dim_reports__submitted_at_day
   dim_reports__submitted_at_month
   dim_reports__submitted_at_num_days_since
   dim_reports__submitted_at_quarter
@@ -2693,6 +2697,9 @@ enum AnalyticsSelectFieldEnum {
   fct_platform_benchmarks__p75_submission_count
   fct_platform_benchmarks__p90_submission_count
   fct_platform_benchmarks__start_at
+  fixture_intervals__end_at
+  fixture_intervals__interval
+  fixture_intervals__start_at
   fixture_months__end_at
   fixture_months__month
   fixture_months__start_at
@@ -24827,6 +24834,7 @@ type Query implements Node {
     """
     last: Int
   ): SkillConnection!
+  static_dashboards(key: String): [StaticDashboard!]
   surveys(
     """
     Returns the elements in the list that come after the specified cursor.
@@ -29397,6 +29405,33 @@ type StartVpnInstancePayload implements MutationResult {
   ): ErrorConnection!
   me: User
   was_successful: Boolean!
+}
+
+"""
+A static dashboard definition
+"""
+type StaticDashboard implements Node & ResourceInterface {
+  id: ID!
+  key: String!
+  tiles: [StaticDashboardTile!]!
+  title: String!
+  url: URI!
+}
+
+"""
+A static dashboard tile definition
+"""
+type StaticDashboardTile implements Node & ResourceInterface {
+  description: String!
+  id: ID!
+  index_by: String!
+  is_stacked: Boolean!
+  key: String!
+  layout: String!
+  query: String!
+  title: String!
+  type: String!
+  url: URI!
 }
 
 """
