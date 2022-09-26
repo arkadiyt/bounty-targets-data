@@ -22752,6 +22752,7 @@ type PentestOpportunity implements Node {
   i_can_submit: Boolean!
   i_can_update: Boolean!
   id: ID!
+  internal_handoff_notes: String
   location_restrictions: [String!]
   mobile_app_scopes(
     """
@@ -27785,6 +27786,7 @@ input ReviewCompletePentestOpportunityInput {
   compliance_framework_other: String
   customer_email: String
   customer_note: String
+  internal_handoff_notes: String
   location_restrictions: [String!]
   package_name: String
   pentest_opportunity_id: ID!
@@ -27849,6 +27851,7 @@ input ReviewPentestOpportunityInput {
   compliance_framework_other: String
   customer_email: String
   customer_note: String
+  internal_handoff_notes: String
   location_restrictions: [String!]
   package_name: String
   pentest_opportunity_id: ID!
