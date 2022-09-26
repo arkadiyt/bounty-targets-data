@@ -20718,7 +20718,7 @@ type OpportunityDocument implements Node {
   allows_private_disclosure: Boolean
   bounty_table_updated_at: DateTime
   cached_response_efficiency_percentage: Int
-  campaign_critical: String
+  campaign_critical: Float
   campaign_end_date: DateTime
   campaign_id: Int
   campaign_start_date: DateTime
@@ -33151,10 +33151,11 @@ input TermFilterInput {
   industry: String
   offers_bounties: Boolean
   organization_id: Int
-  state: String
+  state: Int
   system: Boolean
   team_ids: [Int!]
   team_type: String
+  triage_active: Boolean
 }
 
 input TermsAggsInput {
