@@ -3673,8 +3673,10 @@ type AssetRisk implements Node {
   _id: ID!
   asset: Asset!
   description: String
+  ended_at: DateTime
   evidence: String
   id: ID!
+  mitigated: DateTime
   proposed_action: String
   rating: String!
   readable_type: String!
