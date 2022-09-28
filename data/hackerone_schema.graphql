@@ -4946,6 +4946,27 @@ type Campaign implements Node {
   bounty_table_row: BountyTableRow
   campaign_type: String!
   critical: Float
+  eligible_hackers(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+  ): UserConnection
   end_date: DateTime
   high: Float
   id: ID!
@@ -5016,6 +5037,12 @@ type CampaignEdge {
   The item at the end of the edge.
   """
   node: Campaign
+}
+
+input CampaignParametersInput {
+  inactive_in_last_months: Int
+  never_submitted: Boolean
+  objective: String!
 }
 
 """
@@ -31817,6 +31844,28 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
   submission_requirements: SubmissionRequirements
   submission_requirements_enabled: Boolean
   submission_state: SubmissionStateEnum
+  suggested_campaign_hackers(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+    parameters: CampaignParametersInput
+  ): UserConnection
   survey_answers(
     """
     Returns the elements in the list that come after the specified cursor.
