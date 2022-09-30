@@ -5039,9 +5039,19 @@ type CampaignEdge {
   node: Campaign
 }
 
+"""
+Campaign engagement cadence enum
+"""
+enum CampaignEngagementCadenceEnum {
+  last_12_months
+  last_3_months
+  last_6_months
+  last_9_months
+  never_submitted
+}
+
 input CampaignParametersInput {
-  inactive_in_last_months: Int
-  never_submitted: Boolean
+  engagement_cadence: CampaignEngagementCadenceEnum!
   objective: String!
 }
 
