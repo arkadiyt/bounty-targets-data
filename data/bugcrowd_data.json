@@ -7160,6 +7160,40 @@
     }
   },
   {
+    "name": "Kenna Security",
+    "url": "https://bugcrowd.com/kennasecurity",
+    "allows_disclosure": false,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "partial",
+    "max_payout": 4500,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "other",
+          "target": "Any Host Verified To Be Owned By Kenna (Domains/IP space/etc.)"
+        },
+        {
+          "type": "website",
+          "target": "https://[your-subdomain].kennasecurity.com"
+        },
+        {
+          "type": "api",
+          "target": "https://api.kennasecurity.com"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "website",
+          "target": "Any Kenna Security Platform Subdomain Not Created By You"
+        },
+        {
+          "type": "website",
+          "target": "https://www.kennasecurity.com"
+        }
+      ]
+    }
+  },
+  {
     "name": "Kistler Vulnerability Disclosure Program",
     "url": "https://bugcrowd.com/kistler-vdp",
     "allows_disclosure": true,
