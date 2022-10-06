@@ -2600,6 +2600,7 @@ enum AnalyticsSelectFieldEnum {
   dim_invitations__is_accepted
   dim_invitations__is_viewed
   dim_invitations__organization_id
+  dim_invitations__team_handle
   dim_invitations__team_id
   dim_invitations__user_id
   dim_reports__asset_id
@@ -7113,6 +7114,7 @@ input CreateCampaignInput {
   clientMutationId: String
   critical: Float
   end_date: DateTime!
+  filter_params: CampaignParametersInput
   high: Float
   low: Float
   medium: Float
@@ -7120,6 +7122,7 @@ input CreateCampaignInput {
   researchers_information: String
   start_date: DateTime!
   structured_scope_ids: [ID!]
+  target_audience: Boolean
   team_id: ID!
 }
 
@@ -20770,8 +20773,6 @@ type OpportunityDocument implements Node {
   credentials_set_up: Boolean
   currency: String
   database_id: Int!
-  external_program_id: Int
-  external_program_name: String
   first_response_time: Float
   gold_standard: Int
   graphql_id: ID!
