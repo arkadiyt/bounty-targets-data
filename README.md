@@ -12,14 +12,14 @@ Extra files:
 - [bugcrowd_data.json](https://github.com/arkadiyt/bounty-targets-data/blob/master/data/bugcrowd_data.json): raw [Bugcrowd](https://bugcrowd.com) data.
 - [hackerone_data.json](https://github.com/arkadiyt/bounty-targets-data/blob/master/data/hackerone_data.json): raw [Hackerone](https://hackerone.com) data.
 - [federacy_data.json](https://github.com/arkadiyt/bounty-targets-data/blob/master/data/federacy_data.json): raw [Federacy](https://federacy.com) data.
-
+- [hackenproof_data.json](https://github.com/arkadiyt/bounty-targets-data/blob/master/data/hackenproof_data.json): raw [Hackenproof](https://hackenproof.com) data.
 - [intigriti_data.json](https://github.com/arkadiyt/bounty-targets-data/blob/master/data/intigriti_data.json): raw [Intigriti](https://www.intigriti.com) data.
 - [yeswehack_data.json](https://github.com/arkadiyt/bounty-targets-data/blob/master/data/yeswehack_data.json): raw [YesWeHack](https://www.yeswehack.com/) data.
 - [hackerone_schema.graphql](https://github.com/arkadiyt/bounty-targets-data/blob/master/data/hackerone_schema.graphql): Hackerone's graphql api schema.
 
 ### Status
 
-The last change was detected on `Wednesday 10/12/2022 00:30 (UTC)`. New changes (if any) are picked up hourly.
+The last change was detected on `Wednesday 10/12/2022 02:56 (UTC)`. New changes (if any) are picked up hourly.
 
 ### Code
 
