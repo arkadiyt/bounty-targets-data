@@ -29485,8 +29485,19 @@ A static dashboard definition
 type StaticDashboard implements Node & ResourceInterface {
   id: ID!
   key: String!
-  tiles: [StaticDashboardTile!]!
+  queries: [StaticDashboardQuery]!
+  tiles: [StaticDashboardTile]!
   title: String!
+  url: URI!
+}
+
+"""
+A static dashboard query definition
+"""
+type StaticDashboardQuery implements Node & ResourceInterface {
+  id: ID!
+  key: String!
+  query: String!
   url: URI!
 }
 
