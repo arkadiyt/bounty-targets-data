@@ -660,6 +660,85 @@
     }
   },
   {
+    "id": "echobox-bug-bounty-program",
+    "name": "Echobox Bug Bounty Program",
+    "public": true,
+    "disabled": false,
+    "managed": null,
+    "min_bounty": 50,
+    "max_bounty": 4000,
+    "targets": {
+      "in_scope": [
+        {
+          "target": "https://staging.ebx.sh",
+          "type": "web-application"
+        },
+        {
+          "target": "https://coreapi-stage.service.echobox.com (aka https://properties.service.echobox.com)",
+          "type": "api"
+        },
+        {
+          "target": "https://socialapi-stage.service.echobox.com",
+          "type": "api"
+        },
+        {
+          "target": "https://socialapi-stage.service.echobox.com/v3/serviceauth",
+          "type": "api"
+        },
+        {
+          "target": "https://github.com/ebx/ebx-clientauth-backend-sdk",
+          "type": "other"
+        },
+        {
+          "target": "https://github.com/ebx/ebx-serviceauth-sdk",
+          "type": "other"
+        },
+        {
+          "target": "https://newsletters-stage.echobox.com",
+          "type": "web-application"
+        },
+        {
+          "target": "https://campaignapi-stage.service.echobox.com",
+          "type": "api"
+        },
+        {
+          "target": "https://campaignapi-stage.service.echobox.com/v3/serviceauth",
+          "type": "api"
+        },
+        {
+          "target": "https://stage.emailreporting.service.echobox.com/",
+          "type": "api"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "target": "auth.echobox.com (as this is just a cname of AWS Cognito)",
+          "type": "other"
+        },
+        {
+          "target": "cognito-idp.*.amazonaws.com",
+          "type": "other"
+        },
+        {
+          "target": "www.echobox.com",
+          "type": "other"
+        },
+        {
+          "target": "Any APIs that do not include ‘stage’ in the hostname.",
+          "type": "other"
+        },
+        {
+          "target": "Anything else that is not explicitly listed in the scope section.",
+          "type": "other"
+        },
+        {
+          "target": "Reusing JWT sessions during their expected validity period.",
+          "type": "other"
+        }
+      ]
+    }
+  },
+  {
     "id": "franceconnect-agentconnect-public",
     "name": "FranceConnect+ / AgentConnect",
     "public": true,
