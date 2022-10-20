@@ -31936,7 +31936,9 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
     Returns the last _n_ elements from the list.
     """
     last: Int
+    order_by: FiltersUserFilterOrder
     parameters: CampaignParametersInput
+    where: FiltersUserFilterInput
   ): UserConnection
   survey_answers(
     """
