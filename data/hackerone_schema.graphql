@@ -3463,6 +3463,7 @@ type AssetGroupDocument implements Node {
   assets_count: Int!
   id: ID!
   in_scope_count: Int!
+  last_asset_created_at: DateTime
   name: String!
   new_count: Int!
   out_of_scope_count: Int!
@@ -21035,6 +21036,7 @@ type Organization implements Node {
     after: String
     asm_tag_category_ids: [Int]
     asm_tag_ids: [Int]
+    asset_group_ids: [Int]
     asset_types: [AssetImplementationTypeEnum]
 
     """
