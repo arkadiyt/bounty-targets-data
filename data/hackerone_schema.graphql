@@ -29658,11 +29658,27 @@ type StartVpnInstancePayload implements MutationResult {
 A static dashboard definition
 """
 type StaticDashboard implements Node & ResourceInterface {
+  charts: [StaticDashboardChart]!
   id: ID!
   key: String!
   queries: [StaticDashboardQuery]!
-  tiles: [StaticDashboardTile]!
   title: String!
+  url: URI!
+}
+
+"""
+A static dashboard tile definition
+"""
+type StaticDashboardChart implements Node & ResourceInterface {
+  description: String!
+  id: ID!
+  index_by: String!
+  is_stacked: Boolean!
+  key: String!
+  layout: String!
+  query: String!
+  title: String!
+  type: String!
   url: URI!
 }
 
@@ -29673,22 +29689,6 @@ type StaticDashboardQuery implements Node & ResourceInterface {
   id: ID!
   key: String!
   query: String!
-  url: URI!
-}
-
-"""
-A static dashboard tile definition
-"""
-type StaticDashboardTile implements Node & ResourceInterface {
-  description: String!
-  id: ID!
-  index_by: String!
-  is_stacked: Boolean!
-  key: String!
-  layout: String!
-  query: String!
-  title: String!
-  type: String!
   url: URI!
 }
 
