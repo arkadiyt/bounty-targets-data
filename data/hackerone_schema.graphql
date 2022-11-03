@@ -32088,30 +32088,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
   submission_requirements: SubmissionRequirements
   submission_requirements_enabled: Boolean
   submission_state: SubmissionStateEnum
-  suggested_campaign_hackers(
-    """
-    Returns the elements in the list that come after the specified cursor.
-    """
-    after: String
-
-    """
-    Returns the elements in the list that come before the specified cursor.
-    """
-    before: String
-
-    """
-    Returns the first _n_ elements from the list.
-    """
-    first: Int
-
-    """
-    Returns the last _n_ elements from the list.
-    """
-    last: Int
-    order_by: FiltersUserFilterOrder
-    parameters: CampaignParametersInput
-    where: FiltersUserFilterInput
-  ): UserConnection
+  suggested_campaign_hacker_count(parameters: CampaignParametersInput): Int
   survey_answers(
     """
     Returns the elements in the list that come after the specified cursor.
