@@ -5063,9 +5063,10 @@ Campaign Objective of a Campaign
 """
 type CampaignObjective implements Node {
   _id: ID!
-  category: String!
+  category: String
   description: String!
   id: ID!
+  key: String!
   name: String!
 }
 
@@ -5106,7 +5107,7 @@ type CampaignObjectiveEdge {
 }
 
 input CampaignParametersInput {
-  engagement_cadence: CampaignEngagementCadenceEnum!
+  engagement_cadence: CampaignEngagementCadenceEnum
   objective: String!
 }
 
