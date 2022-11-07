@@ -1419,6 +1419,57 @@
     }
   },
   {
+    "id": "ovo-bug-bounty-program",
+    "name": "OVO Bug Bounty Program",
+    "public": true,
+    "disabled": false,
+    "managed": null,
+    "min_bounty": 50,
+    "max_bounty": 3000,
+    "targets": {
+      "in_scope": [
+        {
+          "target": "https://play.google.com/store/apps/details?id=ovo.id",
+          "type": "mobile-application-android"
+        },
+        {
+          "target": "https://apps.apple.com/ID/app/id1142114207",
+          "type": "mobile-application-ios"
+        },
+        {
+          "target": "*.ovo.id",
+          "type": "web-application"
+        },
+        {
+          "target": "*.taralite.com",
+          "type": "web-application"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "target": "Staging/Development/UAT environments are considered out-of-scope, such as:",
+          "type": "other"
+        },
+        {
+          "target": "- *.byte-stack.net",
+          "type": "other"
+        },
+        {
+          "target": "- *.dududev",
+          "type": "other"
+        },
+        {
+          "target": "- *.uat-ovo.net",
+          "type": "other"
+        },
+        {
+          "target": "and other assets that might not be explicitly listed.",
+          "type": "other"
+        }
+      ]
+    }
+  },
+  {
     "id": "olvid-the-most-secure-messaging-app-in-the-world",
     "name": "Olvid - Open source end-to-end encrypted messaging",
     "public": true,
