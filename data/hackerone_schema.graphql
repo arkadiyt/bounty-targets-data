@@ -2747,13 +2747,13 @@ input AnalyticsSelectInputType {
 }
 
 input AnalyticsWhereInputType {
-  operator: AnalyticsOperatorEnum = and
   predicates: [AnalyticsWherePredicateInputType!]!
 }
 
 input AnalyticsWherePredicateInputType {
   function: AnalyticsPredicateFunctionEnum!
   left: AnalyticsComplexInputType!
+  or: [AnalyticsWherePredicateInputType!]
   right: AnalyticsComplexInputType!
 }
 
