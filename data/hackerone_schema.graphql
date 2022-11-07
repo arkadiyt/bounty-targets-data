@@ -15024,7 +15024,7 @@ input FiltersCustomFieldAttributeFilterInput {
   _not: FiltersCustomFieldAttributeFilterInput
   _or: [FiltersCustomFieldAttributeFilterInput]
   archived_at: ISO8601DateInputPredicateInput
-  attribute_type: CustomFieldAttributeTypes
+  attribute_type: [CustomFieldAttributeTypes!]
   id: IntPredicateInput
   internal: BooleanPredicateInput
 }
@@ -15293,7 +15293,7 @@ input FiltersReportCustomFieldFilterInput {
   _and: [FiltersReportCustomFieldFilterInput]
   _not: FiltersReportCustomFieldFilterInput
   _or: [FiltersReportCustomFieldFilterInput]
-  attribute_type: CustomFieldAttributeTypes
+  attribute_type: [CustomFieldAttributeTypes!]
   id: IntPredicateInput
   internal: BooleanPredicateInput
 }
