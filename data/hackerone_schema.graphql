@@ -6584,6 +6584,20 @@ type CompleteTutorialPayload implements MutationResult {
 }
 
 """
+A consumption subscription
+"""
+type ConsumptionSubscription implements Node {
+  _id: ID!
+  active: Boolean!
+  ends_at: DateTime!
+  id: ID!
+  number_remaining: Float!
+  number_total: Float!
+  number_used: Int!
+  starts_at: DateTime!
+}
+
+"""
 Controlled launch setting
 """
 type ControlledLaunchSetting implements Node {
@@ -12975,6 +12989,7 @@ type DerivedPentest implements Node {
   hours: Int
   i_can_delete: Boolean
   id: ID!
+  is_team_member: Boolean
   name: String
   origin_type: String!
 
@@ -21353,6 +21368,7 @@ type Organization implements Node {
     size: Int
   ): SearchResultConnection
   available_organization_inboxes_count: Int
+  consumption_subscriptions: [ConsumptionSubscription!]
   created_at: DateTime
   derived_pentests(
     """
