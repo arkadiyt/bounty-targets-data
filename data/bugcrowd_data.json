@@ -3312,7 +3312,7 @@
     }
   },
   {
-    "name": "ClickHouse: Open-Source Bug Bounty Program",
+    "name": "ClickHouse",
     "url": "https://bugcrowd.com/clickhouse",
     "allows_disclosure": true,
     "managed_by_bugcrowd": true,
@@ -3322,22 +3322,19 @@
       "in_scope": [
         {
           "type": "other",
+          "target": "ClickHouse Cloud environment hosted by ClickHouse"
+        },
+        {
+          "type": "website",
+          "target": "https://clickhouse.cloud/"
+        },
+        {
+          "type": "other",
           "target": "https://github.com/ClickHouse/ClickHouse"
         }
       ],
       "out_of_scope": [
-        {
-          "type": "other",
-          "target": "ClickHouse Cloud environment hosted by ClickHouse"
-        },
-        {
-          "type": "other",
-          "target": "Third party websites or systems hosted by non-ClickHouse entities that ClickHouse staff use"
-        },
-        {
-          "type": "website",
-          "target": "https://clickhouse.com/"
-        }
+
       ]
     }
   },
