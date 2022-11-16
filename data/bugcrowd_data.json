@@ -2425,6 +2425,40 @@
     }
   },
   {
+    "name": "Bitget",
+    "url": "https://bugcrowd.com/bitget-og",
+    "allows_disclosure": true,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "full",
+    "max_payout": 1500,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "website",
+          "target": "*.bitget.com"
+        },
+        {
+          "type": "api",
+          "target": "Bitget API"
+        },
+        {
+          "type": "android",
+          "target": "Bitget Android App"
+        },
+        {
+          "type": "ios",
+          "target": "Bitget iOS App"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "website",
+          "target": "https://affiliates.bitget.com/login"
+        }
+      ]
+    }
+  },
+  {
     "name": "Bureau of Land Management",
     "url": "https://bugcrowd.com/blm-vdp",
     "allows_disclosure": true,
