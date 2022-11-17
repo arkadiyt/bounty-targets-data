@@ -15458,6 +15458,7 @@ input FiltersNotificationFilterInput {
   database_id: IntPredicateInput
   id: IntPredicateInput
   seen_at: DateInputPredicateInput
+  user_mentioned: BooleanPredicateInput
 }
 
 input FiltersNotificationFilterOrder {
@@ -20829,6 +20830,7 @@ type Notification implements Node {
   updated_at: DateTime!
   url: String
   user: User
+  user_mentioned: Boolean!
 }
 
 """
