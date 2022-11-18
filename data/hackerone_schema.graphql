@@ -15239,6 +15239,7 @@ input FiltersCampaignFilterInput {
   _or: [FiltersCampaignFilterInput]
   id: IntPredicateInput
   status: CampaignStateEnumInputPredicateInput
+  target_audience: BooleanPredicateInput
 }
 
 input FiltersCertificationFilterInput {
@@ -21161,6 +21162,7 @@ type OauthApplication implements Node {
 
 input OpportunitiesFilterInput {
   bookmarked: Boolean
+  campaign_teams: Boolean
 }
 
 """
@@ -21276,11 +21278,7 @@ type OpportunityDocument implements Node {
   allows_private_disclosure: Boolean
   bounty_table_updated_at: DateTime
   cached_response_efficiency_percentage: Int
-  campaign_critical: Float
-  campaign_end_date: DateTime
-  campaign_id: Int
-  campaign_start_date: DateTime
-  campaign_type: String
+  campaign: Campaign
   credentials_set_up: Boolean
   currency: String
   database_id: Int!
