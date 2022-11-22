@@ -15452,21 +15452,6 @@ input FiltersLabelFilterInput {
   name: StringPredicateInput
 }
 
-input FiltersNotificationFilterInput {
-  _and: [FiltersNotificationFilterInput]
-  _not: FiltersNotificationFilterInput
-  _or: [FiltersNotificationFilterInput]
-  database_id: IntPredicateInput
-  id: IntPredicateInput
-  seen_at: DateInputPredicateInput
-  user_mentioned: BooleanPredicateInput
-}
-
-input FiltersNotificationFilterOrder {
-  created_at: FilterOrderPredicateInput
-  id: FilterOrderPredicateInput
-}
-
 input FiltersOrganizationFilterInput {
   _and: [FiltersOrganizationFilterInput]
   _not: FiltersOrganizationFilterInput
@@ -20835,31 +20820,6 @@ type Notification implements Node {
 }
 
 """
-The connection type for Notification.
-"""
-type NotificationConnection {
-  """
-  A list of edges.
-  """
-  edges: [NotificationEdge]
-
-  """
-  A list of nodes.
-  """
-  nodes: [Notification]
-
-  """
-  Information to aid in pagination.
-  """
-  pageInfo: PageInfo!
-
-  """
-  Int
-  """
-  total_count: Int!
-}
-
-"""
 The connection type for NotificationDeliveryPreferenceUnion.
 """
 type NotificationDeliveryPreferenceConnection {
@@ -20995,21 +20955,6 @@ type NotificationDeliveryPreferencesTeamComment implements Node & NotificationDe
   delivery_preference: NotificationDeliveryPreferenceEnum!
   id: ID!
   updated_at: DateTime!
-}
-
-"""
-An edge in a connection.
-"""
-type NotificationEdge {
-  """
-  A cursor for use in pagination.
-  """
-  cursor: String!
-
-  """
-  The item at the end of the edge.
-  """
-  node: Notification
 }
 
 """
@@ -37748,8 +37693,11 @@ input UpdateNotificationsMutationInput {
   A unique identifier for the client performing the mutation.
   """
   clientMutationId: String
-  seen: Boolean
-  where: FiltersNotificationFilterInput = {}
+  id: Int
+  subtype: String
+  team_handle: String
+  type: String
+  unread: Boolean
 }
 
 """
@@ -41280,6 +41228,7 @@ input UpdateUserDisplayOptionsInput {
   A unique identifier for the client performing the mutation.
   """
   clientMutationId: String
+  organization_id: ID
   show_bounty_amounts: Boolean
   view_profile_preference: String
 }
@@ -42364,33 +42313,7 @@ type User implements Node & ResourceInterface {
     """
     last: Int
   ): NotificationDeliveryPreferenceConnection
-
-  """
-  A Resolver for Notifications
-  """
-  notifications(
-    """
-    Returns the elements in the list that come after the specified cursor.
-    """
-    after: String
-
-    """
-    Returns the elements in the list that come before the specified cursor.
-    """
-    before: String
-
-    """
-    Returns the first _n_ elements from the list.
-    """
-    first: Int
-
-    """
-    Returns the last _n_ elements from the list.
-    """
-    last: Int
-    order_by: FiltersNotificationFilterOrder = {}
-    where: FiltersNotificationFilterInput = {}
-  ): NotificationConnection
+  notifications(include_read: Boolean, just_mentions: Boolean, page: Int, sort_direction: String): [VirtualNotification!]
   open_for_employment: Boolean
   organizations(
     """
@@ -43139,6 +43062,7 @@ Display options for a user
 type UserDisplayOptions implements Node {
   _id: ID!
   id: ID!
+  organization: Organization
   show_bounty_amounts: Boolean!
   user: User!
   view_profile: String!
@@ -43559,6 +43483,46 @@ type VerifySamlProviderPayload implements MutationResult {
   ): ErrorConnection!
   saml_provider: SamlProvider
   was_successful: Boolean!
+}
+
+"""
+Virtual notification object
+"""
+type VirtualNotification implements Node {
+  _id: Int!
+  activity_id: Int
+  actor_name: String!
+  affected_names: String
+  amount: String
+  avatar: String!
+  award_amount: String
+  award_amount_lead: String
+  bonus_amount: String
+  checklist_check_title: String
+  created_at: String!
+  custom_message: String
+  expiration_date: String
+  group_name: String
+  id: ID!
+  is_internal: Boolean
+  is_user_first_to_agree: String
+  message: String
+  number_of_checks: Int
+  old_team_name: String
+  pentest_check_name: String
+  pentest_end: String
+  pentest_name: String
+  pentest_start: String
+  pentest_timezone: String
+  readable_closing_substate: String
+  report_id: Int
+  report_title: String
+  target_username: String
+  team_name: String
+  timestamp: Int!
+  type: String!
+  unread: Boolean!
+  url: String
 }
 
 """
