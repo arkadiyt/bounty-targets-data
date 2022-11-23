@@ -6641,6 +6641,7 @@ type ConsumptionSubscription implements Node {
   number_remaining: Float!
   number_total: Float!
   number_used: Int!
+  purchase_by_date: DateTime!
   starts_at: DateTime!
 }
 
@@ -9701,6 +9702,7 @@ input CreatePentestOpportunityInput {
   """
   clientMutationId: String
   company_name: String
+  consumption_subscription_id: Int
   customer_email: String
   organization_id: Int
 }
