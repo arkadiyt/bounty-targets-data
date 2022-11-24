@@ -13573,6 +13573,7 @@ type DisableOrganizationSamlProviderPayload implements MutationResult {
   A unique identifier for the client performing the mutation.
   """
   clientMutationId: String
+  current_user_downgraded: Boolean!
   errors(
     """
     Returns the elements in the list that come after the specified cursor.
@@ -24863,6 +24864,7 @@ type Query implements Node {
     report_ids: [Int!]!
   ): TeamConnection
   bank_transfer_reference: BankTransferReference
+  campaign(id: Int!): Campaign
   campaign_objectives(
     """
     Returns the elements in the list that come after the specified cursor.
