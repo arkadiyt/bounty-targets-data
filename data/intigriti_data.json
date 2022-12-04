@@ -1,10 +1,10 @@
 [
   {
-    "id": "c9ee4224-8db2-4549-aa71-252e6c5025a8",
-    "name": "Access router",
-    "company_handle": "kuleuven",
-    "handle": "accessrouter",
-    "url": "https://www.intigriti.com/programs/kuleuven/accessrouter/detail",
+    "id": "16961f97-925b-42fd-b4df-5459f0a89627",
+    "name": " Challenge 1122 by H4R3L",
+    "company_handle": "intigriti",
+    "handle": "challenge1122",
+    "url": "https://www.intigriti.com/programs/intigriti/challenge1122/detail",
     "status": "open",
     "confidentiality_level": "public",
     "min_bounty": {
@@ -12,24 +12,14 @@
       "currency": "EUR"
     },
     "max_bounty": {
-      "value": 2500.0,
+      "value": 0.0,
       "currency": "EUR"
     },
     "targets": {
       "in_scope": [
         {
-          "type": "iprange",
-          "endpoint": "193.190.253.188",
-          "description": null
-        },
-        {
-          "type": "iprange",
-          "endpoint": "2a02:2c40:300:5::2",
-          "description": null
-        },
-        {
           "type": "url",
-          "endpoint": "lrswitch-access-2.kulnet.kuleuven.be",
+          "endpoint": "https://challenge-1122.intigriti.io/",
           "description": null
         }
       ],
@@ -100,6 +90,55 @@
           "type": "url",
           "endpoint": "wss://socketcluster.the-strip.eu",
           "description": null
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
+    "id": "30f445f7-ca4c-4130-9434-49add5c6ac74",
+    "name": "Algemeen Dagblad",
+    "company_handle": "dpgm",
+    "handle": "algemeendagblad",
+    "url": "https://www.intigriti.com/programs/dpgm/algemeendagblad/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "min_bounty": {
+      "value": 0.0,
+      "currency": "EUR"
+    },
+    "max_bounty": {
+      "value": 2000.0,
+      "currency": "EUR"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "url",
+          "endpoint": "myaccount.ad.nl",
+          "description": null
+        },
+        {
+          "type": "url",
+          "endpoint": "webwinkel.ad.nl",
+          "description": null
+        },
+        {
+          "type": "url",
+          "endpoint": "www.ad.nl",
+          "description": "excluding\n* ad.nl/service\n* ad.nl/inloggen\n* ad.nl/login\n* ad.nl/registreren"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.ad.nl/abonnementen",
+          "description": null
+        },
+        {
+          "type": "url",
+          "endpoint": "*.ad.nl",
+          "description": "excluding abonnement.ad.nl"
         }
       ],
       "out_of_scope": [
@@ -782,6 +821,60 @@
           "type": "url",
           "endpoint": "www.delen.be/en ",
           "description": "🇬🇧🇫🇷🇳🇱"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
+    "id": "43e4eb4b-f2c8-4307-80a6-7ce739469867",
+    "name": "Digitaal Vlaanderen",
+    "company_handle": "vod",
+    "handle": "digitaalvlaanderen",
+    "url": "https://www.intigriti.com/programs/vod/digitaalvlaanderen/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "min_bounty": {
+      "value": 50.0,
+      "currency": "EUR"
+    },
+    "max_bounty": {
+      "value": 1500.0,
+      "currency": "EUR"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "url",
+          "endpoint": "*.vlaanderen.be",
+          "description": "All and any subsites of https://www.vlaanderen.be, \n-for which authentication is not needed\n-for which creation of account(s) is not needed\n\nFor some subsites, a government entity other than Digitaal Vlaanderen may be responsible. We can accept the disclosed vulnerability and relay the issue to the concerned entity, yet we then cannot guarantee they will (be able to) fix it.\n\n\n"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://beta.gastwebsite-acm.burgerprofiel.ext-vlaanderen.be",
+          "description": "**Authenticated** demo environment for the widget platform. The website itself is just an illustrative example and should not be tested."
+        },
+        {
+          "type": "url",
+          "endpoint": "https://beta.gastwebsite.burgerprofiel.ext-vlaanderen.be",
+          "description": "**Unauthenticated** demo environment for the widget platform. The website itself is just an illustrative example and should not be tested."
+        },
+        {
+          "type": "url",
+          "endpoint": "https://beta.widgets.burgerprofiel.dev-vlaanderen.be/",
+          "description": "Embeddable portion of My Citizen Profile\n"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://burgerprofiel.beta-vlaanderen.be",
+          "description": "My Citizen Profile (Mijn Burgerprofiel in Dutch) is the go-to spot for citizens to manage their affairs digitally with the government. Citizens can access their personal data, consult status reports, download certificates, and request new government services such as a permit of subsidy. My Citizen Profile is a plug-in that can be integrated into different official government websites, be it on a Flemish or local level.\n\nAvailable in Dutch - More information can also be found on https://www.vlaanderen.be/uw-overheid/mijn-burgerprofiel (only in Dutch).\n\nThis beta environment is equiped with a mock authentication (OpenID) service, which can generate tokens for different kinds of accounts. As such, the authentication flow of this mocked service is not in scope."
+        },
+        {
+          "type": "url",
+          "endpoint": "https://vo-gebruikersbeheer.vlaanderen.be/",
+          "description": "User Management (IDM) is a platform with which you can manage the inflow and outflow of people and their rights to applications.\n\nIt is a central rights management for different applications within the entire Flemish administration. It controls the inflow and outflow of employees and their rights and is editable to be tailored to the tasks of each employee.\n\nMore information is available on www.vlaanderen.be/gebruikersbeheer. There is detailed product and technical information available for download (in Dutch only).\n\nTo be able to test the platform, you will need to create a (dummy) account in our test environment. You can only do this with your intigriti.me e-mail account via a self-registering system available at https://zelfregistratie-gebruikersbeheer-ti.vlaanderen.be/user/aanvraag_werkrelatie?dg=EA&oc=0415928179. You can register with “Kinepolis Group” as a \"Hoofd Lokale Beheerder\". When you do so, please send an e-mail to webidm@hbplus.be with in the subject line \"Project Intigriti\". We will inform you when the right has been given.\n\nThe application is also available in English via this link: https://gebruikersbeheer-ti.vlaanderen.be/webidm/?lang=en."
         }
       ],
       "out_of_scope": [
@@ -2797,50 +2890,6 @@
     }
   },
   {
-    "id": "0f05f9cd-03e1-4f90-a449-2f43cdaf879a",
-    "name": "Port of Antwerp-Bruges",
-    "company_handle": "portofantwerp",
-    "handle": "portofantwerp",
-    "url": "https://www.intigriti.com/programs/portofantwerp/portofantwerp/detail",
-    "status": "open",
-    "confidentiality_level": "public",
-    "min_bounty": {
-      "value": 0.0,
-      "currency": "EUR"
-    },
-    "max_bounty": {
-      "value": 0.0,
-      "currency": "EUR"
-    },
-    "targets": {
-      "in_scope": [
-        {
-          "type": "url",
-          "endpoint": "*.c-point.be",
-          "description": null
-        },
-        {
-          "type": "url",
-          "endpoint": "*.portofantwerpbruges.com",
-          "description": "Out of scope:\njobs.portofantwerpbruges.com, media.portofantwerpbruges.com, register.portofantwerp.com & future.portofantwerp.com"
-        },
-        {
-          "type": "iprange",
-          "endpoint": "188.118.8.0/25",
-          "description": null
-        },
-        {
-          "type": "iprange",
-          "endpoint": "94.107.237.192/26",
-          "description": null
-        }
-      ],
-      "out_of_scope": [
-
-      ]
-    }
-  },
-  {
     "id": "b2049472-b637-49c3-b9cc-077c676f093c",
     "name": "Randstad",
     "company_handle": "randstad",
@@ -4553,125 +4602,6 @@
     }
   },
   {
-    "id": "0f95dabb-d299-4574-befc-bb96a3bafb42",
-    "name": "Visma",
-    "company_handle": "visma",
-    "handle": "visma",
-    "url": "https://www.intigriti.com/programs/visma/visma/detail",
-    "status": "open",
-    "confidentiality_level": "public",
-    "min_bounty": {
-      "value": 100.0,
-      "currency": "EUR"
-    },
-    "max_bounty": {
-      "value": 7500.0,
-      "currency": "EUR"
-    },
-    "targets": {
-      "in_scope": [
-        {
-          "type": "ios",
-          "endpoint": "564141518",
-          "description": "**Visma Scanner**\nVisma Scanner is a mobile app used for sending receipts and invoices to your Visma accounting system.\nThe iOS version of the app can be found here:\nhttps://apps.apple.com/us/app/visma-scanner/id564141518\nPlease read and follow the steps in the Startup guide to create an account and start hacking: https://vismabugbountyprod.z16.web.core.windows.net/VismaScanner-getting-started.pdf\n\n**Out of scope:**\n* Session invalidation issues (e.g. logout, password change, email change, role change, user deletion, etc)\n* Private screen exposure in the app\n* Stack traces from api calls\n* Jailbroken devices is out of scope\n* All options for login are out of scope, except eAccounting (please see details in the \"Getting Started instructions document\"\n\n\n"
-        },
-        {
-          "type": "url",
-          "endpoint": "accountsettings.connect.identity.stagaws.visma.com",
-          "description": "**Connect**\nSee instructions for domain \"connect.identity.stagaws.visma.com\".\n\n**Out of scope:**\n* Session invalidation after enabling 2FA - by design intended to work like this\n"
-        },
-        {
-          "type": "url",
-          "endpoint": "admin.stage.vismaonline.com",
-          "description": "**Visma Online**\nThis is the old interface for the customer's administrators to administrate the company, where we still have some functionality that has not been moved to the new interface. For example invoicing information and everything regarding collaborations with AO. The collaboration part is out of scope as long as the use of student companies.\nPlease read the Getting Started Instructions in the \"myservices.stage.vismaonline.com\" asset description.\n\n**Out of scope:**\n* Session invalidation issues (e.g. logout, password change, email change, role change, user deletion, etc).\n"
-        },
-        {
-          "type": "url",
-          "endpoint": "ai-testing.maventa.com",
-          "description": "**AutoInvoice**\n\nThis is the main UI for Visma AutoInvoice. AutoInvoice is Visma's automated and fully ERP integrated service for sending, receiving and handling invoices. AutoInvoice converts and exchanges electronic invoices, optionally prints invoices that can't be sent electronically, receives and interpret PDF invoices and offers services for scanning and interpretation of paper invoices. AutoInvoice handles both Business to Business (B2B) and Business to Consumer (B2C) invoices.\n\nUses partially the embeddable user interface from autointerface-embeddable-stage.maventa.com\n\nCreate a test account on https://ai-testing.maventa.com/registrations, or use one of the demo accounts in the getting started instructions below:\nhttps://vismabugbountyprod.z16.web.core.windows.net/VismaAutoinvoice-getting-started.pdf\n\n**Out of scope or works as expected (accepted risk):**\n\n* adding users to your own company without consent\n* language change CSRF\n* application level DOS from /gdpr endpoint\n* duplicate BID/organization number check on registration can be circumvented by race condition (e.g. open two accounts with same BID/org number at same time)\n* IDOR to delete Invoice ID's belonging to different companies by using GDPR removal form (background job checks the right to delete invoices)\n* Hyperlink Injection via emails while adding users to your company\n* User Enumeration via Timing Discrepancy while registering new users\n* Logout CSRF\n\nNote! ai-testing.maventa.com and testing.maventa.com point to the same application but have different branding on the UI. Authentication to the user interface is handled using the Visma Connect service."
-        },
-        {
-          "type": "url",
-          "endpoint": "api.home.stag.visma.com",
-          "description": "**Visma.net Platform/ODP**\nSee instructions for domain \"connect.identity.stagaws.visma.com\"."
-        },
-        {
-          "type": "url",
-          "endpoint": "api.workbox.dk",
-          "description": "**Dinero**\nThis is Dinero's Public API.See instructions for \"app.workbox.dk\""
-        },
-        {
-          "type": "url",
-          "endpoint": "app.workbox.dk",
-          "description": "**Dinero**\nDinero is an accounting software for sole traders and micro businesses based out of Denmark. Our only target group is danish companies and therefore the interface is in danish only.The application is a SaaS application hosted in the cloud and consists of a main application and a number of supportive microservices.\n\nSee the getting started document here: https://vismabugbountyprod.z16.web.core.windows.net/VismaDinero-getting-started.pdf\n\n**Out of scope:**\n* Issues related to login /user creation / forgot-password and /profile page\n* The Cookie \".AspNet.Cookies\" is not set with HttpOnly which is a known vulnerability - please do not report it.\n* Session invalidation issues (e.g. logout, password change, email change, role change, user deletion, etc).\n* Getting access to Pro features as Free user.\n\n\n"
-        },
-        {
-          "type": "url",
-          "endpoint": "authz.workbox.dk",
-          "description": "**Dinero**\nUsed for Authorization (OAuth). See instructions for \"app.workbox.dk\"\n\n**Out of scope:**\n* Issues related to login /user creation / forgot-password and /profile page\n* The Cookie \".AspNet.Cookies\" is not set with HttpOnly which is a known vulnerability - please do not report it.\n* Session invalidation issues (e.g. logout, password change, email change, role change, user deletion, etc)."
-        },
-        {
-          "type": "url",
-          "endpoint": "autointerface.stag.visma.net",
-          "description": "**AutoInvoice**\nSee instructions for domain 'ai-testing.maventa.com' to get user credentials.\n\nThe same resource can be accessed through the URL **autointerface-embeddable-stage.maventa.com**\n\nAll data processing is done through the REST API at ax-stage.maventa.com\n\n**Out of scope or works as expected (accepted risk):**\n* Clickjacking is out of scope for this asset since it is designed to be framed (embedded) in other 3rd party services.\n* Regular users are allowed to view certain admin settings pages (but not allowed to edit the settings)\n\n"
-        },
-        {
-          "type": "url",
-          "endpoint": "ax-stage.maventa.com",
-          "description": "**AutoInvoice**\nhttps://ax-stage.maventa.com is a REST API connected to Visma AutoInvoice.\n\nAPI documentation is available on https://documentation.maventa.com/rest-api/ and https://ax-stage.maventa.com/swagger/#/\n\nSee instructions for domain 'ai-testing.maventa.com' to get user credentials.\n\n**Out of scope or works as expected (accepted risk):**\n* Regular users are allowed to read certain company settings even though they are not perhaps visible in the UI (but they are not allowed to edit the settings)"
-        },
-        {
-          "type": "android",
-          "endpoint": "com.visma.blue",
-          "description": "**Visma Scanner**\nVisma Scanner is a mobile app used for sending receipts and invoices to your Visma accounting system.\nThe Andriod version of the app can be found here:\nhttps://play.google.com/store/apps/details?id=com.visma.blue&hl=en\nPlease read and follow the steps in the Startup guide to create an account and start hacking: https://vismabugbountyprod.z16.web.core.windows.net/VismaScanner-getting-started.pdf\n\n**Out of scope:**\n* Session invalidation issues (e.g. logout, password change, email change, role change, user deletion, etc)\n* Private screen exposure in the app\n* Stack traces from api calls\n* Jailbroken devices is out of scope\n* All options for login are out of scope, except eAccounting (please see details in the \"Getting Started instructions document\""
-        },
-        {
-          "type": "url",
-          "endpoint": "connect.identity.stagaws.visma.com",
-          "description": "**Connect**\nVisma Connect is featurewise a small but critical component in the Visma portfolio. It is a single sign-on solution used by many Visma services. It is also the place where users manage security preferences such as passwords, MFA, 2FA, email and other account settings.\n\nUser accounts for testing can be created on https://connect.identity.stagaws.visma.com (this signup flow is not available in production).\n\nThe test accounts will not have access to any other services right now, so testing is limited to the login portal itself.\n\n**Out of scope:**\n* Session invalidation after enabling 2FA - by design intended to work like this.\n"
-        },
-        {
-          "type": "url",
-          "endpoint": "eaccounting.stage.vismaonline.com",
-          "description": "**eAccounting**\nThis is \"Visma eAccounting\" (aka Visma eEkonomi / Visma ePasseli) which is an ERP system available in Sweden, Norway, Finland and The Netherlands.\n\nWe've added into scope also the eEkonomi \"Visma Lön Smart\" which is a subservice of eAccounting. This can be found after you activate your account (check out the instructions bellow).\n\nYou can read more on https://www.visma.no/eaccounting/english/\n\nYou need to register an user to test this system. The sign-up up process is described in this document:\nhttps://vismabugbountyprod.z16.web.core.windows.net/Visma-eAccounting-getting-started.pdf\n\nThis video also shows the entire setup (only Swedish audio) https://www.youtube.com/watch?v=kVr_CXgfhi0&t=4s\n\nTLDR: Goto https://admin.stage.vismaonline.com/Customer/StudentSignup.aspx and sign up with the training code \"04h2v\"\n\n**Out of scope:**\n* Session invalidation issues (e.g. logout, password change, email change, role change, user deletion, etc).\n* Modification of gray-out fields when logged in with an admin account.\n* Improper access control: manipulation of the message conversation by members that have no permission (edit subject, join thread conversation, closing the conversation).\n* Email phishing\n* PDF injection\n* Permissions for Lön Smart (the permissions in eAccounting don´t apply at all for Lön Smart).\n* Possibility to create Orders and Quotes with amount 0€\n* Race Condition in article stock limits"
-        },
-        {
-          "type": "url",
-          "endpoint": "eaccountingprinting.stage.vismaonline.com",
-          "description": "**eAccounting**\nYou reach this asset by creating and viewing a report under the Accounting/Reports menu as a logged on user in asset \"eaccounting.stage.vismaonline.com\"\n"
-        },
-        {
-          "type": "url",
-          "endpoint": "identity.stage.vismaonline.com",
-          "description": "**Visma Online**\nVisma Connect is used as identity provider, but an own identity server is used to provide JWT tokens that are used by MyServices (and others). \nPlease read the Getting Started instructions document in the \"myservices.stage.vismaonline.com\" asset description.\n\n**Out of scope:**\n* Session invalidation issues (e.g. logout, password change, email change, role change, user deletion, etc).\n"
-        },
-        {
-          "type": "url",
-          "endpoint": "myservices-api.stage.vismaonline.com",
-          "description": "**Visma Online**\nThis is the API behind \"myservices.stage.vismaonline.com\".\nPlease read the Getting Started instructions document in the asset description \"myservices.stage.vismaonline.com\"."
-        },
-        {
-          "type": "url",
-          "endpoint": "myservices.stage.vismaonline.com",
-          "description": "**Visma Online**\nThis is an interface where the customer's users can access all their services, and customer's administrators can manage users on the company and manage users' access to services that the company has. \nMore information about the service and test accounts creation can be found here:\nhttps://vismabugbountyprod.z16.web.core.windows.net/VismaOnline-getting-started.pdf\n\n**Out of scope:**\n* Session invalidation issues (e.g. logout, password change, email change, role change, user deletion, etc).\n\n"
-        },
-        {
-          "type": "url",
-          "endpoint": "oauth.developers.stagaws.visma.com",
-          "description": "**Visma Developer Portal**\nVisma Developer Portal is used both internally and externally by developers for registering OAuth 2.0/OpenID Connect applications for Single-Sign-On with Visma (Visma Connect) and/or API integration.\n\nExisting Visma Connect users accounts can be used for testing. We also allow registration of new users if needed.\n\nUsers need to register an organization as part of the sign-in or to be added (invite) to an existing organization by organization's manager. The user which registers the organization also gets manager role assigned.\n\nEach organization has its own set of OAuth 2.0/OpenID Connect applications.\n\nPlease read the Getting Started Instructions here: https://vismabugbountyprod.z16.web.core.windows.net/VismaDeveloperPortal-getting-started.pdf\n\n\n\n**Out of scope:**\n* session invalidation across browsers/devices - this is how it is intended to work by design\n* issues related to other APIs except DevPortal Bug Bounty Interactive and DevPortal Bug Bounty Non-Interactive"
-        },
-        {
-          "type": "url",
-          "endpoint": "testing.maventa.com",
-          "description": "**AutoInvoice**\nhttps://testing.maventa.com/apis/v1.1/wsdl is a SOAP API connected to Visma AutoInvoice.\n\nAPI documentation is available on https://documentation.maventa.com/soap-api/\n\nSee instructions for domain 'ai-testing.maventa.com' to get user credentials."
-        }
-      ],
-      "out_of_scope": [
-
-      ]
-    }
-  },
-  {
     "id": "3e51fb18-7082-4ce5-85d0-2bd889b5ed4e",
     "name": "Visma Responsible Disclosure",
     "company_handle": "visma",
@@ -5122,7 +5052,7 @@
         },
         {
           "type": "ios",
-          "endpoint": "itsme/id1181309300",
+          "endpoint": "1181309300",
           "description": null
         },
         {
