@@ -1049,6 +1049,14 @@
         },
         {
           "type": "other",
+          "target": "Assets - Confluence Macro - DataCenter - https://marketplace.atlassian.com/apps/1216074/assets-confluence-macro?hosting=datacenter"
+        },
+        {
+          "type": "other",
+          "target": "Assets - Confluence Macro - Server - https://marketplace.atlassian.com/apps/1216074/assets-confluence-macro?hosting=server"
+        },
+        {
+          "type": "other",
           "target": "Assets - DataCenter - https://marketplace.atlassian.com/apps/1212137/assets?hosting=datacenter"
         },
         {
@@ -1085,14 +1093,6 @@
         },
         {
           "type": "other",
-          "target": "Assets - Macro for Confluence - DataCenter - https://marketplace.atlassian.com/apps/1216074/assets-macro-for-confluence?hosting=datacenter"
-        },
-        {
-          "type": "other",
-          "target": "Assets - Macro for Confluence - Server - https://marketplace.atlassian.com/apps/1216074/assets-macro-for-confluence?hosting=server"
-        },
-        {
-          "type": "other",
           "target": "Assets - NVD Integration - DataCenter - https://marketplace.atlassian.com/apps/1220353/assets-nvd-integration?hosting=datacenter"
         },
         {
@@ -1106,6 +1106,10 @@
         {
           "type": "other",
           "target": "Assets - SCCM Integration - Server - https://marketplace.atlassian.com/apps/1219094/assets-sccm-integration?hosting=server"
+        },
+        {
+          "type": "other",
+          "target": "Assets - Server - https://marketplace.atlassian.com/apps/1212137/assets?hosting=server"
         },
         {
           "type": "other",
@@ -1213,11 +1217,11 @@
         },
         {
           "type": "other",
-          "target": "Automation for Jira - Data Center and Server - DataCenter - https://marketplace.atlassian.com/apps/1215460/automation-for-jira-data-center-and-server?hosting=datacenter"
+          "target": "Automation for Jira - Data Center and Server - Server - https://marketplace.atlassian.com/apps/1215460/automation-for-jira-data-center-and-server?hosting=server"
         },
         {
           "type": "other",
-          "target": "Automation for Jira - Data Center and Server - Server - https://marketplace.atlassian.com/apps/1215460/automation-for-jira-data-center-and-server?hosting=server"
+          "target": "Automation for Jira - DataCenter - https://marketplace.atlassian.com/apps/1215460/automation-for-jira?hosting=datacenter"
         },
         {
           "type": "other",
@@ -1418,6 +1422,14 @@
         {
           "type": "other",
           "target": "Dependency Graph Plugin for Bamboo - Server - https://marketplace.atlassian.com/apps/1215979/dependency-graph-plugin-for-bamboo?hosting=server"
+        },
+        {
+          "type": "other",
+          "target": "Developer Assistant for Confluence - Cloud - https://marketplace.atlassian.com/apps/1229446/developer-assistant-for-confluence?hosting=cloud"
+        },
+        {
+          "type": "other",
+          "target": "Developer Assistant for Jira - Cloud - https://marketplace.atlassian.com/apps/1229343/developer-assistant-for-jira?hosting=cloud"
         },
         {
           "type": "other",
@@ -5970,7 +5982,7 @@
         },
         {
           "type": "website",
-          "target": "*.geotab.com/"
+          "target": "*.geotab.com (some exceptions for out of scope)"
         },
         {
           "type": "website",
@@ -7957,6 +7969,10 @@
         {
           "type": "website",
           "target": "https://fr.shop.lululemon.com"
+        },
+        {
+          "type": "website",
+          "target": "lululemon.cn"
         }
       ]
     }
@@ -10341,6 +10357,10 @@
         },
         {
           "type": "website",
+          "target": "app.opera.com"
+        },
+        {
+          "type": "website",
           "target": "apps.opera.com"
         },
         {
@@ -10352,7 +10372,7 @@
           "target": "certs.opera.com"
         },
         {
-          "type": "other",
+          "type": "website",
           "target": "checkout.opera.com"
         },
         {
@@ -10362,6 +10382,10 @@
         {
           "type": "website",
           "target": "investor.opera.com"
+        },
+        {
+          "type": "website",
+          "target": "mobilestore.opera.com"
         }
       ]
     }
@@ -11548,6 +11572,25 @@
     }
   },
   {
+    "name": "Registrar.gov: Bug Bounty Program",
+    "url": "https://bugcrowd.com/registrar-dotgov",
+    "allows_disclosure": true,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "none",
+    "max_payout": 3500,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "website",
+          "target": "https://domains.dotgov.gov"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
     "name": "Railroad Retirement Board - Vulnerability Disclosure Program",
     "url": "https://bugcrowd.com/rrb-vdp",
     "allows_disclosure": true,
@@ -11992,48 +12035,6 @@
       ],
       "out_of_scope": [
 
-      ]
-    }
-  },
-  {
-    "name": "Segment",
-    "url": "https://bugcrowd.com/segment",
-    "allows_disclosure": true,
-    "managed_by_bugcrowd": true,
-    "safe_harbor": "full",
-    "max_payout": 2500,
-    "targets": {
-      "in_scope": [
-        {
-          "type": "website",
-          "target": "Any host / web property verified to be owned by Segment (domains/IP space/etc.)"
-        },
-        {
-          "type": "other",
-          "target": "Source code of Website, Mobile, or Server Libraries (https://segment.com/docs/sources/)"
-        },
-        {
-          "type": "api",
-          "target": "api.segment.io"
-        },
-        {
-          "type": "website",
-          "target": "app.segment.com"
-        }
-      ],
-      "out_of_scope": [
-        {
-          "type": "website",
-          "target": "community.segment.com"
-        },
-        {
-          "type": "website",
-          "target": "segment.com/contact"
-        },
-        {
-          "type": "website",
-          "target": "segment.com/jobs"
-        }
       ]
     }
   },
@@ -13684,7 +13685,7 @@
   {
     "name": "The Scotts Miracle-Gro Company Responsible Disclosure",
     "url": "https://bugcrowd.com/thescottsmiraclerd",
-    "allows_disclosure": false,
+    "allows_disclosure": true,
     "managed_by_bugcrowd": true,
     "safe_harbor": "partial",
     "max_payout": 0,
@@ -14439,6 +14440,10 @@
           "target": " tsock.us1.twilio.com"
         },
         {
+          "type": "other",
+          "target": "Any host / web property verified to be owned by Segment (domains/IP space/etc.)\t"
+        },
+        {
           "type": "website",
           "target": "Any host/web property verified to be owned by Twilio"
         },
@@ -14453,6 +14458,10 @@
         {
           "type": "ios",
           "target": "Authy iOS app"
+        },
+        {
+          "type": "other",
+          "target": "Source code of Website, Mobile, or Server Libraries (https://segment.com/docs/sources/)"
         },
         {
           "type": "api",
@@ -14484,11 +14493,19 @@
         },
         {
           "type": "api",
+          "target": "api.segment.io"
+        },
+        {
+          "type": "api",
           "target": "api.sendgrid.com"
         },
         {
           "type": "api",
           "target": "api.twilio.com"
+        },
+        {
+          "type": "website",
+          "target": "app.segment.com"
         },
         {
           "type": "website",
@@ -14550,6 +14567,10 @@
         },
         {
           "type": "website",
+          "target": "community.segment.com"
+        },
+        {
+          "type": "website",
           "target": "https://dashboard.authy.com"
         },
         {
@@ -14563,6 +14584,14 @@
         {
           "type": "website",
           "target": "s.signal.twilio.com"
+        },
+        {
+          "type": "website",
+          "target": "segment.com/contact"
+        },
+        {
+          "type": "website",
+          "target": "segment.com/jobs\t"
         },
         {
           "type": "website",
@@ -14619,25 +14648,6 @@
         {
           "type": "website",
           "target": "https://opendata.test-socrata.com/admin/gateway"
-        }
-      ],
-      "out_of_scope": [
-
-      ]
-    }
-  },
-  {
-    "name": "Ubisoft VDP",
-    "url": "https://bugcrowd.com/ubisoft-vdp",
-    "allows_disclosure": false,
-    "managed_by_bugcrowd": true,
-    "safe_harbor": "none",
-    "max_payout": 0,
-    "targets": {
-      "in_scope": [
-        {
-          "type": "other",
-          "target": "Ubisoft services available from the internet and any software developed by Ubisoft that are not listed as Out of Scope. This includes our web applications, servers, and all our game(s) within 1 year of the last patch/update."
         }
       ],
       "out_of_scope": [
@@ -16637,6 +16647,60 @@
       ],
       "out_of_scope": [
 
+      ]
+    }
+  },
+  {
+    "name": "Verisign",
+    "url": "https://bugcrowd.com/verisign",
+    "allows_disclosure": false,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "partial",
+    "max_payout": 10000,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "other",
+          "target": " b.gtld-servers.net (DNS service; DNS related)"
+        },
+        {
+          "type": "website",
+          "target": "*.domainscope.com"
+        },
+        {
+          "type": "website",
+          "target": "*.namestudioforsocial.com"
+        },
+        {
+          "type": "website",
+          "target": "*.youcouldbe.com"
+        },
+        {
+          "type": "other",
+          "target": "a.root-servers.net (DNS service; DNS related)"
+        },
+        {
+          "type": "other",
+          "target": "a1.verisigndns.com (DNS service; DNS related)"
+        },
+        {
+          "type": "website",
+          "target": "blog.verisign.com (Website; non-DNS related)"
+        },
+        {
+          "type": "other",
+          "target": "epptool-ctld.verisign-grs.com (EPP service; DNS related)"
+        },
+        {
+          "type": "website",
+          "target": "www.verisign.com (Website; non-DNS related)"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "other",
+          "target": "64.6.64.6, 64.6.65.6 (DNS Service: DNS related)"
+        }
       ]
     }
   },
