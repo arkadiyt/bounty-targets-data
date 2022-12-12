@@ -4479,13 +4479,14 @@ type BountyCompetitivenessData implements Node {
 }
 
 type BountyCompetitivenessPercentile implements Node {
-  critical: BountyCompetitivenessData!
-  high: BountyCompetitivenessData!
+  critical: BountyCompetitivenessData
+  high: BountyCompetitivenessData
 
   """
   ID of the object.
   """
   id: ID!
+  status: String!
 }
 
 input BountyCompetitivenessPercentileInput {
