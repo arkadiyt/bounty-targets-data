@@ -5012,11 +5012,11 @@ BundleSubscription
 """
 type BundleSubscription implements Node & ResourceInterface {
   _id: ID!
-  awarding_retesters: Boolean!
-  handled_by_triage: Boolean!
+  awarding_retesters: Boolean
+  handled_by_triage: Boolean
   id: ID!
   tag: RetestSubscriptionTag
-  triage: Boolean!
+  triage: Boolean
   url: URI!
 }
 
