@@ -25716,15 +25716,6 @@ type RankedCveEntry implements Node {
   cwe_id: String
   cwe_name: String
   id: ID!
-  p25_remediation_time: Int
-  p25_severity_rating: String
-  p25_severity_rating_index: Int
-  p50_remediation_time: Int
-  p50_severity_rating: String
-  p50_severity_rating_index: Int
-  p75_remediation_time: Int
-  p75_severity_rating: String
-  p75_severity_rating_index: Int
   rank: Int!
   remediation_time_1_month: Int!
   remediation_time_1_quarter: Int!
@@ -25735,7 +25726,6 @@ type RankedCveEntry implements Node {
   remediation_time_48_hours: Int!
   remediation_time_72_hours: Int!
   remediation_time_pending: Int!
-  reporter_submitted_count: Int!
   reports_submitted_count: Int!
   score: Float!
   severity_count_critical: Int!
@@ -25787,7 +25777,6 @@ type RankedCveEntry implements Node {
   submission_start_date_9_weeks_ago: Date!
   submission_start_date_trailing_12_to_24_weeks: Date!
   submission_start_date_trailing_12_weeks: Date!
-  teams_submitted_count: Int!
 }
 
 """
