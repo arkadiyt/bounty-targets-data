@@ -7998,6 +7998,7 @@ input CreateDemoInput {
   A unique identifier for the client performing the mutation.
   """
   clientMutationId: String
+  darktrace_brands: [DarktraceBrandInputType!]
   name: String!
   website: String!
   with_assessment_engagement: Boolean
@@ -12188,6 +12189,11 @@ enum CweEntryOrderField {
 input CweEntryOrderInput {
   direction: OrderDirection!
   field: CweEntryOrderField!
+}
+
+input DarktraceBrandInputType {
+  domains: [String!]!
+  name: String!
 }
 
 """
