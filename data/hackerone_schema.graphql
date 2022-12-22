@@ -2516,6 +2516,7 @@ enum AnalyticsFromEnum {
   dim_custom_field_attributes
   dim_custom_field_values
   dim_invitations
+  dim_report_retests
   dim_reports
   dim_teams
   fct_invitation_cohorts
@@ -2608,6 +2609,54 @@ enum AnalyticsSelectFieldEnum {
   dim_invitations__organization_id
   dim_invitations__team_id
   dim_invitations__user_id
+  dim_report_retests__approved_at
+  dim_report_retests__approved_at_day
+  dim_report_retests__approved_at_month
+  dim_report_retests__approved_at_num_days_since
+  dim_report_retests__approved_at_quarter
+  dim_report_retests__approved_at_week
+  dim_report_retests__approved_at_year
+  dim_report_retests__canceled_at
+  dim_report_retests__canceled_at_day
+  dim_report_retests__canceled_at_month
+  dim_report_retests__canceled_at_num_days_since
+  dim_report_retests__canceled_at_quarter
+  dim_report_retests__canceled_at_week
+  dim_report_retests__canceled_at_year
+  dim_report_retests__claimed_at
+  dim_report_retests__claimed_at_day
+  dim_report_retests__claimed_at_month
+  dim_report_retests__claimed_at_num_days_since
+  dim_report_retests__claimed_at_quarter
+  dim_report_retests__claimed_at_week
+  dim_report_retests__claimed_at_year
+  dim_report_retests__created_at
+  dim_report_retests__created_at_day
+  dim_report_retests__created_at_month
+  dim_report_retests__created_at_quarter
+  dim_report_retests__created_at_week
+  dim_report_retests__created_at_year
+  dim_report_retests__is_fixed
+  dim_report_retests__organization_id
+  dim_report_retests__rejected_at
+  dim_report_retests__rejected_at_day
+  dim_report_retests__rejected_at_month
+  dim_report_retests__rejected_at_num_days_since
+  dim_report_retests__rejected_at_quarter
+  dim_report_retests__rejected_at_week
+  dim_report_retests__rejected_at_year
+  dim_report_retests__report_id
+  dim_report_retests__report_retest_id
+  dim_report_retests__state
+  dim_report_retests__team_handle
+  dim_report_retests__team_id
+  dim_report_retests__unclaimed_at
+  dim_report_retests__unclaimed_at_day
+  dim_report_retests__unclaimed_at_month
+  dim_report_retests__unclaimed_at_num_days_since
+  dim_report_retests__unclaimed_at_quarter
+  dim_report_retests__unclaimed_at_week
+  dim_report_retests__unclaimed_at_year
   dim_reports__asset_id
   dim_reports__asset_identifier
   dim_reports__asset_type
@@ -2625,10 +2674,21 @@ enum AnalyticsSelectFieldEnum {
   dim_reports__closed_at_quarter
   dim_reports__closed_at_week
   dim_reports__closed_at_year
+  dim_reports__disclosed_at
+  dim_reports__disclosed_at_day
+  dim_reports__disclosed_at_month
+  dim_reports__disclosed_at_num_days_since
+  dim_reports__disclosed_at_quarter
+  dim_reports__disclosed_at_week
+  dim_reports__disclosed_at_year
   dim_reports__invitation_cohort_id
   dim_reports__is_bounty_awarded
+  dim_reports__is_bounty_sla_missed
+  dim_reports__is_first_program_response_sla_failed
+  dim_reports__is_first_program_response_sla_missed
   dim_reports__is_imported
   dim_reports__is_resolved_report
+  dim_reports__is_resolved_sla_missed
   dim_reports__is_returning_reporter
   dim_reports__is_submitted_at_last_14_days
   dim_reports__is_submitted_at_last_180_days
@@ -2643,8 +2703,15 @@ enum AnalyticsSelectFieldEnum {
   dim_reports__is_submitted_at_prior_7_days
   dim_reports__is_submitted_at_prior_90_days
   dim_reports__is_submitted_by_team_member
+  dim_reports__is_triage_sla_failed
+  dim_reports__is_triage_sla_missed
   dim_reports__is_triaged_report
   dim_reports__is_valid_report
+  dim_reports__num_seconds_to_bounty
+  dim_reports__num_seconds_to_disclosed
+  dim_reports__num_seconds_to_first_program_response
+  dim_reports__num_seconds_to_resolved
+  dim_reports__num_seconds_to_triage
   dim_reports__organization_id
   dim_reports__report_id
   dim_reports__reporter_id
@@ -2661,17 +2728,30 @@ enum AnalyticsSelectFieldEnum {
   dim_reports__team_handle
   dim_reports__team_id
   dim_reports__total_bounty_amount
+  dim_reports__triaged_at
+  dim_reports__triaged_at_day
+  dim_reports__triaged_at_month
+  dim_reports__triaged_at_num_days_since
+  dim_reports__triaged_at_quarter
+  dim_reports__triaged_at_week
+  dim_reports__triaged_at_year
   dim_reports__weakness_id
   dim_reports__weakness_name
+  dim_teams__bounty_awarded_staleness_threshold
   dim_teams__currency
   dim_teams__handle
   dim_teams__name
+  dim_teams__new_staleness_threshold
+  dim_teams__new_staleness_threshold_limit
   dim_teams__offers_bounties
   dim_teams__only_cleared_hackers
   dim_teams__organization_id
+  dim_teams__resolved_staleness_threshold
   dim_teams__state
   dim_teams__team_created_at
   dim_teams__team_id
+  dim_teams__triaged_staleness_threshold
+  dim_teams__triaged_staleness_threshold_limit
   dim_teams__vpn_enabled
   fct_invitation_cohorts__cohort_created_at
   fct_invitation_cohorts__cohort_created_at_month
@@ -2721,6 +2801,8 @@ enum AnalyticsSelectFunctionEnum {
   count
   max
   min
+  p50c
+  p50d
   sum
 }
 
