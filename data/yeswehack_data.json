@@ -209,6 +209,41 @@
     }
   },
   {
+    "id": "ccm-net-ccm-benchmark-group",
+    "name": "CCM.net - CCM Benchmark Group",
+    "public": true,
+    "disabled": false,
+    "managed": null,
+    "min_bounty": 50,
+    "max_bounty": 1000,
+    "targets": {
+      "in_scope": [
+        {
+          "target": "https://ccm.net",
+          "type": "web-application"
+        },
+        {
+          "target": "https://beaute.journaldesfemmes.com/forum/",
+          "type": "web-application"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "target": "- Any subdomains (this scope is limited to https://ccm.net and https://beaute.journaldesfemmes.com)",
+          "type": "other"
+        },
+        {
+          "target": "- SPF / DKIM / ... configuration",
+          "type": "other"
+        },
+        {
+          "target": "- TLS Configuration (BEAST / ...)",
+          "type": "other"
+        }
+      ]
+    }
+  },
+  {
     "id": "contentsquare-bug-bounty-program",
     "name": "Contentsquare Bug Bounty Program",
     "public": true,
@@ -988,6 +1023,26 @@
           "target": "Any security issue on Yousign & mangopay not related with Kiwai",
           "type": "other"
         }
+      ]
+    }
+  },
+  {
+    "id": "linternaute-restaurant-ccm-benchmark-group",
+    "name": "L'internaute Restaurant - CCM Benchmark Group",
+    "public": true,
+    "disabled": false,
+    "managed": null,
+    "min_bounty": 50,
+    "max_bounty": 3000,
+    "targets": {
+      "in_scope": [
+        {
+          "target": "www.linternaute.com/restaurant",
+          "type": "web-application"
+        }
+      ],
+      "out_of_scope": [
+
       ]
     }
   },
