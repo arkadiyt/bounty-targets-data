@@ -4831,6 +4831,90 @@
     }
   },
   {
+    "id": "7999e698-363d-49e2-bd34-4ce47556d03c",
+    "name": "Water-Link",
+    "company_handle": "waterlink",
+    "handle": "water-link",
+    "url": "https://www.intigriti.com/programs/waterlink/water-link/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "min_bounty": {
+      "value": 50.0,
+      "currency": "EUR"
+    },
+    "max_bounty": {
+      "value": 3000.0,
+      "currency": "EUR"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "iprange",
+          "endpoint": "194.78.161.160/27",
+          "description": null
+        },
+        {
+          "type": "url",
+          "endpoint": "https://desktop.water-link.be/",
+          "description": "Our Citrix environment for remote access"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://mail.water-link.be",
+          "description": "Our Exchange mail server"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://pit.water-link.be/",
+          "description": "Our intranet portal"
+        },
+        {
+          "type": "other",
+          "endpoint": "Integration between client portal and Doccle",
+          "description": "We have a portal (eloket) on which customers can consult their water usage and their invoices.\nThe portal application is **out-of-scope** because it's hosted by a 3rd party.\n\nYou can claim test credentials for the test environment for MijnWaterlink through the Claim credentials button. \n\nThe application in itself is out of scope, but this integration with Doccle is part of the scope. \n\nIn Doccle, the customers can link their water-link account to their Doccle account; by doing this, the customer will receive its invoices electronically via Doccle.\n\nThe url of the test environment is: https://registrationa3d22975c.hana.ondemand.com/aanmelden/\n\nSee the FAQ section to get credentials.\n\nWe are interested to know if these can be accessed unauthorized and /or manipulated; can someone link other accounts than his own between Doccle and Water-link? Can you gain access to accounts of other users?\n\nSee video on doccle connect from Mijn waterlink:\n[https://app.intigriti.com/downloads/waterlink/mijnwater-link-doccle-connect.mp4](https://)"
+        },
+        {
+          "type": "url",
+          "endpoint": "SAML request from eloket towards the smart meter platform",
+          "description": "We have a portal (eloket) on which customers can consult their water usage and their invoices.\nThe portal application is **out-of-scope** because it's hosted by a 3rd party.\n\nHowever, to consult the usage registered by the digital meters, the user is redirected from within the portal to another service via a SAML-request.\n\nThe SAML-request and the consultation of the usage is **in scope** of the program.\n\nThe url of the test environment is: https://registrationa3d22975c.hana.ondemand.com/aanmelden/\n\nSee the FAQ section to get credentials.\n\nWe are interested to know if these can be accessed unauthorized and /or manipulated. "
+        },
+        {
+          "type": "url",
+          "endpoint": "*.water-link.be/",
+          "description": null
+        },
+        {
+          "type": "url",
+          "endpoint": "https://www.water-link-jaarverslag.be",
+          "description": "Domain with the annual figures of our organisation."
+        },
+        {
+          "type": "url",
+          "endpoint": "https://www.water-link-pensioenfonds.be",
+          "description": "Domain for the pensions of our employees "
+        },
+        {
+          "type": "url",
+          "endpoint": "https://www.water-link.be",
+          "description": "This is the general public website for our citizens."
+        },
+        {
+          "type": "url",
+          "endpoint": "https://www.waterstoring.be/",
+          "description": "Here our citizens can check if their is a (un)planned interruption of the watersupply."
+        },
+        {
+          "type": "url",
+          "endpoint": "https://aquawardsoperateacc.water-link.be",
+          "description": "CURRENTLY NOT ELIGIBLE FOR BOUNTIES BECAUSE A NEW VERSION IS UNDER DEVELOPMENT\n\nThis is the test environment of the web application, used by the public services to find information about the location of water distribution pipes. \n\nThis information is also consulted in case of emergency interventions, that's why the live environment is out-of-scope.\n\nOther URL's: \ngisacc(*).water-link.be"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
     "id": "ff0c5205-573b-410a-bb4d-e7c3c4de5d00",
     "name": "X-Road",
     "company_handle": "niis",
