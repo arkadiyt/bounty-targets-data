@@ -2471,6 +2471,48 @@
     }
   },
   {
+    "name": "Blackbaud Vulnerability Disclosure Program",
+    "url": "https://bugcrowd.com/blackbaud-vdp",
+    "allows_disclosure": false,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "full",
+    "max_payout": 0,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "website",
+          "target": "https://*.blackbaud.com/*"
+        },
+        {
+          "type": "website",
+          "target": "https://*.blackbaud.net/*"
+        },
+        {
+          "type": "website",
+          "target": "https://*.blackbaudhosting.com/*"
+        },
+        {
+          "type": "website",
+          "target": "https://*.blackbaudondemand.com/*"
+        },
+        {
+          "type": "website",
+          "target": "https://*.justgiving.com/"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "website",
+          "target": "http://community.blackbaud.com/"
+        },
+        {
+          "type": "website",
+          "target": "https://app.blackbaud.com/hostnet"
+        }
+      ]
+    }
+  },
+  {
     "name": "Bureau of Land Management",
     "url": "https://bugcrowd.com/blm-vdp",
     "allows_disclosure": true,
