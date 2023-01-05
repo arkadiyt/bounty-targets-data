@@ -2523,6 +2523,7 @@ enum AnalyticsFromEnum {
   dim_teams
   fct_invitation_cohorts
   fct_platform_benchmarks
+  fct_report_reporters
   fixture_intervals
   fixture_months
   fixture_quarters
@@ -2630,12 +2631,15 @@ enum AnalyticsSelectFieldEnum {
   dim_hacker_reports__submitted_at_year
   dim_hacker_reports__weakness_name
   dim_invitations__created_at
+  dim_invitations__created_at_day
   dim_invitations__created_at_month
   dim_invitations__created_at_quarter
   dim_invitations__created_at_week
   dim_invitations__created_at_year
   dim_invitations__invitation_id
   dim_invitations__is_accepted
+  dim_invitations__is_cancelled
+  dim_invitations__is_rejected
   dim_invitations__is_viewed
   dim_invitations__organization_id
   dim_invitations__team_id
@@ -2803,6 +2807,17 @@ enum AnalyticsSelectFieldEnum {
   fct_platform_benchmarks__p75_submission_count
   fct_platform_benchmarks__p90_submission_count
   fct_platform_benchmarks__start_at
+  fct_report_reporters__organization_id
+  fct_report_reporters__recognized_at
+  fct_report_reporters__recognized_at_day
+  fct_report_reporters__recognized_at_month
+  fct_report_reporters__recognized_at_num_days_since
+  fct_report_reporters__recognized_at_quarter
+  fct_report_reporters__recognized_at_week
+  fct_report_reporters__recognized_at_year
+  fct_report_reporters__report_id
+  fct_report_reporters__team_id
+  fct_report_reporters__user_id
   fixture_intervals__end_at
   fixture_intervals__interval
   fixture_intervals__start_at
