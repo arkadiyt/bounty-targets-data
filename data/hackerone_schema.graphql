@@ -5190,7 +5190,6 @@ type Campaign implements Node {
   researchers_information: String
   start_date: DateTime
   status: String!
-  structured_scope: StructuredScope
   structured_scopes(
     """
     Returns the elements in the list that come after the specified cursor.
@@ -21705,6 +21704,7 @@ type Organization implements Node {
   eligibility_settings: [TeamMemberEligibilitySettings!]
   enterprise: Boolean!
   features: [Feature]
+  h1_assets: Boolean
   handle: String!
   i_can_manage_organization_api_tokens: Boolean!
   i_can_manage_organization_assets: Boolean!
@@ -21857,6 +21857,31 @@ type Organization implements Node {
     order_by: FiltersSamlProviderFilterOrder
     where: FiltersSamlProviderFilterInput
   ): SamlProviderConnection
+  scope_management_teams(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+    order_by: TeamOrderInput
+    permissions: [PermissionEnum] = []
+    secure_order_by: FiltersTeamFilterOrder
+    where: FiltersTeamFilterInput
+  ): TeamConnection
   solutions(
     """
     Returns the elements in the list that come after the specified cursor.
@@ -25507,6 +25532,7 @@ type Query implements Node {
     """
     last: Int
     offset: Int
+    search: String
   ): RankedCveEntryConnection
   ranked_weaknesses_by_year(
     """
