@@ -14155,6 +14155,44 @@
     }
   },
   {
+    "name": "ThousandEyes Bug Bounty",
+    "url": "https://bugcrowd.com/thousandeyes-og",
+    "allows_disclosure": true,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "none",
+    "max_payout": 4500,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "other",
+          "target": "ThousandEyes Endpoint Agent "
+        },
+        {
+          "type": "other",
+          "target": "ThousandEyes Enterprise Agent"
+        },
+        {
+          "type": "api",
+          "target": "https://api.thousandeyes.com/"
+        },
+        {
+          "type": "website",
+          "target": "https://app.thousandeyes.com/"
+        },
+        {
+          "type": "website",
+          "target": "https://www.thousandeyes.com/"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "website",
+          "target": "https://blog.thousandeyes.com/"
+        }
+      ]
+    }
+  },
+  {
     "name": "Trello",
     "url": "https://bugcrowd.com/trello",
     "allows_disclosure": true,
