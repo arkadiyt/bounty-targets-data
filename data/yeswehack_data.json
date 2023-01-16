@@ -713,6 +713,37 @@
     }
   },
   {
+    "id": "dovecot",
+    "name": "Dovecot",
+    "public": true,
+    "disabled": false,
+    "managed": null,
+    "min_bounty": 100,
+    "max_bounty": 5000,
+    "targets": {
+      "in_scope": [
+        {
+          "target": "Dovecot IMAP Server and Pigeonhole SIEVE (see \"Software packages\" and \"Source code\")",
+          "type": "other"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "target": "All content which is not listed as \"Scopes\", especially any production system operated by customers",
+          "type": "other"
+        },
+        {
+          "target": "\"Scopes\" in this program refer to the binary packages and source-code provided there, the systems providing those artefacts are out of scope",
+          "type": "other"
+        },
+        {
+          "target": "Everything that is not directly related to the application or source-code in scope (e.g. GitHub, domain settings)",
+          "type": "other"
+        }
+      ]
+    }
+  },
+  {
     "id": "egerie-bug-bounty",
     "name": "EGERIE BUG BOUNTY",
     "public": true,
@@ -1502,6 +1533,41 @@
     }
   },
   {
+    "id": "app-suite",
+    "name": "OX App Suite",
+    "public": true,
+    "disabled": false,
+    "managed": null,
+    "min_bounty": 100,
+    "max_bounty": 5000,
+    "targets": {
+      "in_scope": [
+        {
+          "target": "https://sandbox.open-xchange.com",
+          "type": "web-application"
+        },
+        {
+          "target": "https://sandbox.open-xchange.com",
+          "type": "api"
+        },
+        {
+          "target": "GitLab and GitHub repos listed on this page",
+          "type": "other"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "target": "All domains which are not listed as \"Scopes\", especially any production system operated by customers",
+          "type": "other"
+        },
+        {
+          "target": "Everything that is not directly related to the application or source-code in scope (e.g. GitHub, domain settings)",
+          "type": "other"
+        }
+      ]
+    }
+  },
+  {
     "id": "olvid-the-most-secure-messaging-app-in-the-world",
     "name": "Olvid - Open source end-to-end encrypted messaging",
     "public": true,
@@ -1574,6 +1640,37 @@
       "out_of_scope": [
         {
           "target": "All domains or subdomains not listed in the above list of 'Scopes'",
+          "type": "other"
+        }
+      ]
+    }
+  },
+  {
+    "id": "powerdns",
+    "name": "PowerDNS",
+    "public": true,
+    "disabled": false,
+    "managed": null,
+    "min_bounty": 100,
+    "max_bounty": 5000,
+    "targets": {
+      "in_scope": [
+        {
+          "target": "PowerDNS authoritative server, recursor and DNSdist (see \"Software packages\" and \"Source-code\")",
+          "type": "other"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "target": "All content which is not listed as \"Scopes\", especially any production system operated by customers",
+          "type": "other"
+        },
+        {
+          "target": "\"Scopes\" in this program refer to the binary packages and source-code provided there, the systems providing those artefacts are out of scope",
+          "type": "other"
+        },
+        {
+          "target": "Everything that is not directly related to the application or source-code in scope (e.g. GitHub, domain settings)",
           "type": "other"
         }
       ]
