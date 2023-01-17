@@ -16534,6 +16534,7 @@ type HackerPreference implements Node {
   has_asset_type_preferences: Boolean
   has_weakness_preferences: Boolean
   id: ID!
+  is_interested_in_collaboration: Boolean!
   level: String
   opportunity_types: [String!]
 }
@@ -25639,7 +25640,6 @@ type Query implements Node {
     Returns the elements in the list that come after the specified cursor.
     """
     after: String
-    aggs: AggsInput
 
     """
     Returns the elements in the list that come before the specified cursor.
