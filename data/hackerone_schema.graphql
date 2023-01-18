@@ -2435,10 +2435,6 @@ type AggregatedSlaSnapshot {
   timestamp: DateTime!
 }
 
-input AggsInput {
-  results: ResultsAggsInput
-}
-
 """
 An Agile Accelerator escalation for a report
 """
@@ -25395,7 +25391,6 @@ type Query implements Node {
     Returns the elements in the list that come after the specified cursor.
     """
     after: String
-    aggs: AggsInput
 
     """
     Returns the elements in the list that come before the specified cursor.
@@ -28656,13 +28651,6 @@ enum ResponseTargetTypeEnum {
   new
   resolution
   triaged
-}
-
-input ResultsAggsInput {
-  aggs: AggsInput
-  filter: FilterInput
-  nested: NestedInput
-  terms: TermsAggsInput
 }
 
 """
@@ -32909,6 +32897,8 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
     """
     first: Int
     from: Int
+    group_names: [String]
+    grouped: Boolean
 
     """
     Returns the last _n_ elements from the list.
@@ -34273,11 +34263,6 @@ input TermFilterInput {
   team_ids: [Int!]
   team_type: String
   triage_active: Boolean
-}
-
-input TermsAggsInput {
-  field: String!
-  size: Int
 }
 
 input TermsFilterInput {
