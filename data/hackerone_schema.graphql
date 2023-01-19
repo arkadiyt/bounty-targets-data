@@ -3161,6 +3161,7 @@ type AsmTagCategory implements Node {
   can_mutate_tags: Boolean
   id: ID!
   name: String!
+  system: Boolean!
 }
 
 """
@@ -6612,6 +6613,7 @@ type CompleteCreditCardFundingPayload implements MutationResult {
     last: Int
     types: [ErrorTypeEnum]
   ): ErrorConnection!
+  last_four: String
   was_successful: Boolean!
 }
 
@@ -32434,6 +32436,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
     order_by: FiltersJobListingFilterOrder
     where: FiltersJobListingFilterInput
   ): JobListingConnection
+  last_four: String
 
   """
   The participant's date of accepted the teams invitation
