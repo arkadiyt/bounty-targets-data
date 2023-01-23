@@ -22197,7 +22197,7 @@ A HackerOne organization member
 """
 type OrganizationMember implements Node & ResourceInterface {
   _id: ID!
-  created_at: String!
+  created_at: DateTime!
   id: ID!
   organization: Organization!
   organization_admin: Boolean!
@@ -22247,6 +22247,7 @@ type OrganizationMember implements Node & ResourceInterface {
     order_by: FiltersOrganizationMemberGroupFilterOrder
     where: FiltersOrganizationMemberGroupFilterInput
   ): OrganizationMemberGroupConnection
+  updated_at: DateTime!
   url: URI!
   user: User!
 }
@@ -22314,6 +22315,7 @@ type OrganizationMemberGroup implements Node & ResourceInterface {
   key: String
   migrated_at: DateTime
   name: String!
+  organization: Organization!
   organization_inboxes(
     """
     Returns the elements in the list that come after the specified cursor.
@@ -22387,6 +22389,7 @@ type OrganizationMemberGroup implements Node & ResourceInterface {
     secure_order_by: FiltersTeamFilterOrder
     where: FiltersTeamFilterInput
   ): TeamConnection!
+  updated_at: DateTime!
   url: URI!
 }
 
