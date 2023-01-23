@@ -30826,7 +30826,7 @@ input StructuredScopeAssetTypeEnumInputPredicateInput {
 
 type StructuredScopeDocument implements Node {
   _id: ID!
-  asm_technology_tags: [String!]
+  asm_system_tags: [String!]
   created_at: DateTime
   cvss_score: String
   description: String
@@ -34432,6 +34432,7 @@ input TextToStructuredScopeInput {
   A unique identifier for the client performing the mutation.
   """
   clientMutationId: String
+  team_ids: [Int]
   text: String!
 }
 
