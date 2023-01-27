@@ -6057,6 +6057,10 @@
         },
         {
           "type": "website",
+          "target": "https://*.consumidor.gov"
+        },
+        {
+          "type": "website",
           "target": "https://*.donotcall.gov"
         },
         {
@@ -6219,10 +6223,6 @@
         },
         {
           "type": "website",
-          "target": "careers.geotab.com"
-        },
-        {
-          "type": "website",
           "target": "consumersenergy.smartchargerewards.com"
         },
         {
@@ -6232,18 +6232,6 @@
         {
           "type": "website",
           "target": "gov*.geotab.com"
-        },
-        {
-          "type": "website",
-          "target": "its.geotab.com/contact"
-        },
-        {
-          "type": "website",
-          "target": "its.geotab.com/demo"
-        },
-        {
-          "type": "website",
-          "target": "its.geotab.com/partners"
         },
         {
           "type": "website",
@@ -6276,28 +6264,6 @@
         {
           "type": "website",
           "target": "smartchargenewyork.smartchargerewards.com"
-        }
-      ]
-    }
-  },
-  {
-    "name": "GoPro Awards Webapp Public Program",
-    "url": "https://bugcrowd.com/gopro-og-public",
-    "allows_disclosure": false,
-    "managed_by_bugcrowd": true,
-    "safe_harbor": "full",
-    "max_payout": 2500,
-    "targets": {
-      "in_scope": [
-        {
-          "type": "website",
-          "target": "GoPro Awards"
-        }
-      ],
-      "out_of_scope": [
-        {
-          "type": "other",
-          "target": "Everything Else"
         }
       ]
     }
@@ -7012,10 +6978,6 @@
         {
           "type": "website",
           "target": "https://*.simplyhired.com (Production Applications)"
-        },
-        {
-          "type": "website",
-          "target": "https://hr.simplyhired-staging.com"
         },
         {
           "type": "website",
@@ -14278,6 +14240,44 @@
         {
           "type": "website",
           "target": "*.whitneyfarms.com"
+        }
+      ]
+    }
+  },
+  {
+    "name": "ThousandEyes Bug Bounty",
+    "url": "https://bugcrowd.com/thousandeyes-og",
+    "allows_disclosure": true,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "none",
+    "max_payout": 4500,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "other",
+          "target": "ThousandEyes Endpoint Agent "
+        },
+        {
+          "type": "other",
+          "target": "ThousandEyes Enterprise Agent"
+        },
+        {
+          "type": "api",
+          "target": "https://api.thousandeyes.com/"
+        },
+        {
+          "type": "website",
+          "target": "https://app.thousandeyes.com/"
+        },
+        {
+          "type": "website",
+          "target": "https://www.thousandeyes.com/"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "website",
+          "target": "https://blog.thousandeyes.com/"
         }
       ]
     }

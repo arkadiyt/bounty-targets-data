@@ -14191,6 +14191,19 @@ type DismissTriageMetaPayload implements MutationResult {
   was_successful: Boolean!
 }
 
+input DocumentElementInputType {
+  markdown: String!
+  type: String!
+}
+
+"""
+Document result object
+"""
+type DocumentResult implements Node {
+  blob: String
+  id: ID!
+}
+
 """
 ElasticSearch Document can be of different types
 """
@@ -17493,6 +17506,11 @@ type InvitationsTeamMember implements InvitationInterface & Node {
   team: Team!
   token: String
 }
+
+"""
+Represents untyped JSON
+"""
+scalar JSON
 
 """
 A jira escalation for a report
@@ -22362,6 +22380,7 @@ type OrganizationMemberGroup implements Node & ResourceInterface {
     order_by: FiltersOrganizationMemberFilterOrder = {user: {username: {_direction: ASC}}}
     where: FiltersOrganizationMemberFilterInput
   ): OrganizationMemberConnection!
+  organization_permissions: [OrganizationPermissionsEnum!]!
   permissions: [OrganizationPermissionsEnum!]!
   program_permissions: [OrganizationPermissionsEnum!]!
   teams(
@@ -22480,10 +22499,12 @@ Organization permissions enum
 enum OrganizationPermissionsEnum {
   asset_inventory_manager
   asset_inventory_viewer
+  group_manager
   program_admin
   read_only_member
   report_analyst
   report_reward_manager
+  user_manager
 }
 
 """
@@ -25243,6 +25264,7 @@ type Query implements Node {
     order_by: CweEntryOrderInput
   ): CweEntryConnection
   cwe_entry(cwe_id: String!): CweEntry
+  document(elements: [DocumentElementInputType]!, queries: [AnalyticsQueryInputType!]!): DocumentResult
   embedded_submission_form(uuid: String!): EmbeddedSubmissionForm
   external_program(handle: String!): ExternalProgram
   external_programs(
@@ -30438,28 +30460,89 @@ type StartVpnInstancePayload implements MutationResult {
 A static dashboard definition
 """
 type StaticDashboard implements Node & ResourceInterface {
+  allow_filtering: Boolean!
   charts: [StaticDashboardChart]!
+  elements: [StaticDashboardElement]!
   id: ID!
+  include_in_stable_rest_api: Boolean!
   key: String!
   queries: [StaticDashboardQuery]!
   title: String!
+  type: String!
   url: URI!
+}
+
+"""
+A static dashboard axis definition
+"""
+type StaticDashboardAxis implements Node {
+  color: String
+  default_data: JSON
+  id: ID!
+  label: String
+  query_key: String
+  select_field: String
 }
 
 """
 A static dashboard tile definition
 """
 type StaticDashboardChart implements Node & ResourceInterface {
-  description: String!
+  chart_orientation: String
+  data_axes: [StaticDashboardAxis!]
+  data_format: String
+  description: String
+  display_all_items_in_tooltip: Boolean
+  display_total_of_all_items_in_tooltip: Boolean
+  enable_grid_x: Boolean
+  enable_grid_y: Boolean
+  group_axis: StaticDashboardAxis
+  hide_legend: Boolean
   id: ID!
-  index_by: String!
-  is_stacked: Boolean!
+  index_axis: StaticDashboardAxis
   key: String!
-  layout: String!
-  query: String!
+  legend_definition: [StaticDashboardLegend]
+  legend_position: String
+  legend_word_break: String
+  margin: StaticDashboardMargin
+  max_height: Float
+  padding: Float
+  pivot_axes: [StaticDashboardAxis!]
+  template: String
   title: String!
   type: String!
   url: URI!
+}
+
+"""
+A static dashboard element definition
+"""
+type StaticDashboardElement implements Node & ResourceInterface {
+  id: ID!
+  markdown: String!
+  type: String!
+  url: URI!
+}
+
+"""
+A static dashboard legend definition
+"""
+type StaticDashboardLegend implements Node {
+  color: String!
+  id: ID!
+  key: String!
+  title: String!
+}
+
+"""
+A static dashboard margin definition
+"""
+type StaticDashboardMargin implements Node {
+  bottom: Float
+  id: ID!
+  left: Float
+  right: Float
+  top: Float
 }
 
 """
