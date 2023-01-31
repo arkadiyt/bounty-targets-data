@@ -9544,6 +9544,7 @@ input CreateOrganizationMemberInvitationInput {
   """
   clientMutationId: String
   email_address: String!
+  notify: Boolean
   organization_admin: Boolean
   organization_id: ID!
   organization_member_group_ids: [Int!]
@@ -14884,6 +14885,7 @@ enum ErrorTypeEnum {
   AUTHORIZATION
   NOT_FOUND
   THROTTLE
+  UNPROCESSABLE_ENTITY
 }
 
 """
@@ -17260,6 +17262,7 @@ An interface for the common fields on a HackerOne Invitation
 """
 interface InvitationInterface {
   _id: ID!
+  id: ID!
 }
 
 """
@@ -17439,12 +17442,15 @@ type InvitationsOrganizationMember implements InvitationInterface & Node {
   email: String
   expires_at: DateTime
   id: ID!
-  invitation_data: String
+  invitation_data: Hash
+  invited_by_id: Int
   organization: Organization
   organization_admin: Boolean
   organization_member_groups: [OrganizationMemberGroup!]
   recipient: User
+  recipient_id: Int
   token: String
+  updated_at: DateTime
 }
 
 """
