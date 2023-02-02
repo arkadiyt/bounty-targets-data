@@ -30446,10 +30446,20 @@ A static dashboard axis definition
 type StaticDashboardAxis implements Node {
   color: String
   default_data: JSON
+  format: StaticDashboardAxisFormatTypeEnum
   id: ID!
   label: String
   query_key: String
   select_field: String
+}
+
+"""
+Static dashboard axis format type enum
+"""
+enum StaticDashboardAxisFormatTypeEnum {
+  currency
+  integer
+  timestamp
 }
 
 """
