@@ -4807,45 +4807,6 @@
     }
   },
   {
-    "id": "ff0c5205-573b-410a-bb4d-e7c3c4de5d00",
-    "name": "X-Road",
-    "company_handle": "niis",
-    "handle": "x-road",
-    "url": "https://www.intigriti.com/programs/niis/x-road/detail",
-    "status": "open",
-    "confidentiality_level": "public",
-    "min_bounty": {
-      "value": 50.0,
-      "currency": "EUR"
-    },
-    "max_bounty": {
-      "value": 5000.0,
-      "currency": "EUR"
-    },
-    "targets": {
-      "in_scope": [
-        {
-          "type": "other",
-          "endpoint": "Central Server",
-          "description": "Central Server contains the registry of X-Road members and their Security Servers. Besides, the Central Server contains the security policy of the X-Road instance that includes a list of trusted certification authorities, a list of trusted time-stamping authorities, and configuration parameters. Both the member registry and the security policy are made available to the Security Servers via HTTP protocol. This distributed set of data forms the global configuration that Security Servers use for mediating the messages sent via X-Road.\n\nMore information about the Central Server can be found at:\n\n* [architecture](https://github.com/nordic-institute/X-Road/blob/develop/doc/Architecture/arc-cs_x-road_central_server_architecture.md)\n* [installation guide](https://github.com/nordic-institute/X-Road/blob/develop/doc/Manuals/ig-cs_x-road_6_central_server_installation_guide.md)\n* [user manual](https://github.com/nordic-institute/X-Road/blob/develop/doc/Manuals/ug-cs_x-road_6_central_server_user_guide.md)\n* [release notes](https://confluence.niis.org/display/XRDKB/Release+Notes)"
-        },
-        {
-          "type": "other",
-          "endpoint": "Security Server",
-          "description": "Security Server is the entry point to X-Road, and it is required for both producing and consuming services via X-Road. The Security Server mediates service calls and service responses between Information Systems. The Security Server encapsulates the security aspects of the X-Road infrastructure: managing keys for signing and authentication, sending messages over a secure channel, creating the proof value for messages with digital signatures, time-stamping and logging.\n\nMore information about the Security Server can be found at:\n\n* [architecture](https://github.com/nordic-institute/X-Road/blob/develop/doc/Architecture/arc-ss_x-road_security_server_architecture.md)\n* [installation guide](https://github.com/nordic-institute/X-Road/blob/develop/doc/Manuals/ig-ss_x-road_v6_security_server_installation_guide.md)\n* [user manual](https://github.com/nordic-institute/X-Road/blob/develop/doc/Manuals/ug-ss_x-road_6_security_server_user_guide.md)"
-        },
-        {
-          "type": "other",
-          "endpoint": "Configuration Proxy",
-          "description": "Configuration Proxy is an intermediary that may *optionally* be used to mediate configuration originating from the Central Server to the Security Servers.  The Configuration Proxy downloads the configuration, stores it, and makes it available for download. Thus, the configuration proxy can be used to increase system availability by creating an additional configuration source and reduce load on the Central Server.\n\nMore information about the Configuration Proxy can be found at:\n\n* [architecture](https://github.com/nordic-institute/X-Road/blob/develop/doc/Architecture/arc-cp_x-road_configuration_proxy_architecture.md)\n* [installation guide and user manual](https://github.com/nordic-institute/X-Road/blob/develop/doc/Manuals/ug-cp_x-road_v6_configuration_proxy_manual.md)"
-        }
-      ],
-      "out_of_scope": [
-
-      ]
-    }
-  },
-  {
     "id": "bbc2d49d-6b11-40af-9746-aefa64756928",
     "name": "Yacht",
     "company_handle": "randstad",
