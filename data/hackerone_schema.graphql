@@ -21542,30 +21542,6 @@ type Organization implements Node {
     order_by: FiltersAssetEnrichmentSubmissionFilterOrder
     where: FiltersAssetEnrichmentSubmissionFilterInput
   ): AssetEnrichmentSubmissionConnection
-  asset_groups_search(
-    """
-    Returns the elements in the list that come after the specified cursor.
-    """
-    after: String
-
-    """
-    Returns the elements in the list that come before the specified cursor.
-    """
-    before: String
-    coverage: AssetCoverageEnum
-
-    """
-    Returns the first _n_ elements from the list.
-    """
-    first: Int
-    from: Int
-
-    """
-    Returns the last _n_ elements from the list.
-    """
-    last: Int
-    size: Int
-  ): SearchResultConnection
   asset_statistics(period: AssetStatisticPeriodEnum!): AssetStatistics
   asset_submissions(
     """
@@ -21622,7 +21598,6 @@ type Organization implements Node {
     after: String
     asm_tag_category_ids: [Int]
     asm_tag_ids: [Int]
-    asset_group_ids: [Int]
     asset_types: [AssetImplementationTypeEnum]
 
     """
@@ -34323,7 +34298,6 @@ enum TeamWeaknessStates {
 
 input TermFilterInput {
   allows_bounty_splitting: Boolean
-  asset_group_id: Int
   credentials_set_up: Boolean
   gold_standard: Int
   identifier: String
