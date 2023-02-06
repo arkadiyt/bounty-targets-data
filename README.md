@@ -19,7 +19,7 @@ Extra files:
 
 ### Status
 
-The last change was detected on `Monday 02/06/2023 22:30 (UTC)`. New changes (if any) are picked up every 30 minutes.
+The last change was detected on `Monday 02/06/2023 23:30 (UTC)`. New changes (if any) are picked up every 30 minutes.
 
 ### Code
 
