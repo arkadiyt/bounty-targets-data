@@ -17142,50 +17142,6 @@ input InvitationOrderInput {
 }
 
 """
-A HackerOne invitation queue slot earned by a hacker
-"""
-type InvitationQueue implements Node {
-  _id: ID!
-  id: ID!
-}
-
-"""
-The connection type for InvitationQueue.
-"""
-type InvitationQueueConnection {
-  """
-  A list of edges.
-  """
-  edges: [InvitationQueueEdge]
-
-  """
-  A list of nodes.
-  """
-  nodes: [InvitationQueue]
-
-  """
-  Information to aid in pagination.
-  """
-  pageInfo: PageInfo!
-  total_count: Int!
-}
-
-"""
-An edge in a connection.
-"""
-type InvitationQueueEdge {
-  """
-  A cursor for use in pagination.
-  """
-  cursor: String!
-
-  """
-  The item at the end of the edge.
-  """
-  node: InvitationQueue
-}
-
-"""
 Invitation source types
 """
 enum InvitationSourceEnum {
@@ -17207,7 +17163,6 @@ enum InvitationSourceEnum {
   pentest
   pentest_schedule
   preview_hacker_matching_invite
-  priority_queue_invite
   recommended_program_enroll
   report_draft_invite
   report_forwarded_email_invite
@@ -42459,28 +42414,6 @@ type User implements Node & ResourceInterface {
   impact: Float
   impact_percentile: Int
   intro: String
-  invitation_queues(
-    """
-    Returns the elements in the list that come after the specified cursor.
-    """
-    after: String
-
-    """
-    Returns the elements in the list that come before the specified cursor.
-    """
-    before: String
-    filter: String = null
-
-    """
-    Returns the first _n_ elements from the list.
-    """
-    first: Int
-
-    """
-    Returns the last _n_ elements from the list.
-    """
-    last: Int
-  ): InvitationQueueConnection
   leaderboard_entry(filter: String, key: LeaderboardKeyEnum!, quarter: Int, year: Int): LeaderboardEntryUnion
   linkedin_handle: String
   location: String
