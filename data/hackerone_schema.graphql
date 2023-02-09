@@ -3814,6 +3814,7 @@ type AssetStatistics implements Node {
   id: ID!
   in_scope_counts: [Int!]!
   out_of_scope_counts: [Int!]!
+  overview_counts: [AssetStatisticsOverviewCountsData!]!
   risk_overviews: [AssetStatisticsRiskOverview!]!
   untested_counts: [Int!]!
 }
@@ -3831,6 +3832,17 @@ type AssetStatisticsCategoryInsights implements Node {
   id: ID!
   in_scope_counts: [Int!]!
   out_of_scope_counts: [Int!]!
+}
+
+"""
+The data for the summary cards on the ASCD
+"""
+type AssetStatisticsOverviewCountsData {
+  assets_count: Int!
+  date: Date!
+  in_scope_count: Int!
+  out_of_scope_count: Int!
+  untested_count: Int!
 }
 
 """
