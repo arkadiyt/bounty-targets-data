@@ -3805,33 +3805,12 @@ enum AssetStatisticPeriodEnum {
 A container for asset statistics
 """
 type AssetStatistics implements Node {
-  asset_counts: [Int!]!
-  category_insights(category_id: Int!): AssetStatisticsCategoryInsights
-
   """
   ID of the object.
   """
   id: ID!
-  in_scope_counts: [Int!]!
-  out_of_scope_counts: [Int!]!
   overview_counts: [AssetStatisticsOverviewCountsData!]!
   risk_overviews: [AssetStatisticsRiskOverview!]!
-  untested_counts: [Int!]!
-}
-
-"""
-A container for asset statistics category insights
-"""
-type AssetStatisticsCategoryInsights implements Node {
-  asset_counts: [Int!]!
-  data: [AssetStatisticsRiskOverviewData!]!
-
-  """
-  ID of the object.
-  """
-  id: ID!
-  in_scope_counts: [Int!]!
-  out_of_scope_counts: [Int!]!
 }
 
 """
