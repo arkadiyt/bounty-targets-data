@@ -225,50 +225,6 @@
     }
   },
   {
-    "id": "8cae2bed-8a61-4d4b-9f0e-fa7bf917aa25",
-    "name": "BloomUp",
-    "company_handle": "bloomup",
-    "handle": "bloomup",
-    "url": "https://www.intigriti.com/programs/bloomup/bloomup/detail",
-    "status": "open",
-    "confidentiality_level": "public",
-    "min_bounty": {
-      "value": 0.0,
-      "currency": "EUR"
-    },
-    "max_bounty": {
-      "value": 0.0,
-      "currency": "EUR"
-    },
-    "targets": {
-      "in_scope": [
-        {
-          "type": "url",
-          "endpoint": "analytics.bloomup.org",
-          "description": "Priority: 4️⃣ - Language: 🇬🇧\n\n----------------------------------------------------------\n\nOur self-hosted analytics server that gathers analytics about the app usage. For this we use an instance of Matomo.\nHere we expect a focus on the security hardening of the server set-up.\n\nNo submissions are allowed that point at existing Matomo bugs: https://github.com/matomo-org/matomo/issues"
-        },
-        {
-          "type": "url",
-          "endpoint": "chat.bloomup.org",
-          "description": "Priority: 3️⃣ - Language: 🇬🇧\n\n----------------------------------------------------------\n\nOur internal self-hosted chat and community. This is used for employee conversations and also as a communication tool towards and between our professionals. MatterMost is used. Here we expect a focus on the security hardening of the server set-up.\n\nNo submissions are allowed that point at exisiting MatterMost bugs: https://mattermost.atlassian.net/browse/TMFJ-11?jql="
-        },
-        {
-          "type": "url",
-          "endpoint": "https://app.acceptance.bloomup.org",
-          "description": "Priority: 1️⃣ - Language: 🇳🇱\n\n----------------------------------------------------------\n\nStaging version of our main app. \nThis app has 2 sides: the client and that of the mental health professionals.\n\nA client can go through an onboarding flow which will ask the a few questions that helps us identify the best professional for them.\nAt the end of the questions they will get a proposal of 3 mental health professionals. They can either choose to book a consult in the next 7 days or (if the psy is online), immediately go into a consult. At the end of this flow, an account is created that they can use later on to track follow-up consults.\n\nThe professional uses this app to plan and follow-up their consults with BloomUp clients.\n\nThe app is available in Dutch only and only for Belgian professionals.\nThis is the most important part to test.\nThe back end server and API lives on https://api.acceptance.bloomup.org (which is also in scope)\n\n**Please don’t forget to use your @intigriti.me address.**\n"
-        },
-        {
-          "type": "url",
-          "endpoint": "meet.bloomup.org",
-          "description": "Priority: 2️⃣ - Language: 🇬🇧\n\n----------------------------------------------------------\n\nThis server runs our Jitsi instance we use so clients can go into an online video consultation with our professionals.\nThe best way to test is by using demo.bloomup.org, register as user and professional and set up a consult with yourself.\nHere we expect a focus on the security hardening of the server set-up.\n\nNo submissions are allowed that point at an existing Jitsi bug: https://desktop.jitsi.org/Development/BugsAndIssues.html"
-        }
-      ],
-      "out_of_scope": [
-
-      ]
-    }
-  },
-  {
     "id": "efd8bd86-a986-4b4a-9eda-c9a6a1a6b540",
     "name": "CM.com",
     "company_handle": "cmcom",
@@ -1258,45 +1214,6 @@
           "type": "url",
           "endpoint": "*.parool.nl",
           "description": "excluding abonnement.parool.nl"
-        }
-      ],
-      "out_of_scope": [
-
-      ]
-    }
-  },
-  {
-    "id": "2173bde4-06be-425b-8add-9a1be4296c30",
-    "name": "Hoplr",
-    "company_handle": "hoplr",
-    "handle": "hoplr",
-    "url": "https://www.intigriti.com/programs/hoplr/hoplr/detail",
-    "status": "open",
-    "confidentiality_level": "public",
-    "min_bounty": {
-      "value": 0.0,
-      "currency": "EUR"
-    },
-    "max_bounty": {
-      "value": 0.0,
-      "currency": "EUR"
-    },
-    "targets": {
-      "in_scope": [
-        {
-          "type": "url",
-          "endpoint": "*.hoplr.com",
-          "description": null
-        },
-        {
-          "type": "ios",
-          "endpoint": "1189149176",
-          "description": null
-        },
-        {
-          "type": "android",
-          "endpoint": "com.hoplr",
-          "description": null
         }
       ],
       "out_of_scope": [
