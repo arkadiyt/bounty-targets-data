@@ -16075,6 +16075,20 @@ input FiltersTeamIndustryFilterInput {
   industry: StringPredicateInput
 }
 
+input FiltersTeamMemberEligibilitySettingsFilterInput {
+  _and: [FiltersTeamMemberEligibilitySettingsFilterInput]
+  _not: FiltersTeamMemberEligibilitySettingsFilterInput
+  _or: [FiltersTeamMemberEligibilitySettingsFilterInput]
+  database_id: IntPredicateInput
+  id: IntPredicateInput
+  name: StringPredicateInput
+}
+
+input FiltersTeamMemberEligibilitySettingsFilterOrder {
+  id: FilterOrderPredicateInput
+  name: FilterOrderPredicateInput
+}
+
 input FiltersTeamMemberFilterInput {
   _and: [FiltersTeamMemberFilterInput]
   _not: FiltersTeamMemberFilterInput
@@ -21576,13 +21590,36 @@ type Organization implements Node {
     """
     last: Int
   ): DomainConnection
-  eligibility_settings: [TeamMemberEligibilitySettings!]
+  eligibility_settings(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+    order_by: FiltersTeamMemberEligibilitySettingsFilterOrder = {name: {_direction: ASC}}
+    where: FiltersTeamMemberEligibilitySettingsFilterInput
+  ): TeamMemberEligibilitySettingsConnection
   enterprise: Boolean!
   features: [Feature]
   gate_saml_opened: Boolean!
   h1_assets: Boolean
   h1_assets_enterprise: Boolean
   handle: String!
+  i_am_organization_member: Boolean!
   i_can_manage_hacker_assets: Boolean!
   i_can_manage_organization_api_tokens: Boolean!
   i_can_manage_organization_assets: Boolean!
@@ -32911,11 +32948,13 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
     Returns the elements in the list that come before the specified cursor.
     """
     before: String
+    category_name: String
 
     """
     Returns the first _n_ elements from the list.
     """
     first: Int
+    has_scope: Boolean
 
     """
     Returns the last _n_ elements from the list.
@@ -33206,8 +33245,10 @@ A team asm tag
 """
 type TeamAsmTag implements Node {
   _id: ID!
+  category_name: String!
+  has_scope: Boolean!
   id: ID!
-  name: String!
+  tag_name: String!
 }
 
 """
@@ -33690,8 +33731,47 @@ type TeamMemberEligibilitySettings implements Node {
   _id: ID!
   allowed_domains: [String!]!
   allowed_domains_enabled: Boolean!
+  created_at: DateTime
   id: ID!
   name: String
+  organization_id: ID
+  updated_at: DateTime
+}
+
+"""
+The connection type for TeamMemberEligibilitySettings.
+"""
+type TeamMemberEligibilitySettingsConnection {
+  """
+  A list of edges.
+  """
+  edges: [TeamMemberEligibilitySettingsEdge]
+
+  """
+  A list of nodes.
+  """
+  nodes: [TeamMemberEligibilitySettings]
+
+  """
+  Information to aid in pagination.
+  """
+  pageInfo: PageInfo!
+  total_count: Int!
+}
+
+"""
+An edge in a connection.
+"""
+type TeamMemberEligibilitySettingsEdge {
+  """
+  A cursor for use in pagination.
+  """
+  cursor: String!
+
+  """
+  The item at the end of the edge.
+  """
+  node: TeamMemberEligibilitySettings
 }
 
 """
