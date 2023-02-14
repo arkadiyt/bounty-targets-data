@@ -15731,7 +15731,7 @@ input FiltersOrganizationInboxFilterInput {
   database_id: IntPredicateInput
   handle: StringPredicateInput
   id: IntPredicateInput
-  is_default: BooleanPredicateInput
+  inbox_type: OrganizationInboxTypeEnumInputPredicateInput
   name: StringPredicateInput
   organization_member_groups: FiltersOrganizationMemberGroupFilterInput
   team: FiltersTeamFilterInput
@@ -21943,7 +21943,7 @@ type OrganizationInbox implements Node {
   created_at: DateTime!
   handle: String!
   id: ID!
-  is_default: Boolean!
+  inbox_type: OrganizationInboxTypeEnum!
   name: String!
   organization: Organization!
   organization_member_groups(
@@ -22054,6 +22054,36 @@ type OrganizationInboxEdge {
   The item at the end of the edge.
   """
   node: OrganizationInbox
+}
+
+"""
+Types an organization inbox can have
+"""
+enum OrganizationInboxTypeEnum {
+  custom
+  default
+  summary
+}
+
+"""
+Types an organization inbox can have
+"""
+enum OrganizationInboxTypeEnumInput {
+  custom
+  default
+  summary
+}
+
+input OrganizationInboxTypeEnumInputPredicateInput {
+  _eq: OrganizationInboxTypeEnumInput
+  _gt: OrganizationInboxTypeEnumInput
+  _gte: OrganizationInboxTypeEnumInput
+  _in: [OrganizationInboxTypeEnumInput]
+  _is_null: Boolean
+  _lt: OrganizationInboxTypeEnumInput
+  _lte: OrganizationInboxTypeEnumInput
+  _neq: OrganizationInboxTypeEnumInput
+  _nin: [OrganizationInboxTypeEnumInput]
 }
 
 """
