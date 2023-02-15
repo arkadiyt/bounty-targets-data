@@ -546,28 +546,32 @@
     "disabled": false,
     "managed": null,
     "min_bounty": 50,
-    "max_bounty": 2000,
+    "max_bounty": 3000,
     "targets": {
       "in_scope": [
         {
-          "target": "app.datadome.co",
+          "target": "https://app.datadome.co",
           "type": "web-application"
         },
         {
-          "target": "c.datadome.co",
+          "target": "https://customer-api.datadome.co",
           "type": "api"
         },
         {
-          "target": "api.datadome.co",
+          "target": "https://api.datadome.co",
           "type": "api"
         },
         {
-          "target": "datadome.co",
+          "target": "https://api-js.datadome.co",
+          "type": "api"
+        },
+        {
+          "target": "https://geo.captcha-delivery.com/contact-human",
           "type": "web-application"
         },
         {
-          "target": "api-js.datadome.co",
-          "type": "api"
+          "target": "https://datadome.co",
+          "type": "web-application"
         },
         {
           "target": "auth.datadome.co",
@@ -580,19 +584,15 @@
         {
           "target": "https://apps.apple.com/fr/app/datadome/id1492490972",
           "type": "mobile-application-ios"
-        },
-        {
-          "target": "https://geo.captcha-delivery.com/contact-human",
-          "type": "web-application"
-        },
-        {
-          "target": "https://customer-api.datadome.co",
-          "type": "api"
         }
       ],
       "out_of_scope": [
         {
           "target": "All domains not listed In-Scope",
+          "type": "other"
+        },
+        {
+          "target": "Third-party widgets on www.datadome.co and app.datadome.co",
           "type": "other"
         }
       ]
