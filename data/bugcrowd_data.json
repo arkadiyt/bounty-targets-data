@@ -3927,6 +3927,44 @@
     }
   },
   {
+    "name": "Comcast Xfinity Bug Bounty",
+    "url": "https://bugcrowd.com/comcast-mbb",
+    "allows_disclosure": true,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "full",
+    "max_payout": 3500,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "website",
+          "target": "*.comcast.com"
+        },
+        {
+          "type": "website",
+          "target": "*.xfinity.com\t"
+        },
+        {
+          "type": "website",
+          "target": "Staging, QA, Dev, and Test Environments"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "website",
+          "target": "*.hfc.comcastbusiness.net"
+        },
+        {
+          "type": "website",
+          "target": "*.hsd1.*.comcast.net"
+        },
+        {
+          "type": "website",
+          "target": "*business.comcast.com"
+        }
+      ]
+    }
+  },
+  {
     "name": "Comcast Xfinity Vulnerability Disclosure Program",
     "url": "https://bugcrowd.com/comcastvdp",
     "allows_disclosure": true,
