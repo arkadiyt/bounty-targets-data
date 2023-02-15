@@ -21513,6 +21513,7 @@ type Organization implements Node {
     Returns the elements in the list that come after the specified cursor.
     """
     after: String
+    archived: Boolean
     asm_tag_category_ids: [Int]
     asm_tag_ids: [Int]
     asset_types: [AssetImplementationTypeEnum]
@@ -32832,6 +32833,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
     Returns the elements in the list that come after the specified cursor.
     """
     after: String
+    asm_tag_ids: [Int]
 
     """
     Returns the elements in the list that come before the specified cursor.
