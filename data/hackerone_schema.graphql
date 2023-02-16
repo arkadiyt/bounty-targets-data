@@ -43290,6 +43290,7 @@ type User implements Node & ResourceInterface {
   ): UserOpportunitiesFeedbackConnection
   user_type: String
   username: String!
+  view_profile: String!
   vpn_credentials: [VpnCredential]
   vpn_instances: [VpnInstance]
   website: String
@@ -43460,7 +43461,6 @@ type UserDisplayOptions implements Node {
   show_bounty_amounts: Boolean!
   theme_preference: String
   user: User!
-  view_profile: String!
   view_profile_preference: String
 }
 
