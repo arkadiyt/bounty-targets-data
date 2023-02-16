@@ -75,22 +75,26 @@
     "targets": {
       "in_scope": [
         {
-          "type": "other",
-          "target": "<Account (Business, Family) signup page --> https://start.1password.com"
+          "type": "website",
+          "target": "<1Password signup page --> https://start.1password.com"
         },
         {
           "type": "other",
-          "target": "<White Box Test team --> https://bugcrowd-test.1password.com"
+          "target": "<CTF Challenge Account --> https://bugcrowd-test.1password.com"
         },
         {
-          "type": "other",
-          "target": "<Your own 1Password subdomain --> https://<your account domain>.1password.com/"
+          "type": "website",
+          "target": "<Your own 1Password Account subdomain --> https://<your account domain>.1password.com/"
         }
       ],
       "out_of_scope": [
         {
           "type": "website",
           "target": "*.agilebits.com"
+        },
+        {
+          "type": "other",
+          "target": "All other domains, subdomains, and 1Password Accounts that are not owned by you, including accounts where you are a user but not the owner, are out of scope."
         }
       ]
     }
