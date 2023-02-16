@@ -3307,6 +3307,7 @@ type Asset implements Node {
     """
     last: Int
   ): AsmTagConnection
+  asset_dns_detail: AssetDnsDetail
   asset_enrichment_submissions(
     """
     Returns the elements in the list that come after the specified cursor.
@@ -3435,6 +3436,21 @@ type AssetDiscoverySetting implements Node {
   id: ID!
   starts_at: DateTime
   time_zone: String
+}
+
+"""
+An asset dns details object
+"""
+type AssetDnsDetail implements Node {
+  _id: ID!
+  asset: Asset!
+  cname: String
+  id: ID!
+  ipv4: [String!]
+  ipv6: [String!]
+  nameservers: [String!]
+  provider: String
+  whois: Hash
 }
 
 type AssetDocument implements Node {
