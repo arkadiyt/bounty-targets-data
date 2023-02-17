@@ -2685,6 +2685,85 @@
     }
   },
   {
+    "id": "0fd1d85b-2d33-4966-b5a0-caabfda5108e",
+    "name": "Ninja Kiwi Games",
+    "company_handle": "ninjakiwigames",
+    "handle": "ninjakiwigames",
+    "url": "https://www.intigriti.com/programs/ninjakiwigames/ninjakiwigames/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "min_bounty": {
+      "value": 50.0,
+      "currency": "EUR"
+    },
+    "max_bounty": {
+      "value": 3750.0,
+      "currency": "EUR"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "url",
+          "endpoint": "analytics.ninjakiwi.com",
+          "description": "This domain hosts the API that consumed analytics events from our game clients\n"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.ninjakiwi.com",
+          "description": "This domain hosts the API for our mobile and PC games. Monitoring traffic through one of our game clients is the easiest method to investigate our main API. Most of our applications are available for free on [Steam](https://store.steampowered.com/developer/ninjakiwigames/#browse). Please carefully read the in-scope section regarding what sorts of exploits will be considering in-scope for this domain. \n"
+        },
+        {
+          "type": "url",
+          "endpoint": "builds-auckland.ninja.kiwi",
+          "description": "This domain hosts builds of Ninja Kiwi games for iOS devices.\n\nAreas of focus:\n* The ability to download any valid build from this service will be considered a CRITICAL vulnerability.\n* We will reward any enumeration of available game builds with a Medium bounty."
+        },
+        {
+          "type": "url",
+          "endpoint": "*.nkstatic.com",
+          "description": "This domain hosts static content for Ninja Kiwi games and website.\n"
+        },
+        {
+          "type": "url",
+          "endpoint": "battles.tv",
+          "description": "Battles.tv is used to share replays from our Bloons TD Battles game.\n"
+        },
+        {
+          "type": "url",
+          "endpoint": "ninja.kiwi",
+          "description": "This domain is used by Ninja Kiwi for our URL shortener service, ie https://ninja.kiwi/intigriti. \n"
+        },
+        {
+          "type": "url",
+          "endpoint": "ninjakiwi.com",
+          "description": null
+        },
+        {
+          "type": "url",
+          "endpoint": "*.ninjakiwi.com",
+          "description": "This covers any subdomains of ninjakiwi.com other than sub-domains which are managed by authorized third-party services. For example:\n* https://store.ninjakiwi.com/ - Managed by Shopify\n* https://support.ninjakiwi.com/ - Managed by Zendesk. "
+        },
+        {
+          "type": "url",
+          "endpoint": "ct.ninjakiwi.com",
+          "description": null
+        },
+        {
+          "type": "url",
+          "endpoint": "mynk.ninjakiwi.com",
+          "description": "This is a legacy domain which powers our Flash games. Uses Flash AMF. \n"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.souparea.com",
+          "description": "This domain will be considered out of scope unless it can be shown to allow an exploit on one of our Tier 1-3 domains.\n\n"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
     "id": "3768c4c1-a0d4-4546-abdf-e8932e760189",
     "name": "NxtPort",
     "company_handle": "portofantwerp",
