@@ -16653,6 +16653,14 @@ type HackerPreference implements Node {
 }
 
 """
+A HackerOne hacker's asset types preference
+"""
+type HackerPreferencesAssetType implements Node {
+  asset_type: String!
+  id: ID!
+}
+
+"""
 A HacktivityItems::HackerPublished for a report
 """
 type HackerPublished implements HacktivityItemInterface & Node {
@@ -37782,6 +37790,7 @@ type UpdateHackerPreferencesAssetTypesPayload implements MutationResult {
     last: Int
     types: [ErrorTypeEnum]
   ): ErrorConnection!
+  hacker_preferences_asset_types: [String!]!
   was_successful: Boolean!
 }
 
@@ -42821,6 +42830,7 @@ type User implements Node & ResourceInterface {
   hacker_asset_submission_enabled: Boolean!
   hacker_invitations_profile: HackerInvitationsProfile
   hacker_preference: HackerPreference
+  hacker_preferences_asset_types: [HackerPreferencesAssetType!]
   hacker_triage_ratings(
     """
     Returns the elements in the list that come after the specified cursor.
