@@ -21906,6 +21906,31 @@ type Organization implements Node {
     order_by: FiltersOrganizationMemberFilterOrder = {user: {username: {_direction: ASC}}}
     where: FiltersOrganizationMemberFilterInput
   ): OrganizationMemberConnection
+  organization_members_search(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+    from: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+    search_string: String
+    size: Int
+    system: Boolean
+  ): SearchResultConnection
   pending_organization_member_invitations(
     """
     Returns the elements in the list that come after the specified cursor.
