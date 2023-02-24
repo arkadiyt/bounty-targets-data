@@ -23875,6 +23875,9 @@ A pentest opportunity external network scope
 """
 type PentestOpportunityExternalNetworkScope implements Node {
   _id: ID!
+  access: String
+  asset_hosts: [String!]!
+  asset_hosts_details: String
   id: ID!
   live_ip_count_range: String
   scope_type: String
