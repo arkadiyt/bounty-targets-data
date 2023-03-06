@@ -22007,9 +22007,12 @@ type Organization implements Node {
     Returns the last _n_ elements from the list.
     """
     last: Int
+    organization_member_group_ids: [Int!]
+    permissions: [String!]
     search_string: String
     size: Int
     system: Boolean
+    team_ids: [Int!]
   ): SearchResultConnection
   pending_organization_member_invitations(
     """
