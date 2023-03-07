@@ -9902,6 +9902,7 @@ input CreatePentestOpportunityInput {
   company_name: String
   consumption_subscription_id: Int
   customer_email: String
+  name: String
   organization_id: Int
 }
 
@@ -28909,6 +28910,7 @@ input ReviewCompletePentestOpportunityInput {
   customer_note: String
   internal_handoff_notes: String
   location_restrictions: [String!]
+  name: String
   package_name: String
   pentest_opportunity_id: ID!
   requested_start_date: String
@@ -28974,6 +28976,7 @@ input ReviewPentestOpportunityInput {
   customer_note: String
   internal_handoff_notes: String
   location_restrictions: [String!]
+  name: String
   package_name: String
   pentest_opportunity_id: ID!
   requested_start_date: String
@@ -29575,6 +29578,7 @@ input SaveAsDraftPentestOpportunityInput {
   customer_email: String
   customer_note: String
   location_restrictions: [String!]
+  name: String
   requested_start_date: String
   schedule_day_restrictions: [String!]
   schedule_restrictions: String
@@ -31270,6 +31274,7 @@ input SubmitPentestOpportunityInput {
   customer_email: String
   customer_note: String
   location_restrictions: [String!]
+  name: String
   requested_start_date: String
   schedule_day_restrictions: [String!]
   schedule_restrictions: String
