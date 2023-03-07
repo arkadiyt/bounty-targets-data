@@ -30622,9 +30622,9 @@ type StartVpnInstancePayload implements MutationResult {
 A static dashboard definition
 """
 type StaticDashboard implements Node & ResourceInterface {
-  allow_filtering: Boolean!
   charts: [StaticDashboardChart]!
   elements: [StaticDashboardElement]!
+  filter_options: [String]!
   id: ID!
   include_in_stable_rest_api: Boolean!
   key: String!
@@ -37539,7 +37539,7 @@ input UpdateEligibilitySettingInput {
   A unique identifier for the client performing the mutation.
   """
   clientMutationId: String
-  eligibility_settings_id: ID!
+  eligibility_setting_id: ID!
   name: String
 }
 
@@ -37551,7 +37551,7 @@ type UpdateEligibilitySettingPayload implements MutationResult {
   A unique identifier for the client performing the mutation.
   """
   clientMutationId: String
-  eligibility_settings: TeamMemberEligibilitySettings
+  eligibility_setting: TeamMemberEligibilitySettings
   errors(
     """
     Returns the elements in the list that come after the specified cursor.
