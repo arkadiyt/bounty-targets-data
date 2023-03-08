@@ -17647,11 +17647,6 @@ type InvitationsTeamMember implements InvitationInterface & Node {
 }
 
 """
-Represents untyped JSON
-"""
-scalar JSON
-
-"""
 A jira escalation for a report
 """
 type JiraEscalation implements Node {
@@ -30639,7 +30634,6 @@ A static dashboard axis definition
 """
 type StaticDashboardAxis implements Node {
   color: String
-  default_data: JSON
   format: StaticDashboardAxisFormatTypeEnum
   id: ID!
   label: String
@@ -30666,22 +30660,14 @@ type StaticDashboardChart implements Node & ResourceInterface {
   description: String
   display_all_items_in_tooltip: Boolean
   display_total_of_all_items_in_tooltip: Boolean
-  enable_grid_x: Boolean
-  enable_grid_y: Boolean
-  group_axis: StaticDashboardAxis
-  hide_legend: Boolean
   id: ID!
   index_axis: StaticDashboardAxis
   key: String!
-  legend_definition: [StaticDashboardLegend]
   legend_position: String
   legend_word_break: String
   margin: StaticDashboardMargin
-  max_height: Float
-  padding: Float
-  pivot_axes: [StaticDashboardAxis!]
+  pivot_axis: StaticDashboardAxis
   stacked: Boolean
-  template: String
   title: String!
   type: String!
   url: URI!
@@ -30695,16 +30681,6 @@ type StaticDashboardElement implements Node & ResourceInterface {
   markdown: String!
   type: String!
   url: URI!
-}
-
-"""
-A static dashboard legend definition
-"""
-type StaticDashboardLegend implements Node {
-  color: String!
-  id: ID!
-  key: String!
-  title: String!
 }
 
 """
