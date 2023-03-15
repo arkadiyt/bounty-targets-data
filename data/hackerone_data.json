@@ -3072,17 +3072,6 @@
           "max_severity": "critical"
         },
         {
-          "asset_identifier": "https://github.com/gravitational/webapps",
-          "asset_type": "SOURCE_CODE",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "This mono-repository contains the source code for the web UI of Teleport.\n\nThe code is organized in terms of independent yarn packages which reside in the `packages` directory.",
-          "integrity_requirement": null,
-          "max_severity": "critical"
-        },
-        {
           "asset_identifier": "platform.teleport.sh",
           "asset_type": "URL",
           "availability_requirement": "high",
@@ -3114,6 +3103,17 @@
           "eligible_for_bounty": false,
           "eligible_for_submission": false,
           "instruction": "Our customers production Teleport Cloud accounts are subdomains of teleport.sh.  Unless explicitly listed elsewhere in the scope, please do not test against any of these subdomains.",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "https://github.com/gravitational/webapps",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "This repo has been deprecated.  The UI code is now maintained in the Teleport repo here: https://github.com/gravitational/teleport",
           "integrity_requirement": null,
           "max_severity": "none"
         },
