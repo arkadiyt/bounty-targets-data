@@ -115,10 +115,6 @@
           "target": "<Your own 1Password Account subdomain --> https://<your account domain>.1password.com/"
         },
         {
-          "type": "other",
-          "target": "https://bugcrowd-test.1password.com"
-        },
-        {
           "type": "website",
           "target": "https://start.1password.com"
         }
@@ -131,6 +127,28 @@
         {
           "type": "website",
           "target": "*.agilebits.com"
+        }
+      ]
+    }
+  },
+  {
+    "name": "1Password Bug Bounty CTF",
+    "url": "https://bugcrowd.com/agilebits-ctf",
+    "allows_disclosure": true,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "full",
+    "max_payout": 0,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "website",
+          "target": "https://bugbounty-ctf.1password.com/"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "other",
+          "target": ""
         }
       ]
     }
