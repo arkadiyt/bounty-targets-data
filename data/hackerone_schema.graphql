@@ -30665,6 +30665,7 @@ type StaticDashboardChart implements Node & ResourceInterface {
   description: String
   display_all_items_in_tooltip: Boolean
   display_total_of_all_items_in_tooltip: Boolean
+  explores: [StaticDashboardExplore!]
   id: ID!
   index_axis: StaticDashboardAxis
   key: String!
@@ -30686,6 +30687,16 @@ type StaticDashboardElement implements Node & ResourceInterface {
   markdown: String!
   type: String!
   url: URI!
+}
+
+"""
+A static dashboard explore definition
+"""
+type StaticDashboardExplore implements Node {
+  field: String!
+  id: ID!
+  label: String!
+  type: String!
 }
 
 """
