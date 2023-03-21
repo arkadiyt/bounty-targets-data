@@ -30752,6 +30752,7 @@ type StaticDashboardElement implements Node & ResourceInterface {
 A static dashboard explore definition
 """
 type StaticDashboardExplore implements Node {
+  allow_limit_override: Boolean
   field: String!
   id: ID!
   label: String!
