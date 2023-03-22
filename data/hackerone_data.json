@@ -4237,6 +4237,94 @@
   },
   {
     "allows_bounty_splitting": false,
+    "average_time_to_bounty_awarded": 204.0,
+    "average_time_to_first_program_response": 10.0,
+    "average_time_to_report_resolved": 643.0,
+    "handle": "floqast",
+    "id": 0,
+    "managed_program": false,
+    "name": "FloQast",
+    "offers_bounties": true,
+    "offers_swag": true,
+    "response_efficiency_percentage": 100,
+    "submission_state": "open",
+    "url": "https://hackerone.com/floqast",
+    "website": "https://floqast.com",
+    "targets": {
+      "in_scope": [
+        {
+          "asset_identifier": "*.eu.floqast.app",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "All domains for FloQast's Core Application for European Customers",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "*.floqast.app",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "All domains for FloQast's Core Application for US Customers",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "api-eu.floqast.app",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Public API for FloQast's Core Application for European Customers",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "asset_identifier": "*.floqast.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "FloQast's Marketing Website",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "*.floqast.studio",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "FloQast's Marketing Website for our Digital Entertainment Division",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "Any Asset Not Specifically Listed as In-Scope",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "Any domain, device, or asset not specifically listed as \"In-Scope\" for this program.",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        }
+      ]
+    }
+  },
+  {
+    "allows_bounty_splitting": false,
     "average_time_to_bounty_awarded": null,
     "average_time_to_first_program_response": 6.0,
     "average_time_to_report_resolved": 15.0,
@@ -51055,7 +51143,7 @@
     "name": "eToro BBP",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 96,
+    "response_efficiency_percentage": 95,
     "submission_state": "open",
     "url": "https://hackerone.com/etoro_bbp",
     "website": "https://etoro.com",
