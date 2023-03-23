@@ -160,6 +160,17 @@
           "instruction": "For our main application ```superbet.ro``` You can use a Romanian fake CNP generator in order to create an account, such as - https://isj.educv.ro/cnp/ in order to create an account. Make sure you are using a Romanian VPN as the portal works only for Romanian IP’s.\n\n● Please add the following User-Agent header when you are using any automated tools or scripts - User-agent: hackerone -. Requests that will not contain this cookie header might get blocked by our tools/SOC team.",
           "integrity_requirement": null,
           "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "*.superbet.rs",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "This is our new betting platform, available only in serbia. We only allow connection from Serbian Ip's, so please use a VPN.",
+          "integrity_requirement": null,
+          "max_severity": "critical"
         }
       ],
       "out_of_scope": [
@@ -77293,7 +77304,7 @@
     "name": "LocalTapiola",
     "offers_bounties": true,
     "offers_swag": true,
-    "response_efficiency_percentage": 65,
+    "response_efficiency_percentage": 66,
     "submission_state": "open",
     "url": "https://hackerone.com/localtapiola",
     "website": "http://www.lahitapiola.fi",
