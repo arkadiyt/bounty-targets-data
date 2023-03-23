@@ -1959,7 +1959,7 @@
     "name": "City of Los Angeles",
     "offers_bounties": false,
     "offers_swag": false,
-    "response_efficiency_percentage": 96,
+    "response_efficiency_percentage": 95,
     "submission_state": "open",
     "url": "https://hackerone.com/city_of_los_angeles_vdp",
     "website": "http://lacity.org",
@@ -10094,6 +10094,28 @@
           "max_severity": "critical"
         },
         {
+          "asset_identifier": "203.119.102.40/32",
+          "asset_type": "CIDR",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "203.119.102.40 (ftp.apnic.net) is **intentionally** accessible by both anonymous FTP and HTTPS. It contains publicly accessible information that is not confidential, but does have requirements for integrity and availability. This includes mailing list archives, copies of the WHOIS database and public forms/documents.  If you find any vulnerabilities that would impact integrity or availability (without executing DoS attacks, as outlined in our policy page), we would be interested in those reports.",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "203.133.248.0/22",
+          "asset_type": "CIDR",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "Information disclosure (e.g. logs, metrics) and reflected Cross Site Scripting (XSS) vulnerabilities are out-of scope for this system. ",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
           "asset_identifier": "ftp.apnic.net",
           "asset_type": "URL",
           "availability_requirement": null,
@@ -10112,6 +10134,17 @@
           "eligible_for_bounty": false,
           "eligible_for_submission": true,
           "instruction": "==These are live mailing lists with external subscribers, so please only use the **Testing** list at https://orbit.apnic.net/postorius/lists/testing.lists.apnic.net/ which was created specifically for vulnerability testing. We *don't* want testing messages going out to legitimate public subscribers.== This list is accessible via email and WebUI.",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "stats.labs.apnic.net",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "Information disclosure and reflected Cross Site Scripting (XSS) vulnerabilities are out-of scope for this system. ",
           "integrity_requirement": null,
           "max_severity": "critical"
         },
