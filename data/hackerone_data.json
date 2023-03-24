@@ -10127,13 +10127,35 @@
           "max_severity": "critical"
         },
         {
+          "asset_identifier": "aso.apnic.net",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "aso.apnic.net  (203.119.102.40) is **intentionally** accessible by anonymous FTP and HTTP. It contains publicly accessible information that is not confidential, but does have requirements for integrity and availability. This includes mailing list archives, copies of the WHOIS database and public forms/documents.  If you find any vulnerabilities that would impact integrity or availability (without executing DoS attacks, as outlined in our policy page), we would be interested in those reports.",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
           "asset_identifier": "ftp.apnic.net",
           "asset_type": "URL",
           "availability_requirement": null,
           "confidentiality_requirement": null,
           "eligible_for_bounty": false,
           "eligible_for_submission": true,
-          "instruction": "ftp.apnic.net (203.119.102.40) is **intentionally** accessible by both anonymous FTP and HTTPS. It contains publicly accessible information that is not confidential, but does have requirements for integrity and availability. This includes mailing list archives, copies of the WHOIS database and public forms/documents.  If you find any vulnerabilities that would impact integrity or availability (without executing DoS attacks, as outlined in our policy page), we would be interested in those reports.",
+          "instruction": "ftp.apnic.net (203.119.102.40) is **intentionally** accessible by anonymous FTP, HTTP and HTTPS. It contains publicly accessible information that is not confidential, but does have requirements for integrity and availability. This includes mailing list archives, copies of the WHOIS database and public forms/documents.  If you find any vulnerabilities that would impact integrity or availability (without executing DoS attacks, as outlined in our policy page), we would be interested in those reports.",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "nori.apnic.net",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "nori.apnic.net  (203.119.102.40) is **intentionally** accessible by anonymous FTP and HTTP. It contains publicly accessible information that is not confidential, but does have requirements for integrity and availability. This includes mailing list archives, copies of the WHOIS database and public forms/documents.  If you find any vulnerabilities that would impact integrity or availability (without executing DoS attacks, as outlined in our policy page), we would be interested in those reports.",
           "integrity_requirement": null,
           "max_severity": "critical"
         },
@@ -10145,6 +10167,17 @@
           "eligible_for_bounty": false,
           "eligible_for_submission": true,
           "instruction": "==These are live mailing lists with external subscribers, so please only use the **Testing** list at https://orbit.apnic.net/postorius/lists/testing.lists.apnic.net/ which was created specifically for vulnerability testing. We *don't* want testing messages going out to legitimate public subscribers.== This list is accessible via email and WebUI.",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "rsync.apnic.net",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "rsync.apnic.net  (203.119.102.40) is **intentionally** accessible by anonymous FTP and HTTP. It contains publicly accessible information that is not confidential, but does have requirements for integrity and availability. This includes mailing list archives, copies of the WHOIS database and public forms/documents.  If you find any vulnerabilities that would impact integrity or availability (without executing DoS attacks, as outlined in our policy page), we would be interested in those reports.",
           "integrity_requirement": null,
           "max_severity": "critical"
         },
@@ -76743,7 +76776,7 @@
     "name": "GitHub",
     "offers_bounties": true,
     "offers_swag": true,
-    "response_efficiency_percentage": 92,
+    "response_efficiency_percentage": 93,
     "submission_state": "open",
     "url": "https://hackerone.com/github",
     "website": "https://bounty.github.com",
