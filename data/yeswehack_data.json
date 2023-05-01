@@ -629,6 +629,10 @@
           "type": "web-application"
         },
         {
+          "target": "https://bot-tester.datadome.co/",
+          "type": "web-application"
+        },
+        {
           "target": "https://play.google.com/store/apps/details?id=co.datadome.app",
           "type": "mobile-application-android"
         },
@@ -734,16 +738,24 @@
   },
   {
     "id": "doctolib-public-bug-bounty-program",
-    "name": "Doctolib - Public Bug Bounty Program",
+    "name": "Doctolib",
     "public": true,
     "disabled": false,
     "managed": null,
     "min_bounty": 0,
-    "max_bounty": 20000,
+    "max_bounty": 25000,
     "targets": {
       "in_scope": [
         {
           "target": "www.doctolib.(fr|de|it)",
+          "type": "web-application"
+        },
+        {
+          "target": "pro.doctolib.(fr|de|it) (see \"about freemium scope\")",
+          "type": "web-application"
+        },
+        {
+          "target": "Special scenarios (see description)",
           "type": "web-application"
         },
         {
@@ -774,10 +786,6 @@
         },
         {
           "target": "doctolib.zendesk.com",
-          "type": "other"
-        },
-        {
-          "target": "pro.doctolib.com",
           "type": "other"
         },
         {
@@ -1612,45 +1620,6 @@
     }
   },
   {
-    "id": "app-suite",
-    "name": "OX App Suite",
-    "public": true,
-    "disabled": false,
-    "managed": null,
-    "min_bounty": 100,
-    "max_bounty": 5000,
-    "targets": {
-      "in_scope": [
-        {
-          "target": "https://sandbox.open-xchange.com",
-          "type": "web-application"
-        },
-        {
-          "target": "https://sandbox.open-xchange.com",
-          "type": "api"
-        },
-        {
-          "target": "GitLab and GitHub repos listed on this page",
-          "type": "other"
-        }
-      ],
-      "out_of_scope": [
-        {
-          "target": "All domains which are not listed as \"Scopes\", especially any production system operated by customers",
-          "type": "other"
-        },
-        {
-          "target": "Everything that is not directly related to the application or source-code in scope (e.g. GitHub, domain settings)",
-          "type": "other"
-        },
-        {
-          "target": "The components \"imageconverter\", \"documentconverter\", \"spellchecker\" and \"cacheservice\" are temporarily out of scope.",
-          "type": "other"
-        }
-      ]
-    }
-  },
-  {
     "id": "olvid-the-most-secure-messaging-app-in-the-world",
     "name": "Olvid - Open source end-to-end encrypted messaging",
     "public": true,
@@ -1729,6 +1698,109 @@
     }
   },
   {
+    "id": "pine-labs-bug-bounty-program",
+    "name": "Pine Labs Bug Bounty Program",
+    "public": true,
+    "disabled": false,
+    "managed": null,
+    "min_bounty": 50,
+    "max_bounty": 2000,
+    "targets": {
+      "in_scope": [
+        {
+          "target": "https://billingserver.pinelabs.com/",
+          "type": "web-application"
+        },
+        {
+          "target": "dashboard.pluralonline.com",
+          "type": "web-application"
+        },
+        {
+          "target": "https://lounge.pinelabs.com/loungeui/login",
+          "type": "web-application"
+        },
+        {
+          "target": "https://pinepgconsole.in:9099",
+          "type": "web-application"
+        },
+        {
+          "target": "https://paymentoptimizerdashboard.pinepg.in/",
+          "type": "web-application"
+        },
+        {
+          "target": "analytics.pinelabs.com",
+          "type": "web-application"
+        },
+        {
+          "target": "corporate.pineperks.in",
+          "type": "web-application"
+        },
+        {
+          "target": "www.pineperks.in",
+          "type": "web-application"
+        },
+        {
+          "target": "https://myplutus.pinelabs.my/",
+          "type": "web-application"
+        },
+        {
+          "target": "trm.pinepaymentsolutions.com",
+          "type": "web-application"
+        },
+        {
+          "target": "trm.pinelabs.com",
+          "type": "web-application"
+        },
+        {
+          "target": "https://www.pinelabs.ae/",
+          "type": "web-application"
+        },
+        {
+          "target": "https://www.letspaylater.ph/",
+          "type": "web-application"
+        },
+        {
+          "target": "https://www.letspaylater.sg/",
+          "type": "web-application"
+        },
+        {
+          "target": "https://apps.apple.com/in/app/pineperks/id908644471",
+          "type": "mobile-application-ios"
+        },
+        {
+          "target": "https://play.google.com/store/apps/details?id=com.pinegift",
+          "type": "mobile-application-android"
+        },
+        {
+          "target": "https://apps.apple.com/in/app/myplutus/id1042552445",
+          "type": "mobile-application-ios"
+        },
+        {
+          "target": "https://play.google.com/store/apps/details?id=com.pinelabs.pinetrm",
+          "type": "mobile-application-android"
+        },
+        {
+          "target": "https://play.google.com/store/apps/details?id=com.pinelabs.fave",
+          "type": "mobile-application-android"
+        },
+        {
+          "target": "https://apps.apple.com/in/app/fave-cashback-for-upi/id1538911340",
+          "type": "mobile-application-ios"
+        },
+        {
+          "target": "https://play.google.com/store/apps/details?id=com.pinelabs.favebiz",
+          "type": "mobile-application-android"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "target": "All other Pine Labs assets that are not listed above are to be treated as out of scope",
+          "type": "other"
+        }
+      ]
+    }
+  },
+  {
     "id": "powerdns",
     "name": "PowerDNS",
     "public": true,
@@ -1754,6 +1826,29 @@
         },
         {
           "target": "Everything that is not directly related to the application or source-code in scope (e.g. GitHub, domain settings)",
+          "type": "other"
+        }
+      ]
+    }
+  },
+  {
+    "id": "prestashop",
+    "name": "PrestaShop",
+    "public": true,
+    "disabled": false,
+    "managed": null,
+    "min_bounty": 0,
+    "max_bounty": 1000,
+    "targets": {
+      "in_scope": [
+        {
+          "target": "https://github.com/PrestaShop/PrestaShop",
+          "type": "web-application"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "target": "Any asset, module or domain not listed in the scope",
           "type": "other"
         }
       ]
@@ -2091,7 +2186,7 @@
           "type": "api"
         },
         {
-          "target": "eventorganizer-api.swapcard.com",
+          "target": "studio-api.swapcard.com",
           "type": "api"
         },
         {
@@ -2396,6 +2491,49 @@
     }
   },
   {
+    "id": "tencent-bug-bounty-program",
+    "name": "Tencent Bug Bounty Program",
+    "public": true,
+    "disabled": false,
+    "managed": null,
+    "min_bounty": 10,
+    "max_bounty": 5000,
+    "targets": {
+      "in_scope": [
+        {
+          "target": "In-Scope Products (for the full list please visit https://en.security.tencent.com/index.php/policy)",
+          "type": "other"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "target": "Please note that the vulnerabilities reported for the following assets will not be eligible for bounties.",
+          "type": "other"
+        },
+        {
+          "target": "*.qzoneapp.com",
+          "type": "other"
+        },
+        {
+          "target": "*. myqcloud.com",
+          "type": "other"
+        },
+        {
+          "target": "Third-party applications and websites",
+          "type": "other"
+        },
+        {
+          "target": "*Notes about Tencent Cloud (cloud.tencent.com as included in *.tencent.com)",
+          "type": "other"
+        },
+        {
+          "target": "Only vulnerabilities affecting the platform itself and IP owned by Tencent will be accepted. If an IP belongs to Tencent Cloud external customer, it is not considered in scope.",
+          "type": "other"
+        }
+      ]
+    }
+  },
+  {
     "id": "vfs-global-bug-bounty-program",
     "name": "VFS Global Bug Bounty Program",
     "public": true,
@@ -2454,10 +2592,6 @@
           "type": "web-application"
         },
         {
-          "target": "myeasydocs.co.il",
-          "type": "web-application"
-        },
-        {
           "target": "biometservices.com",
           "type": "web-application"
         },
@@ -2477,6 +2611,14 @@
         },
         {
           "target": "https://vire.vfsglobal.com",
+          "type": "other"
+        },
+        {
+          "target": "vfsglobal.com.ru",
+          "type": "other"
+        },
+        {
+          "target": "myeasydocs.co.il",
           "type": "other"
         }
       ]
@@ -2646,7 +2788,7 @@
     "targets": {
       "in_scope": [
         {
-          "target": "Products in Scope (see Program Rules for details)",
+          "target": "Products in Scope (see https://www.zte.com.cn/global/cybersecurity/ztepsirt/bug-bounty/products.html for more details)",
           "type": "other"
         }
       ],
