@@ -16522,6 +16522,7 @@ input FiltersHacktivityItemFilterInput {
   reporter: FiltersUserFilterInput
   team: FiltersTeamFilterInput
   total_awarded_amount: StringPredicateInput
+  type: StringPredicateInput
 }
 
 input FiltersHacktivityItemFilterOrder {
@@ -17021,6 +17022,7 @@ input FiltersWeaknessFilterInput {
   _and: [FiltersWeaknessFilterInput]
   _not: FiltersWeaknessFilterInput
   _or: [FiltersWeaknessFilterInput]
+  external_id: StringPredicateInput
   id: IntPredicateInput
   name: StringPredicateInput
 }
