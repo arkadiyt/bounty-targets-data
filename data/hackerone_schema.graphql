@@ -33431,6 +33431,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
   ): CampaignConnection
   can_request_review: Boolean
   can_toggle_bounty_splitting: Boolean!
+  can_update_all_hacker_invitations: Boolean!
   challenge_setting: ChallengeSetting
   checklist: Checklist
   checklist_check(id: ID!): ChecklistCheck
@@ -34761,6 +34762,38 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
     """
     last: Int
   ): UserConnection
+  whitelisted_reporters(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+
+    """
+    This argument is no longer supported
+    """
+    limit: Int = null
+
+    """
+    This argument is no longer supported
+    """
+    page: Int = null
+    where: FiltersUserFilterInput
+  ): WhitelistedReporterConnection
 }
 
 """
@@ -46024,6 +46057,59 @@ type WebhookResponseEdge {
   The item at the end of the edge.
   """
   node: WebhookResponse
+}
+
+"""
+A program's whitelisted reporter
+"""
+type WhitelistedReporter implements Node & ResourceInterface {
+  _id: ID!
+  cleared: Boolean!
+  created_at: DateTime!
+  email_alias: String
+  id: ID!
+  url: URI!
+  username: String!
+}
+
+"""
+The connection type for WhitelistedReporter.
+"""
+type WhitelistedReporterConnection {
+  """
+  A list of edges.
+  """
+  edges: [WhitelistedReporterEdge]
+
+  """
+  A list of nodes.
+  """
+  nodes: [WhitelistedReporter]
+
+  """
+  Information to aid in pagination.
+  """
+  pageInfo: PageInfo!
+
+  """
+  Int
+  """
+  total_count: Int!
+}
+
+"""
+An edge in a connection.
+"""
+type WhitelistedReporterEdge {
+  """
+  A cursor for use in pagination.
+  """
+  cursor: String!
+
+  """
+  The item at the end of the edge.
+  """
+  node: WhitelistedReporter
 }
 
 """
