@@ -2577,12 +2577,8 @@ enum AnalyticsFromEnum {
   fct_platform_benchmarks
   fct_report_reporters
   fixture_intervals
-  fixture_months
-  fixture_quarters
   fixture_report_states
   fixture_severity_ratings
-  fixture_weeks
-  fixture_years
 }
 
 input AnalyticsHavingInputType {
@@ -2927,24 +2923,12 @@ enum AnalyticsSelectFieldEnum {
   fixture_intervals__end_at
   fixture_intervals__interval
   fixture_intervals__start_at
-  fixture_months__end_at
-  fixture_months__month
-  fixture_months__start_at
-  fixture_quarters__end_at
-  fixture_quarters__quarter
-  fixture_quarters__start_at
   fixture_report_states__label
   fixture_report_states__num_index
   fixture_report_states__report_state
   fixture_severity_ratings__label
   fixture_severity_ratings__num_index
   fixture_severity_ratings__severity_rating
-  fixture_weeks__end_at
-  fixture_weeks__start_at
-  fixture_weeks__week
-  fixture_years__end_at
-  fixture_years__start_at
-  fixture_years__year
 }
 
 enum AnalyticsSelectFunctionEnum {
@@ -11770,6 +11754,8 @@ input CreateUserVerificationLetterReportInput {
   A unique identifier for the client performing the mutation.
   """
   clientMutationId: String
+  end_date: DateTime
+  start_date: DateTime
 }
 
 """
