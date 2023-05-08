@@ -68969,7 +68969,7 @@
     "name": "IOVLabs",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 97,
+    "response_efficiency_percentage": 93,
     "submission_state": "open",
     "url": "https://hackerone.com/iovlabs",
     "website": "https://www.iovlabs.org/",
@@ -92718,6 +92718,17 @@
           "max_severity": "high"
         },
         {
+          "asset_identifier": "Tier A - Core Assets",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": null,
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
           "asset_identifier": "accounts.snapchat.com",
           "asset_type": "URL",
           "availability_requirement": "high",
@@ -93457,13 +93468,13 @@
         {
           "asset_identifier": "Recon Data",
           "asset_type": "OTHER",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
+          "availability_requirement": "none",
+          "confidentiality_requirement": "none",
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
           "instruction": "Uber provides endpoints to determine whether an asset belongs to Uber:\n\nhttps://appsec-analysis.uber.com/public/bugbounty/ListDomains\nhttps://appsec-analysis.uber.com/public/bugbounty/ListIPs\n\nAll of the endpoints support offset and limit as optional parameters.\nExample: https://appsec-analysis.uber.com/public/bugbounty/ListDomains?offset=0&limit=100.\n\nThe public endpoints for asset information are for recon purposes. Information returned by those endpoints (or not) does not mean a bounty is guaranteed.",
-          "integrity_requirement": null,
-          "max_severity": "critical"
+          "integrity_requirement": "none",
+          "max_severity": "none"
         },
         {
           "asset_identifier": "uber.com",
