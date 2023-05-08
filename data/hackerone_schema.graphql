@@ -44517,6 +44517,7 @@ type User implements Node & ResourceInterface {
     where: FiltersPentestFilterInput
   ): PentestConnection
   product_analytics: UserProductAnalytics
+  product_user_type: String
   profile_activated: Boolean
   profile_picture(size: ProfilePictureSizes!): String!
   profile_pictures: Hash! @deprecated(reason: "Returns all the possible profile pictures instead of just the one you want use .profile_picture instead.")
