@@ -2570,6 +2570,7 @@ enum AnalyticsFromEnum {
   dim_hacker_reports
   dim_invitations
   dim_organizations
+  dim_payments
   dim_report_retests
   dim_reports
   dim_teams
@@ -2711,7 +2712,9 @@ enum AnalyticsSelectFieldEnum {
   dim_hacker_payments__payment_id
   dim_hacker_payments__payment_type
   dim_hacker_payments__report_id
+  dim_hacker_payments__team_handle
   dim_hacker_payments__user_id
+  dim_hacker_payments__username
   dim_hacker_reports__asset_type
   dim_hacker_reports__engagement_type
   dim_hacker_reports__is_valid_report
@@ -2745,6 +2748,24 @@ enum AnalyticsSelectFieldEnum {
   dim_invitations__user_id
   dim_organizations__id
   dim_organizations__name
+  dim_payments__amount
+  dim_payments__awarded_amount
+  dim_payments__created_at
+  dim_payments__created_at_day
+  dim_payments__created_at_month
+  dim_payments__created_at_num_days_since
+  dim_payments__created_at_quarter
+  dim_payments__created_at_week
+  dim_payments__created_at_year
+  dim_payments__currency
+  dim_payments__organization_id
+  dim_payments__payment_id
+  dim_payments__payment_type
+  dim_payments__report_id
+  dim_payments__team_handle
+  dim_payments__team_id
+  dim_payments__user_id
+  dim_payments__username
   dim_report_retests__approved_at
   dim_report_retests__approved_at_day
   dim_report_retests__approved_at_month
@@ -18174,8 +18195,8 @@ enum InvitationSourceEnum {
   artemis_hacker_reinvite
   artemis_manual_invite
   artemis_manual_reinvite
-  artemis_recommendations_hacker_invite_v2
-  artemis_recommendations_hacker_reinvite_v2
+  artemis_recommendations_hacker_invite_v3
+  artemis_recommendations_hacker_reinvite_v3
   automatic_invite
   bring_your_own_pentest_workflow_invite
   facebook_invite
