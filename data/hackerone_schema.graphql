@@ -26511,7 +26511,9 @@ type Query implements Node {
     Returns the last _n_ elements from the list.
     """
     last: Int
+    offset: Int
     order_by: CweEntryOrderInput
+    search: String
   ): CweEntryConnection
   cwe_entry(cwe_id: String!): CweEntry
   dashboard_states(
