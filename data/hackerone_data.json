@@ -30,12 +30,12 @@
         {
           "asset_identifier": "accounts.firefox.com",
           "asset_type": "URL",
-          "availability_requirement": "high",
-          "confidentiality_requirement": "high",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
           "instruction": "Additional domains in scope for Firefox Accounts:\n* api.accounts.firefox.com\n* oauth.accounts.firefox.com\n* profile.accounts.firefox.com\n* verifier.accounts.firefox.com\n* subscriptions.firefox.com\n",
-          "integrity_requirement": "high",
+          "integrity_requirement": null,
           "max_severity": "critical"
         },
         {
@@ -46,6 +46,17 @@
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
           "instruction": "This is the staging server for Firefox Addons. Testing should be restricted to this instance without any testing on production.\n\nAdditional domains for Addons:\n - services.addons.allizom.org\n  - versioncheck-bg.addons.allizom.org\n   - versioncheck.addons.allizom.org",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "aus5.mozilla.org",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Backend update system for Mozilla products.\n\nNo disruptive testing or scanning tools to be run on production.",
           "integrity_requirement": null,
           "max_severity": "critical"
         },
@@ -198,12 +209,12 @@
         {
           "asset_identifier": "https://www.saytechnologies.com/contact/sales",
           "asset_type": "URL",
-          "availability_requirement": "none",
-          "confidentiality_requirement": "none",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
           "eligible_for_bounty": false,
           "eligible_for_submission": false,
           "instruction": null,
-          "integrity_requirement": "none",
+          "integrity_requirement": null,
           "max_severity": "none"
         }
       ]
@@ -4121,12 +4132,12 @@
         {
           "asset_identifier": "io.tokencard.app.android",
           "asset_type": "GOOGLE_PLAY_APP_ID",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
+          "availability_requirement": "none",
+          "confidentiality_requirement": "high",
           "eligible_for_bounty": false,
           "eligible_for_submission": true,
           "instruction": "This is our Monolith mobile app for Android. You can find it at https://play.google.com/store/apps/details?id=io.tokencard.app.android.",
-          "integrity_requirement": null,
+          "integrity_requirement": "high",
           "max_severity": "critical"
         },
         {
@@ -4577,12 +4588,12 @@
         {
           "asset_identifier": "status.goteleport.com",
           "asset_type": "URL",
-          "availability_requirement": "none",
-          "confidentiality_requirement": "none",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
           "eligible_for_bounty": false,
           "eligible_for_submission": false,
           "instruction": null,
-          "integrity_requirement": "none",
+          "integrity_requirement": null,
           "max_severity": "none"
         },
         {
@@ -6207,23 +6218,23 @@
         {
           "asset_identifier": "auth.mongodb.com/",
           "asset_type": "URL",
-          "availability_requirement": "none",
-          "confidentiality_requirement": "none",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
           "eligible_for_bounty": false,
           "eligible_for_submission": false,
           "instruction": null,
-          "integrity_requirement": "none",
+          "integrity_requirement": null,
           "max_severity": "none"
         },
         {
           "asset_identifier": "http://*.auth.mongodb.com/*",
           "asset_type": "WILDCARD",
-          "availability_requirement": "none",
-          "confidentiality_requirement": "none",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
           "eligible_for_bounty": false,
           "eligible_for_submission": false,
           "instruction": null,
-          "integrity_requirement": "none",
+          "integrity_requirement": null,
           "max_severity": "none"
         },
         {
@@ -7698,12 +7709,12 @@
         {
           "asset_identifier": "Other Not Listed",
           "asset_type": "OTHER",
-          "availability_requirement": "none",
-          "confidentiality_requirement": "none",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
           "eligible_for_bounty": false,
           "eligible_for_submission": true,
           "instruction": null,
-          "integrity_requirement": "none",
+          "integrity_requirement": null,
           "max_severity": "none"
         },
         {
@@ -90903,7 +90914,7 @@
     "name": "Shopify",
     "offers_bounties": true,
     "offers_swag": true,
-    "response_efficiency_percentage": 94,
+    "response_efficiency_percentage": 93,
     "submission_state": "open",
     "url": "https://hackerone.com/shopify",
     "website": "https://www.shopify.com",
