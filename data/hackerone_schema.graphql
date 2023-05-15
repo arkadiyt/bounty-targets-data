@@ -22553,6 +22553,10 @@ input OpportunitiesFilterInput {
   campaign_teams: Boolean
 }
 
+input OpportunitiesQuery {
+  multi_match: MultiMatchInput
+}
+
 type OpportunityDocument implements Node {
   allows_bounty_splitting: Boolean
   allows_private_disclosure: Boolean
@@ -26735,7 +26739,7 @@ type Query implements Node {
     Returns the elements in the list that come before the specified cursor.
     """
     before: String
-    filters: OpportunitiesFilterInput
+    filter: QueryInput
 
     """
     Returns the first _n_ elements from the list.
@@ -26747,7 +26751,8 @@ type Query implements Node {
     Returns the last _n_ elements from the list.
     """
     last: Int
-    query: QueryInput
+    post_filters: OpportunitiesFilterInput
+    query: OpportunitiesQuery
     size: Int
     sort: [SortInput!]
   ): SearchResultConnection
@@ -31681,7 +31686,7 @@ type SolutionInstanceEdge {
 }
 
 input SortInput {
-  direction: OrderDirection!
+  direction: OrderDirection
   field: String!
 }
 
