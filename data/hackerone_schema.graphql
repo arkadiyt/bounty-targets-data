@@ -3490,6 +3490,7 @@ type Asset implements Node {
     """
     last: Int
   ): TeamScopeConnection
+  triage_complexity_rating: TriageComplexityRating
   updated_at: DateTime!
 }
 
@@ -28800,6 +28801,7 @@ type Report implements ActivitiesInterface & Node & ResourceInterface {
   timer_report_triage_miss_at: DateTime
   timer_report_triage_until_missed: Int
   title: String
+  triage_complexity_rating: TriageComplexityRating
   triage_meta: TriageMeta
   triaged_at: DateTime
   triaged_staleness_threshold: Int
@@ -36657,6 +36659,15 @@ type TrayProfile implements Node {
   ): SolutionInstanceConnection
   team: Team
   tray_user_id: String
+}
+
+"""
+Triage Complexity Rating for Reports and Assets
+"""
+type TriageComplexityRating implements Node {
+  complexity: Int!
+  complexity_rationale: String
+  id: ID!
 }
 
 """
