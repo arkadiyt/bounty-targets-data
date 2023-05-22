@@ -28849,7 +28849,49 @@ type ReportDraft implements Node {
   _id: ID!
   id: ID!
   team: Team
+  title: String
+  updated_at: DateTime!
   vulnerability_information: String
+}
+
+"""
+The connection type for ReportDraft.
+"""
+type ReportDraftConnection {
+  """
+  A list of edges.
+  """
+  edges: [ReportDraftEdge]
+
+  """
+  A list of nodes.
+  """
+  nodes: [ReportDraft]
+
+  """
+  Information to aid in pagination.
+  """
+  pageInfo: PageInfo!
+
+  """
+  Int
+  """
+  total_count: Int!
+}
+
+"""
+An edge in a connection.
+"""
+type ReportDraftEdge {
+  """
+  A cursor for use in pagination.
+  """
+  cursor: String!
+
+  """
+  The item at the end of the edge.
+  """
+  node: ReportDraft
 }
 
 """
@@ -44487,6 +44529,27 @@ type User implements Node & ResourceInterface {
   ): HacktivityItemConnection
   remaining_otp_backup_code_count: Int
   remaining_reports(team_handle: String!): Int
+  report_drafts(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+  ): ReportDraftConnection
   report_retest_users(
     """
     Returns the elements in the list that come after the specified cursor.
