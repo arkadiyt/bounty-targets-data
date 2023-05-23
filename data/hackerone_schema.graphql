@@ -17420,6 +17420,18 @@ type HackerPublished implements HacktivityItemInterface & Node {
 }
 
 """
+A HackerOne hacker's report template
+"""
+type HackerReportTemplate implements Node {
+  body: String
+  cvss: JSON
+  cwe: Int
+  id: ID!
+  impact: String
+  title: String!
+}
+
+"""
 A HackerOne Hacker Review Type
 """
 type HackerReview implements Node & ResourceInterface {
@@ -18347,6 +18359,11 @@ type InviteEligibleHackersPayload implements MutationResult {
   users_validation_result: [Hash!]!
   was_successful: Boolean!
 }
+
+"""
+Represents untyped JSON
+"""
+scalar JSON
 
 """
 A jira escalation for a report
@@ -44235,6 +44252,7 @@ type User implements Node & ResourceInterface {
   hacker_preference: HackerPreference
   hacker_preferences_asset_types: [HackerPreferencesAssetType!]
   hacker_preferences_weaknesses: [HackerPreferencesWeakness!]
+  hacker_report_templates: [HackerReportTemplate!]
   hacker_triage_ratings(
     """
     Returns the elements in the list that come after the specified cursor.
