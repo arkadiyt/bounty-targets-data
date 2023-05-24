@@ -2018,6 +2018,37 @@
     }
   },
   {
+    "id": "salt-mobile-sa-bug-bounty-program",
+    "name": "Salt Mobile SA - Bug Bounty Program",
+    "public": true,
+    "disabled": false,
+    "managed": null,
+    "min_bounty": 50,
+    "max_bounty": 2000,
+    "targets": {
+      "in_scope": [
+        {
+          "target": "https://my.salt.ch",
+          "type": "web-application"
+        },
+        {
+          "target": "https://eshop.salt.ch",
+          "type": "web-application"
+        },
+        {
+          "target": "https://login.salt.ch",
+          "type": "web-application"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "target": "All domains or subdomains not listed in the above list of 'Scopes'",
+          "type": "other"
+        }
+      ]
+    }
+  },
+  {
     "id": "sogexia",
     "name": "Sogexia",
     "public": true,
