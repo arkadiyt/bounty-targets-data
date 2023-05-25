@@ -17703,8 +17703,6 @@ Available ElasticSearch indexes
 enum IndexEnum {
   DuplicateDetectorReportsIndex
   OpportunitiesIndex
-  OrganizationMemberGroupsIndex
-  OrganizationMembersIndex
 }
 
 input InnerHitsInput {
@@ -22734,6 +22732,33 @@ type Organization implements Node {
     order_by: FiltersOrganizationMemberGroupFilterOrder
     where: FiltersOrganizationMemberGroupFilterInput
   ): OrganizationMemberGroupConnection
+  organization_member_groups_search(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+    from: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+    permissions: [String!]
+    search_string: String
+    size: Int
+    team_ids: [Int!]
+    types: [OrganizationMemberGroupTypeEnum!]
+  ): SearchResultConnection
   organization_members(
     """
     Returns the elements in the list that come after the specified cursor.
@@ -23429,6 +23454,15 @@ type OrganizationMemberGroupEdge {
   The item at the end of the edge.
   """
   node: OrganizationMemberGroup
+}
+
+"""
+Types an organization member group can have
+"""
+enum OrganizationMemberGroupTypeEnum {
+  managed_system
+  organization
+  system
 }
 
 """
