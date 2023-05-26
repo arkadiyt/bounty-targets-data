@@ -45555,6 +45555,83 @@
   },
   {
     "allows_bounty_splitting": false,
+    "average_time_to_bounty_awarded": 1387.0,
+    "average_time_to_first_program_response": 4785.0,
+    "average_time_to_report_resolved": 1442.0,
+    "handle": "filezilla",
+    "id": 0,
+    "managed_program": false,
+    "name": "FileZilla",
+    "offers_bounties": true,
+    "offers_swag": false,
+    "response_efficiency_percentage": 67,
+    "submission_state": "open",
+    "url": "https://hackerone.com/filezilla",
+    "website": "https://filezilla-project.org/",
+    "targets": {
+      "in_scope": [
+        {
+          "asset_identifier": "https://svn.filezilla-project.org/svn/FileZilla3/trunk/",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://svn.filezilla-project.org/svn/filezilla3/trunk/src/putty",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "The code in this directory is based on PuTTY.  Only vulnerabilities specific to changes made in FileZilla compared to upstream are eligible for a bounty.",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://svn.filezilla-project.org/svn/libfilezilla/trunk",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": null,
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://svn.filezilla-project.org/svn/libfilezilla/trunk/",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "asset_identifier": "https://svn.filezilla-project.org/svn/filezilla3/trunk/src/storj/",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "This also includes the libstorj dependency.",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        }
+      ]
+    }
+  },
+  {
+    "allows_bounty_splitting": false,
     "average_time_to_bounty_awarded": 221.0,
     "average_time_to_first_program_response": 25.0,
     "average_time_to_report_resolved": 1668.0,
@@ -87552,7 +87629,7 @@
     "name": "LocalTapiola",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 79,
+    "response_efficiency_percentage": 81,
     "submission_state": "open",
     "url": "https://hackerone.com/localtapiola",
     "website": "http://www.lahitapiola.fi",
@@ -90462,7 +90539,7 @@
     "name": "Algolia",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 89,
+    "response_efficiency_percentage": 88,
     "submission_state": "open",
     "url": "https://hackerone.com/algolia",
     "website": "https://algolia.com",
