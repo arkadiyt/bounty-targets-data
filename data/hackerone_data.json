@@ -43848,6 +43848,83 @@
   {
     "allows_bounty_splitting": false,
     "average_time_to_bounty_awarded": null,
+    "average_time_to_first_program_response": 533.0,
+    "average_time_to_report_resolved": null,
+    "handle": "gener8",
+    "id": 0,
+    "managed_program": false,
+    "name": "Gener8",
+    "offers_bounties": false,
+    "offers_swag": false,
+    "response_efficiency_percentage": 50,
+    "submission_state": "open",
+    "url": "https://hackerone.com/gener8",
+    "website": "https://gener8ads.com",
+    "targets": {
+      "in_scope": [
+        {
+          "asset_identifier": "*.gener8ads.com",
+          "asset_type": "WILDCARD",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "asset_identifier": "help.gener8ads.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "Our support systems and contact forms are managed by Intercom. Vulnerabilities should  be reported to security@intercom.com\n\nPlease do not attempt to test XSS or injection vulnerabilities against the widget embedded on our site.",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "http://api.gener8ads.com/auth",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "This forms part of our legacy authentication system that will be sunset by the end of Q1 2020.",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "http://gener8ads.com/iframes",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "Hosts static content related to serving third party ads and does not contain sensitive information.",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "user.gener8ads.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "This forms part of our legacy authentication system that will be sunset by the end of Q1 2020.",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        }
+      ]
+    }
+  },
+  {
+    "allows_bounty_splitting": false,
+    "average_time_to_bounty_awarded": null,
     "average_time_to_first_program_response": null,
     "average_time_to_report_resolved": null,
     "handle": "stagingdoteverydotorg",
@@ -87002,7 +87079,7 @@
     "name": "GitHub",
     "offers_bounties": true,
     "offers_swag": true,
-    "response_efficiency_percentage": 93,
+    "response_efficiency_percentage": 92,
     "submission_state": "open",
     "url": "https://hackerone.com/github",
     "website": "https://bounty.github.com",
