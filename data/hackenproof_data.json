@@ -2055,6 +2055,26 @@
     }
   },
   {
+    "id": "/deltaprime/deltaprime-smart-contracts",
+    "name": "DeltaPrime Smart Contracts",
+    "url": "https://hackenproof.com/deltaprime/deltaprime-smart-contracts",
+    "archived": false,
+    "targets": {
+      "in_scope": [
+        {
+          "target": "https://github.com/DeltaPrimeLabs/deltaprime-primeloans/tree/dev/main",
+          "type": "Smart Contract",
+          "instruction": "",
+          "severity": "Critical",
+          "reward": "Bounty"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
     "id": "/dex-trade/dex-trade",
     "name": "Dex-Trade",
     "url": "https://hackenproof.com/dex-trade/dex-trade",
@@ -2150,6 +2170,46 @@
     "targets": {
       "in_scope": [
 
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
+    "id": "/evaa/evaa-smart-contracts",
+    "name": "EVAA Smart Contracts",
+    "url": "https://hackenproof.com/evaa/evaa-smart-contracts",
+    "archived": false,
+    "targets": {
+      "in_scope": [
+        {
+          "target": "https://testnet.tonscan.org/address/EQBQMoFbX2YFU5YP9_0VHdtMFnQMjsM9pH22r9ZSRpYg8Z29",
+          "type": "Smart Contract",
+          "instruction": "This is a master contract. It performs different actions based on various transaction opcodes. During the user's initial interaction with the contract pool, a user initialization takes place. This involves creating a separate contract for the user that only stores data related to that specific user (referred to as user contract).\n\nWhen the user communicates with the master contract for supply or borrow actions, the interaction occurs with the master contract's wallet, which in turn communicates with the user contract. Repay and withdraw actions function similarly to supply and borrow actions.\n\nAdditionally, the master contract includes a set of getters for the frontend and liquidator bots.",
+          "severity": "Critical",
+          "reward": "Bounty"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
+    "id": "/evaa/evaa-web",
+    "name": "EVAA Web",
+    "url": "https://hackenproof.com/evaa/evaa-web",
+    "archived": false,
+    "targets": {
+      "in_scope": [
+        {
+          "target": "https://app.evaa.finance/",
+          "type": "Web",
+          "instruction": "",
+          "severity": "Critical",
+          "reward": "Bounty"
+        }
       ],
       "out_of_scope": [
 
