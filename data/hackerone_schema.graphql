@@ -22787,6 +22787,7 @@ type Organization implements Node {
   h1_assets: Boolean
   h1_assets_enterprise: Boolean
   handle: String!
+  i_am_asset_inventory_manager: Boolean!
   i_am_organization_member: Boolean!
   i_can_create_campaigns: Boolean!
   i_can_manage_all_programs_scope: Boolean!
@@ -26849,6 +26850,31 @@ type Query implements Node {
     team_handle: [String!]
     view: TriageInboxItemViewEnum
   ): TriageInboxItemConnection
+
+  """
+  A Resolver for Triage Pods
+  """
+  triage_pods(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+  ): TriagePodConnection!
   user(username: String!): User @deprecated(reason: "Query for a User node at the root level is not recommended. Ref T12456")
   users(
     """
@@ -35515,6 +35541,7 @@ Triage metadata relating to a specific team
 type TeamTriageMeta implements Node {
   id: ID!
   team_name: String
+  team_pod_name: String
   team_product_edition_name: String
   team_triage_plus: Boolean
 }
@@ -36294,11 +36321,11 @@ Triage Inbox
 type TriageInbox implements Node {
   id: ID!
   oldest_undismissed_at(product_editions: [TriageInboxItemProductEditionFilterEnum!]!, view: TriageInboxItemViewEnum!): DateTime
-  owned_by_me_total_count: Int!
-  owned_by_triage_total_count: Int!
-  prioritization_total_count: Int!
-  pristine_total_count: Int!
-  recently_dismissed_total_count: Int!
+  owned_by_me_total_count(pod_name: String = null): Int!
+  owned_by_triage_total_count(pod_name: String = null): Int!
+  prioritization_total_count(pod_name: String = null): Int!
+  pristine_total_count(pod_name: String = null): Int!
+  recently_dismissed_total_count(pod_name: String = null): Int!
   teams: [Team]
 }
 
@@ -36434,6 +36461,51 @@ type TriageMeta implements Node & ResourceInterface {
   team_triage_meta: TeamTriageMeta
   timer_goals: [Hash!]
   url: URI!
+}
+
+"""
+A Triage pod
+"""
+type TriagePod implements Node {
+  _id: ID!
+  id: ID!
+  name: String!
+}
+
+"""
+The connection type for TriagePod.
+"""
+type TriagePodConnection {
+  """
+  A list of edges.
+  """
+  edges: [TriagePodEdge]
+
+  """
+  A list of nodes.
+  """
+  nodes: [TriagePod]
+
+  """
+  Information to aid in pagination.
+  """
+  pageInfo: PageInfo!
+  total_count: Int!
+}
+
+"""
+An edge in a connection.
+"""
+type TriagePodEdge {
+  """
+  A cursor for use in pagination.
+  """
+  cursor: String!
+
+  """
+  The item at the end of the edge.
+  """
+  node: TriagePod
 }
 
 """
