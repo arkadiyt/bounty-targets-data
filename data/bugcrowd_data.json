@@ -9538,29 +9538,6 @@
     }
   },
   {
-    "name": "HostGator Brazil VDP",
-    "url": "https://bugcrowd.com/hostgator-brazil-vdp",
-    "allows_disclosure": false,
-    "managed_by_bugcrowd": true,
-    "safe_harbor": "full",
-    "max_payout": 0,
-    "targets": {
-      "in_scope": [
-        {
-          "type": "website",
-          "target": "Hostgator.com.br "
-        },
-        {
-          "type": "website",
-          "target": "https://www.hostgator.com.br"
-        }
-      ],
-      "out_of_scope": [
-
-      ]
-    }
-  },
-  {
     "name": "HostGator Latam Bug Bounty",
     "url": "https://bugcrowd.com/hostgator-latam-bb",
     "allows_disclosure": false,
@@ -9571,7 +9548,7 @@
       "in_scope": [
         {
           "type": "website",
-          "target": "Hostgator.com.br "
+          "target": "*.hostgator.com.br/"
         },
         {
           "type": "website",
@@ -9588,16 +9565,54 @@
         {
           "type": "website",
           "target": "https://www.cart.hostgator.com.br"
-        },
-        {
-          "type": "website",
-          "target": "https://www.hostgator.com.br"
         }
       ],
       "out_of_scope": [
         {
           "type": "website",
           "target": "Anything not explicitly listed as \"In Scope\"."
+        }
+      ]
+    }
+  },
+  {
+    "name": "HostGator Latam VDP",
+    "url": "https://bugcrowd.com/hostgator-latam-vdp",
+    "allows_disclosure": false,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "none",
+    "max_payout": 0,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "website",
+          "target": "*.hostgator.com.br"
+        },
+        {
+          "type": "website",
+          "target": "Cliente.hostgator.com.br"
+        },
+        {
+          "type": "website",
+          "target": "cart.hostgator.com.br"
+        },
+        {
+          "type": "website",
+          "target": "https://www.cart.hostgator.com.br"
+        },
+        {
+          "type": "website",
+          "target": "https://www.cliente.hostgator.com.br"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "website",
+          "target": "*.hostgator.com.br/"
+        },
+        {
+          "type": "website",
+          "target": "Anything not explicitly listed as in scope.\t"
         }
       ]
     }
@@ -13798,23 +13813,7 @@
       "in_scope": [
         {
           "type": "website",
-          "target": "*.resellerclub.com"
-        },
-        {
-          "type": "api",
-          "target": "https://httpapi.com"
-        },
-        {
-          "type": "api",
-          "target": "https://httpapi.com/"
-        },
-        {
-          "type": "website",
-          "target": "https://obmobileapp.com"
-        },
-        {
-          "type": "website",
-          "target": "https://www.obmobileapp.com/"
+          "target": "https://www.bigrock.in/"
         }
       ],
       "out_of_scope": [
