@@ -16327,7 +16327,9 @@ input FiltersAnalyticsReportFilterInput {
 }
 
 input FiltersAnalyticsReportFilterOrder {
+  created_at: FilterOrderPredicateInput
   id: FilterOrderPredicateInput
+  name: FilterOrderPredicateInput
 }
 
 input FiltersAssetEnrichmentSubmissionFilterInput {
@@ -32265,6 +32267,7 @@ type StructuredScope implements Node & ResourceInterface {
     last: Int
   ): StructuredScopeVersionConnection
   team: Team
+  triage_guideline: String
   unarchived_at: DateTime
   updated_at: DateTime
   url: URI!
@@ -34445,7 +34448,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
     """
     after: String
     archived: Boolean = null
-    asset_type: String = null
+    asset_type: [String!] = null
 
     """
     Returns the elements in the list that come before the specified cursor.
