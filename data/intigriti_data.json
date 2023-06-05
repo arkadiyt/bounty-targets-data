@@ -904,6 +904,70 @@
     }
   },
   {
+    "id": "f20cc699-5ec8-4cb8-8168-61e15c5c7bbe",
+    "name": "EBSI",
+    "company_handle": "ebsi",
+    "handle": "ebsi",
+    "url": "https://www.intigriti.com/programs/ebsi/ebsi/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "min_bounty": {
+      "value": 500.0,
+      "currency": "EUR"
+    },
+    "max_bounty": {
+      "value": 15000.0,
+      "currency": "EUR"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "other",
+          "endpoint": "Authorisation API",
+          "description": "Following endpoints of the [Authorisation API](https://api-pilot.ebsi.eu/docs/apis/authorisation/latest#/) are considered in-scope:\n\n1. [get v3 well known openid config](https://api-pilot.ebsi.eu/docs/apis/authorisation/latest#/operations/get-v3-well-known-openid-config)\n2. [get v3 jwks](https://api-pilot.ebsi.eu/docs/apis/authorisation/latest#/operations/get-v3-jwks)\n3. [get v3 presentation definitions](https://api-pilot.ebsi.eu/docs/apis/authorisation/latest#/operations/get-v3-presentation-definitions)\n4. [prove ownership over the DID](https://api-pilot.ebsi.eu/docs/apis/authorisation/latest#/operations/post-v3-token)\n\n\nIn this case, the [older version](https://api-pilot.ebsi.eu/docs/apis/authorisation/V2#/) is also considered in scope:\n\n1. [post authorisation v2 authentication requests](https://api-pilot.ebsi.eu/docs/apis/authorisation/V2#/operations/post-authorisation-v2-authentication-requests)\n2. [post authorisation v2 siop sessions](https://api-pilot.ebsi.eu/docs/apis/authorisation/V2#/operations/post-authorisation-v2-siop-sessions)\n3. [post authorisation v2 oauth2 sessions](https://api-pilot.ebsi.eu/docs/apis/authorisation/V2#/operations/post-authorisation-v2-oauth2-sessions)"
+        },
+        {
+          "type": "other",
+          "endpoint": "DID registry API",
+          "description": "Following endpoints of the [DID Registry API](https://api-pilot.ebsi.eu/docs/apis/did-registry/latest#/) are considered in-scope:\n\n1. [get did registry v4 identifiers](https://api-pilot.ebsi.eu/docs/apis/did-registry/latest#/operations/get-did-registry-v4-identifiers)\n2. [get did registry v4 identifier](https://api-pilot.ebsi.eu/docs/apis/did-registry/latest#/operations/get-did-registry-v4-identifier)\n3. [get did registry v4 actions](https://api-pilot.ebsi.eu/docs/apis/did-registry/latest#/operations/get-did-registry-v4-actions)\n4. [post did registry v4 jsonrpc](https://api-pilot.ebsi.eu/docs/apis/did-registry/latest#/operations/post-did-registry-v4-jsonrpc)"
+        },
+        {
+          "type": "other",
+          "endpoint": "Ledger API",
+          "description": "Following endpoints of the [Ledger  API](https://api-pilot.ebsi.eu/docs/apis/ledger/latest#/) are considered in-scope:\n\n1. [post ledger v3 blockchains besu](https://api-pilot.ebsi.eu/docs/apis/ledger/latest#/operations/post-ledger-v3-blockchains-besu)"
+        },
+        {
+          "type": "other",
+          "endpoint": "Timestamp API",
+          "description": "Following endpoints of the [Timestamp API](https://api-pilot.ebsi.eu/docs/apis/timestamp/latest#/) are considered in-scope:\n\n1. [get timestamp v3 hash algorithms](https://api-pilot.ebsi.eu/docs/apis/timestamp/latest#/operations/get-timestamp-v3-hash-algorithms)\n2. [get timestamp v3 hash algorithms hash algorithm id](https://api-pilot.ebsi.eu/docs/apis/timestamp/latest#/operations/get-timestamp-v3-hash-algorithms-hash-algorithm-id)\n3. [get timestamp v3 timestamps](https://api-pilot.ebsi.eu/docs/apis/timestamp/latest#/operations/get-timestamp-v3-timestamps)\n4. [get timestamp v3 timestamps timestampId](https://api-pilot.ebsi.eu/docs/apis/timestamp/latest#/operations/get-timestamp-v3-timestamps-timestampId)\n5. [get timestamp v3 records](https://api-pilot.ebsi.eu/docs/apis/timestamp/latest#/operations/get-timestamp-v3-records)\n6. [get timestamp v3 records record id](https://api-pilot.ebsi.eu/docs/apis/timestamp/latest#/operations/get-timestamp-v3-records-record-id)\n7. [get timestamp v3 records record id versions](https://api-pilot.ebsi.eu/docs/apis/timestamp/latest#/operations/get-timestamp-v3-records-record-id-versions)\n8. [get timestamp v3 records record id versions version id](https://api-pilot.ebsi.eu/docs/apis/timestamp/latest#/operations/get-timestamp-v3-records-record-id-versions-version-id)\n9. [post timestamp v3 jsonrpc](https://api-pilot.ebsi.eu/docs/apis/timestamp/latest#/operations/post-timestamp-v3-jsonrpc)"
+        },
+        {
+          "type": "other",
+          "endpoint": "Trusted Apps Registry API",
+          "description": "Following endpoints of the [Trusted Apps Registry](https://api-pilot.ebsi.eu/docs/apis/trusted-apps-registry/latest#/) are considered in-scope:\n\n1. [get trusted apps registry v2 apps](https://api-pilot.ebsi.eu/docs/apis/trusted-apps-registry/latest#/operations/get-trusted-apps-registry-v2-apps)\n2. [get trusted apps registry v2 app](https://api-pilot.ebsi.eu/docs/apis/trusted-apps-registry/latest#/operations/get-trusted-apps-registry-v2-app)\n3. [get apps applicationId public keys](https://api-pilot.ebsi.eu/docs/apis/trusted-apps-registry/latest#/operations/get-apps-applicationId-public-keys)\n4. [get apps applicationId public keys public key](https://api-pilot.ebsi.eu/docs/apis/trusted-apps-registry/latest#/operations/get-apps-applicationId-public-keys-public-key)\n5. [get apps resourceApplicationId authorizations](https://api-pilot.ebsi.eu/docs/apis/trusted-apps-registry/latest#/operations/get-apps-resourceApplicationId-authorizations)\n6. [get trusted apps registry v2 authorizationId](https://api-pilot.ebsi.eu/docs/apis/trusted-apps-registry/latest#/operations/get-trusted-apps-registry-v2-authorizationId)\n7. [get trusted apps registry v2 policies](https://api-pilot.ebsi.eu/docs/apis/trusted-apps-registry/latest#/operations/get-trusted-apps-registry-v2-policies)\n8. [get trusted apps registry v2 policy](https://api-pilot.ebsi.eu/docs/apis/trusted-apps-registry/latest#/operations/get-trusted-apps-registry-v2-policy)\n9. [get trusted apps registry v2 policy revisions](https://api-pilot.ebsi.eu/docs/apis/trusted-apps-registry/latest#/operations/get-trusted-apps-registry-v2-policy-revisions)\n10. [post ledger v2 blockchains besu](https://api-pilot.ebsi.eu/docs/apis/trusted-apps-registry/latest#/operations/post-ledger-v2-blockchains-besu)"
+        },
+        {
+          "type": "other",
+          "endpoint": "Trusted Issuers Registry API",
+          "description": "Following endpoints of the [Trusted Issuers Registry API](https://api-pilot.ebsi.eu/docs/apis/trusted-issuers-registry/latest#/) are considered in-scope:\n\n1. [get trusted issuers registry v4 issuers](https://api-pilot.ebsi.eu/docs/apis/trusted-issuers-registry/latest#/operations/get-trusted-issuers-registry-v4-issuers)\n2. [get trusted issuers registry v4 issuers issuer](https://api-pilot.ebsi.eu/docs/apis/trusted-issuers-registry/latest#/operations/get-trusted-issuers-registry-v4-issuers-issuer)\n3. [get trusted issuers registry v4 issuers did attributes](https://api-pilot.ebsi.eu/docs/apis/trusted-issuers-registry/latest#/operations/get-trusted-issuers-registry-v4-issuers-did-attributes)\n4. [get trusted issuers registry v4 issuers did attributes attributeid](https://api-pilot.ebsi.eu/docs/apis/trusted-issuers-registry/latest#/operations/get-trusted-issuers-registry-v4-issuers-did-attributes-attributeid)\n5. [get trusted issuers registry v4 issuers did attributes attributeid revisions](https://api-pilot.ebsi.eu/docs/apis/trusted-issuers-registry/latest#/operations/get-trusted-issuers-registry-v4-issuers-did-attributes-attributeid-revisions)\n6. [get trusted issuers registry v4 issuers did proxies](https://api-pilot.ebsi.eu/docs/apis/trusted-issuers-registry/latest#/operations/get-trusted-issuers-registry-v4-issuers-did-proxies)\n7. [get trusted issuers registry v4 issuers did proxies proxyid](https://api-pilot.ebsi.eu/docs/apis/trusted-issuers-registry/latest#/operations/get-trusted-issuers-registry-v4-issuers-did-proxies-proxyid)\n8. [get trusted issuers registry v4 issuers did proxies proxyid path](https://api-pilot.ebsi.eu/docs/apis/trusted-issuers-registry/latest#/operations/get-trusted-issuers-registry-v4-issuers-did-proxies-proxyid-path)\n9. [post ledger v2 blockchains besu](https://api-pilot.ebsi.eu/docs/apis/trusted-issuers-registry/latest#/operations/post-ledger-v2-blockchains-besu)"
+        },
+        {
+          "type": "other",
+          "endpoint": "Trusted Policies Registry API",
+          "description": "Following endpoints of the [Trusted Policies Registry API](https://api-pilot.ebsi.eu/docs/apis/trusted-issuers-registry/latest#/) are considered in-scope:\n\n1. [get policies](https://api-pilot.ebsi.eu/docs/apis/trusted-policies-registry/latest#/operations/get-policies)\n2. [get policy](https://api-pilot.ebsi.eu/docs/apis/trusted-policies-registry/latest#/operations/get-policy)\n3. [get users](https://api-pilot.ebsi.eu/docs/apis/trusted-policies-registry/latest#/operations/get-users)\n4. [get user](https://api-pilot.ebsi.eu/docs/apis/trusted-policies-registry/latest#/operations/get-user)\n5. [post jsonrpc](https://api-pilot.ebsi.eu/docs/apis/trusted-policies-registry/latest#/operations/post-jsonrpc)"
+        },
+        {
+          "type": "other",
+          "endpoint": "Trusted Schemas Registry API",
+          "description": "Following endpoints of the [Trusted Schemas Registry API](https://api-pilot.ebsi.eu/docs/apis/trusted-schemas-registry/latest#/) are considered in-scope:\n\n1. [get trusted schemas registry v2 schemas](https://api-pilot.ebsi.eu/docs/apis/trusted-schemas-registry/latest#/operations/get-trusted-schemas-registry-v2-schemas)\n2. [get trusted schemas registry v2 schema](https://api-pilot.ebsi.eu/docs/apis/trusted-schemas-registry/latest#/operations/get-trusted-schemas-registry-v2-schema)\n3. [get trusted schemas registry v2 schemas revisions](https://api-pilot.ebsi.eu/docs/apis/trusted-schemas-registry/latest#/operations/get-trusted-schemas-registry-v2-schemas-revisions)\n4. [get trusted schemas registry v2 schema revision](https://api-pilot.ebsi.eu/docs/apis/trusted-schemas-registry/latest#/operations/get-trusted-schemas-registry-v2-schema-revision)\n5. [get trusted schemas registry v2 schemas revision metadata list](https://api-pilot.ebsi.eu/docs/apis/trusted-schemas-registry/latest#/operations/get-trusted-schemas-registry-v2-schemas-revision-metadata-list)\n6. [get trusted schemas registry v2 schema revision metadata](https://api-pilot.ebsi.eu/docs/apis/trusted-schemas-registry/latest#/operations/get-trusted-schemas-registry-v2-schema-revision-metadata)\n7. [get trusted schemas registry v2 policies](https://api-pilot.ebsi.eu/docs/apis/trusted-schemas-registry/latest#/operations/get-trusted-schemas-registry-v2-policies)\n8. [get trusted schemas registry v2 policy](https://api-pilot.ebsi.eu/docs/apis/trusted-schemas-registry/latest#/operations/get-trusted-schemas-registry-v2-policy)\n9. [get trusted schemas registry v2 policy revisions](https://api-pilot.ebsi.eu/docs/apis/trusted-schemas-registry/latest#/operations/get-trusted-schemas-registry-v2-policy-revisions)\n10. [post trusted schemas registry v2 jsonrpc](https://api-pilot.ebsi.eu/docs/apis/trusted-schemas-registry/latest#/operations/post-trusted-schemas-registry-v2-jsonrpc)"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
     "id": "d5c4e966-a80a-44f5-91c9-2bb9487b8762",
     "name": "EURid",
     "company_handle": "eurid",
