@@ -11059,6 +11059,7 @@ input CreateStructuredScopeInput {
   notify_subscribers_of_changes: Boolean
   reference: String
   team_id: ID!
+  triage_guideline: StructuredScopeTriageGuidelineEnum = null
 }
 
 """
@@ -32468,6 +32469,15 @@ enum StructuredScopeOrderField {
 }
 
 """
+Structured Scope triage guideline enum
+"""
+enum StructuredScopeTriageGuidelineEnum {
+  accept
+  ask
+  reject
+}
+
+"""
 A versioned log of a scope of a HackerOne program
 """
 type StructuredScopeVersion implements Node & ResourceInterface {
@@ -42108,6 +42118,7 @@ input UpdateStructuredScopeInput {
   notify_subscribers_of_changes: Boolean = true
   reference: String
   structured_scope_id: ID!
+  triage_guideline: StructuredScopeTriageGuidelineEnum
 }
 
 """
