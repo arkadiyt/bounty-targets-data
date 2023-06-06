@@ -17120,7 +17120,10 @@ input FiltersUserFilterInput {
 }
 
 input FiltersUserFilterOrder {
+  cached_reputation_for_user_profile: FilterOrderPredicateInput
   id: FilterOrderPredicateInput
+  impact: FilterOrderPredicateInput
+  signal: FilterOrderPredicateInput
   username: FilterOrderPredicateInput
 }
 
@@ -31875,6 +31878,7 @@ enum StaticDashboardAxisFormatTypeEnum {
 A static dashboard tile definition
 """
 type StaticDashboardChart implements Node & ResourceInterface {
+  allow_limit_override: Boolean
   chart_orientation: String
   data_axes: [StaticDashboardAxis!]
   description: String
@@ -31909,7 +31913,6 @@ type StaticDashboardElement implements Node & ResourceInterface {
 A static dashboard explore definition
 """
 type StaticDashboardExplore implements Node {
-  allow_limit_override: Boolean
   field: String!
   id: ID!
   label: String!
