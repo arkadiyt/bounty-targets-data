@@ -5553,6 +5553,7 @@ Campaign Objective of a Campaign
 """
 type CampaignObjective implements Node {
   _id: ID!
+  asset_types: [String!]
   category: String
   description: String!
   id: ID!
@@ -16989,6 +16990,7 @@ input FiltersTeamFilterInput {
   _not: FiltersTeamFilterInput
   _or: [FiltersTeamFilterInput]
   allows_collaboration: BooleanPredicateInput
+  allows_private_disclosure: BooleanPredicateInput
   asset_credentials_set_up: BooleanPredicateInput
   bookmarked_team_users: FiltersUserFilterInput
   campaigns: FiltersCampaignFilterInput
@@ -36005,6 +36007,7 @@ enum TeamWeaknessStates {
 
 input TermFilterInput {
   allows_bounty_splitting: Boolean
+  allows_private_disclosure: Boolean
   credentials_set_up: Boolean
   gold_standard: Int
   identifier: String
