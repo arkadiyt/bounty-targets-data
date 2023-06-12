@@ -14828,27 +14828,6 @@ type Disclosed implements HacktivityItemInterface & Node {
   is_collaboration: Boolean
   latest_disclosable_action: String
   latest_disclosable_activity_at: DateTime
-  recommended_hacktivity_items(
-    """
-    Returns the elements in the list that come after the specified cursor.
-    """
-    after: String
-
-    """
-    Returns the elements in the list that come before the specified cursor.
-    """
-    before: String
-
-    """
-    Returns the first _n_ elements from the list.
-    """
-    first: Int
-
-    """
-    Returns the last _n_ elements from the list.
-    """
-    last: Int
-  ): HacktivityItemConnection
   report: Report
   reporter: User
   severity_rating: SeverityRatingEnum
@@ -17612,27 +17591,6 @@ type HackerPublished implements HacktivityItemInterface & Node {
   id: ID!
   is_collaboration: Boolean
   latest_disclosable_activity_at: DateTime
-  recommended_hacktivity_items(
-    """
-    Returns the elements in the list that come after the specified cursor.
-    """
-    after: String
-
-    """
-    Returns the elements in the list that come before the specified cursor.
-    """
-    before: String
-
-    """
-    Returns the first _n_ elements from the list.
-    """
-    first: Int
-
-    """
-    Returns the last _n_ elements from the list.
-    """
-    last: Int
-  ): HacktivityItemConnection
   report: Report!
   reporter: User
   severity_rating: SeverityRatingEnum
@@ -17856,27 +17814,6 @@ interface HacktivityItemInterface {
   created_at: DateTime
   id: ID!
   is_collaboration: Boolean
-  recommended_hacktivity_items(
-    """
-    Returns the elements in the list that come after the specified cursor.
-    """
-    after: String
-
-    """
-    Returns the elements in the list that come before the specified cursor.
-    """
-    before: String
-
-    """
-    Returns the first _n_ elements from the list.
-    """
-    first: Int
-
-    """
-    Returns the last _n_ elements from the list.
-    """
-    last: Int
-  ): HacktivityItemConnection
   upvoted_by_current_user: Boolean
   votes(
     """
@@ -37446,27 +37383,6 @@ type Undisclosed implements HacktivityItemInterface & Node {
   is_collaboration: Boolean
   latest_disclosable_action: String
   latest_disclosable_activity_at: DateTime
-  recommended_hacktivity_items(
-    """
-    Returns the elements in the list that come after the specified cursor.
-    """
-    after: String
-
-    """
-    Returns the elements in the list that come before the specified cursor.
-    """
-    before: String
-
-    """
-    Returns the first _n_ elements from the list.
-    """
-    first: Int
-
-    """
-    Returns the last _n_ elements from the list.
-    """
-    last: Int
-  ): HacktivityItemConnection
   reporter: User
   requires_view_privilege: Boolean!
   team: Team
@@ -44936,27 +44852,6 @@ type User implements Node & ResourceInterface {
   receive_policy_update_notifications: Boolean
   receive_structured_scope_update_notifications: Boolean
   receive_team_update_delivery_preference: TeamUpdateDeliveryPreferences
-  recommended_hacktivity_items(
-    """
-    Returns the elements in the list that come after the specified cursor.
-    """
-    after: String
-
-    """
-    Returns the elements in the list that come before the specified cursor.
-    """
-    before: String
-
-    """
-    Returns the first _n_ elements from the list.
-    """
-    first: Int
-
-    """
-    Returns the last _n_ elements from the list.
-    """
-    last: Int
-  ): HacktivityItemConnection
   remaining_otp_backup_code_count: Int
   remaining_reports(team_handle: String!): Int
   report_drafts(
