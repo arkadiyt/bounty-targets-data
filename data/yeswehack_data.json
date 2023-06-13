@@ -2081,6 +2081,53 @@
     }
   },
   {
+    "id": "spacelift-io-bug-bounty-program",
+    "name": "Spacelift.io - Bug Bounty Program",
+    "public": true,
+    "disabled": false,
+    "managed": null,
+    "min_bounty": 50,
+    "max_bounty": 3000,
+    "targets": {
+      "in_scope": [
+        {
+          "target": "https://*.app.spacelift.dev",
+          "type": "web-application"
+        },
+        {
+          "target": "https://*.app.spacelift.dev",
+          "type": "api"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "target": "Contact form (especially HubSpot ones)",
+          "type": "other"
+        },
+        {
+          "target": "Any other Spacelift assets not specifically listed as in-scope.",
+          "type": "other"
+        },
+        {
+          "target": "Any communication with Spacelift colleagues.",
+          "type": "other"
+        },
+        {
+          "target": "Attacks against any account other than the specified target accounts.",
+          "type": "other"
+        },
+        {
+          "target": "Data breaches or credential dumps.",
+          "type": "other"
+        },
+        {
+          "target": "Third-party companies that perform business transactions for Spacelift",
+          "type": "other"
+        }
+      ]
+    }
+  },
+  {
     "id": "spin-by-oxxo-mobile",
     "name": "Spin by OXXO Mobile",
     "public": true,
