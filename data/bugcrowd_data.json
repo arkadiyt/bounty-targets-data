@@ -27289,5 +27289,47 @@
 
       ]
     }
+  },
+  {
+    "name": "Zola Managed Bug Bounty",
+    "url": "https://bugcrowd.com/zola-mbb-og",
+    "allows_disclosure": true,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "full",
+    "max_payout": 2500,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "ios",
+          "target": "Zola iOS App"
+        },
+        {
+          "type": "ios",
+          "target": "https://apps.apple.com/us/app/zola-wedding-registry-gifts/id852691916"
+        },
+        {
+          "type": "website",
+          "target": "https://www.zola.com/"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "website",
+          "target": "Albums Sign Up Dialog"
+        },
+        {
+          "type": "website",
+          "target": "https://www.zola.com/community/sign-up"
+        },
+        {
+          "type": "website",
+          "target": "https://www.zola.com/inspiration/onboard"
+        },
+        {
+          "type": "website",
+          "target": "https://www.zola.com/onboard/*"
+        }
+      ]
+    }
   }
 ]
