@@ -6168,198 +6168,6 @@ type ChangeReportPentestPayload implements MutationResult {
 }
 
 """
-A checklist
-"""
-type Checklist implements Node {
-  _id: ID!
-  checklist_check(id: ID!): ChecklistCheck
-
-  """
-  A Resolver for ChecklistChecks
-  """
-  checklist_checks(
-    """
-    Returns the elements in the list that come after the specified cursor.
-    """
-    after: String
-
-    """
-    Returns the elements in the list that come before the specified cursor.
-    """
-    before: String
-
-    """
-    Returns the first _n_ elements from the list.
-    """
-    first: Int
-
-    """
-    Returns the last _n_ elements from the list.
-    """
-    last: Int
-    order_by: ChecklistCheckOrderInput
-    secure_order_by: FiltersChecklistCheckFilterOrder
-    where: FiltersChecklistCheckFilterInput
-  ): ChecklistCheckConnection
-  expires_at: DateTime!
-  i_have_unsubmitted_checklist_check_responses: Boolean!
-  id: ID!
-  name: String
-  team: Team
-}
-
-"""
-A checklist check
-"""
-type ChecklistCheck implements Node {
-  _id: ID!
-  award_amount: Int!
-  checklist: Checklist
-  checklist_check_response(id: ID!): ChecklistCheckResponse
-  cluster: Cluster
-  cluster_id: Int!
-  description: String
-  id: ID!
-  instruction: String
-  state: ChecklistCheckStateEnum
-  structured_scopes(
-    """
-    Returns the elements in the list that come after the specified cursor.
-    """
-    after: String
-    archived: Boolean = null
-
-    """
-    Returns the elements in the list that come before the specified cursor.
-    """
-    before: String
-    eligible_for_submission: Boolean = null
-
-    """
-    Returns the first _n_ elements from the list.
-    """
-    first: Int
-
-    """
-    Returns the last _n_ elements from the list.
-    """
-    last: Int
-    search: String = null
-  ): StructuredScopesConnection
-  submission_template: String
-  submitted_checklist_check_response: ChecklistCheckResponse
-  title: String!
-  user: User
-}
-
-"""
-The connection type for ChecklistCheck.
-"""
-type ChecklistCheckConnection {
-  """
-  A list of edges.
-  """
-  edges: [ChecklistCheckEdge]
-  max_award_amount: Int
-  min_award_amount: Int
-
-  """
-  A list of nodes.
-  """
-  nodes: [ChecklistCheck]
-
-  """
-  Information to aid in pagination.
-  """
-  pageInfo: PageInfo!
-  total_amount: Float!
-
-  """
-  Int
-  """
-  total_count: Int!
-}
-
-"""
-An edge in a connection.
-"""
-type ChecklistCheckEdge {
-  """
-  A cursor for use in pagination.
-  """
-  cursor: String!
-
-  """
-  The item at the end of the edge.
-  """
-  node: ChecklistCheck
-}
-
-"""
-Fields on which a collection of ChecklistCheck can be ordered
-"""
-enum ChecklistCheckOrderField {
-  expires_at
-  title
-}
-
-input ChecklistCheckOrderInput {
-  direction: OrderDirection!
-  field: ChecklistCheckOrderField!
-}
-
-"""
-A checklist check response
-"""
-type ChecklistCheckResponse implements ActivitiesInterface & Node {
-  _id: ID!
-  activities(
-    """
-    Returns the elements in the list that come after the specified cursor.
-    """
-    after: String
-
-    """
-    Returns the elements in the list that come before the specified cursor.
-    """
-    before: String
-
-    """
-    Returns the first _n_ elements from the list.
-    """
-    first: Int
-    internal: [Boolean]
-
-    """
-    Returns the last _n_ elements from the list.
-    """
-    last: Int
-    not_types: [ActivityTypes]
-    order_by: ActivityOrderInput = {direction: ASC, field: created_at}
-    types: [ActivityTypes]
-
-    """
-    A timestamp encoded as a string that. When provided, only activities with a
-    updated_at greater than this value will be resolved. Example:
-    activities(updated_at_after: "2017-11-30 13:37:12 UTC")
-    """
-    updated_at_after: String
-  ): ActivityConnection
-  approved_at: DateTime
-  attachments: [Attachment]
-  checklist_check: ChecklistCheck
-  expires_at: DateTime
-  i_can_update: Boolean!
-  id: ID!
-  message: String
-  reports: [Report]
-  state: ChecklistCheckResponseStateEnum
-  unread: Boolean
-  user: User
-  vulnerability_found: Boolean
-}
-
-"""
 A interface for the common fields on an HackerOne Activity
 """
 interface ChecklistCheckResponseActivityInterface {
@@ -6375,115 +6183,6 @@ interface ChecklistCheckResponseActivityInterface {
   profile_picture(size: ProfilePictureSizes!): String!
   slug: String
   updated_at: DateTime!
-}
-
-"""
-The connection type for ChecklistCheckResponse.
-"""
-type ChecklistCheckResponseConnection {
-  """
-  A list of edges.
-  """
-  edges: [ChecklistCheckResponseEdge]
-
-  """
-  A list of nodes.
-  """
-  nodes: [ChecklistCheckResponse]
-
-  """
-  Information to aid in pagination.
-  """
-  pageInfo: PageInfo!
-  total_awarded_amount_by_month(year: Int!): [LabeledIntegerPair]
-
-  """
-  Int
-  """
-  total_count: Int!
-  total_count_by_month(year: Int!): [LabeledIntegerPair]
-  total_payment_amount: Int!
-}
-
-"""
-An edge in a connection.
-"""
-type ChecklistCheckResponseEdge {
-  """
-  A cursor for use in pagination.
-  """
-  cursor: String!
-
-  """
-  The item at the end of the edge.
-  """
-  node: ChecklistCheckResponse
-}
-
-"""
-ChecklistCheckResponse state enum
-"""
-enum ChecklistCheckResponseStateEnum {
-  approved
-  in_progress
-  pending
-  rejected
-  released
-  revoked
-}
-
-"""
-ChecklistCheckResponse state enum
-"""
-enum ChecklistCheckResponseStateEnumInput {
-  approved
-  in_progress
-  pending
-  rejected
-  released
-  revoked
-}
-
-input ChecklistCheckResponseStateEnumInputPredicateInput {
-  _eq: ChecklistCheckResponseStateEnumInput
-  _gt: ChecklistCheckResponseStateEnumInput
-  _gte: ChecklistCheckResponseStateEnumInput
-  _in: [ChecklistCheckResponseStateEnumInput]
-  _is_null: Boolean
-  _lt: ChecklistCheckResponseStateEnumInput
-  _lte: ChecklistCheckResponseStateEnumInput
-  _neq: ChecklistCheckResponseStateEnumInput
-  _nin: [ChecklistCheckResponseStateEnumInput]
-}
-
-"""
-ChecklistCheck state enum
-"""
-enum ChecklistCheckStateEnum {
-  claimed
-  completed
-  not_claimed
-}
-
-"""
-ChecklistCheck state enum
-"""
-enum ChecklistCheckStateEnumInput {
-  claimed
-  completed
-  not_claimed
-}
-
-input ChecklistCheckStateEnumInputPredicateInput {
-  _eq: ChecklistCheckStateEnumInput
-  _gt: ChecklistCheckStateEnumInput
-  _gte: ChecklistCheckStateEnumInput
-  _in: [ChecklistCheckStateEnumInput]
-  _is_null: Boolean
-  _lt: ChecklistCheckStateEnumInput
-  _lte: ChecklistCheckStateEnumInput
-  _neq: ChecklistCheckStateEnumInput
-  _nin: [ChecklistCheckStateEnumInput]
 }
 
 """
@@ -6528,53 +6227,6 @@ type ClaimAssetCredentialPayload implements MutationResult {
     types: [ErrorTypeEnum]
   ): ErrorConnection!
   structured_scope: StructuredScope
-  was_successful: Boolean!
-}
-
-"""
-Autogenerated input type of ClaimChecklistCheck
-"""
-input ClaimChecklistCheckInput {
-  checklist_check_id: ID!
-
-  """
-  A unique identifier for the client performing the mutation.
-  """
-  clientMutationId: String
-}
-
-"""
-Autogenerated return type of ClaimChecklistCheck.
-"""
-type ClaimChecklistCheckPayload implements MutationResult {
-  checklist_check: ChecklistCheck
-
-  """
-  A unique identifier for the client performing the mutation.
-  """
-  clientMutationId: String
-  errors(
-    """
-    Returns the elements in the list that come after the specified cursor.
-    """
-    after: String
-
-    """
-    Returns the elements in the list that come before the specified cursor.
-    """
-    before: String
-
-    """
-    Returns the first _n_ elements from the list.
-    """
-    first: Int
-
-    """
-    Returns the last _n_ elements from the list.
-    """
-    last: Int
-    types: [ErrorTypeEnum]
-  ): ErrorConnection!
   was_successful: Boolean!
 }
 
@@ -7944,150 +7596,6 @@ type CreateCampaignPayload implements MutationResult {
     last: Int
     types: [ErrorTypeEnum]
   ): ErrorConnection!
-  was_successful: Boolean!
-}
-
-"""
-Autogenerated input type of CreateChecklistCheckResponseComment
-"""
-input CreateChecklistCheckResponseCommentInput {
-  attachment_ids: [ID]
-  checklist_check_response_id: ID!
-
-  """
-  A unique identifier for the client performing the mutation.
-  """
-  clientMutationId: String
-  message: String!
-}
-
-"""
-Autogenerated return type of CreateChecklistCheckResponseComment.
-"""
-type CreateChecklistCheckResponseCommentPayload implements MutationResult {
-  activities(
-    """
-    Returns the elements in the list that come after the specified cursor.
-    """
-    after: String
-
-    """
-    Returns the elements in the list that come before the specified cursor.
-    """
-    before: String
-
-    """
-    Returns the first _n_ elements from the list.
-    """
-    first: Int
-
-    """
-    Returns the last _n_ elements from the list.
-    """
-    last: Int
-  ): ActivityConnection
-  checklist_check_response: ChecklistCheckResponse
-
-  """
-  A unique identifier for the client performing the mutation.
-  """
-  clientMutationId: String
-  errors(
-    """
-    Returns the elements in the list that come after the specified cursor.
-    """
-    after: String
-
-    """
-    Returns the elements in the list that come before the specified cursor.
-    """
-    before: String
-
-    """
-    Returns the first _n_ elements from the list.
-    """
-    first: Int
-
-    """
-    Returns the last _n_ elements from the list.
-    """
-    last: Int
-    types: [ErrorTypeEnum]
-  ): ErrorConnection!
-  new_activity: ActivityUnionEdge
-  was_successful: Boolean!
-}
-
-"""
-Autogenerated input type of CreateChecklistCheckResponseSubmission
-"""
-input CreateChecklistCheckResponseSubmissionInput {
-  attachment_ids: [Int!]
-  checklist_check_response_id: ID!
-
-  """
-  A unique identifier for the client performing the mutation.
-  """
-  clientMutationId: String
-  message: String
-  report_ids: [Int!]
-  vulnerability_found: Boolean
-}
-
-"""
-Autogenerated return type of CreateChecklistCheckResponseSubmission.
-"""
-type CreateChecklistCheckResponseSubmissionPayload implements MutationResult {
-  activities(
-    """
-    Returns the elements in the list that come after the specified cursor.
-    """
-    after: String
-
-    """
-    Returns the elements in the list that come before the specified cursor.
-    """
-    before: String
-
-    """
-    Returns the first _n_ elements from the list.
-    """
-    first: Int
-
-    """
-    Returns the last _n_ elements from the list.
-    """
-    last: Int
-  ): ActivityConnection
-  checklist_check_response: ChecklistCheckResponse
-
-  """
-  A unique identifier for the client performing the mutation.
-  """
-  clientMutationId: String
-  errors(
-    """
-    Returns the elements in the list that come after the specified cursor.
-    """
-    after: String
-
-    """
-    Returns the elements in the list that come before the specified cursor.
-    """
-    before: String
-
-    """
-    Returns the first _n_ elements from the list.
-    """
-    first: Int
-
-    """
-    Returns the last _n_ elements from the list.
-    """
-    last: Int
-    types: [ErrorTypeEnum]
-  ): ErrorConnection!
-  new_activity: ActivityUnionEdge
   was_successful: Boolean!
 }
 
@@ -15248,7 +14756,6 @@ type Earning implements Node {
   _id: ID!
   amount: Float!
   bounty: Bounty
-  checklist_check_response: ChecklistCheckResponse
   created_at: DateTime!
   id: ID!
   pentester: Pentester
@@ -15302,7 +14809,6 @@ types of Earning
 """
 enum EarningTypeEnum {
   BountyEarned
-  ChecklistCheckCompleted
   PentestCompleted
   RetestCompleted
   UnknownEarningType
@@ -16555,33 +16061,6 @@ input FiltersCertificationFilterInput {
   _or: [FiltersCertificationFilterInput]
   h1_managed: BooleanPredicateInput
   id: IntPredicateInput
-}
-
-input FiltersChecklistCheckFilterInput {
-  _and: [FiltersChecklistCheckFilterInput]
-  _not: FiltersChecklistCheckFilterInput
-  _or: [FiltersChecklistCheckFilterInput]
-  id: IntPredicateInput
-  state: ChecklistCheckStateEnumInputPredicateInput
-}
-
-input FiltersChecklistCheckFilterOrder {
-  cluster_id: FilterOrderPredicateInput
-  id: FilterOrderPredicateInput
-}
-
-input FiltersChecklistCheckResponseFilterInput {
-  _and: [FiltersChecklistCheckResponseFilterInput]
-  _not: FiltersChecklistCheckResponseFilterInput
-  _or: [FiltersChecklistCheckResponseFilterInput]
-  id: IntPredicateInput
-  state: ChecklistCheckResponseStateEnumInputPredicateInput
-}
-
-input FiltersChecklistCheckResponseFilterOrder {
-  approved_at: FilterOrderPredicateInput
-  created_at: FilterOrderPredicateInput
-  id: FilterOrderPredicateInput
 }
 
 input FiltersCommonResponseFilterInput {
@@ -19456,53 +18935,6 @@ type ManualUserBalanceAdjustmentEdge {
 }
 
 """
-Autogenerated input type of MarkChecklistCheckResponseAsRead
-"""
-input MarkChecklistCheckResponseAsReadInput {
-  checklist_check_response_id: ID!
-
-  """
-  A unique identifier for the client performing the mutation.
-  """
-  clientMutationId: String
-}
-
-"""
-Autogenerated return type of MarkChecklistCheckResponseAsRead.
-"""
-type MarkChecklistCheckResponseAsReadPayload implements MutationResult {
-  checklist_check_response: ChecklistCheckResponse
-
-  """
-  A unique identifier for the client performing the mutation.
-  """
-  clientMutationId: String
-  errors(
-    """
-    Returns the elements in the list that come after the specified cursor.
-    """
-    after: String
-
-    """
-    Returns the elements in the list that come before the specified cursor.
-    """
-    before: String
-
-    """
-    Returns the first _n_ elements from the list.
-    """
-    first: Int
-
-    """
-    Returns the last _n_ elements from the list.
-    """
-    last: Int
-    types: [ErrorTypeEnum]
-  ): ErrorConnection!
-  was_successful: Boolean!
-}
-
-"""
 Autogenerated input type of MarkReportAsNeedsMoreInfo
 """
 input MarkReportAsNeedsMoreInfoInput {
@@ -20011,12 +19443,6 @@ type Mutation implements Node {
     """
     input: ClaimAssetCredentialInput!
   ): ClaimAssetCredentialPayload!
-  claimChecklistCheck(
-    """
-    Parameters for ClaimChecklistCheck
-    """
-    input: ClaimChecklistCheckInput!
-  ): ClaimChecklistCheckPayload!
   claimReportRetest(
     """
     Parameters for ClaimReportRetest
@@ -20137,18 +19563,6 @@ type Mutation implements Node {
     """
     input: CreateCampaignInput!
   ): CreateCampaignPayload!
-  createChecklistCheckResponseComment(
-    """
-    Parameters for CreateChecklistCheckResponseComment
-    """
-    input: CreateChecklistCheckResponseCommentInput!
-  ): CreateChecklistCheckResponseCommentPayload!
-  createChecklistCheckResponseSubmission(
-    """
-    Parameters for CreateChecklistCheckResponseSubmission
-    """
-    input: CreateChecklistCheckResponseSubmissionInput!
-  ): CreateChecklistCheckResponseSubmissionPayload!
   createCidr(
     """
     Parameters for CreateCidr
@@ -21000,12 +20414,6 @@ type Mutation implements Node {
     """
     input: LockReportInput!
   ): LockReportPayload!
-  markChecklistCheckResponseAsRead(
-    """
-    Parameters for MarkChecklistCheckResponseAsRead
-    """
-    input: MarkChecklistCheckResponseAsReadInput!
-  ): MarkChecklistCheckResponseAsReadPayload!
   markReportAsNeedsMoreInfo(
     """
     Parameters for MarkReportAsNeedsMoreInfo
@@ -21072,12 +20480,6 @@ type Mutation implements Node {
     """
     input: RecallBountyMutationInput!
   ): RecallBountyMutationPayload!
-  reclaimChecklistCheck(
-    """
-    Parameters for ReclaimChecklistCheck
-    """
-    input: ReclaimChecklistCheckInput!
-  ): ReclaimChecklistCheckPayload!
   reclaimReportRetest(
     """
     Parameters for ReclaimReportRetest
@@ -21126,12 +20528,6 @@ type Mutation implements Node {
     """
     input: RejectReportRetestInput!
   ): RejectReportRetestPayload!
-  releaseChecklistCheck(
-    """
-    Parameters for ReleaseChecklistCheck
-    """
-    input: ReleaseChecklistCheckInput!
-  ): ReleaseChecklistCheckPayload!
   removeAssetsFromStructuredScopes(
     """
     Parameters for RemoveAssetsFromStructuredScopes
@@ -21600,18 +20996,6 @@ type Mutation implements Node {
     """
     input: UpdateChallengeSettingInput!
   ): UpdateChallengeSettingPayload!
-  updateChecklistCheckResponseComment(
-    """
-    Parameters for UpdateChecklistCheckResponseComment
-    """
-    input: UpdateChecklistCheckResponseCommentInput!
-  ): UpdateChecklistCheckResponseCommentPayload!
-  updateChecklistCheckResponseSubmission(
-    """
-    Parameters for UpdateChecklistCheckResponseSubmission
-    """
-    input: UpdateChecklistCheckResponseSubmissionInput!
-  ): UpdateChecklistCheckResponseSubmissionPayload!
   updateCommonResponse(
     """
     Parameters for UpdateCommonResponse
@@ -26505,36 +25889,6 @@ type Query implements Node {
     last: Int
     where: FiltersCertificationFilterInput
   ): CertificationConnection
-  checklist_check(id: Int!): ChecklistCheck
-  checklist_check_response(id: ID!): ChecklistCheckResponse
-
-  """
-  A Resolver for ChecklistChecks
-  """
-  checklist_checks(
-    """
-    Returns the elements in the list that come after the specified cursor.
-    """
-    after: String
-
-    """
-    Returns the elements in the list that come before the specified cursor.
-    """
-    before: String
-
-    """
-    Returns the first _n_ elements from the list.
-    """
-    first: Int
-
-    """
-    Returns the last _n_ elements from the list.
-    """
-    last: Int
-    order_by: ChecklistCheckOrderInput
-    secure_order_by: FiltersChecklistCheckFilterOrder
-    where: FiltersChecklistCheckFilterInput
-  ): ChecklistCheckConnection
 
   """
   A Resolver for Clusters
@@ -27537,76 +26891,6 @@ type RecallBountyMutationPayload implements MutationResult {
 }
 
 """
-Autogenerated input type of ReclaimChecklistCheck
-"""
-input ReclaimChecklistCheckInput {
-  checklist_check_response_id: ID!
-
-  """
-  A unique identifier for the client performing the mutation.
-  """
-  clientMutationId: String
-}
-
-"""
-Autogenerated return type of ReclaimChecklistCheck.
-"""
-type ReclaimChecklistCheckPayload implements MutationResult {
-  checklist_check_response: ChecklistCheckResponse
-  checklist_check_response_edges(
-    """
-    Returns the elements in the list that come after the specified cursor.
-    """
-    after: String
-
-    """
-    Returns the elements in the list that come before the specified cursor.
-    """
-    before: String
-
-    """
-    Returns the first _n_ elements from the list.
-    """
-    first: Int
-
-    """
-    Returns the last _n_ elements from the list.
-    """
-    last: Int
-  ): ChecklistCheckResponseConnection
-
-  """
-  A unique identifier for the client performing the mutation.
-  """
-  clientMutationId: String
-  errors(
-    """
-    Returns the elements in the list that come after the specified cursor.
-    """
-    after: String
-
-    """
-    Returns the elements in the list that come before the specified cursor.
-    """
-    before: String
-
-    """
-    Returns the first _n_ elements from the list.
-    """
-    first: Int
-
-    """
-    Returns the last _n_ elements from the list.
-    """
-    last: Int
-    types: [ErrorTypeEnum]
-  ): ErrorConnection!
-  me: User
-  new_checklist_check_response_edge: ChecklistCheckResponseEdge
-  was_successful: Boolean!
-}
-
-"""
 Autogenerated input type of ReclaimReportRetest
 """
 input ReclaimReportRetestInput {
@@ -27970,76 +27254,6 @@ type RejectReportRetestPayload implements MutationResult {
     types: [ErrorTypeEnum]
   ): ErrorConnection!
   report_retest_user: ReportRetestUser
-  was_successful: Boolean!
-}
-
-"""
-Autogenerated input type of ReleaseChecklistCheck
-"""
-input ReleaseChecklistCheckInput {
-  checklist_check_response_id: ID!
-
-  """
-  A unique identifier for the client performing the mutation.
-  """
-  clientMutationId: String
-}
-
-"""
-Autogenerated return type of ReleaseChecklistCheck.
-"""
-type ReleaseChecklistCheckPayload implements MutationResult {
-  checklist_check_response: ChecklistCheckResponse
-  checklist_check_response_edges(
-    """
-    Returns the elements in the list that come after the specified cursor.
-    """
-    after: String
-
-    """
-    Returns the elements in the list that come before the specified cursor.
-    """
-    before: String
-
-    """
-    Returns the first _n_ elements from the list.
-    """
-    first: Int
-
-    """
-    Returns the last _n_ elements from the list.
-    """
-    last: Int
-  ): ChecklistCheckResponseConnection
-
-  """
-  A unique identifier for the client performing the mutation.
-  """
-  clientMutationId: String
-  errors(
-    """
-    Returns the elements in the list that come after the specified cursor.
-    """
-    after: String
-
-    """
-    Returns the elements in the list that come before the specified cursor.
-    """
-    before: String
-
-    """
-    Returns the first _n_ elements from the list.
-    """
-    first: Int
-
-    """
-    Returns the last _n_ elements from the list.
-    """
-    last: Int
-    types: [ErrorTypeEnum]
-  ): ErrorConnection!
-  me: User
-  new_checklist_check_response_edge: ChecklistCheckResponseEdge
   was_successful: Boolean!
 }
 
@@ -33636,11 +32850,6 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
   available_permissions: [String!]
   average_bounty_lower_amount: Int
   average_bounty_upper_amount: Int
-
-  """
-  The participant's total award earned within the team
-  """
-  award_earned_for_user: Float
   awards_miles: Boolean
   balance: Float
   base_bounty: Int
@@ -33726,37 +32935,6 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
   can_toggle_bounty_splitting: Boolean!
   can_update_all_hacker_invitations: Boolean!
   challenge_setting: ChallengeSetting
-  checklist: Checklist
-  checklist_check(id: ID!): ChecklistCheck
-  checklist_check_response(checklist_check_id: ID!): ChecklistCheckResponse
-
-  """
-  A Resolver for ChecklistCheckResponses
-  """
-  checklist_check_responses(
-    """
-    Returns the elements in the list that come after the specified cursor.
-    """
-    after: String
-
-    """
-    Returns the elements in the list that come before the specified cursor.
-    """
-    before: String
-
-    """
-    Returns the first _n_ elements from the list.
-    """
-    first: Int
-
-    """
-    Returns the last _n_ elements from the list.
-    """
-    last: Int
-    secure_order_by: FiltersChecklistCheckResponseFilterOrder
-    where: FiltersChecklistCheckResponseFilterInput
-  ): ChecklistCheckResponseConnection
-  checklist_id: ID
   child_program_directory_enabled: Boolean
   child_teams(
     """
@@ -34059,7 +33237,6 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
   i_can_toggle_anc: Boolean
   i_can_view_base_bounty: Boolean
   i_can_view_bounty_table: Boolean
-  i_can_view_checklist_checks: Boolean
   i_can_view_coverage_analytics: Boolean
   i_can_view_critical_submissions_enabled: Boolean
   i_can_view_email_forwarding_overview: Boolean!
@@ -34178,11 +33355,6 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
   The participant's number of valid reports within the team
   """
   number_of_valid_reports_for_user: Int
-
-  """
-  The participant's number of valid check responses within the team
-  """
-  number_of_valid_security_check_responses_for_user: Int
   offers_bounties: Boolean
   offers_swag: Boolean
   offers_thanks: Boolean
@@ -35696,7 +34868,6 @@ enum TeamMemberOrderField {
 Fields on which a collection of Teams can be ordered
 """
 enum TeamOrderField {
-  award_earned_by_user
   bounty_earned_by_user
   last_invitation_accepted_at
   reports_submitted_by_user
@@ -38439,107 +37610,6 @@ Autogenerated return type of UpdateChallengeSetting.
 """
 type UpdateChallengeSettingPayload implements MutationResult {
   challenge_setting: ChallengeSetting
-
-  """
-  A unique identifier for the client performing the mutation.
-  """
-  clientMutationId: String
-  errors(
-    """
-    Returns the elements in the list that come after the specified cursor.
-    """
-    after: String
-
-    """
-    Returns the elements in the list that come before the specified cursor.
-    """
-    before: String
-
-    """
-    Returns the first _n_ elements from the list.
-    """
-    first: Int
-
-    """
-    Returns the last _n_ elements from the list.
-    """
-    last: Int
-    types: [ErrorTypeEnum]
-  ): ErrorConnection!
-  was_successful: Boolean!
-}
-
-"""
-Autogenerated input type of UpdateChecklistCheckResponseComment
-"""
-input UpdateChecklistCheckResponseCommentInput {
-  activity_id: ID!
-  attachment_ids: [ID]
-
-  """
-  A unique identifier for the client performing the mutation.
-  """
-  clientMutationId: String
-  message: String!
-}
-
-"""
-Autogenerated return type of UpdateChecklistCheckResponseComment.
-"""
-type UpdateChecklistCheckResponseCommentPayload implements MutationResult {
-  activity: ActivitiesChecklistCheckResponseComment
-
-  """
-  A unique identifier for the client performing the mutation.
-  """
-  clientMutationId: String
-  errors(
-    """
-    Returns the elements in the list that come after the specified cursor.
-    """
-    after: String
-
-    """
-    Returns the elements in the list that come before the specified cursor.
-    """
-    before: String
-
-    """
-    Returns the first _n_ elements from the list.
-    """
-    first: Int
-
-    """
-    Returns the last _n_ elements from the list.
-    """
-    last: Int
-    types: [ErrorTypeEnum]
-  ): ErrorConnection!
-  was_successful: Boolean!
-}
-
-"""
-Autogenerated input type of UpdateChecklistCheckResponseSubmission
-"""
-input UpdateChecklistCheckResponseSubmissionInput {
-  attachment_ids: [Int!]
-  checklist_check_response_id: ID!
-
-  """
-  A unique identifier for the client performing the mutation.
-  """
-  clientMutationId: String
-  message: String
-  report_ids: [Int!]
-  vulnerability_found: Boolean
-}
-
-"""
-Autogenerated return type of UpdateChecklistCheckResponseSubmission.
-"""
-type UpdateChecklistCheckResponseSubmissionPayload implements MutationResult {
-  activity: ActivitiesChecklistCheckResponseCreated
-  checklist_check_response: ChecklistCheckResponse
 
   """
   A unique identifier for the client performing the mutation.
@@ -44384,61 +43454,6 @@ type User implements Node & ResourceInterface {
   ): BountyConnection
   bugcrowd_handle: String
   calendar_token: String
-
-  """
-  A Resolver for ChecklistCheckResponses
-  """
-  checklist_check_responses(
-    """
-    Returns the elements in the list that come after the specified cursor.
-    """
-    after: String
-
-    """
-    Returns the elements in the list that come before the specified cursor.
-    """
-    before: String
-
-    """
-    Returns the first _n_ elements from the list.
-    """
-    first: Int
-
-    """
-    Returns the last _n_ elements from the list.
-    """
-    last: Int
-    secure_order_by: FiltersChecklistCheckResponseFilterOrder
-    where: FiltersChecklistCheckResponseFilterInput
-  ): ChecklistCheckResponseConnection
-
-  """
-  A Resolver for ChecklistChecks
-  """
-  checklist_checks(
-    """
-    Returns the elements in the list that come after the specified cursor.
-    """
-    after: String
-
-    """
-    Returns the elements in the list that come before the specified cursor.
-    """
-    before: String
-
-    """
-    Returns the first _n_ elements from the list.
-    """
-    first: Int
-
-    """
-    Returns the last _n_ elements from the list.
-    """
-    last: Int
-    order_by: ChecklistCheckOrderInput
-    secure_order_by: FiltersChecklistCheckFilterOrder
-    where: FiltersChecklistCheckFilterInput
-  ): ChecklistCheckConnection
   cleared: Boolean!
   cobalt_handle: String
   country: String
@@ -44556,10 +43571,8 @@ type User implements Node & ResourceInterface {
   hackerone_triager: Boolean
   has_active_ban: Boolean
   has_api_token: Boolean
-  has_checklist_check_responses: Boolean
   has_ctf_flags: Boolean
   has_tray_profile: Boolean
-  i_can_claim_a_security_check: Boolean!
   i_can_update_invitation_profile: Boolean
   i_can_update_username: Boolean
   i_can_view_vpn_credentials: Boolean
@@ -45844,7 +44857,6 @@ type VirtualNotification implements Node {
   award_amount: String
   award_amount_lead: String
   bonus_amount: String
-  checklist_check_title: String
   created_at: DateTime!
   custom_message: String
   expiration_date: String
@@ -45853,7 +44865,6 @@ type VirtualNotification implements Node {
   is_internal: Boolean
   is_user_first_to_agree: Boolean
   message: String
-  number_of_checks: Int
   old_team_name: String
   pentest_check_name: String
   pentest_end: String
