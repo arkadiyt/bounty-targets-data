@@ -14241,6 +14241,7 @@ A derived pentest - A view model representing either a pentest or pentest opport
 type DerivedPentest implements Node {
   _id: ID!
   aasm_state: String
+  cloneable: Boolean!
   details_date: DateTime
   findings: Int
   hours: Int
@@ -30134,7 +30135,6 @@ enum RetestSubscriptionTag {
   legacy
   new
   pentest
-  pentest_legacy
   triage
   triage_h1r
 }
@@ -30148,7 +30148,6 @@ enum RetestSubscriptionTagInput {
   legacy
   new
   pentest
-  pentest_legacy
   triage
   triage_h1r
 }
@@ -36984,7 +36983,6 @@ type TriageWorkflow implements Node {
   allow_participants_for_duplicate_reports: Boolean
   custom_triage_summary_templates: [String!]!
   id: ID!
-  ignore_triaged_substate: Boolean
   jira_escalation: TriageWorkflowJiraEscalationEnum
   last_state_for_triage: String
   priority: String
