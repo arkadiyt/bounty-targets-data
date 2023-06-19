@@ -15927,6 +15927,7 @@ type Feature implements Node {
   enabled: Boolean!
   global: Boolean!
   id: ID!
+  intercom_survey: String
   key: String!
   opted_in: Boolean!
   title: String
@@ -39059,6 +39060,7 @@ input UpdateNotificationPreferencesInput {
   clientMutationId: String
   receive_bounty_update_notifications: Boolean
   receive_policy_update_notifications: Boolean
+  receive_smart_reward_update_notifications: Boolean
   receive_structured_scope_update_notifications: Boolean
   receive_team_update_delivery_preference: TeamUpdateDeliveryPreferences
 }
@@ -43993,6 +43995,7 @@ type User implements Node & ResourceInterface {
   rank: Int
   receive_bounty_update_notifications: Boolean
   receive_policy_update_notifications: Boolean
+  receive_smart_reward_update_notifications: Boolean
   receive_structured_scope_update_notifications: Boolean
   receive_team_update_delivery_preference: TeamUpdateDeliveryPreferences
   remaining_otp_backup_code_count: Int
