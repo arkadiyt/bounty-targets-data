@@ -1182,6 +1182,7 @@ interface ActivitiesInterface {
     last: Int
     not_types: [ActivityTypes]
     order_by: ActivityOrderInput = {direction: ASC, field: created_at}
+    team_handle: String
     types: [ActivityTypes]
 
     """
@@ -1191,6 +1192,27 @@ interface ActivitiesInterface {
     """
     updated_at_after: String
   ): ActivityConnection
+}
+
+"""
+A Activities::InvitationReceived activity for a report
+"""
+type ActivitiesInvitationReceived implements ActivityInterface & Node & ReportActivityInterface {
+  _id: ID!
+  actor: ActorUnion
+  actor_is_customer: Boolean!
+  attachments: [Attachment]
+  automated_response: Boolean
+  created_at: DateTime!
+  genius_execution_id: ID @deprecated(reason: "This is about to be replaced by .genius_execution")
+  i_can_edit: Boolean!
+  i_can_flag: Boolean!
+  id: ID!
+  internal: Boolean
+  message: String
+  report: Report
+  triage_inbox_item: TriageInboxItem
+  updated_at: DateTime!
 }
 
 """
@@ -2205,6 +2227,7 @@ enum ActivityTypes {
   ExternalUserRemoved
   GroupAssignedToBug
   HackerRequestedMediation
+  InvitationReceived
   ManuallyDisclosed
   MediationRequested
   NobodyAssignedToBug
@@ -2248,7 +2271,7 @@ enum ActivityTypes {
 """
 Activities can be of multiple types
 """
-union ActivityUnion = ActivitiesAddedToPentest | ActivitiesAgreedOnGoingPublic | ActivitiesAssetCreated | ActivitiesAssetSubmissionRejected | ActivitiesBountyAwarded | ActivitiesBountyRecalled | ActivitiesBountyScheduled | ActivitiesBountySuggested | ActivitiesBugCloned | ActivitiesBugDuplicate | ActivitiesBugFiled | ActivitiesBugInactive | ActivitiesBugInformative | ActivitiesBugNeedsMoreInfo | ActivitiesBugNew | ActivitiesBugNotApplicable | ActivitiesBugPendingProgramReview | ActivitiesBugPriorityChanged | ActivitiesBugReopened | ActivitiesBugResolved | ActivitiesBugRetesting | ActivitiesBugSpam | ActivitiesBugTriaged | ActivitiesCancelledDisclosureRequest | ActivitiesChangedCampaign | ActivitiesChangedScope | ActivitiesChecklistCheckClaimed | ActivitiesChecklistCheckExpired | ActivitiesChecklistCheckReleased | ActivitiesChecklistCheckResponseApproved | ActivitiesChecklistCheckResponseComment | ActivitiesChecklistCheckResponseCreated | ActivitiesChecklistCheckResponseRejected | ActivitiesChecklistCheckResponseUpdated | ActivitiesChecklistCheckRevoked | ActivitiesChecklistExpirationNotification | ActivitiesChecklistStarted | ActivitiesCodeReviewFeedbackPosted | ActivitiesCodeReviewRequested | ActivitiesComment | ActivitiesCommentsClosed | ActivitiesCveIdAdded | ActivitiesDraftStarted | ActivitiesExternalAdvisoryAdded | ActivitiesExternalUserInvitationCancelled | ActivitiesExternalUserInvited | ActivitiesExternalUserJoined | ActivitiesExternalUserRemoved | ActivitiesGroupAssignedToBug | ActivitiesHackerRequestedMediation | ActivitiesManuallyDisclosed | ActivitiesMediationRequested | ActivitiesNobodyAssignedToBug | ActivitiesNotEligibleForBounty | ActivitiesOrganizationAssetsBulkArchived | ActivitiesOrganizationAssetsBulkCreated | ActivitiesPentestCheckAssigned | ActivitiesPentestCheckCompleted | ActivitiesPentestCheckUnassigned | ActivitiesPentestCheckUpdated | ActivitiesPentestPublished | ActivitiesPentestStarted | ActivitiesPentesterAwarded | ActivitiesProgramHackerJoined | ActivitiesProgramHackerLeft | ActivitiesProgramInactive | ActivitiesProgramStructuredScopesBulkUpdated | ActivitiesReassignedToTeam | ActivitiesReferenceIdAdded | ActivitiesRemovedFromPentest | ActivitiesReportBecamePublic | ActivitiesReportCollaboratorInvited | ActivitiesReportCollaboratorJoined | ActivitiesReportCustomFieldValueUpdated | ActivitiesReportOrganizationInboxesUpdated | ActivitiesReportRemediationGuidanceUpdated | ActivitiesReportRetestApproved | ActivitiesReportRetestCanceled | ActivitiesReportRetestRejected | ActivitiesReportSeverityUpdated | ActivitiesReportTitleUpdated | ActivitiesReportTriageSummaryCreated | ActivitiesReportUndisclosed | ActivitiesReportVulnerabilityTypesUpdated | ActivitiesRetestUserExpired | ActivitiesSwagAwarded | ActivitiesTeamBountyTableUpdated | ActivitiesTeamPolicyUpdated | ActivitiesTeamPostCreated | ActivitiesTeamPublished | ActivitiesTeamStructuredScopeUpdated | ActivitiesUserAssignedToBug | ActivitiesUserBannedFromProgram | ActivitiesUserCompletedRetest | ActivitiesUserJoined | ActivitiesUserLeftRetest
+union ActivityUnion = ActivitiesAddedToPentest | ActivitiesAgreedOnGoingPublic | ActivitiesAssetCreated | ActivitiesAssetSubmissionRejected | ActivitiesBountyAwarded | ActivitiesBountyRecalled | ActivitiesBountyScheduled | ActivitiesBountySuggested | ActivitiesBugCloned | ActivitiesBugDuplicate | ActivitiesBugFiled | ActivitiesBugInactive | ActivitiesBugInformative | ActivitiesBugNeedsMoreInfo | ActivitiesBugNew | ActivitiesBugNotApplicable | ActivitiesBugPendingProgramReview | ActivitiesBugPriorityChanged | ActivitiesBugReopened | ActivitiesBugResolved | ActivitiesBugRetesting | ActivitiesBugSpam | ActivitiesBugTriaged | ActivitiesCancelledDisclosureRequest | ActivitiesChangedCampaign | ActivitiesChangedScope | ActivitiesChecklistCheckClaimed | ActivitiesChecklistCheckExpired | ActivitiesChecklistCheckReleased | ActivitiesChecklistCheckResponseApproved | ActivitiesChecklistCheckResponseComment | ActivitiesChecklistCheckResponseCreated | ActivitiesChecklistCheckResponseRejected | ActivitiesChecklistCheckResponseUpdated | ActivitiesChecklistCheckRevoked | ActivitiesChecklistExpirationNotification | ActivitiesChecklistStarted | ActivitiesCodeReviewFeedbackPosted | ActivitiesCodeReviewRequested | ActivitiesComment | ActivitiesCommentsClosed | ActivitiesCveIdAdded | ActivitiesDraftStarted | ActivitiesExternalAdvisoryAdded | ActivitiesExternalUserInvitationCancelled | ActivitiesExternalUserInvited | ActivitiesExternalUserJoined | ActivitiesExternalUserRemoved | ActivitiesGroupAssignedToBug | ActivitiesHackerRequestedMediation | ActivitiesInvitationReceived | ActivitiesManuallyDisclosed | ActivitiesMediationRequested | ActivitiesNobodyAssignedToBug | ActivitiesNotEligibleForBounty | ActivitiesOrganizationAssetsBulkArchived | ActivitiesOrganizationAssetsBulkCreated | ActivitiesPentestCheckAssigned | ActivitiesPentestCheckCompleted | ActivitiesPentestCheckUnassigned | ActivitiesPentestCheckUpdated | ActivitiesPentestPublished | ActivitiesPentestStarted | ActivitiesPentesterAwarded | ActivitiesProgramHackerJoined | ActivitiesProgramHackerLeft | ActivitiesProgramInactive | ActivitiesProgramStructuredScopesBulkUpdated | ActivitiesReassignedToTeam | ActivitiesReferenceIdAdded | ActivitiesRemovedFromPentest | ActivitiesReportBecamePublic | ActivitiesReportCollaboratorInvited | ActivitiesReportCollaboratorJoined | ActivitiesReportCustomFieldValueUpdated | ActivitiesReportOrganizationInboxesUpdated | ActivitiesReportRemediationGuidanceUpdated | ActivitiesReportRetestApproved | ActivitiesReportRetestCanceled | ActivitiesReportRetestRejected | ActivitiesReportSeverityUpdated | ActivitiesReportTitleUpdated | ActivitiesReportTriageSummaryCreated | ActivitiesReportUndisclosed | ActivitiesReportVulnerabilityTypesUpdated | ActivitiesRetestUserExpired | ActivitiesSwagAwarded | ActivitiesTeamBountyTableUpdated | ActivitiesTeamPolicyUpdated | ActivitiesTeamPostCreated | ActivitiesTeamPublished | ActivitiesTeamStructuredScopeUpdated | ActivitiesUserAssignedToBug | ActivitiesUserBannedFromProgram | ActivitiesUserCompletedRetest | ActivitiesUserJoined | ActivitiesUserLeftRetest
 
 """
 An edge in a connection.
@@ -2328,6 +2351,7 @@ input AddAssetsToStructuredScopesInput {
   custom_message: String
   eligible_for_bounty: Boolean
   eligible_for_submission: Boolean
+  instruction: String
   notify_subscribers_on_changes: Boolean
   organization_id: ID!
   team_ids: [Int!]!
@@ -3937,6 +3961,7 @@ enum AssetImplementationTypeEnum {
   IosAppStore
   IosIpa
   IosTestflight
+  IpAddress
   OtherAsset
   SmartContract
   SourceCode
@@ -27953,6 +27978,7 @@ type Report implements ActivitiesInterface & Node & ResourceInterface {
     last: Int
     not_types: [ActivityTypes]
     order_by: ActivityOrderInput = {direction: ASC, field: created_at}
+    team_handle: String
     types: [ActivityTypes]
 
     """
@@ -31762,6 +31788,7 @@ enum StructuredScopeAssetTypeEnum {
   DOWNLOADABLE_EXECUTABLES
   GOOGLE_PLAY_APP_ID
   HARDWARE
+  IP_ADDRESS
   OTHER
   OTHER_APK
   OTHER_IPA
@@ -31782,6 +31809,7 @@ enum StructuredScopeAssetTypeEnumInput {
   DOWNLOADABLE_EXECUTABLES
   GOOGLE_PLAY_APP_ID
   HARDWARE
+  IP_ADDRESS
   OTHER
   OTHER_APK
   OTHER_IPA
@@ -32937,6 +32965,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
     last: Int
     not_types: [ActivityTypes]
     order_by: ActivityOrderInput = {direction: ASC, field: created_at}
+    team_handle: String
     types: [ActivityTypes]
 
     """
@@ -34313,6 +34342,17 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
     Returns the last _n_ elements from the list.
     """
     last: Int
+
+    """
+    This argument is no longer supported
+    """
+    limit: Int = null
+
+    """
+    This argument is no longer supported
+    """
+    page: Int = null
+    where: FiltersUserFilterInput
   ): UserConnection
   whitelisted_reporters(
     """
@@ -43465,13 +43505,46 @@ type UpvotePayload implements MutationResult {
 """
 A HackerOne user
 """
-type User implements Node & ResourceInterface {
+type User implements ActivitiesInterface & Node & ResourceInterface {
   _id: ID!
   account_recovery_phone_number: String
   account_recovery_phone_number_sent_at: DateTime
   account_recovery_phone_number_verified_at: DateTime
   account_recovery_unverified_phone_number: String
   active_ban: HackerTempBan
+  activities(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+    internal: [Boolean]
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+    not_types: [ActivityTypes]
+    order_by: ActivityOrderInput = {direction: ASC, field: created_at}
+    team_handle: String
+    types: [ActivityTypes]
+
+    """
+    A timestamp encoded as a string that. When provided, only activities with a
+    updated_at greater than this value will be resolved. Example:
+    activities(updated_at_after: "2017-11-30 13:37:12 UTC")
+    """
+    updated_at_after: String
+  ): ActivityConnection
   address: Address
   allow_pentester_application: Boolean!
   anc_triager: Boolean
@@ -45553,8 +45626,41 @@ type WebhookResponseEdge {
 """
 A program's whitelisted reporter
 """
-type WhitelistedReporter implements Node & ResourceInterface {
+type WhitelistedReporter implements ActivitiesInterface & Node & ResourceInterface {
   _id: ID!
+  activities(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+    internal: [Boolean]
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+    not_types: [ActivityTypes]
+    order_by: ActivityOrderInput = {direction: ASC, field: created_at}
+    team_handle: String
+    types: [ActivityTypes]
+
+    """
+    A timestamp encoded as a string that. When provided, only activities with a
+    updated_at greater than this value will be resolved. Example:
+    activities(updated_at_after: "2017-11-30 13:37:12 UTC")
+    """
+    updated_at_after: String
+  ): ActivityConnection
   cleared: Boolean!
   created_at: DateTime!
   email_alias: String
