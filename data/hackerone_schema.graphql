@@ -24575,27 +24575,6 @@ type PentestOpportunity implements Node {
   consumption_subscription: ConsumptionSubscription
   customer_email: String
   customer_note: String
-  external_network_scopes(
-    """
-    Returns the elements in the list that come after the specified cursor.
-    """
-    after: String
-
-    """
-    Returns the elements in the list that come before the specified cursor.
-    """
-    before: String
-
-    """
-    Returns the first _n_ elements from the list.
-    """
-    first: Int
-
-    """
-    Returns the last _n_ elements from the list.
-    """
-    last: Int
-  ): PentestOpportunityExternalNetworkScopeConnection
   i_can_archive: Boolean!
   i_can_auto_provision: Boolean!
   i_can_autosave: Boolean!
@@ -24627,6 +24606,27 @@ type PentestOpportunity implements Node {
     last: Int
   ): PentestOpportunityMobileAppScopeConnection
   name: String
+  network_scopes(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+  ): PentestOpportunityNetworkScopeConnection
   organization: Organization
   package_name: String
   requested_start_date: DateTime
@@ -24723,57 +24723,6 @@ type PentestOpportunityApiScopeEdge {
 }
 
 """
-A pentest opportunity external network scope
-"""
-type PentestOpportunityExternalNetworkScope implements Node {
-  _id: ID!
-  access: String
-  asset_hosts: [String!]!
-  asset_hosts_details: String
-  id: ID!
-  live_ip_count_range: String
-  scope_type: String
-  total_ip_address_count: String
-  total_ip_address_ranges: String
-}
-
-"""
-The connection type for PentestOpportunityExternalNetworkScope.
-"""
-type PentestOpportunityExternalNetworkScopeConnection {
-  """
-  A list of edges.
-  """
-  edges: [PentestOpportunityExternalNetworkScopeEdge]
-
-  """
-  A list of nodes.
-  """
-  nodes: [PentestOpportunityExternalNetworkScope]
-
-  """
-  Information to aid in pagination.
-  """
-  pageInfo: PageInfo!
-  total_count: Int!
-}
-
-"""
-An edge in a connection.
-"""
-type PentestOpportunityExternalNetworkScopeEdge {
-  """
-  A cursor for use in pagination.
-  """
-  cursor: String!
-
-  """
-  The item at the end of the edge.
-  """
-  node: PentestOpportunityExternalNetworkScope
-}
-
-"""
 A pentest opportunity mobile app scope
 """
 type PentestOpportunityMobileAppScope implements Node {
@@ -24834,6 +24783,57 @@ type PentestOpportunityMobileAppScopeEdge {
   The item at the end of the edge.
   """
   node: PentestOpportunityMobileAppScope
+}
+
+"""
+A pentest opportunity external network scope
+"""
+type PentestOpportunityNetworkScope implements Node {
+  _id: ID!
+  access: String
+  asset_hosts: [String!]!
+  asset_hosts_details: String
+  id: ID!
+  live_ip_count_range: String
+  scope_type: String
+  total_ip_address_count: String
+  total_ip_address_ranges: String
+}
+
+"""
+The connection type for PentestOpportunityNetworkScope.
+"""
+type PentestOpportunityNetworkScopeConnection {
+  """
+  A list of edges.
+  """
+  edges: [PentestOpportunityNetworkScopeEdge]
+
+  """
+  A list of nodes.
+  """
+  nodes: [PentestOpportunityNetworkScope]
+
+  """
+  Information to aid in pagination.
+  """
+  pageInfo: PageInfo!
+  total_count: Int!
+}
+
+"""
+An edge in a connection.
+"""
+type PentestOpportunityNetworkScopeEdge {
+  """
+  A cursor for use in pagination.
+  """
+  cursor: String!
+
+  """
+  The item at the end of the edge.
+  """
+  node: PentestOpportunityNetworkScope
 }
 
 """
