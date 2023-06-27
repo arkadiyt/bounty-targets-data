@@ -232,7 +232,7 @@
       "currency": "EUR"
     },
     "max_bounty": {
-      "value": 0.0,
+      "value": 500.0,
       "currency": "EUR"
     },
     "targets": {
@@ -984,16 +984,11 @@
       "currency": "EUR"
     },
     "max_bounty": {
-      "value": 0.0,
+      "value": 500.0,
       "currency": "EUR"
     },
     "targets": {
       "in_scope": [
-        {
-          "type": "url",
-          "endpoint": "www.gulp-shop.de",
-          "description": null
-        },
         {
           "type": "url",
           "endpoint": "*.gulp.ch",
@@ -1007,6 +1002,11 @@
         {
           "type": "url",
           "endpoint": "demo.tendertracker.de",
+          "description": null
+        },
+        {
+          "type": "url",
+          "endpoint": "www.gulp-shop.de",
           "description": null
         }
       ],
@@ -2372,7 +2372,7 @@
       "currency": "EUR"
     },
     "max_bounty": {
-      "value": 0.0,
+      "value": 500.0,
       "currency": "EUR"
     },
     "targets": {
@@ -3310,11 +3310,16 @@
       "currency": "EUR"
     },
     "max_bounty": {
-      "value": 0.0,
+      "value": 500.0,
       "currency": "EUR"
     },
     "targets": {
       "in_scope": [
+        {
+          "type": "url",
+          "endpoint": "*.randstad.*",
+          "description": "Out of Scope: workplace.randstad.in & apps.randstad.in"
+        },
         {
           "type": "url",
           "endpoint": "*.randstadrisesmart.*",
@@ -3326,14 +3331,9 @@
           "description": null
         },
         {
-          "type": "url",
-          "endpoint": "*.randstad.*",
-          "description": "Out of Scope: workplace.randstad.in & apps.randstad.in"
-        },
-        {
           "type": "other",
           "endpoint": "Any related Randstad domain",
-          "description": ""
+          "description": null
         }
       ],
       "out_of_scope": [
@@ -3923,11 +3923,26 @@
       "currency": "EUR"
     },
     "max_bounty": {
-      "value": 0.0,
+      "value": 500.0,
       "currency": "EUR"
     },
     "targets": {
       "in_scope": [
+        {
+          "type": "url",
+          "endpoint": "*.tempo-team.*",
+          "description": null
+        },
+        {
+          "type": "url",
+          "endpoint": "Any related Tempo-Team domain",
+          "description": null
+        },
+        {
+          "type": "url",
+          "endpoint": "www.tempo-team.be",
+          "description": "🇳🇱🇫🇷"
+        },
         {
           "type": "url",
           "endpoint": "www.tempo-team.com",
@@ -3937,21 +3952,6 @@
           "type": "url",
           "endpoint": "www.tempo-team.nl",
           "description": "🇳🇱"
-        },
-        {
-          "type": "url",
-          "endpoint": "www.tempo-team.be",
-          "description": "🇳🇱🇫🇷"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.tempo-team.*",
-          "description": ""
-        },
-        {
-          "type": "url",
-          "endpoint": "Any related Tempo-Team domain",
-          "description": null
         }
       ],
       "out_of_scope": [
@@ -4333,7 +4333,7 @@
       "currency": "EUR"
     },
     "max_bounty": {
-      "value": 0.0,
+      "value": 500.0,
       "currency": "EUR"
     },
     "targets": {
@@ -5543,7 +5543,7 @@
       "currency": "EUR"
     },
     "max_bounty": {
-      "value": 0.0,
+      "value": 500.0,
       "currency": "EUR"
     },
     "targets": {
