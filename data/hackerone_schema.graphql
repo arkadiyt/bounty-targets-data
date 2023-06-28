@@ -24030,6 +24030,7 @@ type Pentest implements Node {
   lead_pentester: Pentester
   linked_jira_reports_count: Int
   location_restrictions: [String!]
+  minimum_days_until_start: Int!
   most_common_weaknesses: Hash
   name: String
   pentest_checklist(id: ID!): PentestChecklist
