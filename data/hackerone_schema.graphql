@@ -8247,11 +8247,10 @@ input CreateCveRequestInput {
   clientMutationId: String
   cve_entry_identifier: String
   description: String!
-  product: String!
-  product_version: String!
   references: [String]
   report_id: Int
   team_handle: String!
+  versions: JSON!
   vulnerability_discovered_at: String!
   weakness_name: String!
 }
@@ -12644,8 +12643,7 @@ type CveRequest implements Node & ResourceInterface {
   id: ID!
   latest_state_change_reason: String
   owner: User!
-  product: String
-  product_version: String
+  products: [String]
   references: [String]
   report: Report
   request_type: String!
@@ -12653,6 +12651,7 @@ type CveRequest implements Node & ResourceInterface {
   team: Team!
   updated_at: DateTime
   url: URI!
+  versions: JSON
   vulnerability_discovered_at: DateTime
   weakness: Weakness
 }
@@ -18439,6 +18438,11 @@ type InvitedReportCollaboratorEdge {
   """
   node: InvitationsReportCollaborator
 }
+
+"""
+Represents untyped JSON
+"""
+scalar JSON
 
 """
 A jira escalation for a report
@@ -38491,10 +38495,9 @@ input UpdateCveRequestInput {
   description: String
   event: String
   event_reason: String
-  product: String
-  product_version: String
   references: [String]
   report_id: Int
+  versions: JSON
   vulnerability_discovered_at: String
   weakness_name: String
 }
