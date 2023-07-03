@@ -34259,6 +34259,12 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
     last: Int
     order_by: StructuredScopeOrder
     search: String = null
+
+    """
+    A date that, when provided, only structured_scopes with a created_at greater
+    than this date will be resolved. Example: structured_scopes(start_date: "2017-11-30")
+    """
+    start_date: DateTime
   ): StructuredScopesConnection
   structured_scopes_search(
     """
