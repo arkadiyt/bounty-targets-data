@@ -735,185 +735,6 @@ type ActivitiesChangedScope implements ActivityInterface & Node & ReportActivity
 }
 
 """
-A Activities::ChecklistCheckClaimed activity for a checklist_check
-"""
-type ActivitiesChecklistCheckClaimed implements ChecklistCheckResponseActivityInterface & Node {
-  _id: ID!
-  actor: ActorUnion
-  created_at: DateTime!
-  i_can_edit: Boolean!
-  i_can_flag: Boolean!
-  id: ID!
-  internal: Boolean
-  message: String
-  name: String
-  profile_picture(size: ProfilePictureSizes!): String!
-  slug: String
-  updated_at: DateTime!
-}
-
-"""
-A Activities::ChecklistCheckExpired activity for a checklist_check
-"""
-type ActivitiesChecklistCheckExpired implements ChecklistCheckResponseActivityInterface & Node {
-  _id: ID!
-  actor: ActorUnion
-  created_at: DateTime!
-  i_can_edit: Boolean!
-  i_can_flag: Boolean!
-  id: ID!
-  internal: Boolean
-  message: String
-  name: String
-  profile_picture(size: ProfilePictureSizes!): String!
-  slug: String
-  updated_at: DateTime!
-}
-
-"""
-A Activities::ChecklistCheckReleased activity for a checklist_check
-"""
-type ActivitiesChecklistCheckReleased implements ChecklistCheckResponseActivityInterface & Node {
-  _id: ID!
-  actor: ActorUnion
-  created_at: DateTime!
-  i_can_edit: Boolean!
-  i_can_flag: Boolean!
-  id: ID!
-  internal: Boolean
-  message: String
-  name: String
-  profile_picture(size: ProfilePictureSizes!): String!
-  slug: String
-  updated_at: DateTime!
-}
-
-"""
-A Activities::ChecklistCheckResponseApproved activity for a checklist_check
-"""
-type ActivitiesChecklistCheckResponseApproved implements ChecklistCheckResponseActivityInterface & Node {
-  _id: ID!
-  actor: ActorUnion
-  created_at: DateTime!
-  i_can_edit: Boolean!
-  i_can_flag: Boolean!
-  id: ID!
-  internal: Boolean
-  message: String
-  name: String
-  profile_picture(size: ProfilePictureSizes!): String!
-  slug: String
-  updated_at: DateTime!
-}
-
-"""
-A Activities::ChecklistCheckResponseComment activity for a checklist_check
-"""
-type ActivitiesChecklistCheckResponseComment implements AttachmentActivityInterface & ChecklistCheckResponseActivityInterface & Node {
-  _id: ID!
-  actor: ActorUnion
-  attachments: [Attachment]
-  created_at: DateTime!
-  i_can_edit: Boolean!
-  i_can_flag: Boolean!
-  id: ID!
-  internal: Boolean
-  message: String
-  name: String
-  profile_picture(size: ProfilePictureSizes!): String!
-  slug: String
-  updated_at: DateTime!
-}
-
-"""
-A Activities::ChecklistCheckResponseCreated activity for a checklist_check
-"""
-type ActivitiesChecklistCheckResponseCreated implements AttachmentActivityInterface & ChecklistCheckResponseActivityInterface & Node {
-  _id: ID!
-  actor: ActorUnion
-  attachments: [Attachment]
-  created_at: DateTime!
-  i_can_edit: Boolean!
-  i_can_flag: Boolean!
-  id: ID!
-  internal: Boolean
-  message: String
-  name: String
-  profile_picture(size: ProfilePictureSizes!): String!
-  slug: String
-  updated_at: DateTime!
-}
-
-"""
-A Activities::ChecklistCheckResponseRejected activity for a checklist_check
-"""
-type ActivitiesChecklistCheckResponseRejected implements ChecklistCheckResponseActivityInterface & Node {
-  _id: ID!
-  actor: ActorUnion
-  created_at: DateTime!
-  i_can_edit: Boolean!
-  i_can_flag: Boolean!
-  id: ID!
-  internal: Boolean
-  message: String
-  name: String
-  profile_picture(size: ProfilePictureSizes!): String!
-  slug: String
-  updated_at: DateTime!
-}
-
-"""
-A Activities::ChecklistCheckResponseUpdated activity for a checklist_check
-"""
-type ActivitiesChecklistCheckResponseUpdated implements AttachmentActivityInterface & ChecklistCheckResponseActivityInterface & Node {
-  _id: ID!
-  actor: ActorUnion
-  attachments: [Attachment]
-  created_at: DateTime!
-  i_can_edit: Boolean!
-  i_can_flag: Boolean!
-  id: ID!
-  internal: Boolean
-  message: String
-  name: String
-  profile_picture(size: ProfilePictureSizes!): String!
-  slug: String
-  updated_at: DateTime!
-}
-
-"""
-A Activities::ChecklistCheckRevoked activity for a checklist_check
-"""
-type ActivitiesChecklistCheckRevoked implements ChecklistCheckResponseActivityInterface & Node {
-  _id: ID!
-  actor: ActorUnion
-  created_at: DateTime!
-  i_can_edit: Boolean!
-  i_can_flag: Boolean!
-  id: ID!
-  internal: Boolean
-  message: String
-  name: String
-  profile_picture(size: ProfilePictureSizes!): String!
-  slug: String
-  updated_at: DateTime!
-}
-
-"""
-A Activities::ChecklistExpirationNotification activity for a checklistk
-"""
-type ActivitiesChecklistExpirationNotification implements Node {
-  id: ID!
-}
-
-"""
-A Activities::ChecklistStarted activity for a checklist
-"""
-type ActivitiesChecklistStarted implements Node {
-  id: ID!
-}
-
-"""
 An Activities::CodeReviewFeedbackPosted activity for a report
 """
 type ActivitiesCodeReviewFeedbackPosted implements ActivityInterface & Node & ReportActivityInterface {
@@ -2247,17 +2068,6 @@ enum ActivityTypes {
   CancelledDisclosureRequest
   ChangedCampaign
   ChangedScope
-  ChecklistCheckClaimed
-  ChecklistCheckExpired
-  ChecklistCheckReleased
-  ChecklistCheckResponseApproved
-  ChecklistCheckResponseComment
-  ChecklistCheckResponseCreated
-  ChecklistCheckResponseRejected
-  ChecklistCheckResponseUpdated
-  ChecklistCheckRevoked
-  ChecklistExpirationNotification
-  ChecklistStarted
   CodeReviewFeedbackPosted
   CodeReviewRequested
   Comment
@@ -2315,7 +2125,7 @@ enum ActivityTypes {
 """
 Activities can be of multiple types
 """
-union ActivityUnion = ActivitiesAddedToPentest | ActivitiesAgreedOnGoingPublic | ActivitiesAssetCreated | ActivitiesAssetSubmissionRejected | ActivitiesBountyAwarded | ActivitiesBountyRecalled | ActivitiesBountyScheduled | ActivitiesBountySuggested | ActivitiesBugCloned | ActivitiesBugDuplicate | ActivitiesBugFiled | ActivitiesBugInactive | ActivitiesBugInformative | ActivitiesBugNeedsMoreInfo | ActivitiesBugNew | ActivitiesBugNotApplicable | ActivitiesBugPendingProgramReview | ActivitiesBugPriorityChanged | ActivitiesBugReopened | ActivitiesBugResolved | ActivitiesBugRetesting | ActivitiesBugSpam | ActivitiesBugTriaged | ActivitiesCancelledDisclosureRequest | ActivitiesChangedCampaign | ActivitiesChangedScope | ActivitiesChecklistCheckClaimed | ActivitiesChecklistCheckExpired | ActivitiesChecklistCheckReleased | ActivitiesChecklistCheckResponseApproved | ActivitiesChecklistCheckResponseComment | ActivitiesChecklistCheckResponseCreated | ActivitiesChecklistCheckResponseRejected | ActivitiesChecklistCheckResponseUpdated | ActivitiesChecklistCheckRevoked | ActivitiesChecklistExpirationNotification | ActivitiesChecklistStarted | ActivitiesCodeReviewFeedbackPosted | ActivitiesCodeReviewRequested | ActivitiesComment | ActivitiesCommentsClosed | ActivitiesCveIdAdded | ActivitiesDraftStarted | ActivitiesExternalAdvisoryAdded | ActivitiesExternalUserInvitationCancelled | ActivitiesExternalUserInvited | ActivitiesExternalUserJoined | ActivitiesExternalUserRemoved | ActivitiesGroupAssignedToBug | ActivitiesHackerRequestedMediation | ActivitiesInvitationReceived | ActivitiesManuallyDisclosed | ActivitiesMediationRequested | ActivitiesNobodyAssignedToBug | ActivitiesNotEligibleForBounty | ActivitiesOrganizationAssetsBulkArchived | ActivitiesOrganizationAssetsBulkCreated | ActivitiesPentestCheckAssigned | ActivitiesPentestCheckCompleted | ActivitiesPentestCheckUnassigned | ActivitiesPentestCheckUpdated | ActivitiesPentestPublished | ActivitiesPentestStarted | ActivitiesPentesterAwarded | ActivitiesProgramHackerJoined | ActivitiesProgramHackerLeft | ActivitiesProgramInactive | ActivitiesProgramStructuredScopesBulkUpdated | ActivitiesReassignedToTeam | ActivitiesReferenceIdAdded | ActivitiesRemovedFromPentest | ActivitiesReportBecamePublic | ActivitiesReportCollaboratorInvited | ActivitiesReportCollaboratorJoined | ActivitiesReportCustomFieldValueUpdated | ActivitiesReportOrganizationInboxesUpdated | ActivitiesReportRemediationGuidanceUpdated | ActivitiesReportRetestApproved | ActivitiesReportRetestCanceled | ActivitiesReportRetestRejected | ActivitiesReportSeverityUpdated | ActivitiesReportTitleUpdated | ActivitiesReportTriageSummaryCreated | ActivitiesReportUndisclosed | ActivitiesReportVulnerabilityTypesUpdated | ActivitiesRetestUserExpired | ActivitiesSwagAwarded | ActivitiesTeamBountyTableUpdated | ActivitiesTeamPolicyUpdated | ActivitiesTeamPostCreated | ActivitiesTeamPublished | ActivitiesTeamStructuredScopeUpdated | ActivitiesUserAssignedToBug | ActivitiesUserBannedFromProgram | ActivitiesUserCompletedRetest | ActivitiesUserJoined | ActivitiesUserLeftRetest
+union ActivityUnion = ActivitiesAddedToPentest | ActivitiesAgreedOnGoingPublic | ActivitiesAssetCreated | ActivitiesAssetSubmissionRejected | ActivitiesBountyAwarded | ActivitiesBountyRecalled | ActivitiesBountyScheduled | ActivitiesBountySuggested | ActivitiesBugCloned | ActivitiesBugDuplicate | ActivitiesBugFiled | ActivitiesBugInactive | ActivitiesBugInformative | ActivitiesBugNeedsMoreInfo | ActivitiesBugNew | ActivitiesBugNotApplicable | ActivitiesBugPendingProgramReview | ActivitiesBugPriorityChanged | ActivitiesBugReopened | ActivitiesBugResolved | ActivitiesBugRetesting | ActivitiesBugSpam | ActivitiesBugTriaged | ActivitiesCancelledDisclosureRequest | ActivitiesChangedCampaign | ActivitiesChangedScope | ActivitiesCodeReviewFeedbackPosted | ActivitiesCodeReviewRequested | ActivitiesComment | ActivitiesCommentsClosed | ActivitiesCveIdAdded | ActivitiesDraftStarted | ActivitiesExternalAdvisoryAdded | ActivitiesExternalUserInvitationCancelled | ActivitiesExternalUserInvited | ActivitiesExternalUserJoined | ActivitiesExternalUserRemoved | ActivitiesGroupAssignedToBug | ActivitiesHackerRequestedMediation | ActivitiesInvitationReceived | ActivitiesManuallyDisclosed | ActivitiesMediationRequested | ActivitiesNobodyAssignedToBug | ActivitiesNotEligibleForBounty | ActivitiesOrganizationAssetsBulkArchived | ActivitiesOrganizationAssetsBulkCreated | ActivitiesPentestCheckAssigned | ActivitiesPentestCheckCompleted | ActivitiesPentestCheckUnassigned | ActivitiesPentestCheckUpdated | ActivitiesPentestPublished | ActivitiesPentestStarted | ActivitiesPentesterAwarded | ActivitiesProgramHackerJoined | ActivitiesProgramHackerLeft | ActivitiesProgramInactive | ActivitiesProgramStructuredScopesBulkUpdated | ActivitiesReassignedToTeam | ActivitiesReferenceIdAdded | ActivitiesRemovedFromPentest | ActivitiesReportBecamePublic | ActivitiesReportCollaboratorInvited | ActivitiesReportCollaboratorJoined | ActivitiesReportCustomFieldValueUpdated | ActivitiesReportOrganizationInboxesUpdated | ActivitiesReportRemediationGuidanceUpdated | ActivitiesReportRetestApproved | ActivitiesReportRetestCanceled | ActivitiesReportRetestRejected | ActivitiesReportSeverityUpdated | ActivitiesReportTitleUpdated | ActivitiesReportTriageSummaryCreated | ActivitiesReportUndisclosed | ActivitiesReportVulnerabilityTypesUpdated | ActivitiesRetestUserExpired | ActivitiesSwagAwarded | ActivitiesTeamBountyTableUpdated | ActivitiesTeamPolicyUpdated | ActivitiesTeamPostCreated | ActivitiesTeamPublished | ActivitiesTeamStructuredScopeUpdated | ActivitiesUserAssignedToBug | ActivitiesUserBannedFromProgram | ActivitiesUserCompletedRetest | ActivitiesUserJoined | ActivitiesUserLeftRetest
 
 """
 An edge in a connection.
@@ -3872,6 +3682,7 @@ type AssetImplementationDomain implements AssetImplementationInterface & Node {
   created_at: DateTime
   domain_name: String
   id: ID!
+  related_ip_addresses: [Asset!]
   structured_scopes(
     """
     Returns the elements in the list that come after the specified cursor.
@@ -3968,6 +3779,7 @@ type AssetImplementationIpAddress implements AssetImplementationInterface & Node
   created_at: DateTime
   id: ID!
   identifier: String
+  related_domains: [Asset!]
 }
 
 """
@@ -4409,14 +4221,6 @@ type Attachment implements Node {
   file_size: Int!
   id: ID!
   long_lasting_url: String!
-}
-
-"""
-A interface for the common fields on an HackerOne ChecklistCheckResponse Activity
-"""
-interface AttachmentActivityInterface {
-  attachments: [Attachment]
-  id: ID!
 }
 
 """
@@ -6382,24 +6186,6 @@ type ChangeReportPentestPayload implements MutationResult {
   ): ErrorConnection!
   report: Report
   was_successful: Boolean!
-}
-
-"""
-A interface for the common fields on an HackerOne Activity
-"""
-interface ChecklistCheckResponseActivityInterface {
-  _id: ID!
-  actor: ActorUnion
-  created_at: DateTime!
-  i_can_edit: Boolean!
-  i_can_flag: Boolean!
-  id: ID!
-  internal: Boolean
-  message: String
-  name: String
-  profile_picture(size: ProfilePictureSizes!): String!
-  slug: String
-  updated_at: DateTime!
 }
 
 """
