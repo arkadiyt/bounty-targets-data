@@ -4384,6 +4384,7 @@ input AutosavePentestOpportunityInput {
   company_name: String
   compliance_framework: String
   compliance_framework_other: String
+  consumption_subscription_id: ID
   customer_email: String
   customer_note: String
   internal_handoff_notes: String
@@ -6905,6 +6906,8 @@ type ConsumptionSubscription implements Node {
   organization_id: ID!
   pentest_opportunities: [PentestOpportunity]
   purchase_by_date: DateTime!
+  salesforce_account_id: String
+  salesforce_opportunity_id: String
   starts_at: DateTime!
   tag: String!
 }
@@ -29833,6 +29836,7 @@ input ReviewCompletePentestOpportunityInput {
   company_name: String
   compliance_framework: String
   compliance_framework_other: String
+  consumption_subscription_id: ID
   customer_email: String
   customer_note: String
   internal_handoff_notes: String
@@ -29899,6 +29903,7 @@ input ReviewPentestOpportunityInput {
   company_name: String
   compliance_framework: String
   compliance_framework_other: String
+  consumption_subscription_id: ID
   customer_email: String
   customer_note: String
   internal_handoff_notes: String
