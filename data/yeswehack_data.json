@@ -1455,6 +1455,53 @@
     }
   },
   {
+    "id": "moneybox-bug-bounty",
+    "name": "Moneybox Bug Bounty",
+    "public": true,
+    "disabled": false,
+    "managed": null,
+    "min_bounty": 50,
+    "max_bounty": 2000,
+    "targets": {
+      "in_scope": [
+        {
+          "target": "https://api.moneyboxapp.com/",
+          "type": "api"
+        },
+        {
+          "target": "https://admin.moneyboxapp.org/",
+          "type": "web-application"
+        },
+        {
+          "target": "https://admin-roundups.moneyboxapp.org/",
+          "type": "web-application"
+        },
+        {
+          "target": "https://apps.apple.com/gb/app/moneybox-save-and-invest/id1049797239",
+          "type": "mobile-application-ios"
+        },
+        {
+          "target": "https://play.google.com/store/apps/details?id=com.moneyboxapp",
+          "type": "mobile-application-android"
+        },
+        {
+          "target": "https://sycamore.moneyboxapp.org/",
+          "type": "web-application"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "target": "The Moneybox public website https://www.moneyboxapp.com/ and other moneyboxapp.com / moneyboxapp.org domains not listed are out of scope.",
+          "type": "other"
+        },
+        {
+          "target": "Content served by the Cloudflare Access service (https://moneyboxapp.cloudflareaccess.com/*) is out of scope. These pages intentionally do not set a CORS Allow-Origin policy. We have seen this reported several times as a vulnerability, but it is intended behaviour and is considered out of scope.",
+          "type": "other"
+        }
+      ]
+    }
+  },
+  {
     "id": "muslim-pro",
     "name": "Muslim Pro",
     "public": true,
