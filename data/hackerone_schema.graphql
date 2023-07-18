@@ -31684,6 +31684,7 @@ A static dashboard definition
 """
 type StaticDashboard implements Node & ResourceInterface {
   charts: [StaticDashboardChart]!
+  effective_date_range_suffix: String
   elements: [StaticDashboardElement]!
   filter_options: [String]!
   id: ID!
