@@ -8083,6 +8083,7 @@ input CreateCveRequestInput {
   clientMutationId: String
   cve_entry_identifier: String
   description: String!
+  metrics: JSON!
   references: [String]
   report_id: Int
   team_handle: String!
@@ -12479,6 +12480,7 @@ type CveRequest implements Node & ResourceInterface {
   description: String
   id: ID!
   latest_state_change_reason: String
+  metrics: JSON
   owner: User!
   products: [String]
   references: [String]
@@ -38559,6 +38561,7 @@ input UpdateCveRequestInput {
   description: String
   event: String
   event_reason: String
+  metrics: JSON
   references: [String]
   report_id: Int
   versions: JSON
