@@ -2458,6 +2458,29 @@ type AllTimeReputationLeaderboardEntry implements LeaderboardEntryInterface & No
   user: User!
 }
 
+input AnalyticsChartAxisConfigInputType {
+  color: String
+  format: String
+  label: String
+  query_key: String!
+  select_field: String!
+}
+
+input AnalyticsChartConfigInputType {
+  allow_limit_override: Boolean
+  chart_orientation: String
+  data_axes: [AnalyticsChartAxisConfigInputType!]!
+  description: String
+  index_axis: AnalyticsChartAxisConfigInputType!
+  key: String!
+  legend_position: String
+  legend_word_break: String
+  pivot_axis: AnalyticsChartAxisConfigInputType
+  stacked: Boolean
+  title: String
+  type: String!
+}
+
 input AnalyticsComplexInputType {
   boolean: Boolean
   booleans: [Boolean!]
@@ -14951,7 +14974,9 @@ type DismissTriageMetaPayload implements MutationResult {
 }
 
 input DocumentElementInputType {
-  markdown: String!
+  chart_config: AnalyticsChartConfigInputType
+  key: String!
+  markdown: String
   template: String
   type: String!
 }
@@ -31755,8 +31780,10 @@ type StaticDashboardChart implements Node & ResourceInterface {
 A static dashboard element definition
 """
 type StaticDashboardElement implements Node & ResourceInterface {
+  chart_config: StaticDashboardChart
   id: ID!
-  markdown: String!
+  key: String!
+  markdown: String
   template: String
   type: String!
   url: URI!
