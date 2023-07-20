@@ -4444,6 +4444,7 @@ input AutosavePentestOpportunityInput {
   schedule_time_restrictions_end: String
   schedule_time_restrictions_start: String
   scopes: String
+  time_zone: String
   token: String!
 }
 
@@ -24901,6 +24902,7 @@ type PentestOpportunity implements Node {
   sold_at: DateTime
   state: String!
   submitted_at: DateTime
+  time_zone: String
   token: String!
   total_pentester_awards: Int
   total_pentester_hours: Int
@@ -29925,6 +29927,7 @@ input ReviewCompletePentestOpportunityInput {
   schedule_time_restrictions_end: String
   schedule_time_restrictions_start: String
   scopes: String
+  time_zone: String
 }
 
 """
@@ -29992,6 +29995,7 @@ input ReviewPentestOpportunityInput {
   schedule_time_restrictions_end: String
   schedule_time_restrictions_start: String
   scopes: String
+  time_zone: String
 }
 
 """
@@ -32391,6 +32395,7 @@ input SubmitPentestOpportunityInput {
   schedule_time_restrictions_end: String
   schedule_time_restrictions_start: String
   scopes: String
+  time_zone: String
   token: String!
 }
 
