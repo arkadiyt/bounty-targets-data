@@ -877,6 +877,7 @@ type ActivitiesExternalUserInvited implements ActivityInterface & Node & ReportA
   internal: Boolean
   message: String
   report: Report
+  report_permissions: [String!]
   report_retest_user_id: String
   triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
@@ -901,6 +902,7 @@ type ActivitiesExternalUserJoined implements ActivityInterface & Node & ReportAc
   internal: Boolean
   message: String
   report: Report
+  report_permissions: [String!]
   report_retest_user: User
   report_retest_user_id: Int
   triage_inbox_item: TriageInboxItem
