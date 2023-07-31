@@ -16899,6 +16899,7 @@ type GatewayUser implements Node & ResourceInterface {
   blocked_status: Boolean!
   id: ID!
   last_seen: DateTime
+  source_ips: [Hash!]!
   team: Team!
   url: URI!
   user: User!
@@ -24761,6 +24762,7 @@ type PentestOpportunityWebAppScope implements Node {
   interacts_with_aws: Boolean
   publicly_accessible: Boolean
   scope_type: String
+  static: Boolean
   url: String
   user_role_count: Int
 }
@@ -26128,7 +26130,7 @@ type Query implements Node {
     Returns the last _n_ elements from the list.
     """
     last: Int
-    team_handle: String!
+    team_handle: String
   ): GatewayUserConnection
   hacker_referral: HackerReferral
   hacktivity_items(
