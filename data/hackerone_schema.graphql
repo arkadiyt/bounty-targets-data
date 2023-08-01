@@ -14651,7 +14651,7 @@ type DocumentResult implements Node {
 """
 ElasticSearch Document can be of different types
 """
-union DocumentUnion = AssetDocument | AssetSubmissionDocument | OpportunityDocument | OrganizationMemberDocument | OrganizationMemberGroupDocument | OrganizationReportDocument | ReportDocument | StructuredScopeDocument
+union DocumentUnion = AssetDocument | AssetSubmissionDocument | HacktivityReportDocument | OpportunityDocument | OrganizationMemberDocument | OrganizationMemberGroupDocument | OrganizationReportDocument | ReportDocument | StructuredScopeDocument
 
 """
 The connection type for AssetImplementationDomain.
@@ -17469,6 +17469,20 @@ enum HacktivityOrderFieldEnum {
   popular
 }
 
+type HacktivityReportDocument implements Node {
+  _id: ID!
+  currency: String
+  id: ID!
+  latest_disclosable_action: String
+  latest_disclosable_activity_at: DateTime
+  report: Report
+  reporter: User
+  severity_rating: String
+  team: Team
+  total_awarded_amount: Int
+  upvoted_by_current_user: Boolean
+}
+
 """
 Entry for the upvotes leaderboard
 """
@@ -17585,6 +17599,7 @@ Available ElasticSearch indexes
 """
 enum IndexEnum {
   DuplicateDetectorReportsIndex
+  HacktivityReportIndexService
   OpportunitiesIndex
   OrganizationReportIndex
 }
