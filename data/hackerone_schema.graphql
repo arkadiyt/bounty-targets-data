@@ -34099,6 +34099,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
     than this date will be resolved. Example: structured_scopes(start_date: "2017-11-30")
     """
     start_date: DateTime
+    triage_guideline_set: Boolean = null
   ): StructuredScopesConnection
   structured_scopes_search(
     """
@@ -35103,6 +35104,7 @@ type TeamMemberGroup implements Node {
   assigned_to_h1_triage: Boolean!
   created_at: DateTime
   description: String
+  handle: String
   id: ID!
   immutable: Boolean!
   key: String
