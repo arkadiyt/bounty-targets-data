@@ -16929,6 +16929,18 @@ type ForwardedEmailsEdge {
 }
 
 """
+Gateway::GatewayProgram
+"""
+type GatewayProgram implements Node & ResourceInterface {
+  _id: ID!
+  blocked_status: Boolean!
+  cf_team_domain: String
+  egress_ips: [Hash!]
+  id: ID!
+  url: URI!
+}
+
+"""
 Gateway::GatewayUser
 """
 type GatewayUser implements Node & ResourceInterface {
@@ -33568,6 +33580,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
     last: Int
     order_by: ForwardedEmailOrderInput = {direction: DESC, field: created_at}
   ): ForwardedEmailsConnection
+  gateway_program: GatewayProgram
   goal_valid_reports: Int
   gold_standard: Int
   grace_period_remaining_in_days: Int
