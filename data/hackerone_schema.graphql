@@ -26738,6 +26738,7 @@ type Query implements Node {
     last: Int
   ): TriagePodConnection!
   user(username: String!): User @deprecated(reason: "Query for a User node at the root level is not recommended. Ref T12456")
+  user_streak(user_id: ID!): UserStreak
   users(
     """
     Returns the elements in the list that come after the specified cursor.
@@ -45101,6 +45102,16 @@ types available for user statistics
 enum UserStatisticsSnapshotTypeEnum {
   last_90_days
   past_year
+}
+
+"""
+User streak type
+"""
+type UserStreak implements Node {
+  end_date: DateTime
+  id: ID!
+  length: Int
+  start_date: DateTime
 }
 
 """
