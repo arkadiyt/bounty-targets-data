@@ -24812,7 +24812,9 @@ A pentest opportunity api scope
 """
 type PentestOpportunityApiScope implements Node {
   _id: ID!
+  account_provisioning_needed: Boolean
   attachments: [Attachment]
+  authentication_mode: String
   aws_services: [String!]
   description: String
   distinct_user_roles: [String!]
@@ -24869,8 +24871,10 @@ A pentest opportunity mobile app scope
 """
 type PentestOpportunityMobileAppScope implements Node {
   _id: ID!
+  account_provisioning_needed: Boolean
   app_identifier: String
   app_type: String
+  authentication_mode: String
   aws_services: [String!]
   can_detect_compromised_device: Boolean
   can_detect_emulator: Boolean
@@ -24983,6 +24987,8 @@ A pentest opportunity web app scope
 """
 type PentestOpportunityWebAppScope implements Node {
   _id: ID!
+  account_provisioning_needed: Boolean
+  authentication_mode: String
   aws_services: [String!]
   description: String
   distinct_user_roles: [String!]
