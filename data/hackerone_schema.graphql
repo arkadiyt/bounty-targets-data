@@ -44361,7 +44361,7 @@ type User implements ActivitiesInterface & Node & ResourceInterface {
     """
     last: Int
   ): NotificationDeliveryPreferenceConnection
-  notifications(include_read: Boolean, just_mentions: Boolean, page: Int, sort_direction: String): [VirtualNotification!]
+  notifications(include_message: Boolean, include_read: Boolean, just_mentions: Boolean, page: Int, sort_direction: String): [VirtualNotification!]
   open_for_employment: Boolean
   organizations(
     """
