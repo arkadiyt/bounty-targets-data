@@ -17747,12 +17747,6 @@ type HighestReputationLeaderboardEntry implements LeaderboardEntryInterface & No
   user: User!
 }
 
-input HighlightFieldInput {
-  number_of_fragments: Int
-  post_tags: [String!]
-  pre_tags: [String!]
-}
-
 """
 An ISO 8601-encoded date
 """
@@ -24880,6 +24874,7 @@ A pentest opportunity api scope
 type PentestOpportunityApiScope implements Node {
   _id: ID!
   account_provisioning_needed: Boolean
+  additional_questions: String
   attachments: [Attachment]
   authentication_mode: String
   aws_services: [String!]
@@ -24939,6 +24934,7 @@ A pentest opportunity mobile app scope
 type PentestOpportunityMobileAppScope implements Node {
   _id: ID!
   account_provisioning_needed: Boolean
+  additional_questions: String
   app_identifier: String
   app_type: String
   authentication_mode: String
@@ -25055,6 +25051,7 @@ A pentest opportunity web app scope
 type PentestOpportunityWebAppScope implements Node {
   _id: ID!
   account_provisioning_needed: Boolean
+  additional_questions: String
   authentication_mode: String
   aws_services: [String!]
   description: String
@@ -32204,7 +32201,6 @@ type StructuredScopeDocument implements Node {
   display_name: String!
   eligible_for_bounty: Boolean!
   eligible_for_submission: Boolean!
-  highlight: Hash
   id: ID!
   identifier: String!
   instruction: String
@@ -32226,17 +32222,6 @@ type StructuredScopeEdge {
   The item at the end of the edge.
   """
   node: StructuredScope
-}
-
-input StructuredScopeHighlightFieldsInput {
-  identifier: HighlightFieldInput
-  instruction: HighlightFieldInput
-}
-
-input StructuredScopeHighlightInput {
-  fields: StructuredScopeHighlightFieldsInput
-  post_tags: [String!]
-  pre_tags: [String!]
 }
 
 """
@@ -34430,7 +34415,6 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
     from: Int
     group_names: [String]
     grouped: Boolean
-    highlight: StructuredScopeHighlightInput
 
     """
     Returns the last _n_ elements from the list.
