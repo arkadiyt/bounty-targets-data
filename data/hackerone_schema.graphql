@@ -27046,7 +27046,6 @@ type Query implements Node {
     last: Int
   ): TriagePodConnection!
   user(username: String!): User @deprecated(reason: "Query for a User node at the root level is not recommended. Ref T12456")
-  user_streak(user_id: ID!): UserStreak
   users(
     """
     Returns the elements in the list that come after the specified cursor.
@@ -45042,6 +45041,7 @@ type User implements ActivitiesInterface & Node & ResourceInterface {
     last: Int
   ): UserOpportunitiesFeedbackConnection
   user_spoken_languages: [UserSpokenLanguage!]
+  user_streak: UserStreak
   user_type: String
   username: String!
   verified: Boolean!
@@ -45457,7 +45457,7 @@ User streak type
 type UserStreak implements Node {
   end_date: DateTime
   id: ID!
-  length: Int
+  length: Int!
   start_date: DateTime
 }
 
