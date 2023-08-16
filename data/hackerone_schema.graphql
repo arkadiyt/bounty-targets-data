@@ -2533,7 +2533,21 @@ enum AnalyticsFromEnum {
   fixture_intervals
   fixture_report_states
   fixture_severity_ratings
+  gateway_httpstream
   view_intervals
+}
+
+type AnalyticsGatewayHttpStreamDocument implements Node {
+  datetime: String
+  destinationip: String
+  destinationport: String
+  email: String
+  end_date: String
+  id: ID!
+  sourceip: String
+  sourceport: String
+  start_date: String
+  url: String
 }
 
 input AnalyticsHavingInputType {
@@ -2934,6 +2948,47 @@ enum AnalyticsSelectFieldEnum {
   fixture_severity_ratings__label
   fixture_severity_ratings__num_index
   fixture_severity_ratings__severity_rating
+  gateway_httpstream__accountid
+  gateway_httpstream__action
+  gateway_httpstream__blockedfilehash
+  gateway_httpstream__blockedfilename
+  gateway_httpstream__blockedfilereason
+  gateway_httpstream__blockedfilesize
+  gateway_httpstream__cloudflare_dataset_type
+  gateway_httpstream__datetime
+  gateway_httpstream__destinationip
+  gateway_httpstream__destinationport
+  gateway_httpstream__deviceid
+  gateway_httpstream__devicename
+  gateway_httpstream__downloadedfilenames
+  gateway_httpstream__email
+  gateway_httpstream__end_date
+  gateway_httpstream__fileinfo
+  gateway_httpstream__httphost
+  gateway_httpstream__httpmethod
+  gateway_httpstream__httpstatuscode
+  gateway_httpstream__httpversion
+  gateway_httpstream__id
+  gateway_httpstream__isisolated
+  gateway_httpstream__organization_id
+  gateway_httpstream__policyid
+  gateway_httpstream__policyname
+  gateway_httpstream__referer
+  gateway_httpstream__requestid
+  gateway_httpstream__row_number
+  gateway_httpstream__s3_bucket
+  gateway_httpstream__s3_key
+  gateway_httpstream__sourceinternalip
+  gateway_httpstream__sourceip
+  gateway_httpstream__sourceport
+  gateway_httpstream__start_date
+  gateway_httpstream__surrogate_id
+  gateway_httpstream__team_id
+  gateway_httpstream__untrustedcertificateaction
+  gateway_httpstream__uploadedfilenames
+  gateway_httpstream__url
+  gateway_httpstream__useragent
+  gateway_httpstream__userid
   view_intervals__end_at
   view_intervals__interval
   view_intervals__start_at
@@ -14848,7 +14903,7 @@ type DocumentResult implements Node {
 """
 ElasticSearch Document can be of different types
 """
-union DocumentUnion = AssetDocument | AssetSubmissionDocument | HacktivityReportDocument | OpportunityDocument | OrganizationMemberDocument | OrganizationMemberGroupDocument | OrganizationReportDocument | ReportDocument | StructuredScopeDocument
+union DocumentUnion = AnalyticsGatewayHttpStreamDocument | AssetDocument | AssetSubmissionDocument | HacktivityReportDocument | OpportunityDocument | OrganizationMemberDocument | OrganizationMemberGroupDocument | OrganizationReportDocument | ReportDocument | StructuredScopeDocument
 
 """
 The connection type for AssetImplementationDomain.
@@ -33554,6 +33609,32 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
   allows_collaboration_with_non_whitelisted_hackers: Boolean
   allows_disclosure_assistance: Boolean!
   allows_private_disclosure: Boolean
+  analytics_gateway_http_streams_search(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+    end_date: DateTime
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+    from: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+    search_string: String
+    size: Int
+    start_date: DateTime
+  ): SearchResultConnection
   asset_credentials_set_up: Boolean
   asset_discovery_setting: AssetDiscoverySetting
   asset_scope_tab_enabled: Boolean
