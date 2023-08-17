@@ -1445,7 +1445,151 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "ios",
+          "endpoint": "949829216",
+          "description": "iOS app of GAMMA NL"
+        },
+        {
+          "type": "ios",
+          "endpoint": "950680989",
+          "description": "iOS app of Karwei"
+        },
+        {
+          "type": "ios",
+          "endpoint": "950693949",
+          "description": "iOS app of GAMMA BE"
+        },
+        {
+          "type": "android",
+          "endpoint": "be.gamma.app.android",
+          "description": "Android app of GAMMA BE"
+        },
+        {
+          "type": "url",
+          "endpoint": "kassa.gamma.be/*",
+          "description": null
+        },
+        {
+          "type": "url",
+          "endpoint": "kassa.gamma.nl/*",
+          "description": null
+        },
+        {
+          "type": "url",
+          "endpoint": "kassa.karwei.nl/*",
+          "description": null
+        },
+        {
+          "type": "url",
+          "endpoint": "mijn.gamma.be/*",
+          "description": null
+        },
+        {
+          "type": "url",
+          "endpoint": "mijn.gamma.nl/*",
+          "description": null
+        },
+        {
+          "type": "url",
+          "endpoint": "mijn.karwei.nl/*",
+          "description": null
+        },
+        {
+          "type": "android",
+          "endpoint": "nl.gamma.app.android",
+          "description": "Android app of GAMMA NL"
+        },
+        {
+          "type": "android",
+          "endpoint": "nl.karwei.app.android",
+          "description": "Android app of Karwei"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.gamma.be/*",
+          "description": null
+        },
+        {
+          "type": "url",
+          "endpoint": "www.gamma.nl/*",
+          "description": null
+        },
+        {
+          "type": "url",
+          "endpoint": "www.karwei.nl/*",
+          "description": null
+        },
+        {
+          "type": "url",
+          "endpoint": "*.gamma.be/*",
+          "description": "**Out of scope: raamdecoratieconfigurator.gamma.be**\n**Out of scope: mail.gamma.be**\n\nThis covers all subdomains of gamma.be not listed in Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.gamma.nl/*",
+          "description": "**Out of scope: mail.gamma.nl**\n**Out of scope: raamdecoratieconfigurator.gamma.nl**\n\n\nThis covers all subdomains of gamma.nl not listed in Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.intergamma.nl/*",
+          "description": "Corporate website"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.karwei.nl/*",
+          "description": "**Out of scope: mail.karwei.nl**\n\n**api.maakafspraak.karwei.nl and maakafspraak.karwei.nl are listed seperately**\n\nThis covers all subdomains of Karwei.nl not listed in Tier 1"
+        },
+        {
+          "type": "ios",
+          "endpoint": "1558129454",
+          "description": "Our brand new iOS app fully dedicated to paint, with nice features to use AR and see how the paint looks on your own wall.\nShares various web views with our website.\n\nTechnically equal to the Android version"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://zabbix.intergamma.nl/*",
+          "description": "Zabbix installation"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.intergamma-test.nl",
+          "description": null
+        },
+        {
+          "type": "url",
+          "endpoint": "*.intergamma.cloud",
+          "description": null
+        },
+        {
+          "type": "url",
+          "endpoint": "*.restintergamma.nl",
+          "description": null
+        },
+        {
+          "type": "url",
+          "endpoint": "*.werkenbijgamma.be",
+          "description": "Recruiting website"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.werkenbijgamma.nl",
+          "description": "Recruiting website"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.werkenbijkarwei.nl",
+          "description": "Recruiting website"
+        },
+        {
+          "type": "android",
+          "endpoint": "nl.gamma.verf",
+          "description": "Our brand new Android app fully dedicated to paint, with nice features to use AR and see how the paint looks on your own wall.\nShares various web views with our website.\n\nTechnically equal to the iOS version"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.karweioutletstore.nl",
+          "description": null
+        }
       ],
       "out_of_scope": [
 
@@ -4360,7 +4504,41 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "ios",
+          "endpoint": "1101145849",
+          "description": "iOS application. This is currently installable on Jailbroken devices, please read the out-of-scope findings."
+        },
+        {
+          "type": "url",
+          "endpoint": "api.uphold.com",
+          "description": "Production WebWallet Application. Do not test service degradation attacks or horizontal privilege here.\n\nOn the business app side, we allow you to create apps in sandbox, but you shouldn't be able to create them in Production."
+        },
+        {
+          "type": "android",
+          "endpoint": "com.uphold.wallet",
+          "description": "Android application. This is currently installable on Jailbroken devices, please read the out-of-scope findings."
+        },
+        {
+          "type": "url",
+          "endpoint": "uphold.com/dashboard",
+          "description": "Production WebWallet Application. Do not test service degradation attacks or horizontal privilege here."
+        },
+        {
+          "type": "url",
+          "endpoint": "api-sandbox.uphold.com",
+          "description": "Use this environment for financial transaction testing, degradation attacks, or horizontal privilege attacks. Fund with Crypto Testnet Faucet (e.g. https://coinfaucet.eu/en/btc-testnet/ for Bitcoin).\n\nOn the business app side, we allow you to create apps in sandbox, but you shouldn't be able to create them in Production."
+        },
+        {
+          "type": "url",
+          "endpoint": "sandbox.uphold.com/dashboard",
+          "description": "Use this environment for financial transaction testing, degradation attacks, or horizontal privilege attacks. Fund with Crypto Testnet Faucet (e.g. https://coinfaucet.eu/en/btc-testnet/ for Bitcoin)"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.uphold.com",
+          "description": "We are willing to give bonuses on anything you find and we agree is impactful, in the rest of our domain. Please note that third party services are out of scope unless the issue is caused due to a misconfiguration by Uphold\n\n"
+        }
       ],
       "out_of_scope": [
 
@@ -5010,7 +5188,11 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "url",
+          "endpoint": "all",
+          "description": "This program covers all Visma services, products or web properties.\nWe do not offer money rewards for this program, but as a small token of appreciation for all researchers that submit a previously unknown vulnerability that triggers a code or configuration change, we will offer a place on our [Security Hall of Fame (HoF)](https://www.visma.com/trust-centre/security/products-and-services/bug-bounty-and-responsible-disclosure/hall-of-fame/).\nAlso for **all valid Medium+ reports**, we will offer **swags**.\n\nFor money rewards, the only exceptions are the specific assets listed in our Public Bug Bounty Program, see https://app.intigriti.com/programs/visma/visma/detail. Please note that we will only accept reports for the explicitly listed assets under our Public program."
+        }
       ],
       "out_of_scope": [
 
@@ -5128,7 +5310,31 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "url",
+          "endpoint": "intigriti.voipgrid.nl",
+          "description": "This web environment has been setup for this Bug Bounty program. \n\nThis application has the same codebase between the two brands VoIPGRID and Voys"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.voipgrid.nl",
+          "description": null
+        },
+        {
+          "type": "url",
+          "endpoint": "*.voys.be",
+          "description": null
+        },
+        {
+          "type": "url",
+          "endpoint": "*.voys.co",
+          "description": null
+        },
+        {
+          "type": "url",
+          "endpoint": "*.voys.nl",
+          "description": "Excluding https://jobs.voys.nl, https://jobs.voys.co"
+        }
       ],
       "out_of_scope": [
 
@@ -5565,7 +5771,146 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "url",
+          "endpoint": "fps-extr-services.vidaxl.org",
+          "description": null
+        },
+        {
+          "type": "url",
+          "endpoint": "ar.vidaxl.sa.com",
+          "description": null
+        },
+        {
+          "type": "url",
+          "endpoint": "b2b.vidaxl.com",
+          "description": null
+        },
+        {
+          "type": "url",
+          "endpoint": "cms.woger-cdn.com",
+          "description": null
+        },
+        {
+          "type": "url",
+          "endpoint": "customer-services.vidaxl.org",
+          "description": null
+        },
+        {
+          "type": "url",
+          "endpoint": "en.vidaxl.ae",
+          "description": null
+        },
+        {
+          "type": "url",
+          "endpoint": "en.vidaxl.ca",
+          "description": null
+        },
+        {
+          "type": "url",
+          "endpoint": "fr.vidaxl.ch",
+          "description": null
+        },
+        {
+          "type": "url",
+          "endpoint": "is.vidaxl.is",
+          "description": null
+        },
+        {
+          "type": "url",
+          "endpoint": "nexus.vidaxl.org",
+          "description": null
+        },
+        {
+          "type": "url",
+          "endpoint": "nl.vidaxl.be",
+          "description": null
+        },
+        {
+          "type": "url",
+          "endpoint": "serviceportal.vidaxl.com",
+          "description": null
+        },
+        {
+          "type": "url",
+          "endpoint": "shops-services.vidaxl.org",
+          "description": null
+        },
+        {
+          "type": "url",
+          "endpoint": "tracking.vidaxl.com",
+          "description": null
+        },
+        {
+          "type": "url",
+          "endpoint": "uk.vidaxl.com.ua",
+          "description": null
+        },
+        {
+          "type": "url",
+          "endpoint": "vidaxl.zendesk.com",
+          "description": null
+        },
+        {
+          "type": "url",
+          "endpoint": "www.dropshippingxl.com",
+          "description": null
+        },
+        {
+          "type": "url",
+          "endpoint": "www.vidaxl.<TLD>",
+          "description": "Our TLDs for vidaxl are: `.at`, `.bg`, `.com.uk`, `.com`, `.com.au`, `.com.tr`, `.cz`, `.de`, `.dk`, `.ee`, `.es`, `.fi`, `.fr`, `.gr`, `.hr`, `.hu`, `.ie`, `.it`, `.jp`, `.lt`, `.lv`, `.nl`, `.no`, `.pl`, `.pt`, `.ro`, .se`, `.si`, and `.sk`."
+        },
+        {
+          "type": "url",
+          "endpoint": "apigateway.vidaxl.io",
+          "description": null
+        },
+        {
+          "type": "url",
+          "endpoint": "app.vidaxl.io",
+          "description": null
+        },
+        {
+          "type": "url",
+          "endpoint": "corporate.vidaxl.com",
+          "description": null
+        },
+        {
+          "type": "url",
+          "endpoint": "drone.vidaxl.io",
+          "description": null
+        },
+        {
+          "type": "url",
+          "endpoint": "qa-db.vidaxl.io",
+          "description": null
+        },
+        {
+          "type": "url",
+          "endpoint": "qa.vidaxl.io",
+          "description": null
+        },
+        {
+          "type": "url",
+          "endpoint": "qa1-apigateway.vidaxl.io",
+          "description": null
+        },
+        {
+          "type": "url",
+          "endpoint": "staging-apigateway.vidaxl.io",
+          "description": null
+        },
+        {
+          "type": "url",
+          "endpoint": "staging-db.vidaxl.io",
+          "description": null
+        },
+        {
+          "type": "url",
+          "endpoint": "staging.vidaxl.io",
+          "description": null
+        }
       ],
       "out_of_scope": [
 
