@@ -2542,12 +2542,12 @@ type AnalyticsGatewayHttpStreamDocument implements Node {
   destinationip: String
   destinationport: String
   email: String
-  end_date: String
+  httpmethod: String
   id: ID!
   sourceip: String
   sourceport: String
-  start_date: String
   url: String
+  username: String
 }
 
 input AnalyticsHavingInputType {
@@ -4697,8 +4697,10 @@ input BoolQueryInput {
 
 input BooleanPredicateInput {
   _eq: Boolean
+  _in: [Boolean]
   _is_null: Boolean
   _neq: Boolean
+  _nin: [Boolean]
 }
 
 """
@@ -16880,6 +16882,21 @@ input FiltersSurveyRatingItemFilterInput {
 input FiltersSurveyRatingItemFilterOrder {
   id: FilterOrderPredicateInput
   survey_rating: FiltersSurveyRatingFilterOrder
+}
+
+input FiltersSwagFilterInput {
+  _and: [FiltersSwagFilterInput]
+  _not: FiltersSwagFilterInput
+  _or: [FiltersSwagFilterInput]
+  id: IntPredicateInput
+  sent: BooleanPredicateInput
+}
+
+input FiltersSwagFilterOrder {
+  id: FilterOrderPredicateInput
+  report_id: FilterOrderPredicateInput
+  sent: FilterOrderPredicateInput
+  user_id: FilterOrderPredicateInput
 }
 
 input FiltersTeamFilterInput {
@@ -33315,11 +33332,6 @@ The connection type for Swag.
 """
 type SwagConnection {
   """
-  Boolean
-  """
-  any: Boolean!
-
-  """
   A list of edges.
   """
   edges: [SwagEdge]
@@ -34699,6 +34711,8 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
     Returns the last _n_ elements from the list.
     """
     last: Int
+    order_by: FiltersSwagFilterOrder = {id: {_direction: DESC}}
+    where: FiltersSwagFilterInput = {}
   ): SwagConnection
   system_users(
     """
