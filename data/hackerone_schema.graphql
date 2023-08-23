@@ -2603,7 +2603,13 @@ input AnalyticsQueryInputType {
   order_by: [AnalyticsOrderByInputType!]
   select: [AnalyticsSelectInputType!]!
   uid: String
+  variables: [AnalyticsQueryVariableInputType!]
   where: AnalyticsWhereInputType
+}
+
+input AnalyticsQueryVariableInputType {
+  key: String!
+  value: String!
 }
 
 """
