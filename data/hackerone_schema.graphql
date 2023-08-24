@@ -21703,6 +21703,8 @@ input OpportunitiesQuery {
 type OpportunityDocument implements Node {
   allows_bounty_splitting: Boolean
   allows_private_disclosure: Boolean
+  awarded_report_count: Int
+  awarded_reporter_count: Int
   bounty_table_updated_at: DateTime
   cached_response_efficiency_percentage: Int
   campaign: Campaign
