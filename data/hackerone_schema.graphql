@@ -3452,11 +3452,12 @@ type Asset implements Node {
   external_source: String
   id: ID!
   identifier: String
-  implementation: AssetImplementationUnion!
   integrity_requirement: SeveritySecurityRequirementEnum
   max_severity: String
   organization: Organization!
   reference: String
+  related_domains: [Asset!]
+  related_ip_addresses: [Asset!]
   risk_rating: String
   source: String
   structured_scopes(
@@ -3615,182 +3616,6 @@ type AssetEdge {
 }
 
 """
-An android apk asset object
-"""
-type AssetImplementationAndroidApk implements AssetImplementationInterface & Node {
-  _id: ID!
-  app_store_id: String
-  asset: Asset
-  created_at: DateTime
-  id: ID!
-}
-
-"""
-An android play store asset object
-"""
-type AssetImplementationAndroidPlayStore implements AssetImplementationInterface & Node {
-  _id: ID!
-  app_store_id: String
-  asset: Asset
-  created_at: DateTime
-  id: ID!
-}
-
-"""
-A cidr asset object
-"""
-type AssetImplementationCidr implements AssetImplementationInterface & Node {
-  _id: ID!
-  asset: Asset
-  block: String
-  created_at: DateTime
-  id: ID!
-}
-
-"""
-A domain asset object
-"""
-type AssetImplementationDomain implements AssetImplementationInterface & Node {
-  _id: ID!
-  asset: Asset
-  coverage: AssetCoverageEnum!
-  created_at: DateTime
-  domain_name: String
-  id: ID!
-  related_ip_addresses: [Asset!]
-  structured_scopes(
-    """
-    Returns the elements in the list that come after the specified cursor.
-    """
-    after: String
-
-    """
-    Returns the elements in the list that come before the specified cursor.
-    """
-    before: String
-
-    """
-    Returns the first _n_ elements from the list.
-    """
-    first: Int
-
-    """
-    Returns the last _n_ elements from the list.
-    """
-    last: Int
-  ): StructuredScopesConnection
-}
-
-"""
-An executable asset object
-"""
-type AssetImplementationExecutable implements AssetImplementationInterface & Node {
-  _id: ID!
-  asset: Asset
-  created_at: DateTime
-  id: ID!
-  identifier: String
-}
-
-"""
-A hardware asset object
-"""
-type AssetImplementationHardware implements AssetImplementationInterface & Node {
-  _id: ID!
-  asset: Asset
-  created_at: DateTime
-  id: ID!
-  identifier: String
-}
-
-"""
-An interface for the Asset implementation
-"""
-interface AssetImplementationInterface {
-  _id: ID!
-  asset: Asset
-  id: ID!
-}
-
-"""
-An ios app store asset object
-"""
-type AssetImplementationIosAppStore implements AssetImplementationInterface & Node {
-  _id: ID!
-  app_store_id: String
-  asset: Asset
-  created_at: DateTime
-  id: ID!
-}
-
-"""
-An ios ipa asset object
-"""
-type AssetImplementationIosIpa implements AssetImplementationInterface & Node {
-  _id: ID!
-  app_store_id: String
-  asset: Asset
-  created_at: DateTime
-  id: ID!
-}
-
-"""
-An ios testflight asset object
-"""
-type AssetImplementationIosTestflight implements AssetImplementationInterface & Node {
-  _id: ID!
-  app_store_id: String
-  asset: Asset
-  created_at: DateTime
-  id: ID!
-}
-
-"""
-An Ip address asset object
-"""
-type AssetImplementationIpAddress implements AssetImplementationInterface & Node {
-  _id: ID!
-  asset: Asset
-  created_at: DateTime
-  id: ID!
-  identifier: String
-  related_domains: [Asset!]
-}
-
-"""
-An other asset object
-"""
-type AssetImplementationOtherAsset implements AssetImplementationInterface & Node {
-  _id: ID!
-  asset: Asset
-  created_at: DateTime
-  id: ID!
-  identifier: String
-}
-
-"""
-A smart contract asset object
-"""
-type AssetImplementationSmartContract implements AssetImplementationInterface & Node {
-  _id: ID!
-  asset: Asset
-  created_at: DateTime
-  id: ID!
-  url: String
-}
-
-"""
-A source code asset object
-"""
-type AssetImplementationSourceCode implements AssetImplementationInterface & Node {
-  _id: ID!
-  asset: Asset
-  available_from: String
-  created_at: DateTime
-  id: ID!
-}
-
-"""
 Asset type enum
 """
 enum AssetImplementationTypeEnum {
@@ -3810,44 +3635,6 @@ enum AssetImplementationTypeEnum {
   Url
   Wildcard
   WindowsMicrosoftStore
-}
-
-"""
-Asset implementations can be of multiple types
-"""
-union AssetImplementationUnion = AssetImplementationAndroidApk | AssetImplementationAndroidPlayStore | AssetImplementationCidr | AssetImplementationDomain | AssetImplementationExecutable | AssetImplementationHardware | AssetImplementationIosAppStore | AssetImplementationIosIpa | AssetImplementationIosTestflight | AssetImplementationIpAddress | AssetImplementationOtherAsset | AssetImplementationSmartContract | AssetImplementationSourceCode | AssetImplementationUrl | AssetImplementationWildcard | AssetImplementationWindowsMicrosoftStore
-
-"""
-A URL asset object
-"""
-type AssetImplementationUrl implements AssetImplementationInterface & Node {
-  _id: ID!
-  asset: Asset
-  created_at: DateTime
-  id: ID!
-  url: String
-}
-
-"""
-A wildcard asset object
-"""
-type AssetImplementationWildcard implements AssetImplementationInterface & Node {
-  _id: ID!
-  asset: Asset
-  created_at: DateTime
-  id: ID!
-  url: String
-}
-
-"""
-A windows microsoft store asset object
-"""
-type AssetImplementationWindowsMicrosoftStore implements AssetImplementationInterface & Node {
-  _id: ID!
-  app_store_id: String
-  asset: Asset
-  created_at: DateTime
-  id: ID!
 }
 
 """
