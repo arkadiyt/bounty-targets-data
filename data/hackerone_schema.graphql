@@ -16531,25 +16531,6 @@ type HackerPublished implements HacktivityItemInterface & Node {
 }
 
 """
-Hacker Referrals
-"""
-type HackerReferral implements Node {
-  _id: ID!
-  created_at: DateTime!
-  id: ID!
-  invitee_accepted: Boolean
-  invitee_id(id: Int!): User
-  invitee_responded_at: DateTime
-  inviter_id(id: Int!): User
-  inviter_message: String!
-  team_accepted: Boolean
-  team_id(id: Int!): Team
-  team_message: String
-  team_responded_at: DateTime
-  updated_at: DateTime!
-}
-
-"""
 A HackerOne hacker's report template
 """
 type HackerReportTemplate implements Node {
@@ -25480,7 +25461,6 @@ type Query implements Node {
     last: Int
     team_handle: String
   ): GatewayUserConnection
-  hacker_referral: HackerReferral
   hacktivity_items(
     """
     Returns the elements in the list that come after the specified cursor.
