@@ -33063,6 +33063,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
   i_can_edit_program_profile: Boolean
   i_can_manage_billing: Boolean!
   i_can_manage_custom_fields: Boolean
+  i_can_manage_gateway_v2: Boolean!
   i_can_manage_program: Boolean!
   i_can_manage_references: Boolean!
   i_can_manage_system_users: Boolean!
@@ -33950,6 +33951,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
   vpn_blocked_for_me: Boolean
   vpn_enabled: Boolean
   vpn_state: VpnStateEnum!
+  vpn_state_disabled: Boolean
   vpn_suspended: Boolean
   vpn_us_only: Boolean
   weaknesses(
