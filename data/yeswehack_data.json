@@ -217,6 +217,33 @@
     }
   },
   {
+    "id": "bookbeat",
+    "name": "BookBeat",
+    "public": true,
+    "disabled": false,
+    "managed": null,
+    "min_bounty": 50,
+    "max_bounty": 2000,
+    "targets": {
+      "in_scope": [
+        {
+          "target": "https://www.bookbeat.com",
+          "type": "web-application"
+        },
+        {
+          "target": "https://www.bookbeat.[se|fi|dk|co.uk|de|pl|dk|ch|at|no|nl|be|es|it|fr]",
+          "type": "web-application"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "target": "All domains not listed In-Scope",
+          "type": "other"
+        }
+      ]
+    }
+  },
+  {
     "id": "bug-bounty-program-blablacar",
     "name": "Bug Bounty Program - BlaBlaCar",
     "public": true,
