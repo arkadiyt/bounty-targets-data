@@ -3981,6 +3981,7 @@ type Attachment implements Node {
   file_size: Int!
   id: ID!
   long_lasting_url: String!
+  moderated: Boolean
 }
 
 """
@@ -4444,26 +4445,6 @@ type BeneficiaryRequiredFieldEdge {
   The item at the end of the edge.
   """
   node: BeneficiaryRequiredField
-}
-
-"""
-Metadata for Berbix
-"""
-type BerbixMetadata implements Node {
-  """
-  Client token
-  """
-  client_token: String!
-
-  """
-  Hosted URL
-  """
-  hosted_url: String!
-
-  """
-  ID of the object.
-  """
-  id: ID!
 }
 
 """
@@ -16917,11 +16898,6 @@ Metadata for ID verification
 """
 type IdVerification implements Node {
   """
-  Metadata for Berbix
-  """
-  berbix_metadata: BerbixMetadata
-
-  """
   ID of the object.
   """
   id: ID!
@@ -16929,7 +16905,22 @@ type IdVerification implements Node {
   """
   Verification status
   """
-  status: Status
+  status: IdVerificationStatus
+
+  """
+  Verification URL
+  """
+  url: String
+}
+
+enum IdVerificationStatus {
+  blocked
+  eligible
+  failed
+  in_progress
+  not_eligible
+  processing
+  success
 }
 
 """
@@ -30983,16 +30974,6 @@ type StaticParticipantEdge {
   The item at the end of the edge.
   """
   node: StaticParticipant
-}
-
-enum Status {
-  blocked
-  eligible
-  failed
-  in_progress
-  not_eligible
-  processing
-  success
 }
 
 """
