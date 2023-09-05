@@ -30747,7 +30747,6 @@ type StartIdVerificationPayload implements MutationResult {
   A unique identifier for the client performing the mutation.
   """
   clientMutationId: String
-  client_token: String
   errors(
     """
     Returns the elements in the list that come after the specified cursor.
@@ -30770,7 +30769,7 @@ type StartIdVerificationPayload implements MutationResult {
     last: Int
     types: [ErrorTypeEnum]
   ): ErrorConnection!
-  hosted_url: String
+  url: String
   was_successful: Boolean!
 }
 
