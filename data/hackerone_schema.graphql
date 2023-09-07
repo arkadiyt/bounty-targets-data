@@ -12891,6 +12891,28 @@ type DerivedPentest implements Node {
   name: String
   origin_id: ID!
   origin_type: String!
+  pentest_checklists(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+    where: FiltersPentestChecklistFilterInput
+  ): PentestChecklistConnection
 
   """
   A Resolver for Pentest Tasks
@@ -15597,6 +15619,14 @@ input FiltersOrganizationMemberGroupFilterInput {
 input FiltersOrganizationMemberGroupFilterOrder {
   id: FilterOrderPredicateInput
   name: FilterOrderPredicateInput
+}
+
+input FiltersPentestChecklistFilterInput {
+  _and: [FiltersPentestChecklistFilterInput]
+  _not: FiltersPentestChecklistFilterInput
+  _or: [FiltersPentestChecklistFilterInput]
+  id: IntPredicateInput
+  methodology: StringPredicateInput
 }
 
 input FiltersPentestFilterInput {
