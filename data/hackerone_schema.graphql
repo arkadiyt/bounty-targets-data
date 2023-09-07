@@ -2527,6 +2527,7 @@ input AnalyticsComplexInputType {
   strings: [String!]
   timestamp: String
   timestamps: [String!]
+  variable: String
 }
 
 """
@@ -2567,6 +2568,11 @@ enum AnalyticsFromEnum {
   fixture_severity_ratings
   gateway_httpstream
   view_intervals
+}
+
+input AnalyticsFunctionInputType {
+  arguments: [AnalyticsComplexInputType!]
+  name: AnalyticsSelectFunctionEnum
 }
 
 type AnalyticsGatewayHttpStreamDocument implements Node {
@@ -3036,6 +3042,7 @@ enum AnalyticsSelectFunctionEnum {
   array_agg
   avg
   count
+  date_trunc
   max
   min
   p50c
@@ -3050,6 +3057,7 @@ input AnalyticsSelectInputType {
   field: AnalyticsSelectFieldEnum!
   from: String
   function: AnalyticsSelectFunctionEnum
+  function_with_args: AnalyticsFunctionInputType
   where: AnalyticsWhereInputType
 }
 
@@ -30925,7 +30933,7 @@ A static dashboard definition
 """
 type StaticDashboard implements Node & ResourceInterface {
   charts: [StaticDashboardChart]!
-  effective_date_range_suffix: String
+  description: String
   elements: [StaticDashboardElement]!
   filter_options: [String]!
   id: ID!
