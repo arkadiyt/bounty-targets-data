@@ -16962,6 +16962,87 @@ enum IdVerificationStatus {
 }
 
 """
+The connection type for InboxViewUnion.
+"""
+type InboxViewConnection {
+  """
+  A list of edges.
+  """
+  edges: [InboxViewUnionEdge]
+
+  """
+  A list of nodes.
+  """
+  nodes: [InboxViewUnion]
+
+  """
+  Information to aid in pagination.
+  """
+  pageInfo: PageInfo!
+  total_count: Int
+}
+
+"""
+A interface for the common fields on an Inbox View
+"""
+interface InboxViewInterface {
+  _id: ID!
+  assets: [Int!]!
+  assigned_to_group_ids: [Int!]!
+  assigned_to_user_ids: [Int!]!
+  built_in: Boolean!
+  created_at: DateTime!
+  custom_fields: [String!]!
+  filters: [String!]!
+  hackathons: [Int!]!
+  id: ID!
+  key: String!
+  name: String!
+  position: Int!
+  pre_submission_states: [String!]!
+  reporter_ids: [Int!]!
+  severities: [String!]!
+  sort_direction: String
+  sort_type: String
+  substates: [String!]!
+  text_query: String!
+  updated_at: DateTime!
+  visible: Boolean!
+}
+
+input InboxViewOrder {
+  direction: OrderDirection!
+  field: InboxViewOrderField!
+}
+
+"""
+Fields on which a collection of inbox views can be ordered
+"""
+enum InboxViewOrderField {
+  position
+}
+
+"""
+Inbox Views can be of multiple types
+"""
+union InboxViewUnion = StaticInboxView | TeamInboxView
+
+"""
+An edge in a connection.
+"""
+type InboxViewUnionEdge {
+  """
+  A cursor for use in pagination.
+  """
+  cursor: String!
+
+  """
+  The item at the end of the edge.
+  """
+  node: InboxViewUnion
+}
+
+"""
 Available ElasticSearch indexes
 """
 enum IndexEnum {
@@ -22371,6 +22452,29 @@ type OrganizationInbox implements Node {
   handle: String!
   id: ID!
   inbox_type: OrganizationInboxTypeEnum!
+  inbox_views(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+    order_by: InboxViewOrder = {direction: ASC, field: position}
+    visible: Boolean
+  ): InboxViewConnection
   name: String!
   organization: Organization!
   organization_member_groups(
@@ -31037,6 +31141,34 @@ type StaticDashboardQuery implements Node & ResourceInterface {
 }
 
 """
+A team report filter preset
+"""
+type StaticInboxView implements InboxViewInterface & Node {
+  _id: ID!
+  assets: [Int!]!
+  assigned_to_group_ids: [Int!]!
+  assigned_to_user_ids: [Int!]!
+  built_in: Boolean!
+  created_at: DateTime!
+  custom_fields: [String!]!
+  filters: [String!]!
+  hackathons: [Int!]!
+  id: ID!
+  key: String!
+  name: String!
+  position: Int!
+  pre_submission_states: [String!]!
+  reporter_ids: [Int!]!
+  severities: [String!]!
+  sort_direction: String
+  sort_type: String
+  substates: [String!]!
+  text_query: String!
+  updated_at: DateTime!
+  visible: Boolean!
+}
+
+"""
 A static participant for a team
 """
 type StaticParticipant implements Node {
@@ -33227,9 +33359,9 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
     Returns the last _n_ elements from the list.
     """
     last: Int
-    order_by: TeamInboxViewOrder = {direction: ASC, field: position}
+    order_by: InboxViewOrder = {direction: ASC, field: position}
     visible: Boolean
-  ): TeamInboxViewConnection
+  ): InboxViewConnection
   industries: [String!]
   industry: String
   internet_bug_bounty: Boolean
@@ -34344,7 +34476,7 @@ type TeamGeniusEdge {
 """
 A team report filter preset
 """
-type TeamInboxView implements Node {
+type TeamInboxView implements InboxViewInterface & Node {
   _id: ID!
   assets: [Int!]!
   assigned_to_group_ids: [Int!]!
@@ -34368,54 +34500,6 @@ type TeamInboxView implements Node {
   text_query: String!
   updated_at: DateTime!
   visible: Boolean!
-}
-
-"""
-The connection type for TeamInboxView.
-"""
-type TeamInboxViewConnection {
-  """
-  A list of edges.
-  """
-  edges: [TeamInboxViewEdge]
-
-  """
-  A list of nodes.
-  """
-  nodes: [TeamInboxView]
-
-  """
-  Information to aid in pagination.
-  """
-  pageInfo: PageInfo!
-  total_count: Int!
-}
-
-"""
-An edge in a connection.
-"""
-type TeamInboxViewEdge {
-  """
-  A cursor for use in pagination.
-  """
-  cursor: String!
-
-  """
-  The item at the end of the edge.
-  """
-  node: TeamInboxView
-}
-
-input TeamInboxViewOrder {
-  direction: OrderDirection!
-  field: TeamInboxViewOrderField!
-}
-
-"""
-Fields on which a collection of team inbox views can be ordered
-"""
-enum TeamInboxViewOrderField {
-  position
 }
 
 """
