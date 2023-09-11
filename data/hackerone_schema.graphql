@@ -12937,6 +12937,7 @@ type DerivedPentest implements Node {
     last: Int
     where: FiltersPentestChecklistFilterInput
   ): PentestChecklistConnection
+  pentest_report: PentestReport
 
   """
   A Resolver for Pentest Tasks
@@ -12969,7 +12970,6 @@ type DerivedPentest implements Node {
   retesting_ends_at: DateTime
   size: Int
   start_date: DateTime
-  summary_report: PentestSummaryReport
   team: Team
   token: String
 }
@@ -23518,6 +23518,27 @@ type Pentest implements Node {
     last: Int
   ): PentestFormAnswerConnection
   pentest_opportunity: PentestOpportunity
+  pentest_reports(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+  ): PentestReportConnection
   pentest_structured_scope(structured_scope_id: ID!): PentestStructuredScope
   pentest_structured_scopes(
     """
@@ -23540,27 +23561,6 @@ type Pentest implements Node {
     """
     last: Int
   ): PentestStructuredScopeConnection
-  pentest_summary_reports(
-    """
-    Returns the elements in the list that come after the specified cursor.
-    """
-    after: String
-
-    """
-    Returns the elements in the list that come before the specified cursor.
-    """
-    before: String
-
-    """
-    Returns the first _n_ elements from the list.
-    """
-    first: Int
-
-    """
-    Returns the last _n_ elements from the list.
-    """
-    last: Int
-  ): PentestSummaryReportConnection
 
   """
   A Resolver for Pentest Tasks
@@ -24515,6 +24515,59 @@ input PentestOrderInput {
 }
 
 """
+A pentest report
+"""
+type PentestReport implements Node {
+  _id: ID!
+  attachment: Attachment!
+  created_at: DateTime
+  description: String
+  id: ID!
+  name: String
+  updated_at: DateTime
+}
+
+"""
+The connection type for PentestReport.
+"""
+type PentestReportConnection {
+  """
+  A list of edges.
+  """
+  edges: [PentestReportEdge]
+
+  """
+  A list of nodes.
+  """
+  nodes: [PentestReport]
+
+  """
+  Information to aid in pagination.
+  """
+  pageInfo: PageInfo!
+
+  """
+  Int
+  """
+  total_count: Int!
+}
+
+"""
+An edge in a connection.
+"""
+type PentestReportEdge {
+  """
+  A cursor for use in pagination.
+  """
+  cursor: String!
+
+  """
+  The item at the end of the edge.
+  """
+  node: PentestReport
+}
+
+"""
 Pentest state enum
 """
 enum PentestStateEnum {
@@ -24720,59 +24773,6 @@ enum PentestSummaryFormStateEnum {
   complete
   draft
   in_review
-}
-
-"""
-A pentest summary report
-"""
-type PentestSummaryReport implements Node {
-  _id: ID!
-  attachment: Attachment!
-  created_at: DateTime
-  description: String
-  id: ID!
-  name: String
-  updated_at: DateTime
-}
-
-"""
-The connection type for PentestSummaryReport.
-"""
-type PentestSummaryReportConnection {
-  """
-  A list of edges.
-  """
-  edges: [PentestSummaryReportEdge]
-
-  """
-  A list of nodes.
-  """
-  nodes: [PentestSummaryReport]
-
-  """
-  Information to aid in pagination.
-  """
-  pageInfo: PageInfo!
-
-  """
-  Int
-  """
-  total_count: Int!
-}
-
-"""
-An edge in a connection.
-"""
-type PentestSummaryReportEdge {
-  """
-  A cursor for use in pagination.
-  """
-  cursor: String!
-
-  """
-  The item at the end of the edge.
-  """
-  node: PentestSummaryReport
 }
 
 """
@@ -25557,7 +25557,7 @@ type PublishPentestWriteUpPayload implements MutationResult {
     last: Int
     types: [ErrorTypeEnum]
   ): ErrorConnection!
-  pentest_summary_report: PentestSummaryReport
+  pentest_report: PentestReport
   was_successful: Boolean!
   write_up: WriteUp
 }
