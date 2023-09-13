@@ -16025,6 +16025,19 @@ input FiltersTriageSubscriptionFilterInput {
   is_active: Boolean
 }
 
+input FiltersTriggerFilterInput {
+  _and: [FiltersTriggerFilterInput]
+  _not: FiltersTriggerFilterInput
+  _or: [FiltersTriggerFilterInput]
+  id: IntPredicateInput
+  seeded: BooleanPredicateInput
+}
+
+input FiltersTriggerFilterOrder {
+  created_at: FilterOrderPredicateInput
+  id: FilterOrderPredicateInput
+}
+
 input FiltersUserAvailabilityFilterInput {
   _and: [FiltersUserAvailabilityFilterInput]
   _not: FiltersUserAvailabilityFilterInput
@@ -16982,15 +16995,15 @@ An impact entry
 """
 type Impact implements Node {
   """
+  The change in impact
+  """
+  change: Int!
+
+  """
   When the impact was created
   """
   created_at: DateTime!
   id: ID!
-
-  """
-  The change in impact
-  """
-  impact: Int!
 
   """
   The reason for the impact change
@@ -30698,6 +30711,73 @@ input ShouldInput {
   terms: TermsFilterInput
 }
 
+"""
+A signal entry
+"""
+type Signal implements Node {
+  """
+  When the signal was created
+  """
+  created_at: DateTime!
+  id: ID!
+
+  """
+  The reason for the signal change
+  """
+  reason: String!
+
+  """
+  The report that this signal is associated with
+  """
+  report: Report
+
+  """
+  The change in signal
+  """
+  signal: Int!
+
+  """
+  The team that this signal is associated with
+  """
+  team: Team!
+}
+
+"""
+The connection type for Signal.
+"""
+type SignalConnection {
+  """
+  A list of edges.
+  """
+  edges: [SignalEdge]
+
+  """
+  A list of nodes.
+  """
+  nodes: [Signal]
+
+  """
+  Information to aid in pagination.
+  """
+  pageInfo: PageInfo!
+  total_count: Int!
+}
+
+"""
+An edge in a connection.
+"""
+type SignalEdge {
+  """
+  A cursor for use in pagination.
+  """
+  cursor: String!
+
+  """
+  The item at the end of the edge.
+  """
+  node: Signal
+}
+
 type SignalRequirementsSetting implements Node {
   id: ID!
   target_signal: Float
@@ -34347,7 +34427,8 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
     Returns the last _n_ elements from the list.
     """
     last: Int
-    order_by: TriggersOrder = {direction: DESC, field: created_at}
+    order_by: FiltersTriggerFilterOrder = {}
+    where: FiltersTriggerFilterInput = {}
   ): TriggerConnection
   twitter_handle: String
   type: String
@@ -36518,7 +36599,7 @@ type Trigger implements Node & ResourceInterface {
   id: ID!
   seeded: Boolean!
   team: Team!
-  title: String @deprecated(reason: "It won't be used when new triggers launched")
+  title: String
   trigger_action_logs(
     """
     Returns the elements in the list that come after the specified cursor.
@@ -36621,18 +36702,6 @@ type TriggerEdge {
   The item at the end of the edge.
   """
   node: Trigger
-}
-
-"""
-Fields on which a collection of triggers can be ordered
-"""
-enum TriggerOrderField {
-  created_at
-}
-
-input TriggersOrder {
-  direction: OrderDirection!
-  field: TriggerOrderField!
 }
 
 """
@@ -44389,6 +44458,27 @@ type User implements ActivitiesInterface & Node & ResourceInterface {
     last: Int
   ): UserSessionConnection
   signal: Float
+  signal_changes(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+  ): SignalConnection
   signal_percentile: Int
   skills(
     """
