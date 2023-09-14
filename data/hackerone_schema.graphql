@@ -22420,6 +22420,38 @@ type Organization implements Node {
   pentest_opportunities: [PentestOpportunity]
   profile_picture(size: ProfilePictureSizes!): String
   profile_picture_filename: String
+  reporters(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+
+    """
+    This argument is no longer supported
+    """
+    limit: Int = null
+
+    """
+    This argument is no longer supported
+    """
+    page: Int = null
+    where: FiltersUserFilterInput
+  ): UserConnection
   saml_providers(
     """
     Returns the elements in the list that come after the specified cursor.
@@ -30716,6 +30748,11 @@ A signal entry
 """
 type Signal implements Node {
   """
+  The change in signal
+  """
+  change: Int!
+
+  """
   When the signal was created
   """
   created_at: DateTime!
@@ -30730,11 +30767,6 @@ type Signal implements Node {
   The report that this signal is associated with
   """
   report: Report
-
-  """
-  The change in signal
-  """
-  signal: Int!
 
   """
   The team that this signal is associated with
