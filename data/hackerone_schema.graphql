@@ -21999,6 +21999,7 @@ type Organization implements Node {
     last: Int
   ): AsmTagConnection
   assessments_consumption: [Hash!]
+  asset_import(id: ID!): AssetImport
   asset_statistics(period: AssetStatisticPeriodEnum!): AssetStatistics
   asset_submissions(
     """
