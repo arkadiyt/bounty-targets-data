@@ -23476,6 +23476,8 @@ type Pentest implements Node {
   end_date: Date
   ends_at: DateTime
   findings_per_asset: Hash
+  has_final_report: Boolean!
+  has_loa: Boolean!
   high_critical_count: Int
   hour_cap: Int
   i_accepted: Boolean!
@@ -24591,7 +24593,9 @@ type PentestReport implements Node {
   description: String
   id: ID!
   name: String
+  report_type: String
   updated_at: DateTime
+  uploaded_by: User
 }
 
 """
