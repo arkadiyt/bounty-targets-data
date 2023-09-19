@@ -24594,6 +24594,7 @@ type PentestReport implements Node {
   id: ID!
   name: String
   report_type: String
+  source: String
   updated_at: DateTime
   uploaded_by: User
 }
@@ -46103,6 +46104,7 @@ type WriteUp implements Node {
   _id: ID!
   data_overrides: Hash
   id: ID!
+  template_config_key: String!
 }
 
 """
