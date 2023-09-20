@@ -1814,6 +1814,61 @@
     }
   },
   {
+    "id": "/civic/civic-smart-contracts",
+    "name": "Civic Smart Contracts",
+    "url": "https://hackenproof.com/civic/civic-smart-contracts",
+    "archived": false,
+    "triaged_by_hackenproof": true,
+    "targets": {
+      "in_scope": [
+        {
+          "target": "https://github.com/identity-com/on-chain-identity-gateway/tree/main/ethereum",
+          "type": "Smart Contract",
+          "instruction": "",
+          "severity": "Critical",
+          "reward": "Bounty"
+        },
+        {
+          "target": "https://github.com/identity-com/on-chain-identity-gateway/tree/main/solana",
+          "type": "Smart Contract",
+          "instruction": "Only Program is within scope. Program v2 to be excluded (see Out of Scope).",
+          "severity": "Critical",
+          "reward": "Bounty"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "target": "https://github.com/identity-com/on-chain-identity-gateway/tree/main/solana/program_v2",
+          "type": "Smart Contract",
+          "instruction": "",
+          "severity": "None",
+          "reward": ""
+        },
+        {
+          "target": "https://github.com/identity-com/on-chain-identity-gateway/blob/main/ethereum/gatekeeper-cli/src/utils/oclif/flags.ts#L10",
+          "type": "Smart Contract",
+          "instruction": "Baked-in private keys for testing the CLIs are to be excluded.",
+          "severity": "None",
+          "reward": ""
+        },
+        {
+          "target": "https://github.com/identity-com/on-chain-identity-gateway/blob/main/solana/gatekeeper-cli/src/util/test-gatekeeper-network.json",
+          "type": "Smart Contract",
+          "instruction": "Baked-in private keys for testing the CLIs are to be excluded.",
+          "severity": "None",
+          "reward": ""
+        },
+        {
+          "target": "https://github.com/identity-com/on-chain-identity-gateway/blob/main/solana/gatekeeper-cli/src/util/test-gatekeeper.json",
+          "type": "Smart Contract",
+          "instruction": "Baked-in private keys for testing the CLIs are to be excluded.",
+          "severity": "None",
+          "reward": ""
+        }
+      ]
+    }
+  },
+  {
     "id": "/coin98/coin98",
     "name": "Coin98",
     "url": "https://hackenproof.com/coin98/coin98",
