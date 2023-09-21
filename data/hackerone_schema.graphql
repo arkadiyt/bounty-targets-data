@@ -3502,7 +3502,6 @@ type Asset implements Node {
   related_ip_addresses: [Asset!]
   risk_rating: String
   source: String
-  state: String
   structured_scopes(
     """
     Returns the elements in the list that come after the specified cursor.
@@ -3710,15 +3709,6 @@ type AssetRisk implements Node {
   rating: String!
   readable_type: String!
   title: String!
-}
-
-"""
-States of asset
-"""
-enum AssetStateEnum {
-  confirmed
-  rejected
-  unconfirmed
 }
 
 """
@@ -22147,7 +22137,6 @@ type Organization implements Node {
     missing_tag_for_category: String
     search_string: String
     size: Int
-    state: AssetStateEnum
     tag_names: [String]
     team_ids: [Int]
   ): SearchResultConnection
