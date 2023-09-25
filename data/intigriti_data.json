@@ -34,6 +34,51 @@
         },
         {
           "type": "url",
+          "endpoint": "https://care-navigation-admin-bff.int.eu.enterprise.ada.com",
+          "description": "Backend for frontend (bff) service for Care Navigation Admin interface. BFF is a variant of the API Gateway pattern which provides an additional layer between microservices."
+        },
+        {
+          "type": "url",
+          "endpoint": "https://care-navigation-admin-fe.int.eu.enterprise.ada.com",
+          "description": "Care Navigation Admin Frontend is a visual tool for managing Connect data including:\n- Connect Care Option mappings,\n- Connect/Assess Feedback service,\n- Connect Sign-up service,\n- Admin Users,\n- Connect Client Configurations\n\nTest credentials will not be provided. Try to find broken access controls on this endpoint. "
+        },
+        {
+          "type": "url",
+          "endpoint": "https://care-navigation-bff.int.eu.enterprise.ada.com",
+          "description": "Backend for frontend (bff) service for Care Navigation Frontend service. BFF is a variant of the API Gateway pattern which provides an additional layer between microservices."
+        },
+        {
+          "type": "url",
+          "endpoint": "https://care-navigation-fe.int.eu.enterprise.ada.com",
+          "description": "Care Navigation Frontend service represents Ada Partner care navigation option list available after assessment test is accomplished. Service includes:\n\n- Configurable care category list\n- Customer location search\n- Customer feedback service (can be injected between the views)\n- Detailed Event tracking\n- Configurable and location-based Partner Care service list\n- Geolocation, Feedback & Signup are linked with care-navigation-bff via an API and Service/Categories are linked with care-navigation-admin-bff via an API."
+        },
+        {
+          "type": "url",
+          "endpoint": "https://demo-prod-assessment-bff.ada-prod-eu.prod.gcp.ada.com",
+          "description": "Backend for frontend (bff) service for demo assessment web interface. BFF is a variant of the API Gateway pattern which provides an additional layer between microservices. \n\nPlease see the all endpoints in the Open API documentation (demo_assessment_bff_openapi.json) file"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://demo-prod-hcp-report-bff.ada-prod-eu.prod.gcp.ada.com",
+          "description": "Handover is a solution for sharing (handing over) the results of the health assessment with the user’s health care provider (HCP) or a health professional. This service has the responsibility to process the data from the hcp-report-backend for the use of handover frontend."
+        },
+        {
+          "type": "url",
+          "endpoint": "https://demo.enterprise.ada.com",
+          "description": "Our web application helps millions to manage their health. This is the frontend assessment application demo domain which represents the general flow we provide with our enterprise partners. This medical AI symptom checker is trained by real doctors. This endpoint provides both guess and authenticated flow which can be combined with our SSO service.\n\nThis UI is calling the BFF domain which is also in the scope."
+        },
+        {
+          "type": "url",
+          "endpoint": "https://demo.handover.enterprise.ada.com",
+          "description": "Handover is a solution for sharing (handing over) the results of the health assessment with the user’s health care provider (HCP) or a health professional. This service has the responsibility to render the HCP report data received from the HCP report bff."
+        },
+        {
+          "type": "url",
+          "endpoint": "https://demo.sso.enterprise.ada.com",
+          "description": "Smart-auth is Ada’s identification management and Single Sign On (SSO).\nThis service is based on [SMART on FHIR](https://hl7.org/fhir/smart-app-launch/index.html) implementation and provides a standard way to integrate with other EHR (Electronic Health Record) servers. It is an optional module meaning that not all flows are authentication required. "
+        },
+        {
+          "type": "url",
           "endpoint": "https://id.ada.com",
           "description": "Ada-ID is an identity management service for end user that interacts with Ada's applications. It provides authentication and authorization. Ada-ID serves as web application and API services. Frontend is valid for password reset and account verification process. This endpoint is protected by a Web Application Firewall. "
         }
