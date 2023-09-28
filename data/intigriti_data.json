@@ -2874,6 +2874,55 @@
     }
   },
   {
+    "id": "ff0f8e99-99b3-453a-a80c-fe9644bd1f01",
+    "name": "Monzo Vulnerability Disclosure Program",
+    "company_handle": "monzobank",
+    "handle": "monzo-vdp",
+    "url": "https://www.intigriti.com/programs/monzobank/monzo-vdp/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "min_bounty": {
+      "value": 0.0,
+      "currency": "GBP"
+    },
+    "max_bounty": {
+      "value": 0.0,
+      "currency": "GBP"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "url",
+          "endpoint": "*.monzo.com",
+          "description": "The crux of Monzo where the APIs live as well as Monzo Business and the main web site"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.monzo.me",
+          "description": "Houses the services for the pay me / request payment feature"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.prod-ffs.io",
+          "description": "Where our internal tooling lives... hopefully it isn't exposed!"
+        },
+        {
+          "type": "ios",
+          "endpoint": "1052238659",
+          "description": "The public seed of the Monzo app on iOS"
+        },
+        {
+          "type": "android",
+          "endpoint": "co.uk.getmondo",
+          "description": "The public seed of the Monzo app on Android"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
     "id": "56339d19-36cc-49a0-8e8f-b2502e00d165",
     "name": "Moralis VDP",
     "company_handle": "moralis",
