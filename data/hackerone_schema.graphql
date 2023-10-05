@@ -2519,6 +2519,7 @@ input AnalyticsComplexInputType {
   boolean: Boolean
   booleans: [Boolean!]
   from: String
+  function_with_args: AnalyticsFunctionInputType
   nil: Boolean
   number: Float
   numbers: [Float!]
@@ -2573,6 +2574,7 @@ enum AnalyticsFromEnum {
 input AnalyticsFunctionInputType {
   arguments: [AnalyticsComplexInputType!]
   name: AnalyticsSelectFunctionEnum
+  ref: AnalyticsSelectFieldEnum
 }
 
 type AnalyticsGatewayHttpStreamDocument implements Node {
