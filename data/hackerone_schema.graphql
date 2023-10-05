@@ -18669,7 +18669,9 @@ type LufthansaAccount implements Node {
 A machine learning inference result
 """
 type MachineLearningInferenceResult implements Node {
+  _id: ID!
   id: ID!
+  result: String
   was_useful: Boolean
 }
 
@@ -26140,6 +26142,7 @@ type Query implements Node {
     quarter: Int
     year: Int
   ): LeaderboardEntryConnection!
+  machine_learning_inference_result(id: Int!): MachineLearningInferenceResult!
   maintenance_banner: MaintenanceBanner
   me: User
   mediation_requests(
@@ -30609,7 +30612,7 @@ type SecurityAnalystCopilotPayload implements MutationResult {
     last: Int
     types: [ErrorTypeEnum]
   ): ErrorConnection!
-  response: String
+  machine_learning_inference_result: MachineLearningInferenceResult
   was_successful: Boolean!
 }
 
