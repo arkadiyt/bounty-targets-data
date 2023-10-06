@@ -17256,6 +17256,7 @@ interface InboxViewInterface {
   built_in: Boolean!
   created_at: DateTime!
   custom_fields: [String!]!
+  custom_inbox_ids: [Int!]!
   filters: [String!]!
   hackathons: [Int!]!
   id: ID!
@@ -30151,6 +30152,11 @@ type RevokeUserApiTokenPayload implements MutationResult {
   was_successful: Boolean!
 }
 
+enum RulesOfEngagementStatus {
+  rules_of_engagement_not_signed
+  rules_of_engagement_signed
+}
+
 """
 Salesforce Account Consumption Tier type
 """
@@ -31096,6 +31102,7 @@ type SignRulesOfEngagementPayload implements MutationResult {
     last: Int
     types: [ErrorTypeEnum]
   ): ErrorConnection!
+  user_identity: UserIdentity!
   was_successful: Boolean!
 }
 
@@ -31870,6 +31877,7 @@ type StaticInboxView implements InboxViewInterface & Node {
   built_in: Boolean!
   created_at: DateTime!
   custom_fields: [String!]!
+  custom_inbox_ids: [Int!]!
   filters: [String!]!
   hackathons: [Int!]!
   id: ID!
@@ -35229,6 +35237,7 @@ type TeamInboxView implements InboxViewInterface & Node {
   built_in: Boolean!
   created_at: DateTime!
   custom_fields: [String!]!
+  custom_inbox_ids: [Int!]!
   filters: [String!]!
   hackathons: [Int!]!
   id: ID!
@@ -45416,6 +45425,7 @@ type User implements ActivitiesInterface & Node & ResourceInterface {
     last: Int
   ): UserDeviceConnection
   user_display_options: UserDisplayOptions
+  user_identity: UserIdentity
   user_input_draft(field_key: String!): UserInputDraft
   user_opportunities_feedbacks(
     """
@@ -45661,6 +45671,18 @@ enum UserFlagPriorityEnum {
   priority_3
   priority_4
   priority_5
+}
+
+"""
+Data about the user's identity
+"""
+type UserIdentity implements Node {
+  id: ID!
+
+  """
+  Whether the Rules of Engagement have been signed
+  """
+  rules_of_engagement_status: RulesOfEngagementStatus!
 }
 
 """
