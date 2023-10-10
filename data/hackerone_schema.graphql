@@ -22555,6 +22555,7 @@ type Organization implements Node {
     Returns the last _n_ elements from the list.
     """
     last: Int
+    organization_inbox_ids: [Int!]
     permissions: [String!]
     search_string: String
     size: Int
@@ -31055,6 +31056,7 @@ enum SeveritySecurityRequirementEnum {
   low
   medium
   none
+  not_defined
 }
 
 """
@@ -31831,6 +31833,7 @@ type StaticDashboard implements Node & ResourceInterface {
   key: String!
   queries: [StaticDashboardQuery]!
   title: String!
+  title_tooltip: String
   type: String!
   url: URI!
 }
@@ -31878,6 +31881,7 @@ type StaticDashboardChart implements Node & ResourceInterface {
   pivot_axis: StaticDashboardAxis
   stacked: Boolean
   title: String!
+  title_tooltip: String
   type: String!
   url: URI!
 }
