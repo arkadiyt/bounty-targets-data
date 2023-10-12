@@ -21944,6 +21944,7 @@ type NotificationDeliveryPreferencesTeamComment implements Node & NotificationDe
 type NotificationDocument implements Node {
   database_id: Int!
   id: ID!
+  notification: VirtualNotification!
   unread: Boolean!
 }
 
