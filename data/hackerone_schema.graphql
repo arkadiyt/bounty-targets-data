@@ -26898,6 +26898,7 @@ input RangeInput {
   assets_count: GteInput
   bounty_table_updated_at: RangeOperatorInput
   cached_response_efficiency_percentage: GteInput
+  created_at: RangeOperatorInput
   in_scope_count: GteInput
   last_updated_at: RangeOperatorInput
   launched_at: RangeOperatorInput
@@ -26911,7 +26912,10 @@ input RangeInput {
 }
 
 input RangeOperatorInput {
+  gt: DateTime
   gte: DateTime
+  lt: DateTime
+  lte: DateTime
 }
 
 """
@@ -36167,6 +36171,7 @@ input TermFilterInput {
   idv: Boolean
   industry: String
   key: String
+  mentioned_user_ids: Int
   offers_bounties: Boolean
   organization_id: Int
   publicly_visible_retesting: Boolean
@@ -36175,6 +36180,7 @@ input TermFilterInput {
   team_ids: [Int!]
   team_type: String
   triage_active: Boolean
+  unread: Boolean
 }
 
 input TermsFilterInput {
