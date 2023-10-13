@@ -37236,6 +37236,7 @@ type Trigger implements Node & ResourceInterface {
     last: Int
   ): ExpressionConnection!
   id: ID!
+  percolated_query_string: String
   seeded: Boolean!
   team: Team!
   title: String
