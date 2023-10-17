@@ -2875,6 +2875,7 @@ enum AnalyticsSelectFieldEnum {
   dim_reports__disclosed_at_quarter
   dim_reports__disclosed_at_week
   dim_reports__disclosed_at_year
+  dim_reports__engagement_type
   dim_reports__invitation_cohort_id
   dim_reports__is_bounty_awarded
   dim_reports__is_bounty_sla_missed
@@ -31087,14 +31088,6 @@ enum SeverityConfidentialityRequirementEnum {
 }
 
 """
-Configurable types for severity input
-"""
-enum SeverityInputEnum {
-  cvss
-  rating_and_cvss
-}
-
-"""
 Severity integrity
 """
 enum SeverityIntegrityEnum {
@@ -31976,6 +31969,7 @@ type StaticDashboardAxis implements Node {
   label: String
   query_key: String
   select_field: String
+  tooltip: String
 }
 
 """
@@ -32696,7 +32690,6 @@ type SubmissionRequirements implements Node {
   id: ID!
   mfa_required_at: DateTime
   severity_calculation_methods: [SeverityCalculationMethodEnum!]!
-  severity_options: SeverityInputEnum!
   severity_required_at: DateTime
   terms_required_at: DateTime
 }
@@ -42472,7 +42465,6 @@ input UpdateSubmissionRequirementsInput {
   clientMutationId: String
   mfa_required_at: String
   severity_calculation_methods: [SeverityCalculationMethodEnum!]
-  severity_options: SeverityInputEnum
   severity_required_at: String
   team_id: ID!
 }
