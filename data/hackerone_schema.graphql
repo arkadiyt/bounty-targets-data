@@ -36239,6 +36239,7 @@ enum TechnologyProficiencyEnum {
 }
 
 input TermFilterInput {
+  actor_name: String
   allows_bounty_splitting: Boolean
   allows_private_disclosure: Boolean
   credentials_set_up: Boolean
@@ -36262,6 +36263,7 @@ input TermFilterInput {
 
 input TermsFilterInput {
   coverage: [AssetCoverageEnum!]
+  engagement_name: [String!]
   industry: [String!]
   organization_id: [Int!]
   permissions: [OrganizationPermissionsEnum!]
