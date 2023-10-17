@@ -2561,6 +2561,7 @@ enum AnalyticsFromEnum {
   dim_reports
   dim_teams
   dim_teams_assets_in_scope
+  fct_gateway_asset_activity
   fct_invitation_cohorts
   fct_platform_benchmarks
   fct_report_reporters
@@ -2955,6 +2956,13 @@ enum AnalyticsSelectFieldEnum {
   dim_teams_assets_in_scope__structured_scope_id
   dim_teams_assets_in_scope__structured_scope_version_id
   dim_teams_assets_in_scope__team_id
+  fct_gateway_asset_activity__asset
+  fct_gateway_asset_activity__day
+  fct_gateway_asset_activity__hits_count
+  fct_gateway_asset_activity__id
+  fct_gateway_asset_activity__organization_id
+  fct_gateway_asset_activity__team_id
+  fct_gateway_asset_activity__username
   fct_invitation_cohorts__cohort_created_at
   fct_invitation_cohorts__cohort_created_at_month
   fct_invitation_cohorts__cohort_created_at_quarter
@@ -22553,6 +22561,7 @@ type Organization implements Node {
   i_can_manage_organizations: Boolean!
   i_can_manage_pentest_scope: Boolean!
   i_can_view_audit_log: Boolean!
+  i_can_view_gateway_analytics_dashboard: Boolean!
   i_can_view_organization_assets: Boolean!
   i_can_view_organization_member_groups: Boolean!
   id: ID!
