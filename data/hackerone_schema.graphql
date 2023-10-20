@@ -26602,6 +26602,7 @@ type Query implements Node {
     """
     last: Int
     offset: Int
+    order_by: AnalyticsOrderByInputType
     search: String
   ): RankedCveEntryConnection
   ranked_weaknesses_by_year(
@@ -27049,6 +27050,7 @@ type RankedCveEntry implements Node {
   cvss_vector: String
   cwe_id: String
   cwe_name: String
+  epss: Float
   id: ID!
   products: [String!]
   rank: Int!
