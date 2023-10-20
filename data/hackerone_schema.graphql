@@ -2521,6 +2521,7 @@ input AnalyticsChartConfigInputType {
   data_axes: [AnalyticsChartAxisConfigInputType!]!
   description: String
   index_axis: AnalyticsChartAxisConfigInputType!
+  interval_override: String
   key: String!
   legend_position: String
   legend_word_break: String
@@ -2531,6 +2532,7 @@ input AnalyticsChartConfigInputType {
 }
 
 input AnalyticsComplexInputType {
+  arg_name: String
   boolean: Boolean
   booleans: [Boolean!]
   from: String
@@ -32076,6 +32078,7 @@ type StaticDashboardChart implements Node & ResourceInterface {
   explores: [StaticDashboardExplore!]
   id: ID!
   index_axis: StaticDashboardAxis
+  interval_override: String
   key: String!
   legend_position: String
   legend_word_break: String
