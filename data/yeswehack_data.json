@@ -559,6 +559,45 @@
     }
   },
   {
+    "id": "franceconnect-agentconnect-public",
+    "name": "DINUM - FranceConnect / FranceConnect+ / AgentConnect - Public Program",
+    "public": true,
+    "disabled": false,
+    "managed": null,
+    "min_bounty": 0,
+    "max_bounty": 10000,
+    "targets": {
+      "in_scope": [
+        {
+          "target": "https://auth.integ01.dev-franceconnect.fr",
+          "type": "web-application"
+        },
+        {
+          "target": "https://fca.integ01.dev-agentconnect.fr",
+          "type": "web-application"
+        },
+        {
+          "target": "https://eidas-bridge.integ01.dev-franceconnect.fr",
+          "type": "web-application"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "target": "All partners and all mocks are out of scope (but you can use the deployed mocks at your discretion to attack the scope).",
+          "type": "other"
+        },
+        {
+          "target": "The local stack (*.docker.dev-franceconnect) is a powerful tool for you to understand the internals processes but is out of scope (the exploit should as well work in the scope to qualify).",
+          "type": "other"
+        },
+        {
+          "target": "The  production environment (*.gouv.fr) is out of scope.",
+          "type": "other"
+        }
+      ]
+    }
+  },
+  {
     "id": "dailymotion-public-bug-bounty",
     "name": "Dailymotion public bug bounty",
     "public": true,
@@ -989,45 +1028,6 @@
       "out_of_scope": [
         {
           "target": "https://www.ezviz.com web application",
-          "type": "other"
-        }
-      ]
-    }
-  },
-  {
-    "id": "franceconnect-agentconnect-public",
-    "name": "FranceConnect+ / AgentConnect",
-    "public": true,
-    "disabled": false,
-    "managed": null,
-    "min_bounty": 0,
-    "max_bounty": 10000,
-    "targets": {
-      "in_scope": [
-        {
-          "target": "https://auth.integ01.dev-franceconnect.fr",
-          "type": "web-application"
-        },
-        {
-          "target": "https://fca.integ01.dev-agentconnect.fr",
-          "type": "web-application"
-        },
-        {
-          "target": "https://eidas-bridge.integ01.dev-franceconnect.fr",
-          "type": "web-application"
-        }
-      ],
-      "out_of_scope": [
-        {
-          "target": "All partners and all mocks are out of scope (but you can use the deployed mocks at your discretion to attack the scope).",
-          "type": "other"
-        },
-        {
-          "target": "The local stack (*.docker.dev-franceconnect) is a powerful tool for you to understand the internals processes but is out of scope (the exploit should as well work in the scope to qualify).",
-          "type": "other"
-        },
-        {
-          "target": "The  production environment (*.gouv.fr) is out of scope.",
           "type": "other"
         }
       ]
