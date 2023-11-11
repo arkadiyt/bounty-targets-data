@@ -209,10 +209,7 @@ type ActivitiesBountyAwarded implements ActivityInterface & Node & ReportActivit
   actor_is_customer: Boolean!
   attachments: [Attachment]
   automated_response: Boolean
-  bonus_amount: String
-  bounty_amount: String
-  bounty_currency: String
-  collaborator: User
+  bounty: Bounty
   created_at: DateTime!
   genius_execution_id: ID @deprecated(reason: "This is about to be replaced by .genius_execution")
   i_can_edit: Boolean!
@@ -1075,6 +1072,27 @@ type ActivitiesManuallyDisclosed implements ActivityInterface & Node & ReportAct
 A Activities::MediationRequested activity for a report
 """
 type ActivitiesMediationRequested implements ActivityInterface & Node & ReportActivityInterface {
+  _id: ID!
+  actor: ActorUnion
+  actor_is_customer: Boolean!
+  attachments: [Attachment]
+  automated_response: Boolean
+  created_at: DateTime!
+  genius_execution_id: ID @deprecated(reason: "This is about to be replaced by .genius_execution")
+  i_can_edit: Boolean!
+  i_can_flag: Boolean!
+  id: ID!
+  internal: Boolean
+  message: String
+  report: Report
+  triage_inbox_item: TriageInboxItem
+  updated_at: DateTime!
+}
+
+"""
+A Activities::NmiReminderComment activity for a report
+"""
+type ActivitiesNmiReminderComment implements ActivityInterface & Node & ReportActivityInterface {
   _id: ID!
   actor: ActorUnion
   actor_is_customer: Boolean!
@@ -2132,6 +2150,7 @@ enum ActivityTypes {
   InvitationReceived
   ManuallyDisclosed
   MediationRequested
+  NmiReminderComment
   NobodyAssignedToBug
   NotEligibleForBounty
   PentestCheckAssigned
@@ -2175,7 +2194,7 @@ enum ActivityTypes {
 """
 Activities can be of multiple types
 """
-union ActivityUnion = ActivitiesAddedToPentest | ActivitiesAgreedOnGoingPublic | ActivitiesAssetCreated | ActivitiesAssetSubmissionRejected | ActivitiesBountyAwarded | ActivitiesBountyRecalled | ActivitiesBountyScheduled | ActivitiesBountySuggested | ActivitiesBugCloned | ActivitiesBugDuplicate | ActivitiesBugFiled | ActivitiesBugInactive | ActivitiesBugInformative | ActivitiesBugNeedsMoreInfo | ActivitiesBugNew | ActivitiesBugNotApplicable | ActivitiesBugPendingProgramReview | ActivitiesBugPriorityChanged | ActivitiesBugReopened | ActivitiesBugResolved | ActivitiesBugRetesting | ActivitiesBugSpam | ActivitiesBugTriaged | ActivitiesBulkAssetsConfirmed | ActivitiesCancelledDisclosureRequest | ActivitiesChangedCampaign | ActivitiesChangedScope | ActivitiesCodeReviewFeedbackPosted | ActivitiesCodeReviewRequested | ActivitiesComment | ActivitiesCommentsClosed | ActivitiesCveIdAdded | ActivitiesDraftStarted | ActivitiesExternalAdvisoryAdded | ActivitiesExternalUserInvitationCancelled | ActivitiesExternalUserInvited | ActivitiesExternalUserJoined | ActivitiesExternalUserRemoved | ActivitiesGroupAssignedToBug | ActivitiesHackerRequestedMediation | ActivitiesInvitationReceived | ActivitiesManuallyDisclosed | ActivitiesMediationRequested | ActivitiesNobodyAssignedToBug | ActivitiesNotEligibleForBounty | ActivitiesOrganizationAssetsBulkArchived | ActivitiesOrganizationAssetsBulkCreated | ActivitiesPentestCheckAssigned | ActivitiesPentestCheckCompleted | ActivitiesPentestCheckUnassigned | ActivitiesPentestCheckUpdated | ActivitiesPentestPublished | ActivitiesPentestStarted | ActivitiesPentesterAwarded | ActivitiesProgramGatewayStateChanged | ActivitiesProgramGatewayUsersStateChanged | ActivitiesProgramHackerJoined | ActivitiesProgramHackerLeft | ActivitiesProgramInactive | ActivitiesProgramStructuredScopesBulkUpdated | ActivitiesReassignedToTeam | ActivitiesReferenceIdAdded | ActivitiesRemovedFromPentest | ActivitiesReportBecamePublic | ActivitiesReportCollaboratorInvited | ActivitiesReportCollaboratorJoined | ActivitiesReportCustomFieldValueUpdated | ActivitiesReportOrganizationInboxesUpdated | ActivitiesReportRemediationGuidanceUpdated | ActivitiesReportRetestApproved | ActivitiesReportRetestCanceled | ActivitiesReportRetestRejected | ActivitiesReportSeverityUpdated | ActivitiesReportTitleUpdated | ActivitiesReportTriageSummaryCreated | ActivitiesReportUndisclosed | ActivitiesReportVulnerabilityTypesUpdated | ActivitiesRetestUserExpired | ActivitiesScopeGuidanceRequested | ActivitiesScopeGuidanceSet | ActivitiesSwagAwarded | ActivitiesTeamBountyTableUpdated | ActivitiesTeamPolicyUpdated | ActivitiesTeamPostCreated | ActivitiesTeamPublished | ActivitiesTeamStructuredScopeUpdated | ActivitiesUserAssignedToBug | ActivitiesUserBannedFromProgram | ActivitiesUserCompletedRetest | ActivitiesUserJoined | ActivitiesUserLeftRetest
+union ActivityUnion = ActivitiesAddedToPentest | ActivitiesAgreedOnGoingPublic | ActivitiesAssetCreated | ActivitiesAssetSubmissionRejected | ActivitiesBountyAwarded | ActivitiesBountyRecalled | ActivitiesBountyScheduled | ActivitiesBountySuggested | ActivitiesBugCloned | ActivitiesBugDuplicate | ActivitiesBugFiled | ActivitiesBugInactive | ActivitiesBugInformative | ActivitiesBugNeedsMoreInfo | ActivitiesBugNew | ActivitiesBugNotApplicable | ActivitiesBugPendingProgramReview | ActivitiesBugPriorityChanged | ActivitiesBugReopened | ActivitiesBugResolved | ActivitiesBugRetesting | ActivitiesBugSpam | ActivitiesBugTriaged | ActivitiesBulkAssetsConfirmed | ActivitiesCancelledDisclosureRequest | ActivitiesChangedCampaign | ActivitiesChangedScope | ActivitiesCodeReviewFeedbackPosted | ActivitiesCodeReviewRequested | ActivitiesComment | ActivitiesCommentsClosed | ActivitiesCveIdAdded | ActivitiesDraftStarted | ActivitiesExternalAdvisoryAdded | ActivitiesExternalUserInvitationCancelled | ActivitiesExternalUserInvited | ActivitiesExternalUserJoined | ActivitiesExternalUserRemoved | ActivitiesGroupAssignedToBug | ActivitiesHackerRequestedMediation | ActivitiesInvitationReceived | ActivitiesManuallyDisclosed | ActivitiesMediationRequested | ActivitiesNmiReminderComment | ActivitiesNobodyAssignedToBug | ActivitiesNotEligibleForBounty | ActivitiesOrganizationAssetsBulkArchived | ActivitiesOrganizationAssetsBulkCreated | ActivitiesPentestCheckAssigned | ActivitiesPentestCheckCompleted | ActivitiesPentestCheckUnassigned | ActivitiesPentestCheckUpdated | ActivitiesPentestPublished | ActivitiesPentestStarted | ActivitiesPentesterAwarded | ActivitiesProgramGatewayStateChanged | ActivitiesProgramGatewayUsersStateChanged | ActivitiesProgramHackerJoined | ActivitiesProgramHackerLeft | ActivitiesProgramInactive | ActivitiesProgramStructuredScopesBulkUpdated | ActivitiesReassignedToTeam | ActivitiesReferenceIdAdded | ActivitiesRemovedFromPentest | ActivitiesReportBecamePublic | ActivitiesReportCollaboratorInvited | ActivitiesReportCollaboratorJoined | ActivitiesReportCustomFieldValueUpdated | ActivitiesReportOrganizationInboxesUpdated | ActivitiesReportRemediationGuidanceUpdated | ActivitiesReportRetestApproved | ActivitiesReportRetestCanceled | ActivitiesReportRetestRejected | ActivitiesReportSeverityUpdated | ActivitiesReportTitleUpdated | ActivitiesReportTriageSummaryCreated | ActivitiesReportUndisclosed | ActivitiesReportVulnerabilityTypesUpdated | ActivitiesRetestUserExpired | ActivitiesScopeGuidanceRequested | ActivitiesScopeGuidanceSet | ActivitiesSwagAwarded | ActivitiesTeamBountyTableUpdated | ActivitiesTeamPolicyUpdated | ActivitiesTeamPostCreated | ActivitiesTeamPublished | ActivitiesTeamStructuredScopeUpdated | ActivitiesUserAssignedToBug | ActivitiesUserBannedFromProgram | ActivitiesUserCompletedRetest | ActivitiesUserJoined | ActivitiesUserLeftRetest
 
 """
 An edge in a connection.
@@ -4118,6 +4137,7 @@ enum AuditLogSourceTypeEnumInput {
   product_edition_downgrader
   saml_jit_provisioner
   sandbox_setup
+  scim
   slack_api_error
 }
 
@@ -4582,7 +4602,7 @@ type Bounty implements Node {
   amount: String!
   awarded_amount: String!
   awarded_bonus_amount: String!
-  awarded_currency: String!
+  awarded_currency: String
   awarded_user: User
   bonus_amount: String!
   created_at: DateTime!
@@ -5899,6 +5919,50 @@ type ChatMessageFunction implements Node {
   """
   id: ID!
   name: String
+}
+
+"""
+Data about the user's residency verifications
+"""
+type CitizenshipVerification implements Node {
+  country_code: String!
+  id: ID!
+  nationality: String!
+}
+
+"""
+The connection type for CitizenshipVerification.
+"""
+type CitizenshipVerificationConnection {
+  """
+  A list of edges.
+  """
+  edges: [CitizenshipVerificationEdge]
+
+  """
+  A list of nodes.
+  """
+  nodes: [CitizenshipVerification]
+
+  """
+  Information to aid in pagination.
+  """
+  pageInfo: PageInfo!
+}
+
+"""
+An edge in a connection.
+"""
+type CitizenshipVerificationEdge {
+  """
+  A cursor for use in pagination.
+  """
+  cursor: String!
+
+  """
+  The item at the end of the edge.
+  """
+  node: CitizenshipVerification
 }
 
 """
@@ -7750,6 +7814,63 @@ type CreateCveRequestPayload implements MutationResult {
 }
 
 """
+Autogenerated input type of CreateCvss_3_0_Severity
+"""
+input CreateCvss_3_0_SeverityInput {
+  attack_complexity: SeverityAttackComplexityEnum!
+  attack_vector: SeverityAttackVectorEnum!
+  availability: SeverityAvailabilityEnum!
+
+  """
+  A unique identifier for the client performing the mutation.
+  """
+  clientMutationId: String
+  confidentiality: SeverityConfidentialityEnum!
+  dry_run: Boolean
+  integrity: SeverityIntegrityEnum!
+  message: String
+  privileges_required: SeverityPrivilegesRequiredEnum!
+  report_id: ID!
+  scope: SeverityScopeEnum!
+  tracer: String
+  user_interaction: SeverityUserInteractionEnum!
+}
+
+"""
+Autogenerated return type of CreateCvss_3_0_Severity.
+"""
+type CreateCvss_3_0_SeverityPayload implements MutationResult {
+  """
+  A unique identifier for the client performing the mutation.
+  """
+  clientMutationId: String
+  errors(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+    types: [ErrorTypeEnum]
+  ): ErrorConnection!
+  severity: Severity
+  was_successful: Boolean!
+}
+
+"""
 Autogenerated input type of CreateDemo
 """
 input CreateDemoInput {
@@ -8414,6 +8535,55 @@ type CreateMailingAddressPayload implements MutationResult {
     types: [ErrorTypeEnum]
   ): ErrorConnection!
   me: User
+  was_successful: Boolean!
+}
+
+"""
+Autogenerated input type of CreateManualSeverity
+"""
+input CreateManualSeverityInput {
+  """
+  A unique identifier for the client performing the mutation.
+  """
+  clientMutationId: String
+  dry_run: Boolean
+  message: String
+  rating: SeverityRatingEnum!
+  report_id: ID!
+  tracer: String
+}
+
+"""
+Autogenerated return type of CreateManualSeverity.
+"""
+type CreateManualSeverityPayload implements MutationResult {
+  """
+  A unique identifier for the client performing the mutation.
+  """
+  clientMutationId: String
+  errors(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+    types: [ErrorTypeEnum]
+  ): ErrorConnection!
+  severity: Severity
   was_successful: Boolean!
 }
 
@@ -16322,6 +16492,7 @@ input FiltersTeamFilterInput {
   bookmarked_team_users: FiltersUserFilterInput
   campaigns: FiltersCampaignFilterInput
   external_program: FiltersExternalProgramFilterInput
+  h1_clear: BooleanPredicateInput
   handle: StringPredicateInput
   id: IntPredicateInput
   internet_bug_bounty: BooleanPredicateInput
@@ -16619,7 +16790,9 @@ type GatewayProgram implements Node & ResourceInterface {
   id: ID!
   ipsec_settings: Hash
   ipsec_templates: [Hash!]
+  membership_suspended: Boolean
   selected_ips: [Hash!]
+  team: Team
   url: URI!
 }
 
@@ -16631,7 +16804,6 @@ type GatewayUser implements Node & ResourceInterface {
   blocked_status: Boolean!
   id: ID!
   last_seen: DateTime
-  source_ips: [Hash!]!
   team: Team!
   url: URI!
   user: User!
@@ -17925,6 +18097,97 @@ enum IntegrationEventsEnum {
 }
 
 """
+Autogenerated input type of InvalidateCitizenshipVerification
+"""
+input InvalidateCitizenshipVerificationInput {
+  citizenship_verification_id: ID!
+
+  """
+  A unique identifier for the client performing the mutation.
+  """
+  clientMutationId: String
+}
+
+"""
+Autogenerated return type of InvalidateCitizenshipVerification.
+"""
+type InvalidateCitizenshipVerificationPayload implements MutationResult {
+  """
+  A unique identifier for the client performing the mutation.
+  """
+  clientMutationId: String
+  errors(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+    types: [ErrorTypeEnum]
+  ): ErrorConnection!
+  user_identity: UserIdentity
+  was_successful: Boolean!
+}
+
+"""
+Autogenerated input type of InvalidateResidencyVerification
+"""
+input InvalidateResidencyVerificationInput {
+  """
+  A unique identifier for the client performing the mutation.
+  """
+  clientMutationId: String
+  residency_verification_id: ID!
+}
+
+"""
+Autogenerated return type of InvalidateResidencyVerification.
+"""
+type InvalidateResidencyVerificationPayload implements MutationResult {
+  """
+  A unique identifier for the client performing the mutation.
+  """
+  clientMutationId: String
+  errors(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+    types: [ErrorTypeEnum]
+  ): ErrorConnection!
+  user_identity: UserIdentity
+  was_successful: Boolean!
+}
+
+"""
 An interface for the common fields on a HackerOne Invitation
 """
 interface InvitationInterface {
@@ -18934,7 +19197,7 @@ An LLM conversation
 type LlmConversation implements Node {
   _id: ID!
   id: ID!
-  llm_conversation_messages: [LlmConversationMessage!]!
+  llm_conversation_messages: [LlmConversationMessage]!
   subtitle: String
   title: String!
 }
@@ -18946,9 +19209,44 @@ type LlmConversationMessage implements Node {
   _id: ID!
   author: String!
   created_at: DateTime!
+  debug: String
+  elements: [LlmConversationMessageElement!]
   id: ID!
   message: String
   was_useful: Boolean
+}
+
+"""
+An LLM conversation message element
+"""
+type LlmConversationMessageElement implements Node {
+  arguments: JSON!
+
+  """
+  ID of the object.
+  """
+  id: ID!
+  type: LlmConversationMessageElementTypeEnum!
+}
+
+"""
+Types of LLM conversation message elements
+"""
+enum LlmConversationMessageElementTypeEnum {
+  image
+  link
+  markdown
+  text
+  update_report_title
+}
+
+"""
+Available LLM Conversation User Types
+"""
+enum LlmConversationUserEnum {
+  HACKER
+  ORGANIZATION
+  TRIAGER
 }
 
 """
@@ -19376,16 +19674,16 @@ input MoreLikeThisInput {
 Autogenerated input type of MoveScopesToNewPentestOpportunity
 """
 input MoveScopesToNewPentestOpportunityInput {
-  api_scope_ids: [ID!]
+  api_scope_ids: [ID!] = []
 
   """
   A unique identifier for the client performing the mutation.
   """
   clientMutationId: String
-  mobile_app_scope_ids: [ID!]
-  network_scope_ids: [ID!]
+  mobile_app_scope_ids: [ID!] = []
+  network_scope_ids: [ID!] = []
   pentest_opportunity_id: ID!
-  web_app_scope_ids: [ID!]
+  web_app_scope_ids: [ID!] = []
 }
 
 """
@@ -19792,6 +20090,12 @@ type Mutation implements Node {
     """
     input: CreateCveRequestInput!
   ): CreateCveRequestPayload!
+  createCvss_3_0_Severity(
+    """
+    Parameters for CreateCvss_3_0_Severity
+    """
+    input: CreateCvss_3_0_SeverityInput!
+  ): CreateCvss_3_0_SeverityPayload!
   createDemo(
     """
     Parameters for CreateDemo
@@ -19870,6 +20174,12 @@ type Mutation implements Node {
     """
     input: CreateMailingAddressInput!
   ): CreateMailingAddressPayload!
+  createManualSeverity(
+    """
+    Parameters for CreateManualSeverity
+    """
+    input: CreateManualSeverityInput!
+  ): CreateManualSeverityPayload!
   createOrUpdateHackerCertification(
     """
     Parameters for CreateOrUpdateHackerCertification
@@ -20571,6 +20881,18 @@ type Mutation implements Node {
     """
     input: ImportAssetsCsvMutationInput!
   ): ImportAssetsCsvMutationPayload!
+  invalidateCitizenshipVerification(
+    """
+    Parameters for InvalidateCitizenshipVerification
+    """
+    input: InvalidateCitizenshipVerificationInput!
+  ): InvalidateCitizenshipVerificationPayload!
+  invalidateResidencyVerification(
+    """
+    Parameters for InvalidateResidencyVerification
+    """
+    input: InvalidateResidencyVerificationInput!
+  ): InvalidateResidencyVerificationPayload!
   inviteEligibleHackers(
     """
     Parameters for InviteEligibleHackers
@@ -20967,12 +21289,24 @@ type Mutation implements Node {
     """
     input: SignRulesOfEngagementInput!
   ): SignRulesOfEngagementPayload!
+  startCitizenshipVerification(
+    """
+    Parameters for StartCitizenshipVerification
+    """
+    input: StartCitizenshipVerificationInput!
+  ): StartCitizenshipVerificationPayload!
   startIdVerification(
     """
     Parameters for StartIdVerification
     """
     input: StartIdVerificationInput!
   ): StartIdVerificationPayload!
+  startResidencyVerification(
+    """
+    Parameters for StartResidencyVerification
+    """
+    input: StartResidencyVerificationInput!
+  ): StartResidencyVerificationPayload!
   startVpnInstance(
     """
     Parameters for StartVpnInstance
@@ -22064,6 +22398,7 @@ input NewConversationInput {
   A unique identifier for the client performing the mutation.
   """
   clientMutationId: String
+  user_type: LlmConversationUserEnum!
 }
 
 """
@@ -22851,6 +23186,7 @@ type Organization implements Node {
   i_can_manage_all_programs_scope: Boolean!
   i_can_manage_asset_submissions: Boolean!
   i_can_manage_legacy_feature_toggles: Boolean!
+  i_can_manage_organization_admins: Boolean!
   i_can_manage_organization_api_tokens: Boolean!
   i_can_manage_organization_assets: Boolean!
   i_can_manage_organization_inboxes: Boolean!
@@ -24151,6 +24487,7 @@ type Pentest implements Node {
   i_can_update_program_settings: Boolean!
   id: ID!
   industry: String
+  latest_start_date: DateTime
   lead_pentester: Pentester
   linked_jira_reports_count: Int
   location_restrictions: [String!]
@@ -27226,6 +27563,7 @@ input RangeInput {
   minimum_medium: GteInput
   new_count: GteInput
   out_of_scope_count: GteInput
+  submitted_at: RangeOperatorInput
   untested_count: GteInput
 }
 
@@ -30177,6 +30515,49 @@ type ResetAllCredentialsPayload implements MutationResult {
 }
 
 """
+Data about the user's residency verifications
+"""
+type ResidencyVerification implements Node {
+  id: ID!
+  nationality: String!
+}
+
+"""
+The connection type for ResidencyVerification.
+"""
+type ResidencyVerificationConnection {
+  """
+  A list of edges.
+  """
+  edges: [ResidencyVerificationEdge]
+
+  """
+  A list of nodes.
+  """
+  nodes: [ResidencyVerification]
+
+  """
+  Information to aid in pagination.
+  """
+  pageInfo: PageInfo!
+}
+
+"""
+An edge in a connection.
+"""
+type ResidencyVerificationEdge {
+  """
+  A cursor for use in pagination.
+  """
+  cursor: String!
+
+  """
+  The item at the end of the edge.
+  """
+  node: ResidencyVerification
+}
+
+"""
 Represents a type that can be retrieved by a URL.
 """
 interface ResourceInterface {
@@ -31364,7 +31745,7 @@ enum SeverityCalculationMethodEnum {
 Calculate CVSS Severity score and rating
 """
 type SeverityCalculator implements Node {
-  calculated_severity(attack_complexity: SeverityAttackComplexityEnum!, attack_vector: SeverityAttackVectorEnum!, availability: SeverityAvailabilityEnum!, confidentiality: SeverityConfidentialityEnum!, integrity: SeverityIntegrityEnum!, privileges_required: SeverityPrivilegesRequiredEnum!, report_id: Int, scope: SeverityScopeEnum!, user_interaction: SeverityUserInteractionEnum!): CalculatedSeverity!
+  calculated_severity(attack_complexity: SeverityAttackComplexityEnum!, attack_vector: SeverityAttackVectorEnum!, availability: SeverityAvailabilityEnum!, availability_requirement: SeverityAvailabilityRequirementEnum, confidentiality: SeverityConfidentialityEnum!, confidentiality_requirement: SeverityConfidentialityRequirementEnum, integrity: SeverityIntegrityEnum!, integrity_requirement: SeverityIntegrityRequirementEnum, max_severity: SeverityRatingEnum, privileges_required: SeverityPrivilegesRequiredEnum!, report_id: Int, scope: SeverityScopeEnum!, user_interaction: SeverityUserInteractionEnum!): CalculatedSeverity!
   id: ID!
 }
 
@@ -32154,6 +32535,50 @@ enum SpotCheckTypeStates {
 }
 
 """
+Autogenerated input type of StartCitizenshipVerification
+"""
+input StartCitizenshipVerificationInput {
+  """
+  A unique identifier for the client performing the mutation.
+  """
+  clientMutationId: String
+}
+
+"""
+Autogenerated return type of StartCitizenshipVerification.
+"""
+type StartCitizenshipVerificationPayload implements MutationResult {
+  """
+  A unique identifier for the client performing the mutation.
+  """
+  clientMutationId: String
+  errors(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+    types: [ErrorTypeEnum]
+  ): ErrorConnection!
+  url: String
+  was_successful: Boolean!
+}
+
+"""
 Autogenerated input type of StartIdVerification
 """
 input StartIdVerificationInput {
@@ -32167,6 +32592,50 @@ input StartIdVerificationInput {
 Autogenerated return type of StartIdVerification.
 """
 type StartIdVerificationPayload implements MutationResult {
+  """
+  A unique identifier for the client performing the mutation.
+  """
+  clientMutationId: String
+  errors(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+    types: [ErrorTypeEnum]
+  ): ErrorConnection!
+  url: String
+  was_successful: Boolean!
+}
+
+"""
+Autogenerated input type of StartResidencyVerification
+"""
+input StartResidencyVerificationInput {
+  """
+  A unique identifier for the client performing the mutation.
+  """
+  clientMutationId: String
+}
+
+"""
+Autogenerated return type of StartResidencyVerification.
+"""
+type StartResidencyVerificationPayload implements MutationResult {
   """
   A unique identifier for the client performing the mutation.
   """
@@ -32608,7 +33077,7 @@ type StructuredScope implements Node & ResourceInterface {
   asset_identifier: String!
   asset_type: StructuredScopeAssetTypeEnum
   attachments: [Attachment]
-  availability_requirement: SeveritySecurityRequirementEnum
+  availability_requirement: SeverityAvailabilityRequirementEnum
   bounty_table_rows(
     """
     Returns the elements in the list that come after the specified cursor.
@@ -32652,7 +33121,7 @@ type StructuredScope implements Node & ResourceInterface {
     last: Int
   ): CampaignConnection
   claimed_credential: Credential
-  confidentiality_requirement: SeveritySecurityRequirementEnum
+  confidentiality_requirement: SeverityConfidentialityRequirementEnum
   country: String
   created_at: DateTime!
   credential_inquiry: CredentialInquiry
@@ -32687,7 +33156,7 @@ type StructuredScope implements Node & ResourceInterface {
   human_asset_type: String
   id: ID!
   instruction: String
-  integrity_requirement: SeveritySecurityRequirementEnum
+  integrity_requirement: SeverityIntegrityRequirementEnum
   labels(
     """
     Returns the elements in the list that come after the specified cursor.
@@ -36503,6 +36972,7 @@ input TermFilterInput {
   allows_bounty_splitting: Boolean
   allows_private_disclosure: Boolean
   credentials_set_up: Boolean
+  from_hacker: Boolean
   gold_standard: Int
   h1_clear: Boolean
   identifier: String
@@ -36513,6 +36983,7 @@ input TermFilterInput {
   offers_bounties: Boolean
   organization_id: Int
   publicly_visible_retesting: Boolean
+  report_substate: [String!]
   state: Int
   system: Boolean
   team_ids: [Int!]
@@ -36527,10 +36998,15 @@ input TermsFilterInput {
   industry: [String!]
   organization_id: [Int!]
   permissions: [OrganizationPermissionsEnum!]
+  report_substate: [String!]
+  reporter_id: [String!]
+  state: [String!]
   submission_state: [SubmissionStateEnum!]
+  substate: [String!]
   team_id: [Int!]
   team_ids: [Int!]
   tech: [String!]
+  type: [String!]
 }
 
 """
@@ -45147,6 +45623,7 @@ type User implements ActivitiesInterface & Node & ResourceInterface {
     """
     last: Int
   ): UserConnection
+  gateway_programs: [GatewayProgram!]
   github_handle: String
   gitlab_handle: String
   h1_pentester: Boolean
@@ -45190,6 +45667,7 @@ type User implements ActivitiesInterface & Node & ResourceInterface {
   has_tray_profile: Boolean
   i_can_update_invitation_profile: Boolean
   i_can_update_username: Boolean
+  i_can_view_gateway_v2_settings: Boolean
   i_can_view_vpn_credentials: Boolean
   id: ID!
   impact: Float
@@ -45219,7 +45697,7 @@ type User implements ActivitiesInterface & Node & ResourceInterface {
   leaderboard_entry(filter: String, key: LeaderboardKeyEnum!, quarter: Int, year: Int): LeaderboardEntryUnion
   linkedin_handle: String
   llm_conversation_messages(llm_conversation_id: ID!): [LlmConversationMessage!]!
-  llm_conversations(id: ID): [LlmConversation!]!
+  llm_conversations(id: ID, user_type: LlmConversationUserEnum): [LlmConversation!]!
   location: String
   lufthansa_account: LufthansaAccount
   manual_user_balance_adjustments(
@@ -46151,7 +46629,52 @@ enum UserFlagPriorityEnum {
 Data about the user's identity
 """
 type UserIdentity implements Node {
+  citizenship_verifications(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+    only_valid: Boolean
+  ): CitizenshipVerificationConnection!
+  citizenships: [String!]!
   id: ID!
+  residency_verifications(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+    only_valid: Boolean
+  ): ResidencyVerificationConnection!
 
   """
   Whether the Rules of Engagement have been signed
@@ -46861,7 +47384,7 @@ type Weakness implements Node {
     last: Int
   ): ReportConnection
   reputation_change: Int
-  time_spent: Int!
+  time_spent: Int
   updated_at: DateTime!
 }
 

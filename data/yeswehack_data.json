@@ -565,19 +565,31 @@
     "disabled": false,
     "managed": null,
     "min_bounty": 0,
-    "max_bounty": 10000,
+    "max_bounty": 20000,
     "targets": {
       "in_scope": [
         {
-          "target": "https://auth.integ01.dev-franceconnect.fr",
+          "target": "Specific scenarios (see program description)",
+          "type": "other"
+        },
+        {
+          "target": "AgentConnect (see program description for github link)",
           "type": "web-application"
         },
         {
-          "target": "https://fca.integ01.dev-agentconnect.fr",
+          "target": "FranceConnect+ (see program description for github link)",
           "type": "web-application"
         },
         {
-          "target": "https://eidas-bridge.integ01.dev-franceconnect.fr",
+          "target": "FranceConnect (see program description for github link)",
+          "type": "web-application"
+        },
+        {
+          "target": "eIDAS Bridge  (see program description for github link)",
+          "type": "web-application"
+        },
+        {
+          "target": "User Dashboard  (see program description for github link)",
           "type": "web-application"
         }
       ],
@@ -592,6 +604,14 @@
         },
         {
           "target": "The  production environment (*.gouv.fr) is out of scope.",
+          "type": "other"
+        },
+        {
+          "target": "https://fcp.integ01.dev-franceconnect.fr",
+          "type": "other"
+        },
+        {
+          "target": "https://tableaudebord.integ01.dev-franceconnect.fr",
           "type": "other"
         }
       ]
@@ -809,7 +829,7 @@
     "disabled": false,
     "managed": null,
     "min_bounty": 0,
-    "max_bounty": 50000,
+    "max_bounty": 25000,
     "targets": {
       "in_scope": [
         {
@@ -1013,7 +1033,7 @@
     "disabled": false,
     "managed": null,
     "min_bounty": 30,
-    "max_bounty": 3000,
+    "max_bounty": 6000,
     "targets": {
       "in_scope": [
         {
@@ -1199,7 +1219,19 @@
           "type": "web-application"
         },
         {
-          "target": "*.infomaniak.site",
+          "target": "ix2smbdyjt.infomaniak.site",
+          "type": "web-application"
+        },
+        {
+          "target": "5k8vrbdyje.infomaniak.site",
+          "type": "web-application"
+        },
+        {
+          "target": "fv3lfbdyjh.infomaniak.site",
+          "type": "web-application"
+        },
+        {
+          "target": "l75pvbdyjo.infomaniak.site",
           "type": "web-application"
         },
         {
@@ -1711,81 +1743,6 @@
     }
   },
   {
-    "id": "muslim-pro",
-    "name": "Muslim Pro",
-    "public": true,
-    "disabled": false,
-    "managed": null,
-    "min_bounty": 50,
-    "max_bounty": 2000,
-    "targets": {
-      "in_scope": [
-        {
-          "target": "*.muslimpro.com",
-          "type": "web-application"
-        },
-        {
-          "target": "muslim-pro-app.firebaseapp.com",
-          "type": "web-application"
-        },
-        {
-          "target": "muslim-pro-app.firebaseio.com",
-          "type": "api"
-        },
-        {
-          "target": "muslim-pro-app.appspot.com",
-          "type": "api"
-        },
-        {
-          "target": "muslimproapi.appspot.com",
-          "type": "api"
-        },
-        {
-          "target": "https://play.google.com/store/apps/details?id=com.bitsmedia.android.muslimpro&hl=en",
-          "type": "mobile-application-android"
-        },
-        {
-          "target": "https://apps.apple.com/us/app/muslim-pro-azan-quran-qibla/id388389451",
-          "type": "mobile-application-ios"
-        },
-        {
-          "target": "api.muslimpro.com",
-          "type": "api"
-        },
-        {
-          "target": "muslim-pro-app.web.app",
-          "type": "web-application"
-        }
-      ],
-      "out_of_scope": [
-        {
-          "target": "support.muslimpro.com",
-          "type": "other"
-        },
-        {
-          "target": "translate.muslimpro.com",
-          "type": "other"
-        },
-        {
-          "target": "media.muslimpro.com",
-          "type": "other"
-        },
-        {
-          "target": "go.muslimpro.com",
-          "type": "other"
-        },
-        {
-          "target": "app.muslimpro.com/qalbox",
-          "type": "other"
-        },
-        {
-          "target": "qalbox (iOS, Android)",
-          "type": "other"
-        }
-      ]
-    }
-  },
-  {
     "id": "ovh",
     "name": "OVH",
     "public": true,
@@ -1976,49 +1933,6 @@
         },
         {
           "target": "Vulnerability in a third-party vendor we use",
-          "type": "other"
-        }
-      ]
-    }
-  },
-  {
-    "id": "olvid-the-most-secure-messaging-app-in-the-world",
-    "name": "Olvid - Open source end-to-end encrypted messaging",
-    "public": true,
-    "disabled": false,
-    "managed": null,
-    "min_bounty": 50,
-    "max_bounty": 2000,
-    "targets": {
-      "in_scope": [
-        {
-          "target": "https://play.google.com/store/apps/details?id=io.olvid.messenger",
-          "type": "mobile-application-android"
-        },
-        {
-          "target": "https://apps.apple.com/us/app/olvid/id1414865219",
-          "type": "mobile-application-ios"
-        },
-        {
-          "target": "https://server.olvid.io",
-          "type": "api"
-        }
-      ],
-      "out_of_scope": [
-        {
-          "target": "Attacks requiring root access on the device",
-          "type": "other"
-        },
-        {
-          "target": "Any attack consisting in spying on the Olvid app through another app on the device (devices are considered healthy/malware free)",
-          "type": "other"
-        },
-        {
-          "target": "Social Engineering attacks to impersonate someone",
-          "type": "other"
-        },
-        {
-          "target": "Attacks on assets not related to the application itself (like on our web page at https://olvid.io)",
           "type": "other"
         }
       ]
@@ -2266,10 +2180,6 @@
         {
           "target": "https://auth-ywh.it.authentification.si.gouv.qc.ca",
           "type": "api"
-        },
-        {
-          "target": "https://preprod-habilitation.sq.gouv.qc.ca",
-          "type": "web-application"
         },
         {
           "target": "https://www.cyber.gouv.qc.ca",
