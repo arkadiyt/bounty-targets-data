@@ -46616,6 +46616,9 @@ enum UserFlagPriorityEnum {
 Data about the user's identity
 """
 type UserIdentity implements Node {
+  active_citizenship_verification_url: String
+  active_residency_verification_url: String
+  citizenship_verification_limit_reached: Boolean!
   citizenship_verifications(
     """
     Returns the elements in the list that come after the specified cursor.
@@ -46640,6 +46643,7 @@ type UserIdentity implements Node {
   ): CitizenshipVerificationConnection!
   citizenships: [String!]!
   id: ID!
+  residency_verification_limit_reached: Boolean!
   residency_verifications(
     """
     Returns the elements in the list that come after the specified cursor.
