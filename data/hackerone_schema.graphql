@@ -16218,6 +16218,16 @@ input FiltersPentestFilterOrder {
   id: FilterOrderPredicateInput
 }
 
+input FiltersPentestOpportunityFilterInput {
+  _and: [FiltersPentestOpportunityFilterInput]
+  _not: FiltersPentestOpportunityFilterInput
+  _or: [FiltersPentestOpportunityFilterInput]
+  aasm_state: PentestOpportunityStateEnumInputPredicateInput
+  id: IntPredicateInput
+  salesforce_account: StringPredicateInput
+  salesforce_opportunity: StringPredicateInput
+}
+
 input FiltersPentestTaskFilterInput {
   _and: [FiltersPentestTaskFilterInput]
   _not: FiltersPentestTaskFilterInput
@@ -19667,6 +19677,7 @@ input MoveScopesToNewPentestOpportunityInput {
   mobile_app_scope_ids: [ID!] = []
   network_scope_ids: [ID!] = []
   pentest_opportunity_id: ID!
+  target_pentest_opportunity_id: ID
   web_app_scope_ids: [ID!] = []
 }
 
@@ -23355,7 +23366,28 @@ type Organization implements Node {
     last: Int
     recipient_username: String
   ): TeamMemberInvitationConnection
-  pentest_opportunities: [PentestOpportunity]
+  pentest_opportunities(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+    where: FiltersPentestOpportunityFilterInput
+  ): PentestOpportunityConnection
   profile_picture(size: ProfilePictureSizes!): String
   profile_picture_filename: String
   reporters(
@@ -25377,6 +25409,42 @@ type PentestOpportunityApiScopeEdge {
 }
 
 """
+The connection type for PentestOpportunity.
+"""
+type PentestOpportunityConnection {
+  """
+  A list of edges.
+  """
+  edges: [PentestOpportunityEdge]
+
+  """
+  A list of nodes.
+  """
+  nodes: [PentestOpportunity]
+
+  """
+  Information to aid in pagination.
+  """
+  pageInfo: PageInfo!
+  total_count: Int
+}
+
+"""
+An edge in a connection.
+"""
+type PentestOpportunityEdge {
+  """
+  A cursor for use in pagination.
+  """
+  cursor: String!
+
+  """
+  The item at the end of the edge.
+  """
+  node: PentestOpportunity
+}
+
+"""
 A pentest opportunity mobile app scope
 """
 type PentestOpportunityMobileAppScope implements Node {
@@ -25491,6 +25559,31 @@ type PentestOpportunityNetworkScopeEdge {
   The item at the end of the edge.
   """
   node: PentestOpportunityNetworkScope
+}
+
+"""
+Pentest Opportunity state enum
+"""
+enum PentestOpportunityStateEnumInput {
+  draft
+  in_review
+  provisioned
+  provisioning
+  reviewed
+  sold
+  submitted
+  unused
+}
+
+input PentestOpportunityStateEnumInputPredicateInput {
+  _eq: PentestOpportunityStateEnumInput
+  _gt: PentestOpportunityStateEnumInput
+  _gte: PentestOpportunityStateEnumInput
+  _in: [PentestOpportunityStateEnumInput]
+  _is_null: Boolean
+  _lt: PentestOpportunityStateEnumInput
+  _lte: PentestOpportunityStateEnumInput
+  _neq: PentestOpportunityStateEnumInput
 }
 
 """
@@ -27064,6 +27157,28 @@ type Query implements Node {
     where: FiltersOrganizationFilterInput
   ): OrganizationConnection
   pentest(id: ID!): Pentest
+  pentest_opportunities(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+    where: FiltersPentestOpportunityFilterInput
+  ): PentestOpportunityConnection
   pentest_opportunity(token: String!): PentestOpportunity
   pentest_opportunity_status(token: String!): Hash
   pentester_profiles(
@@ -32691,9 +32806,11 @@ A static dashboard definition
 """
 type StaticDashboard implements Node & ResourceInterface {
   charts: [StaticDashboardChart]!
+  dashboard_layout_columns: Int
   description: String
   elements: [StaticDashboardElement]!
   filter_options: [String]!
+  hide_interval_dropdown: Boolean
   id: ID!
   include_in_stable_rest_api: Boolean!
   key: String!
@@ -32739,6 +32856,8 @@ type StaticDashboardChart implements Node & ResourceInterface {
   display_all_items_in_tooltip: Boolean
   display_total_of_all_items_in_tooltip: Boolean
   explores: [StaticDashboardExplore!]
+  hide_chart_card_menu: Boolean
+  hide_date_range_annotation: Boolean
   id: ID!
   index_axis: StaticDashboardAxis
   interval_override: String
@@ -33399,6 +33518,14 @@ type StructuredScopeVersionEdge {
   The item at the end of the edge.
   """
   node: StructuredScopeVersion
+}
+
+"""
+A materialized view of structured_scope with credential
+"""
+type StructuredScopeWithCredential implements Node {
+  _id: ID!
+  id: ID!
 }
 
 """
@@ -35038,6 +35165,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
   needs_payment_method: Boolean
   new_staleness_threshold: Int
   new_staleness_threshold_limit: Int
+  number_of_claimed_credentials_for_scopes(scopes: [String!]!): Int
 
   """
   The participant's number of reports within the team
@@ -35516,6 +35644,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
     size: Int
     sort: SortInput
   ): SearchResultConnection
+  structured_scopes_with_credentials: [StructuredScopeWithCredential!]!
   submission_requirements: SubmissionRequirements
   submission_requirements_enabled: Boolean
   submission_state: SubmissionStateEnum
