@@ -6751,7 +6751,7 @@
     "url": "https://bugcrowd.com/contrast-security",
     "allows_disclosure": true,
     "managed_by_bugcrowd": true,
-    "safe_harbor": "none",
+    "safe_harbor": "full",
     "max_payout": 3000,
     "targets": {
       "in_scope": [
@@ -7728,6 +7728,14 @@
         {
           "type": "website",
           "target": "https://{account-code}.app.sandbox.digistorm.com-2/*"
+        },
+        {
+          "type": "website",
+          "target": "https://{account-code}.app.sandbox.digistorm.com/admin/bookings"
+        },
+        {
+          "type": "website",
+          "target": "https://{account-code}.app.sandbox.digistorm.com/admin/settings/crm/#checklists"
         }
       ],
       "out_of_scope": [
@@ -10181,6 +10189,10 @@
         },
         {
           "type": "website",
+          "target": "my.geotab.com"
+        },
+        {
+          "type": "website",
           "target": "myadmin.geotab.com"
         },
         {
@@ -11866,6 +11878,10 @@
         },
         {
           "type": "other",
+          "target": "api-stagaus.skipthedishes.com"
+        },
+        {
+          "type": "other",
           "target": "api.skipthedishes.com"
         },
         {
@@ -12899,44 +12915,6 @@
         {
           "type": "website",
           "target": "test.lifterlms.com"
-        }
-      ]
-    }
-  },
-  {
-    "name": "Lightspeed Restaurant (K-Series)",
-    "url": "https://bugcrowd.com/lightspeed-k-series",
-    "allows_disclosure": true,
-    "managed_by_bugcrowd": true,
-    "safe_harbor": "full",
-    "max_payout": 2000,
-    "targets": {
-      "in_scope": [
-        {
-          "type": "website",
-          "target": "https://manager.trial.lsk.lightspeed.app/"
-        },
-        {
-          "type": "website",
-          "target": "https://manager.trial.lsk.lightspeed.app/\t"
-        }
-      ],
-      "out_of_scope": [
-        {
-          "type": "website",
-          "target": "https://lightspeedhq.com/trial "
-        },
-        {
-          "type": "other",
-          "target": "https://pos-admin.trial.lsk.lightspeed.app"
-        },
-        {
-          "type": "website",
-          "target": "lightspeedhq.com/trial "
-        },
-        {
-          "type": "other",
-          "target": "pos-admin.trial.lsk.lightspeed.app"
         }
       ]
     }
@@ -18422,15 +18400,7 @@
         },
         {
           "type": "website",
-          "target": "brandportal.naspers.com"
-        },
-        {
-          "type": "website",
           "target": "cfc.naspers.com"
-        },
-        {
-          "type": "website",
-          "target": "dashboard.naspers.com"
         },
         {
           "type": "website",
@@ -18458,15 +18428,7 @@
         },
         {
           "type": "website",
-          "target": "https://brandportal.naspers.com"
-        },
-        {
-          "type": "website",
           "target": "https://cfc.naspers.com/"
-        },
-        {
-          "type": "website",
-          "target": "https://dashboard.naspers.com"
         },
         {
           "type": "website",
@@ -18478,15 +18440,7 @@
         },
         {
           "type": "website",
-          "target": "https://legal.prosus.com"
-        },
-        {
-          "type": "website",
           "target": "https://peopleview.naspers.com"
-        },
-        {
-          "type": "website",
-          "target": "https://publicpolicy.naspers.com/"
         },
         {
           "type": "website",
@@ -18498,19 +18452,11 @@
         },
         {
           "type": "website",
-          "target": "legal.prosus.com"
-        },
-        {
-          "type": "website",
           "target": "peopleview.naspers.com"
         },
         {
           "type": "website",
           "target": "prosus.com"
-        },
-        {
-          "type": "website",
-          "target": "publicpolicy.naspers.com"
         },
         {
           "type": "website",
@@ -26279,84 +26225,6 @@
       ],
       "out_of_scope": [
 
-      ]
-    }
-  },
-  {
-    "name": "Lightspeed Retail (X-Series)",
-    "url": "https://bugcrowd.com/x-series",
-    "allows_disclosure": true,
-    "managed_by_bugcrowd": true,
-    "safe_harbor": "full",
-    "max_payout": 6250,
-    "targets": {
-      "in_scope": [
-        {
-          "type": "website",
-          "target": " developers.vendhq.com"
-        },
-        {
-          "type": "website",
-          "target": "https://developers.vendhq.com/"
-        },
-        {
-          "type": "website",
-          "target": "https://payment-connectors.vendhq.com/"
-        },
-        {
-          "type": "website",
-          "target": "https://www.vendhq.com/"
-        },
-        {
-          "type": "website",
-          "target": "https://yourstore.retail.lightspeed.app/signin/?return=%2F"
-        },
-        {
-          "type": "website",
-          "target": "payment-connectors.vendhq.com"
-        },
-        {
-          "type": "website",
-          "target": "secure.vendhq.com"
-        },
-        {
-          "type": "website",
-          "target": "www.vendhq.com"
-        },
-        {
-          "type": "website",
-          "target": "yourstore.retail.lightspeed.app"
-        }
-      ],
-      "out_of_scope": [
-        {
-          "type": "website",
-          "target": "partnerportal.vendhq.com"
-        },
-        {
-          "type": "website",
-          "target": "partners.vendhq.com"
-        },
-        {
-          "type": "website",
-          "target": "support.vendhq.com"
-        },
-        {
-          "type": "website",
-          "target": "track.api.vendhq.com"
-        },
-        {
-          "type": "website",
-          "target": "vendhq.force.com"
-        },
-        {
-          "type": "website",
-          "target": "vendimageuploadcdn.global.ssl.fastly.net"
-        },
-        {
-          "type": "website",
-          "target": "your-store.vendecommerce.com"
-        }
       ]
     }
   },
