@@ -3985,7 +3985,18 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "url",
+          "endpoint": "https://associatie.kuleuven.be/inschrijvingen/oli_login_50000050",
+          "description": "🇬🇧🇳🇱  the registration/login part on idp.kuleuven.be itself is out of scope for the program",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://webwsp.aps.kuleuven.be/sap/bc/ui5_ui5/sap/zc_oi_appl/",
+          "description": "🇬🇧🇳🇱",
+          "impact": "Tier 2"
+        }
       ],
       "out_of_scope": [
 
@@ -5529,7 +5540,156 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "url",
+          "endpoint": "api.truelayer[-sandbox].com",
+          "description": "The majority of our API endpoints live here",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "auth.truelayer[-sandbox].com",
+          "description": "Our service for getting OAuth access tokens to access our APIs",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "login-api.truelayer[-sandbox].com",
+          "description": "",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "login.truelayer[-sandbox].com",
+          "description": "Where you can connect your bank account and use Open Banking to pull data such as transactions",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "onboarding-api.truelayer.com",
+          "description": "Used in the developer console",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "pay-api.truelayer[-sandbox].com",
+          "description": "",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "pay.truelayer[-sandbox].com",
+          "description": "Some of our older payment API endpoints live here rather than on api.truelayer.com",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "paydirect.truelayer[-sandbox].com",
+          "description": "Some of our older payment API endpoints live here rather than on api.truelayer.com",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "payment.truelayer[-sandbox].com",
+          "description": "Our hosted payments page for merchants that want us to manage the UI screens for making payments",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "payouts.truelayer[-sandbox].com",
+          "description": "Our Payouts API",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "users-api.truelayer.com",
+          "description": "Internal service for managing users",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "other",
+          "endpoint": "C# SDK",
+          "description": "https://github.com/TrueLayer/truelayer-dotnet",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "console-backend.truelayer[-sandbox].com",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "console.truelayer[-sandbox].com",
+          "description": "Our developer console where you can login, create applications, manage your OAuth client ID/secret, upload public keys for request signing, view transactions",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "iOS SDK",
+          "description": "https://github.com/TrueLayer/TrueLayer-iOS-SDK",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "Java SDK",
+          "description": "https://github.com/TrueLayer/truelayer-java",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "PHP SDK",
+          "description": "https://github.com/TrueLayer/truelayer-php",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "Rust SDK",
+          "description": "https://github.com/TrueLayer/truelayer-rust",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "TrueLayer for Magento (Magento plugin)",
+          "description": "https://github.com/TrueLayer/magento2",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "TrueLayer for WooCommerce (WordPress plugin)",
+          "description": "https://wordpress.org/plugins/truelayer-for-woocommerce/ is our WordPress plugin allowing you to use TrueLayer as a checkout option in your WooCommerce store. The source code is also available on GitHub.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "truelayer-signing",
+          "description": "https://github.com/TrueLayer/truelayer-signing is our open source library for generating signed requests for calling TrueLayer APIs. Many languages are supported including Rust, C#, NodeJS, Go, Java and PHP.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "webhooks.truelayer[-sandbox].com",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.truelayer.cloud",
+          "description": "",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.truelayer.com",
+          "description": "",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.truelayer.io",
+          "description": "",
+          "impact": "Tier 3"
+        }
       ],
       "out_of_scope": [
 
