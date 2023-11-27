@@ -3985,18 +3985,7 @@
     },
     "targets": {
       "in_scope": [
-        {
-          "type": "url",
-          "endpoint": "https://associatie.kuleuven.be/inschrijvingen/oli_login_50000050",
-          "description": "🇬🇧🇳🇱  the registration/login part on idp.kuleuven.be itself is out of scope for the program",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "https://webwsp.aps.kuleuven.be/sap/bc/ui5_ui5/sap/zc_oi_appl/",
-          "description": "🇬🇧🇳🇱",
-          "impact": "Tier 2"
-        }
+
       ],
       "out_of_scope": [
 
@@ -4480,6 +4469,102 @@
         {
           "type": "url",
           "endpoint": "*.portofantwerpbruges.com",
+          "description": "",
+          "impact": "No bounty"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
+    "id": "201f8ade-4d93-4d8b-b371-af5ed9d8b837",
+    "name": "RIPE NCC",
+    "company_handle": "ripencc",
+    "handle": "ripencc",
+    "url": "https://www.intigriti.com/programs/ripencc/ripencc/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "min_bounty": {
+      "value": 0,
+      "currency": "EUR"
+    },
+    "max_bounty": {
+      "value": 2000,
+      "currency": "EUR"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "url",
+          "endpoint": "access.ripe.net",
+          "description": "This is the authentication service for our membership and community, mostly used for all of our membership (e.g. LIR) applications.We strongly suggest you to adjust your scanners to the limit where we mentioned in the req/sec.Please adhere to the out of scope rules below.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "other",
+          "endpoint": "https://github.com/RIPE-NCC/rpki-commons",
+          "description": "This library contains an implementation of an X.509 v3 certificate extension which binds a list of IP address blocks or prefixes to the subject of a certificate (IP Address Delegation Extension).",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "other",
+          "endpoint": "https://github.com/RIPE-NCC/rpki-core",
+          "description": "This repository contains the source code for the RIPE NCC certification. We strive to publish as many components as possible with reasonable effort. Some elements or information are not included, either because of our threat model or because we can not publish them.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "other",
+          "endpoint": "https://github.com/RIPE-NCC/whois",
+          "description": "RIPE Database whois code repository.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "lirportal.ripe.net",
+          "description": "Our portal page for LIR's where they can access their information and more.Since this portal designed to give access only to LIR's, you can't create an account.Until then;",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.ripe.net",
+          "description": "Our main domain.We suggest you to check out of scope section of our program if you discover any vulnerabilities on this domain or it's subdomains.To make your reports better, we suggest you to check the IP address of the asset you've found so you can understand the address if in scope or out of scope.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "ip range",
+          "endpoint": "193.0.0.0/19 and 2001:67c:2e8::/48",
+          "description": "This is our IP Range.Since we are letting some people to host their content, there are some exclusions.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "https://github.com/RIPE-NCC/rpki-monitoring",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "https://github.com/RIPE-NCC/rpki-publication-server",
+          "description": "This is the RIPE NCC's implementation of RFC 8182 - The RPKI Repository Delta Protocol and a draft of RFC 8181 - A Publication Protocol for the Resource Public Key Infrastructure.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "https://github.com/RIPE-NCC/rpki-ta-0",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "https://github.com/RIPE-NCC/rsyncit",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "Assets owned by RIPE NCC",
           "description": "",
           "impact": "No bounty"
         }
@@ -5444,156 +5529,7 @@
     },
     "targets": {
       "in_scope": [
-        {
-          "type": "url",
-          "endpoint": "api.truelayer[-sandbox].com",
-          "description": "The majority of our API endpoints live here",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "auth.truelayer[-sandbox].com",
-          "description": "Our service for getting OAuth access tokens to access our APIs",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "login-api.truelayer[-sandbox].com",
-          "description": "",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "login.truelayer[-sandbox].com",
-          "description": "Where you can connect your bank account and use Open Banking to pull data such as transactions",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "onboarding-api.truelayer.com",
-          "description": "Used in the developer console",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "pay-api.truelayer[-sandbox].com",
-          "description": "",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "pay.truelayer[-sandbox].com",
-          "description": "Some of our older payment API endpoints live here rather than on api.truelayer.com",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "paydirect.truelayer[-sandbox].com",
-          "description": "Some of our older payment API endpoints live here rather than on api.truelayer.com",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "payment.truelayer[-sandbox].com",
-          "description": "Our hosted payments page for merchants that want us to manage the UI screens for making payments",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "payouts.truelayer[-sandbox].com",
-          "description": "Our Payouts API",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "users-api.truelayer.com",
-          "description": "Internal service for managing users",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "other",
-          "endpoint": "C# SDK",
-          "description": "https://github.com/TrueLayer/truelayer-dotnet",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "console-backend.truelayer[-sandbox].com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "console.truelayer[-sandbox].com",
-          "description": "Our developer console where you can login, create applications, manage your OAuth client ID/secret, upload public keys for request signing, view transactions",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "other",
-          "endpoint": "iOS SDK",
-          "description": "https://github.com/TrueLayer/TrueLayer-iOS-SDK",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "other",
-          "endpoint": "Java SDK",
-          "description": "https://github.com/TrueLayer/truelayer-java",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "other",
-          "endpoint": "PHP SDK",
-          "description": "https://github.com/TrueLayer/truelayer-php",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "other",
-          "endpoint": "Rust SDK",
-          "description": "https://github.com/TrueLayer/truelayer-rust",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "other",
-          "endpoint": "TrueLayer for Magento (Magento plugin)",
-          "description": "https://github.com/TrueLayer/magento2",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "other",
-          "endpoint": "TrueLayer for WooCommerce (WordPress plugin)",
-          "description": "https://wordpress.org/plugins/truelayer-for-woocommerce/ is our WordPress plugin allowing you to use TrueLayer as a checkout option in your WooCommerce store. The source code is also available on GitHub.",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "other",
-          "endpoint": "truelayer-signing",
-          "description": "https://github.com/TrueLayer/truelayer-signing is our open source library for generating signed requests for calling TrueLayer APIs. Many languages are supported including Rust, C#, NodeJS, Go, Java and PHP.",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "webhooks.truelayer[-sandbox].com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.truelayer.cloud",
-          "description": "",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.truelayer.com",
-          "description": "",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.truelayer.io",
-          "description": "",
-          "impact": "Tier 3"
-        }
+
       ],
       "out_of_scope": [
 
