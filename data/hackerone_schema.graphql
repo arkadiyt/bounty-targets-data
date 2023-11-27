@@ -25623,6 +25623,27 @@ type PentestOpportunity implements Node {
   consumption_subscription: ConsumptionSubscription
   customer_email: String
   customer_note: String
+  generic_scopes(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+  ): PentestOpportunityGenericScopeConnection
   i_can_archive: Boolean!
   i_can_auto_provision: Boolean!
   i_can_autosave: Boolean!
@@ -25812,6 +25833,57 @@ type PentestOpportunityEdge {
   The item at the end of the edge.
   """
   node: PentestOpportunity
+}
+
+"""
+A pentest opportunity generic scope
+"""
+type PentestOpportunityGenericScope implements Node {
+  _id: ID!
+  asset_access_description: String
+  asset_description: String
+  asset_identifier: String
+  attachments: [Attachment]
+  generic_asset_type: String
+  id: ID!
+  methodology_description: String
+  scope_type: String
+}
+
+"""
+The connection type for PentestOpportunityGenericScope.
+"""
+type PentestOpportunityGenericScopeConnection {
+  """
+  A list of edges.
+  """
+  edges: [PentestOpportunityGenericScopeEdge]
+
+  """
+  A list of nodes.
+  """
+  nodes: [PentestOpportunityGenericScope]
+
+  """
+  Information to aid in pagination.
+  """
+  pageInfo: PageInfo!
+  total_count: Int!
+}
+
+"""
+An edge in a connection.
+"""
+type PentestOpportunityGenericScopeEdge {
+  """
+  A cursor for use in pagination.
+  """
+  cursor: String!
+
+  """
+  The item at the end of the edge.
+  """
+  node: PentestOpportunityGenericScope
 }
 
 """
