@@ -19447,7 +19447,7 @@ type LlmConversation implements Node {
     order_by: FiltersLlmConversationMessageFilterOrder
     where: FiltersLlmConversationMessageFilterInput
   ): LlmConversationMessageConnection
-  prompts(context_ids: [ID!]): [String!]
+  prompts(context_ids: [ID!]): [LlmPromptSuggestion!]
   subtitle: String
   title: String!
 }
@@ -19563,12 +19563,22 @@ type LlmConversationMessageElement implements Node {
 Types of LLM conversation message elements
 """
 enum LlmConversationMessageElementTypeEnum {
+  create_report_comment
   image
   link
   markdown
   separator
   text
   update_report_title
+}
+
+"""
+A prompt suggestion
+"""
+type LlmPromptSuggestion implements Node {
+  id: ID!
+  prompt: String!
+  title: String!
 }
 
 """
