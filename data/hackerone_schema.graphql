@@ -6747,7 +6747,6 @@ input CopilotInput {
   A unique identifier for the client performing the mutation.
   """
   clientMutationId: String
-  context_ids: [ID!]
   llm_conversation_id: ID!
   message: String!
 }
@@ -19609,6 +19608,7 @@ An LLM conversation
 """
 type LlmConversation implements Node {
   _id: ID!
+  context_ids: [ID!]!
   id: ID!
   llm_conversation_messages(
     """
@@ -19633,7 +19633,7 @@ type LlmConversation implements Node {
     order_by: FiltersLlmConversationMessageFilterOrder
     where: FiltersLlmConversationMessageFilterInput
   ): LlmConversationMessageConnection
-  prompts(context_ids: [ID!]): [LlmPromptSuggestion!]
+  next_prompts: [LlmPromptSuggestion!]
   subtitle: String
   title: String!
 }
@@ -22999,6 +22999,7 @@ input NewConversationInput {
   A unique identifier for the client performing the mutation.
   """
   clientMutationId: String
+  context_ids: [ID!]
 }
 
 """
