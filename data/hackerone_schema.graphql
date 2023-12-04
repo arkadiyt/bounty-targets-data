@@ -34030,10 +34030,14 @@ type StoreUserInputDraftPayload implements MutationResult {
 
 type StoredQuery implements Node & ResourceInterface {
   _id: ID!
+  average_match_duration: Int
   id: ID!
   index_class: IndexEnum!
+  maximum_match_duration: Int
+  minimum_match_duration: Int
   name: String
   query_string: String!
+  sum_match_duration: Int
   url: URI!
 }
 
