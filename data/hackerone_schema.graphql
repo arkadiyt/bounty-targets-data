@@ -3708,6 +3708,7 @@ type AssetEdge {
 Asset type enum
 """
 enum AssetImplementationTypeEnum {
+  AiModel
   AndroidApk
   AndroidPlayStore
   Cidr
@@ -3718,7 +3719,6 @@ enum AssetImplementationTypeEnum {
   IosIpa
   IosTestflight
   IpAddress
-  LargeLanguageModel
   OtherAsset
   SmartContract
   SourceCode
@@ -4527,6 +4527,12 @@ type BeneficiaryRequiredFieldEdge {
   """
   node: BeneficiaryRequiredField
 }
+
+"""
+Represents non-fractional signed whole numeric values. Since the value may
+exceed the size of a 32-bit integer, it's encoded as a string.
+"""
+scalar BigInt
 
 """
 A HackerOne Hacker Blog Post Type
@@ -19704,7 +19710,7 @@ An LLM conversation
 """
 type LlmConversation implements Node {
   _id: ID!
-  context_ids: [ID!]!
+  context_object: LlmConversationContext!
   id: ID!
   llm_conversation_messages(
     """
@@ -19757,6 +19763,21 @@ type LlmConversationConnection {
   Int
   """
   total_count: Int!
+}
+
+"""
+An LLM conversation context
+"""
+type LlmConversationContext implements Node {
+  """
+  ID of the object.
+  """
+  id: ID!
+  report_ids: [BigInt!]
+}
+
+input LlmConversationContextInputType {
+  report_ids: [Int!]
 }
 
 """
@@ -23109,7 +23130,7 @@ input NewConversationInput {
   A unique identifier for the client performing the mutation.
   """
   clientMutationId: String
-  context_ids: [ID!]
+  context_object: LlmConversationContextInputType
 }
 
 """
@@ -34375,13 +34396,13 @@ type StructuredScope implements Node & ResourceInterface {
 Structured Scope asset type enum
 """
 enum StructuredScopeAssetTypeEnum {
+  AI_MODEL
   APPLE_STORE_APP_ID
   CIDR
   DOWNLOADABLE_EXECUTABLES
   GOOGLE_PLAY_APP_ID
   HARDWARE
   IP_ADDRESS
-  LARGE_LANGUAGE_MODEL
   OTHER
   OTHER_APK
   OTHER_IPA
@@ -34397,13 +34418,13 @@ enum StructuredScopeAssetTypeEnum {
 Structured Scope asset type enum
 """
 enum StructuredScopeAssetTypeEnumInput {
+  AI_MODEL
   APPLE_STORE_APP_ID
   CIDR
   DOWNLOADABLE_EXECUTABLES
   GOOGLE_PLAY_APP_ID
   HARDWARE
   IP_ADDRESS
-  LARGE_LANGUAGE_MODEL
   OTHER
   OTHER_APK
   OTHER_IPA
