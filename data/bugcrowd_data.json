@@ -1505,7 +1505,7 @@
           "target": "Atlassian Start (https://start.atlassian.com)"
         },
         {
-          "type": "other",
+          "type": "website",
           "target": "Bamboo"
         },
         {
@@ -1517,8 +1517,8 @@
           "target": "Bitbucket Cloud including Bitbucket Pipelines (https://bitbucket.org)"
         },
         {
-          "type": "other",
-          "target": "Bitbucket Server"
+          "type": "website",
+          "target": "Bitbucket Data Center"
         },
         {
           "type": "website",
@@ -1546,22 +1546,22 @@
         },
         {
           "type": "android",
-          "target": "Confluence Server Mobile App for Android"
+          "target": "Confluence Data Center Mobile App for Android"
         },
         {
           "type": "ios",
-          "target": "Confluence Server Mobile App for iOS"
+          "target": "Confluence Data Center Mobile App for iOS"
         },
         {
-          "type": "other",
+          "type": "website",
           "target": "Crowd"
         },
         {
-          "type": "other",
+          "type": "website",
           "target": "Crucible"
         },
         {
-          "type": "other",
+          "type": "website",
           "target": "FishEye"
         },
         {
@@ -1581,36 +1581,36 @@
           "target": "Jira Cloud Mobile App for iOS"
         },
         {
-          "type": "other",
-          "target": "Jira Core Server"
+          "type": "website",
+          "target": "Jira Core Data Center"
+        },
+        {
+          "type": "android",
+          "target": "Jira Data Center Mobile App for Android"
+        },
+        {
+          "type": "ios",
+          "target": "Jira Data Center Mobile App for iOS"
         },
         {
           "type": "website",
           "target": "Jira Product Discovery"
         },
         {
-          "type": "android",
-          "target": "Jira Server Mobile App for Android"
-        },
-        {
-          "type": "ios",
-          "target": "Jira Server Mobile App for iOS"
-        },
-        {
           "type": "website",
           "target": "Jira Service Management Cloud (bugbounty-test-<bugcrowd-name>.atlassian.net)"
         },
         {
-          "type": "other",
-          "target": "Jira Service Management Server"
+          "type": "website",
+          "target": "Jira Service Management Data Center"
         },
         {
           "type": "website",
           "target": "Jira Software Cloud (bugbounty-test-<bugcrowd-name>.atlassian.net)"
         },
         {
-          "type": "other",
-          "target": "Jira Software Server"
+          "type": "website",
+          "target": "Jira Software Data Center"
         },
         {
           "type": "website",
@@ -1689,7 +1689,7 @@
           "target": "https://start.atlassian.com"
         },
         {
-          "type": "other",
+          "type": "website",
           "target": "https://www.atlassian.com/enterprise/data-center/bitbucket"
         },
         {
@@ -1697,19 +1697,19 @@
           "target": "https://www.atlassian.com/enterprise/data-center/confluence"
         },
         {
-          "type": "other",
+          "type": "website",
           "target": "https://www.atlassian.com/enterprise/data-center/crowd"
         },
         {
-          "type": "other",
+          "type": "website",
           "target": "https://www.atlassian.com/enterprise/data-center/jira"
         },
         {
-          "type": "other",
+          "type": "website",
           "target": "https://www.atlassian.com/enterprise/data-center/jira"
         },
         {
-          "type": "other",
+          "type": "website",
           "target": "https://www.atlassian.com/enterprise/data-center/jira/service-management"
         },
         {
@@ -1717,7 +1717,7 @@
           "target": "https://www.atlassian.com/software/atlas"
         },
         {
-          "type": "other",
+          "type": "website",
           "target": "https://www.atlassian.com/software/bamboo"
         },
         {
@@ -1737,11 +1737,11 @@
           "target": "https://www.atlassian.com/software/confluence/premium"
         },
         {
-          "type": "other",
+          "type": "website",
           "target": "https://www.atlassian.com/software/crucible"
         },
         {
-          "type": "other",
+          "type": "website",
           "target": "https://www.atlassian.com/software/fisheye"
         },
         {
@@ -4931,16 +4931,12 @@
     "targets": {
       "in_scope": [
         {
-          "type": "website",
-          "target": "http://security-testing-env-dashboard.k8s.test-001.d-usw-2.braze.com"
-        },
-        {
-          "type": "website",
-          "target": "https://bug-bounty.braze.com/"
-        },
-        {
           "type": "api",
-          "target": "https://security-testing-env-api.k8s.test-001.d-usw-2.braze.com/"
+          "target": "https://security-testing-env-api.k8s.tools-001.d-use-1.braze.com/"
+        },
+        {
+          "type": "website",
+          "target": "https://security-testing-env-dashboard.k8s.tools-001.d-use-1.braze.com/"
         }
       ],
       "out_of_scope": [
@@ -16957,6 +16953,10 @@
         },
         {
           "type": "website",
+          "target": "catch.opera.com"
+        },
+        {
+          "type": "website",
           "target": "certs.opera.com"
         },
         {
@@ -18938,25 +18938,6 @@
         {
           "type": "website",
           "target": "https://*.regionsapps.com"
-        }
-      ],
-      "out_of_scope": [
-
-      ]
-    }
-  },
-  {
-    "name": "Registrar.gov: Bug Bounty Program",
-    "url": "https://bugcrowd.com/registrar-dotgov",
-    "allows_disclosure": true,
-    "managed_by_bugcrowd": true,
-    "safe_harbor": "partial",
-    "max_payout": 3500,
-    "targets": {
-      "in_scope": [
-        {
-          "type": "website",
-          "target": "https://domains.dotgov.gov"
         }
       ],
       "out_of_scope": [

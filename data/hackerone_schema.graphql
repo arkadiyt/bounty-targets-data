@@ -19769,15 +19769,20 @@ type LlmConversationConnection {
 An LLM conversation context
 """
 type LlmConversationContext implements Node {
+  cve_ids: [String!]
+  cwe_ids: [String!]
+
   """
   ID of the object.
   """
   id: ID!
   report_ids: [BigInt!]
+  team_handles: [String!]
 }
 
 input LlmConversationContextInputType {
   report_ids: [Int!]
+  team_handles: [String!]
 }
 
 """
@@ -19803,10 +19808,7 @@ type LlmConversationMessage implements Node {
   author: String!
   created_at: DateTime!
   debug: String
-  elements: [LlmConversationMessageElement!]
   id: ID!
-  index: Int!
-  message: String
   message_index: Int
   messages: [String!]
   state: String!
@@ -19854,38 +19856,11 @@ type LlmConversationMessageEdge {
 }
 
 """
-An LLM conversation message element
-"""
-type LlmConversationMessageElement implements Node {
-  arguments: JSON!
-
-  """
-  ID of the object.
-  """
-  id: ID!
-  index: Int!
-  type: LlmConversationMessageElementTypeEnum!
-}
-
-"""
-Types of LLM conversation message elements
-"""
-enum LlmConversationMessageElementTypeEnum {
-  create_report_comment
-  image
-  link
-  loading
-  markdown
-  separator
-  text
-  update_report_title
-}
-
-"""
 A prompt suggestion
 """
 type LlmPromptSuggestion implements Node {
   id: ID!
+  partial: Boolean
   prompt: String!
   title: String!
 }
@@ -24060,6 +24035,7 @@ type Organization implements Node {
     size: Int
     system: Boolean
     team_ids: [Int!]
+    user_type: [String]
   ): SearchResultConnection
   pending_organization_member_invitations(
     """
@@ -25541,6 +25517,7 @@ type Pentest implements Node {
   structured_scope_types: [String!]
   summary_form_state: PentestSummaryFormStateEnum
   summary_report_delivery_date: DateTime
+  summary_reports_downloadable: Boolean!
   supporting_pentesters(
     """
     Returns the elements in the list that come after the specified cursor.
@@ -26495,7 +26472,7 @@ A pentest report
 """
 type PentestReport implements Node {
   _id: ID!
-  attachment: Attachment!
+  attachment: Attachment
   created_at: DateTime
   description: String
   id: ID!
@@ -28379,10 +28356,8 @@ type Query implements Node {
     last: Int
     ordered_by_timer: Boolean
     owner_usernames: [String!]
-    plus: Boolean
     pod_name: String
     priority: TriageInboxItemPriorityEnum
-    product_editions: [TriageInboxItemProductEditionFilterEnum!]
     report_id: Int
     report_substate: TriageInboxItemReportSubstateEnum
     report_title: String
@@ -38927,7 +38902,7 @@ Triage Inbox
 """
 type TriageInbox implements Node {
   id: ID!
-  oldest_undismissed_at(product_editions: [TriageInboxItemProductEditionFilterEnum!]!, view: TriageInboxItemViewEnum!): DateTime
+  oldest_undismissed_at(view: TriageInboxItemViewEnum!): DateTime
   owned_by_me_total_count(pod_name: String = null): Int!
   owned_by_triage_total_count(pod_name: String = null): Int!
   prioritization_total_count(pod_name: String = null): Int!
@@ -39008,14 +38983,6 @@ Valid values for the report priority of triage inbox items
 enum TriageInboxItemPriorityEnum {
   high
   regular
-}
-
-"""
-Valid values for the product edition of triage inbox items
-"""
-enum TriageInboxItemProductEditionFilterEnum {
-  enterprise
-  professional
 }
 
 """
@@ -48041,6 +48008,7 @@ type UserIdentity implements Node {
   has_unverifiable_citizenship: Boolean!
   has_unverifiable_residency: Boolean!
   id: ID!
+  meets_idv_one_valid_report_criteria: Boolean!
   residency_verification_limit_reached: Boolean!
   residency_verifications(
     """
