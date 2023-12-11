@@ -14913,6 +14913,7 @@ input DuplicateDetectionPageStateInput {
   selectedParameters: [String!]!
   selectedReportRank: Int!
   selectedSearchParamsGroups: [String!]!
+  selectedSubstates: [String!]!
   selectedTeamIds: [String!]!
   selectedTextQueries: [String!]!
 }
@@ -34781,6 +34782,7 @@ type Survey implements Node & ResourceInterface {
   category: String!
   id: ID!
   question: String!
+  question_settings: Hash
   structured_responses(
     """
     Returns the elements in the list that come after the specified cursor.
@@ -35143,7 +35145,6 @@ Prepared survey response reasons
 """
 type SurveyStructuredResponse implements Node {
   _id: ID!
-  enabled: Boolean!
   helper_text: String
   id: ID!
   reason: String!
