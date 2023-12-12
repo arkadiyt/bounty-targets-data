@@ -17099,6 +17099,19 @@ input FiltersTeamWeaknessFilterInput {
   states: [TeamWeaknessStates!]
 }
 
+input FiltersTermFilterInput {
+  _and: [FiltersTermFilterInput]
+  _not: FiltersTermFilterInput
+  _or: [FiltersTermFilterInput]
+  id: IntPredicateInput
+  name: StringPredicateInput
+}
+
+input FiltersTermFilterOrder {
+  created_at: FilterOrderPredicateInput
+  id: FilterOrderPredicateInput
+}
+
 input FiltersTriageSubscriptionFilterInput {
   _and: [FiltersTriageSubscriptionFilterInput]
   _not: FiltersTriageSubscriptionFilterInput
@@ -28306,6 +28319,29 @@ type Query implements Node {
     secure_order_by: FiltersTeamFilterOrder
     where: FiltersTeamFilterInput
   ): TeamConnection
+  terms(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+    order_by: FiltersTermFilterOrder
+    where: FiltersTermFilterInput!
+  ): TermConnection
   time_zones: [Hash!]!
   top_technology_tags(
     """
@@ -38110,6 +38146,53 @@ enum TechnologyProficiencyEnum {
   EXPERT
   INTERMEDIATE
   NOVICE
+}
+
+"""
+A HackerOne term object
+"""
+type Term implements Node {
+  _id: ID!
+  copy: String!
+  created_at: DateTime!
+  id: ID!
+  name: String!
+}
+
+"""
+The connection type for Term.
+"""
+type TermConnection {
+  """
+  A list of edges.
+  """
+  edges: [TermEdge]
+
+  """
+  A list of nodes.
+  """
+  nodes: [Term]
+
+  """
+  Information to aid in pagination.
+  """
+  pageInfo: PageInfo!
+  total_count: Int
+}
+
+"""
+An edge in a connection.
+"""
+type TermEdge {
+  """
+  A cursor for use in pagination.
+  """
+  cursor: String!
+
+  """
+  The item at the end of the edge.
+  """
+  node: Term
 }
 
 input TermFilterInput {
