@@ -36298,6 +36298,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
     month: Int = null
     year: Int = null
   ): PaymentTransactionConnection
+  payments_team_owner: Team
   pending_invitations(
     """
     Returns the elements in the list that come after the specified cursor.
