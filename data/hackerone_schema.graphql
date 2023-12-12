@@ -4347,6 +4347,7 @@ type BbpLaunchConfiguration implements Node {
   attachment: Attachment
   current_configuration_step: String
   has_changed_brand_promise: Boolean!
+  has_changed_custom_section: Boolean!
   has_changed_disclosure_policies: Boolean!
   has_changed_faq: Boolean!
   has_changed_legal: Boolean!
@@ -4360,6 +4361,8 @@ type BbpLaunchConfiguration implements Node {
   launch_at: DateTime
   launch_requested_at: DateTime
   policy_brand_promise: String
+  policy_custom_section_content: String
+  policy_custom_section_name: String
   policy_disclosure_policies: String
   policy_faq: String
   policy_legal: String
@@ -40489,6 +40492,8 @@ input UpdateBbpLaunchConfigurationPolicyInput {
   """
   clientMutationId: String
   policy_brand_promise: String
+  policy_custom_section_content: String
+  policy_custom_section_name: String
   policy_disclosure_policies: String
   policy_faq: String
   policy_legal: String
