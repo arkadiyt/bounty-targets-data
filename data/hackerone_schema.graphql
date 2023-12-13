@@ -4280,6 +4280,12 @@ type AutosavePentestOpportunityPayload implements MutationResult {
   was_successful: Boolean!
 }
 
+enum BackgroundStatus {
+  background_blocked
+  background_checked
+  background_unchecked
+}
+
 """
 A HackerOne badge
 """
@@ -48071,6 +48077,7 @@ Data about the user's identity
 type UserIdentity implements Node {
   active_citizenship_verification_url: String
   active_residency_verification_url: String
+  background_status: BackgroundStatus!
   citizenship_verification_limit_reached: Boolean!
   citizenship_verifications(
     """
