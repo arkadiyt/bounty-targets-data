@@ -27966,6 +27966,7 @@ type Query implements Node {
     size: Int
     sort: [SortInput!]
   ): SearchResultConnection
+  organization(handle: String!): Organization!
   organization_inboxes(
     """
     Returns the elements in the list that come after the specified cursor.
