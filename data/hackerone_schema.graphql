@@ -9492,7 +9492,7 @@ input CreateOrganizationSamlProviderInput {
   A unique identifier for the client performing the mutation.
   """
   clientMutationId: String
-  domain_ownership_id: ID!
+  domain_ownership_ids: [ID!]!
   name: String!
   organization_id: ID!
   single_sign_on_url: String!
@@ -42666,7 +42666,7 @@ input UpdateOrganizationSamlProviderInput {
   A unique identifier for the client performing the mutation.
   """
   clientMutationId: String
-  domain_ownership_id: ID!
+  domain_ownership_ids: [ID!]!
   name: String!
   saml_provider_id: ID!
   single_sign_on_url: String!
