@@ -39325,6 +39325,7 @@ enum TriageInboxItemViewEnum {
 Triage meta
 """
 type TriageMeta implements Node & ResourceInterface {
+  asset_type: String
   currently_viewing_triager: User
   id: ID!
   likely_invalid_submission: Boolean!
