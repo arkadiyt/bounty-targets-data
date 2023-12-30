@@ -217,7 +217,72 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "url",
+          "endpoint": "login.cm.com",
+          "description": "",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.ticketing.cm.com",
+          "description": "Login to your account and go to https://www.cm.com/en-gb/app/ticketing/From here you can create tickets and much more!Make sure to take a look at the user-side ticket store as well (https://store.ticketing.cm.com/..)",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.cm.com",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.cmtelecom.com",
+          "description": "Some of the applications that are in our scope use our old api.If you find a bug on this api and it is from a product that is in scope, it is valid.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "cm.com/[locale]/app/*",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "cm.com/[locale]/register",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "cm.com/app/messagingtrial/",
+          "description": "An application that makes it possible for developers to do a limited test of sending messages using the CM.COM business messaging API.What we would like to know is:",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.cm.com",
+          "description": "",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.cm.com",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.cmtelecom.com",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "demo.globalticket.com/*",
+          "description": "GlobalTicket is one of our integrations.Be sure to check out /cms to try and work your way into it.",
+          "impact": "No bounty"
+        }
       ],
       "out_of_scope": [
 
@@ -592,42 +657,7 @@
     },
     "targets": {
       "in_scope": [
-        {
-          "type": "url",
-          "endpoint": "*.gulp.ch",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.gulp.de",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "demo.tendertracker.de",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "www.gulp-shop.de",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "www.gulp.ch/forum/*",
-          "description": "",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "www.gulp.de/forum/*",
-          "description": "",
-          "impact": "Out of scope"
-        }
+
       ],
       "out_of_scope": [
 
@@ -1852,96 +1882,7 @@
     },
     "targets": {
       "in_scope": [
-        {
-          "type": "url",
-          "endpoint": "*.aroundtheworld.tomorrowland.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "artists.tomorrowland.com/production-website/33117",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "cognito-idp.eu-west-1.amazonaws.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "android",
-          "endpoint": "com.tomorrowland.oneworldradio",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "globaljourney.tomorrowland.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "mdm.weareone.world",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "my.tomorrowland.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "ios",
-          "endpoint": "one-world-radio-tomorrowland/id1485778856",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "oneworldradio.tomorrowland.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "sp1y1tpaf1.execute-api.eu-west-1.amazonaws.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "winterpackages.tomorrowland.com",
-          "description": "Out of Scope: bypassing payment process",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "www.tomorrowland.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.tomorrowland.com",
-          "description": "",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "components.stag.tomorrowland.com",
-          "description": "Vulnerabilities found on either components.stag.tomorrowland.com or components.tomorrowland.com will be considered duplicate.",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "components.tomorrowland.com",
-          "description": "Vulnerabilities found on either components.stag.tomorrowland.com or components.tomorrowland.com will be considered duplicate.",
-          "impact": "Tier 3"
-        }
+
       ],
       "out_of_scope": [
 
