@@ -42,7 +42,60 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "url",
+          "endpoint": "https://api.the-strip.eu",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://cdn.the-strip.eu",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://en-gb.napoleoncasino.be/wimi/game/play/slug/napoleon-spinner",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://en-gb.napoleoncasino.be/wimi/game/play/slug/napoleon-spinner-deluxe",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://en-gb.napoleoncasino.be/wimi/game/play/slug/napoleon-spinner-max",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://en-gb.napoleondice.be/wimi/game/play/slug/dice-spinner",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://en-gb.napoleondice.be/wimi/game/play/slug/multi-jackpot-cards",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://en-gb.napoleondice.be/wimi/game/play/slug/pick-a-tiki",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "wss://socketcluster.the-strip.eu",
+          "description": "",
+          "impact": "Tier 2"
+        }
       ],
       "out_of_scope": [
 
@@ -217,72 +270,7 @@
     },
     "targets": {
       "in_scope": [
-        {
-          "type": "url",
-          "endpoint": "login.cm.com",
-          "description": "",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.ticketing.cm.com",
-          "description": "Login to your account and go to https://www.cm.com/en-gb/app/ticketing/From here you can create tickets and much more!Make sure to take a look at the user-side ticket store as well (https://store.ticketing.cm.com/..)",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "api.cm.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "api.cmtelecom.com",
-          "description": "Some of the applications that are in our scope use our old api.If you find a bug on this api and it is from a product that is in scope, it is valid.",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "cm.com/[locale]/app/*",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "cm.com/[locale]/register",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "cm.com/app/messagingtrial/",
-          "description": "An application that makes it possible for developers to do a limited test of sending messages using the CM.COM business messaging API.What we would like to know is:",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "www.cm.com",
-          "description": "",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.cm.com",
-          "description": "",
-          "impact": "No bounty"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.cmtelecom.com",
-          "description": "",
-          "impact": "No bounty"
-        },
-        {
-          "type": "url",
-          "endpoint": "demo.globalticket.com/*",
-          "description": "GlobalTicket is one of our integrations.Be sure to check out /cms to try and work your way into it.",
-          "impact": "No bounty"
-        }
+
       ],
       "out_of_scope": [
 
@@ -1007,7 +995,90 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "url",
+          "endpoint": "edge.lansweeper.com",
+          "description": "Domain used during the two-way sync process between the local web console (on-premises software) and the cloud platform. You can request your trial on our website: https://www.lansweeper.com/download/ but always use \"intigriti.me\" address for any user accountWith this trial you get access to our cloud platform (app.lansweeper.com), our on-premises software and the sync process (edge.lansweeper.com) between these two. You have to install our on-premises software somewhere locally and this will allow you to scan your local network and push the results to the cloud platform via the sync process.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.lansweeper.com",
+          "description": "API used for integrations with our cloud platform (app.lansweeper.com).More information about our API: https://docs.lansweeper.com/docs",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "app.lansweeper.com",
+          "description": "The cloud Platform, this also includes lecstaticcontent.lansweeper.comYou can request your trial on our website: https://www.lansweeper.com/download/ but always use \"intigriti.me\" address for any user accountWith this trial you get access to our cloud platform (app.lansweeper.com), our on-premises software and the sync process (edge.lansweeper.com) between these two. You have to install our on-premises software somewhere locally and this will allow you to scan your local network and push the results to the cloud platform via the sync process.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "backoffice.lansweeper.com",
+          "description": "Internal backoffice portal for cloud platformNo authorisation will be given",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "app.lansweeper.com/trial",
+          "description": "Demo site with demo data to test the cloud platformAlways use \"intigriti.me\" address for any web form",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "autoupdateapi.lansweeper.com",
+          "description": "API for updating on-premise software",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "docs.lansweeper.com",
+          "description": "Lansweeper's technical documentation",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "login.lansweeper.com",
+          "description": "Auth0 identitiy provider for cloud platform.Always use \"intigriti.me\" address for any user account",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "on-premises software",
+          "description": "The on-premises software is the latest available version on our website (www.lansweeper.com/changelog).You can request your trial on our website: https://www.lansweeper.com/download/ but always use \"intigriti.me\" address for any user accountWith this trial you get access to our cloud platform (app.lansweeper.com), our on-premises software and the sync process (edge.lansweeper.com) between these two. You have to install our on-premises software somewhere locally and this will allow you to scan your local network and push the results to the cloud platform via the sync process.",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "OT scanner",
+          "description": "Scanner to discover OT devices.",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.lansweeper.com",
+          "description": "Always use \"intigriti.me\" address for any web formOut of scope for this domain:Store.lansweeper.comwww.lansweeper.com/forumThird-party plug-ins (e.g. Pardot - CleverBridge - Botpress)",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.lansweeper.com",
+          "description": "Any other public-facing Lansweeper related URL",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "careers.lansweeper.com",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.lansweeper.com/forum",
+          "description": "",
+          "impact": "Out of scope"
+        }
       ],
       "out_of_scope": [
 
@@ -1132,7 +1203,114 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "url",
+          "endpoint": "*.bigmoralis.com",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.grandmoralis.com",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.moralis-internal.io",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.moralis-streams.com",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.moralis.io",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.moralisapp.com",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.moralishost.com",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.moralismoney.com",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.moralisweb3.com",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.usemoralis.com",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "academy.moralis.io",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "docs.moralis.io",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "forum.moralis.io",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "merch.moralis.io",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "roadmap.moralis.io",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "status.moralis.io",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "studygroup.moralis.io",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "talent.moralis.io",
+          "description": "",
+          "impact": "Out of scope"
+        }
       ],
       "out_of_scope": [
 
@@ -1157,7 +1335,30 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "url",
+          "endpoint": "*.napoleoncasino.be",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.napoleondice.be",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.napoleongames.be",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.napoleonsports.be",
+          "description": "",
+          "impact": "Tier 2"
+        }
       ],
       "out_of_scope": [
 
@@ -1282,7 +1483,30 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "url",
+          "endpoint": "console.nxtport.eu",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "login.nxtport.eu",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "signup.nxtport.eu",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.nxtport.com",
+          "description": "",
+          "impact": "No bounty"
+        }
       ],
       "out_of_scope": [
 
@@ -1482,7 +1706,24 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "other",
+          "endpoint": "https://gist.github.com/RedBullSecurity/3eb88debcb01759eccf65ec2b799b340",
+          "description": "Domains that are related to Red Bull and can be found on this list. Any subdomain not mentioned in this list, will be considered as out of scope.",
+          "impact": "No bounty"
+        },
+        {
+          "type": "other",
+          "endpoint": "IOS and Android apps related to Red Bull",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.newyorkredbulls.com",
+          "description": "",
+          "impact": "Out of scope"
+        }
       ],
       "out_of_scope": [
 
@@ -1607,7 +1848,114 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "url",
+          "endpoint": "api.sentiance.com",
+          "description": "Main API",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "android",
+          "endpoint": "com.sentiance.journeys2",
+          "description": "Insights Google Store link",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "controltower.sentiance.com",
+          "description": "Insights dashboard",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "ios",
+          "endpoint": "https://apps.apple.com/us/app/rac-go/id6444858115",
+          "description": "RAC Go Apple store link",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "android",
+          "endpoint": "https://play.google.com/store/apps/details?id=com.sentiance.saferdriver",
+          "description": "RAC Go Google store link",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "ios",
+          "endpoint": "insights-by-sentiance/id1608074635",
+          "description": "Insights Apple Store link",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "journeys-api.sentiance.com/v2",
+          "description": "Insights app base API",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.sentiance.com",
+          "description": "IMPORTANT! Please read the out of scope section. Not all subdomains are in scope",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "android",
+          "endpoint": "com.sentiance.journeys",
+          "description": "Journeys Google Store link",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "ios",
+          "endpoint": "journeys-2/id984087229?mt=8",
+          "description": "Journeys Apple Store link",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "docs.sentiance.com",
+          "description": "",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "jobs.sentiance.com",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "press.sentiance.com",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "_weather.sentiance.com",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "betadoc.sentiance.com",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "landing-automotive.sentiance.com",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "mb.sentiance.com",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.sentiance.com",
+          "description": "(including no subdomain)",
+          "impact": "Out of scope"
+        }
       ],
       "out_of_scope": [
 
@@ -1807,7 +2155,18 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "url",
+          "endpoint": "aweb.suivo.com",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "asupport.suivo.com",
+          "description": "",
+          "impact": "Tier 2"
+        }
       ],
       "out_of_scope": [
 
@@ -1957,7 +2316,228 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "url",
+          "endpoint": "api.truelayer[-sandbox].com",
+          "description": "The majority of our API endpoints live here",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "auth.truelayer[-sandbox].com",
+          "description": "Our service for getting OAuth access tokens to access our APIs",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "login-api.truelayer[-sandbox].com",
+          "description": "",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "login.truelayer[-sandbox].com",
+          "description": "Where you can connect your bank account and use Open Banking to pull data such as transactions",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "onboarding-api.truelayer.com",
+          "description": "Used in the developer console",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "pay-api.truelayer[-sandbox].com",
+          "description": "",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "pay.truelayer[-sandbox].com",
+          "description": "Some of our older payment API endpoints live here rather than on api.truelayer.com",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "paydirect.truelayer[-sandbox].com",
+          "description": "Some of our older payment API endpoints live here rather than on api.truelayer.com",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "payment.truelayer[-sandbox].com",
+          "description": "Our hosted payments page for merchants that want us to manage the UI screens for making payments",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "payouts.truelayer[-sandbox].com",
+          "description": "Our Payouts API",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "users-api.truelayer.com",
+          "description": "Internal service for managing users",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "other",
+          "endpoint": "C# SDK",
+          "description": "https://github.com/TrueLayer/truelayer-dotnet",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "console-backend.truelayer[-sandbox].com",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "console.truelayer[-sandbox].com",
+          "description": "Our developer console where you can login, create applications, manage your OAuth client ID/secret, upload public keys for request signing, view transactions",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "hpp.truelayer[-sandbox].com",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "iOS SDK",
+          "description": "https://github.com/TrueLayer/TrueLayer-iOS-SDK",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "Java SDK",
+          "description": "https://github.com/TrueLayer/truelayer-java",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "PHP SDK",
+          "description": "https://github.com/TrueLayer/truelayer-php",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "React Native SDK",
+          "description": "https://github.com/TrueLayer/truelayer-react-native-sdk",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "Rust SDK",
+          "description": "https://github.com/TrueLayer/truelayer-rust",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "TrueLayer for Magento (Magento plugin)",
+          "description": "https://github.com/TrueLayer/magento2",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "TrueLayer for WooCommerce (WordPress plugin)",
+          "description": "https://wordpress.org/plugins/truelayer-for-woocommerce/ is our WordPress plugin allowing you to use TrueLayer as a checkout option in your WooCommerce store. The source code is also available on GitHub.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "truelayer-signing",
+          "description": "https://github.com/TrueLayer/truelayer-signing is our open source library for generating signed requests for calling TrueLayer APIs. Many languages are supported including Rust, C#, NodeJS, Go, Java and PHP.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "webhooks.truelayer[-sandbox].com",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.truelayer.cloud",
+          "description": "",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.truelayer.com",
+          "description": "",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.truelayer.io",
+          "description": "",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "banks.truelayer.com",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "careers.truelayer.com",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "docs.truelayer.com",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://truelayer.com/contact/",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "index.truelayer.com",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "info.truelayer.com",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "signin.truelayer.com",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "statuspage.truelayer.com",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "support.truelayer.com",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "truelayer.zendesk.com",
+          "description": "",
+          "impact": "Out of scope"
+        }
       ],
       "out_of_scope": [
 
@@ -2032,7 +2612,216 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "ip range",
+          "endpoint": "134.58.179.102-103",
+          "description": "",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "autodiscover.uzleuven.be",
+          "description": "",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "ecrf.uzleuven.be",
+          "description": "",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "extranet-asa.uzleuven.be",
+          "description": "",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "extranet.uzleuven.be",
+          "description": "",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "liquidfiles.uzleuven.be",
+          "description": "",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "mx1.uzleuven.be",
+          "description": "",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "mx2.uzleuven.be",
+          "description": "",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "pcrstudioruzb.uzleuven.be",
+          "description": "",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "prddsplunkhf.uzleuven.be",
+          "description": "",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "sts.uzleuven.be",
+          "description": "",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.uzleuven.be",
+          "description": "",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "dns1.uzleuven.be",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "dns2.uzleuven.be",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "liquidfilestest.uzleuven.be",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "teststs.uzleuven.be",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "uzlcm12cmg1.uzleuven.be",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "w1.uzleuven.be",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.kwsdose.be",
+          "description": "",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.playuzleuven.be",
+          "description": "",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.uzleuven.*",
+          "description": "",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.contactallerg(y|ie).uzleuven.be",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.mir.uzleuven.be",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "*dev.uzleuven.be",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "*idp*.uzleuven.be",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "*stag*.uzleuven.be",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "files.uzleuven.be",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "kumulus.uzleuven.be",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "mijnacc.uzleuven.be",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "mirc.uzleuven.be",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "prddnighting01.uzleuven.be",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "w1.uzleuven.be/random",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "ziekenhuisschool.be",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "jobs.uzleuven.be",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "vacatures.uzleuven.be",
+          "description": "",
+          "impact": "Out of scope"
+        }
       ],
       "out_of_scope": [
 
@@ -2232,7 +3021,84 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "ios",
+          "endpoint": "1467907532",
+          "description": "An iOS application for demoing our product.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "alchemy.veriff.com",
+          "description": "This is an end user (internal) API endpoint.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.flamingo-eu.veriff.com",
+          "description": "This is a public API endpoint.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.us.veriff.me",
+          "description": "This is a public API endpoint.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.veriff.me",
+          "description": "This is a public API endpoint.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "android",
+          "endpoint": "com.veriff.demo",
+          "description": "An Android application for demoing our product.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "louvre.veriff.me",
+          "description": "This is an end user (internal) API endpoint.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "magic.veriff.me",
+          "description": "This is an end user (internal) API endpoint.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "station.veriff.com",
+          "description": "Here you can find our Veriff Station application.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "stationapi.veriff.com",
+          "description": "This is the backend for our Station application.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.veriff.com",
+          "description": "Please note that third party services are out of scope unless the issue is caused due to a misconfiguration by Veriff.",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "developers.veriff.me",
+          "description": "You can find our developers documentation here.",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.veriff.com",
+          "description": "This is our marketing website.",
+          "impact": "Tier 3"
+        }
       ],
       "out_of_scope": [
 
@@ -2432,7 +3298,306 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "url",
+          "endpoint": "*ensemble*.yahoo.com",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "*omega*.yahoo.com",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "7 News",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "AOL (misc)",
+          "description": "Only use this asset when nothing else can be reasonably selected.Bugs with AOL that are not listed in scope of our other AOL-related assets can still be submitted to this asset and might be eligible for award, at the sole discretion of the Yahoo Bug Bounty team.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "AOL Help",
+          "description": "Any bugs found in non-production environments will not be eligible for the Same Bug Different Host bonus if the issue also exists in production.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "AOL Homepage",
+          "description": "First Party Things:",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "AOL Mail",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "AOL Search",
+          "description": "Any bugs found in non-production environments will not be eligible for the Same Bug Different Host bonus if the issue also exists in production.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "apis.mail.yahoo.com",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "Autoblog",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "data.mail.yahoo.com",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "Engadget",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "Flurry",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "Gemini",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "Low Cost Access",
+          "description": "##Other places to look##Notes",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "Membership",
+          "description": "##In ScopeSome documentation that may help:https://developer.yahoo.com/oauth2/guide/Specific paths to target….For login.*.comFor api.login.*.com##Out of Scope##Limits",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "onepush.query.yahoo.com",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "Online Marketplace",
+          "description": "Online Marketplace (MyAccount) supports many AOL properties and can be accessed by a variety of CNAME records.Please consolidate your reports.Note: Reporting the same issue separately for multiple CNAMEs will result in reports being marked as Duplicate at best.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "Other (Misc)",
+          "description": "Only use this asset when nothing else can be reasonably selected. Bugs with Yahoo products that are not listed in scope of our Public Program can still be submitted to this asset and might be eligible for award, at the sole discretion of the Yahoo Bug Bounty team .Use this asset for:",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "proddata.xobni.yahoo.com",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "Social Media Accounts",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "Techcrunch",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "TW eCommerce: Auctions",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "TW eCommerce: Shopping",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "TW eCommerce: Store",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "TW eCommerce: Used Car",
+          "description": "Refer to the  ## Notes ##  section in the TW eCommerce: Auctions listing.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "TW Media: Front Page",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "TW Media: News",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "TW Media: Stock",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "Yahoo Calendar",
+          "description": "Specific paths to look at:Limit traffic against our services to < 10/second when probing or testing.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "Yahoo Finance",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "Yahoo HK News",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "Yahoo Mail",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "Yahoo News",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "Yahoo Open Source Projects",
+          "description": "Select open source projects are now eligible for bounties.The rest of our open source projects are technically in scope, but at a reduced rate for the time being.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "Yahoo Search",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "Yahoo Sports: Best Ball",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "Yahoo Sports: Daily Fantasy",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "Yahoo Sports: Editorial",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "Yahoo Sports: Fantasy Games",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "Yahoo Sports: Fantasy Slate/PicknWin",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "Yahoo Sports: Fantasy Sports",
+          "description": "The betting feature in Fantasy is provided by a third party, BetMGM. https://sports.yahoo.com/odds/, is the page from where it redirects the user to the BetMGM. This is geographically restricted.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "Yahoo Sports: Fantasy Wallet",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "Yahoo Sports: Mobile",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "Yahoo Sports: Rivals",
+          "description": "All testing against rivals is to be MANUAL only. ZERO automated tools are allowed. This notice is your warning.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "Yahoo Sports: Rivals Forums",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "Yahoo Video",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "Yahoo Weather",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "Yahoo! (Misc)",
+          "description": "Only use this asset when nothing else can be reasonably selected.Bugs with Yahoo! that are not listed in scope of our other Yahoo-related assets can still be submitted to this asset and might be eligible for award, at the sole discretion of the Yahoo Bug Bounty team.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "yimg.com",
+          "description": "yimg is a resource storage and content distribution network (CDN).What does that mean for my report?",
+          "impact": "Tier 2"
+        }
       ],
       "out_of_scope": [
 
