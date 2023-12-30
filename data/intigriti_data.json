@@ -708,48 +708,7 @@
     },
     "targets": {
       "in_scope": [
-        {
-          "type": "ios",
-          "endpoint": "1416625210",
-          "description": "React-Native built iOS app",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "android",
-          "endpoint": "com.freshfoodventures.crisp",
-          "description": "React-Native built Android app",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "crisp.ninja",
-          "description": "Code review tool behind IP-filter",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "for-hackers.crisp.kitchen",
-          "description": "Back-office management login page.(for-hackers.crisp.kitchen is a CNAME to crisp.kitchen; it allows us to classify traffic)",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "for-hackers.crisp.nl",
-          "description": "Main frontpage & landing pages.(for-hackers.crisp.nl is a CNAME to crisp.nl; it allows us to classify traffic)",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "for-hackers.crispapp.nl",
-          "description": "Backend host to which apps connect.(for-hackers.crispapp.nl is a CNAME to crispapp.nl; it allows us to classify traffic)",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "https://for-hackers.crispapp.nl/web-rn/",
-          "description": "Hidden web build of the app. Client-side issues that do not exist in the native apps are capped to low severity.",
-          "impact": "Tier 2"
-        }
+
       ],
       "out_of_scope": [
 
@@ -979,7 +938,66 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "url",
+          "endpoint": "myaccount.demorgen.be",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "shop.demorgen.be",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.demorgen.be",
+          "description": "excluding",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.demorgen.be/abonnementen",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.demorgen.be",
+          "description": "excluding abonnement.demorgen.be",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "* demorgen.be/inloggen",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "* demorgen.be/login",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "* demorgen.be/registreren",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "* demorgen.be/service",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "abonnement.demorgen.be",
+          "description": "",
+          "impact": "Out of scope"
+        }
       ],
       "out_of_scope": [
 
@@ -5818,7 +5836,42 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "url",
+          "endpoint": "*.sqills.com",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.sqills.team",
+          "description": "",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.red.sqills.team",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "booking.*.cloud.sqills.com",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "booking.*.sqills.com",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "careers.sqills.com",
+          "description": "",
+          "impact": "Out of scope"
+        }
       ],
       "out_of_scope": [
 
