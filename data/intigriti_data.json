@@ -92,7 +92,30 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "url",
+          "endpoint": "*.allegro.pl.allegrosandbox.pl",
+          "description": "This is our sandbox environment that replicates production. For more information please visit developer website.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.allegro.pl",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.allegrogroup.com",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "other",
+          "endpoint": "Any production website owned by Allegro not listed in Domains",
+          "description": "",
+          "impact": "Out of scope"
+        }
       ],
       "out_of_scope": [
 
@@ -1142,78 +1165,7 @@
     },
     "targets": {
       "in_scope": [
-        {
-          "type": "other",
-          "endpoint": "134.58.179.82",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "android",
-          "endpoint": "be.nexuzhealth.mobile.cpv",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "android",
-          "endpoint": "be.nexuzhealth.mobile.kws",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "android",
-          "endpoint": "be.nexuzhealth.mobile.mynexuz",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "forms.nexuzhealth.be",
-          "description": "Registration for code cards used to authenticate on the mynexuzhealth application",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "idp-mobile.nexuzhealth.be",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "ios",
-          "endpoint": "kws-companion/id1342124012",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "mobile.nexuzhealth.be",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "mynexuz.be",
-          "description": "🇬🇧🇫🇷🇳🇱",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "mynexuz.be/myUZ/",
-          "description": "🇬🇧🇫🇷🇳🇱",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "ios",
-          "endpoint": "mynexuzhealth/id1459856321",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "https://www.nexuzhealth.com/nl/mynexuzhealthpro",
-          "description": "",
-          "impact": "Out of scope"
-        }
+
       ],
       "out_of_scope": [
 
@@ -1713,7 +1665,78 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "ios",
+          "endpoint": "1114799709",
+          "description": "The iOS Player app that allows you to browse and play music.In order to use the iOS Player you will need a pairing code that you can obtain through https://business.soundtrackyourbrand.com using the test credentials.https://www.youtube.com/watch?v=y7HGAtsB6Tg",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "ios",
+          "endpoint": "1114800186",
+          "description": "The iOS Remote that allows you to remotely control your Soundtrack Players.In order to use the iOS Remote you will need a remote code that you can obtain through https://business.soundtrackyourbrand.com using the test credentials.https://www.youtube.com/watch?v=cmAe1kRvOeY",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.soundtrackyourbrand.com",
+          "description": "Our public API. Used by us as well as third parties. You can use your regular login token to authenticate.Docs: https://developer.soundtrackyourbrand.com/apiGraphQL Explorer: https://api.soundtrackyourbrand.com/v2/explorePlease use one of the claimed test credentials. In order to use the API you can login using your claimed credentials (via loginUser) and use the token you get back to issue API calls.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "billing.api.soundtrackyourbrand.com",
+          "description": "Our billing service. Handles payments (one time and recurring), price and product management and subscription renewals.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "builds.soundtrackyourbrand.com",
+          "description": "Our service which does gradual rollout of our player software to our Windows client and hardware players.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "business.soundtrackyourbrand.com",
+          "description": "Our web based management console that allows users to administer their players, music and their account.To claim bounties for this domain you need to use one of the claimed test credentials.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "android",
+          "endpoint": "com.soundtrackyourbrand.soundtrack.player",
+          "description": "The Android Player app that allows you to browse and play music.In order to use the Android Player you will need a pairing code that you can obtain through https://business.soundtrackyourbrand.com using the test credentials.https://www.youtube.com/watch?v=y7HGAtsB6Tg",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://auth.api.soundtrackyourbrand.com/",
+          "description": "Our authentication service.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "other",
+          "endpoint": "https://builds.soundtrackyourbrand.com/download/WIN32SOUNDTRACK/latest",
+          "description": "The Windows Player that allows you to play music. No user interface except for a tray icon.In order to use the Windows Player you will need a pairing code that you can obtain through https://business.soundtrackyourbrand.com using the test credentials.https://www.youtube.com/watch?v=HjFfXcjSEmM",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://radio.api.soundtrackyourbrand.com/",
+          "description": "Our playlisting service.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://www.soundtrackyourbrand.com",
+          "description": "Our public website.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "other",
+          "endpoint": "macOS app",
+          "description": "The macOS Player app allows you to browse and play music. You can find it in the App Store: https://apps.apple.com/se/app/soundtrack-player/id1114799709?l=enIn order to use the macOS you will need a pairing code that you can obtain through https://business.soundtrackyourbrand.com using the test credentials.https://www.youtube.com/watch?v=y7HGAtsB6Tg",
+          "impact": "Tier 1"
+        }
       ],
       "out_of_scope": [
 
@@ -2288,7 +2311,12 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "url",
+          "endpoint": "all",
+          "description": "This program covers all Visma services, products or web properties.We do not offer money rewards for this program, but as a small token of appreciation for all researchers that submit a previously unknown vulnerability that triggers a code or configuration change, we will offer a place on our Security Hall of Fame (HoF).Also for all valid Medium+ reports, we will offer swags.For money rewards, the only exceptions are the specific assets listed in our Public Bug Bounty Program, see https://app.intigriti.com/programs/visma/visma/detail. Please note that we will only accept reports for the explicitly listed assets under our Public program.",
+          "impact": "No bounty"
+        }
       ],
       "out_of_scope": [
 
