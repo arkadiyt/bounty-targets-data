@@ -1167,7 +1167,78 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "url",
+          "endpoint": "analytics.ninjakiwi.com",
+          "description": "This domain hosts the API that consumed analytics events from our game clients",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.ninjakiwi.com",
+          "description": "This domain hosts the API for our mobile and PC games. Monitoring traffic through one of our game clients is the easiest method to investigate our main API. Most of our applications are available for free on Steam. Please carefully read the in-scope section regarding what sorts of exploits will be considering in-scope for this domain.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "builds-auckland.ninja.kiwi",
+          "description": "This domain hosts builds of Ninja Kiwi games for iOS devices.Areas of focus:",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.nkstatic.com",
+          "description": "This domain hosts static content for Ninja Kiwi games and website.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "battles.tv",
+          "description": "Battles.tv is used to share replays from our Bloons TD Battles game.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "data.ninjakiwi.com",
+          "description": "This domain hosts our public data API which grants open access to in-game data from our biggest games. For example player profiles, leatherboards and event information is available through this domain.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "ninja.kiwi",
+          "description": "This domain is used by Ninja Kiwi for our URL shortener service, ie https://ninja.kiwi/intigriti.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "ninjakiwi.com",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.ninjakiwi.com",
+          "description": "This covers any subdomains of ninjakiwi.com other than sub-domains which are managed by authorized third-party services or included in the list below.Third Party ServicesThe following domains are explicitly excluded",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "ct.ninjakiwi.com",
+          "description": "",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "mynk.ninjakiwi.com",
+          "description": "This is a legacy domain which powers our Flash games. Uses Flash AMF.",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.souparea.com",
+          "description": "This domain will be considered out of scope unless it can be shown to allow an exploit on one of our Tier 1-3 domains.",
+          "impact": "No bounty"
+        }
       ],
       "out_of_scope": [
 
@@ -1792,96 +1863,7 @@
     },
     "targets": {
       "in_scope": [
-        {
-          "type": "url",
-          "endpoint": "*.aroundtheworld.tomorrowland.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "artists.tomorrowland.com/production-website/33117",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "cognito-idp.eu-west-1.amazonaws.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "android",
-          "endpoint": "com.tomorrowland.oneworldradio",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "globaljourney.tomorrowland.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "mdm.weareone.world",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "my.tomorrowland.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "ios",
-          "endpoint": "one-world-radio-tomorrowland/id1485778856",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "oneworldradio.tomorrowland.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "sp1y1tpaf1.execute-api.eu-west-1.amazonaws.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "winterpackages.tomorrowland.com",
-          "description": "Out of Scope: bypassing payment process",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "www.tomorrowland.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.tomorrowland.com",
-          "description": "",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "components.stag.tomorrowland.com",
-          "description": "Vulnerabilities found on either components.stag.tomorrowland.com or components.tomorrowland.com will be considered duplicate.",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "components.tomorrowland.com",
-          "description": "Vulnerabilities found on either components.stag.tomorrowland.com or components.tomorrowland.com will be considered duplicate.",
-          "impact": "Tier 3"
-        }
+
       ],
       "out_of_scope": [
 
