@@ -217,72 +217,7 @@
     },
     "targets": {
       "in_scope": [
-        {
-          "type": "url",
-          "endpoint": "login.cm.com",
-          "description": "",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.ticketing.cm.com",
-          "description": "Login to your account and go to https://www.cm.com/en-gb/app/ticketing/From here you can create tickets and much more!Make sure to take a look at the user-side ticket store as well (https://store.ticketing.cm.com/..)",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "api.cm.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "api.cmtelecom.com",
-          "description": "Some of the applications that are in our scope use our old api.If you find a bug on this api and it is from a product that is in scope, it is valid.",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "cm.com/[locale]/app/*",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "cm.com/[locale]/register",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "cm.com/app/messagingtrial/",
-          "description": "An application that makes it possible for developers to do a limited test of sending messages using the CM.COM business messaging API.What we would like to know is:",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "www.cm.com",
-          "description": "",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.cm.com",
-          "description": "",
-          "impact": "No bounty"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.cmtelecom.com",
-          "description": "",
-          "impact": "No bounty"
-        },
-        {
-          "type": "url",
-          "endpoint": "demo.globalticket.com/*",
-          "description": "GlobalTicket is one of our integrations.Be sure to check out /cms to try and work your way into it.",
-          "impact": "No bounty"
-        }
+
       ],
       "out_of_scope": [
 
@@ -1682,7 +1617,78 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "ios",
+          "endpoint": "1114799709",
+          "description": "The iOS Player app that allows you to browse and play music.In order to use the iOS Player you will need a pairing code that you can obtain through https://business.soundtrackyourbrand.com using the test credentials.https://www.youtube.com/watch?v=y7HGAtsB6Tg",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "ios",
+          "endpoint": "1114800186",
+          "description": "The iOS Remote that allows you to remotely control your Soundtrack Players.In order to use the iOS Remote you will need a remote code that you can obtain through https://business.soundtrackyourbrand.com using the test credentials.https://www.youtube.com/watch?v=cmAe1kRvOeY",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.soundtrackyourbrand.com",
+          "description": "Our public API. Used by us as well as third parties. You can use your regular login token to authenticate.Docs: https://developer.soundtrackyourbrand.com/apiGraphQL Explorer: https://api.soundtrackyourbrand.com/v2/explorePlease use one of the claimed test credentials. In order to use the API you can login using your claimed credentials (via loginUser) and use the token you get back to issue API calls.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "billing.api.soundtrackyourbrand.com",
+          "description": "Our billing service. Handles payments (one time and recurring), price and product management and subscription renewals.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "builds.soundtrackyourbrand.com",
+          "description": "Our service which does gradual rollout of our player software to our Windows client and hardware players.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "business.soundtrackyourbrand.com",
+          "description": "Our web based management console that allows users to administer their players, music and their account.To claim bounties for this domain you need to use one of the claimed test credentials.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "android",
+          "endpoint": "com.soundtrackyourbrand.soundtrack.player",
+          "description": "The Android Player app that allows you to browse and play music.In order to use the Android Player you will need a pairing code that you can obtain through https://business.soundtrackyourbrand.com using the test credentials.https://www.youtube.com/watch?v=y7HGAtsB6Tg",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://auth.api.soundtrackyourbrand.com/",
+          "description": "Our authentication service.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "other",
+          "endpoint": "https://builds.soundtrackyourbrand.com/download/WIN32SOUNDTRACK/latest",
+          "description": "The Windows Player that allows you to play music. No user interface except for a tray icon.In order to use the Windows Player you will need a pairing code that you can obtain through https://business.soundtrackyourbrand.com using the test credentials.https://www.youtube.com/watch?v=HjFfXcjSEmM",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://radio.api.soundtrackyourbrand.com/",
+          "description": "Our playlisting service.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://www.soundtrackyourbrand.com",
+          "description": "Our public website.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "other",
+          "endpoint": "macOS app",
+          "description": "The macOS Player app allows you to browse and play music. You can find it in the App Store: https://apps.apple.com/se/app/soundtrack-player/id1114799709?l=enIn order to use the macOS you will need a pairing code that you can obtain through https://business.soundtrackyourbrand.com using the test credentials.https://www.youtube.com/watch?v=y7HGAtsB6Tg",
+          "impact": "Tier 1"
+        }
       ],
       "out_of_scope": [
 
