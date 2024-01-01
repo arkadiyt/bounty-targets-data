@@ -1592,42 +1592,7 @@
     },
     "targets": {
       "in_scope": [
-        {
-          "type": "ios",
-          "endpoint": "910898851",
-          "description": "We expect that issued items are including print-screen of the version of the app.  Flow to get to version number",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "android",
-          "endpoint": "app.nl.socialdeal",
-          "description": "We expect that issued items are including print-screen of the version of the app.  Flow to get to version number",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "http://socialdeal.nl/inspirations/bluemonday/",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "http://www.whynot.com/",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "https://www.socialdeal.nl/orderlist/5e834ae0bed5c/63d772e2ed277/",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "www.socialdeal.nl",
-          "description": "Our main website.www.socialdeal.be and www.socialdeal.de are the same websites, with different Locale.",
-          "impact": "Tier 2"
-        }
+
       ],
       "out_of_scope": [
 
@@ -2202,7 +2167,114 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "ios",
+          "endpoint": "564141518",
+          "description": "Visma ScannerVisma Scanner is a mobile app used for sending receipts and invoices to your Visma accounting system.The iOS version of the app can be found here:https://apps.apple.com/us/app/visma-scanner/id564141518Please read and follow the steps in the Startup guide to create an account and start hacking: https://vismabugbountyprod.z16.web.core.windows.net/VismaScanner-getting-started.pdfOut of scope:",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "accountsettings.connect.identity.stagaws.visma.com",
+          "description": "ConnectSee instructions for domain \"connect.identity.stagaws.visma.com\".Out of scope:",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "admin.stage.vismaonline.com",
+          "description": "Visma OnlineThis is the old interface for the customer's administrators to administrate the company, where we still have some functionality that has not been moved to the new interface. For example invoicing information and everything regarding collaborations with AO. The collaboration part is out of scope as long as the use of student companies.Please read the Getting Started Instructions in the \"myservices.stage.vismaonline.com\" asset description.Out of scope:",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "ai-testing.maventa.com",
+          "description": "AutoInvoiceThis is the main UI for Visma AutoInvoice. AutoInvoice is Visma's automated and fully ERP integrated service for sending, receiving and handling invoices. AutoInvoice converts and exchanges electronic invoices, optionally prints invoices that can't be sent electronically, receives and interpret PDF invoices and offers services for scanning and interpretation of paper invoices. AutoInvoice handles both Business to Business (B2B) and Business to Consumer (B2C) invoices.Uses partially the embeddable user interface from autointerface-embeddable-stage.maventa.comCreate a test account on https://ai-testing.maventa.com/registrations, or use one of the demo accounts in the getting started instructions below:https://vismabugbountyprod.z16.web.core.windows.net/VismaAutoinvoice-getting-started.pdfOut of scope or works as expected (accepted risk):Note! ai-testing.maventa.com and testing.maventa.com point to the same application but have different branding on the UI. Authentication to the user interface is handled using the Visma Connect service.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.workbox.dk",
+          "description": "DineroThis is Dinero's Public API.See instructions for \"app.workbox.dk\"",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "app.workbox.dk",
+          "description": "DineroDinero is an accounting software for sole traders and micro businesses based out of Denmark. Our only target group is danish companies and therefore the interface is in danish only. The application is a SaaS application hosted in the cloud and consists of a main application and a number of supportive microservices.See the getting started document here: https://vismabugbountyprod.z16.web.core.windows.net/VismaDinero-getting-started.pdfOut of scope:",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "authz.workbox.dk",
+          "description": "DineroUsed for Authorization (OAuth). See instructions for \"app.workbox.dk\"",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "autointerface.stag.visma.net",
+          "description": "AutoInvoiceSee instructions for domain 'ai-testing.maventa.com' to get user credentials.The same resource can be accessed through the URL autointerface-embeddable-stage.maventa.comAll data processing is done through the REST API at ax-stage.maventa.comOut of scope or works as expected (accepted risk):",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "ax-stage.maventa.com",
+          "description": "AutoInvoicehttps://ax-stage.maventa.com is a REST API connected to Visma AutoInvoice.API documentation is available on https://documentation.maventa.com/rest-api/ and https://ax-stage.maventa.com/swagger/#/See instructions for domain 'ai-testing.maventa.com' to get user credentials.Out of scope or works as expected (accepted risk):",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "android",
+          "endpoint": "com.visma.blue",
+          "description": "Visma ScannerVisma Scanner is a mobile app used for sending receipts and invoices to your Visma accounting system.The Andriod version of the app can be found here:https://play.google.com/store/apps/details?id=com.visma.blue&hl=enPlease read and follow the steps in the Startup guide to create an account and start hacking: https://vismabugbountyprod.z16.web.core.windows.net/VismaScanner-getting-started.pdfOut of scope:",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "connect.identity.stagaws.visma.com",
+          "description": "ConnectVisma Connect is featurewise a small but critical component in the Visma portfolio. It is a single sign-on solution used by many Visma services. It is also the place where users manage security preferences such as passwords, MFA, 2FA, email and other account settings.User accounts for testing can be created on https://connect.identity.stagaws.visma.com (this signup flow is not available in production).The test accounts will not have access to any other services right now, so testing is limited to the login portal itself.Out of scope:",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "eaccounting.stage.vismaonline.com",
+          "description": "eAccountingThis is \"Visma eAccounting\" (aka Visma eEkonomi / Visma ePasseli) which is an ERP system available in Sweden, Norway, Finland and The Netherlands.We've added into scope also the eEkonomi \"Visma Lön Smart\" which is a subservice of eAccounting. This can be found after you activate your account (check out the instructions bellow).You can read more on https://www.visma.no/eaccounting/english/You need to register an user to test this system. The sign-up up process is described in this document:https://vismabugbountyprod.z16.web.core.windows.net/Visma-eAccounting-getting-started.pdfThis video also shows the entire setup (only Swedish audio) https://www.youtube.com/watch?v=kVr_CXgfhi0&t=4sTLDR: Goto https://admin.stage.vismaonline.com/Customer/StudentSignup.aspx and sign up with the training code \"04h2v\"Out of scope:",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "eaccountingprinting.stage.vismaonline.com",
+          "description": "eAccountingYou reach this asset by creating and viewing a report under the Accounting/Reports menu as a logged on user in asset \"eaccounting.stage.vismaonline.com\"",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "identity.stage.vismaonline.com",
+          "description": "Visma OnlineVisma Connect is used as identity provider, but an own identity server is used to provide JWT tokens that are used by MyServices (and others).Please read the Getting Started instructions document in the \"myservices.stage.vismaonline.com\" asset description.Out of scope:",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "myservices-api.stage.vismaonline.com",
+          "description": "Visma OnlineThis is the API behind \"myservices.stage.vismaonline.com\".Please read the Getting Started instructions document in the asset description \"myservices.stage.vismaonline.com\".",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "myservices.stage.vismaonline.com",
+          "description": "Visma OnlineThis is an interface where the customer's users can access all their services, and customer's administrators can manage users on the company and manage users' access to services that the company has.More information about the service and test accounts creation can be found here:https://vismabugbountyprod.z16.web.core.windows.net/VismaOnline-getting-started.pdfOut of scope:",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "oauth.developers.stagaws.visma.com",
+          "description": "Visma Developer PortalVisma Developer Portal is used both internally and externally by developers for registering OAuth 2.0/OpenID Connect applications for Single-Sign-On with Visma (Visma Connect) and/or API integration.Existing Visma Connect users accounts can be used for testing. We also allow registration of new users if needed.Users need to register an organization as part of the sign-in or to be added (invite) to an existing organization by organization's manager. The user which registers the organization also gets manager role assigned.Each organization has its own set of OAuth 2.0/OpenID Connect applications.Please read the Getting Started Instructions here: https://vismabugbountyprod.z16.web.core.windows.net/VismaDeveloperPortal-getting-started.pdfOut of scope:",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "testing.maventa.com",
+          "description": "AutoInvoicehttps://testing.maventa.com/apis/v1.1/wsdl is a SOAP API connected to Visma AutoInvoice.API documentation is available on https://documentation.maventa.com/soap-api/See instructions for domain 'ai-testing.maventa.com' to get user credentials.",
+          "impact": "Tier 2"
+        }
       ],
       "out_of_scope": [
 
