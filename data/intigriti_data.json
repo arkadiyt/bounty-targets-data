@@ -217,7 +217,72 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "url",
+          "endpoint": "login.cm.com",
+          "description": "",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.ticketing.cm.com",
+          "description": "Login to your account and go to https://www.cm.com/en-gb/app/ticketing/From here you can create tickets and much more!Make sure to take a look at the user-side ticket store as well (https://store.ticketing.cm.com/..)",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.cm.com",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.cmtelecom.com",
+          "description": "Some of the applications that are in our scope use our old api.If you find a bug on this api and it is from a product that is in scope, it is valid.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "cm.com/[locale]/app/*",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "cm.com/[locale]/register",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "cm.com/app/messagingtrial/",
+          "description": "An application that makes it possible for developers to do a limited test of sending messages using the CM.COM business messaging API.What we would like to know is:",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.cm.com",
+          "description": "",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.cm.com",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.cmtelecom.com",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "demo.globalticket.com/*",
+          "description": "GlobalTicket is one of our integrations.Be sure to check out /cms to try and work your way into it.",
+          "impact": "No bounty"
+        }
       ],
       "out_of_scope": [
 
@@ -1117,78 +1182,7 @@
     },
     "targets": {
       "in_scope": [
-        {
-          "type": "other",
-          "endpoint": "134.58.179.82",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "android",
-          "endpoint": "be.nexuzhealth.mobile.cpv",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "android",
-          "endpoint": "be.nexuzhealth.mobile.kws",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "android",
-          "endpoint": "be.nexuzhealth.mobile.mynexuz",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "forms.nexuzhealth.be",
-          "description": "Registration for code cards used to authenticate on the mynexuzhealth application",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "idp-mobile.nexuzhealth.be",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "ios",
-          "endpoint": "kws-companion/id1342124012",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "mobile.nexuzhealth.be",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "mynexuz.be",
-          "description": "🇬🇧🇫🇷🇳🇱",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "mynexuz.be/myUZ/",
-          "description": "🇬🇧🇫🇷🇳🇱",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "ios",
-          "endpoint": "mynexuzhealth/id1459856321",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "https://www.nexuzhealth.com/nl/mynexuzhealthpro",
-          "description": "",
-          "impact": "Out of scope"
-        }
+
       ],
       "out_of_scope": [
 
