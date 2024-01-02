@@ -467,7 +467,42 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "url",
+          "endpoint": "myaccount.volkskrant.nl",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "shop.volkskrant.nl",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "webwinkel.volkskrant.nl",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.volkskrant.nl",
+          "description": "excluding",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.volkskrant.nl/abonnementen",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.volkskrant.nl",
+          "description": "excluding abonnement.volkskrant.nl",
+          "impact": "Tier 3"
+        }
       ],
       "out_of_scope": [
 
@@ -2042,48 +2077,7 @@
     },
     "targets": {
       "in_scope": [
-        {
-          "type": "ios",
-          "endpoint": "1101145849",
-          "description": "iOS application. This is currently installable on Jailbroken devices, please read the out-of-scope findings.",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "api.uphold.com",
-          "description": "Production WebWallet Application. Do not test service degradation attacks or horizontal privilege here.On the business app side, we allow you to create apps in sandbox, but you shouldn't be able to create them in Production.",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "android",
-          "endpoint": "com.uphold.wallet",
-          "description": "Android application. This is currently installable on Jailbroken devices, please read the out-of-scope findings.",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "uphold.com/dashboard",
-          "description": "Production WebWallet Application. Do not test service degradation attacks or horizontal privilege here.",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "api-sandbox.uphold.com",
-          "description": "Use this environment for financial transaction testing, degradation attacks, or horizontal privilege attacks. Fund with Crypto Testnet Faucet (e.g. https://coinfaucet.eu/en/btc-testnet/ for Bitcoin).On the business app side, we allow you to create apps in sandbox, but you shouldn't be able to create them in Production.",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "sandbox.uphold.com/dashboard",
-          "description": "Use this environment for financial transaction testing, degradation attacks, or horizontal privilege attacks. Fund with Crypto Testnet Faucet (e.g. https://coinfaucet.eu/en/btc-testnet/ for Bitcoin)",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.uphold.com",
-          "description": "We are willing to give bonuses on anything you find and we agree is impactful, in the rest of our domain. Please note that third party services are out of scope unless the issue is caused due to a misconfiguration by Uphold",
-          "impact": "Tier 3"
-        }
+
       ],
       "out_of_scope": [
 
