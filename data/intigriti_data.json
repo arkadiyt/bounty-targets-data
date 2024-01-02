@@ -392,7 +392,24 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "url",
+          "endpoint": "*.dpgmedia.be",
+          "description": "excluding",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.dpgmedia.nl",
+          "description": "excluding",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "Any related DPG media domain",
+          "description": "Only applicable to domains that are 100% owned by DPG.For example, projects that are partly owned by DPG and partly owned by RTL (because of a joint venture between the two) are not in scope.Whois: De Persgroep Publishing nvBrusselstesteenweg 3471730 AsseBelgiëDPG Media Services NVMediaplein 12018 AntwerpenBelgium",
+          "impact": "Tier 3"
+        }
       ],
       "out_of_scope": [
 
@@ -592,42 +609,7 @@
     },
     "targets": {
       "in_scope": [
-        {
-          "type": "url",
-          "endpoint": "*.gulp.ch",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.gulp.de",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "demo.tendertracker.de",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "www.gulp-shop.de",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "www.gulp.ch/forum/*",
-          "description": "",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "www.gulp.de/forum/*",
-          "description": "",
-          "impact": "Out of scope"
-        }
+
       ],
       "out_of_scope": [
 
