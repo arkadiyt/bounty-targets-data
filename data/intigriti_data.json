@@ -17,7 +17,84 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "ios",
+          "endpoint": "1099986434",
+          "description": "IOS Mobile Applicaton of Ada Health",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "android",
+          "endpoint": "com.ada.app",
+          "description": "Android Mobile Application of Ada Health",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://api.mobile.ada.com",
+          "description": "Backend for frontend API endpoint for mobile application activities. This endpoint is protected by a Web Application Firewall.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://id.ada.com",
+          "description": "Ada-ID is an identity management service for end user that interacts with Ada's applications. It provides authentication and authorization. Ada-ID serves as web application and API services. Frontend is valid for password reset and account verification process. This endpoint is protected by a Web Application Firewall.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://care-navigation-admin-bff.int.eu.enterprise.ada.com",
+          "description": "Backend for frontend (bff) service for Care Navigation Admin interface. BFF is a variant of the API Gateway pattern which provides an additional layer between microservices.",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://care-navigation-admin-fe.int.eu.enterprise.ada.com",
+          "description": "Care Navigation Admin Frontend is a visual tool for managing Connect data including:Test credentials will not be provided. Try to find broken access controls on this endpoint.",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://care-navigation-bff.int.eu.enterprise.ada.com",
+          "description": "Backend for frontend (bff) service for Care Navigation Frontend service. BFF is a variant of the API Gateway pattern which provides an additional layer between microservices.",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://care-navigation-fe.int.eu.enterprise.ada.com",
+          "description": "Care Navigation Frontend service represents Ada Partner care navigation option list available after assessment test is accomplished. Service includes:",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://demo-prod-assessment-bff.ada-prod-eu.prod.gcp.ada.com",
+          "description": "Backend for frontend (bff) service for demo assessment web interface. BFF is a variant of the API Gateway pattern which provides an additional layer between microservices. Please see the all endpoints in the Open API documentation (demo_assessment_bff_openapi.json) file",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://demo-prod-hcp-report-bff.ada-prod-eu.prod.gcp.ada.com",
+          "description": "Handover is a solution for sharing (handing over) the results of the health assessment with the user’s health care provider (HCP) or a health professional. This service has the responsibility to process the data from the hcp-report-backend for the use of handover frontend.",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://demo.enterprise.ada.com",
+          "description": "Our web application helps millions to manage their health. This is the frontend assessment application demo domain which represents the general flow we provide with our enterprise partners. This medical AI symptom checker is trained by real doctors. This endpoint provides both guess and authenticated flow which can be combined with our SSO service.This UI is calling the BFF domain which is also in the scope.",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://demo.handover.enterprise.ada.com",
+          "description": "Handover is a solution for sharing (handing over) the results of the health assessment with the user’s health care provider (HCP) or a health professional. This service has the responsibility to render the HCP report data received from the HCP report bff.",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://demo.sso.enterprise.ada.com",
+          "description": "Smart-auth is Ada’s identification management and Single Sign On (SSO).This service is based on SMART on FHIR implementation and provides a standard way to integrate with other EHR (Electronic Health Record) servers. It is an optional module meaning that not all flows are authentication required.",
+          "impact": "Tier 3"
+        }
       ],
       "out_of_scope": [
 
@@ -92,30 +169,7 @@
     },
     "targets": {
       "in_scope": [
-        {
-          "type": "url",
-          "endpoint": "*.allegro.pl.allegrosandbox.pl",
-          "description": "This is our sandbox environment that replicates production. For more information please visit developer website.",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.allegro.pl",
-          "description": "",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.allegrogroup.com",
-          "description": "",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "other",
-          "endpoint": "Any production website owned by Allegro not listed in Domains",
-          "description": "",
-          "impact": "Out of scope"
-        }
+
       ],
       "out_of_scope": [
 
@@ -715,54 +769,7 @@
     },
     "targets": {
       "in_scope": [
-        {
-          "type": "url",
-          "endpoint": "* hln.be/inloggen",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "* hln.be/login",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "* hln.be/registreren",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "hln.be",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "myaccount.hln.be",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "www.hln.be",
-          "description": "excluding",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.hln.be",
-          "description": "",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "* hln.be/service",
-          "description": "",
-          "impact": "Out of scope"
-        }
+
       ],
       "out_of_scope": [
 
@@ -1087,162 +1094,7 @@
     },
     "targets": {
       "in_scope": [
-        {
-          "type": "url",
-          "endpoint": "*.military.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.monster.at",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.monster.be",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.monster.ca",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.monster.ch",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.monster.co.uk",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.monster.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.monster.de",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.monster.dk",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.monster.es",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.monster.eu",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.monster.fr",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.monster.hu",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.monster.ie",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.monster.it",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.monster.lu",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.monster.no",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.monster.pt",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.monster.se",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.monsterboard.nl",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.monsterpolska.pl",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "fastweb.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.monster.cz",
-          "description": "",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.monster.fi",
-          "description": "",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.monsterindia.com",
-          "description": "",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "Any endpoints which are not owned by Monster & third party systems",
-          "description": "",
-          "impact": "Out of scope"
-        }
+
       ],
       "out_of_scope": [
 
@@ -1642,24 +1494,7 @@
     },
     "targets": {
       "in_scope": [
-        {
-          "type": "other",
-          "endpoint": "https://gist.github.com/RedBullSecurity/3eb88debcb01759eccf65ec2b799b340",
-          "description": "Domains that are related to Red Bull and can be found on this list. Any subdomain not mentioned in this list, will be considered as out of scope.",
-          "impact": "No bounty"
-        },
-        {
-          "type": "other",
-          "endpoint": "IOS and Android apps related to Red Bull",
-          "description": "",
-          "impact": "No bounty"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.newyorkredbulls.com",
-          "description": "",
-          "impact": "Out of scope"
-        }
+
       ],
       "out_of_scope": [
 
@@ -1709,7 +1544,36 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "url",
+          "endpoint": "*.rhinternal.net",
+          "description": "",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.robinhood.com",
+          "description": "",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.robinhood.net",
+          "description": "robinhood.net contains internal Robinhood services. You shouldn’t be able to log into anything here.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "ios",
+          "endpoint": "938003185",
+          "description": "",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "android",
+          "endpoint": "com.robinhood.android",
+          "description": "",
+          "impact": "Tier 1"
+        }
       ],
       "out_of_scope": [
 
@@ -1809,36 +1673,7 @@
     },
     "targets": {
       "in_scope": [
-        {
-          "type": "other",
-          "endpoint": "SimScale API",
-          "description": "API URL: https://api.simscale.comThe API doc is available at https://api.simscale.com.API keys with limited capabilities (project creation and geometry upload) can be managed in the API keys page. API keys with full API capabilities can be requested from the Intigriti support (\"Ask scope question\"). Please note that only a limited number of those API keys will be issued at a time.",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "other",
-          "endpoint": "SimScale Platform",
-          "description": "The following areas and paths under domain https://www.simscale.com:Paths: /signup/*, /signin/*, /onboarding/*Examples:Paths: /dashboard, /users/*Examples (login required):Paths: /workbench/*Examples (login required):Paths: /projects/*Examples:All API endpoints used by UIs listed above.Paths: /api/*, /csm/*, /postprocessing/*",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "other",
-          "endpoint": "SimScale Website",
-          "description": "Domain https://www.simscale.com and the remaining paths not listed under SimScale Platform.Examples:",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "https://www.simscale.com/api/v1/projects/*",
-          "description": "",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "www.simscale.com/forum/users/*.json",
-          "description": "",
-          "impact": "Out of scope"
-        }
+
       ],
       "out_of_scope": [
 
@@ -2163,228 +1998,7 @@
     },
     "targets": {
       "in_scope": [
-        {
-          "type": "url",
-          "endpoint": "api.truelayer[-sandbox].com",
-          "description": "The majority of our API endpoints live here",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "auth.truelayer[-sandbox].com",
-          "description": "Our service for getting OAuth access tokens to access our APIs",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "login-api.truelayer[-sandbox].com",
-          "description": "",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "login.truelayer[-sandbox].com",
-          "description": "Where you can connect your bank account and use Open Banking to pull data such as transactions",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "onboarding-api.truelayer.com",
-          "description": "Used in the developer console",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "pay-api.truelayer[-sandbox].com",
-          "description": "",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "pay.truelayer[-sandbox].com",
-          "description": "Some of our older payment API endpoints live here rather than on api.truelayer.com",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "paydirect.truelayer[-sandbox].com",
-          "description": "Some of our older payment API endpoints live here rather than on api.truelayer.com",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "payment.truelayer[-sandbox].com",
-          "description": "Our hosted payments page for merchants that want us to manage the UI screens for making payments",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "payouts.truelayer[-sandbox].com",
-          "description": "Our Payouts API",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "users-api.truelayer.com",
-          "description": "Internal service for managing users",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "other",
-          "endpoint": "C# SDK",
-          "description": "https://github.com/TrueLayer/truelayer-dotnet",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "console-backend.truelayer[-sandbox].com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "console.truelayer[-sandbox].com",
-          "description": "Our developer console where you can login, create applications, manage your OAuth client ID/secret, upload public keys for request signing, view transactions",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "hpp.truelayer[-sandbox].com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "other",
-          "endpoint": "iOS SDK",
-          "description": "https://github.com/TrueLayer/TrueLayer-iOS-SDK",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "other",
-          "endpoint": "Java SDK",
-          "description": "https://github.com/TrueLayer/truelayer-java",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "other",
-          "endpoint": "PHP SDK",
-          "description": "https://github.com/TrueLayer/truelayer-php",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "other",
-          "endpoint": "React Native SDK",
-          "description": "https://github.com/TrueLayer/truelayer-react-native-sdk",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "other",
-          "endpoint": "Rust SDK",
-          "description": "https://github.com/TrueLayer/truelayer-rust",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "other",
-          "endpoint": "TrueLayer for Magento (Magento plugin)",
-          "description": "https://github.com/TrueLayer/magento2",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "other",
-          "endpoint": "TrueLayer for WooCommerce (WordPress plugin)",
-          "description": "https://wordpress.org/plugins/truelayer-for-woocommerce/ is our WordPress plugin allowing you to use TrueLayer as a checkout option in your WooCommerce store. The source code is also available on GitHub.",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "other",
-          "endpoint": "truelayer-signing",
-          "description": "https://github.com/TrueLayer/truelayer-signing is our open source library for generating signed requests for calling TrueLayer APIs. Many languages are supported including Rust, C#, NodeJS, Go, Java and PHP.",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "webhooks.truelayer[-sandbox].com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.truelayer.cloud",
-          "description": "",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.truelayer.com",
-          "description": "",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.truelayer.io",
-          "description": "",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "banks.truelayer.com",
-          "description": "",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "careers.truelayer.com",
-          "description": "",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "docs.truelayer.com",
-          "description": "",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "https://truelayer.com/contact/",
-          "description": "",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "index.truelayer.com",
-          "description": "",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "info.truelayer.com",
-          "description": "",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "signin.truelayer.com",
-          "description": "",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "statuspage.truelayer.com",
-          "description": "",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "support.truelayer.com",
-          "description": "",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "truelayer.zendesk.com",
-          "description": "",
-          "impact": "Out of scope"
-        }
+
       ],
       "out_of_scope": [
 
@@ -2684,7 +2298,114 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "ios",
+          "endpoint": "564141518",
+          "description": "Visma ScannerVisma Scanner is a mobile app used for sending receipts and invoices to your Visma accounting system.The iOS version of the app can be found here:https://apps.apple.com/us/app/visma-scanner/id564141518Please read and follow the steps in the Startup guide to create an account and start hacking: https://vismabugbountyprod.z16.web.core.windows.net/VismaScanner-getting-started.pdfOut of scope:",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "accountsettings.connect.identity.stagaws.visma.com",
+          "description": "ConnectSee instructions for domain \"connect.identity.stagaws.visma.com\".Out of scope:",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "admin.stage.vismaonline.com",
+          "description": "Visma OnlineThis is the old interface for the customer's administrators to administrate the company, where we still have some functionality that has not been moved to the new interface. For example invoicing information and everything regarding collaborations with AO. The collaboration part is out of scope as long as the use of student companies.Please read the Getting Started Instructions in the \"myservices.stage.vismaonline.com\" asset description.Out of scope:",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "ai-testing.maventa.com",
+          "description": "AutoInvoiceThis is the main UI for Visma AutoInvoice. AutoInvoice is Visma's automated and fully ERP integrated service for sending, receiving and handling invoices. AutoInvoice converts and exchanges electronic invoices, optionally prints invoices that can't be sent electronically, receives and interpret PDF invoices and offers services for scanning and interpretation of paper invoices. AutoInvoice handles both Business to Business (B2B) and Business to Consumer (B2C) invoices.Uses partially the embeddable user interface from autointerface-embeddable-stage.maventa.comCreate a test account on https://ai-testing.maventa.com/registrations, or use one of the demo accounts in the getting started instructions below:https://vismabugbountyprod.z16.web.core.windows.net/VismaAutoinvoice-getting-started.pdfOut of scope or works as expected (accepted risk):Note! ai-testing.maventa.com and testing.maventa.com point to the same application but have different branding on the UI. Authentication to the user interface is handled using the Visma Connect service.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.workbox.dk",
+          "description": "DineroThis is Dinero's Public API.See instructions for \"app.workbox.dk\"",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "app.workbox.dk",
+          "description": "DineroDinero is an accounting software for sole traders and micro businesses based out of Denmark. Our only target group is danish companies and therefore the interface is in danish only. The application is a SaaS application hosted in the cloud and consists of a main application and a number of supportive microservices.See the getting started document here: https://vismabugbountyprod.z16.web.core.windows.net/VismaDinero-getting-started.pdfOut of scope:",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "authz.workbox.dk",
+          "description": "DineroUsed for Authorization (OAuth). See instructions for \"app.workbox.dk\"",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "autointerface.stag.visma.net",
+          "description": "AutoInvoiceSee instructions for domain 'ai-testing.maventa.com' to get user credentials.The same resource can be accessed through the URL autointerface-embeddable-stage.maventa.comAll data processing is done through the REST API at ax-stage.maventa.comOut of scope or works as expected (accepted risk):",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "ax-stage.maventa.com",
+          "description": "AutoInvoicehttps://ax-stage.maventa.com is a REST API connected to Visma AutoInvoice.API documentation is available on https://documentation.maventa.com/rest-api/ and https://ax-stage.maventa.com/swagger/#/See instructions for domain 'ai-testing.maventa.com' to get user credentials.Out of scope or works as expected (accepted risk):",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "android",
+          "endpoint": "com.visma.blue",
+          "description": "Visma ScannerVisma Scanner is a mobile app used for sending receipts and invoices to your Visma accounting system.The Andriod version of the app can be found here:https://play.google.com/store/apps/details?id=com.visma.blue&hl=enPlease read and follow the steps in the Startup guide to create an account and start hacking: https://vismabugbountyprod.z16.web.core.windows.net/VismaScanner-getting-started.pdfOut of scope:",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "connect.identity.stagaws.visma.com",
+          "description": "ConnectVisma Connect is featurewise a small but critical component in the Visma portfolio. It is a single sign-on solution used by many Visma services. It is also the place where users manage security preferences such as passwords, MFA, 2FA, email and other account settings.User accounts for testing can be created on https://connect.identity.stagaws.visma.com (this signup flow is not available in production).The test accounts will not have access to any other services right now, so testing is limited to the login portal itself.Out of scope:",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "eaccounting.stage.vismaonline.com",
+          "description": "eAccountingThis is \"Visma eAccounting\" (aka Visma eEkonomi / Visma ePasseli) which is an ERP system available in Sweden, Norway, Finland and The Netherlands.We've added into scope also the eEkonomi \"Visma Lön Smart\" which is a subservice of eAccounting. This can be found after you activate your account (check out the instructions bellow).You can read more on https://www.visma.no/eaccounting/english/You need to register an user to test this system. The sign-up up process is described in this document:https://vismabugbountyprod.z16.web.core.windows.net/Visma-eAccounting-getting-started.pdfThis video also shows the entire setup (only Swedish audio) https://www.youtube.com/watch?v=kVr_CXgfhi0&t=4sTLDR: Goto https://admin.stage.vismaonline.com/Customer/StudentSignup.aspx and sign up with the training code \"04h2v\"Out of scope:",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "eaccountingprinting.stage.vismaonline.com",
+          "description": "eAccountingYou reach this asset by creating and viewing a report under the Accounting/Reports menu as a logged on user in asset \"eaccounting.stage.vismaonline.com\"",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "identity.stage.vismaonline.com",
+          "description": "Visma OnlineVisma Connect is used as identity provider, but an own identity server is used to provide JWT tokens that are used by MyServices (and others).Please read the Getting Started instructions document in the \"myservices.stage.vismaonline.com\" asset description.Out of scope:",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "myservices-api.stage.vismaonline.com",
+          "description": "Visma OnlineThis is the API behind \"myservices.stage.vismaonline.com\".Please read the Getting Started instructions document in the asset description \"myservices.stage.vismaonline.com\".",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "myservices.stage.vismaonline.com",
+          "description": "Visma OnlineThis is an interface where the customer's users can access all their services, and customer's administrators can manage users on the company and manage users' access to services that the company has.More information about the service and test accounts creation can be found here:https://vismabugbountyprod.z16.web.core.windows.net/VismaOnline-getting-started.pdfOut of scope:",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "oauth.developers.stagaws.visma.com",
+          "description": "Visma Developer PortalVisma Developer Portal is used both internally and externally by developers for registering OAuth 2.0/OpenID Connect applications for Single-Sign-On with Visma (Visma Connect) and/or API integration.Existing Visma Connect users accounts can be used for testing. We also allow registration of new users if needed.Users need to register an organization as part of the sign-in or to be added (invite) to an existing organization by organization's manager. The user which registers the organization also gets manager role assigned.Each organization has its own set of OAuth 2.0/OpenID Connect applications.Please read the Getting Started Instructions here: https://vismabugbountyprod.z16.web.core.windows.net/VismaDeveloperPortal-getting-started.pdfOut of scope:",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "testing.maventa.com",
+          "description": "AutoInvoicehttps://testing.maventa.com/apis/v1.1/wsdl is a SOAP API connected to Visma AutoInvoice.API documentation is available on https://documentation.maventa.com/soap-api/See instructions for domain 'ai-testing.maventa.com' to get user credentials.",
+          "impact": "Tier 2"
+        }
       ],
       "out_of_scope": [
 
@@ -2884,7 +2605,12 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "other",
+          "endpoint": "Zero days that affect Intigriti or participating customers (listed below)",
+          "description": "",
+          "impact": "Tier 2"
+        }
       ],
       "out_of_scope": [
 
@@ -3009,7 +2735,186 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "url",
+          "endpoint": "api.vidaxl.com",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "ar.vidaxl.sa.com",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "b2b.vidaxl.com",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "cms.woger-cdn.com",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "customer-services.vidaxl.org",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "en.vidaxl.ae",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "en.vidaxl.ca",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "fps-extr-services.vidaxl.org",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "fr.vidaxl.ch",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "is.vidaxl.is",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "nexus.vidaxl.org",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "nl.vidaxl.be",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "serviceportal.vidaxl.com",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "shops-services.vidaxl.org",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "tracking.vidaxl.com",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "uk.vidaxl.com.ua",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "vidaxl.zendesk.com",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.dropshippingxl.com",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.vidaxl.<TLD>",
+          "description": "Our TLDs for vidaxl are: .at, .bg, .com.uk, .com, .com.au, .com.tr, .cz, .de, .dk, .ee, .es, .fi, .fr, .gr, .hr, .hu, .ie, .it, .jp, .lt, .lv, .nl, .no, .pl, .pt, .ro, .se, .si, and .sk`.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "apigateway.vidaxl.io",
+          "description": "",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "app.vidaxl.io",
+          "description": "",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "corporate.vidaxl.com",
+          "description": "",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "drone.vidaxl.io",
+          "description": "",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "qa-db.vidaxl.io",
+          "description": "",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "qa.vidaxl.io",
+          "description": "",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "qa1-apigateway.vidaxl.io",
+          "description": "",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "staging-apigateway.vidaxl.io",
+          "description": "",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "staging-db.vidaxl.io",
+          "description": "",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "staging.vidaxl.io",
+          "description": "",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "partners.vidaxl.com",
+          "description": "",
+          "impact": "Out of scope"
+        }
       ],
       "out_of_scope": [
 
