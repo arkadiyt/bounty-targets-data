@@ -67,7 +67,36 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "url",
+          "endpoint": "myaccount.ad.nl",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "webwinkel.ad.nl",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.ad.nl",
+          "description": "excluding",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.ad.nl/abonnementen",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.ad.nl",
+          "description": "excluding abonnement.ad.nl",
+          "impact": "Tier 3"
+        }
       ],
       "out_of_scope": [
 
@@ -317,7 +346,12 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "url",
+          "endpoint": "https://justonweb.be/fines/",
+          "description": "",
+          "impact": "Tier 2"
+        }
       ],
       "out_of_scope": [
 
@@ -392,24 +426,7 @@
     },
     "targets": {
       "in_scope": [
-        {
-          "type": "url",
-          "endpoint": "*.dpgmedia.be",
-          "description": "excluding",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.dpgmedia.nl",
-          "description": "excluding",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "other",
-          "endpoint": "Any related DPG media domain",
-          "description": "Only applicable to domains that are 100% owned by DPG.For example, projects that are partly owned by DPG and partly owned by RTL (because of a joint venture between the two) are not in scope.Whois: De Persgroep Publishing nvBrusselstesteenweg 3471730 AsseBelgiëDPG Media Services NVMediaplein 12018 AntwerpenBelgium",
-          "impact": "Tier 3"
-        }
+
       ],
       "out_of_scope": [
 
@@ -459,66 +476,7 @@
     },
     "targets": {
       "in_scope": [
-        {
-          "type": "url",
-          "endpoint": "myaccount.demorgen.be",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "shop.demorgen.be",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "www.demorgen.be",
-          "description": "excluding",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "www.demorgen.be/abonnementen",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.demorgen.be",
-          "description": "excluding abonnement.demorgen.be",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "* demorgen.be/inloggen",
-          "description": "",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "* demorgen.be/login",
-          "description": "",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "* demorgen.be/registreren",
-          "description": "",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "* demorgen.be/service",
-          "description": "",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "abonnement.demorgen.be",
-          "description": "",
-          "impact": "Out of scope"
-        }
+
       ],
       "out_of_scope": [
 
@@ -543,42 +501,7 @@
     },
     "targets": {
       "in_scope": [
-        {
-          "type": "url",
-          "endpoint": "myaccount.volkskrant.nl",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "shop.volkskrant.nl",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "webwinkel.volkskrant.nl",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "www.volkskrant.nl",
-          "description": "excluding",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "www.volkskrant.nl/abonnementen",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.volkskrant.nl",
-          "description": "excluding abonnement.volkskrant.nl",
-          "impact": "Tier 3"
-        }
+
       ],
       "out_of_scope": [
 
@@ -603,120 +526,7 @@
     },
     "targets": {
       "in_scope": [
-        {
-          "type": "url",
-          "endpoint": "api.digital.delen.be",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "api.digital.delen.lu",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "app.delen.be",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "app.delen.ch",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "app.delen.lu",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "auth.digital.delen.be",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "auth.digital.delen.lu",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "android",
-          "endpoint": "be.delen.digital",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "ios",
-          "endpoint": "delen/id1064839588",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "login.delen.be",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "login.delen.ch",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "login.delen.lu",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "login.oyens.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "status.delen.be",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "sts.delen.be",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "www.cadelam.be",
-          "description": "🇫🇷🇳🇱",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "www.cadelux.lu/en",
-          "description": "🇬🇧🇫🇷🇳🇱",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "www.delen.bank",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "www.delen.be/en",
-          "description": "🇬🇧🇫🇷🇳🇱",
-          "impact": "Tier 2"
-        }
+
       ],
       "out_of_scope": [
 
@@ -791,30 +601,7 @@
     },
     "targets": {
       "in_scope": [
-        {
-          "type": "url",
-          "endpoint": "service.fing.com",
-          "description": "Our public cloud API for Device Recognition which can be requested on our website: https://app.fing.com/internet/business/devrecog/trial.",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "app.fing.com",
-          "description": "The Fing web application that gives you an overview of all monitored networks",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "Fing desktop",
-          "description": "The free Fing App to identify connected devices, troubleshoot network and device issues, detect network intruders and run Wi-Fi and internet speed tests anywhere. It can be downloaded here: http://app.fing.com/app",
-          "impact": "No bounty"
-        },
-        {
-          "type": "url",
-          "endpoint": "www.fing.com",
-          "description": "Always use \"intigriti.me\" address for any web form",
-          "impact": "No bounty"
-        }
+
       ],
       "out_of_scope": [
 
@@ -839,42 +626,7 @@
     },
     "targets": {
       "in_scope": [
-        {
-          "type": "url",
-          "endpoint": "*.gulp.ch",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.gulp.de",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "demo.tendertracker.de",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "www.gulp-shop.de",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "www.gulp.ch/forum/*",
-          "description": "",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "www.gulp.de/forum/*",
-          "description": "",
-          "impact": "Out of scope"
-        }
+
       ],
       "out_of_scope": [
 
@@ -974,54 +726,7 @@
     },
     "targets": {
       "in_scope": [
-        {
-          "type": "url",
-          "endpoint": "* hln.be/inloggen",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "* hln.be/login",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "* hln.be/registreren",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "hln.be",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "myaccount.hln.be",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "www.hln.be",
-          "description": "excluding",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.hln.be",
-          "description": "",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "* hln.be/service",
-          "description": "",
-          "impact": "Out of scope"
-        }
+
       ],
       "out_of_scope": [
 
@@ -1046,72 +751,7 @@
     },
     "targets": {
       "in_scope": [
-        {
-          "type": "url",
-          "endpoint": "myaccount.parool.nl",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "shop.parool.nl",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "webwinkel.parool.nl",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "www.parool.nl",
-          "description": "excluding",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "www.parool.nl/abonnementen",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.parool.nl",
-          "description": "excluding abonnement.parool.nl",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "* parool.nl/inloggen",
-          "description": "",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "* parool.nl/login",
-          "description": "",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "* parool.nl/registreren",
-          "description": "",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "* parool.nl/service",
-          "description": "",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "abonnement.parool.nl",
-          "description": "",
-          "impact": "Out of scope"
-        }
+
       ],
       "out_of_scope": [
 
@@ -1186,12 +826,7 @@
     },
     "targets": {
       "in_scope": [
-        {
-          "type": "other",
-          "endpoint": "Any ING (sub)domain",
-          "description": "",
-          "impact": "No bounty"
-        }
+
       ],
       "out_of_scope": [
 
@@ -1291,24 +926,7 @@
     },
     "targets": {
       "in_scope": [
-        {
-          "type": "ip range",
-          "endpoint": "IPv4: 134.58.0.0/16",
-          "description": "",
-          "impact": "No bounty"
-        },
-        {
-          "type": "ip range",
-          "endpoint": "IPv6: 2a02:2c40::/32",
-          "description": "",
-          "impact": "No bounty"
-        },
-        {
-          "type": "url",
-          "endpoint": "www.trismegistos.org",
-          "description": "",
-          "impact": "Out of scope"
-        }
+
       ],
       "out_of_scope": [
 
@@ -1358,90 +976,7 @@
     },
     "targets": {
       "in_scope": [
-        {
-          "type": "url",
-          "endpoint": "edge.lansweeper.com",
-          "description": "Domain used during the two-way sync process between the local web console (on-premises software) and the cloud platform. You can request your trial on our website: https://www.lansweeper.com/download/ but always use \"intigriti.me\" address for any user accountWith this trial you get access to our cloud platform (app.lansweeper.com), our on-premises software and the sync process (edge.lansweeper.com) between these two. You have to install our on-premises software somewhere locally and this will allow you to scan your local network and push the results to the cloud platform via the sync process.",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "api.lansweeper.com",
-          "description": "API used for integrations with our cloud platform (app.lansweeper.com).More information about our API: https://docs.lansweeper.com/docs",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "app.lansweeper.com",
-          "description": "The cloud Platform, this also includes lecstaticcontent.lansweeper.comYou can request your trial on our website: https://www.lansweeper.com/download/ but always use \"intigriti.me\" address for any user accountWith this trial you get access to our cloud platform (app.lansweeper.com), our on-premises software and the sync process (edge.lansweeper.com) between these two. You have to install our on-premises software somewhere locally and this will allow you to scan your local network and push the results to the cloud platform via the sync process.",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "backoffice.lansweeper.com",
-          "description": "Internal backoffice portal for cloud platformNo authorisation will be given",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "app.lansweeper.com/trial",
-          "description": "Demo site with demo data to test the cloud platformAlways use \"intigriti.me\" address for any web form",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "autoupdateapi.lansweeper.com",
-          "description": "API for updating on-premise software",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "docs.lansweeper.com",
-          "description": "Lansweeper's technical documentation",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "login.lansweeper.com",
-          "description": "Auth0 identitiy provider for cloud platform.Always use \"intigriti.me\" address for any user account",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "on-premises software",
-          "description": "The on-premises software is the latest available version on our website (www.lansweeper.com/changelog).You can request your trial on our website: https://www.lansweeper.com/download/ but always use \"intigriti.me\" address for any user accountWith this trial you get access to our cloud platform (app.lansweeper.com), our on-premises software and the sync process (edge.lansweeper.com) between these two. You have to install our on-premises software somewhere locally and this will allow you to scan your local network and push the results to the cloud platform via the sync process.",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "OT scanner",
-          "description": "Scanner to discover OT devices.",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "www.lansweeper.com",
-          "description": "Always use \"intigriti.me\" address for any web formOut of scope for this domain:Store.lansweeper.comwww.lansweeper.com/forumThird-party plug-ins (e.g. Pardot - CleverBridge - Botpress)",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.lansweeper.com",
-          "description": "Any other public-facing Lansweeper related URL",
-          "impact": "No bounty"
-        },
-        {
-          "type": "url",
-          "endpoint": "careers.lansweeper.com",
-          "description": "",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "www.lansweeper.com/forum",
-          "description": "",
-          "impact": "Out of scope"
-        }
+
       ],
       "out_of_scope": [
 
@@ -1516,162 +1051,7 @@
     },
     "targets": {
       "in_scope": [
-        {
-          "type": "url",
-          "endpoint": "*.military.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.monster.at",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.monster.be",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.monster.ca",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.monster.ch",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.monster.co.uk",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.monster.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.monster.de",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.monster.dk",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.monster.es",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.monster.eu",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.monster.fr",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.monster.hu",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.monster.ie",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.monster.it",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.monster.lu",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.monster.no",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.monster.pt",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.monster.se",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.monsterboard.nl",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.monsterpolska.pl",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "fastweb.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.monster.cz",
-          "description": "",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.monster.fi",
-          "description": "",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.monsterindia.com",
-          "description": "",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "Any endpoints which are not owned by Monster & third party systems",
-          "description": "",
-          "impact": "Out of scope"
-        }
+
       ],
       "out_of_scope": [
 
@@ -1846,78 +1226,7 @@
     },
     "targets": {
       "in_scope": [
-        {
-          "type": "url",
-          "endpoint": "analytics.ninjakiwi.com",
-          "description": "This domain hosts the API that consumed analytics events from our game clients",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "api.ninjakiwi.com",
-          "description": "This domain hosts the API for our mobile and PC games. Monitoring traffic through one of our game clients is the easiest method to investigate our main API. Most of our applications are available for free on Steam. Please carefully read the in-scope section regarding what sorts of exploits will be considering in-scope for this domain.",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "builds-auckland.ninja.kiwi",
-          "description": "This domain hosts builds of Ninja Kiwi games for iOS devices.Areas of focus:",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.nkstatic.com",
-          "description": "This domain hosts static content for Ninja Kiwi games and website.",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "battles.tv",
-          "description": "Battles.tv is used to share replays from our Bloons TD Battles game.",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "data.ninjakiwi.com",
-          "description": "This domain hosts our public data API which grants open access to in-game data from our biggest games. For example player profiles, leatherboards and event information is available through this domain.",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "ninja.kiwi",
-          "description": "This domain is used by Ninja Kiwi for our URL shortener service, ie https://ninja.kiwi/intigriti.",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "ninjakiwi.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.ninjakiwi.com",
-          "description": "This covers any subdomains of ninjakiwi.com other than sub-domains which are managed by authorized third-party services or included in the list below.Third Party ServicesThe following domains are explicitly excluded",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "ct.ninjakiwi.com",
-          "description": "",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "mynk.ninjakiwi.com",
-          "description": "This is a legacy domain which powers our Flash games. Uses Flash AMF.",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.souparea.com",
-          "description": "This domain will be considered out of scope unless it can be shown to allow an exploit on one of our Tier 1-3 domains.",
-          "impact": "No bounty"
-        }
+
       ],
       "out_of_scope": [
 
@@ -2067,354 +1376,7 @@
     },
     "targets": {
       "in_scope": [
-        {
-          "type": "url",
-          "endpoint": "*.c-point.be",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "ip range",
-          "endpoint": "188.118.8.0/25",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "ip range",
-          "endpoint": "94.107.237.192/26",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "api-accpt.portofantwerp.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "api-accpt.portofantwerpbruges.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "api.portofantwerp.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "api.portofantwerpbruges.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "apps-accpt.portofantwerp.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "apps-accpt.portofantwerpbruges.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "apps.portofantwerp.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "apps.portofantwerpbruges.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "as2-accpt.portofantwerp.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "as2-accpt.portofantwerpbruges.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "as2.portofantwerp.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "as2.portofantwerpbruges.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "digitalspecs.portofantwerpbruges.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "login-accpt.portofantwerpbruges.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "login.portofantwerpbruges.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "maximo-accpt.portofantwerp.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "maximo-accpt.portofantwerpbruges.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "maximo.portofantwerp.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "maximo.portofantwerpbruges.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "maximo.portofantwerpbruges.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "my-accpt.portofantwerp.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "my-accpt.portofantwerpbruges.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "my.portofantwerp.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "my.portofantwerpbruges.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "oprc.portofantwerpbruges.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "register-accpt.portofantwerp.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "register-accpt.portofantwerpbruges.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "servicedesk-accpt.portofantwerp.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "servicedesk-accpt.portofantwerpbruges.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "servicedesk.portofantwerp.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "servicedesk.portofantwerpbruges.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "share-accpt.portofantwerp.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "share-accpt.portofantwerpbruges.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "share.portofantwerp.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "share.portofantwerpbruges.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "webapps-accpt.portofantwerp.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "webapps-accpt.portofantwerpbruges.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "webapps.portofantwerp.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "webapps.portofantwerpbruges.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "wiki-accpt.portofantwerp.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "wiki-accpt.portofantwerpbruges.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "wiki.portofantwerp.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "wiki.portofantwerpbruges.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "www.oursustainableport.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "www.portofantwerpbruges.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.portofantwerp.com",
-          "description": "",
-          "impact": "No bounty"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.portofantwerpbruges.com",
-          "description": "",
-          "impact": "No bounty"
-        },
-        {
-          "type": "url",
-          "endpoint": "future.portofantwerp.com",
-          "description": "",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "future.portofantwerpbruges.com",
-          "description": "",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "jobs.portofantwerp.com",
-          "description": "",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "jobs.portofantwerpbruges.com",
-          "description": "",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "media.portofantwerp.com",
-          "description": "",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "media.portofantwerpbruges.com",
-          "description": "",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "register.portofantwerp.com",
-          "description": "",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "register.portofantwerpbruges.com",
-          "description": "",
-          "impact": "Out of scope"
-        }
+
       ],
       "out_of_scope": [
 
@@ -2614,114 +1576,7 @@
     },
     "targets": {
       "in_scope": [
-        {
-          "type": "url",
-          "endpoint": "api.sentiance.com",
-          "description": "Main API",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "android",
-          "endpoint": "com.sentiance.journeys2",
-          "description": "Insights Google Store link",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "controltower.sentiance.com",
-          "description": "Insights dashboard",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "ios",
-          "endpoint": "https://apps.apple.com/us/app/rac-go/id6444858115",
-          "description": "RAC Go Apple store link",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "android",
-          "endpoint": "https://play.google.com/store/apps/details?id=com.sentiance.saferdriver",
-          "description": "RAC Go Google store link",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "ios",
-          "endpoint": "insights-by-sentiance/id1608074635",
-          "description": "Insights Apple Store link",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "journeys-api.sentiance.com/v2",
-          "description": "Insights app base API",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.sentiance.com",
-          "description": "IMPORTANT! Please read the out of scope section. Not all subdomains are in scope",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "android",
-          "endpoint": "com.sentiance.journeys",
-          "description": "Journeys Google Store link",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "ios",
-          "endpoint": "journeys-2/id984087229?mt=8",
-          "description": "Journeys Apple Store link",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "docs.sentiance.com",
-          "description": "",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "jobs.sentiance.com",
-          "description": "",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "press.sentiance.com",
-          "description": "",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "_weather.sentiance.com",
-          "description": "",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "betadoc.sentiance.com",
-          "description": "",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "landing-automotive.sentiance.com",
-          "description": "",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "mb.sentiance.com",
-          "description": "",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "www.sentiance.com",
-          "description": "(including no subdomain)",
-          "impact": "Out of scope"
-        }
+
       ],
       "out_of_scope": [
 
@@ -2746,36 +1601,7 @@
     },
     "targets": {
       "in_scope": [
-        {
-          "type": "other",
-          "endpoint": "SimScale API",
-          "description": "API URL: https://api.simscale.comThe API doc is available at https://api.simscale.com.API keys with limited capabilities (project creation and geometry upload) can be managed in the API keys page. API keys with full API capabilities can be requested from the Intigriti support (\"Ask scope question\"). Please note that only a limited number of those API keys will be issued at a time.",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "other",
-          "endpoint": "SimScale Platform",
-          "description": "The following areas and paths under domain https://www.simscale.com:Paths: /signup/*, /signin/*, /onboarding/*Examples:Paths: /dashboard, /users/*Examples (login required):Paths: /workbench/*Examples (login required):Paths: /projects/*Examples:All API endpoints used by UIs listed above.Paths: /api/*, /csm/*, /postprocessing/*",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "other",
-          "endpoint": "SimScale Website",
-          "description": "Domain https://www.simscale.com and the remaining paths not listed under SimScale Platform.Examples:",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "https://www.simscale.com/api/v1/projects/*",
-          "description": "",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "www.simscale.com/forum/users/*.json",
-          "description": "",
-          "impact": "Out of scope"
-        }
+
       ],
       "out_of_scope": [
 
@@ -2825,42 +1651,7 @@
     },
     "targets": {
       "in_scope": [
-        {
-          "type": "ios",
-          "endpoint": "910898851",
-          "description": "We expect that issued items are including print-screen of the version of the app.  Flow to get to version number",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "android",
-          "endpoint": "app.nl.socialdeal",
-          "description": "We expect that issued items are including print-screen of the version of the app.  Flow to get to version number",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "http://socialdeal.nl/inspirations/bluemonday/",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "http://www.whynot.com/",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "https://www.socialdeal.nl/orderlist/5e834ae0bed5c/63d772e2ed277/",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "www.socialdeal.nl",
-          "description": "Our main website.www.socialdeal.be and www.socialdeal.de are the same websites, with different Locale.",
-          "impact": "Tier 2"
-        }
+
       ],
       "out_of_scope": [
 
@@ -3035,42 +1826,7 @@
     },
     "targets": {
       "in_scope": [
-        {
-          "type": "url",
-          "endpoint": "*.tempo-team.*",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "Any related Tempo-Team domain",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "www.tempo-team.be",
-          "description": "🇳🇱🇫🇷",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "www.tempo-team.com",
-          "description": "🇩🇪",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "www.tempo-team.nl",
-          "description": "🇳🇱",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.tempo-team.de",
-          "description": "",
-          "impact": "Out of scope"
-        }
+
       ],
       "out_of_scope": [
 
@@ -3120,48 +1876,7 @@
     },
     "targets": {
       "in_scope": [
-        {
-          "type": "url",
-          "endpoint": "winkels.torfs.be",
-          "description": "🇫🇷🇳🇱",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "www.schoenentorfs.be",
-          "description": "🇫🇷🇳🇱",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "www.schoenentorfs.nl",
-          "description": "🇳🇱",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "www.torfs.be",
-          "description": "🇫🇷🇳🇱",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "www.torfs.nl",
-          "description": "🇳🇱",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "www.samenfittorfs.be",
-          "description": "🇳🇱",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "other",
-          "endpoint": "Any related Torfs domain",
-          "description": "",
-          "impact": "No bounty"
-        }
+
       ],
       "out_of_scope": [
 
@@ -3311,12 +2026,7 @@
     },
     "targets": {
       "in_scope": [
-        {
-          "type": "other",
-          "endpoint": "Ubisoft",
-          "description": "Ubisoft services available from the internet and any software developed by Ubisoft that is not listed as Out of Scope. This includes our web applications, servers, and all our game(s) within 1 year of the last patch/update.",
-          "impact": "Tier 2"
-        }
+
       ],
       "out_of_scope": [
 
@@ -3366,48 +2076,7 @@
     },
     "targets": {
       "in_scope": [
-        {
-          "type": "ios",
-          "endpoint": "1101145849",
-          "description": "iOS application. This is currently installable on Jailbroken devices, please read the out-of-scope findings.",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "api.uphold.com",
-          "description": "Production WebWallet Application. Do not test service degradation attacks or horizontal privilege here.On the business app side, we allow you to create apps in sandbox, but you shouldn't be able to create them in Production.",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "android",
-          "endpoint": "com.uphold.wallet",
-          "description": "Android application. This is currently installable on Jailbroken devices, please read the out-of-scope findings.",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "uphold.com/dashboard",
-          "description": "Production WebWallet Application. Do not test service degradation attacks or horizontal privilege here.",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "api-sandbox.uphold.com",
-          "description": "Use this environment for financial transaction testing, degradation attacks, or horizontal privilege attacks. Fund with Crypto Testnet Faucet (e.g. https://coinfaucet.eu/en/btc-testnet/ for Bitcoin).On the business app side, we allow you to create apps in sandbox, but you shouldn't be able to create them in Production.",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "sandbox.uphold.com/dashboard",
-          "description": "Use this environment for financial transaction testing, degradation attacks, or horizontal privilege attacks. Fund with Crypto Testnet Faucet (e.g. https://coinfaucet.eu/en/btc-testnet/ for Bitcoin)",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.uphold.com",
-          "description": "We are willing to give bonuses on anything you find and we agree is impactful, in the rest of our domain. Please note that third party services are out of scope unless the issue is caused due to a misconfiguration by Uphold",
-          "impact": "Tier 3"
-        }
+
       ],
       "out_of_scope": [
 
@@ -3482,66 +2151,7 @@
     },
     "targets": {
       "in_scope": [
-        {
-          "type": "url",
-          "endpoint": "myaccount.vtm.be",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "vtm.be/vtmgo",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "vtmgo.be",
-          "description": "excluding",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.vtm.be",
-          "description": "Out of scope: shop.vtm.be",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.vtmgo.be",
-          "description": "",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "* vtmgo.be/inloggen",
-          "description": "",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "* vtmgo.be/login",
-          "description": "",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "* vtmgo.be/registreren",
-          "description": "",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "* vtmgo.be/service",
-          "description": "",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "shop.vtm.be",
-          "description": "",
-          "impact": "Out of scope"
-        }
+
       ],
       "out_of_scope": [
 
@@ -3566,84 +2176,7 @@
     },
     "targets": {
       "in_scope": [
-        {
-          "type": "url",
-          "endpoint": "api-wallet.venly.io",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "api.arkane.network",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "api.venly.market",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "connect.arkane.network",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "connect.venly.io",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "events.venly.market",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "login.arkane.network",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "login.venly.io",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "venly.market",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "wallet.venly.io",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "api-staging.venly.market",
-          "description": "",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "events-staging.venly.market",
-          "description": "",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "staging.venly.market",
-          "description": "",
-          "impact": "Tier 3"
-        }
+
       ],
       "out_of_scope": [
 
@@ -3693,114 +2226,7 @@
     },
     "targets": {
       "in_scope": [
-        {
-          "type": "ios",
-          "endpoint": "564141518",
-          "description": "Visma ScannerVisma Scanner is a mobile app used for sending receipts and invoices to your Visma accounting system.The iOS version of the app can be found here:https://apps.apple.com/us/app/visma-scanner/id564141518Please read and follow the steps in the Startup guide to create an account and start hacking: https://vismabugbountyprod.z16.web.core.windows.net/VismaScanner-getting-started.pdfOut of scope:",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "accountsettings.connect.identity.stagaws.visma.com",
-          "description": "ConnectSee instructions for domain \"connect.identity.stagaws.visma.com\".Out of scope:",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "admin.stage.vismaonline.com",
-          "description": "Visma OnlineThis is the old interface for the customer's administrators to administrate the company, where we still have some functionality that has not been moved to the new interface. For example invoicing information and everything regarding collaborations with AO. The collaboration part is out of scope as long as the use of student companies.Please read the Getting Started Instructions in the \"myservices.stage.vismaonline.com\" asset description.Out of scope:",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "ai-testing.maventa.com",
-          "description": "AutoInvoiceThis is the main UI for Visma AutoInvoice. AutoInvoice is Visma's automated and fully ERP integrated service for sending, receiving and handling invoices. AutoInvoice converts and exchanges electronic invoices, optionally prints invoices that can't be sent electronically, receives and interpret PDF invoices and offers services for scanning and interpretation of paper invoices. AutoInvoice handles both Business to Business (B2B) and Business to Consumer (B2C) invoices.Uses partially the embeddable user interface from autointerface-embeddable-stage.maventa.comCreate a test account on https://ai-testing.maventa.com/registrations, or use one of the demo accounts in the getting started instructions below:https://vismabugbountyprod.z16.web.core.windows.net/VismaAutoinvoice-getting-started.pdfOut of scope or works as expected (accepted risk):Note! ai-testing.maventa.com and testing.maventa.com point to the same application but have different branding on the UI. Authentication to the user interface is handled using the Visma Connect service.",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "api.workbox.dk",
-          "description": "DineroThis is Dinero's Public API.See instructions for \"app.workbox.dk\"",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "app.workbox.dk",
-          "description": "DineroDinero is an accounting software for sole traders and micro businesses based out of Denmark. Our only target group is danish companies and therefore the interface is in danish only. The application is a SaaS application hosted in the cloud and consists of a main application and a number of supportive microservices.See the getting started document here: https://vismabugbountyprod.z16.web.core.windows.net/VismaDinero-getting-started.pdfOut of scope:",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "authz.workbox.dk",
-          "description": "DineroUsed for Authorization (OAuth). See instructions for \"app.workbox.dk\"",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "autointerface.stag.visma.net",
-          "description": "AutoInvoiceSee instructions for domain 'ai-testing.maventa.com' to get user credentials.The same resource can be accessed through the URL autointerface-embeddable-stage.maventa.comAll data processing is done through the REST API at ax-stage.maventa.comOut of scope or works as expected (accepted risk):",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "ax-stage.maventa.com",
-          "description": "AutoInvoicehttps://ax-stage.maventa.com is a REST API connected to Visma AutoInvoice.API documentation is available on https://documentation.maventa.com/rest-api/ and https://ax-stage.maventa.com/swagger/#/See instructions for domain 'ai-testing.maventa.com' to get user credentials.Out of scope or works as expected (accepted risk):",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "android",
-          "endpoint": "com.visma.blue",
-          "description": "Visma ScannerVisma Scanner is a mobile app used for sending receipts and invoices to your Visma accounting system.The Andriod version of the app can be found here:https://play.google.com/store/apps/details?id=com.visma.blue&hl=enPlease read and follow the steps in the Startup guide to create an account and start hacking: https://vismabugbountyprod.z16.web.core.windows.net/VismaScanner-getting-started.pdfOut of scope:",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "connect.identity.stagaws.visma.com",
-          "description": "ConnectVisma Connect is featurewise a small but critical component in the Visma portfolio. It is a single sign-on solution used by many Visma services. It is also the place where users manage security preferences such as passwords, MFA, 2FA, email and other account settings.User accounts for testing can be created on https://connect.identity.stagaws.visma.com (this signup flow is not available in production).The test accounts will not have access to any other services right now, so testing is limited to the login portal itself.Out of scope:",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "eaccounting.stage.vismaonline.com",
-          "description": "eAccountingThis is \"Visma eAccounting\" (aka Visma eEkonomi / Visma ePasseli) which is an ERP system available in Sweden, Norway, Finland and The Netherlands.We've added into scope also the eEkonomi \"Visma Lön Smart\" which is a subservice of eAccounting. This can be found after you activate your account (check out the instructions bellow).You can read more on https://www.visma.no/eaccounting/english/You need to register an user to test this system. The sign-up up process is described in this document:https://vismabugbountyprod.z16.web.core.windows.net/Visma-eAccounting-getting-started.pdfThis video also shows the entire setup (only Swedish audio) https://www.youtube.com/watch?v=kVr_CXgfhi0&t=4sTLDR: Goto https://admin.stage.vismaonline.com/Customer/StudentSignup.aspx and sign up with the training code \"04h2v\"Out of scope:",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "eaccountingprinting.stage.vismaonline.com",
-          "description": "eAccountingYou reach this asset by creating and viewing a report under the Accounting/Reports menu as a logged on user in asset \"eaccounting.stage.vismaonline.com\"",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "identity.stage.vismaonline.com",
-          "description": "Visma OnlineVisma Connect is used as identity provider, but an own identity server is used to provide JWT tokens that are used by MyServices (and others).Please read the Getting Started instructions document in the \"myservices.stage.vismaonline.com\" asset description.Out of scope:",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "myservices-api.stage.vismaonline.com",
-          "description": "Visma OnlineThis is the API behind \"myservices.stage.vismaonline.com\".Please read the Getting Started instructions document in the asset description \"myservices.stage.vismaonline.com\".",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "myservices.stage.vismaonline.com",
-          "description": "Visma OnlineThis is an interface where the customer's users can access all their services, and customer's administrators can manage users on the company and manage users' access to services that the company has.More information about the service and test accounts creation can be found here:https://vismabugbountyprod.z16.web.core.windows.net/VismaOnline-getting-started.pdfOut of scope:",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "oauth.developers.stagaws.visma.com",
-          "description": "Visma Developer PortalVisma Developer Portal is used both internally and externally by developers for registering OAuth 2.0/OpenID Connect applications for Single-Sign-On with Visma (Visma Connect) and/or API integration.Existing Visma Connect users accounts can be used for testing. We also allow registration of new users if needed.Users need to register an organization as part of the sign-in or to be added (invite) to an existing organization by organization's manager. The user which registers the organization also gets manager role assigned.Each organization has its own set of OAuth 2.0/OpenID Connect applications.Please read the Getting Started Instructions here: https://vismabugbountyprod.z16.web.core.windows.net/VismaDeveloperPortal-getting-started.pdfOut of scope:",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "testing.maventa.com",
-          "description": "AutoInvoicehttps://testing.maventa.com/apis/v1.1/wsdl is a SOAP API connected to Visma AutoInvoice.API documentation is available on https://documentation.maventa.com/soap-api/See instructions for domain 'ai-testing.maventa.com' to get user credentials.",
-          "impact": "Tier 2"
-        }
+
       ],
       "out_of_scope": [
 
@@ -3875,54 +2301,7 @@
     },
     "targets": {
       "in_scope": [
-        {
-          "type": "ios",
-          "endpoint": "1395921017",
-          "description": "iOS Mobile Application",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "https://api.voiapp.io/",
-          "description": "Backend REST API",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "android",
-          "endpoint": "io.voiapp.voi",
-          "description": "Android Mobile Application",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "mds.voiapp.io",
-          "description": "Partner API as documented at https://docs.voiscooters.com/",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.voiscooters.com",
-          "description": "",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "report.voi.com",
-          "description": "Website to report badly parked scooters.",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "voi.com",
-          "description": "Informational Website",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "www.voiscooters.com",
-          "description": "Informational Website",
-          "impact": "Tier 3"
-        }
+
       ],
       "out_of_scope": [
 
@@ -3972,96 +2351,7 @@
     },
     "targets": {
       "in_scope": [
-        {
-          "type": "url",
-          "endpoint": "*. advancedcustomfields.com",
-          "description": "",
-          "impact": "No bounty"
-        },
-        {
-          "type": "url",
-          "endpoint": "*. bettersearchreplace.com",
-          "description": "",
-          "impact": "No bounty"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.deliciousbrains.com",
-          "description": "",
-          "impact": "No bounty"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.studiopress.com",
-          "description": "The studiopress.com, www.studiopress.com, and my.studiopress.com sites are public facing marketing and WordPress theme e-commerce sites. No credentials will be provided. Researchers are free to test functionally that requires authentication with their own accounts. Please note: no reimbursements will be made for money spent to access this part of the application.",
-          "impact": "No bounty"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.wpengine.io",
-          "description": "This is an apex domain used for microservices hosted as subdomains and service-to-service APIs - these are intended to be \"internal\" services like APIs but have public DNS records and some may be publicly-accessible. To aid in testing, we've provided some initial OSINT for this domain: https://crt.sh/?q=%25wpengine.io",
-          "impact": "No bounty"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.wpesvc.net",
-          "description": "This is an apex domain used for microservices hosted as subdomains and service-to-service APIs - these are intended to be \"internal\" services like APIs but have public DNS records and some may be publicly-accessible. To aid in testing, we've provided some initial OSINT for this domain: https://crt.sh/?q=%25wpesvc.net",
-          "impact": "No bounty"
-        },
-        {
-          "type": "url",
-          "endpoint": "app.getflywheel.com",
-          "description": "This is the primary site for researchers to register and test both the Flywheel App as well as the Flywheel Platform. We will not provide credentials or bypass verification controls (i.e, a researcher will need to either provide a valid phone number or credit card to have a live site), but a researcher may register a demo site that matches the platform's functionality without verification. Please use your Intigriti credentials to register. Please note that any issues regarding an individual WordPress installation on the Flywheel platform, outside of plugins owned by WP Engine/Flywheel, will be considered out of scope as we do not monitor or manage customer content. We are, however, very interested in issues that may compromise customer isolation on the platform or cause data to be leaked from either a host or an unrelated customer site.",
-          "impact": "No bounty"
-        },
-        {
-          "type": "url",
-          "endpoint": "getflywheel.com",
-          "description": "This site is the landing page for Flywheel-branded services. Most of this data is static, but there are a number of dynamic fields and functionalities that are available to be tested. Support, contact forms, and chat functionality are out-of-scope - specifically, the Sales Questions functionality or https://getflywheel.com/schedule-a-demo/. No testing should be done against these targets or any 3rd party services. Please do not contact Live Chat agents.",
-          "impact": "No bounty"
-        },
-        {
-          "type": "url",
-          "endpoint": "my.wpengine.com",
-          "description": "The User Portal for WP Engine. Customers manage their WordPress sites, addons, and billing details through this portal. No credentials will be provided. Researchers are free to test functionally that requires authentication with their own accounts. Please note: no reimbursements will be made for money spent to access this part of the application.",
-          "impact": "No bounty"
-        },
-        {
-          "type": "url",
-          "endpoint": "spressforumstg.wpengine.com",
-          "description": "the staging environment for the StudioPress community forum, built on WordPress. Researchers are welcome to register an account using their @intigriti.me email address, but should refrain from interacting with the community, making public posts, or performing automated testing which may cause disruption. Do not attempt to gain access to any user accounts not under your control.",
-          "impact": "No bounty"
-        },
-        {
-          "type": "url",
-          "endpoint": "studiopress.blog",
-          "description": "This is a public-facing marketing site built on WordPress. Most of the content on this site consists of static blog posts.",
-          "impact": "No bounty"
-        },
-        {
-          "type": "other",
-          "endpoint": "WP Engine-developed WordPress Plugins and Themes",
-          "description": "We accept any reports of vulnerabilities in plugins or themes managed or developed by WP Engine, with the exception of any application-level vulnerabilities in the Out of Scope section below.  These free versions closely mirror their paid counterparts, so any vulnerabilities discovered should be applicable to both the paid or free plugins.We also accept reports for the following Delicious Brains plugins:https://wordpress.org/plugins/advanced-custom-fields",
-          "impact": "No bounty"
-        },
-        {
-          "type": "url",
-          "endpoint": "wpengine.com",
-          "description": "This the landing page for the main WP Engine website. Most of this data is static, but there are a number of dynamic fields and functionalities that are available to be tested. Support, contact forms, and chat functionality are out-of-scope - specifically, the Sales Questions functionality and wpengine.com/contact/. No testing should be done against these targets or any 3rd party services.",
-          "impact": "No bounty"
-        },
-        {
-          "type": "url",
-          "endpoint": "https://getflywheel.com/schedule-a-demo/",
-          "description": "",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "https://wpengine.com/contact/",
-          "description": "",
-          "impact": "Out of scope"
-        }
+
       ],
       "out_of_scope": [
 
@@ -4186,48 +2476,7 @@
     },
     "targets": {
       "in_scope": [
-        {
-          "type": "url",
-          "endpoint": "https://api-dashboard.stag.henchman.io",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "https://api-search.stag.henchman.io",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "https://add-in.stag.henchman.io",
-          "description": "This is our add-in.You can authenticate with:email: wouter+intigriti@henchman.iopassword: 7qHVPbNm_MZmdNkc-_nwXJkCTyXu*EfRsK9Pmnn3Here you can search for the analysed data. You will see this data after your integration is finished.https://youtu.be/BF1bsN2JpBY",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "https://auth.stag.henchman.io",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "https://dashboard.stag.henchman.io",
-          "description": "This is our dashboard.We've created a Intigriti - Bug Bounty Program tenant.You can authenticate with:email: wouter+intigriti@henchman.iopassword: 7qHVPbNm_MZmdNkc-_nwXJkCTyXu*EfRsK9Pmnn3Here you can add/remove users and add an integration.https://youtu.be/BF1bsN2JpBY",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "https://ops-dashboard.stag.henchman.io",
-          "description": "This is our operations dashboard.You can authenticate with:email: wouter+intigriti@henchman.iopassword: 7qHVPbNm_MZmdNkc-_nwXJkCTyXu*EfRsK9Pmnn3You will need this to make sure the integration flow goes as smooth as possible. Integration connections that have been made by the customer/tenant on the dashboard will need to be approved here first. Also, this platform will give you extra information about the state of the integration. An integration can only be deleted on the operations dashboard.https://youtu.be/BF1bsN2JpBY⚠️ It's important that you use this ops-dashboard only for you own integration flow or to create a company for yourself. Please don't add yourself as a user to another company that you haven't created yourself. This can be in use for other researchers ⚠️",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.henchman.io",
-          "description": "For the Dashboard, Auth, Add-in and API endpoints - Do NOT test these on production. Please use the staging environments listed in the above domains section.",
-          "impact": "No bounty"
-        }
+
       ],
       "out_of_scope": [
 
@@ -4252,72 +2501,7 @@
     },
     "targets": {
       "in_scope": [
-        {
-          "type": "ios",
-          "endpoint": "1135288773",
-          "description": "",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "api.ibood.com",
-          "description": "",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "android",
-          "endpoint": "com.ibood.app",
-          "description": "",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "my.ibood.com",
-          "description": "",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.ibood.io",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "www.ibood.com",
-          "description": "Many pages contain a section for comments. Please use this page for testing: https://www.ibood.com/contents/pages/intigriti",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.ibood.com",
-          "description": "Many subdomains point to 3rd party services, which can often be recognized because they are CNAME records to out of scope domains.Please check the out of scope section to verify what is in / out of scope regarding these.",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "beta.ibood.com",
-          "description": "",
-          "impact": "No bounty"
-        },
-        {
-          "type": "url",
-          "endpoint": "feeds.ibood.com",
-          "description": "",
-          "impact": "No bounty"
-        },
-        {
-          "type": "url",
-          "endpoint": "img.ibood.com",
-          "description": "",
-          "impact": "No bounty"
-        },
-        {
-          "type": "url",
-          "endpoint": "service-*.ibood.com",
-          "description": "",
-          "impact": "No bounty"
-        }
+
       ],
       "out_of_scope": [
 
@@ -4367,186 +2551,7 @@
     },
     "targets": {
       "in_scope": [
-        {
-          "type": "url",
-          "endpoint": "api.vidaxl.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "ar.vidaxl.sa.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "b2b.vidaxl.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "cms.woger-cdn.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "customer-services.vidaxl.org",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "en.vidaxl.ae",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "en.vidaxl.ca",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "fps-extr-services.vidaxl.org",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "fr.vidaxl.ch",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "is.vidaxl.is",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "nexus.vidaxl.org",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "nl.vidaxl.be",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "serviceportal.vidaxl.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "shops-services.vidaxl.org",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "tracking.vidaxl.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "uk.vidaxl.com.ua",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "vidaxl.zendesk.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "www.dropshippingxl.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "www.vidaxl.<TLD>",
-          "description": "Our TLDs for vidaxl are: .at, .bg, .com.uk, .com, .com.au, .com.tr, .cz, .de, .dk, .ee, .es, .fi, .fr, .gr, .hr, .hu, .ie, .it, .jp, .lt, .lv, .nl, .no, .pl, .pt, .ro, .se, .si, and .sk`.",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "apigateway.vidaxl.io",
-          "description": "",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "app.vidaxl.io",
-          "description": "",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "corporate.vidaxl.com",
-          "description": "",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "drone.vidaxl.io",
-          "description": "",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "qa-db.vidaxl.io",
-          "description": "",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "qa.vidaxl.io",
-          "description": "",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "qa1-apigateway.vidaxl.io",
-          "description": "",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "staging-apigateway.vidaxl.io",
-          "description": "",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "staging-db.vidaxl.io",
-          "description": "",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "staging.vidaxl.io",
-          "description": "",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "partners.vidaxl.com",
-          "description": "",
-          "impact": "Out of scope"
-        }
+
       ],
       "out_of_scope": [
 
