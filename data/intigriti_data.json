@@ -117,132 +117,7 @@
     },
     "targets": {
       "in_scope": [
-        {
-          "type": "url",
-          "endpoint": "hey.bild.de",
-          "description": "",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "https://meinkonto.bild.de/",
-          "description": "",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "https://secure.mypass.de/",
-          "description": "",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "https://vip-club.computerbild.de/",
-          "description": "",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "sportbild.bild.de",
-          "description": "",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "Tier 1 subdomains",
-          "description": "See attached document NMT-DomainScopeBugBounty.xlsx in \"In scope\" section",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "www.bild.de",
-          "description": "",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "www.bild.tv",
-          "description": "",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "www.computerbild.de",
-          "description": "",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "www.welt.de",
-          "description": "",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "play.bild.de",
-          "description": "See attached document NMT-DomainScopeBugBounty.xlsx in \"In scope\" section",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "www.autobild.de",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "www.bz-berlin.de",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "Tier 3 subdomains",
-          "description": "See attached document NMT-DomainScopeBugBounty.xlsx in \"In scope\" section",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "www.ein-herz-fuer-kinder.de",
-          "description": "",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "www.fitbook.de",
-          "description": "",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "www.myhomebook.de",
-          "description": "",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "www.petbook.de",
-          "description": "",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "www.stylebook.de",
-          "description": "",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "www.techbook.de",
-          "description": "",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "www.travelbook.de",
-          "description": "",
-          "impact": "Tier 3"
-        }
+
       ],
       "out_of_scope": [
 
@@ -417,48 +292,7 @@
     },
     "targets": {
       "in_scope": [
-        {
-          "type": "ios",
-          "endpoint": "1416625210",
-          "description": "React-Native built iOS app",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "android",
-          "endpoint": "com.freshfoodventures.crisp",
-          "description": "React-Native built Android app",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "crisp.ninja",
-          "description": "Code review tool behind IP-filter",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "for-hackers.crisp.kitchen",
-          "description": "Back-office management login page.(for-hackers.crisp.kitchen is a CNAME to crisp.kitchen; it allows us to classify traffic)",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "for-hackers.crisp.nl",
-          "description": "Main frontpage & landing pages.(for-hackers.crisp.nl is a CNAME to crisp.nl; it allows us to classify traffic)",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "for-hackers.crispapp.nl",
-          "description": "Backend host to which apps connect.(for-hackers.crispapp.nl is a CNAME to crispapp.nl; it allows us to classify traffic)",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "https://for-hackers.crispapp.nl/web-rn/",
-          "description": "Hidden web build of the app. Client-side issues that do not exist in the native apps are capped to low severity.",
-          "impact": "Tier 2"
-        }
+
       ],
       "out_of_scope": [
 
@@ -1583,7 +1417,24 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "other",
+          "endpoint": "https://gist.github.com/RedBullSecurity/3eb88debcb01759eccf65ec2b799b340",
+          "description": "Domains that are related to Red Bull and can be found on this list. Any subdomain not mentioned in this list, will be considered as out of scope.",
+          "impact": "No bounty"
+        },
+        {
+          "type": "other",
+          "endpoint": "IOS and Android apps related to Red Bull",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.newyorkredbulls.com",
+          "description": "",
+          "impact": "Out of scope"
+        }
       ],
       "out_of_scope": [
 
@@ -2108,30 +1959,7 @@
     },
     "targets": {
       "in_scope": [
-        {
-          "type": "url",
-          "endpoint": "*.tweakblogs.net",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.tweakers.net",
-          "description": "Out of scope: elect.tweakers.net",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.tweakimg.net",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "elect.tweakers.net",
-          "description": "",
-          "impact": "Out of scope"
-        }
+
       ],
       "out_of_scope": [
 
