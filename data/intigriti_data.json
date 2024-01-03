@@ -1192,78 +1192,7 @@
     },
     "targets": {
       "in_scope": [
-        {
-          "type": "url",
-          "endpoint": "analytics.ninjakiwi.com",
-          "description": "This domain hosts the API that consumed analytics events from our game clients",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "api.ninjakiwi.com",
-          "description": "This domain hosts the API for our mobile and PC games. Monitoring traffic through one of our game clients is the easiest method to investigate our main API. Most of our applications are available for free on Steam. Please carefully read the in-scope section regarding what sorts of exploits will be considering in-scope for this domain.",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "builds-auckland.ninja.kiwi",
-          "description": "This domain hosts builds of Ninja Kiwi games for iOS devices.Areas of focus:",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.nkstatic.com",
-          "description": "This domain hosts static content for Ninja Kiwi games and website.",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "battles.tv",
-          "description": "Battles.tv is used to share replays from our Bloons TD Battles game.",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "data.ninjakiwi.com",
-          "description": "This domain hosts our public data API which grants open access to in-game data from our biggest games. For example player profiles, leatherboards and event information is available through this domain.",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "ninja.kiwi",
-          "description": "This domain is used by Ninja Kiwi for our URL shortener service, ie https://ninja.kiwi/intigriti.",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "ninjakiwi.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.ninjakiwi.com",
-          "description": "This covers any subdomains of ninjakiwi.com other than sub-domains which are managed by authorized third-party services or included in the list below.Third Party ServicesThe following domains are explicitly excluded",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "ct.ninjakiwi.com",
-          "description": "",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "mynk.ninjakiwi.com",
-          "description": "This is a legacy domain which powers our Flash games. Uses Flash AMF.",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.souparea.com",
-          "description": "This domain will be considered out of scope unless it can be shown to allow an exploit on one of our Tier 1-3 domains.",
-          "impact": "No bounty"
-        }
+
       ],
       "out_of_scope": [
 
@@ -1463,7 +1392,48 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "url",
+          "endpoint": "*.randstad.*",
+          "description": "Out of Scope: workplace.randstad.in & apps.randstad.in",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.randstadrisesmart.*",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.risesmart.*",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "Any related Randstad domain",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "apps.randstad.in",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "cz.randstad.com",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "workplace.randstad.in",
+          "description": "",
+          "impact": "Out of scope"
+        }
       ],
       "out_of_scope": [
 
@@ -2163,7 +2133,216 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "url",
+          "endpoint": "*.canvas.be",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.dewarmsteweek.be",
+          "description": "Out of scope: shop.dewarmsteweek.be - no testing allowed",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.ketnet.be",
+          "description": "Out of scope: shop.ketnet.be - no testing allowed",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.klara.be",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.mnm.be",
+          "description": "Out of scope: shop.mnm.be - no testing allowed",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.radio1.be",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.radio2.be",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.radioplus.be",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.sporza.be",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.stubru.be",
+          "description": "Out of scope: shop.stubru.be - no testing allowed",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.vrt.be",
+          "description": "Out of scope: shop.vrt.be - no testing allowedOut of scope: innovatie.vrt.be",
+          "impact": "No bounty"
+        },
+        {
+          "type": "ios",
+          "endpoint": "1001982587",
+          "description": "Ketnet Junior",
+          "impact": "No bounty"
+        },
+        {
+          "type": "ios",
+          "endpoint": "1001983790",
+          "description": "Ketnet",
+          "impact": "No bounty"
+        },
+        {
+          "type": "ios",
+          "endpoint": "1041369236",
+          "description": "Wall of Moments",
+          "impact": "No bounty"
+        },
+        {
+          "type": "ios",
+          "endpoint": "1116046348",
+          "description": "Radio 1",
+          "impact": "No bounty"
+        },
+        {
+          "type": "ios",
+          "endpoint": "1116049623",
+          "description": "Radio 2",
+          "impact": "No bounty"
+        },
+        {
+          "type": "ios",
+          "endpoint": "1116054448",
+          "description": "MNM",
+          "impact": "No bounty"
+        },
+        {
+          "type": "ios",
+          "endpoint": "1116054765",
+          "description": "Klara",
+          "impact": "No bounty"
+        },
+        {
+          "type": "ios",
+          "endpoint": "1337574835",
+          "description": "VRT NU",
+          "impact": "No bounty"
+        },
+        {
+          "type": "ios",
+          "endpoint": "388159251",
+          "description": "Studio Brussel",
+          "impact": "No bounty"
+        },
+        {
+          "type": "ios",
+          "endpoint": "878339906",
+          "description": "Sporza",
+          "impact": "No bounty"
+        },
+        {
+          "type": "ios",
+          "endpoint": "927943978",
+          "description": "Kaatje van Ketnet",
+          "impact": "No bounty"
+        },
+        {
+          "type": "ios",
+          "endpoint": "952769219",
+          "description": "VRT NWS",
+          "impact": "No bounty"
+        },
+        {
+          "type": "ios",
+          "endpoint": "959958329",
+          "description": "Sporza Voetbal",
+          "impact": "No bounty"
+        },
+        {
+          "type": "android",
+          "endpoint": "be.vrt.ketnet.ketnet",
+          "description": "Ketnet",
+          "impact": "No bounty"
+        },
+        {
+          "type": "android",
+          "endpoint": "be.vrt.ketnet.ketnetjr",
+          "description": "Ketnet Junior",
+          "impact": "No bounty"
+        },
+        {
+          "type": "android",
+          "endpoint": "be.vrt.mobile.android.deredactie",
+          "description": "VRT NWS",
+          "impact": "No bounty"
+        },
+        {
+          "type": "android",
+          "endpoint": "be.vrt.mobile.android.sporza.voetbal",
+          "description": "Sporza voetbal",
+          "impact": "No bounty"
+        },
+        {
+          "type": "android",
+          "endpoint": "be.vrt.radioplus.klara",
+          "description": "Klara",
+          "impact": "No bounty"
+        },
+        {
+          "type": "android",
+          "endpoint": "be.vrt.radioplus.mnm",
+          "description": "MNM",
+          "impact": "No bounty"
+        },
+        {
+          "type": "android",
+          "endpoint": "be.vrt.radioplus.radio1",
+          "description": "Radio 1",
+          "impact": "No bounty"
+        },
+        {
+          "type": "android",
+          "endpoint": "be.vrt.radioplus.radio2",
+          "description": "Radio 2",
+          "impact": "No bounty"
+        },
+        {
+          "type": "android",
+          "endpoint": "be.vrt.radioplus.stubru",
+          "description": "Studio Brussel",
+          "impact": "No bounty"
+        },
+        {
+          "type": "android",
+          "endpoint": "be.vrt.vrtnu",
+          "description": "VRT NU",
+          "impact": "No bounty"
+        },
+        {
+          "type": "android",
+          "endpoint": "com.fwc2014.vrt.and",
+          "description": "Sporza",
+          "impact": "No bounty"
+        }
       ],
       "out_of_scope": [
 
