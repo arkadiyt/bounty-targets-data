@@ -17,7 +17,84 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "ios",
+          "endpoint": "1099986434",
+          "description": "IOS Mobile Applicaton of Ada Health",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "android",
+          "endpoint": "com.ada.app",
+          "description": "Android Mobile Application of Ada Health",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://api.mobile.ada.com",
+          "description": "Backend for frontend API endpoint for mobile application activities. This endpoint is protected by a Web Application Firewall.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://id.ada.com",
+          "description": "Ada-ID is an identity management service for end user that interacts with Ada's applications. It provides authentication and authorization. Ada-ID serves as web application and API services. Frontend is valid for password reset and account verification process. This endpoint is protected by a Web Application Firewall.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://care-navigation-admin-bff.int.eu.enterprise.ada.com",
+          "description": "Backend for frontend (bff) service for Care Navigation Admin interface. BFF is a variant of the API Gateway pattern which provides an additional layer between microservices.",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://care-navigation-admin-fe.int.eu.enterprise.ada.com",
+          "description": "Care Navigation Admin Frontend is a visual tool for managing Connect data including:Test credentials will not be provided. Try to find broken access controls on this endpoint.",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://care-navigation-bff.int.eu.enterprise.ada.com",
+          "description": "Backend for frontend (bff) service for Care Navigation Frontend service. BFF is a variant of the API Gateway pattern which provides an additional layer between microservices.",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://care-navigation-fe.int.eu.enterprise.ada.com",
+          "description": "Care Navigation Frontend service represents Ada Partner care navigation option list available after assessment test is accomplished. Service includes:",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://demo-prod-assessment-bff.ada-prod-eu.prod.gcp.ada.com",
+          "description": "Backend for frontend (bff) service for demo assessment web interface. BFF is a variant of the API Gateway pattern which provides an additional layer between microservices. Please see the all endpoints in the Open API documentation (demo_assessment_bff_openapi.json) file",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://demo-prod-hcp-report-bff.ada-prod-eu.prod.gcp.ada.com",
+          "description": "Handover is a solution for sharing (handing over) the results of the health assessment with the user’s health care provider (HCP) or a health professional. This service has the responsibility to process the data from the hcp-report-backend for the use of handover frontend.",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://demo.enterprise.ada.com",
+          "description": "Our web application helps millions to manage their health. This is the frontend assessment application demo domain which represents the general flow we provide with our enterprise partners. This medical AI symptom checker is trained by real doctors. This endpoint provides both guess and authenticated flow which can be combined with our SSO service.This UI is calling the BFF domain which is also in the scope.",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://demo.handover.enterprise.ada.com",
+          "description": "Handover is a solution for sharing (handing over) the results of the health assessment with the user’s health care provider (HCP) or a health professional. This service has the responsibility to render the HCP report data received from the HCP report bff.",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://demo.sso.enterprise.ada.com",
+          "description": "Smart-auth is Ada’s identification management and Single Sign On (SSO).This service is based on SMART on FHIR implementation and provides a standard way to integrate with other EHR (Electronic Health Record) servers. It is an optional module meaning that not all flows are authentication required.",
+          "impact": "Tier 3"
+        }
       ],
       "out_of_scope": [
 
@@ -367,48 +444,7 @@
     },
     "targets": {
       "in_scope": [
-        {
-          "type": "url",
-          "endpoint": "*.deutschepost.de",
-          "description": "",
-          "impact": "No bounty"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.dhl",
-          "description": "",
-          "impact": "No bounty"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.dhl.com",
-          "description": "",
-          "impact": "No bounty"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.dhl.de",
-          "description": "",
-          "impact": "No bounty"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.dpdhl.com",
-          "description": "",
-          "impact": "No bounty"
-        },
-        {
-          "type": "other",
-          "endpoint": "Any other domain from DHL Group companies",
-          "description": "",
-          "impact": "No bounty"
-        },
-        {
-          "type": "other",
-          "endpoint": "Mobile apps owned by DHL Group companies",
-          "description": "",
-          "impact": "No bounty"
-        }
+
       ],
       "out_of_scope": [
 
@@ -583,60 +619,7 @@
     },
     "targets": {
       "in_scope": [
-        {
-          "type": "url",
-          "endpoint": "my.eurid.eu",
-          "description": "My .eu is the registrant or domain holder portal and requires a registered domain name in one of our supported scripts to access.",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.das.eu",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.dns.eu",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.eurid.eu",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.nic.eu",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.registry.eu",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.whois.eu",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.yadifa.eu",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "other",
-          "endpoint": "YADIFA authoritative name server",
-          "description": "YADIFA is EURid's authoritative name server software which can be downloaded from the yadifa.eu website.",
-          "impact": "Tier 3"
-        }
+
       ],
       "out_of_scope": [
 
@@ -2136,48 +2119,7 @@
     },
     "targets": {
       "in_scope": [
-        {
-          "type": "ios",
-          "endpoint": "1101145849",
-          "description": "iOS application. This is currently installable on Jailbroken devices, please read the out-of-scope findings.",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "api.uphold.com",
-          "description": "Production WebWallet Application. Do not test service degradation attacks or horizontal privilege here.On the business app side, we allow you to create apps in sandbox, but you shouldn't be able to create them in Production.",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "android",
-          "endpoint": "com.uphold.wallet",
-          "description": "Android application. This is currently installable on Jailbroken devices, please read the out-of-scope findings.",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "uphold.com/dashboard",
-          "description": "Production WebWallet Application. Do not test service degradation attacks or horizontal privilege here.",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "api-sandbox.uphold.com",
-          "description": "Use this environment for financial transaction testing, degradation attacks, or horizontal privilege attacks. Fund with Crypto Testnet Faucet (e.g. https://coinfaucet.eu/en/btc-testnet/ for Bitcoin).On the business app side, we allow you to create apps in sandbox, but you shouldn't be able to create them in Production.",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "sandbox.uphold.com/dashboard",
-          "description": "Use this environment for financial transaction testing, degradation attacks, or horizontal privilege attacks. Fund with Crypto Testnet Faucet (e.g. https://coinfaucet.eu/en/btc-testnet/ for Bitcoin)",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.uphold.com",
-          "description": "We are willing to give bonuses on anything you find and we agree is impactful, in the rest of our domain. Please note that third party services are out of scope unless the issue is caused due to a misconfiguration by Uphold",
-          "impact": "Tier 3"
-        }
+
       ],
       "out_of_scope": [
 
@@ -2352,7 +2294,12 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "url",
+          "endpoint": "all",
+          "description": "This program covers all Visma services, products or web properties.We do not offer money rewards for this program, but as a small token of appreciation for all researchers that submit a previously unknown vulnerability that triggers a code or configuration change, we will offer a place on our Security Hall of Fame (HoF).Also for all valid Medium+ reports, we will offer swags.For money rewards, the only exceptions are the specific assets listed in our Public Bug Bounty Program, see https://app.intigriti.com/programs/visma/visma/detail. Please note that we will only accept reports for the explicitly listed assets under our Public program.",
+          "impact": "No bounty"
+        }
       ],
       "out_of_scope": [
 
