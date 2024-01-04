@@ -267,12 +267,7 @@
     },
     "targets": {
       "in_scope": [
-        {
-          "type": "url",
-          "endpoint": "app-pwn.intigriti.rocks",
-          "description": "",
-          "impact": "Tier 2"
-        }
+
       ],
       "out_of_scope": [
 
@@ -1572,7 +1567,36 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "other",
+          "endpoint": "SimScale API",
+          "description": "API URL: https://api.simscale.comThe API doc is available at https://api.simscale.com.API keys with limited capabilities (project creation and geometry upload) can be managed in the API keys page. API keys with full API capabilities can be requested from the Intigriti support (\"Ask scope question\"). Please note that only a limited number of those API keys will be issued at a time.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "SimScale Platform",
+          "description": "The following areas and paths under domain https://www.simscale.com:Paths: /signup/*, /signin/*, /onboarding/*Examples:Paths: /dashboard, /users/*Examples (login required):Paths: /workbench/*Examples (login required):Paths: /projects/*Examples:All API endpoints used by UIs listed above.Paths: /api/*, /csm/*, /postprocessing/*",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "SimScale Website",
+          "description": "Domain https://www.simscale.com and the remaining paths not listed under SimScale Platform.Examples:",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://www.simscale.com/api/v1/projects/*",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.simscale.com/forum/users/*.json",
+          "description": "",
+          "impact": "Out of scope"
+        }
       ],
       "out_of_scope": [
 
@@ -1997,7 +2021,12 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "other",
+          "endpoint": "Ubisoft",
+          "description": "Ubisoft services available from the internet and any software developed by Ubisoft that is not listed as Out of Scope. This includes our web applications, servers, and all our game(s) within 1 year of the last patch/update.",
+          "impact": "Tier 2"
+        }
       ],
       "out_of_scope": [
 
@@ -2247,30 +2276,7 @@
     },
     "targets": {
       "in_scope": [
-        {
-          "type": "url",
-          "endpoint": "*.vlerick.com",
-          "description": "When you start testing www.vlerick.com, visit www.vlerick.com/en?internal first. In this way, your testing is not taken into account in our web stats.",
-          "impact": "No bounty"
-        },
-        {
-          "type": "url",
-          "endpoint": "https://mastersblog.vlerick.com/",
-          "description": "",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "https://repository.vlerick.com",
-          "description": "",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "https://vlerick.myshopify.com/",
-          "description": "",
-          "impact": "Out of scope"
-        }
+
       ],
       "out_of_scope": [
 
