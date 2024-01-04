@@ -6543,6 +6543,7 @@ type CompleteHacktivityReportDocument implements Node {
   cwe: String
   disclosed: Boolean
   disclosed_at: Date
+  has_collaboration: Boolean
   id: ID!
   industry: String
   latest_disclosable_action: String
@@ -18013,6 +18014,7 @@ type HacktivityReportDocument implements Node {
   cve_ids: [String!]
   cwe: String
   disclosed_at: Date
+  has_collaboration: Boolean
   id: ID!
   latest_disclosable_action: String
   latest_disclosable_activity_at: DateTime
