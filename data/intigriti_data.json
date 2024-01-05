@@ -92,7 +92,30 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "url",
+          "endpoint": "*.allegro.pl.allegrosandbox.pl",
+          "description": "This is our sandbox environment that replicates production. For more information please visit developer website.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.allegro.pl",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.allegrogroup.com",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "other",
+          "endpoint": "Any production website owned by Allegro not listed in Domains",
+          "description": "",
+          "impact": "Out of scope"
+        }
       ],
       "out_of_scope": [
 
@@ -163,6 +186,31 @@
     },
     "max_bounty": {
       "value": 0,
+      "currency": "EUR"
+    },
+    "targets": {
+      "in_scope": [
+
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
+    "id": "5f29e1eb-85e8-4d99-9b52-b809f06de633",
+    "name": "Bpost",
+    "company_handle": "bpost",
+    "handle": "dummy",
+    "url": "https://www.intigriti.com/programs/bpost/dummy/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "min_bounty": {
+      "value": 0,
+      "currency": "EUR"
+    },
+    "max_bounty": {
+      "value": 1500,
       "currency": "EUR"
     },
     "targets": {
@@ -1092,30 +1140,7 @@
     },
     "targets": {
       "in_scope": [
-        {
-          "type": "url",
-          "endpoint": "*.napoleoncasino.be",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.napoleondice.be",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.napoleongames.be",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.napoleonsports.be",
-          "description": "",
-          "impact": "Tier 2"
-        }
+
       ],
       "out_of_scope": [
 
@@ -1215,78 +1240,7 @@
     },
     "targets": {
       "in_scope": [
-        {
-          "type": "url",
-          "endpoint": "analytics.ninjakiwi.com",
-          "description": "This domain hosts the API that consumed analytics events from our game clients",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "api.ninjakiwi.com",
-          "description": "This domain hosts the API for our mobile and PC games. Monitoring traffic through one of our game clients is the easiest method to investigate our main API. Most of our applications are available for free on Steam. Please carefully read the in-scope section regarding what sorts of exploits will be considering in-scope for this domain.",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "builds-auckland.ninja.kiwi",
-          "description": "This domain hosts builds of Ninja Kiwi games for iOS devices.Areas of focus:",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.nkstatic.com",
-          "description": "This domain hosts static content for Ninja Kiwi games and website.",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "battles.tv",
-          "description": "Battles.tv is used to share replays from our Bloons TD Battles game.",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "data.ninjakiwi.com",
-          "description": "This domain hosts our public data API which grants open access to in-game data from our biggest games. For example player profiles, leatherboards and event information is available through this domain.",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "ninja.kiwi",
-          "description": "This domain is used by Ninja Kiwi for our URL shortener service, ie https://ninja.kiwi/intigriti.",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "ninjakiwi.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.ninjakiwi.com",
-          "description": "This covers any subdomains of ninjakiwi.com other than sub-domains which are managed by authorized third-party services or included in the list below.Third Party ServicesThe following domains are explicitly excluded",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "ct.ninjakiwi.com",
-          "description": "",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "mynk.ninjakiwi.com",
-          "description": "This is a legacy domain which powers our Flash games. Uses Flash AMF.",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.souparea.com",
-          "description": "This domain will be considered out of scope unless it can be shown to allow an exploit on one of our Tier 1-3 domains.",
-          "impact": "No bounty"
-        }
+
       ],
       "out_of_scope": [
 
@@ -1511,7 +1465,24 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "other",
+          "endpoint": "https://gist.github.com/RedBullSecurity/3eb88debcb01759eccf65ec2b799b340",
+          "description": "Domains that are related to Red Bull and can be found on this list. Any subdomain not mentioned in this list, will be considered as out of scope.",
+          "impact": "No bounty"
+        },
+        {
+          "type": "other",
+          "endpoint": "IOS and Android apps related to Red Bull",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.newyorkredbulls.com",
+          "description": "",
+          "impact": "Out of scope"
+        }
       ],
       "out_of_scope": [
 
@@ -1711,7 +1682,42 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "ios",
+          "endpoint": "910898851",
+          "description": "We expect that issued items are including print-screen of the version of the app.  Flow to get to version number",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "android",
+          "endpoint": "app.nl.socialdeal",
+          "description": "We expect that issued items are including print-screen of the version of the app.  Flow to get to version number",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "http://socialdeal.nl/inspirations/bluemonday/",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "http://www.whynot.com/",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://www.socialdeal.nl/orderlist/5e834ae0bed5c/63d772e2ed277/",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.socialdeal.nl",
+          "description": "Our main website.www.socialdeal.be and www.socialdeal.de are the same websites, with different Locale.",
+          "impact": "Tier 2"
+        }
       ],
       "out_of_scope": [
 
@@ -2482,6 +2488,31 @@
     },
     "max_bounty": {
       "value": 3000,
+      "currency": "EUR"
+    },
+    "targets": {
+      "in_scope": [
+
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
+    "id": "a09e497e-fd75-4b56-afa0-7a6689389b76",
+    "name": "e-tracker",
+    "company_handle": "bpost",
+    "handle": "e-tracker",
+    "url": "https://www.intigriti.com/programs/bpost/e-tracker/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "min_bounty": {
+      "value": 0,
+      "currency": "EUR"
+    },
+    "max_bounty": {
+      "value": 0,
       "currency": "EUR"
     },
     "targets": {
