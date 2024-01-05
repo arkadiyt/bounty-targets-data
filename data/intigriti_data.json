@@ -92,30 +92,7 @@
     },
     "targets": {
       "in_scope": [
-        {
-          "type": "url",
-          "endpoint": "*.allegro.pl.allegrosandbox.pl",
-          "description": "This is our sandbox environment that replicates production. For more information please visit developer website.",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.allegro.pl",
-          "description": "",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.allegrogroup.com",
-          "description": "",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "other",
-          "endpoint": "Any production website owned by Allegro not listed in Domains",
-          "description": "",
-          "impact": "Out of scope"
-        }
+
       ],
       "out_of_scope": [
 
@@ -815,12 +792,7 @@
     },
     "targets": {
       "in_scope": [
-        {
-          "type": "other",
-          "endpoint": "Any ING (sub)domain",
-          "description": "",
-          "impact": "No bounty"
-        }
+
       ],
       "out_of_scope": [
 
@@ -845,30 +817,7 @@
     },
     "targets": {
       "in_scope": [
-        {
-          "type": "other",
-          "endpoint": "Hardware",
-          "description": "",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "other",
-          "endpoint": "Firmware",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "other",
-          "endpoint": "Software",
-          "description": "",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.intel.com",
-          "description": "Intel's Web Infrastructure, i.e.*.intel.comIntel’s web infrastructure, i.e., website domains owned and/or operated by Intel, fall Out of Scope. These reports are not eligible for rewards of any kind.Please send security vulnerability reports against intel.com and/or related web presence to external.security.research@intel.com",
-          "impact": "No bounty"
-        }
+
       ],
       "out_of_scope": [
 
@@ -1218,7 +1167,78 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "url",
+          "endpoint": "analytics.ninjakiwi.com",
+          "description": "This domain hosts the API that consumed analytics events from our game clients",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.ninjakiwi.com",
+          "description": "This domain hosts the API for our mobile and PC games. Monitoring traffic through one of our game clients is the easiest method to investigate our main API. Most of our applications are available for free on Steam. Please carefully read the in-scope section regarding what sorts of exploits will be considering in-scope for this domain.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "builds-auckland.ninja.kiwi",
+          "description": "This domain hosts builds of Ninja Kiwi games for iOS devices.Areas of focus:",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.nkstatic.com",
+          "description": "This domain hosts static content for Ninja Kiwi games and website.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "battles.tv",
+          "description": "Battles.tv is used to share replays from our Bloons TD Battles game.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "data.ninjakiwi.com",
+          "description": "This domain hosts our public data API which grants open access to in-game data from our biggest games. For example player profiles, leatherboards and event information is available through this domain.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "ninja.kiwi",
+          "description": "This domain is used by Ninja Kiwi for our URL shortener service, ie https://ninja.kiwi/intigriti.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "ninjakiwi.com",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.ninjakiwi.com",
+          "description": "This covers any subdomains of ninjakiwi.com other than sub-domains which are managed by authorized third-party services or included in the list below.Third Party ServicesThe following domains are explicitly excluded",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "ct.ninjakiwi.com",
+          "description": "",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "mynk.ninjakiwi.com",
+          "description": "This is a legacy domain which powers our Flash games. Uses Flash AMF.",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.souparea.com",
+          "description": "This domain will be considered out of scope unless it can be shown to allow an exploit on one of our Tier 1-3 domains.",
+          "impact": "No bounty"
+        }
       ],
       "out_of_scope": [
 
@@ -1356,378 +1376,6 @@
     "company_handle": "portofantwerp",
     "handle": "portofantwerp",
     "url": "https://www.intigriti.com/programs/portofantwerp/portofantwerp/detail",
-    "status": "open",
-    "confidentiality_level": "public",
-    "min_bounty": {
-      "value": 0,
-      "currency": "EUR"
-    },
-    "max_bounty": {
-      "value": 2000,
-      "currency": "EUR"
-    },
-    "targets": {
-      "in_scope": [
-        {
-          "type": "url",
-          "endpoint": "*.c-point.be",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "ip range",
-          "endpoint": "188.118.8.0/25",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "ip range",
-          "endpoint": "94.107.237.192/26",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "api-accpt.portofantwerp.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "api-accpt.portofantwerpbruges.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "api.portofantwerp.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "api.portofantwerpbruges.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "apps-accpt.portofantwerp.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "apps-accpt.portofantwerpbruges.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "apps.portofantwerp.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "apps.portofantwerpbruges.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "as2-accpt.portofantwerp.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "as2-accpt.portofantwerpbruges.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "as2.portofantwerp.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "as2.portofantwerpbruges.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "digitalspecs.portofantwerpbruges.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "login-accpt.portofantwerpbruges.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "login.portofantwerpbruges.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "maximo-accpt.portofantwerp.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "maximo-accpt.portofantwerpbruges.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "maximo.portofantwerp.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "maximo.portofantwerpbruges.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "maximo.portofantwerpbruges.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "my-accpt.portofantwerp.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "my-accpt.portofantwerpbruges.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "my.portofantwerp.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "my.portofantwerpbruges.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "oprc.portofantwerpbruges.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "register-accpt.portofantwerp.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "register-accpt.portofantwerpbruges.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "servicedesk-accpt.portofantwerp.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "servicedesk-accpt.portofantwerpbruges.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "servicedesk.portofantwerp.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "servicedesk.portofantwerpbruges.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "share-accpt.portofantwerp.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "share-accpt.portofantwerpbruges.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "share.portofantwerp.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "share.portofantwerpbruges.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "webapps-accpt.portofantwerp.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "webapps-accpt.portofantwerpbruges.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "webapps.portofantwerp.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "webapps.portofantwerpbruges.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "wiki-accpt.portofantwerp.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "wiki-accpt.portofantwerpbruges.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "wiki.portofantwerp.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "wiki.portofantwerpbruges.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "www.oursustainableport.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "www.portofantwerpbruges.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.portofantwerp.com",
-          "description": "",
-          "impact": "No bounty"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.portofantwerpbruges.com",
-          "description": "",
-          "impact": "No bounty"
-        },
-        {
-          "type": "url",
-          "endpoint": "future.portofantwerp.com",
-          "description": "",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "future.portofantwerpbruges.com",
-          "description": "",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "jobs.portofantwerp.com",
-          "description": "",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "jobs.portofantwerpbruges.com",
-          "description": "",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "media.portofantwerp.com",
-          "description": "",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "media.portofantwerpbruges.com",
-          "description": "",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "register.portofantwerp.com",
-          "description": "",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "register.portofantwerpbruges.com",
-          "description": "",
-          "impact": "Out of scope"
-        }
-      ],
-      "out_of_scope": [
-
-      ]
-    }
-  },
-  {
-    "id": "201f8ade-4d93-4d8b-b371-af5ed9d8b837",
-    "name": "RIPE NCC",
-    "company_handle": "ripencc",
-    "handle": "ripencc",
-    "url": "https://www.intigriti.com/programs/ripencc/ripencc/detail",
     "status": "open",
     "confidentiality_level": "public",
     "min_bounty": {
