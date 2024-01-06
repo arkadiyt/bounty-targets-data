@@ -17,84 +17,7 @@
     },
     "targets": {
       "in_scope": [
-        {
-          "type": "ios",
-          "endpoint": "1099986434",
-          "description": "IOS Mobile Applicaton of Ada Health",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "android",
-          "endpoint": "com.ada.app",
-          "description": "Android Mobile Application of Ada Health",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "https://api.mobile.ada.com",
-          "description": "Backend for frontend API endpoint for mobile application activities. This endpoint is protected by a Web Application Firewall.",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "https://id.ada.com",
-          "description": "Ada-ID is an identity management service for end user that interacts with Ada's applications. It provides authentication and authorization. Ada-ID serves as web application and API services. Frontend is valid for password reset and account verification process. This endpoint is protected by a Web Application Firewall.",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "https://care-navigation-admin-bff.int.eu.enterprise.ada.com",
-          "description": "Backend for frontend (bff) service for Care Navigation Admin interface. BFF is a variant of the API Gateway pattern which provides an additional layer between microservices.",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "https://care-navigation-admin-fe.int.eu.enterprise.ada.com",
-          "description": "Care Navigation Admin Frontend is a visual tool for managing Connect data including:Test credentials will not be provided. Try to find broken access controls on this endpoint.",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "https://care-navigation-bff.int.eu.enterprise.ada.com",
-          "description": "Backend for frontend (bff) service for Care Navigation Frontend service. BFF is a variant of the API Gateway pattern which provides an additional layer between microservices.",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "https://care-navigation-fe.int.eu.enterprise.ada.com",
-          "description": "Care Navigation Frontend service represents Ada Partner care navigation option list available after assessment test is accomplished. Service includes:",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "https://demo-prod-assessment-bff.ada-prod-eu.prod.gcp.ada.com",
-          "description": "Backend for frontend (bff) service for demo assessment web interface. BFF is a variant of the API Gateway pattern which provides an additional layer between microservices. Please see the all endpoints in the Open API documentation (demo_assessment_bff_openapi.json) file",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "https://demo-prod-hcp-report-bff.ada-prod-eu.prod.gcp.ada.com",
-          "description": "Handover is a solution for sharing (handing over) the results of the health assessment with the user’s health care provider (HCP) or a health professional. This service has the responsibility to process the data from the hcp-report-backend for the use of handover frontend.",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "https://demo.enterprise.ada.com",
-          "description": "Our web application helps millions to manage their health. This is the frontend assessment application demo domain which represents the general flow we provide with our enterprise partners. This medical AI symptom checker is trained by real doctors. This endpoint provides both guess and authenticated flow which can be combined with our SSO service.This UI is calling the BFF domain which is also in the scope.",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "https://demo.handover.enterprise.ada.com",
-          "description": "Handover is a solution for sharing (handing over) the results of the health assessment with the user’s health care provider (HCP) or a health professional. This service has the responsibility to render the HCP report data received from the HCP report bff.",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "https://demo.sso.enterprise.ada.com",
-          "description": "Smart-auth is Ada’s identification management and Single Sign On (SSO).This service is based on SMART on FHIR implementation and provides a standard way to integrate with other EHR (Electronic Health Record) servers. It is an optional module meaning that not all flows are authentication required.",
-          "impact": "Tier 3"
-        }
+
       ],
       "out_of_scope": [
 
@@ -894,7 +817,12 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "other",
+          "endpoint": "Any ING (sub)domain",
+          "description": "",
+          "impact": "No bounty"
+        }
       ],
       "out_of_scope": [
 
@@ -1919,96 +1847,7 @@
     },
     "targets": {
       "in_scope": [
-        {
-          "type": "url",
-          "endpoint": "*.aroundtheworld.tomorrowland.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "artists.tomorrowland.com/production-website/33117",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "cognito-idp.eu-west-1.amazonaws.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "android",
-          "endpoint": "com.tomorrowland.oneworldradio",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "globaljourney.tomorrowland.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "mdm.weareone.world",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "my.tomorrowland.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "ios",
-          "endpoint": "one-world-radio-tomorrowland/id1485778856",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "oneworldradio.tomorrowland.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "sp1y1tpaf1.execute-api.eu-west-1.amazonaws.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "winterpackages.tomorrowland.com",
-          "description": "Out of Scope: bypassing payment process",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "www.tomorrowland.com",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.tomorrowland.com",
-          "description": "",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "components.stag.tomorrowland.com",
-          "description": "Vulnerabilities found on either components.stag.tomorrowland.com or components.tomorrowland.com will be considered duplicate.",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "components.tomorrowland.com",
-          "description": "Vulnerabilities found on either components.stag.tomorrowland.com or components.tomorrowland.com will be considered duplicate.",
-          "impact": "Tier 3"
-        }
+
       ],
       "out_of_scope": [
 
@@ -2033,7 +1872,48 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "url",
+          "endpoint": "winkels.torfs.be",
+          "description": "🇫🇷🇳🇱",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.schoenentorfs.be",
+          "description": "🇫🇷🇳🇱",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.schoenentorfs.nl",
+          "description": "🇳🇱",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.torfs.be",
+          "description": "🇫🇷🇳🇱",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.torfs.nl",
+          "description": "🇳🇱",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.samenfittorfs.be",
+          "description": "🇳🇱",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "other",
+          "endpoint": "Any related Torfs domain",
+          "description": "",
+          "impact": "No bounty"
+        }
       ],
       "out_of_scope": [
 
