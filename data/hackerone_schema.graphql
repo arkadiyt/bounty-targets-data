@@ -3747,6 +3747,7 @@ type AssetImport implements Node {
 Fields on which a collection of assets can be ordered
 """
 enum AssetOrderField {
+  _id
   created_at
   identifier
 }
@@ -23914,6 +23915,7 @@ type Organization implements Node {
     first: Int
     from: Int
     group: String
+    id__gt: Int
 
     """
     Returns the last _n_ elements from the list.
