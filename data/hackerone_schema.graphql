@@ -10010,7 +10010,7 @@ input CreateProgramSatisfactionSurveyAnswerInput {
   A unique identifier for the client performing the mutation.
   """
   clientMutationId: String
-  feedback: String
+  feedback: String!
   source: ID!
   survey_structured_response_ids: [ID]!
 }
@@ -35335,6 +35335,15 @@ type SurveyEdge {
 }
 
 """
+All valid survey eligibility status values
+"""
+enum SurveyEligibilityStatusEnum {
+  answered
+  eligible
+  ineligible
+}
+
+"""
 A survey rating
 """
 type SurveyRating implements Node {
@@ -47674,6 +47683,7 @@ type User implements ActivitiesInterface & Node & ResourceInterface {
     last: Int
     throttle_time: Int
   ): ProgramHealthAcknowledgementConnection
+  program_satisfaction_survey_eligibility_status(handle: String!): SurveyEligibilityStatusEnum
   public_reviews(
     """
     Returns the elements in the list that come after the specified cursor.
