@@ -28218,6 +28218,33 @@ type Query implements Node {
     secure_order_by: FiltersHacktivityItemFilterOrder
     where: FiltersHacktivityItemFilterInput
   ): HacktivityItemConnection
+  hacktivity_search(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+    from: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+    limit: Int
+    query_string: String
+    size: Int
+    sort: SortInput
+    user_prompt: String
+  ): SearchResultConnection
   id: ID!
   id_verification: IdVerification
   label_categories(
@@ -33032,6 +33059,7 @@ type SearchResultConnection {
   A list of edges.
   """
   edges: [SearchResultEdge]
+  executed_query_string: String
 
   """
   A list of nodes.
