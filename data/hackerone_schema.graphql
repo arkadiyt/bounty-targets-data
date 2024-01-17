@@ -1313,6 +1313,21 @@ type ActivitiesPentesterAwarded implements ActivityInterface & Node {
 }
 
 """
+A Activities::PentesterPositionOpened activity for a new pentest opportunity
+"""
+type ActivitiesPentesterPositionOpened implements ActivityInterface & Node {
+  _id: ID!
+  actor: ActorUnion
+  created_at: DateTime!
+  i_can_edit: Boolean!
+  i_can_flag: Boolean!
+  id: ID!
+  internal: Boolean
+  message: String
+  updated_at: DateTime!
+}
+
+"""
 An Activities::ProgramGatewayStateChanged activity for a program
 """
 type ActivitiesProgramGatewayStateChanged implements ActivityInterface & Node {
@@ -2219,7 +2234,7 @@ enum ActivityTypes {
 """
 Activities can be of multiple types
 """
-union ActivityUnion = ActivitiesAddedToPentest | ActivitiesAgreedOnGoingPublic | ActivitiesAssetCreated | ActivitiesAssetSubmissionRejected | ActivitiesBountyAwarded | ActivitiesBountyCancelled | ActivitiesBountyRecalled | ActivitiesBountyScheduled | ActivitiesBountySuggested | ActivitiesBugCloned | ActivitiesBugDuplicate | ActivitiesBugFiled | ActivitiesBugInactive | ActivitiesBugInformative | ActivitiesBugNeedsMoreInfo | ActivitiesBugNew | ActivitiesBugNotApplicable | ActivitiesBugPendingProgramReview | ActivitiesBugPriorityChanged | ActivitiesBugReopened | ActivitiesBugResolved | ActivitiesBugRetesting | ActivitiesBugSpam | ActivitiesBugTriaged | ActivitiesBulkAssetsConfirmed | ActivitiesCancelledDisclosureRequest | ActivitiesChangedCampaign | ActivitiesChangedScope | ActivitiesCodeReviewFeedbackPosted | ActivitiesCodeReviewRequested | ActivitiesComment | ActivitiesCommentsClosed | ActivitiesCveIdAdded | ActivitiesDraftStarted | ActivitiesExternalAdvisoryAdded | ActivitiesExternalUserInvitationCancelled | ActivitiesExternalUserInvited | ActivitiesExternalUserJoined | ActivitiesExternalUserRemoved | ActivitiesGroupAssignedToBug | ActivitiesHackerRequestedMediation | ActivitiesInvitationReceived | ActivitiesManuallyDisclosed | ActivitiesMediationRequested | ActivitiesNmiReminderComment | ActivitiesNobodyAssignedToBug | ActivitiesNotEligibleForBounty | ActivitiesOrganizationAssetsBulkArchived | ActivitiesOrganizationAssetsBulkCreated | ActivitiesPentestCheckAssigned | ActivitiesPentestCheckCompleted | ActivitiesPentestCheckUnassigned | ActivitiesPentestCheckUpdated | ActivitiesPentestPublished | ActivitiesPentestStarted | ActivitiesPentesterAwarded | ActivitiesProgramGatewayStateChanged | ActivitiesProgramGatewayUsersStateChanged | ActivitiesProgramHackerJoined | ActivitiesProgramHackerLeft | ActivitiesProgramInactive | ActivitiesProgramStructuredScopesBulkUpdated | ActivitiesReassignedToTeam | ActivitiesReferenceIdAdded | ActivitiesRemovedFromPentest | ActivitiesReportBecamePublic | ActivitiesReportCollaboratorInvited | ActivitiesReportCollaboratorJoined | ActivitiesReportCustomFieldValueUpdated | ActivitiesReportOrganizationInboxesUpdated | ActivitiesReportRemediationGuidanceUpdated | ActivitiesReportRetestApproved | ActivitiesReportRetestCanceled | ActivitiesReportRetestRejected | ActivitiesReportSeverityUpdated | ActivitiesReportTitleUpdated | ActivitiesReportTriageSummaryCreated | ActivitiesReportUndisclosed | ActivitiesReportVulnerabilityTypesUpdated | ActivitiesRetestUserExpired | ActivitiesScopeGuidanceRequested | ActivitiesScopeGuidanceSet | ActivitiesSwagAwarded | ActivitiesTeamBountyTableUpdated | ActivitiesTeamPolicyUpdated | ActivitiesTeamPostCreated | ActivitiesTeamPublished | ActivitiesTeamStructuredScopeUpdated | ActivitiesUserAssignedToBug | ActivitiesUserBannedFromProgram | ActivitiesUserCompletedRetest | ActivitiesUserJoined | ActivitiesUserLeftRetest
+union ActivityUnion = ActivitiesAddedToPentest | ActivitiesAgreedOnGoingPublic | ActivitiesAssetCreated | ActivitiesAssetSubmissionRejected | ActivitiesBountyAwarded | ActivitiesBountyCancelled | ActivitiesBountyRecalled | ActivitiesBountyScheduled | ActivitiesBountySuggested | ActivitiesBugCloned | ActivitiesBugDuplicate | ActivitiesBugFiled | ActivitiesBugInactive | ActivitiesBugInformative | ActivitiesBugNeedsMoreInfo | ActivitiesBugNew | ActivitiesBugNotApplicable | ActivitiesBugPendingProgramReview | ActivitiesBugPriorityChanged | ActivitiesBugReopened | ActivitiesBugResolved | ActivitiesBugRetesting | ActivitiesBugSpam | ActivitiesBugTriaged | ActivitiesBulkAssetsConfirmed | ActivitiesCancelledDisclosureRequest | ActivitiesChangedCampaign | ActivitiesChangedScope | ActivitiesCodeReviewFeedbackPosted | ActivitiesCodeReviewRequested | ActivitiesComment | ActivitiesCommentsClosed | ActivitiesCveIdAdded | ActivitiesDraftStarted | ActivitiesExternalAdvisoryAdded | ActivitiesExternalUserInvitationCancelled | ActivitiesExternalUserInvited | ActivitiesExternalUserJoined | ActivitiesExternalUserRemoved | ActivitiesGroupAssignedToBug | ActivitiesHackerRequestedMediation | ActivitiesInvitationReceived | ActivitiesManuallyDisclosed | ActivitiesMediationRequested | ActivitiesNmiReminderComment | ActivitiesNobodyAssignedToBug | ActivitiesNotEligibleForBounty | ActivitiesOrganizationAssetsBulkArchived | ActivitiesOrganizationAssetsBulkCreated | ActivitiesPentestCheckAssigned | ActivitiesPentestCheckCompleted | ActivitiesPentestCheckUnassigned | ActivitiesPentestCheckUpdated | ActivitiesPentestPublished | ActivitiesPentestStarted | ActivitiesPentesterAwarded | ActivitiesPentesterPositionOpened | ActivitiesProgramGatewayStateChanged | ActivitiesProgramGatewayUsersStateChanged | ActivitiesProgramHackerJoined | ActivitiesProgramHackerLeft | ActivitiesProgramInactive | ActivitiesProgramStructuredScopesBulkUpdated | ActivitiesReassignedToTeam | ActivitiesReferenceIdAdded | ActivitiesRemovedFromPentest | ActivitiesReportBecamePublic | ActivitiesReportCollaboratorInvited | ActivitiesReportCollaboratorJoined | ActivitiesReportCustomFieldValueUpdated | ActivitiesReportOrganizationInboxesUpdated | ActivitiesReportRemediationGuidanceUpdated | ActivitiesReportRetestApproved | ActivitiesReportRetestCanceled | ActivitiesReportRetestRejected | ActivitiesReportSeverityUpdated | ActivitiesReportTitleUpdated | ActivitiesReportTriageSummaryCreated | ActivitiesReportUndisclosed | ActivitiesReportVulnerabilityTypesUpdated | ActivitiesRetestUserExpired | ActivitiesScopeGuidanceRequested | ActivitiesScopeGuidanceSet | ActivitiesSwagAwarded | ActivitiesTeamBountyTableUpdated | ActivitiesTeamPolicyUpdated | ActivitiesTeamPostCreated | ActivitiesTeamPublished | ActivitiesTeamStructuredScopeUpdated | ActivitiesUserAssignedToBug | ActivitiesUserBannedFromProgram | ActivitiesUserCompletedRetest | ActivitiesUserJoined | ActivitiesUserLeftRetest
 
 """
 An edge in a connection.
@@ -6251,6 +6266,7 @@ input ClonePentestInput {
   A unique identifier for the client performing the mutation.
   """
   clientMutationId: String
+  consumption_subscription_id: Int
   pentest_id: Int!
   pentest_name: String!
   requested_start_date: DateTime!
@@ -9949,13 +9965,11 @@ type CreatePentestStructuredScopePayload implements MutationResult {
 Autogenerated input type of CreatePentester
 """
 input CreatePentesterInput {
-  applied_as_lead: Boolean
-
   """
   A unique identifier for the client performing the mutation.
   """
   clientMutationId: String
-  pentest_id: ID!
+  pentester_position_id: ID!
 }
 
 """
@@ -9989,6 +10003,7 @@ type CreatePentesterPayload implements MutationResult {
     types: [ErrorTypeEnum]
   ): ErrorConnection!
   pentester: Pentester
+  pentester_position: PentesterPosition
   was_successful: Boolean!
 }
 
@@ -16973,6 +16988,16 @@ input FiltersPentesterFilterInput {
   _or: [FiltersPentesterFilterInput]
   id: IntPredicateInput
   state: PentesterStateEnumInputPredicateInput
+}
+
+input FiltersPentesterPositionFilterInput {
+  _and: [FiltersPentesterPositionFilterInput]
+  _not: FiltersPentesterPositionFilterInput
+  _or: [FiltersPentesterPositionFilterInput]
+  i_applied: Boolean
+  id: IntPredicateInput
+  pentests: FiltersPentestFilterInput
+  state: StringPredicateInput
 }
 
 input FiltersPentesterProfileFilterInput {
@@ -27232,6 +27257,84 @@ type PentesterEdge {
 }
 
 """
+A position available on a pentester position
+"""
+type PentesterPosition implements Node {
+  _id: ID!
+  application: Pentester
+  award_amount: Int!
+  certifications_restrictions: [String!]!
+  citizenship_restrictions: [String!]!
+  currency: String!
+  description: String!
+  ends_at: DateTime!
+  highlights: [String!]!
+  hour_cap: Int!
+  i_accepted: Boolean!
+  i_applied: Boolean!
+  i_can_apply: Boolean!
+  i_can_revoke: Boolean!
+  id: ID!
+  industry: String!
+  location_restrictions: [String!]!
+  name: String!
+  pentest: Pentest
+  pentest_lead_abilities: Boolean!
+  positions_available: Int!
+  profile_picture(size: ProfilePictureSizes!): String!
+  retesting_ends_at: DateTime!
+  schedule_day_restrictions: [String!]!
+  schedule_restrictions: String!
+  schedule_time_restrictions_end: String
+  schedule_time_restrictions_start: String
+  starts_at: DateTime!
+  state: String!
+  structured_scope_types: [String!]
+  team: Team
+  time_zone_code: String
+}
+
+"""
+The connection type for PentesterPosition.
+"""
+type PentesterPositionConnection {
+  """
+  A list of edges.
+  """
+  edges: [PentesterPositionEdge]
+
+  """
+  A list of nodes.
+  """
+  nodes: [PentesterPosition]
+
+  """
+  Information to aid in pagination.
+  """
+  pageInfo: PageInfo!
+
+  """
+  Int
+  """
+  total_count: Int!
+}
+
+"""
+An edge in a connection.
+"""
+type PentesterPositionEdge {
+  """
+  A cursor for use in pagination.
+  """
+  cursor: String!
+
+  """
+  The item at the end of the edge.
+  """
+  node: PentesterPosition
+}
+
+"""
 A pentester profile
 """
 type PentesterProfile implements Node {
@@ -28421,6 +28524,32 @@ type Query implements Node {
   ): PentestOpportunityConnection
   pentest_opportunity(token: String!): PentestOpportunity
   pentest_opportunity_status(token: String!): Hash
+
+  """
+  A Resolver for Pentester Positions
+  """
+  pentester_positions(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+    where: FiltersPentesterPositionFilterInput
+  ): PentesterPositionConnection
   pentester_profiles(
     """
     Returns the elements in the list that come after the specified cursor.
@@ -32368,7 +32497,7 @@ input RevokePentesterInput {
   A unique identifier for the client performing the mutation.
   """
   clientMutationId: String
-  pentest_id: ID!
+  pentester_position_id: ID!
 }
 
 """
@@ -32402,6 +32531,7 @@ type RevokePentesterPayload implements MutationResult {
     types: [ErrorTypeEnum]
   ): ErrorConnection!
   pentester: Pentester
+  pentester_position: PentesterPosition
   was_successful: Boolean!
 }
 
