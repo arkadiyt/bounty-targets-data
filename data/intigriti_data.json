@@ -242,7 +242,7 @@
     "status": "open",
     "confidentiality_level": "public",
     "min_bounty": {
-      "value": 200,
+      "value": 100,
       "currency": "EUR"
     },
     "max_bounty": {
@@ -253,9 +253,21 @@
       "in_scope": [
         {
           "type": "url",
+          "endpoint": "*.allegro.cz.allegrosandbox.pl",
+          "description": "This is the sandbox version that replicates the Czech version of Allegro. The main difference between .cz and .pl is the possibility to buy products using guest account.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
           "endpoint": "*.allegro.pl.allegrosandbox.pl",
           "description": "This is our sandbox environment that replicates production. For more information please visit developer website.",
-          "impact": "Tier 2"
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.allegro.cz",
+          "description": "",
+          "impact": "Out of scope"
         },
         {
           "type": "url",
