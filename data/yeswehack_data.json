@@ -677,6 +677,33 @@
     }
   },
   {
+    "id": "datadome-bot-bounty",
+    "name": "DataDome Bot Bounty",
+    "public": true,
+    "disabled": false,
+    "managed": null,
+    "min_bounty": 200,
+    "max_bounty": 5000,
+    "targets": {
+      "in_scope": [
+        {
+          "target": "https://bounty-nodejs.datashield.co",
+          "type": "web-application"
+        },
+        {
+          "target": "https://bounty-fastly.datashield.co",
+          "type": "web-application"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "target": "Distributed attacks (scraping must be done using only 1 IP at a time).",
+          "type": "other"
+        }
+      ]
+    }
+  },
+  {
     "id": "datadome-bug-bounty",
     "name": "DataDome Bug Bounty",
     "public": true,
