@@ -35413,6 +35413,11 @@ type Subscription implements Node {
   ID of the object.
   """
   id: ID!
+
+  """
+  Subscribe to messages in a specific LLM conversation
+  """
+  llm_conversation_messages(conversation_id: ID!): LlmConversationMessage!
 }
 
 """
