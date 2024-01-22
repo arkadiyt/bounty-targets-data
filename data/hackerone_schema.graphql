@@ -15089,6 +15089,25 @@ enum DomainVerificationMethodEnum {
   http_file
 }
 
+"""
+A dupe window is a time frame for a team, during which hackers can submit duplicate reports.
+"""
+type DupeWindow {
+  active: Boolean!
+  eligible_report_count: Int!
+  ends_at: DateTime!
+  id: ID!
+}
+
+"""
+The state of eligibility for a report to a dupe window
+"""
+enum DupeWindowEligibilityEnum {
+  eligible
+  not_applicable
+  not_eligible
+}
+
 input DuplicateDetectionPageStateInput {
   isExactMatch: Boolean
   selectedEndpoints: [String!]!
@@ -30605,6 +30624,8 @@ type Report implements ActivitiesInterface & Node & ResourceInterface {
   cve_ids: [String]
   disclosed_at: DateTime
   displayable_severity: String
+  dupe_window: DupeWindow
+  dupe_window_eligibility: DupeWindowEligibilityEnum
   duplicates(
     """
     Returns the elements in the list that come after the specified cursor.
