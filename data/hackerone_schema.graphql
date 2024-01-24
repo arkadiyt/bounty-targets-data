@@ -8678,6 +8678,7 @@ input CreateIssueTrackerReferenceIdInput {
   message: String
   reference: String!
   report_id: ID!
+  source: String = "manual"
 }
 
 """
@@ -39904,7 +39905,6 @@ enum TriageInboxItemViewEnum {
   prioritization
   pristine
   recently_claimed
-  recently_dismissed
 }
 
 """
