@@ -15211,6 +15211,7 @@ type Earning implements Node {
   id: ID!
   pentester: Pentester
   report_retest_user: ReportRetestUser
+  spot_check_user: SpotCheckUser
   team: Team
   type: EarningTypeEnum
 }
@@ -15262,6 +15263,7 @@ enum EarningTypeEnum {
   BountyEarned
   PentestCompleted
   RetestCompleted
+  SpotCheckCompleted
   UnknownEarningType
 }
 
@@ -34363,6 +34365,7 @@ Spot Check Report
 """
 type SpotCheckReport implements Node {
   _id: ID!
+  approved_at: Date!
   created_at: Date!
   executive_summary: String!
   findings_and_evidence: String!
@@ -34419,6 +34422,7 @@ type SpotCheckUser implements Node {
   _id: ID!
   id: ID!
   spot_check: SpotCheck!
+  spot_check_report: SpotCheckReport!
   state: SpotCheckUserTypeStates!
   user: User!
 }
