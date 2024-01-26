@@ -17697,12 +17697,15 @@ type GatewayProgram implements Node & ResourceInterface {
   _id: ID!
   blocked_status: Boolean!
   cf_team_domain: String
+  cloudflared_enabled: Boolean
   compliance_logs: [Hash!]
   egress_ips: [Hash!]
   gateway_scopes: Hash
   id: ID!
   ipsec_settings: Hash
   ipsec_templates: [Hash!]
+  logging_enabled: Boolean
+  magic_wan: Boolean
   membership_suspended: Boolean
   selected_ips: [Hash!]
   team: Team
