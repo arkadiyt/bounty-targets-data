@@ -4398,10 +4398,33 @@ type AutosavePentestOpportunityPayload implements MutationResult {
   was_successful: Boolean!
 }
 
-enum BackgroundStatus {
-  background_blocked
-  background_checked
-  background_unchecked
+"""
+Metadata for Background Check
+"""
+type BackgroundCheck implements Node {
+  """
+  ID of the object.
+  """
+  id: ID!
+
+  """
+  Background check status
+  """
+  status: BackgroundCheckStatus
+
+  """
+  Background check URL
+  """
+  url: String
+}
+
+enum BackgroundCheckStatus {
+  eligible
+  failed
+  in_progress
+  not_eligible
+  processing
+  success
 }
 
 """
@@ -28237,6 +28260,7 @@ type Query implements Node {
     querystring: String
     report_ids: [Int!]!
   ): TeamConnection
+  background_check: BackgroundCheck
   bank_transfer_reference: BankTransferReference
   campaign_objectives(
     """
@@ -49078,7 +49102,6 @@ Data about the user's identity
 type UserIdentity implements Node {
   active_citizenship_verification_url: String
   active_residency_verification_url: String
-  background_status: BackgroundStatus!
   citizenship_verification_limit_reached: Boolean!
   citizenship_verifications(
     """
