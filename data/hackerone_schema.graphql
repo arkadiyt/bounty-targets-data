@@ -17393,6 +17393,23 @@ input FiltersSeverityFilterInput {
   user: FiltersUserFilterInput
 }
 
+input FiltersSpotCheckFilterInput {
+  _and: [FiltersSpotCheckFilterInput]
+  _not: FiltersSpotCheckFilterInput
+  _or: [FiltersSpotCheckFilterInput]
+  id: IntPredicateInput
+  spot_check_users: FiltersSpotCheckUserFilterInput
+}
+
+input FiltersSpotCheckUserFilterInput {
+  _and: [FiltersSpotCheckUserFilterInput]
+  _not: FiltersSpotCheckUserFilterInput
+  _or: [FiltersSpotCheckUserFilterInput]
+  id: IntPredicateInput
+  state: SpotCheckUserTypeStatesInputPredicateInput
+  user_id: IntPredicateInput
+}
+
 input FiltersStructuredScopeFilterInput {
   _and: [FiltersStructuredScopeFilterInput]
   _not: FiltersStructuredScopeFilterInput
@@ -17471,6 +17488,7 @@ input FiltersTeamFilterInput {
   response_efficiency_percentage: IntPredicateInput
   retest_subscription: FiltersRetestSubscriptionAggregateFilterInput
   searchable_content: FiltersSearchableContentFilterInput
+  spot_checks: FiltersSpotCheckFilterInput
   state: TeamStateInputPredicateInput
   structured_scopes: FiltersStructuredScopeFilterInput
   submission_state: SubmissionStateEnumInputPredicateInput
@@ -34435,6 +34453,28 @@ type SpotCheck implements Node {
   spent_to_date: Int!
   spot_check_reports: [SpotCheckReport!]!
   spot_check_type: SpotCheckTypeEnum!
+  spot_check_users(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+    where: FiltersSpotCheckUserFilterInput
+  ): [SpotCheckUser!]!
   start_date: Date!
   state: SpotCheckTypeStates!
   target_num_hackers: Int!
@@ -34557,6 +34597,27 @@ enum SpotCheckUserTypeStates {
   invited
   pending
   rejected
+}
+
+"""
+States for a spot check report
+"""
+enum SpotCheckUserTypeStatesInput {
+  accepted
+  invited
+  pending
+  rejected
+}
+
+input SpotCheckUserTypeStatesInputPredicateInput {
+  _eq: SpotCheckUserTypeStatesInput
+  _gt: SpotCheckUserTypeStatesInput
+  _gte: SpotCheckUserTypeStatesInput
+  _in: [SpotCheckUserTypeStatesInput]
+  _is_null: Boolean
+  _lt: SpotCheckUserTypeStatesInput
+  _lte: SpotCheckUserTypeStatesInput
+  _neq: SpotCheckUserTypeStatesInput
 }
 
 """
@@ -37652,6 +37713,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
     Returns the last _n_ elements from the list.
     """
     last: Int
+    where: FiltersSpotCheckFilterInput
   ): SpotCheckConnection
   started_accepting_at: DateTime
   state: TeamState
@@ -48688,6 +48750,28 @@ type User implements ActivitiesInterface & Node & ResourceInterface {
     team_handle: String = null
     terms_accepted: Boolean = null
   ): SoftLaunchConnection
+  spot_checks(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+    where: FiltersSpotCheckFilterInput
+  ): SpotCheckConnection
   statistics_snapshot(snapshot_type: UserStatisticsSnapshotTypeEnum!): UserStatisticsSnapshot
   subscribed_for_team_messages: Boolean
   survey_ratings(
