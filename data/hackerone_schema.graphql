@@ -36161,7 +36161,7 @@ input SurveyRatingItemResultInput {
 """
 The actor of an survey rating item
 """
-union SurveyRatingItemSubjectUnion = Pentest | Pentester | Report | Team
+union SurveyRatingItemSubjectUnion = Organization | Pentest | Pentester | Report | Team
 
 """
 The connection type for SurveyRatingItem.
@@ -36240,6 +36240,7 @@ enum SurveyRatingTypesInput {
   pentester
   program_overview
   team_member
+  tem
 }
 
 input SurveyRatingTypesInputPredicateInput {
