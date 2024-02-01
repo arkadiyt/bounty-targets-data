@@ -9295,6 +9295,8 @@ input CreateOrUpdatePentestInput {
   location_restrictions: [String!]
   pentester_cap: Int
   published_description: String
+  requirement_disallowed_labels: [Int!]
+  requirement_labels: [Int!]
   retesting_end_date: String
   schedule_day_restrictions: [String]
   schedule_restrictions: String
@@ -17028,6 +17030,14 @@ input FiltersHacktivityItemFilterInput {
 input FiltersHacktivityItemFilterOrder {
   id: FilterOrderPredicateInput
   latest_disclosable_activity_at: FilterOrderPredicateInput
+}
+
+input FiltersLabelCategoryFilterInput {
+  _and: [FiltersLabelCategoryFilterInput]
+  _not: FiltersLabelCategoryFilterInput
+  _or: [FiltersLabelCategoryFilterInput]
+  id: IntPredicateInput
+  name: StringPredicateInput
 }
 
 input FiltersLabelFilterInput {
@@ -26150,6 +26160,8 @@ type Pentest implements Node {
     where: FiltersReportFilterInput
     without_scope: Boolean = null
   ): ReportConnection
+  requirement_disallowed_labels: [Label!]
+  requirement_labels: [Label!]
   retesting_end_date: Date
   retesting_ends_at: DateTime
   retesting_window_days: Int
@@ -28632,6 +28644,7 @@ type Query implements Node {
     Returns the last _n_ elements from the list.
     """
     last: Int
+    where: FiltersLabelCategoryFilterInput
   ): LabelCategoryConnection!
   languages: [Hash!]!
   leaderboard_entries(
