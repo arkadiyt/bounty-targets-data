@@ -31500,6 +31500,7 @@ input ReportFilterInput {
   first_program_activity_at__null: Boolean
   hacker_published: Boolean
   id: [Int]
+  inbox_ids: [Int]
   keyword: String
   last_activity_at__gt: DateTime
   last_activity_at__lt: DateTime
@@ -31509,7 +31510,7 @@ input ReportFilterInput {
   last_public_activity_at__lt: DateTime
   last_reporter_activity_at__gt: DateTime
   last_reporter_activity_at__lt: DateTime
-  program: [String]!
+  program: [String]
   reporter: [String]!
   reporter_agreed_on_going_public: Boolean
   severity: [SeverityRatingEnum]
