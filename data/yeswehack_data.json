@@ -619,7 +619,7 @@
   },
   {
     "id": "tchap-public",
-    "name": "DINUM - Tchap - Public Bug Bounty Program",
+    "name": "DINUM - Tchap - Bug Bounty Program",
     "public": true,
     "disabled": false,
     "managed": null,
@@ -628,8 +628,20 @@
     "targets": {
       "in_scope": [
         {
+          "target": "https://www.tchap.gouv.fr",
+          "type": "web-application"
+        },
+        {
+          "target": "https://matrix.agent.tchap.gouv.fr",
+          "type": "api"
+        },
+        {
           "target": "https://matrix.agent.*.tchap.gouv.fr",
           "type": "api"
+        },
+        {
+          "target": "https://github.com/tchapgouv",
+          "type": "other"
         },
         {
           "target": "https://play.google.com/store/apps/details?id=fr.gouv.tchap.a&hl=fr",
@@ -640,7 +652,7 @@
           "type": "mobile-application-ios"
         },
         {
-          "target": "https://www.tchap.gouv.fr",
+          "target": "https://www.beta.tchap.gouv.fr",
           "type": "web-application"
         },
         {
@@ -650,15 +662,15 @@
         {
           "target": "https://matrix.e.tchap.gouv.fr",
           "type": "api"
-        },
-        {
-          "target": "https://www.beta.tchap.gouv.fr",
-          "type": "web-application"
         }
       ],
       "out_of_scope": [
         {
-          "target": "Everythings that not listed in scope is out of scope.",
+          "target": "Everything that not listed as in scope is to be considered as out of scope of this program",
+          "type": "other"
+        },
+        {
+          "target": "Please note that Tchap is hosted by a third party and thus vulnerabilities related to the host are out of the scope",
           "type": "other"
         }
       ]
