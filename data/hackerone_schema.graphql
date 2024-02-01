@@ -15491,6 +15491,7 @@ input EditSpotCheckReportInput {
   files: [Upload!]!
   findings_and_evidence: String!
   methodology_and_tooling: String!
+  removed_attachment_ids: [Int!]!
   scope: String!
   spot_check_report_id: ID!
   time_spent: Int!
@@ -34540,7 +34541,7 @@ Spot Check Report
 """
 type SpotCheckReport implements Node {
   _id: ID!
-  approved_at: Date
+  approved_at: Date!
   attachments: [Attachment!]!
   created_at: Date!
   executive_summary: String!
