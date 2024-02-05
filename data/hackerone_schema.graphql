@@ -34470,28 +34470,7 @@ type SpotCheck implements Node {
   spent_to_date: Int!
   spot_check_reports: [SpotCheckReport!]!
   spot_check_type: SpotCheckTypeEnum!
-  spot_check_users(
-    """
-    Returns the elements in the list that come after the specified cursor.
-    """
-    after: String
-
-    """
-    Returns the elements in the list that come before the specified cursor.
-    """
-    before: String
-
-    """
-    Returns the first _n_ elements from the list.
-    """
-    first: Int
-
-    """
-    Returns the last _n_ elements from the list.
-    """
-    last: Int
-    where: FiltersSpotCheckUserFilterInput
-  ): [SpotCheckUser!]!
+  spot_check_users(where: FiltersSpotCheckUserFilterInput): [SpotCheckUser!]!
   start_date: Date!
   state: SpotCheckTypeStates!
   target_num_hackers: Int!
@@ -34603,6 +34582,8 @@ type SpotCheckUser implements Node {
   spot_check: SpotCheck!
   spot_check_report: SpotCheckReport
   state: SpotCheckUserTypeStates!
+  submission_deadline: DateTime
+  submission_deadline_passed: Boolean
   user: User!
 }
 
