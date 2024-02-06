@@ -10882,6 +10882,7 @@ input CreateSpotCheckReportInput {
   files: [Upload!]!
   findings_and_evidence: String!
   methodology_and_tooling: String!
+  report_ids: [Int!]
   scope: String!
   spot_check_id: ID!
   time_spent: Int!
@@ -15543,6 +15544,7 @@ input EditSpotCheckReportInput {
   findings_and_evidence: String!
   methodology_and_tooling: String!
   removed_attachment_ids: [Int!]!
+  report_ids: [Int!]
   scope: String!
   spot_check_report_id: ID!
   time_spent: Int!
@@ -34637,6 +34639,7 @@ type SpotCheckReport implements Node {
   findings_and_evidence: String!
   id: ID!
   methodology_and_tooling: String!
+  related_vulnerability_reports: [Report!]!
   scope: String!
   spot_check: SpotCheck!
   spot_check_user: SpotCheckUser!
