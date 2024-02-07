@@ -17216,6 +17216,8 @@ input FiltersPentestChecklistFilterInput {
   _or: [FiltersPentestChecklistFilterInput]
   id: IntPredicateInput
   methodology: StringPredicateInput
+  pentest_structured_scope_id: IntPredicateInput
+  unique: Boolean
 }
 
 input FiltersPentestFilterInput {
@@ -17229,6 +17231,14 @@ input FiltersPentestFilterInput {
 
 input FiltersPentestFilterOrder {
   id: FilterOrderPredicateInput
+}
+
+input FiltersPentestFormAnswerFilterInput {
+  _and: [FiltersPentestFormAnswerFilterInput]
+  _not: FiltersPentestFormAnswerFilterInput
+  _or: [FiltersPentestFormAnswerFilterInput]
+  id: IntPredicateInput
+  pentest_structured_scope_id: IntPredicateInput
 }
 
 input FiltersPentestOpportunityFilterInput {
@@ -25806,6 +25816,7 @@ type Pentest implements Node {
     Returns the last _n_ elements from the list.
     """
     last: Int
+    where: FiltersPentestFormAnswerFilterInput
   ): PentestFormAnswerConnection
   assets_in_scope(
     """
@@ -25827,6 +25838,7 @@ type Pentest implements Node {
     Returns the last _n_ elements from the list.
     """
     last: Int
+    structured_scope_ids: [Int!]
   ): StructuredScopesConnection
   assets_in_scope_without_reports(
     """
@@ -25877,9 +25889,9 @@ type Pentest implements Node {
   code_security_audit: Boolean!
   community_display_count: String
   completed_at: DateTime
-  counts_per_asset: Hash
-  counts_per_severity: Hash
-  counts_per_weakness: Hash
+  counts_per_asset(structured_scope_ids: [Int!]): Hash
+  counts_per_severity(structured_scope_ids: [Int!]): Hash
+  counts_per_weakness(structured_scope_ids: [Int!]): Hash
   description: String
   end_date: Date
   ends_at: DateTime
@@ -25930,7 +25942,7 @@ type Pentest implements Node {
     Returns the last _n_ elements from the list.
     """
     last: Int
-    unique: Boolean
+    where: FiltersPentestChecklistFilterInput
   ): PentestChecklistConnection
   pentest_checks(
     """
