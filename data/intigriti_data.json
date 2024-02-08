@@ -7683,7 +7683,7 @@
       "currency": "EUR"
     },
     "max_bounty": {
-      "value": 4000,
+      "value": 5000,
       "currency": "EUR"
     },
     "targets": {
@@ -7691,37 +7691,37 @@
         {
           "type": "ios",
           "endpoint": "1101145849",
-          "description": "iOS application. This is currently installable on Jailbroken devices, please read the out-of-scope findings.",
+          "description": "Uphold Wallet - iOS application. This is currently installable on Jailbroken devices, please read the out-of-scope findings.",
           "impact": "Tier 1"
         },
         {
           "type": "url",
           "endpoint": "api.uphold.com",
-          "description": "Production WebWallet Application. Do not test service degradation attacks or horizontal privilege here.On the business app side, we allow you to create apps in sandbox, but you shouldn't be able to create them in Production.",
+          "description": "Production Web Wallet API. Do not test service degradation attacks or horizontal privilege here.On the business app side, we allow you to create apps in sandbox, but you shouldn't be able to create them in Production.",
           "impact": "Tier 1"
         },
         {
           "type": "android",
           "endpoint": "com.uphold.wallet",
-          "description": "Android application. This is currently installable on Jailbroken devices, please read the out-of-scope findings.",
+          "description": "Uphold Wallet - Android application. This is currently installable on Jailbroken devices, please read the out-of-scope findings.",
           "impact": "Tier 1"
         },
         {
           "type": "url",
-          "endpoint": "uphold.com/dashboard",
-          "description": "Production WebWallet Application. Do not test service degradation attacks or horizontal privilege here.",
+          "endpoint": "wallet.uphold.com",
+          "description": "Production Web Wallet Application. Do not test service degradation attacks or horizontal privilege here.",
           "impact": "Tier 1"
         },
         {
           "type": "url",
           "endpoint": "api-sandbox.uphold.com",
-          "description": "Use this environment for financial transaction testing, degradation attacks, or horizontal privilege attacks. Fund with Crypto Testnet Faucet (e.g. https://coinfaucet.eu/en/btc-testnet/ for Bitcoin).On the business app side, we allow you to create apps in sandbox, but you shouldn't be able to create them in Production.",
+          "description": "Sandbox Web Wallet API. Use this environment for financial transaction testing, degradation attacks, or horizontal privilege attacks. Fund with Crypto Testnet Faucet (e.g. https://coinfaucet.eu/en/btc-testnet/ for Bitcoin).On the business app side, we allow you to create apps in sandbox, but you shouldn't be able to create them in Production.",
           "impact": "Tier 2"
         },
         {
           "type": "url",
-          "endpoint": "sandbox.uphold.com/dashboard",
-          "description": "Use this environment for financial transaction testing, degradation attacks, or horizontal privilege attacks. Fund with Crypto Testnet Faucet (e.g. https://coinfaucet.eu/en/btc-testnet/ for Bitcoin)",
+          "endpoint": "wallet-sandbox.uphold.com",
+          "description": "Sandbox Web Wallet Application. Use this environment for financial transaction testing, degradation attacks, or horizontal privilege attacks. Fund with Crypto Testnet Faucet (e.g. https://coinfaucet.eu/en/btc-testnet/ for Bitcoin)",
           "impact": "Tier 2"
         },
         {
