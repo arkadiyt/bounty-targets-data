@@ -17473,6 +17473,8 @@ input FiltersSpotCheckFilterInput {
   _or: [FiltersSpotCheckFilterInput]
   id: IntPredicateInput
   spot_check_users: FiltersSpotCheckUserFilterInput
+  state: SpotCheckTypeStatesInputPredicateInput
+  with_reports_from_user: Boolean
 }
 
 input FiltersSpotCheckUserFilterInput {
@@ -17481,6 +17483,7 @@ input FiltersSpotCheckUserFilterInput {
   _or: [FiltersSpotCheckUserFilterInput]
   id: IntPredicateInput
   state: SpotCheckUserTypeStatesInputPredicateInput
+  submission_deadline_passed: Boolean
   user_id: IntPredicateInput
 }
 
@@ -34627,10 +34630,31 @@ enum SpotCheckTypeStates {
 }
 
 """
+States for a spot check
+"""
+enum SpotCheckTypeStatesInput {
+  completed
+  launched
+  pending
+}
+
+input SpotCheckTypeStatesInputPredicateInput {
+  _eq: SpotCheckTypeStatesInput
+  _gt: SpotCheckTypeStatesInput
+  _gte: SpotCheckTypeStatesInput
+  _in: [SpotCheckTypeStatesInput]
+  _is_null: Boolean
+  _lt: SpotCheckTypeStatesInput
+  _lte: SpotCheckTypeStatesInput
+  _neq: SpotCheckTypeStatesInput
+}
+
+"""
 Spot Check User
 """
 type SpotCheckUser implements Node {
   _id: ID!
+  due_in_days: Int
   id: ID!
   spot_check: SpotCheck!
   spot_check_report: SpotCheckReport
