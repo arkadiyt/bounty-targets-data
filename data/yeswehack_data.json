@@ -2625,6 +2625,61 @@
     }
   },
   {
+    "id": "teamviewer-bounty-program",
+    "name": "TeamViewer - Bounty Program",
+    "public": true,
+    "disabled": false,
+    "managed": null,
+    "min_bounty": 100,
+    "max_bounty": 10000,
+    "targets": {
+      "in_scope": [
+        {
+          "target": "https://www.teamviewer.com/en/products/teamviewer/",
+          "type": "application"
+        },
+        {
+          "target": "https://web.teamviewer.com",
+          "type": "web-application"
+        },
+        {
+          "target": "https://account.teamviewer.com",
+          "type": "web-application"
+        },
+        {
+          "target": "https://login.teamviewer.com",
+          "type": "web-application"
+        },
+        {
+          "target": "https://play.google.com/store/apps/details?id=com.teamviewer.teamviewer.market.mobile&hl=en&gl=US",
+          "type": "mobile-application-android"
+        },
+        {
+          "target": "https://play.google.com/store/apps/details?id=com.teamviewer.quicksupport.market&hl=en&gl=US",
+          "type": "mobile-application-android"
+        },
+        {
+          "target": "https://play.google.com/store/apps/details?id=com.teamviewer.host.market&hl=en&gl=US",
+          "type": "mobile-application-android"
+        },
+        {
+          "target": "https://apps.apple.com/de/app/teamviewer-remote-control/id692035811",
+          "type": "mobile-application-ios"
+        },
+        {
+          "target": "https://apps.apple.com/de/app/teamviewer-quicksupport/id661649585",
+          "type": "mobile-application-ios"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "target": "All domains not listed In-Scope",
+          "type": "other"
+        }
+      ]
+    }
+  },
+  {
     "id": "telenor-sweden-public-bug-bounty-program",
     "name": "Telenor Sweden Public Bug Bounty Program",
     "public": true,
@@ -2648,6 +2703,10 @@
         },
         {
           "target": "*.ownit.se",
+          "type": "web-application"
+        },
+        {
+          "target": "*.vimla.se",
           "type": "web-application"
         }
       ],
