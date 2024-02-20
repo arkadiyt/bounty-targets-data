@@ -33,67 +33,115 @@
           "type": "url",
           "endpoint": "https://api.mobile.ada.com",
           "description": "Backend for frontend API endpoint for mobile application activities. This endpoint is protected by a Web Application Firewall.",
-          "impact": "Tier 2"
+          "impact": "Tier 1"
         },
         {
           "type": "url",
           "endpoint": "https://id.ada.com",
           "description": "Ada-ID is an identity management service for end user that interacts with Ada's applications. It provides authentication and authorization. Ada-ID serves as web application and API services. Frontend is valid for password reset and account verification process. This endpoint is protected by a Web Application Firewall.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.ada.health",
+          "description": "All subdomains (one or multilevel) of ada.health, except the ones interacting directly in Tier 1 & 2 assets, are considered as Tier 3.",
           "impact": "Tier 2"
         },
         {
           "type": "url",
-          "endpoint": "https://care-navigation-admin-bff.int.eu.enterprise.ada.com",
+          "endpoint": "*.adahealth.ca",
+          "description": "All subdomains (one or multilevel) of adahealth.ca, except the ones interacting directly in Tier 1 & 2 assets, are considered as Tier 3.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://care-navigation-admin-bff.eu.enterprise.ada.com",
           "description": "Backend for frontend (bff) service for Care Navigation Admin interface. BFF is a variant of the API Gateway pattern which provides an additional layer between microservices.",
-          "impact": "Tier 3"
+          "impact": "Tier 2"
         },
         {
           "type": "url",
-          "endpoint": "https://care-navigation-admin-fe.int.eu.enterprise.ada.com",
+          "endpoint": "https://care-navigation-admin-fe.eu.enterprise.ada.com",
           "description": "Care Navigation Admin Frontend is a visual tool for managing Connect data including:Test credentials will not be provided. Try to find broken access controls on this endpoint.",
-          "impact": "Tier 3"
+          "impact": "Tier 2"
         },
         {
           "type": "url",
-          "endpoint": "https://care-navigation-bff.int.eu.enterprise.ada.com",
+          "endpoint": "https://care-navigation-bff.eu.enterprise.ada.com",
           "description": "Backend for frontend (bff) service for Care Navigation Frontend service. BFF is a variant of the API Gateway pattern which provides an additional layer between microservices.",
-          "impact": "Tier 3"
+          "impact": "Tier 2"
         },
         {
           "type": "url",
-          "endpoint": "https://care-navigation-fe.int.eu.enterprise.ada.com",
+          "endpoint": "https://care-navigation-fe.eu.enterprise.ada.com",
           "description": "Care Navigation Frontend service represents Ada Partner care navigation option list available after assessment test is accomplished. Service includes:",
-          "impact": "Tier 3"
+          "impact": "Tier 2"
         },
         {
           "type": "url",
           "endpoint": "https://demo-prod-assessment-bff.ada-prod-eu.prod.gcp.ada.com",
           "description": "Backend for frontend (bff) service for demo assessment web interface. BFF is a variant of the API Gateway pattern which provides an additional layer between microservices. Please see the all endpoints in the Open API documentation (demo_assessment_bff_openapi.json) file",
-          "impact": "Tier 3"
+          "impact": "Tier 2"
         },
         {
           "type": "url",
           "endpoint": "https://demo-prod-hcp-report-bff.ada-prod-eu.prod.gcp.ada.com",
           "description": "Handover is a solution for sharing (handing over) the results of the health assessment with the user’s health care provider (HCP) or a health professional. This service has the responsibility to process the data from the hcp-report-backend for the use of handover frontend.",
-          "impact": "Tier 3"
+          "impact": "Tier 2"
         },
         {
           "type": "url",
           "endpoint": "https://demo.enterprise.ada.com",
           "description": "Our web application helps millions to manage their health. This is the frontend assessment application demo domain which represents the general flow we provide with our enterprise partners. This medical AI symptom checker is trained by real doctors. This endpoint provides both guess and authenticated flow which can be combined with our SSO service.This UI is calling the BFF domain which is also in the scope.",
-          "impact": "Tier 3"
+          "impact": "Tier 2"
         },
         {
           "type": "url",
           "endpoint": "https://demo.handover.enterprise.ada.com",
           "description": "Handover is a solution for sharing (handing over) the results of the health assessment with the user’s health care provider (HCP) or a health professional. This service has the responsibility to render the HCP report data received from the HCP report bff.",
-          "impact": "Tier 3"
+          "impact": "Tier 2"
         },
         {
           "type": "url",
           "endpoint": "https://demo.sso.enterprise.ada.com",
           "description": "Smart-auth is Ada’s identification management and Single Sign On (SSO).This service is based on SMART on FHIR implementation and provides a standard way to integrate with other EHR (Electronic Health Record) servers. It is an optional module meaning that not all flows are authentication required.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.ada.com",
+          "description": "All subdomains (one or multilevel) of ada.com, except the ones interacting directly in Tier 1 & 2 are considered as Tier 3.",
           "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.httpproxy.data.ada.com",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "monitoring.*.enterprise.ada.com",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "monitoring.*.enterprise.adahahealth.ca",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "monitoring.*.gcp.ada.com",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "monitoring.*.gcp.adahealth.ca",
+          "description": "",
+          "impact": "Out of scope"
         }
       ],
       "out_of_scope": [
@@ -3574,6 +3622,12 @@
           "type": "url",
           "endpoint": "backoffice.lansweeper.com",
           "description": "Internal backoffice portal for cloud platformNo authorisation will be given",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://lsagentrelay.lansweeper.com/",
+          "description": "Our cloud relay server connection using LsAgent. If the computers you're scanning do not have a direct connection to your Lansweeper installation, scanned LsAgent data can be sent to our relay server in the cloud. Our LsAgent is a cross-platform scanning agent that can scan computers both inside and outside of your network. It automatically collects an inventory from the computer it's installed on and sends the data back to the Lansweeper installation, this can be done through our relay server in the cloud.For this, you must enable relay access in your Lansweeper installation.Scanned LsAgent data is sent securely over HTTPS (TLS 1.2) to the relay server in Microsoft Azure, where it is encrypted as well. Your Lansweeper scanning server can retrieve the scanned data from the relay server, after which it is deleted from the relay. In order to use the relay server, make sure outbound traffic is allowed on your Lansweeper scanning server. Specifically, the scanning server must be able to make an outbound connection to port 443 of lsagentrelay.lansweeper.com, the cloud relay server. More information about LsAgent can be found on our website: https://community.lansweeper.com/t5/scanning-your-network/introduction-to-lsagent-for-windows-linux-and-mac/ta-p/64473The use of the relay server must explicitly be enabled in the Lansweeper web console. It is not enabled by default!",
           "impact": "Tier 2"
         },
         {
