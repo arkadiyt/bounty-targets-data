@@ -17420,6 +17420,7 @@ input FiltersReportFilterInput {
   imported: BooleanPredicateInput
   ineligible_for_bounty: BooleanPredicateInput
   pentest: FiltersPentestFilterInput
+  reference: StringPredicateInput
   reporter: FiltersUserFilterInput
   roles: [FiltersReportFilterRoles]
   severity_rating: SeverityRatingEnumInputPredicateInput
@@ -31668,6 +31669,8 @@ input ReportFilterInput {
   last_reporter_activity_at__gt: DateTime
   last_reporter_activity_at__lt: DateTime
   program: [String]
+  reference: String
+  reference__null: Boolean
   reporter: [String]!
   reporter_agreed_on_going_public: Boolean
   severity: [SeverityRatingEnum]
