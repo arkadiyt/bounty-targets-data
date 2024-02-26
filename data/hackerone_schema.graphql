@@ -49449,6 +49449,7 @@ Data about the user's identity
 type UserIdentity implements Node {
   active_citizenship_verification_url: String
   active_residency_verification_url: String
+  background_checked: Boolean
   citizenship_verification_limit_reached: Boolean!
   citizenship_verifications(
     """
@@ -49476,6 +49477,7 @@ type UserIdentity implements Node {
   has_unverifiable_citizenship: Boolean!
   has_unverifiable_residency: Boolean!
   id: ID!
+  identity_verified: Boolean
   meets_idv_one_valid_report_criteria: Boolean!
   residency_verification_limit_reached: Boolean!
   residency_verifications(
@@ -49500,6 +49502,7 @@ type UserIdentity implements Node {
     last: Int
     only_valid: Boolean
   ): ResidencyVerificationConnection!
+  rules_of_engagement_signed: Boolean
 
   """
   Whether the Rules of Engagement have been signed
@@ -50520,6 +50523,7 @@ type WhitelistedReporter implements ActivitiesInterface & Node & ResourceInterfa
   id: ID!
   old_usernames: [String!]
   url: URI!
+  user_identity: UserIdentity
   username: String!
 }
 
