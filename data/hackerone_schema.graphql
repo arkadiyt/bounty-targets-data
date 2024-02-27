@@ -25829,6 +25829,9 @@ A payments user
 type PaymentsUserType implements Node {
   id: ID!
   monthly_payouts: Boolean!
+  payout_cadence: PayoutCadenceEnum
+  payout_threshold_amount: Int
+  self_hold_payouts_at: Boolean
 }
 
 """
@@ -25841,6 +25844,15 @@ type Payout implements Node {
   reference: String!
   sent_at: String
   status: String!
+}
+
+"""
+Payout frequency or trigger
+"""
+enum PayoutCadenceEnum {
+  daily
+  monthly
+  payout_threshold
 }
 
 """
