@@ -559,6 +559,61 @@
     }
   },
   {
+    "id": "demarches-simplifiees-public",
+    "name": "DINUM - Démarches Simplifiées - Public Bug Bounty Program",
+    "public": true,
+    "disabled": false,
+    "managed": null,
+    "min_bounty": 50,
+    "max_bounty": 5000,
+    "targets": {
+      "in_scope": [
+        {
+          "target": "https://www.demarches-simplifiees.fr",
+          "type": "web-application"
+        },
+        {
+          "target": "https://www.demarches-simplifiees.fr/graphql",
+          "type": "api"
+        },
+        {
+          "target": "https://www.demarches-simplifiees.fr/api/v2/graphql",
+          "type": "api"
+        },
+        {
+          "target": "https://static.demarches-simplifiees.fr",
+          "type": "api"
+        },
+        {
+          "target": "DS proxy (see https://github.com/demarches-simplifiees/ds_proxy)",
+          "type": "other"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "target": "All domains or subdomains not listed in the above list of \"Scopes\" are considered out of scope",
+          "type": "other"
+        },
+        {
+          "target": "https://doc.demarches-simplifiees.fr",
+          "type": "other"
+        },
+        {
+          "target": "https://beta.gouv.fr/startups/demarches-simplifiees.fr",
+          "type": "other"
+        },
+        {
+          "target": "'démarches' other than the two provided for the prupose of your tests",
+          "type": "other"
+        },
+        {
+          "target": "AgentConnect/FranceConnect authentication feature",
+          "type": "other"
+        }
+      ]
+    }
+  },
+  {
     "id": "franceconnect-agentconnect-public",
     "name": "DINUM - FranceConnect / FranceConnect+ / AgentConnect - Public Program",
     "public": true,
