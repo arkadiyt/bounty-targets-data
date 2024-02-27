@@ -10601,6 +10601,7 @@ input CreateSeverityFromHashInput {
   clientMutationId: String
   hash: JSON!
   message: String
+  override_max_severity: Boolean
   report_id: ID!
 }
 
@@ -31111,6 +31112,7 @@ type Report implements ActivitiesInterface & Node & ResourceInterface {
   i_can_hide_timeline: Boolean
   i_can_manage_collaborators: Boolean
   i_can_manage_reference: Boolean
+  i_can_override_max_severity: Boolean
   i_can_post_hacker_triage_rating: Boolean
   i_can_post_triage_rating: Boolean
   i_can_redact: Boolean
