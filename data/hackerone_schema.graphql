@@ -3050,6 +3050,8 @@ enum AnalyticsSelectFieldEnum {
   dim_reports__disclosed_at_quarter
   dim_reports__disclosed_at_week
   dim_reports__disclosed_at_year
+  dim_reports__duplicate_report_count
+  dim_reports__duplicate_report_ids
   dim_reports__engagement_type
   dim_reports__invitation_cohort_id
   dim_reports__is_bounty_awarded
@@ -47477,6 +47479,7 @@ input UpdateUserDisplayOptionsInput {
   clientMutationId: String
   organization_id: ID
   show_bounty_amounts: Boolean
+  show_private_team_thanks: Boolean
   theme_preference: ThemePreferenceEnum
   view_profile_preference: String
 }
@@ -49545,6 +49548,7 @@ type UserDisplayOptions implements Node {
   id: ID!
   organization: Organization
   show_bounty_amounts: Boolean!
+  show_private_team_thanks: Boolean!
   theme_preference: String
   user: User!
   view_profile_preference: String
