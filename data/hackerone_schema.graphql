@@ -49628,6 +49628,7 @@ type UserIdentity implements Node {
     last: Int
     only_valid: Boolean
   ): CitizenshipVerificationConnection!
+  citizenship_verified: Boolean
   citizenships: [String!]!
   has_unverifiable_citizenship: Boolean!
   has_unverifiable_residency: Boolean!
@@ -49657,6 +49658,7 @@ type UserIdentity implements Node {
     last: Int
     only_valid: Boolean
   ): ResidencyVerificationConnection!
+  residency_verified: Boolean
   rules_of_engagement_signed: Boolean
 
   """
