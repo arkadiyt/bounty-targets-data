@@ -3050,6 +3050,8 @@ enum AnalyticsSelectFieldEnum {
   dim_reports__disclosed_at_quarter
   dim_reports__disclosed_at_week
   dim_reports__disclosed_at_year
+  dim_reports__duplicate_report_count
+  dim_reports__duplicate_report_ids
   dim_reports__engagement_type
   dim_reports__invitation_cohort_id
   dim_reports__is_bounty_awarded
@@ -25845,7 +25847,7 @@ type PaymentsUserType implements Node {
   monthly_payouts: Boolean!
   payout_cadence: PayoutCadenceEnum
   payout_threshold_amount: Int
-  self_hold_payouts_at: Boolean
+  self_hold_payouts: Boolean
 }
 
 """
@@ -44046,7 +44048,8 @@ input UpdatePaymentsUserMutationInput {
   A unique identifier for the client performing the mutation.
   """
   clientMutationId: String
-  payout_cadence: PayoutCadenceEnum!
+  pause_payouts: Boolean
+  payout_cadence: PayoutCadenceEnum
   payout_threshold_amount: Int
 }
 
