@@ -44046,7 +44046,8 @@ input UpdatePaymentsUserMutationInput {
   A unique identifier for the client performing the mutation.
   """
   clientMutationId: String
-  monthly_payouts: Boolean!
+  payout_cadence: PayoutCadenceEnum!
+  payout_threshold_amount: Int
 }
 
 """
