@@ -17,7 +17,132 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "ios",
+          "endpoint": "1099986434",
+          "description": "IOS Mobile Applicaton of Ada Health",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "android",
+          "endpoint": "com.ada.app",
+          "description": "Android Mobile Application of Ada Health",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://api.mobile.ada.com",
+          "description": "Backend for frontend API endpoint for mobile application activities. This endpoint is protected by a Web Application Firewall.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://id.ada.com",
+          "description": "Ada-ID is an identity management service for end user that interacts with Ada's applications. It provides authentication and authorization. Ada-ID serves as web application and API services. Frontend is valid for password reset and account verification process. This endpoint is protected by a Web Application Firewall.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.ada.health",
+          "description": "All subdomains (one or multilevel) of ada.health, except the ones interacting directly in Tier 1 & 2 assets, are considered as Tier 3.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.adahealth.ca",
+          "description": "All subdomains (one or multilevel) of adahealth.ca, except the ones interacting directly in Tier 1 & 2 assets, are considered as Tier 3.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://care-navigation-admin-bff.eu.enterprise.ada.com",
+          "description": "Backend for frontend (bff) service for Care Navigation Admin interface. BFF is a variant of the API Gateway pattern which provides an additional layer between microservices.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://care-navigation-admin-fe.eu.enterprise.ada.com",
+          "description": "Care Navigation Admin Frontend is a visual tool for managing Connect data including:Test credentials will not be provided. Try to find broken access controls on this endpoint.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://care-navigation-bff.eu.enterprise.ada.com",
+          "description": "Backend for frontend (bff) service for Care Navigation Frontend service. BFF is a variant of the API Gateway pattern which provides an additional layer between microservices.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://care-navigation-fe.eu.enterprise.ada.com",
+          "description": "Care Navigation Frontend service represents Ada Partner care navigation option list available after assessment test is accomplished. Service includes:",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://demo-prod-assessment-bff.ada-prod-eu.prod.gcp.ada.com",
+          "description": "Backend for frontend (bff) service for demo assessment web interface. BFF is a variant of the API Gateway pattern which provides an additional layer between microservices. Please see the all endpoints in the Open API documentation (demo_assessment_bff_openapi.json) file",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://demo-prod-hcp-report-bff.ada-prod-eu.prod.gcp.ada.com",
+          "description": "Handover is a solution for sharing (handing over) the results of the health assessment with the user’s health care provider (HCP) or a health professional. This service has the responsibility to process the data from the hcp-report-backend for the use of handover frontend.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://demo.enterprise.ada.com",
+          "description": "Our web application helps millions to manage their health. This is the frontend assessment application demo domain which represents the general flow we provide with our enterprise partners. This medical AI symptom checker is trained by real doctors. This endpoint provides both guess and authenticated flow which can be combined with our SSO service.This UI is calling the BFF domain which is also in the scope.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://demo.handover.enterprise.ada.com",
+          "description": "Handover is a solution for sharing (handing over) the results of the health assessment with the user’s health care provider (HCP) or a health professional. This service has the responsibility to render the HCP report data received from the HCP report bff.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://demo.sso.enterprise.ada.com",
+          "description": "Smart-auth is Ada’s identification management and Single Sign On (SSO).This service is based on SMART on FHIR implementation and provides a standard way to integrate with other EHR (Electronic Health Record) servers. It is an optional module meaning that not all flows are authentication required.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.ada.com",
+          "description": "All subdomains (one or multilevel) of ada.com, except the ones interacting directly in Tier 1 & 2 are considered as Tier 3.",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.httpproxy.data.ada.com",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "monitoring.*.enterprise.ada.com",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "monitoring.*.enterprise.adahahealth.ca",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "monitoring.*.gcp.ada.com",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "monitoring.*.gcp.adahealth.ca",
+          "description": "",
+          "impact": "Out of scope"
+        }
       ],
       "out_of_scope": [
 
@@ -582,7 +707,114 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "url",
+          "endpoint": "*.buhler-datascience.ch",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.buhlercloud.com",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.buhlergroup.ai",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.buhlergroup.cn",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.buhlergroup.com",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.buhlergroup.io",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.buhlertest.ch",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "ip range",
+          "endpoint": "194.9.120.0 - 194.9.123.255",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.info.buhlergroup.com",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.learnhub.buhlergroup.com",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.virtualworld-portal.buhlergroup.com",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.virtualworld.buhlergroup.com",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.webinars.buhlergroup.com",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "bestbuy.buhlergroup.com",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "channel.buhlergroup.com",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "imap.buhlergroup.cn",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "pop.buhlergroup.cn",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "smtp.buhlergroup.cn",
+          "description": "",
+          "impact": "Out of scope"
+        }
       ],
       "out_of_scope": [
 
@@ -607,7 +839,78 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "url",
+          "endpoint": "login.cm.com",
+          "description": "",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.ticketing.cm.com",
+          "description": "Login to your account and go to https://www.cm.com/en-gb/app/ticketing/From here you can create tickets and much more!Make sure to take a look at the user-side ticket store as well (https://store.ticketing.cm.com/..)",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.cm.com",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.cmtelecom.com",
+          "description": "Some of the applications that are in our scope use our old api.If you find a bug on this api and it is from a product that is in scope, it is valid.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "cm.com/[locale]/app/*",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "cm.com/[locale]/register",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "cm.com/app/messagingtrial/",
+          "description": "An application that makes it possible for developers to do a limited test of sending messages using the CM.COM business messaging API.What we would like to know is:",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.cm.com",
+          "description": "",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.cm.com",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.cmtelecom.com",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "cmcom.atlassian.net",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "demo.globalticket.com/*",
+          "description": "GlobalTicket is one of our integrations.Be sure to check out /cms to try and work your way into it.",
+          "impact": "No bounty"
+        }
       ],
       "out_of_scope": [
 
@@ -632,7 +935,54 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "url",
+          "endpoint": "*.canadapost-postescanada.ca",
+          "description": "Any subdomain of canadapost-postescanada.ca (eg. www.canadapost-postescanada.ca, sso-osu.canadapost-postescanada.ca and store.canadapost-postescanada.ca)",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.postescanada-canadapost.ca",
+          "description": "Any subdomain of postescanada-canadapost.ca (eg. www.postescanada-canadapost.ca)",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.purolator.com",
+          "description": "Any subdomain of purolator.com (eg. www.purolator.com, eshiponline.purolator.com and billingcentre.purolator.com)",
+          "impact": "No bounty"
+        },
+        {
+          "type": "ios",
+          "endpoint": "394391577",
+          "description": "Canada Post's mobile application for iOS",
+          "impact": "No bounty"
+        },
+        {
+          "type": "ios",
+          "endpoint": "438701193",
+          "description": "Purolator's mobile application for iOS",
+          "impact": "No bounty"
+        },
+        {
+          "type": "android",
+          "endpoint": "com.canadapost.android",
+          "description": "Canada Post's mobile application for Android",
+          "impact": "No bounty"
+        },
+        {
+          "type": "android",
+          "endpoint": "com.purolator.mobileapp",
+          "description": "Purolator's mobile application for Android",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "*/scripts/cgiip.exe/*",
+          "description": "XSS in any parameter on the endpoint /scripts/cgiip.exe/ (any in scope domain)",
+          "impact": "Out of scope"
+        }
       ],
       "out_of_scope": [
 
@@ -1101,7 +1451,156 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "url",
+          "endpoint": "app.datacamp.com/certification",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "app.datacamp.com/groups",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "app.datacamp.com/learn",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "app.datacamp.com/workspace",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "assessment-v2.datacamp.com",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "assessment.datacamp.com",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "campus.datacamp.com",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "android",
+          "endpoint": "com.datacamp",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "ios",
+          "endpoint": "https://apps.apple.com/au/app/datacamp-learn-data-science/id1263413087",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "practice.datacamp.com",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "projects.datacamp.com",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.datacamp.com",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.datacamp.com",
+          "description": "",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.it.datacamp.com",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "app.datacamp.com/recruit",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "ast-viewer.datacamp.com",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "confluence.datacamp.com",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "intranet.datacamp.com",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "jira.datacamp.com",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "links.datacamp.com",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "rdocumentation.datacamp.com",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "signature.datacamp.com",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "status.datacamp.com",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "support.datacamp.com",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "talent-jobs-api.datacamp.com",
+          "description": "",
+          "impact": "Out of scope"
+        }
       ],
       "out_of_scope": [
 
@@ -1126,7 +1625,42 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "ios",
+          "endpoint": "456910787",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "accept.delijn.be",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "api-a.delijn.be",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.delijn.be",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "android",
+          "endpoint": "com.themobilecompany.delijn",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.delijn.be",
+          "description": "",
+          "impact": "No bounty"
+        }
       ],
       "out_of_scope": [
 
@@ -1235,7 +1769,42 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "url",
+          "endpoint": "myaccount.volkskrant.nl",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "shop.volkskrant.nl",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "webwinkel.volkskrant.nl",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.volkskrant.nl",
+          "description": "excluding",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.volkskrant.nl/abonnementen",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.volkskrant.nl",
+          "description": "excluding abonnement.volkskrant.nl",
+          "impact": "Tier 3"
+        }
       ],
       "out_of_scope": [
 
@@ -1398,7 +1967,108 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "url",
+          "endpoint": "*.vlaanderen.be",
+          "description": "All and any subsites of https://www.vlaanderen.be,-for which authentication is not needed-for which creation of account(s) is not neededFor some subsites, a government entity other than Digitaal Vlaanderen may be responsible. We can accept the disclosed vulnerability and relay the issue to the concerned entity, yet we then cannot guarantee they will (be able to) fix it.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://beta.gastwebsite-acm.burgerprofiel.ext-vlaanderen.be",
+          "description": "Authenticated demo environment for the widget platform. The website itself is just an illustrative example and should not be tested.",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://beta.gastwebsite.burgerprofiel.ext-vlaanderen.be",
+          "description": "Unauthenticated demo environment for the widget platform. The website itself is just an illustrative example and should not be tested.",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://beta.widgets.burgerprofiel.dev-vlaanderen.be/",
+          "description": "Embeddable portion of My Citizen Profile",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://burgerprofiel.beta-vlaanderen.be",
+          "description": "My Citizen Profile (Mijn Burgerprofiel in Dutch) is the go-to spot for citizens to manage their affairs digitally with the government. Citizens can access their personal data, consult status reports, download certificates, and request new government services such as a permit of subsidy. My Citizen Profile is a plug-in that can be integrated into different official government websites, be it on a Flemish or local level.Available in Dutch - More information can also be found on https://www.vlaanderen.be/uw-overheid/mijn-burgerprofiel (only in Dutch).This beta environment is equiped with a mock authentication (OpenID) service, which can generate tokens for different kinds of accounts. As such, the authentication flow of this mocked service is not in scope.",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://vo-gebruikersbeheer.vlaanderen.be/",
+          "description": "User Management (IDM) is a platform with which you can manage the inflow and outflow of people and their rights to applications.It is a central rights management for different applications within the entire Flemish administration. It controls the inflow and outflow of employees and their rights and is editable to be tailored to the tasks of each employee.More information is available on www.vlaanderen.be/gebruikersbeheer. There is detailed product and technical information available for download (in Dutch only).To be able to test the platform, you will need to create a (dummy) account in our test environment. You can only do this with your intigriti.me e-mail account via a self-registering system available at https://zelfregistratie-gebruikersbeheer-ti.vlaanderen.be/user/aanvraag_werkrelatie?dg=EA&oc=0415928179. You can register with “Kinepolis Group” as a \"Hoofd Lokale Beheerder\". When you do so, please send an e-mail to webidm@hbplus.be with in the subject line \"Project Intigriti\". We will inform you when the right has been given.The application is also available in English via this link: https://gebruikersbeheer-ti.vlaanderen.be/webidm/?lang=en.",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "_* _ .naric . *.onderwijs*.vlaanderen.be",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "* naric*.onderwijs*.vlaanderen.be",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "apigee.naric.onderwijs*.vlaanderen.be",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "archiefoverdracht*.vlaanderen.be",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "bibis*.vlaanderen.be",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "cdn.vlaanderen.be",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "codex.opendata.api.vlaanderen.be",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "data-onderwijs.vlaanderen.be",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "ets*.omgeving.vlaanderen.be",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "natura2000.vlaanderen.be",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "opibus*.onderwijs*.vlaanderen.be",
+          "description": "",
+          "impact": "Out of scope"
+        }
       ],
       "out_of_scope": [
 
@@ -1423,7 +2093,60 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "url",
+          "endpoint": "my.eurid.eu",
+          "description": "My .eu is the registrant or domain holder portal and requires a registered domain name in one of our supported scripts to access.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.das.eu",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.dns.eu",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.eurid.eu",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.nic.eu",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.registry.eu",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.whois.eu",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.yadifa.eu",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "YADIFA authoritative name server",
+          "description": "YADIFA is EURid's authoritative name server software which can be downloaded from the yadifa.eu website.",
+          "impact": "Tier 3"
+        }
       ],
       "out_of_scope": [
 
@@ -1581,7 +2304,66 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "url",
+          "endpoint": "*.account.api.here.com",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.account.here.com",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.mobilitygraph.hereapi.com",
+          "description": "Including, but not limited to, following applications:https://predictor.mobilitygraph.hereapi.com/https://profile.mobilitygraph.hereapi.com/https://subscription.mobilitygraph.hereapi.com/",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.router.hereapi.com",
+          "description": "Including, but not limited to, following applications:https://matrix.router.hereapi.com/https://subp-als.matrix.router.hereapi.com/v8/matrixhttps://transit.router.hereapi.com/https://intermodal.router.hereapi.com/",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.scbe.api.here.com",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.subp-router.hereapi.com",
+          "description": "Including, but not limited to, following application:https://vip-als.subp-router.hereapi.com/",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "ios",
+          "endpoint": "955837609",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "android",
+          "endpoint": "com.here.app.maps",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.here.com",
+          "description": "This scope (*.here.com) is for Log4J and Spring4Shell RCE vulnerabilities only.",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.hereapi.com",
+          "description": "This scope (*.hereapi.com) is for Log4J and Spring4Shell RCE vulnerabilities only.",
+          "impact": "Tier 3"
+        }
       ],
       "out_of_scope": [
 
@@ -1768,7 +2550,12 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "url",
+          "endpoint": "https://www.kuleuven.be/sapredir/huisvesting",
+          "description": "!! You can create an account with your @intigriti.me address and name 'Intigriti Test' (as explained in the FAQ), but the registration process itself is not in scope for the bug bounty programme !!The scope includes all assets that are reasonably related to the housing application app (except for authentication like login or registration process).",
+          "impact": "Tier 2"
+        }
       ],
       "out_of_scope": [
 
@@ -1793,7 +2580,66 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "url",
+          "endpoint": "* humo.be/registreren",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "myaccount.humo.be",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "shop.humo.be",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.humo.be",
+          "description": "excluding",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.humo.be/abonnementen",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.humo.be",
+          "description": "excluding abonnement.humo.be",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "* humo.be/inloggen",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "* humo.be/login",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "* humo.be/service",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "abonnement.humo.be",
+          "description": "",
+          "impact": "Out of scope"
+        }
       ],
       "out_of_scope": [
 
@@ -2088,7 +2934,30 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "other",
+          "endpoint": "Hardware",
+          "description": "",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "other",
+          "endpoint": "Firmware",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "Software",
+          "description": "",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.intel.com",
+          "description": "Intel's Web Infrastructure, i.e.*.intel.comIntel’s web infrastructure, i.e., website domains owned and/or operated by Intel, fall Out of Scope. These reports are not eligible for rewards of any kind.Please send security vulnerability reports against intel.com and/or related web presence to external.security.research@intel.comPlease select this domain when submitting  credentials of any kind.",
+          "impact": "No bounty"
+        }
       ],
       "out_of_scope": [
 
@@ -2977,7 +3846,42 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "url",
+          "endpoint": "www.libelle.nl",
+          "description": "excluding",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.libelle.nl",
+          "description": "",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "* libelle.nl/inloggen",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "* libelle.nl/login",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "* libelle.nl/registreren",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "* libelle.nl/service",
+          "description": "",
+          "impact": "Out of scope"
+        }
       ],
       "out_of_scope": [
 
@@ -3128,7 +4032,162 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "url",
+          "endpoint": "*.military.com",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.monster.at",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.monster.be",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.monster.ca",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.monster.ch",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.monster.co.uk",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.monster.com",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.monster.de",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.monster.dk",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.monster.es",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.monster.eu",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.monster.fr",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.monster.hu",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.monster.ie",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.monster.it",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.monster.lu",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.monster.no",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.monster.pt",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.monster.se",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.monsterboard.nl",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.monsterpolska.pl",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "fastweb.com",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.monster.cz",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.monster.fi",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.monsterindia.com",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "Any endpoints which are not owned by Monster & third party systems",
+          "description": "",
+          "impact": "Out of scope"
+        }
       ],
       "out_of_scope": [
 
@@ -3153,7 +4212,48 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "url",
+          "endpoint": "*.monzo.com",
+          "description": "The crux of Monzo where the APIs live as well as Monzo Business and the main web site",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.monzo.me",
+          "description": "Houses the services for the pay me / request payment feature",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.prod-ffs.io",
+          "description": "Where our internal tooling lives... hopefully it isn't exposed!",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "ios",
+          "endpoint": "1052238659",
+          "description": "The public seed of the Monzo app on iOS",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "android",
+          "endpoint": "co.uk.getmondo",
+          "description": "The public seed of the Monzo app on Android",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "community.monzo.com",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "developers.monzo.com/env.js",
+          "description": "",
+          "impact": "Out of scope"
+        }
       ],
       "out_of_scope": [
 
@@ -3178,7 +4278,114 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "url",
+          "endpoint": "*.bigmoralis.com",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.grandmoralis.com",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.moralis-internal.io",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.moralis-streams.com",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.moralis.io",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.moralisapp.com",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.moralishost.com",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.moralismoney.com",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.moralisweb3.com",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.usemoralis.com",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "academy.moralis.io",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "docs.moralis.io",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "forum.moralis.io",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "merch.moralis.io",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "roadmap.moralis.io",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "status.moralis.io",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "studygroup.moralis.io",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "talent.moralis.io",
+          "description": "",
+          "impact": "Out of scope"
+        }
       ],
       "out_of_scope": [
 
@@ -3228,7 +4435,78 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "other",
+          "endpoint": "134.58.179.82",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "android",
+          "endpoint": "be.nexuzhealth.mobile.cpv",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "android",
+          "endpoint": "be.nexuzhealth.mobile.kws",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "android",
+          "endpoint": "be.nexuzhealth.mobile.mynexuz",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "forms.nexuzhealth.be",
+          "description": "Registration for code cards used to authenticate on the mynexuzhealth application",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "idp-mobile.nexuzhealth.be",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "ios",
+          "endpoint": "kws-companion/id1342124012",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "mobile.nexuzhealth.be",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "mynexuz.be",
+          "description": "🇬🇧🇫🇷🇳🇱",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "mynexuz.be/myUZ/",
+          "description": "🇬🇧🇫🇷🇳🇱",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "ios",
+          "endpoint": "mynexuzhealth/id1459856321",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://www.nexuzhealth.com/nl/mynexuzhealthpro",
+          "description": "",
+          "impact": "Out of scope"
+        }
       ],
       "out_of_scope": [
 
@@ -3289,7 +4567,78 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "url",
+          "endpoint": "analytics.ninjakiwi.com",
+          "description": "This domain hosts the API that consumed analytics events from our game clients",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.ninjakiwi.com",
+          "description": "This domain hosts the API for our mobile and PC games. Monitoring traffic through one of our game clients is the easiest method to investigate our main API. Most of our applications are available for free on Steam. Please carefully read the in-scope section regarding what sorts of exploits will be considering in-scope for this domain.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "builds-auckland.ninja.kiwi",
+          "description": "This domain hosts builds of Ninja Kiwi games for iOS devices.Areas of focus:",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.nkstatic.com",
+          "description": "This domain hosts static content for Ninja Kiwi games and website.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "battles.tv",
+          "description": "Battles.tv is used to share replays from our Bloons TD Battles game.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "data.ninjakiwi.com",
+          "description": "This domain hosts our public data API which grants open access to in-game data from our biggest games. For example player profiles, leatherboards and event information is available through this domain.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "ninja.kiwi",
+          "description": "This domain is used by Ninja Kiwi for our URL shortener service, ie https://ninja.kiwi/intigriti.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "ninjakiwi.com",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.ninjakiwi.com",
+          "description": "This covers any subdomains of ninjakiwi.com other than sub-domains which are managed by authorized third-party services or included in the list below.Third Party ServicesThe following domains are explicitly excluded",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "ct.ninjakiwi.com",
+          "description": "",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "mynk.ninjakiwi.com",
+          "description": "This is a legacy domain which powers our Flash games. Uses Flash AMF.",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.souparea.com",
+          "description": "This domain will be considered out of scope unless it can be shown to allow an exploit on one of our Tier 1-3 domains.",
+          "impact": "No bounty"
+        }
       ],
       "out_of_scope": [
 
@@ -3638,7 +4987,24 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "url",
+          "endpoint": "selt.languagecert.org",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.languagecert.org",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.peoplecert.org",
+          "description": "",
+          "impact": "No bounty"
+        }
       ],
       "out_of_scope": [
 
@@ -3663,7 +5029,90 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "url",
+          "endpoint": "*.personio-internal.de",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.personio.tools",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://*.personio.de",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://hug.personio.com",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://sec-test-<intigriti handle>-<nn>.personio.de",
+          "description": "Please see FAQ for creation instructions",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://www.personio.com/free-trial/",
+          "description": "",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://www.personio.de/kostenlos-testen/",
+          "description": "",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "Other assets owned by Personio",
+          "description": "",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.personio.de",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "personio.slack.com",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "statuspage.personio.de",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "support.personio.de",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.personio.com",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.personio.es",
+          "description": "",
+          "impact": "Out of scope"
+        }
       ],
       "out_of_scope": [
 
@@ -4060,7 +5509,132 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "url",
+          "endpoint": "access.ripe.net",
+          "description": "This is the authentication service for our membership and community, mostly used for all of our membership (e.g. LIR) applications.We strongly suggest you to adjust your scanners to the limit where we mentioned in the req/sec.Please adhere to the out of scope rules below.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "other",
+          "endpoint": "https://github.com/RIPE-NCC/rpki-commons",
+          "description": "This library contains an implementation of an X.509 v3 certificate extension which binds a list of IP address blocks or prefixes to the subject of a certificate (IP Address Delegation Extension).",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "other",
+          "endpoint": "https://github.com/RIPE-NCC/rpki-core",
+          "description": "This repository contains the source code for the RIPE NCC certification. We strive to publish as many components as possible with reasonable effort. Some elements or information are not included, either because of our threat model or because we can not publish them.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "other",
+          "endpoint": "https://github.com/RIPE-NCC/whois",
+          "description": "RIPE Database whois code repository.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "lirportal.ripe.net",
+          "description": "Our portal page for LIR's where they can access their information and more.Since this portal designed to give access only to LIR's, you can't create an account.Until then;",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.ripe.net",
+          "description": "Our main domain.We suggest you to check out of scope section of our program if you discover any vulnerabilities on this domain or it's subdomains.To make your reports better, we suggest you to check the IP address of the asset you've found so you can understand the address if in scope or out of scope.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "ip range",
+          "endpoint": "193.0.0.0/19 and 2001:67c:2e8::/48",
+          "description": "This is our IP Range.Since we are letting some people to host their content, there are some exclusions.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "https://github.com/RIPE-NCC/rpki-monitoring",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "https://github.com/RIPE-NCC/rpki-publication-server",
+          "description": "This is the RIPE NCC's implementation of RFC 8182 - The RPKI Repository Delta Protocol and a draft of RFC 8181 - A Publication Protocol for the Resource Public Key Infrastructure.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "https://github.com/RIPE-NCC/rpki-ta-0",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "https://github.com/RIPE-NCC/rsyncit",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "Assets owned by RIPE NCC",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.anchors.atlas.ripe.net",
+          "description": "These probes and anchors are not hosted in networks managed by the RIPE NCC, but in networks participating in the RIPE Atlas project. If you find any vulnerabilities for IP addresses associated with RIPE Atlas probes/anchors, you will need to report them to the security teams of the responsible network operators.",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.probes.atlas.ripe.net",
+          "description": "These probes and anchors are not hosted in networks managed by the RIPE NCC, but in networks participating in the RIPE Atlas project. If you find any vulnerabilities for IP addresses associated with RIPE Atlas probes/anchors, you will need to report them to the security teams of the responsible network operators.",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "193.0.0.160/27",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "2001:67c:2e8:3::/64",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "Any *.ripe.net host that is located outside of the in-scope IP ranges",
+          "description": "The RIPE NCC uses a number of SaaS provider where a *.ripe.net record may point to. However, these services are not maintained by the RIPE NCC and are not part of this Bug Bounty program. If you think a specific host may be in scope, please contact Intigriti Support",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "Any of the beta/dev environments",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "exams.ripe.net",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "RIPE Meeting network (2001:67c:64::/48 and 193.0.24.0/21)",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "ripe(1to87).ripe.net",
+          "description": "",
+          "impact": "Out of scope"
+        }
       ],
       "out_of_scope": [
 
@@ -4085,7 +5659,48 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "url",
+          "endpoint": "*.randstad.*",
+          "description": "Out of Scope: workplace.randstad.in & apps.randstad.in",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.randstadrisesmart.*",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.risesmart.*",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "Any related Randstad domain",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "apps.randstad.in",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "cz.randstad.com",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "workplace.randstad.in",
+          "description": "",
+          "impact": "Out of scope"
+        }
       ],
       "out_of_scope": [
 
@@ -4182,7 +5797,36 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "url",
+          "endpoint": "*.rhinternal.net",
+          "description": "",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.robinhood.com",
+          "description": "",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.robinhood.net",
+          "description": "robinhood.net contains internal Robinhood services. You shouldn’t be able to log into anything here.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "ios",
+          "endpoint": "938003185",
+          "description": "",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "android",
+          "endpoint": "com.robinhood.android",
+          "description": "",
+          "impact": "Tier 1"
+        }
       ],
       "out_of_scope": [
 
@@ -4267,7 +5911,24 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "url",
+          "endpoint": "https://*.saytechnologies.com",
+          "description": "",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://*.say.rocks",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://www.saytechnologies.com/contact/sales",
+          "description": "",
+          "impact": "Out of scope"
+        }
       ],
       "out_of_scope": [
 
@@ -4292,7 +5953,114 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "url",
+          "endpoint": "api.sentiance.com",
+          "description": "Main API",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "android",
+          "endpoint": "com.sentiance.journeys2",
+          "description": "Insights Google Store link",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "controltower.sentiance.com",
+          "description": "Insights dashboard",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "ios",
+          "endpoint": "https://apps.apple.com/us/app/rac-go/id6444858115",
+          "description": "RAC Go Apple store link",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "android",
+          "endpoint": "https://play.google.com/store/apps/details?id=com.sentiance.saferdriver",
+          "description": "RAC Go Google store link",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "ios",
+          "endpoint": "insights-by-sentiance/id1608074635",
+          "description": "Insights Apple Store link",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "journeys-api.sentiance.com/v2",
+          "description": "Insights app base API",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.sentiance.com",
+          "description": "IMPORTANT! Please read the out of scope section. Not all subdomains are in scope",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "android",
+          "endpoint": "com.sentiance.journeys",
+          "description": "Journeys Google Store link",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "ios",
+          "endpoint": "journeys-2/id984087229?mt=8",
+          "description": "Journeys Apple Store link",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "docs.sentiance.com",
+          "description": "",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "jobs.sentiance.com",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "press.sentiance.com",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "_weather.sentiance.com",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "betadoc.sentiance.com",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "landing-automotive.sentiance.com",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "mb.sentiance.com",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.sentiance.com",
+          "description": "(including no subdomain)",
+          "impact": "Out of scope"
+        }
       ],
       "out_of_scope": [
 
@@ -4317,7 +6085,36 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "other",
+          "endpoint": "SimScale API",
+          "description": "API URL: https://api.simscale.comThe API doc is available at https://api.simscale.com.API keys with limited capabilities (project creation and geometry upload) can be managed in the API keys page. API keys with full API capabilities can be requested from the Intigriti support (\"Ask scope question\"). Please note that only a limited number of those API keys will be issued at a time.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "SimScale Platform",
+          "description": "The following areas and paths under domain https://www.simscale.com:Paths: /signup/*, /signin/*, /onboarding/*Examples:Paths: /dashboard, /users/*Examples (login required):Paths: /workbench/*Examples (login required):Paths: /projects/*Examples:All API endpoints used by UIs listed above.Paths: /api/*, /csm/*, /postprocessing/*",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "SimScale Website",
+          "description": "Domain https://www.simscale.com and the remaining paths not listed under SimScale Platform.Examples:",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://www.simscale.com/api/v1/projects/*",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.simscale.com/forum/users/*.json",
+          "description": "",
+          "impact": "Out of scope"
+        }
       ],
       "out_of_scope": [
 
@@ -4786,7 +6583,42 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "url",
+          "endpoint": "*.sqills.com",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.sqills.team",
+          "description": "",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.red.sqills.team",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "booking.*.cloud.sqills.com",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "booking.*.sqills.com",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "careers.sqills.com",
+          "description": "",
+          "impact": "Out of scope"
+        }
       ],
       "out_of_scope": [
 
@@ -4811,7 +6643,12 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "other",
+          "endpoint": "Research",
+          "description": "",
+          "impact": "Tier 1"
+        }
       ],
       "out_of_scope": [
 
@@ -4957,7 +6794,54 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "other",
+          "endpoint": "Brand Sites",
+          "description": "Brand sites owned by The Coca-Cola Company.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "Corporate Sites",
+          "description": "*.us.coca-cola.com*.coca-cola.com*.ko.com*.testko.com*.coca-colacompany.com*.coke.com*.cokestore.com*.cokeurl.com*.tccc-aem.com",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "Mobile Applications",
+          "description": "Coca-Cola iOS AppCoca-Cola Android App",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "Publicly Facing Assets Related to The Coca-Cola Company",
+          "description": "Researchers are welcome to submit reports on any publicly facing asset(s) attributed to The Coca-Cola Company.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "*.cn",
+          "description": "All assets located in or related to China are out of scope and reports will not be accepted.",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.na.ko.com",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "other",
+          "endpoint": "Coke One North America (CONA)",
+          "description": "Any application or asset owned by Coke One North America (CONA)",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "other",
+          "endpoint": "Food and Beverage Dispensing Devices",
+          "description": "Due to the unique nature of these devices (usually present on networks operated by 3rd parties), we do not authorize testing against them.",
+          "impact": "Out of scope"
+        }
       ],
       "out_of_scope": [
 
@@ -5162,7 +7046,72 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "url",
+          "endpoint": "myaccount.trouw.nl",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "shop.trouw.nl",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "webwinkel.trouw.nl",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.trouw.nl",
+          "description": "excluding",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.trouw.nl/abonnementen",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.trouw.nl",
+          "description": "excluding abonnement.trouw.nl",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "* trouw.nl/inloggen",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "* trouw.nl/login",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "* trouw.nl/registreren",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "* trouw.nl/service",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "abonnement.trouw.nl",
+          "description": "",
+          "impact": "Out of scope"
+        }
       ],
       "out_of_scope": [
 
@@ -5463,7 +7412,30 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "url",
+          "endpoint": "*.tweakblogs.net",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.tweakers.net",
+          "description": "Out of scope: elect.tweakers.net",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.tweakimg.net",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "elect.tweakers.net",
+          "description": "",
+          "impact": "Out of scope"
+        }
       ],
       "out_of_scope": [
 
@@ -5728,7 +7700,12 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "other",
+          "endpoint": "Ubisoft",
+          "description": "Ubisoft services available from the internet and any software developed by Ubisoft that is not listed as Out of Scope. This includes our web applications, servers, and all our game(s) within 1 year of the last patch/update.",
+          "impact": "Tier 2"
+        }
       ],
       "out_of_scope": [
 
@@ -6923,7 +8900,96 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "url",
+          "endpoint": "*. advancedcustomfields.com",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "*. bettersearchreplace.com",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.deliciousbrains.com",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.studiopress.com",
+          "description": "The studiopress.com, www.studiopress.com, and my.studiopress.com sites are public facing marketing and WordPress theme e-commerce sites. No credentials will be provided. Researchers are free to test functionally that requires authentication with their own accounts. Please note: no reimbursements will be made for money spent to access this part of the application.",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.wpengine.io",
+          "description": "This is an apex domain used for microservices hosted as subdomains and service-to-service APIs - these are intended to be \"internal\" services like APIs but have public DNS records and some may be publicly-accessible. To aid in testing, we've provided some initial OSINT for this domain: https://crt.sh/?q=%25wpengine.io",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.wpesvc.net",
+          "description": "This is an apex domain used for microservices hosted as subdomains and service-to-service APIs - these are intended to be \"internal\" services like APIs but have public DNS records and some may be publicly-accessible. To aid in testing, we've provided some initial OSINT for this domain: https://crt.sh/?q=%25wpesvc.net",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "app.getflywheel.com",
+          "description": "This is the primary site for researchers to register and test both the Flywheel App as well as the Flywheel Platform. We will not provide credentials or bypass verification controls (i.e, a researcher will need to either provide a valid phone number or credit card to have a live site), but a researcher may register a demo site that matches the platform's functionality without verification. Please use your Intigriti credentials to register. Please note that any issues regarding an individual WordPress installation on the Flywheel platform, outside of plugins owned by WP Engine/Flywheel, will be considered out of scope as we do not monitor or manage customer content. We are, however, very interested in issues that may compromise customer isolation on the platform or cause data to be leaked from either a host or an unrelated customer site.",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "getflywheel.com",
+          "description": "This site is the landing page for Flywheel-branded services. Most of this data is static, but there are a number of dynamic fields and functionalities that are available to be tested. Support, contact forms, and chat functionality are out-of-scope - specifically, the Sales Questions functionality or https://getflywheel.com/schedule-a-demo/. No testing should be done against these targets or any 3rd party services. Please do not contact Live Chat agents.",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "my.wpengine.com",
+          "description": "The User Portal for WP Engine. Customers manage their WordPress sites, addons, and billing details through this portal. No credentials will be provided. Researchers are free to test functionally that requires authentication with their own accounts. Please note: no reimbursements will be made for money spent to access this part of the application.",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "spressforumstg.wpengine.com",
+          "description": "the staging environment for the StudioPress community forum, built on WordPress. Researchers are welcome to register an account using their @intigriti.me email address, but should refrain from interacting with the community, making public posts, or performing automated testing which may cause disruption. Do not attempt to gain access to any user accounts not under your control.",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "studiopress.blog",
+          "description": "This is a public-facing marketing site built on WordPress. Most of the content on this site consists of static blog posts.",
+          "impact": "No bounty"
+        },
+        {
+          "type": "other",
+          "endpoint": "WP Engine-developed WordPress Plugins and Themes",
+          "description": "We accept any reports of vulnerabilities in plugins or themes managed or developed by WP Engine, with the exception of any application-level vulnerabilities in the Out of Scope section below.  These free versions closely mirror their paid counterparts, so any vulnerabilities discovered should be applicable to both the paid or free plugins.We also accept reports for the following Delicious Brains plugins:https://wordpress.org/plugins/advanced-custom-fields",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "wpengine.com",
+          "description": "This the landing page for the main WP Engine website. Most of this data is static, but there are a number of dynamic fields and functionalities that are available to be tested. Support, contact forms, and chat functionality are out-of-scope - specifically, the Sales Questions functionality and wpengine.com/contact/. No testing should be done against these targets or any 3rd party services.",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://getflywheel.com/schedule-a-demo/",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://wpengine.com/contact/",
+          "description": "",
+          "impact": "Out of scope"
+        }
       ],
       "out_of_scope": [
 
@@ -7362,7 +9428,48 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "url",
+          "endpoint": "hub.vznkul.be/*",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "hub.vznkul.be/services/interhub/InterHubService",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "hub.vznkul.be/services/intrahub/IntraHubService",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "hubacc.vznkul.be/*",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "hubacc.vznkul.be/services/acceptance/interhub/InterHubService",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "hubacc.vznkul.be/services/acceptance/intrahub/IntraHubService",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.vznkul.be",
+          "description": "",
+          "impact": "Out of scope"
+        }
       ],
       "out_of_scope": [
 
@@ -7387,7 +9494,48 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "url",
+          "endpoint": "https://api-dashboard.stag.henchman.io",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://api-search.stag.henchman.io",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://add-in.stag.henchman.io",
+          "description": "This is our add-in.You can authenticate with:email: wouter+intigriti@henchman.iopassword: 7qHVPbNm_MZmdNkc-_nwXJkCTyXu*EfRsK9Pmnn3Here you can search for the analysed data. You will see this data after your integration is finished.https://youtu.be/BF1bsN2JpBY",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://auth.stag.henchman.io",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://dashboard.stag.henchman.io",
+          "description": "This is our dashboard.We've created a Intigriti - Bug Bounty Program tenant.You can authenticate with:email: wouter+intigriti@henchman.iopassword: 7qHVPbNm_MZmdNkc-_nwXJkCTyXu*EfRsK9Pmnn3Here you can add/remove users and add an integration.https://youtu.be/BF1bsN2JpBY",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://ops-dashboard.stag.henchman.io",
+          "description": "This is our operations dashboard.You can authenticate with:email: wouter+intigriti@henchman.iopassword: 7qHVPbNm_MZmdNkc-_nwXJkCTyXu*EfRsK9Pmnn3You will need this to make sure the integration flow goes as smooth as possible. Integration connections that have been made by the customer/tenant on the dashboard will need to be approved here first. Also, this platform will give you extra information about the state of the integration. An integration can only be deleted on the operations dashboard.https://youtu.be/BF1bsN2JpBY⚠️ It's important that you use this ops-dashboard only for you own integration flow or to create a company for yourself. Please don't add yourself as a user to another company that you haven't created yourself. This can be in use for other researchers ⚠️",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.henchman.io",
+          "description": "For the Dashboard, Auth, Add-in and API endpoints - Do NOT test these on production. Please use the staging environments listed in the above domains section.",
+          "impact": "No bounty"
+        }
       ],
       "out_of_scope": [
 
