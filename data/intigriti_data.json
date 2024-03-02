@@ -17,7 +17,132 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "ios",
+          "endpoint": "1099986434",
+          "description": "IOS Mobile Applicaton of Ada Health",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "android",
+          "endpoint": "com.ada.app",
+          "description": "Android Mobile Application of Ada Health",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://api.mobile.ada.com",
+          "description": "Backend for frontend API endpoint for mobile application activities. This endpoint is protected by a Web Application Firewall.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://id.ada.com",
+          "description": "Ada-ID is an identity management service for end user that interacts with Ada's applications. It provides authentication and authorization. Ada-ID serves as web application and API services. Frontend is valid for password reset and account verification process. This endpoint is protected by a Web Application Firewall.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.ada.health",
+          "description": "All subdomains (one or multilevel) of ada.health, except the ones interacting directly in Tier 1 & 2 assets, are considered as Tier 3.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.adahealth.ca",
+          "description": "All subdomains (one or multilevel) of adahealth.ca, except the ones interacting directly in Tier 1 & 2 assets, are considered as Tier 3.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://care-navigation-admin-bff.eu.enterprise.ada.com",
+          "description": "Backend for frontend (bff) service for Care Navigation Admin interface. BFF is a variant of the API Gateway pattern which provides an additional layer between microservices.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://care-navigation-admin-fe.eu.enterprise.ada.com",
+          "description": "Care Navigation Admin Frontend is a visual tool for managing Connect data including:Test credentials will not be provided. Try to find broken access controls on this endpoint.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://care-navigation-bff.eu.enterprise.ada.com",
+          "description": "Backend for frontend (bff) service for Care Navigation Frontend service. BFF is a variant of the API Gateway pattern which provides an additional layer between microservices.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://care-navigation-fe.eu.enterprise.ada.com",
+          "description": "Care Navigation Frontend service represents Ada Partner care navigation option list available after assessment test is accomplished. Service includes:",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://demo-prod-assessment-bff.ada-prod-eu.prod.gcp.ada.com",
+          "description": "Backend for frontend (bff) service for demo assessment web interface. BFF is a variant of the API Gateway pattern which provides an additional layer between microservices. Please see the all endpoints in the Open API documentation (demo_assessment_bff_openapi.json) file",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://demo-prod-hcp-report-bff.ada-prod-eu.prod.gcp.ada.com",
+          "description": "Handover is a solution for sharing (handing over) the results of the health assessment with the user’s health care provider (HCP) or a health professional. This service has the responsibility to process the data from the hcp-report-backend for the use of handover frontend.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://demo.enterprise.ada.com",
+          "description": "Our web application helps millions to manage their health. This is the frontend assessment application demo domain which represents the general flow we provide with our enterprise partners. This medical AI symptom checker is trained by real doctors. This endpoint provides both guess and authenticated flow which can be combined with our SSO service.This UI is calling the BFF domain which is also in the scope.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://demo.handover.enterprise.ada.com",
+          "description": "Handover is a solution for sharing (handing over) the results of the health assessment with the user’s health care provider (HCP) or a health professional. This service has the responsibility to render the HCP report data received from the HCP report bff.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://demo.sso.enterprise.ada.com",
+          "description": "Smart-auth is Ada’s identification management and Single Sign On (SSO).This service is based on SMART on FHIR implementation and provides a standard way to integrate with other EHR (Electronic Health Record) servers. It is an optional module meaning that not all flows are authentication required.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.ada.com",
+          "description": "All subdomains (one or multilevel) of ada.com, except the ones interacting directly in Tier 1 & 2 are considered as Tier 3.",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.httpproxy.data.ada.com",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "monitoring.*.enterprise.ada.com",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "monitoring.*.enterprise.adahahealth.ca",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "monitoring.*.gcp.ada.com",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "monitoring.*.gcp.adahealth.ca",
+          "description": "",
+          "impact": "Out of scope"
+        }
       ],
       "out_of_scope": [
 
@@ -226,7 +351,108 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "url",
+          "endpoint": "imove.bpost.cloud",
+          "description": "Coorporate application :Make your reservation to save a spot at the office",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.bpost.be",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.bpost.cloud",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.landmarkglobal-group.com",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "android",
+          "endpoint": "be.bpost.mobilecard",
+          "description": "With Mobile Postcard you can send real personalized postcards based on photos and videos on your smartphone or tablet. We print them for you and ship them anywhere in the world.",
+          "impact": "No bounty"
+        },
+        {
+          "type": "android",
+          "endpoint": "be.bpost.mybpost",
+          "description": "Track, receive, send. With the My bpost app you can arrange all your parcels in 1 app.",
+          "impact": "No bounty"
+        },
+        {
+          "type": "device",
+          "endpoint": "bpost Parcel Lockers",
+          "description": "More info about these lockers on https://www.bpost.be/en/parcel-lockerWhe have parcel lockers with screen and  screenless.You need the mybpost app to open a screenless locker.",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "career.bpost.be",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "dmm.bpost.be",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "eshop.bpost.be",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "maxiresponse.bpost.be",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "my.bpost.be",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "procuration.bpost.be",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "quickstamp-gb.bpost.be",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "register.bpost.be",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "validationlist.bpost.be",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.bpost.be",
+          "description": "",
+          "impact": "No bounty"
+        }
       ],
       "out_of_scope": [
 
@@ -251,7 +477,114 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "url",
+          "endpoint": "*.buhler-datascience.ch",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.buhlercloud.com",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.buhlergroup.ai",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.buhlergroup.cn",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.buhlergroup.com",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.buhlergroup.io",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.buhlertest.ch",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "ip range",
+          "endpoint": "194.9.120.0 - 194.9.123.255",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.info.buhlergroup.com",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.learnhub.buhlergroup.com",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.virtualworld-portal.buhlergroup.com",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.virtualworld.buhlergroup.com",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.webinars.buhlergroup.com",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "bestbuy.buhlergroup.com",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "channel.buhlergroup.com",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "imap.buhlergroup.cn",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "pop.buhlergroup.cn",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "smtp.buhlergroup.cn",
+          "description": "",
+          "impact": "Out of scope"
+        }
       ],
       "out_of_scope": [
 
@@ -372,7 +705,54 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "url",
+          "endpoint": "*.canadapost-postescanada.ca",
+          "description": "Any subdomain of canadapost-postescanada.ca (eg. www.canadapost-postescanada.ca, sso-osu.canadapost-postescanada.ca and store.canadapost-postescanada.ca)",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.postescanada-canadapost.ca",
+          "description": "Any subdomain of postescanada-canadapost.ca (eg. www.postescanada-canadapost.ca)",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.purolator.com",
+          "description": "Any subdomain of purolator.com (eg. www.purolator.com, eshiponline.purolator.com and billingcentre.purolator.com)",
+          "impact": "No bounty"
+        },
+        {
+          "type": "ios",
+          "endpoint": "394391577",
+          "description": "Canada Post's mobile application for iOS",
+          "impact": "No bounty"
+        },
+        {
+          "type": "ios",
+          "endpoint": "438701193",
+          "description": "Purolator's mobile application for iOS",
+          "impact": "No bounty"
+        },
+        {
+          "type": "android",
+          "endpoint": "com.canadapost.android",
+          "description": "Canada Post's mobile application for Android",
+          "impact": "No bounty"
+        },
+        {
+          "type": "android",
+          "endpoint": "com.purolator.mobileapp",
+          "description": "Purolator's mobile application for Android",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "*/scripts/cgiip.exe/*",
+          "description": "XSS in any parameter on the endpoint /scripts/cgiip.exe/ (any in scope domain)",
+          "impact": "Out of scope"
+        }
       ],
       "out_of_scope": [
 
@@ -584,7 +964,48 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "ios",
+          "endpoint": "1416625210",
+          "description": "React-Native built iOS app",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "android",
+          "endpoint": "com.freshfoodventures.crisp",
+          "description": "React-Native built Android app",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "crisp.ninja",
+          "description": "Code review tool behind IP-filter",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "for-hackers.crisp.kitchen",
+          "description": "Back-office management login page.(for-hackers.crisp.kitchen is a CNAME to crisp.kitchen; it allows us to classify traffic)",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "for-hackers.crisp.nl",
+          "description": "Main frontpage & landing pages.(for-hackers.crisp.nl is a CNAME to crisp.nl; it allows us to classify traffic)",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "for-hackers.crispapp.nl",
+          "description": "Backend host to which apps connect.(for-hackers.crispapp.nl is a CNAME to crispapp.nl; it allows us to classify traffic)",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://for-hackers.crispapp.nl/web-rn/",
+          "description": "Hidden web build of the app. Client-side issues that do not exist in the native apps are capped to low severity.",
+          "impact": "Tier 2"
+        }
       ],
       "out_of_scope": [
 
@@ -725,7 +1146,24 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "url",
+          "endpoint": "*.dpgmedia.be",
+          "description": "excluding",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.dpgmedia.nl",
+          "description": "excluding",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "Any related DPG media domain",
+          "description": "Only applicable to domains that are 100% owned by DPG.For example, projects that are partly owned by DPG and partly owned by RTL (because of a joint venture between the two) are not in scope.Whois: De Persgroep Publishing nvBrusselstesteenweg 3471730 AsseBelgiëDPG Media Services NVMediaplein 12018 AntwerpenBelgium",
+          "impact": "Tier 3"
+        }
       ],
       "out_of_scope": [
 
@@ -800,7 +1238,66 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "url",
+          "endpoint": "myaccount.demorgen.be",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "shop.demorgen.be",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.demorgen.be",
+          "description": "excluding",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.demorgen.be/abonnementen",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.demorgen.be",
+          "description": "excluding abonnement.demorgen.be",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "* demorgen.be/inloggen",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "* demorgen.be/login",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "* demorgen.be/registreren",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "* demorgen.be/service",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "abonnement.demorgen.be",
+          "description": "",
+          "impact": "Out of scope"
+        }
       ],
       "out_of_scope": [
 
@@ -825,7 +1322,42 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "url",
+          "endpoint": "myaccount.volkskrant.nl",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "shop.volkskrant.nl",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "webwinkel.volkskrant.nl",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.volkskrant.nl",
+          "description": "excluding",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.volkskrant.nl/abonnementen",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.volkskrant.nl",
+          "description": "excluding abonnement.volkskrant.nl",
+          "impact": "Tier 3"
+        }
       ],
       "out_of_scope": [
 
@@ -1267,7 +1799,66 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "url",
+          "endpoint": "*.account.api.here.com",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.account.here.com",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.mobilitygraph.hereapi.com",
+          "description": "Including, but not limited to, following applications:https://predictor.mobilitygraph.hereapi.com/https://profile.mobilitygraph.hereapi.com/https://subscription.mobilitygraph.hereapi.com/",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.router.hereapi.com",
+          "description": "Including, but not limited to, following applications:https://matrix.router.hereapi.com/https://subp-als.matrix.router.hereapi.com/v8/matrixhttps://transit.router.hereapi.com/https://intermodal.router.hereapi.com/",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.scbe.api.here.com",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.subp-router.hereapi.com",
+          "description": "Including, but not limited to, following application:https://vip-als.subp-router.hereapi.com/",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "ios",
+          "endpoint": "955837609",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "android",
+          "endpoint": "com.here.app.maps",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.here.com",
+          "description": "This scope (*.here.com) is for Log4J and Spring4Shell RCE vulnerabilities only.",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.hereapi.com",
+          "description": "This scope (*.hereapi.com) is for Log4J and Spring4Shell RCE vulnerabilities only.",
+          "impact": "Tier 3"
+        }
       ],
       "out_of_scope": [
 
@@ -1292,7 +1883,54 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "url",
+          "endpoint": "* hln.be/inloggen",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "* hln.be/login",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "* hln.be/registreren",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "hln.be",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "myaccount.hln.be",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.hln.be",
+          "description": "excluding",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.hln.be",
+          "description": "",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "* hln.be/service",
+          "description": "",
+          "impact": "Out of scope"
+        }
       ],
       "out_of_scope": [
 
@@ -1317,7 +1955,72 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "url",
+          "endpoint": "myaccount.parool.nl",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "shop.parool.nl",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "webwinkel.parool.nl",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.parool.nl",
+          "description": "excluding",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.parool.nl/abonnementen",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.parool.nl",
+          "description": "excluding abonnement.parool.nl",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "* parool.nl/inloggen",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "* parool.nl/login",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "* parool.nl/registreren",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "* parool.nl/service",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "abonnement.parool.nl",
+          "description": "",
+          "impact": "Out of scope"
+        }
       ],
       "out_of_scope": [
 
@@ -1367,7 +2070,66 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "url",
+          "endpoint": "* humo.be/registreren",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "myaccount.humo.be",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "shop.humo.be",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.humo.be",
+          "description": "excluding",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.humo.be/abonnementen",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.humo.be",
+          "description": "excluding abonnement.humo.be",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "* humo.be/inloggen",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "* humo.be/login",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "* humo.be/service",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "abonnement.humo.be",
+          "description": "",
+          "impact": "Out of scope"
+        }
       ],
       "out_of_scope": [
 
@@ -2405,7 +3167,48 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "url",
+          "endpoint": "*.monzo.com",
+          "description": "The crux of Monzo where the APIs live as well as Monzo Business and the main web site",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.monzo.me",
+          "description": "Houses the services for the pay me / request payment feature",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.prod-ffs.io",
+          "description": "Where our internal tooling lives... hopefully it isn't exposed!",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "ios",
+          "endpoint": "1052238659",
+          "description": "The public seed of the Monzo app on iOS",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "android",
+          "endpoint": "co.uk.getmondo",
+          "description": "The public seed of the Monzo app on Android",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "community.monzo.com",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "developers.monzo.com/env.js",
+          "description": "",
+          "impact": "Out of scope"
+        }
       ],
       "out_of_scope": [
 
@@ -2430,7 +3233,114 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "url",
+          "endpoint": "*.bigmoralis.com",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.grandmoralis.com",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.moralis-internal.io",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.moralis-streams.com",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.moralis.io",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.moralisapp.com",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.moralishost.com",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.moralismoney.com",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.moralisweb3.com",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.usemoralis.com",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "academy.moralis.io",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "docs.moralis.io",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "forum.moralis.io",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "merch.moralis.io",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "roadmap.moralis.io",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "status.moralis.io",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "studygroup.moralis.io",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "talent.moralis.io",
+          "description": "",
+          "impact": "Out of scope"
+        }
       ],
       "out_of_scope": [
 
@@ -2555,7 +3465,36 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "ios",
+          "endpoint": "1079537578",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://oda.com",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "android",
+          "endpoint": "no.kolonial.tienda",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.oda.com",
+          "description": "",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.prod.nube.tech",
+          "description": "",
+          "impact": "Tier 3"
+        }
       ],
       "out_of_scope": [
 
@@ -2839,7 +3778,24 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "url",
+          "endpoint": "selt.languagecert.org",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.languagecert.org",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.peoplecert.org",
+          "description": "",
+          "impact": "No bounty"
+        }
       ],
       "out_of_scope": [
 
@@ -3394,7 +4350,12 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "url",
+          "endpoint": "All domains of Revolut",
+          "description": "",
+          "impact": "No bounty"
+        }
       ],
       "out_of_scope": [
 
@@ -3419,7 +4380,36 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "url",
+          "endpoint": "*.rhinternal.net",
+          "description": "",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.robinhood.com",
+          "description": "",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.robinhood.net",
+          "description": "robinhood.net contains internal Robinhood services. You shouldn’t be able to log into anything here.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "ios",
+          "endpoint": "938003185",
+          "description": "",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "android",
+          "endpoint": "com.robinhood.android",
+          "description": "",
+          "impact": "Tier 1"
+        }
       ],
       "out_of_scope": [
 
@@ -3444,7 +4434,42 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "url",
+          "endpoint": "*.swisspass.ch",
+          "description": "",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.sbb.ch",
+          "description": "",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.sbb.ch",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.elvetino.ch",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.sbbcargo.com",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.transsicura.ch",
+          "description": "",
+          "impact": "Tier 2"
+        }
       ],
       "out_of_scope": [
 
@@ -3469,7 +4494,24 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "url",
+          "endpoint": "https://*.saytechnologies.com",
+          "description": "",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://*.say.rocks",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://www.saytechnologies.com/contact/sales",
+          "description": "",
+          "impact": "Out of scope"
+        }
       ],
       "out_of_scope": [
 
@@ -3494,7 +4536,114 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "url",
+          "endpoint": "api.sentiance.com",
+          "description": "Main API",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "android",
+          "endpoint": "com.sentiance.journeys2",
+          "description": "Insights Google Store link",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "controltower.sentiance.com",
+          "description": "Insights dashboard",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "ios",
+          "endpoint": "https://apps.apple.com/us/app/rac-go/id6444858115",
+          "description": "RAC Go Apple store link",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "android",
+          "endpoint": "https://play.google.com/store/apps/details?id=com.sentiance.saferdriver",
+          "description": "RAC Go Google store link",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "ios",
+          "endpoint": "insights-by-sentiance/id1608074635",
+          "description": "Insights Apple Store link",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "journeys-api.sentiance.com/v2",
+          "description": "Insights app base API",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.sentiance.com",
+          "description": "IMPORTANT! Please read the out of scope section. Not all subdomains are in scope",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "android",
+          "endpoint": "com.sentiance.journeys",
+          "description": "Journeys Google Store link",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "ios",
+          "endpoint": "journeys-2/id984087229?mt=8",
+          "description": "Journeys Apple Store link",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "docs.sentiance.com",
+          "description": "",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "jobs.sentiance.com",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "press.sentiance.com",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "_weather.sentiance.com",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "betadoc.sentiance.com",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "landing-automotive.sentiance.com",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "mb.sentiance.com",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.sentiance.com",
+          "description": "(including no subdomain)",
+          "impact": "Out of scope"
+        }
       ],
       "out_of_scope": [
 
@@ -3569,7 +4718,42 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "ios",
+          "endpoint": "910898851",
+          "description": "We expect that issued items are including print-screen of the version of the app.  Flow to get to version number",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "android",
+          "endpoint": "app.nl.socialdeal",
+          "description": "We expect that issued items are including print-screen of the version of the app.  Flow to get to version number",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "http://socialdeal.nl/inspirations/bluemonday/",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "http://www.whynot.com/",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://www.socialdeal.nl/orderlist/5e834ae0bed5c/63d772e2ed277/",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.socialdeal.nl",
+          "description": "Our main website.www.socialdeal.be and www.socialdeal.de are the same websites, with different Locale.",
+          "impact": "Tier 2"
+        }
       ],
       "out_of_scope": [
 
@@ -3594,7 +4778,78 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "ios",
+          "endpoint": "1114799709",
+          "description": "The iOS Player app that allows you to browse and play music.In order to use the iOS Player you will need a pairing code that you can obtain through https://business.soundtrackyourbrand.com using the test credentials.https://www.youtube.com/watch?v=y7HGAtsB6Tg",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "ios",
+          "endpoint": "1114800186",
+          "description": "The iOS Remote that allows you to remotely control your Soundtrack Players.In order to use the iOS Remote you will need a remote code that you can obtain through https://business.soundtrackyourbrand.com using the test credentials.https://www.youtube.com/watch?v=cmAe1kRvOeY",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.soundtrackyourbrand.com",
+          "description": "Our public API. Used by us as well as third parties. You can use your regular login token to authenticate.Docs: https://developer.soundtrackyourbrand.com/apiGraphQL Explorer: https://api.soundtrackyourbrand.com/v2/explorePlease use one of the claimed test credentials. In order to use the API you can login using your claimed credentials (via loginUser) and use the token you get back to issue API calls.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "billing.api.soundtrackyourbrand.com",
+          "description": "Our billing service. Handles payments (one time and recurring), price and product management and subscription renewals.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "builds.soundtrackyourbrand.com",
+          "description": "Our service which does gradual rollout of our player software to our Windows client and hardware players.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "business.soundtrackyourbrand.com",
+          "description": "Our web based management console that allows users to administer their players, music and their account.To claim bounties for this domain you need to use one of the claimed test credentials.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "android",
+          "endpoint": "com.soundtrackyourbrand.soundtrack.player",
+          "description": "The Android Player app that allows you to browse and play music.In order to use the Android Player you will need a pairing code that you can obtain through https://business.soundtrackyourbrand.com using the test credentials.https://www.youtube.com/watch?v=y7HGAtsB6Tg",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://auth.api.soundtrackyourbrand.com/",
+          "description": "Our authentication service.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "other",
+          "endpoint": "https://builds.soundtrackyourbrand.com/download/WIN32SOUNDTRACK/latest",
+          "description": "The Windows Player that allows you to play music. No user interface except for a tray icon.In order to use the Windows Player you will need a pairing code that you can obtain through https://business.soundtrackyourbrand.com using the test credentials.https://www.youtube.com/watch?v=HjFfXcjSEmM",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://radio.api.soundtrackyourbrand.com/",
+          "description": "Our playlisting service.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://www.soundtrackyourbrand.com",
+          "description": "Our public website.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "other",
+          "endpoint": "macOS app",
+          "description": "The macOS Player app allows you to browse and play music. You can find it in the App Store: https://apps.apple.com/se/app/soundtrack-player/id1114799709?l=enIn order to use the macOS you will need a pairing code that you can obtain through https://business.soundtrackyourbrand.com using the test credentials.https://www.youtube.com/watch?v=y7HGAtsB6Tg",
+          "impact": "Tier 1"
+        }
       ],
       "out_of_scope": [
 
@@ -3673,7 +4928,42 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "url",
+          "endpoint": "*.sqills.com",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.sqills.team",
+          "description": "",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.red.sqills.team",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "booking.*.cloud.sqills.com",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "booking.*.sqills.com",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "careers.sqills.com",
+          "description": "",
+          "impact": "Out of scope"
+        }
       ],
       "out_of_scope": [
 
@@ -3698,7 +4988,12 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "other",
+          "endpoint": "Research",
+          "description": "",
+          "impact": "Tier 1"
+        }
       ],
       "out_of_scope": [
 
@@ -3869,7 +5164,96 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "url",
+          "endpoint": "*.aroundtheworld.tomorrowland.com",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "artists.tomorrowland.com/production-website/33117",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "cognito-idp.eu-west-1.amazonaws.com",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "android",
+          "endpoint": "com.tomorrowland.oneworldradio",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "globaljourney.tomorrowland.com",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "mdm.weareone.world",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "my.tomorrowland.com",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "ios",
+          "endpoint": "one-world-radio-tomorrowland/id1485778856",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "oneworldradio.tomorrowland.com",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "sp1y1tpaf1.execute-api.eu-west-1.amazonaws.com",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "winterpackages.tomorrowland.com",
+          "description": "Out of Scope: bypassing payment process",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.tomorrowland.com",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.tomorrowland.com",
+          "description": "",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "components.stag.tomorrowland.com",
+          "description": "Vulnerabilities found on either components.stag.tomorrowland.com or components.tomorrowland.com will be considered duplicate.",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "components.tomorrowland.com",
+          "description": "Vulnerabilities found on either components.stag.tomorrowland.com or components.tomorrowland.com will be considered duplicate.",
+          "impact": "Tier 3"
+        }
       ],
       "out_of_scope": [
 
@@ -4328,7 +5712,222 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "ip range",
+          "endpoint": "134.58.179.102-103",
+          "description": "",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "autodiscover.uzleuven.be",
+          "description": "",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "ecrf.uzleuven.be",
+          "description": "",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "extranet-asa.uzleuven.be",
+          "description": "",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "extranet.uzleuven.be",
+          "description": "",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "liquidfiles.uzleuven.be",
+          "description": "",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "mx1.uzleuven.be",
+          "description": "",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "mx2.uzleuven.be",
+          "description": "",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "pcrstudioruzb.uzleuven.be",
+          "description": "",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "prddsplunkhf.uzleuven.be",
+          "description": "",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "sts.uzleuven.be",
+          "description": "",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.uzleuven.be",
+          "description": "",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "dns1.uzleuven.be",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "dns2.uzleuven.be",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "liquidfilestest.uzleuven.be",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "random.uzleuven.be/random/",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "teststs.uzleuven.be",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "uzlcm12cmg1.uzleuven.be",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "w1.uzleuven.be",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.kwsdose.be",
+          "description": "",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.playuzleuven.be",
+          "description": "",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.uzleuven.*",
+          "description": "",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.contactallerg(y|ie).uzleuven.be",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.mir.uzleuven.be",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "*dev.uzleuven.be",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "*idp*.uzleuven.be",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "*stag*.uzleuven.be",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "files.uzleuven.be",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "kumulus.uzleuven.be",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "mijnacc.uzleuven.be",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "mirc.uzleuven.be",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "prddnighting01.uzleuven.be",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "w1.uzleuven.be/random",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "ziekenhuisschool.be",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "jobs.uzleuven.be",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "vacatures.uzleuven.be",
+          "description": "",
+          "impact": "Out of scope"
+        }
       ],
       "out_of_scope": [
 
@@ -4408,7 +6007,90 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "ios",
+          "endpoint": "1101145849",
+          "description": "Uphold Wallet - iOS application. This is currently installable on Jailbroken devices, please read the out-of-scope findings.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "ios",
+          "endpoint": "6444005221",
+          "description": "UpHODL - iOS application. This is currently installable on Jailbroken devices, but we don't allow the user to proceed with creating a wallet. Please read the out-of-scope findings.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.uphold.com",
+          "description": "Production Web Wallet API. Do not test service degradation attacks or horizontal privilege here.On the business app side, we allow you to create apps in sandbox, but you shouldn't be able to create them in Production.More information available here.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "android",
+          "endpoint": "com.uphold.labs.uphodl.android",
+          "description": "UpHODL - Android application. This is currently installable on Jailbroken devices, but we don't allow the user to proceed with creating a wallet. Please read the out-of-scope findings.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "android",
+          "endpoint": "com.uphold.wallet",
+          "description": "Uphold Wallet - Android application. This is currently installable on Jailbroken devices, please read the out-of-scope findings.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "graphql.topperpay.com/graphql",
+          "description": "Production GraphQL API for Topper. Do not test service degradation attacks or horizontal privilege here.More information available here.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "wallet.uphold.com",
+          "description": "Production Web Wallet Application. Do not test service degradation attacks or horizontal privilege here.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "api-sandbox.uphold.com",
+          "description": "Sandbox Web Wallet API. Use this environment for financial transaction testing, degradation attacks, or horizontal privilege attacks. Fund with Crypto Testnet Faucet (e.g. https://coinfaucet.eu/en/btc-testnet/ for Bitcoin).On the business app side, we allow you to create apps in sandbox, but you shouldn't be able to create them in Production.More information available here.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.sandbox.topperpay.com",
+          "description": "Sandbox Rest API for Topper. Use this environment for financial transaction testing, degradation attacks, or horizontal privilege attacks.More information available here.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.topperpay.com",
+          "description": "Production Rest API for Topper. Do not test service degradation attacks or horizontal privilege here.More information available here.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "graphql.sandbox.topperpay.com/graphql",
+          "description": "Sandbox GraphQL API for Topper. Use this environment for financial transaction testing, degradation attacks, or horizontal privilege attacks.More information available here.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "wallet-sandbox.uphold.com",
+          "description": "Sandbox Web Wallet Application. Use this environment for financial transaction testing, degradation attacks, or horizontal privilege attacks. Fund with Crypto Testnet Faucet (e.g. https://coinfaucet.eu/en/btc-testnet/ for Bitcoin)",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.uphold.com",
+          "description": "Our institutional website. We're looking for issues that could impact our image and our users (defacement, XSS, etc.)",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.uphold.com",
+          "description": "We are willing to give bonuses on anything you find and we agree is impactful, in the rest of our domain. Please note that third party services are out of scope unless the issue is caused due to a misconfiguration by Uphold.",
+          "impact": "Tier 3"
+        }
       ],
       "out_of_scope": [
 
@@ -4655,7 +6337,216 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "url",
+          "endpoint": "*.canvas.be",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.dewarmsteweek.be",
+          "description": "Out of scope: shop.dewarmsteweek.be - no testing allowed",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.ketnet.be",
+          "description": "Out of scope: shop.ketnet.be - no testing allowed",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.klara.be",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.mnm.be",
+          "description": "Out of scope: shop.mnm.be - no testing allowed",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.radio1.be",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.radio2.be",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.radioplus.be",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.sporza.be",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.stubru.be",
+          "description": "Out of scope: shop.stubru.be - no testing allowed",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.vrt.be",
+          "description": "Out of scope: shop.vrt.be - no testing allowedOut of scope: innovatie.vrt.be",
+          "impact": "No bounty"
+        },
+        {
+          "type": "ios",
+          "endpoint": "1001982587",
+          "description": "Ketnet Junior",
+          "impact": "No bounty"
+        },
+        {
+          "type": "ios",
+          "endpoint": "1001983790",
+          "description": "Ketnet",
+          "impact": "No bounty"
+        },
+        {
+          "type": "ios",
+          "endpoint": "1041369236",
+          "description": "Wall of Moments",
+          "impact": "No bounty"
+        },
+        {
+          "type": "ios",
+          "endpoint": "1116046348",
+          "description": "Radio 1",
+          "impact": "No bounty"
+        },
+        {
+          "type": "ios",
+          "endpoint": "1116049623",
+          "description": "Radio 2",
+          "impact": "No bounty"
+        },
+        {
+          "type": "ios",
+          "endpoint": "1116054448",
+          "description": "MNM",
+          "impact": "No bounty"
+        },
+        {
+          "type": "ios",
+          "endpoint": "1116054765",
+          "description": "Klara",
+          "impact": "No bounty"
+        },
+        {
+          "type": "ios",
+          "endpoint": "1337574835",
+          "description": "VRT NU",
+          "impact": "No bounty"
+        },
+        {
+          "type": "ios",
+          "endpoint": "388159251",
+          "description": "Studio Brussel",
+          "impact": "No bounty"
+        },
+        {
+          "type": "ios",
+          "endpoint": "878339906",
+          "description": "Sporza",
+          "impact": "No bounty"
+        },
+        {
+          "type": "ios",
+          "endpoint": "927943978",
+          "description": "Kaatje van Ketnet",
+          "impact": "No bounty"
+        },
+        {
+          "type": "ios",
+          "endpoint": "952769219",
+          "description": "VRT NWS",
+          "impact": "No bounty"
+        },
+        {
+          "type": "ios",
+          "endpoint": "959958329",
+          "description": "Sporza Voetbal",
+          "impact": "No bounty"
+        },
+        {
+          "type": "android",
+          "endpoint": "be.vrt.ketnet.ketnet",
+          "description": "Ketnet",
+          "impact": "No bounty"
+        },
+        {
+          "type": "android",
+          "endpoint": "be.vrt.ketnet.ketnetjr",
+          "description": "Ketnet Junior",
+          "impact": "No bounty"
+        },
+        {
+          "type": "android",
+          "endpoint": "be.vrt.mobile.android.deredactie",
+          "description": "VRT NWS",
+          "impact": "No bounty"
+        },
+        {
+          "type": "android",
+          "endpoint": "be.vrt.mobile.android.sporza.voetbal",
+          "description": "Sporza voetbal",
+          "impact": "No bounty"
+        },
+        {
+          "type": "android",
+          "endpoint": "be.vrt.radioplus.klara",
+          "description": "Klara",
+          "impact": "No bounty"
+        },
+        {
+          "type": "android",
+          "endpoint": "be.vrt.radioplus.mnm",
+          "description": "MNM",
+          "impact": "No bounty"
+        },
+        {
+          "type": "android",
+          "endpoint": "be.vrt.radioplus.radio1",
+          "description": "Radio 1",
+          "impact": "No bounty"
+        },
+        {
+          "type": "android",
+          "endpoint": "be.vrt.radioplus.radio2",
+          "description": "Radio 2",
+          "impact": "No bounty"
+        },
+        {
+          "type": "android",
+          "endpoint": "be.vrt.radioplus.stubru",
+          "description": "Studio Brussel",
+          "impact": "No bounty"
+        },
+        {
+          "type": "android",
+          "endpoint": "be.vrt.vrtnu",
+          "description": "VRT NU",
+          "impact": "No bounty"
+        },
+        {
+          "type": "android",
+          "endpoint": "com.fwc2014.vrt.and",
+          "description": "Sporza",
+          "impact": "No bounty"
+        }
       ],
       "out_of_scope": [
 
@@ -4680,7 +6571,66 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "url",
+          "endpoint": "myaccount.vtm.be",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "vtm.be/vtmgo",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "vtmgo.be",
+          "description": "excluding",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.vtm.be",
+          "description": "Out of scope: shop.vtm.be",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.vtmgo.be",
+          "description": "",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "* vtmgo.be/inloggen",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "* vtmgo.be/login",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "* vtmgo.be/registreren",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "* vtmgo.be/service",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "shop.vtm.be",
+          "description": "",
+          "impact": "Out of scope"
+        }
       ],
       "out_of_scope": [
 
@@ -4832,7 +6782,114 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "ios",
+          "endpoint": "564141518",
+          "description": "Visma ScannerVisma Scanner is a mobile app used for sending receipts and invoices to your Visma accounting system.The iOS version of the app can be found here:https://apps.apple.com/us/app/visma-scanner/id564141518Please read and follow the steps in the Startup guide to create an account and start hacking: https://vismabugbountyprod.z16.web.core.windows.net/VismaScanner-getting-started.pdfOut of scope:",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "accountsettings.connect.identity.stagaws.visma.com",
+          "description": "ConnectSee instructions for domain \"connect.identity.stagaws.visma.com\".Out of scope:",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "admin.stage.vismaonline.com",
+          "description": "Visma OnlineThis is the old interface for the customer's administrators to administrate the company, where we still have some functionality that has not been moved to the new interface. For example invoicing information and everything regarding collaborations with AO. The collaboration part is out of scope as long as the use of student companies.Please read the Getting Started Instructions in the \"myservices.stage.vismaonline.com\" asset description.Out of scope:",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "ai-testing.maventa.com",
+          "description": "AutoInvoiceThis is the main UI for Visma AutoInvoice. AutoInvoice is Visma's automated and fully ERP integrated service for sending, receiving and handling invoices. AutoInvoice converts and exchanges electronic invoices, optionally prints invoices that can't be sent electronically, receives and interpret PDF invoices and offers services for scanning and interpretation of paper invoices. AutoInvoice handles both Business to Business (B2B) and Business to Consumer (B2C) invoices.Uses partially the embeddable user interface from autointerface-embeddable-stage.maventa.comCreate a test account on https://ai-testing.maventa.com/registrations, or use one of the demo accounts in the getting started instructions below:https://vismabugbountyprod.z16.web.core.windows.net/VismaAutoinvoice-getting-started.pdfOut of scope or works as expected (accepted risk):Note! ai-testing.maventa.com and testing.maventa.com point to the same application but have different branding on the UI. Authentication to the user interface is handled using the Visma Connect service.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.workbox.dk",
+          "description": "DineroThis is Dinero's Public API.See instructions for \"app.workbox.dk\"",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "app.workbox.dk",
+          "description": "DineroDinero is an accounting software for sole traders and micro businesses based out of Denmark. Our only target group is danish companies and therefore the interface is in danish only. The application is a SaaS application hosted in the cloud and consists of a main application and a number of supportive microservices.See the getting started document here: https://vismabugbountyprod.z16.web.core.windows.net/VismaDinero-getting-started.pdfOut of scope:",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "authz.workbox.dk",
+          "description": "DineroUsed for Authorization (OAuth). See instructions for \"app.workbox.dk\"",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "autointerface.stag.visma.net",
+          "description": "AutoInvoiceSee instructions for domain 'ai-testing.maventa.com' to get user credentials.The same resource can be accessed through the URL autointerface-embeddable-stage.maventa.comAll data processing is done through the REST API at ax-stage.maventa.comOut of scope or works as expected (accepted risk):",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "ax-stage.maventa.com",
+          "description": "AutoInvoicehttps://ax-stage.maventa.com is a REST API connected to Visma AutoInvoice.API documentation is available on https://documentation.maventa.com/rest-api/ and https://ax-stage.maventa.com/swagger/#/See instructions for domain 'ai-testing.maventa.com' to get user credentials.Out of scope or works as expected (accepted risk):",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "android",
+          "endpoint": "com.visma.blue",
+          "description": "Visma ScannerVisma Scanner is a mobile app used for sending receipts and invoices to your Visma accounting system.The Andriod version of the app can be found here:https://play.google.com/store/apps/details?id=com.visma.blue&hl=enPlease read and follow the steps in the Startup guide to create an account and start hacking: https://vismabugbountyprod.z16.web.core.windows.net/VismaScanner-getting-started.pdfOut of scope:",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "connect.identity.stagaws.visma.com",
+          "description": "ConnectVisma Connect is featurewise a small but critical component in the Visma portfolio. It is a single sign-on solution used by many Visma services. It is also the place where users manage security preferences such as passwords, MFA, 2FA, email and other account settings.User accounts for testing can be created on https://connect.identity.stagaws.visma.com (this signup flow is not available in production).The test accounts will not have access to any other services right now, so testing is limited to the login portal itself.Out of scope:",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "eaccounting.stage.vismaonline.com",
+          "description": "eAccountingThis is \"Visma eAccounting\" (aka Visma eEkonomi / Visma ePasseli) which is an ERP system available in Sweden, Norway, Finland and The Netherlands.We've added into scope also the eEkonomi \"Visma Lön Smart\" which is a subservice of eAccounting. This can be found after you activate your account (check out the instructions bellow).You can read more on https://www.visma.no/eaccounting/english/You need to register an user to test this system. The sign-up up process is described in this document:https://vismabugbountyprod.z16.web.core.windows.net/Visma-eAccounting-getting-started.pdfThis video also shows the entire setup (only Swedish audio) https://www.youtube.com/watch?v=kVr_CXgfhi0&t=4sTLDR: Goto https://admin.stage.vismaonline.com/Customer/StudentSignup.aspx and sign up with the training code \"04h2v\"Out of scope:",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "eaccountingprinting.stage.vismaonline.com",
+          "description": "eAccountingYou reach this asset by creating and viewing a report under the Accounting/Reports menu as a logged on user in asset \"eaccounting.stage.vismaonline.com\"",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "identity.stage.vismaonline.com",
+          "description": "Visma OnlineVisma Connect is used as identity provider, but an own identity server is used to provide JWT tokens that are used by MyServices (and others).Please read the Getting Started instructions document in the \"myservices.stage.vismaonline.com\" asset description.Out of scope:",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "myservices-api.stage.vismaonline.com",
+          "description": "Visma OnlineThis is the API behind \"myservices.stage.vismaonline.com\".Please read the Getting Started instructions document in the asset description \"myservices.stage.vismaonline.com\".",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "myservices.stage.vismaonline.com",
+          "description": "Visma OnlineThis is an interface where the customer's users can access all their services, and customer's administrators can manage users on the company and manage users' access to services that the company has.More information about the service and test accounts creation can be found here:https://vismabugbountyprod.z16.web.core.windows.net/VismaOnline-getting-started.pdfOut of scope:",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "oauth.developers.stagaws.visma.com",
+          "description": "Visma Developer PortalVisma Developer Portal is used both internally and externally by developers for registering OAuth 2.0/OpenID Connect applications for Single-Sign-On with Visma (Visma Connect) and/or API integration.Existing Visma Connect users accounts can be used for testing. We also allow registration of new users if needed.Users need to register an organization as part of the sign-in or to be added (invite) to an existing organization by organization's manager. The user which registers the organization also gets manager role assigned.Each organization has its own set of OAuth 2.0/OpenID Connect applications.Please read the Getting Started Instructions here: https://vismabugbountyprod.z16.web.core.windows.net/VismaDeveloperPortal-getting-started.pdfOut of scope:",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "testing.maventa.com",
+          "description": "AutoInvoicehttps://testing.maventa.com/apis/v1.1/wsdl is a SOAP API connected to Visma AutoInvoice.API documentation is available on https://documentation.maventa.com/soap-api/See instructions for domain 'ai-testing.maventa.com' to get user credentials.",
+          "impact": "Tier 2"
+        }
       ],
       "out_of_scope": [
 
@@ -5196,7 +7253,12 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "url",
+          "endpoint": "https://etracker.bpost.cloud/pro",
+          "description": "",
+          "impact": "No bounty"
+        }
       ],
       "out_of_scope": [
 
@@ -5221,7 +7283,48 @@
     },
     "targets": {
       "in_scope": [
-
+        {
+          "type": "url",
+          "endpoint": "hub.vznkul.be/*",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "hub.vznkul.be/services/interhub/InterHubService",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "hub.vznkul.be/services/intrahub/IntraHubService",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "hubacc.vznkul.be/*",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "hubacc.vznkul.be/services/acceptance/interhub/InterHubService",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "hubacc.vznkul.be/services/acceptance/intrahub/IntraHubService",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.vznkul.be",
+          "description": "",
+          "impact": "Out of scope"
+        }
       ],
       "out_of_scope": [
 
