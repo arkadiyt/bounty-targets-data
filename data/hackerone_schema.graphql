@@ -4517,6 +4517,7 @@ enum BackgroundCheckStatus {
   in_progress
   not_eligible
   processing
+  renewal_eligible
   success
 }
 
@@ -14156,6 +14157,7 @@ type DerivedPentest implements Node {
   hours: Int
   i_can_delete: Boolean
   id: ID!
+  is_code_review: Boolean
   is_team_member: Boolean
   name: String
   origin_id: ID!
@@ -31775,7 +31777,6 @@ Report metadata
 type ReportMetadata implements Node {
   _id: ID!
   id: ID!
-  time_spent: Int
 }
 
 """
@@ -50380,7 +50381,6 @@ type Weakness implements Node {
     last: Int
   ): ReportConnection
   reputation_change: Int
-  time_spent: Int
   updated_at: DateTime!
 }
 
