@@ -2049,6 +2049,45 @@
     }
   },
   {
+    "id": "okto-bug-bounty-program",
+    "name": "Okto - Bug Bounty Program",
+    "public": true,
+    "disabled": false,
+    "managed": null,
+    "min_bounty": 0,
+    "max_bounty": 2000,
+    "targets": {
+      "in_scope": [
+        {
+          "target": "https://apps.apple.com/in/app/okto-wallet/id6450688229",
+          "type": "mobile-application-ios"
+        },
+        {
+          "target": "https://play.google.com/store/apps/details?id=com.coindcx.okto",
+          "type": "mobile-application-android"
+        },
+        {
+          "target": "*.okto.tech",
+          "type": "api"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "target": "All domains or subdomains not listed in the above list of 'Scopes'",
+          "type": "other"
+        },
+        {
+          "target": "CMS websites own by Okto (Anything related to Wordpress etc)",
+          "type": "other"
+        },
+        {
+          "target": "All other third parties",
+          "type": "other"
+        }
+      ]
+    }
+  },
+  {
     "id": "ooredoo-qpsc-bug-bounty-program",
     "name": "Ooredoo QPSC - Customer Portal Bug Bounty Program",
     "public": true,
