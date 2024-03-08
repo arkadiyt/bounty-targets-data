@@ -26552,6 +26552,27 @@ type PentestOpportunity implements Node {
   compliance_framework: String
   compliance_framework_other: String
   consumption_subscription: ConsumptionSubscription
+  csa_scopes(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+  ): PentestOpportunityCsaScopeConnection
   customer_email: String
   customer_note: String
   generic_scopes(
@@ -26748,6 +26769,56 @@ type PentestOpportunityConnection {
   """
   pageInfo: PageInfo!
   total_count: Int
+}
+
+"""
+A pentest opportunity CSA scope
+"""
+type PentestOpportunityCsaScope implements Node {
+  _id: ID!
+  host: String
+  id: ID!
+  lines_of_code: String
+  num_of_repositories: String
+  other_topic: String
+  scope_type: String
+  topics: [String!]
+}
+
+"""
+The connection type for PentestOpportunityCsaScope.
+"""
+type PentestOpportunityCsaScopeConnection {
+  """
+  A list of edges.
+  """
+  edges: [PentestOpportunityCsaScopeEdge]
+
+  """
+  A list of nodes.
+  """
+  nodes: [PentestOpportunityCsaScope]
+
+  """
+  Information to aid in pagination.
+  """
+  pageInfo: PageInfo!
+  total_count: Int!
+}
+
+"""
+An edge in a connection.
+"""
+type PentestOpportunityCsaScopeEdge {
+  """
+  A cursor for use in pagination.
+  """
+  cursor: String!
+
+  """
+  The item at the end of the edge.
+  """
+  node: PentestOpportunityCsaScope
 }
 
 """
