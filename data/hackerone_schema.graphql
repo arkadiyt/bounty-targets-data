@@ -32173,7 +32173,7 @@ input RequestIntegrationCloneMutationInput {
   """
   clientMutationId: String
   integrations: [TraySolutionCloneInput!]!
-  pentest_id: String!
+  pentest_id: ID!
 }
 
 """
@@ -40208,6 +40208,7 @@ input TraySolutionCloneInput {
   id: ID
   solution_instance: String
   solution_instance_name: String!
+  solution_name: String!
   team_handle: String!
 }
 
