@@ -25019,7 +25019,6 @@ type OrganizationInbox implements Node {
     state: ReportStateEnum
     substate: ReportStateEnum
     where: FiltersReportFilterInput
-    without_scope: Boolean = null
   ): ReportConnection
   team: Team
 }
@@ -26054,7 +26053,6 @@ type Pentest implements Node {
     state: ReportStateEnum
     substate: ReportStateEnum
     where: FiltersReportFilterInput
-    without_scope: Boolean = null
   ): ReportConnection
   requirement_disallowed_labels: [Label!]
   requirement_labels: [Label!]
@@ -26375,7 +26373,6 @@ type PentestChecklist implements Node {
     state: ReportStateEnum
     substate: ReportStateEnum
     where: FiltersReportFilterInput
-    without_scope: Boolean = null
   ): ReportConnection
 }
 
@@ -27314,7 +27311,6 @@ type PentestStructuredScope implements Node {
     state: ReportStateEnum
     substate: ReportStateEnum
     where: FiltersReportFilterInput
-    without_scope: Boolean = null
   ): ReportConnection
   structured_scope: StructuredScope
 }
@@ -28990,7 +28986,6 @@ type Query implements Node {
     state: ReportStateEnum
     substate: ReportStateEnum
     where: FiltersReportFilterInput
-    without_scope: Boolean = null
   ): ReportConnection
   resource(url: URI): ResourceInterface
   response_target_benchmarks(response_target: Int!, response_target_type: ResponseTargetTypeEnum!, severity_rating: SeverityRatingEnum, teams: [String!]!): MinMax
@@ -35509,7 +35504,6 @@ type StructuredScope implements Node & ResourceInterface {
     state: ReportStateEnum
     substate: ReportStateEnum
     where: FiltersReportFilterInput
-    without_scope: Boolean = null
   ): ReportConnection
   structured_scope_versions(
     """
@@ -37732,7 +37726,6 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
     substate: ReportStateEnum
     violates_minimum_sla: [SlaTypeEnum!]
     where: FiltersReportFilterInput
-    without_scope: Boolean = null
   ): ReportConnection
   reports_received_last_90_days: Int
   resolution_time(date_start: DateTime): Float
@@ -48639,7 +48632,6 @@ type User implements ActivitiesInterface & Node & ResourceInterface {
     state: ReportStateEnum
     substate: ReportStateEnum
     where: FiltersReportFilterInput
-    without_scope: Boolean = null
   ): ReportConnection
   reputation: Int
   reputation_changes(
