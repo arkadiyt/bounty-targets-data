@@ -4276,6 +4276,40 @@
     }
   },
   {
+    "id": "/metamask/metamask-validator-staking-smart-contracts",
+    "name": "MetaMask Validator Staking Smart Contracts",
+    "url": "https://hackenproof.com/metamask/metamask-validator-staking-smart-contracts",
+    "archived": false,
+    "triaged_by_hackenproof": true,
+    "targets": {
+      "in_scope": [
+        {
+          "target": "https://etherscan.io/address/0xdc71affc862fceb6ad32be58e098423a7727bebd#code",
+          "type": "Smart Contract",
+          "instruction": "Contract is deployed without proxy. More info can be found in documentation here.",
+          "severity": "Critical",
+          "reward": "Bounty"
+        },
+        {
+          "target": "https://github.com/kilnfi/staking-contracts/tree/f33eb8dc37fab40217dbe1e69853ca3fcd884a2d",
+          "type": "Smart Contract",
+          "instruction": "commit hash of the deploy without proxy",
+          "severity": "Critical",
+          "reward": "Bounty"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "target": "https://portfolio.metamask.io/",
+          "type": "Web",
+          "instruction": "",
+          "severity": "None",
+          "reward": ""
+        }
+      ]
+    }
+  },
+  {
     "id": "/metis/metis-smart-contracts",
     "name": "Metis Smart Contracts",
     "url": "https://hackenproof.com/metis/metis-smart-contracts",
