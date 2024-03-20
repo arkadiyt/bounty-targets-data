@@ -23603,17 +23603,6 @@ type NewConversationPayload implements MutationResult {
 }
 
 """
-A feature notification for all users
-"""
-type NewFeatureNotification implements Node {
-  description: String
-  id: ID!
-  key: String
-  name: String
-  url: String
-}
-
-"""
 An object with an ID.
 """
 interface Node {
@@ -48267,7 +48256,6 @@ type User implements ActivitiesInterface & Node & ResourceInterface {
   ): TeamMemberConnection
   most_hacked_on_team_recently: Team
   name: String
-  new_feature_notification: NewFeatureNotification
   next_update_username_date: String
   notification_delivery_preferences(
     """
