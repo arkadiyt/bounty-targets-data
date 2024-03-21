@@ -24078,6 +24078,7 @@ type Organization implements Node {
   _id: ID!
   about: String
   additional_invitations_count: Int!
+  all_team_count: Int
   asm_tag_categories(
     """
     Returns the elements in the list that come after the specified cursor.
@@ -24236,6 +24237,7 @@ type Organization implements Node {
     tag_names: [String]
     team_ids: [Int]
   ): SearchResultConnection
+  assets_team_count: Int
   audit_log_items(
     """
     Returns the elements in the list that come after the specified cursor.
@@ -24259,11 +24261,16 @@ type Organization implements Node {
     secure_order_by: FiltersAuditLogItemFilterOrder
   ): AuditLogItemConnection
   available_custom_inboxes_count: Int
+  bug_bounty_team_count: Int
+  campaigns_team_count: Int
+  challenge_team_count: Int
+  code_review_team_count: Int
   consumption_subscriptions: [ConsumptionSubscription!]
   created_at: DateTime
   credit_worthy: Boolean!
   darktrace_customer: DarktraceCustomer
   darktrace_instances: [DarktraceInstance!]
+  derived_pentest_count: Int
   derived_pentests(
     """
     Returns the elements in the list that come after the specified cursor.
@@ -24589,6 +24596,7 @@ type Organization implements Node {
     page: Int = null
     where: FiltersUserFilterInput
   ): UserConnection
+  response_team_count: Int
   saml_providers(
     """
     Returns the elements in the list that come after the specified cursor.
@@ -24680,6 +24688,7 @@ type Organization implements Node {
     """
     last: Int
   ): SolutionConnection
+  spot_check_team_count: Int
   stored_queries(
     """
     Returns the elements in the list that come after the specified cursor.
