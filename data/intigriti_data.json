@@ -2197,6 +2197,72 @@
     }
   },
   {
+    "id": "f70ab87e-e3a5-4c33-81b3-55771420e71d",
+    "name": "Henchman",
+    "company_handle": "henchman",
+    "handle": "henchmanio",
+    "url": "https://www.intigriti.com/programs/henchman/henchmanio/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "min_bounty": {
+      "value": 50,
+      "currency": "EUR"
+    },
+    "max_bounty": {
+      "value": 4000,
+      "currency": "EUR"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "url",
+          "endpoint": "https://api-dashboard.stag.henchman.io",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://api-search.stag.henchman.io",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://add-in.stag.henchman.io",
+          "description": "This is our add-in.You can authenticate with:email: wouter+intigriti@henchman.iopassword: 7qHVPbNm_MZmdNkc-_nwXJkCTyXu*EfRsK9Pmnn3Here you can search for the analysed data. You will see this data after your integration is finished.https://youtu.be/BF1bsN2JpBY",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://auth.stag.henchman.io",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://dashboard.stag.henchman.io",
+          "description": "This is our dashboard.We've created a Intigriti - Bug Bounty Program tenant.You can authenticate with:email: wouter+intigriti@henchman.iopassword: 7qHVPbNm_MZmdNkc-_nwXJkCTyXu*EfRsK9Pmnn3Here you can add/remove users and add an integration.https://youtu.be/BF1bsN2JpBY",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://ops-dashboard.stag.henchman.io",
+          "description": "This is our operations dashboard.You can authenticate with:email: wouter+intigriti@henchman.iopassword: 7qHVPbNm_MZmdNkc-_nwXJkCTyXu*EfRsK9Pmnn3You will need this to make sure the integration flow goes as smooth as possible. Integration connections that have been made by the customer/tenant on the dashboard will need to be approved here first. Also, this platform will give you extra information about the state of the integration. An integration can only be deleted on the operations dashboard.https://youtu.be/BF1bsN2JpBY⚠️ It's important that you use this ops-dashboard only for you own integration flow or to create a company for yourself. Please don't add yourself as a user to another company that you haven't created yourself. This can be in use for other researchers ⚠️",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "*.henchman.io",
+          "description": "For the Dashboard, Auth, Add-in and API endpoints - Do NOT test these on production. Please use the staging environments listed in the above domains section.",
+          "impact": "No bounty"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
     "id": "e85b4b33-7785-43b5-a5aa-5bcd226688b4",
     "name": "Here Technologies",
     "company_handle": "heretechnologies",
@@ -9408,72 +9474,6 @@
           "endpoint": "www.vznkul.be",
           "description": "",
           "impact": "Out of scope"
-        }
-      ],
-      "out_of_scope": [
-
-      ]
-    }
-  },
-  {
-    "id": "f70ab87e-e3a5-4c33-81b3-55771420e71d",
-    "name": "henchman.io Bug Bounty Program",
-    "company_handle": "henchman",
-    "handle": "henchmanio",
-    "url": "https://www.intigriti.com/programs/henchman/henchmanio/detail",
-    "status": "open",
-    "confidentiality_level": "public",
-    "min_bounty": {
-      "value": 50,
-      "currency": "EUR"
-    },
-    "max_bounty": {
-      "value": 4000,
-      "currency": "EUR"
-    },
-    "targets": {
-      "in_scope": [
-        {
-          "type": "url",
-          "endpoint": "https://api-dashboard.stag.henchman.io",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "https://api-search.stag.henchman.io",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "https://add-in.stag.henchman.io",
-          "description": "This is our add-in.You can authenticate with:email: wouter+intigriti@henchman.iopassword: 7qHVPbNm_MZmdNkc-_nwXJkCTyXu*EfRsK9Pmnn3Here you can search for the analysed data. You will see this data after your integration is finished.https://youtu.be/BF1bsN2JpBY",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "https://auth.stag.henchman.io",
-          "description": "",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "https://dashboard.stag.henchman.io",
-          "description": "This is our dashboard.We've created a Intigriti - Bug Bounty Program tenant.You can authenticate with:email: wouter+intigriti@henchman.iopassword: 7qHVPbNm_MZmdNkc-_nwXJkCTyXu*EfRsK9Pmnn3Here you can add/remove users and add an integration.https://youtu.be/BF1bsN2JpBY",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "https://ops-dashboard.stag.henchman.io",
-          "description": "This is our operations dashboard.You can authenticate with:email: wouter+intigriti@henchman.iopassword: 7qHVPbNm_MZmdNkc-_nwXJkCTyXu*EfRsK9Pmnn3You will need this to make sure the integration flow goes as smooth as possible. Integration connections that have been made by the customer/tenant on the dashboard will need to be approved here first. Also, this platform will give you extra information about the state of the integration. An integration can only be deleted on the operations dashboard.https://youtu.be/BF1bsN2JpBY⚠️ It's important that you use this ops-dashboard only for you own integration flow or to create a company for yourself. Please don't add yourself as a user to another company that you haven't created yourself. This can be in use for other researchers ⚠️",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.henchman.io",
-          "description": "For the Dashboard, Auth, Add-in and API endpoints - Do NOT test these on production. Please use the staging environments listed in the above domains section.",
-          "impact": "No bounty"
         }
       ],
       "out_of_scope": [
