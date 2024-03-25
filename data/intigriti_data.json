@@ -2229,7 +2229,7 @@
         {
           "type": "url",
           "endpoint": "https://add-in.stag.henchman.io",
-          "description": "This is our add-in.You can authenticate with:email: wouter+intigriti@henchman.iopassword: 7qHVPbNm_MZmdNkc-_nwXJkCTyXu*EfRsK9Pmnn3Here you can search for the analysed data. You will see this data after your integration is finished.https://youtu.be/BF1bsN2JpBY",
+          "description": "This is our add-in.CredentialsTo access the add-in, you are required to obtain credentials through the credential tool provided. This tool offers two distinct types of credentials. Specifically, for interacting with this endpoint, you will need to use the user credentials, which are identical to those utilized for the dashboard.Here you can search for the analyzed data. You will see this data after your integration is finished.https://youtu.be/BF1bsN2JpBY",
           "impact": "Tier 2"
         },
         {
@@ -2241,13 +2241,13 @@
         {
           "type": "url",
           "endpoint": "https://dashboard.stag.henchman.io",
-          "description": "This is our dashboard.We've created a Intigriti - Bug Bounty Program tenant.You can authenticate with:email: wouter+intigriti@henchman.iopassword: 7qHVPbNm_MZmdNkc-_nwXJkCTyXu*EfRsK9Pmnn3Here you can add/remove users and add an integration.https://youtu.be/BF1bsN2JpBY",
+          "description": "This is our dashboard, which you can use to add an integration.We've created an Intigriti tenant.CredentialsTo access the dashboard, you are required to obtain credentials through the credential tool provided. This tool offers two distinct types of credentials. Specifically, for interacting with this endpoint, you will need to use the user credentials, which are identical to those utilized for the add-in.https://youtu.be/BF1bsN2JpBY",
           "impact": "Tier 2"
         },
         {
           "type": "url",
           "endpoint": "https://ops-dashboard.stag.henchman.io",
-          "description": "This is our operations dashboard.You can authenticate with:email: wouter+intigriti@henchman.iopassword: 7qHVPbNm_MZmdNkc-_nwXJkCTyXu*EfRsK9Pmnn3You will need this to make sure the integration flow goes as smooth as possible. Integration connections that have been made by the customer/tenant on the dashboard will need to be approved here first. Also, this platform will give you extra information about the state of the integration. An integration can only be deleted on the operations dashboard.https://youtu.be/BF1bsN2JpBY⚠️ It's important that you use this ops-dashboard only for you own integration flow or to create a company for yourself. Please don't add yourself as a user to another company that you haven't created yourself. This can be in use for other researchers ⚠️",
+          "description": "This is our operations dashboard, you will need this to make sure the integration flow goes as smooth as possible. Integration connections that have been made by the customer/tenant on the dashboard will need to be approved here first. Also, this platform will give you extra information about the state of the integration. An integration can only be deleted on the operations dashboard.CredentialsTo access the dashboard, you are required to obtain credentials through the credential tool provided. This tool offers two distinct types of credentials. Specifically, for interacting with this endpoint, you will need to use the user credentials, which are identical to those utilized for the add-in.https://youtu.be/BF1bsN2JpBY⚠️ It's important that you use this ops-dashboard only for you own integration flow. ⚠️",
           "impact": "Tier 2"
         },
         {
@@ -5926,138 +5926,6 @@
           "type": "url",
           "endpoint": "https://www.saytechnologies.com/contact/sales",
           "description": "",
-          "impact": "Out of scope"
-        }
-      ],
-      "out_of_scope": [
-
-      ]
-    }
-  },
-  {
-    "id": "e1845bab-be93-43d9-b040-462f886235ef",
-    "name": "Sentiance",
-    "company_handle": "sentiance",
-    "handle": "sentiance",
-    "url": "https://www.intigriti.com/programs/sentiance/sentiance/detail",
-    "status": "open",
-    "confidentiality_level": "public",
-    "min_bounty": {
-      "value": 50,
-      "currency": "EUR"
-    },
-    "max_bounty": {
-      "value": 3500,
-      "currency": "EUR"
-    },
-    "targets": {
-      "in_scope": [
-        {
-          "type": "url",
-          "endpoint": "api.sentiance.com",
-          "description": "Main API",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "android",
-          "endpoint": "com.sentiance.journeys2",
-          "description": "Insights Google Store link",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "controltower.sentiance.com",
-          "description": "Insights dashboard",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "ios",
-          "endpoint": "https://apps.apple.com/us/app/rac-go/id6444858115",
-          "description": "RAC Go Apple store link",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "android",
-          "endpoint": "https://play.google.com/store/apps/details?id=com.sentiance.saferdriver",
-          "description": "RAC Go Google store link",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "ios",
-          "endpoint": "insights-by-sentiance/id1608074635",
-          "description": "Insights Apple Store link",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "journeys-api.sentiance.com/v2",
-          "description": "Insights app base API",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "*.sentiance.com",
-          "description": "IMPORTANT! Please read the out of scope section. Not all subdomains are in scope",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "android",
-          "endpoint": "com.sentiance.journeys",
-          "description": "Journeys Google Store link",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "ios",
-          "endpoint": "journeys-2/id984087229?mt=8",
-          "description": "Journeys Apple Store link",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "docs.sentiance.com",
-          "description": "",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "jobs.sentiance.com",
-          "description": "",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "press.sentiance.com",
-          "description": "",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "_weather.sentiance.com",
-          "description": "",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "betadoc.sentiance.com",
-          "description": "",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "landing-automotive.sentiance.com",
-          "description": "",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "mb.sentiance.com",
-          "description": "",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "www.sentiance.com",
-          "description": "(including no subdomain)",
           "impact": "Out of scope"
         }
       ],
