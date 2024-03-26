@@ -12687,6 +12687,7 @@ type DeclarativePolicy implements Node {
   created_at: DateTime!
   has_open_scope: Boolean
   id: ID!
+  introduction: String
   pays_within_one_month: Boolean
   protected_by_gold_standard_safe_harbor: Boolean
   updated_at: DateTime
@@ -45813,6 +45814,7 @@ input UpdateTeamPolicyInput {
   complies_with_standard_ineligible_findings: Boolean
   custom_message_for_policy_change: String
   has_open_scope: Boolean
+  introduction: String
   notify_subscribers_of_policy_change: Boolean
   pays_within_one_month: Boolean
   policy: String
