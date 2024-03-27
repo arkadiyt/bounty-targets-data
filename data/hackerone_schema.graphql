@@ -9387,6 +9387,7 @@ input CreateOrUpdatePentestInput {
   schedule_restrictions: String
   schedule_time_restrictions_end: String
   schedule_time_restrictions_start: String
+  skill_ids: [Int!]
   slack_workspace_url: String
   start_date: String!
   state: String!
@@ -17230,6 +17231,7 @@ input FiltersSkillFilterInput {
   _and: [FiltersSkillFilterInput]
   _not: FiltersSkillFilterInput
   _or: [FiltersSkillFilterInput]
+  approved: BooleanPredicateInput
   id: IntPredicateInput
   name: StringPredicateInput
 }
@@ -25797,6 +25799,27 @@ type Pentest implements Node {
   schedule_time_restrictions_end: String!
   schedule_time_restrictions_start: String!
   severities: [String!]!
+  skills(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+  ): SkillConnection
   slack_workspace_url: String
   start_date: Date
   started: Boolean
@@ -33806,6 +33829,7 @@ Label of a structured scope
 """
 type Skill implements Node {
   _id: ID!
+  approved: Boolean!
   description: String!
   id: ID!
   name: String!
