@@ -2479,6 +2479,60 @@
     }
   },
   {
+    "id": "c7272420-0cef-4366-87d2-278c06591799",
+    "name": "House of HR Vulnerability Disclosure Program",
+    "company_handle": "houseofhr",
+    "handle": "houseofhrvulnerabilitydisclosureprogram",
+    "url": "https://www.intigriti.com/programs/houseofhr/houseofhrvulnerabilitydisclosureprogram/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "min_bounty": {
+      "value": 0,
+      "currency": "EUR"
+    },
+    "max_bounty": {
+      "value": 0,
+      "currency": "EUR"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "wildcard",
+          "endpoint": "*.houseofhr.com/*",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.swop.com/*",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "houseofhr.com/contact-us",
+          "description": "This contact form is out of scope",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "houseofhr.com/your-career/jobs",
+          "description": "Applying for jobs is out of scope",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "rebel.houseofhr.com",
+          "description": "",
+          "impact": "Out of scope"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
     "id": "a78e0210-4de1-4ced-8895-48ac98c3166d",
     "name": "Housing Application (huisvestingsapp) Bug Bounty Program",
     "company_handle": "kuleuven",
