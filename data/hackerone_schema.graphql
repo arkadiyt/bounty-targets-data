@@ -2745,6 +2745,7 @@ enum AnalyticsFromEnum {
   fixture_report_states
   fixture_severity_ratings
   gateway_httpstream
+  platform_benchmarks
   view_intervals
 }
 
@@ -3261,6 +3262,12 @@ enum AnalyticsSelectFieldEnum {
   gateway_httpstream__url
   gateway_httpstream__useragent
   gateway_httpstream__userid
+  platform_benchmarks__end_at
+  platform_benchmarks__interval
+  platform_benchmarks__is_forecast
+  platform_benchmarks__key
+  platform_benchmarks__start_at
+  platform_benchmarks__value
   view_intervals__end_at
   view_intervals__interval
   view_intervals__start_at
@@ -17285,6 +17292,7 @@ input FiltersSurveyRatingItemFilterInput {
   _and: [FiltersSurveyRatingItemFilterInput]
   _not: FiltersSurveyRatingItemFilterInput
   _or: [FiltersSurveyRatingItemFilterInput]
+  has_comment_or_hidden_text: Boolean
   id: IntPredicateInput
   recipient: FiltersUserFilterInput
   survey_rating: FiltersSurveyRatingFilterInput
@@ -34248,16 +34256,6 @@ input SortInput {
 }
 
 """
-Spark line graph types
-"""
-enum SparkLineEnum {
-  bounty_awarded_at
-  resolved_at
-  submitted_at
-  triaged_at
-}
-
-"""
 Spot Check
 """
 type SpotCheck implements Node {
@@ -34693,6 +34691,7 @@ A static dashboard axis definition
 type StaticDashboardAxis implements Node {
   color: String
   format: StaticDashboardAxisFormatTypeEnum
+  hide_when_empty: Boolean
   id: ID!
   label: String
   query_key: String
@@ -37487,7 +37486,6 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
     last: Int
   ): InvitationUnionConnection @deprecated(reason: "This should be a generic invitation connection. Used interim until generic invitation type is defined")
   solution(solution_id: String!): Solution
-  spark_line(end_date: DateTime!, spark_line_type: SparkLineEnum!, start_date: DateTime!): [Int!]
   spot_checks(
     """
     Returns the elements in the list that come after the specified cursor.
