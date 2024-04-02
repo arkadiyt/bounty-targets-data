@@ -362,6 +362,69 @@
     }
   },
   {
+    "id": "bug-bounty-sncf-connect-1",
+    "name": "Bug Bounty SNCF Connect",
+    "public": true,
+    "disabled": false,
+    "managed": null,
+    "min_bounty": 0,
+    "max_bounty": 10000,
+    "targets": {
+      "in_scope": [
+        {
+          "target": "https://www.sncf-connect.com",
+          "type": "web-application"
+        },
+        {
+          "target": "https://sncf-connect.com",
+          "type": "web-application"
+        },
+        {
+          "target": "https//monidentifiant.sncf",
+          "type": "web-application"
+        },
+        {
+          "target": "https://www.sncf-connect.com/bff",
+          "type": "api"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "target": "Please note sncf-connect.com doesn't own the SNCF.com domains.",
+          "type": "other"
+        },
+        {
+          "target": "Anything that is not listed as part of the scope, example :",
+          "type": "other"
+        },
+        {
+          "target": "- https://www.sncf.com/",
+          "type": "other"
+        },
+        {
+          "target": "- https://tgvinoui.sncf/",
+          "type": "other"
+        },
+        {
+          "target": "- https://www.sncf-voyageurs.com/",
+          "type": "other"
+        },
+        {
+          "target": "- https://www.maxjeune-tgvinoui.sncf/",
+          "type": "other"
+        },
+        {
+          "target": "- https://www.malocationavis.sncf-connect.com/",
+          "type": "other"
+        },
+        {
+          "target": "The SNCF Connect mobile applications (Android and Apple) are out of scope even if the web services they use are in scope (accessible through paths beginning by 'https://www.sncf-connect.com/bff').",
+          "type": "other"
+        }
+      ]
+    }
+  },
+  {
     "id": "contentsquare-bug-bounty-program",
     "name": "Contentsquare Bug Bounty Program",
     "public": true,
