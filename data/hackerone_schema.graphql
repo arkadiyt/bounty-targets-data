@@ -4091,125 +4091,6 @@ type AssetStatisticsRiskOverviewData {
   tag_name: String!
 }
 
-"""
-Types an asset submission can be
-"""
-enum AssetSubmissionAssetTypeEnum {
-  domain
-  url
-}
-
-"""
-The connection type for AssetSubmissionUnion.
-"""
-type AssetSubmissionConnection {
-  """
-  A list of edges.
-  """
-  edges: [AssetSubmissionEdge]
-  limited_total_count: String!
-
-  """
-  A list of nodes.
-  """
-  nodes: [AssetSubmissionUnion]
-
-  """
-  Information to aid in pagination.
-  """
-  pageInfo: PageInfo!
-
-  """
-  Int
-  """
-  total_count: Int!
-}
-
-type AssetSubmissionDocument implements Node {
-  _id: ID!
-  asset_type: String!
-  id: ID!
-  identifier: String!
-  last_submitted_at: DateTime!
-  submission_id: ID!
-}
-
-"""
-An edge in a connection.
-"""
-type AssetSubmissionEdge {
-  """
-  A cursor for use in pagination.
-  """
-  cursor: String!
-
-  """
-  The item at the end of the edge.
-  """
-  node: AssetSubmissionUnion
-}
-
-"""
-A interface for the common fields on an Asset Submission
-"""
-interface AssetSubmissionInterface {
-  _id: ID!
-  asset_dns_detail: AssetDnsDetail
-  asset_type: AssetSubmissionAssetTypeEnum
-  created_at: DateTime!
-  description: String
-  display_name: String
-  id: ID!
-  identifier: String!
-  source: String
-  status: AssetSubmissionStatusEnum
-  updated_at: DateTime!
-}
-
-"""
-Statuses an asset submission can have
-"""
-enum AssetSubmissionStatusEnum {
-  accepted
-  duplicate
-  in_review
-  rejected
-}
-
-"""
-Statuses an asset submission can have
-"""
-enum AssetSubmissionStatusEnumInput {
-  accepted
-  duplicate
-  in_review
-  rejected
-}
-
-input AssetSubmissionStatusEnumInputPredicateInput {
-  _eq: AssetSubmissionStatusEnumInput
-  _gt: AssetSubmissionStatusEnumInput
-  _gte: AssetSubmissionStatusEnumInput
-  _in: [AssetSubmissionStatusEnumInput]
-  _is_null: Boolean
-  _lt: AssetSubmissionStatusEnumInput
-  _lte: AssetSubmissionStatusEnumInput
-  _neq: AssetSubmissionStatusEnumInput
-}
-
-"""
-Types an asset submission can have
-"""
-enum AssetSubmissionTypeEnum {
-  HackerAssetSubmission
-  ScannerAssetSubmission
-}
-
-"""
-An Asset Submissions can be multiple types
-"""
-union AssetSubmissionUnion = HackerAssetSubmission | ScannerAssetSubmission
-
 input AssetTagCategoryClauseInput {
   category_id: Int!
   clause: AssetTagClauseTypeEnum!
@@ -15008,7 +14889,7 @@ type DocumentResult implements Node {
 """
 ElasticSearch Document can be of different types
 """
-union DocumentUnion = AnalyticsGatewayHttpStreamDocument | AssetDocument | AssetSubmissionDocument | CompleteHacktivityReportDocument | NotificationDocument | OpportunityDocument | OrganizationMemberDocument | OrganizationMemberGroupDocument | OrganizationReportDocument | ReportDocument | StoredQueryDocument | StructuredScopeDocument
+union DocumentUnion = AnalyticsGatewayHttpStreamDocument | AssetDocument | CompleteHacktivityReportDocument | NotificationDocument | OpportunityDocument | OrganizationMemberDocument | OrganizationMemberGroupDocument | OrganizationReportDocument | ReportDocument | StoredQueryDocument | StructuredScopeDocument
 
 """
 A domain ownership object
@@ -16583,23 +16464,6 @@ input FiltersAssetFilterInput {
   identifier: StringPredicateInput
 }
 
-input FiltersAssetSubmissionFilterInput {
-  _and: [FiltersAssetSubmissionFilterInput]
-  _not: FiltersAssetSubmissionFilterInput
-  _or: [FiltersAssetSubmissionFilterInput]
-  id: IntPredicateInput
-  identifier: StringPredicateInput
-  status: AssetSubmissionStatusEnumInputPredicateInput
-  type: AssetSubmissionTypeEnum
-}
-
-input FiltersAssetSubmissionFilterOrder {
-  created_at: FilterOrderPredicateInput
-  id: FilterOrderPredicateInput
-  identifier: FilterOrderPredicateInput
-  status: FilterOrderPredicateInput
-}
-
 input FiltersAuditLogItemFilterInput {
   _and: [FiltersAuditLogItemFilterInput]
   _not: FiltersAuditLogItemFilterInput
@@ -17796,25 +17660,6 @@ type HackerApiCreateReportPayload implements MutationResult {
   ): ErrorConnection!
   report: Report
   was_successful: Boolean!
-}
-
-"""
-A Hacker Asset Submission
-"""
-type HackerAssetSubmission implements AssetSubmissionInterface & Node {
-  _id: ID!
-  asset_dns_detail: AssetDnsDetail
-  asset_type: AssetSubmissionAssetTypeEnum
-  created_at: DateTime!
-  description: String
-  display_name: String
-  id: ID!
-  identifier: String!
-  source: String
-  status: AssetSubmissionStatusEnum
-  team: Team
-  updated_at: DateTime!
-  user: User!
 }
 
 """
@@ -23908,50 +23753,6 @@ type Organization implements Node {
   assessments_consumption: [Hash!]
   asset_import(id: ID!): AssetImport
   asset_statistics(period: AssetStatisticPeriodEnum!): AssetStatistics
-  asset_submissions(
-    """
-    Returns the elements in the list that come after the specified cursor.
-    """
-    after: String
-
-    """
-    Returns the elements in the list that come before the specified cursor.
-    """
-    before: String
-
-    """
-    Returns the first _n_ elements from the list.
-    """
-    first: Int
-
-    """
-    Returns the last _n_ elements from the list.
-    """
-    last: Int
-    order_by: FiltersAssetSubmissionFilterOrder
-    where: FiltersAssetSubmissionFilterInput
-  ): AssetSubmissionConnection
-  asset_submissions_tags(
-    """
-    Returns the elements in the list that come after the specified cursor.
-    """
-    after: String
-
-    """
-    Returns the elements in the list that come before the specified cursor.
-    """
-    before: String
-
-    """
-    Returns the first _n_ elements from the list.
-    """
-    first: Int
-
-    """
-    Returns the last _n_ elements from the list.
-    """
-    last: Int
-  ): SearchResultConnection
   asset_types: [String]
   assets(
     """
@@ -33193,23 +32994,6 @@ type SaveUnverifiableResidencyVerificationPayload implements MutationResult {
   ): ErrorConnection!
   user_identity: UserIdentity
   was_successful: Boolean!
-}
-
-"""
-A Scanner Asset Submission
-"""
-type ScannerAssetSubmission implements AssetSubmissionInterface & Node {
-  _id: ID!
-  asset_dns_detail: AssetDnsDetail
-  asset_type: AssetSubmissionAssetTypeEnum
-  created_at: DateTime!
-  description: String
-  display_name: String
-  id: ID!
-  identifier: String!
-  source: String
-  status: AssetSubmissionStatusEnum
-  updated_at: DateTime!
 }
 
 """
@@ -47536,29 +47320,6 @@ type User implements ActivitiesInterface & Node & ResourceInterface {
   ): ActivityConnection
   address: Address
   allow_pentester_application: Boolean!
-  asset_submissions(
-    """
-    Returns the elements in the list that come after the specified cursor.
-    """
-    after: String
-
-    """
-    Returns the elements in the list that come before the specified cursor.
-    """
-    before: String
-
-    """
-    Returns the first _n_ elements from the list.
-    """
-    first: Int
-
-    """
-    Returns the last _n_ elements from the list.
-    """
-    last: Int
-    order_by: FiltersAssetSubmissionFilterOrder
-    where: FiltersAssetSubmissionFilterInput
-  ): AssetSubmissionConnection
   assets(
     """
     Returns the elements in the list that come after the specified cursor.
