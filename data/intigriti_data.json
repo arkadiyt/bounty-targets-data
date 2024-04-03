@@ -2280,6 +2280,216 @@
     }
   },
   {
+    "id": "dd9dba85-e047-42f3-b59e-9328c7d49672",
+    "name": "DigitalOcean",
+    "company_handle": "digitalocean",
+    "handle": "digitalocean",
+    "url": "https://www.intigriti.com/programs/digitalocean/digitalocean/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "min_bounty": {
+      "value": 100,
+      "currency": "USD"
+    },
+    "max_bounty": {
+      "value": 10000,
+      "currency": "USD"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "wildcard",
+          "endpoint": "*.digitalocean.com",
+          "description": "Public IPs belonging to AS14061(DigitalOcean, LLC) are assigned to DigitalOcean customers and should be considered out of scope.The following subdomains are out of scope:",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "ip range",
+          "endpoint": "169.254.169.254",
+          "description": "Metadata service available at http://169.254.169.254/ from Droplets",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.digitalocean.com",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "cloud.digitalocean.com",
+          "description": "Findings against resources owned by your account should be filed underneath this asset.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "css-tricks.com",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "digitaloceanmirrors.com",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "digitaloceanpartners.com",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "digitaloceanstatus.com",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "digitaloceantest.com",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "do.co",
+          "description": "Company shortlink service",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "dointernal.com",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "hackathon-tracker.digitalocean.com",
+          "description": "API for hacktoberfest.com",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "hacktoberfest.com",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "https://github.com/digitalocean/do-agent",
+          "description": "A daemon that helps collect system metrics from droplets.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "https://github.com/digitalocean/do-markdownit",
+          "description": "Markdown plugin run against all user-submitted content on https://digitalocean.com/community.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "https://github.com/digitalocean/doctl",
+          "description": "The official command line interface for the DigitalOcean API.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "https://github.com/digitalocean/droplet-agent",
+          "description": "A daemon that enables web console access on droplets",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "https://github.com/digitalocean/terraform-provider-digitalocean",
+          "description": "DigitalOcean's official Terraform provider.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://www.digitalocean.com/",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "marketplace.digitalocean.com",
+          "description": "Note that marketplace 1-click apps and add-ons are maintained by our partnered vendors and are out of scope. Security issues against these components of the marketplace are not in the scope of this program and ineligible for bounty rewards, but we are happy to help facilitate communications to the application owners.Please reach out to us at security@digitalocean.com for facilitation.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "uatdo.com",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.digitalocean.com",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.db.ondigitalocean.com",
+          "description": "Customers' resources are hosted underneath this domain, so the entire domain should be considered out-of-scope.Any database created inside your own account on this domain are considered in-scope. Use the cloud.digitalocean.com asset in that case.",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.digitaloceanspaces.com",
+          "description": "Customers' resources are hosted underneath this domain, so the entire domain should be considered out-of-scope.Any Spaces buckets created inside your own account on this domain are considered in-scope. Use the cloud.digitalocean.com asset in that case.",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.doserverless.co",
+          "description": "Customers' resources are hosted underneath this domain, so the entire domain should be considered out-of-scope.Any Functions created inside your own account on this domain are considered in-scope. Use the cloud.digitalocean.com asset in that case.",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.k8s.ondigitalocean.com",
+          "description": "Customers' resources are hosted underneath this domain, so the entire domain should be considered out-of-scope.Any Kubernetes clusters created inside your own account on this domain are considered in-scope. Use the cloud.digitalocean.com asset in that case.",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.ondigitalocean.app",
+          "description": "Customers' resources are hosted underneath this domain, so the entire domain should be considered out-of-scope.Any Apps created inside your own account on this domain are considered in-scope. Use the cloud.digitalocean.com asset in that case.",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "other",
+          "endpoint": "Assets created by other DigitalOcean customers",
+          "description": "Any asset (Droplet, Space, or otherwise) created by other DigitalOcean customers are not to be tested under any circumstances.",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "other",
+          "endpoint": "Marketplace Apps and Add-Ons",
+          "description": "The marketplace applications and add-ons are maintained by our partnered vendors. Security issues are not in the scope of this program and ineligible for bounty rewards, but we are happy to help facilitate communications to the application owners.Please reach out to us at security@digitalocean.com for facilitation.",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "other",
+          "endpoint": "Other DigitalOcean open source projects not listed",
+          "description": "All open source projects hosted by DigitalOcean not otherwise listed as in-scope are out-of-scope.",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "registry.digitalocean.com/*",
+          "description": "Customers' resources are hosted underneath this domain, so the entire domain should be considered out-of-scope.Any container registries created inside your own account on this domain are considered in-scope. Use the cloud.digitalocean.com asset in that case.",
+          "impact": "Out of scope"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
     "id": "e8b2e8ca-1fb2-4c17-933f-2a1f5cfb7da7",
     "name": "Driessen Vulnerability Disclosure Program",
     "company_handle": "driessengroep",
