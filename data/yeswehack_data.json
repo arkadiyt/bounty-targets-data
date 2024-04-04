@@ -1204,6 +1204,33 @@
     }
   },
   {
+    "id": "egerie-bug-bounty",
+    "name": "EGERIE BUG BOUNTY",
+    "public": true,
+    "disabled": false,
+    "managed": null,
+    "min_bounty": 50,
+    "max_bounty": 4000,
+    "targets": {
+      "in_scope": [
+        {
+          "target": "https://saas.egerie.eu/*",
+          "type": "web-application"
+        },
+        {
+          "target": "https://saas.egerie.eu/v4/EgerieRM/api/*",
+          "type": "api"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "target": "Anything that's not listed as part of the scope.",
+          "type": "other"
+        }
+      ]
+    }
+  },
+  {
     "id": "ezviz-bug-bounty-program",
     "name": "Ezviz - Bug Bounty Program",
     "public": true,
