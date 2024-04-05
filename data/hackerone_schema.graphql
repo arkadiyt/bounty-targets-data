@@ -3509,7 +3509,7 @@ input ArchivePentestOpportunityInput {
   A unique identifier for the client performing the mutation.
   """
   clientMutationId: String
-  pentest_opportunity_id: ID!
+  pentest_opportunity_id: Int!
 }
 
 """
@@ -3968,6 +3968,7 @@ enum AssetImplementationTypeEnum {
   AiModel
   AndroidApk
   AndroidPlayStore
+  Api
   Cidr
   Domain
   Executable
@@ -34994,6 +34995,7 @@ Structured Scope asset type enum
 """
 enum StructuredScopeAssetTypeEnum {
   AI_MODEL
+  API
   APPLE_STORE_APP_ID
   CIDR
   DOWNLOADABLE_EXECUTABLES
@@ -35016,6 +35018,7 @@ Structured Scope asset type enum
 """
 enum StructuredScopeAssetTypeEnumInput {
   AI_MODEL
+  API
   APPLE_STORE_APP_ID
   CIDR
   DOWNLOADABLE_EXECUTABLES
