@@ -28680,6 +28680,7 @@ type Query implements Node {
     report_id: Int
     report_substate: TriageInboxItemReportSubstateEnum
     report_title: String
+    running_validation_timer: Boolean
     team_handle: [String!]
     view: TriageInboxItemViewEnum
   ): TriageInboxItemConnection
