@@ -12455,6 +12455,7 @@ type DeclarativePolicy implements Node {
   """
   _id: ID!
   complies_with_standard_ineligible_findings: Boolean
+  contact_email: String
   created_at: DateTime!
   has_open_scope: Boolean
   id: ID!
@@ -36809,7 +36810,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
   ): ForwardedEmailsConnection
   gateway_program: GatewayProgram
   goal_valid_reports: Int
-  gold_standard: Int
+  gold_standard: Boolean
   grace_period_remaining_in_days: Int
   hackerone_to_jira_events_configuration: HackeroneToJiraEventsConfiguration
   handle: String!
@@ -45611,6 +45612,7 @@ input UpdateTeamPolicyInput {
   """
   clientMutationId: String
   complies_with_standard_ineligible_findings: Boolean
+  contact_email: String
   custom_message_for_policy_change: String
   has_open_scope: Boolean
   introduction: String
