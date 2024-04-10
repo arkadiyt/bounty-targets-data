@@ -25291,6 +25291,8 @@ type Pentest implements Node {
     last: Int
   ): StructuredScopesConnection
   attachments: [Attachment]
+  available_qualified_lead_pentesters: Int!
+  available_qualified_supporting_pentesters: Int!
   award_amount: Int
   award_amount_lead: Int
   citizenship_restrictions: [String!]
@@ -25655,6 +25657,8 @@ type Pentest implements Node {
   tem: User
   time_zone: String
   time_zone_code: String
+  total_qualified_lead_pentesters: Int!
+  total_qualified_supporting_pentesters: Int!
   tpm: User
   triaged_resolved_reports(
     """
