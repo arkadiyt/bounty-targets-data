@@ -1234,6 +1234,10 @@
         {
           "target": "[https://saas.egerie.eu/EgerieRM/Administration/Connectors]",
           "type": "other"
+        },
+        {
+          "target": "[https://saas.egerie.eu/v4/EgeriePM/api#tag/UserPreference]",
+          "type": "other"
         }
       ]
     }
@@ -2585,6 +2589,109 @@
     }
   },
   {
+    "id": "sequoia-pgp-bug-bounty-program",
+    "name": "Sequoia PGP Bug Bounty Program",
+    "public": true,
+    "disabled": false,
+    "managed": null,
+    "min_bounty": 500,
+    "max_bounty": 10000,
+    "targets": {
+      "in_scope": [
+        {
+          "target": "buffered-reader",
+          "type": "other"
+        },
+        {
+          "target": "nettle-sys",
+          "type": "other"
+        },
+        {
+          "target": "nettle-rs",
+          "type": "other"
+        },
+        {
+          "target": "SHA1-CD",
+          "type": "other"
+        },
+        {
+          "target": "sequoia-openpgp",
+          "type": "other"
+        },
+        {
+          "target": "sequoia-autocrypt",
+          "type": "other"
+        },
+        {
+          "target": "sequoia-ipc",
+          "type": "other"
+        },
+        {
+          "target": "sequoia-net",
+          "type": "other"
+        },
+        {
+          "target": "Shared OpenPGP Certificate Directory",
+          "type": "other"
+        },
+        {
+          "target": "sequoia-cert-store",
+          "type": "other"
+        },
+        {
+          "target": "sequoia-wot",
+          "type": "other"
+        },
+        {
+          "target": "sequoia-policy-config",
+          "type": "other"
+        },
+        {
+          "target": "rpm-sequoia",
+          "type": "other"
+        },
+        {
+          "target": "sqv",
+          "type": "other"
+        },
+        {
+          "target": "sq",
+          "type": "other"
+        },
+        {
+          "target": "sqop",
+          "type": "other"
+        },
+        {
+          "target": "octopus",
+          "type": "other"
+        },
+        {
+          "target": "sequoia-git",
+          "type": "other"
+        },
+        {
+          "target": "OpenPGP Cert Directory Specification",
+          "type": "other"
+        },
+        {
+          "target": "Web of Trust Specification",
+          "type": "other"
+        },
+        {
+          "target": "Sequoia git Specification",
+          "type": "other"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "target": "chameleon: https://gitlab.com/sequoia-pgp/sequoia-chameleon-gnupg",
+          "type": "other"
+        }
+      ]
+    }
+  },
+  {
     "id": "sogexia",
     "name": "Sogexia",
     "public": true,
@@ -3592,6 +3699,93 @@
         },
         {
           "target": "*.owncloud.com",
+          "type": "other"
+        }
+      ]
+    }
+  },
+  {
+    "id": "systemd-bug-bounty-program",
+    "name": "systemd Bug Bounty Program",
+    "public": true,
+    "disabled": false,
+    "managed": null,
+    "min_bounty": 250,
+    "max_bounty": 10000,
+    "targets": {
+      "in_scope": [
+        {
+          "target": "systemd (the manager itself)",
+          "type": "other"
+        },
+        {
+          "target": "systemd-boot",
+          "type": "other"
+        },
+        {
+          "target": "systemd-stub",
+          "type": "other"
+        },
+        {
+          "target": "systemd-udev",
+          "type": "other"
+        },
+        {
+          "target": "systemd-journald",
+          "type": "other"
+        },
+        {
+          "target": "systemd-logind",
+          "type": "other"
+        },
+        {
+          "target": "systemd-networkd",
+          "type": "other"
+        },
+        {
+          "target": "libsystemd",
+          "type": "other"
+        },
+        {
+          "target": "systemd-timesyncd",
+          "type": "other"
+        },
+        {
+          "target": "systemd-hostnamed",
+          "type": "other"
+        },
+        {
+          "target": "systemd-resolved",
+          "type": "other"
+        },
+        {
+          "target": "systemd-cryptenroll",
+          "type": "other"
+        },
+        {
+          "target": "systemd-cryptsetup",
+          "type": "other"
+        },
+        {
+          "target": "systemd-veritysetup",
+          "type": "other"
+        },
+        {
+          "target": "systemd-fstab-generator",
+          "type": "other"
+        },
+        {
+          "target": "systemd-gpt-auto-generator",
+          "type": "other"
+        },
+        {
+          "target": "systemd-ask-password",
+          "type": "other"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "target": "journal sealing in systemd-journald: there are known issue that need to be solved first, before this feature can be included in the program",
           "type": "other"
         }
       ]
