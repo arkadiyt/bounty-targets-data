@@ -16565,6 +16565,7 @@ input FiltersLlmAppFilterInput {
   _not: FiltersLlmAppFilterInput
   _or: [FiltersLlmAppFilterInput]
   id: IntPredicateInput
+  owner: String
 }
 
 input FiltersLlmAppFilterOrder {
@@ -19727,6 +19728,8 @@ type LinkReportPayload implements MutationResult {
 An LLM App
 """
 type LlmApp implements Node {
+  color: String
+  created_at: DateTime!
   description: String!
   id: ID!
   instructions: String!
@@ -23083,6 +23086,7 @@ input NewConversationInput {
   """
   clientMutationId: String
   context_object: LlmConversationContextInputType
+  llm_app_id: ID
 }
 
 """
@@ -28691,6 +28695,7 @@ type Query implements Node {
     pod_name: String
     priority: TriageInboxItemPriorityEnum
     report_id: Int
+    report_severity_rating: Boolean
     report_substate: TriageInboxItemReportSubstateEnum
     report_title: String
     running_validation_timer: Boolean
@@ -36598,6 +36603,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
   ): CveRequestsConnection
   cwe_field_hidden: Boolean!
   declarative_policy: DeclarativePolicy
+  declarative_programs_enabled: Boolean!
   domain_ownerships(
     """
     Returns the elements in the list that come after the specified cursor.
@@ -36768,7 +36774,6 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
   i_can_manage_gateway_v2: Boolean!
   i_can_manage_program: Boolean!
   i_can_manage_references: Boolean!
-  i_can_manage_system_users: Boolean!
   i_can_manage_team_members: Boolean!
   i_can_see_report_submit_button: Boolean
   i_can_view_all_weaknesses: Boolean
@@ -37061,6 +37066,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
   ): SurveyAnswerConnection
   publicly_visible_retesting: Boolean
   remaining_retest_count: Int
+  remediation_guidance_disabled_at: DateTime
   remediation_guidance_enabled: Boolean!
   report_sources: [String!]
   report_submission_form_intro: String
