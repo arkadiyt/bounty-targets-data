@@ -12399,7 +12399,9 @@ type DeclarativePolicy implements Node {
   id: ID!
   introduction: String
   pays_within_one_month: Boolean
+  platform_standards_exclusions: [String!]
   protected_by_gold_standard_safe_harbor: Boolean
+  standard_ineligible_findings_exclusions: [String!]
   updated_at: DateTime
 }
 
@@ -37930,6 +37932,7 @@ type TeamDisplayOptions implements Node {
   show_response_efficiency_indicator: Boolean!
   show_top_bounties: Boolean!
   show_total_bounties_paid: Boolean!
+  show_total_reports_per_asset: Boolean!
   team: Team!
 }
 
@@ -45554,8 +45557,10 @@ input UpdateTeamPolicyInput {
   introduction: String
   notify_subscribers_of_policy_change: Boolean
   pays_within_one_month: Boolean
+  platform_standards_exclusions: [String!]
   policy: String
   protected_by_gold_standard_safe_harbor: Boolean
+  standard_ineligible_findings_exclusions: [String!]
   team_id: ID!
 }
 
