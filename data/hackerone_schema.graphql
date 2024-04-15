@@ -37070,6 +37070,10 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
   remaining_retest_count: Int
   remediation_guidance_disabled_at: DateTime
   remediation_guidance_enabled: Boolean!
+  report_count_per_severity_critical: Int
+  report_count_per_severity_high: Int
+  report_count_per_severity_low: Int
+  report_count_per_severity_medium: Int
   report_sources: [String!]
   report_submission_form_intro: String
   report_template: String
