@@ -6858,6 +6858,17 @@ type ConnectedRepositoryEdge {
 }
 
 """
+A connected repository for a CSA pentest
+"""
+input ConnectedRepositoryInputType {
+  """
+  Whether this repository needs a review
+  """
+  needs_review: Boolean!
+  repo_id: String!
+}
+
+"""
 A consumption subscription
 """
 type ConsumptionSubscription implements Node {
@@ -24076,6 +24087,42 @@ type Organization implements Node {
     page: Int = null
     where: FiltersUserFilterInput
   ): UserConnection
+  reports(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+    approaching_sla_violation: [SlaTypeEnum!]
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+    database_id: Int = null
+    filter: ReportFilterInput
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+    handle: String
+    has_assignee: Boolean
+    has_retests: Boolean
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+    not_approaching_any_sla_violation: Boolean
+    offset: Int
+    order_by: ReportOrderInput = {direction: DESC, field: id}
+    pre_submission_review_states: [ReportPreSubmissionReviewStateEnum] = null
+    secure_order_by: FiltersReportFilterOrder
+    state: ReportStateEnum
+    substate: ReportStateEnum
+    violates_minimum_sla: [SlaTypeEnum!]
+    where: FiltersReportFilterInput
+  ): ReportConnection
   response_team_count: Int
   saml_providers(
     """
@@ -24466,12 +24513,14 @@ type OrganizationInbox implements Node {
     """
     first: Int
     handle: String
+    has_assignee: Boolean
     has_retests: Boolean
 
     """
     Returns the last _n_ elements from the list.
     """
     last: Int
+    offset: Int
     order_by: ReportOrderInput = {direction: DESC, field: id}
     pre_submission_review_states: [ReportPreSubmissionReviewStateEnum] = null
     secure_order_by: FiltersReportFilterOrder
@@ -25231,6 +25280,27 @@ type Pentest implements Node {
   code_security_audit: Boolean!
   community_display_count: String
   completed_at: DateTime
+  connected_repositories(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+  ): ConnectedRepositoryConnection
   counts_per_asset(structured_scope_ids: [Int!]): Hash
   counts_per_severity(structured_scope_ids: [Int!]): Hash
   counts_per_weakness(structured_scope_ids: [Int!]): Hash
@@ -25488,12 +25558,14 @@ type Pentest implements Node {
     """
     first: Int
     handle: String
+    has_assignee: Boolean
     has_retests: Boolean
 
     """
     Returns the last _n_ elements from the list.
     """
     last: Int
+    offset: Int
     order_by: ReportOrderInput = {direction: DESC, field: id}
     pre_submission_review_states: [ReportPreSubmissionReviewStateEnum] = null
     secure_order_by: FiltersReportFilterOrder
@@ -25822,12 +25894,14 @@ type PentestChecklist implements Node {
     """
     first: Int
     handle: String
+    has_assignee: Boolean
     has_retests: Boolean
 
     """
     Returns the last _n_ elements from the list.
     """
     last: Int
+    offset: Int
     order_by: ReportOrderInput = {direction: DESC, field: id}
     pre_submission_review_states: [ReportPreSubmissionReviewStateEnum] = null
     secure_order_by: FiltersReportFilterOrder
@@ -26772,12 +26846,14 @@ type PentestStructuredScope implements Node {
     """
     first: Int
     handle: String
+    has_assignee: Boolean
     has_retests: Boolean
 
     """
     Returns the last _n_ elements from the list.
     """
     last: Int
+    offset: Int
     order_by: ReportOrderInput = {direction: DESC, field: id}
     pre_submission_review_states: [ReportPreSubmissionReviewStateEnum] = null
     secure_order_by: FiltersReportFilterOrder
@@ -28439,6 +28515,7 @@ type Query implements Node {
     Returns the last _n_ elements from the list.
     """
     last: Int
+    offset: Int
     order_by: FiltersReportRetestFilterOrder
     where: FiltersReportRetestFilterInput
   ): ReportRetestConnection
@@ -28481,12 +28558,14 @@ type Query implements Node {
     """
     first: Int
     handle: String
+    has_assignee: Boolean
     has_retests: Boolean
 
     """
     Returns the last _n_ elements from the list.
     """
     last: Int
+    offset: Int
     order_by: ReportOrderInput = {direction: DESC, field: id}
     pre_submission_review_states: [ReportPreSubmissionReviewStateEnum] = null
     secure_order_by: FiltersReportFilterOrder
@@ -33098,6 +33177,7 @@ input SetupPentestInput {
   A unique identifier for the client performing the mutation.
   """
   clientMutationId: String
+  connected_repositories: [ConnectedRepositoryInputType!]
   ends_at: String
   location_restrictions: [String]
   pentest_id: ID!
@@ -34949,12 +35029,14 @@ type StructuredScope implements Node & ResourceInterface {
     """
     first: Int
     handle: String
+    has_assignee: Boolean
     has_retests: Boolean
 
     """
     Returns the last _n_ elements from the list.
     """
     last: Int
+    offset: Int
     order_by: ReportOrderInput = {direction: DESC, field: id}
     pre_submission_review_states: [ReportPreSubmissionReviewStateEnum] = null
     secure_order_by: FiltersReportFilterOrder
@@ -37128,6 +37210,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
     """
     first: Int
     handle: String
+    has_assignee: Boolean
     has_retests: Boolean
 
     """
@@ -37135,6 +37218,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
     """
     last: Int
     not_approaching_any_sla_violation: Boolean
+    offset: Int
     order_by: ReportOrderInput = {direction: DESC, field: id}
     pre_submission_review_states: [ReportPreSubmissionReviewStateEnum] = null
     secure_order_by: FiltersReportFilterOrder
@@ -43127,7 +43211,7 @@ input UpdatePaymentsUserMutationInput {
   """
   clientMutationId: String
   pause_payouts: Boolean
-  payout_cadence: PayoutCadenceEnum
+  payout_cadence: PayoutCadenceEnum!
   payout_threshold_amount: Int
 }
 
@@ -47888,12 +47972,14 @@ type User implements ActivitiesInterface & Node & ResourceInterface {
     """
     first: Int
     handle: String
+    has_assignee: Boolean
     has_retests: Boolean
 
     """
     Returns the last _n_ elements from the list.
     """
     last: Int
+    offset: Int
     order_by: ReportOrderInput = {direction: DESC, field: id}
     pre_submission_review_states: [ReportPreSubmissionReviewStateEnum] = null
     secure_order_by: FiltersReportFilterOrder
