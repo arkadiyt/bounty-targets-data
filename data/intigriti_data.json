@@ -66,156 +66,6 @@
     }
   },
   {
-    "id": "44cacd66-4ad6-4b5f-901e-d257ee0ae989",
-    "name": "Ada Health",
-    "company_handle": "adahealth",
-    "handle": "adahealth",
-    "url": "https://www.intigriti.com/programs/adahealth/adahealth/detail",
-    "status": "open",
-    "confidentiality_level": "public",
-    "min_bounty": {
-      "value": 50,
-      "currency": "EUR"
-    },
-    "max_bounty": {
-      "value": 10000,
-      "currency": "EUR"
-    },
-    "targets": {
-      "in_scope": [
-        {
-          "type": "ios",
-          "endpoint": "1099986434",
-          "description": "IOS Mobile Applicaton of Ada Health",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "android",
-          "endpoint": "com.ada.app",
-          "description": "Android Mobile Application of Ada Health",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "https://api.mobile.ada.com",
-          "description": "Backend for frontend API endpoint for mobile application activities. This endpoint is protected by a Web Application Firewall.",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "https://id.ada.com",
-          "description": "Ada-ID is an identity management service for end user that interacts with Ada's applications. It provides authentication and authorization. Ada-ID serves as web application and API services. Frontend is valid for password reset and account verification process. This endpoint is protected by a Web Application Firewall.",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.ada.health",
-          "description": "All subdomains (one or multilevel) of ada.health, except the ones interacting directly in Tier 1 & 2 assets, are considered as Tier 3.",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.adahealth.ca",
-          "description": "All subdomains (one or multilevel) of adahealth.ca, except the ones interacting directly in Tier 1 & 2 assets, are considered as Tier 3.",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "https://care-navigation-admin-bff.eu.enterprise.ada.com",
-          "description": "Backend for frontend (bff) service for Care Navigation Admin interface. BFF is a variant of the API Gateway pattern which provides an additional layer between microservices.",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "https://care-navigation-admin-fe.eu.enterprise.ada.com",
-          "description": "Care Navigation Admin Frontend is a visual tool for managing Connect data including:Test credentials will not be provided. Try to find broken access controls on this endpoint.",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "https://care-navigation-bff.eu.enterprise.ada.com",
-          "description": "Backend for frontend (bff) service for Care Navigation Frontend service. BFF is a variant of the API Gateway pattern which provides an additional layer between microservices.",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "https://care-navigation-fe.eu.enterprise.ada.com",
-          "description": "Care Navigation Frontend service represents Ada Partner care navigation option list available after assessment test is accomplished. Service includes:",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "https://demo-prod-assessment-bff.ada-prod-eu.prod.gcp.ada.com",
-          "description": "Backend for frontend (bff) service for demo assessment web interface. BFF is a variant of the API Gateway pattern which provides an additional layer between microservices. Please see the all endpoints in the Open API documentation (demo_assessment_bff_openapi.json) file",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "https://demo-prod-hcp-report-bff.ada-prod-eu.prod.gcp.ada.com",
-          "description": "Handover is a solution for sharing (handing over) the results of the health assessment with the user’s health care provider (HCP) or a health professional. This service has the responsibility to process the data from the hcp-report-backend for the use of handover frontend.",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "https://demo.enterprise.ada.com",
-          "description": "Our web application helps millions to manage their health. This is the frontend assessment application demo domain which represents the general flow we provide with our enterprise partners. This medical AI symptom checker is trained by real doctors. This endpoint provides both guess and authenticated flow which can be combined with our SSO service.This UI is calling the BFF domain which is also in the scope.",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "https://demo.handover.enterprise.ada.com",
-          "description": "Handover is a solution for sharing (handing over) the results of the health assessment with the user’s health care provider (HCP) or a health professional. This service has the responsibility to render the HCP report data received from the HCP report bff.",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "https://demo.sso.enterprise.ada.com",
-          "description": "Smart-auth is Ada’s identification management and Single Sign On (SSO).This service is based on SMART on FHIR implementation and provides a standard way to integrate with other EHR (Electronic Health Record) servers. It is an optional module meaning that not all flows are authentication required.",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.ada.com",
-          "description": "All subdomains (one or multilevel) of ada.com, except the ones interacting directly in Tier 1 & 2 are considered as Tier 3.",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.httpproxy.data.ada.com",
-          "description": "",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "monitoring.*.enterprise.ada.com",
-          "description": "",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "monitoring.*.enterprise.adahahealth.ca",
-          "description": "",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "monitoring.*.gcp.ada.com",
-          "description": "",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "monitoring.*.gcp.adahealth.ca",
-          "description": "",
-          "impact": "Out of scope"
-        }
-      ],
-      "out_of_scope": [
-
-      ]
-    }
-  },
-  {
     "id": "664b7290-6bb3-42cf-b677-a9b3724c5485",
     "name": "Aleacsys Online BV",
     "company_handle": "wimigames",
@@ -774,10 +624,22 @@
     "targets": {
       "in_scope": [
         {
+          "type": "wildcard",
+          "endpoint": "*.stbpost.be",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
           "type": "url",
           "endpoint": "imove.bpost.cloud",
           "description": "Coorporate application :Make your reservation to save a spot at the office",
           "impact": "Tier 2"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.acbpost.be",
+          "description": "",
+          "impact": "No bounty"
         },
         {
           "type": "wildcard",
