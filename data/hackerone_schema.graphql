@@ -48439,6 +48439,9 @@ type User implements ActivitiesInterface & Node & ResourceInterface {
     """
     last: Int
   ): ThanksItemConnection
+  total_earnings: Float
+  total_manual_user_balance_adjustments: Float
+  total_payouts: Float
   totp_enabled: Boolean
   totp_supported: Boolean
   triage_ratings(
