@@ -2683,6 +2683,7 @@ input AnalyticsChartConfigInputType {
   new_until: String
   pivot_axis: AnalyticsChartAxisConfigInputType
   stacked: Boolean
+  subheader_override_text: String
   title: String
   type: String!
 }
@@ -34600,6 +34601,7 @@ type StaticDashboardChart implements Node & ResourceInterface {
   new_until: String
   pivot_axis: StaticDashboardAxis
   stacked: Boolean
+  subheader_override_text: String
   title: String!
   title_tooltip: String
   type: String!
