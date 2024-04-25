@@ -38079,6 +38079,7 @@ type TeamDisplayOptions implements Node {
   show_top_bounties: Boolean!
   show_total_bounties_paid: Boolean!
   show_total_reports_per_asset: Boolean!
+  show_total_reports_per_severity: Boolean!
   team: Team!
 }
 
@@ -45562,6 +45563,8 @@ input UpdateTeamDisplayOptionsInput {
   show_reports_resolved: Boolean
   show_top_bounties: Boolean
   show_total_bounties_paid: Boolean
+  show_total_reports_per_asset: Boolean
+  show_total_reports_per_severity: Boolean
   team_id: ID!
 }
 
