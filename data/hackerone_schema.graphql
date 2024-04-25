@@ -6004,11 +6004,14 @@ type CertificationsPentesterProfileEdge {
 Challenge setting of a Team
 """
 type ChallengeSetting implements Node {
+  aasm_state: String
   has_retesting_phase: Boolean
   id: ID!
   not_started: Boolean
   policy: String
+  starts_at: DateTime
   stops_at: DateTime
+  target_budget: Int
 }
 
 """
@@ -8236,6 +8239,7 @@ input CreateDemoInput {
   with_benchmarking_feature: Boolean
   with_bounty_engagement: Boolean
   with_campaigns_feature: Boolean
+  with_challenge_engagement: Boolean
   with_custom_inboxes_feature: Boolean
   with_engagements_analytics_feature: Boolean
   with_gateway_feature: Boolean
@@ -24310,7 +24314,6 @@ type Organization implements Node {
     last: Int
     tags: [String!]
   ): StoredQueryConnection
-  supports_organization_member_groups: Boolean
   team_member_groups(
     """
     Returns the elements in the list that come after the specified cursor.
