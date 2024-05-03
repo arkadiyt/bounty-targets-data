@@ -12672,7 +12672,7 @@ type DeclarativePolicy implements Node {
   id: ID!
   introduction: String
   pays_within_one_month: Boolean
-  platform_standards_exclusions: [String!]
+  platform_standards_exclusions: [PlatformStandardsExclusionsEnum!]
   protected_by_gold_standard_safe_harbor: Boolean
   standard_ineligible_findings_exclusions: [StandardIneligibleFindingsExclusionsEnum!]
   updated_at: DateTime
@@ -27740,6 +27740,20 @@ type PingPageActivityPayload implements MutationResult {
     types: [ErrorTypeEnum]
   ): ErrorConnection!
   was_successful: Boolean!
+}
+
+enum PlatformStandardsExclusionsEnum {
+  BYPASS_RESOLVED_REPORT
+  CHAINED_VULNERABILITIES
+  IDOR
+  LEAKAGE_SENSITIVE_PII
+  LEAKED_CREDENTIALS
+  MULTIPLE_REPORTS_HIGHLIGHTING_SYSTEMIC_ISSUES
+  SELF_SIGN_UP_CVSS_PR
+  THIRD_PARTY_COMPONENTS_FOR_HACKERS
+  THIRD_PARTY_COMPONENTS_FOR_PROGRAMS_CONSUMING_THE_COMPONENT
+  USING_AVAILABILITY_METRIC_FOR_DATA
+  VULNERABLE_NETWORK_CONECTION_IN_CLIENT_APPLICATIONS
 }
 
 """
