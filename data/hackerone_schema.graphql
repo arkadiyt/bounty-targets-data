@@ -9464,6 +9464,7 @@ input CreateOrUpdatePentestInput {
   """
   clientMutationId: String
   description: String!
+  enable_final_detailed_report: Boolean
   end_date: String!
   hour_cap: Int!
   id: ID
@@ -25640,6 +25641,7 @@ type Pentest implements Node {
   counts_per_severity(structured_scope_ids: [Int!]): Hash
   counts_per_weakness(structured_scope_ids: [Int!]): Hash
   description: String
+  enable_final_detailed_report: Boolean
   end_date: Date
   ends_at: DateTime
   findings_per_asset: Hash
