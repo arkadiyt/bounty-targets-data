@@ -9062,7 +9062,7 @@ input CreateLanguageModelResolverJobInput {
   clientMutationId: String
   input: String = ""
   resolver: String!
-  variables: JSON = {}
+  variables: LanguageModelResolverJobVariablesInput = {}
 }
 
 """
@@ -19656,9 +19656,32 @@ A language model resolver job
 """
 type LanguageModelResolverJob implements Node {
   _id: ID!
+  created_at: DateTime!
   id: ID!
   response: String
   state: String!
+}
+
+input LanguageModelResolverJobVariablesInput {
+  cve_ids: [String!]
+  cwe_ids: [String!]
+  includes: JSON
+  messages: [LanguageModelResolverJobVariablesMessagesInput!]
+  report_ids: [Int!]
+  team_handles: [String!]
+}
+
+input LanguageModelResolverJobVariablesMessagesInput {
+  content: String!
+  role: LanguageModelResolversChatRolesEnum!
+}
+
+"""
+Roles different users can have in a chat
+"""
+enum LanguageModelResolversChatRolesEnum {
+  assistant
+  user
 }
 
 """
@@ -29235,6 +29258,7 @@ input QueryInput {
 input QueryStringInput {
   _name: String
   default_field: String
+  fields: [String!]
   query: String!
 }
 
@@ -33897,6 +33921,7 @@ input ShouldInput {
   exists: ExistsInput
   multi_match: MultiMatchInput
   nested: NestedInput
+  query_string: QueryStringInput
   range: RangeInput
   term: TermFilterInput
   terms: TermsFilterInput
