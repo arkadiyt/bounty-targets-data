@@ -3615,11 +3615,11 @@
     "status": "open",
     "confidentiality_level": "public",
     "min_bounty": {
-      "value": 10,
+      "value": 50,
       "currency": "EUR"
     },
     "max_bounty": {
-      "value": 4000,
+      "value": 5500,
       "currency": "EUR"
     },
     "targets": {
@@ -3717,13 +3717,19 @@
         {
           "type": "wildcard",
           "endpoint": "*.gamma.be/*",
-          "description": "Out of scope: raamdecoratieconfigurator.gamma.beOut of scope: mail.gamma.beThis covers all subdomains of gamma.be not listed in Tier 1",
+          "description": "Out of scope: mail.gamma.beThis covers all subdomains of gamma.be not listed in Tier 1",
           "impact": "Tier 2"
         },
         {
           "type": "wildcard",
           "endpoint": "*.gamma.nl/*",
-          "description": "Out of scope: mail.gamma.nlOut of scope: raamdecoratieconfigurator.gamma.nlThis covers all subdomains of gamma.nl not listed in Tier 1",
+          "description": "Out of scope: mail.gamma.nlThis covers all subdomains of gamma.nl not listed in Tier 1",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.intergamma.cloud",
+          "description": "",
           "impact": "Tier 2"
         },
         {
@@ -3739,6 +3745,12 @@
           "impact": "Tier 2"
         },
         {
+          "type": "wildcard",
+          "endpoint": "*.restintergamma.nl",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
           "type": "ios",
           "endpoint": "1558129454",
           "description": "Our brand new iOS app fully dedicated to paint, with nice features to use AR and see how the paint looks on your own wall.Shares various web views with our website.Technically equal to the Android version",
@@ -3746,25 +3758,7 @@
         },
         {
           "type": "wildcard",
-          "endpoint": "https://zabbix.intergamma.nl/*",
-          "description": "Zabbix installation",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "wildcard",
           "endpoint": "*.intergamma-test.nl",
-          "description": "",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.intergamma.cloud",
-          "description": "",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.restintergamma.nl",
           "description": "",
           "impact": "Tier 3"
         },
@@ -3787,15 +3781,15 @@
           "impact": "Tier 3"
         },
         {
-          "type": "android",
-          "endpoint": "nl.gamma.verf",
-          "description": "Our brand new Android app fully dedicated to paint, with nice features to use AR and see how the paint looks on your own wall.Shares various web views with our website.Technically equal to the iOS version",
-          "impact": "Tier 3"
-        },
-        {
           "type": "wildcard",
           "endpoint": "*.karweioutletstore.nl",
           "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "android",
+          "endpoint": "nl.gamma.verf",
+          "description": "Our brand new Android app fully dedicated to paint, with nice features to use AR and see how the paint looks on your own wall.Shares various web views with our website.Technically equal to the iOS version",
           "impact": "No bounty"
         },
         {
@@ -3849,18 +3843,6 @@
         {
           "type": "url",
           "endpoint": "mail.karwei.nl",
-          "description": "",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "raamdecoratieconfigurator.gamma.be",
-          "description": "",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "raamdecoratieconfigurator.gamma.nl",
           "description": "",
           "impact": "Out of scope"
         }
