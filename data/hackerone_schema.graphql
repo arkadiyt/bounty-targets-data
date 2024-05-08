@@ -9061,7 +9061,7 @@ input CreateLanguageModelResolverJobInput {
   clientMutationId: String
   input: String = ""
   resolver: String!
-  variables: LanguageModelResolverJobVariablesInput = {}
+  variables: JSON = {}
 }
 
 """
@@ -19659,28 +19659,6 @@ type LanguageModelResolverJob implements Node {
   id: ID!
   response: String
   state: String!
-}
-
-input LanguageModelResolverJobVariablesInput {
-  cve_ids: [String!]
-  cwe_ids: [String!]
-  includes: JSON
-  messages: [LanguageModelResolverJobVariablesMessagesInput!]
-  report_ids: [Int!]
-  team_handles: [String!]
-}
-
-input LanguageModelResolverJobVariablesMessagesInput {
-  content: String!
-  role: LanguageModelResolversChatRolesEnum!
-}
-
-"""
-Roles different users can have in a chat
-"""
-enum LanguageModelResolversChatRolesEnum {
-  assistant
-  user
 }
 
 """
