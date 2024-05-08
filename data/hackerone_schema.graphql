@@ -8460,7 +8460,6 @@ input CreateDemoInput {
   with_benchmarking_feature: Boolean
   with_bounty_engagement: Boolean
   with_campaigns_feature: Boolean
-  with_custom_inboxes_feature: Boolean
   with_engagements_analytics_feature: Boolean
   with_gateway_feature: Boolean
   with_h1_assets_enterprise_product: Boolean
@@ -37854,7 +37853,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
     size: Int
     sort: SortInput
   ): SearchResultConnection
-  structured_scopes_with_credentials: [StructuredScopeWithCredential!]!
+  structured_scopes_with_credentials(has_revoked_credentials: Boolean): [StructuredScopeWithCredential!]!
   submission_requirements: SubmissionRequirements
   submission_requirements_enabled: Boolean
   submission_state: SubmissionStateEnum
