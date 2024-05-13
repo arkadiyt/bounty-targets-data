@@ -770,6 +770,48 @@ type ActivitiesChangedScope implements ActivityInterface & Node & ReportActivity
 }
 
 """
+An Activities::ClosingStateChallengeRejected activity for a report
+"""
+type ActivitiesClosingStateChallengeRejected implements ActivityInterface & Node & ReportActivityInterface {
+  _id: ID!
+  actor: ActorUnion
+  actor_is_customer: Boolean!
+  attachments: [Attachment]
+  automated_response: Boolean
+  created_at: DateTime!
+  genius_execution_id: ID @deprecated(reason: "This is about to be replaced by .genius_execution")
+  i_can_edit: Boolean!
+  i_can_flag: Boolean!
+  id: ID!
+  internal: Boolean
+  message: String
+  report: Report
+  triage_inbox_item: TriageInboxItem
+  updated_at: DateTime!
+}
+
+"""
+An Activities::ClosingStateChallengeRequested activity for a report
+"""
+type ActivitiesClosingStateChallengeRequested implements ActivityInterface & Node & ReportActivityInterface {
+  _id: ID!
+  actor: ActorUnion
+  actor_is_customer: Boolean!
+  attachments: [Attachment]
+  automated_response: Boolean
+  created_at: DateTime!
+  genius_execution_id: ID @deprecated(reason: "This is about to be replaced by .genius_execution")
+  i_can_edit: Boolean!
+  i_can_flag: Boolean!
+  id: ID!
+  internal: Boolean
+  message: String
+  report: Report
+  triage_inbox_item: TriageInboxItem
+  updated_at: DateTime!
+}
+
+"""
 An Activities::CodeReviewFeedbackPosted activity for a report
 """
 type ActivitiesCodeReviewFeedbackPosted implements ActivityInterface & Node & ReportActivityInterface {
@@ -2265,6 +2307,8 @@ enum ActivityTypes {
   CancelledDisclosureRequest
   ChangedCampaign
   ChangedScope
+  ClosingStateChallengeRejected
+  ClosingStateChallengeRequested
   CodeReviewFeedbackPosted
   CodeReviewRequested
   Comment
@@ -2328,7 +2372,7 @@ enum ActivityTypes {
 """
 Activities can be of multiple types
 """
-union ActivityUnion = ActivitiesAddedToPentest | ActivitiesAgreedOnGoingPublic | ActivitiesAssetCreated | ActivitiesAssetSubmissionRejected | ActivitiesBountyAwarded | ActivitiesBountyCancelled | ActivitiesBountyRecalled | ActivitiesBountyScheduled | ActivitiesBountySuggested | ActivitiesBugCloned | ActivitiesBugDuplicate | ActivitiesBugFiled | ActivitiesBugInactive | ActivitiesBugInformative | ActivitiesBugNeedsMoreInfo | ActivitiesBugNew | ActivitiesBugNotApplicable | ActivitiesBugPendingProgramReview | ActivitiesBugPriorityChanged | ActivitiesBugReopened | ActivitiesBugResolved | ActivitiesBugRetesting | ActivitiesBugSpam | ActivitiesBugTriaged | ActivitiesBulkAssetsConfirmed | ActivitiesCancelledDisclosureRequest | ActivitiesChangedCampaign | ActivitiesChangedScope | ActivitiesCodeReviewFeedbackPosted | ActivitiesCodeReviewRequested | ActivitiesComment | ActivitiesCommentsClosed | ActivitiesCveIdAdded | ActivitiesDraftStarted | ActivitiesExternalAdvisoryAdded | ActivitiesExternalUserInvitationCancelled | ActivitiesExternalUserInvited | ActivitiesExternalUserJoined | ActivitiesExternalUserRemoved | ActivitiesGroupAssignedToBug | ActivitiesHackerRequestedMediation | ActivitiesInvitationReceived | ActivitiesManuallyDisclosed | ActivitiesMediationRequested | ActivitiesNmiReminderComment | ActivitiesNobodyAssignedToBug | ActivitiesNotEligibleForBounty | ActivitiesOrganizationAssetsBulkArchived | ActivitiesOrganizationAssetsBulkCreated | ActivitiesPentestAwardAmountLeadUpdated | ActivitiesPentestAwardAmountUpdated | ActivitiesPentestCheckAssigned | ActivitiesPentestCheckCompleted | ActivitiesPentestCheckUnassigned | ActivitiesPentestCheckUpdated | ActivitiesPentestPublished | ActivitiesPentestStarted | ActivitiesPentesterAwarded | ActivitiesPentesterPositionOpened | ActivitiesProgramGatewayStateChanged | ActivitiesProgramGatewayUsersStateChanged | ActivitiesProgramHackerJoined | ActivitiesProgramHackerLeft | ActivitiesProgramInactive | ActivitiesProgramStructuredScopesBulkUpdated | ActivitiesReassignedToTeam | ActivitiesReferenceIdAdded | ActivitiesRemovedFromPentest | ActivitiesReportBecamePublic | ActivitiesReportCollaboratorInvited | ActivitiesReportCollaboratorJoined | ActivitiesReportCustomFieldValueUpdated | ActivitiesReportOrganizationInboxesUpdated | ActivitiesReportRemediationGuidanceUpdated | ActivitiesReportRetestApproved | ActivitiesReportRetestCanceled | ActivitiesReportRetestRejected | ActivitiesReportSeverityUpdated | ActivitiesReportTitleUpdated | ActivitiesReportTriageSummaryCreated | ActivitiesReportUndisclosed | ActivitiesReportVulnerabilityTypesUpdated | ActivitiesRetestUserExpired | ActivitiesScopeGuidanceRequested | ActivitiesScopeGuidanceSet | ActivitiesSwagAwarded | ActivitiesTeamBountyTableUpdated | ActivitiesTeamPolicyUpdated | ActivitiesTeamPostCreated | ActivitiesTeamPublished | ActivitiesTeamStructuredScopeUpdated | ActivitiesTeamSubmissionStateChanged | ActivitiesUserAssignedToBug | ActivitiesUserBannedFromProgram | ActivitiesUserCompletedRetest | ActivitiesUserJoined | ActivitiesUserLeftRetest
+union ActivityUnion = ActivitiesAddedToPentest | ActivitiesAgreedOnGoingPublic | ActivitiesAssetCreated | ActivitiesAssetSubmissionRejected | ActivitiesBountyAwarded | ActivitiesBountyCancelled | ActivitiesBountyRecalled | ActivitiesBountyScheduled | ActivitiesBountySuggested | ActivitiesBugCloned | ActivitiesBugDuplicate | ActivitiesBugFiled | ActivitiesBugInactive | ActivitiesBugInformative | ActivitiesBugNeedsMoreInfo | ActivitiesBugNew | ActivitiesBugNotApplicable | ActivitiesBugPendingProgramReview | ActivitiesBugPriorityChanged | ActivitiesBugReopened | ActivitiesBugResolved | ActivitiesBugRetesting | ActivitiesBugSpam | ActivitiesBugTriaged | ActivitiesBulkAssetsConfirmed | ActivitiesCancelledDisclosureRequest | ActivitiesChangedCampaign | ActivitiesChangedScope | ActivitiesClosingStateChallengeRejected | ActivitiesClosingStateChallengeRequested | ActivitiesCodeReviewFeedbackPosted | ActivitiesCodeReviewRequested | ActivitiesComment | ActivitiesCommentsClosed | ActivitiesCveIdAdded | ActivitiesDraftStarted | ActivitiesExternalAdvisoryAdded | ActivitiesExternalUserInvitationCancelled | ActivitiesExternalUserInvited | ActivitiesExternalUserJoined | ActivitiesExternalUserRemoved | ActivitiesGroupAssignedToBug | ActivitiesHackerRequestedMediation | ActivitiesInvitationReceived | ActivitiesManuallyDisclosed | ActivitiesMediationRequested | ActivitiesNmiReminderComment | ActivitiesNobodyAssignedToBug | ActivitiesNotEligibleForBounty | ActivitiesOrganizationAssetsBulkArchived | ActivitiesOrganizationAssetsBulkCreated | ActivitiesPentestAwardAmountLeadUpdated | ActivitiesPentestAwardAmountUpdated | ActivitiesPentestCheckAssigned | ActivitiesPentestCheckCompleted | ActivitiesPentestCheckUnassigned | ActivitiesPentestCheckUpdated | ActivitiesPentestPublished | ActivitiesPentestStarted | ActivitiesPentesterAwarded | ActivitiesPentesterPositionOpened | ActivitiesProgramGatewayStateChanged | ActivitiesProgramGatewayUsersStateChanged | ActivitiesProgramHackerJoined | ActivitiesProgramHackerLeft | ActivitiesProgramInactive | ActivitiesProgramStructuredScopesBulkUpdated | ActivitiesReassignedToTeam | ActivitiesReferenceIdAdded | ActivitiesRemovedFromPentest | ActivitiesReportBecamePublic | ActivitiesReportCollaboratorInvited | ActivitiesReportCollaboratorJoined | ActivitiesReportCustomFieldValueUpdated | ActivitiesReportOrganizationInboxesUpdated | ActivitiesReportRemediationGuidanceUpdated | ActivitiesReportRetestApproved | ActivitiesReportRetestCanceled | ActivitiesReportRetestRejected | ActivitiesReportSeverityUpdated | ActivitiesReportTitleUpdated | ActivitiesReportTriageSummaryCreated | ActivitiesReportUndisclosed | ActivitiesReportVulnerabilityTypesUpdated | ActivitiesRetestUserExpired | ActivitiesScopeGuidanceRequested | ActivitiesScopeGuidanceSet | ActivitiesSwagAwarded | ActivitiesTeamBountyTableUpdated | ActivitiesTeamPolicyUpdated | ActivitiesTeamPostCreated | ActivitiesTeamPublished | ActivitiesTeamStructuredScopeUpdated | ActivitiesTeamSubmissionStateChanged | ActivitiesUserAssignedToBug | ActivitiesUserBannedFromProgram | ActivitiesUserCompletedRetest | ActivitiesUserJoined | ActivitiesUserLeftRetest
 
 """
 An edge in a connection.
@@ -4394,11 +4438,6 @@ type Automation implements Node {
   _id: ID!
 
   """
-  Whether the automation is active
-  """
-  active: Boolean!
-
-  """
   The configuration of the automation
   """
   config: String
@@ -4407,6 +4446,11 @@ type Automation implements Node {
   The date and time the automation was created
   """
   created_at: DateTime!
+
+  """
+  Whether the automation is enabled
+  """
+  enabled: Boolean!
 
   """
   The events that trigger the automation
@@ -6483,6 +6527,100 @@ type ClonePentestPayload implements MutationResult {
     types: [ErrorTypeEnum]
   ): ErrorConnection!
   pentest_opportunity: PentestOpportunity
+  was_successful: Boolean!
+}
+
+"""
+Autogenerated input type of ClosingStateChallengeReject
+"""
+input ClosingStateChallengeRejectInput {
+  """
+  A unique identifier for the client performing the mutation.
+  """
+  clientMutationId: String
+  message: String!
+  report_id: ID!
+}
+
+"""
+Autogenerated return type of ClosingStateChallengeReject.
+"""
+type ClosingStateChallengeRejectPayload implements MutationResult {
+  activity: ActivitiesClosingStateChallengeRejected
+
+  """
+  A unique identifier for the client performing the mutation.
+  """
+  clientMutationId: String
+  errors(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+    types: [ErrorTypeEnum]
+  ): ErrorConnection!
+  was_successful: Boolean!
+}
+
+"""
+Autogenerated input type of ClosingStateChallengeRequest
+"""
+input ClosingStateChallengeRequestInput {
+  """
+  A unique identifier for the client performing the mutation.
+  """
+  clientMutationId: String
+  message: String!
+  report_id: ID!
+}
+
+"""
+Autogenerated return type of ClosingStateChallengeRequest.
+"""
+type ClosingStateChallengeRequestPayload implements MutationResult {
+  activity: ActivitiesClosingStateChallengeRequested
+
+  """
+  A unique identifier for the client performing the mutation.
+  """
+  clientMutationId: String
+  errors(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+    types: [ErrorTypeEnum]
+  ): ErrorConnection!
   was_successful: Boolean!
 }
 
@@ -20886,6 +21024,18 @@ type Mutation implements Node {
     """
     input: ClonePentestInput!
   ): ClonePentestPayload!
+  closingStateChallengeReject(
+    """
+    Parameters for ClosingStateChallengeReject
+    """
+    input: ClosingStateChallengeRejectInput!
+  ): ClosingStateChallengeRejectPayload!
+  closingStateChallengeRequest(
+    """
+    Parameters for ClosingStateChallengeRequest
+    """
+    input: ClosingStateChallengeRequestInput!
+  ): ClosingStateChallengeRequestPayload!
   completeCreditCardFunding(
     """
     Parameters for CompleteCreditCardFunding
@@ -22559,12 +22709,12 @@ type Mutation implements Node {
     """
     input: UpdateAutomaticInvitesInput!
   ): UpdateAutomaticInvitesPayload!
-  updateAutomationActive(
+  updateAutomationEnabled(
     """
-    Parameters for UpdateAutomationActive
+    Parameters for UpdateAutomationEnabled
     """
-    input: UpdateAutomationActiveInput!
-  ): UpdateAutomationActivePayload!
+    input: UpdateAutomationEnabledInput!
+  ): UpdateAutomationEnabledPayload!
   updateBbpLaunchConfigurationCurrentStep(
     """
     Parameters for UpdateBbpLaunchConfigurationCurrentStep
@@ -41513,22 +41663,22 @@ type UpdateAutomaticInvitesPayload implements MutationResult {
 }
 
 """
-Autogenerated input type of UpdateAutomationActive
+Autogenerated input type of UpdateAutomationEnabled
 """
-input UpdateAutomationActiveInput {
-  active: Boolean!
+input UpdateAutomationEnabledInput {
   automation_id: ID!
 
   """
   A unique identifier for the client performing the mutation.
   """
   clientMutationId: String
+  enabled: Boolean!
 }
 
 """
-Autogenerated return type of UpdateAutomationActive.
+Autogenerated return type of UpdateAutomationEnabled.
 """
-type UpdateAutomationActivePayload implements MutationResult {
+type UpdateAutomationEnabledPayload implements MutationResult {
   automation: Automation!
 
   """
