@@ -37986,7 +37986,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
     size: Int
     sort: SortInput
   ): SearchResultConnection
-  structured_scopes_with_credentials(has_revoked_credentials: Boolean): [StructuredScopeWithCredential!]!
+  structured_scopes_with_credentials(all_credentials_revoked: Boolean): [StructuredScopeWithCredential!]!
   submission_requirements: SubmissionRequirements
   submission_requirements_enabled: Boolean
   submission_state: SubmissionStateEnum
