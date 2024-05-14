@@ -24917,6 +24917,27 @@ type OrganizationInbox implements Node {
     visible: Boolean
   ): InboxViewConnection
   name: String!
+  notification_preferences(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+  ): NotificationPreferenceConnection
   organization: Organization!
   organization_member_groups(
     """
@@ -25142,8 +25163,6 @@ type OrganizationMember implements Node & ResourceInterface {
     Returns the last _n_ elements from the list.
     """
     last: Int
-    order_by: FiltersOrganizationMemberGroupFilterOrder
-    where: FiltersOrganizationMemberGroupFilterInput
   ): OrganizationMemberGroupConnection
   updated_at: DateTime!
   url: URI!
