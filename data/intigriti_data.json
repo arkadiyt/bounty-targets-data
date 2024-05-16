@@ -1446,6 +1446,78 @@
     }
   },
   {
+    "id": "afeb2624-ac2e-46bc-b078-b0e018baeb62",
+    "name": "Cloudways by DigitalOcean",
+    "company_handle": "digitalocean",
+    "handle": "cloudways",
+    "url": "https://www.intigriti.com/programs/digitalocean/cloudways/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "min_bounty": {
+      "value": 50,
+      "currency": "USD"
+    },
+    "max_bounty": {
+      "value": 4000,
+      "currency": "USD"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "wildcard",
+          "endpoint": "*.cloudways.com",
+          "description": "All external services/software like support.cloudways.com and feedback.cloudways.com that are not owned, managed or controlled by Cloudways are considered out of scope and ineligible for rewards.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.cloudways.com",
+          "description": "Cloudways API offers an alternative to the Cloudways Platform. Many, but not all actions that Cloudways Platform allows through the UI can also be performed through Cloudways API.In the event a vulnerability is applicable to both the Cloudways Platform (platform.cloudways.com) and API, it will be treated as one root incident.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "developers.cloudways.com",
+          "description": "Cloudways Developers authorizes the API key to use Cloudways API. The vulnerability testing of this target should focus on the process of API authorization ONLY. All other areas on Cloudways developers are strictly OUT OF SCOPE.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "platform.cloudways.com",
+          "description": "Cloudways Platform is the primary target for this program. Cloudways Platform is the main interaction point for Cloudways customers. Through the Platform, customers could launch managed cloud servers and then set up their application on these servers. Once the application is up, Cloudways Platform provides users with options to manage their servers and applications.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "unified.cloudways.com",
+          "description": "Cloudways Platofrm with new UI along with new api and backend to handle all the services of Cloudways",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.cloudways.com",
+          "description": "Cloudways website is the corporate website that is often the initial touchpoint for a significant number of interactions between visitors, customers and Cloudways. It offers product details and related corporate information to visitors.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "uacademy.ugurus.com",
+          "description": "Ugurus Platform is the main interaction point for Ugurus customers.",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "ugurus.com",
+          "description": "UGURUS offers elite training & mentorship for agency owners & growing freelancers. Ugurus website is the initial touchpoint for the number of interactions between visitors, customers and Ugurus. It offers product details and related corporate information to visitors.",
+          "impact": "Tier 3"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
     "id": "daac218b-19c1-44ab-9d72-f49cdec5fb44",
     "name": "Crisp",
     "company_handle": "crisp",
