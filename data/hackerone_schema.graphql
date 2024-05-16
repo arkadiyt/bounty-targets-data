@@ -23942,6 +23942,7 @@ input OpportunitiesFilterInput {
 
 input OpportunitiesQuery {
   multi_match: MultiMatchInput
+  query_string: QueryStringInput
 }
 
 type OpportunityDocument implements Node {
@@ -29414,8 +29415,10 @@ input QueryInput {
 
 input QueryStringInput {
   _name: String
+  analyze_wildcard: Boolean
   default_field: String
   fields: [String!]
+  minimum_should_match: Int
   query: String!
 }
 
@@ -47635,6 +47638,8 @@ input UpdateVdpLaunchConfigurationPolicyInput {
   """
   clientMutationId: String
   policy_brand_promise: String
+  policy_custom_section_content: String
+  policy_custom_section_name: String
   policy_disclosure_policies: String
   policy_out_of_scope: String
   policy_safe_harbor: String
@@ -49703,6 +49708,7 @@ VDP launch configuration for a team
 type VdpLaunchConfiguration implements Node {
   current_configuration_step: String
   has_changed_brand_promise: Boolean!
+  has_changed_custom_section: Boolean!
   has_changed_disclosure_policies: Boolean!
   has_changed_out_of_scope: Boolean!
   has_changed_safe_harbor: Boolean!
@@ -49711,6 +49717,8 @@ type VdpLaunchConfiguration implements Node {
   launch_at: DateTime
   launch_requested_at: DateTime
   policy_brand_promise: String
+  policy_custom_section_content: String
+  policy_custom_section_name: String
   policy_disclosure_policies: String
   policy_out_of_scope: String
   policy_safe_harbor: String
