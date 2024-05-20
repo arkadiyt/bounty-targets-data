@@ -7027,67 +7027,6 @@ type CompleteTutorialPayload implements MutationResult {
 }
 
 """
-A connected repository for CSA pentest
-"""
-type ConnectedRepository implements Node {
-  _id: ID!
-  default_branch: String
-  description: String
-  id: ID!
-  name: String
-  needs_review: Boolean!
-  sha: String
-  url: String!
-}
-
-"""
-The connection type for ConnectedRepository.
-"""
-type ConnectedRepositoryConnection {
-  """
-  A list of edges.
-  """
-  edges: [ConnectedRepositoryEdge]
-
-  """
-  A list of nodes.
-  """
-  nodes: [ConnectedRepository]
-
-  """
-  Information to aid in pagination.
-  """
-  pageInfo: PageInfo!
-  total_count: Int!
-}
-
-"""
-An edge in a connection.
-"""
-type ConnectedRepositoryEdge {
-  """
-  A cursor for use in pagination.
-  """
-  cursor: String!
-
-  """
-  The item at the end of the edge.
-  """
-  node: ConnectedRepository
-}
-
-"""
-A connected repository for a CSA pentest
-"""
-input ConnectedRepositoryInputType {
-  """
-  Whether this repository needs a review
-  """
-  needs_review: Boolean!
-  repo_id: String!
-}
-
-"""
 A consumption subscription
 """
 type ConsumptionSubscription implements Node {
@@ -25691,27 +25630,6 @@ type Pentest implements Node {
   code_security_audit: Boolean!
   community_display_count: String
   completed_at: DateTime
-  connected_repositories(
-    """
-    Returns the elements in the list that come after the specified cursor.
-    """
-    after: String
-
-    """
-    Returns the elements in the list that come before the specified cursor.
-    """
-    before: String
-
-    """
-    Returns the first _n_ elements from the list.
-    """
-    first: Int
-
-    """
-    Returns the last _n_ elements from the list.
-    """
-    last: Int
-  ): ConnectedRepositoryConnection
   counts_per_asset(structured_scope_ids: [Int!]): Hash
   counts_per_severity(structured_scope_ids: [Int!]): Hash
   counts_per_weakness(structured_scope_ids: [Int!]): Hash
@@ -27328,27 +27246,6 @@ A pentest task
 """
 type PentestTask implements Node {
   _id: ID!
-  connected_repositories(
-    """
-    Returns the elements in the list that come after the specified cursor.
-    """
-    after: String
-
-    """
-    Returns the elements in the list that come before the specified cursor.
-    """
-    before: String
-
-    """
-    Returns the first _n_ elements from the list.
-    """
-    first: Int
-
-    """
-    Returns the last _n_ elements from the list.
-    """
-    last: Int
-  ): ConnectedRepositoryConnection
   description: String
   group_key: String!
   id: ID!
@@ -33628,7 +33525,6 @@ input SetupPentestInput {
   A unique identifier for the client performing the mutation.
   """
   clientMutationId: String
-  connected_repositories: [ConnectedRepositoryInputType!]
   ends_at: String
   location_restrictions: [String]
   pentest_id: ID!
