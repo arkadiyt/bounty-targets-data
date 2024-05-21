@@ -25655,6 +25655,7 @@ type Pentest implements Node {
   lead_pentester: Pentester
   linked_jira_reports_count: Int
   location_restrictions: [String!]
+  methodology_types: [String!]
   minimum_days_until_start: Int!
   most_common_weaknesses: Hash
   name: String
@@ -25940,7 +25941,6 @@ type Pentest implements Node {
   started: Boolean
   starts_at: DateTime
   state: PentestStateEnum
-  structured_scope_types: [String!]
   summary_form_state: PentestSummaryFormStateEnum
   summary_report_delivery_date: DateTime
   summary_reports_downloadable: Boolean!
@@ -27405,6 +27405,7 @@ type PentesterPosition implements Node {
   id: ID!
   industry: String!
   location_restrictions: [String!]!
+  methodology_types: [String!]
   name: String!
   pentest: Pentest
   pentest_lead_abilities: Boolean!
@@ -27419,7 +27420,6 @@ type PentesterPosition implements Node {
   start_date: Date!
   starts_at: DateTime!
   state: String!
-  structured_scope_types: [String!]
   team: Team
   team_size: Int!
   time_zone_code: String
