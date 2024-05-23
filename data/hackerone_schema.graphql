@@ -1932,6 +1932,27 @@ type ActivitiesReportUndisclosed implements ActivityInterface & Node & ReportAct
 }
 
 """
+A Activities::ReportVulnerabilityInformationUpdated activity for a report
+"""
+type ActivitiesReportVulnerabilityInformationUpdated implements ActivityInterface & Node & ReportActivityInterface {
+  _id: ID!
+  actor: ActorUnion
+  actor_is_customer: Boolean!
+  attachments: [Attachment]
+  automated_response: Boolean
+  created_at: DateTime!
+  genius_execution_id: ID @deprecated(reason: "This is about to be replaced by .genius_execution")
+  i_can_edit: Boolean!
+  i_can_flag: Boolean!
+  id: ID!
+  internal: Boolean
+  message: String
+  report: Report
+  triage_inbox_item: TriageInboxItem
+  updated_at: DateTime!
+}
+
+"""
 A Activities::ReportVulnerabilityTypesUpdated activity for a report
 """
 type ActivitiesReportVulnerabilityTypesUpdated implements ActivityInterface & Node & ReportActivityInterface {
@@ -2351,6 +2372,7 @@ enum ActivityTypes {
   ReportSeverityUpdated
   ReportTitleUpdated
   ReportUndisclosed
+  ReportVulnerabilityInformationUpdated
   ReportVulnerabilityTypesUpdated
   RetestUserExpired
   ScopeGuidanceRequested
@@ -2372,7 +2394,7 @@ enum ActivityTypes {
 """
 Activities can be of multiple types
 """
-union ActivityUnion = ActivitiesAddedToPentest | ActivitiesAgreedOnGoingPublic | ActivitiesAssetCreated | ActivitiesAssetSubmissionRejected | ActivitiesBountyAwarded | ActivitiesBountyCancelled | ActivitiesBountyRecalled | ActivitiesBountyScheduled | ActivitiesBountySuggested | ActivitiesBugCloned | ActivitiesBugDuplicate | ActivitiesBugFiled | ActivitiesBugInactive | ActivitiesBugInformative | ActivitiesBugNeedsMoreInfo | ActivitiesBugNew | ActivitiesBugNotApplicable | ActivitiesBugPendingProgramReview | ActivitiesBugPriorityChanged | ActivitiesBugReopened | ActivitiesBugResolved | ActivitiesBugRetesting | ActivitiesBugSpam | ActivitiesBugTriaged | ActivitiesBulkAssetsConfirmed | ActivitiesCancelledDisclosureRequest | ActivitiesChangedCampaign | ActivitiesChangedScope | ActivitiesClosingStateChallengeRejected | ActivitiesClosingStateChallengeRequested | ActivitiesCodeReviewFeedbackPosted | ActivitiesCodeReviewRequested | ActivitiesComment | ActivitiesCommentsClosed | ActivitiesCveIdAdded | ActivitiesDraftStarted | ActivitiesExternalAdvisoryAdded | ActivitiesExternalUserInvitationCancelled | ActivitiesExternalUserInvited | ActivitiesExternalUserJoined | ActivitiesExternalUserRemoved | ActivitiesGroupAssignedToBug | ActivitiesHackerRequestedMediation | ActivitiesInvitationReceived | ActivitiesManuallyDisclosed | ActivitiesMediationRequested | ActivitiesNmiReminderComment | ActivitiesNobodyAssignedToBug | ActivitiesNotEligibleForBounty | ActivitiesOrganizationAssetsBulkArchived | ActivitiesOrganizationAssetsBulkCreated | ActivitiesPentestAwardAmountLeadUpdated | ActivitiesPentestAwardAmountUpdated | ActivitiesPentestCheckAssigned | ActivitiesPentestCheckCompleted | ActivitiesPentestCheckUnassigned | ActivitiesPentestCheckUpdated | ActivitiesPentestPublished | ActivitiesPentestStarted | ActivitiesPentesterAwarded | ActivitiesPentesterPositionOpened | ActivitiesProgramGatewayStateChanged | ActivitiesProgramGatewayUsersStateChanged | ActivitiesProgramHackerJoined | ActivitiesProgramHackerLeft | ActivitiesProgramInactive | ActivitiesProgramStructuredScopesBulkUpdated | ActivitiesReassignedToTeam | ActivitiesReferenceIdAdded | ActivitiesRemovedFromPentest | ActivitiesReportBecamePublic | ActivitiesReportCollaboratorInvited | ActivitiesReportCollaboratorJoined | ActivitiesReportCustomFieldValueUpdated | ActivitiesReportOrganizationInboxesUpdated | ActivitiesReportRemediationGuidanceUpdated | ActivitiesReportRetestApproved | ActivitiesReportRetestCanceled | ActivitiesReportRetestRejected | ActivitiesReportSeverityUpdated | ActivitiesReportTitleUpdated | ActivitiesReportTriageSummaryCreated | ActivitiesReportUndisclosed | ActivitiesReportVulnerabilityTypesUpdated | ActivitiesRetestUserExpired | ActivitiesScopeGuidanceRequested | ActivitiesScopeGuidanceSet | ActivitiesSwagAwarded | ActivitiesTeamBountyTableUpdated | ActivitiesTeamPolicyUpdated | ActivitiesTeamPostCreated | ActivitiesTeamPublished | ActivitiesTeamStructuredScopeUpdated | ActivitiesTeamSubmissionStateChanged | ActivitiesUserAssignedToBug | ActivitiesUserBannedFromProgram | ActivitiesUserCompletedRetest | ActivitiesUserJoined | ActivitiesUserLeftRetest
+union ActivityUnion = ActivitiesAddedToPentest | ActivitiesAgreedOnGoingPublic | ActivitiesAssetCreated | ActivitiesAssetSubmissionRejected | ActivitiesBountyAwarded | ActivitiesBountyCancelled | ActivitiesBountyRecalled | ActivitiesBountyScheduled | ActivitiesBountySuggested | ActivitiesBugCloned | ActivitiesBugDuplicate | ActivitiesBugFiled | ActivitiesBugInactive | ActivitiesBugInformative | ActivitiesBugNeedsMoreInfo | ActivitiesBugNew | ActivitiesBugNotApplicable | ActivitiesBugPendingProgramReview | ActivitiesBugPriorityChanged | ActivitiesBugReopened | ActivitiesBugResolved | ActivitiesBugRetesting | ActivitiesBugSpam | ActivitiesBugTriaged | ActivitiesBulkAssetsConfirmed | ActivitiesCancelledDisclosureRequest | ActivitiesChangedCampaign | ActivitiesChangedScope | ActivitiesClosingStateChallengeRejected | ActivitiesClosingStateChallengeRequested | ActivitiesCodeReviewFeedbackPosted | ActivitiesCodeReviewRequested | ActivitiesComment | ActivitiesCommentsClosed | ActivitiesCveIdAdded | ActivitiesDraftStarted | ActivitiesExternalAdvisoryAdded | ActivitiesExternalUserInvitationCancelled | ActivitiesExternalUserInvited | ActivitiesExternalUserJoined | ActivitiesExternalUserRemoved | ActivitiesGroupAssignedToBug | ActivitiesHackerRequestedMediation | ActivitiesInvitationReceived | ActivitiesManuallyDisclosed | ActivitiesMediationRequested | ActivitiesNmiReminderComment | ActivitiesNobodyAssignedToBug | ActivitiesNotEligibleForBounty | ActivitiesOrganizationAssetsBulkArchived | ActivitiesOrganizationAssetsBulkCreated | ActivitiesPentestAwardAmountLeadUpdated | ActivitiesPentestAwardAmountUpdated | ActivitiesPentestCheckAssigned | ActivitiesPentestCheckCompleted | ActivitiesPentestCheckUnassigned | ActivitiesPentestCheckUpdated | ActivitiesPentestPublished | ActivitiesPentestStarted | ActivitiesPentesterAwarded | ActivitiesPentesterPositionOpened | ActivitiesProgramGatewayStateChanged | ActivitiesProgramGatewayUsersStateChanged | ActivitiesProgramHackerJoined | ActivitiesProgramHackerLeft | ActivitiesProgramInactive | ActivitiesProgramStructuredScopesBulkUpdated | ActivitiesReassignedToTeam | ActivitiesReferenceIdAdded | ActivitiesRemovedFromPentest | ActivitiesReportBecamePublic | ActivitiesReportCollaboratorInvited | ActivitiesReportCollaboratorJoined | ActivitiesReportCustomFieldValueUpdated | ActivitiesReportOrganizationInboxesUpdated | ActivitiesReportRemediationGuidanceUpdated | ActivitiesReportRetestApproved | ActivitiesReportRetestCanceled | ActivitiesReportRetestRejected | ActivitiesReportSeverityUpdated | ActivitiesReportTitleUpdated | ActivitiesReportTriageSummaryCreated | ActivitiesReportUndisclosed | ActivitiesReportVulnerabilityInformationUpdated | ActivitiesReportVulnerabilityTypesUpdated | ActivitiesRetestUserExpired | ActivitiesScopeGuidanceRequested | ActivitiesScopeGuidanceSet | ActivitiesSwagAwarded | ActivitiesTeamBountyTableUpdated | ActivitiesTeamPolicyUpdated | ActivitiesTeamPostCreated | ActivitiesTeamPublished | ActivitiesTeamStructuredScopeUpdated | ActivitiesTeamSubmissionStateChanged | ActivitiesUserAssignedToBug | ActivitiesUserBannedFromProgram | ActivitiesUserCompletedRetest | ActivitiesUserJoined | ActivitiesUserLeftRetest
 
 """
 An edge in a connection.
@@ -4601,6 +4623,8 @@ input AutosavePentestOpportunityInput {
   consumption_subscription_id: ID
   customer_email: String
   customer_note: String
+  desired_outcomes: [String!]
+  intent: String
   internal_handoff_notes: String
   location_restrictions: [String!]
   name: String
@@ -4615,6 +4639,7 @@ input AutosavePentestOpportunityInput {
   schedule_time_restrictions_start: String
   scopes: String
   skill_ids: [ID!]
+  specific_concerns: String
   state: String
   time_zone: String
   token: String!
@@ -26458,6 +26483,7 @@ type PentestOpportunity implements Node {
   ): PentestOpportunityCsaScopeConnection
   customer_email: String
   customer_note: String
+  desired_outcomes: [String!]
   generic_scopes(
     """
     Returns the elements in the list that come after the specified cursor.
@@ -26486,6 +26512,7 @@ type PentestOpportunity implements Node {
   i_can_submit: Boolean!
   i_can_update: Boolean!
   id: ID!
+  intent: String
   internal_handoff_notes: String
   location_restrictions: [String!]
   mobile_app_scopes(
@@ -26566,6 +26593,7 @@ type PentestOpportunity implements Node {
     last: Int
   ): SkillConnection
   sold_at: DateTime
+  specific_concerns: String
   state: String!
   submitted_at: DateTime
   time_zone: String
@@ -32624,6 +32652,8 @@ input ReviewCompletePentestOpportunityInput {
   consumption_subscription_id: ID
   customer_email: String
   customer_note: String
+  desired_outcomes: [String!]
+  intent: String
   internal_handoff_notes: String
   location_restrictions: [String!]
   name: String
@@ -32639,6 +32669,7 @@ input ReviewCompletePentestOpportunityInput {
   schedule_time_restrictions_start: String
   scopes: String
   skill_ids: [ID!]
+  specific_concerns: String
   time_zone: String
 }
 
@@ -32695,6 +32726,8 @@ input ReviewPentestOpportunityInput {
   consumption_subscription_id: ID
   customer_email: String
   customer_note: String
+  desired_outcomes: [String!]
+  intent: String
   internal_handoff_notes: String
   location_restrictions: [String!]
   name: String
@@ -32710,6 +32743,7 @@ input ReviewPentestOpportunityInput {
   schedule_time_restrictions_start: String
   scopes: String
   skill_ids: [ID!]
+  specific_concerns: String
   time_zone: String
 }
 
@@ -35760,6 +35794,8 @@ input SubmitPentestOpportunityInput {
   compliance_framework_other: String
   customer_email: String
   customer_note: String
+  desired_outcomes: [String!]
+  intent: String
   location_restrictions: [String!]
   name: String
   owner_name: String
@@ -35770,6 +35806,7 @@ input SubmitPentestOpportunityInput {
   schedule_time_restrictions_start: String
   scopes: String
   skill_ids: [ID!]
+  specific_concerns: String
   time_zone: String
   token: String!
 }
