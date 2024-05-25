@@ -6333,6 +6333,92 @@
     }
   },
   {
+    "name": "Etsy",
+    "url": "https://bugcrowd.com/etsy",
+    "allows_disclosure": true,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "partial",
+    "max_payout": 10000,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "website",
+          "target": "*.etsy.com"
+        },
+        {
+          "type": "website",
+          "target": "Any publicly facing host owned by Etsy, including the below:"
+        },
+        {
+          "type": "api",
+          "target": "Etsy API (see documentation below)"
+        },
+        {
+          "type": "android",
+          "target": "Etsy Mobile Application (Android)"
+        },
+        {
+          "type": "ios",
+          "target": "Etsy Mobile Application (iPhone)"
+        },
+        {
+          "type": "other",
+          "target": "etsypayments.com"
+        },
+        {
+          "type": "website",
+          "target": "help.etsy.com"
+        },
+        {
+          "type": "website",
+          "target": "http://blog.etsy.com/"
+        },
+        {
+          "type": "website",
+          "target": "http://careers.etsy.com/"
+        },
+        {
+          "type": "website",
+          "target": "http://community.etsy.com/"
+        },
+        {
+          "type": "other",
+          "target": "https://etsypayments.com"
+        },
+        {
+          "type": "website",
+          "target": "https://help.etsy.com"
+        },
+        {
+          "type": "website",
+          "target": "https://www.etsy.com"
+        },
+        {
+          "type": "api",
+          "target": "https://www.etsy.com/developers/documentation/getting_started/api_basics"
+        },
+        {
+          "type": "android",
+          "target": "https://www.etsy.com/mobile"
+        },
+        {
+          "type": "ios",
+          "target": "https://www.etsy.com/mobile"
+        },
+        {
+          "type": "website",
+          "target": "www.etsy.com"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "api",
+          "target": "icht.etsysecure.com"
+        }
+      ]
+    }
+  },
+  {
     "name": "Exoscale",
     "url": "https://bugcrowd.com/exoscale",
     "allows_disclosure": true,
@@ -8361,116 +8447,6 @@
         {
           "type": "website",
           "target": "https://bugcrowd-pub.bounty.kiteworks.dev"
-        }
-      ]
-    }
-  },
-  {
-    "name": "LastPass",
-    "url": "https://bugcrowd.com/lastpass",
-    "allows_disclosure": true,
-    "managed_by_bugcrowd": true,
-    "safe_harbor": "partial",
-    "max_payout": 5000,
-    "targets": {
-      "in_scope": [
-        {
-          "type": "android",
-          "target": "LastPass Authenticator (Android)"
-        },
-        {
-          "type": "ios",
-          "target": "LastPass Authenticator (iOS)"
-        },
-        {
-          "type": "android",
-          "target": "LastPass Password Manager (Android)"
-        },
-        {
-          "type": "ios",
-          "target": "LastPass Password Manager (iOS)"
-        },
-        {
-          "type": "other",
-          "target": "LastPass browser extensions (Chrome / Safari / Edge / Firefox)"
-        },
-        {
-          "type": "other",
-          "target": "Local computer apps (UWP application / Windows installer (MSI) / MacOS)"
-        },
-        {
-          "type": "other",
-          "target": "Workstation MFA (WMFA)"
-        },
-        {
-          "type": "website",
-          "target": "https://accounts.lastpass.com"
-        },
-        {
-          "type": "website",
-          "target": "https://admin.lastpass.com"
-        },
-        {
-          "type": "ios",
-          "target": "https://apps.apple.com/us/app/lastpass-authenticator/id1079110004"
-        },
-        {
-          "type": "ios",
-          "target": "https://apps.apple.com/us/app/lastpass-password-manager/id324613447"
-        },
-        {
-          "type": "website",
-          "target": "https://auth.lastpass.com"
-        },
-        {
-          "type": "website",
-          "target": "https://blog.lastpass.com"
-        },
-        {
-          "type": "website",
-          "target": "https://lastpass.com"
-        },
-        {
-          "type": "other",
-          "target": "https://lastpass.com/misc_download2.php"
-        },
-        {
-          "type": "other",
-          "target": "https://lastpass.com/misc_download2.php"
-        },
-        {
-          "type": "android",
-          "target": "https://play.google.com/store/apps/details?id=com.lastpass.authenticator&hl=en_US&gl=US"
-        },
-        {
-          "type": "android",
-          "target": "https://play.google.com/store/apps/details?id=com.lastpass.lpandroid"
-        },
-        {
-          "type": "website",
-          "target": "https://support.lastpass.com"
-        },
-        {
-          "type": "website",
-          "target": "https://www.lastpass.com"
-        }
-      ],
-      "out_of_scope": [
-        {
-          "type": "other",
-          "target": "Lastpass CLI tool"
-        },
-        {
-          "type": "website",
-          "target": "https://forums.lastpass.com"
-        },
-        {
-          "type": "website",
-          "target": "https://identity.lastpass.com"
-        },
-        {
-          "type": "website",
-          "target": "https://info.lastpass.com"
         }
       ]
     }
