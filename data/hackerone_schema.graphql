@@ -12707,6 +12707,7 @@ type DeclarativePolicy implements Node {
   pays_within_one_month: Boolean
   platform_standards_exclusions: [PlatformStandardsExclusionsEnum!]
   protected_by_gold_standard_safe_harbor: Boolean
+  scope_exclusions: [ScopeExclusion!]
   standard_ineligible_findings_exclusions: [StandardIneligibleFindingsExclusionsEnum!]
   updated_at: DateTime
 }
@@ -33432,6 +33433,28 @@ type SaveUnverifiableResidencyVerificationPayload implements MutationResult {
 }
 
 """
+Scope Exclusion
+"""
+type ScopeExclusion implements Node {
+  """
+  The primary key from the database
+  """
+  _id: ID!
+  category: String
+  created_at: DateTime!
+  details: String
+  id: ID!
+  updated_at: DateTime
+}
+
+input ScopeExclusionInput {
+  category: String
+  delete: Boolean
+  details: String
+  id: ID
+}
+
+"""
 The connection type for DocumentUnion.
 """
 type SearchResultConnection {
@@ -46312,6 +46335,7 @@ input UpdateTeamPolicyInput {
   platform_standards_exclusions: [String!]
   policy: String
   protected_by_gold_standard_safe_harbor: Boolean
+  scope_exclusions: [ScopeExclusionInput!]
   standard_ineligible_findings_exclusions: [String!]
   team_id: ID!
 }
@@ -48484,7 +48508,7 @@ type User implements ActivitiesInterface & Node & ResourceInterface {
     """
     last: Int
   ): NotificationPreferenceConnection
-  notifications(include_message: Boolean, include_read: Boolean, just_mentions: Boolean, page: Int, sort_direction: String): [VirtualNotification!]
+  notifications(include_message: Boolean, include_read: Boolean, just_mentions: Boolean, page: Int, page_size: Int, sort_direction: String, team_ids: [Int], type: String, user_type: String): [VirtualNotification!]
   open_for_employment: Boolean
   organizations(
     """
@@ -49076,7 +49100,7 @@ type User implements ActivitiesInterface & Node & ResourceInterface {
   ): TutorialConnection
   twitter_handle: String
   unconfirmed_email: String
-  unread_notification_count: Int
+  unread_notification_count(team_ids: [Int], type: String, user_type: String): Int
   url: URI!
 
   """
@@ -49855,6 +49879,7 @@ type VirtualNotification implements Node {
   pentest_start: String
   pentest_timezone: String
   readable_closing_substate: String
+  report: Report
   report_i_am_subscribed: Boolean
   report_id: Int
   report_state: String
