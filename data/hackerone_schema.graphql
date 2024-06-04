@@ -23548,7 +23548,7 @@ interface NotificationDeliveryPreferenceInterface {
 """
 NotificationDeliveryPreferences can be of multiple types
 """
-union NotificationDeliveryPreferenceUnion = NotificationDeliveryPreferencesAward | NotificationDeliveryPreferencesDisclose | NotificationDeliveryPreferencesGatewayAccessUpdate | NotificationDeliveryPreferencesHackerComment | NotificationDeliveryPreferencesMention | NotificationDeliveryPreferencesNewSubmission | NotificationDeliveryPreferencesSubmissionConfirmation | NotificationDeliveryPreferencesSubmissionUpdate | NotificationDeliveryPreferencesTeamComment
+union NotificationDeliveryPreferenceUnion = NotificationDeliveryPreferencesAward | NotificationDeliveryPreferencesCampaignUpdates | NotificationDeliveryPreferencesDisclose | NotificationDeliveryPreferencesGatewayAccessUpdate | NotificationDeliveryPreferencesHackerComment | NotificationDeliveryPreferencesMention | NotificationDeliveryPreferencesNewSubmission | NotificationDeliveryPreferencesSubmissionConfirmation | NotificationDeliveryPreferencesSubmissionUpdate | NotificationDeliveryPreferencesTeamComment
 
 """
 An edge in a connection.
@@ -23569,6 +23569,17 @@ type NotificationDeliveryPreferenceUnionEdge {
 A NotificationDeliveryPreferences::Award preference for a user
 """
 type NotificationDeliveryPreferencesAward implements Node & NotificationDeliveryPreferenceInterface {
+  _id: ID!
+  created_at: DateTime!
+  delivery_preference: NotificationDeliveryPreferenceEnum!
+  id: ID!
+  updated_at: DateTime!
+}
+
+"""
+A NotificationDeliveryPreferences::CampaignUpdates preference for a user
+"""
+type NotificationDeliveryPreferencesCampaignUpdates implements Node & NotificationDeliveryPreferenceInterface {
   _id: ID!
   created_at: DateTime!
   delivery_preference: NotificationDeliveryPreferenceEnum!
