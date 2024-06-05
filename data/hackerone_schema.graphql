@@ -4774,31 +4774,23 @@ BBP launch configuration for a team
 type BbpLaunchConfiguration implements Node {
   attachment: Attachment
   current_configuration_step: String
-  has_changed_brand_promise: Boolean!
   has_changed_custom_section: Boolean!
   has_changed_disclosure_policies: Boolean!
-  has_changed_faq: Boolean!
-  has_changed_legal: Boolean!
   has_changed_out_of_scope: Boolean!
-  has_changed_program_eligibility: Boolean!
   has_changed_program_rules: Boolean!
-  has_changed_rewards: Boolean!
-  has_changed_safe_harbor: Boolean!
+  has_changed_session_layer: Boolean!
+  has_changed_test_plan: Boolean!
   id: ID!
   invoice_opt_in: Boolean!
   launch_at: DateTime
   launch_requested_at: DateTime
-  policy_brand_promise: String
   policy_custom_section_content: String
   policy_custom_section_name: String
   policy_disclosure_policies: String
-  policy_faq: String
-  policy_legal: String
   policy_out_of_scope: String
-  policy_program_eligibility: String
   policy_program_rules: String
-  policy_rewards: String
-  policy_safe_harbor: String
+  policy_session_layer: String
+  policy_test_plan: String
   suggested_critical: Int
   suggested_high: Int
   suggested_low: Int
@@ -41786,17 +41778,13 @@ input UpdateBbpLaunchConfigurationPolicyInput {
   A unique identifier for the client performing the mutation.
   """
   clientMutationId: String
-  policy_brand_promise: String
   policy_custom_section_content: String
   policy_custom_section_name: String
   policy_disclosure_policies: String
-  policy_faq: String
-  policy_legal: String
   policy_out_of_scope: String
-  policy_program_eligibility: String
   policy_program_rules: String
-  policy_rewards: String
-  policy_safe_harbor: String
+  policy_session_layer: String
+  policy_test_plan: String
   team_id: ID!
 }
 
@@ -47625,13 +47613,13 @@ input UpdateVdpLaunchConfigurationPolicyInput {
   A unique identifier for the client performing the mutation.
   """
   clientMutationId: String
-  policy_brand_promise: String
   policy_custom_section_content: String
   policy_custom_section_name: String
   policy_disclosure_policies: String
   policy_out_of_scope: String
-  policy_safe_harbor: String
-  policy_scope: String
+  policy_program_rules: String
+  policy_session_layer: String
+  policy_test_plan: String
   team_id: ID!
 }
 
@@ -49704,22 +49692,22 @@ VDP launch configuration for a team
 """
 type VdpLaunchConfiguration implements Node {
   current_configuration_step: String
-  has_changed_brand_promise: Boolean!
   has_changed_custom_section: Boolean!
   has_changed_disclosure_policies: Boolean!
   has_changed_out_of_scope: Boolean!
-  has_changed_safe_harbor: Boolean!
-  has_changed_scope: Boolean!
+  has_changed_program_rules: Boolean!
+  has_changed_session_layer: Boolean!
+  has_changed_test_plan: Boolean!
   id: ID!
   launch_at: DateTime
   launch_requested_at: DateTime
-  policy_brand_promise: String
   policy_custom_section_content: String
   policy_custom_section_name: String
   policy_disclosure_policies: String
   policy_out_of_scope: String
-  policy_safe_harbor: String
-  policy_scope: String
+  policy_program_rules: String
+  policy_session_layer: String
+  policy_test_plan: String
 }
 
 """
