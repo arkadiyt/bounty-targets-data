@@ -5159,80 +5159,6 @@
     }
   },
   {
-    "name": "Comcast Xfinity Bug Bounty",
-    "url": "https://bugcrowd.com/comcast-mbb",
-    "allows_disclosure": true,
-    "managed_by_bugcrowd": true,
-    "safe_harbor": "full",
-    "max_payout": 3500,
-    "targets": {
-      "in_scope": [
-        {
-          "type": "website",
-          "target": "*.comcast.com"
-        },
-        {
-          "type": "website",
-          "target": "*.xfinity.com\t"
-        },
-        {
-          "type": "website",
-          "target": "Staging, QA, Dev, and Test Environments"
-        }
-      ],
-      "out_of_scope": [
-        {
-          "type": "website",
-          "target": "*.hfc.comcastbusiness.net"
-        },
-        {
-          "type": "website",
-          "target": "*.hsd1.*.comcast.net"
-        },
-        {
-          "type": "website",
-          "target": "*business.comcast.com"
-        },
-        {
-          "type": "network",
-          "target": "10.0.0.0/8"
-        },
-        {
-          "type": "network",
-          "target": "172.26.128.0/18"
-        },
-        {
-          "type": "network",
-          "target": "184.112.0.0/13"
-        },
-        {
-          "type": "network",
-          "target": "184.122.0.0/15"
-        },
-        {
-          "type": "network",
-          "target": "50.128.0.0/12"
-        },
-        {
-          "type": "network",
-          "target": "50.152.0.0/13"
-        },
-        {
-          "type": "network",
-          "target": "96.201.0.0/16"
-        },
-        {
-          "type": "network",
-          "target": "96.202.128.0/17"
-        },
-        {
-          "type": "network",
-          "target": "96.203.0.0/16"
-        }
-      ]
-    }
-  },
-  {
     "name": "Comcast Xfinity Vulnerability Disclosure Program",
     "url": "https://bugcrowd.com/comcastvdp",
     "allows_disclosure": true,
@@ -10711,6 +10637,29 @@
           "type": "website",
           "target": "signup.myconnect.com.au"
         }
+      ]
+    }
+  },
+  {
+    "name": "ZAP",
+    "url": "https://bugcrowd.com/owaspzap",
+    "allows_disclosure": true,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "full",
+    "max_payout": 1000,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "other",
+          "target": "Latest ZAP version (2.15.0)"
+        },
+        {
+          "type": "website",
+          "target": "https://www.zaproxy.org"
+        }
+      ],
+      "out_of_scope": [
+
       ]
     }
   },
