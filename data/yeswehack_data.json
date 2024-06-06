@@ -425,6 +425,61 @@
     }
   },
   {
+    "id": "coindcx-bug-bounty-program",
+    "name": "Coindcx - Bug Bounty Program",
+    "public": true,
+    "disabled": false,
+    "managed": null,
+    "min_bounty": 50,
+    "max_bounty": 2000,
+    "targets": {
+      "in_scope": [
+        {
+          "target": "*.coindcx.com",
+          "type": "web-application"
+        },
+        {
+          "target": "api.coindcx.com",
+          "type": "api"
+        },
+        {
+          "target": "https://play.google.com/store/apps/details?id=com.coindcx.btc",
+          "type": "mobile-application-android"
+        },
+        {
+          "target": "https://apps.apple.com/in/app/coindcx-trade-bitcoin-crypto",
+          "type": "mobile-application-ios"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "target": "All domains or subdomains not listed in the above list of 'Scopes'",
+          "type": "other"
+        },
+        {
+          "target": "Zendesk and other third parties",
+          "type": "other"
+        },
+        {
+          "target": "CMS websites own by Coindcx (Anything related to Wordpress etc)",
+          "type": "other"
+        },
+        {
+          "target": "coindcx.com/blog",
+          "type": "other"
+        },
+        {
+          "target": "info.coindcx.com",
+          "type": "other"
+        },
+        {
+          "target": "otcdesk.coindcx.com",
+          "type": "other"
+        }
+      ]
+    }
+  },
+  {
     "id": "contentsquare-bug-bounty-program",
     "name": "Contentsquare Bug Bounty Program",
     "public": true,
