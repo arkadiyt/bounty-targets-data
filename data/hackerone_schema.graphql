@@ -4778,7 +4778,6 @@ type BbpLaunchConfiguration implements Node {
   has_changed_disclosure_policies: Boolean!
   has_changed_out_of_scope: Boolean!
   has_changed_program_rules: Boolean!
-  has_changed_session_layer: Boolean!
   has_changed_test_plan: Boolean!
   id: ID!
   invoice_opt_in: Boolean!
@@ -4789,7 +4788,6 @@ type BbpLaunchConfiguration implements Node {
   policy_disclosure_policies: String
   policy_out_of_scope: String
   policy_program_rules: String
-  policy_session_layer: String
   policy_test_plan: String
   suggested_critical: Int
   suggested_high: Int
@@ -42196,7 +42194,6 @@ input UpdateBbpLaunchConfigurationPolicyInput {
   policy_disclosure_policies: String
   policy_out_of_scope: String
   policy_program_rules: String
-  policy_session_layer: String
   policy_test_plan: String
   team_id: ID!
 }
@@ -48128,7 +48125,6 @@ input UpdateVdpLaunchConfigurationPolicyInput {
   policy_disclosure_policies: String
   policy_out_of_scope: String
   policy_program_rules: String
-  policy_session_layer: String
   policy_test_plan: String
   team_id: ID!
 }
@@ -50206,7 +50202,6 @@ type VdpLaunchConfiguration implements Node {
   has_changed_disclosure_policies: Boolean!
   has_changed_out_of_scope: Boolean!
   has_changed_program_rules: Boolean!
-  has_changed_session_layer: Boolean!
   has_changed_test_plan: Boolean!
   id: ID!
   launch_at: DateTime
@@ -50216,7 +50211,6 @@ type VdpLaunchConfiguration implements Node {
   policy_disclosure_policies: String
   policy_out_of_scope: String
   policy_program_rules: String
-  policy_session_layer: String
   policy_test_plan: String
 }
 
