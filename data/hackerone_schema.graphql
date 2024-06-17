@@ -4297,6 +4297,20 @@ type AssignPentestCheckPentestersPayload implements MutationResult {
 }
 
 """
+Types of records which can be used to assign a report
+"""
+enum AssigneeEnum {
+  group
+  nobody
+  user
+}
+
+input AssigneeInputType {
+  id: Int!
+  type: AssigneeEnum!
+}
+
+"""
 Report can be assigned to either a user or a team member group
 """
 union AssigneeUnion = TeamMemberGroup | User
@@ -24752,6 +24766,7 @@ type Organization implements Node {
     """
     after: String
     approaching_sla_violation: [SlaTypeEnum!]
+    assignee: AssigneeInputType = null
 
     """
     Returns the elements in the list that come before the specified cursor.
@@ -25177,6 +25192,7 @@ type OrganizationInbox implements Node {
     Returns the elements in the list that come after the specified cursor.
     """
     after: String
+    assignee: AssigneeInputType = null
 
     """
     Returns the elements in the list that come before the specified cursor.
@@ -26198,6 +26214,7 @@ type Pentest implements Node {
     Returns the elements in the list that come after the specified cursor.
     """
     after: String
+    assignee: AssigneeInputType = null
 
     """
     Returns the elements in the list that come before the specified cursor.
@@ -26533,6 +26550,7 @@ type PentestChecklist implements Node {
     Returns the elements in the list that come after the specified cursor.
     """
     after: String
+    assignee: AssigneeInputType = null
 
     """
     Returns the elements in the list that come before the specified cursor.
@@ -27489,6 +27507,7 @@ type PentestStructuredScope implements Node {
     Returns the elements in the list that come after the specified cursor.
     """
     after: String
+    assignee: AssigneeInputType = null
 
     """
     Returns the elements in the list that come before the specified cursor.
@@ -29187,6 +29206,7 @@ type Query implements Node {
     Returns the elements in the list that come after the specified cursor.
     """
     after: String
+    assignee: AssigneeInputType
 
     """
     Returns the elements in the list that come before the specified cursor.
@@ -29232,6 +29252,7 @@ type Query implements Node {
     Returns the elements in the list that come after the specified cursor.
     """
     after: String
+    assignee: AssigneeInputType = null
 
     """
     Returns the elements in the list that come before the specified cursor.
@@ -29946,6 +29967,7 @@ type ReconCenterContext implements Node {
   ): ReconCenterDocumentsConnection
   id: ID!
   name: String
+  options: ReconCenterContextOptions
   owner: User
   related_object_id: String
   related_object_type: String
@@ -29987,6 +30009,14 @@ type ReconCenterContextEdge {
   The item at the end of the edge.
   """
   node: ReconCenterContext
+}
+
+"""
+Recon center context options
+"""
+type ReconCenterContextOptions implements Node {
+  delete_enabled: Boolean
+  id: ID!
 }
 
 """
@@ -35978,6 +36008,7 @@ type StructuredScope implements Node & ResourceInterface {
     Returns the elements in the list that come after the specified cursor.
     """
     after: String
+    assignee: AssigneeInputType = null
 
     """
     Returns the elements in the list that come before the specified cursor.
@@ -38158,6 +38189,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
     """
     after: String
     approaching_sla_violation: [SlaTypeEnum!]
+    assignee: AssigneeInputType = null
 
     """
     Returns the elements in the list that come before the specified cursor.
@@ -49066,7 +49098,7 @@ type User implements ActivitiesInterface & Node & ResourceInterface {
     """
     last: Int
   ): NotificationPreferenceConnection
-  notifications(include_message: Boolean, include_read: Boolean, just_mentions: Boolean, page: Int, page_size: Int, sort_direction: String, team_ids: [Int], type: String, user_type: String): [VirtualNotification!]
+  notifications(assignee: AssigneeInputType, include_message: Boolean, include_read: Boolean, just_mentions: Boolean, page: Int, page_size: Int, sort_direction: String, team_ids: [Int], type: String, user_type: String): [VirtualNotification!]
   open_for_employment: Boolean
   organizations(
     """
@@ -49277,6 +49309,7 @@ type User implements ActivitiesInterface & Node & ResourceInterface {
     Returns the elements in the list that come after the specified cursor.
     """
     after: String
+    assignee: AssigneeInputType = null
 
     """
     Returns the elements in the list that come before the specified cursor.
@@ -49658,7 +49691,7 @@ type User implements ActivitiesInterface & Node & ResourceInterface {
   ): TutorialConnection
   twitter_handle: String
   unconfirmed_email: String
-  unread_notification_count(team_ids: [Int], type: String, user_type: String): Int
+  unread_notification_count(assignee: AssigneeInputType, team_ids: [Int], type: String, user_type: String): Int
   url: URI!
 
   """
