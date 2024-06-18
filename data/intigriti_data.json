@@ -240,6 +240,150 @@
     }
   },
   {
+    "id": "933f224e-fbd3-4f08-a4fb-5038c2fa1a6e",
+    "name": "Axel Springer National Media & Tech",
+    "company_handle": "axelspringerse",
+    "handle": "nmt",
+    "url": "https://www.intigriti.com/programs/axelspringerse/nmt/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "min_bounty": {
+      "value": 15,
+      "currency": "EUR"
+    },
+    "max_bounty": {
+      "value": 2500,
+      "currency": "EUR"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "wildcard",
+          "endpoint": "*.bild.de",
+          "description": "",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.bild.tv",
+          "description": "",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.computerbild.de",
+          "description": "",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.welt.de",
+          "description": "",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://dealer.prod.ps.axelspringer.de/api/v1/partners/{partnerId}/activation",
+          "description": "",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "https://dealer.prod.ps.axelspringer.de/purchases/004/bild/*",
+          "description": "",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "https://dealer.prod.ps.axelspringer.de/purchases/004/welt/*",
+          "description": "Here is documentation to help with testing: https://dealer-docs.prod.ps.axelspringer.de/",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://secure.mypass.de/",
+          "description": "",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.autobild.de",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.bz-berlin.de",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.spring-media.de",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.springtools.de",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.ein-herz-fuer-kinder.de",
+          "description": "",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.fitbook.de",
+          "description": "",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.myhomebook.de",
+          "description": "",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.petbook.de",
+          "description": "",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.stylebook.de",
+          "description": "",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.techbook.de",
+          "description": "",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.travelbook.de",
+          "description": "",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.wissen-sie-mehr.de",
+          "description": "",
+          "impact": "Tier 3"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
     "id": "21d92048-d4d8-4781-8f37-3209a1b60fe1",
     "name": "Azena",
     "company_handle": "azena",
@@ -6205,6 +6349,12 @@
           "impact": "Tier 2"
         },
         {
+          "type": "other",
+          "endpoint": "Mobile Apps",
+          "description": "SBB Freesurf - browse the web for free on the train.SBB Freesurf IOSSBB Freesurf AndroidSBB GO - as a study paricipant, you can record you customer journey with the SBB go app and evaluate SBB Touchpoints along your journey.SBB GO IOSSBB GO AndroidSBB Inclusive - provides visual and digital customer information in stations and on SBB long-distance servicesSBB Inclusive IOSSBB Inclusive Android",
+          "impact": "Tier 2"
+        },
+        {
           "type": "url",
           "endpoint": "www.elvetino.ch",
           "description": "",
@@ -6261,120 +6411,6 @@
         {
           "type": "url",
           "endpoint": "https://www.saytechnologies.com/contact/sales",
-          "description": "",
-          "impact": "Out of scope"
-        }
-      ],
-      "out_of_scope": [
-
-      ]
-    }
-  },
-  {
-    "id": "e1845bab-be93-43d9-b040-462f886235ef",
-    "name": "Sentiance",
-    "company_handle": "sentiance",
-    "handle": "sentiance",
-    "url": "https://www.intigriti.com/programs/sentiance/sentiance/detail",
-    "status": "open",
-    "confidentiality_level": "public",
-    "min_bounty": {
-      "value": 50,
-      "currency": "EUR"
-    },
-    "max_bounty": {
-      "value": 3500,
-      "currency": "EUR"
-    },
-    "targets": {
-      "in_scope": [
-        {
-          "type": "url",
-          "endpoint": "api.sentiance.com",
-          "description": "Main API",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "android",
-          "endpoint": "com.sentiance.journeys2",
-          "description": "Insights Google Store link",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "controltower.sentiance.com",
-          "description": "Insights dashboard",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "ios",
-          "endpoint": "https://apps.apple.com/us/app/rac-go/id6444858115",
-          "description": "RAC Go Apple store link",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "android",
-          "endpoint": "https://play.google.com/store/apps/details?id=com.sentiance.saferdriver",
-          "description": "RAC Go Google store link",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "ios",
-          "endpoint": "insights-by-sentiance/id1608074635",
-          "description": "Insights Apple Store link",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "journeys-api.sentiance.com/v2",
-          "description": "Insights app base API",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.sentiance.com",
-          "description": "IMPORTANT! Please read the out of scope section. Not all subdomains are in scope",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "android",
-          "endpoint": "com.sentiance.journeys",
-          "description": "Journeys Google Store link",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "ios",
-          "endpoint": "journeys-2/id984087229?mt=8",
-          "description": "Journeys Apple Store link",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "docs.sentiance.com",
-          "description": "",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "graphqldocs.sentiance.com",
-          "description": "",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "legacy-docs.sentiance.com",
-          "description": "",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "jobs.sentiance.com",
-          "description": "",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "www.sentiance.com",
           "description": "",
           "impact": "Out of scope"
         }
