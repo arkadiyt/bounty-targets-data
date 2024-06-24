@@ -17467,6 +17467,7 @@ input FiltersSkillFilterInput {
   _not: FiltersSkillFilterInput
   _or: [FiltersSkillFilterInput]
   approved: BooleanPredicateInput
+  database_id: IntPredicateInput
   id: IntPredicateInput
   name: StringPredicateInput
   recommended_skills_for_user: Boolean
@@ -27747,6 +27748,7 @@ type PentesterPosition implements Node {
   pentest: Pentest
   pentest_lead_abilities: Boolean!
   positions_available: Int!
+  preferred_skills: [Int!]!
   profile_picture(size: ProfilePictureSizes!): String!
   retesting_ends_at: DateTime!
   schedule_day_restrictions: [String!]!
