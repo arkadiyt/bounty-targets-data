@@ -2839,6 +2839,7 @@ enum AnalyticsFromEnum {
   fixture_severity_ratings
   gateway_httpstream
   platform_benchmarks
+  view_intervals
 }
 
 input AnalyticsFunctionInputType {
@@ -2866,14 +2867,6 @@ input AnalyticsHavingPredicateInputType {
   function: AnalyticsPredicateFunctionEnum!
   left: AnalyticsSelectInputType!
   right: AnalyticsComplexInputType!
-}
-
-enum AnalyticsIntervalEnum {
-  day
-  month
-  quarter
-  week
-  year
 }
 
 input AnalyticsJoinInputType {
@@ -2910,16 +2903,13 @@ enum AnalyticsPredicateFunctionEnum {
 }
 
 input AnalyticsQueryInputType {
-  end_at: DateTime!
   from: AnalyticsFromEnum!
   having: AnalyticsHavingInputType
-  interval: AnalyticsIntervalEnum!
   join: [AnalyticsJoinInputType!]
   limit: Int
   offset: Int
   order_by: [AnalyticsOrderByInputType!]
   select: [AnalyticsSelectInputType!]!
-  start_at: DateTime!
   uid: String
   variables: [AnalyticsQueryVariableInputType!]
   where: AnalyticsWhereInputType
@@ -3382,6 +3372,9 @@ enum AnalyticsSelectFieldEnum {
   platform_benchmarks__key
   platform_benchmarks__start_at
   platform_benchmarks__value
+  view_intervals__end_at
+  view_intervals__interval
+  view_intervals__start_at
 }
 
 enum AnalyticsSelectFunctionEnum {
