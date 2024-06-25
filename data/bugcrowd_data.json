@@ -4484,6 +4484,128 @@
     }
   },
   {
+    "name": "Bugcrowd",
+    "url": "https://bugcrowd.com/bugcrowd",
+    "allows_disclosure": true,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "full",
+    "max_payout": 10000,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "website",
+          "target": "*.bugcrowd.com/auth/*"
+        },
+        {
+          "type": "api",
+          "target": "Crowdcontrol"
+        },
+        {
+          "type": "api",
+          "target": "api.bugcrowd.com"
+        },
+        {
+          "type": "website",
+          "target": "bugcrowd.com"
+        },
+        {
+          "type": "website",
+          "target": "docs.bugcrowd.com"
+        },
+        {
+          "type": "api",
+          "target": "https://api.bugcrowd.com"
+        },
+        {
+          "type": "website",
+          "target": "https://bugcrowd.com/programs"
+        },
+        {
+          "type": "website",
+          "target": "https://docs.bugcrowd.com/"
+        },
+        {
+          "type": "website",
+          "target": "https://identity.bugcrowd.com/"
+        },
+        {
+          "type": "website",
+          "target": "https://identity.bugcrowd.com/ "
+        },
+        {
+          "type": "api",
+          "target": "https://tracker.bugcrowd.com"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "website",
+          "target": "assetinventory.bugcrowd.com"
+        },
+        {
+          "type": "website",
+          "target": "blog.bugcrowd.com"
+        },
+        {
+          "type": "website",
+          "target": "bugcrowd*.freshdesk.com"
+        },
+        {
+          "type": "website",
+          "target": "community.bugcrowd.com"
+        },
+        {
+          "type": "website",
+          "target": "email.bugcrowd.com"
+        },
+        {
+          "type": "website",
+          "target": "email.forum.bugcrowd.com"
+        },
+        {
+          "type": "website",
+          "target": "events.bugcrowd.com"
+        },
+        {
+          "type": "website",
+          "target": "forum.bugcrowd.com"
+        },
+        {
+          "type": "website",
+          "target": "go.bugcrowd.com"
+        },
+        {
+          "type": "website",
+          "target": "https://assetinventory.bugcrowd.com"
+        },
+        {
+          "type": "website",
+          "target": "https://community.bugcrowd.com"
+        },
+        {
+          "type": "website",
+          "target": "https://go.bugcrowd.com"
+        },
+        {
+          "type": "website",
+          "target": "https://www.bugcrowd.com"
+        },
+        {
+          "type": "website",
+          "target": "pages.bugcrowd.com"
+        },
+        {
+          "type": "website",
+          "target": "researcherdocs.bugcrowd.com"
+        },
+        {
+          "type": "website",
+          "target": "www.bugcrowd.com"
+        }
+      ]
+    }
+  },
+  {
     "name": "Bullish.com",
     "url": "https://bugcrowd.com/bullish",
     "allows_disclosure": true,
@@ -6255,32 +6377,6 @@
         {
           "type": "website",
           "target": "gslink.financialforce.com"
-        }
-      ]
-    }
-  },
-  {
-    "name": "FIS",
-    "url": "https://bugcrowd.com/fis",
-    "allows_disclosure": true,
-    "managed_by_bugcrowd": true,
-    "safe_harbor": "full",
-    "max_payout": 20000,
-    "targets": {
-      "in_scope": [
-        {
-          "type": "website",
-          "target": "Any FIS asset is in scope"
-        }
-      ],
-      "out_of_scope": [
-        {
-          "type": "website",
-          "target": "Reference above out of scope targets"
-        },
-        {
-          "type": "website",
-          "target": "https://apuat-aaa.fisglobal.com"
         }
       ]
     }
