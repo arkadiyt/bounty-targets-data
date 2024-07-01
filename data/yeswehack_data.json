@@ -870,6 +870,113 @@
     }
   },
   {
+    "id": "dracoon-bug-bounty-program",
+    "name": "DRACOON – Bug Bounty Program",
+    "public": true,
+    "disabled": false,
+    "managed": null,
+    "min_bounty": 50,
+    "max_bounty": 5000,
+    "targets": {
+      "in_scope": [
+        {
+          "target": "https://bounty-cloud.dracoon.app/api",
+          "type": "api"
+        },
+        {
+          "target": "https://bounty-cloud.dracoon.app/oauth",
+          "type": "other"
+        },
+        {
+          "target": "https://0-2744452194.s3.nbg01.de.dracoon.io",
+          "type": "other"
+        },
+        {
+          "target": "https://bounty-cloud.dracoon.app/mediaserver",
+          "type": "other"
+        },
+        {
+          "target": "https://bounty-cloud.dracoon.app/reporting/api",
+          "type": "api"
+        },
+        {
+          "target": "https://bounty-cloud.dracoon.app/webdav",
+          "type": "other"
+        },
+        {
+          "target": "https://bounty-cloud.dracoon.app/",
+          "type": "web-application"
+        },
+        {
+          "target": "https://bounty-server.dracoon.app/api",
+          "type": "api"
+        },
+        {
+          "target": "https://bounty-server.dracoon.app/oauth",
+          "type": "other"
+        },
+        {
+          "target": "https://bounty-server.dracoon.app/reporting/api",
+          "type": "api"
+        },
+        {
+          "target": "https://bounty-server.dracoon.app/webdav",
+          "type": "other"
+        },
+        {
+          "target": "https://bounty-server.dracoon.app/",
+          "type": "web-application"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "target": "Any other host, tenant or service than the ones explicitly stated.",
+          "type": "other"
+        },
+        {
+          "target": "www.dracoon.com",
+          "type": "other"
+        },
+        {
+          "target": "*.dracoon.com",
+          "type": "other"
+        },
+        {
+          "target": "*.dracoon.net",
+          "type": "other"
+        },
+        {
+          "target": "*.dracoon.team",
+          "type": "other"
+        },
+        {
+          "target": "*.dracoon.app (with the exceptions of bounty-cloud.dracoon.app and bounty-server.dracoon.app)",
+          "type": "other"
+        },
+        {
+          "target": "*.dracoon.io (with the exception of https://0-2744452194.s3.nbg01.de.dracoon.io)",
+          "type": "other"
+        },
+        {
+          "target": "*.fp-sign.com",
+          "type": "other"
+        },
+        {
+          "target": "*.usersnap.com",
+          "type": "other"
+        },
+        {
+          "target": "*.gdata.com",
+          "type": "other"
+        },
+        {
+          "target": "*.retarus.com",
+          "type": "other"
+        }
+      ]
+    }
+  },
+  {
     "id": "dailymotion-public-bug-bounty",
     "name": "Dailymotion public bug bounty",
     "public": true,
