@@ -3986,6 +3986,49 @@
     }
   },
   {
+    "id": "pendulum-bug-bounty-program",
+    "name": "ntpd-rs Bug Bounty Program",
+    "public": true,
+    "disabled": false,
+    "managed": null,
+    "min_bounty": 250,
+    "max_bounty": 10000,
+    "targets": {
+      "in_scope": [
+        {
+          "target": "https://github.com/pendulum-project/ntpd-rs",
+          "type": "other"
+        },
+        {
+          "target": "https://github.com/pendulum-project/timestamped-socket",
+          "type": "other"
+        },
+        {
+          "target": "https://github.com/pendulum-project/clock-steering",
+          "type": "other"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "target": "Known protocol limitations related to the NTP protocol",
+          "type": "other"
+        },
+        {
+          "target": "Anything related to the NTPv5 and/or NTS Pool KE features (both disabled by default), unless it impacts other parts of the software",
+          "type": "other"
+        },
+        {
+          "target": "Anything related to *.ntpd-rs.pendulum-project.org",
+          "type": "other"
+        },
+        {
+          "target": "Anything related to the CI pipeline or GitHub related hosting",
+          "type": "other"
+        }
+      ]
+    }
+  },
+  {
     "id": "owncloud-bug-bounty-program",
     "name": "ownCloud - Bug Bounty Program",
     "public": true,
