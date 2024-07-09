@@ -18068,6 +18068,7 @@ A hacker comment classification
 """
 type HackerCommentClassification implements Node {
   _id: ID!
+  activity_id: ID!
   id: ID!
   requires_action: Boolean!
   suggested_response: String
@@ -28785,7 +28786,6 @@ type Query implements Node {
     last: Int
     team_handle: String
   ): GatewayUserConnection
-  hacker_comment_classification(activity_id: String!): HackerCommentClassification
   hacktivity_items(
     """
     Returns the elements in the list that come after the specified cursor.
@@ -28863,6 +28863,7 @@ type Query implements Node {
     where: FiltersLabelCategoryFilterInput
   ): LabelCategoryConnection!
   languages: [Hash!]!
+  last_hacker_comment_classification(report_id: String!): HackerCommentClassification
   leaderboard_entries(
     """
     Returns the elements in the list that come after the specified cursor.
