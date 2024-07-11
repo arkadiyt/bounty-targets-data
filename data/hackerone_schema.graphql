@@ -10457,7 +10457,7 @@ type CreateReconContextPayload implements MutationResult {
     last: Int
     types: [ErrorTypeEnum]
   ): ErrorConnection!
-  recon_context: ReconCenterContext
+  recon_context: ReconWorkspaceContext
   was_successful: Boolean!
 }
 
@@ -10503,7 +10503,7 @@ type CreateReconDocumentPayload implements MutationResult {
     last: Int
     types: [ErrorTypeEnum]
   ): ErrorConnection!
-  recon_context: ReconCenterContext
+  recon_context: ReconWorkspaceContext
   was_successful: Boolean!
 }
 
@@ -13649,7 +13649,7 @@ type DeleteReconDocumentPayload implements MutationResult {
     last: Int
     types: [ErrorTypeEnum]
   ): ErrorConnection!
-  recon_context: ReconCenterContext
+  recon_context: ReconWorkspaceContext
   was_successful: Boolean!
 }
 
@@ -29174,7 +29174,7 @@ type Query implements Node {
     last: Int
     year: Int
   ): RankedWeaknessByYearConnection
-  recon_context(id: Int): ReconCenterContext
+  recon_context(id: Int): ReconWorkspaceContext
   recon_contexts(
     """
     Returns the elements in the list that come after the specified cursor.
@@ -29196,7 +29196,7 @@ type Query implements Node {
     Returns the last _n_ elements from the list.
     """
     last: Int
-  ): ReconCenterContextConnection
+  ): ReconWorkspaceContextConnection
   report(id: Int!): Report @deprecated(reason: "Query for a Report node at the root level is not recommended.")
   report_retest_user(activity_id: Int!): ReportRetestUser
   report_retests(
@@ -29935,144 +29935,6 @@ type ReclaimReportRetestPayload implements MutationResult {
 }
 
 """
-Recon center context
-"""
-type ReconCenterContext implements Node {
-  _id: ID!
-  collaborators: [User!]
-  created_at: DateTime
-  description: String
-  documents(
-    """
-    Returns the elements in the list that come after the specified cursor.
-    """
-    after: String
-
-    """
-    Returns the elements in the list that come before the specified cursor.
-    """
-    before: String
-
-    """
-    Returns the first _n_ elements from the list.
-    """
-    first: Int
-
-    """
-    Returns the last _n_ elements from the list.
-    """
-    last: Int
-  ): ReconCenterDocumentsConnection
-  id: ID!
-  name: String
-  options: ReconCenterContextOptions
-  owner: User
-  related_object_id: String
-  related_object_type: String
-  target: Team
-  updated_at: DateTime
-}
-
-"""
-The connection type for ReconCenterContext.
-"""
-type ReconCenterContextConnection {
-  """
-  A list of edges.
-  """
-  edges: [ReconCenterContextEdge]
-
-  """
-  A list of nodes.
-  """
-  nodes: [ReconCenterContext]
-
-  """
-  Information to aid in pagination.
-  """
-  pageInfo: PageInfo!
-  total_count: Int!
-}
-
-"""
-An edge in a connection.
-"""
-type ReconCenterContextEdge {
-  """
-  A cursor for use in pagination.
-  """
-  cursor: String!
-
-  """
-  The item at the end of the edge.
-  """
-  node: ReconCenterContext
-}
-
-"""
-Recon center context options
-"""
-type ReconCenterContextOptions implements Node {
-  delete_enabled: Boolean
-  id: ID!
-}
-
-"""
-Recon center documents
-"""
-type ReconCenterDocument implements Node {
-  _id: ID!
-  byte_size: Int
-  content_type: String
-  contributed_by: User
-  created_at: DateTime!
-  description: String
-  id: ID!
-  information_type: ReconInformationTypeEnum
-  name: String
-  pinned: Boolean
-  state: String
-  tool_source: ReconToolEnum
-  url: String
-}
-
-"""
-An edge in a connection.
-"""
-type ReconCenterDocumentEdge {
-  """
-  A cursor for use in pagination.
-  """
-  cursor: String!
-
-  """
-  The item at the end of the edge.
-  """
-  node: ReconCenterDocument
-}
-
-"""
-The connection type for ReconCenterDocument.
-"""
-type ReconCenterDocumentsConnection {
-  """
-  A list of edges.
-  """
-  edges: [ReconCenterDocumentEdge]
-
-  """
-  A list of nodes.
-  """
-  nodes: [ReconCenterDocument]
-
-  """
-  Information to aid in pagination.
-  """
-  pageInfo: PageInfo!
-  total_count: Int!
-}
-
-"""
 Possible types of recon information
 """
 enum ReconInformationTypeEnum {
@@ -30114,6 +29976,144 @@ enum ReconToolEnum {
   unknown
   wfuzz
   wireshark
+}
+
+"""
+Recon workspace context
+"""
+type ReconWorkspaceContext implements Node {
+  _id: ID!
+  collaborators: [User!]
+  created_at: DateTime
+  description: String
+  documents(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+  ): ReconWorkspaceDocumentsConnection
+  id: ID!
+  name: String
+  options: ReconWorkspaceContextOptions
+  owner: User
+  related_object_id: String
+  related_object_type: String
+  target: Team
+  updated_at: DateTime
+}
+
+"""
+The connection type for ReconWorkspaceContext.
+"""
+type ReconWorkspaceContextConnection {
+  """
+  A list of edges.
+  """
+  edges: [ReconWorkspaceContextEdge]
+
+  """
+  A list of nodes.
+  """
+  nodes: [ReconWorkspaceContext]
+
+  """
+  Information to aid in pagination.
+  """
+  pageInfo: PageInfo!
+  total_count: Int!
+}
+
+"""
+An edge in a connection.
+"""
+type ReconWorkspaceContextEdge {
+  """
+  A cursor for use in pagination.
+  """
+  cursor: String!
+
+  """
+  The item at the end of the edge.
+  """
+  node: ReconWorkspaceContext
+}
+
+"""
+Recon workspace context options
+"""
+type ReconWorkspaceContextOptions implements Node {
+  delete_enabled: Boolean
+  id: ID!
+}
+
+"""
+Recon workspace documents
+"""
+type ReconWorkspaceDocument implements Node {
+  _id: ID!
+  byte_size: Int
+  content_type: String
+  contributed_by: User
+  created_at: DateTime!
+  description: String
+  id: ID!
+  information_type: ReconInformationTypeEnum
+  name: String
+  pinned: Boolean
+  state: String
+  tool_source: ReconToolEnum
+  url: String
+}
+
+"""
+An edge in a connection.
+"""
+type ReconWorkspaceDocumentEdge {
+  """
+  A cursor for use in pagination.
+  """
+  cursor: String!
+
+  """
+  The item at the end of the edge.
+  """
+  node: ReconWorkspaceDocument
+}
+
+"""
+The connection type for ReconWorkspaceDocument.
+"""
+type ReconWorkspaceDocumentsConnection {
+  """
+  A list of edges.
+  """
+  edges: [ReconWorkspaceDocumentEdge]
+
+  """
+  A list of nodes.
+  """
+  nodes: [ReconWorkspaceDocument]
+
+  """
+  Information to aid in pagination.
+  """
+  pageInfo: PageInfo!
+  total_count: Int!
 }
 
 """
@@ -44945,7 +44945,7 @@ type UpdateReconContextPayload implements MutationResult {
     last: Int
     types: [ErrorTypeEnum]
   ): ErrorConnection!
-  recon_context: ReconCenterContext
+  recon_context: ReconWorkspaceContext
   was_successful: Boolean!
 }
 
@@ -44995,7 +44995,7 @@ type UpdateReconDocumentPayload implements MutationResult {
     last: Int
     types: [ErrorTypeEnum]
   ): ErrorConnection!
-  recon_document: ReconCenterDocument
+  recon_document: ReconWorkspaceDocument
   was_successful: Boolean!
 }
 
