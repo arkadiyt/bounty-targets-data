@@ -6961,6 +6961,60 @@
     }
   },
   {
+    "id": "0d585f25-b705-4141-a961-66d6ade8942e",
+    "name": "SimScale",
+    "company_handle": "simscale",
+    "handle": "simscale",
+    "url": "https://www.intigriti.com/programs/simscale/simscale/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "min_bounty": {
+      "value": 50,
+      "currency": "EUR"
+    },
+    "max_bounty": {
+      "value": 6000,
+      "currency": "EUR"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "other",
+          "endpoint": "SimScale API",
+          "description": "API URL: https://api.simscale.comThe API doc is available at https://api.simscale.com.API keys can be managed in the API keys page.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "SimScale Platform",
+          "description": "The following areas and paths under domain https://www.simscale.com:Paths: /signup/*, /signin/*, /onboarding/*Examples:Paths: /dashboardExamples (login required):Paths: /workbench/*Examples (login required):Paths: /projects/*Examples:All API endpoints used by UIs listed above.Paths: /api/*, /csm/*, /postprocessing/*",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "SimScale Website",
+          "description": "Domain https://www.simscale.com and the remaining paths not listed under SimScale Platform.Examples:",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "https://www.simscale.com/api/v1/projects/*",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "www.simscale.com/forum/users/*.json",
+          "description": "",
+          "impact": "Out of scope"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
     "id": "b0de5cde-9841-464a-9d6b-642824f00dc6",
     "name": "Sixt",
     "company_handle": "sixt",
