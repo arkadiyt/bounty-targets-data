@@ -6308,6 +6308,92 @@
     }
   },
   {
+    "name": "Exoscale",
+    "url": "https://bugcrowd.com/engagements/exoscale",
+    "allows_disclosure": true,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "full",
+    "max_payout": 10000,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "other",
+          "target": "Virtualisation layer"
+        },
+        {
+          "type": "other",
+          "target": "https://sks-ch-gva-2.exo.io"
+        },
+        {
+          "type": "website",
+          "target": "https://portal.exoscale.com/"
+        },
+        {
+          "type": "api",
+          "target": "https://api-ch-gva-2.exoscale.com/v2"
+        },
+        {
+          "type": "api",
+          "target": "https://sos-ch-gva-2.exo.io/"
+        },
+        {
+          "type": "website",
+          "target": "https://internal.exoscale.ch"
+        },
+        {
+          "type": "api",
+          "target": "https://api-ch-gva-2.exoscale.com/v2"
+        },
+        {
+          "type": "api",
+          "target": "https://api-ch-gva-2.exoscale.com/v2"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "website",
+          "target": "https://www.exoscale.com"
+        },
+        {
+          "type": "website",
+          "target": "https://community.exoscale.com"
+        },
+        {
+          "type": "other",
+          "target": "Marketplace products"
+        },
+        {
+          "type": "website",
+          "target": "https://academy.exoscale.com"
+        },
+        {
+          "type": "api",
+          "target": "CDN service"
+        },
+        {
+          "type": "website",
+          "target": "https://jobs.exoscale.com"
+        },
+        {
+          "type": "website",
+          "target": "https://changelog.exoscale.com"
+        },
+        {
+          "type": "website",
+          "target": "https://openapi-v2.exoscale.com/"
+        },
+        {
+          "type": "website",
+          "target": "http://zammad.internal.exoscale.ch/"
+        },
+        {
+          "type": "api",
+          "target": "https://exoscalestatus.com/"
+        }
+      ]
+    }
+  },
+  {
     "name": "FoxyCart",
     "url": "https://bugcrowd.com/engagements/foxycart",
     "allows_disclosure": false,
@@ -6776,6 +6862,100 @@
         {
           "type": "website",
           "target": "https://li.me (hubspot)"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Linktree",
+    "url": "https://bugcrowd.com/engagements/linktree-mbb-og",
+    "allows_disclosure": false,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "full",
+    "max_payout": 7500,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "website",
+          "target": "https://linktr.ee"
+        },
+        {
+          "type": "website",
+          "target": "https://linktree.com"
+        },
+        {
+          "type": "website",
+          "target": "https://tr.ee"
+        },
+        {
+          "type": "website",
+          "target": "*.linktree-extensions.com"
+        },
+        {
+          "type": "website",
+          "target": "https://odesli.co"
+        },
+        {
+          "type": "website",
+          "target": "https://odesli.com"
+        },
+        {
+          "type": "website",
+          "target": "https://song.link"
+        },
+        {
+          "type": "website",
+          "target": "https://songlink.io"
+        },
+        {
+          "type": "website",
+          "target": "https://album.link"
+        },
+        {
+          "type": "website",
+          "target": "https://artist.link"
+        },
+        {
+          "type": "website",
+          "target": "https://pods.link"
+        },
+        {
+          "type": "website",
+          "target": "https://playlist.link"
+        },
+        {
+          "type": "website",
+          "target": "https://mylink.page"
+        },
+        {
+          "type": "ios",
+          "target": "https://linktree.app.link/LinktreeWebsite?utm_medium=Linktree_Footer"
+        },
+        {
+          "type": "android",
+          "target": "https://linktree.app.link/LinktreeWebsite?utm_medium=Linktree_Footer"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "website",
+          "target": "https://filestack.com"
+        },
+        {
+          "type": "website",
+          "target": "https://freshdesk.com"
+        },
+        {
+          "type": "website",
+          "target": "https://blstr.xyz"
+        },
+        {
+          "type": "website",
+          "target": "https://blstr.co"
+        },
+        {
+          "type": "website",
+          "target": "https://community.linktr.ee"
         }
       ]
     }
@@ -7613,152 +7793,6 @@
         {
           "type": "api",
           "target": "icht.etsysecure.com"
-        }
-      ]
-    }
-  },
-  {
-    "name": "Exoscale",
-    "url": "https://bugcrowd.com/exoscale",
-    "allows_disclosure": true,
-    "managed_by_bugcrowd": true,
-    "safe_harbor": "full",
-    "max_payout": 10000,
-    "targets": {
-      "in_scope": [
-        {
-          "type": "api",
-          "target": "API"
-        },
-        {
-          "type": "api",
-          "target": "Database as a Service (DBaaS)"
-        },
-        {
-          "type": "website",
-          "target": "Internal Web services - https://*.internal.exoscale.ch"
-        },
-        {
-          "type": "api",
-          "target": "Managed Scalable Kubernetes Service (SKS)"
-        },
-        {
-          "type": "other",
-          "target": "SKS Clusters"
-        },
-        {
-          "type": "api",
-          "target": "Simple Object Storage (SOS)"
-        },
-        {
-          "type": "other",
-          "target": "Virtualisation layer"
-        },
-        {
-          "type": "website",
-          "target": "Web Portal"
-        },
-        {
-          "type": "api",
-          "target": "https://api-ch-gva-2.exoscale.com/v2"
-        },
-        {
-          "type": "api",
-          "target": "https://api-ch-gva-2.exoscale.com/v2"
-        },
-        {
-          "type": "api",
-          "target": "https://api-ch-gva-2.exoscale.com/v2"
-        },
-        {
-          "type": "website",
-          "target": "https://internal.exoscale.ch"
-        },
-        {
-          "type": "website",
-          "target": "https://portal.exoscale.com/"
-        },
-        {
-          "type": "other",
-          "target": "https://sks-ch-gva-2.exo.io"
-        },
-        {
-          "type": "api",
-          "target": "https://sos-ch-gva-2.exo.io/"
-        }
-      ],
-      "out_of_scope": [
-        {
-          "type": "api",
-          "target": "CDN service"
-        },
-        {
-          "type": "website",
-          "target": "Changelog"
-        },
-        {
-          "type": "website",
-          "target": "Exoscale Academy"
-        },
-        {
-          "type": "website",
-          "target": "Job Board"
-        },
-        {
-          "type": "other",
-          "target": "Marketplace products"
-        },
-        {
-          "type": "website",
-          "target": "OpenAPI V2 Documentation"
-        },
-        {
-          "type": "website",
-          "target": "Public Documentation Website"
-        },
-        {
-          "type": "website",
-          "target": "Public Website"
-        },
-        {
-          "type": "api",
-          "target": "Runstatus"
-        },
-        {
-          "type": "website",
-          "target": "Zammad"
-        },
-        {
-          "type": "website",
-          "target": "http://zammad.internal.exoscale.ch/"
-        },
-        {
-          "type": "website",
-          "target": "https://academy.exoscale.com"
-        },
-        {
-          "type": "website",
-          "target": "https://changelog.exoscale.com"
-        },
-        {
-          "type": "website",
-          "target": "https://community.exoscale.com"
-        },
-        {
-          "type": "api",
-          "target": "https://exoscalestatus.com/"
-        },
-        {
-          "type": "website",
-          "target": "https://jobs.exoscale.com"
-        },
-        {
-          "type": "website",
-          "target": "https://openapi-v2.exoscale.com/"
-        },
-        {
-          "type": "website",
-          "target": "https://www.exoscale.com"
         }
       ]
     }
@@ -10830,81 +10864,6 @@
         {
           "type": "website",
           "target": "https://www.governmentjobs.com"
-        }
-      ],
-      "out_of_scope": [
-
-      ]
-    }
-  },
-  {
-    "name": "NETGEAR Cash Rewards",
-    "url": "https://bugcrowd.com/netgear",
-    "allows_disclosure": true,
-    "managed_by_bugcrowd": true,
-    "safe_harbor": "none",
-    "max_payout": 1200,
-    "targets": {
-      "in_scope": [
-        {
-          "type": "android",
-          "target": "Insight Android App"
-        },
-        {
-          "type": "website",
-          "target": "Insight Cloud Portal"
-        },
-        {
-          "type": "iot",
-          "target": "Insight Managed Smart Cloud Wireless Access Point"
-        },
-        {
-          "type": "ios",
-          "target": "Insight iOS App"
-        },
-        {
-          "type": "iot",
-          "target": "Meural"
-        },
-        {
-          "type": "android",
-          "target": "Nighthawk Android App"
-        },
-        {
-          "type": "iot",
-          "target": "Nighthawk Pro Gaming Router"
-        },
-        {
-          "type": "iot",
-          "target": "Nighthawk Pro Gaming Switch"
-        },
-        {
-          "type": "iot",
-          "target": "Nighthawk Router"
-        },
-        {
-          "type": "iot",
-          "target": "Nighthawk Switch"
-        },
-        {
-          "type": "ios",
-          "target": "Nighthawk iOS App"
-        },
-        {
-          "type": "iot",
-          "target": "Orbi "
-        },
-        {
-          "type": "android",
-          "target": "Orbi Android App "
-        },
-        {
-          "type": "ios",
-          "target": "Orbi iOS App "
-        },
-        {
-          "type": "api",
-          "target": "https://api.netgear.com"
         }
       ],
       "out_of_scope": [
