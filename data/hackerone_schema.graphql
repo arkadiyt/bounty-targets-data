@@ -4513,6 +4513,28 @@ type Automation implements Node {
   The primary key from the database
   """
   _id: ID!
+  automation_run(id: Int!): AutomationRun
+  automation_runs(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+  ): AutomationRunConnection
 
   """
   The code being executed
@@ -4605,6 +4627,68 @@ type AutomationEdge {
   The item at the end of the edge.
   """
   node: Automation
+}
+
+"""
+An specific run of an automation
+"""
+type AutomationRun implements Node {
+  """
+  The primary key from the database
+  """
+  _id: ID!
+
+  """
+  The date and time the automation run was created
+  """
+  created_at: DateTime!
+  id: ID!
+
+  """
+  The logs of this run
+  """
+  run_logs: [Hash!]!
+
+  """
+  The status of this run
+  """
+  status: String!
+}
+
+"""
+The connection type for AutomationRun.
+"""
+type AutomationRunConnection {
+  """
+  A list of edges.
+  """
+  edges: [AutomationRunEdge]
+
+  """
+  A list of nodes.
+  """
+  nodes: [AutomationRun]
+
+  """
+  Information to aid in pagination.
+  """
+  pageInfo: PageInfo!
+  total_count: Int
+}
+
+"""
+An edge in a connection.
+"""
+type AutomationRunEdge {
+  """
+  A cursor for use in pagination.
+  """
+  cursor: String!
+
+  """
+  The item at the end of the edge.
+  """
+  node: AutomationRun
 }
 
 """
