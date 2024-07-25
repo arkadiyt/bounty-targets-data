@@ -4647,12 +4647,17 @@ type AutomationRun implements Node {
   """
   The logs of this run
   """
-  run_logs: [Hash!]!
+  run_logs: [Hash!]
 
   """
   The status of this run
   """
   status: String!
+
+  """
+  If the automation failed, the error
+  """
+  trace: [String!]
 }
 
 """
