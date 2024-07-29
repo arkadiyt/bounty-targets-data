@@ -18965,6 +18965,8 @@ Configuration for integration events
 """
 type IntegrationEventsConfiguration implements Node {
   _id: ID!
+  changed_scope: Boolean!
+  cve_id_added: Boolean!
   id: ID!
   integration_types: IntegrationEventsEnum
   program_gateway_state_changed: Boolean!
@@ -18972,6 +18974,7 @@ type IntegrationEventsConfiguration implements Node {
   program_hacker_joined: Boolean!
   program_hacker_left: Boolean!
   program_structured_scopes_bulk_updated: Boolean!
+  reference_id_added: Boolean!
   report_agreed_on_going_public: Boolean!
   report_became_public: Boolean!
   report_bounty_awarded: Boolean!
@@ -19008,15 +19011,19 @@ type IntegrationEventsConfiguration implements Node {
   report_undisclosed: Boolean!
   report_user_assigned: Boolean!
   report_user_completed_retest: Boolean!
+  report_vulnerability_types_updated: Boolean!
   user_notification_preference_option_types: UserNotificationPreferenceOptionEnum
 }
 
 input IntegrationEventsConfigurationInputType {
+  changed_scope: Boolean!
+  cve_id_added: Boolean!
   program_gateway_state_changed: Boolean!
   program_gateway_users_state_changed: Boolean!
   program_hacker_joined: Boolean!
   program_hacker_left: Boolean!
   program_structured_scopes_bulk_updated: Boolean!
+  reference_id_added: Boolean!
   report_agreed_on_going_public: Boolean!
   report_became_public: Boolean!
   report_bounty_awarded: Boolean!
@@ -19053,12 +19060,23 @@ input IntegrationEventsConfigurationInputType {
   report_undisclosed: Boolean!
   report_user_assigned: Boolean!
   report_user_completed_retest: Boolean!
+  report_vulnerability_types_updated: Boolean!
 }
 
 """
 Event types for which any integration can listen.Used only for the ability to query on possible values
 """
 enum IntegrationEventsEnum {
+  """
+  The asset assigned to a report changed
+  """
+  changed_scope
+
+  """
+  The CVE of a report changed
+  """
+  cve_id_added
+
   """
   When a program changes gateway access for all hackers.
   """
@@ -19083,6 +19101,11 @@ enum IntegrationEventsEnum {
   When a program's scope is updated.
   """
   program_structured_scopes_bulk_updated
+
+  """
+  The reference ID of a report changed
+  """
+  reference_id_added
 
   """
   When a report is agreed to be publicly disclosed.
@@ -19263,6 +19286,11 @@ enum IntegrationEventsEnum {
   When a report retest is completed by a hacker.
   """
   report_user_completed_retest
+
+  """
+  The CWE of a report changed
+  """
+  report_vulnerability_types_updated
 }
 
 """
