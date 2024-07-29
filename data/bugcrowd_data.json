@@ -5691,6 +5691,116 @@
     }
   },
   {
+    "name": "Cisco Meraki",
+    "url": "https://bugcrowd.com/engagements/ciscomeraki",
+    "allows_disclosure": false,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "partial",
+    "max_payout": 10000,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "website",
+          "target": "*.meraki.com"
+        },
+        {
+          "type": "website",
+          "target": "*.ikarem.io"
+        },
+        {
+          "type": "other",
+          "target": "Cisco Meraki Systems Manager"
+        },
+        {
+          "type": "other",
+          "target": "Cisco Meraki Virtual Security Appliances"
+        },
+        {
+          "type": "website",
+          "target": "*.network-auth.com"
+        },
+        {
+          "type": "ios",
+          "target": "Cisco Meraki Dashboard Mobile Application (iOS and Android)"
+        },
+        {
+          "type": "hardware",
+          "target": "Cisco Meraki MX Security Appliances"
+        },
+        {
+          "type": "hardware",
+          "target": "Cisco Meraki MS Switches"
+        },
+        {
+          "type": "hardware",
+          "target": "Cisco Meraki MR Access Points"
+        },
+        {
+          "type": "hardware",
+          "target": "Cisco Meraki MV Security Cameras"
+        },
+        {
+          "type": "hardware",
+          "target": "Cisco Meraki Z Series (Z1,Z3(C))"
+        },
+        {
+          "type": "website",
+          "target": "https://meraki.cisco.com"
+        },
+        {
+          "type": "website",
+          "target": "apps.meraki.io"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "website",
+          "target": "merakipartners.com"
+        },
+        {
+          "type": "website",
+          "target": "developers.meraki.com"
+        },
+        {
+          "type": "website",
+          "target": "smhelp.meraki.com"
+        },
+        {
+          "type": "website",
+          "target": "community.meraki.com"
+        },
+        {
+          "type": "website",
+          "target": "community-staging.meraki.com"
+        },
+        {
+          "type": "website",
+          "target": "*.cisco.com"
+        },
+        {
+          "type": "website",
+          "target": "meraki.cisco.com/form/contact"
+        },
+        {
+          "type": "api",
+          "target": "Customer API Keys"
+        },
+        {
+          "type": "hardware",
+          "target": "Meraki MC Phones"
+        },
+        {
+          "type": "website",
+          "target": "documentation.meraki.com"
+        },
+        {
+          "type": "other",
+          "target": "Insecure Direct Object References (IDORs)"
+        }
+      ]
+    }
+  },
+  {
     "name": "ClassDojo",
     "url": "https://bugcrowd.com/engagements/classdojo",
     "allows_disclosure": true,
@@ -7754,32 +7864,6 @@
         {
           "type": "website",
           "target": "gslink.financialforce.com"
-        }
-      ]
-    }
-  },
-  {
-    "name": "FIS",
-    "url": "https://bugcrowd.com/fis",
-    "allows_disclosure": true,
-    "managed_by_bugcrowd": true,
-    "safe_harbor": "full",
-    "max_payout": 20000,
-    "targets": {
-      "in_scope": [
-        {
-          "type": "website",
-          "target": "Any FIS asset is in scope"
-        }
-      ],
-      "out_of_scope": [
-        {
-          "type": "website",
-          "target": "Reference above out of scope targets"
-        },
-        {
-          "type": "website",
-          "target": "https://apuat-aaa.fisglobal.com"
         }
       ]
     }
