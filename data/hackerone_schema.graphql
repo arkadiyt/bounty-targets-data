@@ -20541,6 +20541,7 @@ An LLM conversation message
 """
 type LlmConversationMessage implements Node {
   _id: ID!
+  artifacts: [LlmConversationMessageArtifact!]
   author: String!
   created_at: DateTime!
   id: ID!
@@ -20548,6 +20549,26 @@ type LlmConversationMessage implements Node {
   messages: [String!]
   state: String!
   was_useful: Boolean
+}
+
+"""
+Artifact of an LLM conversation message
+"""
+type LlmConversationMessageArtifact implements Node {
+  created_at: DateTime!
+  id: ID!
+  message_index: Int!
+  payload: Hash!
+  type: LlmConversationMessageArtifactTypeEnum!
+}
+
+"""
+Types of LLM message artifacts
+"""
+enum LlmConversationMessageArtifactTypeEnum {
+  auth_error
+  error
+  tool_use
 }
 
 """
