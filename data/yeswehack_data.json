@@ -2160,6 +2160,69 @@
     }
   },
   {
+    "id": "maya-public-bug-bounty-program",
+    "name": "Maya - Public Bug Bounty Program",
+    "public": true,
+    "disabled": false,
+    "managed": null,
+    "min_bounty": 50,
+    "max_bounty": 5000,
+    "targets": {
+      "in_scope": [
+        {
+          "target": "https://play.google.com/store/apps/details?id=com.paymaya",
+          "type": "mobile-application-android"
+        },
+        {
+          "target": "https://apps.apple.com/am/app/maya-your-all-in-one-money-app/id991673877",
+          "type": "mobile-application-ios"
+        },
+        {
+          "target": "https://appgallery.huawei.com/app/C101186357",
+          "type": "mobile-application"
+        },
+        {
+          "target": "https://api.paymaya.com/",
+          "type": "api"
+        },
+        {
+          "target": "https://pg.paymaya.com",
+          "type": "api"
+        },
+        {
+          "target": "https://payoutapi.maya.ph/",
+          "type": "api"
+        },
+        {
+          "target": "https://op.paymaya.com/",
+          "type": "api"
+        },
+        {
+          "target": "https://connect.paymaya.com/",
+          "type": "api"
+        },
+        {
+          "target": "https://paymayabiller-prod.paymaya.com/",
+          "type": "api"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "target": "All domains or subdomains not listed in the above list of 'Scopes'",
+          "type": "other"
+        },
+        {
+          "target": "Other subdomain of paymaya.com that has no direct integration/part of the mobile application",
+          "type": "other"
+        },
+        {
+          "target": "Non-Production environments (test, dev, staging, or sandbox)",
+          "type": "other"
+        }
+      ]
+    }
+  },
+  {
     "id": "mon-espace-sante-mes",
     "name": "Mon Espace Santé (MES)",
     "public": true,
