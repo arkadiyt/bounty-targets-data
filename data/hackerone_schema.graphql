@@ -2819,7 +2819,6 @@ enum AnalyticsFromEnum {
   dim_invitations
   dim_mediations
   dim_observed_assets
-  dim_organization_inboxes_reports
   dim_organizations
   dim_payments
   dim_report_retests
@@ -2899,6 +2898,7 @@ input AnalyticsOrderByInputType {
 }
 
 enum AnalyticsPredicateFunctionEnum {
+  any
   eq
   gt
   gteq
@@ -3059,17 +3059,6 @@ enum AnalyticsSelectFieldEnum {
   dim_observed_assets__report_state
   dim_observed_assets__team_handle
   dim_observed_assets__team_id
-  dim_organization_inboxes_reports__created_at
-  dim_organization_inboxes_reports__created_at_day
-  dim_organization_inboxes_reports__created_at_month
-  dim_organization_inboxes_reports__created_at_num_days_since
-  dim_organization_inboxes_reports__created_at_quarter
-  dim_organization_inboxes_reports__created_at_week
-  dim_organization_inboxes_reports__created_at_year
-  dim_organization_inboxes_reports__organization_id
-  dim_organization_inboxes_reports__organization_inbox_id
-  dim_organization_inboxes_reports__report_id
-  dim_organization_inboxes_reports__updated_at
   dim_organizations__handle
   dim_organizations__name
   dim_organizations__organization_id
@@ -3209,6 +3198,7 @@ enum AnalyticsSelectFieldEnum {
   dim_reports__num_seconds_to_resolved
   dim_reports__num_seconds_to_triage
   dim_reports__organization_id
+  dim_reports__organization_inbox_ids
   dim_reports__report_id
   dim_reports__reporter_id
   dim_reports__reporter_username
