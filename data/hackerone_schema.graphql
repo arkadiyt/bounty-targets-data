@@ -34757,8 +34757,7 @@ input SignupEntryLevelVdpInput {
   clientMutationId: String
   company_name: String!
   email: String!
-  first_name: String!
-  last_name: String!
+  name: String!
   password: String!
   password_confirmation: String!
   title: String!
@@ -37798,6 +37797,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
   credentials_revoked_count: Int
   critical_submissions_enabled: Boolean
   currency: String
+  current_reach: Float
   custom_field_attributes(
     """
     Returns the elements in the list that come after the specified cursor.
