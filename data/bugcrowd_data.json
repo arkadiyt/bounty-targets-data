@@ -7092,6 +7092,128 @@
     }
   },
   {
+    "name": "Sophos",
+    "url": "https://bugcrowd.com/engagements/sophos",
+    "allows_disclosure": true,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "full",
+    "max_payout": 50000,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "website",
+          "target": "https://www.sophos.com/en-us/products/endpoint-antivirus/free-trial "
+        },
+        {
+          "type": "iot",
+          "target": "XG Firewall - Pre-auth RCE"
+        },
+        {
+          "type": "website",
+          "target": "https://central.sophos.com"
+        },
+        {
+          "type": "other",
+          "target": "XG Firewall"
+        },
+        {
+          "type": "other",
+          "target": "Intercept X Endpoint"
+        },
+        {
+          "type": "other",
+          "target": "*.sophos.com"
+        },
+        {
+          "type": "website",
+          "target": "*.cyberoam.com"
+        },
+        {
+          "type": "other",
+          "target": "*.reflexion.net"
+        },
+        {
+          "type": "other",
+          "target": "*.hitmanpro.com"
+        },
+        {
+          "type": "website",
+          "target": "*.astaro.com"
+        },
+        {
+          "type": "other",
+          "target": "Any Other Sophos Product or Service"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "website",
+          "target": "*.ddns.cyberoam.com"
+        },
+        {
+          "type": "website",
+          "target": "*.releaseportal.cyberoam.com"
+        },
+        {
+          "type": "website",
+          "target": "*eventreg.sophos.com"
+        },
+        {
+          "type": "website",
+          "target": "surveys.sophos.com"
+        },
+        {
+          "type": "website",
+          "target": "app.reflexion.net"
+        },
+        {
+          "type": "website",
+          "target": "tickets.reflexion.net"
+        },
+        {
+          "type": "website",
+          "target": "mev.hitmanpro.com"
+        },
+        {
+          "type": "other",
+          "target": "autodiscover.hitmanpro.com"
+        },
+        {
+          "type": "other",
+          "target": "lyncdiscover.hitmanpro.com"
+        },
+        {
+          "type": "other",
+          "target": "sip.hitmanpro.com"
+        },
+        {
+          "type": "other",
+          "target": "support.hitmanpro.com"
+        },
+        {
+          "type": "other",
+          "target": "shop.hitmanpro.com"
+        },
+        {
+          "type": "website",
+          "target": "events.sophos.com"
+        },
+        {
+          "type": "website",
+          "target": "sophos.atlassian.net (Public service desk)"
+        },
+        {
+          "type": "website",
+          "target": "community.sophos.com"
+        },
+        {
+          "type": "other",
+          "target": "SPF/DKIM/DMARC issues"
+        }
+      ]
+    }
+  },
+  {
     "name": "T-Mobile",
     "url": "https://bugcrowd.com/engagements/t-mobile",
     "allows_disclosure": false,
@@ -13389,132 +13511,6 @@
       ],
       "out_of_scope": [
 
-      ]
-    }
-  },
-  {
-    "name": "Sophos",
-    "url": "https://bugcrowd.com/sophos",
-    "allows_disclosure": true,
-    "managed_by_bugcrowd": true,
-    "safe_harbor": "full",
-    "max_payout": 50000,
-    "targets": {
-      "in_scope": [
-        {
-          "type": "website",
-          "target": "*.astaro.com"
-        },
-        {
-          "type": "website",
-          "target": "*.cyberoam.com"
-        },
-        {
-          "type": "other",
-          "target": "*.hitmanpro.com"
-        },
-        {
-          "type": "other",
-          "target": "*.reflexion.net"
-        },
-        {
-          "type": "other",
-          "target": "*.sophos.com"
-        },
-        {
-          "type": "other",
-          "target": "Any Other Sophos Product or Service"
-        },
-        {
-          "type": "other",
-          "target": "Intercept X Endpoint"
-        },
-        {
-          "type": "website",
-          "target": "Sophos Central"
-        },
-        {
-          "type": "other",
-          "target": "XG Firewall"
-        },
-        {
-          "type": "iot",
-          "target": "XG Firewall - Pre-auth RCE"
-        },
-        {
-          "type": "website",
-          "target": "https://central.sophos.com"
-        },
-        {
-          "type": "website",
-          "target": "https://www.sophos.com/en-us/products/endpoint-antivirus/free-trial "
-        }
-      ],
-      "out_of_scope": [
-        {
-          "type": "website",
-          "target": "*.ddns.cyberoam.com"
-        },
-        {
-          "type": "website",
-          "target": "*.releaseportal.cyberoam.com"
-        },
-        {
-          "type": "website",
-          "target": "*eventreg.sophos.com"
-        },
-        {
-          "type": "other",
-          "target": "SPF/DKIM/DMARC issues"
-        },
-        {
-          "type": "website",
-          "target": "app.reflexion.net"
-        },
-        {
-          "type": "other",
-          "target": "autodiscover.hitmanpro.com"
-        },
-        {
-          "type": "website",
-          "target": "community.sophos.com"
-        },
-        {
-          "type": "website",
-          "target": "events.sophos.com"
-        },
-        {
-          "type": "other",
-          "target": "lyncdiscover.hitmanpro.com"
-        },
-        {
-          "type": "website",
-          "target": "mev.hitmanpro.com"
-        },
-        {
-          "type": "other",
-          "target": "shop.hitmanpro.com"
-        },
-        {
-          "type": "other",
-          "target": "sip.hitmanpro.com"
-        },
-        {
-          "type": "website",
-          "target": "sophos.atlassian.net (Public service desk)"
-        },
-        {
-          "type": "other",
-          "target": "support.hitmanpro.com"
-        },
-        {
-          "type": "website",
-          "target": "surveys.sophos.com"
-        },
-        {
-          "type": "website",
-          "target": "tickets.reflexion.net"
-        }
       ]
     }
   },
