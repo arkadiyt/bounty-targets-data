@@ -5848,48 +5848,6 @@
     }
   },
   {
-    "name": "Cloudinary",
-    "url": "https://bugcrowd.com/engagements/cloudinary",
-    "allows_disclosure": true,
-    "managed_by_bugcrowd": true,
-    "safe_harbor": "full",
-    "max_payout": 4000,
-    "targets": {
-      "in_scope": [
-        {
-          "type": "website",
-          "target": "https://cloudinary.com/console"
-        },
-        {
-          "type": "api",
-          "target": "https://api.cloudinary.com"
-        },
-        {
-          "type": "api",
-          "target": "https://res.cloudinary.com"
-        },
-        {
-          "type": "website",
-          "target": "https://mediaflows.cloudinary.com/"
-        },
-        {
-          "type": "website",
-          "target": "https://dimensions.cloudinary.com"
-        }
-      ],
-      "out_of_scope": [
-        {
-          "type": "website",
-          "target": "https://support.cloudinary.com"
-        },
-        {
-          "type": "website",
-          "target": "wiki.cloudinary.com"
-        }
-      ]
-    }
-  },
-  {
     "name": "Code.org",
     "url": "https://bugcrowd.com/engagements/codeorg",
     "allows_disclosure": false,
@@ -6653,6 +6611,68 @@
       ],
       "out_of_scope": [
 
+      ]
+    }
+  },
+  {
+    "name": "KuCoin Managed Bug Bounty Program",
+    "url": "https://bugcrowd.com/engagements/kucoin",
+    "allows_disclosure": false,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "partial",
+    "max_payout": 5000,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "website",
+          "target": "https://kucoin.com"
+        },
+        {
+          "type": "ios",
+          "target": "https://apps.apple.com/us/app/kucoin-buy-bitcoin-crypto/id1378956601?mt=8"
+        },
+        {
+          "type": "android",
+          "target": "https://play.google.com/store/apps/details?id=com.kubi.kucoin"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "website",
+          "target": "support.kucoin.plus"
+        },
+        {
+          "type": "website",
+          "target": "store.kucoin.com"
+        },
+        {
+          "type": "website",
+          "target": "docs.kucoin.com"
+        },
+        {
+          "type": "website",
+          "target": "intro.kucoin.com"
+        },
+        {
+          "type": "website",
+          "target": "cert.kucoin.com"
+        },
+        {
+          "type": "website",
+          "target": "sandbox.kucoin.com"
+        },
+        {
+          "type": "website",
+          "target": "passport.kucoin.com"
+        },
+        {
+          "type": "website",
+          "target": "*-sdb.kucoin.com"
+        },
+        {
+          "type": "website",
+          "target": "*-sandbox.kucoin.com"
+        }
       ]
     }
   },
