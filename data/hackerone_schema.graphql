@@ -20607,7 +20607,7 @@ type LlmConversation implements Node {
   _id: ID!
   context_object: LlmConversationContext!
   id: ID!
-  llm_app: LlmApp
+  llm_app: LlmApp!
   llm_conversation_messages(
     """
     Returns the elements in the list that come after the specified cursor.
