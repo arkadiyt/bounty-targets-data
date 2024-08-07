@@ -7312,6 +7312,60 @@
     }
   },
   {
+    "name": "Skyscanner",
+    "url": "https://bugcrowd.com/engagements/skyscanner",
+    "allows_disclosure": false,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "full",
+    "max_payout": 8000,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "ios",
+          "target": "Skyscanner iOS App"
+        },
+        {
+          "type": "android",
+          "target": "Skyscanner Android App"
+        },
+        {
+          "type": "api",
+          "target": "gateway.skyscanner.net/*"
+        },
+        {
+          "type": "website",
+          "target": "skyscanner.net/hotels/book/*"
+        },
+        {
+          "type": "website",
+          "target": "skyscanner.net/*"
+        },
+        {
+          "type": "website",
+          "target": "partnerportal.skyscanner.net/*"
+        },
+        {
+          "type": "website",
+          "target": "*.skyscanner.net"
+        },
+        {
+          "type": "android",
+          "target": "Skyscanner Android app"
+        },
+        {
+          "type": "ios",
+          "target": "Skyscanner iOS app"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "other",
+          "target": "Corporate Email (*@skyscanner.net)"
+        }
+      ]
+    }
+  },
+  {
     "name": "Smartmockups",
     "url": "https://bugcrowd.com/engagements/smartmockups",
     "allows_disclosure": false,
@@ -13382,60 +13436,6 @@
       ],
       "out_of_scope": [
 
-      ]
-    }
-  },
-  {
-    "name": "Skyscanner",
-    "url": "https://bugcrowd.com/skyscanner",
-    "allows_disclosure": true,
-    "managed_by_bugcrowd": true,
-    "safe_harbor": "full",
-    "max_payout": 8000,
-    "targets": {
-      "in_scope": [
-        {
-          "type": "website",
-          "target": "*.skyscanner.net"
-        },
-        {
-          "type": "android",
-          "target": "Skyscanner Android App"
-        },
-        {
-          "type": "android",
-          "target": "Skyscanner Android app"
-        },
-        {
-          "type": "ios",
-          "target": "Skyscanner iOS App"
-        },
-        {
-          "type": "ios",
-          "target": "Skyscanner iOS app"
-        },
-        {
-          "type": "api",
-          "target": "gateway.skyscanner.net/*"
-        },
-        {
-          "type": "website",
-          "target": "partnerportal.skyscanner.net/*"
-        },
-        {
-          "type": "website",
-          "target": "skyscanner.net/*"
-        },
-        {
-          "type": "website",
-          "target": "skyscanner.net/hotels/book/*"
-        }
-      ],
-      "out_of_scope": [
-        {
-          "type": "other",
-          "target": "Corporate Email (*@skyscanner.net)"
-        }
       ]
     }
   },
