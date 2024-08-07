@@ -3741,73 +3741,6 @@
     }
   },
   {
-    "name": "Backblaze",
-    "url": "https://bugcrowd.com/backblaze",
-    "allows_disclosure": true,
-    "managed_by_bugcrowd": true,
-    "safe_harbor": "none",
-    "max_payout": 5000,
-    "targets": {
-      "in_scope": [
-        {
-          "type": "api",
-          "target": "B2 APIs (*.backblazeb2.com)"
-        },
-        {
-          "type": "android",
-          "target": "Backblaze Android mobile application"
-        },
-        {
-          "type": "website",
-          "target": "Backblaze Website (*.backblaze.com)"
-        },
-        {
-          "type": "ios",
-          "target": "Backblaze iOS mobile application"
-        },
-        {
-          "type": "other",
-          "target": "Git Repositories (b2-sdk-java & B2 Command Line Tool)"
-        },
-        {
-          "type": "other",
-          "target": "Mac Personal Backup Clients"
-        },
-        {
-          "type": "other",
-          "target": "Mac Restore Downloaders"
-        },
-        {
-          "type": "other",
-          "target": "Windows Personal Backup Clients"
-        },
-        {
-          "type": "other",
-          "target": "Windows Restore Downloaders"
-        },
-        {
-          "type": "api",
-          "target": "https://*.backblazeb2.com"
-        },
-        {
-          "type": "ios",
-          "target": "https://apps.apple.com/us/app/backblaze/id628638330"
-        },
-        {
-          "type": "website",
-          "target": "https://backblaze.com"
-        },
-        {
-          "type": "android",
-          "target": "https://play.google.com/store/apps/details?id=com.backblaze.android&hl=en_US&gl=US"
-        }
-      ],
-      "out_of_scope": [
-
-      ]
-    }
-  },
-  {
     "name": "Appliances - Barracuda Networks, Inc.",
     "url": "https://bugcrowd.com/barracuda",
     "allows_disclosure": true,
@@ -5119,6 +5052,57 @@
           "type": "website",
           "target": "https://www.adultforce.com/#/blog/ "
         }
+      ]
+    }
+  },
+  {
+    "name": "Backblaze",
+    "url": "https://bugcrowd.com/engagements/backblaze",
+    "allows_disclosure": false,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": null,
+    "max_payout": 5000,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "android",
+          "target": "https://play.google.com/store/apps/details?id=com.backblaze.android&hl=en_US&gl=US"
+        },
+        {
+          "type": "ios",
+          "target": "https://apps.apple.com/us/app/backblaze/id628638330"
+        },
+        {
+          "type": "other",
+          "target": "Mac Personal Backup Clients"
+        },
+        {
+          "type": "other",
+          "target": "Windows Personal Backup Clients"
+        },
+        {
+          "type": "other",
+          "target": "Mac Restore Downloaders"
+        },
+        {
+          "type": "other",
+          "target": "Windows Restore Downloaders"
+        },
+        {
+          "type": "other",
+          "target": "Git Repositories (b2-sdk-java & B2 Command Line Tool)"
+        },
+        {
+          "type": "api",
+          "target": "https://*.backblazeb2.com"
+        },
+        {
+          "type": "website",
+          "target": "https://backblaze.com"
+        }
+      ],
+      "out_of_scope": [
+
       ]
     }
   },
