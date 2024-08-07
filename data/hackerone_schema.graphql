@@ -4634,10 +4634,20 @@ type AutomationRun implements Node {
   _id: ID!
 
   """
+  ID of the activity that triggered this run
+  """
+  activity_id: Int
+
+  """
   The date and time the automation run was created
   """
   created_at: DateTime!
   id: ID!
+
+  """
+  ID of the report that belongs to the activity that triggered this run
+  """
+  report_id: Int
 
   """
   The logs of this run
@@ -16269,20 +16279,21 @@ An entitlement consumption overview object
 type EntitlementConsumptionOverview implements Node {
   consumption_end_date: String!
   consumption_start_date: String!
-  days_remaining: Int
-  days_remaining_percentage: Int
+  days_remaining: Float
+  days_remaining_percentage: Float
   entitlement_consumption_overview_id: String!
   entitlement_name: String
   entitlement_number: String
-  entitlement_remaining: Int
+  entitlement_remaining: Float
   entitlement_tier: String
   entitlement_total_purchased: Float
+  entitlement_total_spent_in_percentage: Float
   id: ID!
   max_object_consumption_amount_acc: Float
-  program_handle: String
-  team_name: String
-  team_status: String
-  total_spent_percentage: Int
+  object_type: String
+  programs_handle: String
+  programs_name: String
+  programs_status: String
 }
 
 """
