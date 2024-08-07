@@ -4013,56 +4013,6 @@
     }
   },
   {
-    "name": "Braze Public BB",
-    "url": "https://bugcrowd.com/braze-bb",
-    "allows_disclosure": true,
-    "managed_by_bugcrowd": true,
-    "safe_harbor": "none",
-    "max_payout": 5000,
-    "targets": {
-      "in_scope": [
-        {
-          "type": "api",
-          "target": "https://security-testing-env-api.k8s.tools-001.d-use-1.braze.com/"
-        },
-        {
-          "type": "website",
-          "target": "https://security-testing-env-dashboard.k8s.tools-001.d-use-1.braze.com/"
-        }
-      ],
-      "out_of_scope": [
-        {
-          "type": "other",
-          "target": "*.appboy.com"
-        },
-        {
-          "type": "other",
-          "target": "*.braze.com"
-        },
-        {
-          "type": "other",
-          "target": "*.braze.eu"
-        },
-        {
-          "type": "other",
-          "target": "Any Braze Owned Host not listed as in Scope"
-        },
-        {
-          "type": "other",
-          "target": "https://*.appboy.com/"
-        },
-        {
-          "type": "other",
-          "target": "https://*.braze.com/"
-        },
-        {
-          "type": "other",
-          "target": "https://*.braze.eu/"
-        }
-      ]
-    }
-  },
-  {
     "name": "Bullish.com",
     "url": "https://bugcrowd.com/bullish",
     "allows_disclosure": true,
@@ -5350,6 +5300,44 @@
         {
           "type": "website",
           "target": "https://perps-test.bitstamp.net"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Braze Public BB",
+    "url": "https://bugcrowd.com/engagements/braze-bb",
+    "allows_disclosure": false,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": null,
+    "max_payout": 5000,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "api",
+          "target": "https://security-testing-env-api.k8s.tools-001.d-use-1.braze.com/"
+        },
+        {
+          "type": "website",
+          "target": "https://security-testing-env-dashboard.k8s.tools-001.d-use-1.braze.com/"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "other",
+          "target": "https://*.appboy.com/"
+        },
+        {
+          "type": "other",
+          "target": "https://*.braze.eu/"
+        },
+        {
+          "type": "other",
+          "target": "https://*.braze.com/"
+        },
+        {
+          "type": "other",
+          "target": "Any Braze Owned Host not listed as in Scope"
         }
       ]
     }
