@@ -166,288 +166,6 @@
     }
   },
   {
-    "name": "1Password",
-    "url": "https://bugcrowd.com/agilebits",
-    "allows_disclosure": true,
-    "managed_by_bugcrowd": true,
-    "safe_harbor": "full",
-    "max_payout": 30000,
-    "targets": {
-      "in_scope": [
-        {
-          "type": "website",
-          "target": "<1Password signup page --> https://start.1password.com"
-        },
-        {
-          "type": "website",
-          "target": "<Your own 1Password Account subdomain --> https://<your account domain>.1password.com/"
-        },
-        {
-          "type": "android",
-          "target": "<Your own 1Password account> —> Latest stable, beta, or nightly Android Build"
-        },
-        {
-          "type": "other",
-          "target": "<Your own 1Password account> —> Latest stable, beta, or nightly Browser Extension  (Chrome, Brave, Firefox, Edge, and Safari)"
-        },
-        {
-          "type": "other",
-          "target": "<Your own 1Password account> —> Latest stable, beta, or nightly Command Line Interface (CLI) "
-        },
-        {
-          "type": "other",
-          "target": "<Your own 1Password account> —> Latest stable, beta, or nightly Linux Build"
-        },
-        {
-          "type": "other",
-          "target": "<Your own 1Password account> —> Latest stable, beta, or nightly MacOS Build"
-        },
-        {
-          "type": "other",
-          "target": "<Your own 1Password account> —> Latest stable, beta, or nightly Windows Build"
-        },
-        {
-          "type": "ios",
-          "target": "<Your own 1Password account> —> Latest stable, beta, or nightly iOS Build"
-        },
-        {
-          "type": "api",
-          "target": "<Your own 1Password account> —> https://events.1password.com/  (Event Reporting API is available on 1Password Business Accounts Only)"
-        },
-        {
-          "type": "website",
-          "target": "<Your own 1Pasword Personal Account> --> https://my.1password.com/"
-        },
-        {
-          "type": "website",
-          "target": "https://start.1password.com"
-        }
-      ],
-      "out_of_scope": [
-        {
-          "type": "website",
-          "target": "*.agilebits.com"
-        },
-        {
-          "type": "other",
-          "target": "All other domains, subdomains, and 1Password Accounts that are not owned by you, including accounts where you are a user but not the owner, are out of scope."
-        }
-      ]
-    }
-  },
-  {
-    "name": "1Password Bug Bounty CTF",
-    "url": "https://bugcrowd.com/agilebits-ctf",
-    "allows_disclosure": true,
-    "managed_by_bugcrowd": true,
-    "safe_harbor": "full",
-    "max_payout": 0,
-    "targets": {
-      "in_scope": [
-        {
-          "type": "website",
-          "target": "https://bugbounty-ctf.1password.com/"
-        }
-      ],
-      "out_of_scope": [
-        {
-          "type": "other",
-          "target": "All other domains, subdomains, and 1Password Accounts outside of the above URL are out of scope."
-        }
-      ]
-    }
-  },
-  {
-    "name": "Aiven Managed Bug Bounty",
-    "url": "https://bugcrowd.com/aiven-mbb-og",
-    "allows_disclosure": true,
-    "managed_by_bugcrowd": true,
-    "safe_harbor": "full",
-    "max_payout": 20000,
-    "targets": {
-      "in_scope": [
-        {
-          "type": "other",
-          "target": "Aiven for Apache Cassandra managed and hosted service"
-        },
-        {
-          "type": "other",
-          "target": "Aiven for Apache Flink managed and hosted service"
-        },
-        {
-          "type": "other",
-          "target": "Aiven for Apache Kafka managed and hosted service "
-        },
-        {
-          "type": "other",
-          "target": "Aiven for Caching managed and hosted service"
-        },
-        {
-          "type": "other",
-          "target": "Aiven for Clickhouse managed and hosted service"
-        },
-        {
-          "type": "other",
-          "target": "Aiven for Dragonfly managed and hosted service"
-        },
-        {
-          "type": "other",
-          "target": "Aiven for Grafana managed and hosted service"
-        },
-        {
-          "type": "other",
-          "target": "Aiven for M3 managed and hosted service "
-        },
-        {
-          "type": "other",
-          "target": "Aiven for MySQL managed and hosted service"
-        },
-        {
-          "type": "other",
-          "target": "Aiven for OpenSearch managed and hosted service"
-        },
-        {
-          "type": "other",
-          "target": "Aiven for PostgreSQL managed and hosted service"
-        },
-        {
-          "type": "other",
-          "target": "Aiven for Thanos Metrics managed and hosted service"
-        },
-        {
-          "type": "other",
-          "target": "Aiven for Valkey managed and hosted service"
-        },
-        {
-          "type": "website",
-          "target": "aiven.io"
-        },
-        {
-          "type": "api",
-          "target": "api.aiven.io"
-        },
-        {
-          "type": "website",
-          "target": "console.aiven.io"
-        },
-        {
-          "type": "other",
-          "target": "falcon-bug-bounty-flag-pgsql-dev-sandbox.aivencloud.com"
-        },
-        {
-          "type": "other",
-          "target": "github.com/Aiven"
-        },
-        {
-          "type": "other",
-          "target": "github.com/Aiven-Open"
-        },
-        {
-          "type": "other",
-          "target": "http://falcon-bug-bounty-flag-pgsql-dev-sandbox.aivencloud.com/"
-        },
-        {
-          "type": "website",
-          "target": "https://aiven.io/"
-        },
-        {
-          "type": "api",
-          "target": "https://api.aiven.io/login"
-        },
-        {
-          "type": "website",
-          "target": "https://console.aiven.io/login"
-        },
-        {
-          "type": "other",
-          "target": "https://github.com/Aiven"
-        },
-        {
-          "type": "other",
-          "target": "https://github.com/Aiven-Open"
-        }
-      ],
-      "out_of_scope": [
-        {
-          "type": "other",
-          "target": "*.aiven.fi"
-        },
-        {
-          "type": "other",
-          "target": "*.avns.net"
-        },
-        {
-          "type": "website",
-          "target": "Creation of support tickets"
-        },
-        {
-          "type": "other",
-          "target": "Customer services you did not create"
-        },
-        {
-          "type": "website",
-          "target": "aiven.io/community"
-        },
-        {
-          "type": "website",
-          "target": "aiven.io/contact"
-        },
-        {
-          "type": "website",
-          "target": "aivenhelp.zendesk.com"
-        },
-        {
-          "type": "website",
-          "target": "aquarium.aiven.io\t"
-        },
-        {
-          "type": "website",
-          "target": "events.aiven.io"
-        },
-        {
-          "type": "other",
-          "target": "github.com/Aiven-Labs"
-        },
-        {
-          "type": "website",
-          "target": "https://aiven.io/community"
-        },
-        {
-          "type": "website",
-          "target": "https://aiven.io/contact"
-        },
-        {
-          "type": "website",
-          "target": "https://aivenhelp.zendesk.com"
-        },
-        {
-          "type": "website",
-          "target": "https://events.aiven.io"
-        },
-        {
-          "type": "website",
-          "target": "https://support.aiven.io"
-        },
-        {
-          "type": "other",
-          "target": "ideas.aiven.io"
-        },
-        {
-          "type": "website",
-          "target": "support.aiven.io"
-        },
-        {
-          "type": "website",
-          "target": "uptime.aiven.io\t"
-        },
-        {
-          "type": "website",
-          "target": "video.aiven.io\t"
-        }
-      ]
-    }
-  },
-  {
     "name": "Ampol",
     "url": "https://bugcrowd.com/ampol",
     "allows_disclosure": true,
@@ -3741,215 +3459,6 @@
     }
   },
   {
-    "name": "BigCommerce",
-    "url": "https://bugcrowd.com/bigcommerce",
-    "allows_disclosure": true,
-    "managed_by_bugcrowd": true,
-    "safe_harbor": "none",
-    "max_payout": 2500,
-    "targets": {
-      "in_scope": [
-        {
-          "type": "website",
-          "target": "*.bigcommerce.com"
-        },
-        {
-          "type": "website",
-          "target": "*.bigcommerce.net"
-        },
-        {
-          "type": "android",
-          "target": "BigCommerce Android"
-        },
-        {
-          "type": "ios",
-          "target": "BigCommerce iOS"
-        },
-        {
-          "type": "website",
-          "target": "https://*.YOUR-TESTING-STORE.mybigcommerce.com/"
-        },
-        {
-          "type": "website",
-          "target": "https://STORE-YOURSTOREHash.mybigcommerce.com/"
-        },
-        {
-          "type": "ios",
-          "target": "https://apps.apple.com/au/app/bigcommerce/id1418570678"
-        },
-        {
-          "type": "website",
-          "target": "https://bigcommerce.com/blog"
-        },
-        {
-          "type": "website",
-          "target": "https://bigcommerce.com/make-it-big"
-        },
-        {
-          "type": "android",
-          "target": "https://play.google.com/store/apps/details?id=com.bigcommerce.mobile"
-        },
-        {
-          "type": "website",
-          "target": "https://www.bigcommerce.com"
-        },
-        {
-          "type": "website",
-          "target": "https://www.bigcommerce.net"
-        }
-      ],
-      "out_of_scope": [
-
-      ]
-    }
-  },
-  {
-    "name": "Binance",
-    "url": "https://bugcrowd.com/binance",
-    "allows_disclosure": true,
-    "managed_by_bugcrowd": true,
-    "safe_harbor": "partial",
-    "max_payout": 10000,
-    "targets": {
-      "in_scope": [
-        {
-          "type": "website",
-          "target": "*.binance.com"
-        },
-        {
-          "type": "website",
-          "target": "*.binance.us"
-        },
-        {
-          "type": "api",
-          "target": "3rdparty-apis.coinmarketcap.com"
-        },
-        {
-          "type": "other",
-          "target": "Binance Desktop Application"
-        },
-        {
-          "type": "android",
-          "target": "Binance Mobile Application for Android"
-        },
-        {
-          "type": "ios",
-          "target": "Binance Mobile Application for iOS"
-        },
-        {
-          "type": "other",
-          "target": "Binance macOS Application"
-        },
-        {
-          "type": "android",
-          "target": "CoinMarketCap Android app"
-        },
-        {
-          "type": "ios",
-          "target": "CoinMarketCap iOS app"
-        },
-        {
-          "type": "android",
-          "target": "Trustwallet Android App"
-        },
-        {
-          "type": "website",
-          "target": "Trustwallet Chrome Extension"
-        },
-        {
-          "type": "ios",
-          "target": "Trustwallet iOS App"
-        },
-        {
-          "type": "api",
-          "target": "api.binance.com"
-        },
-        {
-          "type": "api",
-          "target": "api.coinmarketcap.com"
-        },
-        {
-          "type": "website",
-          "target": "coinmarketcap.com"
-        },
-        {
-          "type": "other",
-          "target": "https://github.com/trustwallet/wallet-core/"
-        },
-        {
-          "type": "website",
-          "target": "https://trbinance.com"
-        },
-        {
-          "type": "website",
-          "target": "https://www.binance.com/"
-        },
-        {
-          "type": "website",
-          "target": "https://www.binance.us/"
-        },
-        {
-          "type": "api",
-          "target": "portal-api.coinmarketcap.com"
-        },
-        {
-          "type": "api",
-          "target": "pro-api.coinmarketcap.com"
-        },
-        {
-          "type": "website",
-          "target": "pro.coinmarketcap.com"
-        },
-        {
-          "type": "website",
-          "target": "trbinance.com"
-        }
-      ],
-      "out_of_scope": [
-        {
-          "type": "website",
-          "target": "*.binance.org"
-        },
-        {
-          "type": "other",
-          "target": "*.coinmarketcap.com"
-        },
-        {
-          "type": "website",
-          "target": "*.trustwallet.com"
-        },
-        {
-          "type": "website",
-          "target": "*.trustwalletapp.com"
-        },
-        {
-          "type": "website",
-          "target": "binance.sg"
-        },
-        {
-          "type": "website",
-          "target": "blockchain.coinmarketcap.com"
-        },
-        {
-          "type": "website",
-          "target": "blog.coinmarketcap.com"
-        },
-        {
-          "type": "website",
-          "target": "jobs.coinmarketcap.com"
-        },
-        {
-          "type": "website",
-          "target": "support.binance.*"
-        },
-        {
-          "type": "website",
-          "target": "support.coinmarketcap.com"
-        }
-      ]
-    }
-  },
-  {
     "name": "Bullish.com",
     "url": "https://bugcrowd.com/bullish",
     "allows_disclosure": true,
@@ -4642,81 +4151,6 @@
     }
   },
   {
-    "name": "Electroneum",
-    "url": "https://bugcrowd.com/electroneum",
-    "allows_disclosure": true,
-    "managed_by_bugcrowd": true,
-    "safe_harbor": "partial",
-    "max_payout": 12000,
-    "targets": {
-      "in_scope": [
-        {
-          "type": "android",
-          "target": "Electroneum Android App"
-        },
-        {
-          "type": "ios",
-          "target": "Electroneum iOS App"
-        },
-        {
-          "type": "website",
-          "target": "Smartchain Block Explorer"
-        },
-        {
-          "type": "other",
-          "target": "Smartchain Blockchain"
-        },
-        {
-          "type": "website",
-          "target": "https://anytask.thesecurityteam.rocks/"
-        },
-        {
-          "type": "api",
-          "target": "https://api.anytask.com/"
-        },
-        {
-          "type": "api",
-          "target": "https://api.electroneum.com/"
-        },
-        {
-          "type": "ios",
-          "target": "https://apps.apple.com/us/app/electroneum/id1270774992"
-        },
-        {
-          "type": "website",
-          "target": "https://blockexplorer.electroneum.com"
-        },
-        {
-          "type": "website",
-          "target": "https://electroneum.com/"
-        },
-        {
-          "type": "other",
-          "target": "https://github.com/electroneum/electroneum-sc/"
-        },
-        {
-          "type": "website",
-          "target": "https://my.electroneum.com/"
-        },
-        {
-          "type": "website",
-          "target": "https://my.thesecurityteam.rocks/"
-        },
-        {
-          "type": "android",
-          "target": "https://play.google.com/store/apps/details?id=com.electroneum.mobile&hl=en_US"
-        },
-        {
-          "type": "website",
-          "target": "https://www.anytask.com/"
-        }
-      ],
-      "out_of_scope": [
-
-      ]
-    }
-  },
-  {
     "name": "Acorns Grow, Inc.",
     "url": "https://bugcrowd.com/engagements/acorns",
     "allows_disclosure": true,
@@ -4762,6 +4196,240 @@
         {
           "type": "website",
           "target": "store.acorns.com"
+        }
+      ]
+    }
+  },
+  {
+    "name": " 1Password",
+    "url": "https://bugcrowd.com/engagements/agilebits",
+    "allows_disclosure": false,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "full",
+    "max_payout": 30000,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "website",
+          "target": "<Your own 1Pasword Personal Account> --> https://my.1password.com/"
+        },
+        {
+          "type": "website",
+          "target": "https://start.1password.com"
+        },
+        {
+          "type": "other",
+          "target": "<Your own 1Password account> —> Latest stable, beta, or nightly MacOS Build"
+        },
+        {
+          "type": "android",
+          "target": "<Your own 1Password account> —> Latest stable, beta, or nightly Android Build"
+        },
+        {
+          "type": "other",
+          "target": "<Your own 1Password account> —> Latest stable, beta, or nightly Command Line Interface (CLI) "
+        },
+        {
+          "type": "website",
+          "target": "<Your own 1Password Account subdomain --> https://<your account domain>.1password.com/"
+        },
+        {
+          "type": "other",
+          "target": "<Your own 1Password account> —> Latest stable, beta, or nightly Windows Build"
+        },
+        {
+          "type": "other",
+          "target": "<Your own 1Password account> —> Latest stable, beta, or nightly Linux Build"
+        },
+        {
+          "type": "ios",
+          "target": "<Your own 1Password account> —> Latest stable, beta, or nightly iOS Build"
+        },
+        {
+          "type": "other",
+          "target": "<Your own 1Password account> —> Latest stable, beta, or nightly Browser Extension  (Chrome, Brave, Firefox, Edge, and Safari)"
+        },
+        {
+          "type": "api",
+          "target": "<Your own 1Password account> —> https://events.1password.com/  (Event Reporting API is available on 1Password Business Accounts Only)"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "website",
+          "target": "*.agilebits.com"
+        },
+        {
+          "type": "other",
+          "target": "All other domains, subdomains, and 1Password Accounts that are not owned by you, including accounts where you are a user but not the owner, are out of scope."
+        }
+      ]
+    }
+  },
+  {
+    "name": "1Password Bug Bounty CTF",
+    "url": "https://bugcrowd.com/engagements/agilebits-ctf",
+    "allows_disclosure": false,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "full",
+    "max_payout": null,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "website",
+          "target": "https://bugbounty-ctf.1password.com/"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "other",
+          "target": "All other domains, subdomains, and 1Password Accounts outside of the above URL are out of scope."
+        }
+      ]
+    }
+  },
+  {
+    "name": "Aiven Managed Bug Bounty",
+    "url": "https://bugcrowd.com/engagements/aiven-mbb-og",
+    "allows_disclosure": false,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "full",
+    "max_payout": 20000,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "other",
+          "target": "Aiven for Apache Cassandra managed and hosted service"
+        },
+        {
+          "type": "other",
+          "target": "Aiven for Clickhouse managed and hosted service"
+        },
+        {
+          "type": "other",
+          "target": "Aiven for Dragonfly managed and hosted service"
+        },
+        {
+          "type": "other",
+          "target": "Aiven for Apache Flink managed and hosted service"
+        },
+        {
+          "type": "other",
+          "target": "Aiven for Thanos Metrics managed and hosted service"
+        },
+        {
+          "type": "other",
+          "target": "Aiven for Valkey managed and hosted service"
+        },
+        {
+          "type": "other",
+          "target": "Aiven for MySQL managed and hosted service"
+        },
+        {
+          "type": "other",
+          "target": "Aiven for OpenSearch managed and hosted service"
+        },
+        {
+          "type": "other",
+          "target": "Aiven for Grafana managed and hosted service"
+        },
+        {
+          "type": "other",
+          "target": "Aiven for Apache Kafka managed and hosted service "
+        },
+        {
+          "type": "other",
+          "target": "Aiven for M3 managed and hosted service "
+        },
+        {
+          "type": "other",
+          "target": "Aiven for PostgreSQL managed and hosted service"
+        },
+        {
+          "type": "other",
+          "target": "Aiven for Caching managed and hosted service"
+        },
+        {
+          "type": "website",
+          "target": "https://aiven.io/"
+        },
+        {
+          "type": "website",
+          "target": "https://console.aiven.io/login"
+        },
+        {
+          "type": "api",
+          "target": "https://api.aiven.io/login"
+        },
+        {
+          "type": "other",
+          "target": "https://github.com/Aiven-Open"
+        },
+        {
+          "type": "other",
+          "target": "https://github.com/Aiven"
+        },
+        {
+          "type": "other",
+          "target": "http://falcon-bug-bounty-flag-pgsql-dev-sandbox.aivencloud.com/"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "website",
+          "target": "aquarium.aiven.io\t"
+        },
+        {
+          "type": "website",
+          "target": "uptime.aiven.io\t"
+        },
+        {
+          "type": "website",
+          "target": "video.aiven.io\t"
+        },
+        {
+          "type": "website",
+          "target": "https://aiven.io/community"
+        },
+        {
+          "type": "website",
+          "target": "https://aiven.io/contact"
+        },
+        {
+          "type": "other",
+          "target": "Customer services you did not create"
+        },
+        {
+          "type": "other",
+          "target": "*.aiven.fi"
+        },
+        {
+          "type": "other",
+          "target": "github.com/Aiven-Labs"
+        },
+        {
+          "type": "other",
+          "target": "*.avns.net"
+        },
+        {
+          "type": "website",
+          "target": "https://events.aiven.io"
+        },
+        {
+          "type": "other",
+          "target": "ideas.aiven.io"
+        },
+        {
+          "type": "website",
+          "target": "https://aivenhelp.zendesk.com"
+        },
+        {
+          "type": "website",
+          "target": "https://support.aiven.io"
+        },
+        {
+          "type": "website",
+          "target": "Creation of support tickets"
         }
       ]
     }
@@ -5029,6 +4697,187 @@
       ],
       "out_of_scope": [
 
+      ]
+    }
+  },
+  {
+    "name": "BigCommerce",
+    "url": "https://bugcrowd.com/engagements/bigcommerce",
+    "allows_disclosure": true,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": null,
+    "max_payout": 2500,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "website",
+          "target": "https://www.bigcommerce.net"
+        },
+        {
+          "type": "ios",
+          "target": "https://apps.apple.com/au/app/bigcommerce/id1418570678"
+        },
+        {
+          "type": "android",
+          "target": "https://play.google.com/store/apps/details?id=com.bigcommerce.mobile"
+        },
+        {
+          "type": "website",
+          "target": "https://www.bigcommerce.com"
+        },
+        {
+          "type": "website",
+          "target": "https://bigcommerce.com/make-it-big"
+        },
+        {
+          "type": "website",
+          "target": "https://bigcommerce.com/blog"
+        },
+        {
+          "type": "website",
+          "target": "https://*.YOUR-TESTING-STORE.mybigcommerce.com/"
+        },
+        {
+          "type": "website",
+          "target": "https://STORE-YOURSTOREHash.mybigcommerce.com/"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
+    "name": "Binance",
+    "url": "https://bugcrowd.com/engagements/binance",
+    "allows_disclosure": true,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "partial",
+    "max_payout": 10000,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "api",
+          "target": "api.coinmarketcap.com"
+        },
+        {
+          "type": "api",
+          "target": "pro-api.coinmarketcap.com"
+        },
+        {
+          "type": "website",
+          "target": "https://www.binance.com/"
+        },
+        {
+          "type": "other",
+          "target": "Binance Desktop Application"
+        },
+        {
+          "type": "android",
+          "target": "Binance Mobile Application for Android"
+        },
+        {
+          "type": "ios",
+          "target": "Binance Mobile Application for iOS"
+        },
+        {
+          "type": "api",
+          "target": "api.binance.com"
+        },
+        {
+          "type": "other",
+          "target": "Binance macOS Application"
+        },
+        {
+          "type": "website",
+          "target": "pro.coinmarketcap.com"
+        },
+        {
+          "type": "android",
+          "target": "CoinMarketCap Android app"
+        },
+        {
+          "type": "android",
+          "target": "Trustwallet Android App"
+        },
+        {
+          "type": "ios",
+          "target": "Trustwallet iOS App"
+        },
+        {
+          "type": "other",
+          "target": "https://github.com/trustwallet/wallet-core/"
+        },
+        {
+          "type": "ios",
+          "target": "CoinMarketCap iOS app"
+        },
+        {
+          "type": "api",
+          "target": "portal-api.coinmarketcap.com"
+        },
+        {
+          "type": "website",
+          "target": "coinmarketcap.com"
+        },
+        {
+          "type": "api",
+          "target": "3rdparty-apis.coinmarketcap.com"
+        },
+        {
+          "type": "website",
+          "target": "https://www.binance.us/"
+        },
+        {
+          "type": "website",
+          "target": "https://trbinance.com"
+        },
+        {
+          "type": "website",
+          "target": "Trustwallet Chrome Extension"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "website",
+          "target": "jobs.coinmarketcap.com"
+        },
+        {
+          "type": "website",
+          "target": "support.binance.*"
+        },
+        {
+          "type": "website",
+          "target": "binance.sg"
+        },
+        {
+          "type": "website",
+          "target": "*.trustwallet.com"
+        },
+        {
+          "type": "website",
+          "target": "*.trustwalletapp.com"
+        },
+        {
+          "type": "website",
+          "target": "*.binance.org"
+        },
+        {
+          "type": "website",
+          "target": "blog.coinmarketcap.com"
+        },
+        {
+          "type": "website",
+          "target": "support.coinmarketcap.com"
+        },
+        {
+          "type": "website",
+          "target": "blockchain.coinmarketcap.com"
+        },
+        {
+          "type": "other",
+          "target": "*.coinmarketcap.com"
+        }
       ]
     }
   },
@@ -6051,6 +5900,65 @@
     }
   },
   {
+    "name": "Electroneum",
+    "url": "https://bugcrowd.com/engagements/electroneum",
+    "allows_disclosure": true,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "partial",
+    "max_payout": 12000,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "website",
+          "target": "https://my.electroneum.com/"
+        },
+        {
+          "type": "website",
+          "target": "https://electroneum.com/"
+        },
+        {
+          "type": "api",
+          "target": "https://api.electroneum.com/"
+        },
+        {
+          "type": "android",
+          "target": "https://play.google.com/store/apps/details?id=com.electroneum.mobile&hl=en_US"
+        },
+        {
+          "type": "ios",
+          "target": "https://apps.apple.com/us/app/electroneum/id1270774992"
+        },
+        {
+          "type": "api",
+          "target": "https://api.anytask.com/"
+        },
+        {
+          "type": "website",
+          "target": "https://www.anytask.com/"
+        },
+        {
+          "type": "other",
+          "target": "https://github.com/electroneum/electroneum-sc/"
+        },
+        {
+          "type": "website",
+          "target": "https://blockexplorer.electroneum.com"
+        },
+        {
+          "type": "website",
+          "target": "https://my.thesecurityteam.rocks/"
+        },
+        {
+          "type": "website",
+          "target": "https://anytask.thesecurityteam.rocks/"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
     "name": "Elementor: Bug Bounty Program",
     "url": "https://bugcrowd.com/engagements/elementor",
     "allows_disclosure": true,
@@ -6351,6 +6259,56 @@
     }
   },
   {
+    "name": "Gearset: Managed Bug Bounty",
+    "url": "https://bugcrowd.com/engagements/gearset-mbb",
+    "allows_disclosure": false,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "full",
+    "max_payout": 6000,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "website",
+          "target": "https://staging.gearset.com/"
+        },
+        {
+          "type": "api",
+          "target": "https://staging.gearset.com/"
+        },
+        {
+          "type": "website",
+          "target": "https://hipaa.staging.gearset.com/"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "api",
+          "target": "api.gearset.com"
+        },
+        {
+          "type": "website",
+          "target": "app.gearset.com"
+        },
+        {
+          "type": "website",
+          "target": "us.app.gearset.com"
+        },
+        {
+          "type": "website",
+          "target": "eu.app.gearset.com"
+        },
+        {
+          "type": "website",
+          "target": "ap.app.gearest.com"
+        },
+        {
+          "type": "website",
+          "target": "gearset.com"
+        }
+      ]
+    }
+  },
+  {
     "name": "HotDoc",
     "url": "https://bugcrowd.com/engagements/hotdoc",
     "allows_disclosure": true,
@@ -6583,6 +6541,119 @@
         {
           "type": "other",
           "target": "*.dev.x.immutable.com, *.sandbox.x.immutable.com, *.dev.x.immutable.com, *.sandbox.imtbl.com, *.dev.imtbl.com, *.ropsten.x.immutable.com, ropsten.imx.community (see brief for exceptions)"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Intercom",
+    "url": "https://bugcrowd.com/engagements/intercom",
+    "allows_disclosure": true,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "partial",
+    "max_payout": 6000,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "ios",
+          "target": "https://developers.intercom.com/installing-intercom/docs/about-the-sdk-ios"
+        },
+        {
+          "type": "api",
+          "target": "https://api.intercom.com"
+        },
+        {
+          "type": "website",
+          "target": "https://app.intercom.com"
+        },
+        {
+          "type": "website",
+          "target": "*.intercomassets.com / *.intercomcdn.com"
+        },
+        {
+          "type": "website",
+          "target": "https://app.intercom.io/"
+        },
+        {
+          "type": "android",
+          "target": "https://developers.intercom.com/installing-intercom/docs/about-the-sdk-android"
+        },
+        {
+          "type": "website",
+          "target": "https://www.intercom.com/"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
+    "name": "iRobot",
+    "url": "https://bugcrowd.com/engagements/irobot",
+    "allows_disclosure": true,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "full",
+    "max_payout": 7000,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "hardware",
+          "target": "iRobot cloud-connected robot that you own (i.e. j7, s9, i7, 980, 960, 690, Braava, etc.)"
+        },
+        {
+          "type": "android",
+          "target": "https://play.google.com/store/apps/details?id=com.irobot.home"
+        },
+        {
+          "type": "ios",
+          "target": "https://itunes.apple.com/us/app/irobot-home/id1012014442?mt=8"
+        },
+        {
+          "type": "api",
+          "target": "https://w2ab2i60y4.execute-api.us-east-1.amazonaws.com/dev/v1/ecommerce/entitlements"
+        },
+        {
+          "type": "api",
+          "target": "https://w2ab2i60y4.execute-api.us-east-1.amazonaws.com/dev/v1/ecommerce/entitlements/{entitlement_id}"
+        },
+        {
+          "type": "api",
+          "target": "https://w2ab2i60y4.execute-api.us-east-1.amazonaws.com/dev/v1/ecommerce/notifications/raas"
+        },
+        {
+          "type": "api",
+          "target": "https://w2ab2i60y4.execute-api.us-east-1.amazonaws.com/dev/v1/ecommerce/users/{user_id}/entitlements"
+        },
+        {
+          "type": "api",
+          "target": "iRobot API Endpoint"
+        },
+        {
+          "type": "api",
+          "target": "https://w2ab2i60y4.execute-api.us-east-1.amazonaws.com/dev/v1/ecommerce/robots/{robot_id}/entitlements"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "website",
+          "target": "https://www.irobot.com"
+        },
+        {
+          "type": "website",
+          "target": "https://homesupport.irobot.com"
+        },
+        {
+          "type": "website",
+          "target": "https://global.irobot.com/My%20Privacy"
+        },
+        {
+          "type": "website",
+          "target": "irobot.in"
+        },
+        {
+          "type": "website",
+          "target": "https://homesupport.irobot.com/app/chat/chat_launch"
         }
       ]
     }
@@ -6842,6 +6913,117 @@
           "type": "website",
           "target": "https://forums.lastpass.com"
         }
+      ]
+    }
+  },
+  {
+    "name": "Lightspeed Hospitality",
+    "url": "https://bugcrowd.com/engagements/lightspeed-hospitality",
+    "allows_disclosure": false,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "full",
+    "max_payout": 2000,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "website",
+          "target": "https://manager.trial.lsk.lightspeed.app/\t"
+        },
+        {
+          "type": "website",
+          "target": "https://hq.breadcrumb.com/hq/restaurants/bounty-cafe-2/"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "website",
+          "target": "https://lightspeedhq.com/trial "
+        },
+        {
+          "type": "other",
+          "target": "https://pos-admin.trial.lsk.lightspeed.app"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Lightspeed Retail",
+    "url": "https://bugcrowd.com/engagements/lightspeed-retail",
+    "allows_disclosure": false,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "full",
+    "max_payout": 6250,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "website",
+          "target": "secure.vendhq.com"
+        },
+        {
+          "type": "website",
+          "target": "https://developers.vendhq.com/"
+        },
+        {
+          "type": "website",
+          "target": "https://payment-connectors.vendhq.com/"
+        },
+        {
+          "type": "website",
+          "target": "https://www.vendhq.com/"
+        },
+        {
+          "type": "website",
+          "target": "https://yourstore.retail.lightspeed.app/signin/?return=%2F"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "website",
+          "target": "partners.vendhq.com"
+        },
+        {
+          "type": "website",
+          "target": "track.api.vendhq.com"
+        },
+        {
+          "type": "website",
+          "target": "your-store.vendecommerce.com"
+        },
+        {
+          "type": "website",
+          "target": "partnerportal.vendhq.com"
+        },
+        {
+          "type": "website",
+          "target": "vendhq.force.com"
+        },
+        {
+          "type": "website",
+          "target": "vendimageuploadcdn.global.ssl.fastly.net"
+        },
+        {
+          "type": "website",
+          "target": "x-series-support.lightspeedhq.com"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Lightspeed Hospitality Private",
+    "url": "https://bugcrowd.com/engagements/lightspeed-u-series",
+    "allows_disclosure": true,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "full",
+    "max_payout": 1000,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "website",
+          "target": "https://hq.breadcrumb.com/hq/restaurants/bounty-cafe-2/"
+        }
+      ],
+      "out_of_scope": [
+
       ]
     }
   },
@@ -7289,6 +7471,91 @@
     }
   },
   {
+    "name": "Octopus Deploy",
+    "url": "https://bugcrowd.com/engagements/octopus-deploy",
+    "allows_disclosure": true,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "full",
+    "max_payout": 6000,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "other",
+          "target": "https://octopus.com/downloads"
+        },
+        {
+          "type": "other",
+          "target": "https://octopus.com/downloads"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
+    "name": "Octopus",
+    "url": "https://bugcrowd.com/engagements/octopus-og",
+    "allows_disclosure": false,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "full",
+    "max_payout": 6000,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "website",
+          "target": "*.octopus.com"
+        },
+        {
+          "type": "other",
+          "target": "https://github.com/OctopusDeploy"
+        },
+        {
+          "type": "website",
+          "target": "https://octopus.com"
+        },
+        {
+          "type": "website",
+          "target": "https://aiagent.octopus.com/api/form"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "website",
+          "target": "*.octopus.app"
+        },
+        {
+          "type": "website",
+          "target": "artifactorysample.octopus.com"
+        },
+        {
+          "type": "website",
+          "target": "bamboosample.octopus.com"
+        },
+        {
+          "type": "website",
+          "target": "jenkinssample.octopus.com"
+        },
+        {
+          "type": "website",
+          "target": "teamcitysample.octopus.com"
+        },
+        {
+          "type": "website",
+          "target": "nexussample.octopus.com"
+        },
+        {
+          "type": "website",
+          "target": "myget.octopus.com"
+        },
+        {
+          "type": "website",
+          "target": " partners.octopus.com"
+        }
+      ]
+    }
+  },
+  {
     "name": "oDesk ",
     "url": "https://bugcrowd.com/engagements/odesk",
     "allows_disclosure": true,
@@ -7304,6 +7571,560 @@
       ],
       "out_of_scope": [
 
+      ]
+    }
+  },
+  {
+    "name": "OneTrust",
+    "url": "https://bugcrowd.com/engagements/onetrust",
+    "allows_disclosure": true,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "full",
+    "max_payout": 6500,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "website",
+          "target": "https://pentest-app.onetrust.com/"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "website",
+          "target": "https://*.onetrust.com"
+        },
+        {
+          "type": "website",
+          "target": "https://store.onetrust.com"
+        },
+        {
+          "type": "website",
+          "target": "https://*.convercent.com"
+        },
+        {
+          "type": "website",
+          "target": "https://*.dataguidance.com"
+        },
+        {
+          "type": "website",
+          "target": "https://app.vendorpedia.com"
+        },
+        {
+          "type": "website",
+          "target": "https://*.preferencechoice.com"
+        },
+        {
+          "type": "website",
+          "target": "https://*.redacted.ai"
+        },
+        {
+          "type": "website",
+          "target": "https://*.sharedassessments.org"
+        },
+        {
+          "type": "website",
+          "target": "https://developer.onetrust.com"
+        },
+        {
+          "type": "website",
+          "target": "https://my.onetrust.com"
+        },
+        {
+          "type": "website",
+          "target": "https://*.vendorpedia.com"
+        },
+        {
+          "type": "website",
+          "target": "https://*.onetrustgrc.com"
+        },
+        {
+          "type": "website",
+          "target": "https://*.cookiepro.com"
+        },
+        {
+          "type": "website",
+          "target": "https://tv.onetrust.com/"
+        },
+        {
+          "type": "website",
+          "target": "https://*.cookielaw.org"
+        },
+        {
+          "type": "website",
+          "target": "https://*.onetrustpro.com"
+        },
+        {
+          "type": "website",
+          "target": "https://*.privacyconnect.com"
+        },
+        {
+          "type": "website",
+          "target": "https://*.onetrust.de"
+        },
+        {
+          "type": "website",
+          "target": "https://*.onetrust.se"
+        },
+        {
+          "type": "website",
+          "target": "https://*.onetrust.es"
+        },
+        {
+          "type": "website",
+          "target": "https://*.onetrust.fr"
+        },
+        {
+          "type": "website",
+          "target": "https://*.onetrust.it"
+        },
+        {
+          "type": "website",
+          "target": "https://*.privacytech.com"
+        },
+        {
+          "type": "website",
+          "target": "https://*.privacypedia.com"
+        },
+        {
+          "type": "website",
+          "target": "https://*.esgiq.com"
+        },
+        {
+          "type": "website",
+          "target": "https://*.trustweek2021.com"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Opera Public Bug Bounty",
+    "url": "https://bugcrowd.com/engagements/opera",
+    "allows_disclosure": false,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "full",
+    "max_payout": 5000,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "website",
+          "target": "https://auth.opera.com"
+        },
+        {
+          "type": "api",
+          "target": "https://accounts.opera.com"
+        },
+        {
+          "type": "api",
+          "target": "https://flow.opera.com"
+        },
+        {
+          "type": "api",
+          "target": "https://autoupdate.geo.opera.com"
+        },
+        {
+          "type": "api",
+          "target": "https://net.geo.opera.com"
+        },
+        {
+          "type": "website",
+          "target": "https://download.opera.com"
+        },
+        {
+          "type": "api",
+          "target": "https://speeddials.opera.com"
+        },
+        {
+          "type": "api",
+          "target": "https://browser-notifications.opera.com"
+        },
+        {
+          "type": "website",
+          "target": "https://www.opera.com/"
+        },
+        {
+          "type": "other",
+          "target": "https://www.opera.com/computer/thanks?ni=stable&os=windows"
+        },
+        {
+          "type": "other",
+          "target": "https://www.opera.com/computer/thanks?ni=eapgx&os=windows"
+        },
+        {
+          "type": "website",
+          "target": "https://get.geo.opera.com"
+        },
+        {
+          "type": "android",
+          "target": "https://play.google.com/store/apps/details?id=com.opera.browser"
+        },
+        {
+          "type": "android",
+          "target": "https://play.google.com/store/apps/details?id=com.opera.app.news"
+        },
+        {
+          "type": "android",
+          "target": "https://play.google.com/store/apps/details?id=com.opera.gx"
+        },
+        {
+          "type": "android",
+          "target": "https://play.google.com/store/apps/details?id=com.opera.mini.native"
+        },
+        {
+          "type": "android",
+          "target": "https://play.google.com/store/apps/details?id=com.opera.app.sports"
+        },
+        {
+          "type": "api",
+          "target": "https://cryptowallet.opera-api.com"
+        },
+        {
+          "type": "api",
+          "target": "https://suggestions.opera-api.com"
+        },
+        {
+          "type": "other",
+          "target": "*.opera.software"
+        },
+        {
+          "type": "api",
+          "target": "weather.opera-api.com"
+        },
+        {
+          "type": "api",
+          "target": "push.opera.com"
+        },
+        {
+          "type": "api",
+          "target": "*.osp.opera.software"
+        },
+        {
+          "type": "website",
+          "target": "https://bugs.opera.com/"
+        },
+        {
+          "type": "api",
+          "target": "*.opera.technology"
+        },
+        {
+          "type": "website",
+          "target": "https://gx.games"
+        },
+        {
+          "type": "website",
+          "target": "https://create.gx.games"
+        },
+        {
+          "type": "website",
+          "target": "Loomi.tv"
+        },
+        {
+          "type": "api",
+          "target": "https://features.opera-api.com"
+        },
+        {
+          "type": "api",
+          "target": "https://cdn-store.opera-api.com"
+        },
+        {
+          "type": "api",
+          "target": "*.sec-tunnel.com"
+        },
+        {
+          "type": "website",
+          "target": "*.opera.com"
+        },
+        {
+          "type": "api",
+          "target": "exchange.opera.com"
+        },
+        {
+          "type": "api",
+          "target": "merchandise.opera-api.com"
+        },
+        {
+          "type": "api",
+          "target": "blocklist.opera-api.com"
+        },
+        {
+          "type": "api",
+          "target": "https://gx.opera-api.com"
+        },
+        {
+          "type": "api",
+          "target": "37.228.104.0/21"
+        },
+        {
+          "type": "api",
+          "target": "77.111.244.0/22"
+        },
+        {
+          "type": "api",
+          "target": "82.145.208.0/20"
+        },
+        {
+          "type": "api",
+          "target": "91.203.96.0/22"
+        },
+        {
+          "type": "api",
+          "target": "102.23.96.0/22"
+        },
+        {
+          "type": "api",
+          "target": "103.83.120.0/22"
+        },
+        {
+          "type": "api",
+          "target": "107.167.96.0/19"
+        },
+        {
+          "type": "api",
+          "target": "141.0.8.0/21"
+        },
+        {
+          "type": "api",
+          "target": "185.26.180.0/22"
+        },
+        {
+          "type": "api",
+          "target": "195.189.143.0/24"
+        },
+        {
+          "type": "api",
+          "target": "203.89.100.0/22"
+        },
+        {
+          "type": "website",
+          "target": "marketplace.gamemaker.io"
+        },
+        {
+          "type": "api",
+          "target": "*.opera-mini.net"
+        },
+        {
+          "type": "api",
+          "target": "*.opera.news"
+        },
+        {
+          "type": "api",
+          "target": "*.operanewsapp.com"
+        },
+        {
+          "type": "other",
+          "target": "GameMaker Studio 2"
+        },
+        {
+          "type": "api",
+          "target": "*.yoyogames.com"
+        },
+        {
+          "type": "website",
+          "target": "https://www.gamemaker.io"
+        },
+        {
+          "type": "website",
+          "target": "https://cashback.opera.com/"
+        },
+        {
+          "type": "website",
+          "target": "*.apex-football.com"
+        },
+        {
+          "type": "website",
+          "target": "*.operafootball.com"
+        },
+        {
+          "type": "api",
+          "target": "*.feednews.com"
+        },
+        {
+          "type": "website",
+          "target": "*.dailyadvent.com"
+        },
+        {
+          "type": "api",
+          "target": "api.gx.games/gxc"
+        },
+        {
+          "type": "api",
+          "target": "api.gx.games/dc"
+        },
+        {
+          "type": "api",
+          "target": "api.gx.games/dev "
+        },
+        {
+          "type": "api",
+          "target": "api.gx.games/profile"
+        },
+        {
+          "type": "api",
+          "target": "api.gx.games/session"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "website",
+          "target": "concurso.opera.com "
+        },
+        {
+          "type": "website",
+          "target": "investor.opera.com"
+        },
+        {
+          "type": "website",
+          "target": "help.yoyogames.com"
+        },
+        {
+          "type": "website",
+          "target": "bugs.yoyogames.com"
+        },
+        {
+          "type": "website",
+          "target": "admanager.opera.com"
+        },
+        {
+          "type": "website",
+          "target": "accountsstage.yoyogames.com"
+        },
+        {
+          "type": "website",
+          "target": "control.gx-servers.opera.com"
+        },
+        {
+          "type": "website",
+          "target": "help.gx-servers.opera.com"
+        },
+        {
+          "type": "website",
+          "target": "verizon-us-seattle.opera-mini.net"
+        },
+        {
+          "type": "website",
+          "target": "s2{1,2}-05-08-v09.opera-mini.net"
+        },
+        {
+          "type": "website",
+          "target": "verizon-us-lvs-seattle.opera-mini.net"
+        },
+        {
+          "type": "website",
+          "target": "107.167.127.4{0,1}"
+        },
+        {
+          "type": "website",
+          "target": "jobs.opera.com"
+        },
+        {
+          "type": "website",
+          "target": "verizon-us-lvs-ashburn.opera-mini.net"
+        },
+        {
+          "type": "api",
+          "target": "interstitial.opera-mini.net"
+        },
+        {
+          "type": "website",
+          "target": "certs.opera.com"
+        },
+        {
+          "type": "website",
+          "target": "checkout.opera.com"
+        },
+        {
+          "type": "website",
+          "target": "contest.opera.com"
+        },
+        {
+          "type": "website",
+          "target": "catch.opera.com"
+        },
+        {
+          "type": "website",
+          "target": "wallpaper.opera.com"
+        },
+        {
+          "type": "website",
+          "target": "tabfulness.opera.com"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Optimizely",
+    "url": "https://bugcrowd.com/engagements/optimizely",
+    "allows_disclosure": true,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "partial",
+    "max_payout": 2500,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "website",
+          "target": "https://app.optimizely.com/"
+        },
+        {
+          "type": "website",
+          "target": "https://cdn.optimizely.com/"
+        },
+        {
+          "type": "website",
+          "target": "https://cdn-pci.optimizely.com/"
+        },
+        {
+          "type": "website",
+          "target": "https://optimizely-edge.com"
+        },
+        {
+          "type": "api",
+          "target": "https://api.optimizely.com/"
+        },
+        {
+          "type": "website",
+          "target": "https://dxc.episerver.net/ "
+        },
+        {
+          "type": "website",
+          "target": "https://paasportal.episerver.net/"
+        },
+        {
+          "type": "website",
+          "target": "https://paasportal.episerver.net/api/v1.0/"
+        },
+        {
+          "type": "website",
+          "target": "https://app.welcomesoftware.com/"
+        },
+        {
+          "type": "website",
+          "target": "https://accounts.welcomesoftware.com/"
+        },
+        {
+          "type": "api",
+          "target": "https://api.welcomesoftware.com/"
+        },
+        {
+          "type": "website",
+          "target": "https://cdn-app.welcomesoftware.com/"
+        },
+        {
+          "type": "website",
+          "target": "https://analytics.welcomesoftware.com/"
+        },
+        {
+          "type": "api",
+          "target": "https://flags.expeng.optimizely.com"
+        },
+        {
+          "type": "website",
+          "target": "https://accounts.cmp.optimizely.com/"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "website",
+          "target": "https://www.optimizely.com/"
+        }
       ]
     }
   },
@@ -7331,6 +8152,128 @@
       ],
       "out_of_scope": [
 
+      ]
+    }
+  },
+  {
+    "name": "Origin Energy - Retail",
+    "url": "https://bugcrowd.com/engagements/originenergy-og1",
+    "allows_disclosure": true,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "full",
+    "max_payout": 2500,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "website",
+          "target": "https://www.originenergy.com.au/"
+        },
+        {
+          "type": "website",
+          "target": "*.origindigital-pac.com.au"
+        },
+        {
+          "type": "website",
+          "target": "*.odcdn.com.au"
+        },
+        {
+          "type": "website",
+          "target": "https://dataportal.originenergy.com.au"
+        },
+        {
+          "type": "website",
+          "target": "*.support.originenergy.com.au"
+        },
+        {
+          "type": "api",
+          "target": "*.api.originenergy.com.au"
+        },
+        {
+          "type": "website",
+          "target": "*.download.originenergy.com.au"
+        },
+        {
+          "type": "api",
+          "target": "https://api.rx.originenergy.com.au/v1/gateway/schema/graphql"
+        },
+        {
+          "type": "api",
+          "target": "https://api.rx.originenergy.com.au/v1/gateway/schema/kraken/graphql"
+        },
+        {
+          "type": "api",
+          "target": "https://api.rx.originenergy.com.au/v1/lpg/graphql"
+        },
+        {
+          "type": "website",
+          "target": "https://www.winconnect.com.au/moving-out/"
+        },
+        {
+          "type": "website",
+          "target": "https://www.winconnect.com.au/get-connected/"
+        },
+        {
+          "type": "website",
+          "target": "https://customerportal.winconnect.com.au/login"
+        },
+        {
+          "type": "website",
+          "target": "signup.myconnect.com.au"
+        },
+        {
+          "type": "website",
+          "target": "portal.myconnect.com.au"
+        },
+        {
+          "type": "website",
+          "target": "myconnect.com.au"
+        },
+        {
+          "type": "website",
+          "target": "portal.myconnect.com.au/new-connection"
+        },
+        {
+          "type": "website",
+          "target": "ssu.myconnect.com.au/signup/get-connected "
+        },
+        {
+          "type": "website",
+          "target": "hub.myconnect.com.au"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "website",
+          "target": "https://www.originenergy.com.au/moving/"
+        },
+        {
+          "type": "website",
+          "target": "https://auth.api.originenergy.com.au/**"
+        },
+        {
+          "type": "website",
+          "target": "https://origin-energy.formstack.com/**"
+        },
+        {
+          "type": "website",
+          "target": "https://www.compareandconnect.com.au/"
+        },
+        {
+          "type": "website",
+          "target": "https://agent.compareandconnect.com.au/"
+        },
+        {
+          "type": "website",
+          "target": "https://fastconnect.co.nz"
+        },
+        {
+          "type": "website",
+          "target": "https://Yourporter.com.au"
+        },
+        {
+          "type": "website",
+          "target": "https://raywhitehomenow.com/ "
+        }
       ]
     }
   },
@@ -7653,6 +8596,57 @@
           "type": "website",
           "target": "vote.rarible.com"
         }
+      ]
+    }
+  },
+  {
+    "name": "The Security Team Rocks",
+    "url": "https://bugcrowd.com/engagements/securityrocks",
+    "allows_disclosure": false,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "full",
+    "max_payout": 12000,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "api",
+          "target": "https://api.thesecurityteam.rocks"
+        },
+        {
+          "type": "api",
+          "target": "https://api.anytask.thesecurityteam.rocks"
+        },
+        {
+          "type": "website",
+          "target": "https://anytask.thesecurityteam.rocks"
+        },
+        {
+          "type": "website",
+          "target": "https://my.thesecurityteam.rocks"
+        },
+        {
+          "type": "android",
+          "target": "https://play.google.com/store/apps/details?id=com.electroneum.mobile&hl=en_US"
+        },
+        {
+          "type": "ios",
+          "target": "https://apps.apple.com/us/app/electroneum/id1270774992"
+        },
+        {
+          "type": "other",
+          "target": "https://github.com/electroneum/electroneum/"
+        },
+        {
+          "type": "website",
+          "target": "https://legacy-blockexplorer.electroneum.com"
+        },
+        {
+          "type": "android",
+          "target": "https://public.thesecurityteam.rocks/resources/app/android/etnapp-5.2.2-staging.apk"
+        }
+      ],
+      "out_of_scope": [
+
       ]
     }
   },
@@ -8823,68 +9817,6 @@
     }
   },
   {
-    "name": "Gearset: Managed Bug Bounty",
-    "url": "https://bugcrowd.com/gearset-mbb",
-    "allows_disclosure": true,
-    "managed_by_bugcrowd": true,
-    "safe_harbor": "full",
-    "max_payout": 6000,
-    "targets": {
-      "in_scope": [
-        {
-          "type": "website",
-          "target": "hipaa.staging.gearset.com"
-        },
-        {
-          "type": "website",
-          "target": "https://hipaa.staging.gearset.com/"
-        },
-        {
-          "type": "website",
-          "target": "https://staging.gearset.com/"
-        },
-        {
-          "type": "api",
-          "target": "https://staging.gearset.com/"
-        },
-        {
-          "type": "api",
-          "target": "staging-api.gearset.com"
-        },
-        {
-          "type": "website",
-          "target": "staging.gearset.com"
-        }
-      ],
-      "out_of_scope": [
-        {
-          "type": "website",
-          "target": "ap.app.gearest.com"
-        },
-        {
-          "type": "api",
-          "target": "api.gearset.com"
-        },
-        {
-          "type": "website",
-          "target": "app.gearset.com"
-        },
-        {
-          "type": "website",
-          "target": "eu.app.gearset.com"
-        },
-        {
-          "type": "website",
-          "target": "gearset.com"
-        },
-        {
-          "type": "website",
-          "target": "us.app.gearset.com"
-        }
-      ]
-    }
-  },
-  {
     "name": "HostGator Latam Bug Bounty",
     "url": "https://bugcrowd.com/hostgator-latam-bb",
     "allows_disclosure": true,
@@ -9277,143 +10209,6 @@
       ],
       "out_of_scope": [
 
-      ]
-    }
-  },
-  {
-    "name": "Intercom",
-    "url": "https://bugcrowd.com/intercom",
-    "allows_disclosure": true,
-    "managed_by_bugcrowd": true,
-    "safe_harbor": "partial",
-    "max_payout": 6000,
-    "targets": {
-      "in_scope": [
-        {
-          "type": "website",
-          "target": "*.intercomassets.com / *.intercomcdn.com"
-        },
-        {
-          "type": "android",
-          "target": "Android SDK"
-        },
-        {
-          "type": "api",
-          "target": "https://api.intercom.com"
-        },
-        {
-          "type": "api",
-          "target": "https://api.intercom.io"
-        },
-        {
-          "type": "website",
-          "target": "https://app.intercom.com"
-        },
-        {
-          "type": "website",
-          "target": "https://app.intercom.io"
-        },
-        {
-          "type": "website",
-          "target": "https://app.intercom.io/"
-        },
-        {
-          "type": "android",
-          "target": "https://developers.intercom.com/installing-intercom/docs/about-the-sdk-android"
-        },
-        {
-          "type": "ios",
-          "target": "https://developers.intercom.com/installing-intercom/docs/about-the-sdk-ios"
-        },
-        {
-          "type": "website",
-          "target": "https://www.intercom.com"
-        },
-        {
-          "type": "website",
-          "target": "https://www.intercom.com/"
-        },
-        {
-          "type": "ios",
-          "target": "iOS SDK"
-        }
-      ],
-      "out_of_scope": [
-
-      ]
-    }
-  },
-  {
-    "name": "iRobot",
-    "url": "https://bugcrowd.com/irobot",
-    "allows_disclosure": true,
-    "managed_by_bugcrowd": true,
-    "safe_harbor": "full",
-    "max_payout": 7000,
-    "targets": {
-      "in_scope": [
-        {
-          "type": "api",
-          "target": " https://w2ab2i60y4.execute-api.us-east-1.amazonaws.com/dev/v1/ecommerce/entitlements"
-        },
-        {
-          "type": "ios",
-          "target": "https://itunes.apple.com/us/app/irobot-home/id1012014442?mt=8"
-        },
-        {
-          "type": "android",
-          "target": "https://play.google.com/store/apps/details?id=com.irobot.home"
-        },
-        {
-          "type": "api",
-          "target": "https://w2ab2i60y4.execute-api.us-east-1.amazonaws.com/dev/v1/ecommerce/entitlements"
-        },
-        {
-          "type": "api",
-          "target": "https://w2ab2i60y4.execute-api.us-east-1.amazonaws.com/dev/v1/ecommerce/entitlements/{entitlement_id}"
-        },
-        {
-          "type": "api",
-          "target": "https://w2ab2i60y4.execute-api.us-east-1.amazonaws.com/dev/v1/ecommerce/notifications/raas"
-        },
-        {
-          "type": "api",
-          "target": "https://w2ab2i60y4.execute-api.us-east-1.amazonaws.com/dev/v1/ecommerce/robots/{robot_id}/entitlements"
-        },
-        {
-          "type": "api",
-          "target": "https://w2ab2i60y4.execute-api.us-east-1.amazonaws.com/dev/v1/ecommerce/users/{user_id}/entitlements"
-        },
-        {
-          "type": "api",
-          "target": "iRobot API Endpoint"
-        },
-        {
-          "type": "hardware",
-          "target": "iRobot cloud-connected robot that you own (i.e. j7, s9, i7, 980, 960, 690, Braava, etc.)"
-        }
-      ],
-      "out_of_scope": [
-        {
-          "type": "website",
-          "target": "https://global.irobot.com/My%20Privacy"
-        },
-        {
-          "type": "website",
-          "target": "https://homesupport.irobot.com"
-        },
-        {
-          "type": "website",
-          "target": "https://homesupport.irobot.com/app/chat/chat_launch"
-        },
-        {
-          "type": "website",
-          "target": "https://www.irobot.com"
-        },
-        {
-          "type": "website",
-          "target": "irobot.in"
-        }
       ]
     }
   },
@@ -10160,145 +10955,6 @@
           "type": "website",
           "target": "wfh*.kohls.com"
         }
-      ]
-    }
-  },
-  {
-    "name": "Lightspeed Hospitality",
-    "url": "https://bugcrowd.com/lightspeed-hospitality",
-    "allows_disclosure": true,
-    "managed_by_bugcrowd": true,
-    "safe_harbor": "full",
-    "max_payout": 2000,
-    "targets": {
-      "in_scope": [
-        {
-          "type": "website",
-          "target": "https://hq.breadcrumb.com/hq/restaurants/bounty-cafe-2/"
-        },
-        {
-          "type": "website",
-          "target": "https://manager.trial.lsk.lightspeed.app/"
-        },
-        {
-          "type": "website",
-          "target": "https://manager.trial.lsk.lightspeed.app/\t"
-        }
-      ],
-      "out_of_scope": [
-        {
-          "type": "website",
-          "target": "https://lightspeedhq.com/trial "
-        },
-        {
-          "type": "other",
-          "target": "https://pos-admin.trial.lsk.lightspeed.app"
-        },
-        {
-          "type": "website",
-          "target": "lightspeedhq.com/trial "
-        },
-        {
-          "type": "other",
-          "target": "pos-admin.trial.lsk.lightspeed.app"
-        }
-      ]
-    }
-  },
-  {
-    "name": "Lightspeed Retail",
-    "url": "https://bugcrowd.com/lightspeed-retail",
-    "allows_disclosure": true,
-    "managed_by_bugcrowd": true,
-    "safe_harbor": "full",
-    "max_payout": 6250,
-    "targets": {
-      "in_scope": [
-        {
-          "type": "website",
-          "target": " developers.vendhq.com"
-        },
-        {
-          "type": "website",
-          "target": "https://developers.vendhq.com/"
-        },
-        {
-          "type": "website",
-          "target": "https://payment-connectors.vendhq.com/"
-        },
-        {
-          "type": "website",
-          "target": "https://www.vendhq.com/"
-        },
-        {
-          "type": "website",
-          "target": "https://yourstore.retail.lightspeed.app/signin/?return=%2F"
-        },
-        {
-          "type": "website",
-          "target": "payment-connectors.vendhq.com"
-        },
-        {
-          "type": "website",
-          "target": "secure.vendhq.com"
-        },
-        {
-          "type": "website",
-          "target": "www.vendhq.com"
-        },
-        {
-          "type": "website",
-          "target": "yourstore.retail.lightspeed.app"
-        }
-      ],
-      "out_of_scope": [
-        {
-          "type": "website",
-          "target": "partnerportal.vendhq.com"
-        },
-        {
-          "type": "website",
-          "target": "partners.vendhq.com"
-        },
-        {
-          "type": "website",
-          "target": "track.api.vendhq.com"
-        },
-        {
-          "type": "website",
-          "target": "vendhq.force.com"
-        },
-        {
-          "type": "website",
-          "target": "vendimageuploadcdn.global.ssl.fastly.net"
-        },
-        {
-          "type": "website",
-          "target": "x-series-support.lightspeedhq.com"
-        },
-        {
-          "type": "website",
-          "target": "your-store.vendecommerce.com"
-        }
-      ]
-    }
-  },
-  {
-    "name": "Lightspeed Hospitality Private",
-    "url": "https://bugcrowd.com/lightspeed-u-series",
-    "allows_disclosure": true,
-    "managed_by_bugcrowd": true,
-    "safe_harbor": "full",
-    "max_payout": 1000,
-    "targets": {
-      "in_scope": [
-        {
-          "type": "website",
-          "target": "https://hq.breadcrumb.com/hq/restaurants/bounty-cafe-2/"
-        }
-      ],
-      "out_of_scope": [
-
       ]
     }
   },
@@ -11252,111 +11908,6 @@
     }
   },
   {
-    "name": "Octopus Deploy",
-    "url": "https://bugcrowd.com/octopus-deploy",
-    "allows_disclosure": true,
-    "managed_by_bugcrowd": true,
-    "safe_harbor": "full",
-    "max_payout": 6000,
-    "targets": {
-      "in_scope": [
-        {
-          "type": "other",
-          "target": "Octopus Server"
-        },
-        {
-          "type": "other",
-          "target": "Octopus Tentacle"
-        },
-        {
-          "type": "other",
-          "target": "https://octopus.com/downloads"
-        },
-        {
-          "type": "other",
-          "target": "https://octopus.com/downloads"
-        }
-      ],
-      "out_of_scope": [
-
-      ]
-    }
-  },
-  {
-    "name": "Octopus",
-    "url": "https://bugcrowd.com/octopus-og",
-    "allows_disclosure": true,
-    "managed_by_bugcrowd": true,
-    "safe_harbor": "full",
-    "max_payout": 6000,
-    "targets": {
-      "in_scope": [
-        {
-          "type": "website",
-          "target": "*.octopus.com"
-        },
-        {
-          "type": "other",
-          "target": "Octopus Deploy Git Repo"
-        },
-        {
-          "type": "website",
-          "target": "Octopus GitHub Copilot"
-        },
-        {
-          "type": "website",
-          "target": "https://aiagent.octopus.com/api/form"
-        },
-        {
-          "type": "other",
-          "target": "https://github.com/OctopusDeploy"
-        },
-        {
-          "type": "website",
-          "target": "https://octopus.com"
-        },
-        {
-          "type": "website",
-          "target": "octopus.com"
-        }
-      ],
-      "out_of_scope": [
-        {
-          "type": "website",
-          "target": " partners.octopus.com"
-        },
-        {
-          "type": "website",
-          "target": "*.octopus.app"
-        },
-        {
-          "type": "website",
-          "target": "artifactorysample.octopus.com"
-        },
-        {
-          "type": "website",
-          "target": "bamboosample.octopus.com"
-        },
-        {
-          "type": "website",
-          "target": "jenkinssample.octopus.com"
-        },
-        {
-          "type": "website",
-          "target": "myget.octopus.com"
-        },
-        {
-          "type": "website",
-          "target": "nexussample.octopus.com"
-        },
-        {
-          "type": "website",
-          "target": "teamcitysample.octopus.com"
-        }
-      ]
-    }
-  },
-  {
     "name": "Okta",
     "url": "https://bugcrowd.com/okta",
     "allows_disclosure": true,
@@ -11579,128 +12130,6 @@
     }
   },
   {
-    "name": "OneTrust",
-    "url": "https://bugcrowd.com/onetrust",
-    "allows_disclosure": true,
-    "managed_by_bugcrowd": true,
-    "safe_harbor": "full",
-    "max_payout": 6500,
-    "targets": {
-      "in_scope": [
-        {
-          "type": "website",
-          "target": "https://pentest-app.onetrust.com/"
-        }
-      ],
-      "out_of_scope": [
-        {
-          "type": "website",
-          "target": "https://*.convercent.com"
-        },
-        {
-          "type": "website",
-          "target": "https://*.cookielaw.org"
-        },
-        {
-          "type": "website",
-          "target": "https://*.cookiepro.com"
-        },
-        {
-          "type": "website",
-          "target": "https://*.dataguidance.com"
-        },
-        {
-          "type": "website",
-          "target": "https://*.esgiq.com"
-        },
-        {
-          "type": "website",
-          "target": "https://*.onetrust.com"
-        },
-        {
-          "type": "website",
-          "target": "https://*.onetrust.de"
-        },
-        {
-          "type": "website",
-          "target": "https://*.onetrust.es"
-        },
-        {
-          "type": "website",
-          "target": "https://*.onetrust.fr"
-        },
-        {
-          "type": "website",
-          "target": "https://*.onetrust.it"
-        },
-        {
-          "type": "website",
-          "target": "https://*.onetrust.se"
-        },
-        {
-          "type": "website",
-          "target": "https://*.onetrustgrc.com"
-        },
-        {
-          "type": "website",
-          "target": "https://*.onetrustpro.com"
-        },
-        {
-          "type": "website",
-          "target": "https://*.preferencechoice.com"
-        },
-        {
-          "type": "website",
-          "target": "https://*.privacyconnect.com"
-        },
-        {
-          "type": "website",
-          "target": "https://*.privacypedia.com"
-        },
-        {
-          "type": "website",
-          "target": "https://*.privacytech.com"
-        },
-        {
-          "type": "website",
-          "target": "https://*.redacted.ai"
-        },
-        {
-          "type": "website",
-          "target": "https://*.sharedassessments.org"
-        },
-        {
-          "type": "website",
-          "target": "https://*.trustweek2021.com"
-        },
-        {
-          "type": "website",
-          "target": "https://*.vendorpedia.com"
-        },
-        {
-          "type": "website",
-          "target": "https://app.vendorpedia.com"
-        },
-        {
-          "type": "website",
-          "target": "https://developer.onetrust.com"
-        },
-        {
-          "type": "website",
-          "target": "https://my.onetrust.com"
-        },
-        {
-          "type": "website",
-          "target": "https://store.onetrust.com"
-        },
-        {
-          "type": "website",
-          "target": "https://tv.onetrust.com/"
-        }
-      ]
-    }
-  },
-  {
     "name": "OpenAI",
     "url": "https://bugcrowd.com/openai",
     "allows_disclosure": true,
@@ -11855,460 +12284,6 @@
     }
   },
   {
-    "name": "Opera Public Bug Bounty",
-    "url": "https://bugcrowd.com/opera",
-    "allows_disclosure": true,
-    "managed_by_bugcrowd": true,
-    "safe_harbor": "full",
-    "max_payout": 5000,
-    "targets": {
-      "in_scope": [
-        {
-          "type": "website",
-          "target": "*.apex-football.com"
-        },
-        {
-          "type": "website",
-          "target": "*.dailyadvent.com"
-        },
-        {
-          "type": "api",
-          "target": "*.feednews.com"
-        },
-        {
-          "type": "api",
-          "target": "*.opera-mini.net"
-        },
-        {
-          "type": "website",
-          "target": "*.opera.com"
-        },
-        {
-          "type": "api",
-          "target": "*.opera.news"
-        },
-        {
-          "type": "other",
-          "target": "*.opera.software"
-        },
-        {
-          "type": "api",
-          "target": "*.opera.technology"
-        },
-        {
-          "type": "website",
-          "target": "*.operafootball.com"
-        },
-        {
-          "type": "api",
-          "target": "*.operanewsapp.com"
-        },
-        {
-          "type": "api",
-          "target": "*.osp.opera.software"
-        },
-        {
-          "type": "api",
-          "target": "*.sec-tunnel.com"
-        },
-        {
-          "type": "api",
-          "target": "*.yoyogames.com"
-        },
-        {
-          "type": "api",
-          "target": "102.23.96.0/22"
-        },
-        {
-          "type": "api",
-          "target": "103.83.120.0/22"
-        },
-        {
-          "type": "api",
-          "target": "107.167.96.0/19"
-        },
-        {
-          "type": "api",
-          "target": "141.0.8.0/21"
-        },
-        {
-          "type": "api",
-          "target": "185.26.180.0/22"
-        },
-        {
-          "type": "api",
-          "target": "195.189.143.0/24"
-        },
-        {
-          "type": "api",
-          "target": "203.89.100.0/22"
-        },
-        {
-          "type": "api",
-          "target": "37.228.104.0/21"
-        },
-        {
-          "type": "api",
-          "target": "77.111.244.0/22"
-        },
-        {
-          "type": "api",
-          "target": "82.145.208.0/20"
-        },
-        {
-          "type": "api",
-          "target": "91.203.96.0/22"
-        },
-        {
-          "type": "android",
-          "target": "Apex Football"
-        },
-        {
-          "type": "other",
-          "target": "GameMaker Studio 2"
-        },
-        {
-          "type": "website",
-          "target": "Loomi.tv"
-        },
-        {
-          "type": "other",
-          "target": "Opera GX"
-        },
-        {
-          "type": "android",
-          "target": "Opera GX for Android"
-        },
-        {
-          "type": "android",
-          "target": "Opera Mini"
-        },
-        {
-          "type": "android",
-          "target": "Opera News"
-        },
-        {
-          "type": "other",
-          "target": "Opera PC"
-        },
-        {
-          "type": "android",
-          "target": "Opera for Android "
-        },
-        {
-          "type": "api",
-          "target": "accounts.opera.com"
-        },
-        {
-          "type": "api",
-          "target": "api.gx.games/dc"
-        },
-        {
-          "type": "api",
-          "target": "api.gx.games/dev "
-        },
-        {
-          "type": "api",
-          "target": "api.gx.games/gxc"
-        },
-        {
-          "type": "api",
-          "target": "api.gx.games/profile"
-        },
-        {
-          "type": "api",
-          "target": "api.gx.games/session"
-        },
-        {
-          "type": "website",
-          "target": "auth.opera.com"
-        },
-        {
-          "type": "api",
-          "target": "autoupdate.geo.opera.com"
-        },
-        {
-          "type": "api",
-          "target": "blocklist.opera-api.com"
-        },
-        {
-          "type": "api",
-          "target": "browser-notifications.opera.com"
-        },
-        {
-          "type": "website",
-          "target": "bugs.opera.com"
-        },
-        {
-          "type": "website",
-          "target": "cashback.opera.com"
-        },
-        {
-          "type": "api",
-          "target": "cdn-store.opera-api.com"
-        },
-        {
-          "type": "api",
-          "target": "cryptowallet.opera-api.com"
-        },
-        {
-          "type": "website",
-          "target": "download.opera.com"
-        },
-        {
-          "type": "api",
-          "target": "exchange.opera.com"
-        },
-        {
-          "type": "api",
-          "target": "features.opera-api.com"
-        },
-        {
-          "type": "api",
-          "target": "flow.opera.com"
-        },
-        {
-          "type": "website",
-          "target": "get.geo.opera.com"
-        },
-        {
-          "type": "api",
-          "target": "gx.opera-api.com"
-        },
-        {
-          "type": "api",
-          "target": "https://accounts.opera.com"
-        },
-        {
-          "type": "website",
-          "target": "https://auth.opera.com"
-        },
-        {
-          "type": "api",
-          "target": "https://autoupdate.geo.opera.com"
-        },
-        {
-          "type": "api",
-          "target": "https://browser-notifications.opera.com"
-        },
-        {
-          "type": "website",
-          "target": "https://bugs.opera.com/"
-        },
-        {
-          "type": "website",
-          "target": "https://cashback.opera.com/"
-        },
-        {
-          "type": "api",
-          "target": "https://cdn-store.opera-api.com"
-        },
-        {
-          "type": "website",
-          "target": "https://create.gx.games"
-        },
-        {
-          "type": "api",
-          "target": "https://cryptowallet.opera-api.com"
-        },
-        {
-          "type": "website",
-          "target": "https://download.opera.com"
-        },
-        {
-          "type": "api",
-          "target": "https://features.opera-api.com"
-        },
-        {
-          "type": "api",
-          "target": "https://flow.opera.com"
-        },
-        {
-          "type": "website",
-          "target": "https://get.geo.opera.com"
-        },
-        {
-          "type": "website",
-          "target": "https://gx.games"
-        },
-        {
-          "type": "api",
-          "target": "https://gx.opera-api.com"
-        },
-        {
-          "type": "api",
-          "target": "https://net.geo.opera.com"
-        },
-        {
-          "type": "android",
-          "target": "https://play.google.com/store/apps/details?id=com.opera.app.news"
-        },
-        {
-          "type": "android",
-          "target": "https://play.google.com/store/apps/details?id=com.opera.app.sports"
-        },
-        {
-          "type": "android",
-          "target": "https://play.google.com/store/apps/details?id=com.opera.browser"
-        },
-        {
-          "type": "android",
-          "target": "https://play.google.com/store/apps/details?id=com.opera.gx"
-        },
-        {
-          "type": "android",
-          "target": "https://play.google.com/store/apps/details?id=com.opera.mini.native"
-        },
-        {
-          "type": "api",
-          "target": "https://speeddials.opera.com"
-        },
-        {
-          "type": "api",
-          "target": "https://suggestions.opera-api.com"
-        },
-        {
-          "type": "website",
-          "target": "https://www.gamemaker.io"
-        },
-        {
-          "type": "website",
-          "target": "https://www.opera.com/"
-        },
-        {
-          "type": "other",
-          "target": "https://www.opera.com/computer/thanks?ni=eapgx&os=windows"
-        },
-        {
-          "type": "other",
-          "target": "https://www.opera.com/computer/thanks?ni=stable&os=windows"
-        },
-        {
-          "type": "website",
-          "target": "marketplace.gamemaker.io"
-        },
-        {
-          "type": "api",
-          "target": "merchandise.opera-api.com"
-        },
-        {
-          "type": "api",
-          "target": "net.geo.opera.com"
-        },
-        {
-          "type": "api",
-          "target": "push.opera.com"
-        },
-        {
-          "type": "api",
-          "target": "speeddials.opera.com"
-        },
-        {
-          "type": "api",
-          "target": "suggestions.opera-api.com"
-        },
-        {
-          "type": "api",
-          "target": "weather.opera-api.com"
-        },
-        {
-          "type": "website",
-          "target": "www.gamemaker.io"
-        },
-        {
-          "type": "website",
-          "target": "www.opera.com"
-        }
-      ],
-      "out_of_scope": [
-        {
-          "type": "website",
-          "target": "107.167.127.4{0,1}"
-        },
-        {
-          "type": "website",
-          "target": "accountsstage.yoyogames.com"
-        },
-        {
-          "type": "website",
-          "target": "admanager.opera.com"
-        },
-        {
-          "type": "website",
-          "target": "bugs.yoyogames.com"
-        },
-        {
-          "type": "website",
-          "target": "catch.opera.com"
-        },
-        {
-          "type": "website",
-          "target": "certs.opera.com"
-        },
-        {
-          "type": "website",
-          "target": "checkout.opera.com"
-        },
-        {
-          "type": "website",
-          "target": "concurso.opera.com "
-        },
-        {
-          "type": "website",
-          "target": "contest.opera.com"
-        },
-        {
-          "type": "website",
-          "target": "control.gx-servers.opera.com"
-        },
-        {
-          "type": "website",
-          "target": "help.gx-servers.opera.com"
-        },
-        {
-          "type": "website",
-          "target": "help.yoyogames.com"
-        },
-        {
-          "type": "api",
-          "target": "interstitial.opera-mini.net"
-        },
-        {
-          "type": "website",
-          "target": "investor.opera.com"
-        },
-        {
-          "type": "website",
-          "target": "jobs.opera.com"
-        },
-        {
-          "type": "website",
-          "target": "s2{1,2}-05-08-v09.opera-mini.net"
-        },
-        {
-          "type": "website",
-          "target": "tabfulness.opera.com"
-        },
-        {
-          "type": "website",
-          "target": "verizon-us-lvs-ashburn.opera-mini.net"
-        },
-        {
-          "type": "website",
-          "target": "verizon-us-lvs-seattle.opera-mini.net"
-        },
-        {
-          "type": "website",
-          "target": "verizon-us-seattle.opera-mini.net"
-        },
-        {
-          "type": "website",
-          "target": "wallpaper.opera.com"
-        }
-      ]
-    }
-  },
-  {
     "name": "Opsgenie",
     "url": "https://bugcrowd.com/opsgenie",
     "allows_disclosure": true,
@@ -12354,214 +12329,6 @@
         {
           "type": "website",
           "target": "Opsgenie Production (billing systems, third parties)"
-        }
-      ]
-    }
-  },
-  {
-    "name": "Optimizely",
-    "url": "https://bugcrowd.com/optimizely",
-    "allows_disclosure": true,
-    "managed_by_bugcrowd": true,
-    "safe_harbor": "partial",
-    "max_payout": 2500,
-    "targets": {
-      "in_scope": [
-        {
-          "type": "website",
-          "target": "https://accounts.cmp.optimizely.com/"
-        },
-        {
-          "type": "website",
-          "target": "https://accounts.welcomesoftware.com/"
-        },
-        {
-          "type": "website",
-          "target": "https://analytics.welcomesoftware.com/"
-        },
-        {
-          "type": "api",
-          "target": "https://api.optimizely.com/"
-        },
-        {
-          "type": "api",
-          "target": "https://api.welcomesoftware.com/"
-        },
-        {
-          "type": "api",
-          "target": "https://api.welcomesoftware.com/ "
-        },
-        {
-          "type": "website",
-          "target": "https://app.optimizely.com/"
-        },
-        {
-          "type": "website",
-          "target": "https://app.welcomesoftware.com/"
-        },
-        {
-          "type": "website",
-          "target": "https://cdn-app.welcomesoftware.com/"
-        },
-        {
-          "type": "website",
-          "target": "https://cdn-pci.optimizely.com/"
-        },
-        {
-          "type": "website",
-          "target": "https://cdn.optimizely.com/"
-        },
-        {
-          "type": "website",
-          "target": "https://dxc.episerver.net/ "
-        },
-        {
-          "type": "api",
-          "target": "https://flags.expeng.optimizely.com"
-        },
-        {
-          "type": "website",
-          "target": "https://optimizely-edge.com"
-        },
-        {
-          "type": "website",
-          "target": "https://paasportal.episerver.net/"
-        },
-        {
-          "type": "website",
-          "target": "https://paasportal.episerver.net/api/v1.0/"
-        }
-      ],
-      "out_of_scope": [
-        {
-          "type": "website",
-          "target": "https://www.optimizely.com/"
-        }
-      ]
-    }
-  },
-  {
-    "name": "Origin Energy - Retail",
-    "url": "https://bugcrowd.com/originenergy-og1",
-    "allows_disclosure": true,
-    "managed_by_bugcrowd": true,
-    "safe_harbor": "full",
-    "max_payout": 2500,
-    "targets": {
-      "in_scope": [
-        {
-          "type": "api",
-          "target": "*.api.originenergy.com.au"
-        },
-        {
-          "type": "website",
-          "target": "*.download.originenergy.com.au"
-        },
-        {
-          "type": "website",
-          "target": "*.odcdn.com.au"
-        },
-        {
-          "type": "website",
-          "target": "*.origindigital-pac.com.au"
-        },
-        {
-          "type": "website",
-          "target": "*.support.originenergy.com.au"
-        },
-        {
-          "type": "website",
-          "target": "dataportal.originenergy.com.au"
-        },
-        {
-          "type": "api",
-          "target": "https://api.rx.originenergy.com.au/v1/gateway/schema/graphql"
-        },
-        {
-          "type": "api",
-          "target": "https://api.rx.originenergy.com.au/v1/gateway/schema/kraken/graphql"
-        },
-        {
-          "type": "api",
-          "target": "https://api.rx.originenergy.com.au/v1/lpg/graphql"
-        },
-        {
-          "type": "website",
-          "target": "https://customerportal.winconnect.com.au/login"
-        },
-        {
-          "type": "website",
-          "target": "https://dataportal.originenergy.com.au"
-        },
-        {
-          "type": "website",
-          "target": "https://www.originenergy.com.au/"
-        },
-        {
-          "type": "website",
-          "target": "https://www.winconnect.com.au/get-connected/"
-        },
-        {
-          "type": "website",
-          "target": "https://www.winconnect.com.au/moving-out/"
-        },
-        {
-          "type": "website",
-          "target": "hub.myconnect.com.au"
-        },
-        {
-          "type": "website",
-          "target": "myconnect.com.au"
-        },
-        {
-          "type": "website",
-          "target": "portal.myconnect.com.au"
-        },
-        {
-          "type": "website",
-          "target": "portal.myconnect.com.au/new-connection"
-        },
-        {
-          "type": "website",
-          "target": "signup.myconnect.com.au"
-        },
-        {
-          "type": "website",
-          "target": "ssu.myconnect.com.au/signup/get-connected "
-        }
-      ],
-      "out_of_scope": [
-        {
-          "type": "website",
-          "target": "https://Yourporter.com.au"
-        },
-        {
-          "type": "website",
-          "target": "https://agent.compareandconnect.com.au/"
-        },
-        {
-          "type": "website",
-          "target": "https://auth.api.originenergy.com.au/**"
-        },
-        {
-          "type": "website",
-          "target": "https://fastconnect.co.nz"
-        },
-        {
-          "type": "website",
-          "target": "https://origin-energy.formstack.com/**"
-        },
-        {
-          "type": "website",
-          "target": "https://raywhitehomenow.com/ "
-        },
-        {
-          "type": "website",
-          "target": "https://www.compareandconnect.com.au/"
-        },
-        {
-          "type": "website",
-          "target": "https://www.originenergy.com.au/moving/"
         }
       ]
     }
@@ -13081,93 +12848,6 @@
         {
           "type": "ios",
           "target": "iOS"
-        }
-      ],
-      "out_of_scope": [
-
-      ]
-    }
-  },
-  {
-    "name": "The Security Team Rocks",
-    "url": "https://bugcrowd.com/securityrocks",
-    "allows_disclosure": true,
-    "managed_by_bugcrowd": true,
-    "safe_harbor": "full",
-    "max_payout": 12000,
-    "targets": {
-      "in_scope": [
-        {
-          "type": "android",
-          "target": "Electroneum Android App"
-        },
-        {
-          "type": "ios",
-          "target": "Electroneum iOS App"
-        },
-        {
-          "type": "website",
-          "target": "Legacy Block Explorer"
-        },
-        {
-          "type": "other",
-          "target": "Legacy Blockchain "
-        },
-        {
-          "type": "android",
-          "target": "Staging Electroneum Android App"
-        },
-        {
-          "type": "website",
-          "target": "anytask.thesecurityteam.rocks"
-        },
-        {
-          "type": "api",
-          "target": "api.anytask.thesecurityteam.rocks"
-        },
-        {
-          "type": "api",
-          "target": "api.thesecurityteam.rocks"
-        },
-        {
-          "type": "website",
-          "target": "https://anytask.thesecurityteam.rocks"
-        },
-        {
-          "type": "api",
-          "target": "https://api.anytask.thesecurityteam.rocks"
-        },
-        {
-          "type": "api",
-          "target": "https://api.thesecurityteam.rocks"
-        },
-        {
-          "type": "ios",
-          "target": "https://apps.apple.com/us/app/electroneum/id1270774992"
-        },
-        {
-          "type": "other",
-          "target": "https://github.com/electroneum/electroneum/"
-        },
-        {
-          "type": "website",
-          "target": "https://legacy-blockexplorer.electroneum.com"
-        },
-        {
-          "type": "website",
-          "target": "https://my.thesecurityteam.rocks"
-        },
-        {
-          "type": "android",
-          "target": "https://play.google.com/store/apps/details?id=com.electroneum.mobile&hl=en_US"
-        },
-        {
-          "type": "android",
-          "target": "https://public.thesecurityteam.rocks/resources/app/android/etnapp-5.2.2-staging.apk"
-        },
-        {
-          "type": "website",
-          "target": "my.thesecurityteam.rocks"
         }
       ],
       "out_of_scope": [
