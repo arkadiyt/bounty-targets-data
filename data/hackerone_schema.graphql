@@ -7213,7 +7213,45 @@ A completed recommendation entry
 type CompletedRecommendation implements Node {
   created_at: DateTime!
   id: ID!
+  recommendation_id: Int!
+  user: User
   user_id: Int!
+}
+
+"""
+The connection type for CompletedRecommendation.
+"""
+type CompletedRecommendationConnection {
+  """
+  A list of edges.
+  """
+  edges: [CompletedRecommendationEdge]
+
+  """
+  A list of nodes.
+  """
+  nodes: [CompletedRecommendation]
+
+  """
+  Information to aid in pagination.
+  """
+  pageInfo: PageInfo!
+  total_count: Int!
+}
+
+"""
+An edge in a connection.
+"""
+type CompletedRecommendationEdge {
+  """
+  A cursor for use in pagination.
+  """
+  cursor: String!
+
+  """
+  The item at the end of the edge.
+  """
+  node: CompletedRecommendation
 }
 
 """
@@ -8138,7 +8176,8 @@ input CreateCompletedRecommendationInput {
   A unique identifier for the client performing the mutation.
   """
   clientMutationId: String
-  recommendation_id: ID!
+  recommendation_id: Int!
+  team_id: Int!
 }
 
 """
@@ -11624,7 +11663,7 @@ input CreateUserInsightInput {
   """
   clientMutationId: String
   dismissed: Boolean
-  team_insight_id: ID!
+  team_insight_id: Int!
   viewed: Boolean
 }
 
@@ -19258,29 +19297,6 @@ input InnerHitsInput {
 An insight template entry
 """
 type InsightTemplate implements Node {
-  assets(
-    """
-    Returns the elements in the list that come after the specified cursor.
-    """
-    after: String
-
-    """
-    Returns the elements in the list that come before the specified cursor.
-    """
-    before: String
-
-    """
-    Returns the first _n_ elements from the list.
-    """
-    first: Int
-    id: [Int!] = null
-
-    """
-    Returns the last _n_ elements from the list.
-    """
-    last: Int
-    where: FiltersAssetFilterInput
-  ): AssetConnection
   id: ID!
   insight_text_template: String!
   recommendations: [Recommendation!]!
@@ -25053,7 +25069,7 @@ type Organization implements Node {
   gate_saml_opened: Boolean!
   h1_assets: Boolean
   h1_assets_enterprise: Boolean
-  hai_enabled: Boolean!
+  hai_enabled: Boolean
   handle: String!
   has_gateway_teams: Boolean
   i_am_asset_inventory_manager: Boolean!
@@ -29218,6 +29234,7 @@ type Query implements Node {
     last: Int
     order_by: ClusterOrder = {direction: ASC, field: BROWSING_FRIENDLY}
   ): ClusterConnection!
+  completed_recommendations(team_ids: [Int!]!): [CompletedRecommendation!]
   cve_entry(cve_id: String!): RankedCveEntry
   cwe_entries(
     """
@@ -29930,27 +29947,6 @@ type Query implements Node {
     last: Int
   ): TaskConnection
   team(handle: String!): Team @deprecated(reason: "Query for a Team node at the root level is not recommended. Ref T12456")
-  team_insights(
-    """
-    Returns the elements in the list that come after the specified cursor.
-    """
-    after: String
-
-    """
-    Returns the elements in the list that come before the specified cursor.
-    """
-    before: String
-
-    """
-    Returns the first _n_ elements from the list.
-    """
-    first: Int
-
-    """
-    Returns the last _n_ elements from the list.
-    """
-    last: Int
-  ): TeamInsightConnection
   teams(
     """
     Returns the elements in the list that come after the specified cursor.
@@ -30086,6 +30082,7 @@ type Query implements Node {
     last: Int
   ): TriagePodConnection!
   user(username: String!): User @deprecated(reason: "Query for a User node at the root level is not recommended. Ref T12456")
+  user_insights: [UserInsight!]
   users(
     """
     Returns the elements in the list that come after the specified cursor.
@@ -30509,9 +30506,10 @@ type ReclaimReportRetestPayload implements MutationResult {
 A recommendation entry
 """
 type Recommendation implements Node {
-  completed_recommendations: [CompletedRecommendation!]
+  _id: ID!
   cost: String
   id: ID!
+  identifier: String!
   learn_more_link: String!
   recommendation_text: String!
   required_permissions: String
@@ -38086,6 +38084,27 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
     last: Int
   ): CommunicationChannelConnection!
   company_headcount_range: String
+  completed_recommendations(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+  ): CompletedRecommendationConnection
   controlled_launch_setting: ControlledLaunchSetting
   cover_color: String
   cover_photo_url: String
@@ -48673,7 +48692,7 @@ input UpdateUserInsightInput {
   """
   clientMutationId: String
   dismissed: Boolean
-  user_insight_id: ID!
+  user_insight_id: Int!
   viewed: Boolean
 }
 
@@ -50848,9 +50867,11 @@ type UserInputDraft implements Node {
 A user insight entry
 """
 type UserInsight implements Node {
+  _id: ID!
   created_at: DateTime!
   dismissed: Boolean
   id: ID!
+  team_insight_id: Int!
   user_id: Int!
   viewed: Boolean
 }
