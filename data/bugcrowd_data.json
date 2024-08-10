@@ -4267,6 +4267,94 @@
     }
   },
   {
+    "name": " 1Password",
+    "url": "https://bugcrowd.com/engagements/agilebits",
+    "allows_disclosure": false,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "full",
+    "max_payout": 30000,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "website",
+          "target": "<Your own 1Pasword Personal Account> --> https://my.1password.com/"
+        },
+        {
+          "type": "website",
+          "target": "https://start.1password.com"
+        },
+        {
+          "type": "other",
+          "target": "<Your own 1Password account> —> Latest stable, beta, or nightly MacOS Build"
+        },
+        {
+          "type": "android",
+          "target": "<Your own 1Password account> —> Latest stable, beta, or nightly Android Build"
+        },
+        {
+          "type": "other",
+          "target": "<Your own 1Password account> —> Latest stable, beta, or nightly Command Line Interface (CLI) "
+        },
+        {
+          "type": "website",
+          "target": "<Your own 1Password Account subdomain --> https://<your account domain>.1password.com/"
+        },
+        {
+          "type": "other",
+          "target": "<Your own 1Password account> —> Latest stable, beta, or nightly Windows Build"
+        },
+        {
+          "type": "other",
+          "target": "<Your own 1Password account> —> Latest stable, beta, or nightly Linux Build"
+        },
+        {
+          "type": "ios",
+          "target": "<Your own 1Password account> —> Latest stable, beta, or nightly iOS Build"
+        },
+        {
+          "type": "other",
+          "target": "<Your own 1Password account> —> Latest stable, beta, or nightly Browser Extension  (Chrome, Brave, Firefox, Edge, and Safari)"
+        },
+        {
+          "type": "api",
+          "target": "<Your own 1Password account> —> https://events.1password.com/  (Event Reporting API is available on 1Password Business Accounts Only)"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "website",
+          "target": "*.agilebits.com"
+        },
+        {
+          "type": "other",
+          "target": "All other domains, subdomains, and 1Password Accounts that are not owned by you, including accounts where you are a user but not the owner, are out of scope."
+        }
+      ]
+    }
+  },
+  {
+    "name": "1Password Bug Bounty CTF",
+    "url": "https://bugcrowd.com/engagements/agilebits-ctf",
+    "allows_disclosure": false,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "full",
+    "max_payout": null,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "website",
+          "target": "https://bugbounty-ctf.1password.com/"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "other",
+          "target": "All other domains, subdomains, and 1Password Accounts outside of the above URL are out of scope."
+        }
+      ]
+    }
+  },
+  {
     "name": "1Password Bug Bounty CTF",
     "url": "https://bugcrowd.com/engagements/agilebits-ctf",
     "allows_disclosure": false,
@@ -5163,92 +5251,6 @@
         {
           "type": "other",
           "target": "Any Braze Owned Host not listed as in Scope"
-        }
-      ]
-    }
-  },
-  {
-    "name": "Bugcrowd",
-    "url": "https://bugcrowd.com/engagements/bugcrowd",
-    "allows_disclosure": false,
-    "managed_by_bugcrowd": true,
-    "safe_harbor": "full",
-    "max_payout": 10000,
-    "targets": {
-      "in_scope": [
-        {
-          "type": "website",
-          "target": "https://docs.bugcrowd.com/"
-        },
-        {
-          "type": "website",
-          "target": "https://bugcrowd.com/programs"
-        },
-        {
-          "type": "api",
-          "target": "https://tracker.bugcrowd.com"
-        },
-        {
-          "type": "api",
-          "target": "https://api.bugcrowd.com"
-        },
-        {
-          "type": "website",
-          "target": "https://identity.bugcrowd.com/"
-        },
-        {
-          "type": "website",
-          "target": "*.bugcrowd.com/auth/*"
-        }
-      ],
-      "out_of_scope": [
-        {
-          "type": "website",
-          "target": "bugcrowd*.freshdesk.com"
-        },
-        {
-          "type": "website",
-          "target": "https://www.bugcrowd.com"
-        },
-        {
-          "type": "website",
-          "target": "blog.bugcrowd.com"
-        },
-        {
-          "type": "website",
-          "target": "researcherdocs.bugcrowd.com"
-        },
-        {
-          "type": "website",
-          "target": "pages.bugcrowd.com"
-        },
-        {
-          "type": "website",
-          "target": "forum.bugcrowd.com"
-        },
-        {
-          "type": "website",
-          "target": "email.bugcrowd.com"
-        },
-        {
-          "type": "website",
-          "target": "email.forum.bugcrowd.com"
-        },
-        {
-          "type": "website",
-          "target": "https://go.bugcrowd.com"
-        },
-        {
-          "type": "website",
-          "target": "events.bugcrowd.com"
-        },
-        {
-          "type": "website",
-          "target": "https://assetinventory.bugcrowd.com"
-        },
-        {
-          "type": "website",
-          "target": "https://community.bugcrowd.com"
         }
       ]
     }
@@ -8765,77 +8767,6 @@
         {
           "type": "website",
           "target": "https://www.planethoster.com"
-        }
-      ],
-      "out_of_scope": [
-
-      ]
-    }
-  },
-  {
-    "name": "Prosus",
-    "url": "https://bugcrowd.com/engagements/prosus-og",
-    "allows_disclosure": false,
-    "managed_by_bugcrowd": true,
-    "safe_harbor": "full",
-    "max_payout": 1250,
-    "targets": {
-      "in_scope": [
-        {
-          "type": "website",
-          "target": "https://dealflow.prosus.com"
-        },
-        {
-          "type": "api",
-          "target": "https://dealflowapi.prosus.com"
-        },
-        {
-          "type": "website",
-          "target": "https://analytics-admin.prosus.com"
-        },
-        {
-          "type": "website",
-          "target": "http://analytics.prosus.com"
-        },
-        {
-          "type": "website",
-          "target": "http://prosus.com"
-        },
-        {
-          "type": "website",
-          "target": "https://data.prosus.com/"
-        },
-        {
-          "type": "website",
-          "target": "https://hr.prosus.com/"
-        },
-        {
-          "type": "website",
-          "target": "https://tracker.naspers.com/"
-        },
-        {
-          "type": "website",
-          "target": "https://cfc.naspers.com/"
-        },
-        {
-          "type": "website",
-          "target": "https://peopleview.naspers.com"
-        },
-        {
-          "type": "website",
-          "target": "http://nav.naspers.com/"
-        },
-        {
-          "type": "website",
-          "target": "https://www.naspers.com"
-        },
-        {
-          "type": "website",
-          "target": "*.naspers.com"
-        },
-        {
-          "type": "website",
-          "target": "*.prosus.com"
         }
       ],
       "out_of_scope": [
