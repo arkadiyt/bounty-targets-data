@@ -2748,6 +2748,13 @@ type AllTimeReputationLeaderboardEntry implements LeaderboardEntryInterface & No
   user: User!
 }
 
+input AnalyticsBenchmarkQueryInputType {
+  benchmark_name: String!
+  end_at: DateTime!
+  interval: String!
+  start_at: DateTime!
+}
+
 input AnalyticsChartAxisConfigInputType {
   color: String
   darkModeColor: String
@@ -29068,6 +29075,7 @@ Root entity of the Hackerone Schema
 type Query implements Node {
   activity(id: Int!): ActivityUnion
   analytics(queries: [AnalyticsQueryInputType!]!): [AnalyticsDataPoint]
+  analytics_benchmarks(benchmark_configurations: [AnalyticsBenchmarkQueryInputType]!): [AnalyticsDataPoint]
   analytics_reports(
     """
     Returns the elements in the list that come after the specified cursor.
