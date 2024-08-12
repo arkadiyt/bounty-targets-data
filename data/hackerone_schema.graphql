@@ -43565,7 +43565,9 @@ input UpdateDataOverridesWriteUpInput {
   A unique identifier for the client performing the mutation.
   """
   clientMutationId: String
-  company_name: String!
+  company_name: String
+  name: String
+  structured_scope_ids: [Int!]
   write_up_id: ID!
 }
 
@@ -51947,6 +51949,7 @@ type WriteUp implements Node {
   _id: ID!
   created_at: DateTime!
   data_overrides: Hash
+  graphql_data_variables: String
   id: ID!
   name: String!
   template_config_key: String!
