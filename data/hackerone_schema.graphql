@@ -20934,6 +20934,7 @@ Artifact of an LLM conversation message
 """
 type LlmConversationMessageArtifact implements Node {
   created_at: DateTime!
+  debug: Boolean!
   id: ID!
   message_index: Int!
   payload: Hash!
@@ -35181,6 +35182,10 @@ input SignupEntryLevelVdpInput {
   password_confirmation: String!
   title: String!
   tos_accept: Boolean!
+  utm_campaign: String
+  utm_content: String
+  utm_medium: String
+  utm_source: String
   website: String!
 }
 
