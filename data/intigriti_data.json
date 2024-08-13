@@ -918,6 +918,114 @@
     }
   },
   {
+    "id": "48853273-690a-4555-8ac5-821a1c464312",
+    "name": "Capital.com",
+    "company_handle": "capitalcom",
+    "handle": "capitalcom",
+    "url": "https://www.intigriti.com/programs/capitalcom/capitalcom/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "min_bounty": {
+      "value": 0,
+      "currency": "EUR"
+    },
+    "max_bounty": {
+      "value": 10000,
+      "currency": "EUR"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "url",
+          "endpoint": "payment.backend-capital.com",
+          "description": "",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.backend-capital.com",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "capital.com/*",
+          "description": "",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "ios",
+          "endpoint": "com.capital.trading",
+          "description": "https://apps.apple.com/BY/app/id1230088754?mt=8",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "android",
+          "endpoint": "com.capital.trading",
+          "description": "https://play.google.com/store/apps/details?id=com.capital.trading&hl=en",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "open-api.capital.com",
+          "description": "The Capital.com API allows direct access to the latest version of our trading engine.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.capital.com",
+          "description": "",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.itcapital.io",
+          "description": "",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "aff.capital.com",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "go.capital.com",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "register.capital.com",
+          "description": "",
+          "impact": "No bounty"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*affiliates.backend-capital.com",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*eduapp.backend-capital.com",
+          "description": "",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*education.backend-capital.com",
+          "description": "",
+          "impact": "Out of scope"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
     "id": "04aab402-3eb7-41b8-b146-b9344efc89ce",
     "name": "Capture Our Flag",
     "company_handle": "intigriti",
