@@ -20890,11 +20890,13 @@ type LlmConversationContext implements Node {
   ID of the object.
   """
   id: ID!
+  organization_id: ID
   report_ids: [BigInt!]
   team_handles: [String!]
 }
 
 input LlmConversationContextInputType {
+  organization_id: ID
   report_ids: [Int!]
   team_handles: [String!]
 }
