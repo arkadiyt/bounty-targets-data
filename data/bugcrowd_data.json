@@ -6437,24 +6437,56 @@
     "allows_disclosure": false,
     "managed_by_bugcrowd": true,
     "safe_harbor": "full",
-    "max_payout": 5000,
+    "max_payout": 10000,
     "targets": {
       "in_scope": [
         {
-          "type": "other",
-          "target": "*.hubspot.net"
+          "type": "website",
+          "target": "https://app.hubspot.com/"
+        },
+        {
+          "type": "api",
+          "target": "https://app.hubspot.com/"
+        },
+        {
+          "type": "api",
+          "target": "https://developers.hubspot.com/docs/api/overview"
         },
         {
           "type": "website",
-          "target": "*.hs-sites.com"
+          "target": "https://chatspot.ai"
         },
         {
-          "type": "android",
-          "target": "https://play.google.com/store/apps/details?id=com.hubspot.android&hl=en_US&gl=US"
+          "type": "website",
+          "target": "https://connect.com"
         },
         {
           "type": "website",
           "target": "*.hubspotemail.net"
+        },
+        {
+          "type": "website",
+          "target": "*.hs-sites(-eu1)?.com"
+        },
+        {
+          "type": "website",
+          "target": "*.hubspotpagebuilder.com"
+        },
+        {
+          "type": "website",
+          "target": "*.hubspotpagebuilder.eu"
+        },
+        {
+          "type": "website",
+          "target": "https://knowledge.hubspot.com/inbox/set-up-a-customer-portal"
+        },
+        {
+          "type": "website",
+          "target": "Customer connected domain (2)"
+        },
+        {
+          "type": "android",
+          "target": "https://play.google.com/store/apps/details?id=com.hubspot.android&hl=en_US&gl=US"
         },
         {
           "type": "ios",
@@ -6462,45 +6494,37 @@
         },
         {
           "type": "other",
-          "target": "https://*.hubspot.com"
+          "target": "https://knowledge.hubspot.com/connected-email/get-started-with-the-hubspot-sales-office-365-add-in"
         },
         {
           "type": "other",
-          "target": "https://*.hubapi.com"
+          "target": "Other HubSpot-owned (sub)domains not listed as Out of Scope . Please make sure to exercise due diligence before testing. You must include proof that the subdomain is registered to HubSpot to be eligible for a reward."
+        },
+        {
+          "type": "other",
+          "target": "Special Conditions"
         }
       ],
       "out_of_scope": [
         {
+          "type": "website",
+          "target": "https://shop.hubspot.com"
+        },
+        {
+          "type": "website",
+          "target": "https://trust.hubspot.com"
+        },
+        {
+          "type": "website",
+          "target": "https://thespot.hubspot.com"
+        },
+        {
+          "type": "website",
+          "target": "https://ir.hubspot.com"
+        },
+        {
           "type": "other",
-          "target": "*.getsidekick.com"
-        },
-        {
-          "type": "other",
-          "target": "*.inbound.org"
-        },
-        {
-          "type": "website",
-          "target": "surveys.success.hubspot.com"
-        },
-        {
-          "type": "website",
-          "target": "shop.hubspot.com"
-        },
-        {
-          "type": "website",
-          "target": "blog.hubspot.com"
-        },
-        {
-          "type": "website",
-          "target": "integrate.hubspot.com"
-        },
-        {
-          "type": "website",
-          "target": "ux.hubspot.com"
-        },
-        {
-          "type": "website",
-          "target": "ink1001.hubspot.com"
+          "target": "Out of Scope Vulnerabilities"
         }
       ]
     }
