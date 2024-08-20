@@ -25141,6 +25141,7 @@ type Organization implements Node {
     where: FiltersTeamMemberEligibilitySettingsFilterInput
   ): TeamMemberEligibilitySettingsConnection
   enterprise: Boolean!
+  entry_vdp_only: Boolean
   features: [Feature]
   gate_custom_inboxes_opened: Boolean!
   gate_saml_opened: Boolean!
@@ -47584,7 +47585,7 @@ input UpdateTeamCustomerInvitationsProfileInput {
   country_restriction_type: CountryRestrictionTypeEnum
   skill_ids: [ID!]
   team_id: ID!
-  weakness_ids: [ID!]
+  weakness_ids: [ID!]!
 }
 
 """
