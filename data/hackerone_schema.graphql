@@ -16380,6 +16380,7 @@ type EntitlementConsumptionOverview implements Node {
   entitlement_total_purchased: Float
   entitlement_total_spent_in_percentage: Float
   id: ID!
+  last_pentest_status: PentestStateEnum
   max_object_consumption_amount_acc: Float
   object_type: String
   programs_handle: String
@@ -18691,6 +18692,7 @@ type HackerPublished implements HacktivityItemInterface & Node {
 A HackerOne hacker's report template
 """
 type HackerReportTemplate implements Node {
+  _id: ID!
   attack_complexity: String
   attack_vector: String
   availability: String
@@ -18709,6 +18711,7 @@ type HackerReportTemplate implements Node {
   title: String!
   type: String!
   user_interaction: String
+  weaknesses: [Weakness!]
 }
 
 """
@@ -19350,6 +19353,7 @@ An insight template entry
 """
 type InsightTemplate implements Node {
   id: ID!
+  identifier: String!
   insight_text_template: String!
   recommendations: [Recommendation!]!
 }
@@ -30187,6 +30191,7 @@ type Query implements Node {
     order_by: FiltersUserFilterOrder = {username: {_direction: ASC}}
     where: FiltersUserFilterInput
   ): UserConnection
+  vulnerability_templates: [HackerReportTemplate!]!
   weaknesses(
     """
     Returns the elements in the list that come after the specified cursor.
@@ -39777,6 +39782,7 @@ type TeamInsight implements Node {
   _id: ID!
   created_at: DateTime!
   id: ID!
+  identifier: String!
   insight_template: InsightTemplate!
   insight_text: String!
   user_insights: [UserInsight!]!
