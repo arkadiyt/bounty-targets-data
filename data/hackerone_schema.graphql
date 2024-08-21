@@ -12589,7 +12589,9 @@ type CustomerInvitationsProfile implements Node {
   country_requirement: Boolean
   country_restriction_source: CountryRestrictionSourceEnum
   country_restriction_type: CountryRestrictionTypeEnum
+  goals: [String!]!
   id: ID!
+  other_goal_reason: String
   skills(
     """
     Returns the elements in the list that come after the specified cursor.
@@ -47589,9 +47591,11 @@ input UpdateTeamCustomerInvitationsProfileInput {
   country_requirement: Boolean
   country_restriction_source: CountryRestrictionSourceEnum
   country_restriction_type: CountryRestrictionTypeEnum
+  goals: [String!]
+  other_goal_reason: String
   skill_ids: [ID!]
   team_id: ID!
-  weakness_ids: [ID!]!
+  weakness_ids: [ID!]
 }
 
 """
