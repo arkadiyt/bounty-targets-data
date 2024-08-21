@@ -4236,6 +4236,56 @@
     }
   },
   {
+    "name": "Acorns Grow, Inc.",
+    "url": "https://bugcrowd.com/engagements/acorns",
+    "allows_disclosure": true,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "full",
+    "max_payout": 3500,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "website",
+          "target": "https://acorns.com/"
+        },
+        {
+          "type": "other",
+          "target": "https://apps.apple.com/us/app/acorns-invest-spare-change/id883324671"
+        },
+        {
+          "type": "api",
+          "target": "https://graphql.acorns.com"
+        },
+        {
+          "type": "other",
+          "target": "https://play.google.com/store/apps/details?id=com.acorns.android&hl=en_US&gl=US"
+        },
+        {
+          "type": "website",
+          "target": "https://www.gohenry.com/"
+        },
+        {
+          "type": "website",
+          "target": "https://www.pixpay.fr/"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "website",
+          "target": "share.acorns.com"
+        },
+        {
+          "type": "website",
+          "target": "grow.acorns.com"
+        },
+        {
+          "type": "website",
+          "target": "store.acorns.com"
+        }
+      ]
+    }
+  },
+  {
     "name": " 1Password",
     "url": "https://bugcrowd.com/engagements/agilebits",
     "allows_disclosure": false,
@@ -6037,45 +6087,6 @@
         {
           "type": "website",
           "target": "https://app.strattic.com"
-        }
-      ],
-      "out_of_scope": [
-
-      ]
-    }
-  },
-  {
-    "name": "Entain Game Logic Flaws Bug Bounty Program",
-    "url": "https://bugcrowd.com/engagements/entain-glf-mbb-og",
-    "allows_disclosure": false,
-    "managed_by_bugcrowd": true,
-    "safe_harbor": "full",
-    "max_payout": 6500,
-    "targets": {
-      "in_scope": [
-        {
-          "type": "website",
-          "target": "https://casino.partycasino.com"
-        },
-        {
-          "type": "website",
-          "target": "https://casino.bwin.com"
-        },
-        {
-          "type": "website",
-          "target": "https://casino.sportingbet.com"
-        },
-        {
-          "type": "website",
-          "target": "https://www.ladbrokes.com/en/games"
-        },
-        {
-          "type": "website",
-          "target": "https://www.coral.co.uk/en/games"
-        },
-        {
-          "type": "website",
-          "target": "https://casino.*.betmgm.com/en/games (read \"Find a Game to test on our targets\")"
         }
       ],
       "out_of_scope": [
@@ -7935,6 +7946,84 @@
       ],
       "out_of_scope": [
 
+      ]
+    }
+  },
+  {
+    "name": "New Relic Public Bug Bounty Program",
+    "url": "https://bugcrowd.com/engagements/newrelic-mbb-og-public",
+    "allows_disclosure": false,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "partial",
+    "max_payout": 6000,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "website",
+          "target": "https://one.newrelic.com"
+        },
+        {
+          "type": "android",
+          "target": "https://play.google.com/store/apps/details?id=com.newrelic.rpm"
+        },
+        {
+          "type": "ios",
+          "target": "https://apps.apple.com/ie/app/new-relic/id594038638"
+        },
+        {
+          "type": "other",
+          "target": "*.nr-data.net"
+        },
+        {
+          "type": "other",
+          "target": "*.nr-ops.net"
+        },
+        {
+          "type": "website",
+          "target": "https://docs.newrelic.com/"
+        },
+        {
+          "type": "website",
+          "target": "https://newrelic.com/"
+        },
+        {
+          "type": "website",
+          "target": "https://newrelic.com/blog"
+        },
+        {
+          "type": "website",
+          "target": "https://support.newrelic.com/"
+        },
+        {
+          "type": "website",
+          "target": "https://forum.newrelic.com"
+        },
+        {
+          "type": "website",
+          "target": "https://knowledge.newrelic.com/"
+        },
+        {
+          "type": "website",
+          "target": "https://learn.newrelic.com/"
+        },
+        {
+          "type": "website",
+          "target": "https://developer.newrelic.com/"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "website",
+          "target": "https://status.newrelic.com"
+        },
+        {
+          "type": "other",
+          "target": "New Relic open source software repos in github.com not in the list of agents or on docs.newrelic.com; New Relic Example Code, New Relic Experimental and Archived repos are explicitly out of scope."
+        },
+        {
+          "type": "website",
+          "target": "https://iopipe.com"
+        }
       ]
     }
   },
