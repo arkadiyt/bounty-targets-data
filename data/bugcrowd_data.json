@@ -4286,6 +4286,72 @@
     }
   },
   {
+    "name": " 1Password",
+    "url": "https://bugcrowd.com/engagements/agilebits",
+    "allows_disclosure": false,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "full",
+    "max_payout": 30000,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "website",
+          "target": "<Your own 1Pasword Personal Account> --> https://my.1password.com/"
+        },
+        {
+          "type": "website",
+          "target": "https://start.1password.com"
+        },
+        {
+          "type": "other",
+          "target": "<Your own 1Password account> —> Latest stable, beta, or nightly MacOS Build"
+        },
+        {
+          "type": "android",
+          "target": "<Your own 1Password account> —> Latest stable, beta, or nightly Android Build"
+        },
+        {
+          "type": "other",
+          "target": "<Your own 1Password account> —> Latest stable, beta, or nightly Command Line Interface (CLI) "
+        },
+        {
+          "type": "website",
+          "target": "<Your own 1Password Account subdomain --> https://<your account domain>.1password.com/"
+        },
+        {
+          "type": "other",
+          "target": "<Your own 1Password account> —> Latest stable, beta, or nightly Windows Build"
+        },
+        {
+          "type": "other",
+          "target": "<Your own 1Password account> —> Latest stable, beta, or nightly Linux Build"
+        },
+        {
+          "type": "ios",
+          "target": "<Your own 1Password account> —> Latest stable, beta, or nightly iOS Build"
+        },
+        {
+          "type": "other",
+          "target": "<Your own 1Password account> —> Latest stable, beta, or nightly Browser Extension  (Chrome, Brave, Firefox, Edge, and Safari)"
+        },
+        {
+          "type": "api",
+          "target": "<Your own 1Password account> —> https://events.1password.com/  (Event Reporting API is available on 1Password Business Accounts Only)"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "website",
+          "target": "*.agilebits.com"
+        },
+        {
+          "type": "other",
+          "target": "All other domains, subdomains, and 1Password Accounts that are not owned by you, including accounts where you are a user but not the owner, are out of scope."
+        }
+      ]
+    }
+  },
+  {
     "name": "1Password Bug Bounty CTF",
     "url": "https://bugcrowd.com/engagements/agilebits-ctf",
     "allows_disclosure": false,
@@ -5465,116 +5531,6 @@
         {
           "type": "website",
           "target": "https://modeldiplomacy.cfr.org"
-        }
-      ]
-    }
-  },
-  {
-    "name": "Cisco Meraki",
-    "url": "https://bugcrowd.com/engagements/ciscomeraki",
-    "allows_disclosure": false,
-    "managed_by_bugcrowd": true,
-    "safe_harbor": "partial",
-    "max_payout": 10000,
-    "targets": {
-      "in_scope": [
-        {
-          "type": "website",
-          "target": "*.meraki.com"
-        },
-        {
-          "type": "website",
-          "target": "*.ikarem.io"
-        },
-        {
-          "type": "other",
-          "target": "Cisco Meraki Systems Manager"
-        },
-        {
-          "type": "other",
-          "target": "Cisco Meraki Virtual Security Appliances"
-        },
-        {
-          "type": "website",
-          "target": "*.network-auth.com"
-        },
-        {
-          "type": "ios",
-          "target": "Cisco Meraki Dashboard Mobile Application (iOS and Android)"
-        },
-        {
-          "type": "hardware",
-          "target": "Cisco Meraki MX Security Appliances"
-        },
-        {
-          "type": "hardware",
-          "target": "Cisco Meraki MS Switches"
-        },
-        {
-          "type": "hardware",
-          "target": "Cisco Meraki MR Access Points"
-        },
-        {
-          "type": "hardware",
-          "target": "Cisco Meraki MV Security Cameras"
-        },
-        {
-          "type": "hardware",
-          "target": "Cisco Meraki Z Series (Z1,Z3(C))"
-        },
-        {
-          "type": "website",
-          "target": "https://meraki.cisco.com"
-        },
-        {
-          "type": "website",
-          "target": "apps.meraki.io"
-        }
-      ],
-      "out_of_scope": [
-        {
-          "type": "website",
-          "target": "merakipartners.com"
-        },
-        {
-          "type": "website",
-          "target": "developers.meraki.com"
-        },
-        {
-          "type": "website",
-          "target": "smhelp.meraki.com"
-        },
-        {
-          "type": "website",
-          "target": "community.meraki.com"
-        },
-        {
-          "type": "website",
-          "target": "community-staging.meraki.com"
-        },
-        {
-          "type": "website",
-          "target": "*.cisco.com"
-        },
-        {
-          "type": "website",
-          "target": "meraki.cisco.com/form/contact"
-        },
-        {
-          "type": "api",
-          "target": "Customer API Keys"
-        },
-        {
-          "type": "hardware",
-          "target": "Meraki MC Phones"
-        },
-        {
-          "type": "website",
-          "target": "documentation.meraki.com"
-        },
-        {
-          "type": "other",
-          "target": "Insecure Direct Object References (IDORs)"
         }
       ]
     }
@@ -10219,6 +10175,116 @@
     }
   },
   {
+    "name": "Tesla",
+    "url": "https://bugcrowd.com/engagements/tesla",
+    "allows_disclosure": false,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "partial",
+    "max_payout": 100000,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "website",
+          "target": "*.tesla.cn"
+        },
+        {
+          "type": "website",
+          "target": "*.tesla.services"
+        },
+        {
+          "type": "ios",
+          "target": "https://apps.apple.com/us/app/tesla/id582007913"
+        },
+        {
+          "type": "website",
+          "target": "*.tesla.com"
+        },
+        {
+          "type": "website",
+          "target": "*.teslamotors.com"
+        },
+        {
+          "type": "website",
+          "target": "Any host verified to be owned by Tesla Motors Inc. (domains/IP space/etc.)"
+        },
+        {
+          "type": "website",
+          "target": "*.solarcity.com"
+        },
+        {
+          "type": "website",
+          "target": "*.teslainsuranceservices.com"
+        },
+        {
+          "type": "android",
+          "target": "https://play.google.com/store/apps/details?id=com.teslamotors.tesla&hl=en_US&gl=US"
+        },
+        {
+          "type": "hardware",
+          "target": "Tesla Energy hardware you own"
+        },
+        {
+          "type": "hardware",
+          "target": "Tesla vehicle hardware that you own"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "website",
+          "target": "ir.teslamotors.com"
+        },
+        {
+          "type": "website",
+          "target": "feedback.teslamotors.com"
+        },
+        {
+          "type": "website",
+          "target": "mkto.teslamotors.com"
+        },
+        {
+          "type": "website",
+          "target": "Any other third-party websites hosted by non-Tesla entities"
+        },
+        {
+          "type": "website",
+          "target": "ir.tesla.com"
+        },
+        {
+          "type": "website",
+          "target": "shop.eu.teslamotors.com"
+        },
+        {
+          "type": "website",
+          "target": "feedback.tesla.com"
+        },
+        {
+          "type": "website",
+          "target": "energysupport.tesla.com (you can report vulnerabilities to bugbounty.zoho.com)"
+        },
+        {
+          "type": "website",
+          "target": "employeefeedback.tesla.com"
+        },
+        {
+          "type": "website",
+          "target": "Any domains from acquisitions, such as maxwell.com"
+        },
+        {
+          "type": "website",
+          "target": "https://engage.tesla.com/"
+        },
+        {
+          "type": "website",
+          "target": "service.tesla.cn/docs/*"
+        },
+        {
+          "type": "website",
+          "target": "service.tesla.com/docs/*"
+        }
+      ]
+    }
+  },
+  {
     "name": "Cisco ThousandEyes Vulnerability Hunting aka Bug Bounty ",
     "url": "https://bugcrowd.com/engagements/thousandeyes-og",
     "allows_disclosure": false,
@@ -10449,65 +10515,6 @@
         {
           "type": "website",
           "target": "https://ultramobile.com"
-        }
-      ],
-      "out_of_scope": [
-
-      ]
-    }
-  },
-  {
-    "name": "Verisign",
-    "url": "https://bugcrowd.com/engagements/verisign",
-    "allows_disclosure": true,
-    "managed_by_bugcrowd": true,
-    "safe_harbor": "partial",
-    "max_payout": 10000,
-    "targets": {
-      "in_scope": [
-        {
-          "type": "other",
-          "target": "epptool-ctld.verisign-grs.com (EPP service; DNS related)"
-        },
-        {
-          "type": "other",
-          "target": "a.root-servers.net (DNS service; DNS related)"
-        },
-        {
-          "type": "other",
-          "target": "j.root-servers.net (DNS service; DNS related)"
-        },
-        {
-          "type": "other",
-          "target": "*.gtld-servers.net (DNS service; DNS related)"
-        },
-        {
-          "type": "website",
-          "target": "https://www.verisign.com"
-        },
-        {
-          "type": "website",
-          "target": "https://youcouldbe.com"
-        },
-        {
-          "type": "website",
-          "target": "https://blog.verisign.com"
-        },
-        {
-          "type": "website",
-          "target": "https://namestudioforsocial.com/"
-        },
-        {
-          "type": "website",
-          "target": "https://namestudio.com"
-        },
-        {
-          "type": "other",
-          "target": "https://www.verisign.com"
-        },
-        {
-          "type": "other",
-          "target": "*.verisign-grs.com (DNS service; DNS related)"
         }
       ],
       "out_of_scope": [
