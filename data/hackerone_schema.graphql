@@ -12697,6 +12697,7 @@ type CustomerInvitationsProfile implements Node {
   country_restriction_source: CountryRestrictionSourceEnum
   country_restriction_type: CountryRestrictionTypeEnum
   goals: [String!]!
+  hacker_cohorts: [String!]!
   id: ID!
   other_goal_reason: String
   skills(
@@ -47705,6 +47706,7 @@ input UpdateTeamCustomerInvitationsProfileInput {
   country_restriction_source: CountryRestrictionSourceEnum
   country_restriction_type: CountryRestrictionTypeEnum
   goals: [String!]!
+  hacker_cohorts: [String!]!
   other_goal_reason: String
   skill_ids: [ID!]!
   team_id: ID!
