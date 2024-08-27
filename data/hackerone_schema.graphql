@@ -2753,6 +2753,7 @@ input AnalyticsBenchmarkQueryInputType {
   end_at: DateTime!
   interval: String!
   start_at: DateTime!
+  where: AnalyticsWhereInputType
 }
 
 input AnalyticsChartAxisConfigInputType {
@@ -21557,6 +21558,7 @@ input MoveScopesToNewPentestOpportunityInput {
   A unique identifier for the client performing the mutation.
   """
   clientMutationId: String
+  cloud_config_scope_ids: [ID!] = []
   csa_scope_ids: [ID!] = []
   generic_scope_ids: [ID!] = []
   mobile_app_scope_ids: [ID!] = []
@@ -27524,6 +27526,27 @@ type PentestOpportunity implements Node {
   bundle_subscription_id: Int
   citizenship_restrictions: [String!]
   clear_restriction_reasoning: String
+  cloud_config_scopes(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+  ): PentestOpportunityCloudConfigScopeConnection
   company_name: String
   compliance_framework: String
   compliance_framework_other: String
@@ -27749,6 +27772,58 @@ type PentestOpportunityApiScopeEdge {
   The item at the end of the edge.
   """
   node: PentestOpportunityApiScope
+}
+
+"""
+A pentest opportunity cloud config scope
+"""
+type PentestOpportunityCloudConfigScope implements Node {
+  _id: ID!
+  account_id: String
+  can_setup_permissions: Boolean
+  government_cloud: Boolean
+  has_integrations: Boolean
+  id: ID!
+  primary_regions: [String!]
+  provider_type: String
+  scope_type: String
+  secondary_regions: [String!]
+}
+
+"""
+The connection type for PentestOpportunityCloudConfigScope.
+"""
+type PentestOpportunityCloudConfigScopeConnection {
+  """
+  A list of edges.
+  """
+  edges: [PentestOpportunityCloudConfigScopeEdge]
+
+  """
+  A list of nodes.
+  """
+  nodes: [PentestOpportunityCloudConfigScope]
+
+  """
+  Information to aid in pagination.
+  """
+  pageInfo: PageInfo!
+  total_count: Int!
+}
+
+"""
+An edge in a connection.
+"""
+type PentestOpportunityCloudConfigScopeEdge {
+  """
+  A cursor for use in pagination.
+  """
+  cursor: String!
+
+  """
+  The item at the end of the edge.
+  """
+  node: PentestOpportunityCloudConfigScope
 }
 
 """
