@@ -6760,6 +6760,85 @@
     }
   },
   {
+    "name": "Indeed",
+    "url": "https://bugcrowd.com/engagements/indeed",
+    "allows_disclosure": false,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "full",
+    "max_payout": 10000,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "other",
+          "target": "https://*.indeed.com"
+        },
+        {
+          "type": "website",
+          "target": "https://*.indeedflex.com"
+        },
+        {
+          "type": "api",
+          "target": "https://apis.indeed.com/graphql"
+        },
+        {
+          "type": "android",
+          "target": "https://play.google.com/store/apps/details?id=com.indeed.android.jobsearch"
+        },
+        {
+          "type": "ios",
+          "target": "https://apps.apple.com/us/app/indeed-job-search/id309735670"
+        },
+        {
+          "type": "android",
+          "target": "https://play.google.com/store/apps/details?id=com.syftapp.android"
+        },
+        {
+          "type": "ios",
+          "target": "https://apps.apple.com/gb/app/indeed-flex-job-search/id1013812731"
+        },
+        {
+          "type": "website",
+          "target": "https://*.indeed.tech"
+        },
+        {
+          "type": "website",
+          "target": "https://*.indeed.net"
+        },
+        {
+          "type": "website",
+          "target": "https://resume.com"
+        },
+        {
+          "type": "website",
+          "target": "https://wowjobs.ca"
+        },
+        {
+          "type": "ios",
+          "target": "https://apps.apple.com/us/app/%E5%B1%A5%E6%AD%B4%E6%9B%B8%E4%BD%9C%E6%88%90-%E3%82%A4%E3%83%B3%E3%83%87%E3%82%A3%E3%83%BC%E3%83%89/id1484451230"
+        },
+        {
+          "type": "android",
+          "target": "https://play.google.com/store/apps/details?id=com.indeed.resume"
+        },
+        {
+          "type": "ios",
+          "target": "https://apps.apple.com/us/app/indeed-connect-for-employers/id6443822731"
+        },
+        {
+          "type": "website",
+          "target": "https://chromewebstore.google.com/detail/indeed-recruiter-extensio/kiodpphbmnmcmnfgpnmkkhmkllnlflef"
+        },
+        {
+          "type": "other",
+          "target": "Any host/web property/mobile app verified to be owned by Indeed"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
     "name": "Intercom",
     "url": "https://bugcrowd.com/engagements/intercom",
     "allows_disclosure": true,
@@ -7855,129 +7934,6 @@
         {
           "type": "website",
           "target": "https://app.staging.luno.com/"
-        }
-      ],
-      "out_of_scope": [
-
-      ]
-    }
-  },
-  {
-    "name": "Mastercard Public Bug Bounty ",
-    "url": "https://bugcrowd.com/engagements/mastercard",
-    "allows_disclosure": true,
-    "managed_by_bugcrowd": true,
-    "safe_harbor": "partial",
-    "max_payout": 5000,
-    "targets": {
-      "in_scope": [
-        {
-          "type": "website",
-          "target": "https://www.simplify.com/commerce/ "
-        },
-        {
-          "type": "website",
-          "target": "https://www.mastercard.us/en-us.html"
-        },
-        {
-          "type": "website",
-          "target": "https://www.mastercard.ch/de-ch.html"
-        },
-        {
-          "type": "website",
-          "target": "https://www.mastercard.ch/fr-ch.html"
-        },
-        {
-          "type": "website",
-          "target": "https://www.mastercard.com.au/en-au.html"
-        },
-        {
-          "type": "website",
-          "target": "https://www.mastercard.nl/nl-nl.html"
-        },
-        {
-          "type": "website",
-          "target": "https://developer.mastercard.com"
-        },
-        {
-          "type": "website",
-          "target": "https://donate.mastercard.com"
-        },
-        {
-          "type": "website",
-          "target": "https://demo.priceless.com/"
-        },
-        {
-          "type": "website",
-          "target": "https://europe.priceless.com/shb"
-        },
-        {
-          "type": "website",
-          "target": "https://priceless.com/golf/"
-        },
-        {
-          "type": "website",
-          "target": "https://pricelesssurprises.com/"
-        },
-        {
-          "type": "website",
-          "target": "https://priceless.com/aa/"
-        },
-        {
-          "type": "website",
-          "target": "https://priceless.com/aviator/"
-        },
-        {
-          "type": "website",
-          "target": "https://priceless.com/citiaadvantage/"
-        },
-        {
-          "type": "website",
-          "target": "https://performancemarketing.mastercard.com/portal/"
-        },
-        {
-          "type": "website",
-          "target": "https://src.mastercard.com/profile/enroll"
-        },
-        {
-          "type": "website",
-          "target": "https://src.mastercard.com/*"
-        },
-        {
-          "type": "website",
-          "target": "SRC integration on https://masterpassteststore.com/. Only the Masterpass checkout functionality is in scope"
-        },
-        {
-          "type": "api",
-          "target": " Finicity Connect"
-        },
-        {
-          "type": "api",
-          "target": "Finicity- Data Services"
-        },
-        {
-          "type": "api",
-          "target": "Finicity Decisioning"
-        },
-        {
-          "type": "website",
-          "target": "https://www.finicity.com"
-        },
-        {
-          "type": "website",
-          "target": "https://consumer.finicityreports.com"
-        },
-        {
-          "type": "api",
-          "target": "Finicity- Open Banking Payment History application"
-        },
-        {
-          "type": "api",
-          "target": "Finicity - OBB (Open Banking Business Service) "
-        },
-        {
-          "type": "other",
-          "target": "Public Others Target"
         }
       ],
       "out_of_scope": [
