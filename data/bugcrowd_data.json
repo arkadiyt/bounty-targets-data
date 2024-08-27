@@ -3533,70 +3533,6 @@
     }
   },
   {
-    "name": "Bullish.com",
-    "url": "https://bugcrowd.com/bullish",
-    "allows_disclosure": true,
-    "managed_by_bugcrowd": true,
-    "safe_harbor": "full",
-    "max_payout": 12000,
-    "targets": {
-      "in_scope": [
-        {
-          "type": "website",
-          "target": "https://bullish.com/"
-        },
-        {
-          "type": "website",
-          "target": "https://investor.bullish.com"
-        },
-        {
-          "type": "website",
-          "target": "https://investor.bullish.com/"
-        }
-      ],
-      "out_of_scope": [
-        {
-          "type": "website",
-          "target": "*.bullish.com"
-        },
-        {
-          "type": "website",
-          "target": "https://*.bullish.com"
-        },
-        {
-          "type": "website",
-          "target": "https://simnext.bullish-test.com"
-        }
-      ]
-    }
-  },
-  {
-    "name": "Bullish Exchange",
-    "url": "https://bugcrowd.com/bullish-exchange",
-    "allows_disclosure": true,
-    "managed_by_bugcrowd": true,
-    "safe_harbor": "full",
-    "max_payout": 25000,
-    "targets": {
-      "in_scope": [
-        {
-          "type": "api",
-          "target": "https://api.simnext.bullish-test.com"
-        },
-        {
-          "type": "website",
-          "target": "https://simnext.bullish-test.com"
-        }
-      ],
-      "out_of_scope": [
-        {
-          "type": "website",
-          "target": "*.bullish.com/"
-        }
-      ]
-    }
-  },
-  {
     "name": "Majid Al Futtaim Retail",
     "url": "https://bugcrowd.com/carrefour",
     "allows_disclosure": true,
@@ -5191,6 +5127,62 @@
         {
           "type": "website",
           "target": "https://community.bugcrowd.com"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Bullish.com",
+    "url": "https://bugcrowd.com/engagements/bullish",
+    "allows_disclosure": false,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "full",
+    "max_payout": 12000,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "website",
+          "target": "https://bullish.com/"
+        },
+        {
+          "type": "website",
+          "target": "https://investor.bullish.com/"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "website",
+          "target": "https://*.bullish.com"
+        },
+        {
+          "type": "website",
+          "target": "https://simnext.bullish-test.com"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Bullish Exchange",
+    "url": "https://bugcrowd.com/engagements/bullish-exchange",
+    "allows_disclosure": false,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "full",
+    "max_payout": 25000,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "website",
+          "target": "https://simnext.bullish-test.com"
+        },
+        {
+          "type": "api",
+          "target": "https://api.simnext.bullish-test.com"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "website",
+          "target": "*.bullish.com/"
         }
       ]
     }
@@ -10871,6 +10863,132 @@
     }
   },
   {
+    "name": "Wise (ex-TransferWise)",
+    "url": "https://bugcrowd.com/engagements/wise",
+    "allows_disclosure": true,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "full",
+    "max_payout": 4000,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "website",
+          "target": "https://transferwise.com"
+        },
+        {
+          "type": "website",
+          "target": "*.transferwise.com"
+        },
+        {
+          "type": "website",
+          "target": "https://wise.com"
+        },
+        {
+          "type": "website",
+          "target": "*.wise.com"
+        },
+        {
+          "type": "ios",
+          "target": "https://apps.apple.com/us/app/wise-ex-transferwise/id612261027"
+        },
+        {
+          "type": "android",
+          "target": "https://play.google.com/store/apps/details?id=com.transferwise.android&hl=en_US&gl=US"
+        },
+        {
+          "type": "other",
+          "target": "AWS infrastructure and services in use by Wise (eg: S3 buckets)"
+        },
+        {
+          "type": "other",
+          "target": "https://github.com/transferwise/*"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "website",
+          "target": "Wise Affiliate Program"
+        },
+        {
+          "type": "website",
+          "target": "Third party services not hosted by Wise"
+        },
+        {
+          "type": "other",
+          "target": "Any Github asset not under the “transferwise” organization"
+        },
+        {
+          "type": "website",
+          "target": "Third party authentication services (eg: Facebook and Google)"
+        },
+        {
+          "type": "website",
+          "target": "https://transferwise.com/help/contact"
+        },
+        {
+          "type": "website",
+          "target": "https://wise.com/help/contact"
+        },
+        {
+          "type": "website",
+          "target": "*.tw.com"
+        },
+        {
+          "type": "website",
+          "target": "*.tw.ee"
+        },
+        {
+          "type": "android",
+          "target": "Non-current version of the Android app"
+        },
+        {
+          "type": "ios",
+          "target": "Non-current version of the iOS app"
+        },
+        {
+          "type": "website",
+          "target": "*.transferwise.tech"
+        },
+        {
+          "type": "website",
+          "target": "brand.wise.com"
+        },
+        {
+          "type": "website",
+          "target": "links.wise.com"
+        },
+        {
+          "type": "website",
+          "target": "widgets.transferwise.com"
+        },
+        {
+          "type": "website",
+          "target": "brand.transferwise.com"
+        },
+        {
+          "type": "website",
+          "target": "bootstrap.transferwise.com"
+        },
+        {
+          "type": "website",
+          "target": "links.transferwise.com"
+        },
+        {
+          "type": "website",
+          "target": "status.wise.com"
+        },
+        {
+          "type": "website",
+          "target": "status.transferwise.com"
+        },
+        {
+          "type": "website",
+          "target": "tech.transferwise.com"
+        }
+      ]
+    }
+  },
+  {
     "name": "WOO Network: Bug Bounty Program",
     "url": "https://bugcrowd.com/engagements/woo-network",
     "allows_disclosure": false,
@@ -15950,152 +16068,6 @@
         {
           "type": "website",
           "target": "www.wuprepaid.de"
-        }
-      ]
-    }
-  },
-  {
-    "name": "Wise (ex-TransferWise)",
-    "url": "https://bugcrowd.com/wise",
-    "allows_disclosure": true,
-    "managed_by_bugcrowd": true,
-    "safe_harbor": "full",
-    "max_payout": 4000,
-    "targets": {
-      "in_scope": [
-        {
-          "type": "website",
-          "target": "*.transferwise.com"
-        },
-        {
-          "type": "website",
-          "target": "*.wise.com"
-        },
-        {
-          "type": "other",
-          "target": "AWS infrastructure and services in use by Wise (eg: S3 buckets)"
-        },
-        {
-          "type": "android",
-          "target": "Latest version of Wise Android App"
-        },
-        {
-          "type": "ios",
-          "target": "Latest version of Wise iOS App"
-        },
-        {
-          "type": "other",
-          "target": "github.com/transferwise/*"
-        },
-        {
-          "type": "ios",
-          "target": "https://apps.apple.com/us/app/wise-ex-transferwise/id612261027"
-        },
-        {
-          "type": "other",
-          "target": "https://github.com/transferwise/*"
-        },
-        {
-          "type": "android",
-          "target": "https://play.google.com/store/apps/details?id=com.transferwise.android&hl=en_US&gl=US"
-        },
-        {
-          "type": "website",
-          "target": "https://transferwise.com"
-        },
-        {
-          "type": "website",
-          "target": "https://wise.com"
-        },
-        {
-          "type": "website",
-          "target": "transferwise.com"
-        },
-        {
-          "type": "website",
-          "target": "wise.com"
-        }
-      ],
-      "out_of_scope": [
-        {
-          "type": "website",
-          "target": "*.transferwise.tech"
-        },
-        {
-          "type": "website",
-          "target": "*.tw.com"
-        },
-        {
-          "type": "website",
-          "target": "*.tw.ee"
-        },
-        {
-          "type": "other",
-          "target": "Any Github asset not under the “transferwise” organization"
-        },
-        {
-          "type": "android",
-          "target": "Non-current version of the Android app"
-        },
-        {
-          "type": "ios",
-          "target": "Non-current version of the iOS app"
-        },
-        {
-          "type": "website",
-          "target": "Third party authentication services (eg: Facebook and Google)"
-        },
-        {
-          "type": "website",
-          "target": "Third party services not hosted by Wise"
-        },
-        {
-          "type": "website",
-          "target": "Wise Affiliate Program"
-        },
-        {
-          "type": "website",
-          "target": "bootstrap.transferwise.com"
-        },
-        {
-          "type": "website",
-          "target": "brand.transferwise.com"
-        },
-        {
-          "type": "website",
-          "target": "brand.wise.com"
-        },
-        {
-          "type": "website",
-          "target": "https://transferwise.com/help/contact"
-        },
-        {
-          "type": "website",
-          "target": "https://wise.com/help/contact"
-        },
-        {
-          "type": "website",
-          "target": "links.transferwise.com"
-        },
-        {
-          "type": "website",
-          "target": "links.wise.com"
-        },
-        {
-          "type": "website",
-          "target": "status.transferwise.com"
-        },
-        {
-          "type": "website",
-          "target": "status.wise.com"
-        },
-        {
-          "type": "website",
-          "target": "tech.transferwise.com"
-        },
-        {
-          "type": "website",
-          "target": "widgets.transferwise.com"
         }
       ]
     }
