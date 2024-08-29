@@ -8605,68 +8605,6 @@
     }
   },
   {
-    "name": "Octopus",
-    "url": "https://bugcrowd.com/engagements/octopus-og",
-    "allows_disclosure": false,
-    "managed_by_bugcrowd": true,
-    "safe_harbor": "full",
-    "max_payout": 6000,
-    "targets": {
-      "in_scope": [
-        {
-          "type": "website",
-          "target": "*.octopus.com"
-        },
-        {
-          "type": "other",
-          "target": "https://github.com/OctopusDeploy"
-        },
-        {
-          "type": "website",
-          "target": "https://octopus.com"
-        },
-        {
-          "type": "website",
-          "target": "https://aiagent.octopus.com/api/form"
-        }
-      ],
-      "out_of_scope": [
-        {
-          "type": "website",
-          "target": "*.octopus.app"
-        },
-        {
-          "type": "website",
-          "target": "artifactorysample.octopus.com"
-        },
-        {
-          "type": "website",
-          "target": "bamboosample.octopus.com"
-        },
-        {
-          "type": "website",
-          "target": "jenkinssample.octopus.com"
-        },
-        {
-          "type": "website",
-          "target": "teamcitysample.octopus.com"
-        },
-        {
-          "type": "website",
-          "target": "nexussample.octopus.com"
-        },
-        {
-          "type": "website",
-          "target": "myget.octopus.com"
-        },
-        {
-          "type": "website",
-          "target": " partners.octopus.com"
-        }
-      ]
-    }
-  },
-  {
     "name": "oDesk ",
     "url": "https://bugcrowd.com/engagements/odesk",
     "allows_disclosure": true,
@@ -9423,6 +9361,25 @@
         {
           "type": "other",
           "target": "https://dashboard.pantheon.io"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
+    "name": "Pexels",
+    "url": "https://bugcrowd.com/engagements/pexels",
+    "allows_disclosure": true,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "partial",
+    "max_payout": 6000,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "website",
+          "target": "https://www.pexels.com/"
         }
       ],
       "out_of_scope": [
@@ -11536,65 +11493,6 @@
     }
   },
   {
-    "name": "Verisign",
-    "url": "https://bugcrowd.com/engagements/verisign",
-    "allows_disclosure": true,
-    "managed_by_bugcrowd": true,
-    "safe_harbor": "partial",
-    "max_payout": 10000,
-    "targets": {
-      "in_scope": [
-        {
-          "type": "other",
-          "target": "epptool-ctld.verisign-grs.com (EPP service; DNS related)"
-        },
-        {
-          "type": "other",
-          "target": "a.root-servers.net (DNS service; DNS related)"
-        },
-        {
-          "type": "other",
-          "target": "j.root-servers.net (DNS service; DNS related)"
-        },
-        {
-          "type": "other",
-          "target": "*.gtld-servers.net (DNS service; DNS related)"
-        },
-        {
-          "type": "website",
-          "target": "https://www.verisign.com"
-        },
-        {
-          "type": "website",
-          "target": "https://youcouldbe.com"
-        },
-        {
-          "type": "website",
-          "target": "https://blog.verisign.com"
-        },
-        {
-          "type": "website",
-          "target": "https://namestudioforsocial.com/"
-        },
-        {
-          "type": "website",
-          "target": "https://namestudio.com"
-        },
-        {
-          "type": "other",
-          "target": "https://www.verisign.com"
-        },
-        {
-          "type": "other",
-          "target": "*.verisign-grs.com (DNS service; DNS related)"
-        }
-      ],
-      "out_of_scope": [
-
-      ]
-    }
-  },
-  {
     "name": "Web.com",
     "url": "https://bugcrowd.com/engagements/webdotcom",
     "allows_disclosure": true,
@@ -11910,6 +11808,44 @@
       ],
       "out_of_scope": [
 
+      ]
+    }
+  },
+  {
+    "name": "YNAB",
+    "url": "https://bugcrowd.com/engagements/ynab",
+    "allows_disclosure": false,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "full",
+    "max_payout": 3000,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "website",
+          "target": "Other ynab.com domains not listed"
+        },
+        {
+          "type": "website",
+          "target": "https://staging-app.ynab.com"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "website",
+          "target": "https://app.ynab.com/"
+        },
+        {
+          "type": "other",
+          "target": "Any previous version of the desktop apps: YNAB 4, YNAB 3, YNAB Pro, YNAB Basic (Spreadsheet)"
+        },
+        {
+          "type": "website",
+          "target": "https://develop-app.ynab.com"
+        },
+        {
+          "type": "website",
+          "target": "https://support.ynab.com"
+        }
       ]
     }
   },
