@@ -4594,6 +4594,7 @@ type Automation implements Node {
     Returns the last _n_ elements from the list.
     """
     last: Int
+    order_by: FiltersAutomationRunFilterOrder
   ): AutomationRunConnection
 
   """
@@ -17478,9 +17479,15 @@ input FiltersAutomationFilterInput {
 
 input FiltersAutomationFilterOrder {
   created_at: FilterOrderPredicateInput
+  enabled: FilterOrderPredicateInput
   id: FilterOrderPredicateInput
   title: FilterOrderPredicateInput
   updated_at: FilterOrderPredicateInput
+}
+
+input FiltersAutomationRunFilterOrder {
+  created_at: FilterOrderPredicateInput
+  id: FilterOrderPredicateInput
 }
 
 input FiltersBountyFilterInput {
