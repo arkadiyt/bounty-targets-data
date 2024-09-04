@@ -9543,6 +9543,7 @@ input CreateLlmAppInput {
   """
   clientMutationId: String
   color: String!
+  conversation_starters: [String!]
   description: String!
   instructions: String!
   name: String!
@@ -21051,6 +21052,7 @@ An LLM App
 """
 type LlmApp implements Node {
   color: String
+  conversation_starters: [String!]!
   created_at: DateTime!
   description: String!
   id: ID!
@@ -44922,6 +44924,7 @@ input UpdateLlmAppInput {
   """
   clientMutationId: String
   color: String!
+  conversation_starters: [String!]
   description: String!
   instructions: String!
   llm_app_id: ID!
