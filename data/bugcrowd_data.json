@@ -383,108 +383,6 @@
     }
   },
   {
-    "name": "Asana",
-    "url": "https://bugcrowd.com/asana",
-    "allows_disclosure": true,
-    "managed_by_bugcrowd": true,
-    "safe_harbor": "partial",
-    "max_payout": 6500,
-    "targets": {
-      "in_scope": [
-        {
-          "type": "website",
-          "target": "*.app.asana.com"
-        },
-        {
-          "type": "website",
-          "target": "*.asana.biz"
-        },
-        {
-          "type": "website",
-          "target": "*.asana.plus"
-        },
-        {
-          "type": "android",
-          "target": "Asana Android app"
-        },
-        {
-          "type": "other",
-          "target": "Asana Desktop App"
-        },
-        {
-          "type": "ios",
-          "target": "Asana iOS app"
-        },
-        {
-          "type": "website",
-          "target": "app.asana.com"
-        },
-        {
-          "type": "website",
-          "target": "asana.com"
-        },
-        {
-          "type": "website",
-          "target": "form.asana.com"
-        },
-        {
-          "type": "website",
-          "target": "https://app.asana.com"
-        },
-        {
-          "type": "ios",
-          "target": "https://apps.apple.com/us/app/asana-mobile/id489969512"
-        },
-        {
-          "type": "website",
-          "target": "https://asana.com"
-        },
-        {
-          "type": "website",
-          "target": "https://asana.com/apps?category=made-by-asana"
-        },
-        {
-          "type": "other",
-          "target": "https://asana.com/download"
-        },
-        {
-          "type": "website",
-          "target": "https://form.asana.com"
-        },
-        {
-          "type": "android",
-          "target": "https://play.google.com/store/apps/details?id=com.asana.app&hl=en"
-        }
-      ],
-      "out_of_scope": [
-        {
-          "type": "other",
-          "target": "Forms that you do not own"
-        },
-        {
-          "type": "website",
-          "target": "Other subdomains of asana.com"
-        },
-        {
-          "type": "other",
-          "target": "Social engineering against Asana Support or Asana Employees"
-        },
-        {
-          "type": "website",
-          "target": "asana.okta.com"
-        },
-        {
-          "type": "website",
-          "target": "assets.asana.biz"
-        },
-        {
-          "type": "website",
-          "target": "jira*.integrations.asana.plus"
-        }
-      ]
-    }
-  },
-  {
     "name": "Atlassian",
     "url": "https://bugcrowd.com/atlassian",
     "allows_disclosure": true,
@@ -3953,6 +3851,80 @@
         {
           "type": "api",
           "target": "Diebold Nixdorf Services - *.dieboldnixdorf.com "
+        }
+      ]
+    }
+  },
+  {
+    "name": "Asana",
+    "url": "https://bugcrowd.com/engagements/asana",
+    "allows_disclosure": false,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "partial",
+    "max_payout": 6500,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "website",
+          "target": "https://app.asana.com"
+        },
+        {
+          "type": "website",
+          "target": "https://asana.com"
+        },
+        {
+          "type": "website",
+          "target": "https://asana.com/apps?category=made-by-asana"
+        },
+        {
+          "type": "website",
+          "target": "*.asana.biz"
+        },
+        {
+          "type": "other",
+          "target": "https://asana.com/download"
+        },
+        {
+          "type": "ios",
+          "target": "https://apps.apple.com/us/app/asana-mobile/id489969512"
+        },
+        {
+          "type": "android",
+          "target": "https://play.google.com/store/apps/details?id=com.asana.app&hl=en"
+        },
+        {
+          "type": "website",
+          "target": "https://form.asana.com"
+        },
+        {
+          "type": "website",
+          "target": "*.app.asana.com"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "website",
+          "target": "Other subdomains of asana.com"
+        },
+        {
+          "type": "other",
+          "target": "Social engineering against Asana Support or Asana Employees"
+        },
+        {
+          "type": "website",
+          "target": "jira*.integrations.asana.plus"
+        },
+        {
+          "type": "website",
+          "target": "asana.okta.com"
+        },
+        {
+          "type": "website",
+          "target": "assets.asana.biz"
+        },
+        {
+          "type": "other",
+          "target": "Forms that you do not own"
         }
       ]
     }
