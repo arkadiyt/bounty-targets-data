@@ -13292,6 +13292,7 @@ type DeclarativePolicy implements Node {
   _id: ID!
   contact_email: String
   created_at: DateTime!
+  disclosure_declaration: String
   exemplary_standards_exclusions: [ExemplaryStandardsExclusionsEnum!]
   has_open_scope: Boolean
   id: ID!
@@ -38815,6 +38816,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
   i_can_manage_program: Boolean!
   i_can_manage_references: Boolean!
   i_can_manage_team_members: Boolean!
+  i_can_see_disclosure_declaration: Boolean!
   i_can_see_report_submit_button: Boolean
   i_can_view_all_weaknesses: Boolean
   i_can_view_base_bounty: Boolean
@@ -48247,6 +48249,7 @@ input UpdateTeamPolicyInput {
   clientMutationId: String
   contact_email: String
   custom_message_for_policy_change: String
+  disclosure_declaration: String
   exemplary_standards_exclusions: [String!]
   has_open_scope: Boolean
   introduction: String
