@@ -4635,6 +4635,11 @@ type Automation implements Node {
   lambda_arn: String
 
   """
+  The organization that the automation belongs to
+  """
+  organization: Organization!
+
+  """
   The id of the template used to create the automation
   """
   template_identifier: String
@@ -29555,7 +29560,7 @@ type Query implements Node {
     querystring: String
     report_ids: [Int!]!
   ): TeamConnection
-  automation(uid: String!): Automation
+  automation(organization_handle: String!, uid: String!): Automation
   automation_templates(
     """
     Returns the elements in the list that come after the specified cursor.
