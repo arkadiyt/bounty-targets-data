@@ -4964,48 +4964,6 @@
     }
   },
   {
-    "name": "ClickHouse",
-    "url": "https://bugcrowd.com/engagements/clickhouse",
-    "allows_disclosure": false,
-    "managed_by_bugcrowd": true,
-    "safe_harbor": "full",
-    "max_payout": 2500,
-    "targets": {
-      "in_scope": [
-        {
-          "type": "website",
-          "target": "https://clickhou.se/bugcrowd"
-        },
-        {
-          "type": "other",
-          "target": "ClickHouse Cloud environment hosted by ClickHouse"
-        },
-        {
-          "type": "other",
-          "target": "https://github.com/ClickHouse/ClickHouse"
-        }
-      ],
-      "out_of_scope": [
-        {
-          "type": "website",
-          "target": "New support cases, Chat, Request new integration form"
-        },
-        {
-          "type": "website",
-          "target": "Share feedback form"
-        },
-        {
-          "type": "website",
-          "target": "Vulnerability scanners"
-        },
-        {
-          "type": "website",
-          "target": "https://learn.clickhouse.com/"
-        }
-      ]
-    }
-  },
-  {
     "name": "Cloudinary",
     "url": "https://bugcrowd.com/engagements/cloudinary",
     "allows_disclosure": true,
@@ -5044,6 +5002,85 @@
           "type": "website",
           "target": "wiki.cloudinary.com"
         }
+      ]
+    }
+  },
+  {
+    "name": "codefortynine",
+    "url": "https://bugcrowd.com/engagements/codefortynine",
+    "allows_disclosure": true,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "partial",
+    "max_payout": 1500,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "website",
+          "target": "https://marketplace.atlassian.com/apps/1218652/deep-clone-for-jira?hosting=cloud"
+        },
+        {
+          "type": "website",
+          "target": "https://marketplace.atlassian.com/apps/1219514/merge-agent-for-jira?hosting=cloud"
+        },
+        {
+          "type": "website",
+          "target": "https://marketplace.atlassian.com/apps/1220136/quick-filters-for-jira-dashboards?hosting=cloud"
+        },
+        {
+          "type": "website",
+          "target": "https://marketplace.atlassian.com/apps/1219476/comment-custom-fields-for-jira?hosting=cloud"
+        },
+        {
+          "type": "website",
+          "target": "https://marketplace.atlassian.com/apps/1221733/external-data-for-confluence?hosting=cloud"
+        },
+        {
+          "type": "website",
+          "target": "https://marketplace.atlassian.com/apps/1219288/comment-history-log-for-jira?hosting=cloud"
+        },
+        {
+          "type": "website",
+          "target": "https://marketplace.atlassian.com/apps/1215055/slack-for-confluence?hosting=cloud"
+        },
+        {
+          "type": "website",
+          "target": "https://marketplace.atlassian.com/apps/1219807/version-sync-for-jira?hosting=cloud"
+        },
+        {
+          "type": "website",
+          "target": "https://marketplace.atlassian.com/apps/1220964/snipe-it-for-jira?hosting=cloud"
+        },
+        {
+          "type": "website",
+          "target": "https://marketplace.atlassian.com/apps/1218211/secure-google-calendar-for-confluence?hosting=cloud"
+        },
+        {
+          "type": "website",
+          "target": "https://marketplace.atlassian.com/apps/1219994/external-data-for-jira-fields?hosting=cloud"
+        },
+        {
+          "type": "website",
+          "target": "https://marketplace.atlassian.com/apps/1232630/external-data-for-jira-fields-extension?hosting=cloud"
+        },
+        {
+          "type": "website",
+          "target": "https://marketplace.atlassian.com/apps/1222978/dynamic-fields-for-jira?hosting=cloud"
+        },
+        {
+          "type": "website",
+          "target": "https://marketplace.atlassian.com/apps/1223455/advanced-bulk-edit-for-jira?hosting=cloud"
+        },
+        {
+          "type": "website",
+          "target": "https://marketplace.atlassian.com/apps/1226627/prime-custom-fields-for-jira?hosting=cloud"
+        },
+        {
+          "type": "website",
+          "target": "https://marketplace.atlassian.com/apps/1230689/easy-confluence-gadget-for-jira-dashboards?hosting=cloud"
+        }
+      ],
+      "out_of_scope": [
+
       ]
     }
   },
@@ -6212,101 +6249,6 @@
     }
   },
   {
-    "name": "ExpressVPN",
-    "url": "https://bugcrowd.com/engagements/expressvpn",
-    "allows_disclosure": false,
-    "managed_by_bugcrowd": true,
-    "safe_harbor": "full",
-    "max_payout": 2500,
-    "targets": {
-      "in_scope": [
-        {
-          "type": "other",
-          "target": "VPN servers"
-        },
-        {
-          "type": "ios",
-          "target": "ExpressVPN iOS application"
-        },
-        {
-          "type": "android",
-          "target": "ExpressVPN Android application"
-        },
-        {
-          "type": "other",
-          "target": "ExpressVPN Linux application"
-        },
-        {
-          "type": "other",
-          "target": "ExpressVPN macOS application"
-        },
-        {
-          "type": "other",
-          "target": "ExpressVPN Windows application"
-        },
-        {
-          "type": "other",
-          "target": "ExpressVPN Router"
-        },
-        {
-          "type": "other",
-          "target": "ExpressVPN Firefox extension"
-        },
-        {
-          "type": "other",
-          "target": "ExpressVPN Chrome extension"
-        },
-        {
-          "type": "other",
-          "target": "MediaStreamer DNS servers"
-        },
-        {
-          "type": "api",
-          "target": "ExpressVPN APIs"
-        },
-        {
-          "type": "website",
-          "target": "https://www.expressvpn.com"
-        },
-        {
-          "type": "website",
-          "target": "*.expressvpn.com"
-        },
-        {
-          "type": "other",
-          "target": "*.xvservice.net"
-        },
-        {
-          "type": "other",
-          "target": "*.xvtest.net"
-        },
-        {
-          "type": "website",
-          "target": "http://expressobutiolem.onion"
-        },
-        {
-          "type": "other",
-          "target": "Google Play (com.expressvpn.vpn)"
-        },
-        {
-          "type": "other",
-          "target": "Apple App Store (886492891)"
-        },
-        {
-          "type": "other",
-          "target": "https://github.com/expressvpn/lightway-core"
-        },
-        {
-          "type": "other",
-          "target": "ExpressVPN Keys Browser Extension"
-        }
-      ],
-      "out_of_scope": [
-
-      ]
-    }
-  },
-  {
     "name": "FIS",
     "url": "https://bugcrowd.com/engagements/fis",
     "allows_disclosure": true,
@@ -6666,108 +6608,6 @@
         {
           "type": "website",
           "target": "https://try.hotdoc.com.au/hotdoc-profiles"
-        }
-      ]
-    }
-  },
-  {
-    "name": "HubSpot",
-    "url": "https://bugcrowd.com/engagements/hubspot",
-    "allows_disclosure": false,
-    "managed_by_bugcrowd": true,
-    "safe_harbor": "full",
-    "max_payout": 10000,
-    "targets": {
-      "in_scope": [
-        {
-          "type": "website",
-          "target": "https://app.hubspot.com/"
-        },
-        {
-          "type": "website",
-          "target": "https://app-eu1.hubspot.com"
-        },
-        {
-          "type": "api",
-          "target": "https://api.hubspot.com/"
-        },
-        {
-          "type": "api",
-          "target": "https://developers.hubspot.com/docs/api/overview"
-        },
-        {
-          "type": "website",
-          "target": "https://chatspot.ai"
-        },
-        {
-          "type": "website",
-          "target": "https://connect.com"
-        },
-        {
-          "type": "website",
-          "target": "*.hubspotemail.net"
-        },
-        {
-          "type": "website",
-          "target": "*.hs-sites(-eu1)?.com"
-        },
-        {
-          "type": "website",
-          "target": "*.hubspotpagebuilder.com"
-        },
-        {
-          "type": "website",
-          "target": "*.hubspotpagebuilder.eu"
-        },
-        {
-          "type": "website",
-          "target": "https://knowledge.hubspot.com/inbox/set-up-a-customer-portal"
-        },
-        {
-          "type": "website",
-          "target": "Customer connected domain (2)"
-        },
-        {
-          "type": "android",
-          "target": "https://play.google.com/store/apps/details?id=com.hubspot.android&hl=en_US&gl=US"
-        },
-        {
-          "type": "ios",
-          "target": "https://apps.apple.com/us/app/hubspot/id1107711722"
-        },
-        {
-          "type": "other",
-          "target": "https://knowledge.hubspot.com/connected-email/get-started-with-the-hubspot-sales-office-365-add-in"
-        },
-        {
-          "type": "other",
-          "target": "Other HubSpot-owned (sub)domains not listed as Out of Scope . Please make sure to exercise due diligence before testing. You must include proof that the subdomain is registered to HubSpot to be eligible for a reward."
-        },
-        {
-          "type": "other",
-          "target": "Special Conditions"
-        }
-      ],
-      "out_of_scope": [
-        {
-          "type": "website",
-          "target": "https://shop.hubspot.com"
-        },
-        {
-          "type": "website",
-          "target": "https://trust.hubspot.com"
-        },
-        {
-          "type": "website",
-          "target": "https://thespot.hubspot.com"
-        },
-        {
-          "type": "website",
-          "target": "https://ir.hubspot.com"
-        },
-        {
-          "type": "other",
-          "target": "Out of Scope Vulnerabilities"
         }
       ]
     }
@@ -9524,28 +9364,6 @@
     }
   },
   {
-    "name": "Motorola Mobility Hardware Engagement",
-    "url": "https://bugcrowd.com/engagements/motorolamobility-iot",
-    "allows_disclosure": false,
-    "managed_by_bugcrowd": true,
-    "safe_harbor": "partial",
-    "max_payout": 5000,
-    "targets": {
-      "in_scope": [
-        {
-          "type": "android",
-          "target": "All Motorola Devices running Android 13 and above. "
-        }
-      ],
-      "out_of_scope": [
-        {
-          "type": "other",
-          "target": "Vulnerabilities related to web-app related issues"
-        }
-      ]
-    }
-  },
-  {
     "name": "Navan",
     "url": "https://bugcrowd.com/engagements/navan",
     "allows_disclosure": false,
@@ -11044,6 +10862,52 @@
     }
   },
   {
+    "name": "Phemex Bug Bounty",
+    "url": "https://bugcrowd.com/engagements/phemex",
+    "allows_disclosure": false,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": null,
+    "max_payout": 2500,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "ios",
+          "target": "██████████████"
+        },
+        {
+          "type": "website",
+          "target": "██████████████"
+        },
+        {
+          "type": "android",
+          "target": "██████████████████"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "website",
+          "target": "███████████████████"
+        },
+        {
+          "type": "website",
+          "target": "██████████████████"
+        },
+        {
+          "type": "website",
+          "target": "███████████"
+        },
+        {
+          "type": "website",
+          "target": "██████████████"
+        },
+        {
+          "type": "website",
+          "target": "██████████████"
+        }
+      ]
+    }
+  },
+  {
     "name": "Pinterest",
     "url": "https://bugcrowd.com/engagements/pinterest",
     "allows_disclosure": false,
@@ -11891,25 +11755,6 @@
     }
   },
   {
-    "name": "Skroutz Public Managed Bug Bounty",
-    "url": "https://bugcrowd.com/engagements/skroutz",
-    "allows_disclosure": false,
-    "managed_by_bugcrowd": true,
-    "safe_harbor": "full",
-    "max_payout": 4500,
-    "targets": {
-      "in_scope": [
-        {
-          "type": "website",
-          "target": "https://www.skroutz.gr/"
-        }
-      ],
-      "out_of_scope": [
-
-      ]
-    }
-  },
-  {
     "name": "Skyscanner",
     "url": "https://bugcrowd.com/engagements/skyscanner",
     "allows_disclosure": false,
@@ -12441,6 +12286,84 @@
     }
   },
   {
+    "name": "Stiltsoft",
+    "url": "https://bugcrowd.com/engagements/stiltsoft",
+    "allows_disclosure": true,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "full",
+    "max_payout": 3000,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "website",
+          "target": "https://marketplace.atlassian.com/apps/27447/table-filter-and-charts-for-confluence?hosting=cloud"
+        },
+        {
+          "type": "website",
+          "target": "https://marketplace.atlassian.com/apps/1214110/courses-and-quizzes-lms-for-confluence?hosting=cloud"
+        },
+        {
+          "type": "website",
+          "target": "https://marketplace.atlassian.com/apps/1210934/awesome-graphs-for-bitbucket?hosting=cloud"
+        },
+        {
+          "type": "website",
+          "target": "https://marketplace.atlassian.com/apps/1210934/awesome-graphs-for-bitbucket?hosting=server"
+        },
+        {
+          "type": "website",
+          "target": "https://marketplace.atlassian.com/apps/1210934/awesome-graphs-for-bitbucket?hosting=datacenter"
+        },
+        {
+          "type": "website",
+          "target": "https://marketplace.atlassian.com/apps/1222084/spreadsheet-issue-field-editor?hosting=cloud"
+        },
+        {
+          "type": "website",
+          "target": "https://marketplace.atlassian.com/apps/27447/table-filter-and-charts-for-confluence?hosting=datacenter"
+        },
+        {
+          "type": "website",
+          "target": "https://marketplace.atlassian.com/apps/27447/table-filter-and-charts-for-confluence?hosting=server"
+        },
+        {
+          "type": "website",
+          "target": "https://marketplace.atlassian.com/apps/1212507/smart-attachments-for-jira?hosting=cloud"
+        },
+        {
+          "type": "website",
+          "target": "https://marketplace.atlassian.com/apps/1212531/customer-case-jira-support-feedback?hosting=cloud"
+        },
+        {
+          "type": "website",
+          "target": "https://marketplace.atlassian.com/apps/1210766/teamcity-integration-for-jira?hosting=cloud"
+        },
+        {
+          "type": "website",
+          "target": "https://marketplace.atlassian.com/apps/1214971/handy-macros-for-confluence?hosting=cloud"
+        },
+        {
+          "type": "website",
+          "target": "https://marketplace.atlassian.com/apps/1222102/webhook-manager-for-confluence-cloud?hosting=cloud"
+        },
+        {
+          "type": "website",
+          "target": "https://marketplace.atlassian.com/apps/1222001/employee-performance-ratings?hosting=cloud"
+        },
+        {
+          "type": "website",
+          "target": "https://marketplace.atlassian.com/apps/1224994/poll-maker-for-confluence?hosting=cloud"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "website",
+          "target": "https://*.atlassian.com"
+        }
+      ]
+    }
+  },
+  {
     "name": "T-Mobile",
     "url": "https://bugcrowd.com/engagements/t-mobile",
     "allows_disclosure": false,
@@ -12590,6 +12513,96 @@
         {
           "type": "other",
           "target": "Any domain, property, product, protocol, or service of the app/hardware/software version not explicitly listed in the In-Scope section is out of scope; submissions are welcome but not guaranteed for the bounty/bonus."
+        }
+      ]
+    }
+  },
+  {
+    "name": "Tamedia",
+    "url": "https://bugcrowd.com/engagements/tamedia",
+    "allows_disclosure": true,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "full",
+    "max_payout": 2500,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "website",
+          "target": "████████████████████████████"
+        },
+        {
+          "type": "website",
+          "target": "██████████████████████"
+        },
+        {
+          "type": "website",
+          "target": "████████████████████████████"
+        },
+        {
+          "type": "website",
+          "target": "███████████████████████"
+        },
+        {
+          "type": "website",
+          "target": "██████████████████"
+        },
+        {
+          "type": "website",
+          "target": "██████████████████"
+        },
+        {
+          "type": "website",
+          "target": "███████████████████████"
+        },
+        {
+          "type": "website",
+          "target": "████████████████████████"
+        },
+        {
+          "type": "website",
+          "target": "████████████████████████████████"
+        },
+        {
+          "type": "website",
+          "target": "█████████████████████████████"
+        },
+        {
+          "type": "website",
+          "target": "███████████████████████████████████"
+        },
+        {
+          "type": "website",
+          "target": "███████████████████████"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "website",
+          "target": "████████████████████████████"
+        },
+        {
+          "type": "other",
+          "target": "███████████████████"
+        },
+        {
+          "type": "other",
+          "target": "████████████████"
+        },
+        {
+          "type": "website",
+          "target": "███████████████████████████████"
+        },
+        {
+          "type": "website",
+          "target": "██████████████████████████████"
+        },
+        {
+          "type": "website",
+          "target": "█████████████████████████████"
+        },
+        {
+          "type": "website",
+          "target": "██████████████████████████████"
         }
       ]
     }
@@ -14800,6 +14813,25 @@
           "type": "network",
           "target": "184.122.0.0/15"
         }
+      ]
+    }
+  },
+  {
+    "name": "Yieldstreet",
+    "url": "https://bugcrowd.com/engagements/yieldstreet-bb",
+    "allows_disclosure": false,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "full",
+    "max_payout": 3500,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "website",
+          "target": "https://bc.yieldstreet.net"
+        }
+      ],
+      "out_of_scope": [
+
       ]
     }
   },
