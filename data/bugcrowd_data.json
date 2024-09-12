@@ -5489,6 +5489,76 @@
     }
   },
   {
+    "name": "Dell Technologies Application Bug Bounty",
+    "url": "https://bugcrowd.com/engagements/dell-com",
+    "allows_disclosure": true,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": null,
+    "max_payout": 2500,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "website",
+          "target": "*.dell.com/*"
+        },
+        {
+          "type": "website",
+          "target": "*.delltechnologies.com/* "
+        },
+        {
+          "type": "website",
+          "target": "https://console.delltechnologies.com/nav/administration"
+        },
+        {
+          "type": "website",
+          "target": "https://console.delltechnologies.com/nav/invoice"
+        },
+        {
+          "type": "website",
+          "target": "https://console.delltechnologies.com/nav/billing"
+        },
+        {
+          "type": "other",
+          "target": "Any Verified Dell-Controlled Endpoint (domains/IP space/etc.)\t"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "website",
+          "target": "https://console.delltechnologies.com/ "
+        },
+        {
+          "type": "website",
+          "target": "https://console.delltechnologies.com/nav/catalog"
+        },
+        {
+          "type": "website",
+          "target": "https://console.delltechnologies.com/nav/support"
+        },
+        {
+          "type": "website",
+          "target": "https://console.delltechnologies.com/nav/subscriptions"
+        },
+        {
+          "type": "website",
+          "target": "educate.dell.com"
+        },
+        {
+          "type": "website",
+          "target": "console.dell.com"
+        },
+        {
+          "type": "website",
+          "target": "console-test.dell.com"
+        },
+        {
+          "type": "website",
+          "target": "salesproductivity.dell.com"
+        }
+      ]
+    }
+  },
+  {
     "name": "Dell Technologies' Products Bug Bounty Program",
     "url": "https://bugcrowd.com/engagements/dell-product",
     "allows_disclosure": true,
@@ -11732,36 +11802,6 @@
       ],
       "out_of_scope": [
 
-      ]
-    }
-  },
-  {
-    "name": "1Shoppingcart.com",
-    "url": "https://bugcrowd.com/engagements/shoppingcart",
-    "allows_disclosure": true,
-    "managed_by_bugcrowd": true,
-    "safe_harbor": "partial",
-    "max_payout": 2000,
-    "targets": {
-      "in_scope": [
-        {
-          "type": "website",
-          "target": "https://1shoppingcart.com"
-        },
-        {
-          "type": "website",
-          "target": "https://mcssl.com"
-        },
-        {
-          "type": "website",
-          "target": "*.mcssl.com"
-        }
-      ],
-      "out_of_scope": [
-        {
-          "type": "website",
-          "target": "*.1shoppingcart.com"
-        }
       ]
     }
   },
