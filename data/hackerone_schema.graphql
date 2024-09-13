@@ -16610,8 +16610,8 @@ type EntitlementConsumptionOverview implements Node {
   last_pentest_status: PentestStateEnum
   max_object_consumption_amount_acc: Float
   object_type: String
+  pentest_type: String
   product_code: String
-  product_short_code: String
   programs_handle: String
   programs_name: String
   programs_status: String
@@ -25640,6 +25640,7 @@ type Organization implements Node {
     last: Int
     where: FiltersPentestOpportunityFilterInput
   ): PentestOpportunityConnection
+  pentest_sales_entitlements_data: Hash
   profile_picture(size: ProfilePictureSizes!): String
   profile_picture_filename: String
   reporters(
