@@ -5419,6 +5419,76 @@
     }
   },
   {
+    "name": "Dell Technologies Application Bug Bounty",
+    "url": "https://bugcrowd.com/engagements/dell-com",
+    "allows_disclosure": true,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": null,
+    "max_payout": 2500,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "website",
+          "target": "*.dell.com/*"
+        },
+        {
+          "type": "website",
+          "target": "*.delltechnologies.com/* "
+        },
+        {
+          "type": "website",
+          "target": "https://console.delltechnologies.com/nav/administration"
+        },
+        {
+          "type": "website",
+          "target": "https://console.delltechnologies.com/nav/invoice"
+        },
+        {
+          "type": "website",
+          "target": "https://console.delltechnologies.com/nav/billing"
+        },
+        {
+          "type": "other",
+          "target": "Any Verified Dell-Controlled Endpoint (domains/IP space/etc.)\t"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "website",
+          "target": "https://console.delltechnologies.com/ "
+        },
+        {
+          "type": "website",
+          "target": "https://console.delltechnologies.com/nav/catalog"
+        },
+        {
+          "type": "website",
+          "target": "https://console.delltechnologies.com/nav/support"
+        },
+        {
+          "type": "website",
+          "target": "https://console.delltechnologies.com/nav/subscriptions"
+        },
+        {
+          "type": "website",
+          "target": "educate.dell.com"
+        },
+        {
+          "type": "website",
+          "target": "console.dell.com"
+        },
+        {
+          "type": "website",
+          "target": "console-test.dell.com"
+        },
+        {
+          "type": "website",
+          "target": "salesproductivity.dell.com"
+        }
+      ]
+    }
+  },
+  {
     "name": "Dell Technologies' Products Bug Bounty Program",
     "url": "https://bugcrowd.com/engagements/dell-product",
     "allows_disclosure": true,
@@ -5491,101 +5561,6 @@
           "type": "website",
           "target": "*.sandbox.directly.com/schedule-a-demo/* OR /product/* OR /careers/* OR /about/* OR /legal/* OR /trust/*"
         }
-      ]
-    }
-  },
-  {
-    "name": "Dropbox",
-    "url": "https://bugcrowd.com/engagements/dropbox",
-    "allows_disclosure": false,
-    "managed_by_bugcrowd": true,
-    "safe_harbor": "partial",
-    "max_payout": 10000,
-    "targets": {
-      "in_scope": [
-        {
-          "type": "api",
-          "target": "api.dropboxapi.com"
-        },
-        {
-          "type": "website",
-          "target": "*.dropbox.com    "
-        },
-        {
-          "type": "website",
-          "target": "*.hellosign.com"
-        },
-        {
-          "type": "website",
-          "target": "*.helloworks.com"
-        },
-        {
-          "type": "website",
-          "target": "*.hellofax.com"
-        },
-        {
-          "type": "website",
-          "target": "*.dropboxforum.com"
-        },
-        {
-          "type": "website",
-          "target": "*.docsend.com"
-        },
-        {
-          "type": "website",
-          "target": "*.dropboxer.net"
-        },
-        {
-          "type": "website",
-          "target": "https://www.dash.ai/"
-        },
-        {
-          "type": "android",
-          "target": "https://play.google.com/store/apps/details?id=com.dropbox.paper&hl=en_US&gl=US"
-        },
-        {
-          "type": "ios",
-          "target": "https://apps.apple.com/us/app/dropbox-secure-cloud-storage/id327630330"
-        },
-        {
-          "type": "ios",
-          "target": "https://apps.apple.com/us/app/paper-by-dropbox/id1126623662"
-        },
-        {
-          "type": "ios",
-          "target": "https://apps.apple.com/us/app/dropbox-emm/id1080074001"
-        },
-        {
-          "type": "other",
-          "target": "https://www.dropbox.com/desktop"
-        },
-        {
-          "type": "other",
-          "target": "https://www.dropbox.com/capture"
-        },
-        {
-          "type": "other",
-          "target": "https://www.dropbox.com/capture"
-        },
-        {
-          "type": "android",
-          "target": "https://play.google.com/store/apps/details?id=com.dropbox.android&hl=en_US&gl=US"
-        },
-        {
-          "type": "android",
-          "target": "https://play.google.com/store/apps/details?id=com.dropbox.app.hellosign&hl=en_US&gl=US"
-        },
-        {
-          "type": "other",
-          "target": "https://www.dropbox.com/paper"
-        },
-        {
-          "type": "other",
-          "target": "https://dropbox.com/dash/download"
-        }
-      ],
-      "out_of_scope": [
-
       ]
     }
   },
