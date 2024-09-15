@@ -3377,80 +3377,6 @@
     }
   },
   {
-    "name": "Asana",
-    "url": "https://bugcrowd.com/engagements/asana",
-    "allows_disclosure": false,
-    "managed_by_bugcrowd": true,
-    "safe_harbor": "partial",
-    "max_payout": 6500,
-    "targets": {
-      "in_scope": [
-        {
-          "type": "website",
-          "target": "https://app.asana.com"
-        },
-        {
-          "type": "website",
-          "target": "https://asana.com"
-        },
-        {
-          "type": "website",
-          "target": "https://asana.com/apps?category=made-by-asana"
-        },
-        {
-          "type": "website",
-          "target": "*.asana.biz"
-        },
-        {
-          "type": "other",
-          "target": "https://asana.com/download"
-        },
-        {
-          "type": "ios",
-          "target": "https://apps.apple.com/us/app/asana-mobile/id489969512"
-        },
-        {
-          "type": "android",
-          "target": "https://play.google.com/store/apps/details?id=com.asana.app&hl=en"
-        },
-        {
-          "type": "website",
-          "target": "https://form.asana.com"
-        },
-        {
-          "type": "website",
-          "target": "*.app.asana.com"
-        }
-      ],
-      "out_of_scope": [
-        {
-          "type": "website",
-          "target": "Other subdomains of asana.com"
-        },
-        {
-          "type": "other",
-          "target": "Social engineering against Asana Support or Asana Employees"
-        },
-        {
-          "type": "website",
-          "target": "jira*.integrations.asana.plus"
-        },
-        {
-          "type": "website",
-          "target": "asana.okta.com"
-        },
-        {
-          "type": "website",
-          "target": "assets.asana.biz"
-        },
-        {
-          "type": "other",
-          "target": "Forms that you do not own"
-        }
-      ]
-    }
-  },
-  {
     "name": "Aurory Managed Bug Bounty Engagement (Public)",
     "url": "https://bugcrowd.com/engagements/aurory-mbb-og2",
     "allows_disclosure": false,
@@ -4929,6 +4855,69 @@
           "type": "other",
           "target": "Insecure Direct Object References (IDORs)"
         }
+      ]
+    }
+  },
+  {
+    "name": "ClassDojo",
+    "url": "https://bugcrowd.com/engagements/classdojo",
+    "allows_disclosure": true,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "full",
+    "max_payout": 2100,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "ios",
+          "target": "IoS App"
+        },
+        {
+          "type": "api",
+          "target": "https://api.classdojo.com"
+        },
+        {
+          "type": "android",
+          "target": "Android App"
+        },
+        {
+          "type": "website",
+          "target": "https://teach.classdojo.com"
+        },
+        {
+          "type": "website",
+          "target": "https://student.classdojo.com"
+        },
+        {
+          "type": "website",
+          "target": "https://www.classdojo.com"
+        },
+        {
+          "type": "website",
+          "target": "https://home.classdojo.com"
+        },
+        {
+          "type": "website",
+          "target": "https://dev.tutoring.classdojo.com"
+        },
+        {
+          "type": "website",
+          "target": "https://ws.multiplayer.classdojo.com/"
+        },
+        {
+          "type": "website",
+          "target": "https://ticket.multiplayer.classdojo.com"
+        },
+        {
+          "type": "website",
+          "target": "https://clients.multiplayer.classdojo.com/launcher/prod/latest"
+        },
+        {
+          "type": "website",
+          "target": "https://monster-customizer.classdojo.com/cf6dfa68-1a81-4c6d-bc0b-38f3666b37d6/index.html"
+        }
+      ],
+      "out_of_scope": [
+
       ]
     }
   },
