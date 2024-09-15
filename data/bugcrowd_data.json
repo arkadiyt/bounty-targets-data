@@ -8527,6 +8527,92 @@
     }
   },
   {
+    "name": "LastPass",
+    "url": "https://bugcrowd.com/engagements/lastpass",
+    "allows_disclosure": true,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "partial",
+    "max_payout": 5000,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "website",
+          "target": "https://lastpass.com"
+        },
+        {
+          "type": "other",
+          "target": "https://lastpass.com/misc_download2.php"
+        },
+        {
+          "type": "other",
+          "target": "https://lastpass.com/misc_download2.php"
+        },
+        {
+          "type": "website",
+          "target": "https://support.lastpass.com"
+        },
+        {
+          "type": "other",
+          "target": "Workstation MFA (WMFA)"
+        },
+        {
+          "type": "website",
+          "target": "https://blog.lastpass.com"
+        },
+        {
+          "type": "website",
+          "target": "https://admin.lastpass.com"
+        },
+        {
+          "type": "website",
+          "target": "https://auth.lastpass.com"
+        },
+        {
+          "type": "website",
+          "target": "https://accounts.lastpass.com"
+        },
+        {
+          "type": "website",
+          "target": "https://www.lastpass.com"
+        },
+        {
+          "type": "android",
+          "target": "https://play.google.com/store/apps/details?id=com.lastpass.lpandroid"
+        },
+        {
+          "type": "android",
+          "target": "https://play.google.com/store/apps/details?id=com.lastpass.authenticator&hl=en_US&gl=US"
+        },
+        {
+          "type": "ios",
+          "target": "https://apps.apple.com/us/app/lastpass-password-manager/id324613447"
+        },
+        {
+          "type": "ios",
+          "target": "https://apps.apple.com/us/app/lastpass-authenticator/id1079110004"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "website",
+          "target": "https://identity.lastpass.com"
+        },
+        {
+          "type": "other",
+          "target": "Lastpass CLI tool"
+        },
+        {
+          "type": "website",
+          "target": "https://info.lastpass.com"
+        },
+        {
+          "type": "website",
+          "target": "https://forums.lastpass.com"
+        }
+      ]
+    }
+  },
+  {
     "name": "Latitude Financial Services Bug Bounty ",
     "url": "https://bugcrowd.com/engagements/latitude-financial-service-bugbounty",
     "allows_disclosure": false,
@@ -10138,378 +10224,6 @@
       ],
       "out_of_scope": [
 
-      ]
-    }
-  },
-  {
-    "name": "Okta",
-    "url": "https://bugcrowd.com/engagements/okta",
-    "allows_disclosure": true,
-    "managed_by_bugcrowd": true,
-    "safe_harbor": "full",
-    "max_payout": 75000,
-    "targets": {
-      "in_scope": [
-        {
-          "type": "website",
-          "target": "bugcrowd-pam-###.oktapreview.com"
-        },
-        {
-          "type": "website",
-          "target": "bugcrowd-pam-###.pam.oktapreview.com"
-        },
-        {
-          "type": "website",
-          "target": "https://bugcrowd-oie-%username%-1.workflows.oktapreview.com"
-        },
-        {
-          "type": "website",
-          "target": "https://bugcrowd-oie-%username%-2.workflows.oktapreview.com"
-        },
-        {
-          "type": "website",
-          "target": "https://bugcrowd-pam-###.workflows.oktapreview.com"
-        },
-        {
-          "type": "other",
-          "target": "Desktop MFA for Windows"
-        },
-        {
-          "type": "other",
-          "target": "Desktop MFA for macOS"
-        },
-        {
-          "type": "other",
-          "target": "Password Sync for macOS"
-        },
-        {
-          "type": "website",
-          "target": "https://support.okta.com"
-        },
-        {
-          "type": "website",
-          "target": "bugcrowd-oie-%username%-1.at.oktapreview.com"
-        },
-        {
-          "type": "website",
-          "target": "bugcrowd-oie-%username%-2.at.oktapreview.com"
-        },
-        {
-          "type": "website",
-          "target": "https://bugcrowd-pam-###.at.oktapreview.com"
-        },
-        {
-          "type": "website",
-          "target": "bugcrowd-oie-%username%-1.oktapreview.com"
-        },
-        {
-          "type": "website",
-          "target": "bugcrowd-oie-%username%-2.oktapreview.com"
-        },
-        {
-          "type": "website",
-          "target": "https://bugcrowd-pam-###.oktapreview.com"
-        },
-        {
-          "type": "other",
-          "target": "https://www.okta.com/fastpass/"
-        },
-        {
-          "type": "website",
-          "target": "https://www.okta.com/products/advanced-server-access/"
-        },
-        {
-          "type": "website",
-          "target": "http://app.scaleft.com/"
-        },
-        {
-          "type": "other",
-          "target": "https://help.okta.com/asa/en-us/Content/Topics/Adv_Server_Access/docs/client.htm"
-        },
-        {
-          "type": "ios",
-          "target": "https://apps.apple.com/us/app/okta-verify/id490179405"
-        },
-        {
-          "type": "android",
-          "target": "https://play.google.com/store/apps/details?id=com.okta.android.auth&hl=en_US&gl=US"
-        },
-        {
-          "type": "other",
-          "target": "https://apps.apple.com/us/app/okta-verify/id490179405"
-        },
-        {
-          "type": "other",
-          "target": "Okta Verify (Windows)"
-        },
-        {
-          "type": "other",
-          "target": "Okta On-Prem Agents ( AD, LDAP, RDP, IWA )"
-        },
-        {
-          "type": "other",
-          "target": "https://help.okta.com/en/prod/Content/Topics/Adv_Server_Access/docs/sftd-windows.htm"
-        },
-        {
-          "type": "other",
-          "target": "https://help.okta.com/en/prod/Content/Topics/Settings/download-browser-plugin.htm"
-        }
-      ],
-      "out_of_scope": [
-        {
-          "type": "website",
-          "target": "bugcrowd-%username%-1.oktapreview.com"
-        },
-        {
-          "type": "website",
-          "target": "bugcrowd-%username%-2.oktapreview.com"
-        },
-        {
-          "type": "website",
-          "target": "*.okta.com"
-        },
-        {
-          "type": "website",
-          "target": "*.trexcloud.com"
-        },
-        {
-          "type": "website",
-          "target": "login.okta.com"
-        },
-        {
-          "type": "website",
-          "target": "pages.okta.com"
-        },
-        {
-          "type": "website",
-          "target": "developer.okta.com"
-        },
-        {
-          "type": "website",
-          "target": "trust.okta.com"
-        },
-        {
-          "type": "website",
-          "target": "www.okta.com (static site)"
-        },
-        {
-          "type": "website",
-          "target": "https://scaleft.com"
-        },
-        {
-          "type": "website",
-          "target": "https://app.scaleft.com/p/signup"
-        },
-        {
-          "type": "website",
-          "target": "https://github.com/oktadev"
-        },
-        {
-          "type": "other",
-          "target": "Backend Okta non-app infrastructure"
-        },
-        {
-          "type": "other",
-          "target": "Network layer issues"
-        },
-        {
-          "type": "website",
-          "target": "AtSpoke - Okta Workflows actions in access requests"
-        },
-        {
-          "type": "website",
-          "target": "AtSpoke - Entitlement bundles as a resource in access requests"
-        },
-        {
-          "type": "other",
-          "target": "Anything not explicitly called out above as in-scope"
-        }
-      ]
-    }
-  },
-  {
-    "name": "Okta",
-    "url": "https://bugcrowd.com/engagements/okta",
-    "allows_disclosure": true,
-    "managed_by_bugcrowd": true,
-    "safe_harbor": "full",
-    "max_payout": 75000,
-    "targets": {
-      "in_scope": [
-        {
-          "type": "website",
-          "target": "bugcrowd-pam-###.oktapreview.com"
-        },
-        {
-          "type": "website",
-          "target": "bugcrowd-pam-###.pam.oktapreview.com"
-        },
-        {
-          "type": "website",
-          "target": "https://bugcrowd-oie-%username%-1.workflows.oktapreview.com"
-        },
-        {
-          "type": "website",
-          "target": "https://bugcrowd-oie-%username%-2.workflows.oktapreview.com"
-        },
-        {
-          "type": "website",
-          "target": "https://bugcrowd-pam-###.workflows.oktapreview.com"
-        },
-        {
-          "type": "other",
-          "target": "Desktop MFA for Windows"
-        },
-        {
-          "type": "other",
-          "target": "Desktop MFA for macOS"
-        },
-        {
-          "type": "other",
-          "target": "Password Sync for macOS"
-        },
-        {
-          "type": "website",
-          "target": "https://support.okta.com"
-        },
-        {
-          "type": "website",
-          "target": "bugcrowd-oie-%username%-1.at.oktapreview.com"
-        },
-        {
-          "type": "website",
-          "target": "bugcrowd-oie-%username%-2.at.oktapreview.com"
-        },
-        {
-          "type": "website",
-          "target": "https://bugcrowd-pam-###.at.oktapreview.com"
-        },
-        {
-          "type": "website",
-          "target": "bugcrowd-oie-%username%-1.oktapreview.com"
-        },
-        {
-          "type": "website",
-          "target": "bugcrowd-oie-%username%-2.oktapreview.com"
-        },
-        {
-          "type": "website",
-          "target": "https://bugcrowd-pam-###.oktapreview.com"
-        },
-        {
-          "type": "other",
-          "target": "https://www.okta.com/fastpass/"
-        },
-        {
-          "type": "website",
-          "target": "https://www.okta.com/products/advanced-server-access/"
-        },
-        {
-          "type": "website",
-          "target": "http://app.scaleft.com/"
-        },
-        {
-          "type": "other",
-          "target": "https://help.okta.com/asa/en-us/Content/Topics/Adv_Server_Access/docs/client.htm"
-        },
-        {
-          "type": "ios",
-          "target": "https://apps.apple.com/us/app/okta-verify/id490179405"
-        },
-        {
-          "type": "android",
-          "target": "https://play.google.com/store/apps/details?id=com.okta.android.auth&hl=en_US&gl=US"
-        },
-        {
-          "type": "other",
-          "target": "https://apps.apple.com/us/app/okta-verify/id490179405"
-        },
-        {
-          "type": "other",
-          "target": "Okta Verify (Windows)"
-        },
-        {
-          "type": "other",
-          "target": "Okta On-Prem Agents ( AD, LDAP, RDP, IWA )"
-        },
-        {
-          "type": "other",
-          "target": "https://help.okta.com/en/prod/Content/Topics/Adv_Server_Access/docs/sftd-windows.htm"
-        },
-        {
-          "type": "other",
-          "target": "https://help.okta.com/en/prod/Content/Topics/Settings/download-browser-plugin.htm"
-        }
-      ],
-      "out_of_scope": [
-        {
-          "type": "website",
-          "target": "bugcrowd-%username%-1.oktapreview.com"
-        },
-        {
-          "type": "website",
-          "target": "bugcrowd-%username%-2.oktapreview.com"
-        },
-        {
-          "type": "website",
-          "target": "*.okta.com"
-        },
-        {
-          "type": "website",
-          "target": "*.trexcloud.com"
-        },
-        {
-          "type": "website",
-          "target": "login.okta.com"
-        },
-        {
-          "type": "website",
-          "target": "pages.okta.com"
-        },
-        {
-          "type": "website",
-          "target": "developer.okta.com"
-        },
-        {
-          "type": "website",
-          "target": "trust.okta.com"
-        },
-        {
-          "type": "website",
-          "target": "www.okta.com (static site)"
-        },
-        {
-          "type": "website",
-          "target": "https://scaleft.com"
-        },
-        {
-          "type": "website",
-          "target": "https://app.scaleft.com/p/signup"
-        },
-        {
-          "type": "website",
-          "target": "https://github.com/oktadev"
-        },
-        {
-          "type": "other",
-          "target": "Backend Okta non-app infrastructure"
-        },
-        {
-          "type": "other",
-          "target": "Network layer issues"
-        },
-        {
-          "type": "website",
-          "target": "AtSpoke - Okta Workflows actions in access requests"
-        },
-        {
-          "type": "website",
-          "target": "AtSpoke - Entitlement bundles as a resource in access requests"
-        },
-        {
-          "type": "other",
-          "target": "Anything not explicitly called out above as in-scope"
-        }
       ]
     }
   },
@@ -13746,6 +13460,57 @@
         {
           "type": "website",
           "target": "https://ultramobile.com"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
+    "name": "Under Armour AppSec",
+    "url": "https://bugcrowd.com/engagements/underarmour",
+    "allows_disclosure": true,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "partial",
+    "max_payout": 2500,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "website",
+          "target": "https://www.underarmour.com"
+        },
+        {
+          "type": "website",
+          "target": "https://www.underarmour.co.uk"
+        },
+        {
+          "type": "ios",
+          "target": "https://apps.apple.com/us/app/under-armour/id1092704571"
+        },
+        {
+          "type": "android",
+          "target": "https://play.google.com/store/apps/details?id=com.ua.shop&hl=en"
+        },
+        {
+          "type": "api",
+          "target": "https://api.shop.ua.com/graphql"
+        },
+        {
+          "type": "website",
+          "target": "https://www.underarmournext.co.uk/"
+        },
+        {
+          "type": "website",
+          "target": "https://underarmournext.com/"
+        },
+        {
+          "type": "other",
+          "target": "https://mapmyfitness.api.ua.com"
+        },
+        {
+          "type": "website",
+          "target": "https://consumer-sustainability.underarmour.com/en"
         }
       ],
       "out_of_scope": [
