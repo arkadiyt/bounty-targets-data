@@ -2620,72 +2620,6 @@
     }
   },
   {
-    "name": " 1Password",
-    "url": "https://bugcrowd.com/engagements/agilebits",
-    "allows_disclosure": false,
-    "managed_by_bugcrowd": true,
-    "safe_harbor": "full",
-    "max_payout": 30000,
-    "targets": {
-      "in_scope": [
-        {
-          "type": "website",
-          "target": "<Your own 1Pasword Personal Account> --> https://my.1password.com/"
-        },
-        {
-          "type": "website",
-          "target": "https://start.1password.com"
-        },
-        {
-          "type": "other",
-          "target": "<Your own 1Password account> —> Latest stable, beta, or nightly MacOS Build"
-        },
-        {
-          "type": "android",
-          "target": "<Your own 1Password account> —> Latest stable, beta, or nightly Android Build"
-        },
-        {
-          "type": "other",
-          "target": "<Your own 1Password account> —> Latest stable, beta, or nightly Command Line Interface (CLI) "
-        },
-        {
-          "type": "website",
-          "target": "<Your own 1Password Account subdomain --> https://<your account domain>.1password.com/"
-        },
-        {
-          "type": "other",
-          "target": "<Your own 1Password account> —> Latest stable, beta, or nightly Windows Build"
-        },
-        {
-          "type": "other",
-          "target": "<Your own 1Password account> —> Latest stable, beta, or nightly Linux Build"
-        },
-        {
-          "type": "ios",
-          "target": "<Your own 1Password account> —> Latest stable, beta, or nightly iOS Build"
-        },
-        {
-          "type": "other",
-          "target": "<Your own 1Password account> —> Latest stable, beta, or nightly Browser Extension  (Chrome, Brave, Firefox, Edge, and Safari)"
-        },
-        {
-          "type": "api",
-          "target": "<Your own 1Password account> —> https://events.1password.com/  (Event Reporting API is available on 1Password Business Accounts Only)"
-        }
-      ],
-      "out_of_scope": [
-        {
-          "type": "website",
-          "target": "*.agilebits.com"
-        },
-        {
-          "type": "other",
-          "target": "All other domains, subdomains, and 1Password Accounts that are not owned by you, including accounts where you are a user but not the owner, are out of scope."
-        }
-      ]
-    }
-  },
-  {
     "name": "1Password Bug Bounty CTF",
     "url": "https://bugcrowd.com/engagements/agilebits-ctf",
     "allows_disclosure": false,
@@ -10865,6 +10799,25 @@
         {
           "type": "website",
           "target": "https://devstaging.pcapcloud.com/*"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
+    "name": "Pexels",
+    "url": "https://bugcrowd.com/engagements/pexels",
+    "allows_disclosure": true,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "partial",
+    "max_payout": 6000,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "website",
+          "target": "https://www.pexels.com/"
         }
       ],
       "out_of_scope": [
