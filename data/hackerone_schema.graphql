@@ -3084,6 +3084,7 @@ enum AnalyticsSelectFieldEnum {
   dim_payments__created_at_year
   dim_payments__currency
   dim_payments__organization_id
+  dim_payments__organization_inbox_ids
   dim_payments__payment_id
   dim_payments__payment_type
   dim_payments__report_id
@@ -32318,6 +32319,7 @@ type Report implements ActivitiesInterface & Node & ResourceInterface {
   bounty_awarded_at: DateTime
   bounty_awarded_staleness_threshold: Int
   bounty_calculator: BountyCalculator
+  bounty_publicly_visible: Boolean!
   bug_reporter_agreed_on_going_public_at: DateTime
   campaign: Campaign
   can_change_organization_inboxes: Boolean
