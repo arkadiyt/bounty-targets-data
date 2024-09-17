@@ -32323,7 +32323,6 @@ type Report implements ActivitiesInterface & Node & ResourceInterface {
   bounty_awarded_at: DateTime
   bounty_awarded_staleness_threshold: Int
   bounty_calculator: BountyCalculator
-  bounty_publicly_visible: Boolean!
   bug_reporter_agreed_on_going_public_at: DateTime
   campaign: Campaign
   can_change_organization_inboxes: Boolean
@@ -32491,6 +32490,7 @@ type Report implements ActivitiesInterface & Node & ResourceInterface {
   i_can_post_triage_rating: Boolean
   i_can_redact: Boolean
   i_can_update_custom_field_values: Boolean
+  i_can_view_bounty: Boolean!
   i_can_view_duplicate_suggestions: Boolean
   i_can_view_hacker_facing_custom_fields: Boolean
   i_can_view_hai_remediation_guidance: Boolean
