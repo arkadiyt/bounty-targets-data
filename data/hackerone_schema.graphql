@@ -13283,7 +13283,7 @@ type DeclarativePolicy implements Node {
   id: ID!
   introduction: String
   pays_within_one_month: Boolean
-  platform_standards_exclusions: [PlatformStandardsExclusionsEnum!]
+  platform_standards_exclusions: [PlatformStandardsExclusion!]
   protected_by_gold_standard_safe_harbor: Boolean
   scope_exclusions: [ScopeExclusion!]
   updated_at: DateTime
@@ -28885,7 +28885,7 @@ type PingPageActivityPayload implements MutationResult {
   was_successful: Boolean!
 }
 
-enum PlatformStandardsExclusionsEnum {
+enum PlatformStandardEnum {
   CHAINED_VULNERABILITIES
   IDOR
   LEAKAGE_SENSITIVE_PII
@@ -28894,7 +28894,22 @@ enum PlatformStandardsExclusionsEnum {
   SELF_SIGN_UP_CVSS_PR
   THIRD_PARTY_COMPONENTS_FOR_HACKERS
   THIRD_PARTY_COMPONENTS_FOR_PROGRAMS_CONSUMING_THE_COMPONENT
-  VULNERABLE_NETWORK_CONECTION_IN_CLIENT_APPLICATIONS
+  VULNERABLE_NETWORK_CONNECTION_IN_CLIENT_APPLICATIONS
+}
+
+"""
+Platform Standards Exclusion
+"""
+type PlatformStandardsExclusion implements Node {
+  id: ID!
+  justification: String
+  platform_standard: PlatformStandardEnum
+}
+
+input PlatformStandardsExclusionInput {
+  id: ID
+  justification: String
+  platform_standard: PlatformStandardEnum!
 }
 
 """
@@ -48052,7 +48067,7 @@ input UpdateTeamPolicyInput {
   introduction: String
   notify_subscribers_of_policy_change: Boolean
   pays_within_one_month: Boolean
-  platform_standards_exclusions: [String!]
+  platform_standards_exclusions: [PlatformStandardsExclusionInput!]
   policy: String
   protected_by_gold_standard_safe_harbor: Boolean
   scope_exclusions: [ScopeExclusionInput!]
