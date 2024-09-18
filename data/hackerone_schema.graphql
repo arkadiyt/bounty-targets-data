@@ -30332,6 +30332,7 @@ type Query implements Node {
     Returns the first _n_ elements from the list.
     """
     first: Int
+    include_deprecated: Boolean = true
 
     """
     Returns the last _n_ elements from the list.
