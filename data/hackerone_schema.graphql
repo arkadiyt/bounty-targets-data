@@ -2836,6 +2836,7 @@ enum AnalyticsDirectionEnum {
 }
 
 enum AnalyticsFromEnum {
+  amazon_aws_abstract_findings
   dim_custom_field_attributes
   dim_custom_field_values
   dim_hacker_payments
@@ -3004,6 +3005,13 @@ type AnalyticsReportEdge {
 }
 
 enum AnalyticsSelectFieldEnum {
+  amazon_aws_abstract_findings__abstract_category
+  amazon_aws_abstract_findings__affected_service
+  amazon_aws_abstract_findings__id
+  amazon_aws_abstract_findings__is_pending_reward
+  amazon_aws_abstract_findings__reward_amount
+  amazon_aws_abstract_findings__severity
+  amazon_aws_abstract_findings__submitted_at
   dim_custom_field_attributes__configuration
   dim_custom_field_attributes__custom_field_attribute_id
   dim_custom_field_attributes__label
@@ -36380,9 +36388,13 @@ A static dashboard definition
 type StaticDashboard implements Node & ResourceInterface {
   charts: [StaticDashboardChart]!
   dashboard_layout_columns: Int
+  default_end_date: DateTime
+  default_interval: String
+  default_start_date: DateTime
   description: String
   elements: [StaticDashboardElement]!
   filter_options: [String]!
+  hide_date_picker: Boolean
   hide_interval_dropdown: Boolean
   id: ID!
   include_in_stable_rest_api: Boolean!
