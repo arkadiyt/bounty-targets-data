@@ -27829,9 +27829,8 @@ type PentestOpportunityCloudConfigScope implements Node {
   account_id: String
   can_setup_permissions: Boolean
   government_cloud: Boolean
-  has_integrations: Boolean
   id: ID!
-  primary_regions: [String!]
+  primary_region: String
   provider_type: String
   scope_type: String
   secondary_regions: [String!]
@@ -45580,7 +45579,7 @@ input UpdatePentestOpportunityCloudConfigScopeInput {
   database_id: Int!
   government_cloud: Boolean
   pentest_opportunity_id: Int!
-  primary_regions: [String!]
+  primary_region: String
   secondary_regions: [String!]
 }
 
