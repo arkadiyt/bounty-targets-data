@@ -6041,76 +6041,6 @@
     }
   },
   {
-    "name": "Council on Foreign Relations",
-    "url": "https://bugcrowd.com/engagements/cfr",
-    "allows_disclosure": false,
-    "managed_by_bugcrowd": true,
-    "safe_harbor": null,
-    "max_payout": 2100,
-    "targets": {
-      "in_scope": [
-        {
-          "type": "website",
-          "target": "https://www.foreignaffairs.com/",
-          "uri": "https://www.foreignaffairs.com/",
-          "name": "https://www.foreignaffairs.com/",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "https://www.cfr.org/",
-          "uri": "https://www.cfr.org/",
-          "name": "https://www.cfr.org/",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "https://thinkglobalhealth.org",
-          "uri": "https://thinkglobalhealth.org",
-          "name": "https://thinkglobalhealth.org",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "https://education.cfr.org/",
-          "uri": "https://education.cfr.org/",
-          "name": "https://education.cfr.org/",
-          "ipAddress": ""
-        }
-      ],
-      "out_of_scope": [
-        {
-          "type": "website",
-          "target": "https://subs.foreignaffairs.com",
-          "uri": null,
-          "name": "https://subs.foreignaffairs.com",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "https://subscribe.foreignaffairs.com ",
-          "uri": "",
-          "name": "https://subscribe.foreignaffairs.com ",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "https://world101.cfr.org/",
-          "uri": "https://world101.cfr.org/",
-          "name": "https://world101.cfr.org/",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "https://modeldiplomacy.cfr.org",
-          "uri": "https://modeldiplomacy.cfr.org",
-          "name": "https://modeldiplomacy.cfr.org",
-          "ipAddress": null
-        }
-      ]
-    }
-  },
-  {
     "name": "Cisco Meraki",
     "url": "https://bugcrowd.com/engagements/ciscomeraki",
     "allows_disclosure": false,
@@ -8089,6 +8019,104 @@
           "uri": "https://anywhere.epam.com/",
           "name": "anywhere.epam.com",
           "ipAddress": ""
+        }
+      ]
+    }
+  },
+  {
+    "name": "Etsy",
+    "url": "https://bugcrowd.com/engagements/etsy",
+    "allows_disclosure": true,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "partial",
+    "max_payout": 10000,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "website",
+          "target": "Any publicly facing host owned by Etsy, including the below:",
+          "uri": null,
+          "name": "Any publicly facing host owned by Etsy, including the below:",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "https://www.etsy.com",
+          "uri": "https://www.etsy.com",
+          "name": "www.etsy.com",
+          "ipAddress": null
+        },
+        {
+          "type": "android",
+          "target": "https://www.etsy.com/mobile",
+          "uri": "https://www.etsy.com/mobile",
+          "name": "Etsy Mobile Application (Android)",
+          "ipAddress": null
+        },
+        {
+          "type": "ios",
+          "target": "https://www.etsy.com/mobile",
+          "uri": "https://www.etsy.com/mobile",
+          "name": "Etsy Mobile Application (iPhone)",
+          "ipAddress": null
+        },
+        {
+          "type": "api",
+          "target": "https://www.etsy.com/developers/documentation/getting_started/api_basics",
+          "uri": "https://www.etsy.com/developers/documentation/getting_started/api_basics",
+          "name": "Etsy API (see documentation below)",
+          "ipAddress": null
+        },
+        {
+          "type": "other",
+          "target": "https://etsypayments.com",
+          "uri": "https://etsypayments.com",
+          "name": "etsypayments.com",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "http://blog.etsy.com/",
+          "uri": "http://blog.etsy.com/",
+          "name": "http://blog.etsy.com/",
+          "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "http://community.etsy.com/",
+          "uri": "http://community.etsy.com/",
+          "name": "http://community.etsy.com/",
+          "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "http://careers.etsy.com/",
+          "uri": "http://careers.etsy.com/",
+          "name": "http://careers.etsy.com/",
+          "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "https://help.etsy.com",
+          "uri": "https://help.etsy.com",
+          "name": "help.etsy.com",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "*.etsy.com",
+          "uri": "",
+          "name": "*.etsy.com",
+          "ipAddress": ""
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "api",
+          "target": "icht.etsysecure.com",
+          "uri": null,
+          "name": "icht.etsysecure.com",
+          "ipAddress": null
         }
       ]
     }
