@@ -21066,6 +21066,29 @@ type LlmConversationConnection {
 }
 
 """
+Content block of an LLM conversation
+"""
+type LlmConversationContentBlock implements Node {
+  _id: ID!
+  artifacts: [LlmConversationMessageArtifact!]
+  created_at: DateTime!
+  id: ID!
+  message_version: Int!
+  text: String
+  type: LlmConversationContentBlockTypeEnum!
+}
+
+"""
+Types of LLM conversation content blocks
+"""
+enum LlmConversationContentBlockTypeEnum {
+  image
+  text
+  tool_result
+  tool_use
+}
+
+"""
 An LLM conversation context
 """
 type LlmConversationContext implements Node {
@@ -21109,6 +21132,7 @@ type LlmConversationMessage implements Node {
   _id: ID!
   artifacts: [LlmConversationMessageArtifact!]
   author: String!
+  content_blocks: [LlmConversationContentBlock!]
   created_at: DateTime!
   id: ID!
   message_index: Int
@@ -21140,6 +21164,7 @@ enum LlmConversationMessageArtifactTypeEnum {
   error
   followup_questions
   haql
+  insights
   tool_use
 }
 
@@ -26809,6 +26834,7 @@ type Pentest implements Node {
   i_can_update_program_settings: Boolean!
   id: ID!
   industry: String
+  is_active_pentester: Boolean
   is_code_security_audit: Boolean!
   latest_start_date: DateTime
   lead_pentester: Pentester
