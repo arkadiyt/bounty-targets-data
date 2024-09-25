@@ -18007,7 +18007,6 @@ input FiltersReportFilterInput {
   title: StringPredicateInput
   triaged_at: DateTimePredicateInput
   upcoming_singular_disclosures: Int
-  use_case: [FiltersReportFilterUseCases]
   violated_sla: SlaTypeEnum
   vulnerability_information: StringPredicateInput
   weakness: FiltersWeaknessFilterInput
@@ -18021,10 +18020,6 @@ input FiltersReportFilterOrder {
 
 enum FiltersReportFilterRoles {
   is_reporter
-}
-
-enum FiltersReportFilterUseCases {
-  HACKER_DASHBOARD
 }
 
 input FiltersReportRetestFilterInput {
