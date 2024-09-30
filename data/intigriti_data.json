@@ -2979,7 +2979,7 @@
     "status": "open",
     "confidentiality_level": "public",
     "min_bounty": {
-      "value": 100,
+      "value": 10,
       "currency": "USD"
     },
     "max_bounty": {
@@ -2990,8 +2990,38 @@
       "in_scope": [
         {
           "type": "other",
+          "endpoint": "Grafana Loki",
+          "description": "",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "other",
+          "endpoint": "Grafana Mimir",
+          "description": "",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "other",
           "endpoint": "Grafana OSS",
-          "description": "Latest released version of Grafana OSS: https://github.com/grafana/grafana",
+          "description": "",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "other",
+          "endpoint": "Grafana Pyroscope",
+          "description": "",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "other",
+          "endpoint": "Grafana Tempo",
+          "description": "",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "https://github.com/grafana/*",
+          "description": "Only repository misconfigurations for non-archived repositories are in scope - please read 'In scope' section below for detailed scope.",
           "impact": "Tier 2"
         },
         {
@@ -3002,13 +3032,13 @@
         },
         {
           "type": "wildcard",
-          "endpoint": "*.grafana.net",
+          "endpoint": "*.grafana.com",
           "description": "",
           "impact": "Out of scope"
         },
         {
-          "type": "url",
-          "endpoint": "grafana.com",
+          "type": "wildcard",
+          "endpoint": "*.grafana.net",
           "description": "",
           "impact": "Out of scope"
         }
