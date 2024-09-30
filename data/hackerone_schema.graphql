@@ -25629,7 +25629,6 @@ type Organization implements Node {
     not_approaching_any_sla_violation: Boolean
     offset: Int
     order_by: ReportOrderInput = {direction: DESC, field: id}
-    pre_submission_review_states: [ReportPreSubmissionReviewStateEnum] = null
     secure_order_by: FiltersReportFilterOrder
     state: ReportStateEnum
     substate: ReportStateEnum
@@ -26055,7 +26054,6 @@ type OrganizationInbox implements Node {
     last: Int
     offset: Int
     order_by: ReportOrderInput = {direction: DESC, field: id}
-    pre_submission_review_states: [ReportPreSubmissionReviewStateEnum] = null
     secure_order_by: FiltersReportFilterOrder
     state: ReportStateEnum
     substate: ReportStateEnum
@@ -27081,7 +27079,6 @@ type Pentest implements Node {
     last: Int
     offset: Int
     order_by: ReportOrderInput = {direction: DESC, field: id}
-    pre_submission_review_states: [ReportPreSubmissionReviewStateEnum] = null
     secure_order_by: FiltersReportFilterOrder
     state: ReportStateEnum
     substate: ReportStateEnum
@@ -27417,7 +27414,6 @@ type PentestChecklist implements Node {
     last: Int
     offset: Int
     order_by: ReportOrderInput = {direction: DESC, field: id}
-    pre_submission_review_states: [ReportPreSubmissionReviewStateEnum] = null
     secure_order_by: FiltersReportFilterOrder
     state: ReportStateEnum
     substate: ReportStateEnum
@@ -28447,7 +28443,6 @@ type PentestStructuredScope implements Node {
     last: Int
     offset: Int
     order_by: ReportOrderInput = {direction: DESC, field: id}
-    pre_submission_review_states: [ReportPreSubmissionReviewStateEnum] = null
     secure_order_by: FiltersReportFilterOrder
     state: ReportStateEnum
     substate: ReportStateEnum
@@ -30153,7 +30148,6 @@ type Query implements Node {
     last: Int
     offset: Int
     order_by: ReportOrderInput = {direction: DESC, field: id}
-    pre_submission_review_states: [ReportPreSubmissionReviewStateEnum] = null
     secure_order_by: FiltersReportFilterOrder
     state: ReportStateEnum
     substate: ReportStateEnum
@@ -32313,6 +32307,7 @@ type Report implements ActivitiesInterface & Node & ResourceInterface {
   disclosed_at: DateTime
   displayable_severity: String
   dupe_window: DupeWindow
+  dupe_window_available: Boolean
   dupe_window_eligibility: DupeWindowEligibilityEnum
   duplicates(
     """
@@ -32451,7 +32446,6 @@ type Report implements ActivitiesInterface & Node & ResourceInterface {
   field is only present for reports filed after February 14, 2016.
   """
   post_submission_trigger_log_trigger: Trigger
-  pre_submission_review_state: String
   recalculated_severity_score: Float
   reference: ID
   reference_link: String
@@ -33025,16 +33019,6 @@ enum ReportPendingActionFromEnum {
   pending_action_from_hacker
   pending_action_from_team
   pending_action_from_triage
-}
-
-"""
-Pre submission review states a report can be in
-"""
-enum ReportPreSubmissionReviewStateEnum {
-  pre_submission_accepted
-  pre_submission_needs_more_info
-  pre_submission_pending
-  pre_submission_rejected
 }
 
 """
@@ -36975,7 +36959,6 @@ type StructuredScope implements Node & ResourceInterface {
     last: Int
     offset: Int
     order_by: ReportOrderInput = {direction: DESC, field: id}
-    pre_submission_review_states: [ReportPreSubmissionReviewStateEnum] = null
     secure_order_by: FiltersReportFilterOrder
     state: ReportStateEnum
     substate: ReportStateEnum
@@ -39092,7 +39075,6 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
     not_approaching_any_sla_violation: Boolean
     offset: Int
     order_by: ReportOrderInput = {direction: DESC, field: id}
-    pre_submission_review_states: [ReportPreSubmissionReviewStateEnum] = null
     secure_order_by: FiltersReportFilterOrder
     state: ReportStateEnum
     substate: ReportStateEnum
@@ -50639,7 +50621,6 @@ type User implements ActivitiesInterface & Node & ResourceInterface {
     last: Int
     offset: Int
     order_by: ReportOrderInput = {direction: DESC, field: id}
-    pre_submission_review_states: [ReportPreSubmissionReviewStateEnum] = null
     secure_order_by: FiltersReportFilterOrder
     state: ReportStateEnum
     substate: ReportStateEnum
