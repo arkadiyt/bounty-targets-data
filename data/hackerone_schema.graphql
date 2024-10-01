@@ -4306,6 +4306,21 @@ enum AssetTagClauseTypeEnum {
 }
 
 """
+Entry for the asset type leaderboard by engagement type
+"""
+type AssetTypesByEngagementTypeLeaderboardEntry implements LeaderboardEntryInterface & Node {
+  _id: ID!
+  engagement_type: String
+  id: ID!
+  impact: Float
+  previous_rank: Int
+  rank: Int
+  reputation: Int!
+  signal: Float
+  user: User!
+}
+
+"""
 Entry for the asset type leaderboard
 """
 type AssetTypesLeaderboardEntry implements LeaderboardEntryInterface & Node {
@@ -19155,6 +19170,18 @@ type HacktivityDocument implements Node {
 """
 Entry for the upvotes leaderboard
 """
+type HacktivityUpvotesByEngagementTypeLeaderboardEntry implements LeaderboardEntryInterface & Node {
+  _id: ID!
+  id: ID!
+  previous_rank: Int
+  rank: Int
+  user: User!
+  votes: Int!
+}
+
+"""
+Entry for the upvotes leaderboard
+"""
 type HacktivityUpvotesLeaderboardEntry implements LeaderboardEntryInterface & Node {
   _id: ID!
   id: ID!
@@ -19165,6 +19192,21 @@ type HacktivityUpvotesLeaderboardEntry implements LeaderboardEntryInterface & No
 }
 
 scalar Hash
+
+"""
+Entry for the highest reputation leaderboard
+"""
+type HighCritReputationByEngagementTypeLeaderboardEntry implements LeaderboardEntryInterface & Node {
+  _id: ID!
+  engagement_type: String!
+  id: ID!
+  impact: Float
+  previous_rank: Int
+  rank: Int
+  reputation: Int!
+  signal: Float
+  user: User!
+}
 
 """
 Entry for the highest reputation leaderboard
@@ -19183,8 +19225,38 @@ type HighCritReputationLeaderboardEntry implements LeaderboardEntryInterface & N
 """
 Entry for the highest reputation by country leaderboard
 """
+type HighRepByEngagementTypeAndCountryLeaderboardEntry implements LeaderboardEntryInterface & Node {
+  _id: ID!
+  engagement_type: String!
+  id: ID!
+  impact: Float
+  previous_rank: Int
+  rank: Int
+  reputation: Int!
+  signal: Float
+  user: User!
+}
+
+"""
+Entry for the highest reputation by country leaderboard
+"""
 type HighestReputationByCountryLeaderboardEntry implements LeaderboardEntryInterface & Node {
   _id: ID!
+  id: ID!
+  impact: Float
+  previous_rank: Int
+  rank: Int
+  reputation: Int!
+  signal: Float
+  user: User!
+}
+
+"""
+Entry for the highest reputation by engagement type leaderboard
+"""
+type HighestReputationByEngagementTypeLeaderboardEntry implements LeaderboardEntryInterface & Node {
+  _id: ID!
+  engagement_type: String!
   id: ID!
   impact: Float
   previous_rank: Int
@@ -20776,7 +20848,7 @@ interface LeaderboardEntryInterface {
 The different types of leaderboards that exist. Type that is returned is based
 on the key that is passed, and is linked to LeaderboardKeyEnum
 """
-union LeaderboardEntryUnion = AllTimeReputationLeaderboardEntry | AssetTypesLeaderboardEntry | CtfPointsLeaderboardEntry | HacktivityUpvotesLeaderboardEntry | HighCritReputationLeaderboardEntry | HighestReputationByCountryLeaderboardEntry | HighestReputationLeaderboardEntry | OwaspTopTenLeaderboardEntry | UpAndComersLeaderboardEntry
+union LeaderboardEntryUnion = AllTimeReputationLeaderboardEntry | AssetTypesByEngagementTypeLeaderboardEntry | AssetTypesLeaderboardEntry | CtfPointsLeaderboardEntry | HacktivityUpvotesByEngagementTypeLeaderboardEntry | HacktivityUpvotesLeaderboardEntry | HighCritReputationByEngagementTypeLeaderboardEntry | HighCritReputationLeaderboardEntry | HighRepByEngagementTypeAndCountryLeaderboardEntry | HighestReputationByCountryLeaderboardEntry | HighestReputationByEngagementTypeLeaderboardEntry | HighestReputationLeaderboardEntry | OwaspTopTenByEngagementTypeLeaderboardEntry | OwaspTopTenLeaderboardEntry | UpAndComersByEngagementTypeLeaderboardEntry | UpAndComersLeaderboardEntry
 
 """
 An edge in a connection.
@@ -20799,13 +20871,20 @@ Types of leaderboards
 enum LeaderboardKeyEnum {
   ALL_TIME_REPUTATION
   ASSET_TYPES
+  ASSET_TYPES_BY_ENGAGEMENT_TYPE
   CTF_POINTS
   HACKTIVITY_UPVOTES
+  HACKTIVITY_UPVOTES_BY_ENGAGEMENT_TYPE
   HIGHEST_REPUTATION
   HIGHEST_REPUTATION_BY_COUNTRY
+  HIGHEST_REPUTATION_BY_ENGAGEMENT_TYPE
+  HIGHEST_REPUTATION_BY_ENGAGEMENT_TYPE_AND_COUNTRY
   HIGH_CRIT_REPUTATION
+  HIGH_CRIT_REPUTATION_BY_ENGAGEMENT_TYPE
   OWASP_TOP_10
+  OWASP_TOP_10_BY_ENGAGEMENT_TYPE
   UP_AND_COMERS
+  UP_AND_COMERS_BY_ENGAGEMENT_TYPE
 }
 
 """
@@ -26413,6 +26492,21 @@ type OrganizationReportDocument implements Node {
 }
 
 """
+Entry for the Owasp top 10 by engagement type leaderboard
+"""
+type OwaspTopTenByEngagementTypeLeaderboardEntry implements LeaderboardEntryInterface & Node {
+  _id: ID!
+  engagement_type: String!
+  id: ID!
+  impact: Float
+  previous_rank: Int
+  rank: Int
+  reputation: Int!
+  signal: Float
+  user: User!
+}
+
+"""
 Entry for the Owasp top 10 leaderboard
 """
 type OwaspTopTenLeaderboardEntry implements LeaderboardEntryInterface & Node {
@@ -29749,6 +29843,7 @@ type Query implements Node {
     Returns the elements in the list that come before the specified cursor.
     """
     before: String
+    engagement_type: String
     filter: String
 
     """
@@ -42424,6 +42519,19 @@ type UnclaimReportRetestPayload implements MutationResult {
 }
 
 """
+Entry for the up and comers leaderboard by engagement type
+"""
+type UpAndComersByEngagementTypeLeaderboardEntry implements LeaderboardEntryInterface & Node {
+  _id: ID!
+  engagement_type: String!
+  id: ID!
+  previous_rank: Int
+  rank: Int
+  reputation: Int!
+  user: User!
+}
+
+"""
 Entry for the up and comers leaderboard
 """
 type UpAndComersLeaderboardEntry implements LeaderboardEntryInterface & Node {
@@ -50265,7 +50373,7 @@ type User implements ActivitiesInterface & Node & ResourceInterface {
   impact_percentile: Int
   intro: String
   last_active_time: DateTime
-  leaderboard_entry(filter: String, key: LeaderboardKeyEnum!, quarter: Int, year: Int): LeaderboardEntryUnion
+  leaderboard_entry(engagement_type: String, filter: String, key: LeaderboardKeyEnum!, quarter: Int, year: Int): LeaderboardEntryUnion
   linkedin_handle: String
   llm_conversation_messages(
     """
