@@ -36502,9 +36502,9 @@ type StaticDashboard implements Node & ResourceInterface {
   id: ID!
   include_in_stable_rest_api: Boolean!
   key: String!
-  organization_schema: JSON
+  organization_schema(organization_id: ID!): JSON
   queries: [StaticDashboardQuery]!
-  team_schema: JSON
+  team_schema(team_id: ID!): JSON
   title: String!
   title_tooltip: String
   type: String!
