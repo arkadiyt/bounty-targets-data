@@ -4643,6 +4643,7 @@ type Automation implements Node {
     last: Int
     order_by: FiltersAutomationRunFilterOrder
   ): AutomationRunConnection
+  automation_schedule: AutomationSchedule
 
   """
   The code being executed
@@ -4857,6 +4858,25 @@ type AutomationRunEdge {
   The item at the end of the edge.
   """
   node: AutomationRun
+}
+
+"""
+The schedule that an automation is run on
+"""
+type AutomationSchedule implements Node {
+  """
+  The primary key from the database
+  """
+  _id: ID!
+  automation: Automation!
+  created_at: DateTime!
+  id: ID!
+  last_scheduled_run_at: DateTime
+  schedule_type: String!
+  scheduled_day_of_month: Int
+  scheduled_day_of_week: Int
+  scheduled_hour_of_day: Int
+  updated_at: DateTime!
 }
 
 """
@@ -21240,7 +21260,7 @@ enum LlmConversationMessageArtifactTypeEnum {
   auth_error
   debug
   error
-  followup_questions
+  followup_prompts
   haql
   insights
   tool_use
