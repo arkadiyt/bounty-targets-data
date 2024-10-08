@@ -14852,6 +14852,7 @@ type DerivedPentest implements Node {
     last: Int
     where: FiltersPentestChecklistFilterInput
   ): PentestChecklistConnection
+  pentest_opportunity_package_type: String
   pentest_summary_report: PentestReport
 
   """
@@ -25346,6 +25347,7 @@ type Organization implements Node {
   darktrace_customer: DarktraceCustomer
   darktrace_instances: [DarktraceInstance!]
   derived_pentest_count: Int
+  derived_pentest_opportunities_hours: Hash
   derived_pentests(
     """
     Returns the elements in the list that come after the specified cursor.
