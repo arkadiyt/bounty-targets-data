@@ -12287,7 +12287,8 @@ input CreateWriteUpPreviewInput {
   """
   clientMutationId: String
   format: WriteUpPreviewFormatEnum!
-  write_up_id: ID!
+  write_up_database_id: ID
+  write_up_id: ID
 }
 
 """
@@ -30038,6 +30039,7 @@ type Query implements Node {
   ): PentestOpportunityConnection
   pentest_opportunity(token: String!): PentestOpportunity
   pentest_opportunity_status(token: String!): Hash
+  pentest_report(id: ID!): PentestReport
 
   """
   A Resolver for Pentester Positions
