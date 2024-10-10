@@ -14947,6 +14947,7 @@ type DerivedPentest implements Node {
     Returns the last _n_ elements from the list.
     """
     last: Int
+    unique_methodology: Boolean
     where: FiltersPentestChecklistFilterInput
   ): PentestChecklistConnection
   pentest_opportunity_package_type: String
@@ -27061,6 +27062,7 @@ type Pentest implements Node {
     Returns the last _n_ elements from the list.
     """
     last: Int
+    unique_methodology: Boolean
     where: FiltersPentestChecklistFilterInput
   ): PentestChecklistConnection
   pentest_checks(
