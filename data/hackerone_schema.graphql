@@ -3469,11 +3469,34 @@ input AnalyticsWhereInputType {
   predicates: [AnalyticsWherePredicateInputType!]!
 }
 
+input AnalyticsWherePredicateComplexInputType {
+  arg_name: String
+  boolean: Boolean
+  booleans: [Boolean!]
+  from: String
+  function_with_args: AnalyticsWherePredicateFunctionInputType
+  nil: Boolean
+  number: Float
+  numbers: [Float!]
+  ref: AnalyticsSelectFieldEnum
+  string: String
+  strings: [String!]
+  timestamp: String
+  timestamps: [String!]
+  variable: String
+}
+
+input AnalyticsWherePredicateFunctionInputType {
+  arguments: [AnalyticsComplexInputType!]
+  name: AnalyticsSelectFunctionEnum
+  ref: AnalyticsSelectFieldEnum!
+}
+
 input AnalyticsWherePredicateInputType {
   function: AnalyticsPredicateFunctionEnum!
-  left: AnalyticsComplexInputType!
+  left: AnalyticsWherePredicateComplexInputType!
   or: [AnalyticsWherePredicateInputType!]
-  right: AnalyticsComplexInputType!
+  right: AnalyticsWherePredicateComplexInputType!
 }
 
 """
@@ -12361,6 +12384,7 @@ input CreateWriteUpPreviewInput {
   A unique identifier for the client performing the mutation.
   """
   clientMutationId: String
+  filtered_sections: [WriteUpPreviewSectionEnum!]
   format: WriteUpPreviewFormatEnum!
   write_up_database_id: ID
   write_up_id: ID
@@ -12398,6 +12422,7 @@ type CreateWriteUpPreviewPayload implements MutationResult {
   ): ErrorConnection!
   was_successful: Boolean!
   write_up_preview: WriteUpPreview
+  write_up_preview_in_sections: JSON
 }
 
 """
@@ -36604,6 +36629,7 @@ type StaticDashboard implements Node & ResourceInterface {
   description: String
   elements: [StaticDashboardElement]!
   filter_options: [String]!
+  filters: [StaticDashboardFilter]!
   hide_date_picker: Boolean
   hide_interval_dropdown: Boolean
   id: ID!
@@ -36701,6 +36727,14 @@ type StaticDashboardExplore implements Node {
   id: ID!
   label: String!
   type: String!
+}
+
+"""
+A static dashboard filter definition
+"""
+type StaticDashboardFilter implements Node {
+  id: ID!
+  refs: [AnalyticsSelectFieldEnum!]!
 }
 
 """
@@ -52724,6 +52758,25 @@ enum WriteUpPreviewFormatEnum {
   google_docs
   html
   pdf
+}
+
+"""
+Section that can be removed from a write-up preview
+"""
+enum WriteUpPreviewSectionEnum {
+  appendix
+  approach
+  executive_summary
+  hackerone_security_checklists
+  restrictions
+  statement_of_coverage
+  technical_summary
+  testing_team
+  vulnerability_by_asset
+  vulnerability_by_category
+  vulnerability_by_severity
+  vulnerability_classification
+  vulnerability_details
 }
 
 """
