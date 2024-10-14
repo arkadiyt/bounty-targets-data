@@ -3469,34 +3469,11 @@ input AnalyticsWhereInputType {
   predicates: [AnalyticsWherePredicateInputType!]!
 }
 
-input AnalyticsWherePredicateComplexInputType {
-  arg_name: String
-  boolean: Boolean
-  booleans: [Boolean!]
-  from: String
-  function_with_args: AnalyticsWherePredicateFunctionInputType
-  nil: Boolean
-  number: Float
-  numbers: [Float!]
-  ref: AnalyticsSelectFieldEnum
-  string: String
-  strings: [String!]
-  timestamp: String
-  timestamps: [String!]
-  variable: String
-}
-
-input AnalyticsWherePredicateFunctionInputType {
-  arguments: [AnalyticsComplexInputType!]
-  name: AnalyticsSelectFunctionEnum
-  ref: AnalyticsSelectFieldEnum!
-}
-
 input AnalyticsWherePredicateInputType {
   function: AnalyticsPredicateFunctionEnum!
-  left: AnalyticsWherePredicateComplexInputType!
+  left: AnalyticsComplexInputType!
   or: [AnalyticsWherePredicateInputType!]
-  right: AnalyticsWherePredicateComplexInputType!
+  right: AnalyticsComplexInputType!
 }
 
 """
