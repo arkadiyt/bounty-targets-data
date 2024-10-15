@@ -19292,6 +19292,19 @@ type HacktivityUpvotesLeaderboardEntry implements LeaderboardEntryInterface & No
   votes: Int!
 }
 
+"""
+A chunk of HAI-generated report content
+"""
+type HaiReportChunk implements Node & ResourceInterface {
+  _id: ID!
+  category: String
+  content: [String!]
+  created_at: DateTime!
+  id: ID!
+  updated_at: DateTime!
+  url: URI!
+}
+
 scalar Hash
 
 """
@@ -32563,6 +32576,7 @@ type Report implements ActivitiesInterface & Node & ResourceInterface {
   extracted_report_data: ExtractedReportData
   first_program_activity_at: DateTime
   hacker_published: Boolean
+  hai_chunks: [HaiReportChunk]
   i_am_organization_group_member: Boolean
   i_am_participant: Boolean
   i_am_subscribed: Boolean
