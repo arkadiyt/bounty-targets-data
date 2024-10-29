@@ -18036,7 +18036,10 @@ input FiltersPentestFilterInput {
   _and: [FiltersPentestFilterInput]
   _not: FiltersPentestFilterInput
   _or: [FiltersPentestFilterInput]
+  ends_at: DateInputPredicateInput
   id: IntPredicateInput
+  retesting_ends_at: DateInputPredicateInput
+  starts_at: DateInputPredicateInput
   state: PentestStateEnumInputPredicateInput
   team: FiltersTeamFilterInput
 }
@@ -18298,6 +18301,7 @@ input FiltersSpotCheckFilterInput {
   _or: [FiltersSpotCheckFilterInput]
   id: IntPredicateInput
   spot_check_users: FiltersSpotCheckUserFilterInput
+  start_date: DateInputPredicateInput
   state: SpotCheckTypeStatesInputPredicateInput
   with_reports_from_user: Boolean
 }
