@@ -4943,6 +4943,7 @@ type AutomationTemplate implements Node {
   category: String
   description: String
   details: String
+  event_triggered: Boolean
   field_configuration: [AutomationFieldConfigurationUnion!]!
   footer: String
   handler: String
@@ -4951,7 +4952,7 @@ type AutomationTemplate implements Node {
   name: String
   optional_events: [String!]!
   required_events: [String!]!
-  template_can_be_scheduled: Boolean
+  schedule_triggered: Boolean
   template_uses_hai: Boolean
 }
 
@@ -17844,6 +17845,7 @@ input FiltersLlmAppFilterInput {
 
 input FiltersLlmAppFilterOrder {
   id: FilterOrderPredicateInput
+  system: FilterOrderPredicateInput
 }
 
 input FiltersLlmContextualSuggestionFilterInput {
