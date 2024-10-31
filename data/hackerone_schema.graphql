@@ -16679,6 +16679,10 @@ type EngagementDeliverableEdge {
 An entitlement consumption overview object
 """
 type EntitlementConsumptionOverview implements Node {
+  challenge: Boolean
+  challenge_starts_at: DateTime
+  challenge_stops_at: DateTime
+  challenge_tier: String
   consumption_end_date: String!
   consumption_start_date: String!
   days_remaining: Float
@@ -21332,13 +21336,17 @@ type LlmConversationContext implements Node {
   """
   id: ID!
   organization_id: ID
+  path: String
   report_ids: [BigInt!]
+  route: String
   team_handles: [String!]
 }
 
 input LlmConversationContextInputType {
   organization_id: ID
+  path: String
   report_ids: [Int!]
+  route: String
   team_handles: [String!]
 }
 
