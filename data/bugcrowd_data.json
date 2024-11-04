@@ -4838,16 +4838,30 @@
     "url": "https://bugcrowd.com/engagements/bigcommerce",
     "allows_disclosure": true,
     "managed_by_bugcrowd": true,
-    "safe_harbor": null,
-    "max_payout": 2500,
+    "safe_harbor": "full",
+    "max_payout": 5000,
     "targets": {
       "in_scope": [
         {
           "type": "website",
-          "target": "https://www.bigcommerce.net",
-          "uri": "https://www.bigcommerce.net",
-          "name": "*.bigcommerce.net",
+          "target": "https://*.<researcher-store>.mybigcommerce.com",
+          "uri": "",
+          "name": "https://*.<researcher-store>.mybigcommerce.com",
+          "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "https://www.bigcommerce.com",
+          "uri": "https://www.bigcommerce.com",
+          "name": "*.bigcommerce.com",
           "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "login.bigcommerce.com",
+          "uri": "",
+          "name": "login.bigcommerce.com",
+          "ipAddress": ""
         },
         {
           "type": "ios",
@@ -4864,11 +4878,11 @@
           "ipAddress": null
         },
         {
-          "type": "website",
-          "target": "https://www.bigcommerce.com",
-          "uri": "https://www.bigcommerce.com",
-          "name": "*.bigcommerce.com",
-          "ipAddress": null
+          "type": "other",
+          "target": "https://github.com/bigcommerce/*",
+          "uri": "https://github.com/bigcommerce/*",
+          "name": "BigCommerce's Open Source Code",
+          "ipAddress": ""
         },
         {
           "type": "website",
@@ -4886,20 +4900,27 @@
         },
         {
           "type": "website",
-          "target": "https://*.YOUR-TESTING-STORE.mybigcommerce.com/",
+          "target": "https://*.bigcommerce.net",
           "uri": "",
-          "name": "https://*.YOUR-TESTING-STORE.mybigcommerce.com/",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "https://STORE-YOURSTOREHash.mybigcommerce.com/",
-          "uri": "",
-          "name": "https://STORE-YOURSTOREHash.mybigcommerce.com/",
-          "ipAddress": null
+          "name": "https://*.bigcommerce.net",
+          "ipAddress": ""
         }
       ],
       "out_of_scope": [
+        {
+          "type": "website",
+          "target": "*.<not-researcher-store>.mybigcommerce.com",
+          "uri": "",
+          "name": "*.<not-researcher-store>.mybigcommerce.com",
+          "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "support.bigcommerce.com",
+          "uri": "",
+          "name": "support.bigcommerce.com",
+          "ipAddress": ""
+        },
         {
           "type": "website",
           "target": "start.bigcommerce.com ",
@@ -4912,6 +4933,27 @@
           "target": "grc.bigcommerce.com",
           "uri": "",
           "name": "grc.bigcommerce.com",
+          "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "careers.bigcommerce.com",
+          "uri": "",
+          "name": "careers.bigcommerce.com",
+          "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "events.bigcommerce.com",
+          "uri": "",
+          "name": "events.bigcommerce.com",
+          "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "security.bigcommerce.com",
+          "uri": "",
+          "name": "security.bigcommerce.com",
           "ipAddress": ""
         }
       ]
