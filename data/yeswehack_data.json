@@ -3227,6 +3227,10 @@
     "targets": {
       "in_scope": [
         {
+          "target": "(*.post.ch:80|*.post.ch:443) AND 194.41.128.0/17",
+          "type": "other"
+        },
+        {
           "target": "https://account.post.ch",
           "type": "web-application"
         },
@@ -3270,6 +3274,10 @@
         },
         {
           "target": "The alternative login (https://login.swissid.ch) is out of scope. It also leads to the in-scope service, (https://account.post.ch) but we have designated it as out of scope.",
+          "type": "other"
+        },
+        {
+          "target": "https://incamail-dev.post.ch (194.41.248.224) and https://incamail-test.post.ch (194.41.248.58)",
           "type": "other"
         },
         {
