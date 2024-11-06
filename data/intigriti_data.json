@@ -1538,6 +1538,18 @@
       "in_scope": [
         {
           "type": "url",
+          "endpoint": "css-tricks.com",
+          "description": null,
+          "impact": "Tier 3"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.cloudways.com",
+          "description": "All external services/software like `support.cloudways.com` and `feedback.cloudways.com` that are not owned, managed or controlled by Cloudways are considered out of scope and ineligible for rewards.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
           "endpoint": "api.cloudways.com",
           "description": "Cloudways API offers an alternative to the Cloudways Platform. Many, but not all actions that Cloudways Platform allows through the UI can also be performed through Cloudways API.\n\nIn the event a vulnerability is applicable to both the Cloudways Platform (platform.cloudways.com) and API, it will be treated as one root incident.",
           "impact": "Tier 2"
@@ -1564,12 +1576,6 @@
           "type": "url",
           "endpoint": "www.cloudways.com",
           "description": "Cloudways website is the corporate website that is often the initial touchpoint for a significant number of interactions between visitors, customers and Cloudways. It offers product details and related corporate information to visitors.\n",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.cloudways.com",
-          "description": "All external services/software like `support.cloudways.com` and `feedback.cloudways.com` that are not owned, managed or controlled by Cloudways are considered out of scope and ineligible for rewards.",
           "impact": "Tier 2"
         },
         {
@@ -2474,63 +2480,9 @@
           "impact": "Tier 2"
         },
         {
-          "type": "url",
-          "endpoint": "digitaloceanmirrors.com",
-          "description": null,
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "digitaloceanpartners.com",
-          "description": null,
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "digitaloceanstatus.com",
-          "description": null,
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "digitaloceantest.com",
-          "description": null,
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "do.co",
-          "description": "Company shortlink service",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "dointernal.com",
-          "description": null,
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "hackathon-tracker.digitalocean.com",
-          "description": "API for hacktoberfest.com",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "hacktoberfest.com",
-          "description": null,
-          "impact": "Tier 2"
-        },
-        {
           "type": "other",
           "endpoint": "https://github.com/digitalocean/do-agent",
           "description": "A daemon that helps collect system metrics from droplets.",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "other",
-          "endpoint": "https://github.com/digitalocean/do-markdownit",
-          "description": "Markdown plugin run against all user-submitted content on https://digitalocean.com/community. ",
           "impact": "Tier 2"
         },
         {
@@ -2546,9 +2498,9 @@
           "impact": "Tier 2"
         },
         {
-          "type": "url",
+          "type": "other",
           "endpoint": "https://github.com/digitalocean/go-nbd",
-          "description": "golang-only network block device client. ",
+          "description": "golang-only network block device client",
           "impact": "Tier 2"
         },
         {
@@ -2565,8 +2517,8 @@
         },
         {
           "type": "url",
-          "endpoint": "uatdo.com",
-          "description": null,
+          "endpoint": "snapshooter.com",
+          "description": "SnapShooter is a cloud backup and recovery solution",
           "impact": "Tier 2"
         },
         {
@@ -2574,6 +2526,54 @@
           "endpoint": "www.digitalocean.com",
           "description": null,
           "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "digitaloceanmirrors.com",
+          "description": null,
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "digitaloceanpartners.com",
+          "description": null,
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "digitaloceanstatus.com",
+          "description": null,
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "digitaloceantest.com",
+          "description": null,
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "do.co",
+          "description": "Company shortlink service",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "hackathon-tracker.digitalocean.com",
+          "description": "API for hacktoberfest.com",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "hacktoberfest.com",
+          "description": null,
+          "impact": "Tier 3"
+        },
+        {
+          "type": "other",
+          "endpoint": "https://github.com/digitalocean/do-markdownit",
+          "description": "Markdown plugin run against all user-submitted content on https://digitalocean.com/community. ",
+          "impact": "Tier 3"
         },
         {
           "type": "url",
