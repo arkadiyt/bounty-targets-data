@@ -16851,28 +16851,6 @@
     }
   },
   {
-    "name": "Plusgrade Loyalty Public Program",
-    "url": "https://bugcrowd.com/engagements/plusgrade-mbb-public",
-    "allows_disclosure": true,
-    "managed_by_bugcrowd": true,
-    "safe_harbor": "full",
-    "max_payout": 5000,
-    "targets": {
-      "in_scope": [
-        {
-          "type": "website",
-          "target": "*.points.com",
-          "uri": "",
-          "name": "*.points.com",
-          "ipAddress": ""
-        }
-      ],
-      "out_of_scope": [
-
-      ]
-    }
-  },
-  {
     "name": "Private Internet Access",
     "url": "https://bugcrowd.com/engagements/privateinternetaccess",
     "allows_disclosure": false,
@@ -23418,6 +23396,49 @@
           "uri": "",
           "name": "Any Worldpay asset is in scope",
           "ipAddress": ""
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
+    "name": "Wyze Bug Bounty",
+    "url": "https://bugcrowd.com/engagements/wyze",
+    "allows_disclosure": false,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": null,
+    "max_payout": 1000,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "website",
+          "target": "https://auth.wyze.com",
+          "uri": "https://auth.wyze.com",
+          "name": "https://auth.wyze.com",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "https://my.wyze.com",
+          "uri": "https://my.wyze.com",
+          "name": "https://my.wyze.com",
+          "ipAddress": ""
+        },
+        {
+          "type": "api",
+          "target": "https://api.wyzecam.com",
+          "uri": "https://api.wyzecam.com",
+          "name": "https://api.wyzecam.com",
+          "ipAddress": null
+        },
+        {
+          "type": "hardware",
+          "target": "Wyze Cam V3",
+          "uri": "",
+          "name": "Wyze Cam V3",
+          "ipAddress": null
         }
       ],
       "out_of_scope": [
