@@ -25491,7 +25491,9 @@ type Organization implements Node {
     """
     last: Int
     secure_order_by: FiltersAuditLogItemFilterOrder
+    where: FiltersAuditLogItemFilterInput
   ): AuditLogItemConnection
+  audit_log_items_count: Int!
 
   """
   Number of automation runs that can be executed this month
