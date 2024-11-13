@@ -18052,6 +18052,7 @@ input FiltersReportFilterOrder {
   created_at: FilterOrderPredicateInput
   id: FilterOrderPredicateInput
   reporter: FiltersUserFilterOrder
+  submitted_at: FilterOrderPredicateInput
 }
 
 enum FiltersReportFilterRoles {
@@ -18076,6 +18077,7 @@ input FiltersReportRetestFilterOrder {
   created_at: FilterOrderPredicateInput
   id: FilterOrderPredicateInput
   needs_approval_at: FilterOrderPredicateInput
+  report: FiltersReportFilterOrder
 }
 
 enum FiltersReportRetestFilterRoles {
