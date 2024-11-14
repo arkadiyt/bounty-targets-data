@@ -24722,6 +24722,7 @@ input NewConversationInput {
   clientMutationId: String
   context_object: LlmConversationContextInputType
   llm_app_id: ID
+  sign_post_name: String
 }
 
 """
@@ -35429,6 +35430,7 @@ Severity calculation method
 enum SeverityCalculationMethodEnum {
   cvss_3_0_hackerone
   cvss_3_1
+  cvss_4_0
   manual
 }
 
