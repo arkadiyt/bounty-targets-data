@@ -28116,6 +28116,7 @@ type PentestOpportunityCloudConfigScope implements Node {
   can_setup_permissions: Boolean
   government_cloud: Boolean
   id: ID!
+  integrations: [String!]
   primary_region: String
   provider_type: String
   scope_type: String
@@ -28156,14 +28157,6 @@ type PentestOpportunityCloudConfigScopeEdge {
   The item at the end of the edge.
   """
   node: PentestOpportunityCloudConfigScope
-}
-
-"""
-Types of cloud configuration scopes for pentest opportunities.
-"""
-enum PentestOpportunityCloudConfigScopeTypeEnum {
-  aws_cloud_config
-  azure_cloud_config
 }
 
 """
@@ -45862,9 +45855,9 @@ input UpdatePentestOpportunityCloudConfigScopeInput {
   clientMutationId: String
   database_id: Int!
   government_cloud: Boolean
+  integrations: [String!]
   pentest_opportunity_id: Int!
   primary_region: String
-  scope_type: PentestOpportunityCloudConfigScopeTypeEnum!
   secondary_regions: [String!]
 }
 
