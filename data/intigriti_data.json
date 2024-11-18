@@ -3915,6 +3915,12 @@
         },
         {
           "type": "wildcard",
+          "endpoint": "*.intergamma.cloud",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "wildcard",
           "endpoint": "*.intergamma.nl/*",
           "description": "Corporate website",
           "impact": "Tier 2"
@@ -3923,6 +3929,12 @@
           "type": "wildcard",
           "endpoint": "*.karwei.nl/*",
           "description": "**Out of scope: mail.karwei.nl**\n\n**api.maakafspraak.karwei.nl and maakafspraak.karwei.nl are listed seperately**\n\nThis covers all subdomains of Karwei.nl not listed in Tier 1",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.restintergamma.nl",
+          "description": null,
           "impact": "Tier 2"
         },
         {
@@ -3936,18 +3948,6 @@
           "endpoint": "*.intergamma-test.nl",
           "description": null,
           "impact": "Tier 3"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.intergamma.cloud",
-          "description": null,
-          "impact": "Tier 2"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.restintergamma.nl",
-          "description": null,
-          "impact": "Tier 2"
         },
         {
           "type": "wildcard",
@@ -3968,19 +3968,31 @@
           "impact": "Tier 3"
         },
         {
-          "type": "android",
-          "endpoint": "nl.gamma.verf",
-          "description": "Our brand new Android app fully dedicated to paint, with nice features to use AR and see how the paint looks on your own wall.\nShares various web views with our website.\n\nTechnically equal to the iOS version",
-          "impact": "No Bounty"
-        },
-        {
           "type": "wildcard",
           "endpoint": "*.karweioutletstore.nl",
           "description": null,
           "impact": "No Bounty"
+        },
+        {
+          "type": "android",
+          "endpoint": "nl.gamma.verf",
+          "description": "Our brand new Android app fully dedicated to paint, with nice features to use AR and see how the paint looks on your own wall.\nShares various web views with our website.\n\nTechnically equal to the iOS version",
+          "impact": "No Bounty"
         }
       ],
       "out_of_scope": [
+        {
+          "type": "other",
+          "endpoint": "Everything related to configurators, both on primary as other domains",
+          "description": "Temporary catch-all exclusion because of security maintenance and fixing of known issues",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.configuratoren.nl/*",
+          "description": null,
+          "impact": "Out of scope"
+        },
         {
           "type": "url",
           "endpoint": "afspraakmaken.gamma.nl",
@@ -4003,6 +4015,24 @@
           "type": "url",
           "endpoint": "api.maakafspraak.karwei.nl",
           "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "horrenconfigurator-fr.gamma.be",
+          "description": "Third party hosted application",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "horrenconfigurator-nl.gamma.be",
+          "description": "Third party hosted application",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "horrenconfigurator.karwei.nl",
+          "description": "Third party hosted application",
           "impact": "Out of scope"
         },
         {
