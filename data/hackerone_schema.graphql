@@ -200,6 +200,7 @@ type ActivitiesAddedToPentest implements ActivityInterface & Node {
   id: ID!
   internal: Boolean
   message: String
+  posted_by: PostedByEnum
   updated_at: DateTime!
 }
 
@@ -220,6 +221,7 @@ type ActivitiesAgreedOnGoingPublic implements ActivityInterface & Node & ReportA
   id: ID!
   internal: Boolean
   message: String
+  posted_by: PostedByEnum
   report: Report
   triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
@@ -237,6 +239,7 @@ type ActivitiesAssetCreated implements ActivityInterface & Node {
   id: ID!
   internal: Boolean
   message: String
+  posted_by: PostedByEnum
   updated_at: DateTime!
 }
 
@@ -252,6 +255,7 @@ type ActivitiesAssetSubmissionRejected implements ActivityInterface & Node {
   id: ID!
   internal: Boolean
   message: String
+  posted_by: PostedByEnum
   updated_at: DateTime!
 }
 
@@ -272,6 +276,7 @@ type ActivitiesBountyAwarded implements ActivityInterface & Node & ReportActivit
   id: ID!
   internal: Boolean
   message: String
+  posted_by: PostedByEnum
   report: Report
   triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
@@ -297,6 +302,7 @@ type ActivitiesBountyCancelled implements ActivityInterface & Node & ReportActiv
   id: ID!
   internal: Boolean
   message: String
+  posted_by: PostedByEnum
   report: Report
   triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
@@ -321,6 +327,7 @@ type ActivitiesBountyRecalled implements ActivityInterface & Node & ReportActivi
   id: ID!
   internal: Boolean
   message: String
+  posted_by: PostedByEnum
   reason: String
   recalled_at: DateTime
   report: Report
@@ -348,6 +355,7 @@ type ActivitiesBountyScheduled implements ActivityInterface & Node & ReportActiv
   id: ID!
   internal: Boolean
   message: String
+  posted_by: PostedByEnum
   report: Report
   scheduled_at: DateTime
   triage_inbox_item: TriageInboxItem
@@ -373,6 +381,7 @@ type ActivitiesBountySuggested implements ActivityInterface & Node & ReportActiv
   id: ID!
   internal: Boolean
   message: String
+  posted_by: PostedByEnum
   report: Report
   triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
@@ -396,6 +405,7 @@ type ActivitiesBugCloned implements ActivityInterface & Node & ReportActivityInt
   message: String
   original_report: Report
   original_report_id: Int
+  posted_by: PostedByEnum
   report: Report
   triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
@@ -419,6 +429,7 @@ type ActivitiesBugDuplicate implements ActivityInterface & Node & ReportActivity
   message: String
   original_report: Report
   original_report_id: Int
+  posted_by: PostedByEnum
   report: Report
   triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
@@ -440,6 +451,7 @@ type ActivitiesBugFiled implements ActivityInterface & Node & ReportActivityInte
   id: ID!
   internal: Boolean
   message: String
+  posted_by: PostedByEnum
   report: Report
   triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
@@ -461,6 +473,7 @@ type ActivitiesBugInactive implements ActivityInterface & Node & ReportActivityI
   id: ID!
   internal: Boolean
   message: String
+  posted_by: PostedByEnum
   report: Report
   triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
@@ -482,6 +495,7 @@ type ActivitiesBugInformative implements ActivityInterface & Node & ReportActivi
   id: ID!
   internal: Boolean
   message: String
+  posted_by: PostedByEnum
   report: Report
   triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
@@ -503,6 +517,7 @@ type ActivitiesBugNeedsMoreInfo implements ActivityInterface & Node & ReportActi
   id: ID!
   internal: Boolean
   message: String
+  posted_by: PostedByEnum
   report: Report
   triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
@@ -524,6 +539,7 @@ type ActivitiesBugNew implements ActivityInterface & Node & ReportActivityInterf
   id: ID!
   internal: Boolean
   message: String
+  posted_by: PostedByEnum
   report: Report
   triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
@@ -545,6 +561,7 @@ type ActivitiesBugNotApplicable implements ActivityInterface & Node & ReportActi
   id: ID!
   internal: Boolean
   message: String
+  posted_by: PostedByEnum
   report: Report
   triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
@@ -566,6 +583,7 @@ type ActivitiesBugPendingProgramReview implements ActivityInterface & Node & Rep
   id: ID!
   internal: Boolean
   message: String
+  posted_by: PostedByEnum
   report: Report
   triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
@@ -587,6 +605,7 @@ type ActivitiesBugPriorityChanged implements ActivityInterface & Node & ReportAc
   id: ID!
   internal: Boolean
   message: String
+  posted_by: PostedByEnum
   priority: TriageInboxItemPriorityEnum
   report: Report
   triage_inbox_item: TriageInboxItem
@@ -609,6 +628,7 @@ type ActivitiesBugReopened implements ActivityInterface & Node & ReportActivityI
   id: ID!
   internal: Boolean
   message: String
+  posted_by: PostedByEnum
   report: Report
   triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
@@ -630,6 +650,7 @@ type ActivitiesBugResolved implements ActivityInterface & Node & ReportActivityI
   id: ID!
   internal: Boolean
   message: String
+  posted_by: PostedByEnum
   report: Report
   triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
@@ -651,6 +672,7 @@ type ActivitiesBugRetesting implements ActivityInterface & Node & ReportActivity
   id: ID!
   internal: Boolean
   message: String
+  posted_by: PostedByEnum
   report: Report
   report_retest: ReportRetest
   triage_inbox_item: TriageInboxItem
@@ -673,6 +695,7 @@ type ActivitiesBugSpam implements ActivityInterface & Node & ReportActivityInter
   id: ID!
   internal: Boolean
   message: String
+  posted_by: PostedByEnum
   report: Report
   triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
@@ -694,6 +717,7 @@ type ActivitiesBugTriaged implements ActivityInterface & Node & ReportActivityIn
   id: ID!
   internal: Boolean
   message: String
+  posted_by: PostedByEnum
   report: Report
   triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
@@ -711,6 +735,7 @@ type ActivitiesBulkAssetsConfirmed implements ActivityInterface & Node {
   id: ID!
   internal: Boolean
   message: String
+  posted_by: PostedByEnum
   updated_at: DateTime!
 }
 
@@ -730,6 +755,7 @@ type ActivitiesCancelledDisclosureRequest implements ActivityInterface & Node & 
   id: ID!
   internal: Boolean
   message: String
+  posted_by: PostedByEnum
   report: Report
   triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
@@ -751,6 +777,7 @@ type ActivitiesChangedCampaign implements ActivityInterface & Node & ReportActiv
   id: ID!
   internal: Boolean
   message: String
+  posted_by: PostedByEnum
   report: Report
   triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
@@ -774,6 +801,7 @@ type ActivitiesChangedScope implements ActivityInterface & Node & ReportActivity
   message: String
   new_scope: StructuredScope
   old_scope: StructuredScope
+  posted_by: PostedByEnum
   report: Report
   triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
@@ -797,6 +825,7 @@ type ActivitiesCodeReviewFeedbackPosted implements ActivityInterface & Node & Re
   line_number: Int
   message: String
   path: String
+  posted_by: PostedByEnum
   report: Report
   triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
@@ -818,6 +847,7 @@ type ActivitiesCodeReviewRequested implements ActivityInterface & Node & ReportA
   id: ID!
   internal: Boolean
   message: String
+  posted_by: PostedByEnum
   report: Report
   triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
@@ -839,6 +869,7 @@ type ActivitiesComment implements ActivityInterface & Node & ReportActivityInter
   id: ID!
   internal: Boolean
   message: String
+  posted_by: PostedByEnum
   report: Report
   triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
@@ -860,6 +891,7 @@ type ActivitiesCommentsClosed implements ActivityInterface & Node & ReportActivi
   id: ID!
   internal: Boolean
   message: String
+  posted_by: PostedByEnum
   report: Report
   triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
@@ -882,6 +914,7 @@ type ActivitiesCveIdAdded implements ActivityInterface & Node & ReportActivityIn
   id: ID!
   internal: Boolean
   message: String
+  posted_by: PostedByEnum
   report: Report
   triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
@@ -903,6 +936,7 @@ type ActivitiesDecisionReviewRejected implements ActivityInterface & Node & Repo
   id: ID!
   internal: Boolean
   message: String
+  posted_by: PostedByEnum
   report: Report
   triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
@@ -924,6 +958,7 @@ type ActivitiesDecisionReviewRequested implements ActivityInterface & Node & Rep
   id: ID!
   internal: Boolean
   message: String
+  posted_by: PostedByEnum
   report: Report
   triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
@@ -945,6 +980,7 @@ type ActivitiesDraftStarted implements ActivityInterface & Node & ReportActivity
   id: ID!
   internal: Boolean
   message: String
+  posted_by: PostedByEnum
   report: Report
   triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
@@ -966,6 +1002,7 @@ type ActivitiesExternalAdvisoryAdded implements ActivityInterface & Node & Repor
   id: ID!
   internal: Boolean
   message: String
+  posted_by: PostedByEnum
   report: Report
   triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
@@ -988,6 +1025,7 @@ type ActivitiesExternalUserInvitationCancelled implements ActivityInterface & No
   id: ID!
   internal: Boolean
   message: String
+  posted_by: PostedByEnum
   report: Report
   triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
@@ -1010,6 +1048,7 @@ type ActivitiesExternalUserInvited implements ActivityInterface & Node & ReportA
   id: ID!
   internal: Boolean
   message: String
+  posted_by: PostedByEnum
   report: Report
   report_permissions: [String!]
   report_retest_user_id: String
@@ -1035,6 +1074,7 @@ type ActivitiesExternalUserJoined implements ActivityInterface & Node & ReportAc
   id: ID!
   internal: Boolean
   message: String
+  posted_by: PostedByEnum
   report: Report
   report_permissions: [String!]
   report_retest_user: User
@@ -1059,6 +1099,7 @@ type ActivitiesExternalUserRemoved implements ActivityInterface & Node & ReportA
   id: ID!
   internal: Boolean
   message: String
+  posted_by: PostedByEnum
   removed_user: User
   report: Report
   triage_inbox_item: TriageInboxItem
@@ -1083,6 +1124,7 @@ type ActivitiesGroupAssignedToBug implements ActivityInterface & Node & ReportAc
   id: ID!
   internal: Boolean
   message: String
+  posted_by: PostedByEnum
   report: Report
   triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
@@ -1104,6 +1146,7 @@ type ActivitiesHackerRequestedMediation implements ActivityInterface & Node & Re
   id: ID!
   internal: Boolean
   message: String
+  posted_by: PostedByEnum
   report: Report
   triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
@@ -1164,6 +1207,7 @@ type ActivitiesInvitationReceived implements ActivityInterface & Node & ReportAc
   id: ID!
   internal: Boolean
   message: String
+  posted_by: PostedByEnum
   report: Report
   triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
@@ -1185,6 +1229,7 @@ type ActivitiesManuallyDisclosed implements ActivityInterface & Node & ReportAct
   id: ID!
   internal: Boolean
   message: String
+  posted_by: PostedByEnum
   report: Report
   triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
@@ -1206,6 +1251,7 @@ type ActivitiesMediationRequested implements ActivityInterface & Node & ReportAc
   id: ID!
   internal: Boolean
   message: String
+  posted_by: PostedByEnum
   report: Report
   triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
@@ -1227,6 +1273,7 @@ type ActivitiesNmiReminderComment implements ActivityInterface & Node & ReportAc
   id: ID!
   internal: Boolean
   message: String
+  posted_by: PostedByEnum
   report: Report
   triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
@@ -1248,6 +1295,7 @@ type ActivitiesNobodyAssignedToBug implements ActivityInterface & Node & ReportA
   id: ID!
   internal: Boolean
   message: String
+  posted_by: PostedByEnum
   report: Report
   triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
@@ -1269,6 +1317,7 @@ type ActivitiesNotEligibleForBounty implements ActivityInterface & Node & Report
   id: ID!
   internal: Boolean
   message: String
+  posted_by: PostedByEnum
   report: Report
   triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
@@ -1286,6 +1335,7 @@ type ActivitiesOrganizationAssetsBulkArchived implements ActivityInterface & Nod
   id: ID!
   internal: Boolean
   message: String
+  posted_by: PostedByEnum
   updated_at: DateTime!
 }
 
@@ -1301,6 +1351,7 @@ type ActivitiesOrganizationAssetsBulkCreated implements ActivityInterface & Node
   id: ID!
   internal: Boolean
   message: String
+  posted_by: PostedByEnum
   updated_at: DateTime!
 }
 
@@ -1316,6 +1367,7 @@ type ActivitiesPentestAwardAmountLeadUpdated implements ActivityInterface & Node
   id: ID!
   internal: Boolean
   message: String
+  posted_by: PostedByEnum
   updated_at: DateTime!
 }
 
@@ -1331,6 +1383,7 @@ type ActivitiesPentestAwardAmountUpdated implements ActivityInterface & Node {
   id: ID!
   internal: Boolean
   message: String
+  posted_by: PostedByEnum
   updated_at: DateTime!
 }
 
@@ -1346,6 +1399,7 @@ type ActivitiesPentestCheckAssigned implements ActivityInterface & Node {
   id: ID!
   internal: Boolean
   message: String
+  posted_by: PostedByEnum
   updated_at: DateTime!
 }
 
@@ -1361,6 +1415,7 @@ type ActivitiesPentestCheckCompleted implements ActivityInterface & Node {
   id: ID!
   internal: Boolean
   message: String
+  posted_by: PostedByEnum
   updated_at: DateTime!
 }
 
@@ -1376,6 +1431,7 @@ type ActivitiesPentestCheckUnassigned implements ActivityInterface & Node {
   id: ID!
   internal: Boolean
   message: String
+  posted_by: PostedByEnum
   updated_at: DateTime!
 }
 
@@ -1391,6 +1447,7 @@ type ActivitiesPentestCheckUpdated implements ActivityInterface & Node {
   id: ID!
   internal: Boolean
   message: String
+  posted_by: PostedByEnum
   updated_at: DateTime!
 }
 
@@ -1406,6 +1463,7 @@ type ActivitiesPentestPublished implements ActivityInterface & Node {
   id: ID!
   internal: Boolean
   message: String
+  posted_by: PostedByEnum
   updated_at: DateTime!
 }
 
@@ -1421,6 +1479,7 @@ type ActivitiesPentestStarted implements ActivityInterface & Node {
   id: ID!
   internal: Boolean
   message: String
+  posted_by: PostedByEnum
   updated_at: DateTime!
 }
 
@@ -1436,6 +1495,7 @@ type ActivitiesPentesterAwarded implements ActivityInterface & Node {
   id: ID!
   internal: Boolean
   message: String
+  posted_by: PostedByEnum
   updated_at: DateTime!
 }
 
@@ -1451,6 +1511,7 @@ type ActivitiesPentesterPositionOpened implements ActivityInterface & Node {
   id: ID!
   internal: Boolean
   message: String
+  posted_by: PostedByEnum
   updated_at: DateTime!
 }
 
@@ -1466,6 +1527,7 @@ type ActivitiesProgramGatewayStateChanged implements ActivityInterface & Node {
   id: ID!
   internal: Boolean
   message: String
+  posted_by: PostedByEnum
   team: Team!
   updated_at: DateTime!
 }
@@ -1482,6 +1544,7 @@ type ActivitiesProgramGatewayUsersStateChanged implements ActivityInterface & No
   id: ID!
   internal: Boolean
   message: String
+  posted_by: PostedByEnum
   team: Team!
   updated_at: DateTime!
 }
@@ -1498,6 +1561,7 @@ type ActivitiesProgramHackerJoined implements ActivityInterface & Node {
   id: ID!
   internal: Boolean
   message: String
+  posted_by: PostedByEnum
   team: Team!
   updated_at: DateTime!
 }
@@ -1514,6 +1578,7 @@ type ActivitiesProgramHackerLeft implements ActivityInterface & Node {
   id: ID!
   internal: Boolean
   message: String
+  posted_by: PostedByEnum
   team: Team!
   updated_at: DateTime!
 }
@@ -1534,6 +1599,7 @@ type ActivitiesProgramInactive implements ActivityInterface & Node & ReportActiv
   id: ID!
   internal: Boolean
   message: String
+  posted_by: PostedByEnum
   report: Report
   triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
@@ -1551,6 +1617,7 @@ type ActivitiesProgramStructuredScopesBulkUpdated implements ActivityInterface &
   id: ID!
   internal: Boolean
   message: String
+  posted_by: PostedByEnum
   team: Team!
   updated_at: DateTime!
 }
@@ -1573,6 +1640,7 @@ type ActivitiesReassignedToTeam implements ActivityInterface & Node & ReportActi
   message: String
   new_team: Team
   old_team: Team
+  posted_by: PostedByEnum
   report: Report
   triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
@@ -1594,6 +1662,7 @@ type ActivitiesReferenceIdAdded implements ActivityInterface & Node & ReportActi
   id: ID!
   internal: Boolean
   message: String
+  posted_by: PostedByEnum
   reference: String
   reference_url: String
   report: Report
@@ -1613,6 +1682,7 @@ type ActivitiesRemovedFromPentest implements ActivityInterface & Node {
   id: ID!
   internal: Boolean
   message: String
+  posted_by: PostedByEnum
   updated_at: DateTime!
 }
 
@@ -1632,6 +1702,7 @@ type ActivitiesReportBecamePublic implements ActivityInterface & Node & ReportAc
   id: ID!
   internal: Boolean
   message: String
+  posted_by: PostedByEnum
   report: Report
   triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
@@ -1654,6 +1725,7 @@ type ActivitiesReportCollaboratorInvited implements ActivityInterface & Node & R
   id: ID!
   internal: Boolean
   message: String
+  posted_by: PostedByEnum
   report: Report
   triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
@@ -1675,6 +1747,7 @@ type ActivitiesReportCollaboratorJoined implements ActivityInterface & Node & Re
   id: ID!
   internal: Boolean
   message: String
+  posted_by: PostedByEnum
   report: Report
   triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
@@ -1699,6 +1772,7 @@ type ActivitiesReportCustomFieldValueUpdated implements ActivityInterface & Node
   message: String
   new_value: String
   old_value: String
+  posted_by: PostedByEnum
   report: Report
   triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
@@ -1762,6 +1836,7 @@ type ActivitiesReportOrganizationInboxesUpdated implements ActivityInterface & N
     """
     last: Int
   ): OrganizationInboxConnection!
+  posted_by: PostedByEnum
   report: Report
   triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
@@ -1783,6 +1858,7 @@ type ActivitiesReportQualityEvaluated implements ActivityInterface & Node & Repo
   id: ID!
   internal: Boolean
   message: String
+  posted_by: PostedByEnum
   report: Report
   reputation_change: Int
   triage_inbox_item: TriageInboxItem
@@ -1805,6 +1881,7 @@ type ActivitiesReportRemediationGuidanceUpdated implements ActivityInterface & N
   id: ID!
   internal: Boolean
   message: String
+  posted_by: PostedByEnum
   report: Report
   triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
@@ -1826,6 +1903,7 @@ type ActivitiesReportRetestApproved implements ActivityInterface & Node & Report
   id: ID!
   internal: Boolean
   message: String
+  posted_by: PostedByEnum
   report: Report
   report_retest_user: ReportRetestUser
   triage_inbox_item: TriageInboxItem
@@ -1848,6 +1926,7 @@ type ActivitiesReportRetestCanceled implements ActivityInterface & Node & Report
   id: ID!
   internal: Boolean
   message: String
+  posted_by: PostedByEnum
   report: Report
   report_retest_user: ReportRetestUser
   triage_inbox_item: TriageInboxItem
@@ -1870,6 +1949,7 @@ type ActivitiesReportRetestRejected implements ActivityInterface & Node & Report
   id: ID!
   internal: Boolean
   message: String
+  posted_by: PostedByEnum
   report: Report
   triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
@@ -1893,6 +1973,7 @@ type ActivitiesReportSeverityUpdated implements ActivityInterface & Node & Repor
   message: String
   new_severity: Severity
   old_severity: Severity
+  posted_by: PostedByEnum
   report: Report
   triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
@@ -1916,6 +1997,7 @@ type ActivitiesReportTitleUpdated implements ActivityInterface & Node & ReportAc
   message: String
   new_title: String
   old_title: String
+  posted_by: PostedByEnum
   report: Report
   triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
@@ -1937,6 +2019,7 @@ type ActivitiesReportTriageSummaryCreated implements ActivityInterface & Node & 
   id: ID!
   internal: Boolean
   message: String
+  posted_by: PostedByEnum
   report: Report
   triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
@@ -1958,6 +2041,7 @@ type ActivitiesReportUndisclosed implements ActivityInterface & Node & ReportAct
   id: ID!
   internal: Boolean
   message: String
+  posted_by: PostedByEnum
   report: Report
   triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
@@ -1979,6 +2063,7 @@ type ActivitiesReportVulnerabilityInformationUpdated implements ActivityInterfac
   id: ID!
   internal: Boolean
   message: String
+  posted_by: PostedByEnum
   report: Report
   triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
@@ -2002,6 +2087,7 @@ type ActivitiesReportVulnerabilityTypesUpdated implements ActivityInterface & No
   message: String
   new_weakness: Weakness
   old_weakness: Weakness
+  posted_by: PostedByEnum
   report: Report
   triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
@@ -2023,6 +2109,7 @@ type ActivitiesRetestUserExpired implements ActivityInterface & Node & ReportAct
   id: ID!
   internal: Boolean
   message: String
+  posted_by: PostedByEnum
   report: Report
   triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
@@ -2045,6 +2132,7 @@ type ActivitiesScopeGuidanceRequested implements ActivityInterface & Node & Repo
   id: ID!
   internal: Boolean
   message: String
+  posted_by: PostedByEnum
   report: Report
   triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
@@ -2068,6 +2156,7 @@ type ActivitiesScopeGuidanceSet implements ActivityInterface & Node & ReportActi
   id: ID!
   internal: Boolean
   message: String
+  posted_by: PostedByEnum
   report: Report
   triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
@@ -2089,6 +2178,7 @@ type ActivitiesSwagAwarded implements ActivityInterface & Node & ReportActivityI
   id: ID!
   internal: Boolean
   message: String
+  posted_by: PostedByEnum
   report: Report
   swag: Swag
   triage_inbox_item: TriageInboxItem
@@ -2107,6 +2197,7 @@ type ActivitiesTeamBountyTableUpdated implements ActivityInterface & Node {
   id: ID!
   internal: Boolean
   message: String
+  posted_by: PostedByEnum
   updated_at: DateTime!
 }
 
@@ -2122,6 +2213,7 @@ type ActivitiesTeamPolicyUpdated implements ActivityInterface & Node {
   id: ID!
   internal: Boolean
   message: String
+  posted_by: PostedByEnum
   updated_at: DateTime!
 }
 
@@ -2137,6 +2229,7 @@ type ActivitiesTeamPostCreated implements ActivityInterface & Node {
   id: ID!
   internal: Boolean
   message: String
+  posted_by: PostedByEnum
   updated_at: DateTime!
 }
 
@@ -2152,6 +2245,7 @@ type ActivitiesTeamPublished implements ActivityInterface & Node {
   id: ID!
   internal: Boolean
   message: String
+  posted_by: PostedByEnum
   updated_at: DateTime!
 }
 
@@ -2167,6 +2261,7 @@ type ActivitiesTeamStructuredScopeUpdated implements ActivityInterface & Node {
   id: ID!
   internal: Boolean
   message: String
+  posted_by: PostedByEnum
   updated_at: DateTime!
 }
 
@@ -2182,6 +2277,7 @@ type ActivitiesTeamSubmissionStateChanged implements ActivityInterface & Node {
   id: ID!
   internal: Boolean
   message: String
+  posted_by: PostedByEnum
   team: Team!
   updated_at: DateTime!
 }
@@ -2203,6 +2299,7 @@ type ActivitiesUserAssignedToBug implements ActivityInterface & Node & ReportAct
   id: ID!
   internal: Boolean
   message: String
+  posted_by: PostedByEnum
   report: Report
   triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
@@ -2224,6 +2321,7 @@ type ActivitiesUserBannedFromProgram implements ActivityInterface & Node & Repor
   id: ID!
   internal: Boolean
   message: String
+  posted_by: PostedByEnum
   removed_user: User
   report: Report
   triage_inbox_item: TriageInboxItem
@@ -2246,6 +2344,7 @@ type ActivitiesUserCompletedRetest implements ActivityInterface & Node & ReportA
   id: ID!
   internal: Boolean
   message: String
+  posted_by: PostedByEnum
   report: Report
   triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
@@ -2263,6 +2362,7 @@ type ActivitiesUserJoined implements ActivityInterface & Node {
   id: ID!
   internal: Boolean
   message: String
+  posted_by: PostedByEnum
   updated_at: DateTime!
 }
 
@@ -2282,6 +2382,7 @@ type ActivitiesUserLeftRetest implements ActivityInterface & Node & ReportActivi
   id: ID!
   internal: Boolean
   message: String
+  posted_by: PostedByEnum
   report: Report
   triage_inbox_item: TriageInboxItem
   updated_at: DateTime!
@@ -2321,6 +2422,7 @@ interface ActivityInterface {
   id: ID!
   internal: Boolean
   message: String
+  posted_by: PostedByEnum
   updated_at: DateTime!
 }
 
@@ -9279,6 +9381,7 @@ input CreateHackerTemplateInput {
   clientMutationId: String
   cwe: Int
   impact: String
+  report_title: String
   severity: String
   title: String!
 }
@@ -18463,6 +18566,21 @@ input FiltersWebhookResponseFilterOrder {
   id: FilterOrderPredicateInput
 }
 
+input FiltersWorkboardFilterInput {
+  _and: [FiltersWorkboardFilterInput]
+  _not: FiltersWorkboardFilterInput
+  _or: [FiltersWorkboardFilterInput]
+  database_id: IntPredicateInput
+  id: IntPredicateInput
+  name: StringPredicateInput
+}
+
+input FiltersWorkboardFilterOrder {
+  created_at: FilterOrderPredicateInput
+  id: FilterOrderPredicateInput
+  name: FilterOrderPredicateInput
+}
+
 input FiltersWriteUpFilterInput {
   _and: [FiltersWriteUpFilterInput]
   _not: FiltersWriteUpFilterInput
@@ -26101,6 +26219,29 @@ type Organization implements Node {
     """
     last: Int
   ): DomainOwnershipConnection
+  workboards(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+    order_by: FiltersWorkboardFilterOrder
+    where: FiltersWorkboardFilterInput
+  ): WorkboardConnection
 }
 
 """
@@ -29316,6 +29457,17 @@ type Post implements Node {
   id: ID!
   message: String
   title: String
+}
+
+"""
+Types of values in the posted_by field of an activity
+"""
+enum PostedByEnum {
+  report_collaborator
+  reporter
+  team
+  team_member
+  triager
 }
 
 """
@@ -44859,6 +45011,7 @@ input UpdateHackerTemplateInput {
   cwe: Int
   hacker_report_template_id: ID!
   impact: String
+  report_title: String
   severity: String
   title: String!
 }
@@ -52700,6 +52853,63 @@ type WhitelistedReporterRowEdge {
   The item at the end of the edge.
   """
   node: WhitelistedReporterRow
+}
+
+"""
+A workboard that belongs to an organization
+"""
+type Workboard implements Node {
+  """
+  The primary key from the database
+  """
+  _id: ID!
+  id: ID!
+
+  """
+  The name of the workboard
+  """
+  name: String!
+
+  """
+  The organization that the automation belongs to
+  """
+  organization: Organization!
+}
+
+"""
+The connection type for Workboard.
+"""
+type WorkboardConnection {
+  """
+  A list of edges.
+  """
+  edges: [WorkboardEdge]
+
+  """
+  A list of nodes.
+  """
+  nodes: [Workboard]
+
+  """
+  Information to aid in pagination.
+  """
+  pageInfo: PageInfo!
+  total_count: Int!
+}
+
+"""
+An edge in a connection.
+"""
+type WorkboardEdge {
+  """
+  A cursor for use in pagination.
+  """
+  cursor: String!
+
+  """
+  The item at the end of the edge.
+  """
+  node: Workboard
 }
 
 """
