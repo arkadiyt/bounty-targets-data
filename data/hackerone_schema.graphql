@@ -50953,6 +50953,8 @@ type User implements ActivitiesInterface & Node & ResourceInterface {
     secure_order_by: FiltersPentestFilterOrder
     where: FiltersPentestFilterInput
   ): PentestConnection
+  private_program_applications_next_available_date: DateTime
+  private_program_applications_remaining_count: Int
   product_analytics: UserProductAnalytics
   product_user_type: String
   profile_activated: Boolean
