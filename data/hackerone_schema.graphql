@@ -28371,10 +28371,11 @@ type PentestOpportunityCloudConfigScope implements Node {
   government_cloud: Boolean
   id: ID!
   integrations: [String!]
-  primary_region: String
+  primary_regions: [String!]
   provider_type: String
   scope_type: String
   secondary_regions: [String!]
+  subscription_count: Int
 }
 
 """
