@@ -28774,6 +28774,7 @@ type PentestStructuredScope implements Node {
   asset_identifier: String
   credential_instruction: String
   id: ID!
+  metadata: Hash
   methodologies: [String!]!
   pentest: Pentest
   pentest_checklists(
@@ -28912,6 +28913,14 @@ type PentestStructuredScopeEdge {
   The item at the end of the edge.
   """
   node: PentestStructuredScope
+}
+
+input PentestStructuredScopeMetadataInput {
+  cloud_gov_cloud: Boolean
+  cloud_integrations: [String!]
+  cloud_primary_region: String
+  cloud_secondary_regions: [String!]
+  cloud_subscription_ids: [String!]
 }
 
 """
@@ -46178,6 +46187,7 @@ input UpdatePentestStructuredScopeInput {
   clientMutationId: String
   credential_instruction: String
   instruction: String
+  metadata: PentestStructuredScopeMetadataInput
   pentest_structured_scope_id: ID!
 }
 
