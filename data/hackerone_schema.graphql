@@ -309,60 +309,6 @@ type ActivitiesBountyCancelled implements ActivityInterface & Node & ReportActiv
 }
 
 """
-A Activities::BountyRecalled activity for a report
-"""
-type ActivitiesBountyRecalled implements ActivityInterface & Node & ReportActivityInterface {
-  _id: ID!
-  actor: ActorUnion
-  actor_is_customer: Boolean!
-  amount: String
-  attachments: [Attachment]
-  automated_response: Boolean
-  bonus_amount: String
-  bounty_currency: String
-  created_at: DateTime!
-  genius_execution_id: ID @deprecated(reason: "This is about to be replaced by .genius_execution")
-  i_can_edit: Boolean!
-  i_can_flag: Boolean!
-  id: ID!
-  internal: Boolean
-  message: String
-  posted_by: PostedByEnum
-  reason: String
-  recalled_at: DateTime
-  report: Report
-  triage_inbox_item: TriageInboxItem
-  updated_at: DateTime!
-}
-
-"""
-A Activities::BountyScheduled activity for a report
-"""
-type ActivitiesBountyScheduled implements ActivityInterface & Node & ReportActivityInterface {
-  _id: ID!
-  action_object_id: Int
-  actor: ActorUnion
-  actor_is_customer: Boolean!
-  amount: String
-  attachments: [Attachment]
-  automated_response: Boolean
-  bonus_amount: String
-  bounty_currency: String
-  created_at: DateTime!
-  genius_execution_id: ID @deprecated(reason: "This is about to be replaced by .genius_execution")
-  i_can_edit: Boolean!
-  i_can_flag: Boolean!
-  id: ID!
-  internal: Boolean
-  message: String
-  posted_by: PostedByEnum
-  report: Report
-  scheduled_at: DateTime
-  triage_inbox_item: TriageInboxItem
-  updated_at: DateTime!
-}
-
-"""
 A Activities::BountySuggested activity for a report
 """
 type ActivitiesBountySuggested implements ActivityInterface & Node & ReportActivityInterface {
@@ -2528,7 +2474,7 @@ enum ActivityTypes {
 """
 Activities can be of multiple types
 """
-union ActivityUnion = ActivitiesAddedToPentest | ActivitiesAgreedOnGoingPublic | ActivitiesAssetCreated | ActivitiesAssetSubmissionRejected | ActivitiesBountyAwarded | ActivitiesBountyCancelled | ActivitiesBountyRecalled | ActivitiesBountyScheduled | ActivitiesBountySuggested | ActivitiesBugCloned | ActivitiesBugDuplicate | ActivitiesBugFiled | ActivitiesBugInactive | ActivitiesBugInformative | ActivitiesBugNeedsMoreInfo | ActivitiesBugNew | ActivitiesBugNotApplicable | ActivitiesBugPendingProgramReview | ActivitiesBugPriorityChanged | ActivitiesBugReopened | ActivitiesBugResolved | ActivitiesBugRetesting | ActivitiesBugSpam | ActivitiesBugTriaged | ActivitiesBulkAssetsConfirmed | ActivitiesCancelledDisclosureRequest | ActivitiesChangedCampaign | ActivitiesChangedScope | ActivitiesCodeReviewFeedbackPosted | ActivitiesCodeReviewRequested | ActivitiesComment | ActivitiesCommentsClosed | ActivitiesCveIdAdded | ActivitiesDecisionReviewRejected | ActivitiesDecisionReviewRequested | ActivitiesDraftStarted | ActivitiesExternalAdvisoryAdded | ActivitiesExternalUserInvitationCancelled | ActivitiesExternalUserInvited | ActivitiesExternalUserJoined | ActivitiesExternalUserRemoved | ActivitiesGroupAssignedToBug | ActivitiesHackerRequestedMediation | ActivitiesInvitationReceived | ActivitiesManuallyDisclosed | ActivitiesMediationRequested | ActivitiesNmiReminderComment | ActivitiesNobodyAssignedToBug | ActivitiesNotEligibleForBounty | ActivitiesOrganizationAssetsBulkArchived | ActivitiesOrganizationAssetsBulkCreated | ActivitiesPentestAwardAmountLeadUpdated | ActivitiesPentestAwardAmountUpdated | ActivitiesPentestCheckAssigned | ActivitiesPentestCheckCompleted | ActivitiesPentestCheckUnassigned | ActivitiesPentestCheckUpdated | ActivitiesPentestPublished | ActivitiesPentestStarted | ActivitiesPentesterAwarded | ActivitiesPentesterPositionOpened | ActivitiesProgramGatewayStateChanged | ActivitiesProgramGatewayUsersStateChanged | ActivitiesProgramHackerJoined | ActivitiesProgramHackerLeft | ActivitiesProgramInactive | ActivitiesProgramStructuredScopesBulkUpdated | ActivitiesReassignedToTeam | ActivitiesReferenceIdAdded | ActivitiesRemovedFromPentest | ActivitiesReportBecamePublic | ActivitiesReportCollaboratorInvited | ActivitiesReportCollaboratorJoined | ActivitiesReportCustomFieldValueUpdated | ActivitiesReportOrganizationInboxesUpdated | ActivitiesReportQualityEvaluated | ActivitiesReportRemediationGuidanceUpdated | ActivitiesReportRetestApproved | ActivitiesReportRetestCanceled | ActivitiesReportRetestRejected | ActivitiesReportSeverityUpdated | ActivitiesReportTitleUpdated | ActivitiesReportTriageSummaryCreated | ActivitiesReportUndisclosed | ActivitiesReportVulnerabilityInformationUpdated | ActivitiesReportVulnerabilityTypesUpdated | ActivitiesRetestUserExpired | ActivitiesScopeGuidanceRequested | ActivitiesScopeGuidanceSet | ActivitiesSwagAwarded | ActivitiesTeamBountyTableUpdated | ActivitiesTeamPolicyUpdated | ActivitiesTeamPostCreated | ActivitiesTeamPublished | ActivitiesTeamStructuredScopeUpdated | ActivitiesTeamSubmissionStateChanged | ActivitiesUserAssignedToBug | ActivitiesUserBannedFromProgram | ActivitiesUserCompletedRetest | ActivitiesUserJoined | ActivitiesUserLeftRetest
+union ActivityUnion = ActivitiesAddedToPentest | ActivitiesAgreedOnGoingPublic | ActivitiesAssetCreated | ActivitiesAssetSubmissionRejected | ActivitiesBountyAwarded | ActivitiesBountyCancelled | ActivitiesBountySuggested | ActivitiesBugCloned | ActivitiesBugDuplicate | ActivitiesBugFiled | ActivitiesBugInactive | ActivitiesBugInformative | ActivitiesBugNeedsMoreInfo | ActivitiesBugNew | ActivitiesBugNotApplicable | ActivitiesBugPendingProgramReview | ActivitiesBugPriorityChanged | ActivitiesBugReopened | ActivitiesBugResolved | ActivitiesBugRetesting | ActivitiesBugSpam | ActivitiesBugTriaged | ActivitiesBulkAssetsConfirmed | ActivitiesCancelledDisclosureRequest | ActivitiesChangedCampaign | ActivitiesChangedScope | ActivitiesCodeReviewFeedbackPosted | ActivitiesCodeReviewRequested | ActivitiesComment | ActivitiesCommentsClosed | ActivitiesCveIdAdded | ActivitiesDecisionReviewRejected | ActivitiesDecisionReviewRequested | ActivitiesDraftStarted | ActivitiesExternalAdvisoryAdded | ActivitiesExternalUserInvitationCancelled | ActivitiesExternalUserInvited | ActivitiesExternalUserJoined | ActivitiesExternalUserRemoved | ActivitiesGroupAssignedToBug | ActivitiesHackerRequestedMediation | ActivitiesInvitationReceived | ActivitiesManuallyDisclosed | ActivitiesMediationRequested | ActivitiesNmiReminderComment | ActivitiesNobodyAssignedToBug | ActivitiesNotEligibleForBounty | ActivitiesOrganizationAssetsBulkArchived | ActivitiesOrganizationAssetsBulkCreated | ActivitiesPentestAwardAmountLeadUpdated | ActivitiesPentestAwardAmountUpdated | ActivitiesPentestCheckAssigned | ActivitiesPentestCheckCompleted | ActivitiesPentestCheckUnassigned | ActivitiesPentestCheckUpdated | ActivitiesPentestPublished | ActivitiesPentestStarted | ActivitiesPentesterAwarded | ActivitiesPentesterPositionOpened | ActivitiesProgramGatewayStateChanged | ActivitiesProgramGatewayUsersStateChanged | ActivitiesProgramHackerJoined | ActivitiesProgramHackerLeft | ActivitiesProgramInactive | ActivitiesProgramStructuredScopesBulkUpdated | ActivitiesReassignedToTeam | ActivitiesReferenceIdAdded | ActivitiesRemovedFromPentest | ActivitiesReportBecamePublic | ActivitiesReportCollaboratorInvited | ActivitiesReportCollaboratorJoined | ActivitiesReportCustomFieldValueUpdated | ActivitiesReportOrganizationInboxesUpdated | ActivitiesReportQualityEvaluated | ActivitiesReportRemediationGuidanceUpdated | ActivitiesReportRetestApproved | ActivitiesReportRetestCanceled | ActivitiesReportRetestRejected | ActivitiesReportSeverityUpdated | ActivitiesReportTitleUpdated | ActivitiesReportTriageSummaryCreated | ActivitiesReportUndisclosed | ActivitiesReportVulnerabilityInformationUpdated | ActivitiesReportVulnerabilityTypesUpdated | ActivitiesRetestUserExpired | ActivitiesScopeGuidanceRequested | ActivitiesScopeGuidanceSet | ActivitiesSwagAwarded | ActivitiesTeamBountyTableUpdated | ActivitiesTeamPolicyUpdated | ActivitiesTeamPostCreated | ActivitiesTeamPublished | ActivitiesTeamStructuredScopeUpdated | ActivitiesTeamSubmissionStateChanged | ActivitiesUserAssignedToBug | ActivitiesUserBannedFromProgram | ActivitiesUserCompletedRetest | ActivitiesUserJoined | ActivitiesUserLeftRetest
 
 """
 An edge in a connection.
@@ -12341,7 +12287,7 @@ type CreateWorkboardPayload implements MutationResult {
     types: [ErrorTypeEnum]
   ): ErrorConnection!
   was_successful: Boolean!
-  workboard: Workboard!
+  workboard: Workboard
 }
 
 """
@@ -14618,7 +14564,6 @@ type DeleteTriggerPayload implements MutationResult {
   A unique identifier for the client performing the mutation.
   """
   clientMutationId: String
-  deleted_trigger_id: ID
   errors(
     """
     Returns the elements in the list that come after the specified cursor.
@@ -14641,7 +14586,6 @@ type DeleteTriggerPayload implements MutationResult {
     last: Int
     types: [ErrorTypeEnum]
   ): ErrorConnection!
-  team: Team
   was_successful: Boolean!
 }
 
@@ -14868,6 +14812,51 @@ type DeleteWebhookPayload implements MutationResult {
   ): ErrorConnection!
   team: Team
   was_successful: Boolean!
+}
+
+"""
+Autogenerated input type of DeleteWorkboardMutation
+"""
+input DeleteWorkboardMutationInput {
+  """
+  A unique identifier for the client performing the mutation.
+  """
+  clientMutationId: String
+  workboard_id: ID!
+}
+
+"""
+Autogenerated return type of DeleteWorkboardMutation.
+"""
+type DeleteWorkboardMutationPayload implements MutationResult {
+  """
+  A unique identifier for the client performing the mutation.
+  """
+  clientMutationId: String
+  errors(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+    types: [ErrorTypeEnum]
+  ): ErrorConnection!
+  was_successful: Boolean!
+  workboard: Workboard
 }
 
 """
@@ -18574,6 +18563,21 @@ input FiltersWorkboardFilterOrder {
   name: FilterOrderPredicateInput
 }
 
+input FiltersWorkboardViewFilterInput {
+  _and: [FiltersWorkboardViewFilterInput]
+  _not: FiltersWorkboardViewFilterInput
+  _or: [FiltersWorkboardViewFilterInput]
+  database_id: IntPredicateInput
+  id: IntPredicateInput
+  name: StringPredicateInput
+}
+
+input FiltersWorkboardViewFilterOrder {
+  created_at: FilterOrderPredicateInput
+  id: FilterOrderPredicateInput
+  name: FilterOrderPredicateInput
+}
+
 input FiltersWriteUpFilterInput {
   _and: [FiltersWriteUpFilterInput]
   _not: FiltersWriteUpFilterInput
@@ -21067,50 +21071,6 @@ type LeavePrivateProgramPayload implements MutationResult {
   was_successful: Boolean!
 }
 
-"""
-Autogenerated input type of LeaveReportRetestUser
-"""
-input LeaveReportRetestUserInput {
-  """
-  A unique identifier for the client performing the mutation.
-  """
-  clientMutationId: String
-  database_report_id: ID!
-}
-
-"""
-Autogenerated return type of LeaveReportRetestUser.
-"""
-type LeaveReportRetestUserPayload implements MutationResult {
-  """
-  A unique identifier for the client performing the mutation.
-  """
-  clientMutationId: String
-  errors(
-    """
-    Returns the elements in the list that come after the specified cursor.
-    """
-    after: String
-
-    """
-    Returns the elements in the list that come before the specified cursor.
-    """
-    before: String
-
-    """
-    Returns the first _n_ elements from the list.
-    """
-    first: Int
-
-    """
-    Returns the last _n_ elements from the list.
-    """
-    last: Int
-    types: [ErrorTypeEnum]
-  ): ErrorConnection!
-  was_successful: Boolean!
-}
-
 input LikeInput {
   _id: String
 }
@@ -22976,6 +22936,12 @@ type Mutation implements Node {
     """
     input: DeleteWebhookInput!
   ): DeleteWebhookPayload!
+  deleteWorkboard(
+    """
+    Parameters for DeleteWorkboardMutation
+    """
+    input: DeleteWorkboardMutationInput!
+  ): DeleteWorkboardMutationPayload!
   destroyAllConversations(
     """
     Parameters for DestroyAllConversations
@@ -23275,12 +23241,6 @@ type Mutation implements Node {
     """
     input: LeavePrivateProgramInput!
   ): LeavePrivateProgramPayload!
-  leaveReportRetestUser(
-    """
-    Parameters for LeaveReportRetestUser
-    """
-    input: LeaveReportRetestUserInput!
-  ): LeaveReportRetestUserPayload!
   linkReport(
     """
     Parameters for LinkReport
@@ -23371,12 +23331,6 @@ type Mutation implements Node {
     """
     input: ReassignReportToTeamInput!
   ): ReassignReportToTeamPayload!
-  recallBounty(
-    """
-    Parameters for RecallBountyMutation
-    """
-    input: RecallBountyMutationInput!
-  ): RecallBountyMutationPayload!
   reclaimReportRetest(
     """
     Parameters for ReclaimReportRetest
@@ -31137,53 +31091,6 @@ input ReassignReportToTeamInput {
 Autogenerated return type of ReassignReportToTeam.
 """
 type ReassignReportToTeamPayload implements MutationResult {
-  """
-  A unique identifier for the client performing the mutation.
-  """
-  clientMutationId: String
-  errors(
-    """
-    Returns the elements in the list that come after the specified cursor.
-    """
-    after: String
-
-    """
-    Returns the elements in the list that come before the specified cursor.
-    """
-    before: String
-
-    """
-    Returns the first _n_ elements from the list.
-    """
-    first: Int
-
-    """
-    Returns the last _n_ elements from the list.
-    """
-    last: Int
-    types: [ErrorTypeEnum]
-  ): ErrorConnection!
-  was_successful: Boolean!
-}
-
-"""
-Autogenerated input type of RecallBountyMutation
-"""
-input RecallBountyMutationInput {
-  """
-  A unique identifier for the client performing the mutation.
-  """
-  clientMutationId: String
-  id: Int!
-  reason: String
-}
-
-"""
-Autogenerated return type of RecallBountyMutation.
-"""
-type RecallBountyMutationPayload implements MutationResult {
-  activity: ActivitiesBountyRecalled
-
   """
   A unique identifier for the client performing the mutation.
   """
@@ -50101,7 +50008,7 @@ type UpdateWorkboardMutationPayload implements MutationResult {
     types: [ErrorTypeEnum]
   ): ErrorConnection!
   was_successful: Boolean!
-  workboard: Workboard!
+  workboard: Workboard
 }
 
 scalar Upload
@@ -52938,6 +52845,33 @@ type Workboard implements Node {
   The organization that the workboard belongs to
   """
   organization: Organization!
+
+  """
+  The views associated with the workboard
+  """
+  workboard_views(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+    order_by: FiltersWorkboardViewFilterOrder
+    where: FiltersWorkboardViewFilterInput
+  ): WorkboardViewConnection
 }
 
 """
@@ -52974,6 +52908,68 @@ type WorkboardEdge {
   The item at the end of the edge.
   """
   node: Workboard
+}
+
+"""
+A view associated with a workboard
+"""
+type WorkboardView implements Node {
+  """
+  The primary key from the database
+  """
+  _id: ID!
+  id: ID!
+
+  """
+  The name of the workboard view
+  """
+  name: String!
+
+  """
+  The query string for the view
+  """
+  query_string: String!
+
+  """
+  The sort state for the view
+  """
+  sort_state: JSON!
+}
+
+"""
+The connection type for WorkboardView.
+"""
+type WorkboardViewConnection {
+  """
+  A list of edges.
+  """
+  edges: [WorkboardViewEdge]
+
+  """
+  A list of nodes.
+  """
+  nodes: [WorkboardView]
+
+  """
+  Information to aid in pagination.
+  """
+  pageInfo: PageInfo!
+  total_count: Int!
+}
+
+"""
+An edge in a connection.
+"""
+type WorkboardViewEdge {
+  """
+  A cursor for use in pagination.
+  """
+  cursor: String!
+
+  """
+  The item at the end of the edge.
+  """
+  node: WorkboardView
 }
 
 """
