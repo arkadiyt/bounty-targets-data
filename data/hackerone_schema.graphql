@@ -9079,6 +9079,7 @@ input CreateDemoInput {
   with_gateway_feature: Boolean
   with_h1_assets_enterprise_product: Boolean
   with_h1_assets_standard_product: Boolean
+  with_new_seed_data_feature: Boolean
   with_response_engagement: Boolean
   with_self_onboarding_feature: Boolean
   with_spot_checks_feature: Boolean
@@ -25767,6 +25768,7 @@ type Organization implements Node {
   i_can_view_organization_member_groups: Boolean!
   id: ID!
   legacy_features: [Feature]
+  list_all_report_fields_markdown: String!
   name: String!
   organization_inboxes(
     """
@@ -53092,6 +53094,11 @@ type WorkboardView implements Node {
   The sort state for the view
   """
   sort_state: JSON!
+
+  """
+  The workboard associated with the view
+  """
+  workboard: Workboard!
 }
 
 """
