@@ -13225,6 +13225,122 @@ type CveRequestsEdge {
 }
 
 """
+Severity attack complexity for CVSS 4.0
+"""
+enum Cvss4Point0AttackComplexityEnum {
+  high
+  low
+}
+
+"""
+Severity attack requirements for CVSS 4.0
+"""
+enum Cvss4Point0AttackRequirementsEnum {
+  none
+  present
+}
+
+"""
+Severity attack vector for CVSS 4.0
+"""
+enum Cvss4Point0AttackVectorEnum {
+  adjacent
+  local
+  network
+  physical
+}
+
+"""
+Metrics specific to CVSS 4.0 for a severity
+"""
+type Cvss4Point0MetricSet implements Node {
+  attack_complexity: Cvss4Point0AttackComplexityEnum!
+  attack_requirements: Cvss4Point0AttackRequirementsEnum!
+  attack_vector: Cvss4Point0AttackVectorEnum!
+  id: ID!
+  privileges_required: Cvss4Point0PrivilegesRequiredEnum!
+  subsequent_availability: Cvss4Point0SubsequentAvailabilityEnum!
+  subsequent_confidentiality: Cvss4Point0SubsequentConfidentialityEnum!
+  subsequent_integrity: Cvss4Point0SubsequentIntegrityEnum!
+  user_interaction: Cvss4Point0UserInteractionEnum!
+  vulnerable_availability: Cvss4Point0VulnerableAvailabilityEnum!
+  vulnerable_confidentiality: Cvss4Point0VulnerableConfidentialityEnum!
+  vulnerable_integrity: Cvss4Point0VulnerableIntegrityEnum!
+}
+
+"""
+Severity privileges required for CVSS 4.0
+"""
+enum Cvss4Point0PrivilegesRequiredEnum {
+  high
+  low
+  none
+}
+
+"""
+Severity subsequent availability for CVSS 4.0
+"""
+enum Cvss4Point0SubsequentAvailabilityEnum {
+  high
+  low
+  none
+}
+
+"""
+Severity subsequent confidentiality for CVSS 4.0
+"""
+enum Cvss4Point0SubsequentConfidentialityEnum {
+  high
+  low
+  none
+}
+
+"""
+Severity subsequent integrity for CVSS 4.0
+"""
+enum Cvss4Point0SubsequentIntegrityEnum {
+  high
+  low
+  none
+}
+
+"""
+Severity user interaction for CVSS 4.0
+"""
+enum Cvss4Point0UserInteractionEnum {
+  active
+  none
+  passive
+}
+
+"""
+Severity vulnerable availability for CVSS 4.0
+"""
+enum Cvss4Point0VulnerableAvailabilityEnum {
+  high
+  low
+  none
+}
+
+"""
+Severity vulnerable confidentiality for CVSS 4.0
+"""
+enum Cvss4Point0VulnerableConfidentialityEnum {
+  high
+  low
+  none
+}
+
+"""
+Severity vulnerable integrity for CVSS 4.0
+"""
+enum Cvss4Point0VulnerableIntegrityEnum {
+  high
+  low
+  none
+}
+
+"""
 CWE Entry Type
 """
 type CweEntry implements Node {
@@ -35644,6 +35760,7 @@ type Severity implements Node {
   confidentiality: SeverityConfidentialityEnum
   confidentiality_requirement: SeverityConfidentialityRequirementEnum
   created_at: DateTime
+  cvss_4_point_0_metrics: Cvss4Point0MetricSet
   cvss_vector_string: String
   id: ID!
   integrity: SeverityIntegrityEnum
