@@ -12437,7 +12437,7 @@ input CreateWriteUpPreviewInput {
   A unique identifier for the client performing the mutation.
   """
   clientMutationId: String
-  filtered_sections: [WriteUpPreviewSectionEnum!]
+  filtered_sections: [WriteUpPreviewSectionEnum]
   format: WriteUpPreviewFormatEnum!
   write_up_database_id: ID
   write_up_id: ID
@@ -18251,7 +18251,6 @@ input FiltersReportFilterInput {
   pentest: FiltersPentestFilterInput
   reference: StringPredicateInput
   reporter: FiltersUserFilterInput
-  roles: [FiltersReportFilterRoles]
   severity_rating: SeverityRatingEnumInputPredicateInput
   state: ReportStateEnumInputPredicateInput
   structured_scope: FiltersStructuredScopeFilterInput
@@ -18284,10 +18283,6 @@ input FiltersReportFilterOrder {
   submitted_at: FilterOrderPredicateInput
 }
 
-enum FiltersReportFilterRoles {
-  is_reporter
-}
-
 input FiltersReportRetestFilterInput {
   _and: [FiltersReportRetestFilterInput]
   _not: FiltersReportRetestFilterInput
@@ -18297,9 +18292,7 @@ input FiltersReportRetestFilterInput {
   id: IntPredicateInput
   report_retest_users: FiltersReportRetestUserFilterInput
   retest_subscription: FiltersBundleSubscriptionsRetestSubscriptionFilterInput
-  roles: [FiltersReportRetestFilterRoles]
   state: ReportRetestStateEnumInputPredicateInput
-  use_case: [FiltersReportRetestFilterUseCases]
 }
 
 input FiltersReportRetestFilterOrder {
@@ -18307,26 +18300,6 @@ input FiltersReportRetestFilterOrder {
   id: FilterOrderPredicateInput
   needs_approval_at: FilterOrderPredicateInput
   report: FiltersReportFilterOrder
-}
-
-enum FiltersReportRetestFilterRoles {
-  is_pentest_claimable
-  is_private_claimable
-  is_public_claimable
-  is_report_access_granted_via_inbox
-  is_report_external_user
-  is_report_participating_retester
-  is_report_report_collaborator
-  is_report_reporter
-  is_report_someone_visiting_a_public_report
-  is_retester
-}
-
-enum FiltersReportRetestFilterUseCases {
-  HISTORIC
-  INBOX
-  MARKETPLACE
-  PENTEST_CLAIMABLE_USE_CASE
 }
 
 input FiltersReportRetestUserFilterInput {
