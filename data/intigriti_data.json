@@ -5180,6 +5180,18 @@
       "in_scope": [
         {
           "type": "url",
+          "endpoint": "mynk-dash.ninjakiwi.com",
+          "description": null,
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "boomer2.ninjakiwi.com",
+          "description": null,
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
           "endpoint": "analytics.ninjakiwi.com",
           "description": "This domain hosts the API that consumed analytics events from our game clients\n",
           "impact": "Tier 1"
@@ -5239,9 +5251,9 @@
           "impact": "Tier 2"
         },
         {
-          "type": "wildcard",
-          "endpoint": "*.ninjakiwi.com",
-          "description": "This covers any subdomains of ninjakiwi.com other than sub-domains which are managed by authorized third-party services or included in the list below.\n\nThird Party Services\n* https://store.ninjakiwi.com/ - Managed by Shopify\n* https://support.ninjakiwi.com/ - Managed by Zendesk. \n\nPlease note that submitting an issue with any domain in the third party list above will be immediately closed. The services above have their own Bug Bounty programs which you can submit issues to. \n\nThe following domains are explicitly excluded\n* link-chat.ninjakiwi.com\n* chat-staging-v2.ninjakiwi.com\n* link-chat-staging.ninjakiwi.com\n* chat.ninjakiwi.com",
+          "type": "url",
+          "endpoint": "alerts.ninjakiwi.com",
+          "description": null,
           "impact": "Tier 3"
         },
         {
@@ -5264,7 +5276,18 @@
         }
       ],
       "out_of_scope": [
-
+        {
+          "type": "url",
+          "endpoint": "support.ninjakiwi.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "store.ninjakiwi.com",
+          "description": null,
+          "impact": "Out of scope"
+        }
       ]
     }
   },
