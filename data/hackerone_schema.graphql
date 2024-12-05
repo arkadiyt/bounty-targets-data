@@ -13049,8 +13049,8 @@ type CustomerInvitationsProfile implements Node {
   country_codes: [String!]!
   country_restriction_source: CountryRestrictionSourceEnum
   country_restriction_type: CountryRestrictionTypeEnum
-  display_opportunity: Boolean!
   goals: [String!]!
+  hacker_applications_setting: HackerApplicationsSetting
   hacker_cohorts: [String!]!
   hacker_vetting_requirement: HackerVettingRequirementTypeEnum!
   id: ID!
@@ -19046,6 +19046,11 @@ scalar GraphqlScalar
 
 input GteInput {
   gte: Int!
+}
+
+type HackerApplicationsSetting implements Node {
+  allows_applications: Boolean
+  id: ID!
 }
 
 """
