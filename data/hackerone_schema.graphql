@@ -27035,23 +27035,27 @@ type OrganizationReportDocument implements Node {
   assigned_to_user: JSON
   bounties: JSON
   bounties_count: Int
+  bounties_total_awarded_amount: Float
   campaign: JSON
   closed_at: ISO8601DateTime
   created_at: ISO8601DateTime
   custom_fields: JSON
   database_id: ID!
   disclosed_at: ISO8601DateTime
+  engagement: JSON
   graphql_id: ID!
   id: ID!
   inboxes: JSON
+  ineligible_for_bounty: Boolean
   last_activity_at: ISO8601DateTime
   mentions: JSON
   organization: JSON
   participants: JSON
-  program: JSON
+  reference: String
+  reference_url: String
   report: Report
   reporter: JSON
-  severity_rating: String
+  severity: String
   state: String
   structured_scope: JSON
   submitted_at: ISO8601DateTime
