@@ -9731,7 +9731,7 @@
         {
           "type": "other",
           "endpoint": "AOL Help",
-          "description": "## In Scope\n* help.aol.com\n* assistance.aol.fr\n* help.aol.co.uk\n* hilfe.aol.de\n\n## Notes\nAny bugs found in non-production environments will **not** be eligible for the `Same Bug Different Host` bonus if the issue also exists in production.\n\n## Out of Scope\n* assist.aol.com (2nd party service)\n* helpisp.netscape.com\n* helpconnect.netscape.com\n* help.compuserve.com\n",
+          "description": "## In Scope ##\n* help.aol.com\n* assistance.aol.fr\n* help.aol.co.uk\n* hilfe.aol.de\n\n## Notes ##\nAny bugs found in non-production environments will **not** be eligible for the `Same Bug Different Host` bonus if the issue also exists in production.\n\n## Out of Scope ##\n* assist.aol.com (2nd party service)\n* helpisp.netscape.com\n* helpconnect.netscape.com\n* help.compuserve.com\n",
           "impact": "Tier 2"
         },
         {
@@ -9749,7 +9749,7 @@
         {
           "type": "other",
           "endpoint": "AOL Search",
-          "description": "## In Scope\n* search.aol.ca\n* search.aol.co.uk\n* search.aol.com\n* recherche.aol.fr\n* suche.aol.de\n\n## Notes\nAny bugs found in non-production environments will **not** be eligible for the `Same Bug Different Host` bonus if the issue also exists in production.\n",
+          "description": "## In Scope ##\n* search.aol.ca\n* search.aol.co.uk\n* search.aol.com\n* recherche.aol.fr\n* suche.aol.de\n\n## Notes ##\nAny bugs found in non-production environments will **not** be eligible for the `Same Bug Different Host` bonus if the issue also exists in production.\n",
           "impact": "Tier 2"
         },
         {
@@ -9767,7 +9767,7 @@
         {
           "type": "other",
           "endpoint": "Engadget",
-          "description": "## In Scope\n* [APIs](https://api.engadget.com/api)\n* *.engadget.com\n\n## Notes\n* Separate reports for the same or similar payload/issue against multiple international editions, will be marked as duplicates and paid only once for Engadget international editions.\n\n## Out of Scope\n* *.spot.im (3rd party, Spot.IM)\n* *.cn.engadget.com (Engadget International Edition)\n* *.chinese.engadget.com (Engadget International Edition)\n* *.japanese.engadget.com (Engadget International Edition)\n* jobs.engadget.com (3rd party, Jobboard.io)",
+          "description": "## In Scope ##\n* [APIs](https://api.engadget.com/api)\n* *.engadget.com\n\n## Notes ##\n* Separate reports for the same or similar payload/issue against multiple international editions, will be marked as duplicates and paid only once for Engadget international editions.\n\n## Out of Scope ##\n* *.spot.im (3rd party, Spot.IM)\n* *.cn.engadget.com (Engadget International Edition)\n* *.chinese.engadget.com (Engadget International Edition)\n* *.japanese.engadget.com (Engadget International Edition)\n* jobs.engadget.com (3rd party, Jobboard.io)",
           "impact": "Tier 2"
         },
         {
@@ -9779,13 +9779,13 @@
         {
           "type": "other",
           "endpoint": "Low Cost Access",
-          "description": "## In Scope\n* *.isp.netscape.com\n* *.lite.aol.com\n* *.compuserve.com\n* www.wmconnect.com\n\n##Other places to look\n* www.getnetscape.com\n* netscape.compuserve.com\n\n## Out of Scope\n* Subdomains of wmconnect.com outside of www\n\n##Notes\n* These services are designed for delivery through slow internet connections.\n* Registration for these services has been disabled.\n* Help-related pages/domains should be reported to the AOL Help asset.",
+          "description": "## In Scope ##\n* *.isp.netscape.com\n* *.lite.aol.com\n* *.compuserve.com\n* www.wmconnect.com\n\n## Other places to look ##\n* www.getnetscape.com\n* netscape.compuserve.com\n\n## Out of Scope ##\n* Subdomains of wmconnect.com outside of www\n\n## Notes ##\n* These services are designed for delivery through slow internet connections.\n* Registration for these services has been disabled.\n* Help-related pages/domains should be reported to the AOL Help asset.",
           "impact": "Tier 2"
         },
         {
           "type": "other",
           "endpoint": "Membership",
-          "description": "##In Scope\n* https://login.yahoo.com\n* https://login.aol.com\n* https://api.login.yahoo.com\n* https://api.login.aol.com\n* http://credstore.yahoo.com/\n\nSome documentation that may help:\nhttps://developer.yahoo.com/oauth2/guide/\nSpecific paths to target….\nFor `login.*.com`\n* /account/logout\n* /auth/2.0/credentials\n* /auth/1.0/\n* /saml2/\n* /account\n* /oauth2\n* /ylc\n* /account/challenges\n* /account/access\n* /oauth2/device_auth\n* /ctv\n* /activate\n* /forgot\n\nFor `api.login.*.com`\n* /api\n* /oauth2/get_token\n* /oauth2/web_session\n* /oauth2/device_sessions\n* /oauth2/device_authorization\n* /oauth2/device_auth\n* /oauth2/revoke\n* /oauth2/introspect\n\n##Out of Scope\n* Any rate limits for authentication attempts. \n* Any differentiated treatment based on account, browser, IP address etc.\n\n##Limits\n* Limit traffic against our services to < 10/second when probing or testing.",
+          "description": "## In Scope ##\n* https://login.yahoo.com\n* https://login.aol.com\n* https://api.login.yahoo.com\n* https://api.login.aol.com\n* http://credstore.yahoo.com/\n\nSome documentation that may help:\nhttps://developer.yahoo.com/oauth2/guide/\nSpecific paths to target….\nFor `login.*.com`\n* /account/logout\n* /auth/2.0/credentials\n* /auth/1.0/\n* /saml2/\n* /account\n* /oauth2\n* /ylc\n* /account/challenges\n* /account/access\n* /oauth2/device_auth\n* /ctv\n* /activate\n* /forgot\n\nFor `api.login.*.com`\n* /api\n* /oauth2/get_token\n* /oauth2/web_session\n* /oauth2/device_sessions\n* /oauth2/device_authorization\n* /oauth2/device_auth\n* /oauth2/revoke\n* /oauth2/introspect\n\n## Out of Scope ##\n* Any rate limits for authentication attempts. \n* Any differentiated treatment based on account, browser, IP address etc.\n\n## Limits ##\n* Limit traffic against our services to < 10/second when probing or testing.",
           "impact": "Tier 2"
         },
         {
@@ -9983,7 +9983,7 @@
         {
           "type": "url",
           "endpoint": "yimg.com",
-          "description": "yimg is a resource storage and content distribution network (CDN).\n ## Note: ##  Reports submitted that exploit bugs **only** in the context of the `yimg.com` domain are most likely to be closed as `Informative`.  Most bugs in `*.yimg.com` will require a proof-of-concept or proof-of-exploit that escalates into one of the primary brand or product domains (e.g. yahoo.com or aol.com) to be eligible for bounty. CVSS Environmental scores have been set to account for this limitation.\n\nWhat does that mean for my report?\n1. If you show escalation into a trusted domain's context (such as yahoo.com) it will be accepted at 100% bounty rate. A bonus may be applied for different instances within the trusted domain list only; not for other instances of vulnerabilities content on yimg.com.\n2. If you show execution in the context of *.yimg.com only, the vulnerability MAY be accepted by the business owner in some instances. In that case, a minimum bounty would be offered only if the content is removed. There are no \"same bug different host\" or other vulnerability grouping bonus offers for this asset.",
+          "description": "yimg is a resource storage and content distribution network (CDN).\n** Note:  Reports submitted that exploit bugs only in the context of the `yimg.com` domain are most likely to be closed as `Informative`.  Most bugs in `*.yimg.com` will require a proof-of-concept or proof-of-exploit that escalates into one of the primary brand or product domains (e.g. yahoo.com or aol.com) to be eligible for bounty. CVSS Environmental scores have been set to account for this limitation.**\n\nWhat does that mean for my report?\n1. If you show escalation into a trusted domain's context (such as yahoo.com) it will be accepted at 100% bounty rate. A bonus may be applied for different instances within the trusted domain list only; not for other instances of vulnerabilities content on yimg.com.\n2. If you show execution in the context of *.yimg.com only, the vulnerability MAY be accepted by the business owner in some instances. In that case, a minimum bounty would be offered only if the content is removed. There are no \"same bug different host\" or other vulnerability grouping bonus offers for this asset.",
           "impact": "Tier 2"
         }
       ],
