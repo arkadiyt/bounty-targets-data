@@ -27037,6 +27037,7 @@ type OrganizationReportDocument implements Node {
   bounties_total_awarded_amount: Float
   campaign: JSON
   closed_at: ISO8601DateTime
+  created_at: ISO8601DateTime
   custom_fields: JSON
   database_id: ID!
   disclosed_at: ISO8601DateTime
@@ -27059,6 +27060,7 @@ type OrganizationReportDocument implements Node {
   submitted_at: ISO8601DateTime
   substate: String
   title: String
+  updated_at: ISO8601DateTime
   vulnerability_information: String
   weakness: JSON
 }
@@ -39666,6 +39668,30 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
   ): SoftLaunchConnection
   pentest: Pentest
   pentest_feature_enabled: Boolean
+  pentests(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+    order_by: PentestOrderInput
+    secure_order_by: FiltersPentestFilterOrder
+    where: FiltersPentestFilterInput
+  ): PentestConnection @deprecated(reason: "Prefer use of pentest (singular) over pentests (plural)")
   policy: String
   policy_setting: PolicySetting
   posts(
@@ -53274,11 +53300,6 @@ type WorkboardView implements Node {
   The primary key from the database
   """
   _id: ID!
-
-  """
-  The columns shown in the view
-  """
-  columns: [WorkboardViewColumnEnum!]!
   id: ID!
 
   """
@@ -53300,21 +53321,6 @@ type WorkboardView implements Node {
   The workboard associated with the view
   """
   workboard: Workboard!
-}
-
-"""
-Columns in a workboard view
-"""
-enum WorkboardViewColumnEnum {
-  assigned_to
-  id
-  program
-  reference
-  reporter
-  severity_rating
-  submitted_at
-  substate
-  title
 }
 
 """
