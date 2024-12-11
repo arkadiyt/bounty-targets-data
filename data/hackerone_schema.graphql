@@ -12389,6 +12389,7 @@ input CreateWorkboardViewInput {
   A unique identifier for the client performing the mutation.
   """
   clientMutationId: String
+  columns: [WorkboardViewColumnEnum!]
   name: String!
   query_string: String
   sort_state: JSON
@@ -50307,8 +50308,9 @@ input UpdateWorkboardViewInput {
   A unique identifier for the client performing the mutation.
   """
   clientMutationId: String
-  query_string: String
-  sort_state: JSON
+  columns: [WorkboardViewColumnEnum!]!
+  query_string: String!
+  sort_state: JSON!
   workboard_view_id: ID!
 }
 
