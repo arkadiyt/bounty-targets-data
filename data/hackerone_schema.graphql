@@ -4855,6 +4855,16 @@ type Automation implements Node {
 }
 
 """
+An input field configuration for an automation
+"""
+type AutomationConfigurationInputField implements FieldConfigurationInterface & Node {
+  default_value: String!
+  id: ID!
+  key: String!
+  label: String!
+}
+
+"""
 A map field configuration for an automation
 """
 type AutomationConfigurationMapField implements FieldConfigurationInterface & Node {
@@ -4923,7 +4933,7 @@ type AutomationEdge {
 """
 Different types of things can escalate
 """
-union AutomationFieldConfigurationUnion = AutomationConfigurationMapField | AutomationConfigurationSelectField | AutomationConfigurationTextField
+union AutomationFieldConfigurationUnion = AutomationConfigurationInputField | AutomationConfigurationMapField | AutomationConfigurationSelectField | AutomationConfigurationTextField
 
 """
 An specific run of an automation
