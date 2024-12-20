@@ -7557,7 +7557,7 @@ type CompletedRecommendation implements Node {
   id: ID!
   recommendation_id: Int!
   user: User
-  user_id: Int!
+  user_id: Int
 }
 
 """
@@ -16323,6 +16323,7 @@ An earning
 type Earning implements Node {
   _id: ID!
   amount: Float!
+  awarded_by_name: String
   bounty: Bounty
   created_at: DateTime!
   id: ID!
@@ -33069,6 +33070,7 @@ type Report implements ActivitiesInterface & Node & ResourceInterface {
   original_report_id: ID
   pending_action_from: ReportPendingActionFromEnum
   pentest: Pentest
+  pentest_id: ID
 
   """
   A post-submission trigger that notified the hacker after submission. This
@@ -53260,12 +53262,17 @@ Columns in a workboard view
 """
 enum WorkboardViewColumnEnum {
   assigned_to
+  bounties
+  engagement
   id
-  program
+  inboxes
+  last_activity_at
+  last_activity_at_days_ago
   reference
   reporter
   severity_rating
   submitted_at
+  submitted_at_days_ago
   substate
   title
 }
