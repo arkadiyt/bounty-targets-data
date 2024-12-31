@@ -7033,18 +7033,6 @@
     "targets": {
       "in_scope": [
         {
-          "type": "android",
-          "endpoint": "com.robinhood.gateway",
-          "description": null,
-          "impact": "Tier 1"
-        },
-        {
-          "type": "android",
-          "endpoint": "com.robinhood.money",
-          "description": null,
-          "impact": "Tier 1"
-        },
-        {
           "type": "wildcard",
           "endpoint": "*.rhinternal.net",
           "description": null,
@@ -7085,10 +7073,27 @@
           "endpoint": "com.robinhood.android",
           "description": null,
           "impact": "Tier 1"
+        },
+        {
+          "type": "android",
+          "endpoint": "com.robinhood.gateway",
+          "description": null,
+          "impact": "Tier 1"
+        },
+        {
+          "type": "android",
+          "endpoint": "com.robinhood.money",
+          "description": null,
+          "impact": "Tier 1"
         }
       ],
       "out_of_scope": [
-
+        {
+          "type": "url",
+          "endpoint": "shop.robinhood.com",
+          "description": "Report findings to Brilliant Made (https://www.brilliantmade.com/)",
+          "impact": "Out of scope"
+        }
       ]
     }
   },
