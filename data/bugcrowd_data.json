@@ -12124,146 +12124,6 @@
     }
   },
   {
-    "name": "LastPass",
-    "url": "https://bugcrowd.com/engagements/lastpass",
-    "allows_disclosure": true,
-    "managed_by_bugcrowd": true,
-    "safe_harbor": "partial",
-    "max_payout": 5000,
-    "targets": {
-      "in_scope": [
-        {
-          "type": "website",
-          "target": "https://lastpass.com",
-          "uri": "https://lastpass.com",
-          "name": "https://lastpass.com",
-          "ipAddress": null
-        },
-        {
-          "type": "other",
-          "target": "https://lastpass.com/misc_download2.php",
-          "uri": "https://lastpass.com/misc_download2.php",
-          "name": "LastPass browser extensions (Chrome / Safari / Edge / Firefox)",
-          "ipAddress": null
-        },
-        {
-          "type": "other",
-          "target": "https://lastpass.com/misc_download2.php",
-          "uri": "https://lastpass.com/misc_download2.php",
-          "name": "Local computer apps (UWP application / Windows installer (MSI) / MacOS)",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "https://support.lastpass.com",
-          "uri": "https://support.lastpass.com",
-          "name": "https://support.lastpass.com",
-          "ipAddress": null
-        },
-        {
-          "type": "other",
-          "target": "Workstation MFA (WMFA)",
-          "uri": "",
-          "name": "Workstation MFA (WMFA)",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "https://blog.lastpass.com",
-          "uri": "https://blog.lastpass.com",
-          "name": "https://blog.lastpass.com",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "https://admin.lastpass.com",
-          "uri": "https://admin.lastpass.com",
-          "name": "https://admin.lastpass.com",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "https://auth.lastpass.com",
-          "uri": "https://auth.lastpass.com",
-          "name": "https://auth.lastpass.com",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "https://accounts.lastpass.com",
-          "uri": "https://accounts.lastpass.com",
-          "name": "https://accounts.lastpass.com",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "https://www.lastpass.com",
-          "uri": "https://www.lastpass.com",
-          "name": "https://www.lastpass.com",
-          "ipAddress": ""
-        },
-        {
-          "type": "android",
-          "target": "https://play.google.com/store/apps/details?id=com.lastpass.lpandroid",
-          "uri": "https://play.google.com/store/apps/details?id=com.lastpass.lpandroid",
-          "name": "LastPass Password Manager (Android)",
-          "ipAddress": ""
-        },
-        {
-          "type": "android",
-          "target": "https://play.google.com/store/apps/details?id=com.lastpass.authenticator&hl=en_US&gl=US",
-          "uri": "https://play.google.com/store/apps/details?id=com.lastpass.authenticator&hl=en_US&gl=US",
-          "name": "LastPass Authenticator (Android)",
-          "ipAddress": null
-        },
-        {
-          "type": "ios",
-          "target": "https://apps.apple.com/us/app/lastpass-password-manager/id324613447",
-          "uri": "https://apps.apple.com/us/app/lastpass-password-manager/id324613447",
-          "name": "LastPass Password Manager (iOS)",
-          "ipAddress": ""
-        },
-        {
-          "type": "ios",
-          "target": "https://apps.apple.com/us/app/lastpass-authenticator/id1079110004",
-          "uri": "https://apps.apple.com/us/app/lastpass-authenticator/id1079110004",
-          "name": "LastPass Authenticator (iOS)",
-          "ipAddress": null
-        }
-      ],
-      "out_of_scope": [
-        {
-          "type": "website",
-          "target": "https://identity.lastpass.com",
-          "uri": null,
-          "name": "https://identity.lastpass.com",
-          "ipAddress": null
-        },
-        {
-          "type": "other",
-          "target": "Lastpass CLI tool",
-          "uri": null,
-          "name": "Lastpass CLI tool",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "https://info.lastpass.com",
-          "uri": "",
-          "name": "https://info.lastpass.com",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "https://forums.lastpass.com",
-          "uri": "",
-          "name": "https://forums.lastpass.com",
-          "ipAddress": null
-        }
-      ]
-    }
-  },
-  {
     "name": "Latitude Financial Services Bug Bounty ",
     "url": "https://bugcrowd.com/engagements/latitude-financial-service-bugbounty",
     "allows_disclosure": false,
@@ -15822,6 +15682,98 @@
           "name": "https://*.trustweek2021.com",
           "ipAddress": null
         }
+      ]
+    }
+  },
+  {
+    "name": "OpenAI",
+    "url": "https://bugcrowd.com/engagements/openai",
+    "allows_disclosure": true,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "partial",
+    "max_payout": 6500,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "api",
+          "target": "https://api.openai.com",
+          "uri": "https://api.openai.com",
+          "name": "api.openai.com",
+          "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "https://chat.openai.com",
+          "uri": "https://chat.openai.com",
+          "name": "ChatGPT",
+          "ipAddress": ""
+        },
+        {
+          "type": "api",
+          "target": "https://chat.openai.com",
+          "uri": "https://chat.openai.com",
+          "name": "ChatGPT Plugins",
+          "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "Third Party Targets",
+          "uri": "",
+          "name": "Third Party Targets",
+          "ipAddress": ""
+        },
+        {
+          "type": "api",
+          "target": "OpenAI API Keys",
+          "uri": "",
+          "name": "OpenAI API Keys",
+          "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "https://*.openai.org",
+          "uri": "https://*.openai.org",
+          "name": "https://openai.org",
+          "ipAddress": ""
+        },
+        {
+          "type": "api",
+          "target": "https://*.openai.org",
+          "uri": "https://*.openai.org",
+          "name": "*.openai.org",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "https://openai.com/",
+          "uri": "https://openai.com/",
+          "name": "openai.com",
+          "ipAddress": null
+        },
+        {
+          "type": "other",
+          "target": "*.openai.com",
+          "uri": "",
+          "name": "*.openai.com",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "https://platform.openai.com/playground",
+          "uri": "https://platform.openai.com/playground",
+          "name": "Developer Platform Playground",
+          "ipAddress": null
+        },
+        {
+          "type": "other",
+          "target": "Other",
+          "uri": "",
+          "name": "Other",
+          "ipAddress": ""
+        }
+      ],
+      "out_of_scope": [
+
       ]
     }
   },
