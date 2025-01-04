@@ -116,43 +116,6 @@
     }
   },
   {
-    "id": "554fc6c5-4ffa-4682-a3ba-7e86696e9b17",
-    "name": "Aikido Security: Bug Bounty Program",
-    "company_handle": "aikido",
-    "handle": "aikido",
-    "url": "https://www.intigriti.com/programs/aikido/aikido/detail",
-    "status": "open",
-    "confidentiality_level": "public",
-    "tacRequired": false,
-    "twoFactorRequired": false,
-    "min_bounty": {
-      "value": 50,
-      "currency": "EUR"
-    },
-    "max_bounty": {
-      "value": 2500,
-      "currency": "EUR"
-    },
-    "targets": {
-      "in_scope": [
-        {
-          "type": "url",
-          "endpoint": "app.aikido.dev",
-          "description": "This is our main application, which hosts the API as well as the front-end application.\n\nOur public API is also accessible via this host. Documentation is available here: https://apidocs.aikido.dev/.",
-          "impact": "Tier 2"
-        }
-      ],
-      "out_of_scope": [
-        {
-          "type": "wildcard",
-          "endpoint": "*.aikido.dev",
-          "description": null,
-          "impact": "Out of scope"
-        }
-      ]
-    }
-  },
-  {
     "id": "ac81c127-b11b-469e-8060-e0fbb9c9c398",
     "name": "Aikido Security: Zen by Aikido ",
     "company_handle": "aikido",
@@ -1005,6 +968,146 @@
     }
   },
   {
+    "id": "efd8bd86-a986-4b4a-9eda-c9a6a1a6b540",
+    "name": "CM.com",
+    "company_handle": "cmcom",
+    "handle": "cmcom",
+    "url": "https://www.intigriti.com/programs/cmcom/cmcom/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 25,
+      "currency": "EUR"
+    },
+    "max_bounty": {
+      "value": 3500,
+      "currency": "EUR"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "url",
+          "endpoint": "login.cm.com",
+          "description": null,
+          "impact": "Tier 1"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.ticketing.cm.com",
+          "description": "Login to your account and go to https://www.cm.com/en-gb/app/ticketing/\nFrom here you can create tickets and much more!\nMake sure to take a look at the user-side ticket store as well (https://store.ticketing.cm.com/..)",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.cm.com",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.cmtelecom.com",
+          "description": "Some of the applications that are in our scope use our old api. \nIf you find a bug on this api and it is from a product that is in scope, it is valid.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "cm.com/[locale]/app/*",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "cm.com/[locale]/register",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "cm.com/app/messagingtrial/",
+          "description": "An application that makes it possible for developers to do a limited test of sending messages using the CM.COM business messaging API.\n\nWhat we would like to know is:\n* Can the application be exploited to allow sending more than the allowed number of messages?\n* Can the app be exploited to send to other recipients besides the whitelisted recipients?",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.cm.com",
+          "description": null,
+          "impact": "Tier 3"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.appmiral.com",
+          "description": null,
+          "impact": "No Bounty"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.cm.com",
+          "description": null,
+          "impact": "No Bounty"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.cmtelecom.com",
+          "description": null,
+          "impact": "No Bounty"
+        },
+        {
+          "type": "ios",
+          "endpoint": "1199521324",
+          "description": "Right now we don't have a way to make test accounts for these apps, this will be added in the future",
+          "impact": "No Bounty"
+        },
+        {
+          "type": "ios",
+          "endpoint": "1579530451",
+          "description": "Right now we don't have a way to make test accounts for these apps, this will be added in the future",
+          "impact": "No Bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "appmiral.com",
+          "description": null,
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "building-blocks.com",
+          "description": null,
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "cmcom.atlassian.net",
+          "description": null,
+          "impact": "Tier 3"
+        },
+        {
+          "type": "android",
+          "endpoint": "com.cm.cashregister",
+          "description": "Right now we don't have a way to make test accounts for these apps, this will be added in the future",
+          "impact": "No Bounty"
+        },
+        {
+          "type": "android",
+          "endpoint": "com.ticketflow.ticketscanner",
+          "description": "Right now we don't have a way to make test accounts for these apps, this will be added in the future",
+          "impact": "No Bounty"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "demo.globalticket.com/*",
+          "description": "GlobalTicket is one of our integrations. \nBe sure to check out `/cms` to try and work your way into it.",
+          "impact": "No Bounty"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
     "id": "0083a5bf-e54f-4f79-a972-12a795272c8b",
     "name": "Canada Post + Purolator - Responsible Disclosure Program",
     "company_handle": "innovapost",
@@ -1556,6 +1659,38 @@
     }
   },
   {
+    "id": "4981522f-5675-4f46-b7b7-e065d30c8d79",
+    "name": "Cross Border Fines",
+    "company_handle": "bpost",
+    "handle": "crossborderfines",
+    "url": "https://www.intigriti.com/programs/bpost/crossborderfines/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 100,
+      "currency": "EUR"
+    },
+    "max_bounty": {
+      "value": 3000,
+      "currency": "EUR"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "url",
+          "endpoint": "https://justonweb.be/fines/",
+          "description": null,
+          "impact": "Tier 2"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
     "id": "13cfc6fe-92b2-4a56-8577-855ff0bc2f1c",
     "name": "Cyber Security Coalition",
     "company_handle": "cybersecuritycoalition",
@@ -1714,187 +1849,6 @@
       ],
       "out_of_scope": [
 
-      ]
-    }
-  },
-  {
-    "id": "bd22f48d-633e-4b26-bf71-e4778d41b247",
-    "name": "DataCamp",
-    "company_handle": "datacamp",
-    "handle": "datacamp",
-    "url": "https://www.intigriti.com/programs/datacamp/datacamp/detail",
-    "status": "open",
-    "confidentiality_level": "public",
-    "tacRequired": false,
-    "twoFactorRequired": false,
-    "min_bounty": {
-      "value": 25,
-      "currency": "EUR"
-    },
-    "max_bounty": {
-      "value": 1500,
-      "currency": "EUR"
-    },
-    "targets": {
-      "in_scope": [
-        {
-          "type": "url",
-          "endpoint": "assessment-api.datacamp.com",
-          "description": null,
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "app.datacamp.com/certification",
-          "description": null,
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "app.datacamp.com/groups",
-          "description": null,
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "app.datacamp.com/learn",
-          "description": null,
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "assessment-v2.datacamp.com ",
-          "description": null,
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "assessment.datacamp.com",
-          "description": null,
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "campus.datacamp.com",
-          "description": null,
-          "impact": "Tier 2"
-        },
-        {
-          "type": "android",
-          "endpoint": "com.datacamp",
-          "description": null,
-          "impact": "Tier 2"
-        },
-        {
-          "type": "ios",
-          "endpoint": "https://apps.apple.com/au/app/datacamp-learn-data-science/id1263413087",
-          "description": null,
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "practice.datacamp.com",
-          "description": null,
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "projects.datacamp.com",
-          "description": null,
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "www.datacamp.com",
-          "description": null,
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "www.datacamp.com/datalab",
-          "description": null,
-          "impact": "Tier 2"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.datacamp.com",
-          "description": null,
-          "impact": "Tier 3"
-        }
-      ],
-      "out_of_scope": [
-        {
-          "type": "wildcard",
-          "endpoint": "*.it.datacamp.com",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "app.datacamp.com/recruit",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "ast-viewer.datacamp.com",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "confluence.datacamp.com",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "intranet.datacamp.com",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "jira.datacamp.com",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "links.datacamp.com",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "rdocumentation.datacamp.com",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "signature.datacamp.com",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "status.datacamp.com",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "support.datacamp.com",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "talent-jobs-api.datacamp.com",
-          "description": null,
-          "impact": "Out of scope"
-        }
       ]
     }
   },
@@ -8998,80 +8952,6 @@
           "description": null,
           "impact": "Out of scope"
         }
-      ]
-    }
-  },
-  {
-    "id": "c5a9bbd6-2139-4ec9-bdcc-8e2a5082fd7e",
-    "name": "Venly",
-    "company_handle": "arkane",
-    "handle": "arkanenetwork",
-    "url": "https://www.intigriti.com/programs/arkane/arkanenetwork/detail",
-    "status": "open",
-    "confidentiality_level": "public",
-    "tacRequired": false,
-    "twoFactorRequired": false,
-    "min_bounty": {
-      "value": 50,
-      "currency": "EUR"
-    },
-    "max_bounty": {
-      "value": 5000,
-      "currency": "EUR"
-    },
-    "targets": {
-      "in_scope": [
-        {
-          "type": "url",
-          "endpoint": "api-wallet.venly.io",
-          "description": null,
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "api.arkane.network",
-          "description": null,
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "connect.arkane.network ",
-          "description": null,
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "connect.venly.io",
-          "description": null,
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "login.arkane.network",
-          "description": null,
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "login.venly.io",
-          "description": null,
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "wallet.venly.io",
-          "description": null,
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "api-wallet-sandbox.venly.io",
-          "description": null,
-          "impact": "Tier 3"
-        }
-      ],
-      "out_of_scope": [
-
       ]
     }
   },
