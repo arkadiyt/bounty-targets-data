@@ -31493,6 +31493,57 @@ type ReconWorkspaceArtifactEdge {
 }
 
 """
+Recon workspace artifact search result
+"""
+type ReconWorkspaceArtifactSearchResult implements Node {
+  artifact: ReconWorkspaceArtifact
+  artifact_id: ID!
+  artifact_name: String
+  content: String
+  end_index: Int
+  end_line_number: Int
+  id: ID!
+  start_index: Int
+  start_line_number: Int
+}
+
+"""
+An edge in a connection.
+"""
+type ReconWorkspaceArtifactSearchResultEdge {
+  """
+  A cursor for use in pagination.
+  """
+  cursor: String!
+
+  """
+  The item at the end of the edge.
+  """
+  node: ReconWorkspaceArtifactSearchResult
+}
+
+"""
+The connection type for ReconWorkspaceArtifactSearchResult.
+"""
+type ReconWorkspaceArtifactSearchResultsConnection {
+  """
+  A list of edges.
+  """
+  edges: [ReconWorkspaceArtifactSearchResultEdge]
+
+  """
+  A list of nodes.
+  """
+  nodes: [ReconWorkspaceArtifactSearchResult]
+
+  """
+  Information to aid in pagination.
+  """
+  pageInfo: PageInfo!
+  total_count: Int!
+}
+
+"""
 The connection type for ReconWorkspaceArtifact.
 """
 type ReconWorkspaceArtifactsConnection {
@@ -31548,6 +31599,28 @@ type ReconWorkspaceContext implements Node {
   owner: User
   related_object_id: String
   related_object_type: String
+  search(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+    search_query: String
+  ): ReconWorkspaceArtifactSearchResultsConnection
   target: Team
   updated_at: DateTime
 }
