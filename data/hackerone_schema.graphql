@@ -1125,6 +1125,7 @@ interface ActivitiesInterface {
     last: Int
     not_types: [ActivityTypes]
     order_by: ActivityOrderInput = {direction: ASC, field: created_at}
+    report_id: Int
     team_handle: String
     types: [ActivityTypes]
 
@@ -32846,6 +32847,7 @@ type Report implements ActivitiesInterface & Node & ResourceInterface {
     last: Int
     not_types: [ActivityTypes]
     order_by: ActivityOrderInput = {direction: ASC, field: created_at}
+    report_id: Int
     team_handle: String
     types: [ActivityTypes]
 
@@ -38935,6 +38937,7 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
     last: Int
     not_types: [ActivityTypes]
     order_by: ActivityOrderInput = {direction: ASC, field: created_at}
+    report_id: Int
     team_handle: String
     types: [ActivityTypes]
 
@@ -50687,6 +50690,7 @@ type User implements ActivitiesInterface & Node & ResourceInterface {
     last: Int
     not_types: [ActivityTypes]
     order_by: ActivityOrderInput = {direction: ASC, field: created_at}
+    report_id: Int
     team_handle: String
     types: [ActivityTypes]
 
@@ -53101,6 +53105,7 @@ type WhitelistedReporter implements ActivitiesInterface & Node & ResourceInterfa
     last: Int
     not_types: [ActivityTypes]
     order_by: ActivityOrderInput = {direction: ASC, field: created_at}
+    report_id: Int
     team_handle: String
     types: [ActivityTypes]
 
