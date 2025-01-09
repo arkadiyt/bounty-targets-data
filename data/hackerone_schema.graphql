@@ -36396,10 +36396,12 @@ type SlackUser implements Node {
 A hacker application for a soft launched program
 """
 type SoftLaunchApplication implements Node {
-  accepted_at: ISO8601DateTime
+  accepted_at: DateTime
   id: ID!
   recipient: User!
+  state: InvitationStateEnum!
   team: Team!
+  token: String!
 }
 
 """
@@ -51388,6 +51390,9 @@ type User implements ActivitiesInterface & Node & ResourceInterface {
     Returns the last _n_ elements from the list.
     """
     last: Int
+    order_by: InvitationOrderInput
+    state: [InvitationStateEnum] = null
+    team_handle: String = null
   ): SoftLaunchApplicationConnection
   soft_launch_invitations(
     """
