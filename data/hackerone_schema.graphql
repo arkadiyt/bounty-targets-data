@@ -26104,7 +26104,7 @@ type Organization implements Node {
     secure_order_by: FiltersTeamFilterOrder
     where: FiltersTeamFilterInput
   ): TeamConnection
-  should_see_spend_tracker_custom_skus_banner: Boolean
+  skus_alert_banner: String
   solutions(
     """
     Returns the elements in the list that come after the specified cursor.
