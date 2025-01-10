@@ -8611,12 +8611,6 @@
     "targets": {
       "in_scope": [
         {
-          "type": "other",
-          "endpoint": "Web SDK",
-          "description": "https://www.npmjs.com/package/truelayer-web-sdk\n\nA lightweight web SDK for integrating Truelayer's payment services into your web application.",
-          "impact": "Tier 3"
-        },
-        {
           "type": "url",
           "endpoint": "api.truelayer[-sandbox].com",
           "description": "The majority of our API endpoints live here",
@@ -8774,12 +8768,24 @@
         },
         {
           "type": "other",
+          "endpoint": "Web SDK",
+          "description": "https://www.npmjs.com/package/truelayer-web-sdk\n\nA lightweight web SDK for integrating Truelayer's payment services into your web application.",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "other",
           "endpoint": "Rust SDK",
           "description": "https://github.com/TrueLayer/truelayer-rust\n\nCurrently we are not paying bounties for this asset as it's still in alpha.",
           "impact": "No Bounty"
         }
       ],
       "out_of_scope": [
+        {
+          "type": "url",
+          "endpoint": "ok.truelayer.com",
+          "description": "This is a third party service, any issues should be reported to them. If you can demonstrate a high impact issue relating to this asset then please still contact us.",
+          "impact": "Out of scope"
+        },
         {
           "type": "url",
           "endpoint": "banks.truelayer.com",
