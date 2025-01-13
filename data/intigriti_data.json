@@ -8348,6 +8348,18 @@
     "targets": {
       "in_scope": [
         {
+          "type": "wildcard",
+          "endpoint": "*.weareone.world",
+          "description": "Currently as T2, will be evaluated on individual basis.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.stag.weareone.world",
+          "description": null,
+          "impact": "Tier 3"
+        },
+        {
           "type": "url",
           "endpoint": "artists.tomorrowland.com/production-website/33117",
           "description": null,
@@ -8355,8 +8367,14 @@
         },
         {
           "type": "url",
-          "endpoint": "cognito-idp.eu-west-1.amazonaws.com",
-          "description": null,
+          "endpoint": "belgium.tomorrowland.com",
+          "description": "Vulnerabilities found on either winter/brasil/belgium .tomorrowland.com will be considered duplicate.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "brasil.tomorrowland.com",
+          "description": "Vulnerabilities found on either winter/brasil/belgium .tomorrowland.com will be considered duplicate.",
           "impact": "Tier 2"
         },
         {
@@ -8397,6 +8415,30 @@
         },
         {
           "type": "url",
+          "endpoint": "tlbe.prod.tomorrowland.com",
+          "description": "Vulnerabilities found on either TLFR/TLBR/TLBE.prod.tomorrowland.com will be considered duplicate.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "tlbr.prod.tomorrowland.com",
+          "description": "Vulnerabilities found on either TLFR/TLBR/TLBE.prod.tomorrowland.com will be considered duplicate.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "tlfr.prod.tomorrowland.com",
+          "description": "Vulnerabilities found on either TLFR/TLBR/TLBE.prod.tomorrowland.com will be considered duplicate.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "winter.tomorrowland.com",
+          "description": "Vulnerabilities found on either winter/brasil/belgium .tomorrowland.com will be considered duplicate.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
           "endpoint": "winterpackages.tomorrowland.com",
           "description": "Out of Scope: bypassing payment process",
           "impact": "Tier 2"
@@ -8406,6 +8448,12 @@
           "endpoint": "www.tomorrowland.com",
           "description": null,
           "impact": "Tier 2"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.stag.tomorrowland.com",
+          "description": null,
+          "impact": "Tier 3"
         },
         {
           "type": "wildcard",
