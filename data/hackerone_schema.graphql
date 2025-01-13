@@ -19853,6 +19853,7 @@ type IntegrationEventsConfiguration implements Node {
   program_hacker_joined: Boolean!
   program_hacker_left: Boolean!
   program_structured_scopes_bulk_updated: Boolean!
+  reassigned_to_team: Boolean!
   reference_id_added: Boolean!
   report_agreed_on_going_public: Boolean!
   report_became_public: Boolean!
@@ -19902,6 +19903,7 @@ input IntegrationEventsConfigurationInputType {
   program_hacker_joined: Boolean!
   program_hacker_left: Boolean!
   program_structured_scopes_bulk_updated: Boolean!
+  reassigned_to_team: Boolean!
   reference_id_added: Boolean!
   report_agreed_on_going_public: Boolean!
   report_became_public: Boolean!
@@ -19980,6 +19982,11 @@ enum IntegrationEventsEnum {
   When a program's scope is updated.
   """
   program_structured_scopes_bulk_updated
+
+  """
+  When a report is reassigned to this program.
+  """
+  reassigned_to_team
 
   """
   The reference ID of a report changed
