@@ -6236,6 +6236,12 @@
         },
         {
           "type": "url",
+          "endpoint": "https://www.pdq.com/",
+          "description": "Our main marketing website",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
           "endpoint": "https://houston-staging.pdq.tools",
           "description": "Test environment for PDQ Connect",
           "impact": "Tier 3"
@@ -6245,15 +6251,15 @@
           "endpoint": "https://portal-staging.pdq.tools/ ",
           "description": "Test environment for our billing portal",
           "impact": "Tier 3"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "https://*.pdq.com/ ",
-          "description": "Our main marketing website",
-          "impact": "Tier 2"
         }
       ],
       "out_of_scope": [
+        {
+          "type": "wildcard",
+          "endpoint": "https://*.pdq.com/",
+          "description": null,
+          "impact": "Out of scope"
+        },
         {
           "type": "wildcard",
           "endpoint": "https://*.simplemdm.com/ ",
