@@ -11190,6 +11190,7 @@ type CreateSeverityFromHashPayload implements MutationResult {
     last: Int
     types: [ErrorTypeEnum]
   ): ErrorConnection!
+  report: Report
   severity: Severity
   was_successful: Boolean!
 }
@@ -18493,7 +18494,6 @@ input FiltersTeamFilterInput {
   _or: [FiltersTeamFilterInput]
   allows_collaboration: BooleanPredicateInput
   allows_private_disclosure: BooleanPredicateInput
-  asset_credentials_set_up: BooleanPredicateInput
   bookmarked_team_users: FiltersUserFilterInput
   campaigns: FiltersCampaignFilterInput
   external_program: FiltersExternalProgramFilterInput
@@ -21540,6 +21540,7 @@ enum LlmConversationMessageArtifactTypeEnum {
   paraphraser
   prompt
   send_email
+  severity_suggestion
   switch_play
   title_suggestion
   tool_use
