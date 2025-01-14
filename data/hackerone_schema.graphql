@@ -4303,6 +4303,22 @@ input AssetOrderInputType {
 }
 
 """
+Asset package details
+"""
+type AssetPackage implements Node {
+  api_enabled: Boolean!
+  attachments_enabled: Boolean!
+  dashboard_enabled: Boolean!
+  dns_enabled: Boolean!
+  id: ID!
+  inventory_enabled: Boolean!
+  key: String!
+  name: String!
+  review_enabled: Boolean!
+  risks_enabled: Boolean!
+}
+
+"""
 An asset reachability object
 """
 type AssetReachability implements Node {
@@ -25511,6 +25527,7 @@ type Organization implements Node {
     last: Int
   ): AsmTagConnection
   asset_import(id: ID!): AssetImport
+  asset_package: AssetPackage
   asset_statistics(period: AssetStatisticPeriodEnum!): AssetStatistics
   asset_types: [String]
   assets(
