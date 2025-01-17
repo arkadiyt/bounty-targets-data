@@ -11347,6 +11347,7 @@ input CreateSpotCheckInput {
   A unique identifier for the client performing the mutation.
   """
   clientMutationId: String
+  excluded_hackers: [String!]
   hacker_usernames: [String!]
   instructions: String!
   name: String!
@@ -36696,6 +36697,7 @@ type SpotCheck implements Node {
   attachments: [Attachment!]!
   budget: Int!
   estimated_end_date: Date!
+  excluded_hackers: [String!]!
   id: ID!
   instructions: String!
   name: String!
