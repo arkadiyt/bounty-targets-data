@@ -18042,7 +18042,9 @@ input FiltersHaiPlayFilterInput {
   _not: FiltersHaiPlayFilterInput
   _or: [FiltersHaiPlayFilterInput]
   id: IntPredicateInput
+  organizations: FiltersOrganizationFilterInput
   owner: String
+  system: BooleanPredicateInput
 }
 
 input FiltersHaiPlayFilterOrder {
@@ -19379,6 +19381,7 @@ type HaiAttachmentData implements Node {
 A Hai Play
 """
 type HaiPlay implements Node {
+  _id: ID!
   color: String
   conversation_starters: [String!]!
   created_at: DateTime!
@@ -25662,6 +25665,27 @@ type Organization implements Node {
   Number of automation runs that can be executed this month
   """
   automation_entitlement_this_month: Int
+  automation_templates(
+    """
+    Returns the elements in the list that come after the specified cursor.
+    """
+    after: String
+
+    """
+    Returns the elements in the list that come before the specified cursor.
+    """
+    before: String
+
+    """
+    Returns the first _n_ elements from the list.
+    """
+    first: Int
+
+    """
+    Returns the last _n_ elements from the list.
+    """
+    last: Int
+  ): AutomationTemplateConnection
 
   """
   Number of automation runs executed this month
@@ -30096,27 +30120,6 @@ type Query implements Node {
     report_ids: [Int!]!
   ): TeamConnection
   automation(organization_handle: String!, uid: String!): Automation
-  automation_templates(
-    """
-    Returns the elements in the list that come after the specified cursor.
-    """
-    after: String
-
-    """
-    Returns the elements in the list that come before the specified cursor.
-    """
-    before: String
-
-    """
-    Returns the first _n_ elements from the list.
-    """
-    first: Int
-
-    """
-    Returns the last _n_ elements from the list.
-    """
-    last: Int
-  ): AutomationTemplateConnection
   background_check: BackgroundCheck
   bank_transfer_reference: BankTransferReference
   campaign_objectives(
