@@ -5109,6 +5109,7 @@ input AutosavePentestOpportunityInput {
   compliance_framework: String
   compliance_framework_other: String
   consumption_subscription_id: ID
+  cta_required: Boolean
   customer_email: String
   customer_note: String
   desired_outcomes: [String!]
@@ -28201,6 +28202,7 @@ type PentestOpportunity implements Node {
     """
     last: Int
   ): PentestOpportunityCsaScopeConnection
+  cta_required: Boolean
   customer_email: String
   customer_note: String
   desired_outcomes: [String!]
@@ -34691,6 +34693,7 @@ input ReviewCompletePentestOpportunityInput {
   compliance_framework: String
   compliance_framework_other: String
   consumption_subscription_id: ID
+  cta_required: Boolean
   customer_email: String
   customer_note: String
   desired_outcomes: [String!]
@@ -34765,6 +34768,7 @@ input ReviewPentestOpportunityInput {
   compliance_framework: String
   compliance_framework_other: String
   consumption_subscription_id: ID
+  cta_required: Boolean
   customer_email: String
   customer_note: String
   desired_outcomes: [String!]
