@@ -10046,12 +10046,6 @@
         },
         {
           "type": "url",
-          "endpoint": "wolt.com",
-          "description": "- Used by: Everybody.\n- Our main web page.\n- Notable use-cases: Offering an in-browser JavaScript app to interact with other APIs and services. Offering HTTP endpoints to interact with this service's own APIs.",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
           "endpoint": "corporate.wolt.com",
           "description": "#### Keywords: admin\n- Used by: Wolt employees, corporate customers.\n- Admin portal for Wolt's corporate customers.\n- Your JWT as a regular wolt.com user should grant you limited access.",
           "impact": "Tier 1"
@@ -10078,6 +10072,12 @@
           "type": "url",
           "endpoint": "restaurant-api.wolt.com",
           "description": "- Used by: Regular wolt.com users, Wolt employees, corporate customers, delivery partners, store managers.\n- Notable use-cases: Creating and editing users, placing orders, tracking orders, setting prices.\n- Your JWT as a regular wolt.com user should grant you access to most functionality for your user type.\n",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "wolt.com",
+          "description": "- Used by: Everybody.\n- Our main web page.\n- Notable use-cases: Offering an in-browser JavaScript app to interact with other APIs and services. Offering HTTP endpoints to interact with this service's own APIs.",
           "impact": "Tier 1"
         },
         {
@@ -10112,6 +10112,12 @@
         }
       ],
       "out_of_scope": [
+        {
+          "type": "url",
+          "endpoint": "links.wolt.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
         {
           "type": "url",
           "endpoint": "blog.wolt.com",
