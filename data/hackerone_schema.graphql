@@ -31320,6 +31320,7 @@ type Recommendation implements Node {
 Possible types of recon information
 """
 enum ReconInformationTypeEnum {
+  audio
   compressed
   configuration
   document
@@ -31331,6 +31332,7 @@ enum ReconInformationTypeEnum {
   penetration_testing_results
   sbom
   source_code
+  text
   unknown
   video
   vulnerability_scan_report
@@ -39446,7 +39448,6 @@ type Team implements ActivitiesInterface & Node & ResourceInterface {
   i_can_manage_team_members: Boolean!
   i_can_manage_webhooks: Boolean!
   i_can_reset_demo_environments: Boolean!
-  i_can_see_disclosure_declaration: Boolean!
   i_can_see_report_submit_button: Boolean
   i_can_self_onboard: Boolean!
   i_can_view_advanced_vetting_page: Boolean!
