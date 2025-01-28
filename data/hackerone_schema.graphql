@@ -45797,8 +45797,10 @@ input UpdateNotificationsMutationInput {
   id: Int
   subtype: String
   team_handle: String
+  team_ids: [Int!]
   type: String
   unread: Boolean
+  user_type: String
 }
 
 """
