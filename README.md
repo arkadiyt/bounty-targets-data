@@ -15,11 +15,10 @@ Extra files:
 <!-- - [hackenproof_data.json](https://github.com/arkadiyt/bounty-targets-data/blob/master/data/hackenproof_data.json): raw [Hackenproof](https://hackenproof.com) data. -->
 - [intigriti_data.json](https://github.com/arkadiyt/bounty-targets-data/blob/master/data/intigriti_data.json): raw [Intigriti](https://www.intigriti.com) data.
 - [yeswehack_data.json](https://github.com/arkadiyt/bounty-targets-data/blob/master/data/yeswehack_data.json): raw [YesWeHack](https://www.yeswehack.com/) data.
-- [hackerone_schema.graphql](https://github.com/arkadiyt/bounty-targets-data/blob/master/data/hackerone_schema.graphql): Hackerone's graphql api schema.
 
 ### Status
 
-The last change was detected on `Wednesday 01/29/2025 10:00 (UTC)`. New changes (if any) are picked up every 30 minutes.
+The last change was detected on `Monday 02/03/2025 02:30 (UTC)`. New changes (if any) are picked up every 30 minutes.
 
 ### Code
 
