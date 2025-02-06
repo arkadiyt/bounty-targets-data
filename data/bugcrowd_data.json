@@ -8586,34 +8586,6 @@
     }
   },
   {
-    "name": "FIS",
-    "url": "https://bugcrowd.com/engagements/fis",
-    "allows_disclosure": true,
-    "managed_by_bugcrowd": true,
-    "safe_harbor": "full",
-    "max_payout": 20000,
-    "targets": {
-      "in_scope": [
-        {
-          "type": "website",
-          "target": "Any FIS asset is in scope",
-          "uri": "",
-          "name": "Any FIS asset is in scope",
-          "ipAddress": null
-        }
-      ],
-      "out_of_scope": [
-        {
-          "type": "website",
-          "target": "https://apuat-aaa.fisglobal.com",
-          "uri": "https://apuat-aaa.fisglobal.com",
-          "name": "Reference above out of scope targets",
-          "ipAddress": null
-        }
-      ]
-    }
-  },
-  {
     "name": "Flourish",
     "url": "https://bugcrowd.com/engagements/flourish",
     "allows_disclosure": false,
@@ -14747,6 +14719,104 @@
           "target": "nwm.benselect.com",
           "uri": "",
           "name": "nwm.benselect.com",
+          "ipAddress": ""
+        }
+      ]
+    }
+  },
+  {
+    "name": "Nubank Brasil Managed Bug Bounty Program",
+    "url": "https://bugcrowd.com/engagements/nubank",
+    "allows_disclosure": true,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "full",
+    "max_payout": 4000,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "android",
+          "target": "https://play.google.com/store/apps/details?id=com.nu.production&hl=pt_BR&gl=US&pli=1",
+          "uri": "https://play.google.com/store/apps/details?id=com.nu.production&hl=pt_BR&gl=US&pli=1",
+          "name": "Nubank Android: Playstore",
+          "ipAddress": ""
+        },
+        {
+          "type": "ios",
+          "target": "https://apps.apple.com/br/app/nubank-conta-e-cart%C3%A3o/id814456780",
+          "uri": "https://apps.apple.com/br/app/nubank-conta-e-cart%C3%A3o/id814456780",
+          "name": "Nubank iOS App",
+          "ipAddress": ""
+        },
+        {
+          "type": "api",
+          "target": "prod-*.nubank.com.br",
+          "uri": "",
+          "name": "prod-*.nubank.com.br",
+          "ipAddress": ""
+        },
+        {
+          "type": "api",
+          "target": "prod-*.nu.com.mx",
+          "uri": "",
+          "name": "prod-*.nu.com.mx",
+          "ipAddress": ""
+        },
+        {
+          "type": "api",
+          "target": "prod-*.nu.com.co",
+          "uri": "",
+          "name": "prod-*.nu.com.co",
+          "ipAddress": ""
+        },
+        {
+          "type": "other",
+          "target": "https://nubank.com.br/",
+          "uri": "https://nubank.com.br/",
+          "name": "*nubank.com.br",
+          "ipAddress": ""
+        },
+        {
+          "type": "other",
+          "target": "https://nubank.com.mx",
+          "uri": "https://nubank.com.mx",
+          "name": "*nu.com.mx",
+          "ipAddress": ""
+        },
+        {
+          "type": "other",
+          "target": "https://nubank.com.co",
+          "uri": "https://nubank.com.co",
+          "name": "*nu.com.co",
+          "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "https://www.nuinvest.com.br/",
+          "uri": "https://www.nuinvest.com.br/",
+          "name": "*.nuinvest.com.br\t",
+          "ipAddress": ""
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "website",
+          "target": "*nuinternational.com\t",
+          "uri": "",
+          "name": "*nuinternational.com\t",
+          "ipAddress": ""
+        },
+        {
+          "type": "other",
+          "target": "*nat-a.nubank.com.br",
+          "uri": "",
+          "name": "*nat-a.nubank.com.br",
+          "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "international.nubank.com.br",
+          "uri": "",
+          "name": "international.nubank.com.br",
           "ipAddress": ""
         }
       ]
