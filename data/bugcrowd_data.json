@@ -1240,125 +1240,6 @@
     }
   },
   {
-    "name": "Asana",
-    "url": "https://bugcrowd.com/engagements/asana",
-    "allows_disclosure": false,
-    "managed_by_bugcrowd": true,
-    "safe_harbor": "partial",
-    "max_payout": 6500,
-    "targets": {
-      "in_scope": [
-        {
-          "type": "website",
-          "target": "https://app.asana.com",
-          "uri": "https://app.asana.com",
-          "name": "app.asana.com",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "https://asana.com",
-          "uri": "https://asana.com",
-          "name": "asana.com",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "https://asana.com/apps?category=made-by-asana",
-          "uri": "https://asana.com/apps?category=made-by-asana",
-          "name": "*.asana.plus",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "*.asana.biz",
-          "uri": null,
-          "name": "*.asana.biz",
-          "ipAddress": null
-        },
-        {
-          "type": "other",
-          "target": "https://asana.com/download",
-          "uri": "https://asana.com/download",
-          "name": "Asana Desktop App",
-          "ipAddress": null
-        },
-        {
-          "type": "ios",
-          "target": "https://apps.apple.com/us/app/asana-mobile/id489969512",
-          "uri": "https://apps.apple.com/us/app/asana-mobile/id489969512",
-          "name": "Asana iOS app",
-          "ipAddress": null
-        },
-        {
-          "type": "android",
-          "target": "https://play.google.com/store/apps/details?id=com.asana.app&hl=en",
-          "uri": "https://play.google.com/store/apps/details?id=com.asana.app&hl=en",
-          "name": "Asana Android app",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "https://form.asana.com",
-          "uri": "https://form.asana.com",
-          "name": "form.asana.com",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "*.app.asana.com",
-          "uri": null,
-          "name": "*.app.asana.com",
-          "ipAddress": null
-        }
-      ],
-      "out_of_scope": [
-        {
-          "type": "website",
-          "target": "Other subdomains of asana.com",
-          "uri": null,
-          "name": "Other subdomains of asana.com",
-          "ipAddress": null
-        },
-        {
-          "type": "other",
-          "target": "Social engineering against Asana Support or Asana Employees",
-          "uri": null,
-          "name": "Social engineering against Asana Support or Asana Employees",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "jira*.integrations.asana.plus",
-          "uri": "",
-          "name": "jira*.integrations.asana.plus",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "asana.okta.com",
-          "uri": "",
-          "name": "asana.okta.com",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "assets.asana.biz",
-          "uri": "",
-          "name": "assets.asana.biz",
-          "ipAddress": ""
-        },
-        {
-          "type": "other",
-          "target": "Forms that you do not own",
-          "uri": "",
-          "name": "Forms that you do not own",
-          "ipAddress": ""
-        }
-      ]
-    }
-  },
-  {
     "name": "Atlassian",
     "url": "https://bugcrowd.com/engagements/atlassian",
     "allows_disclosure": false,
@@ -8860,6 +8741,34 @@
           "target": "CVE-2021-26086 Limited Remote File Read/Include on Jir",
           "uri": "",
           "name": "CVE-2021-26086 Limited Remote File Read/Include on Jir",
+          "ipAddress": null
+        }
+      ]
+    }
+  },
+  {
+    "name": "FIS",
+    "url": "https://bugcrowd.com/engagements/fis",
+    "allows_disclosure": true,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "full",
+    "max_payout": 20000,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "website",
+          "target": "Any FIS asset is in scope",
+          "uri": "",
+          "name": "Any FIS asset is in scope",
+          "ipAddress": null
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "website",
+          "target": "https://apuat-aaa.fisglobal.com",
+          "uri": "https://apuat-aaa.fisglobal.com",
+          "name": "Reference above out of scope targets",
           "ipAddress": null
         }
       ]
