@@ -1240,125 +1240,6 @@
     }
   },
   {
-    "name": "Asana",
-    "url": "https://bugcrowd.com/engagements/asana",
-    "allows_disclosure": false,
-    "managed_by_bugcrowd": true,
-    "safe_harbor": "partial",
-    "max_payout": 6500,
-    "targets": {
-      "in_scope": [
-        {
-          "type": "website",
-          "target": "https://app.asana.com",
-          "uri": "https://app.asana.com",
-          "name": "app.asana.com",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "https://asana.com",
-          "uri": "https://asana.com",
-          "name": "asana.com",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "https://asana.com/apps?category=made-by-asana",
-          "uri": "https://asana.com/apps?category=made-by-asana",
-          "name": "*.asana.plus",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "*.asana.biz",
-          "uri": null,
-          "name": "*.asana.biz",
-          "ipAddress": null
-        },
-        {
-          "type": "other",
-          "target": "https://asana.com/download",
-          "uri": "https://asana.com/download",
-          "name": "Asana Desktop App",
-          "ipAddress": null
-        },
-        {
-          "type": "ios",
-          "target": "https://apps.apple.com/us/app/asana-mobile/id489969512",
-          "uri": "https://apps.apple.com/us/app/asana-mobile/id489969512",
-          "name": "Asana iOS app",
-          "ipAddress": null
-        },
-        {
-          "type": "android",
-          "target": "https://play.google.com/store/apps/details?id=com.asana.app&hl=en",
-          "uri": "https://play.google.com/store/apps/details?id=com.asana.app&hl=en",
-          "name": "Asana Android app",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "https://form.asana.com",
-          "uri": "https://form.asana.com",
-          "name": "form.asana.com",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "*.app.asana.com",
-          "uri": null,
-          "name": "*.app.asana.com",
-          "ipAddress": null
-        }
-      ],
-      "out_of_scope": [
-        {
-          "type": "website",
-          "target": "Other subdomains of asana.com",
-          "uri": null,
-          "name": "Other subdomains of asana.com",
-          "ipAddress": null
-        },
-        {
-          "type": "other",
-          "target": "Social engineering against Asana Support or Asana Employees",
-          "uri": null,
-          "name": "Social engineering against Asana Support or Asana Employees",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "jira*.integrations.asana.plus",
-          "uri": "",
-          "name": "jira*.integrations.asana.plus",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "asana.okta.com",
-          "uri": "",
-          "name": "asana.okta.com",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "assets.asana.biz",
-          "uri": "",
-          "name": "assets.asana.biz",
-          "ipAddress": ""
-        },
-        {
-          "type": "other",
-          "target": "Forms that you do not own",
-          "uri": "",
-          "name": "Forms that you do not own",
-          "ipAddress": ""
-        }
-      ]
-    }
-  },
-  {
     "name": "Atlassian",
     "url": "https://bugcrowd.com/engagements/atlassian",
     "allows_disclosure": false,
@@ -11470,6 +11351,133 @@
           "target": "https://www.unscreen.com",
           "uri": "https://www.unscreen.com",
           "name": "*.unscreen.com",
+          "ipAddress": null
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
+    "name": "Keeper Security Public Bounty Program",
+    "url": "https://bugcrowd.com/engagements/keepersecurity",
+    "allows_disclosure": true,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "partial",
+    "max_payout": 20000,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "other",
+          "target": "https://www.keepersecurity.com/download.html",
+          "uri": "https://www.keepersecurity.com/download.html",
+          "name": "Keeper Browser Extension (Chrome, Safari, Firefox, Edge)",
+          "ipAddress": null
+        },
+        {
+          "type": "ios",
+          "target": "https://www.keepersecurity.com/download.html",
+          "uri": "https://www.keepersecurity.com/download.html",
+          "name": "Keeper for iOS",
+          "ipAddress": null
+        },
+        {
+          "type": "other",
+          "target": "https://www.microsoft.com/en-us/p/keeperchat/9pdqtcpn4kxn#activetab=pivot:overviewtab",
+          "uri": "https://www.microsoft.com/en-us/p/keeperchat/9pdqtcpn4kxn#activetab=pivot:overviewtab",
+          "name": "KeeperChat for Windows",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "https://keepersecurity.com",
+          "uri": "https://keepersecurity.com",
+          "name": "Keeper Security Website",
+          "ipAddress": null
+        },
+        {
+          "type": "other",
+          "target": "https://www.keepersecurity.com/download.html",
+          "uri": "https://www.keepersecurity.com/download.html",
+          "name": "Keeper for Mac, PC, Linux",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "https://keepersecurity.com/vault",
+          "uri": "https://keepersecurity.com/vault",
+          "name": "Keeper Web Vault (US, EU, AU, CA, JP, GovCloud)",
+          "ipAddress": null
+        },
+        {
+          "type": "api",
+          "target": "https://docs.keeper.io/keeper-bridge/",
+          "uri": "https://docs.keeper.io/keeper-bridge/",
+          "name": "Keeper AD / LDAP Bridge",
+          "ipAddress": null
+        },
+        {
+          "type": "ios",
+          "target": "https://apps.apple.com/app/id1216446440",
+          "uri": "https://apps.apple.com/app/id1216446440",
+          "name": "KeeperChat for iOS",
+          "ipAddress": null
+        },
+        {
+          "type": "android",
+          "target": "https://play.google.com/store/apps/details?id=com.keepersecurity.chat&hl=en_US&gl=US",
+          "uri": "https://play.google.com/store/apps/details?id=com.keepersecurity.chat&hl=en_US&gl=US",
+          "name": "KeeperChat for Android",
+          "ipAddress": null
+        },
+        {
+          "type": "other",
+          "target": "https://apps.apple.com/us/app/keeperchat/id1273303729?mt=12",
+          "uri": "https://apps.apple.com/us/app/keeperchat/id1273303729?mt=12",
+          "name": "KeeperChat for Mac",
+          "ipAddress": null
+        },
+        {
+          "type": "android",
+          "target": "https://play.google.com/store/apps/details?id=com.callpod.android_apps.keeper&hl=en_US&gl=US",
+          "uri": "https://play.google.com/store/apps/details?id=com.callpod.android_apps.keeper&hl=en_US&gl=US",
+          "name": "Keeper for Android",
+          "ipAddress": null
+        },
+        {
+          "type": "other",
+          "target": "https://docs.keeper.io/kcm",
+          "uri": "https://docs.keeper.io/kcm",
+          "name": "Keeper Connection Manager (KCM)",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "https://keepersecurity.com/console",
+          "uri": "https://keepersecurity.com/console",
+          "name": "Keeper Admin Console (US, EU, AU, CA, JP, GovCloud)",
+          "ipAddress": null
+        },
+        {
+          "type": "api",
+          "target": "https://docs.keeper.io/en/v/secrets-manager",
+          "uri": "https://docs.keeper.io/en/v/secrets-manager",
+          "name": "Keeper Secrets Manager and Keeper Commander APIs",
+          "ipAddress": null
+        },
+        {
+          "type": "api",
+          "target": "https://docs.keeper.io/sso-connect-guide/",
+          "uri": "https://docs.keeper.io/sso-connect-guide/",
+          "name": "SSO Connect On-Prem",
+          "ipAddress": null
+        },
+        {
+          "type": "api",
+          "target": "https://docs.keeper.io/sso-connect-cloud/",
+          "uri": "https://docs.keeper.io/sso-connect-cloud/",
+          "name": "SSO Connect Cloud and Automator Service",
           "ipAddress": null
         }
       ],
