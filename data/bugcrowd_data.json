@@ -6023,36 +6023,36 @@
     "url": "https://bugcrowd.com/engagements/canva",
     "allows_disclosure": false,
     "managed_by_bugcrowd": true,
-    "safe_harbor": null,
+    "safe_harbor": "partial",
     "max_payout": 15000,
     "targets": {
       "in_scope": [
         {
           "type": "website",
-          "target": "*.canva.cn",
-          "uri": null,
-          "name": "*.canva.cn",
-          "ipAddress": null
+          "target": "https://www.canva.com",
+          "uri": "https://www.canva.com",
+          "name": "www.canva.com",
+          "ipAddress": ""
         },
         {
-          "type": "android",
-          "target": "Canva (Android)",
-          "uri": null,
-          "name": "Canva (Android)",
-          "ipAddress": null
+          "type": "website",
+          "target": "https://www.canva.com/developers/",
+          "uri": "https://www.canva.com/developers/",
+          "name": "Canva Developer Portal",
+          "ipAddress": ""
         },
         {
           "type": "other",
-          "target": "Canva (Chrome Extension)",
-          "uri": null,
-          "name": "Canva (Chrome Extension)",
-          "ipAddress": null
+          "target": "Apps SDK Sandboxing",
+          "uri": "",
+          "name": "Apps SDK Sandboxing",
+          "ipAddress": ""
         },
         {
-          "type": "ios",
-          "target": "Canva (iOS)",
-          "uri": null,
-          "name": "Canva (iOS)",
+          "type": "api",
+          "target": "https://api.canva.com",
+          "uri": "https://api.canva.com",
+          "name": "api.canva.com",
           "ipAddress": null
         },
         {
@@ -6071,23 +6071,23 @@
         },
         {
           "type": "website",
-          "target": "*.canva-apps.cn",
-          "uri": "",
-          "name": "*.canva-apps.cn",
-          "ipAddress": null
-        },
-        {
-          "type": "other",
-          "target": "https://canva.com/developers",
-          "uri": "https://canva.com/developers",
-          "name": "Canva Developer Platform",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
           "target": "https://*.canva.tech",
           "uri": "https://*.canva.tech",
           "name": "*.canva.tech",
+          "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "https://www.canva.com/en_au/help/chatgpt-templates/",
+          "uri": "https://www.canva.com/en_au/help/chatgpt-templates/",
+          "name": "Canva for ChatGPT",
+          "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "https://www.canva.com/integrations/slack/",
+          "uri": "https://www.canva.com/integrations/slack/",
+          "name": "Canva for Slack",
           "ipAddress": ""
         },
         {
@@ -6096,23 +6096,66 @@
           "uri": "",
           "name": "Canva Desktop (macOS / Windows)",
           "ipAddress": ""
-        }
-      ],
-      "out_of_scope": [
+        },
         {
-          "type": "website",
-          "target": "*.0.canva.cn",
-          "uri": "",
-          "name": "*.0.canva.cn",
-          "ipAddress": ""
+          "type": "ios",
+          "target": "Canva (iOS)",
+          "uri": null,
+          "name": "Canva (iOS)",
+          "ipAddress": null
+        },
+        {
+          "type": "android",
+          "target": "Canva (Android)",
+          "uri": null,
+          "name": "Canva (Android)",
+          "ipAddress": null
+        },
+        {
+          "type": "other",
+          "target": "Canva (Chrome Extension)",
+          "uri": null,
+          "name": "Canva (Chrome Extension)",
+          "ipAddress": null
         },
         {
           "type": "website",
-          "target": "*.0.canva-apps.cn",
+          "target": "*.canva.cn",
+          "uri": null,
+          "name": "*.canva.cn",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "*.canva-apps.cn",
           "uri": "",
-          "name": "*.0.canva-apps.cn",
+          "name": "*.canva-apps.cn",
+          "ipAddress": null
+        },
+        {
+          "type": "other",
+          "target": "Leaked Credentials and Secrets (Canva Employee/Contractor)",
+          "uri": "",
+          "name": "Leaked Credentials and Secrets (Canva Employee/Contractor)",
+          "ipAddress": ""
+        },
+        {
+          "type": "other",
+          "target": "Leaked Credentials and Secrets (Canva User)",
+          "uri": "",
+          "name": "Leaked Credentials and Secrets (Canva User)",
+          "ipAddress": ""
+        },
+        {
+          "type": "other",
+          "target": "3rd-Party Provider Vulnerability",
+          "uri": "",
+          "name": "3rd-Party Provider Vulnerability",
           "ipAddress": ""
         }
+      ],
+      "out_of_scope": [
+
       ]
     }
   },
