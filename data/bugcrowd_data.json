@@ -5802,153 +5802,6 @@
     }
   },
   {
-    "name": "Bugcrowd",
-    "url": "https://bugcrowd.com/engagements/bugcrowd",
-    "allows_disclosure": false,
-    "managed_by_bugcrowd": true,
-    "safe_harbor": "full",
-    "max_payout": 10000,
-    "targets": {
-      "in_scope": [
-        {
-          "type": "website",
-          "target": "https://docs.bugcrowd.com/",
-          "uri": "https://docs.bugcrowd.com/",
-          "name": "docs.bugcrowd.com",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "https://bugcrowd.com/programs",
-          "uri": "https://bugcrowd.com/programs",
-          "name": "bugcrowd.com",
-          "ipAddress": null
-        },
-        {
-          "type": "api",
-          "target": "https://tracker.bugcrowd.com",
-          "uri": "https://tracker.bugcrowd.com",
-          "name": "Crowdcontrol",
-          "ipAddress": null
-        },
-        {
-          "type": "api",
-          "target": "https://api.bugcrowd.com",
-          "uri": "https://api.bugcrowd.com",
-          "name": "api.bugcrowd.com",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "https://identity.bugcrowd.com/",
-          "uri": "https://identity.bugcrowd.com/",
-          "name": "https://identity.bugcrowd.com/ ",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "*.bugcrowd.com/auth/*",
-          "uri": "",
-          "name": "*.bugcrowd.com/auth/*",
-          "ipAddress": ""
-        }
-      ],
-      "out_of_scope": [
-        {
-          "type": "website",
-          "target": "bugcrowd*.freshdesk.com",
-          "uri": null,
-          "name": "bugcrowd*.freshdesk.com",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "https://www.bugcrowd.com",
-          "uri": "https://www.bugcrowd.com",
-          "name": "www.bugcrowd.com",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "blog.bugcrowd.com",
-          "uri": null,
-          "name": "blog.bugcrowd.com",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "researcherdocs.bugcrowd.com",
-          "uri": null,
-          "name": "researcherdocs.bugcrowd.com",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "pages.bugcrowd.com",
-          "uri": null,
-          "name": "pages.bugcrowd.com",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "forum.bugcrowd.com",
-          "uri": null,
-          "name": "forum.bugcrowd.com",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "email.bugcrowd.com",
-          "uri": null,
-          "name": "email.bugcrowd.com",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "email.forum.bugcrowd.com",
-          "uri": null,
-          "name": "email.forum.bugcrowd.com",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "https://go.bugcrowd.com",
-          "uri": "https://go.bugcrowd.com",
-          "name": "go.bugcrowd.com",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "events.bugcrowd.com",
-          "uri": null,
-          "name": "events.bugcrowd.com",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "https://assetinventory.bugcrowd.com",
-          "uri": "https://assetinventory.bugcrowd.com",
-          "name": "assetinventory.bugcrowd.com",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "https://community.bugcrowd.com",
-          "uri": "https://community.bugcrowd.com",
-          "name": "community.bugcrowd.com",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "trust.bugcrowd.com",
-          "uri": "",
-          "name": "trust.bugcrowd.com",
-          "ipAddress": ""
-        }
-      ]
-    }
-  },
-  {
     "name": "Bullish.com",
     "url": "https://bugcrowd.com/engagements/bullish",
     "allows_disclosure": false,
@@ -8693,6 +8546,97 @@
           "uri": "https://anywhere.epam.com/",
           "name": "anywhere.epam.com",
           "ipAddress": ""
+        }
+      ]
+    }
+  },
+  {
+    "name": "Etsy",
+    "url": "https://bugcrowd.com/engagements/etsy",
+    "allows_disclosure": true,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "partial",
+    "max_payout": 10000,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "website",
+          "target": "https://www.etsy.com",
+          "uri": "https://www.etsy.com",
+          "name": "www.etsy.com",
+          "ipAddress": null
+        },
+        {
+          "type": "android",
+          "target": "https://www.etsy.com/mobile",
+          "uri": "https://www.etsy.com/mobile",
+          "name": "Etsy Mobile Application (Android)",
+          "ipAddress": null
+        },
+        {
+          "type": "ios",
+          "target": "https://www.etsy.com/mobile",
+          "uri": "https://www.etsy.com/mobile",
+          "name": "Etsy Mobile Application (iPhone)",
+          "ipAddress": null
+        },
+        {
+          "type": "api",
+          "target": "https://www.etsy.com/developers/documentation/getting_started/api_basics",
+          "uri": "https://www.etsy.com/developers/documentation/getting_started/api_basics",
+          "name": "Etsy API (see documentation below)",
+          "ipAddress": null
+        },
+        {
+          "type": "other",
+          "target": "https://etsypayments.com",
+          "uri": "https://etsypayments.com",
+          "name": "etsypayments.com",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "https://blog.etsy.com",
+          "uri": "https://blog.etsy.com",
+          "name": "blog.etsy.com",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "https://careers.etsy.com",
+          "uri": "https://careers.etsy.com",
+          "name": "careers.etsy.com",
+          "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "https://help.etsy.com",
+          "uri": "https://help.etsy.com",
+          "name": "help.etsy.com",
+          "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "https://community.etsy.com",
+          "uri": "https://community.etsy.com",
+          "name": "community.etsy.com",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "*.etsy.com",
+          "uri": "",
+          "name": "*.etsy.com",
+          "ipAddress": ""
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "api",
+          "target": "icht.etsysecure.com",
+          "uri": null,
+          "name": "icht.etsysecure.com",
+          "ipAddress": null
         }
       ]
     }
@@ -20892,6 +20836,195 @@
     }
   },
   {
+    "name": "Tesla",
+    "url": "https://bugcrowd.com/engagements/tesla",
+    "allows_disclosure": false,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "partial",
+    "max_payout": 100000,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "website",
+          "target": "*.tesla.cn",
+          "uri": null,
+          "name": "*.tesla.cn",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "*.tesla.services",
+          "uri": null,
+          "name": "*.tesla.services",
+          "ipAddress": null
+        },
+        {
+          "type": "ios",
+          "target": "https://apps.apple.com/us/app/tesla/id582007913",
+          "uri": "https://apps.apple.com/us/app/tesla/id582007913",
+          "name": "Official Tesla iOS apps",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "*.tesla.com",
+          "uri": null,
+          "name": "*.tesla.com",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "*.teslamotors.com",
+          "uri": null,
+          "name": "*.teslamotors.com",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "Any host verified to be owned by Tesla Motors Inc. (domains/IP space/etc.)",
+          "uri": null,
+          "name": "Any host verified to be owned by Tesla Motors Inc. (domains/IP space/etc.)",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "*.solarcity.com",
+          "uri": "",
+          "name": "*.solarcity.com",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "*.teslainsuranceservices.com",
+          "uri": null,
+          "name": "*.teslainsuranceservices.com",
+          "ipAddress": null
+        },
+        {
+          "type": "android",
+          "target": "https://play.google.com/store/apps/details?id=com.teslamotors.tesla&hl=en_US&gl=US",
+          "uri": "https://play.google.com/store/apps/details?id=com.teslamotors.tesla&hl=en_US&gl=US",
+          "name": "Official Tesla Android apps",
+          "ipAddress": null
+        },
+        {
+          "type": "hardware",
+          "target": "Tesla Energy hardware you own",
+          "uri": "",
+          "name": "Tesla Energy hardware you own",
+          "ipAddress": ""
+        },
+        {
+          "type": "hardware",
+          "target": "Tesla vehicle hardware that you own",
+          "uri": null,
+          "name": "Tesla vehicle hardware that you own",
+          "ipAddress": null
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "website",
+          "target": "employeefeedback.tesla.com",
+          "uri": null,
+          "name": "employeefeedback.tesla.com",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "energysupport.tesla.com (you can report vulnerabilities to bugbounty.zoho.com)",
+          "uri": null,
+          "name": "energysupport.tesla.com (you can report vulnerabilities to bugbounty.zoho.com)",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "https://engage.tesla.com/",
+          "uri": "https://engage.tesla.com/",
+          "name": "engage.tesla.com",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "*.engage.tesla.com",
+          "uri": "",
+          "name": "*.engage.tesla.com",
+          "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "feedback.tesla.com",
+          "uri": null,
+          "name": "feedback.tesla.com",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "feedback.teslamotors.com",
+          "uri": null,
+          "name": "feedback.teslamotors.com",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "ir.tesla.com",
+          "uri": null,
+          "name": "ir.tesla.com",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "ir.teslamotors.com",
+          "uri": null,
+          "name": "ir.teslamotors.com",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "mkto.teslamotors.com",
+          "uri": null,
+          "name": "mkto.teslamotors.com",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "shop.eu.teslamotors.com",
+          "uri": null,
+          "name": "shop.eu.teslamotors.com",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "service.tesla.com/docs/*",
+          "uri": "",
+          "name": "service.tesla.com/docs/*",
+          "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "service.tesla.cn/docs/*",
+          "uri": "",
+          "name": "service.tesla.cn/docs/*",
+          "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "Any domains from acquisitions, such as maxwell.com",
+          "uri": null,
+          "name": "Any domains from acquisitions, such as maxwell.com",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "Any other third-party websites hosted by non-Tesla entities",
+          "uri": null,
+          "name": "Any other third-party websites hosted by non-Tesla entities",
+          "ipAddress": null
+        }
+      ]
+    }
+  },
+  {
     "name": "TheFork - B2C - WNG",
     "url": "https://bugcrowd.com/engagements/thefork-b2c-wng",
     "allows_disclosure": false,
@@ -24573,28 +24706,6 @@
           "target": "https://apps.apple.com/mt/app/woo-x-buy-crypto-btc/id1576648404",
           "uri": "https://apps.apple.com/mt/app/woo-x-buy-crypto-btc/id1576648404",
           "name": "WOO X: Buy Crypto & BTC (IOS)",
-          "ipAddress": ""
-        }
-      ],
-      "out_of_scope": [
-
-      ]
-    }
-  },
-  {
-    "name": "Worldpay",
-    "url": "https://bugcrowd.com/engagements/worldpay",
-    "allows_disclosure": false,
-    "managed_by_bugcrowd": true,
-    "safe_harbor": "full",
-    "max_payout": 20000,
-    "targets": {
-      "in_scope": [
-        {
-          "type": "website",
-          "target": "Any Worldpay asset is in scope",
-          "uri": "",
-          "name": "Any Worldpay asset is in scope",
           "ipAddress": ""
         }
       ],
