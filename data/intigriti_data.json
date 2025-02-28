@@ -9377,12 +9377,6 @@
     "targets": {
       "in_scope": [
         {
-          "type": "url",
-          "endpoint": "https://github.com/uphold",
-          "description": "The wildcard scope github.com/uphold/* covers any public repositories made available by Uphold on GitHub. These repositories may include SDKs, developer tools, open-source projects, documentation, and other publicly accessible codebases that support Uphold’s ecosystem.\n\nSecurity testing should focus on identifying misconfigurations, exposed sensitive information, or vulnerabilities that could impact Uphold’s security posture.\n\nWe are willing to give bonuses for any impactful issues found across our repositories, provided we agree on their severity and relevance. Please note that third-party dependencies are out of scope unless the issue is caused by a misconfiguration or security oversight by Uphold.",
-          "impact": "Tier 3"
-        },
-        {
           "type": "ios",
           "endpoint": "1101145849",
           "description": "The Uphold Wallet iOS Application is the primary mobile platform for Uphold users to manage their wallets, providing a full suite of financial services, including account management, real-time price quotes, transactions, and access to account history. Users can deposit, withdraw, exchange assets, and complete KYC verification directly through the app.\n\nThis is currently installable on Jailbroken devices, please read the out-of-scope findings.",
@@ -9494,6 +9488,12 @@
           "type": "url",
           "endpoint": "docs.uphold.com",
           "description": "The Uphold API Documentation (https://docs.uphold.com) serves as the official resource for developers integrating with the Uphold Platform. It provides detailed guidance on API authentication, endpoints, request/response structures, and best practices for interacting with Uphold’s financial services. The documentation covers topics such as account management, transactions, currency conversion, and security protocols. Bug bounty participants can review the documentation for misconfigurations, security flaws, or exposed sensitive information that could impact the integrity of the Uphold API ecosystem.\n\nThis is a production environment—please review the program policy to avoid denial of service and other types of unavailability during security testing.",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "github.com/uphold/*",
+          "description": "The wildcard scope github.com/uphold/* covers any public repositories made available by Uphold on GitHub. These repositories may include SDKs, developer tools, open-source projects, documentation, and other publicly accessible codebases that support Uphold’s ecosystem.\n\nSecurity testing should focus on identifying misconfigurations, exposed sensitive information, or vulnerabilities that could impact Uphold’s security posture.\n\nWe are willing to give bonuses for any impactful issues found across our repositories, provided we agree on their severity and relevance. Please note that third-party dependencies are out of scope unless the issue is caused by a misconfiguration or security oversight by Uphold.",
           "impact": "Tier 3"
         },
         {
