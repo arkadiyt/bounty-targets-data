@@ -917,65 +917,6 @@
     }
   },
   {
-    "id": "franceconnect-proconnect-public",
-    "name": "DINUM - FranceConnect / FranceConnect+ / ProConnect - Public Program",
-    "public": true,
-    "disabled": false,
-    "managed": null,
-    "min_bounty": 0,
-    "max_bounty": 30000,
-    "targets": {
-      "in_scope": [
-        {
-          "target": "Specific scenarios (see program description)",
-          "type": "other"
-        },
-        {
-          "target": "ProConnect (see program description for github link)",
-          "type": "web-application"
-        },
-        {
-          "target": "FranceConnect+ (see program description for github link)",
-          "type": "web-application"
-        },
-        {
-          "target": "FranceConnect (see program description for github link)",
-          "type": "web-application"
-        },
-        {
-          "target": "eIDAS Bridge  (see program description for github link)",
-          "type": "web-application"
-        },
-        {
-          "target": "User Dashboard  (see program description for github link)",
-          "type": "web-application"
-        }
-      ],
-      "out_of_scope": [
-        {
-          "target": "All partners and all mocks are out of scope (but you can use the deployed mocks at your discretion to attack the scope).",
-          "type": "other"
-        },
-        {
-          "target": "The local stack (*.docker.dev-franceconnect) is a powerful tool for you to understand the internals processes but is out of scope (the exploit should as well work in the scope to qualify).",
-          "type": "other"
-        },
-        {
-          "target": "The  production environment (*.gouv.fr) is out of scope.",
-          "type": "other"
-        },
-        {
-          "target": "https://fcp.integ01.dev-franceconnect.fr",
-          "type": "other"
-        },
-        {
-          "target": "https://tableaudebord.integ01.dev-franceconnect.fr",
-          "type": "other"
-        }
-      ]
-    }
-  },
-  {
     "id": "tchap-public",
     "name": "DINUM - Tchap - Bug Bounty Program",
     "public": true,
@@ -1593,6 +1534,65 @@
         },
         {
           "target": "Pre-release environment (for example: pb.ys7.com)",
+          "type": "other"
+        }
+      ]
+    }
+  },
+  {
+    "id": "franceconnect-proconnect-public",
+    "name": "FranceConnect / FranceConnect+ - DINUM",
+    "public": true,
+    "disabled": false,
+    "managed": null,
+    "min_bounty": 0,
+    "max_bounty": 30000,
+    "targets": {
+      "in_scope": [
+        {
+          "target": "Specific scenarios (see program description)",
+          "type": "other"
+        },
+        {
+          "target": "ProConnect (see program description for github link)",
+          "type": "web-application"
+        },
+        {
+          "target": "FranceConnect+ (see program description for github link)",
+          "type": "web-application"
+        },
+        {
+          "target": "FranceConnect (see program description for github link)",
+          "type": "web-application"
+        },
+        {
+          "target": "eIDAS Bridge  (see program description for github link)",
+          "type": "web-application"
+        },
+        {
+          "target": "User Dashboard  (see program description for github link)",
+          "type": "web-application"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "target": "All partners and all mocks are out of scope (but you can use the deployed mocks at your discretion to attack the scope).",
+          "type": "other"
+        },
+        {
+          "target": "The local stack (*.docker.dev-franceconnect) is a powerful tool for you to understand the internals processes but is out of scope (the exploit should as well work in the scope to qualify).",
+          "type": "other"
+        },
+        {
+          "target": "The  production environment (*.gouv.fr) is out of scope.",
+          "type": "other"
+        },
+        {
+          "target": "https://fcp.integ01.dev-franceconnect.fr",
+          "type": "other"
+        },
+        {
+          "target": "https://tableaudebord.integ01.dev-franceconnect.fr",
           "type": "other"
         }
       ]
