@@ -116,43 +116,6 @@
     }
   },
   {
-    "id": "554fc6c5-4ffa-4682-a3ba-7e86696e9b17",
-    "name": "Aikido Security: Bug Bounty Program",
-    "company_handle": "aikido",
-    "handle": "aikido",
-    "url": "https://www.intigriti.com/programs/aikido/aikido/detail",
-    "status": "open",
-    "confidentiality_level": "public",
-    "tacRequired": false,
-    "twoFactorRequired": false,
-    "min_bounty": {
-      "value": 50,
-      "currency": "EUR"
-    },
-    "max_bounty": {
-      "value": 2500,
-      "currency": "EUR"
-    },
-    "targets": {
-      "in_scope": [
-        {
-          "type": "url",
-          "endpoint": "app.aikido.dev",
-          "description": "This is our main application, which hosts the API as well as the front-end application.\n\nOur public API is also accessible via this host. Documentation is available here: https://apidocs.aikido.dev/.",
-          "impact": "Tier 2"
-        }
-      ],
-      "out_of_scope": [
-        {
-          "type": "wildcard",
-          "endpoint": "*.aikido.dev",
-          "description": null,
-          "impact": "Out of scope"
-        }
-      ]
-    }
-  },
-  {
     "id": "30f445f7-ca4c-4130-9434-49add5c6ac74",
     "name": "Algemeen Dagblad",
     "company_handle": "dpgm",
@@ -7908,6 +7871,104 @@
           "endpoint": "www.socialdeal.nl",
           "description": "Our main website. \nwww.socialdeal.be and www.socialdeal.de are the same websites, with different Locale.\n",
           "impact": "Tier 2"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
+    "id": "18058413-5255-4f5c-a9db-c6ac027bb5d6",
+    "name": "Soundtrack Your Brand",
+    "company_handle": "syb",
+    "handle": "soundtrackyourbrand",
+    "url": "https://www.intigriti.com/programs/syb/soundtrackyourbrand/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 50,
+      "currency": "EUR"
+    },
+    "max_bounty": {
+      "value": 3500,
+      "currency": "EUR"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "ios",
+          "endpoint": "1114799709",
+          "description": "The iOS Player app that allows you to browse and play music.\n\nIn order to use the iOS Player you will need a pairing code that you can obtain through https://business.soundtrackyourbrand.com using the test credentials.\n\nhttps://www.youtube.com/watch?v=y7HGAtsB6Tg",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "ios",
+          "endpoint": "1114800186",
+          "description": "The iOS Remote that allows you to remotely control your Soundtrack Players.\n\nIn order to use the iOS Remote you will need a remote code that you can obtain through https://business.soundtrackyourbrand.com using the test credentials.\n\nhttps://www.youtube.com/watch?v=cmAe1kRvOeY",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.soundtrackyourbrand.com",
+          "description": "Our public API. Used by us as well as third parties. You can use your regular login token to authenticate.\n\nDocs: https://developer.soundtrackyourbrand.com/api\nGraphQL Explorer: https://api.soundtrackyourbrand.com/v2/explore\n\nPlease use one of the claimed test credentials. In order to use the API you can login using your claimed credentials (via loginUser) and use the token you get back to issue API calls.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "billing.api.soundtrackyourbrand.com",
+          "description": "Our billing service. Handles payments (one time and recurring), price and product management and subscription renewals.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "builds.soundtrackyourbrand.com",
+          "description": "Our service which does gradual rollout of our player software to our Windows client and hardware players.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "business.soundtrackyourbrand.com",
+          "description": "Our web based management console that allows users to administer their players, music and their account.\n\n**To claim bounties for this domain you need to use one of the claimed test credentials.**",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "android",
+          "endpoint": "com.soundtrackyourbrand.soundtrack.player",
+          "description": "The Android Player app that allows you to browse and play music.\n\nIn order to use the Android Player you will need a pairing code that you can obtain through https://business.soundtrackyourbrand.com using the test credentials.\n\nhttps://www.youtube.com/watch?v=y7HGAtsB6Tg",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://auth.api.soundtrackyourbrand.com/",
+          "description": "Our authentication service.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "other",
+          "endpoint": "https://builds.soundtrackyourbrand.com/download/WIN32SOUNDTRACK/latest",
+          "description": "The Windows Player that allows you to play music. No user interface except for a tray icon.\n\nIn order to use the Windows Player you will need a pairing code that you can obtain through https://business.soundtrackyourbrand.com using the test credentials.\n\nhttps://www.youtube.com/watch?v=HjFfXcjSEmM",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://radio.api.soundtrackyourbrand.com/",
+          "description": "Our playlisting service.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://www.soundtrackyourbrand.com",
+          "description": "Our public website.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "other",
+          "endpoint": "macOS app",
+          "description": "The macOS Player app allows you to browse and play music. You can find it in the App Store: https://apps.apple.com/se/app/soundtrack-player/id1114799709?l=en\n\nIn order to use the macOS you will need a pairing code that you can obtain through https://business.soundtrackyourbrand.com using the test credentials.\n\nhttps://www.youtube.com/watch?v=y7HGAtsB6Tg",
+          "impact": "Tier 1"
         }
       ],
       "out_of_scope": [
