@@ -1031,6 +1031,12 @@
     "targets": {
       "in_scope": [
         {
+          "type": "other",
+          "endpoint": "https://github.com/cmdotcom",
+          "description": "Our public code repositories are being used by our customers. In scope for this domain is issues with the public code we host (vulnerabilities, libraries that have known security concerns, keys accidentally pushed to the public GitHub etc.). \n**Testing the GitHub itself is out-of-scope**, they have their own bug bounty program if you are interested :)  ",
+          "impact": "No Bounty"
+        },
+        {
           "type": "url",
           "endpoint": "login.cm.com",
           "description": null,
@@ -1068,8 +1074,26 @@
         },
         {
           "type": "url",
+          "endpoint": "appmiral.com",
+          "description": null,
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "building-blocks.com",
+          "description": null,
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
           "endpoint": "cm.com/app/messagingtrial/",
           "description": "An application that makes it possible for developers to do a limited test of sending messages using the CM.COM business messaging API.\n\nWhat we would like to know is:\n* Can the application be exploited to allow sending more than the allowed number of messages?\n* Can the app be exploited to send to other recipients besides the whitelisted recipients?",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "cmcom.atlassian.net",
+          "description": null,
           "impact": "Tier 3"
         },
         {
@@ -1107,24 +1131,6 @@
           "endpoint": "1579530451",
           "description": "Right now we don't have a way to make test accounts for these apps, this will be added in the future",
           "impact": "No Bounty"
-        },
-        {
-          "type": "url",
-          "endpoint": "appmiral.com",
-          "description": null,
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "building-blocks.com",
-          "description": null,
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "cmcom.atlassian.net",
-          "description": null,
-          "impact": "Tier 3"
         },
         {
           "type": "android",
