@@ -5900,153 +5900,6 @@
     }
   },
   {
-    "name": "Bugcrowd",
-    "url": "https://bugcrowd.com/engagements/bugcrowd",
-    "allows_disclosure": false,
-    "managed_by_bugcrowd": true,
-    "safe_harbor": "full",
-    "max_payout": 10000,
-    "targets": {
-      "in_scope": [
-        {
-          "type": "website",
-          "target": "https://docs.bugcrowd.com/",
-          "uri": "https://docs.bugcrowd.com/",
-          "name": "docs.bugcrowd.com",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "https://bugcrowd.com/programs",
-          "uri": "https://bugcrowd.com/programs",
-          "name": "bugcrowd.com",
-          "ipAddress": null
-        },
-        {
-          "type": "api",
-          "target": "https://tracker.bugcrowd.com",
-          "uri": "https://tracker.bugcrowd.com",
-          "name": "Crowdcontrol",
-          "ipAddress": null
-        },
-        {
-          "type": "api",
-          "target": "https://api.bugcrowd.com",
-          "uri": "https://api.bugcrowd.com",
-          "name": "api.bugcrowd.com",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "https://identity.bugcrowd.com/",
-          "uri": "https://identity.bugcrowd.com/",
-          "name": "https://identity.bugcrowd.com/ ",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "*.bugcrowd.com/auth/*",
-          "uri": "",
-          "name": "*.bugcrowd.com/auth/*",
-          "ipAddress": ""
-        }
-      ],
-      "out_of_scope": [
-        {
-          "type": "website",
-          "target": "bugcrowd*.freshdesk.com",
-          "uri": null,
-          "name": "bugcrowd*.freshdesk.com",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "https://www.bugcrowd.com",
-          "uri": "https://www.bugcrowd.com",
-          "name": "www.bugcrowd.com",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "blog.bugcrowd.com",
-          "uri": null,
-          "name": "blog.bugcrowd.com",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "researcherdocs.bugcrowd.com",
-          "uri": null,
-          "name": "researcherdocs.bugcrowd.com",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "pages.bugcrowd.com",
-          "uri": null,
-          "name": "pages.bugcrowd.com",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "forum.bugcrowd.com",
-          "uri": null,
-          "name": "forum.bugcrowd.com",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "email.bugcrowd.com",
-          "uri": null,
-          "name": "email.bugcrowd.com",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "email.forum.bugcrowd.com",
-          "uri": null,
-          "name": "email.forum.bugcrowd.com",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "https://go.bugcrowd.com",
-          "uri": "https://go.bugcrowd.com",
-          "name": "go.bugcrowd.com",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "events.bugcrowd.com",
-          "uri": null,
-          "name": "events.bugcrowd.com",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "https://assetinventory.bugcrowd.com",
-          "uri": "https://assetinventory.bugcrowd.com",
-          "name": "assetinventory.bugcrowd.com",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "https://community.bugcrowd.com",
-          "uri": "https://community.bugcrowd.com",
-          "name": "community.bugcrowd.com",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "trust.bugcrowd.com",
-          "uri": "",
-          "name": "trust.bugcrowd.com",
-          "ipAddress": ""
-        }
-      ]
-    }
-  },
-  {
     "name": "Bullish.com",
     "url": "https://bugcrowd.com/engagements/bullish",
     "allows_disclosure": false,
@@ -10868,6 +10721,70 @@
           "uri": "",
           "name": "Any host/web property/mobile app verified to be owned by Indeed",
           "ipAddress": null
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
+    "name": "Intercom",
+    "url": "https://bugcrowd.com/engagements/intercom",
+    "allows_disclosure": true,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "partial",
+    "max_payout": 6000,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "ios",
+          "target": "https://developers.intercom.com/installing-intercom/docs/about-the-sdk-ios",
+          "uri": "https://developers.intercom.com/installing-intercom/docs/about-the-sdk-ios",
+          "name": "iOS SDK",
+          "ipAddress": null
+        },
+        {
+          "type": "api",
+          "target": "https://api.intercom.com",
+          "uri": "https://api.intercom.com",
+          "name": "https://api.intercom.io",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "https://app.intercom.com",
+          "uri": "https://app.intercom.com",
+          "name": "https://app.intercom.com",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "*.intercomassets.com / *.intercomcdn.com",
+          "uri": null,
+          "name": "*.intercomassets.com / *.intercomcdn.com",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "https://app.intercom.io/",
+          "uri": "https://app.intercom.io/",
+          "name": "https://app.intercom.io",
+          "ipAddress": null
+        },
+        {
+          "type": "android",
+          "target": "https://developers.intercom.com/installing-intercom/docs/about-the-sdk-android",
+          "uri": "https://developers.intercom.com/installing-intercom/docs/about-the-sdk-android",
+          "name": "Android SDK",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "https://www.intercom.com/",
+          "uri": "https://www.intercom.com/",
+          "name": "https://www.intercom.com",
+          "ipAddress": ""
         }
       ],
       "out_of_scope": [
