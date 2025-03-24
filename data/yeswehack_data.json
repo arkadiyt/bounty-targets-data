@@ -374,6 +374,61 @@
     }
   },
   {
+    "id": "blackbox-bforbank-mobile",
+    "name": "Blackbox BforBank Mobile",
+    "public": true,
+    "disabled": false,
+    "managed": null,
+    "min_bounty": 50,
+    "max_bounty": 4000,
+    "targets": {
+      "in_scope": [
+        {
+          "target": "https://play.google.com/store/apps/details?id=com.bforbank.android",
+          "type": "mobile-application-android"
+        },
+        {
+          "target": "https://apps.apple.com/us/app/bforbank-banque-en-ligne/id1607839793",
+          "type": "mobile-application-ios"
+        },
+        {
+          "target": "https://gtw-b2capps.bforbank.com/*",
+          "type": "api"
+        },
+        {
+          "target": "https://gtw-b2capps.bforbank.com/customer-acquisition/access-management/users*",
+          "type": "api"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "target": "All domains or subdomains not listed in the above list of 'Scopes'",
+          "type": "other"
+        },
+        {
+          "target": "Any security issue on this list of features:",
+          "type": "other"
+        },
+        {
+          "target": "- Live chat (iadvize)",
+          "type": "other"
+        },
+        {
+          "target": "- Offline browsing",
+          "type": "other"
+        },
+        {
+          "target": "- SOFINCO process for personal finance request",
+          "type": "other"
+        },
+        {
+          "target": "- PACIFICA process for mobile insurance request",
+          "type": "other"
+        }
+      ]
+    }
+  },
+  {
     "id": "bookbeat",
     "name": "BookBeat",
     "public": true,
