@@ -19513,6 +19513,48 @@
     }
   },
   {
+    "name": "1Shoppingcart.com",
+    "url": "https://bugcrowd.com/engagements/shoppingcart",
+    "allows_disclosure": true,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "partial",
+    "max_payout": 2000,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "website",
+          "target": "https://1shoppingcart.com",
+          "uri": "https://1shoppingcart.com",
+          "name": "1shoppingcart.com",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "https://mcssl.com",
+          "uri": "https://mcssl.com",
+          "name": "mcssl.com",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "*.mcssl.com",
+          "uri": null,
+          "name": "*.mcssl.com",
+          "ipAddress": null
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "website",
+          "target": "*.1shoppingcart.com",
+          "uri": null,
+          "name": "*.1shoppingcart.com",
+          "ipAddress": null
+        }
+      ]
+    }
+  },
+  {
     "name": "Skroutz Public Managed Bug Bounty",
     "url": "https://bugcrowd.com/engagements/skroutz",
     "allows_disclosure": false,
@@ -19687,41 +19729,6 @@
       ],
       "out_of_scope": [
 
-      ]
-    }
-  },
-  {
-    "name": "SnapNames",
-    "url": "https://bugcrowd.com/engagements/snapnames",
-    "allows_disclosure": true,
-    "managed_by_bugcrowd": true,
-    "safe_harbor": "full",
-    "max_payout": 2000,
-    "targets": {
-      "in_scope": [
-        {
-          "type": "website",
-          "target": "https://snapnames.com/",
-          "uri": "https://snapnames.com/",
-          "name": "https://snapnames.com/",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "https://www.namejet.com/",
-          "uri": "https://www.namejet.com/",
-          "name": "https://www.namejet.com/",
-          "ipAddress": ""
-        }
-      ],
-      "out_of_scope": [
-        {
-          "type": "website",
-          "target": "Anything not explicitly listed as \"In Scope\".",
-          "uri": "",
-          "name": "Anything not explicitly listed as \"In Scope\".",
-          "ipAddress": null
-        }
       ]
     }
   },
