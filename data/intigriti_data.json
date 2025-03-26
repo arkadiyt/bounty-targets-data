@@ -9726,6 +9726,18 @@
     "targets": {
       "in_scope": [
         {
+          "type": "wildcard",
+          "endpoint": "*.vlerick.com",
+          "description": "When you start testing www.vlerick.com, **visit www.vlerick.com/en?internal first**. In this way, your testing is not taken into account in our web stats.\nFeel free to test & scan our new submdomain https://my.vlerick.com/ as well.",
+          "impact": "No Bounty"
+        },
+        {
+          "type": "iprange",
+          "endpoint": "193.190.150.0/24",
+          "description": null,
+          "impact": "No Bounty"
+        },
+        {
           "type": "url",
           "endpoint": "https://viper.uat.vlerick.com/",
           "description": null,
@@ -9734,18 +9746,6 @@
         {
           "type": "url",
           "endpoint": "https://www-tst.vlerick.com/en/",
-          "description": null,
-          "impact": "No Bounty"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.vlerick.com",
-          "description": "When you start testing www.vlerick.com, **visit www.vlerick.com/en?internal first**. In this way, your testing is not taken into account in our web stats.",
-          "impact": "No Bounty"
-        },
-        {
-          "type": "iprange",
-          "endpoint": "193.190.150.0/24",
           "description": null,
           "impact": "No Bounty"
         }
