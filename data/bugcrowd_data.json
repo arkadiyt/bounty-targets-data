@@ -8126,69 +8126,6 @@
     }
   },
   {
-    "name": "Dell Technologies' Products Bug Bounty Program",
-    "url": "https://bugcrowd.com/engagements/dell-product",
-    "allows_disclosure": true,
-    "managed_by_bugcrowd": true,
-    "safe_harbor": "partial",
-    "max_payout": 5000,
-    "targets": {
-      "in_scope": [
-        {
-          "type": "other",
-          "target": "Actively Supported, Bounty Eligible Dell Products",
-          "uri": "",
-          "name": "Actively Supported, Bounty Eligible Dell Products",
-          "ipAddress": null
-        },
-        {
-          "type": "hardware",
-          "target": "Actively Supported, Non-Reward Eligible Dell Products",
-          "uri": "",
-          "name": "Actively Supported, Non-Reward Eligible Dell Products",
-          "ipAddress": null
-        }
-      ],
-      "out_of_scope": [
-        {
-          "type": "website",
-          "target": "*.dell.com/*",
-          "uri": null,
-          "name": "*.dell.com/*",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "*.delltechnologies.com/*",
-          "uri": null,
-          "name": "*.delltechnologies.com/*",
-          "ipAddress": null
-        },
-        {
-          "type": "other",
-          "target": "Virtual Appliance (vApp) Manager",
-          "uri": "",
-          "name": "Virtual Appliance (vApp) Manager",
-          "ipAddress": ""
-        },
-        {
-          "type": "other",
-          "target": "Dell ObjectScale",
-          "uri": "",
-          "name": "Dell ObjectScale",
-          "ipAddress": ""
-        },
-        {
-          "type": "other",
-          "target": "Dell Digital Delivery",
-          "uri": "",
-          "name": "Dell Digital Delivery",
-          "ipAddress": ""
-        }
-      ]
-    }
-  },
-  {
     "name": "Directly",
     "url": "https://bugcrowd.com/engagements/directly",
     "allows_disclosure": true,
@@ -13227,6 +13164,48 @@
           "uri": "https://payments.latitudefinancial.com/hosted/*,https://payments.latitudefinancial.com/embed/*,https://payments-api.latitudefinancial.com/*",
           "name": "Payment APIs",
           "ipAddress": ""
+        }
+      ]
+    }
+  },
+  {
+    "name": "Lightspeed Hospitality",
+    "url": "https://bugcrowd.com/engagements/lightspeed-hospitality",
+    "allows_disclosure": false,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "full",
+    "max_payout": 2000,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "website",
+          "target": "https://manager.trial.lsk.lightspeed.app/\t",
+          "uri": "https://manager.trial.lsk.lightspeed.app/\t",
+          "name": "https://manager.trial.lsk.lightspeed.app/",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "https://hq.breadcrumb.com/hq/restaurants/bounty-cafe-2/",
+          "uri": "https://hq.breadcrumb.com/hq/restaurants/bounty-cafe-2/",
+          "name": "https://hq.breadcrumb.com/hq/restaurants/bounty-cafe-2/",
+          "ipAddress": ""
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "website",
+          "target": "https://lightspeedhq.com/trial ",
+          "uri": "https://lightspeedhq.com/trial ",
+          "name": "lightspeedhq.com/trial ",
+          "ipAddress": null
+        },
+        {
+          "type": "other",
+          "target": "https://pos-admin.trial.lsk.lightspeed.app",
+          "uri": "https://pos-admin.trial.lsk.lightspeed.app",
+          "name": "pos-admin.trial.lsk.lightspeed.app",
+          "ipAddress": null
         }
       ]
     }
