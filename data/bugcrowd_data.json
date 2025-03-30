@@ -6699,6 +6699,49 @@
     }
   },
   {
+    "name": "Cash App",
+    "url": "https://bugcrowd.com/engagements/cashapp",
+    "allows_disclosure": true,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "full",
+    "max_payout": 18000,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "ios",
+          "target": "https://itunes.apple.com/us/app/cash-app/id711923939?mt=8",
+          "uri": "https://itunes.apple.com/us/app/cash-app/id711923939?mt=8",
+          "name": "Cash App Mobile Application for iOS",
+          "ipAddress": null
+        },
+        {
+          "type": "android",
+          "target": "https://play.google.com/store/apps/details?id=com.squareup.cash",
+          "uri": "https://play.google.com/store/apps/details?id=com.squareup.cash",
+          "name": "Cash App Mobile Application for Android",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "https://cash.app",
+          "uri": "https://cash.app",
+          "name": "*.cash.app",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "*.cashstaging.app",
+          "uri": "",
+          "name": "*.cashstaging.app",
+          "ipAddress": null
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
     "name": "Council on Foreign Relations",
     "url": "https://bugcrowd.com/engagements/cfr",
     "allows_disclosure": false,
@@ -6764,181 +6807,6 @@
           "uri": "https://modeldiplomacy.cfr.org",
           "name": "https://modeldiplomacy.cfr.org",
           "ipAddress": null
-        }
-      ]
-    }
-  },
-  {
-    "name": "Cisco Meraki",
-    "url": "https://bugcrowd.com/engagements/ciscomeraki",
-    "allows_disclosure": false,
-    "managed_by_bugcrowd": true,
-    "safe_harbor": "partial",
-    "max_payout": 10000,
-    "targets": {
-      "in_scope": [
-        {
-          "type": "website",
-          "target": "*.meraki.com",
-          "uri": null,
-          "name": "*.meraki.com",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "*.ikarem.io",
-          "uri": null,
-          "name": "*.ikarem.io",
-          "ipAddress": null
-        },
-        {
-          "type": "other",
-          "target": "Cisco Meraki Systems Manager",
-          "uri": null,
-          "name": "Cisco Meraki Systems Manager",
-          "ipAddress": null
-        },
-        {
-          "type": "other",
-          "target": "Cisco Meraki Virtual Security Appliances",
-          "uri": null,
-          "name": "Cisco Meraki Virtual Security Appliances",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "*.network-auth.com",
-          "uri": null,
-          "name": "*.network-auth.com",
-          "ipAddress": null
-        },
-        {
-          "type": "ios",
-          "target": "Cisco Meraki Dashboard Mobile Application (iOS and Android)",
-          "uri": null,
-          "name": "Cisco Meraki Dashboard Mobile Application (iOS and Android)",
-          "ipAddress": null
-        },
-        {
-          "type": "hardware",
-          "target": "Cisco Meraki MX Security Appliances",
-          "uri": null,
-          "name": "Cisco Meraki MX Security Appliances",
-          "ipAddress": null
-        },
-        {
-          "type": "hardware",
-          "target": "Cisco Meraki MS Switches",
-          "uri": null,
-          "name": "Cisco Meraki MS Switches",
-          "ipAddress": null
-        },
-        {
-          "type": "hardware",
-          "target": "Cisco Meraki MR Access Points",
-          "uri": null,
-          "name": "Cisco Meraki MR Access Points",
-          "ipAddress": null
-        },
-        {
-          "type": "hardware",
-          "target": "Cisco Meraki MV Security Cameras",
-          "uri": null,
-          "name": "Cisco Meraki MV Security Cameras",
-          "ipAddress": null
-        },
-        {
-          "type": "hardware",
-          "target": "Cisco Meraki Z Series (Z1,Z3(C))",
-          "uri": null,
-          "name": "Cisco Meraki Z Series (Z1,Z3(C))",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "https://meraki.cisco.com",
-          "uri": "https://meraki.cisco.com",
-          "name": "meraki.cisco.com",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "apps.meraki.io",
-          "uri": "",
-          "name": "apps.meraki.io",
-          "ipAddress": ""
-        }
-      ],
-      "out_of_scope": [
-        {
-          "type": "website",
-          "target": "merakipartners.com",
-          "uri": null,
-          "name": "merakipartners.com",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "developers.meraki.com",
-          "uri": null,
-          "name": "developers.meraki.com",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "smhelp.meraki.com",
-          "uri": null,
-          "name": "smhelp.meraki.com",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "community.meraki.com",
-          "uri": null,
-          "name": "community.meraki.com",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "community-staging.meraki.com",
-          "uri": null,
-          "name": "community-staging.meraki.com",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "*.cisco.com",
-          "uri": "",
-          "name": "*.cisco.com",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "meraki.cisco.com/form/contact",
-          "uri": "",
-          "name": "meraki.cisco.com/form/contact",
-          "ipAddress": null
-        },
-        {
-          "type": "api",
-          "target": "Customer API Keys",
-          "uri": "",
-          "name": "Customer API Keys",
-          "ipAddress": null
-        },
-        {
-          "type": "hardware",
-          "target": "Meraki MC Phones",
-          "uri": "",
-          "name": "Meraki MC Phones",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "documentation.meraki.com",
-          "uri": "",
-          "name": "documentation.meraki.com",
-          "ipAddress": ""
         }
       ]
     }
