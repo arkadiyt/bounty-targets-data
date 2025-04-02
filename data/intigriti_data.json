@@ -153,6 +153,68 @@
     }
   },
   {
+    "id": "ac81c127-b11b-469e-8060-e0fbb9c9c398",
+    "name": "Aikido Security: Zen by Aikido ",
+    "company_handle": "aikido",
+    "handle": "aikidoruntime",
+    "url": "https://www.intigriti.com/programs/aikido/aikidoruntime/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 100,
+      "currency": "EUR"
+    },
+    "max_bounty": {
+      "value": 3500,
+      "currency": "EUR"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "other",
+          "endpoint": "https://github.com/AikidoSec/firewall-node#Vulnerability",
+          "description": "Tier 1 is for vulnerabilities which we potentially introduce via our own firewall component in the user's application.\n\nSee Severity Assessment for more information.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "other",
+          "endpoint": "https://github.com/AikidoSec/firewall-python#Vulnerability",
+          "description": null,
+          "impact": "Tier 1"
+        },
+        {
+          "type": "other",
+          "endpoint": "https://github.com/AikidoSec/firewall-node#Detection Bypass",
+          "description": "Tier 2 is for bypasses in the vulnerability detection of the firewall component, such as a bypass of our SQL injection detection.\n\nSee Severity Assessment for more information.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "https://github.com/AikidoSec/firewall-python#Detection Bypass",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "https://github.com/AikidoSec/firewall-node#False Positive",
+          "description": "Tier 3 is for any false positives you encounter with our vulnerability detection. For example, cases where we falsely flag a SQL injection, while the user's input is safely encapsulated in the SQL query.\n\nSeverity assessments are slightly harder for these cases, see \"Severity Assessment\" for more information.",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "other",
+          "endpoint": "https://github.com/AikidoSec/firewall-python#False Positive",
+          "description": null,
+          "impact": "Tier 3"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
     "id": "30f445f7-ca4c-4130-9434-49add5c6ac74",
     "name": "Algemeen Dagblad",
     "company_handle": "dpgm",
@@ -2889,86 +2951,6 @@
     }
   },
   {
-    "id": "d5c4e966-a80a-44f5-91c9-2bb9487b8762",
-    "name": "EURid",
-    "company_handle": "eurid",
-    "handle": "eurid",
-    "url": "https://www.intigriti.com/programs/eurid/eurid/detail",
-    "status": "open",
-    "confidentiality_level": "public",
-    "tacRequired": false,
-    "twoFactorRequired": false,
-    "min_bounty": {
-      "value": 0,
-      "currency": "EUR"
-    },
-    "max_bounty": {
-      "value": 6000,
-      "currency": "EUR"
-    },
-    "targets": {
-      "in_scope": [
-        {
-          "type": "url",
-          "endpoint": "my.eurid.eu",
-          "description": "My .eu is the registrant or domain holder portal and requires a registered domain name in one of our supported scripts to access.",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.das.eu",
-          "description": null,
-          "impact": "Tier 2"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.dns.eu",
-          "description": null,
-          "impact": "Tier 2"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.eurid.eu",
-          "description": null,
-          "impact": "Tier 2"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.nic.eu",
-          "description": null,
-          "impact": "Tier 2"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.registry.eu",
-          "description": null,
-          "impact": "Tier 2"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.whois.eu",
-          "description": null,
-          "impact": "Tier 2"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.yadifa.eu",
-          "description": null,
-          "impact": "Tier 2"
-        },
-        {
-          "type": "other",
-          "endpoint": "YADIFA authoritative name server",
-          "description": "YADIFA is EURid's authoritative name server software which can be downloaded from the yadifa.eu website.",
-          "impact": "Tier 3"
-        }
-      ],
-      "out_of_scope": [
-
-      ]
-    }
-  },
-  {
     "id": "b962ecba-799e-46b7-a33e-327212bc482e",
     "name": "Exact Vulnerability Disclosure Program",
     "company_handle": "exact",
@@ -3895,6 +3877,115 @@
       ],
       "out_of_scope": [
 
+      ]
+    }
+  },
+  {
+    "id": "b084e962-1d83-4bec-9d46-0f02c0f7bf88",
+    "name": "InnoGames",
+    "company_handle": "innogames",
+    "handle": "innogames",
+    "url": "https://www.intigriti.com/programs/innogames/innogames/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 50,
+      "currency": "EUR"
+    },
+    "max_bounty": {
+      "value": 4500,
+      "currency": "EUR"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "other",
+          "endpoint": "Backend/Non-Game",
+          "description": "* *.igpayment.com\nThis is our payment environment used in all of our games.\n\n* *.innogames.de\nThis is our central login and account management tool. We do not provide accounts for this service and there are no registration pages available. \n\n* *.innogames.com\n\n* www.innogames.com\n***Please do not send applications through the application form. This is a 3rd party tool and out-of-scope.***\n\n* support.innogames.com\n***Please avoid creating many new tickets, but instead concentrate your testing on the ticket contents.***\n\n**Note for automated-scanning:**\nWe are happy that you are as enthusiastic as we are about this program!\nTo not impact our live-systems and other researchers too much, we ask you to keep your automated scanners on a scan rate of 1 request/s. ",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "other",
+          "endpoint": "Elvenar",
+          "description": "* xs.elvenar.com\nThe landing page for the game login.\n\n* xs0.elvenar.com\nThe master server, which performs authentication and holds inventory of \"game-world-wide\" player data.\n\n* xs1.elvenar.com\nThis is the actual game world, where the game takes place.\n",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "Forge of Empires",
+          "description": "* xs.forgeofempires.com\nThe landing page for the game login.\n\n* xs0.forgeofempires.com\nThe master server, which performs authentication and holds inventory of \"game-world-wide\" player data.\n\n* xs1.forgeofempires.com\nThis is the actual game world, where the game takes place.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "Grepolis",
+          "description": "* xs.grepolis.com\nThe landing page for the game login.\n\n* xs0.grepolis.com\nThe master server, which performs authentication and holds inventory of \"game-world-wide\" player data.\n\n* xs1.grepolis.com\nThis is the actual game world, where the game takes place.\n",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "Tribal Wars",
+          "description": "* tribalwars.cash / xs0.tribalwars.cash\nThe master server, which performs authentication and holds inventory of \"game-world-wide\" player data..\n\n* xs(1-3).tribalwars.cash\nThese are the actual game worlds, where the game takes place.\n",
+          "impact": "Tier 2"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "url",
+          "endpoint": "autodiscover.innogames.de",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "exchange.innogames.de",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "igjam.eu",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "jamf.innogames.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "mail.innogames.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "newsroom.innogames.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "pn.innogames.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "slack.innogames.de",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "typingmind.innogames.de",
+          "description": null,
+          "impact": "Out of scope"
+        }
       ]
     }
   },
@@ -5412,139 +5503,6 @@
       ],
       "out_of_scope": [
 
-      ]
-    }
-  },
-  {
-    "id": "0fd1d85b-2d33-4966-b5a0-caabfda5108e",
-    "name": "Ninja Kiwi Games Bug Bounty program",
-    "company_handle": "ninjakiwigames",
-    "handle": "ninjakiwigames",
-    "url": "https://www.intigriti.com/programs/ninjakiwigames/ninjakiwigames/detail",
-    "status": "open",
-    "confidentiality_level": "public",
-    "tacRequired": false,
-    "twoFactorRequired": false,
-    "min_bounty": {
-      "value": 75,
-      "currency": "EUR"
-    },
-    "max_bounty": {
-      "value": 4125,
-      "currency": "EUR"
-    },
-    "targets": {
-      "in_scope": [
-        {
-          "type": "url",
-          "endpoint": "analytics.ninjakiwi.com",
-          "description": "This domain hosts the API that consumed analytics events from our game clients\n",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "api.ninjakiwi.com",
-          "description": "This domain hosts the API for our mobile and PC games. Monitoring traffic through one of our game clients is the easiest method to investigate our main API. Most of our applications are available for free on [Steam](https://store.steampowered.com/developer/ninjakiwigames/#browse). Please carefully read the in-scope section regarding what sorts of exploits will be considering in-scope for this domain. \n",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "builds-auckland.ninja.kiwi",
-          "description": "This domain hosts builds of Ninja Kiwi games for iOS devices.\n\nAreas of focus:\n* The ability to download any valid build from this service will be considered a CRITICAL vulnerability.\n* We will reward any enumeration of available game builds with a Medium bounty.",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "guts.ninjakiwi.com",
-          "description": "This is the backend services for certain BTD6 in-game features such as Contested Territories and the Map Creator.",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.ninjakiwi.me",
-          "description": "ninjakiwi.me is a domain which hosts many of Ninja Kiwi's employtee only services. Any subdomain is eligible for the program. ",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.nkstatic.com",
-          "description": "This domain hosts static content for Ninja Kiwi games and website.\n",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "battles.tv",
-          "description": "Battles.tv is used to share replays from our Bloons TD Battles game.\n",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "data.ninjakiwi.com",
-          "description": "This domain hosts our **public** data API which grants open access to in-game data from our biggest games. For example player profiles, leaderboards and event information is available through this domain. ",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "ninja.kiwi",
-          "description": "This domain is used by Ninja Kiwi for our URL shortener service, ie https://ninja.kiwi/intigriti. \n",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "ninjakiwi.com",
-          "description": null,
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "alerts.ninjakiwi.com",
-          "description": null,
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "boomer2.ninjakiwi.com",
-          "description": null,
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "ct.ninjakiwi.com",
-          "description": null,
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "mynk-dash.ninjakiwi.com",
-          "description": null,
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "mynk.ninjakiwi.com",
-          "description": "This is a legacy domain which powers our Flash games. Uses Flash AMF. \n",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.souparea.com",
-          "description": "This domain will be considered out of scope unless it can be shown to allow an exploit on one of our Tier 1-3 domains.\n\n",
-          "impact": "No Bounty"
-        }
-      ],
-      "out_of_scope": [
-        {
-          "type": "url",
-          "endpoint": "store.ninjakiwi.com",
-          "description": "If you've found an issue with this domain you can contact Shopify here - https://www.shopify.com/bugbounty",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "support.ninjakiwi.com",
-          "description": "If you've found an issue with this domain you can contact Zendesk here - https://support.zendesk.com/hc/en-us/articles/4409154830874-Zendesk-Bug-Bounty-Program",
-          "impact": "Out of scope"
-        }
       ]
     }
   },
