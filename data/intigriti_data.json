@@ -153,68 +153,6 @@
     }
   },
   {
-    "id": "ac81c127-b11b-469e-8060-e0fbb9c9c398",
-    "name": "Aikido Security: Zen by Aikido ",
-    "company_handle": "aikido",
-    "handle": "aikidoruntime",
-    "url": "https://www.intigriti.com/programs/aikido/aikidoruntime/detail",
-    "status": "open",
-    "confidentiality_level": "public",
-    "tacRequired": false,
-    "twoFactorRequired": false,
-    "min_bounty": {
-      "value": 100,
-      "currency": "EUR"
-    },
-    "max_bounty": {
-      "value": 3500,
-      "currency": "EUR"
-    },
-    "targets": {
-      "in_scope": [
-        {
-          "type": "other",
-          "endpoint": "https://github.com/AikidoSec/firewall-node#Vulnerability",
-          "description": "Tier 1 is for vulnerabilities which we potentially introduce via our own firewall component in the user's application.\n\nSee Severity Assessment for more information.",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "other",
-          "endpoint": "https://github.com/AikidoSec/firewall-python#Vulnerability",
-          "description": null,
-          "impact": "Tier 1"
-        },
-        {
-          "type": "other",
-          "endpoint": "https://github.com/AikidoSec/firewall-node#Detection Bypass",
-          "description": "Tier 2 is for bypasses in the vulnerability detection of the firewall component, such as a bypass of our SQL injection detection.\n\nSee Severity Assessment for more information.",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "other",
-          "endpoint": "https://github.com/AikidoSec/firewall-python#Detection Bypass",
-          "description": null,
-          "impact": "Tier 2"
-        },
-        {
-          "type": "other",
-          "endpoint": "https://github.com/AikidoSec/firewall-node#False Positive",
-          "description": "Tier 3 is for any false positives you encounter with our vulnerability detection. For example, cases where we falsely flag a SQL injection, while the user's input is safely encapsulated in the SQL query.\n\nSeverity assessments are slightly harder for these cases, see \"Severity Assessment\" for more information.",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "other",
-          "endpoint": "https://github.com/AikidoSec/firewall-python#False Positive",
-          "description": null,
-          "impact": "Tier 3"
-        }
-      ],
-      "out_of_scope": [
-
-      ]
-    }
-  },
-  {
     "id": "30f445f7-ca4c-4130-9434-49add5c6ac74",
     "name": "Algemeen Dagblad",
     "company_handle": "dpgm",
@@ -5513,6 +5451,139 @@
     }
   },
   {
+    "id": "0fd1d85b-2d33-4966-b5a0-caabfda5108e",
+    "name": "Ninja Kiwi Games Bug Bounty program",
+    "company_handle": "ninjakiwigames",
+    "handle": "ninjakiwigames",
+    "url": "https://www.intigriti.com/programs/ninjakiwigames/ninjakiwigames/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 75,
+      "currency": "EUR"
+    },
+    "max_bounty": {
+      "value": 4125,
+      "currency": "EUR"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "url",
+          "endpoint": "analytics.ninjakiwi.com",
+          "description": "This domain hosts the API that consumed analytics events from our game clients\n",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.ninjakiwi.com",
+          "description": "This domain hosts the API for our mobile and PC games. Monitoring traffic through one of our game clients is the easiest method to investigate our main API. Most of our applications are available for free on [Steam](https://store.steampowered.com/developer/ninjakiwigames/#browse). Please carefully read the in-scope section regarding what sorts of exploits will be considering in-scope for this domain. \n",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "builds-auckland.ninja.kiwi",
+          "description": "This domain hosts builds of Ninja Kiwi games for iOS devices.\n\nAreas of focus:\n* The ability to download any valid build from this service will be considered a CRITICAL vulnerability.\n* We will reward any enumeration of available game builds with a Medium bounty.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "guts.ninjakiwi.com",
+          "description": "This is the backend services for certain BTD6 in-game features such as Contested Territories and the Map Creator.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.ninjakiwi.me",
+          "description": "ninjakiwi.me is a domain which hosts many of Ninja Kiwi's employtee only services. Any subdomain is eligible for the program. ",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.nkstatic.com",
+          "description": "This domain hosts static content for Ninja Kiwi games and website.\n",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "battles.tv",
+          "description": "Battles.tv is used to share replays from our Bloons TD Battles game.\n",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "data.ninjakiwi.com",
+          "description": "This domain hosts our **public** data API which grants open access to in-game data from our biggest games. For example player profiles, leaderboards and event information is available through this domain. ",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "ninja.kiwi",
+          "description": "This domain is used by Ninja Kiwi for our URL shortener service, ie https://ninja.kiwi/intigriti. \n",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "ninjakiwi.com",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "alerts.ninjakiwi.com",
+          "description": null,
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "boomer2.ninjakiwi.com",
+          "description": null,
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "ct.ninjakiwi.com",
+          "description": null,
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "mynk-dash.ninjakiwi.com",
+          "description": null,
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "mynk.ninjakiwi.com",
+          "description": "This is a legacy domain which powers our Flash games. Uses Flash AMF. \n",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.souparea.com",
+          "description": "This domain will be considered out of scope unless it can be shown to allow an exploit on one of our Tier 1-3 domains.\n\n",
+          "impact": "No Bounty"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "url",
+          "endpoint": "store.ninjakiwi.com",
+          "description": "If you've found an issue with this domain you can contact Shopify here - https://www.shopify.com/bugbounty",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "support.ninjakiwi.com",
+          "description": "If you've found an issue with this domain you can contact Zendesk here - https://support.zendesk.com/hc/en-us/articles/4409154830874-Zendesk-Bug-Bounty-Program",
+          "impact": "Out of scope"
+        }
+      ]
+    }
+  },
+  {
     "id": "c7af90e7-ebe9-464f-9786-84970bc4cce3",
     "name": "OVO VDP",
     "company_handle": "ovoenergy",
@@ -7904,104 +7975,6 @@
           "endpoint": "www.socialdeal.nl",
           "description": "Our main website. \nwww.socialdeal.be and www.socialdeal.de are the same websites, with different Locale.\n",
           "impact": "Tier 2"
-        }
-      ],
-      "out_of_scope": [
-
-      ]
-    }
-  },
-  {
-    "id": "18058413-5255-4f5c-a9db-c6ac027bb5d6",
-    "name": "Soundtrack Your Brand",
-    "company_handle": "syb",
-    "handle": "soundtrackyourbrand",
-    "url": "https://www.intigriti.com/programs/syb/soundtrackyourbrand/detail",
-    "status": "open",
-    "confidentiality_level": "public",
-    "tacRequired": false,
-    "twoFactorRequired": false,
-    "min_bounty": {
-      "value": 50,
-      "currency": "EUR"
-    },
-    "max_bounty": {
-      "value": 3500,
-      "currency": "EUR"
-    },
-    "targets": {
-      "in_scope": [
-        {
-          "type": "ios",
-          "endpoint": "1114799709",
-          "description": "The iOS Player app that allows you to browse and play music.\n\nIn order to use the iOS Player you will need a pairing code that you can obtain through https://business.soundtrackyourbrand.com using the test credentials.\n\nhttps://www.youtube.com/watch?v=y7HGAtsB6Tg",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "ios",
-          "endpoint": "1114800186",
-          "description": "The iOS Remote that allows you to remotely control your Soundtrack Players.\n\nIn order to use the iOS Remote you will need a remote code that you can obtain through https://business.soundtrackyourbrand.com using the test credentials.\n\nhttps://www.youtube.com/watch?v=cmAe1kRvOeY",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "api.soundtrackyourbrand.com",
-          "description": "Our public API. Used by us as well as third parties. You can use your regular login token to authenticate.\n\nDocs: https://developer.soundtrackyourbrand.com/api\nGraphQL Explorer: https://api.soundtrackyourbrand.com/v2/explore\n\nPlease use one of the claimed test credentials. In order to use the API you can login using your claimed credentials (via loginUser) and use the token you get back to issue API calls.",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "billing.api.soundtrackyourbrand.com",
-          "description": "Our billing service. Handles payments (one time and recurring), price and product management and subscription renewals.",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "builds.soundtrackyourbrand.com",
-          "description": "Our service which does gradual rollout of our player software to our Windows client and hardware players.",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "business.soundtrackyourbrand.com",
-          "description": "Our web based management console that allows users to administer their players, music and their account.\n\n**To claim bounties for this domain you need to use one of the claimed test credentials.**",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "android",
-          "endpoint": "com.soundtrackyourbrand.soundtrack.player",
-          "description": "The Android Player app that allows you to browse and play music.\n\nIn order to use the Android Player you will need a pairing code that you can obtain through https://business.soundtrackyourbrand.com using the test credentials.\n\nhttps://www.youtube.com/watch?v=y7HGAtsB6Tg",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "https://auth.api.soundtrackyourbrand.com/",
-          "description": "Our authentication service.",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "other",
-          "endpoint": "https://builds.soundtrackyourbrand.com/download/WIN32SOUNDTRACK/latest",
-          "description": "The Windows Player that allows you to play music. No user interface except for a tray icon.\n\nIn order to use the Windows Player you will need a pairing code that you can obtain through https://business.soundtrackyourbrand.com using the test credentials.\n\nhttps://www.youtube.com/watch?v=HjFfXcjSEmM",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "https://radio.api.soundtrackyourbrand.com/",
-          "description": "Our playlisting service.",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "https://www.soundtrackyourbrand.com",
-          "description": "Our public website.",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "other",
-          "endpoint": "macOS app",
-          "description": "The macOS Player app allows you to browse and play music. You can find it in the App Store: https://apps.apple.com/se/app/soundtrack-player/id1114799709?l=en\n\nIn order to use the macOS you will need a pairing code that you can obtain through https://business.soundtrackyourbrand.com using the test credentials.\n\nhttps://www.youtube.com/watch?v=y7HGAtsB6Tg",
-          "impact": "Tier 1"
         }
       ],
       "out_of_scope": [
