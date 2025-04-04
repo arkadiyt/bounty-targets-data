@@ -8252,6 +8252,62 @@
     }
   },
   {
+    "name": "Directly",
+    "url": "https://bugcrowd.com/engagements/directly",
+    "allows_disclosure": true,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "full",
+    "max_payout": 3000,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "website",
+          "target": "app.sandbox.directly.com",
+          "uri": null,
+          "name": "app.sandbox.directly.com",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "*.sandbox.directly.com/",
+          "uri": null,
+          "name": "*.sandbox.directly.com/",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "https://sandbox.directly.com/dashboard/index",
+          "uri": "https://sandbox.directly.com/dashboard/index",
+          "name": "https://sandbox.directly.com/dashboard/index",
+          "ipAddress": null
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "website",
+          "target": "www.directly.com",
+          "uri": null,
+          "name": "www.directly.com",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "resources.directly.com/*",
+          "uri": null,
+          "name": "resources.directly.com/*",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "*.sandbox.directly.com/schedule-a-demo/* OR /product/* OR /careers/* OR /about/* OR /legal/* OR /trust/*",
+          "uri": null,
+          "name": "*.sandbox.directly.com/schedule-a-demo/* OR /product/* OR /careers/* OR /about/* OR /legal/* OR /trust/*",
+          "ipAddress": null
+        }
+      ]
+    }
+  },
+  {
     "name": "Dropbox",
     "url": "https://bugcrowd.com/engagements/dropbox",
     "allows_disclosure": false,
@@ -10576,167 +10632,6 @@
           "target": "*dev.ibotta.com",
           "uri": "",
           "name": "*dev.ibotta.com",
-          "ipAddress": ""
-        }
-      ]
-    }
-  },
-  {
-    "name": "iFood: Bug Bounty Program",
-    "url": "https://bugcrowd.com/engagements/ifood-og",
-    "allows_disclosure": false,
-    "managed_by_bugcrowd": true,
-    "safe_harbor": "full",
-    "max_payout": 2500,
-    "targets": {
-      "in_scope": [
-        {
-          "type": "website",
-          "target": "https://www.ifood.com.br",
-          "uri": "https://www.ifood.com.br",
-          "name": "https://www.ifood.com.br",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "https://*.movilepay.com",
-          "uri": "https://*.movilepay.com",
-          "name": "*.movilepay.com",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "https://*.movilepay.com.br",
-          "uri": "https://*.movilepay.com.br",
-          "name": "*.movilepay.com.br",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "https://shop.ifood.com.br",
-          "uri": "https://shop.ifood.com.br",
-          "name": "https://shop.ifood.com.br",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "https://marketplace.ifood.com.br",
-          "uri": "https://marketplace.ifood.com.br",
-          "name": "https://marketplace.ifood.com.br",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "https://wsloja.ifood.com.br",
-          "uri": "https://wsloja.ifood.com.br",
-          "name": "https://wsloja.ifood.com.br",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "https://wslatam.ifood.com.br",
-          "uri": "https://wslatam.ifood.com.br",
-          "name": "https://wslatam.ifood.com.br",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "https://static-images.ifood.com.br",
-          "uri": "https://static-images.ifood.com.br",
-          "name": "https://static-images.ifood.com.br",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "https://gestordepedidos.ifood.com.br",
-          "uri": "https://gestordepedidos.ifood.com.br",
-          "name": "Gestor de pedidos - Web ONLY",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "https://developer.ifood.com.br",
-          "uri": "https://developer.ifood.com.br",
-          "name": "https://developer.ifood.com.br",
-          "ipAddress": ""
-        },
-        {
-          "type": "api",
-          "target": "https://api.fstr.rocks",
-          "uri": "https://api.fstr.rocks",
-          "name": "https://api.fstr.rocks",
-          "ipAddress": null
-        },
-        {
-          "type": "api",
-          "target": "https://rc.fstr.rocks",
-          "uri": "https://rc.fstr.rocks",
-          "name": "https://rc.fstr.rocks",
-          "ipAddress": null
-        },
-        {
-          "type": "android",
-          "target": "https://play.google.com/store/apps/details?id=br.com.brainweb.ifood&hl=pt_BR",
-          "uri": "https://play.google.com/store/apps/details?id=br.com.brainweb.ifood&hl=pt_BR",
-          "name": "iFood Customer Android Application",
-          "ipAddress": null
-        },
-        {
-          "type": "ios",
-          "target": "https://apps.apple.com/br/app/ifood-pedir-comida-e-mercado/id483017239",
-          "uri": "https://apps.apple.com/br/app/ifood-pedir-comida-e-mercado/id483017239",
-          "name": "iFood Customer iOS Application",
-          "ipAddress": null
-        }
-      ],
-      "out_of_scope": [
-        {
-          "type": "website",
-          "target": "blog-empresas.ifood.com.br",
-          "uri": "",
-          "name": "blog-empresas.ifood.com.br",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "blog-parceiros.ifood.com.br",
-          "uri": "",
-          "name": "blog-parceiros.ifood.com.br",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "*.ecomanda.com.br",
-          "uri": "",
-          "name": "*.ecomanda.com.br",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "*.ecomanda.app",
-          "uri": "",
-          "name": "*.ecomanda.app",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "*.allin.movilepay.com",
-          "uri": "",
-          "name": "*.allin.movilepay.com",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "*.starsoft.movilepay.com",
-          "uri": "",
-          "name": "*.starsoft.movilepay.com",
-          "ipAddress": null
-        },
-        {
-          "type": "other",
-          "target": "Gestor de Pedidos - Desktop Client",
-          "uri": "",
-          "name": "Gestor de Pedidos - Desktop Client",
           "ipAddress": ""
         }
       ]
