@@ -390,7 +390,7 @@
         {
           "type": "url",
           "endpoint": "https://dealer.prod.ps.axelspringer.de/api/v1/partners/{partnerId}/activation",
-          "description": null,
+          "description": "For the authenticated endpoint, we only accept cache poisoning submissions that are valid with changing authentication headers.",
           "impact": "Tier 1"
         },
         {
@@ -1353,38 +1353,6 @@
           "description": null,
           "impact": "Out of scope"
         }
-      ]
-    }
-  },
-  {
-    "id": "46b91324-4123-4be1-94b4-49ce8b601cd9",
-    "name": "Challenge 0325 by 0x999",
-    "company_handle": "intigriti",
-    "handle": "challenge0325",
-    "url": "https://www.intigriti.com/programs/intigriti/challenge0325/detail",
-    "status": "open",
-    "confidentiality_level": "public",
-    "tacRequired": false,
-    "twoFactorRequired": false,
-    "min_bounty": {
-      "value": 0,
-      "currency": "EUR"
-    },
-    "max_bounty": {
-      "value": 0,
-      "currency": "EUR"
-    },
-    "targets": {
-      "in_scope": [
-        {
-          "type": "url",
-          "endpoint": "https://challenge-0325.intigriti.io",
-          "description": null,
-          "impact": "Tier 2"
-        }
-      ],
-      "out_of_scope": [
-
       ]
     }
   },
@@ -3095,6 +3063,38 @@
           "description": null,
           "impact": "Out of scope"
         }
+      ]
+    }
+  },
+  {
+    "id": "52981969-8a58-4c56-a8a1-7b95d874369b",
+    "name": "HackDonalds Challenge",
+    "company_handle": "intigriti",
+    "handle": "challenge-hackdonalds",
+    "url": "https://www.intigriti.com/programs/intigriti/challenge-hackdonalds/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 0,
+      "currency": "EUR"
+    },
+    "max_bounty": {
+      "value": 0,
+      "currency": "EUR"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "url",
+          "endpoint": "hackdonalds.intigriti.io",
+          "description": null,
+          "impact": "Tier 3"
+        }
+      ],
+      "out_of_scope": [
+
       ]
     }
   },
