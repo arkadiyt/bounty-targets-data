@@ -6096,62 +6096,6 @@
     }
   },
   {
-    "name": "Braze Public BB",
-    "url": "https://bugcrowd.com/engagements/braze-bb",
-    "allows_disclosure": false,
-    "managed_by_bugcrowd": true,
-    "safe_harbor": "full",
-    "max_payout": 5000,
-    "targets": {
-      "in_scope": [
-        {
-          "type": "api",
-          "target": "https://bug-bounty-api.k8s.tools-001.d-use-1.braze-dev.com",
-          "uri": "https://bug-bounty-api.k8s.tools-001.d-use-1.braze-dev.com",
-          "name": "https://bug-bounty-api.k8s.tools-001.d-use-1.braze-dev.com",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "https://bug-bounty-dashboard.k8s.tools-001.d-use-1.braze-dev.com",
-          "uri": "https://bug-bounty-dashboard.k8s.tools-001.d-use-1.braze-dev.com",
-          "name": "https://bug-bounty-dashboard.k8s.tools-001.d-use-1.braze-dev.com/",
-          "ipAddress": null
-        }
-      ],
-      "out_of_scope": [
-        {
-          "type": "other",
-          "target": "https://*.appboy.com/",
-          "uri": "https://*.appboy.com/",
-          "name": "*.appboy.com",
-          "ipAddress": null
-        },
-        {
-          "type": "other",
-          "target": "https://*.braze.eu/",
-          "uri": "https://*.braze.eu/",
-          "name": "*.braze.eu",
-          "ipAddress": null
-        },
-        {
-          "type": "other",
-          "target": "https://*.braze.com/",
-          "uri": "https://*.braze.com/",
-          "name": "*.braze.com",
-          "ipAddress": null
-        },
-        {
-          "type": "other",
-          "target": "Any Braze Owned Host not listed as in Scope",
-          "uri": "",
-          "name": "Any Braze Owned Host not listed as in Scope",
-          "ipAddress": null
-        }
-      ]
-    }
-  },
-  {
     "name": "Bugcrowd",
     "url": "https://bugcrowd.com/engagements/bugcrowd",
     "allows_disclosure": false,
@@ -22608,6 +22552,181 @@
           "target": "*.experiences.zone",
           "uri": "",
           "name": "*.experiences.zone",
+          "ipAddress": null
+        }
+      ]
+    }
+  },
+  {
+    "name": "20 Minuten",
+    "url": "https://bugcrowd.com/engagements/twentyminuten",
+    "allows_disclosure": false,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "full",
+    "max_payout": 5000,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "website",
+          "target": "https://www.20min.ch",
+          "uri": "https://www.20min.ch",
+          "name": "https://www.20min.ch",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "https://coral.20min.ch/",
+          "uri": "https://coral.20min.ch/",
+          "name": "https://cm.20min.ch/",
+          "ipAddress": null
+        },
+        {
+          "type": "api",
+          "target": "https://api.20min.ch/",
+          "uri": "https://api.20min.ch/",
+          "name": "https://api.20min.ch/",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "https://videoplayer.20min.ch",
+          "uri": "https://videoplayer.20min.ch",
+          "name": "https://videoplayer.20min.ch",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "https://partner-feeds.20min.ch",
+          "uri": "https://partner-feeds.20min.ch",
+          "name": "https://partner-feeds.20min.ch",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "https://screenplayer.20min.ch",
+          "uri": "https://screenplayer.20min.ch",
+          "name": "https://screenplayer.20min.ch",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "https://audio.20min.ch/",
+          "uri": "https://audio.20min.ch/",
+          "name": "https://audio.20min.ch",
+          "ipAddress": ""
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "api",
+          "target": "https://tgt.tamedia.ch",
+          "uri": null,
+          "name": "https://tgt.tamedia.ch",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "http://auth.20min.ch",
+          "uri": null,
+          "name": "http://auth.20min.ch",
+          "ipAddress": null
+        },
+        {
+          "type": "api",
+          "target": "https://cre-api.tamedia.ch",
+          "uri": null,
+          "name": "https://cre-api.tamedia.ch",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "https://track.20min.ch",
+          "uri": null,
+          "name": "https://track.20min.ch",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "Social Media Links (older than 2 years)",
+          "uri": "",
+          "name": "Social Media Links (older than 2 years)",
+          "ipAddress": null
+        },
+        {
+          "type": "other",
+          "target": "Subdomain Takeover ",
+          "uri": "",
+          "name": "Subdomain Takeover ",
+          "ipAddress": null
+        },
+        {
+          "type": "other",
+          "target": "DMARC, SPF, DKIM",
+          "uri": "",
+          "name": "DMARC, SPF, DKIM",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "https://*.connect.ringier.ch",
+          "uri": "",
+          "name": "https://*.connect.ringier.ch",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "*.onelog.ch",
+          "uri": "",
+          "name": "*.onelog.ch",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "*.20min-tv.ch",
+          "uri": "",
+          "name": "*.20min-tv.ch",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "*.newsnetz.tv",
+          "uri": "",
+          "name": "*.newsnetz.tv",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "*.appuser.ch",
+          "uri": "",
+          "name": "*.appuser.ch",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "*.iagentur.ch",
+          "uri": "",
+          "name": "*.iagentur.ch",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "*.streamboat.ch",
+          "uri": "",
+          "name": "*.streamboat.ch",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "*.streamboatserver.ch",
+          "uri": "",
+          "name": "*.streamboatserver.ch",
+          "ipAddress": null
+        },
+        {
+          "type": "other",
+          "target": "Other Domains and Subdomains not specifically in scope",
+          "uri": "",
+          "name": "Other Domains and Subdomains not specifically in scope",
           "ipAddress": null
         }
       ]
