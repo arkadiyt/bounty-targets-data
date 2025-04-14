@@ -1240,6 +1240,132 @@
     }
   },
   {
+    "name": "Asana",
+    "url": "https://bugcrowd.com/engagements/asana",
+    "allows_disclosure": false,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "partial",
+    "max_payout": 6500,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "website",
+          "target": "https://app.asana.com",
+          "uri": "https://app.asana.com",
+          "name": "app.asana.com",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "https://asana.com",
+          "uri": "https://asana.com",
+          "name": "asana.com",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "https://asana.com/apps?category=made-by-asana",
+          "uri": "https://asana.com/apps?category=made-by-asana",
+          "name": "*.asana.plus",
+          "ipAddress": null
+        },
+        {
+          "type": "other",
+          "target": "https://asana.com/download",
+          "uri": "https://asana.com/download",
+          "name": "Asana Desktop App",
+          "ipAddress": null
+        },
+        {
+          "type": "ios",
+          "target": "https://apps.apple.com/us/app/asana-mobile/id489969512",
+          "uri": "https://apps.apple.com/us/app/asana-mobile/id489969512",
+          "name": "Asana iOS app",
+          "ipAddress": null
+        },
+        {
+          "type": "android",
+          "target": "https://play.google.com/store/apps/details?id=com.asana.app&hl=en",
+          "uri": "https://play.google.com/store/apps/details?id=com.asana.app&hl=en",
+          "name": "Asana Android app",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "https://form.asana.com",
+          "uri": "https://form.asana.com",
+          "name": "form.asana.com",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "*.app.asana.com",
+          "uri": null,
+          "name": "*.app.asana.com",
+          "ipAddress": null
+        },
+        {
+          "type": "other",
+          "target": "https://*.asana.biz",
+          "uri": "https://*.asana.biz",
+          "name": "*.asana.biz",
+          "ipAddress": null
+        },
+        {
+          "type": "other",
+          "target": "Subdomain takeover at *asana.biz",
+          "uri": "",
+          "name": "Subdomain takeover at *asana.biz",
+          "ipAddress": ""
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "website",
+          "target": "Other subdomains of asana.com",
+          "uri": null,
+          "name": "Other subdomains of asana.com",
+          "ipAddress": null
+        },
+        {
+          "type": "other",
+          "target": "Social engineering against Asana Support or Asana Employees",
+          "uri": null,
+          "name": "Social engineering against Asana Support or Asana Employees",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "jira*.integrations.asana.plus",
+          "uri": "",
+          "name": "jira*.integrations.asana.plus",
+          "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "asana.okta.com",
+          "uri": "",
+          "name": "asana.okta.com",
+          "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "assets.asana.biz",
+          "uri": "",
+          "name": "assets.asana.biz",
+          "ipAddress": ""
+        },
+        {
+          "type": "other",
+          "target": "Forms that you do not own",
+          "uri": "",
+          "name": "Forms that you do not own",
+          "ipAddress": ""
+        }
+      ]
+    }
+  },
+  {
     "name": "Atlassian",
     "url": "https://bugcrowd.com/engagements/atlassian",
     "allows_disclosure": false,
@@ -7159,133 +7285,6 @@
           "name": "wiki.cloudinary.com",
           "ipAddress": null
         }
-      ]
-    }
-  },
-  {
-    "name": "codefortynine",
-    "url": "https://bugcrowd.com/engagements/codefortynine",
-    "allows_disclosure": true,
-    "managed_by_bugcrowd": true,
-    "safe_harbor": "partial",
-    "max_payout": 1500,
-    "targets": {
-      "in_scope": [
-        {
-          "type": "website",
-          "target": "https://marketplace.atlassian.com/apps/1218652/deep-clone-for-jira?hosting=cloud",
-          "uri": "https://marketplace.atlassian.com/apps/1218652/deep-clone-for-jira?hosting=cloud",
-          "name": "https://marketplace.atlassian.com/apps/1218652/deep-clone-for-jira?hosting=cloud",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "https://marketplace.atlassian.com/apps/1219514/merge-agent-for-jira?hosting=cloud",
-          "uri": "https://marketplace.atlassian.com/apps/1219514/merge-agent-for-jira?hosting=cloud",
-          "name": "https://marketplace.atlassian.com/apps/1219514/merge-agent-for-jira?hosting=cloud",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "https://marketplace.atlassian.com/apps/1220136/quick-filters-for-jira-dashboards?hosting=cloud",
-          "uri": "https://marketplace.atlassian.com/apps/1220136/quick-filters-for-jira-dashboards?hosting=cloud",
-          "name": "https://marketplace.atlassian.com/apps/1220136/quick-filters-for-jira-dashboards?hosting=cloud",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "https://marketplace.atlassian.com/apps/1219476/comment-custom-fields-for-jira?hosting=cloud",
-          "uri": "https://marketplace.atlassian.com/apps/1219476/comment-custom-fields-for-jira?hosting=cloud",
-          "name": "https://marketplace.atlassian.com/apps/1219476/comment-custom-fields-for-jira?hosting=cloud",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "https://marketplace.atlassian.com/apps/1221733/external-data-for-confluence?hosting=cloud",
-          "uri": "https://marketplace.atlassian.com/apps/1221733/external-data-for-confluence?hosting=cloud",
-          "name": "https://marketplace.atlassian.com/apps/1221733/external-data-for-confluence?hosting=cloud",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "https://marketplace.atlassian.com/apps/1219288/comment-history-log-for-jira?hosting=cloud",
-          "uri": "https://marketplace.atlassian.com/apps/1219288/comment-history-log-for-jira?hosting=cloud",
-          "name": "https://marketplace.atlassian.com/apps/1219288/comment-history-log-for-jira?hosting=cloud",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "https://marketplace.atlassian.com/apps/1215055/slack-for-confluence?hosting=cloud",
-          "uri": "https://marketplace.atlassian.com/apps/1215055/slack-for-confluence?hosting=cloud",
-          "name": "https://marketplace.atlassian.com/apps/1215055/slack-for-confluence?hosting=cloud",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "https://marketplace.atlassian.com/apps/1219807/version-sync-for-jira?hosting=cloud",
-          "uri": "https://marketplace.atlassian.com/apps/1219807/version-sync-for-jira?hosting=cloud",
-          "name": "https://marketplace.atlassian.com/apps/1219807/version-sync-for-jira?hosting=cloud",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "https://marketplace.atlassian.com/apps/1220964/snipe-it-for-jira?hosting=cloud",
-          "uri": "https://marketplace.atlassian.com/apps/1220964/snipe-it-for-jira?hosting=cloud",
-          "name": "https://marketplace.atlassian.com/apps/1220964/snipe-it-for-jira?hosting=cloud",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "https://marketplace.atlassian.com/apps/1218211/secure-google-calendar-for-confluence?hosting=cloud",
-          "uri": "https://marketplace.atlassian.com/apps/1218211/secure-google-calendar-for-confluence?hosting=cloud",
-          "name": "https://marketplace.atlassian.com/apps/1218211/secure-google-calendar-for-confluence?hosting=cloud",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "https://marketplace.atlassian.com/apps/1219994/external-data-for-jira-fields?hosting=cloud",
-          "uri": "https://marketplace.atlassian.com/apps/1219994/external-data-for-jira-fields?hosting=cloud",
-          "name": "https://marketplace.atlassian.com/apps/1219994/external-data-for-jira-fields?hosting=cloud",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "https://marketplace.atlassian.com/apps/1232630/external-data-for-jira-fields-extension?hosting=cloud",
-          "uri": "https://marketplace.atlassian.com/apps/1232630/external-data-for-jira-fields-extension?hosting=cloud",
-          "name": "https://marketplace.atlassian.com/apps/1232630/external-data-for-jira-fields-extension?hosting=cloud",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "https://marketplace.atlassian.com/apps/1222978/dynamic-fields-for-jira?hosting=cloud",
-          "uri": "https://marketplace.atlassian.com/apps/1222978/dynamic-fields-for-jira?hosting=cloud",
-          "name": "https://marketplace.atlassian.com/apps/1222978/dynamic-fields-for-jira?hosting=cloud",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "https://marketplace.atlassian.com/apps/1223455/advanced-bulk-edit-for-jira?hosting=cloud",
-          "uri": "https://marketplace.atlassian.com/apps/1223455/advanced-bulk-edit-for-jira?hosting=cloud",
-          "name": "https://marketplace.atlassian.com/apps/1223455/advanced-bulk-edit-for-jira?hosting=cloud",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "https://marketplace.atlassian.com/apps/1226627/prime-custom-fields-for-jira?hosting=cloud",
-          "uri": "https://marketplace.atlassian.com/apps/1226627/prime-custom-fields-for-jira?hosting=cloud",
-          "name": "https://marketplace.atlassian.com/apps/1226627/prime-custom-fields-for-jira?hosting=cloud",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "https://marketplace.atlassian.com/apps/1230689/easy-confluence-gadget-for-jira-dashboards?hosting=cloud",
-          "uri": "https://marketplace.atlassian.com/apps/1230689/easy-confluence-gadget-for-jira-dashboards?hosting=cloud",
-          "name": "https://marketplace.atlassian.com/apps/1230689/easy-confluence-gadget-for-jira-dashboards?hosting=cloud",
-          "ipAddress": ""
-        }
-      ],
-      "out_of_scope": [
-
       ]
     }
   },
@@ -16924,13 +16923,6 @@
         },
         {
           "type": "website",
-          "target": "https://pro.opensea.io/",
-          "uri": "https://pro.opensea.io/",
-          "name": "pro.opensea.io",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
           "target": "http://wallets.opensea.io/",
           "uri": "http://wallets.opensea.io/",
           "name": "http://wallets.opensea.io/",
@@ -22272,6 +22264,146 @@
     }
   },
   {
+    "name": "TheFork - B2C - WNG",
+    "url": "https://bugcrowd.com/engagements/thefork-b2c-wng",
+    "allows_disclosure": false,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "full",
+    "max_payout": 3500,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "website",
+          "target": "https://www.thefork.com/",
+          "uri": "https://www.thefork.com/",
+          "name": "https://www.thefork.com/",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "https://m.thefork.com",
+          "uri": "https://m.thefork.com",
+          "name": "https://m.thefork.com",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "https://blog.thefork.com/",
+          "uri": "https://blog.thefork.com/",
+          "name": "https://blog.thefork.com/",
+          "ipAddress": null
+        },
+        {
+          "type": "api",
+          "target": "https://api.thefork.com",
+          "uri": "https://api.thefork.com",
+          "name": "https://api.thefork.com",
+          "ipAddress": null
+        },
+        {
+          "type": "api",
+          "target": "https://api.lafourchette.com",
+          "uri": "https://api.lafourchette.com",
+          "name": "https://api.lafourchette.com",
+          "ipAddress": null
+        },
+        {
+          "type": "api",
+          "target": "https://review-api.lafourchette.com",
+          "uri": "https://review-api.lafourchette.com",
+          "name": "https://review-api.lafourchette.com",
+          "ipAddress": null
+        },
+        {
+          "type": "api",
+          "target": "https://google-reserve-api.thefork.io",
+          "uri": "https://google-reserve-api.thefork.io",
+          "name": "https://google-reserve-api.thefork.io ",
+          "ipAddress": null
+        },
+        {
+          "type": "api",
+          "target": "https://m-api.lafourchette.com",
+          "uri": "https://m-api.lafourchette.com",
+          "name": "https://m-api.lafourchette.com",
+          "ipAddress": null
+        },
+        {
+          "type": "android",
+          "target": "https://play.google.com/store/apps/details?id=com.lafourchette.lafourchette",
+          "uri": "https://play.google.com/store/apps/details?id=com.lafourchette.lafourchette",
+          "name": "The Fork Android App",
+          "ipAddress": null
+        },
+        {
+          "type": "ios",
+          "target": "https://apps.apple.com/app/thefork-restaurants-bookings/id424850908",
+          "uri": "https://apps.apple.com/app/thefork-restaurants-bookings/id424850908",
+          "name": "The Fork iOS App",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "https://*.tools.thefork.tech",
+          "uri": "https://*.tools.thefork.tech",
+          "name": "*.tools.thefork.tech",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "https://www.restaurant-information.com",
+          "uri": "https://www.restaurant-information.com",
+          "name": "www.restaurant-information.com",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "https://widget.thefork.com",
+          "uri": "https://widget.thefork.com",
+          "name": "widget.thefork.com",
+          "ipAddress": ""
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "website",
+          "target": "https://*.eltenedor.*",
+          "uri": "https://*.eltenedor.*",
+          "name": "https://*.eltenedor.*",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "https://www.thefork.*",
+          "uri": "https://www.thefork.*",
+          "name": "https://www.thefork.*",
+          "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "Customer semi-login / PartialLogin feature",
+          "uri": "",
+          "name": "Customer semi-login / PartialLogin feature",
+          "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "https://module.thefork.com",
+          "uri": "https://module.thefork.com",
+          "name": "module.thefork.com",
+          "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "https://www.lafourchette.com",
+          "uri": "https://www.lafourchette.com",
+          "name": "https://www.lafourchette.com",
+          "ipAddress": null
+        }
+      ]
+    }
+  },
+  {
     "name": "Cisco ThousandEyes Vulnerability Hunting aka Bug Bounty ",
     "url": "https://bugcrowd.com/engagements/thousandeyes-og",
     "allows_disclosure": false,
@@ -25457,419 +25589,6 @@
       ],
       "out_of_scope": [
 
-      ]
-    }
-  },
-  {
-    "name": "Xfinity Home & xFi",
-    "url": "https://bugcrowd.com/engagements/xfinity-home",
-    "allows_disclosure": false,
-    "managed_by_bugcrowd": true,
-    "safe_harbor": "full",
-    "max_payout": 5500,
-    "targets": {
-      "in_scope": [
-        {
-          "type": "website",
-          "target": "https://home.xfinity.com",
-          "uri": "https://home.xfinity.com",
-          "name": "Home.xfinity.com (see below)",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "Internet.xfinity.com",
-          "uri": null,
-          "name": "Internet.xfinity.com",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "*-cvr-aws-*.sys.comcast.net",
-          "uri": null,
-          "name": "*-cvr-aws-*.sys.comcast.net",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "*signalservice.comcast.net",
-          "uri": null,
-          "name": "*signalservice.comcast.net",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "*.dh-commerce.com ",
-          "uri": "",
-          "name": "*.dh-commerce.com ",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "*.ssr.ccp.xcal.tv ",
-          "uri": "",
-          "name": "*.ssr.ccp.xcal.tv ",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "orc-xfi.com",
-          "uri": null,
-          "name": "orc-xfi.com",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "*.xfiplatform.com",
-          "uri": "",
-          "name": "*.xfiplatform.com",
-          "ipAddress": null
-        },
-        {
-          "type": "ios",
-          "target": "https://apps.apple.com/us/app/xfinity/id1178765645",
-          "uri": "https://apps.apple.com/us/app/xfinity/id1178765645",
-          "name": "Xfinity Home iOS mobile app",
-          "ipAddress": null
-        },
-        {
-          "type": "ios",
-          "target": "Xfinity iOS mobile app",
-          "uri": null,
-          "name": "Xfinity iOS mobile app",
-          "ipAddress": null
-        },
-        {
-          "type": "android",
-          "target": "https://play.google.com/store/apps/details?id=com.xfinity.digitalhome&hl=en_US&gl=US",
-          "uri": "https://play.google.com/store/apps/details?id=com.xfinity.digitalhome&hl=en_US&gl=US",
-          "name": "Xfinity Home Android mobile app",
-          "ipAddress": null
-        },
-        {
-          "type": "android",
-          "target": "Xfinity Android mobile app",
-          "uri": null,
-          "name": "Xfinity Android mobile app",
-          "ipAddress": null
-        },
-        {
-          "type": "api",
-          "target": "xhomeapi-*.codebig2.net",
-          "uri": null,
-          "name": "xhomeapi-*.codebig2.net",
-          "ipAddress": null
-        },
-        {
-          "type": "api",
-          "target": "xhomeapi-*.cloud.comcast.net",
-          "uri": null,
-          "name": "xhomeapi-*.cloud.comcast.net",
-          "ipAddress": null
-        },
-        {
-          "type": "hardware",
-          "target": "Xfinity Home Hardware (items listed below in brief)",
-          "uri": null,
-          "name": "Xfinity Home Hardware (items listed below in brief)",
-          "ipAddress": null
-        },
-        {
-          "type": "iot",
-          "target": "Xfinity Home cameras",
-          "uri": null,
-          "name": "Xfinity Home cameras",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "speedtest.xfinity.com",
-          "uri": null,
-          "name": "speedtest.xfinity.com",
-          "ipAddress": null
-        },
-        {
-          "type": "api",
-          "target": "siorc.xfinity.com",
-          "uri": null,
-          "name": "siorc.xfinity.com",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "smartinet.xfinity.com",
-          "uri": null,
-          "name": "smartinet.xfinity.com",
-          "ipAddress": null
-        },
-        {
-          "type": "api",
-          "target": "gw.api.dh.comcast.com",
-          "uri": "",
-          "name": "gw.api.dh.comcast.com",
-          "ipAddress": null
-        },
-        {
-          "type": "hardware",
-          "target": "xFi Gateways (e.g., XB3, XB6, XB7)",
-          "uri": "",
-          "name": "xFi Gateways (e.g., XB3, XB6, XB7)",
-          "ipAddress": null
-        },
-        {
-          "type": "hardware",
-          "target": "xFi Pods",
-          "uri": "",
-          "name": "xFi Pods",
-          "ipAddress": null
-        },
-        {
-          "type": "api",
-          "target": "https://csp-prod.codebig2.net",
-          "uri": "https://csp-prod.codebig2.net",
-          "name": "https://csp-prod.codebig2.net",
-          "ipAddress": null
-        },
-        {
-          "type": "api",
-          "target": "csp-pci.prod.codebig2.net",
-          "uri": "",
-          "name": "csp-pci.prod.codebig2.net",
-          "ipAddress": null
-        },
-        {
-          "type": "api",
-          "target": "aiq-prod.codebig2.net",
-          "uri": "",
-          "name": "aiq-prod.codebig2.net",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "*.xfinityhome.com",
-          "uri": "",
-          "name": "*.xfinityhome.com",
-          "ipAddress": null
-        }
-      ],
-      "out_of_scope": [
-        {
-          "type": "iot",
-          "target": "3rd Party Devices (known as Works with Xfinity)",
-          "uri": null,
-          "name": "3rd Party Devices (known as Works with Xfinity)",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "oauth.xfinity.com",
-          "uri": null,
-          "name": "oauth.xfinity.com",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "https://login.xfinity.com",
-          "uri": "https://login.xfinity.com",
-          "name": "login.xfinity.com",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "*.xerxessecure.com",
-          "uri": "",
-          "name": "*.xerxessecure.com",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "*.cimcontent.net",
-          "uri": "",
-          "name": "*.cimcontent.net",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "*.identity.xfinity.com",
-          "uri": "",
-          "name": "*.identity.xfinity.com",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "\\*\\business.comcast.com",
-          "uri": "",
-          "name": "\\*\\business.comcast.com",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "*.hfc.comcastbusiness.net",
-          "uri": null,
-          "name": "*.hfc.comcastbusiness.net",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "*.hsd1.*.comcast.net",
-          "uri": null,
-          "name": "*.hsd1.*.comcast.net",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "*.pulseinsights.com",
-          "uri": "",
-          "name": "*.pulseinsights.com",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "*.wurfulcloud.com",
-          "uri": "",
-          "name": "*.wurfulcloud.com",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "*.appcenter.ms",
-          "uri": "",
-          "name": "*.appcenter.ms",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "*.kampyle.com",
-          "uri": "",
-          "name": "*.kampyle.com",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "*.demdex.net",
-          "uri": "",
-          "name": "*.demdex.net",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "*.openx.net",
-          "uri": "",
-          "name": "*.openx.net",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "*.criteo.net",
-          "uri": "",
-          "name": "*.criteo.net",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "*.webcontentassessor.com",
-          "uri": "",
-          "name": "*.webcontentassessor.com",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "*.amazon-adsystem.com",
-          "uri": "",
-          "name": "*.amazon-adsystem.com",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "*.adobedtm.com",
-          "uri": "",
-          "name": "*.adobedtm.com",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "*.adnxs.com",
-          "uri": "",
-          "name": "*.adnxs.com",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "*.fwmrm.net",
-          "uri": "",
-          "name": "*.fwmrm.net",
-          "ipAddress": null
-        },
-        {
-          "type": "network",
-          "target": "10.0.0.0/8",
-          "uri": "",
-          "name": "10.0.0.0/8",
-          "ipAddress": ""
-        },
-        {
-          "type": "network",
-          "target": "50.128.0.0/12",
-          "uri": "",
-          "name": "50.128.0.0/12",
-          "ipAddress": ""
-        },
-        {
-          "type": "network",
-          "target": "50.152.0.0/13",
-          "uri": "",
-          "name": "50.152.0.0/13",
-          "ipAddress": ""
-        },
-        {
-          "type": "network",
-          "target": "96.201.0.0/16",
-          "uri": "",
-          "name": "96.201.0.0/16",
-          "ipAddress": ""
-        },
-        {
-          "type": "network",
-          "target": "96.202.128.0/17",
-          "uri": "",
-          "name": "96.202.128.0/17",
-          "ipAddress": ""
-        },
-        {
-          "type": "network",
-          "target": "96.203.0.0/16",
-          "uri": "",
-          "name": "96.203.0.0/16",
-          "ipAddress": ""
-        },
-        {
-          "type": "network",
-          "target": "172.26.128.0/18",
-          "uri": "",
-          "name": "172.26.128.0/18",
-          "ipAddress": ""
-        },
-        {
-          "type": "network",
-          "target": "184.112.0.0/13",
-          "uri": "",
-          "name": "184.112.0.0/13",
-          "ipAddress": ""
-        },
-        {
-          "type": "network",
-          "target": "184.122.0.0/15",
-          "uri": "",
-          "name": "184.122.0.0/15",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "admin.selectwifi.xfinity.com",
-          "uri": "",
-          "name": "admin.selectwifi.xfinity.com",
-          "ipAddress": ""
-        }
       ]
     }
   },
