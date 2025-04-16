@@ -153,68 +153,6 @@
     }
   },
   {
-    "id": "ac81c127-b11b-469e-8060-e0fbb9c9c398",
-    "name": "Aikido Security: Zen by Aikido ",
-    "company_handle": "aikido",
-    "handle": "aikidoruntime",
-    "url": "https://www.intigriti.com/programs/aikido/aikidoruntime/detail",
-    "status": "open",
-    "confidentiality_level": "public",
-    "tacRequired": false,
-    "twoFactorRequired": false,
-    "min_bounty": {
-      "value": 100,
-      "currency": "EUR"
-    },
-    "max_bounty": {
-      "value": 3500,
-      "currency": "EUR"
-    },
-    "targets": {
-      "in_scope": [
-        {
-          "type": "other",
-          "endpoint": "https://github.com/AikidoSec/firewall-node#Vulnerability",
-          "description": "Tier 1 is for vulnerabilities which we potentially introduce via our own firewall component in the user's application.\n\nSee Severity Assessment for more information.",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "other",
-          "endpoint": "https://github.com/AikidoSec/firewall-python#Vulnerability",
-          "description": null,
-          "impact": "Tier 1"
-        },
-        {
-          "type": "other",
-          "endpoint": "https://github.com/AikidoSec/firewall-node#Detection Bypass",
-          "description": "Tier 2 is for bypasses in the vulnerability detection of the firewall component, such as a bypass of our SQL injection detection.\n\nSee Severity Assessment for more information.",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "other",
-          "endpoint": "https://github.com/AikidoSec/firewall-python#Detection Bypass",
-          "description": null,
-          "impact": "Tier 2"
-        },
-        {
-          "type": "other",
-          "endpoint": "https://github.com/AikidoSec/firewall-node#False Positive",
-          "description": "Tier 3 is for any false positives you encounter with our vulnerability detection. For example, cases where we falsely flag a SQL injection, while the user's input is safely encapsulated in the SQL query.\n\nSeverity assessments are slightly harder for these cases, see \"Severity Assessment\" for more information.",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "other",
-          "endpoint": "https://github.com/AikidoSec/firewall-python#False Positive",
-          "description": null,
-          "impact": "Tier 3"
-        }
-      ],
-      "out_of_scope": [
-
-      ]
-    }
-  },
-  {
     "id": "30f445f7-ca4c-4130-9434-49add5c6ac74",
     "name": "Algemeen Dagblad",
     "company_handle": "dpgm",
@@ -1318,7 +1256,7 @@
       "currency": "EUR"
     },
     "max_bounty": {
-      "value": 10000,
+      "value": 15000,
       "currency": "EUR"
     },
     "targets": {
@@ -1948,6 +1886,193 @@
       ],
       "out_of_scope": [
 
+      ]
+    }
+  },
+  {
+    "id": "bd22f48d-633e-4b26-bf71-e4778d41b247",
+    "name": "DataCamp",
+    "company_handle": "datacamp",
+    "handle": "datacamp",
+    "url": "https://www.intigriti.com/programs/datacamp/datacamp/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 25,
+      "currency": "EUR"
+    },
+    "max_bounty": {
+      "value": 1500,
+      "currency": "EUR"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "url",
+          "endpoint": "app.datacamp.com/certification",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "app.datacamp.com/groups",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "app.datacamp.com/learn",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "assessment-api.datacamp.com",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "assessment-v2.datacamp.com ",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "assessment.datacamp.com",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "campus.datacamp.com",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "android",
+          "endpoint": "com.datacamp",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "ios",
+          "endpoint": "https://apps.apple.com/au/app/datacamp-learn-data-science/id1263413087",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "practice.datacamp.com",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "projects.datacamp.com",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.datacamp.com",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.datacamp.com/datalab",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.datacamp.com",
+          "description": null,
+          "impact": "Tier 3"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "url",
+          "endpoint": "dccertified.datacamp.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.it.datacamp.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "app.datacamp.com/recruit",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "ast-viewer.datacamp.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "confluence.datacamp.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "intranet.datacamp.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "jira.datacamp.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "links.datacamp.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "rdocumentation.datacamp.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "signature.datacamp.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "status.datacamp.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "support.datacamp.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "talent-jobs-api.datacamp.com",
+          "description": null,
+          "impact": "Out of scope"
+        }
       ]
     }
   },
@@ -2938,38 +3063,6 @@
           "description": null,
           "impact": "Out of scope"
         }
-      ]
-    }
-  },
-  {
-    "id": "52981969-8a58-4c56-a8a1-7b95d874369b",
-    "name": "HackDonalds Challenge",
-    "company_handle": "intigriti",
-    "handle": "challenge-hackdonalds",
-    "url": "https://www.intigriti.com/programs/intigriti/challenge-hackdonalds/detail",
-    "status": "open",
-    "confidentiality_level": "public",
-    "tacRequired": false,
-    "twoFactorRequired": false,
-    "min_bounty": {
-      "value": 0,
-      "currency": "EUR"
-    },
-    "max_bounty": {
-      "value": 0,
-      "currency": "EUR"
-    },
-    "targets": {
-      "in_scope": [
-        {
-          "type": "url",
-          "endpoint": "hackdonalds.intigriti.io",
-          "description": null,
-          "impact": "Tier 3"
-        }
-      ],
-      "out_of_scope": [
-
       ]
     }
   },
@@ -9863,6 +9956,110 @@
           "type": "url",
           "endpoint": "api-wallet-sandbox.venly.io",
           "description": null,
+          "impact": "Tier 3"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
+    "id": "acb142c1-ffeb-41c3-a9e7-1624054f42e4",
+    "name": "Veriff Bug Bounty",
+    "company_handle": "veriff",
+    "handle": "veriffbugbounty",
+    "url": "https://www.intigriti.com/programs/veriff/veriffbugbounty/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 5,
+      "currency": "EUR"
+    },
+    "max_bounty": {
+      "value": 6000,
+      "currency": "EUR"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "ios",
+          "endpoint": "1467907532",
+          "description": "An iOS application for demoing our product.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "alchemy.veriff.com",
+          "description": "This is an end user (internal) API endpoint.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.flamingo-eu.veriff.com",
+          "description": "This is a public API endpoint.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.us.veriff.me",
+          "description": "This is a public API endpoint.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.veriff.me",
+          "description": "This is a public API endpoint.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "android",
+          "endpoint": "com.veriff.demo",
+          "description": "An Android application for demoing our product.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "louvre.veriff.me",
+          "description": "This is an end user (internal) API endpoint.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "magic.veriff.me",
+          "description": "This is an end user (internal) API endpoint.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "station.veriff.com",
+          "description": "Here you can find our Veriff Station application.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "stationapi.veriff.com",
+          "description": "This is the backend for our Station application.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.veriff.com",
+          "description": "This is our marketing website.",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.veriff.com",
+          "description": "Please note that third party services are out of scope unless the issue is caused due to a misconfiguration by Veriff.",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "developers.veriff.me",
+          "description": "You can find our developers documentation here.",
           "impact": "Tier 3"
         }
       ],
