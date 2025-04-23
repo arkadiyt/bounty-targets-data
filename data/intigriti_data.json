@@ -10009,12 +10009,6 @@
           "impact": "Tier 1"
         },
         {
-          "type": "url",
-          "endpoint": "www.veriff.com",
-          "description": "This is our marketing website.",
-          "impact": "Tier 3"
-        },
-        {
           "type": "wildcard",
           "endpoint": "*.veriff.com",
           "description": "Please note that third party services are out of scope unless the issue is caused due to a misconfiguration by Veriff.",
@@ -10025,10 +10019,21 @@
           "endpoint": "developers.veriff.me",
           "description": "You can find our developers documentation here.",
           "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.veriff.com",
+          "description": "This is our marketing website.",
+          "impact": "Tier 3"
         }
       ],
       "out_of_scope": [
-
+        {
+          "type": "url",
+          "endpoint": "https://station.veriff.com/config/",
+          "description": "Configuration includes public keys what are needed for frontend working properly.",
+          "impact": "Out of scope"
+        }
       ]
     }
   },
