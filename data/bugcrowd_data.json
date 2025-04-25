@@ -6355,41 +6355,6 @@
     }
   },
   {
-    "name": "Bullish Exchange",
-    "url": "https://bugcrowd.com/engagements/bullish-exchange",
-    "allows_disclosure": false,
-    "managed_by_bugcrowd": true,
-    "safe_harbor": "full",
-    "max_payout": 25000,
-    "targets": {
-      "in_scope": [
-        {
-          "type": "website",
-          "target": "https://simnext.bullish-test.com",
-          "uri": "https://simnext.bullish-test.com",
-          "name": "https://simnext.bullish-test.com",
-          "ipAddress": null
-        },
-        {
-          "type": "api",
-          "target": "https://api.simnext.bullish-test.com",
-          "uri": "https://api.simnext.bullish-test.com",
-          "name": "https://api.simnext.bullish-test.com",
-          "ipAddress": null
-        }
-      ],
-      "out_of_scope": [
-        {
-          "type": "website",
-          "target": "*.bullish.com/",
-          "uri": "",
-          "name": "*.bullish.com/",
-          "ipAddress": null
-        }
-      ]
-    }
-  },
-  {
     "name": "Canva",
     "url": "https://bugcrowd.com/engagements/canva",
     "allows_disclosure": false,
@@ -19775,6 +19740,91 @@
           "uri": "https://auth.seek.com",
           "name": "auth.seek.com",
           "ipAddress": null
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
+    "name": "Sendbird",
+    "url": "https://bugcrowd.com/engagements/sendbird-mbb",
+    "allows_disclosure": true,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "full",
+    "max_payout": 2000,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "website",
+          "target": "https://dashboard.sendbird.com/",
+          "uri": "https://dashboard.sendbird.com/",
+          "name": "https://dashboard.sendbird.com",
+          "ipAddress": null
+        },
+        {
+          "type": "api",
+          "target": "https://gate.sendbird.com",
+          "uri": "",
+          "name": "https://gate.sendbird.com",
+          "ipAddress": null
+        },
+        {
+          "type": "api",
+          "target": "https://api-{app-id}.sendbird.com",
+          "uri": "",
+          "name": "https://api-{app-id}.sendbird.com",
+          "ipAddress": null
+        },
+        {
+          "type": "api",
+          "target": "https://ws-{app-id}.sendbird.com",
+          "uri": "",
+          "name": "https://ws-{app-id}.sendbird.com",
+          "ipAddress": null
+        },
+        {
+          "type": "api",
+          "target": "https://desk-api-{region}.sendbird.com",
+          "uri": "",
+          "name": "https://desk-api-{region}.sendbird.com",
+          "ipAddress": null
+        },
+        {
+          "type": "api",
+          "target": "https://ws-{app-id}.calls.sendbird.com",
+          "uri": "",
+          "name": "https://ws-{app-id}.calls.sendbird.com",
+          "ipAddress": null
+        },
+        {
+          "type": "api",
+          "target": "https://api-{app-id}.calls.sendbird.com",
+          "uri": "",
+          "name": "https://api-{app-id}.calls.sendbird.com",
+          "ipAddress": null
+        },
+        {
+          "type": "api",
+          "target": "https://api-{app-id}.notifications.sendbird.com",
+          "uri": "",
+          "name": "https://api-{app-id}.notifications.sendbird.com",
+          "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "https://sendbird.com/docs",
+          "uri": "https://sendbird.com/docs",
+          "name": "https://sendbird.com/docs",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "https://sendbird.com",
+          "uri": "https://sendbird.com",
+          "name": "https://sendbird.com",
+          "ipAddress": ""
         }
       ],
       "out_of_scope": [
