@@ -116,6 +116,105 @@
     }
   },
   {
+    "id": "554fc6c5-4ffa-4682-a3ba-7e86696e9b17",
+    "name": "Aikido Security: Bug Bounty Program",
+    "company_handle": "aikido",
+    "handle": "aikido",
+    "url": "https://www.intigriti.com/programs/aikido/aikido/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 50,
+      "currency": "EUR"
+    },
+    "max_bounty": {
+      "value": 2500,
+      "currency": "EUR"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "url",
+          "endpoint": "app.aikido.dev",
+          "description": "This is our main application, which hosts the API as well as the front-end application.\n\nOur public API is also accessible via this host. Documentation is available here: https://apidocs.aikido.dev/.",
+          "impact": "Tier 2"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "wildcard",
+          "endpoint": "*.aikido.dev",
+          "description": null,
+          "impact": "Out of scope"
+        }
+      ]
+    }
+  },
+  {
+    "id": "ac81c127-b11b-469e-8060-e0fbb9c9c398",
+    "name": "Aikido Security: Zen by Aikido ",
+    "company_handle": "aikido",
+    "handle": "aikidoruntime",
+    "url": "https://www.intigriti.com/programs/aikido/aikidoruntime/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 100,
+      "currency": "EUR"
+    },
+    "max_bounty": {
+      "value": 3500,
+      "currency": "EUR"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "other",
+          "endpoint": "https://github.com/AikidoSec/firewall-node#Vulnerability",
+          "description": "Tier 1 is for vulnerabilities which we potentially introduce via our own firewall component in the user's application.\n\nSee Severity Assessment for more information.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "other",
+          "endpoint": "https://github.com/AikidoSec/firewall-python#Vulnerability",
+          "description": null,
+          "impact": "Tier 1"
+        },
+        {
+          "type": "other",
+          "endpoint": "https://github.com/AikidoSec/firewall-node#Detection Bypass",
+          "description": "Tier 2 is for bypasses in the vulnerability detection of the firewall component, such as a bypass of our SQL injection detection.\n\nSee Severity Assessment for more information.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "https://github.com/AikidoSec/firewall-python#Detection Bypass",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "https://github.com/AikidoSec/firewall-node#False Positive",
+          "description": "Tier 3 is for any false positives you encounter with our vulnerability detection. For example, cases where we falsely flag a SQL injection, while the user's input is safely encapsulated in the SQL query.\n\nSeverity assessments are slightly harder for these cases, see \"Severity Assessment\" for more information.",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "other",
+          "endpoint": "https://github.com/AikidoSec/firewall-python#False Positive",
+          "description": null,
+          "impact": "Tier 3"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
     "id": "30f445f7-ca4c-4130-9434-49add5c6ac74",
     "name": "Algemeen Dagblad",
     "company_handle": "dpgm",
@@ -1855,193 +1954,6 @@
       ],
       "out_of_scope": [
 
-      ]
-    }
-  },
-  {
-    "id": "bd22f48d-633e-4b26-bf71-e4778d41b247",
-    "name": "DataCamp",
-    "company_handle": "datacamp",
-    "handle": "datacamp",
-    "url": "https://www.intigriti.com/programs/datacamp/datacamp/detail",
-    "status": "open",
-    "confidentiality_level": "public",
-    "tacRequired": false,
-    "twoFactorRequired": false,
-    "min_bounty": {
-      "value": 25,
-      "currency": "EUR"
-    },
-    "max_bounty": {
-      "value": 1500,
-      "currency": "EUR"
-    },
-    "targets": {
-      "in_scope": [
-        {
-          "type": "url",
-          "endpoint": "app.datacamp.com/certification",
-          "description": null,
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "app.datacamp.com/groups",
-          "description": null,
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "app.datacamp.com/learn",
-          "description": null,
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "assessment-api.datacamp.com",
-          "description": null,
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "assessment-v2.datacamp.com ",
-          "description": null,
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "assessment.datacamp.com",
-          "description": null,
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "campus.datacamp.com",
-          "description": null,
-          "impact": "Tier 2"
-        },
-        {
-          "type": "android",
-          "endpoint": "com.datacamp",
-          "description": null,
-          "impact": "Tier 2"
-        },
-        {
-          "type": "ios",
-          "endpoint": "https://apps.apple.com/au/app/datacamp-learn-data-science/id1263413087",
-          "description": null,
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "practice.datacamp.com",
-          "description": null,
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "projects.datacamp.com",
-          "description": null,
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "www.datacamp.com",
-          "description": null,
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "www.datacamp.com/datalab",
-          "description": null,
-          "impact": "Tier 2"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.datacamp.com",
-          "description": null,
-          "impact": "Tier 3"
-        }
-      ],
-      "out_of_scope": [
-        {
-          "type": "url",
-          "endpoint": "dccertified.datacamp.com",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.it.datacamp.com",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "app.datacamp.com/recruit",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "ast-viewer.datacamp.com",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "confluence.datacamp.com",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "intranet.datacamp.com",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "jira.datacamp.com",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "links.datacamp.com",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "rdocumentation.datacamp.com",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "signature.datacamp.com",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "status.datacamp.com",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "support.datacamp.com",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "talent-jobs-api.datacamp.com",
-          "description": null,
-          "impact": "Out of scope"
-        }
       ]
     }
   },
@@ -6304,6 +6216,151 @@
     }
   },
   {
+    "id": "694f3e58-f408-4a3f-8e2a-1b562650399a",
+    "name": "Personio",
+    "company_handle": "personio",
+    "handle": "personio",
+    "url": "https://www.intigriti.com/programs/personio/personio/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 50,
+      "currency": "EUR"
+    },
+    "max_bounty": {
+      "value": 5000,
+      "currency": "EUR"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "wildcard",
+          "endpoint": "*.app.personio-dev.com",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.app.personio.com",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.personio-internal.de",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.personio.tools",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.personio-dev.com",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.personio.com",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "https://*.personio.de",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "https://*.personiowhistleblowing.com",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://community.personio.com",
+          "description": "It is recommended for researchers to follow the following process for our community platform so as to avoid spamming regular user. Any activity not within the following parameters will not be considered a valid submissions:\n\n**Step 1:**\nGo to 🇪🇺 https://community.personio.com or 🇩🇪https://community.personio.de\n\n**Step 2:**\nIf you have an account, click on 🇪🇺 Log in or 🇩🇪Einloggen to log in.\nIf you don’t have an account yet, Click on Sign up or Registrieren in the Menu Bar to sign up\n\n**Step 3:**\nClick on 🇪🇺 Ask the Community or 🇩🇪Frag’ die Community to publish a new thread / post.\n\n**Step 4:**\nWhen publishing your post, select the Category: \"Hacking Playground\" which has been setup specifically for Intigriti researchers\n\nIf you just signed up and cannot see it yet, please wait a couple minutes then refresh.\nIf you still cannot see it, please contact community@personio.de for assistance.\n\nAs a result, your post will land in the Hacking Playground Area.\n\n🇪🇺https://community.personio.com/hacking-playground-156 or 🇩🇪https://community.personio.de/hacking-playground-243\n",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://hug.personio.com",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://sec-test-<intigriti handle>-<nn>.personio.de",
+          "description": "Please see FAQ for creation instructions ",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://www.personio.com/free-trial/",
+          "description": null,
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://www.personio.de/kostenlos-testen/",
+          "description": null,
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "Other assets owned by Personio",
+          "description": null,
+          "impact": "Tier 3"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "url",
+          "endpoint": " www.personio.de",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "personio.slack.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "statuspage.personio.de",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "support.personio.de",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.personio.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.personio.es",
+          "description": null,
+          "impact": "Out of scope"
+        }
+      ]
+    }
+  },
+  {
     "id": "0f05f9cd-03e1-4f90-a449-2f43cdaf879a",
     "name": "Port of Antwerp-Bruges",
     "company_handle": "portofantwerp",
@@ -6709,6 +6766,44 @@
           "description": null,
           "impact": "Out of scope"
         }
+      ]
+    }
+  },
+  {
+    "id": "12866339-b82b-4397-98ef-e2e2eae2982c",
+    "name": "R+V Versicherung Responsible Disclosure",
+    "company_handle": "ruv",
+    "handle": "rvversicherungresponsibledisclosure",
+    "url": "https://www.intigriti.com/programs/ruv/rvversicherungresponsibledisclosure/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 0,
+      "currency": "EUR"
+    },
+    "max_bounty": {
+      "value": 0,
+      "currency": "EUR"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "other",
+          "endpoint": "Any product and website maintained by R+V",
+          "description": "We welcome your submission for any product, app and website maintained by R+V Versicherung.",
+          "impact": "No Bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.ruv.de",
+          "description": "ruv.de is our main site for offering various insurance options for private  and business customers. Customers can also login to their accounts and report insurance incidents on the site. ",
+          "impact": "No Bounty"
+        }
+      ],
+      "out_of_scope": [
+
       ]
     }
   },
