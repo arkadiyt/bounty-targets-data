@@ -16280,6 +16280,98 @@
     }
   },
   {
+    "name": "OpenAI",
+    "url": "https://bugcrowd.com/engagements/openai",
+    "allows_disclosure": true,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "partial",
+    "max_payout": 6500,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "api",
+          "target": "https://api.openai.com",
+          "uri": "https://api.openai.com",
+          "name": "api.openai.com",
+          "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "https://chat.openai.com",
+          "uri": "https://chat.openai.com",
+          "name": "ChatGPT",
+          "ipAddress": ""
+        },
+        {
+          "type": "api",
+          "target": "https://chat.openai.com",
+          "uri": "https://chat.openai.com",
+          "name": "ChatGPT Plugins",
+          "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "Third Party Targets",
+          "uri": "",
+          "name": "Third Party Targets",
+          "ipAddress": ""
+        },
+        {
+          "type": "api",
+          "target": "OpenAI API Keys",
+          "uri": "",
+          "name": "OpenAI API Keys",
+          "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "https://*.openai.org",
+          "uri": "https://*.openai.org",
+          "name": "https://openai.org",
+          "ipAddress": ""
+        },
+        {
+          "type": "api",
+          "target": "https://*.openai.org",
+          "uri": "https://*.openai.org",
+          "name": "*.openai.org",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "https://openai.com/",
+          "uri": "https://openai.com/",
+          "name": "openai.com",
+          "ipAddress": null
+        },
+        {
+          "type": "other",
+          "target": "*.openai.com",
+          "uri": "",
+          "name": "*.openai.com",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "https://platform.openai.com/playground",
+          "uri": "https://platform.openai.com/playground",
+          "name": "Developer Platform Playground",
+          "ipAddress": null
+        },
+        {
+          "type": "other",
+          "target": "Other",
+          "uri": "",
+          "name": "Other",
+          "ipAddress": ""
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
     "name": "OpenSea Managed Bug Bounty Program",
     "url": "https://bugcrowd.com/engagements/opensea",
     "allows_disclosure": false,
@@ -18851,62 +18943,6 @@
       ],
       "out_of_scope": [
 
-      ]
-    }
-  },
-  {
-    "name": "Quizlet",
-    "url": "https://bugcrowd.com/engagements/quizlet",
-    "allows_disclosure": true,
-    "managed_by_bugcrowd": true,
-    "safe_harbor": "partial",
-    "max_payout": 2000,
-    "targets": {
-      "in_scope": [
-        {
-          "type": "website",
-          "target": "https://*.quizlet.com",
-          "uri": null,
-          "name": "https://*.quizlet.com",
-          "ipAddress": null
-        },
-        {
-          "type": "ios",
-          "target": "https://itunes.apple.com/us/app/quizlet-flashcards/id546473125",
-          "uri": "https://itunes.apple.com/us/app/quizlet-flashcards/id546473125",
-          "name": "IoS",
-          "ipAddress": null
-        },
-        {
-          "type": "android",
-          "target": "https://play.google.com/store/apps/details?id=com.quizlet.quizletandroid",
-          "uri": "https://play.google.com/store/apps/details?id=com.quizlet.quizletandroid",
-          "name": "Android",
-          "ipAddress": null
-        },
-        {
-          "type": "api",
-          "target": "3.0 API",
-          "uri": null,
-          "name": "3.0 API",
-          "ipAddress": null
-        }
-      ],
-      "out_of_scope": [
-        {
-          "type": "api",
-          "target": "2.0 API",
-          "uri": null,
-          "name": "2.0 API",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "https://help.quizlet.com/hc/en-us",
-          "uri": "https://help.quizlet.com/hc/en-us",
-          "name": " help.quizlet.com (zendesk)",
-          "ipAddress": null
-        }
       ]
     }
   },
