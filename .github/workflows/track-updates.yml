@@ -71,8 +71,12 @@ def extract_changed_urls(old_file, new_file):
 changed_urls = extract_changed_urls("bugcrowd_old.json", "data/bugcrowd_data.json")
 changed_urls += extract_changed_urls("intigriti_old.json", "data/intigriti_data.json")
 
-for url in changed_urls:
-    print(url)
+if changed_urls:
+    print("Changed program URLs:")
+    for url in changed_urls:
+        print(url)
+else:
+    print("No changes detected")
 EOF
           echo "EOF" >> $GITHUB_ENV
 
@@ -84,6 +88,7 @@ EOF
           CHUNK_SIZE=1900
           CURRENT_MSG="🔔 **Programs changed:**\n\`\`\`"
 
+          # Read each URL from the output of the previous step (stored in CHANGED_URLS)
           while IFS= read -r line || [ -n "$line" ]; do
             if [ $((${#CURRENT_MSG} + ${#line} + 1)) -gt $CHUNK_SIZE ]; then
               CURRENT_MSG="$CURRENT_MSG\`\`\`"
