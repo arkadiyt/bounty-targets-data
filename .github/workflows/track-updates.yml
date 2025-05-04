@@ -12,15 +12,13 @@ jobs:
       - name: Checkout the repository
         uses: actions/checkout@v3
 
-      - name: Set up Python
-        uses: actions/setup-python@v4
+      - name: Cache GitHub repository
+        uses: actions/cache@v3
         with:
-          python-version: '3.x'
-
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install deepdiff
+          path: ~/.git
+          key: ${{ runner.os }}-git-${{ hashFiles('**/bounty-targets-data.git') }}
+          restore-keys: |
+            ${{ runner.os }}-git-
 
       - name: Backup old JSON files
         run: |
@@ -32,43 +30,16 @@ jobs:
           git fetch upstream
           git checkout upstream/main -- data/bugcrowd_data.json data/intigriti_data.json
 
-      - name: Create Python script to extract URLs
+      - name: Compare JSON files and extract changed URLs
+        id: check_diff
         run: |
-          echo "
-import json
-from deepdiff import DeepDiff
-
-def extract_changed_urls(old_file, new_file):
-    try:
-        with open(old_file) as f: old = json.load(f)
-        with open(new_file) as f: new = json.load(f)
-    except Exception as e:
-        print(f'Could not load: {e}')
-        return []
-
-    urls = []
-    old_by_url = {entry.get('url'): entry for entry in old if 'url' in entry}
-    new_by_url = {entry.get('url'): entry for entry in new if 'url' in entry}
-
-    for url, new_entry in new_by_url.items():
-        old_entry = old_by_url.get(url)
-        if not old_entry or DeepDiff(old_entry, new_entry, ignore_order=True):
-            urls.append(url)
-    return urls
-
-changed_urls = extract_changed_urls('bugcrowd_old.json', 'data/bugcrowd_data.json')
-changed_urls += extract_changed_urls('intigriti_old.json', 'data/intigriti_data.json')
-
-if changed_urls:
-    for url in changed_urls:
-        print(url)
-else:
-    print('No changes detected')
-          " > extract_urls.py
-
-      - name: Run Python script to extract changed URLs
-        run: |
-          python3 extract_urls.py > changed_urls.txt
+          # Use jq to extract URLs from the old and new JSON files and compare them
+          OLD_URLS=$(jq -r '.[].url' bugcrowd_old.json intigriti_old.json)
+          NEW_URLS=$(jq -r '.[].url' data/bugcrowd_data.json data/intigriti_data.json)
+          
+          # Find the differences between old and new URLs
+          CHANGED_URLS=$(comm -3 <(echo "$OLD_URLS") <(echo "$NEW_URLS"))
+          echo "$CHANGED_URLS" > changed_urls.txt
 
       - name: Send Discord Notification (URLs Only)
         if: success()
