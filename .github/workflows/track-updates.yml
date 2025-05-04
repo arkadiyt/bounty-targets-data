@@ -29,13 +29,13 @@ jobs:
         id: check_diff
         run: |
           git fetch --depth 1 -v upstream  # Shallow fetch with verbose output
-          git diff --name-only HEAD..upstream/master > changed_files.txt
+          git diff --name-only HEAD..upstream/main > changed_files.txt  # Change to main
           cat changed_files.txt
 
           if grep -qE 'data/(bugcrowd_data\.json|intigriti_data\.json)' changed_files.txt; then
             echo "changed=true" >> $GITHUB_OUTPUT
             echo "CHANGES<<EOF" >> $GITHUB_ENV
-            git diff HEAD..upstream/master -- data/bugcrowd_data.json data/intigriti_data.json > file_changes.diff || echo "No diff"
+            git diff HEAD..upstream/main -- data/bugcrowd_data.json data/intigriti_data.json > file_changes.diff || echo "No diff"  # Change to main
             cat file_changes.diff >> $GITHUB_ENV
             echo "EOF" >> $GITHUB_ENV
           else
@@ -45,7 +45,7 @@ jobs:
       - name: Merge upstream if changed
         if: steps.check_diff.outputs.changed == 'true'
         run: |
-          git merge upstream/master --allow-unrelated-histories -m "Sync with upstream changes"
+          git merge upstream/main --allow-unrelated-histories -m "Sync with upstream changes"  # Change to main
           git push origin HEAD:master
 
       - name: Send Discord Notification
