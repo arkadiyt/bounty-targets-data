@@ -8,63 +8,101 @@ on:
 jobs:
   notify-if-data-changed:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout your repo
         uses: actions/checkout@v3
 
-      - name: Cache GitHub repository
-        uses: actions/cache@v3
-        with:
-          path: ~/.git
-          key: ${{ runner.os }}-git-${{ hashFiles('**/bounty-targets-data.git') }}
-          restore-keys: |
-            ${{ runner.os }}-git-
-
-      - name: Add upstream remote and fetch with shallow clone
+      - name: Add upstream and fetch
         run: |
           git remote add upstream https://github.com/arkadiyt/bounty-targets-data.git
-          git fetch --depth 1 -v upstream  # Shallow clone with verbose output
+          git fetch --depth 1 upstream
 
       - name: Check for changes in target files
         id: check_diff
         run: |
-          git fetch --depth 1 -v upstream  # Shallow fetch with verbose output
-          git diff --name-only HEAD..upstream/main > changed_files.txt  # Change to main
+          git diff --name-only HEAD..upstream/main > changed_files.txt
           cat changed_files.txt
 
           if grep -qE 'data/(bugcrowd_data\.json|intigriti_data\.json)' changed_files.txt; then
             echo "changed=true" >> $GITHUB_OUTPUT
-            echo "CHANGES<<EOF" >> $GITHUB_ENV
-            git diff HEAD..upstream/main -- data/bugcrowd_data.json data/intigriti_data.json > file_changes.diff || echo "No diff"  # Change to main
-            cat file_changes.diff >> $GITHUB_ENV
-            echo "EOF" >> $GITHUB_ENV
           else
             echo "changed=false" >> $GITHUB_OUTPUT
           fi
 
-      - name: Merge upstream if changed
-        if: steps.check_diff.outputs.changed == 'true'
-        run: |
-          git merge upstream/main --allow-unrelated-histories -m "Sync with upstream changes"  # Change to main
-          git push origin HEAD:master
-
-      - name: Send Discord Notification
+      - name: Send Discord Notification (URLs Only)
         if: steps.check_diff.outputs.changed == 'true'
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
         run: |
-          DIFF_CONTENT="${{ env.CHANGES }}"
-          CHUNK_SIZE=1900  # Max length per message (leaving space for formatting)
-          TOTAL_LENGTH=${#DIFF_CONTENT}
+          sudo apt-get update && sudo apt-get install -y python3-pip
+          pip install deepdiff
 
-          # Send messages in chunks if necessary
-          for (( i=0; i<TOTAL_LENGTH; i+=CHUNK_SIZE )); do
-            PART="${DIFF_CONTENT:i:CHUNK_SIZE}"
+          # Backup old JSONs
+          cp data/bugcrowd_data.json bugcrowd_old.json || true
+          cp data/intigriti_data.json intigriti_old.json || true
+
+          # Checkout latest upstream
+          git checkout upstream/main -- data/bugcrowd_data.json data/intigriti_data.json
+
+          echo "CHANGED_URLS<<EOF" >> $GITHUB_ENV
+          python3 <<EOF >> $GITHUB_ENV
+import json
+from deepdiff import DeepDiff
+
+def extract_changed_urls(old_file, new_file):
+    try:
+        with open(old_file) as f: old = json.load(f)
+        with open(new_file) as f: new = json.load(f)
+    except Exception as e:
+        print(f"Could not load: {e}")
+        return []
+
+    urls = []
+    old_by_url = {entry.get("url"): entry for entry in old if "url" in entry}
+    new_by_url = {entry.get("url"): entry for entry in new if "url" in entry}
+
+    for url, new_entry in new_by_url.items():
+        old_entry = old_by_url.get(url)
+        if not old_entry or DeepDiff(old_entry, new_entry, ignore_order=True):
+            urls.append(url)
+    return urls
+
+changed_urls = extract_changed_urls("bugcrowd_old.json", "data/bugcrowd_data.json")
+changed_urls += extract_changed_urls("intigriti_old.json", "data/intigriti_data.json")
+
+for url in changed_urls:
+    print(url)
+EOF
+          echo "EOF" >> $GITHUB_ENV
+
+      - name: Send Changed URLs to Discord in Chunks
+        if: steps.check_diff.outputs.changed == 'true'
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        run: |
+          CHUNK_SIZE=1900
+          CURRENT_MSG="🔔 **Programs changed:**\n\`\`\`"
+
+          while IFS= read -r line || [ -n "$line" ]; do
+            if [ $((${#CURRENT_MSG} + ${#line} + 1)) -gt $CHUNK_SIZE ]; then
+              CURRENT_MSG="$CURRENT_MSG\`\`\`"
+              curl -H "Content-Type: application/json" \
+                   -X POST \
+                   -d "{\"content\": \"$CURRENT_MSG\"}" \
+                   $DISCORD_WEBHOOK_URL
+              CURRENT_MSG="🔔 **Programs changed (cont.):**\n\`\`\`"
+            fi
+            CURRENT_MSG="$CURRENT_MSG\n$line"
+          done <<< "$CHANGED_URLS"
+
+          if [[ "$CURRENT_MSG" != "🔔 **Programs changed:**\n\`\`\`" ]]; then
+            CURRENT_MSG="$CURRENT_MSG\`\`\`"
             curl -H "Content-Type: application/json" \
-              -X POST \
-              -d "{\"content\": \"🔔 **Update detected in \`bugcrowd_data.json\` or \`intigriti_data.json\`**\n\`\`\`\n$PART\n\`\`\`\"}" \
-              $DISCORD_WEBHOOK_URL
-          done
+                 -X POST \
+                 -d "{\"content\": \"$CURRENT_MSG\"}" \
+                 $DISCORD_WEBHOOK_URL
+          fi
 
       - name: Notify Discord if no changes
         if: steps.check_diff.outputs.changed == 'false'
@@ -72,6 +110,6 @@ jobs:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
         run: |
           curl -H "Content-Type: application/json" \
-            -X POST \
-            -d "{\"content\": \"🔔 **No changes detected in \`bugcrowd_data.json\` or \`intigriti_data.json\`**\"}" \
-            $DISCORD_WEBHOOK_URL
+               -X POST \
+               -d "{\"content\": \"🔔 **No changes detected in \`bugcrowd_data.json\` or \`intigriti_data.json\`**\"}" \
+               $DISCORD_WEBHOOK_URL
