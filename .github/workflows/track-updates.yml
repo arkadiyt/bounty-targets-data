@@ -20,15 +20,15 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-git-
 
-      - name: Add upstream remote and fetch
+      - name: Add upstream remote and fetch with shallow clone
         run: |
           git remote add upstream https://github.com/arkadiyt/bounty-targets-data.git
-          git fetch upstream
+          git fetch --depth 1 -v upstream  # Shallow clone with verbose output
 
       - name: Check for changes in target files
         id: check_diff
         run: |
-          git fetch upstream
+          git fetch --depth 1 -v upstream  # Shallow fetch with verbose output
           git diff --name-only HEAD..upstream/master > changed_files.txt
           cat changed_files.txt
 
