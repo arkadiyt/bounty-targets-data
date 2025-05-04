@@ -32,10 +32,9 @@ jobs:
           git fetch upstream
           git checkout upstream/main -- data/bugcrowd_data.json data/intigriti_data.json
 
-      - name: Compare JSON files and extract changed URLs
-        id: extract_urls
+      - name: Create Python script to extract URLs
         run: |
-          python3 <<EOF > changed_urls.txt
+          echo "
 import json
 from deepdiff import DeepDiff
 
@@ -44,12 +43,12 @@ def extract_changed_urls(old_file, new_file):
         with open(old_file) as f: old = json.load(f)
         with open(new_file) as f: new = json.load(f)
     except Exception as e:
-        print(f"Could not load: {e}")
+        print(f'Could not load: {e}')
         return []
 
     urls = []
-    old_by_url = {entry.get("url"): entry for entry in old if "url" in entry}
-    new_by_url = {entry.get("url"): entry for entry in new if "url" in entry}
+    old_by_url = {entry.get('url'): entry for entry in old if 'url' in entry}
+    new_by_url = {entry.get('url'): entry for entry in new if 'url' in entry}
 
     for url, new_entry in new_by_url.items():
         old_entry = old_by_url.get(url)
@@ -57,15 +56,19 @@ def extract_changed_urls(old_file, new_file):
             urls.append(url)
     return urls
 
-changed_urls = extract_changed_urls("bugcrowd_old.json", "data/bugcrowd_data.json")
-changed_urls += extract_changed_urls("intigriti_old.json", "data/intigriti_data.json")
+changed_urls = extract_changed_urls('bugcrowd_old.json', 'data/bugcrowd_data.json')
+changed_urls += extract_changed_urls('intigriti_old.json', 'data/intigriti_data.json')
 
 if changed_urls:
     for url in changed_urls:
         print(url)
 else:
-    print("No changes detected")
-EOF
+    print('No changes detected')
+          " > extract_urls.py
+
+      - name: Run Python script to extract changed URLs
+        run: |
+          python3 extract_urls.py > changed_urls.txt
 
       - name: Send Discord Notification (URLs Only)
         if: success()
