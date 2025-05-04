@@ -43,7 +43,7 @@ jobs:
       - name: Send Discord Notification for Changes
         if: steps.check_diff.outputs.changed == 'true'
         env:
-          DISCORD_WEBHOOK_URL: ${{ secrets.https://discord.com/api/webhooks/1271818703356297226/RcjQ9wKd27kTNb4vxeaWqmnM4D6y1ltYdu-3CinUcH1I-rtFWKkt2x-Ahz89VZ_u18BD }}
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
         run: |
           DIFF_CONTENT="${{ env.CHANGES }}"
           CHUNK_SIZE=1900  # Max length per message (leaving space for formatting)
@@ -61,7 +61,7 @@ jobs:
       - name: Send Discord Notification for No Changes
         if: steps.check_diff.outputs.changed == 'false'
         env:
-          DISCORD_WEBHOOK_URL: ${{ secrets.https://discord.com/api/webhooks/1271818703356297226/RcjQ9wKd27kTNb4vxeaWqmnM4D6y1ltYdu-3CinUcH1I-rtFWKkt2x-Ahz89VZ_u18BD }}
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
         run: |
           curl -H "Content-Type: application/json" \
             -X POST \
