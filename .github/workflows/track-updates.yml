@@ -25,8 +25,9 @@ jobs:
           cp data/bugcrowd_data.json bugcrowd_old.json || true
           cp data/intigriti_data.json intigriti_old.json || true
 
-      - name: Fetch latest data
+      - name: Add upstream remote and fetch latest data
         run: |
+          git remote add upstream https://github.com/arkadiyt/bounty-targets-data.git
           git fetch upstream
           git checkout upstream/main -- data/bugcrowd_data.json data/intigriti_data.json
 
