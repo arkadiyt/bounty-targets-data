@@ -40,7 +40,7 @@ jobs:
           git merge upstream/master --allow-unrelated-histories -m "Sync with upstream changes"
           git push origin HEAD:master
 
-      - name: Send Discord Notification
+      - name: Send Discord Notification for Changes
         if: steps.check_diff.outputs.changed == 'true'
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.https://discord.com/api/webhooks/1271818703356297226/RcjQ9wKd27kTNb4vxeaWqmnM4D6y1ltYdu-3CinUcH1I-rtFWKkt2x-Ahz89VZ_u18BD }}
@@ -57,3 +57,13 @@ jobs:
               -d "{\"content\": \"🔔 **Update detected in \`bugcrowd_data.json\` or \`intigriti_data.json\`**\n\`\`\`\n$PART\n\`\`\`\"}" \
               $DISCORD_WEBHOOK_URL
           done
+
+      - name: Send Discord Notification for No Changes
+        if: steps.check_diff.outputs.changed == 'false'
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.https://discord.com/api/webhooks/1271818703356297226/RcjQ9wKd27kTNb4vxeaWqmnM4D6y1ltYdu-3CinUcH1I-rtFWKkt2x-Ahz89VZ_u18BD }}
+        run: |
+          curl -H "Content-Type: application/json" \
+            -X POST \
+            -d "{\"content\": \"🚫 **No changes detected in \`bugcrowd_data.json\` or \`intigriti_data.json\`**\"}" \
+            $DISCORD_WEBHOOK_URL
