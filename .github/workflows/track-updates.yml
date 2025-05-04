@@ -25,20 +25,18 @@ jobs:
           cp data/bugcrowd_data.json bugcrowd_old.json || true
           cp data/intigriti_data.json intigriti_old.json || true
 
-      - name: Add upstream remote and fetch latest data
+      - name: Add upstream remote and fetch latest data (shallow)
         run: |
           git remote add upstream https://github.com/arkadiyt/bounty-targets-data.git
-          git fetch upstream
+          git fetch upstream --depth 1  # Shallow fetch, only the latest changes
           git checkout upstream/main -- data/bugcrowd_data.json data/intigriti_data.json
 
       - name: Compare JSON files and extract changed URLs
         id: check_diff
         run: |
-          # Use jq to extract URLs from the old and new JSON files and compare them
           OLD_URLS=$(jq -r '.[].url' bugcrowd_old.json intigriti_old.json)
           NEW_URLS=$(jq -r '.[].url' data/bugcrowd_data.json data/intigriti_data.json)
           
-          # Find the differences between old and new URLs
           CHANGED_URLS=$(comm -3 <(echo "$OLD_URLS") <(echo "$NEW_URLS"))
           echo "$CHANGED_URLS" > changed_urls.txt
 
@@ -49,7 +47,6 @@ jobs:
         run: |
           CHANGED_URLS=$(cat changed_urls.txt)
           
-          # Send messages in chunks if the URLs list is too long
           CHUNK_SIZE=1900
           TOTAL_LENGTH=${#CHANGED_URLS}
 
