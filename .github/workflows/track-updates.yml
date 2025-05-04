@@ -12,6 +12,14 @@ jobs:
       - name: Checkout your repo
         uses: actions/checkout@v3
 
+      - name: Cache GitHub repository
+        uses: actions/cache@v3
+        with:
+          path: ~/.git
+          key: ${{ runner.os }}-git-${{ hashFiles('**/bounty-targets-data.git') }}
+          restore-keys: |
+            ${{ runner.os }}-git-
+
       - name: Add upstream remote and fetch
         run: |
           git remote add upstream https://github.com/arkadiyt/bounty-targets-data.git
@@ -40,7 +48,7 @@ jobs:
           git merge upstream/master --allow-unrelated-histories -m "Sync with upstream changes"
           git push origin HEAD:master
 
-      - name: Send Discord Notification for Changes
+      - name: Send Discord Notification
         if: steps.check_diff.outputs.changed == 'true'
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
@@ -58,12 +66,12 @@ jobs:
               $DISCORD_WEBHOOK_URL
           done
 
-      - name: Send Discord Notification for No Changes
+      - name: Notify Discord if no changes
         if: steps.check_diff.outputs.changed == 'false'
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
         run: |
           curl -H "Content-Type: application/json" \
             -X POST \
-            -d "{\"content\": \"🚫 **No changes detected in \`bugcrowd_data.json\` or \`intigriti_data.json\`**\"}" \
+            -d "{\"content\": \"🔔 **No changes detected in \`bugcrowd_data.json\` or \`intigriti_data.json\`**\"}" \
             $DISCORD_WEBHOOK_URL
