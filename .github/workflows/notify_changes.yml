@@ -16,6 +16,11 @@ jobs:
       - name: Set up jq
         run: sudo apt-get install jq
 
+      - name: Download the latest bugcrowd_data.json
+        run: |
+          # Fetch the latest bugcrowd_data.json file from the raw URL
+          curl -o data/bugcrowd_data.json "https://raw.githubusercontent.com/arkadiyt/bounty-targets-data/refs/heads/main/data/bugcrowd_data.json"
+      
       - name: Compare old and new target lists
         run: |
           if [ ! -f data/bugcrowd_data.json ]; then
