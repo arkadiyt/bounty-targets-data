@@ -1,78 +1,49 @@
-name: Sync and Compare Bugcrowd and Intigriti JSONs
+name: Check JSON Changes and Notify
 
 on:
-  workflow_dispatch:
   schedule:
-    - cron: '0 * * * *'  # Once every hour (adjust as necessary)
+    - cron: '*/5 * * * *'  # Check every 5 minutes (you can adjust this)
+  workflow_dispatch:  # Allow manual triggering
 
 jobs:
-  sync-and-compare:
+  check-changes:
     runs-on: ubuntu-latest
-
     steps:
-      # Step 1: Checkout the fork repository
-      - name: Checkout the repository
-        uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-      # Step 2: Add upstream remote (original repository)
-      - name: Add upstream remote (only if not already set)
+      - name: Get current JSON data
         run: |
-          if ! git remote get-url upstream &>/dev/null; then
-            git remote add upstream https://github.com/arkadiyt/bounty-targets-data.git
+          curl -s https://raw.githubusercontent.com/arkadiyt/bounty-targets-data/refs/heads/main/data/intigriti_data.json -o intigriti_data.json
+          curl -s https://raw.githubusercontent.com/arkadiyt/bounty-targets-data/refs/heads/main/data/bugcrowd_data.json -o bugcrowd_data.json
+
+      - name: Get previous JSON data (if exists)
+        run: |
+          if [ -f intigriti_data_old.json ]; then mv intigriti_data_old.json intigriti_data_old.json.bak; fi
+          if [ -f bugcrowd_data_old.json ]; then mv bugcrowd_data_old.json bugcrowd_data_old.json.bak; fi
+
+      - name: Compare old and new JSON files
+        id: compare
+        run: |
+          if [ -f intigriti_data_old.json ]; then
+            diff intigriti_data_old.json.bak intigriti_data.json || echo "Changes detected in intigriti_data.json"
+          fi
+          if [ -f bugcrowd_data_old.json ]; then
+            diff bugcrowd_data_old.json.bak bugcrowd_data.json || echo "Changes detected in bugcrowd_data.json"
           fi
 
-      # Step 3: Fetch the latest changes from upstream repository
-      - name: Fetch the latest changes from upstream
-        run: git fetch upstream
-
-      # Step 4: Checkout the `main` branch
-      - name: Checkout main branch
-        run: git checkout main
-
-      # Step 5: Merge upstream changes into the forked repository
-      - name: Merge upstream/main into the forked main
-        run: git merge upstream/main --no-edit
-
-      # Step 6: Download the current and previous JSON files from GitHub
-      - name: Download current and previous JSON files
+      - name: Notify changes
+        if: steps.compare.outcome == 'failure'
         run: |
-          curl -s -o current_bugcrowd.json https://raw.githubusercontent.com/arkadiyt/bounty-targets-data/main/data/bugcrowd_data.json
-          curl -s -o previous_bugcrowd.json https://raw.githubusercontent.com/rfelecT/bounty-targets-data/main/data/bugcrowd_data.json
-          curl -s -o current_intigriti.json https://raw.githubusercontent.com/arkadiyt/bounty-targets-data/main/data/intigriti_data.json
-          curl -s -o previous_intigriti.json https://raw.githubusercontent.com/rfelecT/bounty-targets-data/main/data/intigriti_data.json
+          DIFF_INTIGRITI=$(diff intigriti_data_old.json.bak intigriti_data.json || echo "No changes")
+          DIFF_BUGCROWD=$(diff bugcrowd_data_old.json.bak bugcrowd_data.json || echo "No changes")
+          
+          MESSAGE="Changes detected in the JSON files:\n"
+          MESSAGE+="\nIntigriti Data Changes:\n$DIFF_INTIGRITI"
+          MESSAGE+="\nBugcrowd Data Changes:\n$DIFF_BUGCROWD"
 
-      # Step 7: Compare JSONs and send to Discord
-      - name: Compare JSONs and send to Discord
-        env:
-          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          curl -X POST -H "Content-Type: application/json" -d "{\"content\": \"$MESSAGE\"}" https://discord.com/api/webhooks/1271818703356297226/RcjQ9wKd27kTNb4vxeaWqmnM4D6y1ltYdu-3CinUcH1I-rtFWKkt2x-Ahz89VZ_u18BD
+      - name: Save current JSON files for future comparison
         run: |
-          CHANGES=""
-
-          # Function to compare two JSON files
-          compare_jsons () {
-            NAME=$1
-            FILE1=$2
-            FILE2=$3
-
-            DIFF=$(diff -u <(jq -S . "$FILE1") <(jq -S . "$FILE2") || true)
-            if [[ -n "$DIFF" ]]; then
-              CHANGES+="**${NAME} Changes:**\n\`\`\`\n${DIFF:0:1800}\n\`\`\`\n"
-            else
-              CHANGES+="✅ No changes in ${NAME}.\n"
-            fi
-          }
-
-          # Compare Bugcrowd and Intigriti JSON files
-          compare_jsons "Bugcrowd" previous_bugcrowd.json current_bugcrowd.json
-          compare_jsons "Intigriti" previous_intigriti.json current_intigriti.json
-
-          # If changes are detected, notify Discord
-          if [[ "$CHANGES" != *"No changes"* ]]; then
-            ESCAPED_CHANGES=$(echo -e "$CHANGES" | sed 's/"/\\"/g')
-            curl -H "Content-Type: application/json" \
-                 -X POST \
-                 -d "{\"content\": \"$ESCAPED_CHANGES\"}" \
-                 "$DISCORD_WEBHOOK"
-          else
-            echo "No changes detected."
-          fi
+          mv intigriti_data.json intigriti_data_old.json
+          mv bugcrowd_data.json bugcrowd_data_old.json
