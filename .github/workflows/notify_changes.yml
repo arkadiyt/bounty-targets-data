@@ -28,19 +28,19 @@ jobs:
           DIFF_INTIGRITI=$(diff intigriti_data_old.json intigriti_data.json || echo "No changes")
           DIFF_BUGCROWD=$(diff bugcrowd_data_old.json bugcrowd_data.json || echo "No changes")
 
-          # Use jq to safely escape the diff output and avoid formatting issues in GITHUB_ENV
-          ESCAPED_DIFF_INTIGRITI=$(echo "$DIFF_INTIGRITI" | jq -R .)
-          ESCAPED_DIFF_BUGCROWD=$(echo "$DIFF_BUGCROWD" | jq -R .)
+          # Encode the diff results to base64 to avoid formatting issues
+          ENCODED_DIFF_INTIGRITI=$(echo "$DIFF_INTIGRITI" | base64)
+          ENCODED_DIFF_BUGCROWD=$(echo "$DIFF_BUGCROWD" | base64)
 
-          echo "DIFF_INTIGRITI=$ESCAPED_DIFF_INTIGRITI" >> $GITHUB_ENV
-          echo "DIFF_BUGCROWD=$ESCAPED_DIFF_BUGCROWD" >> $GITHUB_ENV
+          echo "DIFF_INTIGRITI=$ENCODED_DIFF_INTIGRITI" >> $GITHUB_ENV
+          echo "DIFF_BUGCROWD=$ENCODED_DIFF_BUGCROWD" >> $GITHUB_ENV
 
       - name: Notify changes
-        if: ${{ env.DIFF_INTIGRITI != '"No changes"' || env.DIFF_BUGCROWD != '"No changes"' }}
+        if: ${{ env.DIFF_INTIGRITI != 'No changes' || env.DIFF_BUGCROWD != 'No changes' }}
         run: |
           MESSAGE="Changes detected in the JSON files:\n"
-          MESSAGE+="\nIntigriti Data Changes:\n${{ env.DIFF_INTIGRITI }}"
-          MESSAGE+="\nBugcrowd Data Changes:\n${{ env.DIFF_BUGCROWD }}"
+          MESSAGE+="\nIntigriti Data Changes:\n$(echo ${{ env.DIFF_INTIGRITI }} | base64 --decode)"
+          MESSAGE+="\nBugcrowd Data Changes:\n$(echo ${{ env.DIFF_BUGCROWD }} | base64 --decode)"
 
           curl -X POST -H "Content-Type: application/json" -d "{\"content\": \"$MESSAGE\"}" https://discord.com/api/webhooks/1271818703356297226/RcjQ9wKd27kTNb4vxeaWqmnM4D6y1ltYdu-3CinUcH1I-rtFWKkt2x-Ahz89VZ_u18BD
 
