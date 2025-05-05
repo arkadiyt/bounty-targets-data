@@ -13,15 +13,8 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v3
 
-      - name: Install jq 1.6+
-        run: |
-          sudo wget -O /usr/bin/jq https://github.com/stedolan/jq/releases/download/jq-1.6/jq-linux64
-          sudo chmod +x /usr/bin/jq
-          jq --version
-
       - name: Download latest bugcrowd data
         run: |
-          mkdir -p data
           curl -s -o latest.json https://raw.githubusercontent.com/arkadiyt/bounty-targets-data/refs/heads/main/data/bugcrowd_data.json
 
       - name: Compare and notify if changed
@@ -51,16 +44,11 @@ jobs:
             message="$message\n\n🔴 **Removed:**\n$(echo "$removed_list" | sed 's/^/- /')"
           fi
 
-          # Fix: Properly escape the message to JSON format
-          safe_message=$(echo -e "$message" | jq -R .)
-
           # Send to Discord webhook
           curl -H "Content-Type: application/json" \
                -X POST \
-               -d "{\"content\": $safe_message}" \
+               -d "{\"content\": \"$message\"}" \
                "https://discord.com/api/webhooks/1271818703356297226/RcjQ9wKd27kTNb4vxeaWqmnM4D6y1ltYdu-3CinUcH1I-rtFWKkt2x-Ahz89VZ_u18BD"
 
       - name: Save latest version for next run
         run: cp latest.json data/bugcrowd_data.json
-
-  
