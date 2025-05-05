@@ -46,21 +46,29 @@ jobs:
         run: |
           echo "Checking previous files..."  # Debugging message
           CHANGES=""
-          
-          # Compare bugcrowd_data.json if previous data exists
-          DIFF_OUTPUT=$(diff -u previous_bugcrowd_data.json bugcrowd_data.json)
-          if [[ -n "$DIFF_OUTPUT" ]]; then
-            CHANGES="$CHANGES\nBugcrowd Data Changes:\n$DIFF_OUTPUT"
+
+          # Check if previous bugcrowd_data.json exists before comparing
+          if [[ -f "previous_bugcrowd_data.json" ]]; then
+            DIFF_OUTPUT=$(diff -u previous_bugcrowd_data.json bugcrowd_data.json)
+            if [[ -n "$DIFF_OUTPUT" ]]; then
+              CHANGES="$CHANGES\nBugcrowd Data Changes:\n$DIFF_OUTPUT"
+            else
+              CHANGES="$CHANGES\nNo changes detected in bugcrowd_data.json."
+            fi
           else
-            CHANGES="$CHANGES\nNo changes detected in bugcrowd_data.json."
+            CHANGES="$CHANGES\nNo previous bugcrowd_data.json to compare with."
           fi
           
-          # Compare intigriti_data.json if previous data exists
-          DIFF_OUTPUT=$(diff -u previous_intigriti_data.json intigriti_data.json)
-          if [[ -n "$DIFF_OUTPUT" ]]; then
-            CHANGES="$CHANGES\nIntigriti Data Changes:\n$DIFF_OUTPUT"
+          # Check if previous intigriti_data.json exists before comparing
+          if [[ -f "previous_intigriti_data.json" ]]; then
+            DIFF_OUTPUT=$(diff -u previous_intigriti_data.json intigriti_data.json)
+            if [[ -n "$DIFF_OUTPUT" ]]; then
+              CHANGES="$CHANGES\nIntigriti Data Changes:\n$DIFF_OUTPUT"
+            else
+              CHANGES="$CHANGES\nNo changes detected in intigriti_data.json."
+            fi
           else
-            CHANGES="$CHANGES\nNo changes detected in intigriti_data.json."
+            CHANGES="$CHANGES\nNo previous intigriti_data.json to compare with."
           fi
 
           # Store changes if any were found
