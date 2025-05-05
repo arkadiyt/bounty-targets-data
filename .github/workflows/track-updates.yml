@@ -1,64 +1,51 @@
-name: Notify Discord on Specific File Changes
+name: Notify Discord on Any JSON Change
 
 on:
   schedule:
-    - cron: '0 * * * *'  # every hour
+    - cron: '0 * * * *'  # Every hour
   workflow_dispatch:
 
 jobs:
-  notify-if-data-changed:
+  notify-on-change:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout the repository
-        uses: actions/checkout@v3
-
-      - name: Cache GitHub repository
-        uses: actions/cache@v3
-        with:
-          path: ~/.git
-          key: ${{ runner.os }}-git-${{ hashFiles('**/bounty-targets-data.git') }}
-          restore-keys: |
-            ${{ runner.os }}-git-
-
-      - name: Backup old JSON files
+      - name: Download latest JSON files
         run: |
-          cp data/bugcrowd_data.json bugcrowd_old.json || true
-          cp data/intigriti_data.json intigriti_old.json || true
+          curl -sSL https://raw.githubusercontent.com/arkadiyt/bounty-targets-data/main/data/bugcrowd_data.json -o bugcrowd_new.json
+          curl -sSL https://raw.githubusercontent.com/arkadiyt/bounty-targets-data/main/data/intigriti_data.json -o intigriti_new.json
 
-      - name: Add upstream remote and fetch latest data (shallow)
+      - name: Restore previous files if exist
         run: |
-          git remote add upstream https://github.com/arkadiyt/bounty-targets-data.git
-          git fetch upstream --depth 1
-          git checkout upstream/main -- data/bugcrowd_data.json data/intigriti_data.json
+          mkdir -p prev
+          [ -f prev/bugcrowd.json ] && cp prev/bugcrowd.json bugcrowd_old.json || touch bugcrowd_old.json
+          [ -f prev/intigriti.json ] && cp prev/intigriti.json intigriti_old.json || touch intigriti_old.json
 
-      - name: Compare JSON files and extract changed URLs
-        id: check_diff
+      - name: Compare files and detect changes
+        id: check
         run: |
-          OLD_URLS=$(jq -r '.[].url' bugcrowd_old.json intigriti_old.json 2>/dev/null || echo "")
-          NEW_URLS=$(jq -r '.[].url' data/bugcrowd_data.json data/intigriti_data.json 2>/dev/null || echo "")
-          
-          # Sort and unique for consistent diff
-          OLD_SORTED=$(echo "$OLD_URLS" | sort | uniq)
-          NEW_SORTED=$(echo "$NEW_URLS" | sort | uniq)
+          diff -u bugcrowd_old.json bugcrowd_new.json > diff_bugcrowd.txt || true
+          diff -u intigriti_old.json intigriti_new.json > diff_intigriti.txt || true
 
-          # Use diff to get new or removed URLs
-          CHANGED_URLS=$(comm -3 <(echo "$OLD_SORTED") <(echo "$NEW_SORTED") | sed 's/^\t//')
-          echo "$CHANGED_URLS" > changed_urls.txt
+          cat diff_bugcrowd.txt diff_intigriti.txt > combined_diff.txt
+          CHANGES=$(wc -l < combined_diff.txt)
 
-      - name: Send Discord Notification (URLs Only)
-        if: success()
+          echo "changed=$([ "$CHANGES" -gt 0 ] && echo true || echo false)" >> $GITHUB_OUTPUT
+
+      - name: Send Discord Notification if Changed
+        if: steps.check.outputs.changed == 'true'
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
         run: |
-          CHANGED_URLS=$(cat changed_urls.txt)
+          CONTENT=$(cat combined_diff.txt | tail -c 1800)  # Discord message limit
+          ESCAPED=$(printf "%s" "$CONTENT" | sed 's/\\/\\\\/g' | sed 's/"/\\"/g')
 
-          if [ -n "$CHANGED_URLS" ]; then
-            # Split into 1900-char chunks and send
-            echo "$CHANGED_URLS" | fold -w 1900 | while IFS= read -r PART; do
-              PAYLOAD=$(jq -n --arg msg "🔔 **Changed URLs:**\n\`\`\`\n$PART\n\`\`\`" '{content: $msg}')
-              curl -s -H "Content-Type: application/json" -X POST -d "$PAYLOAD" "$DISCORD_WEBHOOK_URL"
-            done
-          else
-            PAYLOAD=$(jq -n --arg msg "🔔 **No changes detected in URLs.**" '{content: $msg}')
-            curl -s -H "Content-Type: application/json" -X POST -d "$PAYLOAD" "$DISCORD_WEBHOOK_URL"
-          fi
+          curl -X POST -H "Content-Type: application/json" \
+            -d "{\"content\": \"🔔 **Changes detected in JSON files:**\n\`\`\`diff\n$ESCAPED\n\`\`\`\"}" \
+            "$DISCORD_WEBHOOK_URL"
+
+      - name: Save new files for next run
+        run: |
+          mkdir -p prev
+          cp bugcrowd_new.json prev/bugcrowd.json
+          cp intigriti_new.json prev/intigriti.json
