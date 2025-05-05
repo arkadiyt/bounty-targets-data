@@ -44,13 +44,10 @@ jobs:
             message="$message\n\n🔴 **Removed:**\n$(echo "$removed_list" | sed 's/^/- /')"
           fi
 
-          # Escape the message to be valid JSON format
-          escaped_message=$(echo "$message" | jq -R .)
-
-          # Send to Discord webhook
+          # Send as plain text to Discord
           curl -H "Content-Type: application/json" \
                -X POST \
-               -d "{\"content\": \"$escaped_message\"}" \
+               -d "{\"content\":\"$message\"}" \
                "https://discord.com/api/webhooks/1271818703356297226/RcjQ9wKd27kTNb4vxeaWqmnM4D6y1ltYdu-3CinUcH1I-rtFWKkt2x-Ahz89VZ_u18BD"
 
       - name: Save latest version for next run
