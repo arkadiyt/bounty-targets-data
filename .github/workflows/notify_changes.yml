@@ -24,16 +24,14 @@ jobs:
           DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK_URL }}
         run: |
           CHANGES=""
-
+          
           compare_jsons () {
             NAME=$1
             FILE1=$2
             FILE2=$3
 
+            # Compare the files using jq to normalize and diff the sorted files
             DIFF=$(diff -u <(jq -S . "$FILE1") <(jq -S . "$FILE2") || true)
-            
-            # Debug: Print the diff result
-            echo "DIFF for $NAME: $DIFF"
             
             if [[ -n "$DIFF" ]]; then
               CHANGES+="**${NAME} Changes:**\n\`\`\`\n${DIFF:0:1800}\n\`\`\`\n"
