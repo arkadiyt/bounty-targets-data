@@ -44,10 +44,10 @@ jobs:
           message="Bugcrowd Target Changes:"
 
           if [ -n "$added_urls" ]; then
-            message="$message\nAdded URLs:\n$(echo "$added_urls" | sed 's/^/- /')"
+            message="$message$(echo "$added_urls" | sed 's/^/- /')"
           fi
           if [ -n "$removed_urls" ]; then
-            message="$message\nRemoved URLs:\n$(echo "$removed_urls" | sed 's/^/- /')"
+            message="$message$(echo "$removed_urls" | sed 's/^/- /')"
           fi
 
           # Print the message to debug and verify the format
@@ -64,14 +64,18 @@ jobs:
 
       - name: Save the latest version and commit changes
         run: |
-          # Save the modified bugcrowd_data.json
+          # Overwrite the existing bugcrowd_data.json with the latest data
           cp modified_bugcrowd_data.json data/bugcrowd_data.json
 
           # Configure git
           git config user.name "rfelecT"
           git config user.email "arefhsnkhani@gmail.com"
 
-          # Stage and commit the changes
+          # Stage the overwritten file (bugcrowd_data.json)
           git add data/bugcrowd_data.json
+
+          # Commit the changes
           git commit -m "Update bugcrowd_data.json with latest changes"
+
+          # Push the changes
           git push origin main  # Adjust 'main' to your default branch if needed
