@@ -20,15 +20,18 @@ jobs:
         id: fetch_bugcrowd_data
         run: |
           curl -o bugcrowd_data.json https://raw.githubusercontent.com/arkadiyt/bounty-targets-data/main/data/bugcrowd_data.json
-          
+          cat bugcrowd_data.json  # Debugging output
+
       - name: Fetch intigriti_data.json
         id: fetch_intigriti_data
         run: |
           curl -o intigriti_data.json https://raw.githubusercontent.com/arkadiyt/bounty-targets-data/main/data/intigriti_data.json
+          cat intigriti_data.json  # Debugging output
 
       - name: Compare files and extract changes
         id: compare_files
         run: |
+          echo "Checking previous files..."  # Debugging message
           if [[ -f "previous_bugcrowd_data.json" ]]; then
             diff -u previous_bugcrowd_data.json bugcrowd_data.json > bugcrowd_changes.diff || echo "No changes in bugcrowd_data.json"
           else
@@ -44,7 +47,6 @@ jobs:
       - name: Convert changes to text/plain and send to Discord
         run: |
           changes=""
-
           if [ -f "bugcrowd_changes.diff" ]; then
             changes=$(cat bugcrowd_changes.diff)
           fi
@@ -53,8 +55,8 @@ jobs:
             changes="$changes$(cat intigriti_changes.diff)"
           fi
 
-          curl -X POST -H "Content-Type: application/json" -d "{\"content\": \"Changes detected:\n$changes\"}" https://discord.com/api/webhooks/1271818703356297226/RcjQ9wKd27kTNb4vxeaWqmnM4D6y1ltYdu-3CinUcH1I-rtFWKkt2x-Ahz89VZ_u18BD
-
+          echo "Sending changes to Discord..."
+          curl -X POST -H "Content-Type: application/json" -d "{\"content\": \"Changes detected:\n$changes\"}" YOUR_DISCORD_WEBHOOK_URL
 
       - name: Store current files as previous ones for future comparisons
         run: |
