@@ -22,25 +22,21 @@ jobs:
           curl -s https://raw.githubusercontent.com/rfelecT/bounty-targets-data/refs/heads/main/data/intigriti_data.json -o intigriti_data_old.json
           curl -s https://raw.githubusercontent.com/rfelecT/bounty-targets-data/refs/heads/main/data/bugcrowd_data.json -o bugcrowd_data_old.json
 
-      - name: Compare old and new JSON files
+      - name: Compare old and new JSON files and set environment variables
         id: compare
         run: |
           DIFF_INTIGRITI=$(diff intigriti_data_old.json intigriti_data.json || echo "No changes")
           DIFF_BUGCROWD=$(diff bugcrowd_data_old.json bugcrowd_data.json || echo "No changes")
-
-          # Encode the diff results to base64 to avoid formatting issues
-          ENCODED_DIFF_INTIGRITI=$(echo "$DIFF_INTIGRITI" | base64)
-          ENCODED_DIFF_BUGCROWD=$(echo "$DIFF_BUGCROWD" | base64)
-
-          echo "DIFF_INTIGRITI=$ENCODED_DIFF_INTIGRITI" >> $GITHUB_ENV
-          echo "DIFF_BUGCROWD=$ENCODED_DIFF_BUGCROWD" >> $GITHUB_ENV
+          
+          echo "DIFF_INTIGRITI=$DIFF_INTIGRITI" >> $GITHUB_ENV
+          echo "DIFF_BUGCROWD=$DIFF_BUGCROWD" >> $GITHUB_ENV
 
       - name: Notify changes
         if: ${{ env.DIFF_INTIGRITI != 'No changes' || env.DIFF_BUGCROWD != 'No changes' }}
         run: |
           MESSAGE="Changes detected in the JSON files:\n"
-          MESSAGE+="\nIntigriti Data Changes:\n$(echo ${{ env.DIFF_INTIGRITI }} | base64 --decode)"
-          MESSAGE+="\nBugcrowd Data Changes:\n$(echo ${{ env.DIFF_BUGCROWD }} | base64 --decode)"
+          MESSAGE+="\nIntigriti Data Changes:\n${{ env.DIFF_INTIGRITI }}"
+          MESSAGE+="\nBugcrowd Data Changes:\n${{ env.DIFF_BUGCROWD }}"
 
           curl -X POST -H "Content-Type: application/json" -d "{\"content\": \"$MESSAGE\"}" https://discord.com/api/webhooks/1271818703356297226/RcjQ9wKd27kTNb4vxeaWqmnM4D6y1ltYdu-3CinUcH1I-rtFWKkt2x-Ahz89VZ_u18BD
 
