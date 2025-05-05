@@ -1,62 +1,41 @@
-name: Check Bugcrowd Target Changes
+if [ ! -f data/bugcrowd_data.json ]; then
+  echo "No old version found. Saving the latest one."
+  cp latest.json data/bugcrowd_data.json
+  exit 0
+fi
 
-on:
-  schedule:
-    - cron: '0 * * * *'  # Runs every hour
-  workflow_dispatch:
+# Extract the names of the added and removed entries
+added=$(jq '.[].name' latest.json | sort)
+old=$(jq '.[].name' data/bugcrowd_data.json | sort)
 
-jobs:
-  check:
-    runs-on: ubuntu-latest
+# Compare old and new entries to find added and removed targets
+added_list=$(comm -13 <(echo "$old") <(echo "$added"))
+removed_list=$(comm -23 <(echo "$old") <(echo "$added"))
 
-    steps:
-      - name: Checkout repo
-        uses: actions/checkout@v3
+# If no changes, exit early
+if [ -z "$added_list" ] && [ -z "$removed_list" ]; then
+  echo "No changes detected."
+  exit 0
+fi
 
-      - name: Download latest bugcrowd data
-        run: |
-          curl -s -o latest.json https://raw.githubusercontent.com/arkadiyt/bounty-targets-data/refs/heads/main/data/bugcrowd_data.json
+# Prepare the plain text message
+message="Bugcrowd Target Updates"
 
-      - name: Compare and notify if changed
-        run: |
-          if [ ! -f data/bugcrowd_data.json ]; then
-            echo "No old version found. Saving the latest one."
-            cp latest.json data/bugcrowd_data.json
-            exit 0
-          fi
+if [ -n "$added_list" ]; then
+  message="$message\n\nAdded:\n$(echo "$added_list" | sed 's/^/- /')"
+fi
+if [ -n "$removed_list" ]; then
+  message="$message\n\nRemoved:\n$(echo "$removed_list" | sed 's/^/- /')"
+fi
 
-          added=$(jq '.[].name' latest.json | sort)
-          old=$(jq '.[].name' data/bugcrowd_data.json | sort)
+# Print the message to debug and verify the format
+echo "Sending message to Discord:\n$message"
 
-          added_list=$(comm -13 <(echo "$old") <(echo "$added"))
-          removed_list=$(comm -23 <(echo "$old") <(echo "$added"))
+# Escape the message content using jq to ensure proper JSON formatting
+escaped_message=$(echo "$message" | jq -Rs .)
 
-          if [ -z "$added_list" ] && [ -z "$removed_list" ]; then
-            echo "No changes detected."
-            exit 0
-          fi
-
-          # Prepare the plain text message
-          message="Bugcrowd Target Updates"
-          
-          if [ -n "$added_list" ]; then
-            message="$message\n\nAdded:\n$(echo "$added_list" | sed 's/^/- /')"
-          fi
-          if [ -n "$removed_list" ]; then
-            message="$message\n\nRemoved:\n$(echo "$removed_list" | sed 's/^/- /')"
-          fi
-
-          # Print the message to debug and verify the format
-          echo "Sending message to Discord:\n$message"
-
-          # Properly escape newlines and quotes for JSON
-          escaped_message=$(echo "$message" | jq -Rs .)
-
-          # Send as plain text (without rich markdown or formatting)
-          curl -H "Content-Type: application/json" \
-               -X POST \
-               -d "{\"content\":$escaped_message}" \
-               "https://discord.com/api/webhooks/1271818703356297226/RcjQ9wKd27kTNb4vxeaWqmnM4D6y1ltYdu-3CinUcH1I-rtFWKkt2x-Ahz89VZ_u18BD"
-
-      - name: Save latest version for next run
-        run: cp latest.json data/bugcrowd_data.json
+# Send the message to Discord via the webhook
+curl -H "Content-Type: application/json" \
+     -X POST \
+     -d "{\"content\":$escaped_message}" \
+     "https://discord.com/api/webhooks/1271818703356297226/RcjQ9wKd27kTNb4vxeaWqmnM4D6y1ltYdu-3CinUcH1I-rtFWKkt2x-Ahz89VZ_u18BD"
