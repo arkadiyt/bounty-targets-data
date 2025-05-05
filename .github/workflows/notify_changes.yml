@@ -49,10 +49,13 @@ jobs:
           # Print the message to debug and verify the format
           echo "Sending message to Discord:\n$message"
 
+          # Properly escape newlines and quotes for JSON
+          escaped_message=$(echo "$message" | jq -Rs .)
+
           # Send as plain text (without rich markdown or formatting)
           curl -H "Content-Type: application/json" \
                -X POST \
-               -d "{\"content\":\"$message\"}" \
+               -d "{\"content\":$escaped_message}" \
                "https://discord.com/api/webhooks/1271818703356297226/RcjQ9wKd27kTNb4vxeaWqmnM4D6y1ltYdu-3CinUcH1I-rtFWKkt2x-Ahz89VZ_u18BD"
 
       - name: Save latest version for next run
