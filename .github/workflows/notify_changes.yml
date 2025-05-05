@@ -62,12 +62,8 @@ jobs:
                -d "{\"content\":$escaped_message}" \
                "https://discord.com/api/webhooks/1271818703356297226/RcjQ9wKd27kTNb4vxeaWqmnM4D6y1ltYdu-3CinUcH1I-rtFWKkt2x-Ahz89VZ_u18BD"
 
-      - name: Sync with the original repo (arkadiyt/bounty-targets-data)
+      - name: Overwrite the existing bugcrowd_data.json with the latest data
         run: |
-          git remote add upstream https://github.com/arkadiyt/bounty-targets-data.git
-          git fetch upstream main --depth=1  # Shallow fetch from the upstream main branch
-
-          # Overwrite the existing bugcrowd_data.json with the latest data
           cp modified_bugcrowd_data.json data/bugcrowd_data.json
 
           # Configure git
