@@ -2,7 +2,7 @@ name: Notify Discord on Any JSON Change
 
 on:
   schedule:
-    - cron: '0 * * * *'  # Every hour
+    - cron: '0 * * * *'
   workflow_dispatch:
 
 jobs:
@@ -37,11 +37,11 @@ jobs:
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
         run: |
-          CONTENT=$(cat combined_diff.txt | tail -c 1800)  # Discord message limit
-          ESCAPED=$(printf "%s" "$CONTENT" | sed 's/\\/\\\\/g' | sed 's/"/\\"/g')
+          CONTENT=$(tail -c 1800 combined_diff.txt)  # Stay under Discord 2000-char limit
+          ESCAPED=$(printf "%s" "$CONTENT" | jq -Rs .)  # Escapes properly using jq
 
           curl -X POST -H "Content-Type: application/json" \
-            -d "{\"content\": \"🔔 **Changes detected in JSON files:**\n\`\`\`diff\n$ESCAPED\n\`\`\`\"}" \
+            -d "{\"content\": \"🔔 **Changes detected in JSON files:**\n\`\`\`diff\n$CONTENT\n\`\`\`\"}" \
             "$DISCORD_WEBHOOK_URL"
 
       - name: Save new files for next run
