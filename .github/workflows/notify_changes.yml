@@ -7,7 +7,7 @@ on:
     paths:
       - 'data/bugcrowd_data.json'
       - 'data/intigriti_data.json'
-  workflow_dispatch:  # This allows manual trigger of the workflow
+  workflow_dispatch:  # Allows manual trigger of the workflow
 
 jobs:
   notify_changes:
@@ -21,83 +21,51 @@ jobs:
         id: fetch_bugcrowd_data
         run: |
           curl -o bugcrowd_data.json https://raw.githubusercontent.com/arkadiyt/bounty-targets-data/main/data/bugcrowd_data.json
-          if [[ $? -ne 0 ]]; then
-            echo "Error fetching bugcrowd_data.json"
-            exit 1
-          fi
-          cat bugcrowd_data.json  # Debugging output
 
       - name: Fetch current intigriti_data.json
         id: fetch_intigriti_data
         run: |
           curl -o intigriti_data.json https://raw.githubusercontent.com/arkadiyt/bounty-targets-data/main/data/intigriti_data.json
-          if [[ $? -ne 0 ]]; then
-            echo "Error fetching intigriti_data.json"
-            exit 1
-          fi
-          cat intigriti_data.json  # Debugging output
 
       - name: Fetch previous bugcrowd_data.json from rfelecT repo
         id: fetch_previous_bugcrowd_data
         run: |
           curl -o previous_bugcrowd_data.json https://raw.githubusercontent.com/rfelecT/bounty-targets-data/main/data/bugcrowd_data.json
-          if [[ $? -ne 0 ]]; then
-            echo "Error fetching previous_bugcrowd_data.json"
-            exit 1
-          fi
-          cat previous_bugcrowd_data.json  # Debugging output
 
       - name: Fetch previous intigriti_data.json from rfelecT repo
         id: fetch_previous_intigriti_data
         run: |
           curl -o previous_intigriti_data.json https://raw.githubusercontent.com/rfelecT/bounty-targets-data/main/data/intigriti_data.json
-          if [[ $? -ne 0 ]]; then
-            echo "Error fetching previous_intigriti_data.json"
-            exit 1
-          fi
-          cat previous_intigriti_data.json  # Debugging output
 
-      - name: Compare files and extract changes
+      - name: Compare files and notify changes
         id: compare_files
         run: |
-          echo "Checking previous files..."  # Debugging message
           CHANGES=""
 
-          # Check if previous bugcrowd_data.json exists before comparing
-          if [[ -f "previous_bugcrowd_data.json" ]]; then
-            DIFF_OUTPUT=$(diff -u previous_bugcrowd_data.json bugcrowd_data.json)
-            if [[ $? -eq 0 ]]; then
-              CHANGES="$CHANGES\nNo changes detected in bugcrowd_data.json."
-            else
-              CHANGES="$CHANGES\nBugcrowd Data Changes:\n$DIFF_OUTPUT"
-            fi
+          # Compare bugcrowd_data.json
+          DIFF_OUTPUT=$(diff -u previous_bugcrowd_data.json bugcrowd_data.json)
+          if [[ -n "$DIFF_OUTPUT" ]]; then
+            CHANGES="$CHANGES\nBugcrowd Data Changes:\n$DIFF_OUTPUT"
           else
-            CHANGES="$CHANGES\nNo previous bugcrowd_data.json to compare with."
-          fi
-          
-          # Check if previous intigriti_data.json exists before comparing
-          if [[ -f "previous_intigriti_data.json" ]]; then
-            DIFF_OUTPUT=$(diff -u previous_intigriti_data.json intigriti_data.json)
-            if [[ $? -eq 0 ]]; then
-              CHANGES="$CHANGES\nNo changes detected in intigriti_data.json."
-            else
-              CHANGES="$CHANGES\nIntigriti Data Changes:\n$DIFF_OUTPUT"
-            fi
-          else
-            CHANGES="$CHANGES\nNo previous intigriti_data.json to compare with."
+            CHANGES="$CHANGES\nNo changes detected in bugcrowd_data.json."
           fi
 
-          # Store changes if any were found
-          echo "Changes detected: $CHANGES"
-          
-          # Send to Discord only if there are actual changes
+          # Compare intigriti_data.json
+          DIFF_OUTPUT=$(diff -u previous_intigriti_data.json intigriti_data.json)
+          if [[ -n "$DIFF_OUTPUT" ]]; then
+            CHANGES="$CHANGES\nIntigriti Data Changes:\n$DIFF_OUTPUT"
+          else
+            CHANGES="$CHANGES\nNo changes detected in intigriti_data.json."
+          fi
+
+          # If changes were detected, send a message to Discord
           if [[ -n "$CHANGES" ]]; then
             curl -X POST -H "Content-Type: application/json" -d "{\"content\": \"Changes detected:$CHANGES\"}" https://discord.com/api/webhooks/1271818703356297226/RcjQ9wKd27kTNb4vxeaWqmnM4D6y1ltYdu-3CinUcH1I-rtFWKkt2x-Ahz89VZ_u18BD
           else
             echo "No changes detected."
           fi
 
-      - name: Store current files as previous ones for future comparisons
+      - name: Store current files as previous for future comparison
         run: |
           cp bugcrowd_data.json previous_bugcrowd_data.json
           cp intigriti_data.json previous_intigriti_data.json
