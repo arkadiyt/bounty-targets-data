@@ -1,51 +1,65 @@
-name: Notify Discord on Any JSON Change
+name: Notify Discord on JSON Changes
 
 on:
   schedule:
-    - cron: '0 * * * *'
+    - cron: '0 * * * *'  # Every hour
   workflow_dispatch:
 
 jobs:
-  notify-on-change:
+  notify-if-data-changed:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Download latest JSON files
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Fetch latest bounty data
         run: |
-          curl -sSL https://raw.githubusercontent.com/arkadiyt/bounty-targets-data/main/data/bugcrowd_data.json -o bugcrowd_new.json
-          curl -sSL https://raw.githubusercontent.com/arkadiyt/bounty-targets-data/main/data/intigriti_data.json -o intigriti_new.json
+          curl -sSL https://raw.githubusercontent.com/arkadiyt/bounty-targets-data/main/data/bugcrowd_data.json -o bugcrowd_latest.json
+          curl -sSL https://raw.githubusercontent.com/arkadiyt/bounty-targets-data/main/data/intigriti_data.json -o intigriti_latest.json
 
       - name: Restore previous files if exist
         run: |
-          mkdir -p prev
-          [ -f prev/bugcrowd.json ] && cp prev/bugcrowd.json bugcrowd_old.json || touch bugcrowd_old.json
-          [ -f prev/intigriti.json ] && cp prev/intigriti.json intigriti_old.json || touch intigriti_old.json
+          mkdir -p previous
+          cp bugcrowd_latest.json previous/bugcrowd_previous.json || true
+          cp intigriti_latest.json previous/intigriti_previous.json || true
 
-      - name: Compare files and detect changes
-        id: check
+      - name: Save current files for next comparison
         run: |
-          diff -u bugcrowd_old.json bugcrowd_new.json > diff_bugcrowd.txt || true
-          diff -u intigriti_old.json intigriti_new.json > diff_intigriti.txt || true
+          mkdir -p snapshot
+          cp bugcrowd_latest.json snapshot/bugcrowd_snapshot.json
+          cp intigriti_latest.json snapshot/intigriti_snapshot.json
 
-          cat diff_bugcrowd.txt diff_intigriti.txt > combined_diff.txt
-          CHANGES=$(wc -l < combined_diff.txt)
+      - name: Compare JSON and save diff
+        id: diff
+        run: |
+          sudo apt-get install -y jq diffutils
+          
+          DIFF_BC=$(diff -u previous/bugcrowd_previous.json bugcrowd_latest.json || true)
+          DIFF_INT=$(diff -u previous/intigriti_previous.json intigriti_latest.json || true)
+          
+          FULL_DIFF="$DIFF_BC"$'\n'"$DIFF_INT"
+          
+          if [ -n "$FULL_DIFF" ]; then
+            echo "diff_found=true" >> "$GITHUB_OUTPUT"
+            echo "$FULL_DIFF" > full_diff.txt
+          else
+            echo "diff_found=false" >> "$GITHUB_OUTPUT"
+          fi
 
-          echo "changed=$([ "$CHANGES" -gt 0 ] && echo true || echo false)" >> $GITHUB_OUTPUT
-
-      - name: Send Discord Notification if Changed
-        if: steps.check.outputs.changed == 'true'
+      - name: Send Discord Notification
+        if: steps.diff.outputs.diff_found == 'true'
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
         run: |
-          CONTENT=$(tail -c 1800 combined_diff.txt)  # Stay under Discord 2000-char limit
-          ESCAPED=$(printf "%s" "$CONTENT" | jq -Rs .)  # Escapes properly using jq
+          CONTENT=$(cat full_diff.txt | head -c 1900)
+          ESCAPED=$(echo "$CONTENT" | sed 's/"/\\"/g')
 
-          curl -X POST -H "Content-Type: application/json" \
-            -d "{\"content\": \"🔔 **Changes detected in JSON files:**\n\`\`\`diff\n$CONTENT\n\`\`\`\"}" \
-            "$DISCORD_WEBHOOK_URL"
+          curl -X POST "$DISCORD_WEBHOOK_URL" \
+            -H "Content-Type: application/json" \
+            -d "{\"content\": \"🔔 **JSON changes detected:**\n\`\`\`diff\n$ESCAPED\n\`\`\`\"}"
 
-      - name: Save new files for next run
-        run: |
-          mkdir -p prev
-          cp bugcrowd_new.json prev/bugcrowd.json
-          cp intigriti_new.json prev/intigriti.json
+      - name: Upload latest as artifact for next run
+        uses: actions/upload-artifact@v3
+        with:
+          name: previous-jsons
+          path: snapshot/
