@@ -41,10 +41,10 @@ jobs:
           fi
 
           # Prepare the plain text message
-          message="Bugcrowd Target URL Updates"
+          message="Bugcrowd Target Changes:"
 
           if [ -n "$added_urls" ]; then
-            message="$message\n\nChanges:\n$(echo "$added_urls" | sed 's/^/- /')"
+            message="$message\n\n\n$(echo "$added_urls" | sed 's/^/- /')"
           fi
           if [ -n "$removed_urls" ]; then
             message="$message\n\nRChanges::\n$(echo "$removed_urls" | sed 's/^/- /')"
