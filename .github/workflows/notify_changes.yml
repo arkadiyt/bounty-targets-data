@@ -25,24 +25,21 @@ jobs:
       - name: Compare old and new JSON files
         id: compare
         run: |
-          if [ -f intigriti_data_old.json ]; then
-            diff intigriti_data_old.json.bak intigriti_data.json || echo "Changes detected in intigriti_data.json"
-          fi
-          if [ -f bugcrowd_data_old.json ]; then
-            diff bugcrowd_data_old.json.bak bugcrowd_data.json || echo "Changes detected in bugcrowd_data.json"
-          fi
-
-      - name: Notify changes
-        if: steps.compare.outcome == 'failure'
-        run: |
           DIFF_INTIGRITI=$(diff intigriti_data_old.json.bak intigriti_data.json || echo "No changes")
           DIFF_BUGCROWD=$(diff bugcrowd_data_old.json.bak bugcrowd_data.json || echo "No changes")
           
+          echo "DIFF_INTIGRITI=$DIFF_INTIGRITI" >> $GITHUB_ENV
+          echo "DIFF_BUGCROWD=$DIFF_BUGCROWD" >> $GITHUB_ENV
+
+      - name: Notify changes
+        if: ${{ env.DIFF_INTIGRITI != 'No changes' || env.DIFF_BUGCROWD != 'No changes' }}
+        run: |
           MESSAGE="Changes detected in the JSON files:\n"
-          MESSAGE+="\nIntigriti Data Changes:\n$DIFF_INTIGRITI"
-          MESSAGE+="\nBugcrowd Data Changes:\n$DIFF_BUGCROWD"
+          MESSAGE+="\nIntigriti Data Changes:\n${{ env.DIFF_INTIGRITI }}"
+          MESSAGE+="\nBugcrowd Data Changes:\n${{ env.DIFF_BUGCROWD }}"
 
           curl -X POST -H "Content-Type: application/json" -d "{\"content\": \"$MESSAGE\"}" https://discord.com/api/webhooks/1271818703356297226/RcjQ9wKd27kTNb4vxeaWqmnM4D6y1ltYdu-3CinUcH1I-rtFWKkt2x-Ahz89VZ_u18BD
+
       - name: Save current JSON files for future comparison
         run: |
           mv intigriti_data.json intigriti_data_old.json
