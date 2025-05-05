@@ -38,11 +38,12 @@ jobs:
 
           # Prepare the plain text message
           message="Bugcrowd Target Updates"
+          
           if [ -n "$added_list" ]; then
-            message="$message\n\nAdded:\n$added_list"
+            message="$message\n\nAdded:\n$(echo "$added_list" | sed 's/^/- /')"
           fi
           if [ -n "$removed_list" ]; then
-            message="$message\n\nRemoved:\n$removed_list"
+            message="$message\n\nRemoved:\n$(echo "$removed_list" | sed 's/^/- /')"
           fi
 
           # Print the message to debug and verify the format
