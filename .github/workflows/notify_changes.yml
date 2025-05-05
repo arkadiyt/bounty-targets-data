@@ -20,22 +20,32 @@ jobs:
       - name: Download current bugcrowd_data.json
         run: |
           curl -o bugcrowd_data.json https://raw.githubusercontent.com/arkadiyt/bounty-targets-data/main/data/bugcrowd_data.json
+          cat bugcrowd_data.json  # Debugging step: Print the content of the file
 
       - name: Download current intigriti_data.json
         run: |
           curl -o intigriti_data.json https://raw.githubusercontent.com/arkadiyt/bounty-targets-data/main/data/intigriti_data.json
+          cat intigriti_data.json  # Debugging step: Print the content of the file
 
       - name: Download previous bugcrowd_data.json (from rfelecT repo)
         run: |
           curl -o previous_bugcrowd_data.json https://raw.githubusercontent.com/rfelecT/bounty-targets-data/main/data/bugcrowd_data.json
+          cat previous_bugcrowd_data.json  # Debugging step: Print the content of the file
 
       - name: Download previous intigriti_data.json (from rfelecT repo)
         run: |
           curl -o previous_intigriti_data.json https://raw.githubusercontent.com/rfelecT/bounty-targets-data/main/data/intigriti_data.json
+          cat previous_intigriti_data.json  # Debugging step: Print the content of the file
 
       - name: Compare and send changes
         run: |
           CHANGES=""
+
+          # Debugging: Check if files are actually downloaded
+          echo "Contents of bugcrowd_data.json:"
+          cat bugcrowd_data.json
+          echo "Contents of previous_bugcrowd_data.json:"
+          cat previous_bugcrowd_data.json
 
           # Compare bugcrowd_data.json
           DIFF_BUGCROWD=$(diff previous_bugcrowd_data.json bugcrowd_data.json)
@@ -44,6 +54,12 @@ jobs:
           else
             CHANGES="$CHANGES\nNo changes detected in bugcrowd_data.json."
           fi
+
+          # Debugging: Check contents of intigriti files
+          echo "Contents of intigriti_data.json:"
+          cat intigriti_data.json
+          echo "Contents of previous_intigriti_data.json:"
+          cat previous_intigriti_data.json
 
           # Compare intigriti_data.json
           DIFF_INTIGRITI=$(diff previous_intigriti_data.json intigriti_data.json)
