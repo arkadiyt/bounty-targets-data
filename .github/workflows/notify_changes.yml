@@ -31,11 +31,14 @@ jobs:
             exit 0
           fi
 
-          added=$(jq --argfile old data/bugcrowd_data.json --argfile new latest.json '
-            ($new - $old) | map(.name)' < /dev/null)
+          added=$(jq -n --argfile old data/bugcrowd_data.json --argfile new latest.json '
+            ($new - $old) | map(.name)'
+              )
 
-          removed=$(jq --argfile old data/bugcrowd_data.json --argfile new latest.json '
-            ($old - $new) | map(.name)' < /dev/null)
+          removed=$(jq -n --argfile old data/bugcrowd_data.json --argfile new latest.json '
+          ($old - $new) | map(.name)'
+            )
+
 
           added_count=$(echo "$added" | jq 'length')
           removed_count=$(echo "$removed" | jq 'length')
