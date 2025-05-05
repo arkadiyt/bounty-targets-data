@@ -34,10 +34,15 @@ jobs:
       - name: Compare JSON files and extract changed URLs
         id: check_diff
         run: |
-          jq -r '.[].url' bugcrowd_old.json intigriti_old.json | sort > old_urls.txt
-          jq -r '.[].url' data/bugcrowd_data.json data/intigriti_data.json | sort > new_urls.txt
+          OLD_URLS=$(jq -r '.[].url' bugcrowd_old.json intigriti_old.json 2>/dev/null || echo "")
+          NEW_URLS=$(jq -r '.[].url' data/bugcrowd_data.json data/intigriti_data.json 2>/dev/null || echo "")
           
-          CHANGED_URLS=$(comm -3 old_urls.txt new_urls.txt)
+          # Sort and unique for consistent diff
+          OLD_SORTED=$(echo "$OLD_URLS" | sort | uniq)
+          NEW_SORTED=$(echo "$NEW_URLS" | sort | uniq)
+
+          # Use diff to get new or removed URLs
+          CHANGED_URLS=$(comm -3 <(echo "$OLD_SORTED") <(echo "$NEW_SORTED") | sed 's/^\t//')
           echo "$CHANGED_URLS" > changed_urls.txt
 
       - name: Send Discord Notification (URLs Only)
@@ -47,20 +52,13 @@ jobs:
         run: |
           CHANGED_URLS=$(cat changed_urls.txt)
 
-          CHUNK_SIZE=1900
-          TOTAL_LENGTH=${#CHANGED_URLS}
-
           if [ -n "$CHANGED_URLS" ]; then
-            for (( i=0; i<TOTAL_LENGTH; i+=CHUNK_SIZE )); do
-              PART="${CHANGED_URLS:i:CHUNK_SIZE}"
-              curl -H "Content-Type: application/json" \
-                -X POST \
-                -d "{\"content\": \"🔔 **Changed URLs:**\n\`\`\`\n$PART\n\`\`\`\"}" \
-                $DISCORD_WEBHOOK_URL
+            # Split into 1900-char chunks and send
+            echo "$CHANGED_URLS" | fold -w 1900 | while IFS= read -r PART; do
+              PAYLOAD=$(jq -n --arg msg "🔔 **Changed URLs:**\n\`\`\`\n$PART\n\`\`\`" '{content: $msg}')
+              curl -s -H "Content-Type: application/json" -X POST -d "$PAYLOAD" "$DISCORD_WEBHOOK_URL"
             done
           else
-            curl -H "Content-Type: application/json" \
-              -X POST \
-              -d "{\"content\": \"🔔 **No changes detected in URLs.**\"}" \
-              $DISCORD_WEBHOOK_URL
+            PAYLOAD=$(jq -n --arg msg "🔔 **No changes detected in URLs.**" '{content: $msg}')
+            curl -s -H "Content-Type: application/json" -X POST -d "$PAYLOAD" "$DISCORD_WEBHOOK_URL"
           fi
