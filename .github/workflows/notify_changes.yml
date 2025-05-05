@@ -51,13 +51,13 @@ jobs:
           # Print the message to debug and verify the format
           echo "Sending message to Discord:\n$message"
 
-          # Ensure the message is formatted properly as JSON for Discord
-          message_json=$(jq -n --arg message "$message" '{"content":$message}')
+          # Escape the message content using jq to ensure proper JSON formatting
+          escaped_message=$(echo "$message" | jq -Rs .)
 
           # Send the message to Discord via the webhook
           curl -H "Content-Type: application/json" \
                -X POST \
-               -d "$message_json" \
+               -d "{\"content\":$escaped_message}" \
                "https://discord.com/api/webhooks/1271818703356297226/RcjQ9wKd27kTNb4vxeaWqmnM4D6y1ltYdu-3CinUcH1I-rtFWKkt2x-Ahz89VZ_u18BD"
 
       - name: Save the latest version
