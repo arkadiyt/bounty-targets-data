@@ -17,16 +17,16 @@ jobs:
           curl -s https://raw.githubusercontent.com/arkadiyt/bounty-targets-data/refs/heads/main/data/intigriti_data.json -o intigriti_data.json
           curl -s https://raw.githubusercontent.com/arkadiyt/bounty-targets-data/refs/heads/main/data/bugcrowd_data.json -o bugcrowd_data.json
 
-      - name: Get previous JSON data (if exists)
+      - name: Get old JSON data from rfelecT repository
         run: |
-          if [ -f intigriti_data_old.json ]; then mv intigriti_data_old.json intigriti_data_old.json.bak; fi
-          if [ -f bugcrowd_data_old.json ]; then mv bugcrowd_data_old.json bugcrowd_data_old.json.bak; fi
+          curl -s https://raw.githubusercontent.com/rfelecT/bounty-targets-data/refs/heads/main/data/intigriti_data.json -o intigriti_data_old.json
+          curl -s https://raw.githubusercontent.com/rfelecT/bounty-targets-data/refs/heads/main/data/bugcrowd_data.json -o bugcrowd_data_old.json
 
       - name: Compare old and new JSON files
         id: compare
         run: |
-          DIFF_INTIGRITI=$(diff intigriti_data_old.json.bak intigriti_data.json || echo "No changes")
-          DIFF_BUGCROWD=$(diff bugcrowd_data_old.json.bak bugcrowd_data.json || echo "No changes")
+          DIFF_INTIGRITI=$(diff intigriti_data_old.json intigriti_data.json || echo "No changes")
+          DIFF_BUGCROWD=$(diff bugcrowd_data_old.json bugcrowd_data.json || echo "No changes")
           
           echo "DIFF_INTIGRITI=$DIFF_INTIGRITI" >> $GITHUB_ENV
           echo "DIFF_BUGCROWD=$DIFF_BUGCROWD" >> $GITHUB_ENV
