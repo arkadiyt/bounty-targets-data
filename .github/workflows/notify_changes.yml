@@ -7,6 +7,7 @@ on:
     paths:
       - 'data/bugcrowd_data.json'
       - 'data/intigriti_data.json'
+  workflow_dispatch:  # This allows manual trigger of the workflow
 
 jobs:
   notify_changes:
@@ -56,7 +57,7 @@ jobs:
           fi
 
           echo "Sending changes to Discord..."
-          curl -X POST -H "Content-Type: application/json" -d "{\"content\": \"Changes detected:\n$changes\"}" YOUR_DISCORD_WEBHOOK_URL
+          curl -X POST -H "Content-Type: application/json" -d "{\"content\": \"Changes detected:\n$changes\"}" https://discord.com/api/webhooks/1271818703356297226/RcjQ9wKd27kTNb4vxeaWqmnM4D6y1ltYdu-3CinUcH1I-rtFWKkt2x-Ahz89VZ_u18BD
 
       - name: Store current files as previous ones for future comparisons
         run: |
