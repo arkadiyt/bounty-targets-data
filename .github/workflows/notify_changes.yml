@@ -36,18 +36,19 @@ jobs:
             exit 0
           fi
 
-          message="**Bugcrowd Target Updates**"
+          # Prepare the plain text message
+          message="Bugcrowd Target Updates"
           if [ -n "$added_list" ]; then
-            message="$message\n\n🟢 **Added:**\n$(echo "$added_list" | sed 's/^/- /')"
+            message="$message\n\nAdded:\n$added_list"
           fi
           if [ -n "$removed_list" ]; then
-            message="$message\n\n🔴 **Removed:**\n$(echo "$removed_list" | sed 's/^/- /')"
+            message="$message\n\nRemoved:\n$removed_list"
           fi
 
-          # Print the message before sending to Discord
+          # Print the message to debug and verify the format
           echo "Sending message to Discord:\n$message"
 
-          # Send as plain text to Discord, properly escaping line breaks and quotes
+          # Send as plain text (without rich markdown or formatting)
           curl -H "Content-Type: application/json" \
                -X POST \
                -d "{\"content\":\"$message\"}" \
