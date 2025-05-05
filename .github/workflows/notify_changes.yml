@@ -16,6 +16,22 @@ jobs:
       - name: Set up jq
         run: sudo apt-get install jq
 
+      - name: Add original repository as a remote
+        run: |
+          git remote add upstream https://github.com/arkadiyt/bounty-targets-data.git
+          git fetch upstream
+
+      - name: Sync fork with the latest changes from the original repository
+        run: |
+          # Ensure we are on the main branch
+          git checkout main
+          
+          # Fetch the latest changes from the original repo (upstream)
+          git fetch upstream
+
+          # Merge changes from upstream (original repo) into your fork
+          git merge upstream/main --no-edit
+
       - name: Download the original bugcrowd_data.json (from arkadiyt)
         run: |
           curl -o original_bugcrowd_data.json "https://raw.githubusercontent.com/arkadiyt/bounty-targets-data/refs/heads/main/data/bugcrowd_data.json"
