@@ -28,11 +28,15 @@ jobs:
           DIFF_INTIGRITI=$(diff intigriti_data_old.json intigriti_data.json || echo "No changes")
           DIFF_BUGCROWD=$(diff bugcrowd_data_old.json bugcrowd_data.json || echo "No changes")
           
-          echo "DIFF_INTIGRITI=$DIFF_INTIGRITI" >> $GITHUB_ENV
-          echo "DIFF_BUGCROWD=$DIFF_BUGCROWD" >> $GITHUB_ENV
+          # Use jq to format the diff as a JSON string safely
+          ESCAPED_DIFF_INTIGRITI=$(echo "$DIFF_INTIGRITI" | jq -R .)
+          ESCAPED_DIFF_BUGCROWD=$(echo "$DIFF_BUGCROWD" | jq -R .)
+          
+          echo "DIFF_INTIGRITI=$ESCAPED_DIFF_INTIGRITI" >> $GITHUB_ENV
+          echo "DIFF_BUGCROWD=$ESCAPED_DIFF_BUGCROWD" >> $GITHUB_ENV
 
       - name: Notify changes
-        if: ${{ env.DIFF_INTIGRITI != 'No changes' || env.DIFF_BUGCROWD != 'No changes' }}
+        if: ${{ env.DIFF_INTIGRITI != '"No changes"' || env.DIFF_BUGCROWD != '"No changes"' }}
         run: |
           MESSAGE="Changes detected in the JSON files:\n"
           MESSAGE+="\nIntigriti Data Changes:\n${{ env.DIFF_INTIGRITI }}"
