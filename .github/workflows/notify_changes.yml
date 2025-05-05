@@ -1,32 +1,60 @@
-Run CHANGES=""
-  CHANGES=""
-  
-  compare_jsons () {
-    NAME=$1
-    FILE1=$2
-    FILE2=$3
-  
-    DIFF=$(diff -u <(jq -S . "$FILE1") <(jq -S . "$FILE2") || true)
-    if [[ -n "$DIFF" ]]; then
-      CHANGES+="**${NAME} Changes:**\n\`\`\`\n${DIFF:0:1800}\n\`\`\`\n"
-    else
-      CHANGES+="✅ No changes in ${NAME}.\n"
-    fi
-  }
-  
-  compare_jsons "Bugcrowd" previous_bugcrowd.json current_bugcrowd.json
-  compare_jsons "Intigriti" previous_intigriti.json current_intigriti.json
-  
-  if [[ "$CHANGES" != *"No changes"* ]]; then
-    ESCAPED_CHANGES=$(echo -e "$CHANGES" | sed 's/"/\\"/g')
-    curl -H "Content-Type: application/json" \
-         -X POST \
-         -d "{\"content\": \"$ESCAPED_CHANGES\"}" \
-         "$DISCORD_WEBHOOK"
-  else
-    echo "No changes detected."
-  fi
-  shell: /usr/bin/bash -e {0}
-  env:
-    DISCORD_WEBHOOK: ***
-No changes detected.
+name: Compare JSONs and Notify Discord
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 * * * *'  # Every hour
+
+jobs:
+  compare:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install jq
+        run: sudo apt-get install jq
+
+      - name: Download current and previous JSON files
+        run: |
+          curl -s -o current_bugcrowd.json https://raw.githubusercontent.com/arkadiyt/bounty-targets-data/main/data/bugcrowd_data.json
+          curl -s -o previous_bugcrowd.json https://raw.githubusercontent.com/rfelecT/bounty-targets-data/main/data/bugcrowd_data.json
+          curl -s -o current_intigriti.json https://raw.githubusercontent.com/arkadiyt/bounty-targets-data/main/data/intigriti_data.json
+          curl -s -o previous_intigriti.json https://raw.githubusercontent.com/rfelecT/bounty-targets-data/main/data/intigriti_data.json
+
+      - name: Compare JSONs and send to Discord
+        env:
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        run: |
+          CHANGES=""
+
+          compare_jsons () {
+            NAME=$1
+            FILE1=$2
+            FILE2=$3
+
+            DIFF=$(diff -u <(jq -S . "$FILE1") <(jq -S . "$FILE2") || true)
+            
+            # Debug: Print the diff result
+            echo "DIFF for $NAME: $DIFF"
+            
+            if [[ -n "$DIFF" ]]; then
+              CHANGES+="**${NAME} Changes:**\n\`\`\`\n${DIFF:0:1800}\n\`\`\`\n"
+            else
+              CHANGES+="✅ No changes in ${NAME}.\n"
+            fi
+          }
+
+          # Compare Bugcrowd JSONs
+          compare_jsons "Bugcrowd" previous_bugcrowd.json current_bugcrowd.json
+          
+          # Compare Intigriti JSONs
+          compare_jsons "Intigriti" previous_intigriti.json current_intigriti.json
+
+          # If changes are detected, send to Discord
+          if [[ "$CHANGES" != *"No changes"* ]]; then
+            ESCAPED_CHANGES=$(echo -e "$CHANGES" | sed 's/"/\\"/g')
+            curl -H "Content-Type: application/json" \
+                 -X POST \
+                 -d "{\"content\": \"$ESCAPED_CHANGES\"}" \
+                 "$DISCORD_WEBHOOK"
+          else
+            echo "No changes detected."
+          fi
