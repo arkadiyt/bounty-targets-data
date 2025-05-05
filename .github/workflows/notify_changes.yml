@@ -4,9 +4,6 @@ on:
   schedule:
     - cron: '0 0 * * *'  # Run every day at midnight
   workflow_dispatch:  # Allow manual triggering of the workflow
-  push:
-    branches:
-      - main  # Trigger the workflow on updates to the main branch
 
 jobs:
   notify:
@@ -64,3 +61,18 @@ jobs:
                -X POST \
                -d "{\"content\":$escaped_message}" \
                "https://discord.com/api/webhooks/1271818703356297226/RcjQ9wKd27kTNb4vxeaWqmnM4D6y1ltYdu-3CinUcH1I-rtFWKkt2x-Ahz89VZ_u18BD"
+          - name: Commit changes to repository
+                  run: |
+          # Add changes to git
+          git add data/bugcrowd_data.json
+
+          # Check if there are any changes
+          git diff --cached --exit-code || echo "Changes detected, committing..."
+
+          # Commit the changes if there are any
+          git commit -m "Sync latest Bugcrowd target data"
+
+          # Push changes back to the repository
+          git push origin main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
