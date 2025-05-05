@@ -62,19 +62,26 @@ jobs:
                -d "{\"content\":$escaped_message}" \
                "https://discord.com/api/webhooks/1271818703356297226/RcjQ9wKd27kTNb4vxeaWqmnM4D6y1ltYdu-3CinUcH1I-rtFWKkt2x-Ahz89VZ_u18BD"
 
-      - name: Overwrite the existing bugcrowd_data.json with the latest data
+      - name: Commit and push changes if any
         run: |
-          cp modified_bugcrowd_data.json data/bugcrowd_data.json
+          # Check if the modified bugcrowd_data.json is different from the current file in the repo
+          git diff --exit-code data/bugcrowd_data.json modified_bugcrowd_data.json
+          
+          # If there are changes, commit and push
+          if [ $? -ne 0 ]; then
+            # Copy the new modified file to the repository directory
+            cp modified_bugcrowd_data.json data/bugcrowd_data.json
 
-          # Configure git
-          git config user.name "rfelecT"
-          git config user.email "arefhsnkhani@gmail.com"
+            # Configure git
+            git config user.name "rfelecT"
+            git config user.email "arefhsnkhani@gmail.com"
 
-          # Stage the overwritten file (bugcrowd_data.json)
-          git add data/bugcrowd_data.json
+            # Stage and commit the changes
+            git add data/bugcrowd_data.json
+            git commit -m "Update bugcrowd_data.json with latest changes"
 
-          # Commit the changes
-          git commit -m "Update bugcrowd_data.json with latest changes"
-
-          # Push the changes
-          git push origin main  # Adjust 'main' to your default branch if needed
+            # Push the changes
+            git push origin main  # Adjust 'main' to your default branch if needed
+          else
+            echo "No changes to commit."
+          fi
