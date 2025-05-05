@@ -1,52 +1,60 @@
-name: Sync Fork and Notify Changes
+name: Sync and Compare Bugcrowd and Intigriti JSONs
 
 on:
-  push:
-    branches:
-      - main  # Or your default branch
+  workflow_dispatch:
   schedule:
-    - cron: '0 * * * *'  # Runs every hour to check for updates (adjust as needed)
+    - cron: '0 * * * *'  # Once every hour (adjust as necessary)
 
 jobs:
   sync-and-compare:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout the repo
+      # Step 1: Checkout the fork repository
+      - name: Checkout the repository
         uses: actions/checkout@v2
 
-      - name: Set up GitHub repository for syncing
+      # Step 2: Add upstream remote (original repository)
+      - name: Add upstream remote (only if not already set)
         run: |
-          git remote add upstream https://github.com/arkadiyt/bounty-targets-data.git
-          git fetch upstream
-          git checkout main
-          git merge upstream/main --no-edit
-
-      - name: Check if any files have changed (bugcrowd or intigriti)
-        run: |
-          git diff --name-only HEAD~1..HEAD | grep -E "bugcrowd_data.json|intigriti_data.json" > changed_files.txt
-          if [[ -s changed_files.txt ]]; then
-            echo "Changes detected in the following files:"
-            cat changed_files.txt
-          else
-            echo "No changes detected in bugcrowd_data.json or intigriti_data.json"
-            exit 0
+          if ! git remote get-url upstream &>/dev/null; then
+            git remote add upstream https://github.com/arkadiyt/bounty-targets-data.git
           fi
 
-      - name: Compare JSON files and send to Discord
+      # Step 3: Fetch the latest changes from upstream repository
+      - name: Fetch the latest changes from upstream
+        run: git fetch upstream
+
+      # Step 4: Checkout the `main` branch
+      - name: Checkout main branch
+        run: git checkout main
+
+      # Step 5: Merge upstream changes into the forked repository
+      - name: Merge upstream/main into the forked main
+        run: git merge upstream/main --no-edit
+
+      # Step 6: Download the current and previous JSON files from GitHub
+      - name: Download current and previous JSON files
+        run: |
+          curl -s -o current_bugcrowd.json https://raw.githubusercontent.com/arkadiyt/bounty-targets-data/main/data/bugcrowd_data.json
+          curl -s -o previous_bugcrowd.json https://raw.githubusercontent.com/rfelecT/bounty-targets-data/main/data/bugcrowd_data.json
+          curl -s -o current_intigriti.json https://raw.githubusercontent.com/arkadiyt/bounty-targets-data/main/data/intigriti_data.json
+          curl -s -o previous_intigriti.json https://raw.githubusercontent.com/rfelecT/bounty-targets-data/main/data/intigriti_data.json
+
+      # Step 7: Compare JSONs and send to Discord
+      - name: Compare JSONs and send to Discord
         env:
           DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK_URL }}
         run: |
           CHANGES=""
 
+          # Function to compare two JSON files
           compare_jsons () {
             NAME=$1
             FILE1=$2
             FILE2=$3
 
-            # Compare the JSON files using jq and diff
             DIFF=$(diff -u <(jq -S . "$FILE1") <(jq -S . "$FILE2") || true)
-
             if [[ -n "$DIFF" ]]; then
               CHANGES+="**${NAME} Changes:**\n\`\`\`\n${DIFF:0:1800}\n\`\`\`\n"
             else
@@ -54,15 +62,11 @@ jobs:
             fi
           }
 
-          # If changes in bugcrowd or intigriti detected, compare
-          if grep -q "bugcrowd_data.json" changed_files.txt; then
-            compare_jsons "Bugcrowd" previous_bugcrowd.json current_bugcrowd.json
-          fi
-          if grep -q "intigriti_data.json" changed_files.txt; then
-            compare_jsons "Intigriti" previous_intigriti.json current_intigriti.json
-          fi
+          # Compare Bugcrowd and Intigriti JSON files
+          compare_jsons "Bugcrowd" previous_bugcrowd.json current_bugcrowd.json
+          compare_jsons "Intigriti" previous_intigriti.json current_intigriti.json
 
-          # Send notification if there are any changes
+          # If changes are detected, notify Discord
           if [[ "$CHANGES" != *"No changes"* ]]; then
             ESCAPED_CHANGES=$(echo -e "$CHANGES" | sed 's/"/\\"/g')
             curl -H "Content-Type: application/json" \
