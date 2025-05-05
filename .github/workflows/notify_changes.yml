@@ -51,12 +51,11 @@ jobs:
             message="$message\n\n🔴 **Removed:**\n$(echo "$removed_list" | sed 's/^/- /')"
           fi
 
-          echo -e "$message"
-
+          echo -e "$message" | jq -Rs '{content: .}' | \
           curl -H "Content-Type: application/json" \
-            -X POST \
-            -d "{\"content\": \"$message\"}" \
-            "https://discord.com/api/webhooks/1271818703356297226/RcjQ9wKd27kTNb4vxeaWqmnM4D6y1ltYdu-3CinUcH1I-rtFWKkt2x-Ahz89VZ_u18BD"
+               -X POST \
+               -d @- \
+               "https://discord.com/api/webhooks/1271818703356297226/RcjQ9wKd27kTNb4vxeaWqmnM4D6y1ltYdu-3CinUcH1I-rtFWKkt2x-Ahz89VZ_u18BD"
 
       - name: Save latest version for next run
         run: cp latest.json data/bugcrowd_data.json
@@ -64,7 +63,7 @@ jobs:
       - name: Commit and push if changed
         run: |
           git config --global user.name "rfelecT"
-          git config --global user.email "arefhsnkhani@gmail.com"
+          git config --global user.email "aarefhsnkhani@gmail.com"
           git add data/bugcrowd_data.json
           git commit -m "Update bugcrowd_data.json" || echo "No changes to commit"
           git push
