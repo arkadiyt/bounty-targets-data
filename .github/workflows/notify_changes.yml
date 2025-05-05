@@ -44,10 +44,10 @@ jobs:
           message="Bugcrowd Target Changes:"
 
           if [ -n "$added_urls" ]; then
-            message="$message\n\n\n$(echo "$added_urls" | sed 's/^/- /')"
+            message="$message$(echo "$added_urls" | sed 's/^/- /')"
           fi
           if [ -n "$removed_urls" ]; then
-            message="$message\n\n\n$(echo "$removed_urls" | sed 's/^/- /')"
+            message="$message$(echo "$removed_urls" | sed 's/^/- /')"
           fi
 
           # Print the message to debug and verify the format
