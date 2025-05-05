@@ -25,25 +25,28 @@ jobs:
         env:
           DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK_URL }}
         run: |
+          escape_json() {
+            echo "$1" | python3 -c 'import json,sys; print(json.dumps(sys.stdin.read()))'
+          }
+
           CHANGES=""
 
           DIFF_BUGCROWD=$(diff -u previous_bugcrowd.json current_bugcrowd.json || true)
           if [[ -n "$DIFF_BUGCROWD" ]]; then
-            CHANGES+="**Bugcrowd Changes:**\n\`\`\`\n${DIFF_BUGCROWD:0:1800}\n\`\`\`\n"
+            CHANGES+="**Bugcrowd Changes:**\n\`\`\`diff\n${DIFF_BUGCROWD:0:1800}\n\`\`\`\n"
           else
             CHANGES+="No changes in bugcrowd_data.json.\n"
           fi
 
           DIFF_INTIGRITI=$(diff -u previous_intigriti.json current_intigriti.json || true)
           if [[ -n "$DIFF_INTIGRITI" ]]; then
-            CHANGES+="**Intigriti Changes:**\n\`\`\`\n${DIFF_INTIGRITI:0:1800}\n\`\`\`\n"
+            CHANGES+="**Intigriti Changes:**\n\`\`\`diff\n${DIFF_INTIGRITI:0:1800}\n\`\`\`\n"
           else
             CHANGES+="No changes in intigriti_data.json.\n"
           fi
 
-          if [[ -n "$CHANGES" ]]; then
-            curl -H "Content-Type: application/json" \
-              -X POST \
-              -d "{\"content\": \"$CHANGES\"}" \
-              "$DISCORD_WEBHOOK_URL"
-          fi
+          ESCAPED_CHANGES=$(escape_json "$CHANGES")
+
+          curl -X POST -H "Content-Type: application/json" \
+            -d "{\"content\": $ESCAPED_CHANGES}" \
+            "$DISCORD_WEBHOOK"
