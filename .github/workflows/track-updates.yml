@@ -1,62 +1,62 @@
-name: Notify Discord on Any JSON Change
+name: Notify Changes
 
 on:
-  schedule:
-    - cron: '0 * * * *'    # Run every hour
-  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - 'data/bugcrowd_data.json'
+      - 'data/intigriti_data.json'
 
 jobs:
-  notify-on-change:
+  notify_changes:
     runs-on: ubuntu-latest
 
     steps:
-      # 1) Download the latest JSON files from upstream
-      - name: Download latest JSON
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Fetch bugcrowd_data.json
+        id: fetch_bugcrowd_data
         run: |
-          curl -sSL https://raw.githubusercontent.com/arkadiyt/bounty-targets-data/main/data/bugcrowd_data.json -o bugcrowd_new.json
-          curl -sSL https://raw.githubusercontent.com/arkadiyt/bounty-targets-data/main/data/intigriti_data.json -o intigriti_new.json
-
-      # 2) Try to restore the previous-run JSONs artifact, if any exists
-      - name: Try to restore previous JSONs (if any)
-        id: restore_previous
-        uses: actions/download-artifact@v2
-        with:
-          name: previous-jsons
-          path: previous
-        continue-on-error: true  # Continue even if the artifact doesn't exist
-
-      # 3) Prepare old/new for diff
-      - name: Prepare files for diff
+          curl -o bugcrowd_data.json https://raw.githubusercontent.com/arkadiyt/bounty-targets-data/main/data/bugcrowd_data.json
+          
+      - name: Fetch intigriti_data.json
+        id: fetch_intigriti_data
         run: |
-          # If no previous file, create an empty file to compare
-          [ -f previous/bugcrowd.json ] && cp previous/bugcrowd.json bugcrowd_old.json || touch bugcrowd_old.json
-          [ -f previous/intigriti.json ] && cp previous/intigriti.json intigriti_old.json || touch intigriti_old.json
+          curl -o intigriti_data.json https://raw.githubusercontent.com/arkadiyt/bounty-targets-data/main/data/intigriti_data.json
 
-      # 4) Diff them
-      - name: Diff JSONs
-        id: diff
+      - name: Compare files and extract changes
+        id: compare_files
         run: |
-          diff -u bugcrowd_old.json bugcrowd_new.json > diff_bc.txt || true
-          diff -u intigriti_old.json intigriti_new.json > diff_int.txt || true
-          cat diff_bc.txt diff_int.txt > full_diff.txt
-          echo "changed=$([ -s full_diff.txt ] && echo true || echo false)" >> $GITHUB_OUTPUT
+          if [[ -f "previous_bugcrowd_data.json" ]]; then
+            diff -u previous_bugcrowd_data.json bugcrowd_data.json > bugcrowd_changes.diff || echo "No changes in bugcrowd_data.json"
+          else
+            echo "No previous data to compare with"
+          fi
+          
+          if [[ -f "previous_intigriti_data.json" ]]; then
+            diff -u previous_intigriti_data.json intigriti_data.json > intigriti_changes.diff || echo "No changes in intigriti_data.json"
+          else
+            echo "No previous data to compare with"
+          fi
 
-      # 5) Send Discord Notification if changed
-      - name: Send Discord Notification
-        if: steps.diff.outputs.changed == 'true'
-        env:
-          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+      - name: Convert changes to text/plain and send to Discord
         run: |
-          # Take only last 1800 chars to stay under 2000 limit
-          CONTENT=$(tail -c1800 full_diff.txt | sed 's/"/\\"/g')
-          PAYLOAD="{\"content\": \"🔔 **Changes detected:**\n\`\`\`diff\n$CONTENT\n\`\`\`\"}"
-          curl -H "Content-Type: application/json" -X POST -d "$PAYLOAD" "$DISCORD_WEBHOOK_URL"
+          changes=""
 
-      # 6) Upload the new JSONs as an artifact for the next run
-      - name: Upload new JSONs
-        uses: actions/upload-artifact@v2
-        with:
-          name: previous-jsons
-          path: |
-            bugcrowd_new.json
-            intigriti_new.json
+          if [ -f "bugcrowd_changes.diff" ]; then
+            changes=$(cat bugcrowd_changes.diff)
+          fi
+
+          if [ -f "intigriti_changes.diff" ]; then
+            changes="$changes$(cat intigriti_changes.diff)"
+          fi
+
+          curl -X POST -H "Content-Type: application/json" -d "{\"content\": \"Changes detected:\n$changes\"}" https://discord.com/api/webhooks/1271818703356297226/RcjQ9wKd27kTNb4vxeaWqmnM4D6y1ltYdu-3CinUcH1I-rtFWKkt2x-Ahz89VZ_u18BD
+
+
+      - name: Store current files as previous ones for future comparisons
+        run: |
+          cp bugcrowd_data.json previous_bugcrowd_data.json
+          cp intigriti_data.json previous_intigriti_data.json
