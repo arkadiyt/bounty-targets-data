@@ -23,7 +23,7 @@ jobs:
 
       - name: Compare JSON files and send to Discord
         env:
-          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK_URL }}
         run: |
           CHANGES=""
 
