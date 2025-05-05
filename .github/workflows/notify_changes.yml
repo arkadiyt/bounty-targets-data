@@ -16,23 +16,23 @@ jobs:
       - name: Set up jq
         run: sudo apt-get install jq
 
-      - name: Download the main bugcrowd_data.json
+      - name: Download the original bugcrowd_data.json (from arkadiyt)
         run: |
-          curl -o main_bugcrowd_data.json "https://raw.githubusercontent.com/arkadiyt/bounty-targets-data/refs/heads/main/data/bugcrowd_data.json"
+          curl -o original_bugcrowd_data.json "https://raw.githubusercontent.com/arkadiyt/bounty-targets-data/refs/heads/main/data/bugcrowd_data.json"
 
-      - name: Download your bugcrowd_data.json
+      - name: Download your modified bugcrowd_data.json (from rfelecT)
         run: |
-          curl -o your_bugcrowd_data.json "https://raw.githubusercontent.com/rfelecT/bounty-targets-data/refs/heads/main/data/bugcrowd_data.json"
+          curl -o modified_bugcrowd_data.json "https://raw.githubusercontent.com/rfelecT/bounty-targets-data/refs/heads/main/data/bugcrowd_data.json"
 
       - name: Compare old and new target lists
         run: |
           # Extract the names of the added and removed entries
-          added=$(jq '.[].name' your_bugcrowd_data.json | sort)
-          old=$(jq '.[].name' main_bugcrowd_data.json | sort)
+          modified=$(jq '.[].name' modified_bugcrowd_data.json | sort)
+          original=$(jq '.[].name' original_bugcrowd_data.json | sort)
 
           # Compare old and new entries to find added and removed targets
-          added_list=$(comm -13 <(echo "$old") <(echo "$added"))
-          removed_list=$(comm -23 <(echo "$old") <(echo "$added"))
+          added_list=$(comm -13 <(echo "$original") <(echo "$modified"))
+          removed_list=$(comm -23 <(echo "$original") <(echo "$modified"))
 
           # If no changes, exit early
           if [ -z "$added_list" ] && [ -z "$removed_list" ]; then
@@ -61,4 +61,3 @@ jobs:
                -X POST \
                -d "{\"content\":$escaped_message}" \
                "https://discord.com/api/webhooks/1271818703356297226/RcjQ9wKd27kTNb4vxeaWqmnM4D6y1ltYdu-3CinUcH1I-rtFWKkt2x-Ahz89VZ_u18BD"
-
