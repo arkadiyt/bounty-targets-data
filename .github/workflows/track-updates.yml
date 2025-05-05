@@ -28,16 +28,16 @@ jobs:
       - name: Add upstream remote and fetch latest data (shallow)
         run: |
           git remote add upstream https://github.com/arkadiyt/bounty-targets-data.git
-          git fetch upstream --depth 1  # Shallow fetch, only the latest changes
+          git fetch upstream --depth 1
           git checkout upstream/main -- data/bugcrowd_data.json data/intigriti_data.json
 
       - name: Compare JSON files and extract changed URLs
         id: check_diff
         run: |
-          OLD_URLS=$(jq -r '.[].url' bugcrowd_old.json intigriti_old.json)
-          NEW_URLS=$(jq -r '.[].url' data/bugcrowd_data.json data/intigriti_data.json)
+          jq -r '.[].url' bugcrowd_old.json intigriti_old.json | sort > old_urls.txt
+          jq -r '.[].url' data/bugcrowd_data.json data/intigriti_data.json | sort > new_urls.txt
           
-          CHANGED_URLS=$(comm -3 <(echo "$OLD_URLS") <(echo "$NEW_URLS"))
+          CHANGED_URLS=$(comm -3 old_urls.txt new_urls.txt)
           echo "$CHANGED_URLS" > changed_urls.txt
 
       - name: Send Discord Notification (URLs Only)
@@ -46,7 +46,7 @@ jobs:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
         run: |
           CHANGED_URLS=$(cat changed_urls.txt)
-          
+
           CHUNK_SIZE=1900
           TOTAL_LENGTH=${#CHANGED_URLS}
 
