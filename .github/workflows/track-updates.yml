@@ -1,65 +1,65 @@
-name: Notify Discord on JSON Changes
+name: Notify Discord on Any JSON Change
 
 on:
   schedule:
-    - cron: '0 * * * *'  # Every hour
+    - cron: '0 * * * *'    # run hourly
   workflow_dispatch:
 
 jobs:
-  notify-if-data-changed:
+  notify-on-change:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-
-      - name: Fetch latest bounty data
+      # 1) Download the latest JSON files from upstream
+      - name: Download latest JSON
         run: |
-          curl -sSL https://raw.githubusercontent.com/arkadiyt/bounty-targets-data/main/data/bugcrowd_data.json -o bugcrowd_latest.json
-          curl -sSL https://raw.githubusercontent.com/arkadiyt/bounty-targets-data/main/data/intigriti_data.json -o intigriti_latest.json
+          curl -sSL https://raw.githubusercontent.com/arkadiyt/bounty-targets-data/main/data/bugcrowd_data.json -o bugcrowd_new.json
+          curl -sSL https://raw.githubusercontent.com/arkadiyt/bounty-targets-data/main/data/intigriti_data.json -o intigriti_new.json
 
-      - name: Restore previous files if exist
+      # 2) Fetch the previous-run JSONs artifact (if any)
+      - name: Restore previous JSONs
+        uses: actions/download-artifact@v2
+        with:
+          name: previous-jsons
+          path: previous
+
+      # 3) Prepare old/new for diff
+      - name: Prepare files for diff
         run: |
-          mkdir -p previous
-          cp bugcrowd_latest.json previous/bugcrowd_previous.json || true
-          cp intigriti_latest.json previous/intigriti_previous.json || true
+          # If no previous, create empty so diff will treat whole file as new
+          [ -f previous/bugcrowd.json ] && cp previous/bugcrowd.json bugcrowd_old.json || touch bugcrowd_old.json
+          [ -f previous/intigriti.json ] && cp previous/intigriti.json intigriti_old.json || touch intigriti_old.json
 
-      - name: Save current files for next comparison
-        run: |
-          mkdir -p snapshot
-          cp bugcrowd_latest.json snapshot/bugcrowd_snapshot.json
-          cp intigriti_latest.json snapshot/intigriti_snapshot.json
-
-      - name: Compare JSON and save diff
+      # 4) Diff them
+      - name: Diff JSONs
         id: diff
         run: |
-          sudo apt-get install -y jq diffutils
-          
-          DIFF_BC=$(diff -u previous/bugcrowd_previous.json bugcrowd_latest.json || true)
-          DIFF_INT=$(diff -u previous/intigriti_previous.json intigriti_latest.json || true)
-          
-          FULL_DIFF="$DIFF_BC"$'\n'"$DIFF_INT"
-          
-          if [ -n "$FULL_DIFF" ]; then
-            echo "diff_found=true" >> "$GITHUB_OUTPUT"
-            echo "$FULL_DIFF" > full_diff.txt
-          else
-            echo "diff_found=false" >> "$GITHUB_OUTPUT"
-          fi
+          diff -u bugcrowd_old.json bugcrowd_new.json > diff_bc.txt || true
+          diff -u intigriti_old.json intigriti_new.json > diff_int.txt || true
+          cat diff_bc.txt diff_int.txt > full_diff.txt
+          echo "changed=$([ -s full_diff.txt ] && echo true || echo false)" >> $GITHUB_OUTPUT
 
+      # 5) Notify Discord if changed
       - name: Send Discord Notification
-        if: steps.diff.outputs.diff_found == 'true'
+        if: steps.diff.outputs.changed == 'true'
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
         run: |
-          CONTENT=$(cat full_diff.txt | head -c 1900)
-          ESCAPED=$(echo "$CONTENT" | sed 's/"/\\"/g')
+          # take only last 1800 chars to stay under 2000 limit
+          CONTENT=$(tail -c1800 full_diff.txt | sed 's/"/\\"/g')
+          PAYLOAD="{\"content\": \"🔔 **Changes detected:**\n\`\`\`diff\n$CONTENT\n\`\`\`\"}"
+          curl -H "Content-Type: application/json" -X POST -d "$PAYLOAD" "$DISCORD_WEBHOOK_URL"
 
-          curl -X POST "$DISCORD_WEBHOOK_URL" \
-            -H "Content-Type: application/json" \
-            -d "{\"content\": \"🔔 **JSON changes detected:**\n\`\`\`diff\n$ESCAPED\n\`\`\`\"}"
+      # 6) If no changes, you can uncomment to notify
+      #- name: Notify no changes
+      #  if: steps.diff.outputs.changed == 'false'
+      #  ...
 
-      - name: Upload latest as artifact for next run
-        uses: actions/upload-artifact@v3
+      # 7) Upload the new JSONs as artifact for next run
+      - name: Upload new JSONs
+        uses: actions/upload-artifact@v2
         with:
           name: previous-jsons
-          path: snapshot/
+          path: |
+            bugcrowd_new.json
+            intigriti_new.json
