@@ -33,31 +33,37 @@ jobs:
         id: compare_files
         run: |
           echo "Checking previous files..."  # Debugging message
+          CHANGES=""
+          
+          # Compare bugcrowd_data.json if it exists
           if [[ -f "previous_bugcrowd_data.json" ]]; then
-            diff -u previous_bugcrowd_data.json bugcrowd_data.json > bugcrowd_changes.diff || echo "No changes in bugcrowd_data.json"
+            DIFF_OUTPUT=$(diff -u previous_bugcrowd_data.json bugcrowd_data.json)
+            if [[ -n "$DIFF_OUTPUT" ]]; then
+              CHANGES="$CHANGES\nBugcrowd Data Changes:\n$DIFF_OUTPUT"
+            fi
           else
-            echo "No previous data to compare with"
+            CHANGES="$CHANGES\nNo previous bugcrowd_data.json to compare with."
           fi
           
+          # Compare intigriti_data.json if it exists
           if [[ -f "previous_intigriti_data.json" ]]; then
-            diff -u previous_intigriti_data.json intigriti_data.json > intigriti_changes.diff || echo "No changes in intigriti_data.json"
+            DIFF_OUTPUT=$(diff -u previous_intigriti_data.json intigriti_data.json)
+            if [[ -n "$DIFF_OUTPUT" ]]; then
+              CHANGES="$CHANGES\nIntigriti Data Changes:\n$DIFF_OUTPUT"
+            fi
           else
-            echo "No previous data to compare with"
+            CHANGES="$CHANGES\nNo previous intigriti_data.json to compare with."
           fi
 
-      - name: Convert changes to text/plain and send to Discord
-        run: |
-          changes=""
-          if [ -f "bugcrowd_changes.diff" ]; then
-            changes=$(cat bugcrowd_changes.diff)
+          # Store changes if any were found
+          echo "Changes detected: $CHANGES"
+          
+          # Send to Discord only if there are actual changes
+          if [[ -n "$CHANGES" ]]; then
+            curl -X POST -H "Content-Type: application/json" -d "{\"content\": \"Changes detected:$CHANGES\"}" https://discord.com/api/webhooks/1271818703356297226/RcjQ9wKd27kTNb4vxeaWqmnM4D6y1ltYdu-3CinUcH1I-rtFWKkt2x-Ahz89VZ_u18BD
+          else
+            echo "No changes detected."
           fi
-
-          if [ -f "intigriti_changes.diff" ]; then
-            changes="$changes$(cat intigriti_changes.diff)"
-          fi
-
-          echo "Sending changes to Discord..."
-          curl -X POST -H "Content-Type: application/json" -d "{\"content\": \"Changes detected:\n$changes\"}" https://discord.com/api/webhooks/1271818703356297226/RcjQ9wKd27kTNb4vxeaWqmnM4D6y1ltYdu-3CinUcH1I-rtFWKkt2x-Ahz89VZ_u18BD
 
       - name: Store current files as previous ones for future comparisons
         run: |
