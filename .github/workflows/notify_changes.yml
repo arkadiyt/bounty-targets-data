@@ -17,17 +17,29 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Fetch bugcrowd_data.json
+      - name: Fetch current bugcrowd_data.json
         id: fetch_bugcrowd_data
         run: |
           curl -o bugcrowd_data.json https://raw.githubusercontent.com/arkadiyt/bounty-targets-data/main/data/bugcrowd_data.json
           cat bugcrowd_data.json  # Debugging output
 
-      - name: Fetch intigriti_data.json
+      - name: Fetch current intigriti_data.json
         id: fetch_intigriti_data
         run: |
           curl -o intigriti_data.json https://raw.githubusercontent.com/arkadiyt/bounty-targets-data/main/data/intigriti_data.json
           cat intigriti_data.json  # Debugging output
+
+      - name: Fetch previous bugcrowd_data.json from rfelecT repo
+        id: fetch_previous_bugcrowd_data
+        run: |
+          curl -o previous_bugcrowd_data.json https://raw.githubusercontent.com/rfelecT/bounty-targets-data/main/data/bugcrowd_data.json
+          cat previous_bugcrowd_data.json  # Debugging output
+
+      - name: Fetch previous intigriti_data.json from rfelecT repo
+        id: fetch_previous_intigriti_data
+        run: |
+          curl -o previous_intigriti_data.json https://raw.githubusercontent.com/rfelecT/bounty-targets-data/main/data/intigriti_data.json
+          cat previous_intigriti_data.json  # Debugging output
 
       - name: Compare files and extract changes
         id: compare_files
@@ -35,24 +47,20 @@ jobs:
           echo "Checking previous files..."  # Debugging message
           CHANGES=""
           
-          # Compare bugcrowd_data.json if it exists
-          if [[ -f "previous_bugcrowd_data.json" ]]; then
-            DIFF_OUTPUT=$(diff -u previous_bugcrowd_data.json bugcrowd_data.json)
-            if [[ -n "$DIFF_OUTPUT" ]]; then
-              CHANGES="$CHANGES\nBugcrowd Data Changes:\n$DIFF_OUTPUT"
-            fi
+          # Compare bugcrowd_data.json if previous data exists
+          DIFF_OUTPUT=$(diff -u previous_bugcrowd_data.json bugcrowd_data.json)
+          if [[ -n "$DIFF_OUTPUT" ]]; then
+            CHANGES="$CHANGES\nBugcrowd Data Changes:\n$DIFF_OUTPUT"
           else
-            CHANGES="$CHANGES\nNo previous bugcrowd_data.json to compare with."
+            CHANGES="$CHANGES\nNo changes detected in bugcrowd_data.json."
           fi
           
-          # Compare intigriti_data.json if it exists
-          if [[ -f "previous_intigriti_data.json" ]]; then
-            DIFF_OUTPUT=$(diff -u previous_intigriti_data.json intigriti_data.json)
-            if [[ -n "$DIFF_OUTPUT" ]]; then
-              CHANGES="$CHANGES\nIntigriti Data Changes:\n$DIFF_OUTPUT"
-            fi
+          # Compare intigriti_data.json if previous data exists
+          DIFF_OUTPUT=$(diff -u previous_intigriti_data.json intigriti_data.json)
+          if [[ -n "$DIFF_OUTPUT" ]]; then
+            CHANGES="$CHANGES\nIntigriti Data Changes:\n$DIFF_OUTPUT"
           else
-            CHANGES="$CHANGES\nNo previous intigriti_data.json to compare with."
+            CHANGES="$CHANGES\nNo changes detected in intigriti_data.json."
           fi
 
           # Store changes if any were found
