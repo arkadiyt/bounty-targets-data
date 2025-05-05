@@ -1,77 +1,49 @@
-name: Notify Changes
+name: Compare JSONs and Notify Discord
 
 on:
-  push:
-    branches:
-      - main
-    paths:
-      - 'data/bugcrowd_data.json'
-      - 'data/intigriti_data.json'
-  workflow_dispatch:  # Allows manual trigger of the workflow
+  workflow_dispatch:
+  schedule:
+    - cron: '0 * * * *'  # Runs every hour; change as needed
 
 jobs:
-  notify_changes:
+  compare:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
       - name: Download current bugcrowd_data.json
-        run: |
-          curl -o bugcrowd_data.json https://raw.githubusercontent.com/arkadiyt/bounty-targets-data/main/data/bugcrowd_data.json
-          cat bugcrowd_data.json  # Debugging step: Print the content of the file
+        run: curl -s -o current_bugcrowd.json https://raw.githubusercontent.com/arkadiyt/bounty-targets-data/main/data/bugcrowd_data.json
+
+      - name: Download previous bugcrowd_data.json
+        run: curl -s -o previous_bugcrowd.json https://raw.githubusercontent.com/rfelecT/bounty-targets-data/main/data/bugcrowd_data.json
 
       - name: Download current intigriti_data.json
-        run: |
-          curl -o intigriti_data.json https://raw.githubusercontent.com/arkadiyt/bounty-targets-data/main/data/intigriti_data.json
-          cat intigriti_data.json  # Debugging step: Print the content of the file
+        run: curl -s -o current_intigriti.json https://raw.githubusercontent.com/arkadiyt/bounty-targets-data/main/data/intigriti_data.json
 
-      - name: Download previous bugcrowd_data.json (from rfelecT repo)
-        run: |
-          curl -o previous_bugcrowd_data.json https://raw.githubusercontent.com/rfelecT/bounty-targets-data/main/data/bugcrowd_data.json
-          cat previous_bugcrowd_data.json  # Debugging step: Print the content of the file
+      - name: Download previous intigriti_data.json
+        run: curl -s -o previous_intigriti.json https://raw.githubusercontent.com/rfelecT/bounty-targets-data/main/data/intigriti_data.json
 
-      - name: Download previous intigriti_data.json (from rfelecT repo)
-        run: |
-          curl -o previous_intigriti_data.json https://raw.githubusercontent.com/rfelecT/bounty-targets-data/main/data/intigriti_data.json
-          cat previous_intigriti_data.json  # Debugging step: Print the content of the file
-
-      - name: Compare and send changes
+      - name: Compare JSON files and send to Discord
+        env:
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
         run: |
           CHANGES=""
 
-          # Debugging: Check if files are actually downloaded
-          echo "Contents of bugcrowd_data.json:"
-          cat bugcrowd_data.json
-          echo "Contents of previous_bugcrowd_data.json:"
-          cat previous_bugcrowd_data.json
-
-          # Compare bugcrowd_data.json
-          DIFF_BUGCROWD=$(diff previous_bugcrowd_data.json bugcrowd_data.json)
+          DIFF_BUGCROWD=$(diff -u previous_bugcrowd.json current_bugcrowd.json || true)
           if [[ -n "$DIFF_BUGCROWD" ]]; then
-            CHANGES="$CHANGES\nBugcrowd Data Changes:\n$DIFF_BUGCROWD"
+            CHANGES+="**Bugcrowd Changes:**\n\`\`\`\n${DIFF_BUGCROWD:0:1800}\n\`\`\`\n"
           else
-            CHANGES="$CHANGES\nNo changes detected in bugcrowd_data.json."
+            CHANGES+="No changes in bugcrowd_data.json.\n"
           fi
 
-          # Debugging: Check contents of intigriti files
-          echo "Contents of intigriti_data.json:"
-          cat intigriti_data.json
-          echo "Contents of previous_intigriti_data.json:"
-          cat previous_intigriti_data.json
-
-          # Compare intigriti_data.json
-          DIFF_INTIGRITI=$(diff previous_intigriti_data.json intigriti_data.json)
+          DIFF_INTIGRITI=$(diff -u previous_intigriti.json current_intigriti.json || true)
           if [[ -n "$DIFF_INTIGRITI" ]]; then
-            CHANGES="$CHANGES\nIntigriti Data Changes:\n$DIFF_INTIGRITI"
+            CHANGES+="**Intigriti Changes:**\n\`\`\`\n${DIFF_INTIGRITI:0:1800}\n\`\`\`\n"
           else
-            CHANGES="$CHANGES\nNo changes detected in intigriti_data.json."
+            CHANGES+="No changes in intigriti_data.json.\n"
           fi
 
-          # Send to Discord if there are changes
           if [[ -n "$CHANGES" ]]; then
-            curl -X POST -H "Content-Type: application/json" -d "{\"content\": \"Changes detected:$CHANGES\"}" https://discord.com/api/webhooks/1271818703356297226/RcjQ9wKd27kTNb4vxeaWqmnM4D6y1ltYdu-3CinUcH1I-rtFWKkt2x-Ahz89VZ_u18BD
-          else
-            echo "No changes detected."
+            curl -H "Content-Type: application/json" \
+              -X POST \
+              -d "{\"content\": \"$CHANGES\"}" \
+              "$DISCORD_WEBHOOK"
           fi
