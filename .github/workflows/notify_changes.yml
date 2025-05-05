@@ -1,44 +1,44 @@
-name: Notify Bugcrowd Changes
+name: Check Bugcrowd Target Changes
 
 on:
   schedule:
-    - cron: '0 * * * *'  # Runs hourly
+    - cron: '0 * * * *'  # runs every hour
   workflow_dispatch:
 
 jobs:
-  check-and-notify:
+  check:
     runs-on: ubuntu-latest
     env:
       DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK_URL }}
 
     steps:
-      - name: Checkout repository
+      - name: Checkout repo
         uses: actions/checkout@v3
+
+      - name: Install jq 1.6+
+        run: |
+          sudo wget -O /usr/bin/jq https://github.com/stedolan/jq/releases/download/jq-1.6/jq-linux64
+          sudo chmod +x /usr/bin/jq
+          jq --version
 
       - name: Download latest bugcrowd data
         run: |
-          curl -sL "https://raw.githubusercontent.com/arkadiyt/bounty-targets-data/refs/heads/main/data/bugcrowd_data.json" -o latest.json
-
-      - name: Install jq
-        run: sudo apt-get install jq
+          mkdir -p data
+          curl -s -o latest.json https://raw.githubusercontent.com/arkadiyt/bounty-targets-data/refs/heads/main/data/bugcrowd_data.json
 
       - name: Compare and notify if changed
         run: |
           if [ ! -f data/bugcrowd_data.json ]; then
             echo "No old version found. Saving the latest one."
-            mkdir -p data
             cp latest.json data/bugcrowd_data.json
             exit 0
           fi
 
-          added=$(jq -n --argfile old data/bugcrowd_data.json --argfile new latest.json '
-            ($new - $old) | map(.name)'
-              )
+          added=$(jq -n --argfile old data/bugcrowd_data.json --argfile new latest.json \
+            '($new - $old) | map(.name)')
 
-          removed=$(jq -n --argfile old data/bugcrowd_data.json --argfile new latest.json '
-          ($old - $new) | map(.name)'
-            )
-
+          removed=$(jq -n --argfile old data/bugcrowd_data.json --argfile new latest.json \
+            '($old - $new) | map(.name)')
 
           added_count=$(echo "$added" | jq 'length')
           removed_count=$(echo "$removed" | jq 'length')
@@ -48,18 +48,4 @@ jobs:
             exit 0
           fi
 
-          message="**Bugcrowd Target Updates**\n"
-          if [ "$added_count" -gt 0 ]; then
-            message+="\n🟢 **Added:**\n$(echo "$added" | jq -r '.[]' | sed 's/^/- /')"
-          fi
-          if [ "$removed_count" -gt 0 ]; then
-            message+="\n🔴 **Removed:**\n$(echo "$removed" | jq -r '.[]' | sed 's/^/- /')"
-          fi
-
-          curl -H "Content-Type: application/json" \
-            -X POST \
-            -d "{\"content\": \"$message\"}" \
-            "$DISCORD_WEBHOOK"
-
-          # Save the new version for next run
-          cp latest.json data/bugcrowd_data.json
+          message="**Bug**
