@@ -44,10 +44,10 @@ jobs:
           message="Bugcrowd Target Changes:"
 
           if [ -n "$added_urls" ]; then
-            message="$message$(echo "$added_urls" | sed 's/^/- /')"
+            message="$message\nAdded URLs:\n$(echo "$added_urls" | sed 's/^/- /')"
           fi
           if [ -n "$removed_urls" ]; then
-            message="$message$(echo "$removed_urls" | sed 's/^/- /')"
+            message="$message\nRemoved URLs:\n$(echo "$removed_urls" | sed 's/^/- /')"
           fi
 
           # Print the message to debug and verify the format
@@ -62,6 +62,16 @@ jobs:
                -d "{\"content\":$escaped_message}" \
                "https://discord.com/api/webhooks/1271818703356297226/RcjQ9wKd27kTNb4vxeaWqmnM4D6y1ltYdu-3CinUcH1I-rtFWKkt2x-Ahz89VZ_u18BD"
 
-      - name: Save the latest version
+      - name: Save the latest version and commit changes
         run: |
+          # Save the modified bugcrowd_data.json
           cp modified_bugcrowd_data.json data/bugcrowd_data.json
+
+          # Configure git
+          git config user.name "rfelecT"
+          git config user.email "arefhsnkhani@gmail.com"
+
+          # Stage and commit the changes
+          git add data/bugcrowd_data.json
+          git commit -m "Update bugcrowd_data.json with latest changes"
+          git push origin main  # Adjust 'main' to your default branch if needed
