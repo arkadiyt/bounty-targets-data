@@ -1,4 +1,4 @@
-name: Check for Bugcrowd Target URL Changes
+name: Check for Bugcrowd Target Changes
 
 on:
   schedule:
@@ -19,63 +19,30 @@ jobs:
       - name: Download the original bugcrowd_data.json (from arkadiyt)
         run: |
           curl -o original_bugcrowd_data.json "https://raw.githubusercontent.com/arkadiyt/bounty-targets-data/refs/heads/main/data/bugcrowd_data.json"
-
       - name: Download your modified bugcrowd_data.json (from rfelecT)
         run: |
           curl -o modified_bugcrowd_data.json "https://raw.githubusercontent.com/rfelecT/bounty-targets-data/refs/heads/main/data/bugcrowd_data.json"
-
-      - name: Compare old and new target URLs
+      - name: Compare all variables and notify changes
         run: |
-          # Extract the URLs from the modified and original datasets
-          modified_urls=$(jq -r '.[].url' modified_bugcrowd_data.json | sort)
-          original_urls=$(jq -r '.[].url' original_bugcrowd_data.json | sort)
+          # Loop through all programs and compare each field
+          for index in $(jq -r 'keys | .[]' modified_bugcrowd_data.json); do
+            original_program=$(jq -r ".[$index]" original_bugcrowd_data.json)
+            modified_program=$(jq -r ".[$index]" modified_bugcrowd_data.json)
 
-          # Compare old and new URLs to find added and removed programs
-          added_urls=$(comm -13 <(echo "$original_urls") <(echo "$modified_urls"))
-          removed_urls=$(comm -23 <(echo "$original_urls") <(echo "$modified_urls"))
+            # Compare all fields of the program
+            if [ "$original_program" != "$modified_program" ]; then
+              # If any field is different, extract the URL and notify
+              program_url=$(echo "$modified_program" | jq -r '.url')
+              echo "Program changed. URL: $program_url"
+              
+              # Construct the message and send to Discord
+              message="Bugcrowd Target Changed:\nURL: $program_url"
+              escaped_message=$(echo "$message" | jq -Rs .)
 
-          # If no changes, exit early
-          if [ -z "$added_urls" ] && [ -z "$removed_urls" ]; then
-            echo "No URL changes detected."
-            exit 0
-          fi
-
-          # Prepare the plain text message
-          message="Bugcrowd Target Changes:"
-
-          if [ -n "$added_urls" ]; then
-            message="$message$(echo "$added_urls" | sed 's/^/- /')"
-          fi
-          if [ -n "$removed_urls" ]; then
-            message="$message$(echo "$removed_urls" | sed 's/^/- /')"
-          fi
-
-          # Print the message to debug and verify the format
-          echo "Sending message to Discord:\n$message"
-
-          # Escape the message content using jq to ensure proper JSON formatting
-          escaped_message=$(echo "$message" | jq -Rs .)
-
-          # Send the message to Discord via the webhook
-          curl -H "Content-Type: application/json" \
-               -X POST \
-               -d "{\"content\":$escaped_message}" \
-               "https://discord.com/api/webhooks/1271818703356297226/RcjQ9wKd27kTNb4vxeaWqmnM4D6y1ltYdu-3CinUcH1I-rtFWKkt2x-Ahz89VZ_u18BD"
-
-      - name: Save the latest version and commit changes
-        run: |
-          # Overwrite the existing bugcrowd_data.json with the latest data
-          cp modified_bugcrowd_data.json data/bugcrowd_data.json
-
-          # Configure git
-          git config user.name "rfelecT"
-          git config user.email "arefhsnkhani@gmail.com"
-
-          # Stage the overwritten file (bugcrowd_data.json)
-          git add data/bugcrowd_data.json
-
-          # Commit the changes
-          git commit -m "Update bugcrowd_data.json with latest changes"
-
-          # Push the changes
-          git push origin main  # Adjust 'main' to your default branch if needed
+              # Send the message to Discord via the webhook
+              curl -H "Content-Type: application/json" \
+                   -X POST \
+                   -d "{\"content\":$escaped_message}" \
+                   "https://discord.com/api/webhooks/1271818703356297226/RcjQ9wKd27kTNb4vxeaWqmnM4D6y1ltYdu-3CinUcH1I-rtFWKkt2x-Ahz89VZ_u18BD"
+            fi
+          done
