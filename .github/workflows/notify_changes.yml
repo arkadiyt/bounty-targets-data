@@ -47,7 +47,7 @@ jobs:
           # Print the message before sending to Discord
           echo "Sending message to Discord:\n$message"
 
-          # Send as plain text to Discord
+          # Send as plain text to Discord, properly escaping line breaks and quotes
           curl -H "Content-Type: application/json" \
                -X POST \
                -d "{\"content\":\"$message\"}" \
