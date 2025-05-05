@@ -44,6 +44,9 @@ jobs:
             message="$message\n\n🔴 **Removed:**\n$(echo "$removed_list" | sed 's/^/- /')"
           fi
 
+          # Print the message before sending to Discord
+          echo "Sending message to Discord:\n$message"
+
           # Send as plain text to Discord
           curl -H "Content-Type: application/json" \
                -X POST \
