@@ -2,7 +2,7 @@ name: Notify Discord on Any JSON Change
 
 on:
   schedule:
-    - cron: '0 * * * *'    # run hourly
+    - cron: '0 * * * *'    # Run every hour
   workflow_dispatch:
 
 jobs:
@@ -16,17 +16,19 @@ jobs:
           curl -sSL https://raw.githubusercontent.com/arkadiyt/bounty-targets-data/main/data/bugcrowd_data.json -o bugcrowd_new.json
           curl -sSL https://raw.githubusercontent.com/arkadiyt/bounty-targets-data/main/data/intigriti_data.json -o intigriti_new.json
 
-      # 2) Fetch the previous-run JSONs artifact (if any)
-      - name: Restore previous JSONs
+      # 2) Try to restore the previous-run JSONs artifact, if any exists
+      - name: Try to restore previous JSONs (if any)
+        id: restore_previous
         uses: actions/download-artifact@v2
         with:
           name: previous-jsons
           path: previous
+        continue-on-error: true  # Continue even if the artifact doesn't exist
 
       # 3) Prepare old/new for diff
       - name: Prepare files for diff
         run: |
-          # If no previous, create empty so diff will treat whole file as new
+          # If no previous file, create an empty file to compare
           [ -f previous/bugcrowd.json ] && cp previous/bugcrowd.json bugcrowd_old.json || touch bugcrowd_old.json
           [ -f previous/intigriti.json ] && cp previous/intigriti.json intigriti_old.json || touch intigriti_old.json
 
@@ -39,23 +41,18 @@ jobs:
           cat diff_bc.txt diff_int.txt > full_diff.txt
           echo "changed=$([ -s full_diff.txt ] && echo true || echo false)" >> $GITHUB_OUTPUT
 
-      # 5) Notify Discord if changed
+      # 5) Send Discord Notification if changed
       - name: Send Discord Notification
         if: steps.diff.outputs.changed == 'true'
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
         run: |
-          # take only last 1800 chars to stay under 2000 limit
+          # Take only last 1800 chars to stay under 2000 limit
           CONTENT=$(tail -c1800 full_diff.txt | sed 's/"/\\"/g')
           PAYLOAD="{\"content\": \"🔔 **Changes detected:**\n\`\`\`diff\n$CONTENT\n\`\`\`\"}"
           curl -H "Content-Type: application/json" -X POST -d "$PAYLOAD" "$DISCORD_WEBHOOK_URL"
 
-      # 6) If no changes, you can uncomment to notify
-      #- name: Notify no changes
-      #  if: steps.diff.outputs.changed == 'false'
-      #  ...
-
-      # 7) Upload the new JSONs as artifact for next run
+      # 6) Upload the new JSONs as an artifact for the next run
       - name: Upload new JSONs
         uses: actions/upload-artifact@v2
         with:
