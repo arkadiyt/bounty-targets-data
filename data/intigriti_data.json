@@ -10053,12 +10053,6 @@
     "targets": {
       "in_scope": [
         {
-          "type": "url",
-          "endpoint": "photoservice.stage.vismaonline.com",
-          "description": "**Visma Scanner**\n\nBackend service for Visma Scanner mobile app, see instructions for domain \"com.visma.blue\" or “564141518”\n\n",
-          "impact": "Tier 2"
-        },
-        {
           "type": "ios",
           "endpoint": "564141518",
           "description": "**Visma Scanner**\nVisma Scanner is a mobile app used for sending receipts and invoices to your Visma accounting system.\nThe iOS version of the app can be found here:\nhttps://apps.apple.com/us/app/visma-scanner/id564141518\nPlease read and follow the steps in the Startup guide to create an account and start hacking: https://vismabugbountyprod.z16.web.core.windows.net/VismaScanner-iMXxOpXkhOlTBUQtXfyA-getting-started.pdf\n**Please note that the training code has changed!** It is now: wr0d4 , also make sure to select the same Program/Service options as the Getting Started document has. \n\n**Out of scope:**\n* Session invalidation issues (e.g. logout, password change, email change, role change, user deletion, etc)\n* Private screen exposure in the app\n* Stack traces from api calls\n* Jailbroken devices is out of scope\n* All options for login are out of scope, except eAccounting (please see details in the \"Getting Started instructions document\"\n\n\n",
@@ -10097,7 +10091,7 @@
         {
           "type": "url",
           "endpoint": "app.workbox.dk",
-          "description": "**Dinero**\nDinero is an accounting software for sole traders and micro businesses based out of Denmark. Our only target group is danish companies and therefore the interface is in danish only. The application is a SaaS application hosted in the cloud and consists of a main application and a number of supportive microservices.\n\nSee the getting started document here: https://vismabugbountyprod.z16.web.core.windows.net/VismaDinero-37UeRwujIXh7r9n3Wol6-getting-started.pdf\n\n**Out of scope:**\n* Issues related to login /user creation / forgot-password and /profile page\n* The Cookie \".AspNet.Cookies\" is not set with HttpOnly which is a known vulnerability - please do not report it.\n* Session invalidation issues (e.g. logout, password change, email change, role change, user deletion, etc).\n* Getting access to Pro features as Free user.\n\n\n",
+          "description": "**Dinero**\nDinero is an accounting software for sole traders and micro businesses based out of Denmark. Our only target group is danish companies and therefore the interface is in danish only. The application is a SaaS application hosted in the cloud and consists of a main application and a number of supportive microservices.\n\nSee the getting started document here: https://vismabugbountyprod.z16.web.core.windows.net/VismaDinero-37UeRwujIXh7r9n3Wol6-getting-started.pdf\n\n**Out of scope:**\n* Issues related to login /user creation / forgot-password and /profile page\n* The Cookie \".AspNet.Cookies\" is not set with HttpOnly which is a known vulnerability - please do not report it.\n* Session invalidation issues (e.g. logout, password change, email change, role change, user deletion, etc).\n* Getting access to Pro features as Free user.\n* cvrservice.workbox.dk, this endpoint is used for searches of publicly available data\n\n",
           "impact": "Tier 2"
         },
         {
@@ -10164,6 +10158,12 @@
           "type": "url",
           "endpoint": "oauth.developers.stagaws.visma.com",
           "description": "**Visma Developer Portal**\nVisma Developer Portal is used both internally and externally by developers for registering OAuth 2.0/OpenID Connect applications for Single-Sign-On with Visma (Visma Connect) and/or API integration.\n\nExisting Visma Connect users accounts can be used for testing. We also allow registration of new users if needed.\n\nUsers need to register an organization as part of the sign-in or to be added (invite) to an existing organization by organization's manager. The user which registers the organization also gets manager role assigned.\n\nEach organization has its own set of OAuth 2.0/OpenID Connect applications.\n\nPlease read the Getting Started Instructions here: https://vismabugbountyprod.z16.web.core.windows.net/VismaDeveloperPortal-Ze8WD6GFaIFdLvE2ekbN-getting-started.pdf\n\n\n\n**Out of scope:**\n* session invalidation across browsers/devices - this is how it is intended to work by design\n* issues related to other APIs except DevPortal Bug Bounty Interactive and DevPortal Bug Bounty Non-Interactive",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "photoservice.stage.vismaonline.com",
+          "description": "**Visma Scanner**\n\nBackend service for Visma Scanner mobile app, see instructions for domain \"com.visma.blue\" or “564141518”\n\n",
           "impact": "Tier 2"
         },
         {
