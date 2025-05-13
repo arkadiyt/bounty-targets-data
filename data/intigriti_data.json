@@ -6197,6 +6197,85 @@
     }
   },
   {
+    "id": "64f80113-969e-4c55-9649-8a044487941c",
+    "name": "PDQ bug bounty program",
+    "company_handle": "pdq",
+    "handle": "pdqcomprivate",
+    "url": "https://www.intigriti.com/programs/pdq/pdqcomprivate/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 50,
+      "currency": "EUR"
+    },
+    "max_bounty": {
+      "value": 3500,
+      "currency": "EUR"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "url",
+          "endpoint": "https://a.simplemdm.com/",
+          "description": "Production environment for SimpleMDM — please take care not to disrupt any services when testing",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://auth2.pdq.tools/ ",
+          "description": "Test environment for our authentication tool",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://library-staging.pdq.tools/ ",
+          "description": "Test environment for our Package Library",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://houston-staging.pdq.tools",
+          "description": "Test environment for PDQ Connect",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://portal-staging.pdq.tools/ ",
+          "description": "Test environment for our billing portal",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://detect.pdq.tools/ ",
+          "description": "Test environment for PDQ Detect",
+          "impact": "Tier 3"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "wildcard",
+          "endpoint": "https://*.pdq.com/",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "https://*.simplemdm.com/ ",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "https://*.smartdeploy.com/ ",
+          "description": null,
+          "impact": "Out of scope"
+        }
+      ]
+    }
+  },
+  {
     "id": "9ef59fe8-d021-4d23-9521-0d7d01da03ee",
     "name": "PeopleCert VDP",
     "company_handle": "peoplecert",
