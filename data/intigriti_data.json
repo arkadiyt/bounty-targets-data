@@ -153,6 +153,68 @@
     }
   },
   {
+    "id": "ac81c127-b11b-469e-8060-e0fbb9c9c398",
+    "name": "Aikido Security: Zen by Aikido ",
+    "company_handle": "aikido",
+    "handle": "aikidoruntime",
+    "url": "https://www.intigriti.com/programs/aikido/aikidoruntime/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 100,
+      "currency": "EUR"
+    },
+    "max_bounty": {
+      "value": 3500,
+      "currency": "EUR"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "other",
+          "endpoint": "https://github.com/AikidoSec/firewall-node#Vulnerability",
+          "description": "Tier 1 is for vulnerabilities which we potentially introduce via our own firewall component in the user's application.\n\nSee Severity Assessment for more information.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "other",
+          "endpoint": "https://github.com/AikidoSec/firewall-python#Vulnerability",
+          "description": null,
+          "impact": "Tier 1"
+        },
+        {
+          "type": "other",
+          "endpoint": "https://github.com/AikidoSec/firewall-node#Detection Bypass",
+          "description": "Tier 2 is for bypasses in the vulnerability detection of the firewall component, such as a bypass of our SQL injection detection.\n\nSee Severity Assessment for more information.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "https://github.com/AikidoSec/firewall-python#Detection Bypass",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "https://github.com/AikidoSec/firewall-node#False Positive",
+          "description": "Tier 3 is for any false positives you encounter with our vulnerability detection. For example, cases where we falsely flag a SQL injection, while the user's input is safely encapsulated in the SQL query.\n\nSeverity assessments are slightly harder for these cases, see \"Severity Assessment\" for more information.",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "other",
+          "endpoint": "https://github.com/AikidoSec/firewall-python#False Positive",
+          "description": null,
+          "impact": "Tier 3"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
     "id": "30f445f7-ca4c-4130-9434-49add5c6ac74",
     "name": "Algemeen Dagblad",
     "company_handle": "dpgm",
@@ -250,12 +312,6 @@
       "out_of_scope": [
         {
           "type": "wildcard",
-          "endpoint": "*.allegro.sk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "wildcard",
           "endpoint": "*.allegro.cz",
           "description": null,
           "impact": "Out of scope"
@@ -263,6 +319,12 @@
         {
           "type": "wildcard",
           "endpoint": "*.allegro.pl",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.allegro.sk",
           "description": null,
           "impact": "Out of scope"
         },
@@ -302,12 +364,6 @@
     "targets": {
       "in_scope": [
         {
-          "type": "other",
-          "endpoint": "Non Altera Products",
-          "description": "Any elements of a complete customer solution developed by entities other than Altera that may be included in a final customer solution.   Reports relating to such entities may be reported via the Altera Bug Bounty Program, but are not eligible for bounty payments. ",
-          "impact": "No Bounty"
-        },
-        {
           "type": "device",
           "endpoint": "Firmware",
           "description": "Firmware developed by Altera that executes within our FPGA products regardless of the storage media.   Excludes any software that executes the Hard Processor Subsystem, or any software that executes on an embedded processor instantiated in soft-logic within the FPGA by a customer.",
@@ -321,15 +377,21 @@
         },
         {
           "type": "other",
+          "endpoint": "FPGA Solution Development Tools and Utilities",
+          "description": "Tools developed by Altera such as the Quartus Tool Suite used by customers to develop a solution that may comprise software, soft-logic that is hosted within an Altera FPGA device.   Also includes various Altera authored supporting utilities used to manage deployment of customer designs to Altera FPGAs.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
           "endpoint": "Software",
           "description": "Altera Developed Device Drivers that execute on a host computer that is connected to an Altera FPGA, used to manage or control the FPGA or any functions implemented by the customer within the FPGA.",
           "impact": "Tier 2"
         },
         {
           "type": "other",
-          "endpoint": "FPGA Solution Development Tools and Utilities",
-          "description": "Tools developed by Altera such as the Quartus Tool Suite used by customers to develop a solution that may comprise software, soft-logic that is hosted within an Altera FPGA device.   Also includes various Altera authored supporting utilities used to manage deployment of customer designs to Altera FPGAs.",
-          "impact": "Tier 2"
+          "endpoint": "Non Altera Products",
+          "description": "Any elements of a complete customer solution developed by entities other than Altera that may be included in a final customer solution.   Reports relating to such entities may be reported via the Altera Bug Bounty Program, but are not eligible for bounty payments. ",
+          "impact": "No Bounty"
         }
       ],
       "out_of_scope": [
@@ -359,14 +421,8 @@
       "in_scope": [
         {
           "type": "url",
-          "endpoint": "https://tuer.de",
+          "endpoint": "https://arbonia-doors.ch",
           "description": "Homepage of a subsidiary",
-          "impact": "No Bounty"
-        },
-        {
-          "type": "url",
-          "endpoint": "https://tuerenhandbuch.garant.de",
-          "description": "Manual of several door products",
           "impact": "No Bounty"
         },
         {
@@ -377,8 +433,14 @@
         },
         {
           "type": "url",
-          "endpoint": "https://arbonia-doors.ch",
+          "endpoint": "https://tuer.de",
           "description": "Homepage of a subsidiary",
+          "impact": "No Bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://tuerenhandbuch.garant.de",
+          "description": "Manual of several door products",
           "impact": "No Bounty"
         }
       ],
@@ -758,10 +820,10 @@
     "targets": {
       "in_scope": [
         {
-          "type": "android",
-          "endpoint": "de.bmw.connected.mobile20.row",
+          "type": "device",
+          "endpoint": "Functions dealing with vehicle access and immobilizer",
           "description": null,
-          "impact": "Tier 2"
+          "impact": "Tier 1"
         },
         {
           "type": "ios",
@@ -770,10 +832,10 @@
           "impact": "Tier 2"
         },
         {
-          "type": "device",
-          "endpoint": "Functions dealing with vehicle access and immobilizer",
+          "type": "android",
+          "endpoint": "de.bmw.connected.mobile20.row",
           "description": null,
-          "impact": "Tier 1"
+          "impact": "Tier 2"
         },
         {
           "type": "device",
@@ -808,12 +870,6 @@
     "targets": {
       "in_scope": [
         {
-          "type": "wildcard",
-          "endpoint": "*.stbpost.be",
-          "description": null,
-          "impact": "No Bounty"
-        },
-        {
           "type": "url",
           "endpoint": "imove.bpost.cloud",
           "description": "Coorporate application :\nMake your reservation to save a spot at the office",
@@ -840,6 +896,12 @@
         {
           "type": "wildcard",
           "endpoint": "*.landmarkglobal-group.com",
+          "description": null,
+          "impact": "No Bounty"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.stbpost.be",
           "description": null,
           "impact": "No Bounty"
         },
@@ -998,12 +1060,6 @@
       ],
       "out_of_scope": [
         {
-          "type": "url",
-          "endpoint": "gitlab.buhler-datascience.ch/api/v4/projects",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
           "type": "wildcard",
           "endpoint": "*.info.buhlergroup.com",
           "description": null,
@@ -1042,6 +1098,12 @@
         {
           "type": "url",
           "endpoint": "channel.buhlergroup.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "gitlab.buhler-datascience.ch/api/v4/projects",
           "description": null,
           "impact": "Out of scope"
         },
@@ -1086,12 +1148,6 @@
     },
     "targets": {
       "in_scope": [
-        {
-          "type": "other",
-          "endpoint": "https://github.com/cmdotcom",
-          "description": "Our public code repositories are being used by our customers. In scope for this domain is issues with the public code we host (vulnerabilities, libraries that have known security concerns, keys accidentally pushed to the public GitHub etc.). \n**Testing the GitHub itself is out-of-scope**, they have their own bug bounty program if you are interested :)  ",
-          "impact": "No Bounty"
-        },
         {
           "type": "url",
           "endpoint": "login.cm.com",
@@ -1204,6 +1260,12 @@
           "type": "wildcard",
           "endpoint": "demo.globalticket.com/*",
           "description": "GlobalTicket is one of our integrations. \nBe sure to check out `/cms` to try and work your way into it.",
+          "impact": "No Bounty"
+        },
+        {
+          "type": "other",
+          "endpoint": "https://github.com/cmdotcom",
+          "description": "Our public code repositories are being used by our customers. In scope for this domain is issues with the public code we host (vulnerabilities, libraries that have known security concerns, keys accidentally pushed to the public GitHub etc.). \n**Testing the GitHub itself is out-of-scope**, they have their own bug bounty program if you are interested :)  ",
           "impact": "No Bounty"
         }
       ],
@@ -1386,12 +1448,6 @@
       ],
       "out_of_scope": [
         {
-          "type": "url",
-          "endpoint": "help.capital.com",
-          "description": "CNAME to zendesk",
-          "impact": "Out of scope"
-        },
-        {
           "type": "wildcard",
           "endpoint": "*affiliates.backend-capital.com",
           "description": null,
@@ -1407,6 +1463,12 @@
           "type": "wildcard",
           "endpoint": "*education.backend-capital.com",
           "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "help.capital.com",
+          "description": "CNAME to zendesk",
           "impact": "Out of scope"
         }
       ]
@@ -1629,18 +1691,6 @@
       ],
       "out_of_scope": [
         {
-          "type": "iprange",
-          "endpoint": "31.31.132.0/24",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "iprange",
-          "endpoint": "31.31.141.0/26",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
           "type": "wildcard",
           "endpoint": "*.citymesh.recruitee.com",
           "description": null,
@@ -1684,6 +1734,12 @@
         },
         {
           "type": "iprange",
+          "endpoint": "31.31.132.0/24",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "iprange",
           "endpoint": "31.31.134.0/23",
           "description": null,
           "impact": "Out of scope"
@@ -1703,6 +1759,12 @@
         {
           "type": "iprange",
           "endpoint": "31.31.140.92-254",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "iprange",
+          "endpoint": "31.31.141.0/26",
           "description": null,
           "impact": "Out of scope"
         },
@@ -1837,8 +1899,8 @@
       "in_scope": [
         {
           "type": "url",
-          "endpoint": "blog.cybersecuritycoalition.be",
-          "description": "Blog site",
+          "endpoint": "annualreport.cybersecuritycoalition.be",
+          "description": null,
           "impact": "No Bounty"
         },
         {
@@ -1849,8 +1911,8 @@
         },
         {
           "type": "url",
-          "endpoint": "annualreport.cybersecuritycoalition.be",
-          "description": null,
+          "endpoint": "blog.cybersecuritycoalition.be",
+          "description": "Blog site",
           "impact": "No Bounty"
         },
         {
@@ -1886,12 +1948,6 @@
     "targets": {
       "in_scope": [
         {
-          "type": "other",
-          "endpoint": "Mobile apps owned by DHL Group companies",
-          "description": null,
-          "impact": "No Bounty"
-        },
-        {
           "type": "wildcard",
           "endpoint": "*.deutschepost.de",
           "description": null,
@@ -1924,6 +1980,12 @@
         {
           "type": "other",
           "endpoint": "Any other domain from DHL Group companies",
+          "description": null,
+          "impact": "No Bounty"
+        },
+        {
+          "type": "other",
+          "endpoint": "Mobile apps owned by DHL Group companies",
           "description": null,
           "impact": "No Bounty"
         }
@@ -2084,12 +2146,6 @@
       ],
       "out_of_scope": [
         {
-          "type": "url",
-          "endpoint": "dccertified.datacamp.com",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
           "type": "wildcard",
           "endpoint": "*.it.datacamp.com",
           "description": null,
@@ -2110,6 +2166,12 @@
         {
           "type": "url",
           "endpoint": "confluence.datacamp.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "dccertified.datacamp.com",
           "description": null,
           "impact": "Out of scope"
         },
@@ -2192,6 +2254,12 @@
         },
         {
           "type": "url",
+          "endpoint": "accept.delijn.be",
+          "description": null,
+          "impact": "No Bounty"
+        },
+        {
+          "type": "url",
           "endpoint": "api-a.delijn.be",
           "description": null,
           "impact": "No Bounty"
@@ -2205,12 +2273,6 @@
         {
           "type": "android",
           "endpoint": "com.themobilecompany.delijn",
-          "description": null,
-          "impact": "No Bounty"
-        },
-        {
-          "type": "url",
-          "endpoint": "accept.delijn.be",
           "description": null,
           "impact": "No Bounty"
         },
@@ -2279,18 +2341,6 @@
       ],
       "out_of_scope": [
         {
-          "type": "url",
-          "endpoint": "abonnement.demorgen.be",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "* demorgen.be/service",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
           "type": "wildcard",
           "endpoint": "* demorgen.be/inloggen",
           "description": null,
@@ -2305,6 +2355,18 @@
         {
           "type": "wildcard",
           "endpoint": "* demorgen.be/registreren",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "* demorgen.be/service",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "abonnement.demorgen.be",
           "description": null,
           "impact": "Out of scope"
         }
@@ -2393,12 +2455,6 @@
     },
     "targets": {
       "in_scope": [
-        {
-          "type": "url",
-          "endpoint": "www.delen.bank",
-          "description": null,
-          "impact": "Tier 2"
-        },
         {
           "type": "url",
           "endpoint": "api.digital.delen.be ",
@@ -2503,6 +2559,12 @@
         },
         {
           "type": "url",
+          "endpoint": "www.delen.bank",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
           "endpoint": "www.delen.be/en ",
           "description": "🇬🇧🇫🇷🇳🇱",
           "impact": "Tier 2"
@@ -2572,24 +2634,6 @@
       ],
       "out_of_scope": [
         {
-          "type": "url",
-          "endpoint": "https://www.vlaanderen.be/vlaamse-overheid/contact/stuur-een-e-mail",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "https://www.vlaanderen.be/aanmelden/help/mail.html",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "https://www.vlaanderen.be/aanmelden/help/mail.html?*",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
           "type": "wildcard",
           "endpoint": "bibis*.vlaanderen.be",
           "description": null,
@@ -2610,6 +2654,24 @@
         {
           "type": "wildcard",
           "endpoint": "ets*.omgeving.vlaanderen.be",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://www.vlaanderen.be/aanmelden/help/mail.html",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "https://www.vlaanderen.be/aanmelden/help/mail.html?*",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://www.vlaanderen.be/vlaamse-overheid/contact/stuur-een-e-mail",
           "description": null,
           "impact": "Out of scope"
         },
@@ -3175,42 +3237,6 @@
     "targets": {
       "in_scope": [
         {
-          "type": "url",
-          "endpoint": "https://www.joico.ca/",
-          "description": null,
-          "impact": "No Bounty"
-        },
-        {
-          "type": "url",
-          "endpoint": "https://www.joico.com/",
-          "description": null,
-          "impact": "No Bounty"
-        },
-        {
-          "type": "url",
-          "endpoint": "https://www.joico.eu/",
-          "description": null,
-          "impact": "No Bounty"
-        },
-        {
-          "type": "url",
-          "endpoint": "https://www.joico.lat/",
-          "description": null,
-          "impact": "No Bounty"
-        },
-        {
-          "type": "url",
-          "endpoint": "https://www.joico.com.br/",
-          "description": null,
-          "impact": "No Bounty"
-        },
-        {
-          "type": "url",
-          "endpoint": "https://www.joico.com.au/",
-          "description": null,
-          "impact": "No Bounty"
-        },
-        {
           "type": "other",
           "endpoint": "*.donnad.it ",
           "description": null,
@@ -3309,6 +3335,42 @@
         {
           "type": "other",
           "endpoint": "Ceresit scope including any TLD:*.ceresit.*",
+          "description": null,
+          "impact": "No Bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://www.joico.ca/",
+          "description": null,
+          "impact": "No Bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://www.joico.com.au/",
+          "description": null,
+          "impact": "No Bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://www.joico.com.br/",
+          "description": null,
+          "impact": "No Bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://www.joico.com/",
+          "description": null,
+          "impact": "No Bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://www.joico.eu/",
+          "description": null,
+          "impact": "No Bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://www.joico.lat/",
           "description": null,
           "impact": "No Bounty"
         },
@@ -3638,18 +3700,6 @@
       ],
       "out_of_scope": [
         {
-          "type": "url",
-          "endpoint": "abonnement.parool.nl",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "* parool.nl/service",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
           "type": "wildcard",
           "endpoint": "* parool.nl/inloggen",
           "description": null,
@@ -3664,6 +3714,18 @@
         {
           "type": "wildcard",
           "endpoint": "* parool.nl/registreren",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "* parool.nl/service",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "abonnement.parool.nl",
           "description": null,
           "impact": "Out of scope"
         }
@@ -3816,8 +3878,14 @@
       ],
       "out_of_scope": [
         {
-          "type": "url",
-          "endpoint": "abonnement.humo.be",
+          "type": "wildcard",
+          "endpoint": "* humo.be/inloggen",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "* humo.be/login",
           "description": null,
           "impact": "Out of scope"
         },
@@ -3828,14 +3896,8 @@
           "impact": "Out of scope"
         },
         {
-          "type": "wildcard",
-          "endpoint": "* humo.be/inloggen",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "* humo.be/login",
+          "type": "url",
+          "endpoint": "abonnement.humo.be",
           "description": null,
           "impact": "Out of scope"
         }
@@ -4230,12 +4292,6 @@
       ],
       "out_of_scope": [
         {
-          "type": "other",
-          "endpoint": "Everything related to configurators, both on primary as other domains",
-          "description": "Temporary catch-all exclusion because of security maintenance and fixing of known issues",
-          "impact": "Out of scope"
-        },
-        {
           "type": "wildcard",
           "endpoint": "*.configuratoren.nl/*",
           "description": null,
@@ -4263,6 +4319,12 @@
           "type": "url",
           "endpoint": "api.maakafspraak.karwei.nl",
           "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "other",
+          "endpoint": "Everything related to configurators, both on primary as other domains",
+          "description": "Temporary catch-all exclusion because of security maintenance and fixing of known issues",
           "impact": "Out of scope"
         },
         {
@@ -4688,12 +4750,6 @@
       ],
       "out_of_scope": [
         {
-          "type": "url",
-          "endpoint": "helpdesk.landmarkcinemas.com",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
           "type": "wildcard",
           "endpoint": "*.cineramabios.nl",
           "description": null,
@@ -4702,6 +4758,12 @@
         {
           "type": "url",
           "endpoint": "dev.kinepolis.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "helpdesk.landmarkcinemas.com",
           "description": null,
           "impact": "Out of scope"
         },
@@ -4772,19 +4834,13 @@
       "in_scope": [
         {
           "type": "wildcard",
-          "endpoint": "*.kiwa.fi",
-          "description": null,
-          "impact": "No Bounty"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.kiwa.no",
-          "description": null,
-          "impact": "No Bounty"
-        },
-        {
-          "type": "wildcard",
           "endpoint": "*.kiwa.com",
+          "description": null,
+          "impact": "No Bounty"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.kiwa.fi",
           "description": null,
           "impact": "No Bounty"
         },
@@ -4797,6 +4853,12 @@
         {
           "type": "wildcard",
           "endpoint": "*.kiwa.nl",
+          "description": null,
+          "impact": "No Bounty"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.kiwa.no",
           "description": null,
           "impact": "No Bounty"
         },
@@ -4865,12 +4927,6 @@
       "out_of_scope": [
         {
           "type": "wildcard",
-          "endpoint": "* libelle.nl/service",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "wildcard",
           "endpoint": "* libelle.nl/inloggen",
           "description": null,
           "impact": "Out of scope"
@@ -4884,6 +4940,12 @@
         {
           "type": "wildcard",
           "endpoint": "* libelle.nl/registreren",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "* libelle.nl/service",
           "description": null,
           "impact": "Out of scope"
         }
@@ -4930,12 +4992,6 @@
         },
         {
           "type": "url",
-          "endpoint": "mgm.mobilevikings.be",
-          "description": null,
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
           "endpoint": "uwa.mobilevikings.be",
           "description": null,
           "impact": "Tier 2"
@@ -4967,6 +5023,12 @@
         {
           "type": "wildcard",
           "endpoint": "*.prd.mobilevikings.be",
+          "description": null,
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "mgm.mobilevikings.be",
           "description": null,
           "impact": "Tier 3"
         },
@@ -5072,12 +5134,6 @@
       "out_of_scope": [
         {
           "type": "url",
-          "endpoint": "monzo.me/",
-          "description": "Monzo.me is a service that allows Monzo users to easily receive money from others via a personalised link, even if the sender doesn't have a Monzo account.",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
           "endpoint": "community.monzo.com",
           "description": "We use a third-party, Discourse for our community forums. Third-parties are out of scope for our programs.",
           "impact": "Out of scope"
@@ -5086,6 +5142,12 @@
           "type": "url",
           "endpoint": "login.internal.monzo.com",
           "description": "This is our connection to Okta for internal authentication. Third-parties are out of scope for our programs. ",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "monzo.me/",
+          "description": "Monzo.me is a service that allows Monzo users to easily receive money from others via a personalised link, even if the sender doesn't have a Monzo account.",
           "impact": "Out of scope"
         }
       ]
@@ -5125,6 +5187,18 @@
         },
         {
           "type": "wildcard",
+          "endpoint": "*.moralis-internal.io",
+          "description": null,
+          "impact": "No Bounty"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.moralis-streams.com",
+          "description": null,
+          "impact": "No Bounty"
+        },
+        {
+          "type": "wildcard",
           "endpoint": "*.moralis.io ",
           "description": null,
           "impact": "No Bounty"
@@ -5143,6 +5217,12 @@
         },
         {
           "type": "wildcard",
+          "endpoint": "*.moralismoney.com",
+          "description": null,
+          "impact": "No Bounty"
+        },
+        {
+          "type": "wildcard",
           "endpoint": "*.moralisweb3.com",
           "description": null,
           "impact": "No Bounty"
@@ -5150,24 +5230,6 @@
         {
           "type": "wildcard",
           "endpoint": "*.usemoralis.com",
-          "description": null,
-          "impact": "No Bounty"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.moralis-internal.io",
-          "description": null,
-          "impact": "No Bounty"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.moralis-streams.com",
-          "description": null,
-          "impact": "No Bounty"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.moralismoney.com",
           "description": null,
           "impact": "No Bounty"
         }
@@ -5245,12 +5307,6 @@
     "targets": {
       "in_scope": [
         {
-          "type": "device",
-          "endpoint": "Any IoT device sold by Nestlé Brands",
-          "description": null,
-          "impact": "No Bounty"
-        },
-        {
           "type": "wildcard",
           "endpoint": "*.nestle.com",
           "description": null,
@@ -5260,6 +5316,12 @@
           "type": "url",
           "endpoint": "Any domain related to Nestlé brands",
           "description": "You can find the Nestlé brands in scope [in this link](https://www.nestle.com/brands).",
+          "impact": "No Bounty"
+        },
+        {
+          "type": "device",
+          "endpoint": "Any IoT device sold by Nestlé Brands",
+          "description": null,
           "impact": "No Bounty"
         }
       ],
@@ -5425,12 +5487,6 @@
       "in_scope": [
         {
           "type": "url",
-          "endpoint": "rancher.ninjakiwi.me",
-          "description": null,
-          "impact": "No Bounty"
-        },
-        {
-          "type": "url",
           "endpoint": "analytics.ninjakiwi.com",
           "description": "This domain hosts the API that consumed analytics events from our game clients\n",
           "impact": "Tier 1"
@@ -5523,6 +5579,12 @@
           "type": "wildcard",
           "endpoint": "*.souparea.com",
           "description": "This domain will be considered out of scope unless it can be shown to allow an exploit on one of our Tier 1-3 domains.\n\n",
+          "impact": "No Bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "rancher.ninjakiwi.me",
+          "description": null,
           "impact": "No Bounty"
         }
       ],
@@ -5643,12 +5705,6 @@
       ],
       "out_of_scope": [
         {
-          "type": "url",
-          "endpoint": "http://vp-alexandria.gridsvc.net/",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
           "type": "wildcard",
           "endpoint": "*.oisl.gg",
           "description": null,
@@ -5741,6 +5797,12 @@
         {
           "type": "url",
           "endpoint": "hackable-woody.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "http://vp-alexandria.gridsvc.net/",
           "description": null,
           "impact": "Out of scope"
         },
@@ -5871,8 +5933,20 @@
       "in_scope": [
         {
           "type": "ios",
+          "endpoint": "1076840480",
+          "description": "Mathem iOS app",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "ios",
           "endpoint": "1079537578",
           "description": "Oda android app",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://mathem.se",
+          "description": "The main shop and brand in Sweden.",
           "impact": "Tier 2"
         },
         {
@@ -5888,6 +5962,12 @@
           "impact": "Tier 2"
         },
         {
+          "type": "android",
+          "endpoint": "se.mathem.mathem",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
           "type": "wildcard",
           "endpoint": "*.oda.com",
           "description": null,
@@ -5898,24 +5978,6 @@
           "endpoint": "*.prod.nube.tech",
           "description": "Should mostly be internal services",
           "impact": "Tier 3"
-        },
-        {
-          "type": "ios",
-          "endpoint": "1076840480",
-          "description": "Mathem iOS app",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "https://mathem.se",
-          "description": "The main shop and brand in Sweden.",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "android",
-          "endpoint": "se.mathem.mathem",
-          "description": null,
-          "impact": "Tier 2"
         }
       ],
       "out_of_scope": [
@@ -6236,6 +6298,12 @@
         },
         {
           "type": "url",
+          "endpoint": "https://detect.pdq.tools/ ",
+          "description": "Test environment for PDQ Detect",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
           "endpoint": "https://houston-staging.pdq.tools",
           "description": "Test environment for PDQ Connect",
           "impact": "Tier 3"
@@ -6244,12 +6312,6 @@
           "type": "url",
           "endpoint": "https://portal-staging.pdq.tools/ ",
           "description": "Test environment for our billing portal",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "https://detect.pdq.tools/ ",
-          "description": "Test environment for PDQ Detect",
           "impact": "Tier 3"
         }
       ],
@@ -7114,32 +7176,14 @@
       "out_of_scope": [
         {
           "type": "wildcard",
-          "endpoint": "*.probes.atlas.ripe.net",
-          "description": "These probes and anchors are not hosted in networks managed by the RIPE NCC, but in networks participating in the RIPE Atlas project. If you find any vulnerabilities for IP addresses associated with RIPE Atlas probes/anchors, you will need to report them to the security teams of the responsible network operators.",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "wildcard",
           "endpoint": "*.anchors.atlas.ripe.net",
           "description": "These probes and anchors are not hosted in networks managed by the RIPE NCC, but in networks participating in the RIPE Atlas project. If you find any vulnerabilities for IP addresses associated with RIPE Atlas probes/anchors, you will need to report them to the security teams of the responsible network operators.",
           "impact": "Out of scope"
         },
         {
-          "type": "url",
-          "endpoint": "RIPE Meeting network (2001:67c:64::/48 and 193.0.24.0/21)",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "Any of the beta/dev environments",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
           "type": "wildcard",
-          "endpoint": "Any *.ripe.net host that is located outside of the in-scope IP ranges ",
-          "description": "The RIPE NCC uses a number of SaaS provider where a *.ripe.net record may point to. However, these services are not maintained by the RIPE NCC and are not part of this Bug Bounty program. If you think a specific host may be in scope, please contact Intigriti Support",
+          "endpoint": "*.probes.atlas.ripe.net",
+          "description": "These probes and anchors are not hosted in networks managed by the RIPE NCC, but in networks participating in the RIPE Atlas project. If you find any vulnerabilities for IP addresses associated with RIPE Atlas probes/anchors, you will need to report them to the security teams of the responsible network operators.",
           "impact": "Out of scope"
         },
         {
@@ -7155,14 +7199,32 @@
           "impact": "Out of scope"
         },
         {
+          "type": "wildcard",
+          "endpoint": "Any *.ripe.net host that is located outside of the in-scope IP ranges ",
+          "description": "The RIPE NCC uses a number of SaaS provider where a *.ripe.net record may point to. However, these services are not maintained by the RIPE NCC and are not part of this Bug Bounty program. If you think a specific host may be in scope, please contact Intigriti Support",
+          "impact": "Out of scope"
+        },
+        {
           "type": "url",
-          "endpoint": "ripe(1to87).ripe.net",
+          "endpoint": "Any of the beta/dev environments",
           "description": null,
           "impact": "Out of scope"
         },
         {
           "type": "url",
           "endpoint": "exams.ripe.net",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "RIPE Meeting network (2001:67c:64::/48 and 193.0.24.0/21)",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "ripe(1to87).ripe.net",
           "description": null,
           "impact": "Out of scope"
         }
@@ -7217,12 +7279,6 @@
       "out_of_scope": [
         {
           "type": "url",
-          "endpoint": "workplace.randstad.in",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
           "endpoint": "apps.randstad.in",
           "description": null,
           "impact": "Out of scope"
@@ -7230,6 +7286,12 @@
         {
           "type": "url",
           "endpoint": "cz.randstad.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "workplace.randstad.in",
           "description": null,
           "impact": "Out of scope"
         }
@@ -7333,7 +7395,7 @@
       "in_scope": [
         {
           "type": "url",
-          "endpoint": "https://rivian.com/api/gql/orders/graphql",
+          "endpoint": "https://business.rivian.com/api",
           "description": null,
           "impact": "Tier 1"
         },
@@ -7345,13 +7407,13 @@
         },
         {
           "type": "url",
-          "endpoint": "https://business.rivian.com/api",
+          "endpoint": "https://rivian.com/api/gql/gateway/graphql",
           "description": null,
           "impact": "Tier 1"
         },
         {
           "type": "url",
-          "endpoint": "https://rivian.com/api/gql/gateway/graphql",
+          "endpoint": "https://rivian.com/api/gql/orders/graphql",
           "description": null,
           "impact": "Tier 1"
         },
@@ -7631,15 +7693,15 @@
       "in_scope": [
         {
           "type": "wildcard",
-          "endpoint": "https://*.say.rocks",
-          "description": null,
-          "impact": "Tier 2"
-        },
-        {
-          "type": "wildcard",
           "endpoint": "https://*.saytechnologies.com",
           "description": null,
           "impact": "Tier 1"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "https://*.say.rocks",
+          "description": null,
+          "impact": "Tier 2"
         }
       ],
       "out_of_scope": [
@@ -7804,50 +7866,14 @@
       ],
       "out_of_scope": [
         {
-          "type": "url",
-          "endpoint": "https://sixt-leasing",
+          "type": "iprange",
+          "endpoint": "185.97.224.12",
           "description": null,
           "impact": "Out of scope"
         },
         {
-          "type": "url",
-          "endpoint": "https://siemens.smc.sixt.com/",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "https://s004-px01.s004.smc.sixt.com/",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "https://s004-px02.s004.smc.sixt.com/",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "https://p001-slweb-px.p001.slweb.smc.sixt.com",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "s003-lb-siemens-stage.s003.smc.sixt.com",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "s002-lb-siemens-test.s002.smc.sixt.com",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "s004-lb-siemens.s004.smc.sixt.com",
+          "type": "iprange",
+          "endpoint": "185.97.224.13",
           "description": null,
           "impact": "Out of scope"
         },
@@ -7877,7 +7903,43 @@
         },
         {
           "type": "url",
+          "endpoint": "drying-little-tears.org",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
           "endpoint": "fleetcheck.sixt.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://p001-slweb-px.p001.slweb.smc.sixt.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://s004-px01.s004.smc.sixt.com/",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://s004-px02.s004.smc.sixt.com/",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://siemens.smc.sixt.com/",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://sixt-leasing",
           "description": null,
           "impact": "Out of scope"
         },
@@ -7955,6 +8017,24 @@
         },
         {
           "type": "url",
+          "endpoint": "s002-lb-siemens-test.s002.smc.sixt.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "s003-lb-siemens-stage.s003.smc.sixt.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "s004-lb-siemens.s004.smc.sixt.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
           "endpoint": "sixtbook.sixt.com",
           "description": null,
           "impact": "Out of scope"
@@ -7962,24 +8042,6 @@
         {
           "type": "url",
           "endpoint": "webservices.sixt.com",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "drying-little-tears.org",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "iprange",
-          "endpoint": "185.97.224.12",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "iprange",
-          "endpoint": "185.97.224.13",
           "description": null,
           "impact": "Out of scope"
         }
@@ -8107,18 +8169,6 @@
     "targets": {
       "in_scope": [
         {
-          "type": "android",
-          "endpoint": "nl.speakap.speakap",
-          "description": null,
-          "impact": "No Bounty"
-        },
-        {
-          "type": "ios",
-          "endpoint": "https://apps.apple.com/nl/app/speakap/id713925262",
-          "description": null,
-          "impact": "No Bounty"
-        },
-        {
           "type": "wildcard",
           "endpoint": "*.speakap.com",
           "description": null,
@@ -8133,6 +8183,18 @@
         {
           "type": "url",
           "endpoint": "Any related Speakap domain",
+          "description": null,
+          "impact": "No Bounty"
+        },
+        {
+          "type": "ios",
+          "endpoint": "https://apps.apple.com/nl/app/speakap/id713925262",
+          "description": null,
+          "impact": "No Bounty"
+        },
+        {
+          "type": "android",
+          "endpoint": "nl.speakap.speakap",
           "description": null,
           "impact": "No Bounty"
         }
@@ -8178,7 +8240,7 @@
       "out_of_scope": [
         {
           "type": "wildcard",
-          "endpoint": "booking.*.sqills.com",
+          "endpoint": "*.red.sqills.team",
           "description": null,
           "impact": "Out of scope"
         },
@@ -8189,14 +8251,14 @@
           "impact": "Out of scope"
         },
         {
-          "type": "url",
-          "endpoint": "careers.sqills.com",
+          "type": "wildcard",
+          "endpoint": "booking.*.sqills.com",
           "description": null,
           "impact": "Out of scope"
         },
         {
-          "type": "wildcard",
-          "endpoint": "*.red.sqills.team",
+          "type": "url",
+          "endpoint": "careers.sqills.com",
           "description": null,
           "impact": "Out of scope"
         }
@@ -8648,18 +8710,6 @@
       ],
       "out_of_scope": [
         {
-          "type": "url",
-          "endpoint": "abonnement.trouw.nl",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "* trouw.nl/service",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
           "type": "wildcard",
           "endpoint": "* trouw.nl/inloggen",
           "description": null,
@@ -8674,6 +8724,18 @@
         {
           "type": "wildcard",
           "endpoint": "* trouw.nl/registreren",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "* trouw.nl/service",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "abonnement.trouw.nl",
           "description": null,
           "impact": "Out of scope"
         }
@@ -8872,12 +8934,6 @@
       "out_of_scope": [
         {
           "type": "url",
-          "endpoint": "ok.truelayer.com",
-          "description": "This is a third party service, any issues should be reported to them. If you can demonstrate a high impact issue relating to this asset then please still contact us.",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
           "endpoint": "banks.truelayer.com",
           "description": null,
           "impact": "Out of scope"
@@ -8910,6 +8966,12 @@
           "type": "url",
           "endpoint": "info.truelayer.com",
           "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "ok.truelayer.com",
+          "description": "This is a third party service, any issues should be reported to them. If you can demonstrate a high impact issue relating to this asset then please still contact us.",
           "impact": "Out of scope"
         },
         {
@@ -9248,13 +9310,13 @@
       "out_of_scope": [
         {
           "type": "url",
-          "endpoint": "uzleuven.atlassian.net",
+          "endpoint": "jobs.uzleuven.be",
           "description": null,
           "impact": "Out of scope"
         },
         {
           "type": "url",
-          "endpoint": "jobs.uzleuven.be",
+          "endpoint": "uzleuven.atlassian.net",
           "description": null,
           "impact": "Out of scope"
         },
@@ -9297,13 +9359,13 @@
       "out_of_scope": [
         {
           "type": "url",
-          "endpoint": "suppliers-ivalua.ubisoft.com",
+          "endpoint": "ivalua.ubisoft.com",
           "description": null,
           "impact": "Out of scope"
         },
         {
           "type": "url",
-          "endpoint": "ivalua.ubisoft.com",
+          "endpoint": "suppliers-ivalua.ubisoft.com",
           "description": null,
           "impact": "Out of scope"
         }
@@ -9546,6 +9608,12 @@
       "out_of_scope": [
         {
           "type": "url",
+          "endpoint": "api.topperpay.com",
+          "description": "Topper API (https://api.topperpay.com) serves as the production API for processing transactions and account-related operations. As this is an actively used environment, it is out of scope for security testing.\n",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
           "endpoint": "api.uphold.com",
           "description": "Uphold API (https://api.uphold.com) serves as the production API endpoint for Uphold’s platform, facilitating financial transactions, account management, and other core functionalities. As this is an actively used environment, it is out of scope for security testing.",
           "impact": "Out of scope"
@@ -9558,20 +9626,14 @@
         },
         {
           "type": "url",
-          "endpoint": "wallet.uphold.com",
-          "description": "Uphold Wallet (https://wallet.uphold.com) serves as the production interface for users to access their Uphold accounts, manage assets, and perform transactions. As this is an actively used environment, it is out of scope for security testing.\n",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "api.topperpay.com",
-          "description": "Topper API (https://api.topperpay.com) serves as the production API for processing transactions and account-related operations. As this is an actively used environment, it is out of scope for security testing.\n",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
           "endpoint": "app.topperpay.com",
           "description": "Topper App (https://app.topperpay.com) is the production web application for users to manage their Topper accounts and perform financial operations. As this is an actively used environment, it is out of scope for security testing.\n",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "cms.optimuscards.com",
+          "description": "Optimus Cards Management Portal (https://cms.optimuscards.com) serves as the production version of the internal management system used for overseeing various card services and operations. As this is an actively used environment, it is out of scope for security testing.\n\nPlease note that security testing against the production system (https://cms.optimuscards.com) is strictly prohibited, and service degradation attacks are not permitted.",
           "impact": "Out of scope"
         },
         {
@@ -9594,8 +9656,8 @@
         },
         {
           "type": "url",
-          "endpoint": "cms.optimuscards.com",
-          "description": "Optimus Cards Management Portal (https://cms.optimuscards.com) serves as the production version of the internal management system used for overseeing various card services and operations. As this is an actively used environment, it is out of scope for security testing.\n\nPlease note that security testing against the production system (https://cms.optimuscards.com) is strictly prohibited, and service degradation attacks are not permitted.",
+          "endpoint": "wallet.uphold.com",
+          "description": "Uphold Wallet (https://wallet.uphold.com) serves as the production interface for users to access their Uphold accounts, manage assets, and perform transactions. As this is an actively used environment, it is out of scope for security testing.\n",
           "impact": "Out of scope"
         }
       ]
@@ -9745,18 +9807,6 @@
       ],
       "out_of_scope": [
         {
-          "type": "url",
-          "endpoint": "shop.vtm.be",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "* vtmgo.be/service",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
           "type": "wildcard",
           "endpoint": "* vtmgo.be/inloggen",
           "description": null,
@@ -9771,6 +9821,18 @@
         {
           "type": "wildcard",
           "endpoint": "* vtmgo.be/registreren",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "* vtmgo.be/service",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "shop.vtm.be",
           "description": null,
           "impact": "Out of scope"
         }
@@ -10085,12 +10147,6 @@
     "targets": {
       "in_scope": [
         {
-          "type": "url",
-          "endpoint": "https://my.vlerick.com/ ",
-          "description": null,
-          "impact": "No Bounty"
-        },
-        {
           "type": "wildcard",
           "endpoint": "*.vlerick.com",
           "description": "When you start testing www.vlerick.com, **visit www.vlerick.com/en?internal first**. In this way, your testing is not taken into account in our web stats.\n\nNEW!  Feel free to test & scan our new submdomain https://my.vlerick.com/ as well.",
@@ -10099,6 +10155,12 @@
         {
           "type": "iprange",
           "endpoint": "193.190.150.0/24",
+          "description": null,
+          "impact": "No Bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://my.vlerick.com/ ",
           "description": null,
           "impact": "No Bounty"
         },
@@ -10719,12 +10781,6 @@
       "out_of_scope": [
         {
           "type": "url",
-          "endpoint": "links.wolt.com",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
           "endpoint": "blog.wolt.com",
           "description": "#### Keywords: Third-party SaaS, WordPress\n- Used by: Wolt employees.\n- WordPress blog hosted by wpengine.com.\n- wpengine.com owns the infrastructure, but we maintain the WordPress installation.\n- **Note:** Only WordPress-level probes are allowed.",
           "impact": "Out of scope"
@@ -10733,6 +10789,12 @@
           "type": "url",
           "endpoint": "gettest.wolt.com",
           "description": "Low severity issues affecting gettest.wolt.com",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "links.wolt.com",
+          "description": null,
           "impact": "Out of scope"
         },
         {
@@ -11196,14 +11258,14 @@
           "impact": "Out of scope"
         },
         {
-          "type": "url",
-          "endpoint": "zabka-snrs.zabka.pl",
+          "type": "other",
+          "endpoint": "Żabka Nano stores",
           "description": null,
           "impact": "Out of scope"
         },
         {
-          "type": "other",
-          "endpoint": "Żabka Nano stores",
+          "type": "url",
+          "endpoint": "zabka-snrs.zabka.pl",
           "description": null,
           "impact": "Out of scope"
         }
