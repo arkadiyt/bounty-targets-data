@@ -12815,7 +12815,7 @@
     "url": "https://bugcrowd.com/engagements/lime",
     "allows_disclosure": false,
     "managed_by_bugcrowd": true,
-    "safe_harbor": null,
+    "safe_harbor": "full",
     "max_payout": 7000,
     "targets": {
       "in_scope": [
@@ -12963,16 +12963,23 @@
       "out_of_scope": [
         {
           "type": "api",
-          "target": "community.li.me",
+          "target": "community.li.me (bevy)",
           "uri": "",
-          "name": "community.li.me",
+          "name": "community.li.me (bevy)",
           "ipAddress": ""
         },
         {
           "type": "website",
-          "target": "https://help.li.me (zendesk)",
+          "target": "*.airflow.limeinternal.com (legacy domain)",
+          "uri": "",
+          "name": "*.airflow.limeinternal.com (legacy domain)",
+          "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "https://help.li.me (Zendesk)",
           "uri": null,
-          "name": "https://help.li.me (zendesk)",
+          "name": "https://help.li.me (Zendesk)",
           "ipAddress": null
         },
         {
@@ -12991,9 +12998,9 @@
         },
         {
           "type": "website",
-          "target": "https://li.me (hubspot)",
+          "target": "https://li.me (HubSpot)",
           "uri": null,
-          "name": "https://li.me (hubspot)",
+          "name": "https://li.me (HubSpot)",
           "ipAddress": null
         }
       ]
