@@ -153,6 +153,68 @@
     }
   },
   {
+    "id": "ac81c127-b11b-469e-8060-e0fbb9c9c398",
+    "name": "Aikido Security: Zen by Aikido ",
+    "company_handle": "aikido",
+    "handle": "aikidoruntime",
+    "url": "https://www.intigriti.com/programs/aikido/aikidoruntime/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 100,
+      "currency": "EUR"
+    },
+    "max_bounty": {
+      "value": 3500,
+      "currency": "EUR"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "other",
+          "endpoint": "https://github.com/AikidoSec/firewall-node#Vulnerability",
+          "description": "Tier 1 is for vulnerabilities which we potentially introduce via our own firewall component in the user's application.\n\nSee Severity Assessment for more information.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "other",
+          "endpoint": "https://github.com/AikidoSec/firewall-python#Vulnerability",
+          "description": null,
+          "impact": "Tier 1"
+        },
+        {
+          "type": "other",
+          "endpoint": "https://github.com/AikidoSec/firewall-node#Detection Bypass",
+          "description": "Tier 2 is for bypasses in the vulnerability detection of the firewall component, such as a bypass of our SQL injection detection.\n\nSee Severity Assessment for more information.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "https://github.com/AikidoSec/firewall-python#Detection Bypass",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "https://github.com/AikidoSec/firewall-node#False Positive",
+          "description": "Tier 3 is for any false positives you encounter with our vulnerability detection. For example, cases where we falsely flag a SQL injection, while the user's input is safely encapsulated in the SQL query.\n\nSeverity assessments are slightly harder for these cases, see \"Severity Assessment\" for more information.",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "other",
+          "endpoint": "https://github.com/AikidoSec/firewall-python#False Positive",
+          "description": null,
+          "impact": "Tier 3"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
     "id": "30f445f7-ca4c-4130-9434-49add5c6ac74",
     "name": "Algemeen Dagblad",
     "company_handle": "dpgm",
@@ -1950,6 +2012,193 @@
     }
   },
   {
+    "id": "bd22f48d-633e-4b26-bf71-e4778d41b247",
+    "name": "DataCamp",
+    "company_handle": "datacamp",
+    "handle": "datacamp",
+    "url": "https://www.intigriti.com/programs/datacamp/datacamp/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 25,
+      "currency": "EUR"
+    },
+    "max_bounty": {
+      "value": 1500,
+      "currency": "EUR"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "url",
+          "endpoint": "app.datacamp.com/certification",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "app.datacamp.com/groups",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "app.datacamp.com/learn",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "assessment-api.datacamp.com",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "assessment-v2.datacamp.com ",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "assessment.datacamp.com",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "campus.datacamp.com",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "android",
+          "endpoint": "com.datacamp",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "ios",
+          "endpoint": "https://apps.apple.com/au/app/datacamp-learn-data-science/id1263413087",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "practice.datacamp.com",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "projects.datacamp.com",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.datacamp.com",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.datacamp.com/datalab",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.datacamp.com",
+          "description": null,
+          "impact": "Tier 3"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "wildcard",
+          "endpoint": "*.it.datacamp.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "app.datacamp.com/recruit",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "ast-viewer.datacamp.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "confluence.datacamp.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "dccertified.datacamp.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "intranet.datacamp.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "jira.datacamp.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "links.datacamp.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "rdocumentation.datacamp.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "signature.datacamp.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "status.datacamp.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "support.datacamp.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "talent-jobs-api.datacamp.com",
+          "description": null,
+          "impact": "Out of scope"
+        }
+      ]
+    }
+  },
+  {
     "id": "618bdc2f-9207-47cc-8c5c-71b734900359",
     "name": "De Lijn",
     "company_handle": "delijn",
@@ -2852,6 +3101,56 @@
     }
   },
   {
+    "id": "0bcc2455-bd63-490b-b725-890a93a1c678",
+    "name": "Fing Bug Bounty Program",
+    "company_handle": "lansweeper",
+    "handle": "fing",
+    "url": "https://www.intigriti.com/programs/lansweeper/fing/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 50,
+      "currency": "EUR"
+    },
+    "max_bounty": {
+      "value": 3500,
+      "currency": "EUR"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "url",
+          "endpoint": "service.fing.com",
+          "description": "Our public cloud API for Device Recognition which can be requested on our website: https://app.fing.com/internet/business/devrecog/trial.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "app.fing.com",
+          "description": "The Fing web application that gives you an overview of all monitored networks",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "Fing desktop",
+          "description": "The free Fing App to identify connected devices, troubleshoot network and device issues, detect network intruders and run Wi-Fi and internet speed tests anywhere. It can be downloaded here: http://app.fing.com/app",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "www.fing.com*",
+          "description": "Always use \"intigriti.me\" address for any web form",
+          "impact": "No Bounty"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
     "id": "611c246e-1bf9-42b7-a458-af832582d0d7",
     "name": "Grafana Labs",
     "company_handle": "grafanalabs",
@@ -3220,6 +3519,110 @@
           "endpoint": "teroson scope including any TLD:*.teroson.*",
           "description": null,
           "impact": "No Bounty"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
+    "id": "e85b4b33-7785-43b5-a5aa-5bcd226688b4",
+    "name": "Here Technologies",
+    "company_handle": "heretechnologies",
+    "handle": "heretechnologies",
+    "url": "https://www.intigriti.com/programs/heretechnologies/heretechnologies/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 0,
+      "currency": "EUR"
+    },
+    "max_bounty": {
+      "value": 2000,
+      "currency": "EUR"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "wildcard",
+          "endpoint": "*.account.api.here.com",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.account.here.com",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.mobilitygraph.hereapi.com",
+          "description": "Including, but not limited to, following applications:\nhttps://predictor.mobilitygraph.hereapi.com/\nhttps://profile.mobilitygraph.hereapi.com/\nhttps://subscription.mobilitygraph.hereapi.com/\n",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.router.hereapi.com",
+          "description": "Including, but not limited to, following applications:\nhttps://matrix.router.hereapi.com/\nhttps://subp-als.matrix.router.hereapi.com/v8/matrix\nhttps://transit.router.hereapi.com/\nhttps://intermodal.router.hereapi.com/",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.scbe.api.here.com",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.subp-router.hereapi.com",
+          "description": "Including, but not limited to, following application:\nhttps://vip-als.subp-router.hereapi.com/\n",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "ios",
+          "endpoint": "955837609",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "android",
+          "endpoint": "com.here.app.maps",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://jaguar.here.com",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://landrover.here.com",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "Leaked/compromised employee accounts *.here.com",
+          "description": "Any leaked/compromised employee accounts within the domain @here.com for any service in domains *.here.com (excluding unverified accounts on account.here.com) and here.okta.com, for example john.doe@here.com account for in.here.com. If you come across any such accounts, whether compromised due to malware infections, security breaches, or any other cause, please notify us. Depending on account setup and environment valid (belongs to HERE employee and active) and non-duplicate reports will be accepted with Low/Medium severity. Please make sure to provide as much information as you can on the source and the reason of account compromise, for example - date of compromise, hostname, stealer id, source you obtained info from.\n\nPlease use the CSV format for all credentials. For example:\n\n`username, password, service, source, date_of_leak`\n\nIf the exact `date_of_leak` is unknown, use \"unknown\" instead.\n\n",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.here.com",
+          "description": "This scope (*.here.com) is for Log4J and Spring4Shell RCE vulnerabilities only.",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.hereapi.com",
+          "description": "This scope (*.hereapi.com) is for Log4J and Spring4Shell RCE vulnerabilities only.",
+          "impact": "Tier 3"
         }
       ],
       "out_of_scope": [
@@ -4544,6 +4947,127 @@
         {
           "type": "url",
           "endpoint": "https://www.kiwa.com/en/contact/",
+          "description": null,
+          "impact": "Out of scope"
+        }
+      ]
+    }
+  },
+  {
+    "id": "06ea3a06-58d5-4173-af0e-c2f1f98714c6",
+    "name": "Lansweeper Bug Bounty Program",
+    "company_handle": "lansweeper",
+    "handle": "lansweeper1",
+    "url": "https://www.intigriti.com/programs/lansweeper/lansweeper1/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 50,
+      "currency": "EUR"
+    },
+    "max_bounty": {
+      "value": 6000,
+      "currency": "EUR"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "url",
+          "endpoint": "edge.lansweeper.com",
+          "description": "Domain used during the two-way sync process between the local web console (on-premises software) and the cloud platform. \n\nYou can request your trial on our website: https://www.lansweeper.com/download/ but always use \"intigriti.me\" address for any user account\n\nWith this trial you get access to our cloud platform (app.lansweeper.com), our on-premises software and the sync process (edge.lansweeper.com) between these two. You have to install our on-premises software somewhere locally and this will allow you to scan your local network and push the results to the cloud platform via the sync process.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.lansweeper.com",
+          "description": "API used for integrations with our cloud platform (app.lansweeper.com). \nMore information about our API: https://docs.lansweeper.com/docs",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "app.lansweeper.com",
+          "description": "The cloud Platform, this also includes lecstaticcontent.lansweeper.com\n\nYou can request your trial on our website: https://www.lansweeper.com/download/ but always use \"intigriti.me\" address for any user account\n\nWith this trial you get access to our cloud platform (app.lansweeper.com), our on-premises software and the sync process (edge.lansweeper.com) between these two. You have to install our on-premises software somewhere locally and this will allow you to scan your local network and push the results to the cloud platform via the sync process.\n",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "backoffice.lansweeper.com",
+          "description": "Internal backoffice portal for cloud platform\nNo authorisation will be given",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://lsagentrelay.lansweeper.com/",
+          "description": "Our cloud relay server connection using LsAgent. If the computers you're scanning do not have a direct connection to your Lansweeper installation, scanned LsAgent data can be sent to our relay server in the cloud. \n\nOur LsAgent is a cross-platform scanning agent that can scan computers both inside and outside of your network. It automatically collects an inventory from the computer it's installed on and sends the data back to the Lansweeper installation, this can be done through our relay server in the cloud.\n\nFor this, you must enable relay access in your Lansweeper installation. \nScanned LsAgent data is sent securely over HTTPS (TLS 1.2) to the relay server in Microsoft Azure, where it is encrypted as well. Your Lansweeper scanning server can retrieve the scanned data from the relay server, after which it is deleted from the relay. In order to use the relay server, make sure outbound traffic is allowed on your Lansweeper scanning server. Specifically, the scanning server must be able to make an outbound connection to port 443 of lsagentrelay.lansweeper.com, the cloud relay server. \n\nMore information about LsAgent can be found on our website: https://community.lansweeper.com/t5/scanning-your-network/introduction-to-lsagent-for-windows-linux-and-mac/ta-p/64473\n\nThe use of the relay server must explicitly be enabled in the Lansweeper web console. It is not enabled by default!",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "Modernized Discovery",
+          "description": "Modernized scanner to discover IT and OT devices.\n\n* Scanner can be downloaded from the cloud platform, more info here: https://community.lansweeper.com/t5/sites/install-network-discovery/ta-p/72388\n* Info on Modernized Discovery: https://community.lansweeper.com/t5/sites/lansweeper-discovery/ta-p/75199#feedbackquestions\n* OT specific: https://community.lansweeper.com/t5/lansweeper-ot/how-to-scan-your-ot/ta-p/64599",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "app.lansweeper.com/trial",
+          "description": "Demo site with demo data to test the cloud platform\n\nAlways use \"intigriti.me\" address for any web form",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "autoupdateapi.lansweeper.com",
+          "description": "API for updating on-premise software",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "docs.lansweeper.com",
+          "description": "Lansweeper's technical documentation",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "login.lansweeper.com",
+          "description": "Auth0 identitiy provider for cloud platform.\nAlways use \"intigriti.me\" address for any user account\n\n",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "on-premises software",
+          "description": "The on-premises software is the latest available version on our website (www.lansweeper.com/changelog).\n\nYou can request your trial on our website: https://www.lansweeper.com/download/ but always use \"intigriti.me\" address for any user account\n\nWith this trial you get access to our cloud platform (app.lansweeper.com), our on-premises software and the sync process (edge.lansweeper.com) between these two. You have to install our on-premises software somewhere locally and this will allow you to scan your local network and push the results to the cloud platform via the sync process.",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.lansweeper.com",
+          "description": "Always use \"intigriti.me\" address for any web form\n\n**Out of scope for this domain:**\nStore.lansweeper.com\nwww.lansweeper.com/forum\nThird-party plug-ins (e.g. Pardot - CleverBridge - Botpress)\n",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.lansweeper.com",
+          "description": "Any other public-facing Lansweeper related URL",
+          "impact": "No Bounty"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "other",
+          "endpoint": " lsrunase2.0 and lsencrypt2.0 ",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "careers.lansweeper.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.lansweeper.com/forum",
           "description": null,
           "impact": "Out of scope"
         }
@@ -9323,6 +9847,97 @@
           "type": "url",
           "endpoint": "wallet.uphold.com",
           "description": "Uphold Wallet (https://wallet.uphold.com) serves as the production interface for users to access their Uphold accounts, manage assets, and perform transactions. As this is an actively used environment, it is out of scope for security testing.\n",
+          "impact": "Out of scope"
+        }
+      ]
+    }
+  },
+  {
+    "id": "3219ed72-e563-458d-aafd-9ce8ca4e3087",
+    "name": "VRT",
+    "company_handle": "vrtnv",
+    "handle": "vrtnv",
+    "url": "https://www.intigriti.com/programs/vrtnv/vrtnv/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 100,
+      "currency": "EUR"
+    },
+    "max_bounty": {
+      "value": 2000,
+      "currency": "EUR"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "other",
+          "endpoint": "API's",
+          "description": "*  vrt.be/vrtnu-api/graphql/v1\n*  vrt.be/vrtnu-api/graphql/public/v1\n*  api.vrt.radio\n*  vrtnws-api.vrt.be\n*  api.sporza.be",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "cds.vrt.radio",
+          "description": "The cds domain for VRT radio sites.\n",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "Mobile Applications",
+          "description": "[VRT MAX iOS App](https://apps.apple.com/us/app/vrt-max/id1337574835)\n[VRT MAX Android App](https://play.google.com/store/apps/details?id=be.vrt.vrtnu)\n[VRT NWS iOS App](https://apps.apple.com/us/app/vrt-nws/id952769219)\n[VRT NWS Android App](https://play.google.com/store/apps/details?id=be.vrt.mobile.android.deredactie)\n[Sporza iOS App](https://apps.apple.com/us/app/sporza/id878339906)\n[Sporza Android App](https://play.google.com/store/apps/details?id=com.fwc2014.vrt.and)\n[Ketnet Junior iOS App](https://apps.apple.com/us/app/ketnet-junior/id1001982587)\n[Ketnet Junior Android App](https://play.google.com/store/apps/details?id=be.vrt.ketnet.ketnetjr)",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "player.vrt.be",
+          "description": "Mediaplayer implementation.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "profiel.vrt.be",
+          "description": "VRT-profile with Single Sign On implementation",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "sporza.be",
+          "description": "Sporza is the brand name for all VRT sports broadcasts on radio, television, internet and multimedia.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "vrt.be/vrtmax",
+          "description": "VRT's online video platform. It allows its users to (re-)watch television programs of its brands één, Canvas and Ketnet on the internet. \n\nTo be able to fully use VRT MAX, you have to register for a VRT profile. Using all of VRT MAX's content is only possible for users with a Belgian residential address. Without the login, you can still watch the live channels.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "vrt.be/vrtnws",
+          "description": "\nVRT NWS is the news brand of VRT. Informing the Flemish citizen is an essential part of it's job.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "Brand Sites",
+          "description": "All brand sites owned by VRT.\n\nThe main site www.vrt.be and www.vrt.be/* is also \"No bounty\" (except paths in the \"in scope\" section)",
+          "impact": "No Bounty"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "url",
+          "endpoint": "innovatie.vrt.be",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "shop.*.be",
+          "description": null,
           "impact": "Out of scope"
         }
       ]
