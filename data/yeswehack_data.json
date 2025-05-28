@@ -378,6 +378,45 @@
     }
   },
   {
+    "id": "bitoasis-bug-bounty-program",
+    "name": "BitOasis - Bug Bounty Program",
+    "public": true,
+    "disabled": false,
+    "managed": null,
+    "min_bounty": 50,
+    "max_bounty": 2000,
+    "targets": {
+      "in_scope": [
+        {
+          "target": "*.bitoasis.net",
+          "type": "web-application"
+        },
+        {
+          "target": "https://play.google.com/store/apps/details?id=com.bitoasis&hl=en",
+          "type": "mobile-application-android"
+        },
+        {
+          "target": "https://apps.apple.com/ae/app/bitoasis-buy-bitcoin-crypto/id1521661794",
+          "type": "mobile-application-ios"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "target": "All domains or subdomains not listed in the above list of 'Scopes'",
+          "type": "other"
+        },
+        {
+          "target": "Websites under Bitoasis that utilize CMS frameworks (e.g., WordPress, Joomla, Sitecore).",
+          "type": "other"
+        },
+        {
+          "target": "https://blog.bitoasis.net",
+          "type": "other"
+        }
+      ]
+    }
+  },
+  {
     "id": "blackbox-bforbank-mobile",
     "name": "Blackbox BforBank Mobile",
     "public": true,
