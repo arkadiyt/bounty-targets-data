@@ -1850,6 +1850,74 @@
     }
   },
   {
+    "id": "afeb2624-ac2e-46bc-b078-b0e018baeb62",
+    "name": "Cloudways by DigitalOcean",
+    "company_handle": "digitalocean",
+    "handle": "cloudways",
+    "url": "https://www.intigriti.com/programs/digitalocean/cloudways/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 50,
+      "currency": "USD"
+    },
+    "max_bounty": {
+      "value": 4000,
+      "currency": "USD"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "wildcard",
+          "endpoint": "*.cloudways.com",
+          "description": "All external services/software like `support.cloudways.com` and `feedback.cloudways.com` that are not owned, managed or controlled by Cloudways are considered out of scope and ineligible for rewards.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.cloudways.com",
+          "description": "Cloudways API offers an alternative to the Cloudways Platform. Many, but not all actions that Cloudways Platform allows through the UI can also be performed through Cloudways API.\n\nIn the event a vulnerability is applicable to both the Cloudways Platform (platform.cloudways.com) and API, it will be treated as one root incident.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "developers.cloudways.com",
+          "description": "Cloudways Developers authorizes the API key to use Cloudways API. The vulnerability testing of this target should focus on the process of API authorization ONLY. All other areas on Cloudways developers are strictly OUT OF SCOPE.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "platform.cloudways.com",
+          "description": "Cloudways Platform is the primary target for this program. Cloudways Platform is the main interaction point for Cloudways customers. Through the Platform, customers could launch managed cloud servers and then set up their application on these servers. Once the application is up, Cloudways Platform provides users with options to manage their servers and applications.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "unified.cloudways.com",
+          "description": "Cloudways Platofrm with new UI along with new api and backend to handle all the services of Cloudways",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.cloudways.com",
+          "description": "Cloudways website is the corporate website that is often the initial touchpoint for a significant number of interactions between visitors, customers and Cloudways. It offers product details and related corporate information to visitors.\n",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "css-tricks.com",
+          "description": null,
+          "impact": "Tier 3"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
     "id": "13cfc6fe-92b2-4a56-8577-855ff0bc2f1c",
     "name": "Cyber Security Coalition",
     "company_handle": "cybersecuritycoalition",
@@ -9877,38 +9945,6 @@
           "endpoint": "testing.maventa.com",
           "description": "**AutoInvoice**\nhttps://testing.maventa.com/apis/v1.1/wsdl is a SOAP API connected to Visma AutoInvoice.\n\nAPI documentation is available on https://documentation.maventa.com/soap-api/\n\nSee instructions for domain 'ai-testing.maventa.com' to get user credentials.",
           "impact": "Tier 2"
-        }
-      ],
-      "out_of_scope": [
-
-      ]
-    }
-  },
-  {
-    "id": "3e51fb18-7082-4ce5-85d0-2bd889b5ed4e",
-    "name": "Visma Responsible Disclosure",
-    "company_handle": "visma",
-    "handle": "VismaResponsibleDisclosure",
-    "url": "https://www.intigriti.com/programs/visma/VismaResponsibleDisclosure/detail",
-    "status": "open",
-    "confidentiality_level": "public",
-    "tacRequired": false,
-    "twoFactorRequired": false,
-    "min_bounty": {
-      "value": 0,
-      "currency": "EUR"
-    },
-    "max_bounty": {
-      "value": 0,
-      "currency": "EUR"
-    },
-    "targets": {
-      "in_scope": [
-        {
-          "type": "url",
-          "endpoint": "all",
-          "description": "This program covers all Visma services, products or web properties.\nWe do not offer money rewards for this program, but as a small token of appreciation for all researchers that submit a previously unknown vulnerability that triggers a code or configuration change, we will offer a place on our [Security Hall of Fame (HoF)](https://www.visma.com/trust-centre/security/products-and-services/bug-bounty-and-responsible-disclosure/hall-of-fame/).\nAlso for **all valid Medium+ reports**, we will offer **swags**.\n\nFor money rewards, the only exceptions are the specific assets listed in our Public Bug Bounty Program, see https://app.intigriti.com/programs/visma/visma/detail. Please note that we will only accept reports for the explicitly listed assets under our Public program.",
-          "impact": "No Bounty"
         }
       ],
       "out_of_scope": [
