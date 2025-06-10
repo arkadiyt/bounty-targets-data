@@ -500,10 +500,16 @@
           "impact": "Tier 1"
         },
         {
+          "type": "url",
+          "endpoint": "https://hey.bild.de",
+          "description": "Hey_ is a Chat Assistent offered by BILD.",
+          "impact": "Tier 1"
+        },
+        {
           "type": "wildcard",
-          "endpoint": "*.auth.bild.de",
-          "description": "The login/ registration for BILD.",
-          "impact": "Tier 2"
+          "endpoint": "https://*.hey.bild.de",
+          "description": null,
+          "impact": "Tier 1"
         },
         {
           "type": "url",
@@ -512,16 +518,16 @@
           "impact": "Tier 1"
         },
         {
-          "type": "url",
-          "endpoint": "meinkonto.bild.de",
-          "description": null,
+          "type": "wildcard",
+          "endpoint": "*.auth.bild.de",
+          "description": "Login/registration for BILD.",
           "impact": "Tier 1"
         },
         {
-          "type": "wildcard",
-          "endpoint": "*.bild.de",
-          "description": "Bild is the largest German tabloid newspaper. \nSome examples of subdomains are \n- angebot.bild.de (offers)\n\nYou are also welcome to create your own account to test our system. ",
-          "impact": "Tier 2"
+          "type": "url",
+          "endpoint": "meinkonto.bild.de",
+          "description": "The account setting of a BILD user. ",
+          "impact": "Tier 1"
         },
         {
           "type": "wildcard",
@@ -564,6 +570,12 @@
           "endpoint": "https://dealer.prod.ps.axelspringer.de/purchases/004/welt/*",
           "description": "Documentation: https://dealer-docs.prod.ps.axelspringer.de/",
           "impact": "Tier 1"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.bild.de",
+          "description": "Bild is the largest German tabloid newspaper. \nSome examples of subdomains are \n- angebot.bild.de (offers)\n\nYou are also welcome to create your own account to test our system. ",
+          "impact": "Tier 2"
         },
         {
           "type": "wildcard",
