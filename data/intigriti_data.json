@@ -153,6 +153,68 @@
     }
   },
   {
+    "id": "ac81c127-b11b-469e-8060-e0fbb9c9c398",
+    "name": "Aikido Security: Zen by Aikido ",
+    "company_handle": "aikido",
+    "handle": "aikidoruntime",
+    "url": "https://www.intigriti.com/programs/aikido/aikidoruntime/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 100,
+      "currency": "EUR"
+    },
+    "max_bounty": {
+      "value": 3500,
+      "currency": "EUR"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "other",
+          "endpoint": "https://github.com/AikidoSec/firewall-node#Vulnerability",
+          "description": "Tier 1 is for vulnerabilities which we potentially introduce via our own firewall component in the user's application.\n\nSee Severity Assessment for more information.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "other",
+          "endpoint": "https://github.com/AikidoSec/firewall-python#Vulnerability",
+          "description": null,
+          "impact": "Tier 1"
+        },
+        {
+          "type": "other",
+          "endpoint": "https://github.com/AikidoSec/firewall-node#Detection Bypass",
+          "description": "Tier 2 is for bypasses in the vulnerability detection of the firewall component, such as a bypass of our SQL injection detection.\n\nSee Severity Assessment for more information.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "https://github.com/AikidoSec/firewall-python#Detection Bypass",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "https://github.com/AikidoSec/firewall-node#False Positive",
+          "description": "Tier 3 is for any false positives you encounter with our vulnerability detection. For example, cases where we falsely flag a SQL injection, while the user's input is safely encapsulated in the SQL query.\n\nSeverity assessments are slightly harder for these cases, see \"Severity Assessment\" for more information.",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "other",
+          "endpoint": "https://github.com/AikidoSec/firewall-python#False Positive",
+          "description": null,
+          "impact": "Tier 3"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
     "id": "30f445f7-ca4c-4130-9434-49add5c6ac74",
     "name": "Algemeen Dagblad",
     "company_handle": "dpgm",
@@ -5739,6 +5801,44 @@
     }
   },
   {
+    "id": "2f8db691-ed2b-4796-9b31-d808efb80dfa",
+    "name": "Online enrollment for students Bug Bounty Program",
+    "company_handle": "kuleuven",
+    "handle": "onlineinschrijvingenbetalingstoepassing",
+    "url": "https://www.intigriti.com/programs/kuleuven/onlineinschrijvingenbetalingstoepassing/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 0,
+      "currency": "EUR"
+    },
+    "max_bounty": {
+      "value": 2000,
+      "currency": "EUR"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "url",
+          "endpoint": "https://associatie.kuleuven.be/inschrijvingen/oli_login_50000050",
+          "description": "🇬🇧🇳🇱  the registration/login part on idp.kuleuven.be itself is out of scope for the program",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://webwsp.aps.kuleuven.be/sap/bc/ui5_ui5/sap/zc_oi_appl/",
+          "description": "🇬🇧🇳🇱 ",
+          "impact": "Tier 2"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
     "id": "ecc515cc-c0c1-4a72-966a-ba2baef4d35f",
     "name": "Orbia Responsible Disclosure",
     "company_handle": "orbia",
@@ -8155,146 +8255,6 @@
           "description": "Due to the unique nature of these devices (usually present on networks operated by 3rd parties), we do not authorize testing against them.\n\n* Coca-Cola Freestyle Machines\n* Dasani Purefill Water Dispensers\n* Intelligent Vending Machines\n* Connected Coolers",
           "impact": "Out of scope"
         }
-      ]
-    }
-  },
-  {
-    "id": "2e52d6d3-da18-467f-836e-7a22b82bef5f",
-    "name": "Tomorrowland",
-    "company_handle": "tomorrowland",
-    "handle": "tomorrowland",
-    "url": "https://www.intigriti.com/programs/tomorrowland/tomorrowland/detail",
-    "status": "open",
-    "confidentiality_level": "public",
-    "tacRequired": false,
-    "twoFactorRequired": false,
-    "min_bounty": {
-      "value": 0,
-      "currency": "EUR"
-    },
-    "max_bounty": {
-      "value": 2500,
-      "currency": "EUR"
-    },
-    "targets": {
-      "in_scope": [
-        {
-          "type": "wildcard",
-          "endpoint": "*.weareone.world",
-          "description": "Currently as T2, will be evaluated on individual basis.",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "belgium.tomorrowland.com",
-          "description": "Vulnerabilities found on either winter/brasil/belgium .tomorrowland.com will be considered duplicate.",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "brasil.tomorrowland.com",
-          "description": "Vulnerabilities found on either winter/brasil/belgium .tomorrowland.com will be considered duplicate.",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "android",
-          "endpoint": "com.tomorrowland.oneworldradio",
-          "description": null,
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "globaljourney.tomorrowland.com",
-          "description": null,
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "my.tomorrowland.com",
-          "description": null,
-          "impact": "Tier 2"
-        },
-        {
-          "type": "ios",
-          "endpoint": "one-world-radio-tomorrowland/id1485778856",
-          "description": null,
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "sp1y1tpaf1.execute-api.eu-west-1.amazonaws.com",
-          "description": null,
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "tlbe.prod.tomorrowland.com",
-          "description": "Vulnerabilities found on either TLFR/TLBR/TLBE.prod.tomorrowland.com will be considered duplicate.",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "tlbr.prod.tomorrowland.com",
-          "description": "Vulnerabilities found on either TLFR/TLBR/TLBE.prod.tomorrowland.com will be considered duplicate.",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "tlfr.prod.tomorrowland.com",
-          "description": "Vulnerabilities found on either TLFR/TLBR/TLBE.prod.tomorrowland.com will be considered duplicate.",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "winter.tomorrowland.com",
-          "description": "Vulnerabilities found on either winter/brasil/belgium .tomorrowland.com will be considered duplicate.",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "winterpackages.tomorrowland.com",
-          "description": "Out of Scope: bypassing payment process",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "www.tomorrowland.com",
-          "description": null,
-          "impact": "Tier 2"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.stag.tomorrowland.com",
-          "description": null,
-          "impact": "Tier 3"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.stag.weareone.world",
-          "description": null,
-          "impact": "Tier 3"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.tomorrowland.com",
-          "description": null,
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "components.stag.tomorrowland.com",
-          "description": "Vulnerabilities found on either components.stag.tomorrowland.com or components.tomorrowland.com will be considered duplicate.",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "components.tomorrowland.com",
-          "description": "Vulnerabilities found on either components.stag.tomorrowland.com or components.tomorrowland.com will be considered duplicate.",
-          "impact": "Tier 3"
-        }
-      ],
-      "out_of_scope": [
-
       ]
     }
   },
