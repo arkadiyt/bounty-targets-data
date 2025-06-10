@@ -494,10 +494,34 @@
     "targets": {
       "in_scope": [
         {
+          "type": "url",
+          "endpoint": "m.bild.de",
+          "description": "The mobile version of BILD.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.auth.bild.de",
+          "description": "The login/ registration for BILD.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "bild.de",
+          "description": "BILD is Germany's largest tabloid newspaper.\nYou can find Tier 1 subdomains, as well as a Tier 2 wildcard subdomain.\nYou are welcome to create your own account and test our system.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "meinkonto.bild.de",
+          "description": null,
+          "impact": "Tier 1"
+        },
+        {
           "type": "wildcard",
           "endpoint": "*.bild.de",
-          "description": "Bild is the largest German tabloid newspaper. \nSome examples of subdomains are \n- meinkonto.bild.de (user settings)\n- signin.auth.bild.de (login)\n- hey.bild.de (AI chat assistant)\n- angebot.bild.de (offers)\n- m.bild.de (mobile  version)\n\nYou are also welcome to create your own account to test our system. ",
-          "impact": "Tier 1"
+          "description": "Bild is the largest German tabloid newspaper. \nSome examples of subdomains are \n- angebot.bild.de (offers)\n\nYou are also welcome to create your own account to test our system. ",
+          "impact": "Tier 2"
         },
         {
           "type": "wildcard",
