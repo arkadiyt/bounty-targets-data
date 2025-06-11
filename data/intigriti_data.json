@@ -1886,6 +1886,38 @@
     }
   },
   {
+    "id": "4981522f-5675-4f46-b7b7-e065d30c8d79",
+    "name": "Cross Border Fines",
+    "company_handle": "bpost",
+    "handle": "crossborderfines",
+    "url": "https://www.intigriti.com/programs/bpost/crossborderfines/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 100,
+      "currency": "EUR"
+    },
+    "max_bounty": {
+      "value": 3000,
+      "currency": "EUR"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "url",
+          "endpoint": "https://justonweb.be/fines/",
+          "description": null,
+          "impact": "Tier 2"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
     "id": "13cfc6fe-92b2-4a56-8577-855ff0bc2f1c",
     "name": "Cyber Security Coalition",
     "company_handle": "cybersecuritycoalition",
@@ -5254,6 +5286,50 @@
           "description": null,
           "impact": "Out of scope"
         }
+      ]
+    }
+  },
+  {
+    "id": "67f303d5-5c5b-44ec-a278-874f818fbc48",
+    "name": "Nestlé VDP",
+    "company_handle": "nestlé",
+    "handle": "nestlévdp",
+    "url": "https://www.intigriti.com/programs/nestl%C3%A9/nestl%C3%A9vdp/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 0,
+      "currency": "EUR"
+    },
+    "max_bounty": {
+      "value": 0,
+      "currency": "EUR"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "wildcard",
+          "endpoint": "*.nestle.com",
+          "description": null,
+          "impact": "No Bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "Any domain related to Nestlé brands",
+          "description": "You can find the Nestlé brands in scope [in this link](https://www.nestle.com/brands).",
+          "impact": "No Bounty"
+        },
+        {
+          "type": "device",
+          "endpoint": "Any IoT device sold by Nestlé Brands",
+          "description": null,
+          "impact": "No Bounty"
+        }
+      ],
+      "out_of_scope": [
+
       ]
     }
   },
