@@ -6221,6 +6221,157 @@
     }
   },
   {
+    "id": "201f8ade-4d93-4d8b-b371-af5ed9d8b837",
+    "name": "RIPE NCC",
+    "company_handle": "ripencc",
+    "handle": "ripencc",
+    "url": "https://www.intigriti.com/programs/ripencc/ripencc/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 0,
+      "currency": "EUR"
+    },
+    "max_bounty": {
+      "value": 2000,
+      "currency": "EUR"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "url",
+          "endpoint": "access.ripe.net",
+          "description": "This is the authentication service for our membership and community, mostly used for all of our membership (e.g. LIR) applications.\nWe strongly suggest you to adjust your scanners to the limit where we mentioned in the req/sec.\n\nPlease adhere to the **out of scope** rules below.\n",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "other",
+          "endpoint": "https://github.com/RIPE-NCC/rpki-commons",
+          "description": "This library contains an implementation of an X.509 v3 certificate extension which binds a list of IP address blocks or prefixes to the subject of a certificate (IP Address Delegation Extension).",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "other",
+          "endpoint": "https://github.com/RIPE-NCC/rpki-core",
+          "description": "This repository contains the source code for the RIPE NCC certification. We strive to publish as many components as possible with reasonable effort. Some elements or information are not included, either because of our threat model or because we can not publish them.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "other",
+          "endpoint": "https://github.com/RIPE-NCC/whois",
+          "description": "RIPE Database whois code repository.\n\n",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "lirportal.ripe.net",
+          "description": "Our portal page for LIR's where they can access their information and more.\nSince this portal designed to give access only to LIR's, you can't create an account.\n\n**Until then**;\n\n* Be careful with the unauthorized data access here\n* Limit your tools requests",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.ripe.net",
+          "description": "Our main domain.\nWe suggest you to check out of scope section of our program if you discover any vulnerabilities on this domain or it's subdomains.\nTo make your reports better, we suggest you to check the IP address of the asset you've found so you can understand the address if in scope or out of scope.\n",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "iprange",
+          "endpoint": "193.0.0.0/19 and 2001:67c:2e8::/48",
+          "description": "This is our IP Range.\nSince we are letting some people to host their content, there are some exclusions.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "https://github.com/RIPE-NCC/rpki-monitoring",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "https://github.com/RIPE-NCC/rpki-publication-server",
+          "description": "This is the RIPE NCC's implementation of RFC 8182 - The RPKI Repository Delta Protocol and a draft of RFC 8181 - A Publication Protocol for the Resource Public Key Infrastructure.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "https://github.com/RIPE-NCC/rpki-ta-0",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "https://github.com/RIPE-NCC/rsyncit",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "Assets owned by RIPE NCC",
+          "description": null,
+          "impact": "No Bounty"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "wildcard",
+          "endpoint": "*.anchors.atlas.ripe.net",
+          "description": "These probes and anchors are not hosted in networks managed by the RIPE NCC, but in networks participating in the RIPE Atlas project. If you find any vulnerabilities for IP addresses associated with RIPE Atlas probes/anchors, you will need to report them to the security teams of the responsible network operators.",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.probes.atlas.ripe.net",
+          "description": "These probes and anchors are not hosted in networks managed by the RIPE NCC, but in networks participating in the RIPE Atlas project. If you find any vulnerabilities for IP addresses associated with RIPE Atlas probes/anchors, you will need to report them to the security teams of the responsible network operators.",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "193.0.0.160/27",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "2001:67c:2e8:3::/64",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "Any *.ripe.net host that is located outside of the in-scope IP ranges ",
+          "description": "The RIPE NCC uses a number of SaaS provider where a *.ripe.net record may point to. However, these services are not maintained by the RIPE NCC and are not part of this Bug Bounty program. If you think a specific host may be in scope, please contact Intigriti Support",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "Any of the beta/dev environments",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "exams.ripe.net",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "RIPE Meeting network (2001:67c:64::/48 and 193.0.24.0/21)",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "ripe(1to87).ripe.net",
+          "description": null,
+          "impact": "Out of scope"
+        }
+      ]
+    }
+  },
+  {
     "id": "b2049472-b637-49c3-b9cc-077c676f093c",
     "name": "Randstad",
     "company_handle": "randstad",
