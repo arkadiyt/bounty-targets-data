@@ -3225,85 +3225,6 @@
     }
   },
   {
-    "id": "611c246e-1bf9-42b7-a458-af832582d0d7",
-    "name": "Grafana Labs",
-    "company_handle": "grafanalabs",
-    "handle": "grafanaossbbp",
-    "url": "https://www.intigriti.com/programs/grafanalabs/grafanaossbbp/detail",
-    "status": "open",
-    "confidentiality_level": "public",
-    "tacRequired": false,
-    "twoFactorRequired": false,
-    "min_bounty": {
-      "value": 10,
-      "currency": "USD"
-    },
-    "max_bounty": {
-      "value": 15000,
-      "currency": "USD"
-    },
-    "targets": {
-      "in_scope": [
-        {
-          "type": "other",
-          "endpoint": "Grafana Loki",
-          "description": null,
-          "impact": "Tier 1"
-        },
-        {
-          "type": "other",
-          "endpoint": "Grafana Mimir",
-          "description": null,
-          "impact": "Tier 1"
-        },
-        {
-          "type": "other",
-          "endpoint": "Grafana OSS",
-          "description": null,
-          "impact": "Tier 1"
-        },
-        {
-          "type": "other",
-          "endpoint": "Grafana Pyroscope",
-          "description": null,
-          "impact": "Tier 1"
-        },
-        {
-          "type": "other",
-          "endpoint": "Grafana Tempo",
-          "description": null,
-          "impact": "Tier 1"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "https://github.com/grafana/*",
-          "description": "Only repository misconfigurations for non-archived repositories are in scope - please read '**In scope**' section below for detailed scope.",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "other",
-          "endpoint": "Non-Core Grafana Plugins",
-          "description": "Grafana Labs developed [plugins](https://grafana.com/grafana/plugins/all-plugins/?signature=grafana) not installed by default are accepted, but not eligible for a bounty. ",
-          "impact": "No Bounty"
-        }
-      ],
-      "out_of_scope": [
-        {
-          "type": "wildcard",
-          "endpoint": "*.grafana.com",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.grafana.net",
-          "description": null,
-          "impact": "Out of scope"
-        }
-      ]
-    }
-  },
-  {
     "id": "4acc7e11-3634-4ce5-b100-d961d3f6c6f0",
     "name": "HRS Group VDP",
     "company_handle": "hrsgroup",
@@ -5042,6 +4963,44 @@
           "description": null,
           "impact": "Out of scope"
         }
+      ]
+    }
+  },
+  {
+    "id": "ecf9c610-36eb-47df-8b25-bb496aff8015",
+    "name": "Nexuzhealth Web PACS",
+    "company_handle": "uz leuven",
+    "handle": "nexuzhealthwebpacs",
+    "url": "https://www.intigriti.com/programs/uz%20leuven/nexuzhealthwebpacs/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 0,
+      "currency": "EUR"
+    },
+    "max_bounty": {
+      "value": 1000,
+      "currency": "EUR"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "url",
+          "endpoint": " idp-contact.nexuzhealth.be",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "media.nexuzhealth.be/patient/ ",
+          "description": null,
+          "impact": "Tier 2"
+        }
+      ],
+      "out_of_scope": [
+
       ]
     }
   },
@@ -7965,6 +7924,91 @@
           "type": "wildcard",
           "endpoint": "*.tempo-team.de",
           "description": null,
+          "impact": "Out of scope"
+        }
+      ]
+    }
+  },
+  {
+    "id": "025558a4-e74e-41eb-9bf6-a01dbe8e5a7a",
+    "name": "The Coca-Cola Company Vulnerability Disclosure Program",
+    "company_handle": "tccc",
+    "handle": "coca-cola",
+    "url": "https://www.intigriti.com/programs/tccc/coca-cola/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 0,
+      "currency": "USD"
+    },
+    "max_bounty": {
+      "value": 0,
+      "currency": "USD"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "other",
+          "endpoint": "Brand Sites",
+          "description": "Brand sites owned by The Coca-Cola Company.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "Corporate Sites",
+          "description": "*.us.coca-cola.com\n*.coca-cola.com\n*.ko.com\n*.testko.com\n*.coca-colacompany.com\n*.coke.com\n*.cokeurl.com\n*.tccc-aem.com",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "Hindustan Coca-Cola Beverages",
+          "description": "Since our establishment on 14th February 1997 in Bengaluru, Karnataka, Hindustan Coca-Cola Beverages (HCCB) has been on a mission to refresh the nation. Having flourished into one of the Top 5 leading beverage companies in India, all our operations are geared towards creating nothing but the best. We specialize in manufacturing, packaging and distributing a vast range of beverages from The Coca-Cola Company portfolio nationwide. But at the same time, we are more than just a leading beverage company in India, we are a company that is profoundly about the impact we make on our people and planet. \n\n**Domains**\n*.hccb.in\n*.hccbpl.in",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "Mobile Applications",
+          "description": "[CokeOn iOS App](https://apps.apple.com/jp/app/coke-on/id1088184021?l=en-US)\n\n[CokeOn Android App](https://play.google.com/store/apps/details?id=com.coke.cokeon&hl=en_US&pli=1)\n\n[CokePLAY](https://cokeplay.cocacola.co.kr/main)\n\n[Coca-Cola iOS App](https://apps.apple.com/us/app/one-by-the-coca-cola-company/id1310675636)\n\n[Coca-Cola Android App](https://play.google.com/store/apps/details?id=com.cocacola.app.cee&pli=1)\n\n[Costa Coffee iOS App](https://itunes.apple.com/app/id578627826)\n\n[Costa Coffee Android App](https://play.google.com/store/apps/details?id=uk.co.club.costa.costa)\n\n[Costa Coffee Club Poland iOS App](https://itunes.apple.com/app/id1435140959)\n\n[Costa Coffee Club Poland Android App](https://play.google.com/store/apps/details?id=pl.costacoffee.club)",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "Publicly Facing Assets Related to The Coca-Cola Company",
+          "description": "Researchers are welcome to submit reports on any publicly facing asset(s) attributed to The Coca-Cola Company.",
+          "impact": "Tier 2"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "other",
+          "endpoint": "All Coke Stores",
+          "description": "Applications or assets related to any Coke Stores.",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "limonsoda.cl",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "other",
+          "endpoint": "Assets Related to China",
+          "description": "All assets located in or related to China are out of scope and reports will not be accepted.",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "other",
+          "endpoint": "Coke One North America (CONA)",
+          "description": "Any application or asset owned by Coke One North America (CONA)",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "other",
+          "endpoint": "Food and Beverage Dispensing Devices",
+          "description": "Due to the unique nature of these devices (usually present on networks operated by 3rd parties), we do not authorize testing against them.\n\n* Coca-Cola Freestyle Machines\n* Dasani Purefill Water Dispensers\n* Intelligent Vending Machines\n* Connected Coolers",
           "impact": "Out of scope"
         }
       ]
