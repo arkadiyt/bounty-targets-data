@@ -9716,28 +9716,6 @@
     }
   },
   {
-    "name": "Fivetran Bug Bounty CTF",
-    "url": "https://bugcrowd.com/engagements/fivetran-mbb-og",
-    "allows_disclosure": false,
-    "managed_by_bugcrowd": true,
-    "safe_harbor": "full",
-    "max_payout": 10000,
-    "targets": {
-      "in_scope": [
-        {
-          "type": "website",
-          "target": "https://fivetran.com/login",
-          "uri": "https://fivetran.com/login",
-          "name": "Fivetran Dashboard",
-          "ipAddress": ""
-        }
-      ],
-      "out_of_scope": [
-
-      ]
-    }
-  },
-  {
     "name": "Flourish",
     "url": "https://bugcrowd.com/engagements/flourish",
     "allows_disclosure": false,
@@ -13959,6 +13937,70 @@
           "name": "www.americangirlmena.com",
           "ipAddress": null
         }
+      ]
+    }
+  },
+  {
+    "name": "Majid Al Futtaim Loyalty Program (Share Rewards)",
+    "url": "https://bugcrowd.com/engagements/majidalfuttaim-loyalty",
+    "allows_disclosure": true,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "full",
+    "max_payout": 2500,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "website",
+          "target": "https://www.sharerewards.com/",
+          "uri": "https://www.sharerewards.com/",
+          "name": "https://www.sharerewards.com/",
+          "ipAddress": null
+        },
+        {
+          "type": "ios",
+          "target": "https://apps.apple.com/us/app/share-rewards/id1465450657",
+          "uri": "https://apps.apple.com/us/app/share-rewards/id1465450657",
+          "name": "Share Rewards Programme iOS App",
+          "ipAddress": null
+        },
+        {
+          "type": "android",
+          "target": "https://play.google.com/store/apps/details?id=com.maf.share&hl=en_US&gl=US",
+          "uri": "https://play.google.com/store/apps/details?id=com.maf.share&hl=en_US&gl=US",
+          "name": "Share Rewards Android App",
+          "ipAddress": null
+        },
+        {
+          "type": "api",
+          "target": "https://www.vtcprodapi.maf.ae/svc/svcHifi.svc/SaveOCRReceipt",
+          "uri": null,
+          "name": "https://www.vtcprodapi.maf.ae/svc/svcHifi.svc/SaveOCRReceipt",
+          "ipAddress": null
+        },
+        {
+          "type": "api",
+          "target": "https://production.maf.auth0.com/api/v2/",
+          "uri": null,
+          "name": "https://production.maf.auth0.com/api/v2/",
+          "ipAddress": null
+        },
+        {
+          "type": "api",
+          "target": "https://production.maf.auth0.com",
+          "uri": null,
+          "name": "https://production.maf.auth0.com",
+          "ipAddress": null
+        },
+        {
+          "type": "api",
+          "target": "https://maf-holding-prod.apigee.net",
+          "uri": "",
+          "name": "https://maf-holding-prod.apigee.net",
+          "ipAddress": null
+        }
+      ],
+      "out_of_scope": [
+
       ]
     }
   },
