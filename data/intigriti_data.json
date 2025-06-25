@@ -474,6 +474,44 @@
     }
   },
   {
+    "id": "0acb1a74-c545-4941-ae57-7ca5fad9d449",
+    "name": "Arm",
+    "company_handle": "arm",
+    "handle": "arm",
+    "url": "https://www.intigriti.com/programs/arm/arm/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 0,
+      "currency": "USD"
+    },
+    "max_bounty": {
+      "value": 15000,
+      "currency": "USD"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "other",
+          "endpoint": "Firmware: Mali Command Stream Frontend (CSF) Firmware",
+          "description": "#### Arm GPU Firmware running on the Command Stream Frontend (CSF): 'CSFFW' (`mali_csffw.bin`)\n\nOnly vulnerabilities that are exploitable through userspace mapped Command Buffers, and/or Kbase syscalls available to unprivileged userspace attackers (in EL0) are in scope.\n\nNote: the version of 'CSFFW' used must be matched to your device:\n- Its version must match the Kbase driver version in use.\n- It must be the correct variant of CSFFW for the device's GPU.\n\nThe version of CSFFW that comes on a compatible device will satisfy this, providing the device has the latest available security updates installed.\n",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "Software: Mali GPU Kernel Driver",
+          "description": "#### Arm Mali GPU Kernel Driver 'Kbase' (`mali_kbase.ko`)\n\nIn scope versions of the Arm Kbase driver version are:\n- The latest Arm Bifrost, Valhall, or 5th Gen GPU Kernel driver versions, as found on <https://developer.arm.com/downloads/-/mali-drivers/> or, \n- Arm Bifrost, Valhall, or 5th Gen GPU Kernel driver versions r49p1 and above that are running on devices supported by the OEM and have latest available security patches applied.\n\nOnly vulnerabilities that are exploitable through syscalls available to unprivileged userspace attackers (in EL0) are in scope.\n\nUse of the following configuration options is allowed. The use of other options is out of scope and may only be used during investigation.\n\n#### Kbase Build Configuration\nMali Kbase Default KConfig Build Options are used.\n\nThe following must specifically be set:\n- `CONFIG_MALI_DEBUG=n`\n\nAdditionally, the following options may be changed:\n- `CONFIG_MALI_CSF_SUPPORT=y` or `n` (please refer to FAQ for which setting must be used)\n- `CONFIG_MALI_EXPERT=y` or `n`\n- `CONFIG_LARGE_PAGE_SUPPORT=y` or `n`\n- `CONFIG_MALI_TRACE_POWER_GPU_WORK_PERIOD=y` or `n`\n- `CONFIG_MALI_NO_MALI`, either:\n  - `=n` (default)\n  - `=y`, (excludes vulnerabilities in the \"dummy model\" code itself)\n\n#### Kbase Dynamic Configuration\nThe default module parameter settings must be used.\n\nAdditionally, the following option(s) may be changed (chosen at 'insmod' time) :\n- `kbase_page_migration_enabled`\n",
+          "impact": "Tier 3"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
     "id": "933f224e-fbd3-4f08-a4fb-5038c2fa1a6e",
     "name": "Axel Springer National Media & Tech",
     "company_handle": "axelspringerse",
@@ -2506,6 +2544,146 @@
           "endpoint": "*.volkskrant.nl",
           "description": "excluding abonnement.volkskrant.nl",
           "impact": "Tier 3"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
+    "id": "d14eedce-607d-4233-995d-30dbc7de8f23",
+    "name": "Delen Private Bank",
+    "company_handle": "delenprivatebank",
+    "handle": "privatebankdelen",
+    "url": "https://www.intigriti.com/programs/delenprivatebank/privatebankdelen/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 100,
+      "currency": "EUR"
+    },
+    "max_bounty": {
+      "value": 15000,
+      "currency": "EUR"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "url",
+          "endpoint": "api.digital.delen.be ",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.digital.delen.lu ",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "app.delen.be ",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "app.delen.ch ",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "app.delen.lu ",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "auth.digital.delen.be ",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "auth.digital.delen.lu ",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "android",
+          "endpoint": "be.delen.digital",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "ios",
+          "endpoint": "delen/id1064839588",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "login.delen.be ",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "login.delen.ch ",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "login.delen.lu ",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "login.oyens.com",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "status.delen.be ",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "sts.delen.be ",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.cadelam.be ",
+          "description": "🇫🇷🇳🇱",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.cadelux.lu/en ",
+          "description": "🇬🇧🇫🇷🇳🇱",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.delen.bank",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.delen.be/en ",
+          "description": "🇬🇧🇫🇷🇳🇱",
+          "impact": "Tier 2"
         }
       ],
       "out_of_scope": [
@@ -4976,6 +5154,139 @@
     }
   },
   {
+    "id": "0fd1d85b-2d33-4966-b5a0-caabfda5108e",
+    "name": "Ninja Kiwi Games Bug Bounty program",
+    "company_handle": "ninjakiwigames",
+    "handle": "ninjakiwigames",
+    "url": "https://www.intigriti.com/programs/ninjakiwigames/ninjakiwigames/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 75,
+      "currency": "EUR"
+    },
+    "max_bounty": {
+      "value": 4125,
+      "currency": "EUR"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "url",
+          "endpoint": "analytics.ninjakiwi.com",
+          "description": "This domain hosts the API that consumed analytics events from our game clients\n",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.ninjakiwi.com",
+          "description": "This domain hosts the API for our mobile and PC games. Monitoring traffic through one of our game clients is the easiest method to investigate our main API. Most of our applications are available for free on [Steam](https://store.steampowered.com/developer/ninjakiwigames/#browse). Please carefully read the in-scope section regarding what sorts of exploits will be considering in-scope for this domain. \n",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "guts.ninjakiwi.com",
+          "description": "This is the backend services for certain BTD6 in-game features such as Contested Territories and the Map Creator.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.ninjakiwi.me",
+          "description": "ninjakiwi.me is a domain which hosts many of Ninja Kiwi's employtee only services. Any subdomain is eligible for the program. ",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.nkstatic.com",
+          "description": "This domain hosts static content for Ninja Kiwi games and website.\n",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "battles.tv",
+          "description": "Battles.tv is used to share replays from our Bloons TD Battles game.\n",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "data.ninjakiwi.com",
+          "description": "This domain hosts our **public** data API which grants open access to in-game data from our biggest games. For example player profiles, leaderboards and event information is available through this domain. ",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "ninja.kiwi",
+          "description": "This domain is used by Ninja Kiwi for our URL shortener service, ie https://ninja.kiwi/intigriti. \n",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "ninjakiwi.com",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "alerts.ninjakiwi.com",
+          "description": null,
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "boomer2.ninjakiwi.com",
+          "description": null,
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "ct.ninjakiwi.com",
+          "description": null,
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "mynk-dash.ninjakiwi.com",
+          "description": null,
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "mynk.ninjakiwi.com",
+          "description": "This is a legacy domain which powers our Flash games. Uses Flash AMF. \n",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.souparea.com",
+          "description": "This domain will be considered out of scope unless it can be shown to allow an exploit on one of our Tier 1-3 domains.\n\n",
+          "impact": "No Bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "rancher.ninjakiwi.me",
+          "description": null,
+          "impact": "No Bounty"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "url",
+          "endpoint": "store.ninjakiwi.com",
+          "description": "If you've found an issue with this domain you can contact Shopify here - https://www.shopify.com/bugbounty",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "support.ninjakiwi.com",
+          "description": "If you've found an issue with this domain you can contact Zendesk here - https://support.zendesk.com/hc/en-us/articles/4409154830874-Zendesk-Bug-Bounty-Program",
+          "impact": "Out of scope"
+        }
+      ]
+    }
+  },
+  {
     "id": "c7af90e7-ebe9-464f-9786-84970bc4cce3",
     "name": "OVO VDP",
     "company_handle": "ovoenergy",
@@ -7118,67 +7429,6 @@
     }
   },
   {
-    "id": "0d585f25-b705-4141-a961-66d6ade8942e",
-    "name": "SimScale",
-    "company_handle": "simscale",
-    "handle": "simscale",
-    "url": "https://www.intigriti.com/programs/simscale/simscale/detail",
-    "status": "open",
-    "confidentiality_level": "public",
-    "tacRequired": false,
-    "twoFactorRequired": false,
-    "min_bounty": {
-      "value": 50,
-      "currency": "EUR"
-    },
-    "max_bounty": {
-      "value": 6000,
-      "currency": "EUR"
-    },
-    "targets": {
-      "in_scope": [
-        {
-          "type": "other",
-          "endpoint": "SimScale API",
-          "description": "API URL: `https://api.simscale.com`\n\nThe API doc is available at https://api.simscale.com.\n\nAPI keys can be managed in the [API keys page](https://www.simscale.com/dashboard/api_keys).\n",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "other",
-          "endpoint": "SimScale Platform",
-          "description": "The following areas and paths under domain `https://www.simscale.com`:\n\n#### User registration and login\nPaths: `/signup/*`, `/signin/*`, `/onboarding/*`\nExamples:\n* [User registration](https://www.simscale.com/signup/)\n* [Login](https://www.simscale.com/signin/)\n\n#### Dashboard and user profile with API key management\nPaths: `/dashboard/*`\nExamples (login required):\n* [Dashboard](https://www.simscale.com/dashboard/)\n* [User profile](https://www.simscale.com/dashboard/profile/)\n* [Manage API keys](https://www.simscale.com/dashboard/api_keys/)\n\n#### Workbench including CAD mode and Post-Processor\nPaths: `/workbench/*`\nExamples (login required):\n* [Workbench](https://www.simscale.com/workbench/?pid=1765004443902609189)\n* [CAD mode](https://www.simscale.com/workbench/modeller?pid=1765004443902609189&sessionId=c58955c3-59a6-46c0-abfc-185db5e26f63)\n* [Post-Processor](https://www.simscale.com/workbench/?pid=1765004443902609189&rru=ea5a010d-fb77-4a47-812c-4f31e7d0b0e3&ci=a152b38a-7621-4136-a4b3-a7d53314a30f&ct=SOLUTION_FIELD&mt=SIMULATION_RESULT)\n\n#### Public project library\nPaths: `/projects/*`\nExamples:\n* [Public projects](https://www.simscale.com/projects/)\n* [Public project page](https://www.simscale.com/projects/simscale/tutorial-_pipe_junction_flow/)\n* [Public projects by tag](https://www.simscale.com/projects/tags/staff%20pick/)\n\n#### Related API endpoints\nAll API endpoints used by UIs listed above.\nPaths: `/api/*`, `/csm/*`, `/postprocessing/*`",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "other",
-          "endpoint": "SimScale Forum",
-          "description": "Everything below https://www.simscale.com/forum/\n\nThe SimScale forum is based on the Open-Source software Discourse. Before you create a submission about the forum please consider to also validate your findings against the Discourse demo platform at https://try.discourse.org/.",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "other",
-          "endpoint": "SimScale Website",
-          "description": "Domain https://www.simscale.com and the remaining paths not listed under SimScale Platform or SimScale Forum.\n\nExamples:\n\n* [Landing page](https://www.simscale.com/)\n* [Documentation](https://www.simscale.com/docs/)\n* [Blog](https://www.simscale.com/blog/)\n",
-          "impact": "Tier 3"
-        }
-      ],
-      "out_of_scope": [
-        {
-          "type": "wildcard",
-          "endpoint": "https://www.simscale.com/api/v1/projects/*",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "www.simscale.com/forum/users/*.json",
-          "description": null,
-          "impact": "Out of scope"
-        }
-      ]
-    }
-  },
-  {
     "id": "b0de5cde-9841-464a-9d6b-642824f00dc6",
     "name": "Sixt",
     "company_handle": "sixt",
@@ -9311,115 +9561,6 @@
       ],
       "out_of_scope": [
 
-      ]
-    }
-  },
-  {
-    "id": "acb142c1-ffeb-41c3-a9e7-1624054f42e4",
-    "name": "Veriff Bug Bounty",
-    "company_handle": "veriff",
-    "handle": "veriffbugbounty",
-    "url": "https://www.intigriti.com/programs/veriff/veriffbugbounty/detail",
-    "status": "open",
-    "confidentiality_level": "public",
-    "tacRequired": false,
-    "twoFactorRequired": false,
-    "min_bounty": {
-      "value": 5,
-      "currency": "EUR"
-    },
-    "max_bounty": {
-      "value": 6000,
-      "currency": "EUR"
-    },
-    "targets": {
-      "in_scope": [
-        {
-          "type": "ios",
-          "endpoint": "1467907532",
-          "description": "An iOS application for demoing our product.",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "alchemy.veriff.com",
-          "description": "This is an end user (internal) API endpoint.",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "api.flamingo-eu.veriff.com",
-          "description": "This is a public API endpoint.",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "api.us.veriff.me",
-          "description": "This is a public API endpoint.",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "api.veriff.me",
-          "description": "This is a public API endpoint.",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "android",
-          "endpoint": "com.veriff.demo",
-          "description": "An Android application for demoing our product.",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "louvre.veriff.me",
-          "description": "This is an end user (internal) API endpoint.",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "magic.veriff.me",
-          "description": "This is an end user (internal) API endpoint.",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "station.veriff.com",
-          "description": "Here you can find our Veriff Station application.",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "stationapi.veriff.com",
-          "description": "This is the backend for our Station application.",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.veriff.com",
-          "description": "Please note that third party services are out of scope unless the issue is caused due to a misconfiguration by Veriff.",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "developers.veriff.me",
-          "description": "You can find our developers documentation here.",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "www.veriff.com",
-          "description": "This is our marketing website.",
-          "impact": "Tier 3"
-        }
-      ],
-      "out_of_scope": [
-        {
-          "type": "url",
-          "endpoint": "https://station.veriff.com/config/",
-          "description": "Configuration includes public keys what are needed for frontend working properly.",
-          "impact": "Out of scope"
-        }
       ]
     }
   },
