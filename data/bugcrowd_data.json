@@ -9723,24 +9723,100 @@
     }
   },
   {
-    "name": "Fivetran Bug Bounty CTF",
+    "name": "Fivetran",
     "url": "https://bugcrowd.com/engagements/fivetran-mbb-og",
     "allows_disclosure": false,
     "managed_by_bugcrowd": true,
     "safe_harbor": "full",
-    "max_payout": 10000,
+    "max_payout": 15000,
     "targets": {
       "in_scope": [
         {
           "type": "website",
           "target": "https://fivetran.com/login",
           "uri": "https://fivetran.com/login",
-          "name": "Fivetran Dashboard",
+          "name": "*.fivetran.com",
+          "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "https://app.getcensus.com",
+          "uri": "https://app.getcensus.com",
+          "name": "app.getcensus.com",
+          "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "https://fivetran.com/login",
+          "uri": "https://fivetran.com/login",
+          "name": "Fivetran SDK",
           "ipAddress": ""
         }
       ],
       "out_of_scope": [
-
+        {
+          "type": "website",
+          "target": "Any internal, staging, or development services.",
+          "uri": "",
+          "name": "Any internal, staging, or development services.",
+          "ipAddress": ""
+        },
+        {
+          "type": "other",
+          "target": "Social engineering against Fivetran Support or Fivetran Employees",
+          "uri": "",
+          "name": "Social engineering against Fivetran Support or Fivetran Employees",
+          "ipAddress": ""
+        },
+        {
+          "type": "other",
+          "target": "*.db.fivetran.com",
+          "uri": "",
+          "name": "*.db.fivetran.com",
+          "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "testing-datalake.fivetran.com",
+          "uri": "",
+          "name": "testing-datalake.fivetran.com",
+          "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "https://shop.fivetran.com",
+          "uri": "https://shop.fivetran.com",
+          "name": "shop.fivetran.com",
+          "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "https://status.fivetran.com/",
+          "uri": "https://status.fivetran.com/",
+          "name": "status.fivetran.com",
+          "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "https://support.fivetran.com",
+          "uri": "https://support.fivetran.com",
+          "name": "support.fivetran.com",
+          "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "https://community-stage.fivetran.com",
+          "uri": "https://community-stage.fivetran.com",
+          "name": "community-stage.fivetran.com",
+          "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "https://trust.fivetran.com",
+          "uri": "https://trust.fivetran.com",
+          "name": "trust.fivetran.com",
+          "ipAddress": ""
+        }
       ]
     }
   },
