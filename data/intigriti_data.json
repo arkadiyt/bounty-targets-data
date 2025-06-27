@@ -7403,67 +7403,6 @@
     }
   },
   {
-    "id": "0d585f25-b705-4141-a961-66d6ade8942e",
-    "name": "SimScale",
-    "company_handle": "simscale",
-    "handle": "simscale",
-    "url": "https://www.intigriti.com/programs/simscale/simscale/detail",
-    "status": "open",
-    "confidentiality_level": "public",
-    "tacRequired": false,
-    "twoFactorRequired": false,
-    "min_bounty": {
-      "value": 250,
-      "currency": "EUR"
-    },
-    "max_bounty": {
-      "value": 6000,
-      "currency": "EUR"
-    },
-    "targets": {
-      "in_scope": [
-        {
-          "type": "other",
-          "endpoint": "SimScale API",
-          "description": "API URL: `https://api.simscale.com`\n\nThe API doc is available at https://api.simscale.com.\n\nAPI keys can be managed in the [API keys page](https://www.simscale.com/dashboard/api_keys).\n",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "other",
-          "endpoint": "SimScale Platform",
-          "description": "The following areas and paths under domain `https://www.simscale.com`:\n\n#### User registration, login, and security settings\n* [User registration](https://www.simscale.com/signup/) and following onboarding\n* [Login](https://www.simscale.com/signin/)\n* [Password reset](https://www.simscale.com/signin/forgot-password/)\n* [Change password](https://www.simscale.com/dashboard/security)\n* [API key management](https://www.simscale.com/dashboard/api_keys/)\n\n#### Dashboard with project and permission management\n* [Dashboard](https://www.simscale.com/dashboard/)\n\n#### Workbench including CAD Edit and Post-Processor\n* [Workbench](https://www.simscale.com/workbench/?pid=1765004443902609189)\n* [CAD Edit](https://www.simscale.com/workbench/?pid=1765004443902609189&geo=7b5ec32d-8304-448a-a6e2-39e7b4f25986)\n* [Post-Processor](https://www.simscale.com/workbench/?pid=1765004443902609189&rru=ea5a010d-fb77-4a47-812c-4f31e7d0b0e3&ci=a152b38a-7621-4136-a4b3-a7d53314a30f&ct=SOLUTION_FIELD&mt=SIMULATION_RESULT)\n\n#### Public project library\n* [Public projects](https://www.simscale.com/projects/)\n* [Public project page](https://www.simscale.com/projects/simscale/tutorial-_pipe_junction_flow/)\n* [Public projects by tag](https://www.simscale.com/projects/tags/staff%20pick/)\n\n#### Related API endpoints\nAll API endpoints used by the UIs listed above.\nPaths: `/api/*`, `/csm/*`, `/postprocessing/*`",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "other",
-          "endpoint": "SimScale Forum",
-          "description": "Everything below https://www.simscale.com/forum/\n\nThe SimScale forum is based on the Open-Source software Discourse. Before you create a submission about the forum please consider to also validate your findings against the Discourse demo platform at https://try.discourse.org/.",
-          "impact": "No Bounty"
-        },
-        {
-          "type": "other",
-          "endpoint": "SimScale Website",
-          "description": "Domain https://www.simscale.com and the remaining paths not listed under SimScale Platform or SimScale Forum.\n\nExamples:\n\n* [Landing page](https://www.simscale.com/)\n* [Documentation](https://www.simscale.com/docs/)\n* [Blog](https://www.simscale.com/blog/)\n",
-          "impact": "No Bounty"
-        }
-      ],
-      "out_of_scope": [
-        {
-          "type": "wildcard",
-          "endpoint": "https://www.simscale.com/api/v1/projects/*",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "www.simscale.com/forum/users/*.json",
-          "description": null,
-          "impact": "Out of scope"
-        }
-      ]
-    }
-  },
-  {
     "id": "b0de5cde-9841-464a-9d6b-642824f00dc6",
     "name": "Sixt",
     "company_handle": "sixt",
