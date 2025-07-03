@@ -3571,6 +3571,73 @@
     }
   },
   {
+    "id": "private-internet-access-bug-bounty-program",
+    "name": "Private Internet Access - Bug Bounty Program",
+    "public": true,
+    "disabled": false,
+    "managed": null,
+    "min_bounty": 50,
+    "max_bounty": 1250,
+    "targets": {
+      "in_scope": [
+        {
+          "target": "*.privateinternetaccess.com",
+          "type": "web-application"
+        },
+        {
+          "target": "*.piaservers.com",
+          "type": "web-application"
+        },
+        {
+          "target": "*.piaservers.net",
+          "type": "web-application"
+        },
+        {
+          "target": "api.privateinternetaccess.com",
+          "type": "api"
+        },
+        {
+          "target": "https://privateinternetaccess.com/api/client/v5",
+          "type": "api"
+        },
+        {
+          "target": "PIA VPN servers",
+          "type": "other"
+        },
+        {
+          "target": "https://apps.apple.com/us/app/private-internet-access-anonymous/id955626407",
+          "type": "mobile-application-ios"
+        },
+        {
+          "target": "https://play.google.com/store/apps/details?id=com.privateinternetaccess.android&hl=en",
+          "type": "mobile-application-android"
+        },
+        {
+          "target": "https://www.privateinternetaccess.com/download/linux-vpn",
+          "type": "application"
+        },
+        {
+          "target": "https://www.privateinternetaccess.com/download/mac-vpn",
+          "type": "application"
+        },
+        {
+          "target": "https://www.privateinternetaccess.com/download/windows-vpn",
+          "type": "application"
+        },
+        {
+          "target": "Applications/Extensions under https://www.privateinternetaccess.com/download",
+          "type": "application"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "target": "All domains or subdomains not listed in the above list of 'Scopes'",
+          "type": "other"
+        }
+      ]
+    }
+  },
+  {
     "id": "programmes-de-primes-aux-bogues-du-gouvernement-du-quebec-cgcd",
     "name": "Programme de prime aux bogues du Gouvernement du Québec",
     "public": true,
