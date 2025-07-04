@@ -7031,6 +7031,67 @@
     }
   },
   {
+    "id": "0d585f25-b705-4141-a961-66d6ade8942e",
+    "name": "SimScale",
+    "company_handle": "simscale",
+    "handle": "simscale",
+    "url": "https://www.intigriti.com/programs/simscale/simscale/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 250,
+      "currency": "EUR"
+    },
+    "max_bounty": {
+      "value": 6000,
+      "currency": "EUR"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "other",
+          "endpoint": "SimScale API",
+          "description": "API URL: `https://api.simscale.com`\n\nThe API doc is available at https://api.simscale.com.\n\nAPI keys can be managed in the [API keys page](https://www.simscale.com/dashboard/api_keys).\n",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "SimScale Platform",
+          "description": "The following areas and paths under domain `https://www.simscale.com`:\n\n#### User Account & Security\nIncludes all aspects of user accounts, including signup, login, password management, API keys, and session handling.\n\nPaths: `/signup/*`, `/signin/*`, `/dashboard/profile`, `/dashboard/security`, `/dashboard/api_keys`\n\n* [User registration](https://www.simscale.com/signup/) and following onboarding\n* [Login](https://www.simscale.com/signin/)\n* [Password reset](https://www.simscale.com/signin/forgot-password/)\n* [Change password](https://www.simscale.com/dashboard/security) (login required)\n* [API key management](https://www.simscale.com/dashboard/api_keys/) (login required)\n\n\n#### Dashboard \n\nCentral space for project and permission management.\n\nPaths:  `/dashboard/*`\n\n* [Dashboard](https://www.simscale.com/dashboard/) (login required).\n\n\n#### Workbench\n\nCovers the complete simulation workflow, including CAD import and editing, meshing, simulation setup and execution, and post-processing.\n\nPaths: `/workbench/*`\n\n* [Workbench](https://www.simscale.com/workbench/?pid=1765004443902609189) (login required), opens a public project in view-only mode.\n\n\n#### Public project library\n\nPaths: `/projects/*`\n\n* [Public projects](https://www.simscale.com/projects/)\n* [Detail page of a public project](https://www.simscale.com/projects/simscale/tutorial-_pipe_junction_flow/)\n\n\n#### Related API endpoints\n\nAll API endpoints used by the areas listed above.\n\nPaths: `/api/*`, `/csm/*`, `/postprocessing/*`",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "SimScale Forum",
+          "description": "Everything below https://www.simscale.com/forum/\n",
+          "impact": "No Bounty"
+        },
+        {
+          "type": "other",
+          "endpoint": "SimScale Website",
+          "description": "Domain https://www.simscale.com and the remaining paths not listed under SimScale Platform or SimScale Forum.\n\n* [Landing page](https://www.simscale.com/)\n* [Documentation](https://www.simscale.com/docs/)\n* [Blog](https://www.simscale.com/blog/)\n",
+          "impact": "No Bounty"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "wildcard",
+          "endpoint": "https://www.simscale.com/api/v1/projects/*",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "www.simscale.com/forum/users/*.json",
+          "description": null,
+          "impact": "Out of scope"
+        }
+      ]
+    }
+  },
+  {
     "id": "b0de5cde-9841-464a-9d6b-642824f00dc6",
     "name": "Sixt",
     "company_handle": "sixt",
@@ -7358,6 +7419,104 @@
           "endpoint": "www.socialdeal.nl",
           "description": "Our main website. \nwww.socialdeal.be and www.socialdeal.de are the same websites, with different Locale.\n",
           "impact": "Tier 2"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
+    "id": "18058413-5255-4f5c-a9db-c6ac027bb5d6",
+    "name": "Soundtrack Your Brand",
+    "company_handle": "syb",
+    "handle": "soundtrackyourbrand",
+    "url": "https://www.intigriti.com/programs/syb/soundtrackyourbrand/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 50,
+      "currency": "EUR"
+    },
+    "max_bounty": {
+      "value": 3500,
+      "currency": "EUR"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "ios",
+          "endpoint": "1114799709",
+          "description": "The iOS Player app that allows you to browse and play music.\n\nIn order to use the iOS Player you will need a pairing code that you can obtain through https://business.soundtrackyourbrand.com using the test credentials.\n\nhttps://www.youtube.com/watch?v=y7HGAtsB6Tg",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "ios",
+          "endpoint": "1114800186",
+          "description": "The iOS Remote that allows you to remotely control your Soundtrack Players.\n\nIn order to use the iOS Remote you will need a remote code that you can obtain through https://business.soundtrackyourbrand.com using the test credentials.\n\nhttps://www.youtube.com/watch?v=cmAe1kRvOeY",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.soundtrackyourbrand.com",
+          "description": "Our public API. Used by us as well as third parties. You can use your regular login token to authenticate.\n\nDocs: https://developer.soundtrackyourbrand.com/api\nGraphQL Explorer: https://api.soundtrackyourbrand.com/v2/explore\n\nPlease use one of the claimed test credentials. In order to use the API you can login using your claimed credentials (via loginUser) and use the token you get back to issue API calls.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "billing.api.soundtrackyourbrand.com",
+          "description": "Our billing service. Handles payments (one time and recurring), price and product management and subscription renewals.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "builds.soundtrackyourbrand.com",
+          "description": "Our service which does gradual rollout of our player software to our Windows client and hardware players.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "business.soundtrackyourbrand.com",
+          "description": "Our web based management console that allows users to administer their players, music and their account.\n\n**To claim bounties for this domain you need to use one of the claimed test credentials.**",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "android",
+          "endpoint": "com.soundtrackyourbrand.soundtrack.player",
+          "description": "The Android Player app that allows you to browse and play music.\n\nIn order to use the Android Player you will need a pairing code that you can obtain through https://business.soundtrackyourbrand.com using the test credentials.\n\nhttps://www.youtube.com/watch?v=y7HGAtsB6Tg",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://auth.api.soundtrackyourbrand.com/",
+          "description": "Our authentication service.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "other",
+          "endpoint": "https://builds.soundtrackyourbrand.com/download/WIN32SOUNDTRACK/latest",
+          "description": "The Windows Player that allows you to play music. No user interface except for a tray icon.\n\nIn order to use the Windows Player you will need a pairing code that you can obtain through https://business.soundtrackyourbrand.com using the test credentials.\n\nhttps://www.youtube.com/watch?v=HjFfXcjSEmM",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://radio.api.soundtrackyourbrand.com/",
+          "description": "Our playlisting service.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://www.soundtrackyourbrand.com",
+          "description": "Our public website.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "other",
+          "endpoint": "macOS app",
+          "description": "The macOS Player app allows you to browse and play music. You can find it in the App Store: https://apps.apple.com/se/app/soundtrack-player/id1114799709?l=en\n\nIn order to use the macOS you will need a pairing code that you can obtain through https://business.soundtrackyourbrand.com using the test credentials.\n\nhttps://www.youtube.com/watch?v=y7HGAtsB6Tg",
+          "impact": "Tier 1"
         }
       ],
       "out_of_scope": [
