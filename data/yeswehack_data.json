@@ -2085,6 +2085,41 @@
     }
   },
   {
+    "id": "gojek-bug-bounty-program",
+    "name": "GOJEK - Public Bounty Program",
+    "public": true,
+    "disabled": false,
+    "managed": null,
+    "min_bounty": 50,
+    "max_bounty": 5000,
+    "targets": {
+      "in_scope": [
+        {
+          "target": "*.gojekapi.com",
+          "type": "api"
+        },
+        {
+          "target": "https://play.google.com/store/apps/details?id=com.gojek.app",
+          "type": "mobile-application-android"
+        },
+        {
+          "target": "https://apps.apple.com/id/app/gojek/id944875099",
+          "type": "mobile-application-ios"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "target": "Any staging environment will be out of scope (staging domain could be indicated by words like test/integration/staging, etc)",
+          "type": "other"
+        },
+        {
+          "target": "All other Goto assets not listed above are to be considered as out of scope",
+          "type": "other"
+        }
+      ]
+    }
+  },
+  {
     "id": "grw-trading-fze-bug-bounty-program",
     "name": "GRW Trading FZE - Open Bug Bounty Program",
     "public": true,
@@ -2110,6 +2145,41 @@
       "out_of_scope": [
         {
           "target": "All domains or subdomains not listed in the above list of 'Scopes'",
+          "type": "other"
+        }
+      ]
+    }
+  },
+  {
+    "id": "goto-financial-public-bounty-program",
+    "name": "GoTo Financial - Public Bounty Program",
+    "public": true,
+    "disabled": false,
+    "managed": null,
+    "min_bounty": 50,
+    "max_bounty": 7000,
+    "targets": {
+      "in_scope": [
+        {
+          "target": "https://apps.apple.com/id/app/gopay-transfer-pulsa-bills/id6446321594",
+          "type": "mobile-application-ios"
+        },
+        {
+          "target": "https://play.google.com/store/apps/details?id=com.gojek.gopay&hl=id",
+          "type": "mobile-application-android"
+        },
+        {
+          "target": "*.gopayapi.com",
+          "type": "web-application"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "target": "- Any staging environment will be out of scope (staging domain could be indicated by words like test/integration/staging, etc)",
+          "type": "other"
+        },
+        {
+          "target": "- All other Goto Financial assets not listed above are to be considered as out of scope",
           "type": "other"
         }
       ]
