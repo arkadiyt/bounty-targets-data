@@ -153,6 +153,68 @@
     }
   },
   {
+    "id": "ac81c127-b11b-469e-8060-e0fbb9c9c398",
+    "name": "Aikido Security: Zen by Aikido ",
+    "company_handle": "aikido",
+    "handle": "aikidoruntime",
+    "url": "https://www.intigriti.com/programs/aikido/aikidoruntime/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 100,
+      "currency": "EUR"
+    },
+    "max_bounty": {
+      "value": 3500,
+      "currency": "EUR"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "other",
+          "endpoint": "https://github.com/AikidoSec/firewall-node#Vulnerability",
+          "description": "Tier 1 is for vulnerabilities which we potentially introduce via our own firewall component in the user's application.\n\nSee Severity Assessment for more information.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "other",
+          "endpoint": "https://github.com/AikidoSec/firewall-python#Vulnerability",
+          "description": null,
+          "impact": "Tier 1"
+        },
+        {
+          "type": "other",
+          "endpoint": "https://github.com/AikidoSec/firewall-node#Detection Bypass",
+          "description": "Tier 2 is for bypasses in the vulnerability detection of the firewall component, such as a bypass of our SQL injection detection.\n\nSee Severity Assessment for more information.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "https://github.com/AikidoSec/firewall-python#Detection Bypass",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "https://github.com/AikidoSec/firewall-node#False Positive",
+          "description": "Tier 3 is for any false positives you encounter with our vulnerability detection. For example, cases where we falsely flag a SQL injection, while the user's input is safely encapsulated in the SQL query.\n\nSeverity assessments are slightly harder for these cases, see \"Severity Assessment\" for more information.",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "other",
+          "endpoint": "https://github.com/AikidoSec/firewall-python#False Positive",
+          "description": null,
+          "impact": "Tier 3"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
     "id": "30f445f7-ca4c-4130-9434-49add5c6ac74",
     "name": "Algemeen Dagblad",
     "company_handle": "dpgm",
@@ -6684,91 +6746,6 @@
           "type": "url",
           "endpoint": "view.e.rivian.com",
           "description": null,
-          "impact": "Out of scope"
-        }
-      ]
-    }
-  },
-  {
-    "id": "d0ff1339-f0c4-4733-a648-1b06b79125e6",
-    "name": "Robinhood Bug Bounty Program",
-    "company_handle": "robinhood",
-    "handle": "robinhoodbbp",
-    "url": "https://www.intigriti.com/programs/robinhood/robinhoodbbp/detail",
-    "status": "open",
-    "confidentiality_level": "public",
-    "tacRequired": false,
-    "twoFactorRequired": false,
-    "min_bounty": {
-      "value": 100,
-      "currency": "USD"
-    },
-    "max_bounty": {
-      "value": 50000,
-      "currency": "USD"
-    },
-    "targets": {
-      "in_scope": [
-        {
-          "type": "wildcard",
-          "endpoint": "*.rhinternal.net",
-          "description": null,
-          "impact": "Tier 1"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.robinhood.com",
-          "description": null,
-          "impact": "Tier 1"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.robinhood.net",
-          "description": "robinhood.net contains internal Robinhood services. You shouldn’t be able to log into anything here.",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "ios",
-          "endpoint": "1634080733",
-          "description": null,
-          "impact": "Tier 1"
-        },
-        {
-          "type": "ios",
-          "endpoint": "6462308655",
-          "description": null,
-          "impact": "Tier 1"
-        },
-        {
-          "type": "ios",
-          "endpoint": "938003185",
-          "description": null,
-          "impact": "Tier 1"
-        },
-        {
-          "type": "android",
-          "endpoint": "com.robinhood.android",
-          "description": null,
-          "impact": "Tier 1"
-        },
-        {
-          "type": "android",
-          "endpoint": "com.robinhood.gateway",
-          "description": null,
-          "impact": "Tier 1"
-        },
-        {
-          "type": "android",
-          "endpoint": "com.robinhood.money",
-          "description": null,
-          "impact": "Tier 1"
-        }
-      ],
-      "out_of_scope": [
-        {
-          "type": "url",
-          "endpoint": "shop.robinhood.com",
-          "description": "Report findings to Brilliant Made (https://www.brilliantmade.com/)",
           "impact": "Out of scope"
         }
       ]
