@@ -5718,12 +5718,6 @@
         },
         {
           "type": "ios",
-          "endpoint": "1584170510",
-          "description": null,
-          "impact": "No Bounty"
-        },
-        {
-          "type": "ios",
           "endpoint": "1616009566",
           "description": null,
           "impact": "No Bounty"
@@ -5754,12 +5748,6 @@
         },
         {
           "type": "android",
-          "endpoint": "com.loyaltyworks.wavinapp",
-          "description": null,
-          "impact": "No Bounty"
-        },
-        {
-          "type": "android",
           "endpoint": "com.RD3Digital.AmancoWavinRA",
           "description": null,
           "impact": "No Bounty"
@@ -5772,6 +5760,18 @@
         }
       ],
       "out_of_scope": [
+        {
+          "type": "ios",
+          "endpoint": "1584170510",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "android",
+          "endpoint": "com.loyaltyworks.wavinapp",
+          "description": null,
+          "impact": "Out of scope"
+        },
         {
           "type": "wildcard",
           "endpoint": "*.vectus.in",
@@ -8670,18 +8670,6 @@
       "in_scope": [
         {
           "type": "url",
-          "endpoint": "wp5-truststroke.uzleuven.be",
-          "description": "* access to /api/ should only work from BE or NL ip's\n* access to other paths or / should not work",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "iprange",
-          "endpoint": "134.58.179.102-103",
-          "description": null,
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
           "endpoint": "autodiscover.uzleuven.be",
           "description": null,
           "impact": "Tier 1"
@@ -8747,15 +8735,21 @@
           "impact": "Tier 1"
         },
         {
-          "type": "url",
-          "endpoint": "dns1.uzleuven.be",
-          "description": null,
+          "type": "iprange",
+          "endpoint": "193.58.149.121,193.58.149.98,193.58.149.82,193.58.149.101,193.58.149.107,193.58.149.108,193.58.149.111",
+          "description": "These are the ip's used by our reverse proxy.\nThe Host header will determine the bounty tier.\nIf a report is submitted where the Host header is not used we will default to Tier 2. ",
           "impact": "Tier 2"
         },
         {
           "type": "url",
-          "endpoint": "dns2.uzleuven.be",
-          "description": null,
+          "endpoint": "wp5-truststroke.uzleuven.be",
+          "description": "* access to /api/ should only work from BE or NL ip's\n* access to other paths or / should not work",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "cardsonline.azdiest.be",
+          "description": "This webapp should return a http 403 error due to ip whitelisting.",
           "impact": "Tier 2"
         },
         {
@@ -8778,15 +8772,15 @@
         },
         {
           "type": "url",
-          "endpoint": "uzlcm12cmg1.uzleuven.be",
+          "endpoint": "w1.uzleuven.be",
           "description": null,
           "impact": "Tier 2"
         },
         {
           "type": "url",
-          "endpoint": "w1.uzleuven.be",
-          "description": null,
-          "impact": "Tier 2"
+          "endpoint": "cardsonlinetst.azdiest.be",
+          "description": "This webapp should return a http 403 error due to ip whitelisting.",
+          "impact": "Tier 3"
         },
         {
           "type": "wildcard",
