@@ -16802,98 +16802,6 @@
     }
   },
   {
-    "name": "OpenAI",
-    "url": "https://bugcrowd.com/engagements/openai",
-    "allows_disclosure": true,
-    "managed_by_bugcrowd": true,
-    "safe_harbor": "partial",
-    "max_payout": 6500,
-    "targets": {
-      "in_scope": [
-        {
-          "type": "api",
-          "target": "https://api.openai.com",
-          "uri": "https://api.openai.com",
-          "name": "api.openai.com",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "https://chat.openai.com",
-          "uri": "https://chat.openai.com",
-          "name": "ChatGPT",
-          "ipAddress": ""
-        },
-        {
-          "type": "api",
-          "target": "https://chat.openai.com",
-          "uri": "https://chat.openai.com",
-          "name": "ChatGPT Plugins",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "Third Party Targets",
-          "uri": "",
-          "name": "Third Party Targets",
-          "ipAddress": ""
-        },
-        {
-          "type": "api",
-          "target": "OpenAI API Keys",
-          "uri": "",
-          "name": "OpenAI API Keys",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "https://*.openai.org",
-          "uri": "https://*.openai.org",
-          "name": "https://openai.org",
-          "ipAddress": ""
-        },
-        {
-          "type": "api",
-          "target": "https://*.openai.org",
-          "uri": "https://*.openai.org",
-          "name": "*.openai.org",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "https://openai.com/",
-          "uri": "https://openai.com/",
-          "name": "openai.com",
-          "ipAddress": null
-        },
-        {
-          "type": "other",
-          "target": "*.openai.com",
-          "uri": "",
-          "name": "*.openai.com",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "https://platform.openai.com/playground",
-          "uri": "https://platform.openai.com/playground",
-          "name": "Developer Platform Playground",
-          "ipAddress": null
-        },
-        {
-          "type": "other",
-          "target": "Other",
-          "uri": "",
-          "name": "Other",
-          "ipAddress": ""
-        }
-      ],
-      "out_of_scope": [
-
-      ]
-    }
-  },
-  {
     "name": "OpenSea Managed Bug Bounty Program",
     "url": "https://bugcrowd.com/engagements/opensea",
     "allows_disclosure": false,
@@ -21255,6 +21163,91 @@
           "uri": "https://auth.seek.com",
           "name": "auth.seek.com",
           "ipAddress": null
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
+    "name": "Sendbird",
+    "url": "https://bugcrowd.com/engagements/sendbird-mbb",
+    "allows_disclosure": true,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "full",
+    "max_payout": 2000,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "website",
+          "target": "https://dashboard.sendbird.com/",
+          "uri": "https://dashboard.sendbird.com/",
+          "name": "https://dashboard.sendbird.com",
+          "ipAddress": null
+        },
+        {
+          "type": "api",
+          "target": "https://gate.sendbird.com",
+          "uri": "",
+          "name": "https://gate.sendbird.com",
+          "ipAddress": null
+        },
+        {
+          "type": "api",
+          "target": "https://api-{app-id}.sendbird.com",
+          "uri": "",
+          "name": "https://api-{app-id}.sendbird.com",
+          "ipAddress": null
+        },
+        {
+          "type": "api",
+          "target": "https://ws-{app-id}.sendbird.com",
+          "uri": "",
+          "name": "https://ws-{app-id}.sendbird.com",
+          "ipAddress": null
+        },
+        {
+          "type": "api",
+          "target": "https://desk-api-{region}.sendbird.com",
+          "uri": "",
+          "name": "https://desk-api-{region}.sendbird.com",
+          "ipAddress": null
+        },
+        {
+          "type": "api",
+          "target": "https://ws-{app-id}.calls.sendbird.com",
+          "uri": "",
+          "name": "https://ws-{app-id}.calls.sendbird.com",
+          "ipAddress": null
+        },
+        {
+          "type": "api",
+          "target": "https://api-{app-id}.calls.sendbird.com",
+          "uri": "",
+          "name": "https://api-{app-id}.calls.sendbird.com",
+          "ipAddress": null
+        },
+        {
+          "type": "api",
+          "target": "https://api-{app-id}.notifications.sendbird.com",
+          "uri": "",
+          "name": "https://api-{app-id}.notifications.sendbird.com",
+          "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "https://sendbird.com/docs",
+          "uri": "https://sendbird.com/docs",
+          "name": "https://sendbird.com/docs",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "https://sendbird.com",
+          "uri": "https://sendbird.com",
+          "name": "https://sendbird.com",
+          "ipAddress": ""
         }
       ],
       "out_of_scope": [
