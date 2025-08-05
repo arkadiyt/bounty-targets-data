@@ -2323,68 +2323,6 @@
     }
   },
   {
-    "id": "618bdc2f-9207-47cc-8c5c-71b734900359",
-    "name": "De Lijn",
-    "company_handle": "delijn",
-    "handle": "delijn",
-    "url": "https://www.intigriti.com/programs/delijn/delijn/detail",
-    "status": "open",
-    "confidentiality_level": "public",
-    "tacRequired": false,
-    "twoFactorRequired": false,
-    "min_bounty": {
-      "value": 0,
-      "currency": "EUR"
-    },
-    "max_bounty": {
-      "value": 0,
-      "currency": "EUR"
-    },
-    "targets": {
-      "in_scope": [
-        {
-          "type": "ios",
-          "endpoint": "456910787",
-          "description": null,
-          "impact": "No Bounty"
-        },
-        {
-          "type": "url",
-          "endpoint": "accept.delijn.be",
-          "description": null,
-          "impact": "No Bounty"
-        },
-        {
-          "type": "url",
-          "endpoint": "api-a.delijn.be",
-          "description": null,
-          "impact": "No Bounty"
-        },
-        {
-          "type": "url",
-          "endpoint": "api.delijn.be",
-          "description": null,
-          "impact": "No Bounty"
-        },
-        {
-          "type": "android",
-          "endpoint": "com.themobilecompany.delijn",
-          "description": null,
-          "impact": "No Bounty"
-        },
-        {
-          "type": "url",
-          "endpoint": "www.delijn.be",
-          "description": null,
-          "impact": "No Bounty"
-        }
-      ],
-      "out_of_scope": [
-
-      ]
-    }
-  },
-  {
     "id": "8bf1f259-cac9-4114-9b84-3b950897b1ec",
     "name": "De Morgen",
     "company_handle": "dpgm",
@@ -6101,6 +6039,85 @@
         {
           "type": "wildcard",
           "endpoint": "*.vectus.in",
+          "description": null,
+          "impact": "Out of scope"
+        }
+      ]
+    }
+  },
+  {
+    "id": "64f80113-969e-4c55-9649-8a044487941c",
+    "name": "PDQ bug bounty program",
+    "company_handle": "pdq",
+    "handle": "pdqcomprivate",
+    "url": "https://www.intigriti.com/programs/pdq/pdqcomprivate/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 50,
+      "currency": "EUR"
+    },
+    "max_bounty": {
+      "value": 3500,
+      "currency": "EUR"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "url",
+          "endpoint": "https://a.simplemdm.com/",
+          "description": "Production environment for SimpleMDM — please take care not to disrupt any services when testing",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://auth2.pdq.tools/ ",
+          "description": "Test environment for our authentication tool",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://library-staging.pdq.tools/ ",
+          "description": "Test environment for our Package Library",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://detect.pdq.tools/ ",
+          "description": "Test environment for PDQ Detect",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://houston-staging.pdq.tools",
+          "description": "Test environment for PDQ Connect",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://portal-staging.pdq.tools/ ",
+          "description": "Test environment for our billing portal",
+          "impact": "Tier 3"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "wildcard",
+          "endpoint": "https://*.pdq.com/",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "https://*.simplemdm.com/ ",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "https://*.smartdeploy.com/ ",
           "description": null,
           "impact": "Out of scope"
         }
