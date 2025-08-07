@@ -153,68 +153,6 @@
     }
   },
   {
-    "id": "ac81c127-b11b-469e-8060-e0fbb9c9c398",
-    "name": "Aikido Security: Zen by Aikido ",
-    "company_handle": "aikido",
-    "handle": "aikidoruntime",
-    "url": "https://www.intigriti.com/programs/aikido/aikidoruntime/detail",
-    "status": "open",
-    "confidentiality_level": "public",
-    "tacRequired": false,
-    "twoFactorRequired": false,
-    "min_bounty": {
-      "value": 100,
-      "currency": "EUR"
-    },
-    "max_bounty": {
-      "value": 3500,
-      "currency": "EUR"
-    },
-    "targets": {
-      "in_scope": [
-        {
-          "type": "other",
-          "endpoint": "https://github.com/AikidoSec/firewall-node#Vulnerability",
-          "description": "Tier 1 is for vulnerabilities which we potentially introduce via our own firewall component in the user's application.\n\nSee Severity Assessment for more information.",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "other",
-          "endpoint": "https://github.com/AikidoSec/firewall-python#Vulnerability",
-          "description": null,
-          "impact": "Tier 1"
-        },
-        {
-          "type": "other",
-          "endpoint": "https://github.com/AikidoSec/firewall-node#Detection Bypass",
-          "description": "Tier 2 is for bypasses in the vulnerability detection of the firewall component, such as a bypass of our SQL injection detection.\n\nSee Severity Assessment for more information.",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "other",
-          "endpoint": "https://github.com/AikidoSec/firewall-python#Detection Bypass",
-          "description": null,
-          "impact": "Tier 2"
-        },
-        {
-          "type": "other",
-          "endpoint": "https://github.com/AikidoSec/firewall-node#False Positive",
-          "description": "Tier 3 is for any false positives you encounter with our vulnerability detection. For example, cases where we falsely flag a SQL injection, while the user's input is safely encapsulated in the SQL query.\n\nSeverity assessments are slightly harder for these cases, see \"Severity Assessment\" for more information.",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "other",
-          "endpoint": "https://github.com/AikidoSec/firewall-python#False Positive",
-          "description": null,
-          "impact": "Tier 3"
-        }
-      ],
-      "out_of_scope": [
-
-      ]
-    }
-  },
-  {
     "id": "30f445f7-ca4c-4130-9434-49add5c6ac74",
     "name": "Algemeen Dagblad",
     "company_handle": "dpgm",
@@ -4832,6 +4770,109 @@
     }
   },
   {
+    "id": "23f5d877-7948-4740-830c-393e66753fc4",
+    "name": "Monzo Public Bug Bounty Program",
+    "company_handle": "monzobank",
+    "handle": "monzopublicbugbountyprogram",
+    "url": "https://www.intigriti.com/programs/monzobank/monzopublicbugbountyprogram/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 50,
+      "currency": "GBP"
+    },
+    "max_bounty": {
+      "value": 12500,
+      "currency": "GBP"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "wildcard",
+          "endpoint": "*.monzo.com",
+          "description": "The crux of Monzo where the APIs live as well as Monzo Business. Excludes the main website (like `monzo.com`/`www.monzo.com`).",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.prod-ffs.io",
+          "description": "Where our internet-facing services are accessed",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "ios",
+          "endpoint": "1052238659",
+          "description": "The public seed of the Monzo app on iOS",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "android",
+          "endpoint": "co.uk.getmondo",
+          "description": "The public seed of the Monzo app on Android",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.monzo.com",
+          "description": null,
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "monzo.com",
+          "description": null,
+          "impact": "Tier 3"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "wildcard",
+          "endpoint": "*/p2p/*",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*/contact-discovery/*",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*/inbound-p2p/*",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.monzo.me",
+          "description": "Houses the services for the pay me/request payment feature",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "community.monzo.com",
+          "description": "We use a third-party, Discourse for our community forums. Third-parties are out of scope for our programs.",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "login.internal.monzo.com",
+          "description": "This is our connection to Okta for internal authentication. Third-parties are out of scope for our programs. ",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "monzo.me",
+          "description": "Monzo.me is a service that allows Monzo users to easily receive money from others via a personalised link, even if the sender doesn't have a Monzo account.",
+          "impact": "Out of scope"
+        }
+      ]
+    }
+  },
+  {
     "id": "56339d19-36cc-49a0-8e8f-b2502e00d165",
     "name": "Moralis VDP",
     "company_handle": "moralis",
@@ -7410,6 +7451,67 @@
       ],
       "out_of_scope": [
 
+      ]
+    }
+  },
+  {
+    "id": "0d585f25-b705-4141-a961-66d6ade8942e",
+    "name": "SimScale",
+    "company_handle": "simscale",
+    "handle": "simscale",
+    "url": "https://www.intigriti.com/programs/simscale/simscale/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 250,
+      "currency": "EUR"
+    },
+    "max_bounty": {
+      "value": 6000,
+      "currency": "EUR"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "other",
+          "endpoint": "SimScale API",
+          "description": "API URL: `https://api.simscale.com`\n\nThe API doc is available at https://api.simscale.com.\n\nAPI keys can be managed in the [API keys page](https://www.simscale.com/dashboard/api_keys).\n",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "SimScale Platform",
+          "description": "The following areas and paths under domain `https://www.simscale.com`:\n\n#### User Account & Security\nIncludes all aspects of user accounts, including signup, login, password management, API keys, and session handling.\n\nPaths: `/signup/*`, `/signin/*`, `/dashboard/profile`, `/dashboard/security`, `/dashboard/api_keys`\n\n* [User registration](https://www.simscale.com/signup/) and following onboarding\n* [Login](https://www.simscale.com/signin/)\n* [Password reset](https://www.simscale.com/signin/forgot-password/)\n* [Change password](https://www.simscale.com/dashboard/security) (login required)\n* [API key management](https://www.simscale.com/dashboard/api_keys/) (login required)\n\n\n#### Dashboard \n\nCentral space for project and permission management.\n\nPaths:  `/dashboard/*`\n\n* [Dashboard](https://www.simscale.com/dashboard/) (login required).\n\n\n#### Workbench\n\nCovers the complete simulation workflow, including CAD import and editing, meshing, simulation setup and execution, and post-processing.\n\nPaths: `/workbench/*`\n\n* [Workbench](https://www.simscale.com/workbench/?pid=1765004443902609189) (login required), opens a public project in view-only mode.\n\n\n#### Public project library\n\nPaths: `/projects/*`\n\n* [Public projects](https://www.simscale.com/projects/)\n* [Detail page of a public project](https://www.simscale.com/projects/simscale/tutorial-_pipe_junction_flow/)\n\n\n#### Related API endpoints\n\nAll API endpoints used by the areas listed above.\n\nPaths: `/api/*`, `/csm/*`, `/postprocessing/*`",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "SimScale Forum",
+          "description": "Everything below https://www.simscale.com/forum/\n",
+          "impact": "No Bounty"
+        },
+        {
+          "type": "other",
+          "endpoint": "SimScale Website",
+          "description": "Domain https://www.simscale.com and the remaining paths not listed under SimScale Platform or SimScale Forum.\n\n* [Landing page](https://www.simscale.com/)\n* [Documentation](https://www.simscale.com/docs/)\n* [Blog](https://www.simscale.com/blog/)\n",
+          "impact": "No Bounty"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "wildcard",
+          "endpoint": "https://www.simscale.com/api/v1/projects/*",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "www.simscale.com/forum/users/*.json",
+          "description": null,
+          "impact": "Out of scope"
+        }
       ]
     }
   },
