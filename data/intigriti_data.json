@@ -2775,6 +2775,229 @@
     }
   },
   {
+    "id": "e540980d-b56e-4956-afff-f914653a4f6e",
+    "name": "Dropbox Bug Bounty",
+    "company_handle": "dropbox",
+    "handle": "dropbox",
+    "url": "https://www.intigriti.com/programs/dropbox/dropbox/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 100,
+      "currency": "USD"
+    },
+    "max_bounty": {
+      "value": 15000,
+      "currency": "USD"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "url",
+          "endpoint": "Dropbox.com",
+          "description": "Dropbox Application",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "sign.dropbox.com",
+          "description": "Sign by Dropbox (formerly HelloSign)",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "HelloSign.com",
+          "description": "HelloSign (now Dropbox Sign)",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "dash.ai",
+          "description": "Web Browser Extension",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "other",
+          "endpoint": "dash.dropbox.com",
+          "description": "Dash by Dropbox MacOS and PC",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.dropbox.com",
+          "description": "Dropbox Public API",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "replay.dropbox.com",
+          "description": "Replay by Dropbox",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "other",
+          "endpoint": "Dropbox Desktop Application",
+          "description": "Dropbox for MacOS and PC ",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "ios",
+          "endpoint": "327630330",
+          "description": "Dropbox iOS Application",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "ios",
+          "endpoint": "6450553960",
+          "description": "Dash by Dropbox iOS Application",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "ios",
+          "endpoint": "1080074001",
+          "description": "Dropbox EMM iOS Application",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "android",
+          "endpoint": "com.dropbox.dash",
+          "description": "Dash by Dropbox Android Application",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "android",
+          "endpoint": "com.dropbox.android",
+          "description": "Dropbox Android Application",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "HelloFax.com",
+          "description": "HelloFax Web Application",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "docsend.com",
+          "description": "Docsend Web Application",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "app.Reclaim.ai",
+          "description": "Reclaim.ai Web Application",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "dropbox.com/paper",
+          "description": "Paper by Dropbox Application",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.dropbox.com",
+          "description": null,
+          "impact": "Tier 3"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.dropboxer.net",
+          "description": null,
+          "impact": "Tier 3"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.dropboxforum.com",
+          "description": null,
+          "impact": "Tier 3"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.dropboxpartners.com",
+          "description": null,
+          "impact": "Tier 3"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.hellofax.com",
+          "description": null,
+          "impact": "Tier 3"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.docsend.com",
+          "description": null,
+          "impact": "Tier 3"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.reclaim.ai",
+          "description": null,
+          "impact": "Tier 3"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.helloworks.com",
+          "description": null,
+          "impact": "Tier 3"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.hellosign.com",
+          "description": null,
+          "impact": "Tier 3"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "other",
+          "endpoint": "Boxcryptor",
+          "description": "Including: \n\n*.boxcryptor.com",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "other",
+          "endpoint": "Formswift",
+          "description": "Including:\n\n*.formswift.com",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "other",
+          "endpoint": "Dropbox Passwords",
+          "description": "Including:\n\niOS and Android Applications",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "other",
+          "endpoint": "Dropbox Capture Windows Desktop App",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "other",
+          "endpoint": "Dropbox Capture macOS Desktop App",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "android",
+          "endpoint": "com.dropbox.paper",
+          "description": "Paper by Dropbox Android Application",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "ios",
+          "endpoint": "1126623662",
+          "description": "Paper by Dropbox iOS Application",
+          "impact": "Out of scope"
+        }
+      ]
+    }
+  },
+  {
     "id": "b31aef04-c63f-429f-b965-f92c94e5eec3",
     "name": "Dropbox Vulnerability Disclosure Program ",
     "company_handle": "dropbox",
@@ -4521,6 +4744,139 @@
       ],
       "out_of_scope": [
 
+      ]
+    }
+  },
+  {
+    "id": "0fd1d85b-2d33-4966-b5a0-caabfda5108e",
+    "name": "Ninja Kiwi Games Bug Bounty program",
+    "company_handle": "ninjakiwigames",
+    "handle": "ninjakiwigames",
+    "url": "https://www.intigriti.com/programs/ninjakiwigames/ninjakiwigames/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 75,
+      "currency": "EUR"
+    },
+    "max_bounty": {
+      "value": 4125,
+      "currency": "EUR"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "url",
+          "endpoint": "analytics.ninjakiwi.com",
+          "description": "This domain hosts the API that consumed analytics events from our game clients\n",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.ninjakiwi.com",
+          "description": "This domain hosts the API for our mobile and PC games. Monitoring traffic through one of our game clients is the easiest method to investigate our main API. Most of our applications are available for free on [Steam](https://store.steampowered.com/developer/ninjakiwigames/#browse). Please carefully read the in-scope section regarding what sorts of exploits will be considering in-scope for this domain. \n",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "guts.ninjakiwi.com",
+          "description": "This is the backend services for certain BTD6 in-game features such as Contested Territories and the Map Creator.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.ninjakiwi.me",
+          "description": "ninjakiwi.me is a domain which hosts many of Ninja Kiwi's employtee only services. Any subdomain is eligible for the program. ",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.nkstatic.com",
+          "description": "This domain hosts static content for Ninja Kiwi games and website.\n",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "battles.tv",
+          "description": "Battles.tv is used to share replays from our Bloons TD Battles game.\n",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "data.ninjakiwi.com",
+          "description": "This domain hosts our **public** data API which grants open access to in-game data from our biggest games. For example player profiles, leaderboards and event information is available through this domain. ",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "ninja.kiwi",
+          "description": "This domain is used by Ninja Kiwi for our URL shortener service, ie https://ninja.kiwi/intigriti. \n",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "ninjakiwi.com",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "alerts.ninjakiwi.com",
+          "description": null,
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "boomer2.ninjakiwi.com",
+          "description": null,
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "ct.ninjakiwi.com",
+          "description": null,
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "mynk-dash.ninjakiwi.com",
+          "description": null,
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "mynk.ninjakiwi.com",
+          "description": "This is a legacy domain which powers our Flash games. Uses Flash AMF. \n",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.souparea.com",
+          "description": "This domain will be considered out of scope unless it can be shown to allow an exploit on one of our Tier 1-3 domains.\n\n",
+          "impact": "No Bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "rancher.ninjakiwi.me",
+          "description": null,
+          "impact": "No Bounty"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "url",
+          "endpoint": "store.ninjakiwi.com",
+          "description": "If you've found an issue with this domain you can contact Shopify here - https://www.shopify.com/bugbounty",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "support.ninjakiwi.com",
+          "description": "If you've found an issue with this domain you can contact Zendesk here - https://support.zendesk.com/hc/en-us/articles/4409154830874-Zendesk-Bug-Bounty-Program",
+          "impact": "Out of scope"
+        }
       ]
     }
   },
@@ -8917,7 +9273,7 @@
         {
           "type": "url",
           "endpoint": "app.workbox.dk",
-          "description": "**Dinero**\nDinero is an accounting software for sole traders and micro businesses based out of Denmark. Our only target group is danish companies and therefore the interface is in danish only. The application is a SaaS application hosted in the cloud and consists of a main application and a number of supportive microservices.\n\nSee the getting started document here: https://vismabugbountyprod.z16.web.core.windows.net/VismaDinero-37UeRwujIXh7r9n3Wol6-getting-started.pdf\n\n**Out of scope:**\n* Issues related to login /user creation / forgot-password and /profile page\n* The Cookie \".AspNet.Cookies\" is not set with HttpOnly which is a known vulnerability - please do not report it.\n* Session invalidation issues (e.g. logout, password change, email change, role change, user deletion, etc).\n* Getting access to Pro features as Free user.\n* cvrservice.workbox.dk, this endpoint is used for searches of publicly available data\n\n",
+          "description": "**Dinero**\nDinero is an accounting software for sole traders and micro businesses based out of Denmark. Our only target group is danish companies and therefore the interface is in danish only. The application is a SaaS application hosted in the cloud and consists of a main application and a number of supportive microservices.\n\nSee the getting started document here: https://vismabugbountyprod.z16.web.core.windows.net/VismaDinero-37UeRwujIXh7r9n3Wol6-getting-started.pdf\n\n**Out of scope:**\n* Issues related to login /user creation / forgot-password and /profile page\n* The Cookie \".AspNet.Cookies\" is not set with HttpOnly which is a known vulnerability - please do not report it.\n* Session invalidation issues (e.g. logout, password change, email change, role change, user deletion, etc).\n* Getting access to Pro features as Free user.\n* Rate-limiting issues (accepted risk)\n* cvrservice.workbox.dk, this endpoint is used for searches of publicly available data\n\n",
           "impact": "Tier 2"
         },
         {
