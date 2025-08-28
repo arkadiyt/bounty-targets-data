@@ -8717,8 +8717,26 @@
         },
         {
           "type": "url",
+          "endpoint": "api.mtls.truelayer[-sandbox].com",
+          "description": "The same API as `api.truelayer[-sandbox].com` but with mutual TLS setup",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
           "endpoint": "auth.truelayer[-sandbox].com",
           "description": "Our service for getting OAuth access tokens to access our APIs",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "auth.mtls.truelayer[-sandbox].com",
+          "description": "The same service as `auth.truelayer[-sandbox].com` but with mutual TLS setup",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "app.truelayer[-sandbox].com",
+          "description": "Hosted Payments Page v2",
           "impact": "Tier 1"
         },
         {
@@ -8765,8 +8783,14 @@
         },
         {
           "type": "url",
-          "endpoint": "payouts.truelayer[-sandbox].com",
-          "description": "Our Payouts API",
+          "endpoint": "payments-experience-api.truelayer[-sandbox].com",
+          "description": "Hosted Payments Page dependency (e.g. for handoff)",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "user-authentication-api.truelayer[-sandbox].com",
+          "description": "Remember Me functionality for payments. See https://truelayer.com/legal/enduser_tos/#save-my-details-remember-me ",
           "impact": "Tier 1"
         },
         {
@@ -8795,8 +8819,8 @@
         },
         {
           "type": "url",
-          "endpoint": "hpp.truelayer[-sandbox].com",
-          "description": null,
+          "endpoint": "sftp.reports.truelayer.com",
+          "description": "SFTP reporting functionality in the Console. See https://docs.truelayer.com/docs/sftp-in-console",
           "impact": "Tier 2"
         },
         {
@@ -8821,6 +8845,18 @@
           "type": "other",
           "endpoint": "TrueLayer for WooCommerce (WordPress plugin)",
           "description": "https://wordpress.org/plugins/truelayer-for-woocommerce/ is our WordPress plugin allowing you to use TrueLayer as a checkout option in your WooCommerce store. The source code is also [available on GitHub](https://github.com/TrueLayer/truelayer-woocommerce).",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "shopify-admin.truelayer.com",
+          "description": "Shopify Plugin backend admin page. See https://docs.truelayer.com/docs/shopify",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "shop-pay-app-api.truelayer.com",
+          "description": "Shopify Plugin backend API. See https://docs.truelayer.com/docs/shopify",
           "impact": "Tier 2"
         },
         {
@@ -8899,6 +8935,12 @@
         },
         {
           "type": "url",
+          "endpoint": "docs.houston.truelayer.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
           "endpoint": "https://truelayer.com/contact/",
           "description": null,
           "impact": "Out of scope"
@@ -8917,25 +8959,19 @@
         },
         {
           "type": "url",
-          "endpoint": "ok.truelayer.com",
-          "description": "This is a third party service, any issues should be reported to them. If you can demonstrate a high impact issue relating to this asset then please still contact us.",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
           "endpoint": "signin.truelayer.com",
           "description": null,
           "impact": "Out of scope"
         },
         {
           "type": "url",
-          "endpoint": "statuspage.truelayer.com",
+          "endpoint": "support.truelayer.com",
           "description": null,
           "impact": "Out of scope"
         },
         {
           "type": "url",
-          "endpoint": "support.truelayer.com",
+          "endpoint": "status.truelayer.com",
           "description": null,
           "impact": "Out of scope"
         },
