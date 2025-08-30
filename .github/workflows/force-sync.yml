@@ -1,0 +1,36 @@
+name: Force Sync Fork
+
+on:
+  schedule:
+    - cron: '0 0 * * *'   # every day at midnight UTC
+  workflow_dispatch:       # manual trigger from Actions tab
+
+jobs:
+  force-sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the sync-bot branch
+        uses: actions/checkout@v3
+        with:
+          ref: sync-bot
+          persist-credentials: false
+
+      - name: Setup Git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Add upstream remote
+        run: git remote add upstream https://github.com/arkadiyt/bounty-targets-data.git
+
+      - name: Fetch upstream
+        run: git fetch upstream
+
+      - name: Reset fork’s main to upstream
+        run: |
+          git checkout main || git checkout -b main
+          git reset --hard upstream/main
+
+      - name: Push changes to fork main
+        run: |
+          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git main --force
