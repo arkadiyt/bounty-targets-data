@@ -116,6 +116,43 @@
     }
   },
   {
+    "id": "554fc6c5-4ffa-4682-a3ba-7e86696e9b17",
+    "name": "Aikido Security: Bug Bounty Program",
+    "company_handle": "aikido",
+    "handle": "aikido",
+    "url": "https://www.intigriti.com/programs/aikido/aikido/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 50,
+      "currency": "EUR"
+    },
+    "max_bounty": {
+      "value": 2500,
+      "currency": "EUR"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "url",
+          "endpoint": "app.aikido.dev",
+          "description": "This is our main application, which hosts the API as well as the front-end application.\n\nOur public API is also accessible via this host. Documentation is available here: https://apidocs.aikido.dev/.",
+          "impact": "Tier 2"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "wildcard",
+          "endpoint": "*.aikido.dev",
+          "description": null,
+          "impact": "Out of scope"
+        }
+      ]
+    }
+  },
+  {
     "id": "30f445f7-ca4c-4130-9434-49add5c6ac74",
     "name": "Algemeen Dagblad",
     "company_handle": "dpgm",
@@ -1873,38 +1910,6 @@
     }
   },
   {
-    "id": "4981522f-5675-4f46-b7b7-e065d30c8d79",
-    "name": "Cross Border Fines",
-    "company_handle": "bpost",
-    "handle": "crossborderfines",
-    "url": "https://www.intigriti.com/programs/bpost/crossborderfines/detail",
-    "status": "open",
-    "confidentiality_level": "public",
-    "tacRequired": false,
-    "twoFactorRequired": false,
-    "min_bounty": {
-      "value": 100,
-      "currency": "EUR"
-    },
-    "max_bounty": {
-      "value": 3000,
-      "currency": "EUR"
-    },
-    "targets": {
-      "in_scope": [
-        {
-          "type": "url",
-          "endpoint": "https://justonweb.be/fines/",
-          "description": null,
-          "impact": "Tier 2"
-        }
-      ],
-      "out_of_scope": [
-
-      ]
-    }
-  },
-  {
     "id": "13cfc6fe-92b2-4a56-8577-855ff0bc2f1c",
     "name": "Cyber Security Coalition",
     "company_handle": "cybersecuritycoalition",
@@ -2530,6 +2535,229 @@
           "type": "url",
           "endpoint": "www.driessen.nl/mijn/solliciteren/",
           "description": null,
+          "impact": "Out of scope"
+        }
+      ]
+    }
+  },
+  {
+    "id": "e540980d-b56e-4956-afff-f914653a4f6e",
+    "name": "Dropbox Bug Bounty",
+    "company_handle": "dropbox",
+    "handle": "dropbox",
+    "url": "https://www.intigriti.com/programs/dropbox/dropbox/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 100,
+      "currency": "USD"
+    },
+    "max_bounty": {
+      "value": 15000,
+      "currency": "USD"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "url",
+          "endpoint": "Dropbox.com",
+          "description": "Dropbox Application",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "sign.dropbox.com",
+          "description": "Sign by Dropbox (formerly HelloSign)",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "HelloSign.com",
+          "description": "HelloSign (now Dropbox Sign)",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "dash.ai",
+          "description": "Web Browser Extension",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "other",
+          "endpoint": "dash.dropbox.com",
+          "description": "Dash by Dropbox MacOS and PC",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.dropbox.com",
+          "description": "Dropbox Public API",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "replay.dropbox.com",
+          "description": "Replay by Dropbox",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "other",
+          "endpoint": "Dropbox Desktop Application",
+          "description": "Dropbox for MacOS and PC ",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "ios",
+          "endpoint": "327630330",
+          "description": "Dropbox iOS Application",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "ios",
+          "endpoint": "6450553960",
+          "description": "Dash by Dropbox iOS Application",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "ios",
+          "endpoint": "1080074001",
+          "description": "Dropbox EMM iOS Application",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "android",
+          "endpoint": "com.dropbox.dash",
+          "description": "Dash by Dropbox Android Application",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "android",
+          "endpoint": "com.dropbox.android",
+          "description": "Dropbox Android Application",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "HelloFax.com",
+          "description": "HelloFax Web Application",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "docsend.com",
+          "description": "Docsend Web Application",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "app.Reclaim.ai",
+          "description": "Reclaim.ai Web Application",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "dropbox.com/paper",
+          "description": "Paper by Dropbox Application",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.dropbox.com",
+          "description": null,
+          "impact": "Tier 3"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.dropboxer.net",
+          "description": null,
+          "impact": "Tier 3"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.dropboxforum.com",
+          "description": null,
+          "impact": "Tier 3"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.dropboxpartners.com",
+          "description": null,
+          "impact": "Tier 3"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.hellofax.com",
+          "description": null,
+          "impact": "Tier 3"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.docsend.com",
+          "description": null,
+          "impact": "Tier 3"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.reclaim.ai",
+          "description": null,
+          "impact": "Tier 3"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.helloworks.com",
+          "description": null,
+          "impact": "Tier 3"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.hellosign.com",
+          "description": null,
+          "impact": "Tier 3"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "other",
+          "endpoint": "Boxcryptor",
+          "description": "Including: \n\n*.boxcryptor.com",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "other",
+          "endpoint": "Formswift",
+          "description": "Including:\n\n*.formswift.com",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "other",
+          "endpoint": "Dropbox Passwords",
+          "description": "Including:\n\niOS and Android Applications",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "other",
+          "endpoint": "Dropbox Capture Windows Desktop App",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "other",
+          "endpoint": "Dropbox Capture macOS Desktop App",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "android",
+          "endpoint": "com.dropbox.paper",
+          "description": "Paper by Dropbox Android Application",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "ios",
+          "endpoint": "1126623662",
+          "description": "Paper by Dropbox iOS Application",
           "impact": "Out of scope"
         }
       ]
@@ -4019,6 +4247,109 @@
       ],
       "out_of_scope": [
 
+      ]
+    }
+  },
+  {
+    "id": "23f5d877-7948-4740-830c-393e66753fc4",
+    "name": "Monzo Public Bug Bounty Program",
+    "company_handle": "monzobank",
+    "handle": "monzopublicbugbountyprogram",
+    "url": "https://www.intigriti.com/programs/monzobank/monzopublicbugbountyprogram/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 50,
+      "currency": "GBP"
+    },
+    "max_bounty": {
+      "value": 12500,
+      "currency": "GBP"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "wildcard",
+          "endpoint": "*.monzo.com",
+          "description": "The crux of Monzo where the APIs live as well as Monzo Business. Excludes the main website (like `monzo.com`/`www.monzo.com`).",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.prod-ffs.io",
+          "description": "Where our internet-facing services are accessed",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "ios",
+          "endpoint": "1052238659",
+          "description": "The public seed of the Monzo app on iOS",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "android",
+          "endpoint": "co.uk.getmondo",
+          "description": "The public seed of the Monzo app on Android",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.monzo.com",
+          "description": null,
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "monzo.com",
+          "description": null,
+          "impact": "Tier 3"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "wildcard",
+          "endpoint": "*/p2p/*",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*/contact-discovery/*",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*/inbound-p2p/*",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.monzo.me",
+          "description": "Houses the services for the pay me/request payment feature",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "community.monzo.com",
+          "description": "We use a third-party, Discourse for our community forums. Third-parties are out of scope for our programs.",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "login.internal.monzo.com",
+          "description": "This is our connection to Okta for internal authentication. Third-parties are out of scope for our programs. ",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "monzo.me",
+          "description": "Monzo.me is a service that allows Monzo users to easily receive money from others via a personalised link, even if the sender doesn't have a Monzo account.",
+          "impact": "Out of scope"
+        }
       ]
     }
   },
@@ -6999,6 +7330,104 @@
           "endpoint": "www.socialdeal.nl",
           "description": "Our main website. \nwww.socialdeal.be and www.socialdeal.de are the same websites, with different Locale.\n",
           "impact": "Tier 2"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
+    "id": "18058413-5255-4f5c-a9db-c6ac027bb5d6",
+    "name": "Soundtrack Your Brand",
+    "company_handle": "syb",
+    "handle": "soundtrackyourbrand",
+    "url": "https://www.intigriti.com/programs/syb/soundtrackyourbrand/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 50,
+      "currency": "EUR"
+    },
+    "max_bounty": {
+      "value": 3500,
+      "currency": "EUR"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "ios",
+          "endpoint": "1114799709",
+          "description": "The iOS Player app that allows you to browse and play music.\n\nIn order to use the iOS Player you will need a pairing code that you can obtain through https://business.soundtrackyourbrand.com using the test credentials.\n\nhttps://www.youtube.com/watch?v=y7HGAtsB6Tg",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "ios",
+          "endpoint": "1114800186",
+          "description": "The iOS Remote that allows you to remotely control your Soundtrack Players.\n\nIn order to use the iOS Remote you will need a remote code that you can obtain through https://business.soundtrackyourbrand.com using the test credentials.\n\nhttps://www.youtube.com/watch?v=cmAe1kRvOeY",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.soundtrackyourbrand.com",
+          "description": "Our public API. Used by us as well as third parties. You can use your regular login token to authenticate.\n\nDocs: https://developer.soundtrackyourbrand.com/api\nGraphQL Explorer: https://api.soundtrackyourbrand.com/v2/explore\n\nPlease use one of the claimed test credentials. In order to use the API you can login using your claimed credentials (via loginUser) and use the token you get back to issue API calls.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "billing.api.soundtrackyourbrand.com",
+          "description": "Our billing service. Handles payments (one time and recurring), price and product management and subscription renewals.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "builds.soundtrackyourbrand.com",
+          "description": "Our service which does gradual rollout of our player software to our Windows client and hardware players.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "business.soundtrackyourbrand.com",
+          "description": "Our web based management console that allows users to administer their players, music and their account.\n\n**To claim bounties for this domain you need to use one of the claimed test credentials.**",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "android",
+          "endpoint": "com.soundtrackyourbrand.soundtrack.player",
+          "description": "The Android Player app that allows you to browse and play music.\n\nIn order to use the Android Player you will need a pairing code that you can obtain through https://business.soundtrackyourbrand.com using the test credentials.\n\nhttps://www.youtube.com/watch?v=y7HGAtsB6Tg",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://auth.api.soundtrackyourbrand.com/",
+          "description": "Our authentication service.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "other",
+          "endpoint": "https://builds.soundtrackyourbrand.com/download/WIN32SOUNDTRACK/latest",
+          "description": "The Windows Player that allows you to play music. No user interface except for a tray icon.\n\nIn order to use the Windows Player you will need a pairing code that you can obtain through https://business.soundtrackyourbrand.com using the test credentials.\n\nhttps://www.youtube.com/watch?v=HjFfXcjSEmM",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://radio.api.soundtrackyourbrand.com/",
+          "description": "Our playlisting service.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://www.soundtrackyourbrand.com",
+          "description": "Our public website.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "other",
+          "endpoint": "macOS app",
+          "description": "The macOS Player app allows you to browse and play music. You can find it in the App Store: https://apps.apple.com/se/app/soundtrack-player/id1114799709?l=en\n\nIn order to use the macOS you will need a pairing code that you can obtain through https://business.soundtrackyourbrand.com using the test credentials.\n\nhttps://www.youtube.com/watch?v=y7HGAtsB6Tg",
+          "impact": "Tier 1"
         }
       ],
       "out_of_scope": [
