@@ -8158,6 +8158,181 @@
     }
   },
   {
+    "id": "d0ff1339-f0c4-4733-a648-1b06b79125e6",
+    "name": "Robinhood Bug Bounty Program",
+    "company_handle": "robinhood",
+    "handle": "robinhoodbbp",
+    "url": "https://www.intigriti.com/programs/robinhood/robinhoodbbp/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 100,
+      "currency": "USD"
+    },
+    "max_bounty": {
+      "value": 50000,
+      "currency": "USD"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "wildcard",
+          "endpoint": "*.rhinternal.net",
+          "description": null,
+          "impact": "Tier 1"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.robinhood.com",
+          "description": null,
+          "impact": "Tier 1"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.robinhood.net",
+          "description": "robinhood.net contains internal Robinhood services. You shouldn’t be able to log into anything here.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "ios",
+          "endpoint": "1634080733",
+          "description": null,
+          "impact": "Tier 1"
+        },
+        {
+          "type": "ios",
+          "endpoint": "6462308655",
+          "description": null,
+          "impact": "Tier 1"
+        },
+        {
+          "type": "ios",
+          "endpoint": "938003185",
+          "description": null,
+          "impact": "Tier 1"
+        },
+        {
+          "type": "android",
+          "endpoint": "com.robinhood.android",
+          "description": null,
+          "impact": "Tier 1"
+        },
+        {
+          "type": "android",
+          "endpoint": "com.robinhood.gateway",
+          "description": null,
+          "impact": "Tier 1"
+        },
+        {
+          "type": "android",
+          "endpoint": "com.robinhood.money",
+          "description": null,
+          "impact": "Tier 1"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "url",
+          "endpoint": "earlytalent.robinhood.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "careers.robinhood.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "weareallinvestors.robinhood.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "press.robinhood.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "underthehoodpod.robinhood.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "go.robinhood.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "startinvesting.robinhood.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "esg.robinhood.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "fleet.infra.robinhood.net",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "content.research.robinhood.com",
+          "description": "Report findings to https://www.GreatQuestion.co",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "shop.robinhood.com",
+          "description": "Report findings to Brilliant Made (https://www.brilliantmade.com/)",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "events.robinhood.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "vgs-api.robinhood.com",
+          "description": "Issues can be reported to Very Good Security: https://www.verygoodsecurity.com/learn/reporting-security-vulnerability",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "affiliates.robinhood.com/",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "share.robinhood.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "roadshow.robinhood.com",
+          "description": null,
+          "impact": "Out of scope"
+        }
+      ]
+    }
+  },
+  {
     "id": "196fa177-ac2d-41b0-91bb-07bc9db43b7a",
     "name": "SBB - Swiss Federal Railways",
     "company_handle": "sbb",
