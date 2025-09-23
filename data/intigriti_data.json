@@ -4397,6 +4397,115 @@
     }
   },
   {
+    "id": "b084e962-1d83-4bec-9d46-0f02c0f7bf88",
+    "name": "InnoGames",
+    "company_handle": "innogames",
+    "handle": "innogames",
+    "url": "https://www.intigriti.com/programs/innogames/innogames/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 50,
+      "currency": "EUR"
+    },
+    "max_bounty": {
+      "value": 4500,
+      "currency": "EUR"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "other",
+          "endpoint": "Backend/Non-Game",
+          "description": "* *.igpayment.com\nThis is our payment environment used in all of our games.\n\n* *.innogames.de\nThis wildcard hosts backend services, which are not intended to be seen by end users. \n\n* login.innogames.de\nThis is our central login and account management tool. We do not provide accounts for this service and there are no registration pages available. \n\n* *.innogames.com\n\n* www.innogames.com\n***Please do not send applications through the application form. This is a 3rd party tool and out-of-scope.***\n\n* support.innogames.com\n***Please avoid creating many new tickets, but instead concentrate your testing on the ticket contents.***\n\n**Note for automated-scanning:**\nWe are happy that you are as enthusiastic as we are about this program!\nTo not impact our live-systems and other researchers too much, we ask you to keep your automated scanners on a scan rate of 1 request/s. ",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "other",
+          "endpoint": "Elvenar",
+          "description": "* xs-play.elvenar.com\nThe landing page for the game login.\n\n* xs0.elvenar.com\nThe master server, which performs authentication and holds inventory of \"game-world-wide\" player data.\n\n* xs1.elvenar.com\nThis is the actual game world, where the game takes place.\n",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "Forge of Empires",
+          "description": "* xs-play.forgeofempires.com\nThe landing page for the game login.\n\n* xs0.forgeofempires.com\nThe master server, which performs authentication and holds inventory of \"game-world-wide\" player data.\n\n* xs1.forgeofempires.com\nThis is the actual game world, where the game takes place.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "Grepolis",
+          "description": "* xs-play.grepolis.com\nThe landing page for the game login.\n\n* xs0.grepolis.com\nThe master server, which performs authentication and holds inventory of \"game-world-wide\" player data.\n\n* xs1.grepolis.com\nThis is the actual game world, where the game takes place.\n",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "Tribal Wars",
+          "description": "* tribalwars.cash / xs0.tribalwars.cash\nThe master server, which performs authentication and holds inventory of \"game-world-wide\" player data..\n\n* xs(1-3).tribalwars.cash\nThese are the actual game worlds, where the game takes place.\n",
+          "impact": "Tier 2"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "url",
+          "endpoint": "autodiscover.innogames.de",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "exchange.innogames.de",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "igjam.eu",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "jamf.innogames.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "mail.innogames.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "newsroom.innogames.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "pn.innogames.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "slack.innogames.de",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "typingmind.innogames.de",
+          "description": null,
+          "impact": "Out of scope"
+        }
+      ]
+    }
+  },
+  {
     "id": "10eb5e95-08e2-4f4e-8d22-f8c600a7acff",
     "name": "Intel®",
     "company_handle": "intel",
@@ -8978,6 +9087,74 @@
           "endpoint": "components.tomorrowland.com",
           "description": "Vulnerabilities found on either components.stag.tomorrowland.com or components.tomorrowland.com will be considered duplicate.",
           "impact": "Tier 3"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
+    "id": "0d0034de-b53e-47b8-9a9d-41c302c49b5a",
+    "name": "Torfs",
+    "company_handle": "torfs",
+    "handle": "torfs",
+    "url": "https://www.intigriti.com/programs/torfs/torfs/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 25,
+      "currency": "EUR"
+    },
+    "max_bounty": {
+      "value": 6500,
+      "currency": "EUR"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "url",
+          "endpoint": "winkels.torfs.be",
+          "description": "🇫🇷🇳🇱",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.schoenentorfs.be",
+          "description": "🇫🇷🇳🇱",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.schoenentorfs.nl ",
+          "description": "🇳🇱",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.torfs.be",
+          "description": "🇫🇷🇳🇱",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.torfs.nl",
+          "description": "🇳🇱",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.samenfittorfs.be",
+          "description": "🇳🇱 ",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "other",
+          "endpoint": "Any related Torfs domain",
+          "description": null,
+          "impact": "No Bounty"
         }
       ],
       "out_of_scope": [
