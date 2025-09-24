@@ -1346,132 +1346,6 @@
     }
   },
   {
-    "name": "Asana",
-    "url": "https://bugcrowd.com/engagements/asana",
-    "allows_disclosure": false,
-    "managed_by_bugcrowd": true,
-    "safe_harbor": "partial",
-    "max_payout": 6500,
-    "targets": {
-      "in_scope": [
-        {
-          "type": "website",
-          "target": "https://app.asana.com",
-          "uri": "https://app.asana.com",
-          "name": "app.asana.com",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "https://asana.com",
-          "uri": "https://asana.com",
-          "name": "asana.com",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "https://asana.com/apps?category=made-by-asana",
-          "uri": "https://asana.com/apps?category=made-by-asana",
-          "name": "*.asana.plus",
-          "ipAddress": null
-        },
-        {
-          "type": "other",
-          "target": "https://asana.com/download",
-          "uri": "https://asana.com/download",
-          "name": "Asana Desktop App",
-          "ipAddress": null
-        },
-        {
-          "type": "ios",
-          "target": "https://apps.apple.com/us/app/asana-mobile/id489969512",
-          "uri": "https://apps.apple.com/us/app/asana-mobile/id489969512",
-          "name": "Asana iOS app",
-          "ipAddress": null
-        },
-        {
-          "type": "android",
-          "target": "https://play.google.com/store/apps/details?id=com.asana.app&hl=en",
-          "uri": "https://play.google.com/store/apps/details?id=com.asana.app&hl=en",
-          "name": "Asana Android app",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "https://form.asana.com",
-          "uri": "https://form.asana.com",
-          "name": "form.asana.com",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "*.app.asana.com",
-          "uri": null,
-          "name": "*.app.asana.com",
-          "ipAddress": null
-        },
-        {
-          "type": "other",
-          "target": "https://*.asana.biz",
-          "uri": "https://*.asana.biz",
-          "name": "*.asana.biz",
-          "ipAddress": null
-        },
-        {
-          "type": "other",
-          "target": "Subdomain takeover at *asana.biz",
-          "uri": "",
-          "name": "Subdomain takeover at *asana.biz",
-          "ipAddress": ""
-        }
-      ],
-      "out_of_scope": [
-        {
-          "type": "website",
-          "target": "Other subdomains of asana.com",
-          "uri": null,
-          "name": "Other subdomains of asana.com",
-          "ipAddress": null
-        },
-        {
-          "type": "other",
-          "target": "Social engineering against Asana Support or Asana Employees",
-          "uri": null,
-          "name": "Social engineering against Asana Support or Asana Employees",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "jira*.integrations.asana.plus",
-          "uri": "",
-          "name": "jira*.integrations.asana.plus",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "asana.okta.com",
-          "uri": "",
-          "name": "asana.okta.com",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "assets.asana.biz",
-          "uri": "",
-          "name": "assets.asana.biz",
-          "ipAddress": ""
-        },
-        {
-          "type": "other",
-          "target": "Forms that you do not own",
-          "uri": "",
-          "name": "Forms that you do not own",
-          "ipAddress": ""
-        }
-      ]
-    }
-  },
-  {
     "name": "Atlassian",
     "url": "https://bugcrowd.com/engagements/atlassian",
     "allows_disclosure": false,
@@ -9500,6 +9374,97 @@
           "uri": "https://*buddybot.lab.epam.com",
           "name": "*.buddybot.lab.epam.com",
           "ipAddress": ""
+        }
+      ]
+    }
+  },
+  {
+    "name": "Etsy",
+    "url": "https://bugcrowd.com/engagements/etsy",
+    "allows_disclosure": true,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "partial",
+    "max_payout": 10000,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "website",
+          "target": "https://www.etsy.com",
+          "uri": "https://www.etsy.com",
+          "name": "www.etsy.com",
+          "ipAddress": null
+        },
+        {
+          "type": "android",
+          "target": "https://www.etsy.com/mobile",
+          "uri": "https://www.etsy.com/mobile",
+          "name": "Etsy Mobile Application (Android)",
+          "ipAddress": null
+        },
+        {
+          "type": "ios",
+          "target": "https://www.etsy.com/mobile",
+          "uri": "https://www.etsy.com/mobile",
+          "name": "Etsy Mobile Application (iPhone)",
+          "ipAddress": null
+        },
+        {
+          "type": "api",
+          "target": "https://www.etsy.com/developers/documentation/getting_started/api_basics",
+          "uri": "https://www.etsy.com/developers/documentation/getting_started/api_basics",
+          "name": "Etsy API (see documentation below)",
+          "ipAddress": null
+        },
+        {
+          "type": "other",
+          "target": "https://etsypayments.com",
+          "uri": "https://etsypayments.com",
+          "name": "etsypayments.com",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "https://blog.etsy.com",
+          "uri": "https://blog.etsy.com",
+          "name": "blog.etsy.com",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "https://careers.etsy.com",
+          "uri": "https://careers.etsy.com",
+          "name": "careers.etsy.com",
+          "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "https://help.etsy.com",
+          "uri": "https://help.etsy.com",
+          "name": "help.etsy.com",
+          "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "https://community.etsy.com",
+          "uri": "https://community.etsy.com",
+          "name": "community.etsy.com",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "*.etsy.com",
+          "uri": "",
+          "name": "*.etsy.com",
+          "ipAddress": ""
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "api",
+          "target": "icht.etsysecure.com",
+          "uri": null,
+          "name": "icht.etsysecure.com",
+          "ipAddress": null
         }
       ]
     }
@@ -21609,6 +21574,237 @@
       ],
       "out_of_scope": [
 
+      ]
+    }
+  },
+  {
+    "name": "SimpliSafe Managed Bug Bounty Engagement",
+    "url": "https://bugcrowd.com/engagements/simplisafe-mbb-og",
+    "allows_disclosure": false,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "full",
+    "max_payout": 6000,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "api",
+          "target": "https://bb1.simplisafe.com",
+          "uri": "https://bb1.simplisafe.com",
+          "name": "bb1.simplisafe.com",
+          "ipAddress": ""
+        },
+        {
+          "type": "api",
+          "target": "https://bb2.simplisafe.com",
+          "uri": "https://bb2.simplisafe.com",
+          "name": "bb2.simplisafe.com",
+          "ipAddress": ""
+        },
+        {
+          "type": "api",
+          "target": "https://cb.simplisafe.com",
+          "uri": "https://cb.simplisafe.com",
+          "name": "cb.simplisafe.com",
+          "ipAddress": ""
+        },
+        {
+          "type": "api",
+          "target": "api.simplisafe.com (HSP Endpoints)",
+          "uri": "",
+          "name": "api.simplisafe.com (HSP Endpoints)",
+          "ipAddress": ""
+        },
+        {
+          "type": "api",
+          "target": "api.services.simplisafe.com (HSP Endpoints)",
+          "uri": "",
+          "name": "api.services.simplisafe.com (HSP Endpoints)",
+          "ipAddress": ""
+        },
+        {
+          "type": "api",
+          "target": "*.prd.cam.simplisafe.com (HSP Endpoints)",
+          "uri": "",
+          "name": "*.prd.cam.simplisafe.com (HSP Endpoints)",
+          "ipAddress": ""
+        },
+        {
+          "type": "api",
+          "target": "*.prd.platform.simplisafe.com (HSP Endpoints)",
+          "uri": "",
+          "name": "*.prd.platform.simplisafe.com (HSP Endpoints)",
+          "ipAddress": ""
+        },
+        {
+          "type": "api",
+          "target": "*.prd.services.simplisafe.com (HSP Endpoints)",
+          "uri": "",
+          "name": "*.prd.services.simplisafe.com (HSP Endpoints)",
+          "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "https://webapp.simplisafe.com",
+          "uri": "https://webapp.simplisafe.com",
+          "name": "SimpliSafe Customer Webapp - US",
+          "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "https://webapp.simplisafe.co.uk",
+          "uri": "https://webapp.simplisafe.co.uk",
+          "name": "SimpliSafe Customer Webapp - UK",
+          "ipAddress": ""
+        },
+        {
+          "type": "ios",
+          "target": "https://apps.apple.com/us/app/simplisafe-home-security-app/id555798051",
+          "uri": "https://apps.apple.com/us/app/simplisafe-home-security-app/id555798051",
+          "name": "SimpliSafe Customer iOS App",
+          "ipAddress": ""
+        },
+        {
+          "type": "android",
+          "target": "https://play.google.com/store/search?q=simplisafe&c=apps",
+          "uri": "https://play.google.com/store/search?q=simplisafe&c=apps",
+          "name": "SimpliSafe Customer Android App",
+          "ipAddress": ""
+        },
+        {
+          "type": "api",
+          "target": "mfa.simplisafe.com",
+          "uri": "",
+          "name": "mfa.simplisafe.com",
+          "ipAddress": ""
+        },
+        {
+          "type": "api",
+          "target": "*.prd.aser.simplisafe.com",
+          "uri": "",
+          "name": "*.prd.aser.simplisafe.com",
+          "ipAddress": ""
+        },
+        {
+          "type": "api",
+          "target": "*.prd.webapps.simplisafe.com",
+          "uri": "",
+          "name": "*.prd.webapps.simplisafe.com",
+          "ipAddress": ""
+        },
+        {
+          "type": "api",
+          "target": "api.simplisafe.com (App Endpoints)",
+          "uri": "",
+          "name": "api.simplisafe.com (App Endpoints)",
+          "ipAddress": ""
+        },
+        {
+          "type": "api",
+          "target": "api.services.simplisafe.com (App Endpoints)",
+          "uri": "",
+          "name": "api.services.simplisafe.com (App Endpoints)",
+          "ipAddress": ""
+        },
+        {
+          "type": "api",
+          "target": "*.prd.services.simplisafe.com (App Endpoints)",
+          "uri": "",
+          "name": "*.prd.services.simplisafe.com (App Endpoints)",
+          "ipAddress": ""
+        },
+        {
+          "type": "api",
+          "target": "*.prd.platform.simplisafe.com (App Endpoints)",
+          "uri": "",
+          "name": "*.prd.platform.simplisafe.com (App Endpoints)",
+          "ipAddress": ""
+        },
+        {
+          "type": "api",
+          "target": "media.simplisafe.com",
+          "uri": "",
+          "name": "media.simplisafe.com",
+          "ipAddress": ""
+        },
+        {
+          "type": "api",
+          "target": "*.prd.cam.simplisafe.com (App Endpoints)",
+          "uri": "",
+          "name": "*.prd.cam.simplisafe.com (App Endpoints)",
+          "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "https://simplisafe.com",
+          "uri": "https://simplisafe.com",
+          "name": "SimpliSafe Website - US",
+          "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "https://simplisafe.co.uk",
+          "uri": "https://simplisafe.co.uk",
+          "name": "SimpliSafe Website - UK",
+          "ipAddress": ""
+        },
+        {
+          "type": "api",
+          "target": "api.prd.commerce.simplisafe.com",
+          "uri": "",
+          "name": "api.prd.commerce.simplisafe.com",
+          "ipAddress": ""
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "api",
+          "target": "auth.simplisafe.com",
+          "uri": "",
+          "name": "auth.simplisafe.com",
+          "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "careers.simplisafe.com",
+          "uri": "",
+          "name": "careers.simplisafe.com",
+          "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "clicks.simplisafe.com",
+          "uri": "",
+          "name": "clicks.simplisafe.com",
+          "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "library.simplisafe.com",
+          "uri": "",
+          "name": "library.simplisafe.com",
+          "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "livechat.simplisafe.com",
+          "uri": "",
+          "name": "livechat.simplisafe.com",
+          "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "press.simplisafe.com",
+          "uri": "",
+          "name": "press.simplisafe.com",
+          "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "support.simplisafe.com",
+          "uri": "",
+          "name": "support.simplisafe.com",
+          "ipAddress": ""
+        }
       ]
     }
   },
