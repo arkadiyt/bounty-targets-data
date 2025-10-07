@@ -3542,6 +3542,109 @@
     }
   },
   {
+    "id": "4d41a636-c811-4757-8fd9-007d7f18e212",
+    "name": "Excoscale Bug Bounty",
+    "company_handle": "exoscale",
+    "handle": "excoscalebugbounty",
+    "url": "https://www.intigriti.com/programs/exoscale/excoscalebugbounty/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 50,
+      "currency": "EUR"
+    },
+    "max_bounty": {
+      "value": 5000,
+      "currency": "EUR"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "url",
+          "endpoint": "https://portal.exoscale.com/",
+          "description": "Our web portal. A good place to start to create your test accounts, deploy your first resources and play around with our services.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": " https://api-*exoscale.com/v2",
+          "description": "Our public API to deploy and interact with our different services. Have a look at [the API documentation](https://openapi-v2.exoscale.com/).\n\nThe API is deployed across multiple zones with different URLs:\n\nhttps://api-ch-gva-2.exoscale.com/v2\nhttps://api-ch-dk-2.exoscale.com/v2\nhttps://api-de-fra-1.exoscale.com/v2\nhttps://api-de-muc-1.exoscale.com/v2\nhttps://api-at-vie-1.exoscale.com/v2\nhttps://api-at-vie-2.exoscale.com/v2\nhttps://api-bg-sof-1.exoscale.com/v2\nhttps://api-hr-zag-1.exoscale.com/v2",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "https://sos-*.exo.io",
+          "description": "sos-*.exo.io are the subdomains related to our S3-compatible Object Storage service (called SOS). Have a look at [the SOS product documentation](https://community.exoscale.com/product/storage/object-storage/). These endpoints implement the S3 protocol. \n\n\nThere is a subdomain for each zone where the service is offered: \n\nhttps://sos-ch-gva-2.exo.io\nhttps://sos-ch-dk-2.exo.io\nhttps://sos-de-fra-1.exo.io\nhttps://sos-de-muc-1.exo.io\nhttps://sos-at-vie-1.exo.io\nhttps://sos-at-vie-2.exo.io\nhttps://sos-bg-sof-1.exo.io\nhttps://sos-hr-zag-1.exo.io\n\nPlease note that there may be resources owned by customers on these domains. Customers' resources are out of scope. ",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "https://sks-*.exo.io",
+          "description": "sks-*.exo.io are the subdomains related to our managed Kubernetes (SKS) clusters. Have a look at [the SKS product documentation](https://community.exoscale.com/product/compute/containers/).\n\n\nThere is a subdomain for each zone where the service is offered: \n\nhttps://sks-ch-gva-2.exo.io\nhttps://sks-ch-dk-2.exo.io\nhttps://sks-de-fra-1.exo.io\nhttps://sks-de-muc-1.exo.io\nhttps://sks-at-vie-1.exo.io\nhttps://sks-at-vie-2.exo.io\nhttps://sks-bg-sof-1.exo.io\nhttps://sks-hr-zag-1.exo.io\n\nPlease note that there may be resources owned by customers on these domains. Customers' resources are out of scope. ",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.internal.exoscale.ch",
+          "description": "Exoscale internal services. Not accessible to the outside world.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://www.exoscale.com/",
+          "description": "Our [public website](https://www.exoscale.com/). A great way to start to familiarise with our products and services and learn more about everything Exoscale has to offer!",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://community.exoscale.com/",
+          "description": "Our [public documentation](https://community.exoscale.com/). Another great way familiarise with our products and services and learn more about everything Exoscale has to offer!",
+          "impact": "Tier 3"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "url",
+          "endpoint": "https://changelog.exoscale.com/",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://exoscalestatus.com/",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://academy.exoscale.com/",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://jobs.exoscale.com/",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "other",
+          "endpoint": "CDN service",
+          "description": "Exoscale offers a CDN service in partnership with Ducksify, member of the Akamai NetAlliance Partner network. The CDN service is out of scope of this program. ",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "other",
+          "endpoint": "Marketplace products",
+          "description": "Exoscale offers instant deployments of certain partner solutions through a marketplace. The marketplace products are out of scope of this program. ",
+          "impact": "Out of scope"
+        }
+      ]
+    }
+  },
+  {
     "id": "0bcc2455-bd63-490b-b725-890a93a1c678",
     "name": "Fing Bug Bounty Program",
     "company_handle": "lansweeper",
