@@ -1033,7 +1033,7 @@
     "disabled": false,
     "managed": null,
     "min_bounty": 50,
-    "max_bounty": 3000,
+    "max_bounty": 5000,
     "targets": {
       "in_scope": [
         {
@@ -1051,23 +1051,15 @@
         {
           "target": "https://api.sandbox.agora.incubateur.net  (source code available on GitHub, see description)",
           "type": "api"
-        },
-        {
-          "target": "https://content.agora.beta.gouv.fr",
-          "type": "other"
         }
       ],
       "out_of_scope": [
         {
-          "target": "All assets not listed as in scope must be considered as out of the scope of this program",
+          "target": "All assets not listed as in scope must be considered as out of the scope of this program. Please note that the  Website \"agora.beta.gouv.fr\" is also out of scope.",
           "type": "other"
         },
         {
           "target": "Production environments are out of the scope of this program",
-          "type": "other"
-        },
-        {
-          "target": "agora.beta.gouv.fr",
           "type": "other"
         },
         {
@@ -2897,6 +2889,41 @@
         },
         {
           "target": "Non-Production environments (test, dev, staging, or sandbox)",
+          "type": "other"
+        }
+      ]
+    }
+  },
+  {
+    "id": "memento-bug-bounty-program",
+    "name": "Memento - Public Bug Bounty Program",
+    "public": true,
+    "disabled": false,
+    "managed": null,
+    "min_bounty": 0,
+    "max_bounty": 2000,
+    "targets": {
+      "in_scope": [
+        {
+          "target": "https://bug-bounty-dfm.mementoblockchain.com/",
+          "type": "web-application"
+        },
+        {
+          "target": "https://api.dextf.com/dd/",
+          "type": "api"
+        },
+        {
+          "target": "https://api.dextf.com/dcd/",
+          "type": "api"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "target": "All domains or subdomains not listed in the above list of 'Scopes'.",
+          "type": "other"
+        },
+        {
+          "target": "Smart contracts.",
           "type": "other"
         }
       ]
