@@ -271,6 +271,79 @@
     }
   },
   {
+    "id": "badcb3b0-34be-4bd1-9186-7678aa5b5d17",
+    "name": "Allegro",
+    "company_handle": "allegro",
+    "handle": "allegrobugbounty",
+    "url": "https://www.intigriti.com/programs/allegro/allegrobugbounty/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 100,
+      "currency": "EUR"
+    },
+    "max_bounty": {
+      "value": 4000,
+      "currency": "EUR"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "wildcard",
+          "endpoint": "*.allegro.cz.allegrosandbox.pl",
+          "description": "Allegro sandbox environment for the Czech Republic.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.allegro.pl.allegrosandbox.pl",
+          "description": "The main sandbox environment that replicates Allegro production. For more information please visit [developer website](https://developer.allegro.pl/tutorials/basic-information-VL6YelvVKTn#test-environment).",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.allegro.sk.allegrosandbox.pl",
+          "description": "Allegro sandbox environment for Slovakia.",
+          "impact": "Tier 2"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "wildcard",
+          "endpoint": "*.allegro.cz",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.allegro.pl",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.allegro.sk",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.allegrogroup.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "other",
+          "endpoint": "Any production website owned by Allegro not listed in Domains",
+          "description": null,
+          "impact": "Out of scope"
+        }
+      ]
+    }
+  },
+  {
     "id": "611efbaa-333e-4b7c-a3c0-89665abd3fe3",
     "name": "Altera",
     "company_handle": "altera",
@@ -3920,6 +3993,85 @@
     }
   },
   {
+    "id": "611c246e-1bf9-42b7-a458-af832582d0d7",
+    "name": "Grafana Labs",
+    "company_handle": "grafanalabs",
+    "handle": "grafanaossbbp",
+    "url": "https://www.intigriti.com/programs/grafanalabs/grafanaossbbp/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 10,
+      "currency": "USD"
+    },
+    "max_bounty": {
+      "value": 15000,
+      "currency": "USD"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "other",
+          "endpoint": "Grafana Loki",
+          "description": null,
+          "impact": "Tier 1"
+        },
+        {
+          "type": "other",
+          "endpoint": "Grafana Mimir",
+          "description": null,
+          "impact": "Tier 1"
+        },
+        {
+          "type": "other",
+          "endpoint": "Grafana OSS",
+          "description": null,
+          "impact": "Tier 1"
+        },
+        {
+          "type": "other",
+          "endpoint": "Grafana Pyroscope",
+          "description": null,
+          "impact": "Tier 1"
+        },
+        {
+          "type": "other",
+          "endpoint": "Grafana Tempo",
+          "description": null,
+          "impact": "Tier 1"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "https://github.com/grafana/*",
+          "description": "Only repository misconfigurations for non-archived repositories are in scope - please read '**In scope**' section below for detailed scope.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "Non-Core Grafana Plugins",
+          "description": "Grafana Labs developed [plugins](https://grafana.com/grafana/plugins/all-plugins/?signature=grafana) not installed by default are accepted, but not eligible for a bounty. ",
+          "impact": "No Bounty"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "wildcard",
+          "endpoint": "*.grafana.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.grafana.net",
+          "description": null,
+          "impact": "Out of scope"
+        }
+      ]
+    }
+  },
+  {
     "id": "4acc7e11-3634-4ce5-b100-d961d3f6c6f0",
     "name": "HRS Group VDP",
     "company_handle": "hrsgroup",
@@ -5734,6 +5886,109 @@
       ],
       "out_of_scope": [
 
+      ]
+    }
+  },
+  {
+    "id": "23f5d877-7948-4740-830c-393e66753fc4",
+    "name": "Monzo Public Bug Bounty Program",
+    "company_handle": "monzobank",
+    "handle": "monzopublicbugbountyprogram",
+    "url": "https://www.intigriti.com/programs/monzobank/monzopublicbugbountyprogram/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 50,
+      "currency": "GBP"
+    },
+    "max_bounty": {
+      "value": 12500,
+      "currency": "GBP"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "wildcard",
+          "endpoint": "*.monzo.com",
+          "description": "The crux of Monzo where the APIs live as well as Monzo Business. Excludes the main website (like `monzo.com`/`www.monzo.com`).",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.prod-ffs.io",
+          "description": "Where our internet-facing services are accessed",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "ios",
+          "endpoint": "1052238659",
+          "description": "The public seed of the Monzo app on iOS",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "android",
+          "endpoint": "co.uk.getmondo",
+          "description": "The public seed of the Monzo app on Android",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.monzo.com",
+          "description": null,
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "monzo.com",
+          "description": null,
+          "impact": "Tier 3"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "wildcard",
+          "endpoint": "*/p2p/*",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*/contact-discovery/*",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*/inbound-p2p/*",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.monzo.me",
+          "description": "Houses the services for the pay me/request payment feature",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "community.monzo.com",
+          "description": "We use a third-party, Discourse for our community forums. Third-parties are out of scope for our programs.",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "login.internal.monzo.com",
+          "description": "This is our connection to Okta for internal authentication. Third-parties are out of scope for our programs. ",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "monzo.me",
+          "description": "Monzo.me is a service that allows Monzo users to easily receive money from others via a personalised link, even if the sender doesn't have a Monzo account.",
+          "impact": "Out of scope"
+        }
       ]
     }
   },
@@ -10591,6 +10846,80 @@
           "description": null,
           "impact": "Out of scope"
         }
+      ]
+    }
+  },
+  {
+    "id": "92431bf9-ab3e-4e69-9619-c59f8e5193b1",
+    "name": "Voi Scooters",
+    "company_handle": "voi",
+    "handle": "voiscooters",
+    "url": "https://www.intigriti.com/programs/voi/voiscooters/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 0,
+      "currency": "EUR"
+    },
+    "max_bounty": {
+      "value": 3500,
+      "currency": "EUR"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "ios",
+          "endpoint": "1395921017",
+          "description": "iOS Mobile Application",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://api.voiapp.io/",
+          "description": "Backend REST API",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "android",
+          "endpoint": "io.voiapp.voi",
+          "description": "Android Mobile Application",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "mds.voiapp.io",
+          "description": "Partner API as documented at https://docs.voiscooters.com/",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.voiscooters.com",
+          "description": null,
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "report.voi.com",
+          "description": "Website to report badly parked scooters.",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "voi.com",
+          "description": "Informational Website",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.voiscooters.com",
+          "description": "Informational Website",
+          "impact": "Tier 3"
+        }
+      ],
+      "out_of_scope": [
+
       ]
     }
   },
