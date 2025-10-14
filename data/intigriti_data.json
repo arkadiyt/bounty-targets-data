@@ -116,6 +116,43 @@
     }
   },
   {
+    "id": "554fc6c5-4ffa-4682-a3ba-7e86696e9b17",
+    "name": "Aikido Security: Bug Bounty Program",
+    "company_handle": "aikido",
+    "handle": "aikido",
+    "url": "https://www.intigriti.com/programs/aikido/aikido/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 50,
+      "currency": "EUR"
+    },
+    "max_bounty": {
+      "value": 2500,
+      "currency": "EUR"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "url",
+          "endpoint": "app.aikido.dev",
+          "description": "This is our main application, which hosts the API as well as the front-end application.\n\nOur public API is also accessible via this host. Documentation is available here: https://apidocs.aikido.dev/.",
+          "impact": "Tier 2"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "wildcard",
+          "endpoint": "*.aikido.dev",
+          "description": null,
+          "impact": "Out of scope"
+        }
+      ]
+    }
+  },
+  {
     "id": "30f445f7-ca4c-4130-9434-49add5c6ac74",
     "name": "Algemeen Dagblad",
     "company_handle": "dpgm",
@@ -5759,109 +5796,6 @@
     }
   },
   {
-    "id": "23f5d877-7948-4740-830c-393e66753fc4",
-    "name": "Monzo Public Bug Bounty Program",
-    "company_handle": "monzobank",
-    "handle": "monzopublicbugbountyprogram",
-    "url": "https://www.intigriti.com/programs/monzobank/monzopublicbugbountyprogram/detail",
-    "status": "open",
-    "confidentiality_level": "public",
-    "tacRequired": false,
-    "twoFactorRequired": false,
-    "min_bounty": {
-      "value": 50,
-      "currency": "GBP"
-    },
-    "max_bounty": {
-      "value": 12500,
-      "currency": "GBP"
-    },
-    "targets": {
-      "in_scope": [
-        {
-          "type": "wildcard",
-          "endpoint": "*.monzo.com",
-          "description": "The crux of Monzo where the APIs live as well as Monzo Business. Excludes the main website (like `monzo.com`/`www.monzo.com`).",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.prod-ffs.io",
-          "description": "Where our internet-facing services are accessed",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "ios",
-          "endpoint": "1052238659",
-          "description": "The public seed of the Monzo app on iOS",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "android",
-          "endpoint": "co.uk.getmondo",
-          "description": "The public seed of the Monzo app on Android",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "www.monzo.com",
-          "description": null,
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "monzo.com",
-          "description": null,
-          "impact": "Tier 3"
-        }
-      ],
-      "out_of_scope": [
-        {
-          "type": "wildcard",
-          "endpoint": "*/p2p/*",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*/contact-discovery/*",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*/inbound-p2p/*",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.monzo.me",
-          "description": "Houses the services for the pay me/request payment feature",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "community.monzo.com",
-          "description": "We use a third-party, Discourse for our community forums. Third-parties are out of scope for our programs.",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "login.internal.monzo.com",
-          "description": "This is our connection to Okta for internal authentication. Third-parties are out of scope for our programs. ",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "monzo.me",
-          "description": "Monzo.me is a service that allows Monzo users to easily receive money from others via a personalised link, even if the sender doesn't have a Monzo account.",
-          "impact": "Out of scope"
-        }
-      ]
-    }
-  },
-  {
     "id": "56339d19-36cc-49a0-8e8f-b2502e00d165",
     "name": "Moralis VDP",
     "company_handle": "moralis",
@@ -9209,6 +9143,74 @@
     }
   },
   {
+    "id": "0d0034de-b53e-47b8-9a9d-41c302c49b5a",
+    "name": "Torfs",
+    "company_handle": "torfs",
+    "handle": "torfs",
+    "url": "https://www.intigriti.com/programs/torfs/torfs/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 25,
+      "currency": "EUR"
+    },
+    "max_bounty": {
+      "value": 6500,
+      "currency": "EUR"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "url",
+          "endpoint": "winkels.torfs.be",
+          "description": "🇫🇷🇳🇱",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.schoenentorfs.be",
+          "description": "🇫🇷🇳🇱",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.schoenentorfs.nl ",
+          "description": "🇳🇱",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.torfs.be",
+          "description": "🇫🇷🇳🇱",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.torfs.nl",
+          "description": "🇳🇱",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.samenfittorfs.be",
+          "description": "🇳🇱 ",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "other",
+          "endpoint": "Any related Torfs domain",
+          "description": null,
+          "impact": "No Bounty"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
     "id": "efa92aaa-d683-4cf9-8834-a03cf864cc80",
     "name": "Trouw",
     "company_handle": "dpgm",
@@ -10473,80 +10475,6 @@
           "description": null,
           "impact": "Out of scope"
         }
-      ]
-    }
-  },
-  {
-    "id": "c5a9bbd6-2139-4ec9-bdcc-8e2a5082fd7e",
-    "name": "Venly",
-    "company_handle": "arkane",
-    "handle": "arkanenetwork",
-    "url": "https://www.intigriti.com/programs/arkane/arkanenetwork/detail",
-    "status": "open",
-    "confidentiality_level": "public",
-    "tacRequired": false,
-    "twoFactorRequired": false,
-    "min_bounty": {
-      "value": 50,
-      "currency": "EUR"
-    },
-    "max_bounty": {
-      "value": 5000,
-      "currency": "EUR"
-    },
-    "targets": {
-      "in_scope": [
-        {
-          "type": "url",
-          "endpoint": "api-wallet.venly.io",
-          "description": null,
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "api.arkane.network",
-          "description": null,
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "connect.arkane.network ",
-          "description": null,
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "connect.venly.io",
-          "description": null,
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "login.arkane.network",
-          "description": null,
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "login.venly.io",
-          "description": null,
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "wallet.venly.io",
-          "description": null,
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "api-wallet-sandbox.venly.io",
-          "description": null,
-          "impact": "Tier 3"
-        }
-      ],
-      "out_of_scope": [
-
       ]
     }
   },
