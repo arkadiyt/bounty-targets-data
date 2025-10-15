@@ -2118,7 +2118,7 @@
       "in_scope": [
         {
           "target": "*.gojekapi.com",
-          "type": "api"
+          "type": "wildcard"
         },
         {
           "target": "api.gojek.co.id",
@@ -2131,6 +2131,14 @@
         {
           "target": "https://apps.apple.com/id/app/gojek/id944875099",
           "type": "mobile-application-ios"
+        },
+        {
+          "target": "gofood.co.id",
+          "type": "web-application"
+        },
+        {
+          "target": "*.gofood.co.id",
+          "type": "wildcard"
         }
       ],
       "out_of_scope": [
@@ -2196,7 +2204,7 @@
         },
         {
           "target": "*.gopayapi.com",
-          "type": "web-application"
+          "type": "wildcard"
         },
         {
           "target": "gopaymerchant.midtrans.com",
@@ -2208,7 +2216,19 @@
         },
         {
           "target": "*.go-pay.co.id",
-          "type": "other"
+          "type": "wildcard"
+        },
+        {
+          "target": "api.midtrans.com",
+          "type": "api"
+        },
+        {
+          "target": "app.midtrans.com",
+          "type": "web-application"
+        },
+        {
+          "target": "www.midtrans.com",
+          "type": "web-application"
         }
       ],
       "out_of_scope": [
