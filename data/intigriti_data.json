@@ -153,6 +153,68 @@
     }
   },
   {
+    "id": "ac81c127-b11b-469e-8060-e0fbb9c9c398",
+    "name": "Aikido Security: Zen by Aikido ",
+    "company_handle": "aikido",
+    "handle": "aikidoruntime",
+    "url": "https://www.intigriti.com/programs/aikido/aikidoruntime/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 100,
+      "currency": "EUR"
+    },
+    "max_bounty": {
+      "value": 3500,
+      "currency": "EUR"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "other",
+          "endpoint": "https://github.com/AikidoSec/firewall-node#Vulnerability",
+          "description": "Tier 1 is for vulnerabilities which we potentially introduce via our own firewall component in the user's application.\n\nSee Severity Assessment for more information.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "other",
+          "endpoint": "https://github.com/AikidoSec/firewall-python#Vulnerability",
+          "description": null,
+          "impact": "Tier 1"
+        },
+        {
+          "type": "other",
+          "endpoint": "https://github.com/AikidoSec/firewall-node#Detection Bypass",
+          "description": "Tier 2 is for bypasses in the vulnerability detection of the firewall component, such as a bypass of our SQL injection detection.\n\nSee Severity Assessment for more information.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "https://github.com/AikidoSec/firewall-python#Detection Bypass",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "https://github.com/AikidoSec/firewall-node#False Positive",
+          "description": "Tier 3 is for any false positives you encounter with our vulnerability detection. For example, cases where we falsely flag a SQL injection, while the user's input is safely encapsulated in the SQL query.\n\nSeverity assessments are slightly harder for these cases, see \"Severity Assessment\" for more information.",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "other",
+          "endpoint": "https://github.com/AikidoSec/firewall-python#False Positive",
+          "description": null,
+          "impact": "Tier 3"
+        }
+      ],
+      "out_of_scope": [
+
+      ]
+    }
+  },
+  {
     "id": "30f445f7-ca4c-4130-9434-49add5c6ac74",
     "name": "Algemeen Dagblad",
     "company_handle": "dpgm",
@@ -205,79 +267,6 @@
       ],
       "out_of_scope": [
 
-      ]
-    }
-  },
-  {
-    "id": "badcb3b0-34be-4bd1-9186-7678aa5b5d17",
-    "name": "Allegro",
-    "company_handle": "allegro",
-    "handle": "allegrobugbounty",
-    "url": "https://www.intigriti.com/programs/allegro/allegrobugbounty/detail",
-    "status": "open",
-    "confidentiality_level": "public",
-    "tacRequired": false,
-    "twoFactorRequired": false,
-    "min_bounty": {
-      "value": 100,
-      "currency": "EUR"
-    },
-    "max_bounty": {
-      "value": 4000,
-      "currency": "EUR"
-    },
-    "targets": {
-      "in_scope": [
-        {
-          "type": "wildcard",
-          "endpoint": "*.allegro.cz.allegrosandbox.pl",
-          "description": "Allegro sandbox environment for the Czech Republic.",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.allegro.pl.allegrosandbox.pl",
-          "description": "The main sandbox environment that replicates Allegro production. For more information please visit [developer website](https://developer.allegro.pl/tutorials/basic-information-VL6YelvVKTn#test-environment).",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.allegro.sk.allegrosandbox.pl",
-          "description": "Allegro sandbox environment for Slovakia.",
-          "impact": "Tier 2"
-        }
-      ],
-      "out_of_scope": [
-        {
-          "type": "wildcard",
-          "endpoint": "*.allegro.cz",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.allegro.pl",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.allegro.sk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.allegrogroup.com",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "other",
-          "endpoint": "Any production website owned by Allegro not listed in Domains",
-          "description": null,
-          "impact": "Out of scope"
-        }
       ]
     }
   },
@@ -1196,139 +1185,6 @@
           "type": "wildcard",
           "endpoint": "*/scripts/cgiip.exe/*",
           "description": "XSS in any parameter on the endpoint */scripts/cgiip.exe/* (any in scope domain)",
-          "impact": "Out of scope"
-        }
-      ]
-    }
-  },
-  {
-    "id": "48853273-690a-4555-8ac5-821a1c464312",
-    "name": "Capital.com",
-    "company_handle": "capitalcom",
-    "handle": "capitalcom",
-    "url": "https://www.intigriti.com/programs/capitalcom/capitalcom/detail",
-    "status": "open",
-    "confidentiality_level": "public",
-    "tacRequired": false,
-    "twoFactorRequired": false,
-    "min_bounty": {
-      "value": 0,
-      "currency": "EUR"
-    },
-    "max_bounty": {
-      "value": 15000,
-      "currency": "EUR"
-    },
-    "targets": {
-      "in_scope": [
-        {
-          "type": "url",
-          "endpoint": "payment.backend-capital.com",
-          "description": null,
-          "impact": "Tier 1"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.backend-capital.com",
-          "description": null,
-          "impact": "Tier 2"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "capital.com/*",
-          "description": null,
-          "impact": "Tier 2"
-        },
-        {
-          "type": "ios",
-          "endpoint": "com.capital.trading",
-          "description": "https://apps.apple.com/BY/app/id1230088754?mt=8",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "android",
-          "endpoint": "com.capital.trading",
-          "description": "https://play.google.com/store/apps/details?id=com.capital.trading&hl=en",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "open-api.capital.com",
-          "description": "The Capital.com API allows direct access to the latest version of our trading engine.",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.capital.com",
-          "description": null,
-          "impact": "Tier 3"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.itcapital.io",
-          "description": null,
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "aff.capital.com",
-          "description": null,
-          "impact": "No Bounty"
-        },
-        {
-          "type": "url",
-          "endpoint": "go.capital.com",
-          "description": null,
-          "impact": "No Bounty"
-        },
-        {
-          "type": "url",
-          "endpoint": "register.capital.com",
-          "description": null,
-          "impact": "No Bounty"
-        }
-      ],
-      "out_of_scope": [
-        {
-          "type": "wildcard",
-          "endpoint": "*affiliates.backend-capital.com",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*eduapp.backend-capital.com",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*education.backend-capital.com",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "help.capital.com",
-          "description": "CNAME to Zendesk",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "relocate-with-us.capital.com",
-          "description": "CNAME to Webflow",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "3cxby.itcapital.io",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": " texis.itcapital.io",
-          "description": null,
           "impact": "Out of scope"
         }
       ]
@@ -3006,229 +2862,6 @@
           "type": "url",
           "endpoint": "www.driessen.nl/mijn/solliciteren/",
           "description": null,
-          "impact": "Out of scope"
-        }
-      ]
-    }
-  },
-  {
-    "id": "e540980d-b56e-4956-afff-f914653a4f6e",
-    "name": "Dropbox Bug Bounty",
-    "company_handle": "dropbox",
-    "handle": "dropbox",
-    "url": "https://www.intigriti.com/programs/dropbox/dropbox/detail",
-    "status": "open",
-    "confidentiality_level": "public",
-    "tacRequired": false,
-    "twoFactorRequired": false,
-    "min_bounty": {
-      "value": 100,
-      "currency": "USD"
-    },
-    "max_bounty": {
-      "value": 15000,
-      "currency": "USD"
-    },
-    "targets": {
-      "in_scope": [
-        {
-          "type": "url",
-          "endpoint": "Dropbox.com",
-          "description": "Dropbox Application",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "sign.dropbox.com",
-          "description": "Sign by Dropbox (formerly HelloSign)",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "HelloSign.com",
-          "description": "HelloSign (now Dropbox Sign)",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "dash.ai",
-          "description": "Web Browser Extension",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "other",
-          "endpoint": "dash.dropbox.com",
-          "description": "Dash by Dropbox MacOS and PC",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "api.dropbox.com",
-          "description": "Dropbox Public API",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "replay.dropbox.com",
-          "description": "Replay by Dropbox",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "other",
-          "endpoint": "Dropbox Desktop Application",
-          "description": "Dropbox for MacOS and PC ",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "ios",
-          "endpoint": "327630330",
-          "description": "Dropbox iOS Application",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "ios",
-          "endpoint": "6450553960",
-          "description": "Dash by Dropbox iOS Application",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "ios",
-          "endpoint": "1080074001",
-          "description": "Dropbox EMM iOS Application",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "android",
-          "endpoint": "com.dropbox.dash",
-          "description": "Dash by Dropbox Android Application",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "android",
-          "endpoint": "com.dropbox.android",
-          "description": "Dropbox Android Application",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "HelloFax.com",
-          "description": "HelloFax Web Application",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "docsend.com",
-          "description": "Docsend Web Application",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "app.Reclaim.ai",
-          "description": "Reclaim.ai Web Application",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "dropbox.com/paper",
-          "description": "Paper by Dropbox Application",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.dropbox.com",
-          "description": null,
-          "impact": "Tier 3"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.dropboxer.net",
-          "description": null,
-          "impact": "Tier 3"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.dropboxforum.com",
-          "description": null,
-          "impact": "Tier 3"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.dropboxpartners.com",
-          "description": null,
-          "impact": "Tier 3"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.hellofax.com",
-          "description": null,
-          "impact": "Tier 3"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.docsend.com",
-          "description": null,
-          "impact": "Tier 3"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.reclaim.ai",
-          "description": null,
-          "impact": "Tier 3"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.helloworks.com",
-          "description": null,
-          "impact": "Tier 3"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.hellosign.com",
-          "description": null,
-          "impact": "Tier 3"
-        }
-      ],
-      "out_of_scope": [
-        {
-          "type": "other",
-          "endpoint": "Boxcryptor",
-          "description": "Including: \n\n*.boxcryptor.com",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "other",
-          "endpoint": "Formswift",
-          "description": "Including:\n\n*.formswift.com",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "other",
-          "endpoint": "Dropbox Passwords",
-          "description": "Including:\n\niOS and Android Applications",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "other",
-          "endpoint": "Dropbox Capture Windows Desktop App",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "other",
-          "endpoint": "Dropbox Capture macOS Desktop App",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "android",
-          "endpoint": "com.dropbox.paper",
-          "description": "Paper by Dropbox Android Application",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "ios",
-          "endpoint": "1126623662",
-          "description": "Paper by Dropbox iOS Application",
           "impact": "Out of scope"
         }
       ]
