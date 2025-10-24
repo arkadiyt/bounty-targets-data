@@ -8625,14 +8625,30 @@
     }
   },
   {
-    "name": "Dell Technologies Application Bug Bounty",
-    "url": "https://bugcrowd.com/engagements/dell-com",
+    "name": "Dell Technologies' Products Bug Bounty Program",
+    "url": "https://bugcrowd.com/engagements/dell-product",
     "allows_disclosure": true,
     "managed_by_bugcrowd": true,
-    "safe_harbor": null,
-    "max_payout": 2500,
+    "safe_harbor": "partial",
+    "max_payout": 5000,
     "targets": {
       "in_scope": [
+        {
+          "type": "other",
+          "target": "Actively Supported, Bounty Eligible Dell Products",
+          "uri": "",
+          "name": "Actively Supported, Bounty Eligible Dell Products",
+          "ipAddress": null
+        },
+        {
+          "type": "hardware",
+          "target": "Actively Supported, Non-Reward Eligible Dell Products",
+          "uri": "",
+          "name": "Actively Supported, Non-Reward Eligible Dell Products",
+          "ipAddress": null
+        }
+      ],
+      "out_of_scope": [
         {
           "type": "website",
           "target": "*.dell.com/*",
@@ -8642,95 +8658,37 @@
         },
         {
           "type": "website",
-          "target": "*.delltechnologies.com/* ",
-          "uri": "",
-          "name": "*.delltechnologies.com/* ",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "https://console.delltechnologies.com/nav/administration",
-          "uri": "https://console.delltechnologies.com/nav/administration",
-          "name": "https://console.delltechnologies.com/nav/administration",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "https://console.delltechnologies.com/nav/invoice",
-          "uri": "https://console.delltechnologies.com/nav/invoice",
-          "name": "https://console.delltechnologies.com/nav/invoice",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "https://console.delltechnologies.com/nav/billing",
-          "uri": "https://console.delltechnologies.com/nav/billing",
-          "name": "https://console.delltechnologies.com/nav/billing",
+          "target": "*.delltechnologies.com/*",
+          "uri": null,
+          "name": "*.delltechnologies.com/*",
           "ipAddress": null
         },
         {
           "type": "other",
-          "target": "Any Verified Dell-Controlled Endpoint (domains/IP space/etc.)\t",
+          "target": "Virtual Appliance (vApp) Manager",
           "uri": "",
-          "name": "Any Verified Dell-Controlled Endpoint (domains/IP space/etc.)\t",
-          "ipAddress": null
-        }
-      ],
-      "out_of_scope": [
-        {
-          "type": "website",
-          "target": "https://console.delltechnologies.com/ ",
-          "uri": "https://console.delltechnologies.com/ ",
-          "name": "https://console.delltechnologies.com/ ",
-          "ipAddress": null
+          "name": "Virtual Appliance (vApp) Manager",
+          "ipAddress": ""
         },
         {
-          "type": "website",
-          "target": "https://console.delltechnologies.com/nav/catalog",
-          "uri": "https://console.delltechnologies.com/nav/catalog",
-          "name": "https://console.delltechnologies.com/nav/catalog",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "https://console.delltechnologies.com/nav/support",
-          "uri": "https://console.delltechnologies.com/nav/support",
-          "name": "https://console.delltechnologies.com/nav/support",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "https://console.delltechnologies.com/nav/subscriptions",
-          "uri": "https://console.delltechnologies.com/nav/subscriptions",
-          "name": "https://console.delltechnologies.com/nav/subscriptions",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "educate.dell.com",
+          "type": "other",
+          "target": "Dell ObjectScale",
           "uri": "",
-          "name": "educate.dell.com",
-          "ipAddress": null
+          "name": "Dell ObjectScale",
+          "ipAddress": ""
         },
         {
-          "type": "website",
-          "target": "console.dell.com",
+          "type": "other",
+          "target": "Dell Digital Delivery",
           "uri": "",
-          "name": "console.dell.com",
-          "ipAddress": null
+          "name": "Dell Digital Delivery",
+          "ipAddress": ""
         },
         {
-          "type": "website",
-          "target": "console-test.dell.com",
+          "type": "other",
+          "target": "Dell Enterprise Hub",
           "uri": "",
-          "name": "console-test.dell.com",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "salesproductivity.dell.com",
-          "uri": "",
-          "name": "salesproductivity.dell.com",
+          "name": "Dell Enterprise Hub",
           "ipAddress": ""
         }
       ]
