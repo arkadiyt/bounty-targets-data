@@ -1199,152 +1199,6 @@
     }
   },
   {
-    "id": "efd8bd86-a986-4b4a-9eda-c9a6a1a6b540",
-    "name": "CM.com",
-    "company_handle": "cmcom",
-    "handle": "cmcom",
-    "url": "https://www.intigriti.com/programs/cmcom/cmcom/detail",
-    "status": "open",
-    "confidentiality_level": "public",
-    "tacRequired": false,
-    "twoFactorRequired": false,
-    "min_bounty": {
-      "value": 25,
-      "currency": "EUR"
-    },
-    "max_bounty": {
-      "value": 3500,
-      "currency": "EUR"
-    },
-    "targets": {
-      "in_scope": [
-        {
-          "type": "url",
-          "endpoint": "login.cm.com",
-          "description": null,
-          "impact": "Tier 1"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.ticketing.cm.com",
-          "description": "Login to your account and go to https://www.cm.com/en-gb/app/ticketing/\nFrom here you can create tickets and much more!\nMake sure to take a look at the user-side ticket store as well (https://store.ticketing.cm.com/..)",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "api.cm.com",
-          "description": null,
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "api.cmtelecom.com",
-          "description": "Some of the applications that are in our scope use our old api. \nIf you find a bug on this api and it is from a product that is in scope, it is valid.",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "cm.com/[locale]/app/*",
-          "description": null,
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "cm.com/[locale]/register",
-          "description": null,
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "appmiral.com",
-          "description": null,
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "building-blocks.com",
-          "description": null,
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "cm.com/app/messagingtrial/",
-          "description": "An application that makes it possible for developers to do a limited test of sending messages using the CM.COM business messaging API.\n\nWhat we would like to know is:\n* Can the application be exploited to allow sending more than the allowed number of messages?\n* Can the app be exploited to send to other recipients besides the whitelisted recipients?",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "cmcom.atlassian.net",
-          "description": null,
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "www.cm.com",
-          "description": null,
-          "impact": "Tier 3"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.appmiral.com",
-          "description": null,
-          "impact": "No Bounty"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.cm.com",
-          "description": null,
-          "impact": "No Bounty"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.cmtelecom.com",
-          "description": null,
-          "impact": "No Bounty"
-        },
-        {
-          "type": "ios",
-          "endpoint": "1199521324",
-          "description": "Right now we don't have a way to make test accounts for these apps, this will be added in the future",
-          "impact": "No Bounty"
-        },
-        {
-          "type": "ios",
-          "endpoint": "1579530451",
-          "description": "Right now we don't have a way to make test accounts for these apps, this will be added in the future",
-          "impact": "No Bounty"
-        },
-        {
-          "type": "android",
-          "endpoint": "com.cm.cashregister",
-          "description": "Right now we don't have a way to make test accounts for these apps, this will be added in the future",
-          "impact": "No Bounty"
-        },
-        {
-          "type": "android",
-          "endpoint": "com.ticketflow.ticketscanner",
-          "description": "Right now we don't have a way to make test accounts for these apps, this will be added in the future",
-          "impact": "No Bounty"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "demo.globalticket.com/*",
-          "description": "GlobalTicket is one of our integrations. \nBe sure to check out `/cms` to try and work your way into it.",
-          "impact": "No Bounty"
-        },
-        {
-          "type": "other",
-          "endpoint": "https://github.com/cmdotcom",
-          "description": "Our public code repositories are being used by our customers. In scope for this domain is issues with the public code we host (vulnerabilities, libraries that have known security concerns, keys accidentally pushed to the public GitHub etc.). \n**Testing the GitHub itself is out-of-scope**, they have their own bug bounty program if you are interested :)  ",
-          "impact": "No Bounty"
-        }
-      ],
-      "out_of_scope": [
-
-      ]
-    }
-  },
-  {
     "id": "0083a5bf-e54f-4f79-a972-12a795272c8b",
     "name": "Canada Post + Purolator - Responsible Disclosure Program",
     "company_handle": "innovapost",
@@ -3100,229 +2954,6 @@
           "type": "url",
           "endpoint": "www.driessen.nl/mijn/solliciteren/",
           "description": null,
-          "impact": "Out of scope"
-        }
-      ]
-    }
-  },
-  {
-    "id": "e540980d-b56e-4956-afff-f914653a4f6e",
-    "name": "Dropbox Bug Bounty",
-    "company_handle": "dropbox",
-    "handle": "dropbox",
-    "url": "https://www.intigriti.com/programs/dropbox/dropbox/detail",
-    "status": "open",
-    "confidentiality_level": "public",
-    "tacRequired": false,
-    "twoFactorRequired": false,
-    "min_bounty": {
-      "value": 100,
-      "currency": "USD"
-    },
-    "max_bounty": {
-      "value": 15000,
-      "currency": "USD"
-    },
-    "targets": {
-      "in_scope": [
-        {
-          "type": "url",
-          "endpoint": "Dropbox.com",
-          "description": "Dropbox Application",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "sign.dropbox.com",
-          "description": "Sign by Dropbox (formerly HelloSign)",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "HelloSign.com",
-          "description": "HelloSign (now Dropbox Sign)",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "dash.ai",
-          "description": "Web Browser Extension",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "other",
-          "endpoint": "dash.dropbox.com",
-          "description": "Dash by Dropbox MacOS and PC",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "api.dropbox.com",
-          "description": "Dropbox Public API",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "replay.dropbox.com",
-          "description": "Replay by Dropbox",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "other",
-          "endpoint": "Dropbox Desktop Application",
-          "description": "Dropbox for MacOS and PC ",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "ios",
-          "endpoint": "327630330",
-          "description": "Dropbox iOS Application",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "ios",
-          "endpoint": "6450553960",
-          "description": "Dash by Dropbox iOS Application",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "ios",
-          "endpoint": "1080074001",
-          "description": "Dropbox EMM iOS Application",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "android",
-          "endpoint": "com.dropbox.dash",
-          "description": "Dash by Dropbox Android Application",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "android",
-          "endpoint": "com.dropbox.android",
-          "description": "Dropbox Android Application",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "HelloFax.com",
-          "description": "HelloFax Web Application",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "docsend.com",
-          "description": "Docsend Web Application",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "app.Reclaim.ai",
-          "description": "Reclaim.ai Web Application",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "dropbox.com/paper",
-          "description": "Paper by Dropbox Application",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.dropbox.com",
-          "description": null,
-          "impact": "Tier 3"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.dropboxer.net",
-          "description": null,
-          "impact": "Tier 3"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.dropboxforum.com",
-          "description": null,
-          "impact": "Tier 3"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.dropboxpartners.com",
-          "description": null,
-          "impact": "Tier 3"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.hellofax.com",
-          "description": null,
-          "impact": "Tier 3"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.docsend.com",
-          "description": null,
-          "impact": "Tier 3"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.reclaim.ai",
-          "description": null,
-          "impact": "Tier 3"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.helloworks.com",
-          "description": null,
-          "impact": "Tier 3"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.hellosign.com",
-          "description": null,
-          "impact": "Tier 3"
-        }
-      ],
-      "out_of_scope": [
-        {
-          "type": "other",
-          "endpoint": "Boxcryptor",
-          "description": "Including: \n\n*.boxcryptor.com",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "other",
-          "endpoint": "Formswift",
-          "description": "Including:\n\n*.formswift.com",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "other",
-          "endpoint": "Dropbox Passwords",
-          "description": "Including:\n\niOS and Android Applications",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "other",
-          "endpoint": "Dropbox Capture Windows Desktop App",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "other",
-          "endpoint": "Dropbox Capture macOS Desktop App",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "android",
-          "endpoint": "com.dropbox.paper",
-          "description": "Paper by Dropbox Android Application",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "ios",
-          "endpoint": "1126623662",
-          "description": "Paper by Dropbox iOS Application",
           "impact": "Out of scope"
         }
       ]
@@ -10022,6 +9653,253 @@
         {
           "type": "url",
           "endpoint": "elect.tweakers.net",
+          "description": null,
+          "impact": "Out of scope"
+        }
+      ]
+    }
+  },
+  {
+    "id": "2cf03670-6a2d-4ac7-8b1e-2e0d84338204",
+    "name": "UZ Leuven",
+    "company_handle": "uz leuven",
+    "handle": "uzleuven",
+    "url": "https://www.intigriti.com/programs/uz%20leuven/uzleuven/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 50,
+      "currency": "EUR"
+    },
+    "max_bounty": {
+      "value": 5000,
+      "currency": "EUR"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "url",
+          "endpoint": "autodiscover.uzleuven.be",
+          "description": null,
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "ecrf.uzleuven.be",
+          "description": null,
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "extranet-asa.uzleuven.be",
+          "description": null,
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "extranet.uzleuven.be",
+          "description": null,
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "liquidfiles.uzleuven.be",
+          "description": null,
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "mx1.uzleuven.be",
+          "description": null,
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "mx2.uzleuven.be",
+          "description": null,
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "pcrstudioruzb.uzleuven.be",
+          "description": null,
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "prddsplunkhf.uzleuven.be",
+          "description": null,
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "sts.uzleuven.be",
+          "description": null,
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.uzleuven.be",
+          "description": null,
+          "impact": "Tier 1"
+        },
+        {
+          "type": "iprange",
+          "endpoint": "193.58.149.121,193.58.149.98,193.58.149.82,193.58.149.101,193.58.149.107,193.58.149.108,193.58.149.111",
+          "description": "These are the ip's used by our reverse proxy.\nThe Host header will determine the bounty tier.\nIf a report is submitted where the Host header is not used we will default to Tier 2. ",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "wp5-truststroke.uzleuven.be",
+          "description": "* access to /api/ should only work from BE or NL ip's\n* access to other paths or / should not work",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "cardsonline.azdiest.be",
+          "description": "This webapp should return a http 403 error due to ip whitelisting.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "liquidfilestest.uzleuven.be",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "random.uzleuven.be/random/",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "teststs.uzleuven.be",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "w1.uzleuven.be",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "cardsonlinetst.azdiest.be",
+          "description": "This webapp should return a http 403 error due to ip whitelisting.",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.kwsdose.be",
+          "description": null,
+          "impact": "Tier 3"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.playuzleuven.be",
+          "description": null,
+          "impact": "Tier 3"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.uzleuven.*",
+          "description": "#### *.uzleuven.be (tier 3) only applies to everything that hasn't been listed in the scope.",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.contactallerg(y|ie).uzleuven.be",
+          "description": null,
+          "impact": "No Bounty"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.mir.uzleuven.be",
+          "description": null,
+          "impact": "No Bounty"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*dev.uzleuven.be",
+          "description": null,
+          "impact": "No Bounty"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*idp*.uzleuven.be",
+          "description": null,
+          "impact": "No Bounty"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*stag*.uzleuven.be",
+          "description": null,
+          "impact": "No Bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "files.uzleuven.be",
+          "description": null,
+          "impact": "No Bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "kumulus.uzleuven.be",
+          "description": null,
+          "impact": "No Bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "mijnacc.uzleuven.be",
+          "description": null,
+          "impact": "No Bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "mirc.uzleuven.be",
+          "description": null,
+          "impact": "No Bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "prddnighting01.uzleuven.be",
+          "description": null,
+          "impact": "No Bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "w1.uzleuven.be/random",
+          "description": null,
+          "impact": "No Bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "ziekenhuisschool.be",
+          "description": null,
+          "impact": "No Bounty"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "url",
+          "endpoint": "jobs.uzleuven.be",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "uzleuven.atlassian.net",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "vacatures.uzleuven.be",
           "description": null,
           "impact": "Out of scope"
         }
