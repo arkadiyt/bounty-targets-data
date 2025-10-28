@@ -116,43 +116,6 @@
     }
   },
   {
-    "id": "554fc6c5-4ffa-4682-a3ba-7e86696e9b17",
-    "name": "Aikido Security: Bug Bounty Program",
-    "company_handle": "aikido",
-    "handle": "aikido",
-    "url": "https://www.intigriti.com/programs/aikido/aikido/detail",
-    "status": "open",
-    "confidentiality_level": "public",
-    "tacRequired": false,
-    "twoFactorRequired": false,
-    "min_bounty": {
-      "value": 50,
-      "currency": "EUR"
-    },
-    "max_bounty": {
-      "value": 2500,
-      "currency": "EUR"
-    },
-    "targets": {
-      "in_scope": [
-        {
-          "type": "url",
-          "endpoint": "app.aikido.dev",
-          "description": "This is our main application, which hosts the API as well as the front-end application.\n\nOur public API is also accessible via this host. Documentation is available here: https://apidocs.aikido.dev/.",
-          "impact": "Tier 2"
-        }
-      ],
-      "out_of_scope": [
-        {
-          "type": "wildcard",
-          "endpoint": "*.aikido.dev",
-          "description": null,
-          "impact": "Out of scope"
-        }
-      ]
-    }
-  },
-  {
     "id": "30f445f7-ca4c-4130-9434-49add5c6ac74",
     "name": "Algemeen Dagblad",
     "company_handle": "dpgm",
@@ -8013,51 +7976,45 @@
       "in_scope": [
         {
           "type": "url",
+          "endpoint": "https://app.pdq.com/",
+          "description": "Production environment for our PDQ Connect — please take care not to disrupt any services when testing",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://portal.pdq.com/",
+          "description": "Production environment for our billing portal — please take care not to disrupt any services when testing",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
           "endpoint": "https://a.simplemdm.com/",
           "description": "Production environment for SimpleMDM — please take care not to disrupt any services when testing",
           "impact": "Tier 2"
         },
         {
           "type": "url",
-          "endpoint": "https://auth2.pdq.tools/ ",
-          "description": "Test environment for our authentication tool",
+          "endpoint": "https://auth2.pdq.com/",
+          "description": "Production environment for our authentication tool — please take care not to disrupt any services when testing",
           "impact": "Tier 2"
         },
         {
           "type": "url",
-          "endpoint": "https://library-staging.pdq.tools/ ",
-          "description": "Test environment for our Package Library",
+          "endpoint": "https://library.pdq.com/",
+          "description": "Production environment for our Package Library — please take care not to disrupt any services when testing",
           "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "https://houston-staging.pdq.tools",
-          "description": "Test environment for PDQ Connect",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "https://portal-staging.pdq.tools/ ",
-          "description": "Test environment for our billing portal",
-          "impact": "Tier 3"
         }
       ],
       "out_of_scope": [
         {
-          "type": "url",
-          "endpoint": "https://auth2.pdq.tools/dev/mailbox",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "https://detect.pdq.tools/",
+          "type": "wildcard",
+          "endpoint": "https://*.pdq.com/",
           "description": null,
           "impact": "Out of scope"
         },
         {
           "type": "wildcard",
-          "endpoint": "https://*.pdq.com/",
+          "endpoint": "https://*.pdq.tools/",
           "description": null,
           "impact": "Out of scope"
         },
