@@ -1,72 +1,5 @@
 [
   {
-    "id": "cf95261d-750a-4672-b42e-74825f0d421d",
-    "name": "9altitudes - Vulnerability Disclosure Program",
-    "company_handle": "ninealtitudes",
-    "handle": "VDP",
-    "url": "https://www.intigriti.com/programs/ninealtitudes/VDP/detail",
-    "status": "open",
-    "confidentiality_level": "public",
-    "tacRequired": false,
-    "twoFactorRequired": false,
-    "min_bounty": {
-      "value": 0,
-      "currency": "EUR"
-    },
-    "max_bounty": {
-      "value": 0,
-      "currency": "EUR"
-    },
-    "targets": {
-      "in_scope": [
-        {
-          "type": "other",
-          "endpoint": "Old 9altitudes related domains",
-          "description": "#### Most of these domains are redirected to our current main domains, this is meant to display missed vulnerabilities. Example: active websites with exploits, old integrations connecting current platforms, remote access, other.\n####\n\n*.admiraldynamics.be\n*.admiraldynamics.eu\n*.bpos-live.com\n*.Bredanademo.dk\n*.Bredanasolutions.com\n*.Bredanasolutions.dk\n*.Bredana-solutions.dk\n*.bro-consulting.be\n*.cayentis.com\n*.cayentisxrm.nl\n*.cayentis.nl\n*.crm4utilities.com\n*.crmhugger.nl\n*.crm-trainingen.com\n*.crm-trainingen.nl\n*.crmvoorenergie.com\n*.crmvoorenergie.nl\n*.dynamicsconnector.net\n*.dynamicsconnector.nl\n*.Econocap.dk\n*.exarte.be\n*.gv-s.be\n*.marktanalyseonline.nl\n*.marktpotentieanalyse.nl\n*.neufaltitudes.com\n*.neufaltitudes.fr\n*.neufaltitudes.nl\n*.ninealtitude.com\n*.ninealtitudes.com\n*.ninealtitudes.dk\n*.ninealtitudes.se\n*.optigrator.com\n*.optigrator.dk\n*.optimate.dk\n*.optimateas.com\n*.optimatecrm.dk\n*.optimatetest.dk\n*.Pdmlink.dk\n*.pylades.com\n*.thewitnetwork.be\n*.Thingworx.dk\n*.uwmarktonline.nl\n*.Windchill.dk\n*.xrmpartner.com\n*.hillstarsrv.nl\n*.hillstar.nl",
-          "impact": "No Bounty"
-        }
-      ],
-      "out_of_scope": [
-        {
-          "type": "wildcard",
-          "endpoint": "*.9altitudes.*",
-          "description": "All data related to the main 9altitudes domains (.com, .nl, .dk, .fr, .si, and other top-level domains).\n",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.adultimagroup.*",
-          "description": "All data related to the main adultimagroup domains  (.com, .nl, .dk, .fr, .si, and other top-level domains).",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.birds.bi",
-          "description": "All data related to the main birds.bi domain.",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.birds.com",
-          "description": "All data related to the main birds.com domain.",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "other",
-          "endpoint": "*.dynamics.com",
-          "description": "\nAll Microsoft Dynamics portals related to 9altitudes. ",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.jobmanager.dk",
-          "description": "All data related to the main jobmanager.dk domain.",
-          "impact": "Out of scope"
-        }
-      ]
-    }
-  },
-  {
     "id": "e67941f1-2087-4681-8718-3e3f4dc51798",
     "name": "AMD Product Security Bug Bounty Program",
     "company_handle": "amd",
@@ -12463,6 +12396,73 @@
       ],
       "out_of_scope": [
 
+      ]
+    }
+  },
+  {
+    "id": "cefc1013-9927-4e4a-b306-e5d57f06d34a",
+    "name": "eHealth Hub VZN KUL",
+    "company_handle": "uz leuven",
+    "handle": "ehealthhub&meta-hubvznkul",
+    "url": "https://www.intigriti.com/programs/uz%20leuven/ehealthhub%26meta-hubvznkul/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 0,
+      "currency": "EUR"
+    },
+    "max_bounty": {
+      "value": 2000,
+      "currency": "EUR"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "wildcard",
+          "endpoint": "hub.vznkul.be/* ",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "hub.vznkul.be/services/interhub/InterHubService",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "hub.vznkul.be/services/intrahub/IntraHubService",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "hubacc.vznkul.be/*",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "hubacc.vznkul.be/services/acceptance/interhub/InterHubService",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "hubacc.vznkul.be/services/acceptance/intrahub/IntraHubService",
+          "description": null,
+          "impact": "Tier 2"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "url",
+          "endpoint": "www.vznkul.be",
+          "description": null,
+          "impact": "Out of scope"
+        }
       ]
     }
   },
