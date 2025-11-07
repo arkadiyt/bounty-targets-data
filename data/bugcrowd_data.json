@@ -604,9 +604,7 @@
           "ipAddress": null
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -676,24 +674,10 @@
         },
         {
           "type": "iot",
-          "target": "Arlo Essential",
-          "uri": null,
-          "name": "Arlo Essential",
-          "ipAddress": null
-        },
-        {
-          "type": "iot",
-          "target": "Arlo Essential 2 (indoor & outdoor camera, doorbell)",
+          "target": "Arlo Essential 2 & 3 (indoor & outdoor camera, doorbell)",
           "uri": "",
-          "name": "Arlo Essential 2 (indoor & outdoor camera, doorbell)",
+          "name": "Arlo Essential 2 & 3 (indoor & outdoor camera, doorbell)",
           "ipAddress": ""
-        },
-        {
-          "type": "iot",
-          "target": "Arlo Pro 3 Floodlight",
-          "uri": null,
-          "name": "Arlo Pro 3 Floodlight",
-          "ipAddress": null
         },
         {
           "type": "iot",
@@ -718,6 +702,13 @@
         },
         {
           "type": "iot",
+          "target": "Arlo Pro 3 Floodlight",
+          "uri": null,
+          "name": "Arlo Pro 3 Floodlight",
+          "ipAddress": null
+        },
+        {
+          "type": "iot",
           "target": "Arlo Pro SmartHub",
           "uri": null,
           "name": "Arlo Pro SmartHub",
@@ -728,6 +719,13 @@
           "target": "Arlo Pro 5S",
           "uri": "",
           "name": "Arlo Pro 5S",
+          "ipAddress": ""
+        },
+        {
+          "type": "iot",
+          "target": "Arlo Pro 6",
+          "uri": "",
+          "name": "Arlo Pro 6",
           "ipAddress": ""
         },
         {
@@ -760,9 +758,9 @@
         },
         {
           "type": "other",
-          "target": "*.arlo.com",
+          "target": "*.arlo.com (subdomains impacting customer-facing services)",
           "uri": "",
-          "name": "*.arlo.com",
+          "name": "*.arlo.com (subdomains impacting customer-facing services)",
           "ipAddress": ""
         },
         {
@@ -780,24 +778,10 @@
           "ipAddress": null
         },
         {
-          "type": "api",
-          "target": "https://arlo-device.messaging.netgear.com",
-          "uri": "",
-          "name": "https://arlo-device.messaging.netgear.com",
-          "ipAddress": null
-        },
-        {
           "type": "website",
           "target": "https://beta.arlo.com",
           "uri": "",
           "name": "https://beta.arlo.com",
-          "ipAddress": null
-        },
-        {
-          "type": "other",
-          "target": "https://downloads.arlo.com",
-          "uri": "",
-          "name": "https://downloads.arlo.com",
           "ipAddress": null
         },
         {
@@ -834,6 +818,13 @@
           "uri": "",
           "name": "https://updates.arlo.com",
           "ipAddress": null
+        },
+        {
+          "type": "api",
+          "target": "https://partnerapi.arlo.com",
+          "uri": "https://partnerapi.arlo.com",
+          "name": "https://partnerapi.arlo.com",
+          "ipAddress": ""
         }
       ],
       "out_of_scope": [
@@ -4021,62 +4012,6 @@
           "ipAddress": ""
         },
         {
-          "type": "other",
-          "target": "https://github.com/auth0/auth0.js",
-          "uri": "https://github.com/auth0/auth0.js",
-          "name": "https://github.com/auth0/auth0.js (Auth0 SDK for Web)",
-          "ipAddress": ""
-        },
-        {
-          "type": "other",
-          "target": "https://github.com/auth0/lock",
-          "uri": "https://github.com/auth0/lock",
-          "name": "https://github.com/auth0/lock (Lock for Web)",
-          "ipAddress": ""
-        },
-        {
-          "type": "other",
-          "target": "https://github.com/auth0/auth0-spa-js",
-          "uri": "https://github.com/auth0/auth0-spa-js",
-          "name": "https://github.com/auth0/auth0-spa-js (Auth0 Single Page App SDK)",
-          "ipAddress": ""
-        },
-        {
-          "type": "other",
-          "target": "https://github.com/auth0/Auth0.Net",
-          "uri": "https://github.com/auth0/Auth0.Net",
-          "name": "https://github.com/auth0/Auth0.Net (.NET SDK)",
-          "ipAddress": ""
-        },
-        {
-          "type": "other",
-          "target": "https://github.com/auth0/nextjs-auth0",
-          "uri": "https://github.com/auth0/nextjs-auth0",
-          "name": "https://github.com/auth0/nextjs-auth0 (Next.js SDK)",
-          "ipAddress": ""
-        },
-        {
-          "type": "other",
-          "target": "https://github.com/auth0/auth0-java",
-          "uri": "https://github.com/auth0/auth0-java",
-          "name": "https://github.com/auth0/auth0-java (Java SDK)",
-          "ipAddress": ""
-        },
-        {
-          "type": "other",
-          "target": "https://github.com/auth0/react-native-auth0",
-          "uri": "https://github.com/auth0/react-native-auth0",
-          "name": "https://github.com/auth0/react-native-auth0 (react-native SDK)",
-          "ipAddress": ""
-        },
-        {
-          "type": "other",
-          "target": "https://github.com/auth0/auth0-php",
-          "uri": "https://github.com/auth0/auth0-php",
-          "name": "https://github.com/auth0/auth0-php (PHP SDK)",
-          "ipAddress": ""
-        },
-        {
           "type": "website",
           "target": "https://dashboard.fga.dev/",
           "uri": "https://dashboard.fga.dev/",
@@ -4102,6 +4037,62 @@
           "target": "https://play.fga.dev/",
           "uri": "https://play.fga.dev/",
           "name": "https://play.fga.dev/",
+          "ipAddress": ""
+        },
+        {
+          "type": "other",
+          "target": "https://github.com/auth0/auth0.js",
+          "uri": "https://github.com/auth0/auth0.js",
+          "name": "Auth0 SDK for Web (Auth0.js)",
+          "ipAddress": ""
+        },
+        {
+          "type": "other",
+          "target": "https://github.com/auth0/lock",
+          "uri": "https://github.com/auth0/lock",
+          "name": "Lock for Web (lock)",
+          "ipAddress": ""
+        },
+        {
+          "type": "other",
+          "target": "https://github.com/auth0/auth0-spa-js",
+          "uri": "https://github.com/auth0/auth0-spa-js",
+          "name": "Auth0 Single Page App SDK (auth0-spa-js)",
+          "ipAddress": ""
+        },
+        {
+          "type": "other",
+          "target": "https://github.com/auth0/Auth0.Net",
+          "uri": "https://github.com/auth0/Auth0.Net",
+          "name": ".NET SDK (Auth0.Net)",
+          "ipAddress": ""
+        },
+        {
+          "type": "other",
+          "target": "https://github.com/auth0/nextjs-auth0",
+          "uri": "https://github.com/auth0/nextjs-auth0",
+          "name": "Auth0 Next.js SDK (nextjs-auth0)",
+          "ipAddress": ""
+        },
+        {
+          "type": "other",
+          "target": "https://github.com/auth0/auth0-java",
+          "uri": "https://github.com/auth0/auth0-java",
+          "name": "Auth0 Java SDK (auth0-java)",
+          "ipAddress": ""
+        },
+        {
+          "type": "other",
+          "target": "https://github.com/auth0/react-native-auth0",
+          "uri": "https://github.com/auth0/react-native-auth0",
+          "name": "Auth0 React Native SDK (react-native-auth0)",
+          "ipAddress": ""
+        },
+        {
+          "type": "other",
+          "target": "https://github.com/auth0/auth0-php",
+          "uri": "https://github.com/auth0/auth0-php",
+          "name": "Auth0 PHP SDK (auth0-php)",
           "ipAddress": ""
         },
         {
@@ -4308,9 +4299,7 @@
           "ipAddress": "195.60.68.250"
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -5331,9 +5320,7 @@
           "ipAddress": null
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -5374,9 +5361,7 @@
           "ipAddress": null
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -5431,9 +5416,7 @@
           "ipAddress": null
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -6111,9 +6094,7 @@
           "ipAddress": ""
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -6553,9 +6534,7 @@
           "ipAddress": ""
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -6631,9 +6610,7 @@
           "ipAddress": null
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -7164,9 +7141,7 @@
           "ipAddress": ""
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -7256,9 +7231,7 @@
           "ipAddress": null
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -7551,9 +7524,7 @@
           "ipAddress": ""
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -7937,6 +7908,13 @@
           "uri": "",
           "name": "https://www.wien.gv.at/advuew/*",
           "ipAddress": ""
+        },
+        {
+          "type": "other",
+          "target": "Public Network / Veranstaltungsnetz",
+          "uri": "",
+          "name": "Public Network / Veranstaltungsnetz",
+          "ipAddress": "141.203.188.0/22"
         }
       ]
     }
@@ -8063,9 +8041,7 @@
           "ipAddress": ""
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -8316,9 +8292,7 @@
           "ipAddress": ""
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -8478,9 +8452,7 @@
           "ipAddress": ""
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -8815,9 +8787,7 @@
           "ipAddress": null
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -9117,9 +9087,7 @@
           "ipAddress": null
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -9188,9 +9156,7 @@
           "ipAddress": ""
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -9245,9 +9211,7 @@
           "ipAddress": ""
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -9344,9 +9308,7 @@
           "ipAddress": null
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -9954,9 +9916,7 @@
           "ipAddress": null
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -10081,9 +10041,7 @@
           "ipAddress": ""
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -10313,9 +10271,7 @@
           "ipAddress": ""
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -11042,9 +10998,7 @@
           "ipAddress": null
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -11127,9 +11081,7 @@
           "ipAddress": null
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -11338,9 +11290,7 @@
           "ipAddress": ""
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -11920,9 +11870,7 @@
           "ipAddress": null
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -12082,9 +12030,7 @@
           "ipAddress": ""
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -13007,9 +12953,7 @@
           "ipAddress": ""
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -13785,9 +13729,7 @@
           "ipAddress": null
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -13961,9 +13903,7 @@
           "ipAddress": null
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -14018,9 +13958,7 @@
           "ipAddress": null
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -14187,9 +14125,7 @@
           "ipAddress": ""
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -14300,9 +14236,7 @@
           "ipAddress": ""
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -14749,9 +14683,7 @@
           "ipAddress": null
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -15016,9 +14948,7 @@
           "ipAddress": null
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -15227,9 +15157,7 @@
           "ipAddress": ""
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -15340,9 +15268,7 @@
           "ipAddress": null
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -15516,9 +15442,7 @@
           "ipAddress": null
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -15937,6 +15861,13 @@
           "uri": "",
           "name": "wholelifeconversion.com",
           "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "21fiveca.com",
+          "uri": "",
+          "name": "21fiveca.com",
+          "ipAddress": ""
         }
       ]
     }
@@ -16070,9 +16001,7 @@
           "ipAddress": null
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -16197,9 +16126,7 @@
           "ipAddress": null
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -16800,9 +16727,7 @@
           "ipAddress": ""
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -16878,9 +16803,7 @@
           "ipAddress": ""
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -19154,9 +19077,7 @@
           "ipAddress": ""
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -19190,9 +19111,7 @@
           "ipAddress": ""
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -19506,9 +19425,7 @@
           "ipAddress": null
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -19577,9 +19494,7 @@
           "ipAddress": null
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -19683,9 +19598,7 @@
           "ipAddress": null
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -19705,9 +19618,7 @@
           "ipAddress": null
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -19755,9 +19666,7 @@
           "ipAddress": null
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -19784,9 +19693,7 @@
           "ipAddress": null
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -20373,9 +20280,7 @@
           "ipAddress": ""
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -20465,9 +20370,7 @@
           "ipAddress": ""
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -20826,9 +20729,16 @@
         },
         {
           "type": "website",
-          "target": "homeloans.realestate.com.au/api/enquiry/contact/racb",
+          "target": "*.realestate.com.au/homeloans",
           "uri": "",
-          "name": "homeloans.realestate.com.au/api/enquiry/contact/racb",
+          "name": "*.realestate.com.au/homeloans",
+          "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "homeloans.realestate.com.au",
+          "uri": "",
+          "name": "homeloans.realestate.com.au",
           "ipAddress": ""
         },
         {
@@ -21320,9 +21230,7 @@
           "ipAddress": ""
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -21482,9 +21390,7 @@
           "ipAddress": ""
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -21616,9 +21522,7 @@
           "ipAddress": null
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -21792,9 +21696,7 @@
           "ipAddress": ""
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -21877,9 +21779,7 @@
           "ipAddress": ""
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -21927,9 +21827,7 @@
           "ipAddress": null
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -22180,9 +22078,7 @@
           "ipAddress": null
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -22307,9 +22203,7 @@
           "ipAddress": ""
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -22336,9 +22230,7 @@
           "ipAddress": ""
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -22736,9 +22628,7 @@
           "ipAddress": null
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -22933,9 +22823,7 @@
           "ipAddress": null
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -23587,36 +23475,15 @@
     "url": "https://bugcrowd.com/engagements/tempusex-public-mbb-og",
     "allows_disclosure": false,
     "managed_by_bugcrowd": true,
-    "safe_harbor": "partial",
+    "safe_harbor": "full",
     "max_payout": 4500,
     "targets": {
       "in_scope": [
         {
           "type": "website",
-          "target": "https://biocorellc.com",
-          "uri": "https://biocorellc.com",
-          "name": "https://biocorellc.com",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
           "target": "https://tempus-ex.com",
           "uri": "https://tempus-ex.com",
           "name": "https://tempus-ex.com",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "https://infiniteathlete.ai",
-          "uri": "https://infiniteathlete.ai",
-          "name": "https://infiniteathlete.ai",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "https://platform.infiniteathlete.ai",
-          "uri": "https://platform.infiniteathlete.ai",
-          "name": "https://platform.infiniteathlete.ai",
           "ipAddress": ""
         },
         {
@@ -23632,11 +23499,23 @@
           "uri": "https://github.com/tempus-ex",
           "name": "https://github.com/tempus-ex",
           "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "https://infiniteathlete.ai",
+          "uri": "https://infiniteathlete.ai",
+          "name": "https://infiniteathlete.ai",
+          "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "https://platform.infiniteathlete.ai",
+          "uri": "https://platform.infiniteathlete.ai",
+          "name": "https://platform.infiniteathlete.ai",
+          "ipAddress": ""
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -25007,9 +24886,7 @@
           "ipAddress": ""
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -25617,9 +25494,7 @@
           "ipAddress": null
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -25660,9 +25535,7 @@
           "ipAddress": ""
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -25689,9 +25562,7 @@
           "ipAddress": ""
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -25718,9 +25589,7 @@
           "ipAddress": ""
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -25740,9 +25609,7 @@
           "ipAddress": ""
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -26273,9 +26140,7 @@
           "ipAddress": null
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -26827,9 +26692,7 @@
           "ipAddress": null
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -26919,9 +26782,7 @@
           "ipAddress": ""
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -27270,9 +27131,7 @@
           "ipAddress": ""
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -27663,9 +27522,7 @@
           "ipAddress": ""
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -27706,9 +27563,7 @@
           "ipAddress": null
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {

@@ -49,6 +49,43 @@
     }
   },
   {
+    "id": "554fc6c5-4ffa-4682-a3ba-7e86696e9b17",
+    "name": "Aikido Security: Bug Bounty Program",
+    "company_handle": "aikido",
+    "handle": "aikido",
+    "url": "https://www.intigriti.com/programs/aikido/aikido/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 50,
+      "currency": "EUR"
+    },
+    "max_bounty": {
+      "value": 2500,
+      "currency": "EUR"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "url",
+          "endpoint": "app.aikido.dev",
+          "description": "This is our main application, which hosts the API as well as the front-end application.\n\nOur public API is also accessible via this host. Documentation is available here: https://apidocs.aikido.dev/.",
+          "impact": "Tier 2"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "wildcard",
+          "endpoint": "*.aikido.dev",
+          "description": null,
+          "impact": "Out of scope"
+        }
+      ]
+    }
+  },
+  {
     "id": "ac81c127-b11b-469e-8060-e0fbb9c9c398",
     "name": "Aikido Security: Zen by Aikido ",
     "company_handle": "aikido",
@@ -105,9 +142,7 @@
           "impact": "Tier 3"
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -161,9 +196,7 @@
           "impact": "Tier 3"
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -290,9 +323,7 @@
           "impact": "No Bounty"
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -364,9 +395,7 @@
           "impact": "No Bounty"
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -402,9 +431,7 @@
           "impact": "Tier 3"
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -736,9 +763,7 @@
           "impact": "No Bounty"
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -768,9 +793,7 @@
           "impact": "Tier 2"
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -897,9 +920,7 @@
           "impact": "Tier 2"
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -1043,9 +1064,7 @@
           "impact": "No Bounty"
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -1334,9 +1353,7 @@
           "impact": "No Bounty"
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -2233,9 +2250,7 @@
           "impact": "Tier 3"
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -2265,9 +2280,7 @@
           "impact": "Tier 2"
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -2315,9 +2328,7 @@
           "impact": "No Bounty"
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -2383,9 +2394,7 @@
           "impact": "No Bounty"
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -2427,9 +2436,7 @@
           "impact": "Tier 3"
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -2761,9 +2768,145 @@
           "impact": "Tier 3"
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
+    }
+  },
+  {
+    "id": "d14eedce-607d-4233-995d-30dbc7de8f23",
+    "name": "Delen Private Bank",
+    "company_handle": "delenprivatebank",
+    "handle": "privatebankdelen",
+    "url": "https://www.intigriti.com/programs/delenprivatebank/privatebankdelen/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 100,
+      "currency": "EUR"
+    },
+    "max_bounty": {
+      "value": 15000,
+      "currency": "EUR"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "url",
+          "endpoint": "api.digital.delen.be ",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.digital.delen.lu ",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "app.delen.be ",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "app.delen.ch ",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "app.delen.lu ",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "auth.digital.delen.be ",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "auth.digital.delen.lu ",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "android",
+          "endpoint": "be.delen.digital",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "ios",
+          "endpoint": "delen/id1064839588",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "login.delen.be ",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "login.delen.ch ",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "login.delen.lu ",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "login.oyens.com",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "status.delen.be ",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "sts.delen.be ",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.cadelam.be ",
+          "description": "🇫🇷🇳🇱",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.cadelux.lu/en ",
+          "description": "🇬🇧🇫🇷🇳🇱",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.delen.bank",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.delen.be/en ",
+          "description": "🇬🇧🇫🇷🇳🇱",
+          "impact": "Tier 2"
+        }
+      ],
+      "out_of_scope": []
     }
   },
   {
@@ -3052,9 +3195,7 @@
           "impact": "Tier 2"
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -3532,9 +3673,7 @@
           "impact": null
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -3667,9 +3806,7 @@
           "impact": "Tier 2"
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -3717,9 +3854,7 @@
           "impact": "No Bounty"
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -3949,9 +4084,7 @@
           "impact": "Tier 3"
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -4200,9 +4333,7 @@
           "impact": "Tier 2"
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -4317,9 +4448,7 @@
           "impact": "No Bounty"
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -4482,9 +4611,7 @@
           "impact": "No Bounty"
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -5480,9 +5607,7 @@
           "impact": "Tier 2"
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -5614,9 +5739,7 @@
           "impact": "No Bounty"
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -5804,9 +5927,7 @@
           "impact": "No Bounty"
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -5842,9 +5963,7 @@
           "impact": "Tier 2"
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -7544,9 +7663,7 @@
           "impact": "Tier 3"
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -7582,9 +7699,7 @@
           "impact": "Tier 2"
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -7934,9 +8049,7 @@
           "impact": "No Bounty"
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -8520,9 +8633,7 @@
           "impact": "No Bounty"
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -8958,9 +9069,7 @@
           "impact": "No Bounty"
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -9171,9 +9280,7 @@
           "impact": "No Bounty"
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -9215,9 +9322,7 @@
           "impact": "No Bounty"
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -9314,9 +9419,7 @@
           "impact": "Tier 2"
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -9376,9 +9479,7 @@
           "impact": "Tier 2"
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -9432,9 +9533,7 @@
           "impact": "No Bounty"
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -9531,9 +9630,7 @@
           "impact": "Tier 2"
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -9841,9 +9938,7 @@
           "impact": "Tier 3"
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -9909,9 +10004,7 @@
           "impact": "No Bounty"
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -10327,9 +10420,7 @@
           "impact": "Tier 2"
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -10722,9 +10813,7 @@
           "impact": "No Bounty"
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -11007,9 +11096,7 @@
           "impact": "No Bounty"
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -11257,9 +11344,7 @@
           "impact": "Tier 3"
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -11403,9 +11488,7 @@
           "impact": "Tier 2"
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -11435,9 +11518,7 @@
           "impact": "No Bounty"
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -11606,9 +11687,7 @@
           "impact": "Tier 3"
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -11740,9 +11819,7 @@
           "impact": "Tier 3"
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -12153,9 +12230,7 @@
           "impact": "Tier 2"
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
@@ -12607,9 +12682,7 @@
           "impact": "No Bounty"
         }
       ],
-      "out_of_scope": [
-
-      ]
+      "out_of_scope": []
     }
   },
   {
