@@ -6064,6 +6064,144 @@
     }
   },
   {
+    "id": "b3a1c714-3ba4-48ea-84cc-b0abcaf446ca",
+    "name": "Nexo's VDP",
+    "company_handle": "nexo",
+    "handle": "nexosvdp",
+    "url": "https://www.intigriti.com/programs/nexo/nexosvdp/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 0,
+      "currency": "USD"
+    },
+    "max_bounty": {
+      "value": 0,
+      "currency": "USD"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "wildcard",
+          "endpoint": "https://*.nexo.com",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://platform.nexo.com/api/1/request_bwc_quote",
+          "description": "API Endpoint fetches and returns buy with card quote.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://platform.nexo.com/api/1/get_pay_to_card_fee",
+          "description": "An API endpoint that generates the fees for the user.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://platform.nexo.com/api/1/exchange_order",
+          "description": "Endpoint’s functionality is to trigger and convert an exchange between two currencies.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://platform.nexo.com/api/1/create_recurring_payment",
+          "description": "API sets and creates new recurring payment which will occurs every X days.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://platform.nexo.com/api/trading/advanced/facade/api/v1/order/futures",
+          "description": "API Endpoint used to open a future position.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://platform.nexo.com/api/1/exchange_request_quote",
+          "description": "API endpoint requests a quote which is used for calculating the amount that will be received.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://platform.nexo.com/api/1/request_crypto_withdrawal",
+          "description": "API Endpoint that allows users to withdraw their crypto.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://platform.nexo.com/api/platform/exchange/v2/booster/orders",
+          "description": "The Endpoint’s functionality is to return the orders that have been made by the user.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://platform.nexo.com/",
+          "description": "On this website you can use our products.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://platform.nexo.com/api/1/term/deposits/user/create",
+          "description": "API Endpoint that creates a fixed-term deposit.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://platform.nexo.com/api/trading/advanced/facade/api/v1/withdraw",
+          "description": "API Endpoint used to withdraw assets from your trading wallet to your savings wallet.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://platform.nexo.com/api/trading/advanced/facade/api/v1/fees",
+          "description": "Endpoint to fetch deposit fees.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://platform.nexo.com/api/trading/advanced/facade/api/v1/deposit",
+          "description": "API Endpoint used to add assets to the user's trading wallet.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://platform.nexo.com/api/platform/exchange/v1/booster/quotes",
+          "description": "API Endpoint requests a quote for our [booster product](https://support.nexo.com/article/nexo-booster-explained). The transactions are made based on this quote.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://platform.nexo.com/api/1/request_pay_to_card",
+          "description": "The Endpoint’s functionality is to perform Withdraw Transaction to a Card.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://nexo.com/",
+          "description": "On this website you can get familiar with our products.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://platform.nexo.com/api/1/request_capture_payment",
+          "description": "API Endpoint that allows users to buy crypto with a card.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://platform.nexo.com/api/platform/exchange/v2/exchange/orders",
+          "description": "API Endpoint used to convert one crypto to another.",
+          "impact": "Tier 1"
+        }
+      ],
+      "out_of_scope": []
+    }
+  },
+  {
     "id": "ecf9c610-36eb-47df-8b25-bb496aff8015",
     "name": "Nexuzhealth Web PACS",
     "company_handle": "uz leuven",
