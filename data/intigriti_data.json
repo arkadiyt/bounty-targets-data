@@ -12070,6 +12070,12 @@
       ],
       "out_of_scope": [
         {
+          "type": "url",
+          "endpoint": "posthog.intigriti.com",
+          "description": "PostHog proxy: https://posthog.com/docs/advanced/proxy\nAlso the PostHog token is meant to be publicly available see: https://posthog.com/docs/api\n\nPlease don't test against this subdomain since you are directly testing PostHog which we don't control.",
+          "impact": "Out of scope"
+        },
+        {
           "type": "wildcard",
           "endpoint": "*.intigriti.io",
           "description": null,
