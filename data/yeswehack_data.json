@@ -355,6 +355,45 @@
     }
   },
   {
+    "id": "bind-bug-bounty-program",
+    "name": "BIND 9 Bug Bounty Program",
+    "public": true,
+    "disabled": false,
+    "managed": null,
+    "min_bounty": 100,
+    "max_bounty": 5000,
+    "targets": {
+      "in_scope": [
+        {
+          "target": "https://gitlab.isc.org/isc-projects/bind9",
+          "type": "open-source"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "target": "Any asset that is not explicitly included in our program's scope",
+          "type": "other"
+        },
+        {
+          "target": "Any third parties’ or Community’s assets (e.g. packages or versions not created and published by ISC).",
+          "type": "other"
+        },
+        {
+          "target": "Any depreciated versions and other versions than the current stable/official version are considered out of scope. (what about the development branch??)",
+          "type": "other"
+        },
+        {
+          "target": "Any local implementation of the project/implementation belonging to third parties",
+          "type": "other"
+        },
+        {
+          "target": "Vulnerabilities in the DNS protocol that are not specific to the BIND 9 implementation (while we are interested in these, they are out of scope of this Bug Bounty program).",
+          "type": "other"
+        }
+      ]
+    }
+  },
+  {
     "id": "bitoasis-bug-bounty-program",
     "name": "BitOasis - Bug Bounty Program",
     "public": true,
@@ -2544,6 +2583,45 @@
     }
   },
   {
+    "id": "imagemagick-bug-bounty-program",
+    "name": "ImageMagick Bug Bounty Program",
+    "public": true,
+    "disabled": false,
+    "managed": null,
+    "min_bounty": 50,
+    "max_bounty": 2000,
+    "targets": {
+      "in_scope": [
+        {
+          "target": "https://github.com/ImageMagick/ImageMagick",
+          "type": "open-source"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "target": "Any asset that is not explicitly included in our program's scope",
+          "type": "other"
+        },
+        {
+          "target": "Any third parties’ or Community’s assets that are not explicitly included (e.g. forks, libraries or packages)",
+          "type": "other"
+        },
+        {
+          "target": "Any depreciated versions and other versions than the current stable/official version are considered out of scope except if specified otherwise in the program’s rules",
+          "type": "other"
+        },
+        {
+          "target": "Any local implementation of the project/implementation belonging to third parties",
+          "type": "other"
+        },
+        {
+          "target": "Any issues that have already been reported in Google OSS-Fuzz publicly or privately",
+          "type": "other"
+        }
+      ]
+    }
+  },
+  {
     "id": "infomaniak-bug-bounty-program",
     "name": "Infomaniak Bug Bounty program",
     "public": true,
@@ -2761,6 +2839,77 @@
         },
         {
           "target": "Websocket IPS-public credentials. Public identifiers that do not allow access to information outside the scope of the user's profile.",
+          "type": "other"
+        }
+      ]
+    }
+  },
+  {
+    "id": "jenkins-bug-bounty-program",
+    "name": "Jenkins Bug Bounty Program",
+    "public": true,
+    "disabled": false,
+    "managed": null,
+    "min_bounty": 100,
+    "max_bounty": 5000,
+    "targets": {
+      "in_scope": [
+        {
+          "target": "https://github.com/jenkinsci/jenkins",
+          "type": "open-source"
+        },
+        {
+          "target": "https://github.com/jenkinsci/stapler",
+          "type": "open-source"
+        },
+        {
+          "target": "https://github.com/jenkinsci/jelly",
+          "type": "open-source"
+        },
+        {
+          "target": "https://github.com/jenkinsci/winstone",
+          "type": "open-source"
+        },
+        {
+          "target": "https://github.com/jenkinsci/script-security-plugin",
+          "type": "open-source"
+        },
+        {
+          "target": "https://github.com/jenkinsci/credentials-plugin",
+          "type": "open-source"
+        },
+        {
+          "target": "https://github.com/jenkinsci/credentials-binding-plugin",
+          "type": "open-source"
+        },
+        {
+          "target": "https://github.com/jenkinsci/workflow-cps-plugin",
+          "type": "open-source"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "target": "Everything from https://www.jenkins.io/security/reporting/#non-issues, and in addition the following items",
+          "type": "other"
+        },
+        {
+          "target": "Docker images are not in scope for this program",
+          "type": "other"
+        },
+        {
+          "target": "Any components/plugins not explicitly included are not in scope (e.g. forks, libraries or packages)",
+          "type": "other"
+        },
+        {
+          "target": "Jenkins installers are not in scope",
+          "type": "other"
+        },
+        {
+          "target": "Jenkins project infrastructure (the one hosted by the project) is not in scope",
+          "type": "other"
+        },
+        {
+          "target": "Jenkins instances hosted by users are not in scope",
           "type": "other"
         }
       ]
