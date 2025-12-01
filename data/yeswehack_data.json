@@ -3956,6 +3956,53 @@
     }
   },
   {
+    "id": "openproject",
+    "name": "OpenProject Bug Bounty Program",
+    "public": true,
+    "disabled": false,
+    "managed": null,
+    "min_bounty": 50,
+    "max_bounty": 5000,
+    "targets": {
+      "in_scope": [
+        {
+          "target": "https://github.com/opf/openproject",
+          "type": "open-source"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "target": "Any asset that is not explicitly included in our program's scope",
+          "type": "other"
+        },
+        {
+          "target": "Any third parties’ or Community’s assets that are not explicitly included (e.g. forks, libraries or packages)",
+          "type": "other"
+        },
+        {
+          "target": "Development configurations, plugins or images, such as the development docker containers, or running application in non-production modes and configurations.",
+          "type": "other"
+        },
+        {
+          "target": "Any depreciated versions and other versions than the current stable/official version are considered out of scope except if specified otherwise in the program’s rules",
+          "type": "other"
+        },
+        {
+          "target": "Libraries and protocols with known limitations and gems already in update maintenance (e.g., OmniAuth < 2 CSRF protections, carrierwave)",
+          "type": "other"
+        },
+        {
+          "target": "Any local implementation of the project/implementation belonging to third parties",
+          "type": "other"
+        },
+        {
+          "target": "Third parties such as security researchers already involved in active security audits, or already opened reports",
+          "type": "other"
+        }
+      ]
+    }
+  },
+  {
     "id": "paddle-com-public-bug-bounty-program",
     "name": "Paddle.com Public Bug Bounty Program",
     "public": true,
