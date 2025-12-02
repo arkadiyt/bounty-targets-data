@@ -4446,6 +4446,115 @@
     }
   },
   {
+    "id": "b084e962-1d83-4bec-9d46-0f02c0f7bf88",
+    "name": "InnoGames",
+    "company_handle": "innogames",
+    "handle": "innogames",
+    "url": "https://www.intigriti.com/programs/innogames/innogames/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 50,
+      "currency": "EUR"
+    },
+    "max_bounty": {
+      "value": 4500,
+      "currency": "EUR"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "other",
+          "endpoint": "Backend/Non-Game",
+          "description": "* *.igpayment.com\nThis is our payment environment used in all of our games.\n\n* *.innogames.de\nThis wildcard hosts backend services, which are not intended to be seen by end users. \n\n* login.innogames.de\nThis is our central login and account management tool. We do not provide accounts for this service and there are no registration pages available. \n\n* *.innogames.com\n\n* www.innogames.com\n***Please do not send applications through the application form. This is a 3rd party tool and out-of-scope.***\n\n* support.innogames.com\n***Please avoid creating many new tickets, but instead concentrate your testing on the ticket contents.***\n\n**Note for automated-scanning:**\nWe are happy that you are as enthusiastic as we are about this program!\nTo not impact our live-systems and other researchers too much, we ask you to keep your automated scanners on a scan rate of 1 request/s. ",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "other",
+          "endpoint": "Elvenar",
+          "description": "* xs-play.elvenar.com\nThe landing page for the game login.\n\n* xs0.elvenar.com\nThe master server, which performs authentication and holds inventory of \"game-world-wide\" player data.\n\n* xs1.elvenar.com\nThis is the actual game world, where the game takes place.\n",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "Forge of Empires",
+          "description": "* xs-play.forgeofempires.com\nThe landing page for the game login.\n\n* xs0.forgeofempires.com\nThe master server, which performs authentication and holds inventory of \"game-world-wide\" player data.\n\n* xs1.forgeofempires.com\nThis is the actual game world, where the game takes place.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "Grepolis",
+          "description": "* xs-play.grepolis.com\nThe landing page for the game login.\n\n* xs0.grepolis.com\nThe master server, which performs authentication and holds inventory of \"game-world-wide\" player data.\n\n* xs1.grepolis.com\nThis is the actual game world, where the game takes place.\n",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "Tribal Wars",
+          "description": "* tribalwars.cash / xs0.tribalwars.cash\nThe master server, which performs authentication and holds inventory of \"game-world-wide\" player data..\n\n* xs(1-3).tribalwars.cash\nThese are the actual game worlds, where the game takes place.\n",
+          "impact": "Tier 2"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "url",
+          "endpoint": "autodiscover.innogames.de",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "exchange.innogames.de",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "igjam.eu",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "jamf.innogames.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "mail.innogames.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "newsroom.innogames.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "pn.innogames.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "slack.innogames.de",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "typingmind.innogames.de",
+          "description": null,
+          "impact": "Out of scope"
+        }
+      ]
+    }
+  },
+  {
     "id": "10eb5e95-08e2-4f4e-8d22-f8c600a7acff",
     "name": "Intel®",
     "company_handle": "intel",
@@ -11477,6 +11586,115 @@
         }
       ],
       "out_of_scope": []
+    }
+  },
+  {
+    "id": "acb142c1-ffeb-41c3-a9e7-1624054f42e4",
+    "name": "Veriff Bug Bounty",
+    "company_handle": "veriff",
+    "handle": "veriffbugbounty",
+    "url": "https://www.intigriti.com/programs/veriff/veriffbugbounty/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 5,
+      "currency": "EUR"
+    },
+    "max_bounty": {
+      "value": 6000,
+      "currency": "EUR"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "ios",
+          "endpoint": "1467907532",
+          "description": "An iOS application for demoing our product.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "alchemy.veriff.com",
+          "description": "This is an end user (internal) API endpoint.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.flamingo-eu.veriff.com",
+          "description": "This is a public API endpoint.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.us.veriff.me",
+          "description": "This is a public API endpoint.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.veriff.me",
+          "description": "This is a public API endpoint.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "android",
+          "endpoint": "com.veriff.demo",
+          "description": "An Android application for demoing our product.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "louvre.veriff.me",
+          "description": "This is an end user (internal) API endpoint.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "magic.veriff.me",
+          "description": "This is an end user (internal) API endpoint.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "station.veriff.com",
+          "description": "Here you can find our Veriff Station application.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "stationapi.veriff.com",
+          "description": "This is the backend for our Station application.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.veriff.com",
+          "description": "Please note that third party services are out of scope unless the issue is caused due to a misconfiguration by Veriff.",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "developers.veriff.me",
+          "description": "You can find our developers documentation here.",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.veriff.com",
+          "description": "This is our marketing website.",
+          "impact": "Tier 3"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "url",
+          "endpoint": "https://station.veriff.com/config/",
+          "description": "Configuration includes public keys what are needed for frontend working properly.",
+          "impact": "Out of scope"
+        }
+      ]
     }
   },
   {
