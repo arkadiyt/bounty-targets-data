@@ -3199,6 +3199,229 @@
     }
   },
   {
+    "id": "e540980d-b56e-4956-afff-f914653a4f6e",
+    "name": "Dropbox Bug Bounty",
+    "company_handle": "dropbox",
+    "handle": "dropbox",
+    "url": "https://www.intigriti.com/programs/dropbox/dropbox/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 100,
+      "currency": "USD"
+    },
+    "max_bounty": {
+      "value": 15000,
+      "currency": "USD"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "url",
+          "endpoint": "Dropbox.com",
+          "description": "Dropbox Application",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "sign.dropbox.com",
+          "description": "Sign by Dropbox (formerly HelloSign)",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "HelloSign.com",
+          "description": "HelloSign (now Dropbox Sign)",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "dash.ai",
+          "description": "Web Browser Extension",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "other",
+          "endpoint": "dash.dropbox.com",
+          "description": "Dash by Dropbox MacOS and PC",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.dropbox.com",
+          "description": "Dropbox Public API",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "replay.dropbox.com",
+          "description": "Replay by Dropbox",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "other",
+          "endpoint": "Dropbox Desktop Application",
+          "description": "Dropbox for MacOS and PC ",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "ios",
+          "endpoint": "327630330",
+          "description": "Dropbox iOS Application",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "ios",
+          "endpoint": "6450553960",
+          "description": "Dash by Dropbox iOS Application",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "ios",
+          "endpoint": "1080074001",
+          "description": "Dropbox EMM iOS Application",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "android",
+          "endpoint": "com.dropbox.dash",
+          "description": "Dash by Dropbox Android Application",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "android",
+          "endpoint": "com.dropbox.android",
+          "description": "Dropbox Android Application",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "HelloFax.com",
+          "description": "HelloFax Web Application",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "docsend.com",
+          "description": "Docsend Web Application",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "app.Reclaim.ai",
+          "description": "Reclaim.ai Web Application",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "dropbox.com/paper",
+          "description": "Paper by Dropbox Application",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.dropbox.com",
+          "description": null,
+          "impact": "Tier 3"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.dropboxer.net",
+          "description": null,
+          "impact": "Tier 3"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.dropboxforum.com",
+          "description": null,
+          "impact": "Tier 3"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.dropboxpartners.com",
+          "description": null,
+          "impact": "Tier 3"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.hellofax.com",
+          "description": null,
+          "impact": "Tier 3"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.docsend.com",
+          "description": null,
+          "impact": "Tier 3"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.reclaim.ai",
+          "description": null,
+          "impact": "Tier 3"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.helloworks.com",
+          "description": null,
+          "impact": "Tier 3"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.hellosign.com",
+          "description": null,
+          "impact": "Tier 3"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "other",
+          "endpoint": "Boxcryptor",
+          "description": "Including: \n\n*.boxcryptor.com",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "other",
+          "endpoint": "Formswift",
+          "description": "Including:\n\n*.formswift.com",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "other",
+          "endpoint": "Dropbox Passwords",
+          "description": "Including:\n\niOS and Android Applications",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "other",
+          "endpoint": "Dropbox Capture Windows Desktop App",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "other",
+          "endpoint": "Dropbox Capture macOS Desktop App",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "android",
+          "endpoint": "com.dropbox.paper",
+          "description": "Paper by Dropbox Android Application",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "ios",
+          "endpoint": "1126623662",
+          "description": "Paper by Dropbox iOS Application",
+          "impact": "Out of scope"
+        }
+      ]
+    }
+  },
+  {
     "id": "b31aef04-c63f-429f-b965-f92c94e5eec3",
     "name": "Dropbox Vulnerability Disclosure Program ",
     "company_handle": "dropbox",
@@ -10168,6 +10391,54 @@
           "impact": "Out of scope"
         }
       ]
+    }
+  },
+  {
+    "id": "724ad196-90de-4ba8-bf21-dc114ab7fce4",
+    "name": "Trusted Firmware",
+    "company_handle": "arm",
+    "handle": "trustedfirmware",
+    "url": "https://www.intigriti.com/programs/arm/trustedfirmware/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 1000,
+      "currency": "USD"
+    },
+    "max_bounty": {
+      "value": 20000,
+      "currency": "USD"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": null,
+          "endpoint": "TrustedFirmware-A (TF-A)",
+          "description": "The Trusted Firmware-A project provides a reference implementation of secure world software for Armv8-A and Armv9-A class processors.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": null,
+          "endpoint": "TrustedFirmware-M (TF-M)",
+          "description": "Trusted Firmware-M (TF-M) implements the Secure Processing Environment (SPE) for Armv8-M, Armv8.1-M architectures (e.g. the Cortex-M33, Cortex-M23, Cortex-M55, Cortex-M85 processors) or dual-core platforms. It is the platform security architecture reference implementation aligning with PSA Certified guidelines, enabling chips, Real Time Operating Systems and devices to become PSA Certified.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": null,
+          "endpoint": "OP-TEE",
+          "description": "OP-TEE is a Trusted Execution Environment (TEE) designed as companion to a non-secure Linux kernel running on Arm; Cortex-A cores using the TrustZone technology.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": null,
+          "endpoint": "Mbed TLS & TF-PSA-Crypto",
+          "description": "Mbed TLS is a C library that implements X.509 certificate manipulation and the TLS and DTLS protocols. Its small code footprint makes it suitable for embedded systems. Mbed TLS includes the TF-PSA-Crypto repository that provides an implementation of the PSA Cryptography API.",
+          "impact": "Tier 2"
+        }
+      ],
+      "out_of_scope": []
     }
   },
   {
