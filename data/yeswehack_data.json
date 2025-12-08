@@ -2191,6 +2191,41 @@
     }
   },
   {
+    "id": "ffmpeg-bug-bounty-program",
+    "name": "FFmpeg Bug Bounty Program",
+    "public": true,
+    "disabled": false,
+    "managed": null,
+    "min_bounty": 100,
+    "max_bounty": 5000,
+    "targets": {
+      "in_scope": [
+        {
+          "target": "https://git.ffmpeg.org/gitweb/ffmpeg.git",
+          "type": "open-source"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "target": "Any asset that is not explicitly included in our program's scope",
+          "type": "other"
+        },
+        {
+          "target": "Any third parties’ or Community’s assets that are not explicitly included (e.g. forks, libraries or packages)",
+          "type": "other"
+        },
+        {
+          "target": "Any depreciated versions and other versions than the current stable/official version are considered out of scope except if specified otherwise in the program’s rules",
+          "type": "other"
+        },
+        {
+          "target": "Any local implementation of the project/implementation belonging to third parties",
+          "type": "other"
+        }
+      ]
+    }
+  },
+  {
     "id": "franceconnect-proconnect-public",
     "name": "FranceConnect / FranceConnect+ - DINUM",
     "public": true,
@@ -5018,31 +5053,39 @@
       "in_scope": [
         {
           "target": "*.telenor.se",
-          "type": "web-application"
+          "type": "wildcard"
         },
         {
           "target": "*.bredbandsbolaget.se",
-          "type": "web-application"
+          "type": "wildcard"
         },
         {
           "target": "*.europolitan.se",
-          "type": "web-application"
+          "type": "wildcard"
         },
         {
           "target": "*.ownit.se",
-          "type": "web-application"
+          "type": "wildcard"
         },
         {
           "target": "*.vimla.se",
-          "type": "web-application"
+          "type": "wildcard"
         },
         {
           "target": "*.vimla.work",
-          "type": "web-application"
+          "type": "wildcard"
         },
         {
           "target": "*.vimla.io",
-          "type": "web-application"
+          "type": "wildcard"
+        },
+        {
+          "target": "*.inpli.se",
+          "type": "wildcard"
+        },
+        {
+          "target": "*.telenorinpli.se",
+          "type": "wildcard"
         }
       ],
       "out_of_scope": [
