@@ -1633,8 +1633,74 @@
     "min_bounty": null,
     "max_bounty": null,
     "targets": {
-      "in_scope": [],
-      "out_of_scope": []
+      "in_scope": [
+        {
+          "target": "*.vlaanderen.be",
+          "type": "web-application"
+        },
+        {
+          "target": "https://beta.gastwebsite-acm.burgerprofiel.ext-vlaanderen.be",
+          "type": "web-application"
+        },
+        {
+          "target": "https://beta.gastwebsite.burgerprofiel.ext-vlaanderen.be",
+          "type": "web-application"
+        },
+        {
+          "target": "https://beta.widgets.burgerprofiel.dev-vlaanderen.be/",
+          "type": "web-application"
+        },
+        {
+          "target": "https://burgerprofiel.beta-vlaanderen.be",
+          "type": "web-application"
+        },
+        {
+          "target": "https://vo-gebruikersbeheer.vlaanderen.be",
+          "type": "web-application"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "target": "- Third-party/vendor-operated services (DV cannot authorize testing on systems not owned or operated by us).",
+          "type": "other"
+        },
+        {
+          "target": "- Newly onboarded systems may have a blackout window (up to six months).",
+          "type": "other"
+        },
+        {
+          "target": "- bibis*.vlaanderen.be",
+          "type": "other"
+        },
+        {
+          "target": "- cdn.vlaanderen.be",
+          "type": "other"
+        },
+        {
+          "target": "- codex.opendata.api.vlaanderen.be",
+          "type": "other"
+        },
+        {
+          "target": "- ets*.omgeving.vlaanderen.be",
+          "type": "other"
+        },
+        {
+          "target": "- https://www.vlaanderen.be/aanmelden/help/mail.html (and ?*)",
+          "type": "other"
+        },
+        {
+          "target": "- https://www.vlaanderen.be/vlaamse-overheid/contact/stuur-een-e-mail",
+          "type": "other"
+        },
+        {
+          "target": "- natura2000.vlaanderen.be",
+          "type": "other"
+        },
+        {
+          "target": "- opibus*.onderwijs*.vlaanderen.be",
+          "type": "other"
+        }
+      ]
     }
   },
   {
