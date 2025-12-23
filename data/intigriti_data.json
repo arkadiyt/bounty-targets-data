@@ -86,84 +86,6 @@
     }
   },
   {
-    "id": "ac81c127-b11b-469e-8060-e0fbb9c9c398",
-    "name": "Aikido Security: Zen by Aikido ",
-    "company_handle": "aikido",
-    "handle": "aikidoruntime",
-    "url": "https://www.intigriti.com/programs/aikido/aikidoruntime/detail",
-    "status": "open",
-    "confidentiality_level": "public",
-    "tacRequired": false,
-    "twoFactorRequired": false,
-    "min_bounty": {
-      "value": 100,
-      "currency": "EUR"
-    },
-    "max_bounty": {
-      "value": 3500,
-      "currency": "EUR"
-    },
-    "targets": {
-      "in_scope": [
-        {
-          "type": "other",
-          "endpoint": "https://github.com/AikidoSec/firewall-node#Vulnerability",
-          "description": "Tier 1 is for vulnerabilities which we potentially introduce via our own firewall component in the user's application.\n\nSee Severity Assessment for more information.",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "https://github.com/AikidoSec/firewall-php#Vulnerability",
-          "description": null,
-          "impact": "Tier 1"
-        },
-        {
-          "type": "other",
-          "endpoint": "https://github.com/AikidoSec/firewall-python#Vulnerability",
-          "description": null,
-          "impact": "Tier 1"
-        },
-        {
-          "type": "other",
-          "endpoint": "https://github.com/AikidoSec/firewall-node#Detection Bypass",
-          "description": "Tier 2 is for bypasses in the vulnerability detection of the firewall component, such as a bypass of our SQL injection detection.\n\nSee Severity Assessment for more information.",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "https://github.com/AikidoSec/firewall-php#Detection Bypass",
-          "description": null,
-          "impact": "Tier 2"
-        },
-        {
-          "type": "other",
-          "endpoint": "https://github.com/AikidoSec/firewall-python#Detection Bypass",
-          "description": null,
-          "impact": "Tier 2"
-        },
-        {
-          "type": "other",
-          "endpoint": "https://github.com/AikidoSec/firewall-node#False Positive",
-          "description": "Tier 3 is for any false positives you encounter with our vulnerability detection. For example, cases where we falsely flag a SQL injection, while the user's input is safely encapsulated in the SQL query.\n\nSeverity assessments are slightly harder for these cases, see \"Severity Assessment\" for more information.",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "https://github.com/AikidoSec/firewall-php#False Positive",
-          "description": null,
-          "impact": "Tier 3"
-        },
-        {
-          "type": "other",
-          "endpoint": "https://github.com/AikidoSec/firewall-python#False Positive",
-          "description": null,
-          "impact": "Tier 3"
-        }
-      ],
-      "out_of_scope": []
-    }
-  },
-  {
     "id": "30f445f7-ca4c-4130-9434-49add5c6ac74",
     "name": "Algemeen Dagblad",
     "company_handle": "dpgm",
@@ -288,6 +210,60 @@
           "impact": "Out of scope"
         }
       ]
+    }
+  },
+  {
+    "id": "611efbaa-333e-4b7c-a3c0-89665abd3fe3",
+    "name": "Altera",
+    "company_handle": "altera",
+    "handle": "altera",
+    "url": "https://www.intigriti.com/programs/altera/altera/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 500,
+      "currency": "USD"
+    },
+    "max_bounty": {
+      "value": 30000,
+      "currency": "USD"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "device",
+          "endpoint": "Firmware",
+          "description": "Firmware developed by Altera that executes within our FPGA products regardless of the storage media.   Excludes any software that executes the Hard Processor Subsystem, or any software that executes on an embedded processor instantiated in soft-logic within the FPGA by a customer.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "device",
+          "endpoint": "Hardware",
+          "description": "FPGA Integrated Circuit hardware.   This may includes both a base FPGA and any associated co-packaged integrated circuits. ",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "other",
+          "endpoint": "FPGA Solution Development Tools and Utilities",
+          "description": "Tools developed by Altera such as the Quartus Tool Suite used by customers to develop a solution that may comprise software, soft-logic that is hosted within an Altera FPGA device.   Also includes various Altera authored supporting utilities used to manage deployment of customer designs to Altera FPGAs.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "Software",
+          "description": "Altera Developed Device Drivers that execute on a host computer that is connected to an Altera FPGA, used to manage or control the FPGA or any functions implemented by the customer within the FPGA.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "Non Altera Products",
+          "description": "Any elements of a complete customer solution developed by entities other than Altera that may be included in a final customer solution.   Reports relating to such entities may be reported via the Altera Bug Bounty Program, but are not eligible for bounty payments. ",
+          "impact": "No Bounty"
+        }
+      ],
+      "out_of_scope": []
     }
   },
   {
@@ -4055,6 +4031,79 @@
         }
       ],
       "out_of_scope": []
+    }
+  },
+  {
+    "id": "5c7a8f79-a23b-4367-a2c6-63a2d48586ee",
+    "name": "Het Laatste Nieuws",
+    "company_handle": "dpgm",
+    "handle": "hetlaatstenieuws",
+    "url": "https://www.intigriti.com/programs/dpgm/hetlaatstenieuws/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 25,
+      "currency": "EUR"
+    },
+    "max_bounty": {
+      "value": 2200,
+      "currency": "EUR"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "wildcard",
+          "endpoint": "* hln.be/inloggen",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "* hln.be/login",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "* hln.be/registreren",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "hln.be",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "myaccount.hln.be",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.hln.be",
+          "description": "excluding\n* hln.be/service\n* hln.be/inloggen\n* hln.be/login\n* hln.be/registreren",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.hln.be",
+          "description": null,
+          "impact": "Tier 3"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "wildcard",
+          "endpoint": "* hln.be/service",
+          "description": null,
+          "impact": "Out of scope"
+        }
+      ]
     }
   },
   {
@@ -11248,6 +11297,115 @@
         }
       ],
       "out_of_scope": []
+    }
+  },
+  {
+    "id": "acb142c1-ffeb-41c3-a9e7-1624054f42e4",
+    "name": "Veriff Bug Bounty",
+    "company_handle": "veriff",
+    "handle": "veriffbugbounty",
+    "url": "https://www.intigriti.com/programs/veriff/veriffbugbounty/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 5,
+      "currency": "EUR"
+    },
+    "max_bounty": {
+      "value": 6000,
+      "currency": "EUR"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "ios",
+          "endpoint": "1467907532",
+          "description": "An iOS application for demoing our product.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "alchemy.veriff.com",
+          "description": "This is an end user (internal) API endpoint.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.flamingo-eu.veriff.com",
+          "description": "This is a public API endpoint.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.us.veriff.me",
+          "description": "This is a public API endpoint.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.veriff.me",
+          "description": "This is a public API endpoint.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "android",
+          "endpoint": "com.veriff.demo",
+          "description": "An Android application for demoing our product.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "louvre.veriff.me",
+          "description": "This is an end user (internal) API endpoint.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "magic.veriff.me",
+          "description": "This is an end user (internal) API endpoint.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "station.veriff.com",
+          "description": "Here you can find our Veriff Station application.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "stationapi.veriff.com",
+          "description": "This is the backend for our Station application.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.veriff.com",
+          "description": "Please note that third party services are out of scope unless the issue is caused due to a misconfiguration by Veriff.",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "developers.veriff.me",
+          "description": "You can find our developers documentation here.",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.veriff.com",
+          "description": "This is our marketing website.",
+          "impact": "Tier 3"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "url",
+          "endpoint": "https://station.veriff.com/config/",
+          "description": "Configuration includes public keys what are needed for frontend working properly.",
+          "impact": "Out of scope"
+        }
+      ]
     }
   },
   {
