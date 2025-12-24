@@ -86,6 +86,84 @@
     }
   },
   {
+    "id": "ac81c127-b11b-469e-8060-e0fbb9c9c398",
+    "name": "Aikido Security: Zen by Aikido ",
+    "company_handle": "aikido",
+    "handle": "aikidoruntime",
+    "url": "https://www.intigriti.com/programs/aikido/aikidoruntime/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 100,
+      "currency": "EUR"
+    },
+    "max_bounty": {
+      "value": 3500,
+      "currency": "EUR"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "other",
+          "endpoint": "https://github.com/AikidoSec/firewall-node#Vulnerability",
+          "description": "Tier 1 is for vulnerabilities which we potentially introduce via our own firewall component in the user's application.\n\nSee Severity Assessment for more information.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://github.com/AikidoSec/firewall-php#Vulnerability",
+          "description": null,
+          "impact": "Tier 1"
+        },
+        {
+          "type": "other",
+          "endpoint": "https://github.com/AikidoSec/firewall-python#Vulnerability",
+          "description": null,
+          "impact": "Tier 1"
+        },
+        {
+          "type": "other",
+          "endpoint": "https://github.com/AikidoSec/firewall-node#Detection Bypass",
+          "description": "Tier 2 is for bypasses in the vulnerability detection of the firewall component, such as a bypass of our SQL injection detection.\n\nSee Severity Assessment for more information.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://github.com/AikidoSec/firewall-php#Detection Bypass",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "https://github.com/AikidoSec/firewall-python#Detection Bypass",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "https://github.com/AikidoSec/firewall-node#False Positive",
+          "description": "Tier 3 is for any false positives you encounter with our vulnerability detection. For example, cases where we falsely flag a SQL injection, while the user's input is safely encapsulated in the SQL query.\n\nSeverity assessments are slightly harder for these cases, see \"Severity Assessment\" for more information.",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://github.com/AikidoSec/firewall-php#False Positive",
+          "description": null,
+          "impact": "Tier 3"
+        },
+        {
+          "type": "other",
+          "endpoint": "https://github.com/AikidoSec/firewall-python#False Positive",
+          "description": null,
+          "impact": "Tier 3"
+        }
+      ],
+      "out_of_scope": []
+    }
+  },
+  {
     "id": "30f445f7-ca4c-4130-9434-49add5c6ac74",
     "name": "Algemeen Dagblad",
     "company_handle": "dpgm",
@@ -2344,48 +2422,6 @@
     }
   },
   {
-    "id": "806f54d7-a85d-40bd-82cc-f09c1a500f28",
-    "name": "DPG Media",
-    "company_handle": "dpgm",
-    "handle": "dpgmedia",
-    "url": "https://www.intigriti.com/programs/dpgm/dpgmedia/detail",
-    "status": "open",
-    "confidentiality_level": "public",
-    "tacRequired": false,
-    "twoFactorRequired": false,
-    "min_bounty": {
-      "value": 25,
-      "currency": "EUR"
-    },
-    "max_bounty": {
-      "value": 500,
-      "currency": "EUR"
-    },
-    "targets": {
-      "in_scope": [
-        {
-          "type": "wildcard",
-          "endpoint": "*.dpgmedia.be",
-          "description": "excluding\n* login.dpgmedia.be",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.dpgmedia.nl",
-          "description": "excluding\n* login.dpgmedia.nl",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "other",
-          "endpoint": "Any related DPG media domain",
-          "description": "\n_Only applicable to domains that are **100% owned by DPG**.  \nFor example, projects that are partly owned by DPG and partly owned by RTL (because of a joint venture between the two) are **not** in scope._\n\nWhois: \n\nDe Persgroep Publishing nv\nBrusselstesteenweg 347\n1730 Asse\nBelgië\n\nDPG Media Services NV \nMediaplein 1 \n2018 Antwerpen \nBelgium",
-          "impact": "Tier 3"
-        }
-      ],
-      "out_of_scope": []
-    }
-  },
-  {
     "id": "bd22f48d-633e-4b26-bf71-e4778d41b247",
     "name": "DataCamp",
     "company_handle": "datacamp",
@@ -2405,6 +2441,12 @@
     },
     "targets": {
       "in_scope": [
+        {
+          "type": "url",
+          "endpoint": "profiles-api.datacamp.com",
+          "description": null,
+          "impact": "Tier 2"
+        },
         {
           "type": "url",
           "endpoint": "app.datacamp.com/certification",
@@ -9776,42 +9818,6 @@
           "impact": "Out of scope"
         }
       ]
-    }
-  },
-  {
-    "id": "87a468af-75ac-4e99-b061-0c40517a784c",
-    "name": "Suivo bug bounty",
-    "company_handle": "suivo",
-    "handle": "suivoweb",
-    "url": "https://www.intigriti.com/programs/suivo/suivoweb/detail",
-    "status": "open",
-    "confidentiality_level": "public",
-    "tacRequired": false,
-    "twoFactorRequired": false,
-    "min_bounty": {
-      "value": 0,
-      "currency": "EUR"
-    },
-    "max_bounty": {
-      "value": 2000,
-      "currency": "EUR"
-    },
-    "targets": {
-      "in_scope": [
-        {
-          "type": "url",
-          "endpoint": " aweb.suivo.com",
-          "description": "For this domain, you can self-register. More information see FAQ",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "asupport.suivo.com",
-          "description": null,
-          "impact": "Tier 2"
-        }
-      ],
-      "out_of_scope": []
     }
   },
   {
