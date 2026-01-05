@@ -1412,6 +1412,145 @@
     }
   },
   {
+    "id": "48853273-690a-4555-8ac5-821a1c464312",
+    "name": "Capital.com",
+    "company_handle": "capitalcom",
+    "handle": "capitalcom",
+    "url": "https://www.intigriti.com/programs/capitalcom/capitalcom/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 0,
+      "currency": "EUR"
+    },
+    "max_bounty": {
+      "value": 15000,
+      "currency": "EUR"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "url",
+          "endpoint": "payment.backend-capital.com",
+          "description": null,
+          "impact": "Tier 1"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.backend-capital.com",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "capital.com/*",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "ios",
+          "endpoint": "com.capital.trading",
+          "description": "https://apps.apple.com/BY/app/id1230088754?mt=8",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "android",
+          "endpoint": "com.capital.trading",
+          "description": "https://play.google.com/store/apps/details?id=com.capital.trading&hl=en",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "open-api.capital.com",
+          "description": "The Capital.com API allows direct access to the latest version of our trading engine.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.capital.com",
+          "description": null,
+          "impact": "Tier 3"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.itcapital.io",
+          "description": null,
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "aff.capital.com",
+          "description": null,
+          "impact": "No Bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "go.capital.com",
+          "description": null,
+          "impact": "No Bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "register.capital.com",
+          "description": null,
+          "impact": "No Bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "careers.capital.com",
+          "description": null,
+          "impact": "No Bounty"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "wildcard",
+          "endpoint": "*affiliates.backend-capital.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*eduapp.backend-capital.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*education.backend-capital.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "help.capital.com",
+          "description": "CNAME to Zendesk",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "relocate-with-us.capital.com",
+          "description": "CNAME to Webflow",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "3cxby.itcapital.io",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": " texis.itcapital.io",
+          "description": null,
+          "impact": "Out of scope"
+        }
+      ]
+    }
+  },
+  {
     "id": "96d3f49a-4c5f-4bc8-835a-77f734eefe4e",
     "name": "Citymesh Responsible Vulnerability Disclosure Program",
     "company_handle": "citymesh",
@@ -10403,54 +10542,6 @@
           "impact": "Out of scope"
         }
       ]
-    }
-  },
-  {
-    "id": "724ad196-90de-4ba8-bf21-dc114ab7fce4",
-    "name": "Trusted Firmware",
-    "company_handle": "arm",
-    "handle": "trustedfirmware",
-    "url": "https://www.intigriti.com/programs/arm/trustedfirmware/detail",
-    "status": "open",
-    "confidentiality_level": "public",
-    "tacRequired": false,
-    "twoFactorRequired": false,
-    "min_bounty": {
-      "value": 1000,
-      "currency": "USD"
-    },
-    "max_bounty": {
-      "value": 20000,
-      "currency": "USD"
-    },
-    "targets": {
-      "in_scope": [
-        {
-          "type": "other",
-          "endpoint": "OP-TEE",
-          "description": "OP-TEE is a Trusted Execution Environment (TEE) designed as companion to a non-secure Linux kernel running on Arm; Cortex-A cores using the TrustZone technology.",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "other",
-          "endpoint": "Mbed TLS & TF-PSA-Crypto",
-          "description": "Mbed TLS is a C library that implements X.509 certificate manipulation and the TLS and DTLS protocols. Its small code footprint makes it suitable for embedded systems. Mbed TLS includes the TF-PSA-Crypto repository that provides an implementation of the PSA Cryptography API.",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "other",
-          "endpoint": "TrustedFirmware-A (TF-A)",
-          "description": "The Trusted Firmware-A project provides a reference implementation of secure world software for Armv8-A and Armv9-A class processors.",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "other",
-          "endpoint": "TrustedFirmware-M (TF-M)",
-          "description": "Trusted Firmware-M (TF-M) implements the Secure Processing Environment (SPE) for Armv8-M, Armv8.1-M architectures (e.g. the Cortex-M33, Cortex-M23, Cortex-M55, Cortex-M85 processors) or dual-core platforms. It is the platform security architecture reference implementation aligning with PSA Certified guidelines, enabling chips, Real Time Operating Systems and devices to become PSA Certified.",
-          "impact": "Tier 2"
-        }
-      ],
-      "out_of_scope": []
     }
   },
   {
