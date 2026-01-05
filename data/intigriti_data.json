@@ -49,6 +49,127 @@
     }
   },
   {
+    "id": "554fc6c5-4ffa-4682-a3ba-7e86696e9b17",
+    "name": "Aikido Security: Bug Bounty Program",
+    "company_handle": "aikido",
+    "handle": "aikido",
+    "url": "https://www.intigriti.com/programs/aikido/aikido/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 50,
+      "currency": "EUR"
+    },
+    "max_bounty": {
+      "value": 2500,
+      "currency": "EUR"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "other",
+          "endpoint": "https://marketplace.visualstudio.com/items?itemName=AikidoSecurity.aikido",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "app.aikido.dev",
+          "description": "This is our main application, which hosts the API as well as the front-end application.\n\nOur public API is also accessible via this host. Documentation is available here: https://apidocs.aikido.dev/.",
+          "impact": "Tier 2"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "wildcard",
+          "endpoint": "*.aikido.dev",
+          "description": null,
+          "impact": "Out of scope"
+        }
+      ]
+    }
+  },
+  {
+    "id": "ac81c127-b11b-469e-8060-e0fbb9c9c398",
+    "name": "Aikido Security: Zen by Aikido ",
+    "company_handle": "aikido",
+    "handle": "aikidoruntime",
+    "url": "https://www.intigriti.com/programs/aikido/aikidoruntime/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 100,
+      "currency": "EUR"
+    },
+    "max_bounty": {
+      "value": 3500,
+      "currency": "EUR"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "other",
+          "endpoint": "https://github.com/AikidoSec/firewall-node#Vulnerability",
+          "description": "Tier 1 is for vulnerabilities which we potentially introduce via our own firewall component in the user's application.\n\nSee Severity Assessment for more information.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://github.com/AikidoSec/firewall-php#Vulnerability",
+          "description": null,
+          "impact": "Tier 1"
+        },
+        {
+          "type": "other",
+          "endpoint": "https://github.com/AikidoSec/firewall-python#Vulnerability",
+          "description": null,
+          "impact": "Tier 1"
+        },
+        {
+          "type": "other",
+          "endpoint": "https://github.com/AikidoSec/firewall-node#Detection Bypass",
+          "description": "Tier 2 is for bypasses in the vulnerability detection of the firewall component, such as a bypass of our SQL injection detection.\n\nSee Severity Assessment for more information.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://github.com/AikidoSec/firewall-php#Detection Bypass",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "https://github.com/AikidoSec/firewall-python#Detection Bypass",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "https://github.com/AikidoSec/firewall-node#False Positive",
+          "description": "Tier 3 is for any false positives you encounter with our vulnerability detection. For example, cases where we falsely flag a SQL injection, while the user's input is safely encapsulated in the SQL query.\n\nSeverity assessments are slightly harder for these cases, see \"Severity Assessment\" for more information.",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://github.com/AikidoSec/firewall-php#False Positive",
+          "description": null,
+          "impact": "Tier 3"
+        },
+        {
+          "type": "other",
+          "endpoint": "https://github.com/AikidoSec/firewall-python#False Positive",
+          "description": null,
+          "impact": "Tier 3"
+        }
+      ],
+      "out_of_scope": []
+    }
+  },
+  {
     "id": "30f445f7-ca4c-4130-9434-49add5c6ac74",
     "name": "Algemeen Dagblad",
     "company_handle": "dpgm",
@@ -2958,6 +3079,229 @@
           "type": "url",
           "endpoint": "www.driessen.nl/mijn/solliciteren/",
           "description": null,
+          "impact": "Out of scope"
+        }
+      ]
+    }
+  },
+  {
+    "id": "e540980d-b56e-4956-afff-f914653a4f6e",
+    "name": "Dropbox Bug Bounty",
+    "company_handle": "dropbox",
+    "handle": "dropbox",
+    "url": "https://www.intigriti.com/programs/dropbox/dropbox/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 100,
+      "currency": "USD"
+    },
+    "max_bounty": {
+      "value": 15000,
+      "currency": "USD"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "url",
+          "endpoint": "Dropbox.com",
+          "description": "Dropbox Application",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "sign.dropbox.com",
+          "description": "Sign by Dropbox (formerly HelloSign)",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "HelloSign.com",
+          "description": "HelloSign (now Dropbox Sign)",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "dash.ai",
+          "description": "Web Browser Extension",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "other",
+          "endpoint": "dash.dropbox.com",
+          "description": "Dash by Dropbox MacOS and PC",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.dropbox.com",
+          "description": "Dropbox Public API",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "replay.dropbox.com",
+          "description": "Replay by Dropbox",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "other",
+          "endpoint": "Dropbox Desktop Application",
+          "description": "Dropbox for MacOS and PC ",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "ios",
+          "endpoint": "327630330",
+          "description": "Dropbox iOS Application",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "ios",
+          "endpoint": "6450553960",
+          "description": "Dash by Dropbox iOS Application",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "ios",
+          "endpoint": "1080074001",
+          "description": "Dropbox EMM iOS Application",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "android",
+          "endpoint": "com.dropbox.dash",
+          "description": "Dash by Dropbox Android Application",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "android",
+          "endpoint": "com.dropbox.android",
+          "description": "Dropbox Android Application",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "HelloFax.com",
+          "description": "HelloFax Web Application",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "docsend.com",
+          "description": "Docsend Web Application",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "app.Reclaim.ai",
+          "description": "Reclaim.ai Web Application",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "dropbox.com/paper",
+          "description": "Paper by Dropbox Application",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.dropbox.com",
+          "description": null,
+          "impact": "Tier 3"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.dropboxer.net",
+          "description": null,
+          "impact": "Tier 3"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.dropboxforum.com",
+          "description": null,
+          "impact": "Tier 3"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.dropboxpartners.com",
+          "description": null,
+          "impact": "Tier 3"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.hellofax.com",
+          "description": null,
+          "impact": "Tier 3"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.docsend.com",
+          "description": null,
+          "impact": "Tier 3"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.reclaim.ai",
+          "description": null,
+          "impact": "Tier 3"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.helloworks.com",
+          "description": null,
+          "impact": "Tier 3"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.hellosign.com",
+          "description": null,
+          "impact": "Tier 3"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "other",
+          "endpoint": "Boxcryptor",
+          "description": "Including: \n\n*.boxcryptor.com",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "other",
+          "endpoint": "Formswift",
+          "description": "Including:\n\n*.formswift.com",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "other",
+          "endpoint": "Dropbox Passwords",
+          "description": "Including:\n\niOS and Android Applications",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "other",
+          "endpoint": "Dropbox Capture Windows Desktop App",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "other",
+          "endpoint": "Dropbox Capture macOS Desktop App",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "android",
+          "endpoint": "com.dropbox.paper",
+          "description": "Paper by Dropbox Android Application",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "ios",
+          "endpoint": "1126623662",
+          "description": "Paper by Dropbox iOS Application",
           "impact": "Out of scope"
         }
       ]
@@ -9000,6 +9344,42 @@
     }
   },
   {
+    "id": "4352dcef-dfc5-4d74-8fd8-9bef5aa16f18",
+    "name": "Skoda Auto Bug Bounty Program",
+    "company_handle": "skodaauto",
+    "handle": "skodaautoprivatebugbountyprogram",
+    "url": "https://www.intigriti.com/programs/skodaauto/skodaautoprivatebugbountyprogram/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 200,
+      "currency": "EUR"
+    },
+    "max_bounty": {
+      "value": 5000,
+      "currency": "EUR"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "ios",
+          "endpoint": "1632202810",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "android",
+          "endpoint": "cz.skodaauto.myskoda",
+          "description": null,
+          "impact": "Tier 2"
+        }
+      ],
+      "out_of_scope": []
+    }
+  },
+  {
     "id": "152bc833-04a4-40d2-bdaa-0b31f6161449",
     "name": "Social Deal",
     "company_handle": "socialdeal",
@@ -9336,6 +9716,162 @@
           "impact": "Out of scope"
         }
       ]
+    }
+  },
+  {
+    "id": "2e52d6d3-da18-467f-836e-7a22b82bef5f",
+    "name": "Tomorrowland",
+    "company_handle": "tomorrowland",
+    "handle": "tomorrowland",
+    "url": "https://www.intigriti.com/programs/tomorrowland/tomorrowland/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 0,
+      "currency": "EUR"
+    },
+    "max_bounty": {
+      "value": 2500,
+      "currency": "EUR"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "url",
+          "endpoint": "cas.tomorrowland.com",
+          "description": "Bounty Boosts: This application is temporarily treated as a Tier 2 app for the duration of the spotlight period.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.weareone.world",
+          "description": "Currently as T2, will be evaluated on individual basis.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "belgium.tomorrowland.com",
+          "description": "Vulnerabilities found on either winter/brasil/belgium .tomorrowland.com will be considered duplicate.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "brasil.tomorrowland.com",
+          "description": "Vulnerabilities found on either winter/brasil/belgium .tomorrowland.com will be considered duplicate.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "android",
+          "endpoint": "com.tomorrowland.oneworldradio",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "globaljourney.tomorrowland.com",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "my.tomorrowland.com",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "ios",
+          "endpoint": "one-world-radio-tomorrowland/id1485778856",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "sp1y1tpaf1.execute-api.eu-west-1.amazonaws.com",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "tlbe.prod.tomorrowland.com",
+          "description": "Vulnerabilities found on either TLFR/TLBR/TLBE.prod.tomorrowland.com will be considered duplicate.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "tlbr.prod.tomorrowland.com",
+          "description": "Vulnerabilities found on either TLFR/TLBR/TLBE.prod.tomorrowland.com will be considered duplicate.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "tlfr.prod.tomorrowland.com",
+          "description": "Vulnerabilities found on either TLFR/TLBR/TLBE.prod.tomorrowland.com will be considered duplicate.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "winter.tomorrowland.com",
+          "description": "Vulnerabilities found on either winter/brasil/belgium .tomorrowland.com will be considered duplicate.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "winterpackages.tomorrowland.com",
+          "description": "Out of Scope: bypassing payment process",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.tomorrowland.com",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "store.tomorrowland.com",
+          "description": "Vulnerabilities found on either brasil-store/store .tomorrowland.com will be considered duplicate.",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "brasil-store.tomorrowland.com",
+          "description": "Vulnerabilities found on either brasil-store/store .tomorrowland.com will be considered duplicate.",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.stag.tomorrowland.com",
+          "description": null,
+          "impact": "Tier 3"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.stag.weareone.world",
+          "description": null,
+          "impact": "Tier 3"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.tomorrowland.com",
+          "description": null,
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "components.stag.tomorrowland.com",
+          "description": "Vulnerabilities found on either components.stag.tomorrowland.com or components.tomorrowland.com will be considered duplicate.",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "components.tomorrowland.com",
+          "description": "Vulnerabilities found on either components.stag.tomorrowland.com or components.tomorrowland.com will be considered duplicate.",
+          "impact": "Tier 3"
+        }
+      ],
+      "out_of_scope": []
     }
   },
   {
@@ -10796,115 +11332,6 @@
         }
       ],
       "out_of_scope": []
-    }
-  },
-  {
-    "id": "acb142c1-ffeb-41c3-a9e7-1624054f42e4",
-    "name": "Veriff Bug Bounty",
-    "company_handle": "veriff",
-    "handle": "veriffbugbounty",
-    "url": "https://www.intigriti.com/programs/veriff/veriffbugbounty/detail",
-    "status": "open",
-    "confidentiality_level": "public",
-    "tacRequired": false,
-    "twoFactorRequired": false,
-    "min_bounty": {
-      "value": 5,
-      "currency": "EUR"
-    },
-    "max_bounty": {
-      "value": 6000,
-      "currency": "EUR"
-    },
-    "targets": {
-      "in_scope": [
-        {
-          "type": "ios",
-          "endpoint": "1467907532",
-          "description": "An iOS application for demoing our product.",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "alchemy.veriff.com",
-          "description": "This is an end user (internal) API endpoint.",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "api.flamingo-eu.veriff.com",
-          "description": "This is a public API endpoint.",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "api.us.veriff.me",
-          "description": "This is a public API endpoint.",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "api.veriff.me",
-          "description": "This is a public API endpoint.",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "android",
-          "endpoint": "com.veriff.demo",
-          "description": "An Android application for demoing our product.",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "louvre.veriff.me",
-          "description": "This is an end user (internal) API endpoint.",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "magic.veriff.me",
-          "description": "This is an end user (internal) API endpoint.",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "station.veriff.com",
-          "description": "Here you can find our Veriff Station application.",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "stationapi.veriff.com",
-          "description": "This is the backend for our Station application.",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.veriff.com",
-          "description": "Please note that third party services are out of scope unless the issue is caused due to a misconfiguration by Veriff.",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "developers.veriff.me",
-          "description": "You can find our developers documentation here.",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "www.veriff.com",
-          "description": "This is our marketing website.",
-          "impact": "Tier 3"
-        }
-      ],
-      "out_of_scope": [
-        {
-          "type": "url",
-          "endpoint": "https://station.veriff.com/config/",
-          "description": "Configuration includes public keys what are needed for frontend working properly.",
-          "impact": "Out of scope"
-        }
-      ]
     }
   },
   {
