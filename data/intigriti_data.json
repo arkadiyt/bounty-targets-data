@@ -92,84 +92,6 @@
     }
   },
   {
-    "id": "ac81c127-b11b-469e-8060-e0fbb9c9c398",
-    "name": "Aikido Security: Zen by Aikido ",
-    "company_handle": "aikido",
-    "handle": "aikidoruntime",
-    "url": "https://www.intigriti.com/programs/aikido/aikidoruntime/detail",
-    "status": "open",
-    "confidentiality_level": "public",
-    "tacRequired": false,
-    "twoFactorRequired": false,
-    "min_bounty": {
-      "value": 100,
-      "currency": "EUR"
-    },
-    "max_bounty": {
-      "value": 3500,
-      "currency": "EUR"
-    },
-    "targets": {
-      "in_scope": [
-        {
-          "type": "other",
-          "endpoint": "https://github.com/AikidoSec/firewall-node#Vulnerability",
-          "description": "Tier 1 is for vulnerabilities which we potentially introduce via our own firewall component in the user's application.\n\nSee Severity Assessment for more information.",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "https://github.com/AikidoSec/firewall-php#Vulnerability",
-          "description": null,
-          "impact": "Tier 1"
-        },
-        {
-          "type": "other",
-          "endpoint": "https://github.com/AikidoSec/firewall-python#Vulnerability",
-          "description": null,
-          "impact": "Tier 1"
-        },
-        {
-          "type": "other",
-          "endpoint": "https://github.com/AikidoSec/firewall-node#Detection Bypass",
-          "description": "Tier 2 is for bypasses in the vulnerability detection of the firewall component, such as a bypass of our SQL injection detection.\n\nSee Severity Assessment for more information.",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "https://github.com/AikidoSec/firewall-php#Detection Bypass",
-          "description": null,
-          "impact": "Tier 2"
-        },
-        {
-          "type": "other",
-          "endpoint": "https://github.com/AikidoSec/firewall-python#Detection Bypass",
-          "description": null,
-          "impact": "Tier 2"
-        },
-        {
-          "type": "other",
-          "endpoint": "https://github.com/AikidoSec/firewall-node#False Positive",
-          "description": "Tier 3 is for any false positives you encounter with our vulnerability detection. For example, cases where we falsely flag a SQL injection, while the user's input is safely encapsulated in the SQL query.\n\nSeverity assessments are slightly harder for these cases, see \"Severity Assessment\" for more information.",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "https://github.com/AikidoSec/firewall-php#False Positive",
-          "description": null,
-          "impact": "Tier 3"
-        },
-        {
-          "type": "other",
-          "endpoint": "https://github.com/AikidoSec/firewall-python#False Positive",
-          "description": null,
-          "impact": "Tier 3"
-        }
-      ],
-      "out_of_scope": []
-    }
-  },
-  {
     "id": "30f445f7-ca4c-4130-9434-49add5c6ac74",
     "name": "Algemeen Dagblad",
     "company_handle": "dpgm",
@@ -10704,6 +10626,54 @@
           "impact": "Out of scope"
         }
       ]
+    }
+  },
+  {
+    "id": "724ad196-90de-4ba8-bf21-dc114ab7fce4",
+    "name": "Trusted Firmware",
+    "company_handle": "arm",
+    "handle": "trustedfirmware",
+    "url": "https://www.intigriti.com/programs/arm/trustedfirmware/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 1000,
+      "currency": "USD"
+    },
+    "max_bounty": {
+      "value": 20000,
+      "currency": "USD"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "other",
+          "endpoint": "OP-TEE",
+          "description": "OP-TEE is a Trusted Execution Environment (TEE) designed as companion to a non-secure Linux kernel running on Arm; Cortex-A cores using the TrustZone technology.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "Mbed TLS & TF-PSA-Crypto",
+          "description": "Mbed TLS is a C library that implements X.509 certificate manipulation and the TLS and DTLS protocols. Its small code footprint makes it suitable for embedded systems. Mbed TLS includes the TF-PSA-Crypto repository that provides an implementation of the PSA Cryptography API.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "TrustedFirmware-A (TF-A)",
+          "description": "The Trusted Firmware-A project provides a reference implementation of secure world software for Armv8-A and Armv9-A class processors.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "TrustedFirmware-M (TF-M)",
+          "description": "Trusted Firmware-M (TF-M) implements the Secure Processing Environment (SPE) for Armv8-M, Armv8.1-M architectures (e.g. the Cortex-M33, Cortex-M23, Cortex-M55, Cortex-M85 processors) or dual-core platforms. It is the platform security architecture reference implementation aligning with PSA Certified guidelines, enabling chips, Real Time Operating Systems and devices to become PSA Certified.",
+          "impact": "Tier 2"
+        }
+      ],
+      "out_of_scope": []
     }
   },
   {
