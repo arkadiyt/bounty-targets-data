@@ -1140,132 +1140,6 @@
     }
   },
   {
-    "name": "Asana",
-    "url": "https://bugcrowd.com/engagements/asana",
-    "allows_disclosure": false,
-    "managed_by_bugcrowd": true,
-    "safe_harbor": "partial",
-    "max_payout": 6500,
-    "targets": {
-      "in_scope": [
-        {
-          "type": "website",
-          "target": "https://app.asana.com",
-          "uri": "https://app.asana.com",
-          "name": "app.asana.com",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "https://asana.com",
-          "uri": "https://asana.com",
-          "name": "asana.com",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "https://asana.com/apps?category=made-by-asana",
-          "uri": "https://asana.com/apps?category=made-by-asana",
-          "name": "*.asana.plus",
-          "ipAddress": null
-        },
-        {
-          "type": "other",
-          "target": "https://asana.com/download",
-          "uri": "https://asana.com/download",
-          "name": "Asana Desktop App",
-          "ipAddress": null
-        },
-        {
-          "type": "ios",
-          "target": "https://apps.apple.com/us/app/asana-mobile/id489969512",
-          "uri": "https://apps.apple.com/us/app/asana-mobile/id489969512",
-          "name": "Asana iOS app",
-          "ipAddress": null
-        },
-        {
-          "type": "android",
-          "target": "https://play.google.com/store/apps/details?id=com.asana.app&hl=en",
-          "uri": "https://play.google.com/store/apps/details?id=com.asana.app&hl=en",
-          "name": "Asana Android app",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "https://form.asana.com",
-          "uri": "https://form.asana.com",
-          "name": "form.asana.com",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "*.app.asana.com",
-          "uri": null,
-          "name": "*.app.asana.com",
-          "ipAddress": null
-        },
-        {
-          "type": "other",
-          "target": "https://*.asana.biz",
-          "uri": "https://*.asana.biz",
-          "name": "*.asana.biz",
-          "ipAddress": null
-        },
-        {
-          "type": "other",
-          "target": "Subdomain takeover at *asana.biz",
-          "uri": "",
-          "name": "Subdomain takeover at *asana.biz",
-          "ipAddress": ""
-        }
-      ],
-      "out_of_scope": [
-        {
-          "type": "website",
-          "target": "Other subdomains of asana.com",
-          "uri": null,
-          "name": "Other subdomains of asana.com",
-          "ipAddress": null
-        },
-        {
-          "type": "other",
-          "target": "Social engineering against Asana Support or Asana Employees",
-          "uri": null,
-          "name": "Social engineering against Asana Support or Asana Employees",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "jira*.integrations.asana.plus",
-          "uri": "",
-          "name": "jira*.integrations.asana.plus",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "asana.okta.com",
-          "uri": "",
-          "name": "asana.okta.com",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "assets.asana.biz",
-          "uri": "",
-          "name": "assets.asana.biz",
-          "ipAddress": ""
-        },
-        {
-          "type": "other",
-          "target": "Forms that you do not own",
-          "uri": "",
-          "name": "Forms that you do not own",
-          "ipAddress": ""
-        }
-      ]
-    }
-  },
-  {
     "name": "Atlassian",
     "url": "https://bugcrowd.com/engagements/atlassian",
     "allows_disclosure": false,
@@ -3871,6 +3745,272 @@
           "target": "https://sentry.io/welcome/",
           "uri": "https://sentry.io/welcome/",
           "name": "Sentry.io",
+          "ipAddress": ""
+        }
+      ]
+    }
+  },
+  {
+    "name": "Auth0 by Okta",
+    "url": "https://bugcrowd.com/engagements/auth0-okta",
+    "allows_disclosure": true,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "full",
+    "max_payout": 50000,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "website",
+          "target": "config.cic-bug-bounty.auth0app.com",
+          "uri": "",
+          "name": "config.cic-bug-bounty.auth0app.com",
+          "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "https://manage.cic-bug-bounty.auth0app.com/",
+          "uri": "https://manage.cic-bug-bounty.auth0app.com/",
+          "name": "manage.cic-bug-bounty.auth0app.com (Management Dashboard)",
+          "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "*.cic-bug-bounty.auth0app.com",
+          "uri": "",
+          "name": "*.cic-bug-bounty.auth0app.com",
+          "ipAddress": ""
+        },
+        {
+          "type": "android",
+          "target": "https://play.google.com/store/apps/details?id=com.auth0.guardian&hl=en_US&gl=US",
+          "uri": "https://play.google.com/store/apps/details?id=com.auth0.guardian&hl=en_US&gl=US",
+          "name": "Auth0 Guardian Android",
+          "ipAddress": ""
+        },
+        {
+          "type": "ios",
+          "target": "https://apps.apple.com/us/app/auth0-guardian/id1093447833",
+          "uri": "https://apps.apple.com/us/app/auth0-guardian/id1093447833",
+          "name": "Auth0 Guardian IoS",
+          "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "https://marketplace.auth0.com",
+          "uri": "https://marketplace.auth0.com",
+          "name": "marketplace.auth0.com (Auth0 Marketplace)",
+          "ipAddress": ""
+        },
+        {
+          "type": "other",
+          "target": "MFA Integrations\t",
+          "uri": "",
+          "name": "MFA Integrations\t",
+          "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "https://dashboard.fga.dev/",
+          "uri": "https://dashboard.fga.dev/",
+          "name": "https://dashboard.fga.dev/",
+          "ipAddress": ""
+        },
+        {
+          "type": "api",
+          "target": "https://api.us1.fga.dev/",
+          "uri": "https://api.us1.fga.dev/",
+          "name": "https://api.us1.fga.dev/",
+          "ipAddress": ""
+        },
+        {
+          "type": "api",
+          "target": "https://customers.us1.fga.dev/",
+          "uri": "https://customers.us1.fga.dev/",
+          "name": "https://customers.us1.fga.dev/",
+          "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "https://play.fga.dev/",
+          "uri": "https://play.fga.dev/",
+          "name": "https://play.fga.dev/",
+          "ipAddress": ""
+        },
+        {
+          "type": "other",
+          "target": "https://github.com/auth0/auth0.js",
+          "uri": "https://github.com/auth0/auth0.js",
+          "name": "Auth0 SDK for Web (Auth0.js)",
+          "ipAddress": ""
+        },
+        {
+          "type": "other",
+          "target": "https://github.com/auth0/lock",
+          "uri": "https://github.com/auth0/lock",
+          "name": "Lock for Web (lock)",
+          "ipAddress": ""
+        },
+        {
+          "type": "other",
+          "target": "https://github.com/auth0/auth0-spa-js",
+          "uri": "https://github.com/auth0/auth0-spa-js",
+          "name": "Auth0 Single Page App SDK (auth0-spa-js)",
+          "ipAddress": ""
+        },
+        {
+          "type": "other",
+          "target": "https://github.com/auth0/Auth0.Net",
+          "uri": "https://github.com/auth0/Auth0.Net",
+          "name": ".NET SDK (Auth0.Net)",
+          "ipAddress": ""
+        },
+        {
+          "type": "other",
+          "target": "https://github.com/auth0/nextjs-auth0",
+          "uri": "https://github.com/auth0/nextjs-auth0",
+          "name": "Auth0 Next.js SDK (nextjs-auth0)",
+          "ipAddress": ""
+        },
+        {
+          "type": "other",
+          "target": "https://github.com/auth0/auth0-java",
+          "uri": "https://github.com/auth0/auth0-java",
+          "name": "Auth0 Java SDK (auth0-java)",
+          "ipAddress": ""
+        },
+        {
+          "type": "other",
+          "target": "https://github.com/auth0/react-native-auth0",
+          "uri": "https://github.com/auth0/react-native-auth0",
+          "name": "Auth0 React Native SDK (react-native-auth0)",
+          "ipAddress": ""
+        },
+        {
+          "type": "other",
+          "target": "https://github.com/auth0/auth0-php",
+          "uri": "https://github.com/auth0/auth0-php",
+          "name": "Auth0 PHP SDK (auth0-php)",
+          "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "auth0.com\t",
+          "uri": "",
+          "name": "auth0.com\t",
+          "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "samltool.io\t",
+          "uri": "",
+          "name": "samltool.io\t",
+          "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "webauthn.me\t",
+          "uri": "",
+          "name": "webauthn.me\t",
+          "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "openidconnect.net\t",
+          "uri": "",
+          "name": "openidconnect.net\t",
+          "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "jwt.io",
+          "uri": "",
+          "name": "jwt.io",
+          "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "auth0.net",
+          "uri": "",
+          "name": "auth0.net",
+          "ipAddress": ""
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "website",
+          "target": "auth0.auth0.com",
+          "uri": "",
+          "name": "auth0.auth0.com",
+          "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "manage.auth0.com",
+          "uri": "",
+          "name": "manage.auth0.com",
+          "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "accounts.auth0.com",
+          "uri": "",
+          "name": "accounts.auth0.com",
+          "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "webtask.io\t",
+          "uri": "",
+          "name": "webtask.io\t",
+          "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "phenix.rocks\t",
+          "uri": "",
+          "name": "phenix.rocks\t",
+          "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "Auth0 Docs (including quickstarts)",
+          "uri": "",
+          "name": "Auth0 Docs (including quickstarts)",
+          "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "sharelock.io",
+          "uri": "",
+          "name": "sharelock.io",
+          "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "goextend.io\t",
+          "uri": "",
+          "name": "goextend.io\t",
+          "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "https://support.auth0.com/tickets/new",
+          "uri": "",
+          "name": "https://support.auth0.com/tickets/new",
+          "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "support.auth0.com",
+          "uri": "",
+          "name": "support.auth0.com",
+          "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "community.auth0.com",
+          "uri": "",
+          "name": "community.auth0.com",
           "ipAddress": ""
         }
       ]
