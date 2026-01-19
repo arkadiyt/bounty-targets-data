@@ -590,6 +590,81 @@
     }
   },
   {
+    "id": "bug-bounty-program-blablacar",
+    "name": "Bug Bounty Program - BlaBlaCar",
+    "public": true,
+    "disabled": false,
+    "managed": null,
+    "min_bounty": 50,
+    "max_bounty": 3000,
+    "targets": {
+      "in_scope": [
+        {
+          "target": "https://edge.blablacar.(fr|de|co.uk|in|es|mx|be|hr|hu|it|nl|pl|com.br|pt|ro|ru|com|tr|com.ua))",
+          "type": "api"
+        },
+        {
+          "target": "https://auth.blablacar.(fr|de|co.uk|in|es|mx|be|hr|hu|it|nl|pl|com.br|pt|ro|ru|com|tr|com.ua)",
+          "type": "api"
+        },
+        {
+          "target": "https://www.blablacar.(fr|de|co.uk|in|es|mx|be|hr|hu|it|nl|pl|com.br|pt|ro|ru|com|tr|com.ua)",
+          "type": "web-application"
+        },
+        {
+          "target": "https://m.blablacar.(fr|de|co.uk|in|es|mx|be|hr|hu|it|nl|pl|com.br|pt|ro|ru|com|tr|com.ua)",
+          "type": "web-application"
+        },
+        {
+          "target": "https://play.google.com/store/apps/details?id=com.comuto&hl=en",
+          "type": "mobile-application-android"
+        },
+        {
+          "target": "https://itunes.apple.com/fr/app/blablacar-trusted-carpooling/id341329033?l=en&mt=8",
+          "type": "mobile-application-ios"
+        },
+        {
+          "target": "https://api.blablalines.com",
+          "type": "api"
+        },
+        {
+          "target": "https://daily.blablacar.fr",
+          "type": "web-application"
+        },
+        {
+          "target": "https://blablacardaily.com",
+          "type": "web-application"
+        },
+        {
+          "target": "https://play.google.com/store/apps/details?id=com.blablalines",
+          "type": "mobile-application-android"
+        },
+        {
+          "target": "https://apps.apple.com/fr/app/blablalines-covoiturage/id1225543288",
+          "type": "mobile-application-ios"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "target": "Please note that https://dev.blablacar.com is hosted by a third party and thus is out of scope.",
+          "type": "other"
+        },
+        {
+          "target": "Any website that is not listed explicitly in the scope.",
+          "type": "other"
+        },
+        {
+          "target": "However, though listed in the out-of-scope list, if you really feel that a bug will leave an impact on our platform, please come up with a convincing and working POC. If that convinces us to change our code, we will reward you with a bounty.",
+          "type": "other"
+        },
+        {
+          "target": "Finally, fraud related reports are out-of-scope if they do not exploit a security vulnerability. Therefore, fraud activity enabled by bug or incomplete business rules enforcement are out-of-scope.  However, a fraud activity enabled by a CSRF exploit for example is valid.",
+          "type": "other"
+        }
+      ]
+    }
+  },
+  {
     "id": "bug-bounty-sncf-connect-1",
     "name": "Bug Bounty SNCF Connect",
     "public": true,
