@@ -375,6 +375,42 @@
     }
   },
   {
+    "id": "0acb1a74-c545-4941-ae57-7ca5fad9d449",
+    "name": "Arm",
+    "company_handle": "arm",
+    "handle": "arm",
+    "url": "https://www.intigriti.com/programs/arm/arm/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 500,
+      "currency": "USD"
+    },
+    "max_bounty": {
+      "value": 20000,
+      "currency": "USD"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "other",
+          "endpoint": "Firmware: Mali Command Stream Frontend (CSF) Firmware",
+          "description": "#### Arm GPU Firmware running on the Command Stream Frontend (CSF): 'CSFFW' (`mali_csffw.bin`)\n\nOnly vulnerabilities that are exploitable through userspace mapped Command Buffers, and/or Kbase syscalls available to unprivileged userspace attackers (in EL0) are in scope.\n\nNote: the version of 'CSFFW' used must be matched to your device:\n- Its version must match the Kbase driver version in use.\n- It must be the correct variant of CSFFW for the device's GPU.\n\nThe version of CSFFW that comes on a compatible device will satisfy this, providing the device has the latest available security updates installed.\n",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "Software: Mali GPU Kernel Driver",
+          "description": "#### Arm Mali GPU Kernel Driver 'Kbase' (`mali_kbase.ko`)\n\nIn scope versions of the Arm Kbase driver version are:\n- The latest Arm Bifrost, Valhall, or 5th Gen GPU Kernel driver versions, as found on <https://developer.arm.com/downloads/-/mali-drivers/> or, \n- Arm Bifrost, Valhall, or 5th Gen GPU Kernel driver versions r49p1 and above that are running on devices supported by the OEM and have latest available security patches applied.\n\nOnly vulnerabilities that are exploitable through syscalls available to unprivileged userspace attackers (in EL0) are in scope.\n\nUse of the following configuration options is allowed. The use of other options is out of scope and may only be used during investigation.\n\n#### Kbase Build Configuration\nMali Kbase Default KConfig Build Options are used.\n\nThe following must specifically be set:\n- `CONFIG_MALI_DEBUG=n`\n\nAdditionally, the following options may be changed:\n- `CONFIG_MALI_CSF_SUPPORT=y` or `n` (please refer to FAQ for which setting must be used)\n- `CONFIG_MALI_EXPERT=y` or `n`\n- `CONFIG_LARGE_PAGE_SUPPORT=y` or `n`\n- `CONFIG_MALI_TRACE_POWER_GPU_WORK_PERIOD=y` or `n`\n- `CONFIG_MALI_NO_MALI`, either:\n  - `=n` (default)\n  - `=y`, (excludes vulnerabilities in the \"dummy model\" code itself)\n\n#### Kbase Dynamic Configuration\nThe default module parameter settings must be used.\n\nAdditionally, the following option(s) may be changed (chosen at 'insmod' time) :\n- `kbase_page_migration_enabled`\n",
+          "impact": "Tier 3"
+        }
+      ],
+      "out_of_scope": []
+    }
+  },
+  {
     "id": "933f224e-fbd3-4f08-a4fb-5038c2fa1a6e",
     "name": "Axel Springer National Media & Tech",
     "company_handle": "axelspringerse",
@@ -2876,6 +2912,126 @@
         }
       ],
       "out_of_scope": [
+        {
+          "type": "url",
+          "endpoint": "anchor.digitalocean.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "brand.digitalocean.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "cloudsupport.digitalocean.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "deploy.digitalocean.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "email.digitalocean.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "events.digitalocean.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "go.digitalocean.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "groove.digitalocean.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "helpdesk.digitalocean.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "ideas.digitalocean.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "investor.digitalocean.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "investors.digitalocean.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "ir.digitalocean.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "mirrors.digitalocean.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "pilot.digitalocean.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "rewards.digitalocean.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "segment.digitalocean.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "status.digitalocean.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "tracking.digitalocean.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "waves.digitalocean.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
         {
           "type": "wildcard",
           "endpoint": "*.db.ondigitalocean.com",
@@ -10596,6 +10752,54 @@
           "impact": "Out of scope"
         }
       ]
+    }
+  },
+  {
+    "id": "724ad196-90de-4ba8-bf21-dc114ab7fce4",
+    "name": "Trusted Firmware",
+    "company_handle": "arm",
+    "handle": "trustedfirmware",
+    "url": "https://www.intigriti.com/programs/arm/trustedfirmware/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 1000,
+      "currency": "USD"
+    },
+    "max_bounty": {
+      "value": 20000,
+      "currency": "USD"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "other",
+          "endpoint": "OP-TEE",
+          "description": "OP-TEE is a Trusted Execution Environment (TEE) designed as companion to a non-secure Linux kernel running on Arm; Cortex-A cores using the TrustZone technology.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "Mbed TLS & TF-PSA-Crypto",
+          "description": "Mbed TLS is a C library that implements X.509 certificate manipulation and the TLS and DTLS protocols. Its small code footprint makes it suitable for embedded systems. Mbed TLS includes the TF-PSA-Crypto repository that provides an implementation of the PSA Cryptography API.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "TrustedFirmware-A (TF-A)",
+          "description": "The Trusted Firmware-A project provides a reference implementation of secure world software for Armv8-A and Armv9-A class processors.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "TrustedFirmware-M (TF-M)",
+          "description": "Trusted Firmware-M (TF-M) implements the Secure Processing Environment (SPE) for Armv8-M, Armv8.1-M architectures (e.g. the Cortex-M33, Cortex-M23, Cortex-M55, Cortex-M85 processors) or dual-core platforms. It is the platform security architecture reference implementation aligning with PSA Certified guidelines, enabling chips, Real Time Operating Systems and devices to become PSA Certified.",
+          "impact": "Tier 2"
+        }
+      ],
+      "out_of_scope": []
     }
   },
   {
