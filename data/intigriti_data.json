@@ -2763,7 +2763,7 @@
         {
           "type": "wildcard",
           "endpoint": "*.digitalocean.com",
-          "description": "Please review __*.digitalocean.com Out of Scope Subdomains__ section below.",
+          "description": "Please review the __*.digitalocean.com Out of Scope Subdomains__ section below to ensure testing of only in-scope domain assets.",
           "impact": "Tier 2"
         },
         {
@@ -2793,7 +2793,7 @@
         {
           "type": "url",
           "endpoint": "marketplace.digitalocean.com",
-          "description": "Note that marketplace 1-click apps and add-ons are maintained by our partnered vendors and are out of scope. Security issues against these components of the marketplace are not in the scope of this program and ineligible for bounty rewards, but we are happy to help facilitate communications to the application owners.\n\nPlease reach out to us at security@digitalocean.com for facilitation.",
+          "description": "Note that marketplace 1-click apps and add-ons are maintained by our partnered vendors and are out of scope. \nPlease see the \"Out of Scope\" section below for more info.",
           "impact": "Tier 2"
         },
         {
@@ -2805,13 +2805,13 @@
         {
           "type": "wildcard",
           "endpoint": "*.snapshooter.com",
-          "description": "SnapShooter is a cloud backup and recovery solution",
+          "description": "SnapShooter is a cloud backup and recovery solution.",
           "impact": "Tier 2"
         },
         {
           "type": null,
           "endpoint": "https://github.com/digitalocean/do-agent",
-          "description": "A daemon that helps collect system metrics from droplets.",
+          "description": "A daemon that helps collect system metrics from droplets",
           "impact": "Tier 2"
         },
         {
@@ -2823,7 +2823,7 @@
         {
           "type": null,
           "endpoint": "https://github.com/digitalocean/doctl",
-          "description": "The official command line interface for the DigitalOcean API.",
+          "description": "The official command line interface for the DigitalOcean API",
           "impact": "Tier 3"
         },
         {
@@ -2847,19 +2847,19 @@
         {
           "type": null,
           "endpoint": "https://github.com/digitalocean/terraform-provider-digitalocean",
-          "description": "DigitalOcean's official Terraform provider.",
+          "description": "DigitalOcean's official Terraform provider",
           "impact": "Tier 3"
         },
         {
           "type": null,
           "endpoint": "https://github.com/digitalocean/go-nbd",
-          "description": "golang-only network block device client",
+          "description": "Golang-only network block device client",
           "impact": "Tier 3"
         },
         {
           "type": null,
           "endpoint": "https://github.com/digitalocean/do-markdownit",
-          "description": "Markdown plugin run against all user-submitted content on https://digitalocean.com/community.",
+          "description": "Markdown plugin run against all user-submitted content on https://digitalocean.com/community",
           "impact": "Tier 3"
         },
         {
@@ -3035,31 +3035,37 @@
         {
           "type": "wildcard",
           "endpoint": "*.db.ondigitalocean.com",
-          "description": "Customers' resources are hosted underneath this domain, so the entire domain should be considered out-of-scope.\n\nAny database created inside your own account on this domain are considered in-scope. Use the cloud.digitalocean.com asset in that case.",
+          "description": "Customers' resources are hosted underneath this domain, so the entire domain should be considered out-of-scope.\n\nAny database created inside your own account on this domain are considered in-scope. Use the `cloud.digitalocean.com` asset in that case.",
           "impact": "Out of scope"
         },
         {
           "type": "wildcard",
           "endpoint": "*.digitaloceanspaces.com",
-          "description": "Customers' resources are hosted underneath this domain, so the entire domain should be considered out-of-scope.\n\nAny Spaces buckets created inside your own account on this domain are considered in-scope. Use the cloud.digitalocean.com asset in that case.",
+          "description": "Customers' resources are hosted underneath this domain, so the entire domain should be considered out-of-scope.\n\nAny Spaces buckets created inside your own account on this domain are considered in-scope. Use the `cloud.digitalocean.com` asset in that case.",
           "impact": "Out of scope"
         },
         {
           "type": "wildcard",
           "endpoint": "*.doserverless.co",
-          "description": "Customers' resources are hosted underneath this domain, so the entire domain should be considered out-of-scope.\n\nAny Functions created inside your own account on this domain are considered in-scope. Use the cloud.digitalocean.com asset in that case.",
+          "description": "Customers' resources are hosted underneath this domain, so the entire domain should be considered out-of-scope.\n\nAny Functions created inside your own account on this domain are considered in-scope. Use the `cloud.digitalocean.com` asset in that case.",
           "impact": "Out of scope"
         },
         {
           "type": "wildcard",
           "endpoint": "*.k8s.ondigitalocean.com",
-          "description": "Customers' resources are hosted underneath this domain, so the entire domain should be considered out-of-scope.\n\nAny Kubernetes clusters created inside your own account on this domain are considered in-scope. Use the cloud.digitalocean.com asset in that case.",
+          "description": "Customers' resources are hosted underneath this domain, so the entire domain should be considered out-of-scope.\n\nAny Kubernetes clusters created inside your own account on this domain are considered in-scope. Use the `cloud.digitalocean.com` asset in that case.",
           "impact": "Out of scope"
         },
         {
           "type": "wildcard",
           "endpoint": "*.ondigitalocean.app",
-          "description": "Customers' resources are hosted underneath this domain, so the entire domain should be considered out-of-scope.\n\nAny Apps created inside your own account on this domain are considered in-scope. Use the cloud.digitalocean.com asset in that case.",
+          "description": "Customers' resources are hosted underneath this domain, so the entire domain should be considered out-of-scope.\n\nAny Apps created inside your own account on this domain are considered in-scope. Use the `cloud.digitalocean.com` asset in that case.",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "registry.digitalocean.com/*",
+          "description": "Customers' resources are hosted underneath this domain, so the entire domain should be considered out-of-scope.\n\nAny container registries created inside your own account on this domain are considered in-scope. Use the `cloud.digitalocean.com` asset in that case.",
           "impact": "Out of scope"
         },
         {
@@ -3071,19 +3077,13 @@
         {
           "type": "other",
           "endpoint": "Marketplace Apps and Add-Ons",
-          "description": "The marketplace applications and add-ons are maintained by our partnered vendors. Security issues are not in the scope of this program and ineligible for bounty rewards, but we are happy to help facilitate communications to the application owners.\nPlease reach out to us at security@digitalocean.com for facilitation.",
+          "description": "The marketplace applications and add-ons are maintained by our partnered vendors. \nSecurity issues against these components of the marketplace are not in the scope of this program and ineligible for bounty rewards, but we are happy to help facilitate communications to the application owners.\nPlease reach out to us at security@digitalocean.com for facilitation.",
           "impact": "Out of scope"
         },
         {
           "type": "other",
           "endpoint": "Other DigitalOcean open source projects not listed",
           "description": "All open source projects hosted by DigitalOcean not otherwise listed as in-scope are out-of-scope.",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "registry.digitalocean.com/*",
-          "description": "Customers' resources are hosted underneath this domain, so the entire domain should be considered out-of-scope.\n\nAny container registries created inside your own account on this domain are considered in-scope. Use the cloud.digitalocean.com asset in that case.",
           "impact": "Out of scope"
         }
       ]
