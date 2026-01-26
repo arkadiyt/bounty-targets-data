@@ -9893,6 +9893,162 @@
     }
   },
   {
+    "id": "5111e2de-2d04-4ec8-9f24-c0b76cbfd38e",
+    "name": "Storebrand Responsible Disclosure",
+    "company_handle": "spp-storebrand",
+    "handle": "storebrand-rd",
+    "url": "https://www.intigriti.com/programs/spp-storebrand/storebrand-rd/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 0,
+      "currency": "EUR"
+    },
+    "max_bounty": {
+      "value": 0,
+      "currency": "EUR"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "wildcard",
+          "endpoint": "*.aipmanagement.dk",
+          "description": null,
+          "impact": "No Bounty"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.capitalinvestment.dk",
+          "description": null,
+          "impact": "No Bounty"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.storebrandam.com",
+          "description": null,
+          "impact": "No Bounty"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.skagenfunds.fr",
+          "description": null,
+          "impact": "No Bounty"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.skagenfunds.de",
+          "description": null,
+          "impact": "No Bounty"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.skagenfunds.ie",
+          "description": null,
+          "impact": "No Bounty"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.skagenfunds.co.uk",
+          "description": null,
+          "impact": "No Bounty"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.skagenfunds.lu",
+          "description": null,
+          "impact": "No Bounty"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.skagenfunds.nl",
+          "description": null,
+          "impact": "No Bounty"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.skagenfunds.is",
+          "description": null,
+          "impact": "No Bounty"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.skagenfunds.fi",
+          "description": null,
+          "impact": "No Bounty"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.skagenfondene.dk",
+          "description": null,
+          "impact": "No Bounty"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.skagenfonder.se",
+          "description": null,
+          "impact": "No Bounty"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.skagenfunds.com",
+          "description": null,
+          "impact": "No Bounty"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.skagenfondene.no",
+          "description": null,
+          "impact": "No Bounty"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.storebrandfonder.se",
+          "description": null,
+          "impact": "No Bounty"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.storebrandfastigheter.se",
+          "description": null,
+          "impact": "No Bounty"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.cubera.no",
+          "description": null,
+          "impact": "No Bounty"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.skagenfondene.no",
+          "description": null,
+          "impact": "No Bounty"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.storebrand.no",
+          "description": null,
+          "impact": "No Bounty"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.kron.no",
+          "description": null,
+          "impact": "No Bounty"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.spp.se",
+          "description": null,
+          "impact": "No Bounty"
+        }
+      ],
+      "out_of_scope": []
+    }
+  },
+  {
     "id": "82be1e9b-f9ab-45e7-82fd-9ba65be37645",
     "name": "Tempo-Team ",
     "company_handle": "randstad",
@@ -10668,54 +10824,6 @@
           "impact": "Out of scope"
         }
       ]
-    }
-  },
-  {
-    "id": "724ad196-90de-4ba8-bf21-dc114ab7fce4",
-    "name": "Trusted Firmware",
-    "company_handle": "arm",
-    "handle": "trustedfirmware",
-    "url": "https://www.intigriti.com/programs/arm/trustedfirmware/detail",
-    "status": "open",
-    "confidentiality_level": "public",
-    "tacRequired": false,
-    "twoFactorRequired": false,
-    "min_bounty": {
-      "value": 1000,
-      "currency": "USD"
-    },
-    "max_bounty": {
-      "value": 20000,
-      "currency": "USD"
-    },
-    "targets": {
-      "in_scope": [
-        {
-          "type": "other",
-          "endpoint": "OP-TEE",
-          "description": "OP-TEE is a Trusted Execution Environment (TEE) designed as companion to a non-secure Linux kernel running on Arm; Cortex-A cores using the TrustZone technology.",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "other",
-          "endpoint": "Mbed TLS & TF-PSA-Crypto",
-          "description": "Mbed TLS is a C library that implements X.509 certificate manipulation and the TLS and DTLS protocols. Its small code footprint makes it suitable for embedded systems. Mbed TLS includes the TF-PSA-Crypto repository that provides an implementation of the PSA Cryptography API.",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "other",
-          "endpoint": "TrustedFirmware-A (TF-A)",
-          "description": "The Trusted Firmware-A project provides a reference implementation of secure world software for Armv8-A and Armv9-A class processors.",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "other",
-          "endpoint": "TrustedFirmware-M (TF-M)",
-          "description": "Trusted Firmware-M (TF-M) implements the Secure Processing Environment (SPE) for Armv8-M, Armv8.1-M architectures (e.g. the Cortex-M33, Cortex-M23, Cortex-M55, Cortex-M85 processors) or dual-core platforms. It is the platform security architecture reference implementation aligning with PSA Certified guidelines, enabling chips, Real Time Operating Systems and devices to become PSA Certified.",
-          "impact": "Tier 2"
-        }
-      ],
-      "out_of_scope": []
     }
   },
   {
