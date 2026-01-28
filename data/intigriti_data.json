@@ -3808,6 +3808,85 @@
     }
   },
   {
+    "id": "611c246e-1bf9-42b7-a458-af832582d0d7",
+    "name": "Grafana Labs",
+    "company_handle": "grafanalabs",
+    "handle": "grafanaossbbp",
+    "url": "https://www.intigriti.com/programs/grafanalabs/grafanaossbbp/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 10,
+      "currency": "USD"
+    },
+    "max_bounty": {
+      "value": 15000,
+      "currency": "USD"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "other",
+          "endpoint": "Grafana Loki",
+          "description": null,
+          "impact": "Tier 1"
+        },
+        {
+          "type": "other",
+          "endpoint": "Grafana Mimir",
+          "description": null,
+          "impact": "Tier 1"
+        },
+        {
+          "type": "other",
+          "endpoint": "Grafana OSS",
+          "description": null,
+          "impact": "Tier 1"
+        },
+        {
+          "type": "other",
+          "endpoint": "Grafana Pyroscope",
+          "description": null,
+          "impact": "Tier 1"
+        },
+        {
+          "type": "other",
+          "endpoint": "Grafana Tempo",
+          "description": null,
+          "impact": "Tier 1"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "https://github.com/grafana/*",
+          "description": "Only repository misconfigurations for non-archived repositories are in scope - please read '**In scope**' section below for detailed scope.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "Non-Core Grafana Plugins",
+          "description": "Grafana Labs developed [plugins](https://grafana.com/grafana/plugins/all-plugins/?signature=grafana) not installed by default are accepted, but not eligible for a bounty. ",
+          "impact": "No Bounty"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "wildcard",
+          "endpoint": "*.grafana.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.grafana.net",
+          "description": null,
+          "impact": "Out of scope"
+        }
+      ]
+    }
+  },
+  {
     "id": "4acc7e11-3634-4ce5-b100-d961d3f6c6f0",
     "name": "HRS Group VDP",
     "company_handle": "hrsgroup",
@@ -10277,6 +10356,72 @@
           "endpoint": "components.tomorrowland.com",
           "description": "Vulnerabilities found on either components.stag.tomorrowland.com or components.tomorrowland.com will be considered duplicate.",
           "impact": "Tier 3"
+        }
+      ],
+      "out_of_scope": []
+    }
+  },
+  {
+    "id": "0d0034de-b53e-47b8-9a9d-41c302c49b5a",
+    "name": "Torfs",
+    "company_handle": "torfs",
+    "handle": "torfs",
+    "url": "https://www.intigriti.com/programs/torfs/torfs/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 25,
+      "currency": "EUR"
+    },
+    "max_bounty": {
+      "value": 6500,
+      "currency": "EUR"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "url",
+          "endpoint": "winkels.torfs.be",
+          "description": "🇫🇷🇳🇱",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.schoenentorfs.be",
+          "description": "🇫🇷🇳🇱",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.schoenentorfs.nl ",
+          "description": "🇳🇱",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.torfs.be",
+          "description": "🇫🇷🇳🇱",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.torfs.nl",
+          "description": "🇳🇱",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.samenfittorfs.be",
+          "description": "🇳🇱 ",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "other",
+          "endpoint": "Any related Torfs domain",
+          "description": null,
+          "impact": "No Bounty"
         }
       ],
       "out_of_scope": []
