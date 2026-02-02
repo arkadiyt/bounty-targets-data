@@ -948,6 +948,60 @@
     }
   },
   {
+    "id": "2de0c513-e7e8-4e4f-b0d9-885e45c1f767",
+    "name": "Bitvavo VDP",
+    "company_handle": "bitvavo",
+    "handle": "bitvavovdp",
+    "url": "https://www.intigriti.com/programs/bitvavo/bitvavovdp/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 0,
+      "currency": "EUR"
+    },
+    "max_bounty": {
+      "value": 0,
+      "currency": "EUR"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "ios",
+          "endpoint": "1483903423",
+          "description": null,
+          "impact": "No Bounty"
+        },
+        {
+          "type": "android",
+          "endpoint": "com.bitvavo.android",
+          "description": null,
+          "impact": "No Bounty"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "https://api.bitvavo.com/v2/*",
+          "description": "This is the base REST API endpoint for Bitvavo. For the full list of available methods, endpoints, schema definition, and auth requirement consult the canonical API documentation: \n\nhttps://docs.bitvavo.com/docs/rest-api/\n\nBitvavo offers two protocols for interacting with its platform: **REST** and **WebSocket**. Both protocols return JSON-encoded responses, and use standard HTTP status codes. However, each protocol is optimized for different use cases:\n\n**REST API**\n* Best suited for synchronous, request-response interactions.\n* Client initiates every call, and the server responds with the requested data.\n\nFor more details, read carefully our API docs at https://docs.bitvavo.com/docs/get-started/",
+          "impact": "No Bounty"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "wss://ws.bitvavo.com/v2 *",
+          "description": "This is the base WebSocket API endpoint for Bitvavo. For the full list of available methods, endpoints, schema definition, and auth requirement consult the canonical API documentation: \n\nhttps://docs.bitvavo.com/docs/websocket-api/\n\nBitvavo offers two protocols for interacting with its platform: **REST** and **WebSocket**. Both protocols return JSON-encoded responses, and use standard HTTP status codes. However, each protocol is optimized for different use cases:\n\n**WebSocket API**\n* Ideal for real-time, event-driven communication.\n* Once connected, the server continuously pushes updates to the client without requiring repeated requests.\n\nFor more details, read carefully our API docs at https://docs.bitvavo.com/docs/get-started/",
+          "impact": "No Bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://bitvavo.com",
+          "description": null,
+          "impact": "No Bounty"
+        }
+      ],
+      "out_of_scope": []
+    }
+  },
+  {
     "id": "5f29e1eb-85e8-4d99-9b52-b809f06de633",
     "name": "Bpost",
     "company_handle": "bpost",
