@@ -92,84 +92,6 @@
     }
   },
   {
-    "id": "ac81c127-b11b-469e-8060-e0fbb9c9c398",
-    "name": "Aikido Security: Zen by Aikido ",
-    "company_handle": "aikido",
-    "handle": "aikidoruntime",
-    "url": "https://www.intigriti.com/programs/aikido/aikidoruntime/detail",
-    "status": "open",
-    "confidentiality_level": "public",
-    "tacRequired": false,
-    "twoFactorRequired": false,
-    "min_bounty": {
-      "value": 100,
-      "currency": "EUR"
-    },
-    "max_bounty": {
-      "value": 3500,
-      "currency": "EUR"
-    },
-    "targets": {
-      "in_scope": [
-        {
-          "type": "other",
-          "endpoint": "https://github.com/AikidoSec/firewall-node#Vulnerability",
-          "description": "Tier 1 is for vulnerabilities which we potentially introduce via our own firewall component in the user's application.\n\nSee Severity Assessment for more information.",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "https://github.com/AikidoSec/firewall-php#Vulnerability",
-          "description": null,
-          "impact": "Tier 1"
-        },
-        {
-          "type": "other",
-          "endpoint": "https://github.com/AikidoSec/firewall-python#Vulnerability",
-          "description": null,
-          "impact": "Tier 1"
-        },
-        {
-          "type": "other",
-          "endpoint": "https://github.com/AikidoSec/firewall-node#Detection Bypass",
-          "description": "Tier 2 is for bypasses in the vulnerability detection of the firewall component, such as a bypass of our SQL injection detection.\n\nSee Severity Assessment for more information.",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "https://github.com/AikidoSec/firewall-php#Detection Bypass",
-          "description": null,
-          "impact": "Tier 2"
-        },
-        {
-          "type": "other",
-          "endpoint": "https://github.com/AikidoSec/firewall-python#Detection Bypass",
-          "description": null,
-          "impact": "Tier 2"
-        },
-        {
-          "type": "other",
-          "endpoint": "https://github.com/AikidoSec/firewall-node#False Positive",
-          "description": "Tier 3 is for any false positives you encounter with our vulnerability detection. For example, cases where we falsely flag a SQL injection, while the user's input is safely encapsulated in the SQL query.\n\nSeverity assessments are slightly harder for these cases, see \"Severity Assessment\" for more information.",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "https://github.com/AikidoSec/firewall-php#False Positive",
-          "description": null,
-          "impact": "Tier 3"
-        },
-        {
-          "type": "other",
-          "endpoint": "https://github.com/AikidoSec/firewall-python#False Positive",
-          "description": null,
-          "impact": "Tier 3"
-        }
-      ],
-      "out_of_scope": []
-    }
-  },
-  {
     "id": "30f445f7-ca4c-4130-9434-49add5c6ac74",
     "name": "Algemeen Dagblad",
     "company_handle": "dpgm",
@@ -4619,6 +4541,252 @@
     }
   },
   {
+    "id": "f6f576c3-c066-4be1-9d0b-f6d934d682f6",
+    "name": "ICI PARIS XL",
+    "company_handle": "aswatson",
+    "handle": "iciparisxl",
+    "url": "https://www.intigriti.com/programs/aswatson/iciparisxl/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 10,
+      "currency": "USD"
+    },
+    "max_bounty": {
+      "value": 8500,
+      "currency": "USD"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "url",
+          "endpoint": "www.iciparisxl.nl",
+          "description": "This is ICI Paris XL NL, our Dutch online Perfumery.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.iciparisxl.be",
+          "description": "This is ICI Paris XL BE, our Belgian online Perfumery.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.iciparisxl.lu",
+          "description": "This is ICI Paris XL LU, our Luxembourgish online Perfumery.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "android",
+          "endpoint": "ICI Paris XL Android",
+          "description": "This is our ICI Paris XL (Android) app.\nApp link: https://play.google.com/store/apps/details?id=com.iciparisxl.app",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "ios",
+          "endpoint": "ICI Paris XL iOS",
+          "description": "This is our ICI Paris XL (iOS) app.\nApp link [https://apps.apple.com/nl/app/ici-paris-xl-beauty/id1061895392](https://)",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "app.iciparisxl.be",
+          "description": "This is the API server of the ICI Paris XL mobile app in Belgium",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "app.iciparisxl.lu",
+          "description": "This is the API server of the ICI Paris XL mobile app in Luxembourg",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "app.iciparisxl.nl",
+          "description": "This is the API server of the ICI Paris XL mobile app in the Netherlands",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "media.iciparisxl.lu",
+          "description": "This subdomain is used to store static content for the www.iciparisxl.lu e-commerce website",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "media.iciparisxl.nl",
+          "description": "This subdomain is used to store static content for the www.iciparisxl.nl e-commerce website",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "media.iciparisxl.be",
+          "description": "This subdomain is used to store static content for the www.iciparisxl.be e-commerce website",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.iciparisxl.lu",
+          "description": "This is the API server for the www.iciparisxl.lu website\nAPI spec: https://api.iciparisxl.lu/api/v2/api-docs",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.iciparisxl.nl",
+          "description": "This is the API server for the www.iciparisxl.nl website\nAPI spec: https://api.iciparisxl.nl/api/v2/api-docs",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.iciparisxl.be",
+          "description": "This is the API server for the www.iciparisxl.be website\nAPI spec: https://api.iciparisxl.be/api/v2/api-docs",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.iciparisxl.com",
+          "description": "This is a referral page to the ICI Paris XL e-commerce websites",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "xlence.iciparisxl.nl",
+          "description": "This is a marketing related application from ICI Paris XL",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "newsletter.iciparisxl.nl",
+          "description": "This is a marketing related application from ICI Paris XL",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "newsletter-feedback.iciparisxl.nl",
+          "description": "This is a marketing related application from ICI Paris XL",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "beauty-and-you.iciparisxl.nl",
+          "description": "This is a marketing related application from ICI Paris XL",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "folder.iciparisxl.nl",
+          "description": "This is a marketing related application from ICI Paris XL",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "folders.iciparisxl.nl",
+          "description": "This is a marketing related application from ICI Paris XL",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "edition.iciparisxl.nl",
+          "description": "This is a marketing related application from ICI Paris XL",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "servicefr.iciparisxl.be",
+          "description": "This is a customer service related application from ICI Paris XL",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "wifi-in-store.iciparisxl.nl",
+          "description": "This is an application used to connect to in-store WIFI in the ICI Paris XL stores",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "wifi-in-store.iciparisxl.lu",
+          "description": "This is an application used to connect to in-store WIFI in the ICI Paris XL stores",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "wifi-in-store.iciparisxl.be",
+          "description": "This is an application used to connect to in-store WIFI in the ICI Paris XL stores",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "service.iciparisxl.nl",
+          "description": "This is a customer service related application from ICI Paris XL",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "servicefr.iciparisxl.lu",
+          "description": "This is a customer service related application from ICI Paris XL",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "campagne.iciparisxl.nl",
+          "description": "An Adobe Campaign application from ICI Paris XL",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "campagne.iciparisxl.lu",
+          "description": "An Adobe Campaign application from ICI Paris XL",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "campagne.iciparisxl.be",
+          "description": "An Adobe Campaign application from ICI Paris XL",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "servicenl.iciparisxl.be",
+          "description": "This is a customer service related application from ICI Paris XL",
+          "impact": null
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.iciparisxl.lu",
+          "description": null,
+          "impact": null
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.iciparisxl.nl",
+          "description": "This asset contains all other applications on this wildcard not explicitly mentioned elsewhere in the scope",
+          "impact": null
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.iciparisxl.be",
+          "description": "This asset contains all other applications on this wildcard not explicitly mentioned elsewhere in the scope",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "www.pourvous.nl",
+          "description": "This is our Pour Vous e-commerce website",
+          "impact": null
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.pourvous.nl",
+          "description": "This asset contains all other applications on this wildcard not explicitly mentioned elsewhere in the scope",
+          "impact": null
+        }
+      ],
+      "out_of_scope": []
+    }
+  },
+  {
     "id": "540e04bb-ae56-49cd-8e05-311a08ba44f7",
     "name": "ING Responsible Disclosure",
     "company_handle": "ing",
@@ -5620,6 +5788,324 @@
     }
   },
   {
+    "id": "d108eca8-374c-4e6f-a996-4af69c7bd079",
+    "name": "Kruidvat",
+    "company_handle": "aswatson",
+    "handle": "kruidvat",
+    "url": "https://www.intigriti.com/programs/aswatson/kruidvat/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 10,
+      "currency": "USD"
+    },
+    "max_bounty": {
+      "value": 8500,
+      "currency": "USD"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "url",
+          "endpoint": "www.kruidvat.nl",
+          "description": "This is Kruidvat NL, our Dutch online Pharmacy.\nAPI spec: https://www.kruidvat.nl/api/v2/api-docs",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.kruidvat.be",
+          "description": "This is Kruidvat BE, our Belgian online Pharmacy.\nAPI spec: https://www.kruidvat.be/api/v2/api-docs",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "ios",
+          "endpoint": "Kruidvat BE iOS",
+          "description": "This is our Kruidvat mobile app for Belgium.\nApp Link: https://apps.apple.com/be/app/kruidvat/id1151434781",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "ios",
+          "endpoint": "Kruidvat NL iOS",
+          "description": "This is our Kruidvat mobile app for The Netherlands.\nApp Link: https://itunes.apple.com/nl/app/kruidvat-mobiele-app/id531631058",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "android",
+          "endpoint": "Kruidvat BE Android",
+          "description": "This is our Kruidvat mobile app for Belgium.\nApp Link: https://play.google.com/store/apps/details?id=nl.kruidvat.voordeelkaart",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "android",
+          "endpoint": "Kruidvat NL Android",
+          "description": "TThis is our Kruidvat mobile app for The Netherlands.\nApp Link: https://play.google.com/store/apps/details?id=be.kruidvat.voordeelkaart",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.kruidvatkids.nl",
+          "description": "This is our Kruidvat Kids e-commerce website, specifically for the daycare market",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "speelgoedfolder.kruidvat.nl",
+          "description": "This is a marketing related application from Kruidvat",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "depliantdejouets.kruidvat.be",
+          "description": "This is a marketing related application from Kruidvat",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "folder.kruidvat.be",
+          "description": "This is a marketing related application from Kruidvat",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "folder.kruidvat.nl",
+          "description": "This is a marketing related application from Kruidvat",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "speelgoedfolder.kruidvat.be",
+          "description": "This is a marketing related application from Kruidvat",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "ecom-static.kruidvat.be",
+          "description": "This is a marketing related application from Kruidvat",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "ecom-static.kruidvat.nl",
+          "description": "This is a marketing related application from Kruidvat",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "ecom-data.kruidvat.be",
+          "description": "This is a marketing related application from Kruidvat",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "magazine.kruidvat.be",
+          "description": "This is a marketing related application from Kruidvat",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "ecom-data.kruidvat.nl",
+          "description": "This is a marketing related application from Kruidvat",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "campaign.kruidvat.nl",
+          "description": "An Adobe Campaign application from Kruidvat",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "campaign.kruidvat.be",
+          "description": "An Adobe Campaign application from Kruidvat",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "campaign-uat.kruidvat.nl",
+          "description": "An Adobe Campaign application from Kruidvat",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "campaign-uat.kruidvat.be",
+          "description": "An Adobe Campaign application from Kruidvat",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "cewe.kruidvat.nl",
+          "description": "This is our third party website from the Kruidvat Netherlands Fotoservice by CEWE",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "cewe.kruidvat.be",
+          "description": "This is our third party website from the Kruidvat Belgium Fotoservice by CEWE",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "cewetest.kruidvat.nl",
+          "description": "This is our third party website from the Kruidvat Netherlands Fotoservice by CEWE",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "cewetest.kruidvat.be",
+          "description": "This is our third party website from the Kruidvat Belgium Fotoservice by CEWE",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "digital.kruidvat.be",
+          "description": "An Adobe Campaign application from Kruidvat",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "digital.kruidvat.nl",
+          "description": "An Adobe Campaign application from Kruidvat",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "foto.kruidvat.be",
+          "description": "This is our third party website from the Kruidvat Belgium Fotoservice by our own brand",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "foto.kruidvat.nl",
+          "description": "This is our third party website from the Kruidvat Netherlands Fotoservice by our own brand",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "fotoservice.kruidvat.nl",
+          "description": "This is our third party website from the Kruidvat Netherlands Fotoservice by our own brand",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "fotoservice.kruidvat.be",
+          "description": "This is our third party website from the Kruidvat Belgium Fotoservice by our own brand",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "photo.kruidvat.be",
+          "description": "This is our third party website from the Kruidvat Belgium Fotoservice by our own brand",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "service.kruidvat.be",
+          "description": "This is a customer service related application from Kruidvat",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "service.kruidvat.nl",
+          "description": "This is a customer service related application from Kruidvat",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "servicefr.kruidvat.be",
+          "description": "This is a customer service related application from Kruidvat",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "www.cewe.kruidvat.be",
+          "description": "This is our third party website from the Kruidvat Belgium Fotoservice by CEWE",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "www.cewe.kruidvat.nl",
+          "description": "This is our third party website from the Kruidvat Netherlands Fotoservice by CEWE",
+          "impact": null
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.kruidvatkids.nl",
+          "description": "This asset contains all other applications on this wildcard not explicitly mentioned elsewhere in the scope",
+          "impact": null
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.kruidvat.nl",
+          "description": "This asset contains all other applications on this wildcard not explicitly mentioned elsewhere in the scope",
+          "impact": null
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.kruidvat.be",
+          "description": "This asset contains all other applications on this wildcard not explicitly mentioned elsewhere in the scope",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "www.trekpleister.nl",
+          "description": "\"This is Trekpleister, our Dutch online Pharmacy.\nAPI spec: https://www.trekpleister.nl/api/v2/api-docs\"",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "campaign.trekpleister.nl",
+          "description": "An Adobe Campaign application from Kruidvat",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "campaign-uat.trekpleister.nl",
+          "description": "An Adobe Campaign application from Kruidvat",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "ecom-data.trekpleister.nl",
+          "description": "This is a marketing related application from Kruidvat",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "service.trekpleister.nl",
+          "description": "This is a customer service related application from Kruidvat",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "folder.trekpleister.nl",
+          "description": "This is a marketing related application from Kruidvat",
+          "impact": null
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.trekpleister.nl",
+          "description": "This asset contains all other applications on this wildcard not explicitly mentioned elsewhere in the scope",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "www.prijsmepper.nl",
+          "description": "This is the website for the Prijsmepper brand",
+          "impact": null
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.prijsmepper.nl",
+          "description": "This asset contains all other applications on this wildcard not explicitly mentioned elsewhere in the scope",
+          "impact": null
+        }
+      ],
+      "out_of_scope": []
+    }
+  },
+  {
     "id": "06ea3a06-58d5-4173-af0e-c2f1f98714c6",
     "name": "Lansweeper Bug Bounty Program",
     "company_handle": "lansweeper",
@@ -5805,6 +6291,474 @@
           "impact": "Out of scope"
         }
       ]
+    }
+  },
+  {
+    "id": "ad2bd496-536c-4c24-b885-ce01d66966b9",
+    "name": "Marionnaud",
+    "company_handle": "aswatson",
+    "handle": "marionnaud",
+    "url": "https://www.intigriti.com/programs/aswatson/marionnaud/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 10,
+      "currency": "USD"
+    },
+    "max_bounty": {
+      "value": 8500,
+      "currency": "USD"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "url",
+          "endpoint": "www.marionnaud.fr",
+          "description": "This is Marionnaud France, our online Perfumery.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "android",
+          "endpoint": "Marionnaud France Android",
+          "description": "This is our Marionnaud France (Android) app.\nApp link: https://play.google.com/store/apps/details?id=com.marionnaud.marionnaudfrance",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "ios",
+          "endpoint": "Marionnaud France iOS",
+          "description": "This is our Marionnaud France (iOS) app.\nApp link: https://apps.apple.com/fr/app/marionnaud-france/id1127368763",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "app.marionnaud.fr",
+          "description": "This is the API server of the Marionnaud France mobile app",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "media.marionnaud.fr",
+          "description": "This subdomain is used to store static content for the www.marionnaud.fr e-commerce website",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.marionnaud.fr",
+          "description": null,
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "ecom-data.marionnaud.fr",
+          "description": "This is a marketing related application from The Perfume Shop",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "bdes-api.marionnaud.fr",
+          "description": "This is the API for the bdese.marionnaud.fr supplier portal",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "bdese.marionnaud.fr",
+          "description": "This is a supplier portal for Marionnaud France",
+          "impact": null
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.marionnaud.fr",
+          "description": "This asset contains all other applications on this wildcard not explicitly mentioned elsewhere in the scope",
+          "impact": null
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.marionnaud.es",
+          "description": "This asset contains all other applications on this wildcard not explicitly mentioned elsewhere in the scope",
+          "impact": null
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.marionnaud.paris",
+          "description": "This asset contains all other applications on this wildcard not explicitly mentioned elsewhere in the scope",
+          "impact": null
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.marionnaud.com",
+          "description": "This asset contains all other applications on this wildcard not explicitly mentioned elsewhere in the scope",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "www.marionnaud.at",
+          "description": "This is Marionnaud Austria, our online Perfumery.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "ios",
+          "endpoint": "Marionnaud Austria iOS",
+          "description": "This is our Marionnaud Austria (iOS) app.\nApp link: https://apps.apple.com/gb/app/marionnaud-%C3%B6sterreich/id1114541888",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "android",
+          "endpoint": "Marionnaud Austria Android",
+          "description": "This is our Marionnaud Austria (Android) app.\nApp link: App Link https://play.google.com/store/apps/details?id=at.marionnaud.customer",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "app.marionnaud.at",
+          "description": "This is the API server of the Marionnaud Austria mobile app",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.marionnaud.at",
+          "description": "This is the API server for the www.marionnaud.at website\nAPI spec: https://api.marionnaud.at/api/v2/api-docs",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "media.marionnaud.at",
+          "description": "This subdomain is used to store static content for the www.marionnaud.at e-commerce website",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "campaign.marionnaud.at",
+          "description": "This is a marketing related application from The Perfume Shop",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "ecom-data.marionnaud.at",
+          "description": "This is a marketing related application from The Perfume Shop",
+          "impact": null
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.marionnaud.de",
+          "description": "This asset contains all other applications on this wildcard not explicitly mentioned elsewhere in the scope",
+          "impact": null
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.marionnaud.at",
+          "description": "This asset contains all other applications on this wildcard not explicitly mentioned elsewhere in the scope",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "www.marionnaud.ch",
+          "description": "This is Marionnaud Switzerland, our online Perfumery.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "ios",
+          "endpoint": "Marionnaud Switzerland iOS",
+          "description": "This is our Marionnaud Switzerland (iOS) app.\nApp link: https://apps.apple.com/ch/app/id1486316902",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "android",
+          "endpoint": "Marionnaud Switzerland Android",
+          "description": "This is our Marionnaud Switzerland (Android) app.\nApp link: https://play.google.com/store/apps/details?id=ch.marionnaud.customer",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "app.marionnaud.ch",
+          "description": "This is the API server of the Marionnaud Switzerland mobile app",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.marionnaud.ch",
+          "description": "This is the API server for the www.marionnaud.ch website\nAPI spec: https://api.marionnaud.ch/api/v2/api-docs",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "media.marionnaud.ch",
+          "description": "This subdomain is used to store static content for the www.marionnaud.ch e-commerce website",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "campaign.marionnaud.ch",
+          "description": "This is a marketing related application from The Perfume Shop",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "ecom-data.marionnaud.ch",
+          "description": "This is a marketing related application from The Perfume Shop",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "extranet.marionnaud.ch",
+          "description": "This is the extranet for Marionnaud Switzerland",
+          "impact": null
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.marionnaud.ch",
+          "description": "This asset contains all other applications on this wildcard not explicitly mentioned elsewhere in the scope",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "www.marionnaud.it",
+          "description": "This is Marionnaud Italy, our online Perfumery.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "ios",
+          "endpoint": "Marionnaud Italy iOS",
+          "description": "This is our Marionnaud Italy (iOS) app.\nApp link: https://apps.apple.com/it/app/marionnaud/id883671274",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "android",
+          "endpoint": "Marionnaud Italy Android",
+          "description": "This is our Marionnaud Italy (Android) app.\nApp link: https://play.google.com/store/apps/details?id=it.marionnaud.customer",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "app.marionnaud.it",
+          "description": "This is the API server of the Marionnaud Italy mobile app",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.marionnaud.it",
+          "description": "This is the API server for the www.marionnaud.it website\nAPI spec: https://api.marionnaud.it/api/v2/api-docs",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "media.marionnaud.it",
+          "description": "This subdomain is used to store static content for the www.marionnaud.it e-commerce website",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "campaign.marionnaud.it",
+          "description": "This is a marketing related application from The Perfume Shop",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "ecom-data.marionnaud.it",
+          "description": "This is a marketing related application from The Perfume Shop",
+          "impact": null
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.marionnaud.it",
+          "description": "This asset contains all other applications on this wildcard not explicitly mentioned elsewhere in the scope",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "www.marionnaud.hu",
+          "description": "This is Marionnaud Hungary, our online Perfumery.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "ios",
+          "endpoint": "Marionnaud Hungary iOS",
+          "description": "This is our Marionnaud Hungary (iOS) app.\nApp link: https://apps.apple.com/hu/app/marionnaud-magyarorsz%C3%A1g/id1645840482",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "android",
+          "endpoint": "Marionnaud Hungary Android",
+          "description": "This is our Marionnaud Hungary (Android) app.\nApp link: https://play.google.com/store/apps/details?id=hu.marionnaud.customer",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "media.marionnaud.hu",
+          "description": "This subdomain is used to store static content for the www.marionnaud.hu e-commerce website",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.marionnaud.hu",
+          "description": "This is the API server for the www.marionnaud.hu website\nAPI spec: https://api.marionnaud.hu/api/v2/api-docs",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "app.marionnaud.hu",
+          "description": "This is the API server of the Marionnaud Hungary mobile app",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "ecom-data.marionnaud.hu",
+          "description": "This is a marketing related application from The Perfume Shop",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "campaign.marionnaud.hu",
+          "description": "This is a marketing related application from The Perfume Shop",
+          "impact": null
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.marionnaud.hu",
+          "description": "This asset contains all other applications on this wildcard not explicitly mentioned elsewhere in the scope",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "www.marionnaud.cz",
+          "description": "This is Marionnaud Czech Republic, our online Perfumery.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "ios",
+          "endpoint": "Marionnaud Czech Republic iOS",
+          "description": "This is our Marionnaud Czech Republic (iOS) app.\nApp link: https://apps.apple.com/cz/app/marionnaud-%C4%8Desko/id1641863747",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "android",
+          "endpoint": "Marionnaud Czech Republic Android",
+          "description": "This is our Marionnaud Czech Republic (Android) app.\nApp link: https://play.google.com/store/apps/details?id=cz.marionnaud.customer",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "media.marionnaud.cz",
+          "description": "This subdomain is used to store static content for the www.marionnaud.cz e-commerce website",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.marionnaud.cz",
+          "description": "This is the API server for the www.marionnaud.cz website\nAPI spec: https://api.marionnaud.cz/api/v2/api-docs",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "app.marionnaud.cz",
+          "description": "This is the API server of the Marionnaud Czech Republic mobile app",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "campaign.marionnaud.cz",
+          "description": "This is a marketing related application from The Perfume Shop",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "ecom-data.marionnaud.cz",
+          "description": "This is a marketing related application from The Perfume Shop",
+          "impact": null
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.marionnaud.cz",
+          "description": "This asset contains all other applications on this wildcard not explicitly mentioned elsewhere in the scope",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "www.marionnaud.ro",
+          "description": "This is Marionnaud Romania, our online Perfumery.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "android",
+          "endpoint": "Marionnaud Romania Android",
+          "description": "This is our Marionnaud Romania (Android) app.\nApp link: https://play.google.com/store/apps/details?id=ro.marionnaud.customer",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "ios",
+          "endpoint": "Marionnaud Romania iOS",
+          "description": "This is our Marionnaud Romania (iOS) app.\nApp link: https://apps.apple.com/ro/app/marionnaud-romania/id1021924260",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.marionnaud.ro",
+          "description": "This is the API server for the www.marionnaud.ro website\nAPI spec: https://api.marionnaud.ro/api/v2/api-docs",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "app.marionnaud.ro",
+          "description": "This is the API server of the Marionnaud Romania mobile app",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "media.marionnaud.ro",
+          "description": "This subdomain is used to store static content for the www.marionnaud.ro e-commerce website",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.marionnaud.ro",
+          "description": "This asset contains all other applications on this wildcard not explicitly mentioned elsewhere in the scope",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "www.marionnaud.sk",
+          "description": "This is Marionnaud Slovakia, our online Perfumery.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "ios",
+          "endpoint": "Marionnaud Slovakia iOS",
+          "description": "This is our Marionnaud Slovakia (iOS) app.\nApp link: https://apps.apple.com/gb/app/marionnaud-beaut%C3%A9-soins/id1127368763",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "android",
+          "endpoint": "Marionnaud Slovakia Android",
+          "description": "This is our Marionnaud Slovakia (Android) app.\nApp link: https://play.google.com/store/apps/details?id=sk.marionnaud.customer",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "media.marionnaud.sk",
+          "description": "This subdomain is used to store static content for the www.marionnaud.sk e-commerce website",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "app.marionnaud.sk",
+          "description": "This is the API server of the Marionnaud Slovakia mobile app",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.marionnaud.sk",
+          "description": "This is the API server for the www.marionnaud.sk website\nAPI spec: https://api.marionnaud.sk/api/v2/api-docs",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.marionnaud.sk",
+          "description": "This asset contains all other applications on this wildcard not explicitly mentioned elsewhere in the scope",
+          "impact": null
+        }
+      ],
+      "out_of_scope": []
     }
   },
   {
@@ -10116,18 +11070,6 @@
           "endpoint": "welcome.sqills.com",
           "description": null,
           "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "elevate.pdm.sqills.team",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "api.elevate.pdm.sqills.team",
-          "description": null,
-          "impact": "Out of scope"
         }
       ]
     }
@@ -10283,6 +11225,198 @@
           "endpoint": "*.spp.se",
           "description": null,
           "impact": "No Bounty"
+        }
+      ],
+      "out_of_scope": []
+    }
+  },
+  {
+    "id": "0cff4473-e61f-47fa-b840-154a75128796",
+    "name": "Superdrug",
+    "company_handle": "aswatson",
+    "handle": "superdrug",
+    "url": "https://www.intigriti.com/programs/aswatson/superdrug/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 10,
+      "currency": "USD"
+    },
+    "max_bounty": {
+      "value": 8500,
+      "currency": "USD"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "url",
+          "endpoint": "www.superdrug.com",
+          "description": "This is Superdrug, our online Pharmacy in the UK",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "ios",
+          "endpoint": "Superdrug iOS",
+          "description": "This is our Superdrug (iOS) app.\nApp link: https://apps.apple.com/gb/app/superdrug/id1267896687",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "android",
+          "endpoint": "Superdrug Android",
+          "description": "This is our Superdrug (Android) app.\nApp link: https://play.google.com/store/apps/details?id=superdrug.com.beautycard",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.superdrug.com",
+          "description": "This is the API server for the www.superdrug.com website\nAPI spec: https://api.superdrug.com/api/v2/api-docs",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "media.superdrug.com",
+          "description": "This subdomain is used to store static content for the www.superdrug.com e-commerce website",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "app.superdrug.com",
+          "description": "This is the API server of the Superdrug mobile app",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "campaign.superdrug.com",
+          "description": "This is a marketing related application from Superdrug",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "community.superdrug.com",
+          "description": "This is the social community website from Superdrug",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "ecom-data.superdrug.com",
+          "description": "This is a marketing related application from Superdrug",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "videogp-api.superdrug.com",
+          "description": "This is the API server for the Superdrug Video GP website.",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "healthclinics.superdrug.com",
+          "description": "This is the Superdrug Healthclinics website.",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "innovation.superdrug.com",
+          "description": "This is a marketing related application from Superdrug",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "onlinedoctor.superdrug.com",
+          "description": "This is the Superdrug Online Doctor website.",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "onlinepharmacy.superdrug.com",
+          "description": "This is the Superdrug Online Pharmacy (Wordpress) website.",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "videogp.superdrug.com",
+          "description": "This website can be used by customers to set a video appointment with a GP.",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "app.pharmacy.superdrug.com",
+          "description": "This is the authenticated portal for customers from Superdrug Online Pharmacy website.",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "appt.healthclinics.superdrug.com",
+          "description": "This is the online booking system for Superdrug Healthclinics.",
+          "impact": null
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.superdrug.com",
+          "description": "This asset contains all other applications on this wildcard not explicitly mentioned in the scope.\nReports on these applications may be eligible for bonuses, chosen by the program team.",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "www.savers.co.uk",
+          "description": "This is Savers, our online Pharmacy in the UK",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "ios",
+          "endpoint": "Savers iOS",
+          "description": "This is our Savers (iOS) app.\nApp link: https://apps.apple.com/gb/app/savers/id6451311397",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "android",
+          "endpoint": "Savers Android",
+          "description": "This is our Savers (Android) app.\nApp link: https://play.google.com/store/apps/details?id=uk.co.savers",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.savers.co.uk",
+          "description": "This is the API server for the www.savers.co.uk website\nAPI spec: https://api.savers.co.uk/api/v2/api-docs",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "media.savers.co.uk",
+          "description": "This subdomain is used to store static content for the www.savers.co.uk e-commerce website",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "app.savers.co.uk",
+          "description": "This is the API server of the Savers mobile app",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.superdrugmobile.com",
+          "description": "This is the Superdrug Mobile website",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "campaign.savers.co.uk",
+          "description": "This is a marketing related application from Superdrug",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "ecom-data.savers.co.uk",
+          "description": "This is a marketing related application from Superdrug",
+          "impact": null
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.savers.co.uk",
+          "description": "This asset contains all other applications on this wildcard not explicitly mentioned in the scope.\nReports on these applications may be eligible for bonuses, chosen by the program team.",
+          "impact": null
         }
       ],
       "out_of_scope": []
@@ -10450,6 +11584,90 @@
           "impact": "Out of scope"
         }
       ]
+    }
+  },
+  {
+    "id": "b1be2cd1-cb7c-4456-86f4-8e541955a51a",
+    "name": "The Perfume Shop",
+    "company_handle": "aswatson",
+    "handle": "theperfumeshop",
+    "url": "https://www.intigriti.com/programs/aswatson/theperfumeshop/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 10,
+      "currency": "USD"
+    },
+    "max_bounty": {
+      "value": 8500,
+      "currency": "USD"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "url",
+          "endpoint": "www.theperfumeshop.com",
+          "description": "This is The Perfume Shop, our online Perfumery in the UK",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "app.theperfumeshop.com",
+          "description": "This is the API server of the The Perfume Shop mobile app in the UK",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.theperfumeshop.com",
+          "description": "This is the API server for the www.theperfumeshop.com website\nAPI spec: https://api.theperfumeshop.com/api/v2/api-docs",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "media.theperfumeshop.com",
+          "description": "This subdomain is used to store static content for the www.theperfumeshop.com e-commerce website",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "android",
+          "endpoint": "The Perfume Shop Android",
+          "description": "This is our The Perfume Shop (Android) app.\nApp link: https://play.google.com/store/apps/details?id=com.theperfumeshop.customer",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "ios",
+          "endpoint": "The Perfume Shop iOS",
+          "description": "This is our The Perfume Shop (iOS) app.\nApp link: https://apps.apple.com/gb/app/the-perfume-shop/id1202206665",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "campaign.theperfumeshop.com",
+          "description": "This is a marketing related application from The Perfume Shop",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "campaigns.theperfumeshop.com",
+          "description": "This is a marketing related application from The Perfume Shop",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "ecom-data.theperfumeshop.com",
+          "description": "This is a marketing related application from The Perfume Shop",
+          "impact": null
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.theperfumeshop.com",
+          "description": "This asset contains all other applications on this wildcard not explicitly mentioned elsewhere in the scope",
+          "impact": null
+        }
+      ],
+      "out_of_scope": []
     }
   },
   {
@@ -10717,72 +11935,6 @@
           "endpoint": "components.tomorrowland.com",
           "description": "Vulnerabilities found on either components.stag.tomorrowland.com or components.tomorrowland.com will be considered duplicate.",
           "impact": "Tier 3"
-        }
-      ],
-      "out_of_scope": []
-    }
-  },
-  {
-    "id": "0d0034de-b53e-47b8-9a9d-41c302c49b5a",
-    "name": "Torfs",
-    "company_handle": "torfs",
-    "handle": "torfs",
-    "url": "https://www.intigriti.com/programs/torfs/torfs/detail",
-    "status": "open",
-    "confidentiality_level": "public",
-    "tacRequired": false,
-    "twoFactorRequired": false,
-    "min_bounty": {
-      "value": 25,
-      "currency": "EUR"
-    },
-    "max_bounty": {
-      "value": 6500,
-      "currency": "EUR"
-    },
-    "targets": {
-      "in_scope": [
-        {
-          "type": "url",
-          "endpoint": "winkels.torfs.be",
-          "description": "🇫🇷🇳🇱",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "www.schoenentorfs.be",
-          "description": "🇫🇷🇳🇱",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "www.schoenentorfs.nl ",
-          "description": "🇳🇱",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "www.torfs.be",
-          "description": "🇫🇷🇳🇱",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "www.torfs.nl",
-          "description": "🇳🇱",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "www.samenfittorfs.be",
-          "description": "🇳🇱 ",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "other",
-          "endpoint": "Any related Torfs domain",
-          "description": null,
-          "impact": "No Bounty"
         }
       ],
       "out_of_scope": []
@@ -13068,6 +14220,762 @@
           "impact": "Out of scope"
         }
       ]
+    }
+  },
+  {
+    "id": "8a9c91c0-dd4f-4ed3-bb65-3c6b68e76b24",
+    "name": "Watsons",
+    "company_handle": "aswatson",
+    "handle": "watsons",
+    "url": "https://www.intigriti.com/programs/aswatson/watsons/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 10,
+      "currency": "USD"
+    },
+    "max_bounty": {
+      "value": 8500,
+      "currency": "USD"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "url",
+          "endpoint": "www.watsons.com.hk",
+          "description": "This is our online retail platform for health and beauty products in Hong Kong.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "www10.watsons.com.hk",
+          "description": "This is the API server of the Watsons Hong Kong mobile app",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "android",
+          "endpoint": "Watsons Hong Kong Android",
+          "description": "This is our Watsons Hong Kong Mobile (Android) app. \nApp Link: https://play.google.com/store/apps/details?id=com.ndn.android.watsons",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "ios",
+          "endpoint": "Watsons Hong Kong iOS",
+          "description": "This is our Watsons Hong Kong (iOS) app.\nApp link: https://apps.apple.com/hk/app/%E5%B1%88%E8%87%A3%E6%B0%8F%E9%A6%99%E6%B8%AF/id479512803",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.watsons.com.hk",
+          "description": "This is the API server for the www.watsons.com.hk website",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "medias.watsons.com.hk",
+          "description": "This subdomain is used to store static content for the www.watsons.com.hk e-commerce website.",
+          "impact": null
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.watsons.com.hk",
+          "description": "This asset contains all other applications on this wildcard not explicitly mentioned elsewhere in the scope",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "www.watsons.co.th",
+          "description": "This is our online retail platform for health and beauty products in Thailand.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "www10.watsons.co.th",
+          "description": "This is the API server of the Watsons Thailand mobile app",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "www20.watsons.co.th",
+          "description": "This is the API server of the Watsons Thailand mobile app",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "ios",
+          "endpoint": "Watsons Thailand iOS",
+          "description": "This is our Watsons Thailand (iOS) app.\nApp link: https://apps.apple.com/hk/app/watsons-th/id619935224",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "android",
+          "endpoint": "Watsons Thailand Android",
+          "description": "This is our Watsons Thailand Mobile (Android) app. \nApp Link: https://play.google.com/store/apps/details?id=com.mtelnet.watson.thailand",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.watsons.co.th",
+          "description": "This is the API server for the www.watsons.co.th website",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "community.watsons.co.th",
+          "description": "The asset is community forum of watsons.co.th",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "medias.watsons.co.th",
+          "description": "This subdomain is used to store static content for the www.watsons.co.th e-commerce website.",
+          "impact": null
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.watsons.co.th",
+          "description": "This asset contains all other applications on this wildcard not explicitly mentioned elsewhere in the scope",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "www.watsons.com.tw",
+          "description": "This is our online retail platform for health and beauty products in Taiwan.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "www10.watsons.com.tw",
+          "description": "This is the API server of the Watsons Taiwan mobile app",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "android",
+          "endpoint": "Watsons Taiwan Android",
+          "description": "This is our Watsons Taiwan Mobile (Android) app. \nApp Link: https://play.google.com/store/apps/details?id=tw.com.watsons.app",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "ios",
+          "endpoint": "Watsons Taiwan iOS",
+          "description": "This is our Watsons Taiwan (iOS) app.\nApp link: https://apps.apple.com/hk/app/%E5%B1%88%E8%87%A3%E6%B0%8F%E5%8F%B0%E7%81%A3/id477968775",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.watsons.com.tw",
+          "description": "This is the API server for the www.watsons.com.tw website",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "member.watsons.com.tw",
+          "description": "The asset is promotion website of watsons.com.tw.",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "medias.watsons.com.tw",
+          "description": "This subdomain is used to store static content for the www.watsons.com.tw e-commerce website.",
+          "impact": null
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.watsons.com.tw",
+          "description": "This asset contains all other applications on this wildcard not explicitly mentioned elsewhere in the scope",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "www.watsons.com.sg",
+          "description": "This is our online retail platform for health and beauty products in Singapore.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "www10.watsons.com.sg",
+          "description": "This is the API server of the Watsons Singapore mobile app",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "ios",
+          "endpoint": "Watsons Singapore iOS",
+          "description": "This is our Watsons Singapore (iOS) app.\nApp link: https://apps.apple.com/hk/app/watsons-sg-the-official-app/id449412168",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "android",
+          "endpoint": "Watsons Singapore Android",
+          "description": "This is our Watsons Singapore Mobile (Android) app. \nApp Link: https://play.google.com/store/apps/details?id=com.watsons.sg.android",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.watsons.com.sg",
+          "description": "This is the API server for the www.watsons.com.sg website",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "medias.watsons.com.sg",
+          "description": "This subdomain is used to store static content for the www.watsons.com.sg e-commerce website.",
+          "impact": null
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.watsons.com.sg",
+          "description": "This asset contains all other applications on this wildcard not explicitly mentioned elsewhere in the scope",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "www.watsons.com.ph",
+          "description": "This is our online retail platform for health and beauty products in Philippines.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "ios",
+          "endpoint": "Watsons Philippines iOS",
+          "description": "This is our Watsons Philippines (iOS) app.\nApp link: https://apps.apple.com/hk/app/watsons-philippines/id1438203234",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "android",
+          "endpoint": "Watsons Philippines Android",
+          "description": "This is our Watsons Philippines Mobile (Android) app. \nApp Link:https://play.google.com/store/apps/details?id=com.mtelnet.watson.ph",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.watsons.com.ph",
+          "description": "This is the API server for the www.watsons.com.ph website",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "www10.watsons.com.ph",
+          "description": "This is the API server of the Watsons Philippines mobile app",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "community.watsons.com.ph",
+          "description": "The asset is community forum of watsons.com.ph.",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "medias.watsons.com.ph",
+          "description": "This subdomain is used to store static content for the www.watsons.com.ph e-commerce website.",
+          "impact": null
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.watsons.com.ph",
+          "description": "This asset contains all other applications on this wildcard not explicitly mentioned elsewhere in the scope",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "www.lookatme.com.ph",
+          "description": null,
+          "impact": "Tier 1"
+        },
+        {
+          "type": "android",
+          "endpoint": "LookAtMe Philippines Android",
+          "description": null,
+          "impact": "Tier 1"
+        },
+        {
+          "type": "ios",
+          "endpoint": "LookAtMe Philippines iOS",
+          "description": null,
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.lookatme.com.ph",
+          "description": null,
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "medias.lookatme.com.ph",
+          "description": null,
+          "impact": null
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.lookatme.com.ph",
+          "description": null,
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "www.watsons.com.my",
+          "description": "This is our online retail platform for health and beauty products in Malaysia.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "www10.watsons.com.my",
+          "description": "This is the API server of the Watsons Malaysia mobile app",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "android",
+          "endpoint": "Watsons Malaysia Android",
+          "description": "This is our Watsons Malaysia Mobile (Android) app. \nApp Link: https://play.google.com/store/apps/details?id=com.watsons.mcommerce",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "ios",
+          "endpoint": "Watsons Malaysia iOS",
+          "description": "This is our Watsons Malaysia (iOS) app.\nApp link: https://apps.apple.com/hk/app/watsons-my/id1112796292",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.watsons.com.my",
+          "description": "This is the API server for the www.watsons.com.my website",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "community.watsons.com.my",
+          "description": "The asset is community forum of watsons.com.my.",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "medias.watsons.com.my",
+          "description": "This subdomain is used to store static content for the www.watsons.com.my e-commerce website.",
+          "impact": null
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.watsons.com.my",
+          "description": "This asset contains all other applications on this wildcard not explicitly mentioned elsewhere in the scope",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "www.watsons.co.id",
+          "description": "This is our online retail platform for health and beauty products in Indonesia.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "www10.watsons.co.id",
+          "description": "This is the API server of the Watsons Indonesia mobile app",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "android",
+          "endpoint": "Watsons Indonesia Android",
+          "description": "This is our Watsons Indonesia Mobile (Android) app. \nApp Link: https://play.google.com/store/apps/details?id=com.watsons.id.android",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "ios",
+          "endpoint": "Watsons Indonesia iOS",
+          "description": "This is our Watsons Indonesia (iOS) app.\nApp link: https://apps.apple.com/hk/app/watsons-id/id1184851346",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.watsons.co.id",
+          "description": "This is the API server for the www.watsons.co.id website",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "medias.watsons.co.id",
+          "description": "This subdomain is used to store static content for the www.watsons.co.id e-commerce website.",
+          "impact": null
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.watsons.co.id",
+          "description": "This asset contains all other applications on this wildcard not explicitly mentioned elsewhere in the scope",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "www.watsons.vn",
+          "description": "This is our online retail platform for health and beauty products in Vietnam.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "www10.watsons.vn",
+          "description": "This is the API server of the Watsons Vietnam mobile app",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "ios",
+          "endpoint": "Watsons Vietnam iOS",
+          "description": "This is our Watsons Vietnam (iOS) app.\nApp link: https://apps.apple.com/in/app/watsons-vietnam/id1446869800",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "android",
+          "endpoint": "Watsons Vietnam Android",
+          "description": "This is our Watsons Vietnam Mobile (Android) app. \nApp Link: https://play.google.com/store/apps/details?id=com.watsons.vn.android",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.watsons.vn",
+          "description": "This is the API server for the www.watsons.vn website",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "medias.watsons.vn",
+          "description": "This subdomain is used to store static content for the www.watsons.vn e-commerce website.",
+          "impact": null
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.watsons.vn",
+          "description": "This asset contains all other applications on this wildcard not explicitly mentioned elsewhere in the scope",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "www.pns.hk",
+          "description": "This is our online retail platform for ParkNShop Hong Kong.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "www10.pns.hk",
+          "description": "This is the API server of the PNS mobile app",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.pns.hk",
+          "description": "This is the API server for the www.pns.hk website",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "ios",
+          "endpoint": "PNS iOS",
+          "description": "This is our PNS (iOS) app.\nApp link: https://apps.apple.com/hk/app/parknshop/id840837558",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "android",
+          "endpoint": "PNS Android",
+          "description": "This is our PNS Mobile (Android) app. \nApp Link: https://play.google.com/store/apps/details?id=com.parknshop.parknshopapp",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "medias.pns.hk",
+          "description": "This subdomain is used to store static content for the www.pns.hk e-commerce website.",
+          "impact": null
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.pns.hk",
+          "description": "This asset contains all other applications on this wildcard not explicitly mentioned elsewhere in the scope",
+          "impact": null
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.parknshop.com",
+          "description": "This asset contains all other applications on this wildcard not explicitly mentioned elsewhere in the scope",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "www.fortress.com.hk",
+          "description": "This is our online retail platform for Fortress Hong Kong.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "www10.fortress.com.hk",
+          "description": "This is the API server of the Fortress Hong Kong mobile app",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "android",
+          "endpoint": "Fortress Hong Kong Android",
+          "description": "This is our Fortress (Android) app. \nApp Link: https://play.google.com/store/apps/details?id=fortress.fortressapp",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "ios",
+          "endpoint": "Fortress Hong Kong iOS",
+          "description": "This is our Fortress (iOS) app.\nApp link: https://apps.apple.com/hk/app/fortress/id1133110850",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.fortress.com.hk",
+          "description": "This is the API server for the www.fortress.com.hk website",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "medias.fortress.com.hk",
+          "description": "This subdomain is used to store static content for the www.fortress.com.hk e-commerce website.",
+          "impact": null
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.fortress.com.hk",
+          "description": "This asset contains all other applications on this wildcard not explicitly mentioned elsewhere in the scope",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "www.moneyback.com.hk",
+          "description": "This is the Moneyback website, our Hong Kong loyalty reward program. MoneyBack has turned shopping into fantastic rewards for families across Hong Kong.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "android",
+          "endpoint": "Moneyback Android",
+          "description": "This is our Moneyback (Android) app.\nApp link: https://play.google.com/store/apps/details?id=com.asw.moneyback",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "ios",
+          "endpoint": "Moneyback iOS",
+          "description": "This is our Moneyback (iOS) app.\nApp link: https://apps.apple.com/hk/app/moneyback/id1230818544",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "mapi.moneyback.com.hk",
+          "description": "This is the API Server for our MoneyBack Mobile app.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.moneyback.com.hk",
+          "description": "This asset contains all other applications on this wildcard not explicitly mentioned elsewhere in the scope",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "www.watsons.com.tr",
+          "description": "This is our online retail platform for health and beauty products in Turkey.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "android",
+          "endpoint": "Watsons Turkey Android",
+          "description": "This is our Watsons Turkey (Android) app.\nApp link: https://play.google.com/store/apps/details?id=com.mobular.watsons",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "ios",
+          "endpoint": "Watsons Turkey iOS",
+          "description": "This is our Watsons Turkey (iOS) app.\nApp link: https://apps.apple.com/tr/app/watsons-kozmetik-ve-al%C4%B1%C5%9Fveri%C5%9F/id1507132907",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "app.watsons.com.tr",
+          "description": "This is the API server of the Watsons Turkey mobile app",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.watsons.com.tr",
+          "description": "This is the API server for the www.watsons.com.tr website\nAPI spec: https://api.watsons.com.tr/api/v2/api-docs",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "blog.watsons.com.tr",
+          "description": "This is the blog website for Watsons Turkey.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "campaign.watsons.com.tr",
+          "description": "This is a marketing related application from Watsons Turkey",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "adayevrak.watsons.com.tr",
+          "description": "This is an HR related application from Watsons Turkey",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "katalog.watsons.com.tr",
+          "description": "This is a marketing related application from Watsons Turkey",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "www.watsonsbeautystudio.com",
+          "description": "This is Watsons Turkey's Beauty Studio website",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "ik.watsons.com.tr",
+          "description": "This is an HR related application from Watsons Turkey",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "gc.watsons.com.tr",
+          "description": "This is a marketing related application from Watsons Turkey",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "odul.watsons.com.tr",
+          "description": "This is a marketing related application from Watsons Turkey",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "wasapi.watsons.com.tr",
+          "description": "This is the API server for the odul.watsons.com.tr application",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "media.watsons.com.tr",
+          "description": "This subdomain is used to store static content for the www.watsons.com.tr e-commerce website",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "scp.watsons.com.tr",
+          "description": "This is a supplier portal from Watsons Turkey",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "scpapi.watsons.com.tr",
+          "description": "This is the API server for the supplier portal from Watsons Turkey",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "bulten.watsons.com.tr",
+          "description": "This is a marketing related application from Watsons Turkey",
+          "impact": null
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.watsons.com.tr",
+          "description": "This asset contains all other applications on this wildcard not explicitly mentioned elsewhere in the scope",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "www.drogas.lt",
+          "description": "This is our online retail platform for health and beauty products in Lithuania.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.drogas.lv",
+          "description": "This is our online retail platform for health and beauty products in Latvia.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "android",
+          "endpoint": "Drogas Latvia Android",
+          "description": "This is our Drogas Latvia (Android) app.\nApp link: https://play.google.com/store/apps/details?id=lv.drogas.consumer",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "ios",
+          "endpoint": "Drogas Latvia iOS",
+          "description": "This is our Drogas Latvia (iOS) app.\nApp link: https://apps.apple.com/lv/app/drogas/id1564705644",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "android",
+          "endpoint": "Drogas Lithuania Android",
+          "description": "This is our Drogas Lithuania (Android) app.\nApp link: https://play.google.com/store/apps/details?id=lt.drogas.consumer",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "ios",
+          "endpoint": "Drogas Lithuania iOS",
+          "description": "This is our Drogas Lithuania (iOS) app.\nApp link: https://apps.apple.com/lt/app/drogas/id1571651832",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "app.drogas.lt",
+          "description": "This is the API server of the Drogas Lithuania mobile app",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.drogas.lv",
+          "description": "This is the API server for the www.watsons.com.tr website\nAPI spec: https://api.drogas.lv/api/v2/api-docs",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "media.drogas.lt",
+          "description": "This subdomain is used to store static content for the www.drogas.lt e-commerce website",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "app.drogas.lv",
+          "description": "This is the API server of the Drogas Latvia mobile app",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.drogas.lt",
+          "description": "This is the API server for the www.watsons.com.tr website\nAPI spec: https://api.drogas.lt/api/v2/api-docs",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "media.drogas.lv",
+          "description": "This subdomain is used to store static content for the www.drogas.lv e-commerce website",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "campaign.drogas.lt",
+          "description": "This is a marketing related application from Drogas",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "campaign.drogas.lv",
+          "description": "This is a marketing related application from Drogas",
+          "impact": null
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.drogas.lt",
+          "description": "This asset contains all other applications on this wildcard not explicitly mentioned elsewhere in the scope",
+          "impact": null
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.drogas.lv",
+          "description": "This asset contains all other applications on this wildcard not explicitly mentioned elsewhere in the scope",
+          "impact": null
+        }
+      ],
+      "out_of_scope": []
     }
   },
   {
