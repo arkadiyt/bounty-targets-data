@@ -92,6 +92,102 @@
     }
   },
   {
+    "id": "ac81c127-b11b-469e-8060-e0fbb9c9c398",
+    "name": "Aikido Security: Zen by Aikido ",
+    "company_handle": "aikido",
+    "handle": "aikidoruntime",
+    "url": "https://www.intigriti.com/programs/aikido/aikidoruntime/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 100,
+      "currency": "EUR"
+    },
+    "max_bounty": {
+      "value": 3500,
+      "currency": "EUR"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "other",
+          "endpoint": "https://github.com/AikidoSec/firewall-node#Vulnerability",
+          "description": "Tier 1 is for vulnerabilities which we potentially introduce via our own firewall component in the user's application.\n\nSee Severity Assessment for more information.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://github.com/AikidoSec/firewall-ruby#Vulnerability",
+          "description": null,
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://github.com/AikidoSec/firewall-php#Vulnerability",
+          "description": null,
+          "impact": "Tier 1"
+        },
+        {
+          "type": "other",
+          "endpoint": "https://github.com/AikidoSec/firewall-python#Vulnerability",
+          "description": null,
+          "impact": "Tier 1"
+        },
+        {
+          "type": "other",
+          "endpoint": "https://github.com/AikidoSec/firewall-node#Detection Bypass",
+          "description": "Tier 2 is for bypasses in the vulnerability detection of the firewall component, such as a bypass of our SQL injection detection.\n\nSee Severity Assessment for more information.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://github.com/AikidoSec/firewall-ruby#Detection Bypass",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://github.com/AikidoSec/firewall-php#Detection Bypass",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "https://github.com/AikidoSec/firewall-python#Detection Bypass",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "https://github.com/AikidoSec/firewall-node#False Positive",
+          "description": "Tier 3 is for any false positives you encounter with our vulnerability detection. For example, cases where we falsely flag a SQL injection, while the user's input is safely encapsulated in the SQL query.\n\nSeverity assessments are slightly harder for these cases, see \"Severity Assessment\" for more information.",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://github.com/AikidoSec/firewall-ruby#False Positive",
+          "description": null,
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://github.com/AikidoSec/firewall-php#False Positive",
+          "description": null,
+          "impact": "Tier 3"
+        },
+        {
+          "type": "other",
+          "endpoint": "https://github.com/AikidoSec/firewall-python#False Positive",
+          "description": null,
+          "impact": "Tier 3"
+        }
+      ],
+      "out_of_scope": []
+    }
+  },
+  {
     "id": "30f445f7-ca4c-4130-9434-49add5c6ac74",
     "name": "Algemeen Dagblad",
     "company_handle": "dpgm",
@@ -5006,86 +5102,14 @@
     "targets": {
       "in_scope": [
         {
-          "type": "ios",
-          "endpoint": "949829216",
-          "description": "iOS app of GAMMA NL",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "ios",
-          "endpoint": "950680989",
-          "description": "iOS app of Karwei",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "ios",
-          "endpoint": "950693949",
-          "description": "iOS app of GAMMA BE",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "android",
-          "endpoint": "be.gamma.app.android",
-          "description": "Android app of GAMMA BE",
-          "impact": "Tier 1"
-        },
-        {
           "type": "wildcard",
-          "endpoint": "kassa.gamma.be/*",
+          "endpoint": "www.gamma.nl/*",
           "description": null,
-          "impact": "Tier 1"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "kassa.gamma.nl/*",
-          "description": null,
-          "impact": "Tier 1"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "kassa.karwei.nl/*",
-          "description": null,
-          "impact": "Tier 1"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "mijn.gamma.be/*",
-          "description": null,
-          "impact": "Tier 1"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "mijn.gamma.nl/*",
-          "description": null,
-          "impact": "Tier 1"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "mijn.karwei.nl/*",
-          "description": null,
-          "impact": "Tier 1"
-        },
-        {
-          "type": "android",
-          "endpoint": "nl.gamma.app.android",
-          "description": "Android app of GAMMA NL",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "android",
-          "endpoint": "nl.karwei.app.android",
-          "description": "Android app of Karwei",
           "impact": "Tier 1"
         },
         {
           "type": "wildcard",
           "endpoint": "www.gamma.be/*",
-          "description": null,
-          "impact": "Tier 1"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "www.gamma.nl/*",
           "description": null,
           "impact": "Tier 1"
         },
@@ -5097,14 +5121,98 @@
         },
         {
           "type": "wildcard",
+          "endpoint": "kassa.gamma.nl/*",
+          "description": null,
+          "impact": "Tier 1"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "kassa.gamma.be/*",
+          "description": null,
+          "impact": "Tier 1"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "kassa.karwei.nl/*",
+          "description": null,
+          "impact": "Tier 1"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "mijn.gamma.nl/*",
+          "description": null,
+          "impact": "Tier 1"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "mijn.gamma.be/*",
+          "description": null,
+          "impact": "Tier 1"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "mijn.karwei.nl/*",
+          "description": null,
+          "impact": "Tier 1"
+        },
+        {
+          "type": "ios",
+          "endpoint": "949829216",
+          "description": "iOS app of GAMMA NL",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "ios",
+          "endpoint": "950693949",
+          "description": "iOS app of GAMMA BE",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "ios",
+          "endpoint": "950680989",
+          "description": "iOS app of Karwei",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "ios",
+          "endpoint": "1558129454",
+          "description": "Our brand new iOS app fully dedicated to paint, with nice features to use AR and see how the paint looks on your own wall.\nShares various web views with our website.\n\nTechnically equal to the Android version",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "android",
+          "endpoint": "nl.gamma.app.android",
+          "description": "Android app of GAMMA NL",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "android",
+          "endpoint": "be.gamma.app.android",
+          "description": "Android app of GAMMA BE",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "android",
+          "endpoint": "nl.karwei.app.android",
+          "description": "Android app of Karwei",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.gamma.nl/*",
+          "description": "**Out of scope: mail.gamma.nl**\n\n\nThis covers all subdomains of gamma.nl not listed in Tier 1",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "wildcard",
           "endpoint": "*.gamma.be/*",
           "description": "**Out of scope: mail.gamma.be**\n\nThis covers all subdomains of gamma.be not listed in Tier 1",
           "impact": "Tier 2"
         },
         {
           "type": "wildcard",
-          "endpoint": "*.gamma.nl/*",
-          "description": "**Out of scope: mail.gamma.nl**\n\n\nThis covers all subdomains of gamma.nl not listed in Tier 1",
+          "endpoint": "*.karwei.nl/*",
+          "description": "**Out of scope: mail.karwei.nl**\n\n**api.maakafspraak.karwei.nl and maakafspraak.karwei.nl are listed seperately**\n\nThis covers all subdomains of Karwei.nl not listed in Tier 1",
           "impact": "Tier 2"
         },
         {
@@ -5121,20 +5229,8 @@
         },
         {
           "type": "wildcard",
-          "endpoint": "*.karwei.nl/*",
-          "description": "**Out of scope: mail.karwei.nl**\n\n**api.maakafspraak.karwei.nl and maakafspraak.karwei.nl are listed seperately**\n\nThis covers all subdomains of Karwei.nl not listed in Tier 1",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "wildcard",
           "endpoint": "*.restintergamma.nl",
           "description": null,
-          "impact": "Tier 2"
-        },
-        {
-          "type": "ios",
-          "endpoint": "1558129454",
-          "description": "Our brand new iOS app fully dedicated to paint, with nice features to use AR and see how the paint looks on your own wall.\nShares various web views with our website.\n\nTechnically equal to the Android version",
           "impact": "Tier 2"
         },
         {
@@ -5145,13 +5241,13 @@
         },
         {
           "type": "wildcard",
-          "endpoint": "*.werkenbijgamma.be",
+          "endpoint": "*.werkenbijgamma.nl",
           "description": "Recruiting website",
           "impact": "Tier 3"
         },
         {
           "type": "wildcard",
-          "endpoint": "*.werkenbijgamma.nl",
+          "endpoint": "*.werkenbijgamma.be",
           "description": "Recruiting website",
           "impact": "Tier 3"
         },
