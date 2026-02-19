@@ -2801,6 +2801,144 @@
     }
   },
   {
+    "id": "d14eedce-607d-4233-995d-30dbc7de8f23",
+    "name": "Delen Private Bank",
+    "company_handle": "delenprivatebank",
+    "handle": "privatebankdelen",
+    "url": "https://www.intigriti.com/programs/delenprivatebank/privatebankdelen/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 100,
+      "currency": "EUR"
+    },
+    "max_bounty": {
+      "value": 15000,
+      "currency": "EUR"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "url",
+          "endpoint": "api.digital.delen.be ",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.digital.delen.lu ",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "app.delen.be ",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "app.delen.ch ",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "app.delen.lu ",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "auth.digital.delen.be ",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "auth.digital.delen.lu ",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "android",
+          "endpoint": "be.delen.digital",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "ios",
+          "endpoint": "delen/id1064839588",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "login.delen.be ",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "login.delen.ch ",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "login.delen.lu ",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "login.oyens.com",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "status.delen.be ",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "sts.delen.be ",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.cadelam.be ",
+          "description": "🇫🇷🇳🇱",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.cadelux.lu/en ",
+          "description": "🇬🇧🇫🇷🇳🇱",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.delen.bank",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.delen.be/en ",
+          "description": "🇬🇧🇫🇷🇳🇱",
+          "impact": "Tier 2"
+        }
+      ],
+      "out_of_scope": []
+    }
+  },
+  {
     "id": "dd9dba85-e047-42f3-b59e-9328c7d49672",
     "name": "DigitalOcean",
     "company_handle": "digitalocean",
@@ -3872,85 +4010,6 @@
         }
       ],
       "out_of_scope": []
-    }
-  },
-  {
-    "id": "611c246e-1bf9-42b7-a458-af832582d0d7",
-    "name": "Grafana Labs",
-    "company_handle": "grafanalabs",
-    "handle": "grafanaossbbp",
-    "url": "https://www.intigriti.com/programs/grafanalabs/grafanaossbbp/detail",
-    "status": "open",
-    "confidentiality_level": "public",
-    "tacRequired": false,
-    "twoFactorRequired": false,
-    "min_bounty": {
-      "value": 10,
-      "currency": "USD"
-    },
-    "max_bounty": {
-      "value": 15000,
-      "currency": "USD"
-    },
-    "targets": {
-      "in_scope": [
-        {
-          "type": "other",
-          "endpoint": "Grafana Loki",
-          "description": null,
-          "impact": "Tier 1"
-        },
-        {
-          "type": "other",
-          "endpoint": "Grafana Mimir",
-          "description": null,
-          "impact": "Tier 1"
-        },
-        {
-          "type": "other",
-          "endpoint": "Grafana OSS",
-          "description": null,
-          "impact": "Tier 1"
-        },
-        {
-          "type": "other",
-          "endpoint": "Grafana Pyroscope",
-          "description": null,
-          "impact": "Tier 1"
-        },
-        {
-          "type": "other",
-          "endpoint": "Grafana Tempo",
-          "description": null,
-          "impact": "Tier 1"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "https://github.com/grafana/*",
-          "description": "Only repository misconfigurations for non-archived repositories are in scope - please read '**In scope**' section below for detailed scope.",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "other",
-          "endpoint": "Non-Core Grafana Plugins",
-          "description": "Grafana Labs developed [plugins](https://grafana.com/grafana/plugins/all-plugins/?signature=grafana) not installed by default are accepted, but not eligible for a bounty. ",
-          "impact": "No Bounty"
-        }
-      ],
-      "out_of_scope": [
-        {
-          "type": "wildcard",
-          "endpoint": "*.grafana.com",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.grafana.net",
-          "description": null,
-          "impact": "Out of scope"
-        }
-      ]
     }
   },
   {
@@ -11852,6 +11911,72 @@
     }
   },
   {
+    "id": "0d0034de-b53e-47b8-9a9d-41c302c49b5a",
+    "name": "Torfs",
+    "company_handle": "torfs",
+    "handle": "torfs",
+    "url": "https://www.intigriti.com/programs/torfs/torfs/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 25,
+      "currency": "EUR"
+    },
+    "max_bounty": {
+      "value": 6500,
+      "currency": "EUR"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "url",
+          "endpoint": "winkels.torfs.be",
+          "description": "🇫🇷🇳🇱",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.schoenentorfs.be",
+          "description": "🇫🇷🇳🇱",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.schoenentorfs.nl ",
+          "description": "🇳🇱",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.torfs.be",
+          "description": "🇫🇷🇳🇱",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.torfs.nl",
+          "description": "🇳🇱",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.samenfittorfs.be",
+          "description": "🇳🇱 ",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "other",
+          "endpoint": "Any related Torfs domain",
+          "description": null,
+          "impact": "No Bounty"
+        }
+      ],
+      "out_of_scope": []
+    }
+  },
+  {
     "id": "efa92aaa-d683-4cf9-8834-a03cf864cc80",
     "name": "Trouw",
     "company_handle": "dpgm",
@@ -12241,6 +12366,54 @@
           "impact": "Out of scope"
         }
       ]
+    }
+  },
+  {
+    "id": "724ad196-90de-4ba8-bf21-dc114ab7fce4",
+    "name": "Trusted Firmware",
+    "company_handle": "arm",
+    "handle": "trustedfirmware",
+    "url": "https://www.intigriti.com/programs/arm/trustedfirmware/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 1000,
+      "currency": "USD"
+    },
+    "max_bounty": {
+      "value": 20000,
+      "currency": "USD"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "other",
+          "endpoint": "OP-TEE",
+          "description": "OP-TEE is a Trusted Execution Environment (TEE) designed as companion to a non-secure Linux kernel running on Arm; Cortex-A cores using the TrustZone technology.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "Mbed TLS & TF-PSA-Crypto",
+          "description": "Mbed TLS is a C library that implements X.509 certificate manipulation and the TLS and DTLS protocols. Its small code footprint makes it suitable for embedded systems. Mbed TLS includes the TF-PSA-Crypto repository that provides an implementation of the PSA Cryptography API.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "TrustedFirmware-A (TF-A)",
+          "description": "The Trusted Firmware-A project provides a reference implementation of secure world software for Armv8-A and Armv9-A class processors.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "TrustedFirmware-M (TF-M)",
+          "description": "Trusted Firmware-M (TF-M) implements the Secure Processing Environment (SPE) for Armv8-M, Armv8.1-M architectures (e.g. the Cortex-M33, Cortex-M23, Cortex-M55, Cortex-M85 processors) or dual-core platforms. It is the platform security architecture reference implementation aligning with PSA Certified guidelines, enabling chips, Real Time Operating Systems and devices to become PSA Certified.",
+          "impact": "Tier 2"
+        }
+      ],
+      "out_of_scope": []
     }
   },
   {
