@@ -1302,113 +1302,6 @@
     }
   },
   {
-    "id": "dracoon-bug-bounty-program",
-    "name": "DRACOON – Bug Bounty Program",
-    "public": true,
-    "disabled": false,
-    "managed": null,
-    "min_bounty": 1,
-    "max_bounty": 5000,
-    "targets": {
-      "in_scope": [
-        {
-          "target": "https://bounty-cloud.dracoon.app/api",
-          "type": "api"
-        },
-        {
-          "target": "https://bounty-cloud.dracoon.app/oauth",
-          "type": "other"
-        },
-        {
-          "target": "https://0-2744452194.s3.nbg01.de.dracoon.io",
-          "type": "other"
-        },
-        {
-          "target": "https://bounty-cloud.dracoon.app/mediaserver",
-          "type": "other"
-        },
-        {
-          "target": "https://bounty-cloud.dracoon.app/reporting/api",
-          "type": "api"
-        },
-        {
-          "target": "https://bounty-cloud.dracoon.app/webdav",
-          "type": "other"
-        },
-        {
-          "target": "https://bounty-cloud.dracoon.app/",
-          "type": "web-application"
-        },
-        {
-          "target": "https://bounty-server.dracoon.app/api",
-          "type": "api"
-        },
-        {
-          "target": "https://bounty-server.dracoon.app/oauth",
-          "type": "other"
-        },
-        {
-          "target": "https://bounty-server.dracoon.app/reporting/api",
-          "type": "api"
-        },
-        {
-          "target": "https://bounty-server.dracoon.app/webdav",
-          "type": "other"
-        },
-        {
-          "target": "https://bounty-server.dracoon.app/",
-          "type": "web-application"
-        }
-      ],
-      "out_of_scope": [
-        {
-          "target": "Any other host, tenant or service than the ones explicitly stated.",
-          "type": "other"
-        },
-        {
-          "target": "www.dracoon.com",
-          "type": "other"
-        },
-        {
-          "target": "*.dracoon.com",
-          "type": "other"
-        },
-        {
-          "target": "*.dracoon.net",
-          "type": "other"
-        },
-        {
-          "target": "*.dracoon.team",
-          "type": "other"
-        },
-        {
-          "target": "*.dracoon.app (with the exceptions of bounty-cloud.dracoon.app and bounty-server.dracoon.app)",
-          "type": "other"
-        },
-        {
-          "target": "*.dracoon.io (with the exception of https://0-2744452194.s3.nbg01.de.dracoon.io)",
-          "type": "other"
-        },
-        {
-          "target": "*.fp-sign.com",
-          "type": "other"
-        },
-        {
-          "target": "*.usersnap.com",
-          "type": "other"
-        },
-        {
-          "target": "*.gdata.com",
-          "type": "other"
-        },
-        {
-          "target": "*.retarus.com",
-          "type": "other"
-        }
-      ]
-    }
-  },
-  {
     "id": "dailymotion-public-bug-bounty",
     "name": "Dailymotion public bug bounty",
     "public": true,
@@ -2735,6 +2628,10 @@
           "type": "open-source"
         },
         {
+          "target": "https://github.com/jenkinsci/remoting",
+          "type": "open-source"
+        },
+        {
           "target": "https://github.com/jenkinsci/ldap-plugin",
           "type": "open-source"
         },
@@ -2764,6 +2661,38 @@
         },
         {
           "target": "https://github.com/jenkinsci/workflow-scm-step-plugin",
+          "type": "open-source"
+        },
+        {
+          "target": "https://github.com/jenkinsci/workflow-multibranch-plugin",
+          "type": "open-source"
+        },
+        {
+          "target": "https://github.com/jenkinsci/github-plugin",
+          "type": "open-source"
+        },
+        {
+          "target": "https://github.com/jenkinsci/github-branch-source-plugin",
+          "type": "open-source"
+        },
+        {
+          "target": "https://github.com/jenkinsci/workflow-support-plugin",
+          "type": "open-source"
+        },
+        {
+          "target": "https://github.com/jenkinsci/pipeline-stage-step-plugin",
+          "type": "open-source"
+        },
+        {
+          "target": "https://github.com/jenkinsci/pipeline-input-step-plugin",
+          "type": "open-source"
+        },
+        {
+          "target": "https://github.com/jenkinsci/pipeline-build-step-plugin",
+          "type": "open-source"
+        },
+        {
+          "target": "https://github.com/jenkinsci/pipeline-groovy-lib-plugin",
           "type": "open-source"
         }
       ],
@@ -3854,53 +3783,6 @@
         },
         {
           "target": "Interoperability Issues that are caused by other OpenPGP implementations' non-compliance with the OpenPGP Standard",
-          "type": "other"
-        }
-      ]
-    }
-  },
-  {
-    "id": "openproject",
-    "name": "OpenProject Bug Bounty Program",
-    "public": true,
-    "disabled": false,
-    "managed": null,
-    "min_bounty": 10,
-    "max_bounty": 5000,
-    "targets": {
-      "in_scope": [
-        {
-          "target": "https://github.com/opf/openproject",
-          "type": "open-source"
-        }
-      ],
-      "out_of_scope": [
-        {
-          "target": "Any asset that is not explicitly included in our program's scope",
-          "type": "other"
-        },
-        {
-          "target": "Any third parties’ or Community’s assets that are not explicitly included (e.g. forks, libraries or packages)",
-          "type": "other"
-        },
-        {
-          "target": "Development configurations, plugins or images, such as the development or all-in-one docker containers, or running application in non-production modes and configurations.",
-          "type": "other"
-        },
-        {
-          "target": "Any depreciated versions and other versions than the current stable/official version are considered out of scope except if specified otherwise in the program’s rules",
-          "type": "other"
-        },
-        {
-          "target": "Libraries and protocols with known limitations and gems already in update maintenance (e.g., OmniAuth < 2 CSRF protections, carrierwave)",
-          "type": "other"
-        },
-        {
-          "target": "Any local implementation of the project/implementation belonging to third parties",
-          "type": "other"
-        },
-        {
-          "target": "Third parties such as security researchers already involved in active security audits, or already opened reports",
           "type": "other"
         }
       ]
@@ -5716,85 +5598,6 @@
     }
   },
   {
-    "id": "zivver-bug-bounty-program",
-    "name": "Zivver – Bug Bounty Program",
-    "public": true,
-    "disabled": false,
-    "managed": null,
-    "min_bounty": 1,
-    "max_bounty": 10000,
-    "targets": {
-      "in_scope": [
-        {
-          "target": "app.zivver.com",
-          "type": "web-application"
-        },
-        {
-          "target": "owa-v6.zivver.com",
-          "type": "api"
-        },
-        {
-          "target": "collector.zivver.com",
-          "type": "api"
-        },
-        {
-          "target": "downloads.zivver.com",
-          "type": "api"
-        },
-        {
-          "target": "img.zivver.com",
-          "type": "api"
-        },
-        {
-          "target": "sign.zivver.com",
-          "type": "web-application"
-        },
-        {
-          "target": "https://play.google.com/store/apps/details?id=com.zivver.app",
-          "type": "mobile-application-android"
-        },
-        {
-          "target": "https://apps.apple.com/be/app/zivver/id1179528663",
-          "type": "mobile-application-ios"
-        },
-        {
-          "target": "Zivver Outlook Plugin",
-          "type": "other"
-        },
-        {
-          "target": "Zivver OWA add-in",
-          "type": "other"
-        },
-        {
-          "target": "Zivver Chrome Extension",
-          "type": "other"
-        }
-      ],
-      "out_of_scope": [
-        {
-          "target": "Any other Zivver domain or service not explicitly mentioned in the scope",
-          "type": "other"
-        },
-        {
-          "target": "hubspot.com which hosts our marketing webpage",
-          "type": "other"
-        },
-        {
-          "target": "chargebee.com which is our subscription management partner",
-          "type": "other"
-        },
-        {
-          "target": "Zivver Cloud Sync for Azure",
-          "type": "other"
-        },
-        {
-          "target": "Synctool V2",
-          "type": "other"
-        }
-      ]
-    }
-  },
-  {
     "id": "pendulum-bug-bounty-program",
     "name": "ntpd-rs Bug Bounty Program",
     "public": true,
@@ -5832,121 +5635,6 @@
         },
         {
           "target": "Anything related to the CI pipeline or GitHub related hosting",
-          "type": "other"
-        }
-      ]
-    }
-  },
-  {
-    "id": "owncloud-bug-bounty-program",
-    "name": "ownCloud – Bug Bounty Program",
-    "public": true,
-    "disabled": false,
-    "managed": null,
-    "min_bounty": 50,
-    "max_bounty": 5000,
-    "targets": {
-      "in_scope": [
-        {
-          "target": "https://owncloud.org/install/#install-clients",
-          "type": "application"
-        },
-        {
-          "target": "https://play.google.com/store/apps/details?id=com.owncloud.android",
-          "type": "mobile-application-android"
-        },
-        {
-          "target": "https://apps.apple.com/app/id1359583808",
-          "type": "mobile-application-ios"
-        },
-        {
-          "target": "https://github.com/owncloud/customgroups",
-          "type": "other"
-        },
-        {
-          "target": "https://github.com/owncloud/guests",
-          "type": "other"
-        },
-        {
-          "target": "https://github.com/owncloud/richdocuments",
-          "type": "other"
-        },
-        {
-          "target": "https://github.com/owncloud/notifications",
-          "type": "other"
-        },
-        {
-          "target": "https://github.com/owncloud/client",
-          "type": "other"
-        },
-        {
-          "target": "https://github.com/owncloud/core",
-          "type": "other"
-        },
-        {
-          "target": "https://github.com/owncloud/gallery",
-          "type": "other"
-        },
-        {
-          "target": "https://github.com/owncloud/ocis",
-          "type": "other"
-        },
-        {
-          "target": "https://github.com/owncloud/web",
-          "type": "other"
-        },
-        {
-          "target": "https://github.com/owncloud/web-extensions",
-          "type": "other"
-        },
-        {
-          "target": "https://github.com/owncloud/user_ldap",
-          "type": "other"
-        },
-        {
-          "target": "https://github.com/owncloud/oauth2",
-          "type": "other"
-        },
-        {
-          "target": "https://github.com/owncloud/openidconnect",
-          "type": "other"
-        },
-        {
-          "target": "https://github.com/owncloud/activity",
-          "type": "other"
-        },
-        {
-          "target": "https://github.com/owncloud/impersonate",
-          "type": "other"
-        },
-        {
-          "target": "https://github.com/owncloud/updater",
-          "type": "other"
-        },
-        {
-          "target": "https://github.com/owncloud/core/tree/master/apps/files",
-          "type": "other"
-        },
-        {
-          "target": "https://github.com/owncloud/android",
-          "type": "other"
-        },
-        {
-          "target": "https://github.com/owncloud/ios-app",
-          "type": "other"
-        }
-      ],
-      "out_of_scope": [
-        {
-          "target": "All domains or subdomains not listed in the above list of 'Scopes'",
-          "type": "other"
-        },
-        {
-          "target": "*.owncloud.org",
-          "type": "other"
-        },
-        {
-          "target": "*.owncloud.com",
           "type": "other"
         }
       ]

@@ -219,6 +219,60 @@
     }
   },
   {
+    "id": "611efbaa-333e-4b7c-a3c0-89665abd3fe3",
+    "name": "Altera",
+    "company_handle": "altera",
+    "handle": "altera",
+    "url": "https://www.intigriti.com/programs/altera/altera/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 500,
+      "currency": "USD"
+    },
+    "max_bounty": {
+      "value": 30000,
+      "currency": "USD"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "device",
+          "endpoint": "Firmware",
+          "description": "Firmware developed by Altera that executes within our FPGA products regardless of the storage media.   Excludes any software that executes the Hard Processor Subsystem, or any software that executes on an embedded processor instantiated in soft-logic within the FPGA by a customer.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "device",
+          "endpoint": "Hardware",
+          "description": "FPGA Integrated Circuit hardware.   This may includes both a base FPGA and any associated co-packaged integrated circuits. ",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "other",
+          "endpoint": "FPGA Solution Development Tools and Utilities",
+          "description": "Tools developed by Altera such as the Quartus Tool Suite used by customers to develop a solution that may comprise software, soft-logic that is hosted within an Altera FPGA device.   Also includes various Altera authored supporting utilities used to manage deployment of customer designs to Altera FPGAs.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "Software",
+          "description": "Altera Developed Device Drivers that execute on a host computer that is connected to an Altera FPGA, used to manage or control the FPGA or any functions implemented by the customer within the FPGA.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "Non Altera Products",
+          "description": "Any elements of a complete customer solution developed by entities other than Altera that may be included in a final customer solution.   Reports relating to such entities may be reported via the Altera Bug Bounty Program, but are not eligible for bounty payments. ",
+          "impact": "No Bounty"
+        }
+      ],
+      "out_of_scope": []
+    }
+  },
+  {
     "id": "e2a235f3-6a95-4134-a165-aa48e9632f47",
     "name": "Anaconda Vulnerability Disclosure Program",
     "company_handle": "anacondainc",
@@ -354,6 +408,277 @@
         }
       ],
       "out_of_scope": []
+    }
+  },
+  {
+    "id": "933f224e-fbd3-4f08-a4fb-5038c2fa1a6e",
+    "name": "Axel Springer National Media & Tech",
+    "company_handle": "axelspringerse",
+    "handle": "nmt",
+    "url": "https://www.intigriti.com/programs/axelspringerse/nmt/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 15,
+      "currency": "EUR"
+    },
+    "max_bounty": {
+      "value": 2500,
+      "currency": "EUR"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "url",
+          "endpoint": "politico.eu",
+          "description": "politico.eu covers politics with a European lens, featuring Berlin Playbook briefings and POLITICO Pro analysis.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "adtechnology.axelspringer.com",
+          "description": "technical domain used for advertising management on our brand websites.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.asadcdn.com",
+          "description": "technical domain used for advertising management on our brand websites.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "bild.de",
+          "description": "BILD is Germany's largest tabloid newspaper.\nYou can find Tier 1 subdomains, as well as a Tier 2 wildcard subdomain.\nYou are welcome to create your own account and test our system.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "welt.de",
+          "description": "Large german broadsheet newspaper. \n\nYou can find Tier 1 subdomains, as well as a Tier 2 wildcard subdomain.\nYou are welcome to create your own account and test our system.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "epaper.welt.de",
+          "description": null,
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "cancellation.prod.ps.welt.de",
+          "description": null,
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "digital.welt.de",
+          "description": null,
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "signin.auth.welt.de",
+          "description": null,
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "m.bild.de",
+          "description": "The mobile version of BILD.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.hey.bild.de",
+          "description": "Hey_ is a Chat Assistent offered by BILD.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "go.welt.de",
+          "description": "Welt Go a Chat Assistent offered by WELT.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.auth.bild.de",
+          "description": "Login/registration for BILD.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.sportbild.de",
+          "description": "German sports magazine from BILD.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "meinkonto.bild.de",
+          "description": "The account setting of a BILD user.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.bild.tv",
+          "description": "This is the livestream of the Bild television channel.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.computerbild.de",
+          "description": "Is a magazine  with the topic computer from Bild. \nSome examples of subdomains are\n- vip-club.computerbild.de (VIP club)\n- signin.auth.computerbild.de (login) \n\nother interesting paths \n- computerbild.de/download (download center)\n\nYou are also welcome to create your own account to test our system.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "iprange",
+          "endpoint": "18.184.198.198, 18.185.214.59, 18.194.109.179, 3.121.117.72, 3.121.138.10, 3.121.138.128, 3.121.138.134, 3.121.138.170, 3.121.138.33, 3.121.138.43, 3.124.248.208, 35.156.137.39",
+          "description": "IP addresses of our backend systems, comma separated.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "dealer.prod.ps.axelspringer.de/purchases/*",
+          "description": "Documentation: https://dealer-docs.prod.ps.axelspringer.de/",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.germany.politico.eu",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.welt.de",
+          "description": "Large german broadsheet newspaper. \n\nYou are also welcome to create your own account to test our system.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.bild.de",
+          "description": "Bild is the largest German tabloid newspaper. \nSome examples of subdomains are \n- angebot.bild.de (offers)\n\nYou are also welcome to create your own account to test our system.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.bild.design",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.autobild.de",
+          "description": "Is a magazine  with the topic cars from Bild. \nSome examples of subdomains\n- club.autobild.de\n\nYou are also welcome to create your own account to test our system.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.bz-berlin.de",
+          "description": "Berlin based tabloid newspaper. \nSome examples of subdomains \n- backend.bz-berlin.de",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.spring-media.de",
+          "description": "Used for internal tools, mostly behind a VPN.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.springtools.de",
+          "description": "Used for internal tools, mostly behind a VPN.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "editorial.one",
+          "description": "Used for internal tools, mostly behind a VPN.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.as-nmt.de",
+          "description": "Used for internal api's and websites, mostly behind a VPN.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.ein-herz-fuer-kinder.de",
+          "description": "Charity organisation for children in Germany.",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.fitbook.de",
+          "description": "Magazine focusing on fitness topics.",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.myhomebook.de",
+          "description": "Magazine focusing on home and garden topics.",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.petbook-magazine.com/",
+          "description": "English version of the petbook.",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.petbook.de",
+          "description": "Magazine focusing on pet topics.",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.stylebook.de",
+          "description": "Magazine focusing on style topics.",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.techbook.de",
+          "description": "Magazine focusing on tech topics.",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.travelbook.de",
+          "description": "Magazine focusing on travel topics.",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.wissen-sie-mehr.de",
+          "description": "Whistleblower form from BILD.",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "technik.autobild.de",
+          "description": null,
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "technik.beta.autobild.de",
+          "description": null,
+          "impact": "Tier 3"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "wildcard",
+          "endpoint": "*.axelspringer.com",
+          "description": "This domain is covered by our partner program. \nhttps://app.intigriti.com/programs/axelspringerse/axelspringersevulnerabilitydisclosureprogram/detail",
+          "impact": "Out of scope"
+        }
+      ]
     }
   },
   {
@@ -825,6 +1150,12 @@
       ],
       "out_of_scope": [
         {
+          "type": "url",
+          "endpoint": "kroki.devops.buhlergroup.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
           "type": "wildcard",
           "endpoint": "*.info.buhlergroup.com",
           "description": null,
@@ -1229,7 +1560,7 @@
         },
         {
           "type": "url",
-          "endpoint": " texis.itcapital.io",
+          "endpoint": "texis.itcapital.io",
           "description": null,
           "impact": "Out of scope"
         }
@@ -2066,6 +2397,79 @@
     }
   },
   {
+    "id": "9f7ba0be-8ccc-4995-8846-5bc93f573bce",
+    "name": "DIGI Responsible Disclosure Program",
+    "company_handle": "digi",
+    "handle": "digi-vdp",
+    "url": "https://www.intigriti.com/programs/digi/digi-vdp/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 0,
+      "currency": "EUR"
+    },
+    "max_bounty": {
+      "value": 0,
+      "currency": "EUR"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "wildcard",
+          "endpoint": "*.digi.pt",
+          "description": null,
+          "impact": "No Bounty"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.digi.it",
+          "description": null,
+          "impact": "No Bounty"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.digimobil.it",
+          "description": null,
+          "impact": "No Bounty"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.digi-belgium.be",
+          "description": null,
+          "impact": "No Bounty"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.digimobil.es",
+          "description": null,
+          "impact": "No Bounty"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.rcs-rds.ro",
+          "description": null,
+          "impact": "No Bounty"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.digi.ro",
+          "description": null,
+          "impact": "No Bounty"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "url",
+          "endpoint": "https://digicampus.digimobil.es",
+          "description": null,
+          "impact": "Out of scope"
+        }
+      ]
+    }
+  },
+  {
     "id": "806f54d7-a85d-40bd-82cc-f09c1a500f28",
     "name": "DPG Media",
     "company_handle": "dpgm",
@@ -2105,6 +2509,199 @@
         }
       ],
       "out_of_scope": []
+    }
+  },
+  {
+    "id": "bd22f48d-633e-4b26-bf71-e4778d41b247",
+    "name": "DataCamp",
+    "company_handle": "datacamp",
+    "handle": "datacamp",
+    "url": "https://www.intigriti.com/programs/datacamp/datacamp/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 25,
+      "currency": "EUR"
+    },
+    "max_bounty": {
+      "value": 1500,
+      "currency": "EUR"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "url",
+          "endpoint": "profiles-api.datacamp.com",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "app.datacamp.com/certification",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "app.datacamp.com/groups",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "app.datacamp.com/learn",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "assessment-api.datacamp.com",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "assessment-v2.datacamp.com ",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "assessment.datacamp.com",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "campus.datacamp.com",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "android",
+          "endpoint": "com.datacamp",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "ios",
+          "endpoint": "https://apps.apple.com/au/app/datacamp-learn-data-science/id1263413087",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "practice.datacamp.com",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "projects.datacamp.com",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.datacamp.com",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.datacamp.com/datalab",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.datacamp.com",
+          "description": null,
+          "impact": "Tier 3"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "wildcard",
+          "endpoint": "*.it.datacamp.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "app.datacamp.com/recruit",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "ast-viewer.datacamp.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "confluence.datacamp.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "dccertified.datacamp.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "intranet.datacamp.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "jira.datacamp.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "links.datacamp.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "rdocumentation.datacamp.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "signature.datacamp.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "status.datacamp.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "support.datacamp.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "talent-jobs-api.datacamp.com",
+          "description": null,
+          "impact": "Out of scope"
+        }
+      ]
     }
   },
   {
@@ -2160,26 +2757,26 @@
       ],
       "out_of_scope": [
         {
-          "type": "wildcard",
-          "endpoint": "* demorgen.be/inloggen",
+          "type": "url",
+          "endpoint": "demorgen.be/inloggen",
           "description": null,
           "impact": "Out of scope"
         },
         {
-          "type": "wildcard",
-          "endpoint": "* demorgen.be/login",
+          "type": "url",
+          "endpoint": "demorgen.be/login",
           "description": null,
           "impact": "Out of scope"
         },
         {
-          "type": "wildcard",
-          "endpoint": "* demorgen.be/registreren",
+          "type": "url",
+          "endpoint": "demorgen.be/registreren",
           "description": null,
           "impact": "Out of scope"
         },
         {
-          "type": "wildcard",
-          "endpoint": "* demorgen.be/service",
+          "type": "url",
+          "endpoint": "demorgen.be/service",
           "description": null,
           "impact": "Out of scope"
         },
@@ -2840,8 +3437,8 @@
           "impact": "Out of scope"
         },
         {
-          "type": "url",
-          "endpoint": "www.driessen.nl/mijn/solliciteren/",
+          "type": "wildcard",
+          "endpoint": "www.driessen.nl/mijn/solliciteren/*",
           "description": null,
           "impact": "Out of scope"
         }
@@ -3715,20 +4312,20 @@
     "targets": {
       "in_scope": [
         {
-          "type": "wildcard",
-          "endpoint": "* hln.be/inloggen",
+          "type": "url",
+          "endpoint": "hln.be/inloggen",
           "description": null,
           "impact": "Tier 2"
         },
         {
-          "type": "wildcard",
-          "endpoint": "* hln.be/login",
+          "type": "url",
+          "endpoint": "hln.be/login",
           "description": null,
           "impact": "Tier 2"
         },
         {
-          "type": "wildcard",
-          "endpoint": "* hln.be/registreren",
+          "type": "url",
+          "endpoint": "hln.be/registreren",
           "description": null,
           "impact": "Tier 2"
         },
@@ -3759,8 +4356,8 @@
       ],
       "out_of_scope": [
         {
-          "type": "wildcard",
-          "endpoint": "* hln.be/service",
+          "type": "url",
+          "endpoint": "hln.be/service",
           "description": null,
           "impact": "Out of scope"
         }
@@ -3826,26 +4423,26 @@
       ],
       "out_of_scope": [
         {
-          "type": "wildcard",
-          "endpoint": "* parool.nl/inloggen",
+          "type": "url",
+          "endpoint": "parool.nl/inloggen",
           "description": null,
           "impact": "Out of scope"
         },
         {
-          "type": "wildcard",
-          "endpoint": "* parool.nl/login",
+          "type": "url",
+          "endpoint": "parool.nl/login",
           "description": null,
           "impact": "Out of scope"
         },
         {
-          "type": "wildcard",
-          "endpoint": "* parool.nl/registreren",
+          "type": "url",
+          "endpoint": "parool.nl/registreren",
           "description": null,
           "impact": "Out of scope"
         },
         {
-          "type": "wildcard",
-          "endpoint": "* parool.nl/service",
+          "type": "url",
+          "endpoint": "parool.nl/service",
           "description": null,
           "impact": "Out of scope"
         },
@@ -3964,8 +4561,8 @@
     "targets": {
       "in_scope": [
         {
-          "type": "wildcard",
-          "endpoint": "* humo.be/registreren",
+          "type": "url",
+          "endpoint": "humo.be/registreren",
           "description": null,
           "impact": "Tier 2"
         },
@@ -4002,20 +4599,20 @@
       ],
       "out_of_scope": [
         {
-          "type": "wildcard",
-          "endpoint": "* humo.be/inloggen",
+          "type": "url",
+          "endpoint": "humo.be/inloggen",
           "description": null,
           "impact": "Out of scope"
         },
         {
-          "type": "wildcard",
-          "endpoint": "* humo.be/login",
+          "type": "url",
+          "endpoint": "humo.be/login",
           "description": null,
           "impact": "Out of scope"
         },
         {
-          "type": "wildcard",
-          "endpoint": "* humo.be/service",
+          "type": "url",
+          "endpoint": "humo.be/service",
           "description": null,
           "impact": "Out of scope"
         },
@@ -4302,115 +4899,6 @@
         }
       ],
       "out_of_scope": []
-    }
-  },
-  {
-    "id": "b084e962-1d83-4bec-9d46-0f02c0f7bf88",
-    "name": "InnoGames",
-    "company_handle": "innogames",
-    "handle": "innogames",
-    "url": "https://www.intigriti.com/programs/innogames/innogames/detail",
-    "status": "open",
-    "confidentiality_level": "public",
-    "tacRequired": false,
-    "twoFactorRequired": false,
-    "min_bounty": {
-      "value": 50,
-      "currency": "EUR"
-    },
-    "max_bounty": {
-      "value": 4500,
-      "currency": "EUR"
-    },
-    "targets": {
-      "in_scope": [
-        {
-          "type": "other",
-          "endpoint": "Backend/Non-Game",
-          "description": "* *.igpayment.com\nThis is our payment environment used in all of our games.\n\n* *.innogames.de\nThis wildcard hosts backend services, which are not intended to be seen by end users. \n\n* login.innogames.de\nThis is our central login and account management tool. We do not provide accounts for this service and there are no registration pages available. \n\n* *.innogames.com\n\n* www.innogames.com\n***Please do not send applications through the application form. This is a 3rd party tool and out-of-scope.***\n\n* support.innogames.com\n***Please avoid creating many new tickets, but instead concentrate your testing on the ticket contents.***\n\n**Note for automated-scanning:**\nWe are happy that you are as enthusiastic as we are about this program!\nTo not impact our live-systems and other researchers too much, we ask you to keep your automated scanners on a scan rate of 1 request/s. ",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "other",
-          "endpoint": "Elvenar",
-          "description": "* xs-play.elvenar.com\nThe landing page for the game login.\n\n* xs0.elvenar.com\nThe master server, which performs authentication and holds inventory of \"game-world-wide\" player data.\n\n* xs1.elvenar.com\nThis is the actual game world, where the game takes place.\n",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "other",
-          "endpoint": "Forge of Empires",
-          "description": "* xs-play.forgeofempires.com\nThe landing page for the game login.\n\n* xs0.forgeofempires.com\nThe master server, which performs authentication and holds inventory of \"game-world-wide\" player data.\n\n* xs1.forgeofempires.com\nThis is the actual game world, where the game takes place.",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "other",
-          "endpoint": "Grepolis",
-          "description": "* xs-play.grepolis.com\nThe landing page for the game login.\n\n* xs0.grepolis.com\nThe master server, which performs authentication and holds inventory of \"game-world-wide\" player data.\n\n* xs1.grepolis.com\nThis is the actual game world, where the game takes place.\n",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "other",
-          "endpoint": "Tribal Wars",
-          "description": "* tribalwars.cash / xs0.tribalwars.cash\nThe master server, which performs authentication and holds inventory of \"game-world-wide\" player data..\n\n* xs(1-3).tribalwars.cash\nThese are the actual game worlds, where the game takes place.\n",
-          "impact": "Tier 2"
-        }
-      ],
-      "out_of_scope": [
-        {
-          "type": "url",
-          "endpoint": "autodiscover.innogames.de",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "exchange.innogames.de",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "igjam.eu",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "jamf.innogames.com",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "mail.innogames.com",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "newsroom.innogames.com",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "pn.innogames.com",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "slack.innogames.de",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "typingmind.innogames.de",
-          "description": null,
-          "impact": "Out of scope"
-        }
-      ]
     }
   },
   {
@@ -5755,26 +6243,26 @@
       ],
       "out_of_scope": [
         {
-          "type": "wildcard",
-          "endpoint": "* libelle.nl/inloggen",
+          "type": "url",
+          "endpoint": "libelle.nl/inloggen",
           "description": null,
           "impact": "Out of scope"
         },
         {
-          "type": "wildcard",
-          "endpoint": "* libelle.nl/login",
+          "type": "url",
+          "endpoint": "libelle.nl/login",
           "description": null,
           "impact": "Out of scope"
         },
         {
-          "type": "wildcard",
-          "endpoint": "* libelle.nl/registreren",
+          "type": "url",
+          "endpoint": "libelle.nl/registreren",
           "description": null,
           "impact": "Out of scope"
         },
         {
-          "type": "wildcard",
-          "endpoint": "* libelle.nl/service",
+          "type": "url",
+          "endpoint": "libelle.nl/service",
           "description": null,
           "impact": "Out of scope"
         }
@@ -11369,72 +11857,6 @@
     }
   },
   {
-    "id": "0d0034de-b53e-47b8-9a9d-41c302c49b5a",
-    "name": "Torfs",
-    "company_handle": "torfs",
-    "handle": "torfs",
-    "url": "https://www.intigriti.com/programs/torfs/torfs/detail",
-    "status": "open",
-    "confidentiality_level": "public",
-    "tacRequired": false,
-    "twoFactorRequired": false,
-    "min_bounty": {
-      "value": 25,
-      "currency": "EUR"
-    },
-    "max_bounty": {
-      "value": 6500,
-      "currency": "EUR"
-    },
-    "targets": {
-      "in_scope": [
-        {
-          "type": "url",
-          "endpoint": "winkels.torfs.be",
-          "description": "🇫🇷🇳🇱",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "www.schoenentorfs.be",
-          "description": "🇫🇷🇳🇱",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "www.schoenentorfs.nl ",
-          "description": "🇳🇱",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "www.torfs.be",
-          "description": "🇫🇷🇳🇱",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "www.torfs.nl",
-          "description": "🇳🇱",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "www.samenfittorfs.be",
-          "description": "🇳🇱 ",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "other",
-          "endpoint": "Any related Torfs domain",
-          "description": null,
-          "impact": "No Bounty"
-        }
-      ],
-      "out_of_scope": []
-    }
-  },
-  {
     "id": "efa92aaa-d683-4cf9-8834-a03cf864cc80",
     "name": "Trouw",
     "company_handle": "dpgm",
@@ -11493,26 +11915,26 @@
       ],
       "out_of_scope": [
         {
-          "type": "wildcard",
-          "endpoint": "* trouw.nl/inloggen",
+          "type": "url",
+          "endpoint": "trouw.nl/inloggen",
           "description": null,
           "impact": "Out of scope"
         },
         {
-          "type": "wildcard",
-          "endpoint": "* trouw.nl/login",
+          "type": "url",
+          "endpoint": "trouw.nl/login",
           "description": null,
           "impact": "Out of scope"
         },
         {
-          "type": "wildcard",
-          "endpoint": "* trouw.nl/registreren",
+          "type": "url",
+          "endpoint": "trouw.nl/registreren",
           "description": null,
           "impact": "Out of scope"
         },
         {
-          "type": "wildcard",
-          "endpoint": "* trouw.nl/service",
+          "type": "url",
+          "endpoint": "trouw.nl/service",
           "description": null,
           "impact": "Out of scope"
         },
@@ -12730,26 +13152,26 @@
       ],
       "out_of_scope": [
         {
-          "type": "wildcard",
-          "endpoint": "* vtmgo.be/inloggen",
+          "type": "url",
+          "endpoint": "vtmgo.be/inloggen",
           "description": null,
           "impact": "Out of scope"
         },
         {
-          "type": "wildcard",
-          "endpoint": "* vtmgo.be/login",
+          "type": "url",
+          "endpoint": "vtmgo.be/login",
           "description": null,
           "impact": "Out of scope"
         },
         {
-          "type": "wildcard",
-          "endpoint": "* vtmgo.be/registreren",
+          "type": "url",
+          "endpoint": "vtmgo.be/registreren",
           "description": null,
           "impact": "Out of scope"
         },
         {
-          "type": "wildcard",
-          "endpoint": "* vtmgo.be/service",
+          "type": "url",
+          "endpoint": "vtmgo.be/service",
           "description": null,
           "impact": "Out of scope"
         },
@@ -13254,6 +13676,90 @@
           "impact": "Out of scope"
         }
       ]
+    }
+  },
+  {
+    "id": "92431bf9-ab3e-4e69-9619-c59f8e5193b1",
+    "name": "Voi Scooters",
+    "company_handle": "voi",
+    "handle": "voiscooters",
+    "url": "https://www.intigriti.com/programs/voi/voiscooters/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 0,
+      "currency": "EUR"
+    },
+    "max_bounty": {
+      "value": 3500,
+      "currency": "EUR"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "ios",
+          "endpoint": "1395921017",
+          "description": "iOS Mobile Application",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://api.voiapp.io/",
+          "description": "Backend REST API",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "android",
+          "endpoint": "io.voiapp.voi",
+          "description": "Android Mobile Application",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "fm.voiapp.io",
+          "description": null,
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "mds.voiapp.io",
+          "description": "Partner API as documented at https://docs.voi.com/",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.voi.com",
+          "description": "This wildcard is intended to cover internally developed applications",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://repair.voiweb.net",
+          "description": null,
+          "impact": "Tier 3"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.voiscooters.com",
+          "description": null,
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "report.voi.com",
+          "description": "Website to report badly parked scooters.",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "voi.com",
+          "description": "Informational Website",
+          "impact": "Tier 3"
+        }
+      ],
+      "out_of_scope": []
     }
   },
   {
