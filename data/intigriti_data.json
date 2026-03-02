@@ -2753,6 +2753,144 @@
     }
   },
   {
+    "id": "d14eedce-607d-4233-995d-30dbc7de8f23",
+    "name": "Delen Private Bank",
+    "company_handle": "delenprivatebank",
+    "handle": "privatebankdelen",
+    "url": "https://www.intigriti.com/programs/delenprivatebank/privatebankdelen/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 100,
+      "currency": "EUR"
+    },
+    "max_bounty": {
+      "value": 15000,
+      "currency": "EUR"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "url",
+          "endpoint": "api.digital.delen.be ",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.digital.delen.lu ",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "app.delen.be ",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "app.delen.ch ",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "app.delen.lu ",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "auth.digital.delen.be ",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "auth.digital.delen.lu ",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "android",
+          "endpoint": "be.delen.digital",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "ios",
+          "endpoint": "delen/id1064839588",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "login.delen.be ",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "login.delen.ch ",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "login.delen.lu ",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "login.oyens.com",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "status.delen.be ",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "sts.delen.be ",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.cadelam.be ",
+          "description": "🇫🇷🇳🇱",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.cadelux.lu/en ",
+          "description": "🇬🇧🇫🇷🇳🇱",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.delen.bank",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.delen.be/en ",
+          "description": "🇬🇧🇫🇷🇳🇱",
+          "impact": "Tier 2"
+        }
+      ],
+      "out_of_scope": []
+    }
+  },
+  {
     "id": "dd9dba85-e047-42f3-b59e-9328c7d49672",
     "name": "DigitalOcean",
     "company_handle": "digitalocean",
@@ -3078,6 +3216,12 @@
           "type": "wildcard",
           "endpoint": "registry.digitalocean.com/*",
           "description": "Customers' resources are hosted underneath this domain, so the entire domain should be considered out-of-scope.\n\nAny container registries created inside your own account on this domain are considered in-scope. Use the `cloud.digitalocean.com` asset in that case.",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.doserverless-dev3.io",
+          "description": null,
           "impact": "Out of scope"
         },
         {
@@ -5228,6 +5372,324 @@
     }
   },
   {
+    "id": "d108eca8-374c-4e6f-a996-4af69c7bd079",
+    "name": "Kruidvat",
+    "company_handle": "aswatson",
+    "handle": "kruidvat",
+    "url": "https://www.intigriti.com/programs/aswatson/kruidvat/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 10,
+      "currency": "USD"
+    },
+    "max_bounty": {
+      "value": 8500,
+      "currency": "USD"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "url",
+          "endpoint": "www.kruidvat.nl",
+          "description": "This is Kruidvat NL, our Dutch online Pharmacy.\nAPI spec: https://www.kruidvat.nl/api/v2/api-docs",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.kruidvat.be",
+          "description": "This is Kruidvat BE, our Belgian online Pharmacy.\nAPI spec: https://www.kruidvat.be/api/v2/api-docs",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "ios",
+          "endpoint": "Kruidvat BE iOS",
+          "description": "This is our Kruidvat mobile app for Belgium.\nApp Link: https://apps.apple.com/be/app/kruidvat/id1151434781",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "ios",
+          "endpoint": "Kruidvat NL iOS",
+          "description": "This is our Kruidvat mobile app for The Netherlands.\nApp Link: https://itunes.apple.com/nl/app/kruidvat-mobiele-app/id531631058",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "android",
+          "endpoint": "Kruidvat BE Android",
+          "description": "This is our Kruidvat mobile app for Belgium.\nApp Link: https://play.google.com/store/apps/details?id=nl.kruidvat.voordeelkaart",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "android",
+          "endpoint": "Kruidvat NL Android",
+          "description": "TThis is our Kruidvat mobile app for The Netherlands.\nApp Link: https://play.google.com/store/apps/details?id=be.kruidvat.voordeelkaart",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.kruidvatkids.nl",
+          "description": "This is our Kruidvat Kids e-commerce website, specifically for the daycare market",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "speelgoedfolder.kruidvat.nl",
+          "description": "This is a marketing related application from Kruidvat",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "depliantdejouets.kruidvat.be",
+          "description": "This is a marketing related application from Kruidvat",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "folder.kruidvat.be",
+          "description": "This is a marketing related application from Kruidvat",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "folder.kruidvat.nl",
+          "description": "This is a marketing related application from Kruidvat",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "speelgoedfolder.kruidvat.be",
+          "description": "This is a marketing related application from Kruidvat",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "ecom-static.kruidvat.be",
+          "description": "This is a marketing related application from Kruidvat",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "ecom-static.kruidvat.nl",
+          "description": "This is a marketing related application from Kruidvat",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "ecom-data.kruidvat.be",
+          "description": "This is a marketing related application from Kruidvat",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "magazine.kruidvat.be",
+          "description": "This is a marketing related application from Kruidvat",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "ecom-data.kruidvat.nl",
+          "description": "This is a marketing related application from Kruidvat",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "campaign.kruidvat.nl",
+          "description": "An Adobe Campaign application from Kruidvat",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "campaign.kruidvat.be",
+          "description": "An Adobe Campaign application from Kruidvat",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "campaign-uat.kruidvat.nl",
+          "description": "An Adobe Campaign application from Kruidvat",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "campaign-uat.kruidvat.be",
+          "description": "An Adobe Campaign application from Kruidvat",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "cewe.kruidvat.nl",
+          "description": "This is our third party website from the Kruidvat Netherlands Fotoservice by CEWE",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "cewe.kruidvat.be",
+          "description": "This is our third party website from the Kruidvat Belgium Fotoservice by CEWE",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "cewetest.kruidvat.nl",
+          "description": "This is our third party website from the Kruidvat Netherlands Fotoservice by CEWE",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "cewetest.kruidvat.be",
+          "description": "This is our third party website from the Kruidvat Belgium Fotoservice by CEWE",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "digital.kruidvat.be",
+          "description": "An Adobe Campaign application from Kruidvat",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "digital.kruidvat.nl",
+          "description": "An Adobe Campaign application from Kruidvat",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "foto.kruidvat.be",
+          "description": "This is our third party website from the Kruidvat Belgium Fotoservice by our own brand",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "foto.kruidvat.nl",
+          "description": "This is our third party website from the Kruidvat Netherlands Fotoservice by our own brand",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "fotoservice.kruidvat.nl",
+          "description": "This is our third party website from the Kruidvat Netherlands Fotoservice by our own brand",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "fotoservice.kruidvat.be",
+          "description": "This is our third party website from the Kruidvat Belgium Fotoservice by our own brand",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "photo.kruidvat.be",
+          "description": "This is our third party website from the Kruidvat Belgium Fotoservice by our own brand",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "service.kruidvat.be",
+          "description": "This is a customer service related application from Kruidvat",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "service.kruidvat.nl",
+          "description": "This is a customer service related application from Kruidvat",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "servicefr.kruidvat.be",
+          "description": "This is a customer service related application from Kruidvat",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "www.cewe.kruidvat.be",
+          "description": "This is our third party website from the Kruidvat Belgium Fotoservice by CEWE",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "www.cewe.kruidvat.nl",
+          "description": "This is our third party website from the Kruidvat Netherlands Fotoservice by CEWE",
+          "impact": null
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.kruidvatkids.nl",
+          "description": "This asset contains all other applications on this wildcard not explicitly mentioned elsewhere in the scope",
+          "impact": null
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.kruidvat.nl",
+          "description": "This asset contains all other applications on this wildcard not explicitly mentioned elsewhere in the scope",
+          "impact": null
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.kruidvat.be",
+          "description": "This asset contains all other applications on this wildcard not explicitly mentioned elsewhere in the scope",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "www.trekpleister.nl",
+          "description": "\"This is Trekpleister, our Dutch online Pharmacy.\nAPI spec: https://www.trekpleister.nl/api/v2/api-docs\"",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "campaign.trekpleister.nl",
+          "description": "An Adobe Campaign application from Kruidvat",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "campaign-uat.trekpleister.nl",
+          "description": "An Adobe Campaign application from Kruidvat",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "ecom-data.trekpleister.nl",
+          "description": "This is a marketing related application from Kruidvat",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "service.trekpleister.nl",
+          "description": "This is a customer service related application from Kruidvat",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "folder.trekpleister.nl",
+          "description": "This is a marketing related application from Kruidvat",
+          "impact": null
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.trekpleister.nl",
+          "description": "This asset contains all other applications on this wildcard not explicitly mentioned elsewhere in the scope",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "www.prijsmepper.nl",
+          "description": "This is the website for the Prijsmepper brand",
+          "impact": null
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.prijsmepper.nl",
+          "description": "This asset contains all other applications on this wildcard not explicitly mentioned elsewhere in the scope",
+          "impact": null
+        }
+      ],
+      "out_of_scope": []
+    }
+  },
+  {
     "id": "06ea3a06-58d5-4173-af0e-c2f1f98714c6",
     "name": "Lansweeper Bug Bounty Program",
     "company_handle": "lansweeper",
@@ -6016,6 +6478,109 @@
     }
   },
   {
+    "id": "23f5d877-7948-4740-830c-393e66753fc4",
+    "name": "Monzo Public Bug Bounty Program",
+    "company_handle": "monzobank",
+    "handle": "monzopublicbugbountyprogram",
+    "url": "https://www.intigriti.com/programs/monzobank/monzopublicbugbountyprogram/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 50,
+      "currency": "GBP"
+    },
+    "max_bounty": {
+      "value": 12500,
+      "currency": "GBP"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "wildcard",
+          "endpoint": "*.monzo.com",
+          "description": "The crux of Monzo where the APIs live as well as Monzo Business. Excludes the main website (like `monzo.com`/`www.monzo.com`).",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.prod-ffs.io",
+          "description": "Where our internet-facing services are accessed",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "ios",
+          "endpoint": "1052238659",
+          "description": "The public seed of the Monzo app on iOS",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "android",
+          "endpoint": "co.uk.getmondo",
+          "description": "The public seed of the Monzo app on Android",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.monzo.com",
+          "description": null,
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "monzo.com",
+          "description": null,
+          "impact": "Tier 3"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "wildcard",
+          "endpoint": "*/p2p/*",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*/contact-discovery/*",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*/inbound-p2p/*",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.monzo.me",
+          "description": "Houses the services for the pay me/request payment feature",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "community.monzo.com",
+          "description": "We use a third-party, Discourse for our community forums. Third-parties are out of scope for our programs.",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "login.internal.monzo.com",
+          "description": "This is our connection to Okta for internal authentication. Third-parties are out of scope for our programs. ",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "monzo.me",
+          "description": "Monzo.me is a service that allows Monzo users to easily receive money from others via a personalised link, even if the sender doesn't have a Monzo account.",
+          "impact": "Out of scope"
+        }
+      ]
+    }
+  },
+  {
     "id": "56339d19-36cc-49a0-8e8f-b2502e00d165",
     "name": "Moralis VDP",
     "company_handle": "moralis",
@@ -6355,1718 +6920,36 @@
     }
   },
   {
-    "id": "0fd1d85b-2d33-4966-b5a0-caabfda5108e",
-    "name": "Ninja Kiwi Games Bug Bounty program",
-    "company_handle": "ninjakiwigames",
-    "handle": "ninjakiwigames",
-    "url": "https://www.intigriti.com/programs/ninjakiwigames/ninjakiwigames/detail",
-    "status": "open",
-    "confidentiality_level": "public",
-    "tacRequired": false,
-    "twoFactorRequired": false,
-    "min_bounty": {
-      "value": 75,
-      "currency": "EUR"
-    },
-    "max_bounty": {
-      "value": 4125,
-      "currency": "EUR"
-    },
-    "targets": {
-      "in_scope": [
-        {
-          "type": "url",
-          "endpoint": "analytics.ninjakiwi.com",
-          "description": "This domain hosts the API that consumed analytics events from our game clients",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "api.ninjakiwi.com",
-          "description": "This domain hosts the API for our mobile and PC games. Monitoring traffic through one of our game clients is the easiest method to investigate our main API. Most of our applications are available for free on [Steam](https://store.steampowered.com/developer/ninjakiwigames/#browse). Please carefully read the in-scope section regarding what sorts of exploits will be considering in-scope for this domain.",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "guts.ninjakiwi.com",
-          "description": "This is the backend services for certain BTD6 in-game features such as Contested Territories and the Map Creator.",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.ninjakiwi.me",
-          "description": "ninjakiwi.me is a domain which hosts many of Ninja Kiwi's employtee only services. Any subdomain is eligible for the program.",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.nkstatic.com",
-          "description": "This domain hosts static content for Ninja Kiwi games and website.",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "battles.tv",
-          "description": "Battles.tv is used to share replays from our Bloons TD Battles game.",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "data.ninjakiwi.com",
-          "description": "This domain hosts our **public** data API which grants open access to in-game data from our biggest games. For example player profiles, leaderboards and event information is available through this domain.",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "ninja.kiwi",
-          "description": "This domain is used by Ninja Kiwi for our URL shortener service, ie https://ninja.kiwi/intigriti.",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "ninjakiwi.com",
-          "description": null,
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "alerts.ninjakiwi.com",
-          "description": null,
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "boomer2.ninjakiwi.com",
-          "description": null,
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "ct.ninjakiwi.com",
-          "description": null,
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "mynk-dash.ninjakiwi.com",
-          "description": null,
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "mynk.ninjakiwi.com",
-          "description": "This is a legacy domain which powers our Flash games. Uses Flash AMF.",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.souparea.com",
-          "description": "This domain will be considered out of scope unless it can be shown to allow an exploit on one of our Tier 1-3 domains.",
-          "impact": "No Bounty"
-        },
-        {
-          "type": "url",
-          "endpoint": "rancher.ninjakiwi.com",
-          "description": null,
-          "impact": "No Bounty"
-        },
-        {
-          "type": "url",
-          "endpoint": "rancher.ninjakiwi.me",
-          "description": null,
-          "impact": "No Bounty"
-        }
-      ],
-      "out_of_scope": [
-        {
-          "type": "url",
-          "endpoint": "store.ninjakiwi.com",
-          "description": "If you've found an issue with this domain you can contact Shopify here - https://www.shopify.com/bugbounty",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "support.ninjakiwi.com",
-          "description": "If you've found an issue with this domain you can contact Zendesk here - https://support.zendesk.com/hc/en-us/articles/4409154830874-Zendesk-Bug-Bounty-Program",
-          "impact": "Out of scope"
-        }
-      ]
-    }
-  },
-  {
-    "id": "c7af90e7-ebe9-464f-9786-84970bc4cce3",
-    "name": "OVO VDP",
-    "company_handle": "ovoenergy",
-    "handle": "ovovdp",
-    "url": "https://www.intigriti.com/programs/ovoenergy/ovovdp/detail",
+    "id": "2f8db691-ed2b-4796-9b31-d808efb80dfa",
+    "name": "Online enrollment for students Bug Bounty Program",
+    "company_handle": "kuleuven",
+    "handle": "onlineinschrijvingenbetalingstoepassing",
+    "url": "https://www.intigriti.com/programs/kuleuven/onlineinschrijvingenbetalingstoepassing/detail",
     "status": "open",
     "confidentiality_level": "public",
     "tacRequired": false,
     "twoFactorRequired": false,
     "min_bounty": {
       "value": 0,
-      "currency": "GBP"
-    },
-    "max_bounty": {
-      "value": 0,
-      "currency": "GBP"
-    },
-    "targets": {
-      "in_scope": [
-        {
-          "type": "wildcard",
-          "endpoint": "*.bonnetapps.com",
-          "description": null,
-          "impact": "No Bounty"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.boostpower.co.uk",
-          "description": null,
-          "impact": "No Bounty"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.corgihomeheat.co.uk",
-          "description": null,
-          "impact": "No Bounty"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.corgihomeplan.co.uk",
-          "description": null,
-          "impact": "No Bounty"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.corgihomeplan.uk",
-          "description": null,
-          "impact": "No Bounty"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.gridsvc.net",
-          "description": null,
-          "impact": "No Bounty"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.joinbonnet.com",
-          "description": null,
-          "impact": "No Bounty"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.ovo-live.com",
-          "description": null,
-          "impact": "No Bounty"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.ovo-sso.com",
-          "description": null,
-          "impact": "No Bounty"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.ovo.com",
-          "description": null,
-          "impact": "No Bounty"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.ovoener.gy",
-          "description": null,
-          "impact": "No Bounty"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.ovoenergy.com",
-          "description": null,
-          "impact": "No Bounty"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.ovotech.org.uk",
-          "description": null,
-          "impact": "No Bounty"
-        }
-      ],
-      "out_of_scope": [
-        {
-          "type": "url",
-          "endpoint": "pol-dev.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "prod.tardis.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "pol.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "notification-service.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "developer.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "aws.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "api.prd.payments.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "cheque-payouts.uat.pace.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "servicecomms-nonprod.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "payments-api.uat.pace.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "direct-debit-review.prd.pace.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "argocd.metering-shared-test.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "mon.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "worldpay-webhook-ovotest.uat.payments.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "kafka-connect-fintxns.uat.pace.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "recommended-dds.uat.pace.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "engineering-handbook.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "login-aggregator.internal.id-uat.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "aiven-kafka-users-nonprod.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "retail-payg.gcp.nonprod.bedrock.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "keg-tap-nonprod.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "mq01.dev.ptl.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "kafka-connect-fintxns.prd.pace.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "test-simple-event.data-availability.gcp.bedrock.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "id-oot.dev.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "retail-aiven-kafka-users.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "oot.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "smex-scheduler-test.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "prod.flow-platform.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "rac-spam.uat.randc.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "admin.internal.id-uat.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "tardis.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "bast-uat.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "artemis.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "accounts-internal-prod.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "fakeidserver.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "log.prd.mon.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "prx01.uat.ptl.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "argocd.metering-shared-sandbox.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "bast-aus.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "worldpay-webhook-orion.uat.payments.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "flow-platform.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "auth.id-uat.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "bast-uat-aus.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "internal.id-uat.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "eng-svc.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "smex-scheduler-nonprod.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "cms-flags.prd.pace.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "tariffs-service.prd.ec.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "contracts-api.prd.ec.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "jaws-prod.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "cloudquery-grafana.seceng-prod-aws.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "internal.prod.tardis.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "rac.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "account-transaction.rise.gcp.nonprod.bedrock.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "impulsive.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "sis.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "profile-coefficients.prd.rac.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "uat.smb.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "frontend-api.prod.usage.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "retail-payg.gcp.bedrock.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "webhook.uat.payments.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "uat.randc.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "api.uat.payments.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "recommended-dds.prd.pace.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "orion-bolton-service.prd.props.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "direct-debit-review.uat.pace.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "smex-scheduler-prod.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "api.test.he.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "argocd.metering-shared-non-prod.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "aiven-kafka-users.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "bast-load-test.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "load-test-event.test-tap-team.gcp.nonprod.bedrock.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "auth0.id-uat.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "public.bws-testing.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "testlab.gcp.infosec.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "terraform.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "notification-service-public.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "estimation.uat.randc.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "infosec-audit.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "contract-update-service.prd.ec.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "manual-readings.uat.randc.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "webhook.prd.payments.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "servicecomms-dev.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "data-availability.gcp.bedrock.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "salesforce.prod.oot.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "self-serve-refunds.uat.pace.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "cip.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "bws-nonprod.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "auth.id.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "smex-scheduler-sandbox.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "nonprod.cip.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "accounts-internal-nonprod.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "sis-sandbox.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "cheque-payouts.prd.pace.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "accounts-prod.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "jaws-testing.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "payments.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "orion-bolton-service.uat.props.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "pace.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "nonprod.tardis.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "payments-api.prd.pace.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "replay.prd.rac.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "login.internal.id-uat.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "bws.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "bws-testing.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "argocd.metering-shared-non-prod-aus.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "prd.payments.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "prod.growth.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "sme.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "seceng-nonprod-aws.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "nonprod.growth.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "jaws-nonprod.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "orion-onboarding-uat.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "argocd.metering-shared-prod.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "worldpay-webhook-orion.prd.payments.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "internal.id-test.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "notification-service-uat-public.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "prd.pace.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "nonprod.flow-platform.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "contract-update-service.uat.ec.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "kafka-connect-fintxns.prod.pace.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "rise.gcp.nonprod.bedrock.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "prod.oot.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "test-cert-manager.uat.randc.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "auth-green.id-uat.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "servicecomms.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "ec.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "reads-lifecycle-prod.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "tariffs-service.uat.ec.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "public-manual-readings.prd.rac.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "uat.payments.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "id-uat.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "uat.pace.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "bws-sandbox.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "profile-coefficients.uat.randc.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "asp-nonprod.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "internal.nonprod.tardis.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "bast.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "uat.nonprod.flow-platform.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "rise.gcp.bedrock.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "asp-prod.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "estimation.prd.rac.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "ipam.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "replay.uat.randc.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "homemoves-nonprod.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "auth-green.internal.id-uat.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "api.prd.meters.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "uat.onboarding.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "homemoves-prod.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "payment-dd-service.uat.ptl.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "frontend-api.uat.usage.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "orion-onboarding.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "account-activation-uat.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "prd.smb.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "uat.rac.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "move-ins.prod.homemoves.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "cost-usage.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "sonarqube.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "public-manual-readings.uat.randc.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "nonprod.oot.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "sis-nonprod.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "direct-debit-review-exemption.uat.pace.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "accounts-nonprod.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "contracts-api.uat.ec.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "log.uat.mon.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "scully-nonprod.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "self-serve-refunds.prd.pace.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "shipit.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "core-billing.gcp.nonprod.bedrock.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "notification-service-uat.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.ec.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "manual-reads.prd.rac.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "pol-uat.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "auth.internal.id-uat.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "admin.id-uat.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "bast-test-aus.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "api.he.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "prd.rac.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "account-transaction.rise.gcp.bedrock.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "rac-spam.prd.rac.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "prod.usage.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.nonprod.oot.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "public.homemoves-*.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "contracts-api.*.ec.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.prod.oot.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "api.uat.meters.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "auth-internal.id-uat.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "payment-dd-service.prd.ptl.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "pol-staging.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "reads-lifecycle-nonprod.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "cms-flags.uat.pace.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "move-ins.nonprod.homemoves.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "jaws-sandbox.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "uat.usage.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "direct-debit-review-exemption.prd.pace.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "data-availability.gcp.nonprod.bedrock.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.ec.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "qs.ovotech.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.oisl.gg",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "appsfwd.ovoenergy.com",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "askovo.net",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "auth-retail.ovoenergy.com",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "auth-www.ovoenergy.com",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "cctv-mgr.ovoenergy.com",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "cev.ovoenergy.com",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "documentum.ovoenergy.com",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "ecomms.ovoenergy.com",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "fortivpn.ovoenergy.com",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "forum.ovoenergy.com",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "greeninstaller.co.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "hackable-lenny.com",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "hackable-sarge.com",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "hackable-slink.com",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "hackable-woody.com",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "http://vp-alexandria.gridsvc.net/",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "learn.ovo.com",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "lightning.ovoenergy.com",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "ovo-comms-uat.co.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "ovo-comms.co.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "ovo.itgcanopy.com",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "ovobyus.com",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "ovocards.com",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "ovocommunity.com",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "ovofoundation.org.uk",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "ovomyrewards.com",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "paybylink.ovoenergy.com",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "pma.ovoenergy.com",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "survey.ovoenergy.com",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "tech.ovoenergy.com",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "testrailapp.ovoenergy.com",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "thirdpartyassurance.ovoenergy.com",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "tracking.ovo.com",
-          "description": null,
-          "impact": "Out of scope"
-        }
-      ]
-    }
-  },
-  {
-    "id": "188976b1-e8b3-4132-a6f6-e96113599474",
-    "name": "Oda",
-    "company_handle": "oda",
-    "handle": "oda",
-    "url": "https://www.intigriti.com/programs/oda/oda/detail",
-    "status": "open",
-    "confidentiality_level": "public",
-    "tacRequired": false,
-    "twoFactorRequired": false,
-    "min_bounty": {
-      "value": 75,
       "currency": "EUR"
     },
     "max_bounty": {
-      "value": 4000,
+      "value": 2000,
       "currency": "EUR"
     },
     "targets": {
       "in_scope": [
         {
           "type": "url",
-          "endpoint": "login.prod.nube.tech",
-          "description": null,
-          "impact": "Tier 2"
-        },
-        {
-          "type": "ios",
-          "endpoint": "1076840480",
-          "description": "Mathem iOS app - used by our swedish customers to order groceries",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "ios",
-          "endpoint": "1079537578",
-          "description": "Oda iOS app - used by our norwegian customers to order groceries",
+          "endpoint": "https://associatie.kuleuven.be/inschrijvingen/oli_login_50000050",
+          "description": "🇬🇧🇳🇱  the registration/login part on idp.kuleuven.be itself is out of scope for the program",
           "impact": "Tier 2"
         },
         {
           "type": "url",
-          "endpoint": "https://mathem.se",
-          "description": "The main shop and brand in Sweden.",
+          "endpoint": "https://webwsp.aps.kuleuven.be/sap/bc/ui5_ui5/sap/zc_oi_appl/",
+          "description": "🇬🇧🇳🇱 ",
           "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "https://oda.com",
-          "description": "The main shop used in Norway.",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "android",
-          "endpoint": "no.kolonial.tienda",
-          "description": "Oda android app  - used by our norwegian customers to order groceries",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "android",
-          "endpoint": "se.mathem.mathem",
-          "description": "Mathem android app - used by our swedish customers to order groceries",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.oda.com",
-          "description": null,
-          "impact": "Tier 3"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.prod.nube.tech",
-          "description": "Should mostly be internal services",
-          "impact": "Tier 3"
         }
       ],
       "out_of_scope": []
@@ -9913,6 +8796,102 @@
     }
   },
   {
+    "id": "18058413-5255-4f5c-a9db-c6ac027bb5d6",
+    "name": "Soundtrack Your Brand",
+    "company_handle": "syb",
+    "handle": "soundtrackyourbrand",
+    "url": "https://www.intigriti.com/programs/syb/soundtrackyourbrand/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 50,
+      "currency": "EUR"
+    },
+    "max_bounty": {
+      "value": 3500,
+      "currency": "EUR"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "ios",
+          "endpoint": "1114799709",
+          "description": "The iOS Player app that allows you to browse and play music.\n\nIn order to use the iOS Player you will need a pairing code that you can obtain through https://business.soundtrackyourbrand.com using the test credentials.\n\nhttps://www.youtube.com/watch?v=y7HGAtsB6Tg",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "ios",
+          "endpoint": "1114800186",
+          "description": "The iOS Remote that allows you to remotely control your Soundtrack Players.\n\nIn order to use the iOS Remote you will need a remote code that you can obtain through https://business.soundtrackyourbrand.com using the test credentials.\n\nhttps://www.youtube.com/watch?v=cmAe1kRvOeY",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.soundtrackyourbrand.com",
+          "description": "Our public API. Used by us as well as third parties. You can use your regular login token to authenticate.\n\nDocs: https://developer.soundtrackyourbrand.com/api\nGraphQL Explorer: https://api.soundtrackyourbrand.com/v2/explore\n\nPlease use one of the claimed test credentials. In order to use the API you can login using your claimed credentials (via loginUser) and use the token you get back to issue API calls.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "billing.api.soundtrackyourbrand.com",
+          "description": "Our billing service. Handles payments (one time and recurring), price and product management and subscription renewals.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "builds.soundtrackyourbrand.com",
+          "description": "Our service which does gradual rollout of our player software to our Windows client and hardware players.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "business.soundtrackyourbrand.com",
+          "description": "Our web based management console that allows users to administer their players, music and their account.\n\n**To claim bounties for this domain you need to use one of the claimed test credentials.**",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "android",
+          "endpoint": "com.soundtrackyourbrand.soundtrack.player",
+          "description": "The Android Player app that allows you to browse and play music.\n\nIn order to use the Android Player you will need a pairing code that you can obtain through https://business.soundtrackyourbrand.com using the test credentials.\n\nhttps://www.youtube.com/watch?v=y7HGAtsB6Tg",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://auth.api.soundtrackyourbrand.com/",
+          "description": "Our authentication service.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "other",
+          "endpoint": "https://builds.soundtrackyourbrand.com/download/WIN32SOUNDTRACK/latest",
+          "description": "The Windows Player that allows you to play music. No user interface except for a tray icon.\n\nIn order to use the Windows Player you will need a pairing code that you can obtain through https://business.soundtrackyourbrand.com using the test credentials.\n\nhttps://www.youtube.com/watch?v=HjFfXcjSEmM",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://radio.api.soundtrackyourbrand.com/",
+          "description": "Our playlisting service.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://www.soundtrackyourbrand.com",
+          "description": "Our public website.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "other",
+          "endpoint": "macOS app",
+          "description": "The macOS Player app allows you to browse and play music. You can find it in the App Store: https://apps.apple.com/se/app/soundtrack-player/id1114799709?l=en\n\nIn order to use the macOS you will need a pairing code that you can obtain through https://business.soundtrackyourbrand.com using the test credentials.\n\nhttps://www.youtube.com/watch?v=y7HGAtsB6Tg",
+          "impact": "Tier 1"
+        }
+      ],
+      "out_of_scope": []
+    }
+  },
+  {
     "id": "8f6c92dc-1300-4f11-8284-29b6ed743378",
     "name": "Speakap Responsible Disclosure",
     "company_handle": "speakap",
@@ -9988,13 +8967,79 @@
       "in_scope": [
         {
           "type": "wildcard",
-          "endpoint": "*.storebrand.se",
+          "endpoint": "*.sppfonder.se",
           "description": null,
           "impact": "No Bounty"
         },
         {
           "type": "wildcard",
-          "endpoint": "*.storebrand.com",
+          "endpoint": "*.storebrandrealestate.se",
+          "description": null,
+          "impact": "No Bounty"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.storebrandfunds.com",
+          "description": null,
+          "impact": "No Bounty"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.storebrandfondene.dk",
+          "description": null,
+          "impact": "No Bounty"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.aipmanagement.dk",
+          "description": null,
+          "impact": "No Bounty"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.storebrandam.com",
+          "description": null,
+          "impact": "No Bounty"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.capitalinvestment.dk",
+          "description": null,
+          "impact": "No Bounty"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.capitalbolig.dk",
+          "description": null,
+          "impact": "No Bounty"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.storebrandfonder.se",
+          "description": null,
+          "impact": "No Bounty"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.delphifunds.com",
+          "description": null,
+          "impact": "No Bounty"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.delphifonder.se",
+          "description": null,
+          "impact": "No Bounty"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.storebrandfastigheter.se",
+          "description": null,
+          "impact": "No Bounty"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.delphi",
           "description": null,
           "impact": "No Bounty"
         },
@@ -10012,25 +9057,25 @@
         },
         {
           "type": "wildcard",
-          "endpoint": "*.capitalbolig.dk",
+          "endpoint": "*.skagenfunds.it",
           "description": null,
           "impact": "No Bounty"
         },
         {
           "type": "wildcard",
-          "endpoint": "*.aipmanagement.dk",
+          "endpoint": "*.skagenfunds.ch",
           "description": null,
           "impact": "No Bounty"
         },
         {
           "type": "wildcard",
-          "endpoint": "*.capitalinvestment.dk",
+          "endpoint": "*.skagenfunds.be",
           "description": null,
           "impact": "No Bounty"
         },
         {
           "type": "wildcard",
-          "endpoint": "*.storebrandam.com",
+          "endpoint": "*.skagenfunds.at",
           "description": null,
           "impact": "No Bounty"
         },
@@ -10108,13 +9153,25 @@
         },
         {
           "type": "wildcard",
-          "endpoint": "*.storebrandfonder.se",
+          "endpoint": "*.sppkonsult.se",
           "description": null,
           "impact": "No Bounty"
         },
         {
           "type": "wildcard",
-          "endpoint": "*.storebrandfastigheter.se",
+          "endpoint": "*.storebrand.dk",
+          "description": null,
+          "impact": "No Bounty"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.storebrand.se",
+          "description": null,
+          "impact": "No Bounty"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.storebrand.com",
           "description": null,
           "impact": "No Bounty"
         },
@@ -12264,6 +11321,115 @@
     }
   },
   {
+    "id": "acb142c1-ffeb-41c3-a9e7-1624054f42e4",
+    "name": "Veriff Bug Bounty",
+    "company_handle": "veriff",
+    "handle": "veriffbugbounty",
+    "url": "https://www.intigriti.com/programs/veriff/veriffbugbounty/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 5,
+      "currency": "EUR"
+    },
+    "max_bounty": {
+      "value": 6000,
+      "currency": "EUR"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "ios",
+          "endpoint": "1467907532",
+          "description": "An iOS application for demoing our product.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "alchemy.veriff.com",
+          "description": "This is an end user (internal) API endpoint.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.flamingo-eu.veriff.com",
+          "description": "This is a public API endpoint.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.us.veriff.me",
+          "description": "This is a public API endpoint.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.veriff.me",
+          "description": "This is a public API endpoint.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "android",
+          "endpoint": "com.veriff.demo",
+          "description": "An Android application for demoing our product.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "louvre.veriff.me",
+          "description": "This is an end user (internal) API endpoint.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "magic.veriff.me",
+          "description": "This is an end user (internal) API endpoint.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "station.veriff.com",
+          "description": "Here you can find our Veriff Station application.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "stationapi.veriff.com",
+          "description": "This is the backend for our Station application.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.veriff.com",
+          "description": "Please note that third party services are out of scope unless the issue is caused due to a misconfiguration by Veriff.",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "developers.veriff.me",
+          "description": "You can find our developers documentation here.",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.veriff.com",
+          "description": "This is our marketing website.",
+          "impact": "Tier 3"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "url",
+          "endpoint": "https://station.veriff.com/config/",
+          "description": "Configuration includes public keys what are needed for frontend working properly.",
+          "impact": "Out of scope"
+        }
+      ]
+    }
+  },
+  {
     "id": "30a91ad4-fb06-4f0c-ae96-7f5167a840db",
     "name": "Vinted - Bug Bounty Program",
     "company_handle": "vinted",
@@ -13158,6 +12324,762 @@
           "endpoint": "https://www.water-link-jaarverslag.be",
           "description": null,
           "impact": "No Bounty"
+        }
+      ],
+      "out_of_scope": []
+    }
+  },
+  {
+    "id": "8a9c91c0-dd4f-4ed3-bb65-3c6b68e76b24",
+    "name": "Watsons",
+    "company_handle": "aswatson",
+    "handle": "watsons",
+    "url": "https://www.intigriti.com/programs/aswatson/watsons/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 10,
+      "currency": "USD"
+    },
+    "max_bounty": {
+      "value": 8500,
+      "currency": "USD"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "url",
+          "endpoint": "www.watsons.com.hk",
+          "description": "This is our online retail platform for health and beauty products in Hong Kong.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "www10.watsons.com.hk",
+          "description": "This is the API server of the Watsons Hong Kong mobile app",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "android",
+          "endpoint": "Watsons Hong Kong Android",
+          "description": "This is our Watsons Hong Kong Mobile (Android) app. \nApp Link: https://play.google.com/store/apps/details?id=com.ndn.android.watsons",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "ios",
+          "endpoint": "Watsons Hong Kong iOS",
+          "description": "This is our Watsons Hong Kong (iOS) app.\nApp link: https://apps.apple.com/hk/app/%E5%B1%88%E8%87%A3%E6%B0%8F%E9%A6%99%E6%B8%AF/id479512803",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.watsons.com.hk",
+          "description": "This is the API server for the www.watsons.com.hk website",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "medias.watsons.com.hk",
+          "description": "This subdomain is used to store static content for the www.watsons.com.hk e-commerce website.",
+          "impact": null
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.watsons.com.hk",
+          "description": "This asset contains all other applications on this wildcard not explicitly mentioned elsewhere in the scope",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "www.watsons.co.th",
+          "description": "This is our online retail platform for health and beauty products in Thailand.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "www10.watsons.co.th",
+          "description": "This is the API server of the Watsons Thailand mobile app",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "www20.watsons.co.th",
+          "description": "This is the API server of the Watsons Thailand mobile app",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "ios",
+          "endpoint": "Watsons Thailand iOS",
+          "description": "This is our Watsons Thailand (iOS) app.\nApp link: https://apps.apple.com/hk/app/watsons-th/id619935224",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "android",
+          "endpoint": "Watsons Thailand Android",
+          "description": "This is our Watsons Thailand Mobile (Android) app. \nApp Link: https://play.google.com/store/apps/details?id=com.mtelnet.watson.thailand",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.watsons.co.th",
+          "description": "This is the API server for the www.watsons.co.th website",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "community.watsons.co.th",
+          "description": "The asset is community forum of watsons.co.th",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "medias.watsons.co.th",
+          "description": "This subdomain is used to store static content for the www.watsons.co.th e-commerce website.",
+          "impact": null
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.watsons.co.th",
+          "description": "This asset contains all other applications on this wildcard not explicitly mentioned elsewhere in the scope",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "www.watsons.com.tw",
+          "description": "This is our online retail platform for health and beauty products in Taiwan.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "www10.watsons.com.tw",
+          "description": "This is the API server of the Watsons Taiwan mobile app",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "android",
+          "endpoint": "Watsons Taiwan Android",
+          "description": "This is our Watsons Taiwan Mobile (Android) app. \nApp Link: https://play.google.com/store/apps/details?id=tw.com.watsons.app",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "ios",
+          "endpoint": "Watsons Taiwan iOS",
+          "description": "This is our Watsons Taiwan (iOS) app.\nApp link: https://apps.apple.com/hk/app/%E5%B1%88%E8%87%A3%E6%B0%8F%E5%8F%B0%E7%81%A3/id477968775",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.watsons.com.tw",
+          "description": "This is the API server for the www.watsons.com.tw website",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "member.watsons.com.tw",
+          "description": "The asset is promotion website of watsons.com.tw.",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "medias.watsons.com.tw",
+          "description": "This subdomain is used to store static content for the www.watsons.com.tw e-commerce website.",
+          "impact": null
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.watsons.com.tw",
+          "description": "This asset contains all other applications on this wildcard not explicitly mentioned elsewhere in the scope",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "www.watsons.com.sg",
+          "description": "This is our online retail platform for health and beauty products in Singapore.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "www10.watsons.com.sg",
+          "description": "This is the API server of the Watsons Singapore mobile app",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "ios",
+          "endpoint": "Watsons Singapore iOS",
+          "description": "This is our Watsons Singapore (iOS) app.\nApp link: https://apps.apple.com/hk/app/watsons-sg-the-official-app/id449412168",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "android",
+          "endpoint": "Watsons Singapore Android",
+          "description": "This is our Watsons Singapore Mobile (Android) app. \nApp Link: https://play.google.com/store/apps/details?id=com.watsons.sg.android",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.watsons.com.sg",
+          "description": "This is the API server for the www.watsons.com.sg website",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "medias.watsons.com.sg",
+          "description": "This subdomain is used to store static content for the www.watsons.com.sg e-commerce website.",
+          "impact": null
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.watsons.com.sg",
+          "description": "This asset contains all other applications on this wildcard not explicitly mentioned elsewhere in the scope",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "www.watsons.com.ph",
+          "description": "This is our online retail platform for health and beauty products in Philippines.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "ios",
+          "endpoint": "Watsons Philippines iOS",
+          "description": "This is our Watsons Philippines (iOS) app.\nApp link: https://apps.apple.com/hk/app/watsons-philippines/id1438203234",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "android",
+          "endpoint": "Watsons Philippines Android",
+          "description": "This is our Watsons Philippines Mobile (Android) app. \nApp Link:https://play.google.com/store/apps/details?id=com.mtelnet.watson.ph",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.watsons.com.ph",
+          "description": "This is the API server for the www.watsons.com.ph website",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "www10.watsons.com.ph",
+          "description": "This is the API server of the Watsons Philippines mobile app",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "community.watsons.com.ph",
+          "description": "The asset is community forum of watsons.com.ph.",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "medias.watsons.com.ph",
+          "description": "This subdomain is used to store static content for the www.watsons.com.ph e-commerce website.",
+          "impact": null
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.watsons.com.ph",
+          "description": "This asset contains all other applications on this wildcard not explicitly mentioned elsewhere in the scope",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "www.lookatme.com.ph",
+          "description": null,
+          "impact": "Tier 1"
+        },
+        {
+          "type": "android",
+          "endpoint": "LookAtMe Philippines Android",
+          "description": null,
+          "impact": "Tier 1"
+        },
+        {
+          "type": "ios",
+          "endpoint": "LookAtMe Philippines iOS",
+          "description": null,
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.lookatme.com.ph",
+          "description": null,
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "medias.lookatme.com.ph",
+          "description": null,
+          "impact": null
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.lookatme.com.ph",
+          "description": null,
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "www.watsons.com.my",
+          "description": "This is our online retail platform for health and beauty products in Malaysia.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "www10.watsons.com.my",
+          "description": "This is the API server of the Watsons Malaysia mobile app",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "android",
+          "endpoint": "Watsons Malaysia Android",
+          "description": "This is our Watsons Malaysia Mobile (Android) app. \nApp Link: https://play.google.com/store/apps/details?id=com.watsons.mcommerce",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "ios",
+          "endpoint": "Watsons Malaysia iOS",
+          "description": "This is our Watsons Malaysia (iOS) app.\nApp link: https://apps.apple.com/hk/app/watsons-my/id1112796292",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.watsons.com.my",
+          "description": "This is the API server for the www.watsons.com.my website",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "community.watsons.com.my",
+          "description": "The asset is community forum of watsons.com.my.",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "medias.watsons.com.my",
+          "description": "This subdomain is used to store static content for the www.watsons.com.my e-commerce website.",
+          "impact": null
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.watsons.com.my",
+          "description": "This asset contains all other applications on this wildcard not explicitly mentioned elsewhere in the scope",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "www.watsons.co.id",
+          "description": "This is our online retail platform for health and beauty products in Indonesia.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "www10.watsons.co.id",
+          "description": "This is the API server of the Watsons Indonesia mobile app",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "android",
+          "endpoint": "Watsons Indonesia Android",
+          "description": "This is our Watsons Indonesia Mobile (Android) app. \nApp Link: https://play.google.com/store/apps/details?id=com.watsons.id.android",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "ios",
+          "endpoint": "Watsons Indonesia iOS",
+          "description": "This is our Watsons Indonesia (iOS) app.\nApp link: https://apps.apple.com/hk/app/watsons-id/id1184851346",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.watsons.co.id",
+          "description": "This is the API server for the www.watsons.co.id website",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "medias.watsons.co.id",
+          "description": "This subdomain is used to store static content for the www.watsons.co.id e-commerce website.",
+          "impact": null
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.watsons.co.id",
+          "description": "This asset contains all other applications on this wildcard not explicitly mentioned elsewhere in the scope",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "www.watsons.vn",
+          "description": "This is our online retail platform for health and beauty products in Vietnam.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "www10.watsons.vn",
+          "description": "This is the API server of the Watsons Vietnam mobile app",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "ios",
+          "endpoint": "Watsons Vietnam iOS",
+          "description": "This is our Watsons Vietnam (iOS) app.\nApp link: https://apps.apple.com/in/app/watsons-vietnam/id1446869800",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "android",
+          "endpoint": "Watsons Vietnam Android",
+          "description": "This is our Watsons Vietnam Mobile (Android) app. \nApp Link: https://play.google.com/store/apps/details?id=com.watsons.vn.android",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.watsons.vn",
+          "description": "This is the API server for the www.watsons.vn website",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "medias.watsons.vn",
+          "description": "This subdomain is used to store static content for the www.watsons.vn e-commerce website.",
+          "impact": null
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.watsons.vn",
+          "description": "This asset contains all other applications on this wildcard not explicitly mentioned elsewhere in the scope",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "www.pns.hk",
+          "description": "This is our online retail platform for ParkNShop Hong Kong.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "www10.pns.hk",
+          "description": "This is the API server of the PNS mobile app",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.pns.hk",
+          "description": "This is the API server for the www.pns.hk website",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "ios",
+          "endpoint": "PNS iOS",
+          "description": "This is our PNS (iOS) app.\nApp link: https://apps.apple.com/hk/app/parknshop/id840837558",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "android",
+          "endpoint": "PNS Android",
+          "description": "This is our PNS Mobile (Android) app. \nApp Link: https://play.google.com/store/apps/details?id=com.parknshop.parknshopapp",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "medias.pns.hk",
+          "description": "This subdomain is used to store static content for the www.pns.hk e-commerce website.",
+          "impact": null
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.pns.hk",
+          "description": "This asset contains all other applications on this wildcard not explicitly mentioned elsewhere in the scope",
+          "impact": null
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.parknshop.com",
+          "description": "This asset contains all other applications on this wildcard not explicitly mentioned elsewhere in the scope",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "www.fortress.com.hk",
+          "description": "This is our online retail platform for Fortress Hong Kong.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "www10.fortress.com.hk",
+          "description": "This is the API server of the Fortress Hong Kong mobile app",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "android",
+          "endpoint": "Fortress Hong Kong Android",
+          "description": "This is our Fortress (Android) app. \nApp Link: https://play.google.com/store/apps/details?id=fortress.fortressapp",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "ios",
+          "endpoint": "Fortress Hong Kong iOS",
+          "description": "This is our Fortress (iOS) app.\nApp link: https://apps.apple.com/hk/app/fortress/id1133110850",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.fortress.com.hk",
+          "description": "This is the API server for the www.fortress.com.hk website",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "medias.fortress.com.hk",
+          "description": "This subdomain is used to store static content for the www.fortress.com.hk e-commerce website.",
+          "impact": null
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.fortress.com.hk",
+          "description": "This asset contains all other applications on this wildcard not explicitly mentioned elsewhere in the scope",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "www.watsons.com.tr",
+          "description": "This is our online retail platform for health and beauty products in Turkey.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "android",
+          "endpoint": "Watsons Turkey Android",
+          "description": "This is our Watsons Turkey (Android) app.\nApp link: https://play.google.com/store/apps/details?id=com.mobular.watsons",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "ios",
+          "endpoint": "Watsons Turkey iOS",
+          "description": "This is our Watsons Turkey (iOS) app.\nApp link: https://apps.apple.com/tr/app/watsons-kozmetik-ve-al%C4%B1%C5%9Fveri%C5%9F/id1507132907",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "app.watsons.com.tr",
+          "description": "This is the API server of the Watsons Turkey mobile app",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.watsons.com.tr",
+          "description": "This is the API server for the www.watsons.com.tr website\nAPI spec: https://api.watsons.com.tr/api/v2/api-docs",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "blog.watsons.com.tr",
+          "description": "This is the blog website for Watsons Turkey.",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "campaign.watsons.com.tr",
+          "description": "This is a marketing related application from Watsons Turkey",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "adayevrak.watsons.com.tr",
+          "description": "This is an HR related application from Watsons Turkey",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "katalog.watsons.com.tr",
+          "description": "This is a marketing related application from Watsons Turkey",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "www.watsonsbeautystudio.com",
+          "description": "This is Watsons Turkey's Beauty Studio website",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "ik.watsons.com.tr",
+          "description": "This is an HR related application from Watsons Turkey",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "gc.watsons.com.tr",
+          "description": "This is a marketing related application from Watsons Turkey",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "odul.watsons.com.tr",
+          "description": "This is a marketing related application from Watsons Turkey",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "wasapi.watsons.com.tr",
+          "description": "This is the API server for the odul.watsons.com.tr application",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "media.watsons.com.tr",
+          "description": "This subdomain is used to store static content for the www.watsons.com.tr e-commerce website",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "scp.watsons.com.tr",
+          "description": "This is a supplier portal from Watsons Turkey",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "scpapi.watsons.com.tr",
+          "description": "This is the API server for the supplier portal from Watsons Turkey",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "bulten.watsons.com.tr",
+          "description": "This is a marketing related application from Watsons Turkey",
+          "impact": null
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.watsons.com.tr",
+          "description": "This asset contains all other applications on this wildcard not explicitly mentioned elsewhere in the scope",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "www.drogas.lt",
+          "description": "This is our online retail platform for health and beauty products in Lithuania.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.drogas.lv",
+          "description": "This is our online retail platform for health and beauty products in Latvia.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "android",
+          "endpoint": "Drogas Latvia Android",
+          "description": "This is our Drogas Latvia (Android) app.\nApp link: https://play.google.com/store/apps/details?id=lv.drogas.consumer",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "ios",
+          "endpoint": "Drogas Latvia iOS",
+          "description": "This is our Drogas Latvia (iOS) app.\nApp link: https://apps.apple.com/lv/app/drogas/id1564705644",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "android",
+          "endpoint": "Drogas Lithuania Android",
+          "description": "This is our Drogas Lithuania (Android) app.\nApp link: https://play.google.com/store/apps/details?id=lt.drogas.consumer",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "ios",
+          "endpoint": "Drogas Lithuania iOS",
+          "description": "This is our Drogas Lithuania (iOS) app.\nApp link: https://apps.apple.com/lt/app/drogas/id1571651832",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "app.drogas.lt",
+          "description": "This is the API server of the Drogas Lithuania mobile app",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.drogas.lv",
+          "description": "This is the API server for the www.watsons.com.tr website\nAPI spec: https://api.drogas.lv/api/v2/api-docs",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "media.drogas.lt",
+          "description": "This subdomain is used to store static content for the www.drogas.lt e-commerce website",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "app.drogas.lv",
+          "description": "This is the API server of the Drogas Latvia mobile app",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.drogas.lt",
+          "description": "This is the API server for the www.watsons.com.tr website\nAPI spec: https://api.drogas.lt/api/v2/api-docs",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "media.drogas.lv",
+          "description": "This subdomain is used to store static content for the www.drogas.lv e-commerce website",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "campaign.drogas.lt",
+          "description": "This is a marketing related application from Drogas",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "campaign.drogas.lv",
+          "description": "This is a marketing related application from Drogas",
+          "impact": null
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.drogas.lt",
+          "description": "This asset contains all other applications on this wildcard not explicitly mentioned elsewhere in the scope",
+          "impact": null
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.drogas.lv",
+          "description": "This asset contains all other applications on this wildcard not explicitly mentioned elsewhere in the scope",
+          "impact": null
+        },
+        {
+          "type": "url",
+          "endpoint": "www.moneyback.com.hk",
+          "description": "This is the Moneyback website, our Hong Kong loyalty reward program. MoneyBack has turned shopping into fantastic rewards for families across Hong Kong.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "android",
+          "endpoint": "Moneyback Android",
+          "description": "This is our Moneyback (Android) app.\nApp link: https://play.google.com/store/apps/details?id=com.asw.moneyback",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "ios",
+          "endpoint": "Moneyback iOS",
+          "description": "This is our Moneyback (iOS) app.\nApp link: https://apps.apple.com/hk/app/moneyback/id1230818544",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "mapi.moneyback.com.hk",
+          "description": "This is the API Server for our MoneyBack Mobile app.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.moneyback.com.hk",
+          "description": "This asset contains all other applications on this wildcard not explicitly mentioned elsewhere in the scope",
+          "impact": null
         }
       ],
       "out_of_scope": []
