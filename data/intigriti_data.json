@@ -49,6 +49,49 @@
     }
   },
   {
+    "id": "554fc6c5-4ffa-4682-a3ba-7e86696e9b17",
+    "name": "Aikido Security: Bug Bounty Program",
+    "company_handle": "aikido",
+    "handle": "aikido",
+    "url": "https://www.intigriti.com/programs/aikido/aikido/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 50,
+      "currency": "EUR"
+    },
+    "max_bounty": {
+      "value": 2500,
+      "currency": "EUR"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "other",
+          "endpoint": "https://marketplace.visualstudio.com/items?itemName=AikidoSecurity.aikido",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "app.aikido.dev",
+          "description": "This is our main application, which hosts the API as well as the front-end application.\n\nOur public API is also accessible via this host. Documentation is available here: https://apidocs.aikido.dev/.",
+          "impact": "Tier 2"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "wildcard",
+          "endpoint": "*.aikido.dev",
+          "description": null,
+          "impact": "Out of scope"
+        }
+      ]
+    }
+  },
+  {
     "id": "30f445f7-ca4c-4130-9434-49add5c6ac74",
     "name": "Algemeen Dagblad",
     "company_handle": "dpgm",
@@ -3239,43 +3282,43 @@
           "type": "ios",
           "endpoint": "https://apps.apple.com/us/app/donorbox-live/id1668808097",
           "description": "Donorbox Live is a mobile app that allows orgs to connect Stripe-sanctioned card readers and accept in person payments. See the infrastructure section below for details.",
-          "impact": "Tier 1"
+          "impact": "No Bounty"
         },
         {
           "type": "url",
           "endpoint": "https://donorbox.org/admin",
           "description": "This is the customer support admin console used by Donorbox employees. A donorbox.org account (signed in via Google SSO and with MFA enabled) is required to access this. Additionally, you must be invited to the Rebel Idealist organization in order to gain initial admin access. Please report any unauthorized access to this page.",
-          "impact": "Tier 1"
+          "impact": "No Bounty"
         },
         {
           "type": "android",
           "endpoint": "https://play.google.com/store/apps/details?id=org.donorbox.cardreader&hl=en&gl=US",
           "description": "Donorbox Live is a mobile app that allows orgs to connect Stripe-sanctioned card readers and accept in person payments. See the infrastructure section below for details.",
-          "impact": "Tier 1"
+          "impact": "No Bounty"
         },
         {
           "type": "url",
           "endpoint": "https://donorbox.org",
           "description": "This is the website which includes any page you can navigate to from www.donorbox.org, e.g., www.donorbox.org/pricing.",
-          "impact": "Tier 2"
+          "impact": "No Bounty"
         },
         {
           "type": "url",
           "endpoint": "https://donorbox.org/embed/potato",
           "description": "This is an example of an embed form. Embed forms can be added to a separate website used by the organization. Changing the organization who receives the donation (aka hijacking) or providing fraudulent donations (like a double refund) should not be possible.",
-          "impact": "Tier 2"
+          "impact": "No Bounty"
         },
         {
           "type": "url",
           "endpoint": "https://donorbox.org/org_admin",
           "description": "This is the admin console for organizations. When customers create an org account, they will be directed here to make changes such as creating a campaign, connecting Stripe or PayPal, and changing the donation form. Donor information and donations can be viewed.",
-          "impact": "Tier 2"
+          "impact": "No Bounty"
         },
         {
           "type": "url",
           "endpoint": "https://donorbox.org/potato",
           "description": "This is an example of a hosted page, which lives under the host domain. Hosted pages are provided for organizations to use as their main website if they don't already have one. When a new donation form is created, a hosted page gets created by default.",
-          "impact": "Tier 2"
+          "impact": "No Bounty"
         }
       ],
       "out_of_scope": []
@@ -5926,6 +5969,79 @@
     }
   },
   {
+    "id": "9889b03a-9d1e-44fd-b635-af6e8bd72950",
+    "name": "Liferay VDP",
+    "company_handle": "liferay",
+    "handle": "liferay-vdp",
+    "url": "https://www.intigriti.com/programs/liferay/liferay-vdp/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 0,
+      "currency": "USD"
+    },
+    "max_bounty": {
+      "value": 0,
+      "currency": "USD"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "url",
+          "endpoint": "www.liferay.com",
+          "description": "Liferay Corporate Website/Marketing Portal - The primary public-facing corporate and marketing website. Contains general company information, product pages, and non-customer/non-developer functionality.",
+          "impact": "No Bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "liferay.dev",
+          "description": "Liferay Developer Portal & Community Forums - The central hub for Liferay developers and the community. Includes forums, blogs, technical documentation, and community features (user registration, profiles, and content submission).",
+          "impact": "No Bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "learn.liferay.com",
+          "description": "Liferay Learning & Documentation Center - The official documentation and training resource for Liferay products (e.g., Liferay DXP). Primarily a content consumption site.",
+          "impact": "No Bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "support.liferay.com",
+          "description": "Liferay Customer/Support Portal - The customer and partner support ticketing system/knowledge base. Requires customer/partner login credentials to access private support features.",
+          "impact": "No Bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "marketplace.liferay.com",
+          "description": "Liferay App Marketplace - Platform for finding and downloading apps and extensions for Liferay DXP/Portal. Involves user accounts for purchasing/downloading.",
+          "impact": "No Bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "console.liferay.cloud",
+          "description": "Liferay Cloud (PaaS/SaaS) Platform - This should cover publicly accessible components of the Liferay Cloud Platform. This is the main application hosting environment for customer deployments.",
+          "impact": "No Bounty"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.liferay.com",
+          "description": "Any domain or web application owned and operated by Liferay, Inc. that are not based on Liferay Portal or Liferay DXP software.",
+          "impact": "No Bounty"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "url",
+          "endpoint": "login.liferay.com",
+          "description": null,
+          "impact": "Out of scope"
+        }
+      ]
+    }
+  },
+  {
     "id": "ad2bd496-536c-4c24-b885-ce01d66966b9",
     "name": "Marionnaud",
     "company_handle": "aswatson",
@@ -6523,109 +6639,6 @@
         }
       ],
       "out_of_scope": []
-    }
-  },
-  {
-    "id": "23f5d877-7948-4740-830c-393e66753fc4",
-    "name": "Monzo Public Bug Bounty Program",
-    "company_handle": "monzobank",
-    "handle": "monzopublicbugbountyprogram",
-    "url": "https://www.intigriti.com/programs/monzobank/monzopublicbugbountyprogram/detail",
-    "status": "open",
-    "confidentiality_level": "public",
-    "tacRequired": false,
-    "twoFactorRequired": false,
-    "min_bounty": {
-      "value": 50,
-      "currency": "GBP"
-    },
-    "max_bounty": {
-      "value": 12500,
-      "currency": "GBP"
-    },
-    "targets": {
-      "in_scope": [
-        {
-          "type": "wildcard",
-          "endpoint": "*.monzo.com",
-          "description": "The crux of Monzo where the APIs live as well as Monzo Business. Excludes the main website (like `monzo.com`/`www.monzo.com`).",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.prod-ffs.io",
-          "description": "Where our internet-facing services are accessed",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "ios",
-          "endpoint": "1052238659",
-          "description": "The public seed of the Monzo app on iOS",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "android",
-          "endpoint": "co.uk.getmondo",
-          "description": "The public seed of the Monzo app on Android",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "www.monzo.com",
-          "description": null,
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "monzo.com",
-          "description": null,
-          "impact": "Tier 3"
-        }
-      ],
-      "out_of_scope": [
-        {
-          "type": "wildcard",
-          "endpoint": "*/p2p/*",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*/contact-discovery/*",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*/inbound-p2p/*",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.monzo.me",
-          "description": "Houses the services for the pay me/request payment feature",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "community.monzo.com",
-          "description": "We use a third-party, Discourse for our community forums. Third-parties are out of scope for our programs.",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "login.internal.monzo.com",
-          "description": "This is our connection to Okta for internal authentication. Third-parties are out of scope for our programs. ",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "monzo.me",
-          "description": "Monzo.me is a service that allows Monzo users to easily receive money from others via a personalised link, even if the sender doesn't have a Monzo account.",
-          "impact": "Out of scope"
-        }
-      ]
     }
   },
   {
@@ -11692,90 +11705,6 @@
           "impact": "Out of scope"
         }
       ]
-    }
-  },
-  {
-    "id": "92431bf9-ab3e-4e69-9619-c59f8e5193b1",
-    "name": "Voi Scooters",
-    "company_handle": "voi",
-    "handle": "voiscooters",
-    "url": "https://www.intigriti.com/programs/voi/voiscooters/detail",
-    "status": "open",
-    "confidentiality_level": "public",
-    "tacRequired": false,
-    "twoFactorRequired": false,
-    "min_bounty": {
-      "value": 0,
-      "currency": "EUR"
-    },
-    "max_bounty": {
-      "value": 3500,
-      "currency": "EUR"
-    },
-    "targets": {
-      "in_scope": [
-        {
-          "type": "ios",
-          "endpoint": "1395921017",
-          "description": "iOS Mobile Application",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "https://api.voiapp.io/",
-          "description": "Backend REST API",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "android",
-          "endpoint": "io.voiapp.voi",
-          "description": "Android Mobile Application",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "fm.voiapp.io",
-          "description": null,
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "mds.voiapp.io",
-          "description": "Partner API as documented at https://docs.voi.com/",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.voi.com",
-          "description": "This wildcard is intended to cover internally developed applications",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "https://repair.voiweb.net",
-          "description": null,
-          "impact": "Tier 3"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.voiscooters.com",
-          "description": null,
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "report.voi.com",
-          "description": "Website to report badly parked scooters.",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "voi.com",
-          "description": "Informational Website",
-          "impact": "Tier 3"
-        }
-      ],
-      "out_of_scope": []
     }
   },
   {
