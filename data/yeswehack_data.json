@@ -923,7 +923,7 @@
     "disabled": false,
     "managed": null,
     "min_bounty": 200,
-    "max_bounty": 3000,
+    "max_bounty": 1000,
     "targets": {
       "in_scope": [
         {
@@ -953,7 +953,19 @@
       ],
       "out_of_scope": [
         {
-          "target": "Distributed attacks (scraping must be done using only 1 IP at a time).",
+          "target": "* Distributed attacks (scraping must be performed from a single IP at a time)",
+          "type": "other"
+        },
+        {
+          "target": "* Denial of service attacks or any technique whose goal is to degrade infrastructure availability. This falls outside the scope of bot protection bypass and will not be rewarded.",
+          "type": "other"
+        },
+        {
+          "target": "* Social engineering of DataDome employees or contractors",
+          "type": "other"
+        },
+        {
+          "target": "* Client-side web vulnerabilities",
           "type": "other"
         }
       ]
