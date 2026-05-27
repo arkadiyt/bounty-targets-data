@@ -97,6 +97,79 @@
     }
   },
   {
+    "id": "badcb3b0-34be-4bd1-9186-7678aa5b5d17",
+    "name": "Allegro",
+    "company_handle": "allegro",
+    "handle": "allegrobugbounty",
+    "url": "https://www.intigriti.com/programs/allegro/allegrobugbounty/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 100,
+      "currency": "EUR"
+    },
+    "max_bounty": {
+      "value": 4000,
+      "currency": "EUR"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "wildcard",
+          "endpoint": "*.allegro.cz.allegrosandbox.pl",
+          "description": "Allegro sandbox environment for the Czech Republic.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.allegro.pl.allegrosandbox.pl",
+          "description": "The main sandbox environment that replicates Allegro production. For more information please visit [developer website](https://developer.allegro.pl/tutorials/basic-information-VL6YelvVKTn#test-environment).",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.allegro.sk.allegrosandbox.pl",
+          "description": "Allegro sandbox environment for Slovakia.",
+          "impact": "Tier 2"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "wildcard",
+          "endpoint": "*.allegro.cz",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.allegro.pl",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.allegro.sk",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.allegrogroup.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "other",
+          "endpoint": "Any production website owned by Allegro not listed in Domains",
+          "description": null,
+          "impact": "Out of scope"
+        }
+      ]
+    }
+  },
+  {
     "id": "e2a235f3-6a95-4134-a165-aa48e9632f47",
     "name": "Anaconda Vulnerability Disclosure Program",
     "company_handle": "anacondainc",
@@ -1496,145 +1569,6 @@
         }
       ],
       "out_of_scope": []
-    }
-  },
-  {
-    "id": "48853273-690a-4555-8ac5-821a1c464312",
-    "name": "Capital.com",
-    "company_handle": "capitalcom",
-    "handle": "capitalcom",
-    "url": "https://www.intigriti.com/programs/capitalcom/capitalcom/detail",
-    "status": "open",
-    "confidentiality_level": "public",
-    "tacRequired": false,
-    "twoFactorRequired": false,
-    "min_bounty": {
-      "value": 0,
-      "currency": "EUR"
-    },
-    "max_bounty": {
-      "value": 15000,
-      "currency": "EUR"
-    },
-    "targets": {
-      "in_scope": [
-        {
-          "type": "url",
-          "endpoint": "payment.backend-capital.com",
-          "description": null,
-          "impact": "Tier 1"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.backend-capital.com",
-          "description": null,
-          "impact": "Tier 2"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "capital.com/*",
-          "description": null,
-          "impact": "Tier 2"
-        },
-        {
-          "type": "ios",
-          "endpoint": "com.capital.trading",
-          "description": "https://apps.apple.com/BY/app/id1230088754?mt=8",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "android",
-          "endpoint": "com.capital.trading",
-          "description": "https://play.google.com/store/apps/details?id=com.capital.trading&hl=en",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "open-api.capital.com",
-          "description": "The Capital.com API allows direct access to the latest version of our trading engine.",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.capital.com",
-          "description": null,
-          "impact": "Tier 3"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.itcapital.io",
-          "description": null,
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "aff.capital.com",
-          "description": null,
-          "impact": "No Bounty"
-        },
-        {
-          "type": "url",
-          "endpoint": "go.capital.com",
-          "description": null,
-          "impact": "No Bounty"
-        },
-        {
-          "type": "url",
-          "endpoint": "register.capital.com",
-          "description": null,
-          "impact": "No Bounty"
-        },
-        {
-          "type": "url",
-          "endpoint": "careers.capital.com",
-          "description": null,
-          "impact": "No Bounty"
-        }
-      ],
-      "out_of_scope": [
-        {
-          "type": "wildcard",
-          "endpoint": "*affiliates.backend-capital.com",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*eduapp.backend-capital.com",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*education.backend-capital.com",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "help.capital.com",
-          "description": "CNAME to Zendesk",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "relocate-with-us.capital.com",
-          "description": "CNAME to Webflow",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "3cxby.itcapital.io",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "texis.itcapital.io",
-          "description": null,
-          "impact": "Out of scope"
-        }
-      ]
     }
   },
   {
