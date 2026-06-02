@@ -1499,145 +1499,6 @@
     }
   },
   {
-    "id": "48853273-690a-4555-8ac5-821a1c464312",
-    "name": "Capital.com",
-    "company_handle": "capitalcom",
-    "handle": "capitalcom",
-    "url": "https://www.intigriti.com/programs/capitalcom/capitalcom/detail",
-    "status": "open",
-    "confidentiality_level": "public",
-    "tacRequired": false,
-    "twoFactorRequired": false,
-    "min_bounty": {
-      "value": 0,
-      "currency": "EUR"
-    },
-    "max_bounty": {
-      "value": 15000,
-      "currency": "EUR"
-    },
-    "targets": {
-      "in_scope": [
-        {
-          "type": "url",
-          "endpoint": "payment.backend-capital.com",
-          "description": null,
-          "impact": "Tier 1"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.backend-capital.com",
-          "description": null,
-          "impact": "Tier 2"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "capital.com/*",
-          "description": null,
-          "impact": "Tier 2"
-        },
-        {
-          "type": "ios",
-          "endpoint": "com.capital.trading",
-          "description": "https://apps.apple.com/BY/app/id1230088754?mt=8",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "android",
-          "endpoint": "com.capital.trading",
-          "description": "https://play.google.com/store/apps/details?id=com.capital.trading&hl=en",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "open-api.capital.com",
-          "description": "The Capital.com API allows direct access to the latest version of our trading engine.",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.capital.com",
-          "description": null,
-          "impact": "Tier 3"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.itcapital.io",
-          "description": null,
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "aff.capital.com",
-          "description": null,
-          "impact": "No Bounty"
-        },
-        {
-          "type": "url",
-          "endpoint": "go.capital.com",
-          "description": null,
-          "impact": "No Bounty"
-        },
-        {
-          "type": "url",
-          "endpoint": "register.capital.com",
-          "description": null,
-          "impact": "No Bounty"
-        },
-        {
-          "type": "url",
-          "endpoint": "careers.capital.com",
-          "description": null,
-          "impact": "No Bounty"
-        }
-      ],
-      "out_of_scope": [
-        {
-          "type": "wildcard",
-          "endpoint": "*affiliates.backend-capital.com",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*eduapp.backend-capital.com",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*education.backend-capital.com",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "help.capital.com",
-          "description": "CNAME to Zendesk",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "relocate-with-us.capital.com",
-          "description": "CNAME to Webflow",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "3cxby.itcapital.io",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "texis.itcapital.io",
-          "description": null,
-          "impact": "Out of scope"
-        }
-      ]
-    }
-  },
-  {
     "id": "96d3f49a-4c5f-4bc8-835a-77f734eefe4e",
     "name": "Citymesh Responsible Vulnerability Disclosure Program",
     "company_handle": "citymesh",
@@ -11288,6 +11149,157 @@
         }
       ],
       "out_of_scope": []
+    }
+  },
+  {
+    "id": "30a91ad4-fb06-4f0c-ae96-7f5167a840db",
+    "name": "Vinted - Bug Bounty Program",
+    "company_handle": "vinted",
+    "handle": "vinted-bugbountyprogram",
+    "url": "https://www.intigriti.com/programs/vinted/vinted-bugbountyprogram/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 5,
+      "currency": "EUR"
+    },
+    "max_bounty": {
+      "value": 2300,
+      "currency": "EUR"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "wildcard",
+          "endpoint": "*.vinted.net",
+          "description": null,
+          "impact": "Tier 1"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.vinted.com",
+          "description": null,
+          "impact": "Tier 1"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.vinted.fr",
+          "description": null,
+          "impact": "Tier 1"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.vintedgo.com",
+          "description": "Vinted shipping website",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "ios",
+          "endpoint": "Vinted: Shop & sell pre-loved",
+          "description": "iOS application for Vinted",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "android",
+          "endpoint": "Vinted: Shop & sell pre-loved",
+          "description": "Android application for Vinted",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*sandbox*.vintedgo.com",
+          "description": null,
+          "impact": "Tier 3"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*sandbox*.vinted.com",
+          "description": null,
+          "impact": "Tier 3"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*old.vinted.com",
+          "description": null,
+          "impact": "Tier 3"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*test-escalations.vintedgo.com",
+          "description": null,
+          "impact": "Tier 3"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*badger.it.vinted.com",
+          "description": null,
+          "impact": "Tier 3"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*careers.vinted.com",
+          "description": null,
+          "impact": "Tier 3"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*news.vinted.com",
+          "description": null,
+          "impact": "Tier 3"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*company.vinted.com",
+          "description": null,
+          "impact": "Tier 3"
+        },
+        {
+          "type": "other",
+          "endpoint": "Scam",
+          "description": "Non-public source code of any automated tool made for Vinted. Failing that: detailed analysis of the tool with identifiable results of its action (such as servers, users or items impacted and time of impact, preferably in a video format)\n\nInside knowledge of any groups working on Vinted (related to scams, fraud, counterfeits, dropshipping, shipment abuse, or any other type of abuse) that would lead to actionable results (tutorials, methods, patterns of operation, infrastructure, indicators of vulnerabilities)\n\nWe are interested in compromised Vinted employees.",
+          "impact": null
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "url",
+          "endpoint": "api.prod.svc.vintedpay.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "callbacks.prod.svc.vintedpay.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.homerr.com",
+          "description": "One of our sister company for shipping",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*vintedpay.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.vinted.ca ",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.people.vinted.*",
+          "description": null,
+          "impact": "Out of scope"
+        }
+      ]
     }
   },
   {
