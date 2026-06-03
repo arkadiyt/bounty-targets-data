@@ -8759,97 +8759,6 @@
     }
   },
   {
-    "name": "Etsy",
-    "url": "https://bugcrowd.com/engagements/etsy",
-    "allows_disclosure": true,
-    "managed_by_bugcrowd": true,
-    "safe_harbor": "partial",
-    "max_payout": 10000,
-    "targets": {
-      "in_scope": [
-        {
-          "type": "website",
-          "target": "https://www.etsy.com",
-          "uri": "https://www.etsy.com",
-          "name": "www.etsy.com",
-          "ipAddress": null
-        },
-        {
-          "type": "android",
-          "target": "https://www.etsy.com/mobile",
-          "uri": "https://www.etsy.com/mobile",
-          "name": "Etsy Mobile Application (Android)",
-          "ipAddress": null
-        },
-        {
-          "type": "ios",
-          "target": "https://www.etsy.com/mobile",
-          "uri": "https://www.etsy.com/mobile",
-          "name": "Etsy Mobile Application (iPhone)",
-          "ipAddress": null
-        },
-        {
-          "type": "api",
-          "target": "https://www.etsy.com/developers/documentation/getting_started/api_basics",
-          "uri": "https://www.etsy.com/developers/documentation/getting_started/api_basics",
-          "name": "Etsy API (see documentation below)",
-          "ipAddress": null
-        },
-        {
-          "type": "other",
-          "target": "https://etsypayments.com",
-          "uri": "https://etsypayments.com",
-          "name": "etsypayments.com",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "https://blog.etsy.com",
-          "uri": "https://blog.etsy.com",
-          "name": "blog.etsy.com",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "https://careers.etsy.com",
-          "uri": "https://careers.etsy.com",
-          "name": "careers.etsy.com",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "https://help.etsy.com",
-          "uri": "https://help.etsy.com",
-          "name": "help.etsy.com",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "https://community.etsy.com",
-          "uri": "https://community.etsy.com",
-          "name": "community.etsy.com",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "*.etsy.com",
-          "uri": "",
-          "name": "*.etsy.com",
-          "ipAddress": ""
-        }
-      ],
-      "out_of_scope": [
-        {
-          "type": "api",
-          "target": "icht.etsysecure.com",
-          "uri": null,
-          "name": "icht.etsysecure.com",
-          "ipAddress": null
-        }
-      ]
-    }
-  },
-  {
     "name": "Felix Health Managed Bug Bounty Engagement",
     "url": "https://bugcrowd.com/engagements/felix-health-mbb-og",
     "allows_disclosure": false,
@@ -24116,6 +24025,68 @@
           "ipAddress": null
         }
       ]
+    }
+  },
+  {
+    "name": "STAGIL Marketplace Bug Bounty",
+    "url": "https://bugcrowd.com/engagements/stagil",
+    "allows_disclosure": false,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "full",
+    "max_payout": 1500,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "website",
+          "target": "https://marketplace.atlassian.com/apps/1213893/stagil-issue-templates-schedule-create-and-link?hosting=cloud&tab=overview",
+          "uri": "https://marketplace.atlassian.com/apps/1213893/stagil-issue-templates-schedule-create-and-link?hosting=cloud&tab=overview",
+          "name": "https://marketplace.atlassian.com/apps/1213893/stagil-issue-templates-schedule-create-and-link?hosting=cloud&tab=overview",
+          "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "https://marketplace.atlassian.com/apps/1215311/stagil-assets-advanced-links-data-model-matrix-structure?tab=overview&hosting=cloud",
+          "uri": "https://marketplace.atlassian.com/apps/1215311/stagil-assets-advanced-links-data-model-matrix-structure?tab=overview&hosting=cloud",
+          "name": "https://marketplace.atlassian.com/apps/1215311/stagil-assets-advanced-links-data-model-matrix-structure?tab=overview&hosting=cloud",
+          "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "https://marketplace.atlassian.com/apps/1215391/stagil-incoming-links?hosting=cloud&tab=overview",
+          "uri": "https://marketplace.atlassian.com/apps/1215391/stagil-incoming-links?hosting=cloud&tab=overview",
+          "name": "https://marketplace.atlassian.com/apps/1215391/stagil-incoming-links?hosting=cloud&tab=overview",
+          "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "https://marketplace.atlassian.com/apps/1219099/stagil-tables-todo-checklists-reports-statistics?hosting=cloud&tab=overview",
+          "uri": "https://marketplace.atlassian.com/apps/1219099/stagil-tables-todo-checklists-reports-statistics?hosting=cloud&tab=overview",
+          "name": "https://marketplace.atlassian.com/apps/1219099/stagil-tables-todo-checklists-reports-statistics?hosting=cloud&tab=overview",
+          "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "https://marketplace.atlassian.com/apps/1232798/fillchecker-timesheet-checks-and-reports-for-jira?hosting=cloud&tab=overview",
+          "uri": "https://marketplace.atlassian.com/apps/1232798/fillchecker-timesheet-checks-and-reports-for-jira?hosting=cloud&tab=overview",
+          "name": "https://marketplace.atlassian.com/apps/1232798/fillchecker-timesheet-checks-and-reports-for-jira?hosting=cloud&tab=overview",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "https://marketplace.atlassian.com/apps/1217026/stagil-tasks-jira-issues-tables-macro-for-confluence?hosting=cloud&tab=overview",
+          "uri": "https://marketplace.atlassian.com/apps/1217026/stagil-tasks-jira-issues-tables-macro-for-confluence?hosting=cloud&tab=overview",
+          "name": "https://marketplace.atlassian.com/apps/1217026/stagil-tasks-jira-issues-tables-macro-for-confluence?hosting=cloud&tab=overview",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "https://marketplace.atlassian.com/apps/1211243/timetracker-time-tracking-timesheet-reporting-for-jira?hosting=cloud&tab=overview",
+          "uri": "https://marketplace.atlassian.com/apps/1211243/timetracker-time-tracking-timesheet-reporting-for-jira?hosting=cloud&tab=overview",
+          "name": "https://marketplace.atlassian.com/apps/1211243/timetracker-time-tracking-timesheet-reporting-for-jira?hosting=cloud&tab=overview",
+          "ipAddress": ""
+        }
+      ],
+      "out_of_scope": []
     }
   },
   {
