@@ -97,6 +97,79 @@
     }
   },
   {
+    "id": "badcb3b0-34be-4bd1-9186-7678aa5b5d17",
+    "name": "Allegro",
+    "company_handle": "allegro",
+    "handle": "allegrobugbounty",
+    "url": "https://www.intigriti.com/programs/allegro/allegrobugbounty/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 100,
+      "currency": "EUR"
+    },
+    "max_bounty": {
+      "value": 4000,
+      "currency": "EUR"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "wildcard",
+          "endpoint": "*.allegro.cz.allegrosandbox.pl",
+          "description": "Allegro sandbox environment for the Czech Republic.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.allegro.pl.allegrosandbox.pl",
+          "description": "The main sandbox environment that replicates Allegro production. For more information please visit [developer website](https://developer.allegro.pl/tutorials/basic-information-VL6YelvVKTn#test-environment).",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.allegro.sk.allegrosandbox.pl",
+          "description": "Allegro sandbox environment for Slovakia.",
+          "impact": "Tier 2"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "wildcard",
+          "endpoint": "*.allegro.cz",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.allegro.pl",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.allegro.sk",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.allegrogroup.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "other",
+          "endpoint": "Any production website owned by Allegro not listed in Domains",
+          "description": null,
+          "impact": "Out of scope"
+        }
+      ]
+    }
+  },
+  {
     "id": "611efbaa-333e-4b7c-a3c0-89665abd3fe3",
     "name": "Altera",
     "company_handle": "altera",
@@ -6337,109 +6410,6 @@
         }
       ],
       "out_of_scope": []
-    }
-  },
-  {
-    "id": "23f5d877-7948-4740-830c-393e66753fc4",
-    "name": "Monzo Public Bug Bounty Program",
-    "company_handle": "monzobank",
-    "handle": "monzopublicbugbountyprogram",
-    "url": "https://www.intigriti.com/programs/monzobank/monzopublicbugbountyprogram/detail",
-    "status": "open",
-    "confidentiality_level": "public",
-    "tacRequired": false,
-    "twoFactorRequired": false,
-    "min_bounty": {
-      "value": 50,
-      "currency": "GBP"
-    },
-    "max_bounty": {
-      "value": 12500,
-      "currency": "GBP"
-    },
-    "targets": {
-      "in_scope": [
-        {
-          "type": "wildcard",
-          "endpoint": "*.monzo.com",
-          "description": "The crux of Monzo where the APIs live as well as Monzo Business. Excludes the main website (like `monzo.com`/`www.monzo.com`).",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.prod-ffs.io",
-          "description": "Where our internet-facing services are accessed",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "ios",
-          "endpoint": "1052238659",
-          "description": "The public seed of the Monzo app on iOS",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "android",
-          "endpoint": "co.uk.getmondo",
-          "description": "The public seed of the Monzo app on Android",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "www.monzo.com",
-          "description": null,
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "monzo.com",
-          "description": null,
-          "impact": "Tier 3"
-        }
-      ],
-      "out_of_scope": [
-        {
-          "type": "wildcard",
-          "endpoint": "*/p2p/*",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*/contact-discovery/*",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*/inbound-p2p/*",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.monzo.me",
-          "description": "Houses the services for the pay me/request payment feature",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "community.monzo.com",
-          "description": "We use a third-party, Discourse for our community forums. Third-parties are out of scope for our programs.",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "login.internal.monzo.com",
-          "description": "This is our connection to Okta for internal authentication. Third-parties are out of scope for our programs. ",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "monzo.me",
-          "description": "Monzo.me is a service that allows Monzo users to easily receive money from others via a personalised link, even if the sender doesn't have a Monzo account.",
-          "impact": "Out of scope"
-        }
-      ]
     }
   },
   {
