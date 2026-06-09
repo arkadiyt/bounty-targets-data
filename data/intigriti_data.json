@@ -1428,6 +1428,150 @@
     }
   },
   {
+    "id": "efd8bd86-a986-4b4a-9eda-c9a6a1a6b540",
+    "name": "CM.com",
+    "company_handle": "cmcom",
+    "handle": "cmcom",
+    "url": "https://www.intigriti.com/programs/cmcom/cmcom/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 25,
+      "currency": "EUR"
+    },
+    "max_bounty": {
+      "value": 3500,
+      "currency": "EUR"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "url",
+          "endpoint": "login.cm.com",
+          "description": null,
+          "impact": "Tier 1"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.ticketing.cm.com",
+          "description": "Login to your account and go to https://www.cm.com/en-gb/app/ticketing/\nFrom here you can create tickets and much more!\nMake sure to take a look at the user-side ticket store as well (https://store.ticketing.cm.com/..)",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.cm.com",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.cmtelecom.com",
+          "description": "Some of the applications that are in our scope use our old api. \nIf you find a bug on this api and it is from a product that is in scope, it is valid.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "cm.com/[locale]/app/*",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "cm.com/[locale]/register",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "appmiral.com",
+          "description": null,
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "building-blocks.com",
+          "description": null,
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "cm.com/app/messagingtrial/",
+          "description": "An application that makes it possible for developers to do a limited test of sending messages using the CM.COM business messaging API.\n\nWhat we would like to know is:\n* Can the application be exploited to allow sending more than the allowed number of messages?\n* Can the app be exploited to send to other recipients besides the whitelisted recipients?",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "cmcom.atlassian.net",
+          "description": null,
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.cm.com",
+          "description": null,
+          "impact": "Tier 3"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.appmiral.com",
+          "description": null,
+          "impact": "No Bounty"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.cm.com",
+          "description": null,
+          "impact": "No Bounty"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.cmtelecom.com",
+          "description": null,
+          "impact": "No Bounty"
+        },
+        {
+          "type": "ios",
+          "endpoint": "1199521324",
+          "description": "Right now we don't have a way to make test accounts for these apps, this will be added in the future",
+          "impact": "No Bounty"
+        },
+        {
+          "type": "ios",
+          "endpoint": "1579530451",
+          "description": "Right now we don't have a way to make test accounts for these apps, this will be added in the future",
+          "impact": "No Bounty"
+        },
+        {
+          "type": "android",
+          "endpoint": "com.cm.cashregister",
+          "description": "Right now we don't have a way to make test accounts for these apps, this will be added in the future",
+          "impact": "No Bounty"
+        },
+        {
+          "type": "android",
+          "endpoint": "com.ticketflow.ticketscanner",
+          "description": "Right now we don't have a way to make test accounts for these apps, this will be added in the future",
+          "impact": "No Bounty"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "demo.globalticket.com/*",
+          "description": "GlobalTicket is one of our integrations. \nBe sure to check out `/cms` to try and work your way into it.",
+          "impact": "No Bounty"
+        },
+        {
+          "type": "other",
+          "endpoint": "https://github.com/cmdotcom",
+          "description": "Our public code repositories are being used by our customers. In scope for this domain is issues with the public code we host (vulnerabilities, libraries that have known security concerns, keys accidentally pushed to the public GitHub etc.). \n**Testing the GitHub itself is out-of-scope**, they have their own bug bounty program if you are interested :)  ",
+          "impact": "No Bounty"
+        }
+      ],
+      "out_of_scope": []
+    }
+  },
+  {
     "id": "0083a5bf-e54f-4f79-a972-12a795272c8b",
     "name": "Canada Post - Responsible Disclosure Program",
     "company_handle": "innovapost",
@@ -7612,19 +7756,38 @@
     "targets": {
       "in_scope": [
         {
-          "type": "url",
-          "endpoint": "iqoption.com",
-          "description": "> **Description:** A trading platform with self-registration option\n> This Tier is concentrated within any security issues which are related to trading areas such as exchange, withdrawal, deposit, and other billing-related operations\n> List of countries where the service is restricted (see FAQ section):\n> Registration is available via  [link](https://iqoption.com/en/register)",
-          "impact": "Tier 1"
+          "type": "other",
+          "endpoint": "Trading Scope",
+          "description": "## Description\n\nA trading platform with open self-registration. This scope covers security issues affecting trading-related and billing operations — exchange, deposit, withdrawal, refund, bonuses, and identity verification (KYC).\n\n- Registration: https://eu.iqoption.com/en/register\n\n## Assets\n\n```\niqoption.com\n*.iqoption.com\n```\n\n## What this scope covers\n\nThis scope is about flaws in the **trading, payment, and verification logic itself** — business-logic, flow, and architectural issues that let a user perform monetary or verification operations which deviate from the intended behaviour and can cause financial or regulatory harm to the company. Typical impact: creating or inflating funds out of nothing, moving money out in ways the flow should not allow, abusing bonuses, or bypassing KYC.\n\n> **The vulnerability must reside in the money/verification flow itself.** A monetary loss achieved through otherwise legitimate functionality after a separate compromise — for example, taking over an account via XSS, CSRF, IDOR, or leaked credentials and then using the normal withdrawal feature — is classified under the scope of that underlying vulnerability (e.g. Main Scope), not here. In this scope the unexpected movement of money or bypass of verification **is** the vulnerability, not merely its impact.\n\nIn short, we are looking for cases where an attacker can:\n\n1. Circumvent verification processes for deposits, refunds, or withdrawals.\n2. Manipulate system logic to bypass restrictions (e.g. the withdrawal block for non-verified users).\n3. Gain unauthorized access to funds or perform operations contrary to the intended flow — e.g. balance inflation, bonus abuse, double-spending, or rounding/arithmetic flaws affecting monetary calculations.\n\n## User & verification model\n\n**Non-verified users** — identity not confirmed (no KYC).\n- Allowed: deposit funds (no limit); refund deposited funds to the original card.\n- Restricted: all withdrawals other than card-based refunds are blocked; winnings cannot be withdrawn without triggering verification.\n\n**Verified users** — identity confirmed via official documents (e.g. passport).\n- All operations (deposit, withdrawal, refund) are gated by verification, starting from the first deposit.\n\n## In-scope vulnerability classes\n\n### Document integrity\n- Forged, AI-generated, or altered documents passing verification undetected, including repeated submission of modified versions of the same document.\n- Tampering with uploaded document metadata to bypass manual review.\n\n### Deposits\n- Inflating account balance without an actual payment (tampering with transaction requests/responses).\n- Using a verification-required payment method — or one disabled in the UI for a given country — via direct API calls.\n- Duplicate / replayed deposit transactions, or modified deposit amounts.\n\n### Withdrawals\n- Withdrawing funds (including winnings) to a card other than the deposit card without triggering verification where it should be required.\n- Withdrawing or refunding funds beyond the amount eligible — e.g. a non-verified user getting back more than was deposited, or before a refund is completed.\n- Inconsistencies between client-side and server-side enforcement of withdrawal blocks.\n- Altering withdrawal limits or changing the beneficiary account/card via the API.\n\n### Refunds\n- Issuing multiple refunds for a single deposit (double refunds), or refunding more than the original deposit amount.\n- Using the refund flow to cash out funds unrelated to the original deposit (e.g. winnings).\n- Manipulating another account's transaction ID to trigger an unauthorized refund, or redirecting a refund to an unauthorized account/card.\n- Triggering refunds without the proper KYC checks.\n\n### Bonuses & promo codes\n- Any use of bonuses or promo codes outside their intended scenario that produces a monetary or security impact. This includes, but is not limited to: reuse or replay of single-use codes, multi-accounting / self-referral to farm bonuses, stacking promotions that should not combine, inflating a bonus value, and claiming a promotion the user is not eligible for.\n\n### Authorization on monetary operations\n- Missing or broken ownership / authorization checks on monetary endpoints that allow a user to act on another user's funds or account — for example, an IDOR or parameter swap (user_id, account_id, card_id, transaction_id) that withdraws, refunds, or moves another user's balance, or operates on their billing data. The vulnerability is the absent authorization on the money operation itself, not access obtained through a separate compromise.\n\n### Business logic & payment-gateway integrity\n- Manipulating communication between the platform and the payment gateway, or failed/declined payments still being credited to the account.\n- Double-spending / duplicate processing of the same transaction (e.g. replaying a transaction ID).\n- Rounding or arithmetic errors that create or destroy value.\n- Combining otherwise-legitimate flows to reach an unintended outcome (e.g. using the refund mechanism to circumvent the withdrawal block).",
+          "impact": "No Bounty"
         },
         {
-          "type": "url",
-          "endpoint": "quadcode.com",
-          "description": "> The Quadcode's main webside representing the company information, mission, solutions.\n\n**Registration is not available**",
-          "impact": "Tier 2"
+          "type": "other",
+          "endpoint": "Main Scope",
+          "description": "## Description\n\nThis scope covers general application-security vulnerabilities on the platform that do **not** reside in the trading, payment, or verification (KYC) flows. Issues whose core defect is in the money or verification logic belong to Trading Scope.\n\n## Assets\n\n```\niqoption.com\n*.iqoption.com\n```\n\nThe scope applies to the root domain and all sub-domains, except those listed in the Out of Scope section.\n\n## What this scope covers\n\nTechnical web-application vulnerabilities affecting the confidentiality, integrity, or availability of the platform and its users, where the flaw is not in a monetary or verification operation itself. Typical classes include (non-exhaustive): XSS, SSRF (reaching internal resources or cloud metadata), injection (SQLi, command, template, etc.), authentication / session / authorization flaws, IDOR on non-monetary objects, access-control bypass, and sensitive-data exposure.\n\n## Relationship to Trading Scope\n\nWhere a vulnerability in this scope produces a monetary or verification impact through otherwise-legitimate functionality — e.g. taking over an account via XSS, IDOR, or leaked credentials and then using the normal withdrawal or refund feature — the finding is classified here, under the underlying vulnerability, not under Trading Scope. Trading Scope is reserved for cases where the unexpected movement of money or bypass of verification **is** the vulnerability.\n\n> **Note:** Account takeover via the `ssid` cookie — arising from the lack of the `HttpOnly` attribute — is a known and accepted issue. A report will not gain additional severity from chaining this vector (e.g. XSS → `ssid` theft → ATO → withdrawal). The underlying vulnerability (e.g. the XSS itself) is still assessed on its own merits.",
+          "impact": "No Bounty"
+        },
+        {
+          "type": "other",
+          "endpoint": "Corporate Scope",
+          "description": "## Description\n\nThe Quadcode corporate website, presenting company information, mission, and solutions.\n\n## Assets\n\n```\nquadcode.com\n*.quadcode.com\n```\n\nThe scope is currently limited to the domains listed above.\n\n## What this scope covers\n\nThe same technical web-application vulnerability classes as Main Scope (XSS, SSRF, injection, authentication / session / authorization flaws, IDOR, access-control bypass, sensitive-data exposure, etc.), as they apply to the corporate website.",
+          "impact": "No Bounty"
+        },
+        {
+          "type": "other",
+          "endpoint": "Asset, Data & Secret Exposure",
+          "description": "## Description\n\nA scope for high-impact findings that fall outside Trading, Main, and Corporate Scope — typically the exposure of Quadcode-owned assets, data, secrets, or infrastructure on systems that are not among the listed in-scope domains. A demonstrated security impact is mandatory; severity is assessed by that impact, as described below.\n\n## What this scope covers\n\nExposure of Quadcode assets, data, or secrets outside the listed scope, **where a concrete security impact can be demonstrated**, including but not limited to:\n\n- Leaked or exposed Quadcode credentials, API keys, tokens, or other secrets — including valid credentials found in breached or leaked databases — where the access or capability they grant is demonstrated.\n- Container images pushed to public registries (e.g. Docker Hub) that expose secrets or other sensitive internal details.\n- Misconfigured or open cloud storage (e.g. S3 buckets) containing Quadcode data.\n- Other comparable exposures with a realistic, serious security impact on Quadcode or its customers.\n\n## Impact, severity, and eligibility\n\n- **A demonstrated security impact is mandatory.** The mere existence of exposed material — a credential string, a token, a public artifact — is **not** sufficient on its own. Findings without a demonstrated impact are out of scope.\n- For reports involving exposed secrets specifically, you must demonstrate that:\n  - the secret belongs to Quadcode;\n  - the secret is currently valid; and\n  - it grants access to non-public resources or data.\n- Demonstrate impact only to the **minimum** extent necessary (e.g. confirm that authentication succeeds); do not go further (see the rules below).\n- Severity reflects the sensitivity of the exposed asset/account and the real, demonstrated impact on Quadcode's infrastructure and customers — not the mere existence of access. Valid credentials or access that pose no direct risk to our customers' data (e.g. those belonging to B2B partners) are treated accordingly.\n- Before reporting, confirm the asset actually belongs to Quadcode. Findings on third-party or unrelated assets are out of scope.\n- We reserve the final right to determine the scope and severity of findings in this area.\n\n## Rules for this scope\n\nThese reinforce the global Rules of Engagement and apply strictly here:\n\n- **Demonstrate impact only to the minimum required, then stop.** Confirm the exposure is real and exploitable (e.g. that a credential authenticates), but do not access, download, or extract data beyond that minimum.\n- Do not pivot, escalate, or use any discovered access to reach further systems.\n- Report immediately and do not retain copies of any exposed data or secrets.",
+          "impact": "No Bounty"
         }
       ],
-      "out_of_scope": []
+      "out_of_scope": [
+        {
+          "type": "wildcard",
+          "endpoint": "*.cpa.iqoption.com",
+          "description": null,
+          "impact": "Out of scope"
+        }
+      ]
     }
   },
   {
@@ -7808,157 +7971,6 @@
         {
           "type": "url",
           "endpoint": "https://pen-app.entrili.com",
-          "description": null,
-          "impact": "Out of scope"
-        }
-      ]
-    }
-  },
-  {
-    "id": "201f8ade-4d93-4d8b-b371-af5ed9d8b837",
-    "name": "RIPE NCC",
-    "company_handle": "ripencc",
-    "handle": "ripencc",
-    "url": "https://www.intigriti.com/programs/ripencc/ripencc/detail",
-    "status": "open",
-    "confidentiality_level": "public",
-    "tacRequired": false,
-    "twoFactorRequired": false,
-    "min_bounty": {
-      "value": 0,
-      "currency": "EUR"
-    },
-    "max_bounty": {
-      "value": 2000,
-      "currency": "EUR"
-    },
-    "targets": {
-      "in_scope": [
-        {
-          "type": "url",
-          "endpoint": "access.ripe.net",
-          "description": "This is the authentication service for our membership and community, mostly used for all of our membership (e.g. LIR) applications.",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "other",
-          "endpoint": "https://github.com/RIPE-NCC/rpki-commons",
-          "description": "This library contains an implementation of an X.509 v3 certificate extension which binds a list of IP address blocks or prefixes to the subject of a certificate (IP Address Delegation Extension).",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "other",
-          "endpoint": "https://github.com/RIPE-NCC/rpki-core",
-          "description": "This repository contains the source code for the RIPE NCC certification. We strive to publish as many components as possible with reasonable effort. Some elements or information are not included, either because of our threat model or because we can not publish them.",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "other",
-          "endpoint": "https://github.com/RIPE-NCC/whois",
-          "description": "RIPE Database whois code repository.",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "lirportal.ripe.net",
-          "description": "Our portal page for LIR's where they can access their information and more.\nSince this portal designed to give access only to LIR's, you can't create an account.\n\n**Until then**;\n\n* Be careful with the unauthorized data access here\n* Limit your tools requests",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.ripe.net",
-          "description": "Our main domain.\nWe suggest you to check out of scope section of our program if you discover any vulnerabilities on this domain or its subdomains.\nTo make your reports better, we suggest you to check the IP address of the asset you've found so you can understand the address if in scope or out of scope.",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "iprange",
-          "endpoint": "193.0.0.0/19 and 2001:67c:2e8::/48",
-          "description": "This is our IP space.\nThe RIPE NCC hosts websites for other organizations and therefore only assets in the ripe.net zones are included.",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "other",
-          "endpoint": "https://github.com/RIPE-NCC/rpki-monitoring",
-          "description": null,
-          "impact": "Tier 2"
-        },
-        {
-          "type": "other",
-          "endpoint": "https://github.com/RIPE-NCC/rpki-publication-server",
-          "description": "This is the RIPE NCC's implementation of RFC 8182 - The RPKI Repository Delta Protocol and a draft of RFC 8181 - A Publication Protocol for the Resource Public Key Infrastructure.",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "other",
-          "endpoint": "https://github.com/RIPE-NCC/rpki-ta-0",
-          "description": null,
-          "impact": "Tier 2"
-        },
-        {
-          "type": "other",
-          "endpoint": "https://github.com/RIPE-NCC/rsyncit",
-          "description": null,
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "Assets owned by RIPE NCC",
-          "description": null,
-          "impact": "No Bounty"
-        }
-      ],
-      "out_of_scope": [
-        {
-          "type": "wildcard",
-          "endpoint": "*.anchors.atlas.ripe.net",
-          "description": "These probes and anchors are not hosted in networks managed by the RIPE NCC, but in networks participating in the RIPE Atlas project. If you find any vulnerabilities for IP addresses associated with RIPE Atlas probes/anchors, you will need to report them to the security teams of the responsible network operators.",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.probes.atlas.ripe.net",
-          "description": "These probes and anchors are not hosted in networks managed by the RIPE NCC, but in networks participating in the RIPE Atlas project. If you find any vulnerabilities for IP addresses associated with RIPE Atlas probes/anchors, you will need to report them to the security teams of the responsible network operators.",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "193.0.0.160/27",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "2001:67c:2e8:3::/64",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "Any *.ripe.net host that is located outside of the in-scope IP ranges ",
-          "description": "The RIPE NCC uses a number of SaaS provider where a *.ripe.net record may point to. However, these services are not maintained by the RIPE NCC and are not part of this Bug Bounty program. If you think a specific host may be in scope, please contact Intigriti Support",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "Any of the beta/dev environments",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "exams.ripe.net",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "RIPE Meeting network (2001:67c:64::/48 and 193.0.24.0/21)",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "ripe(1to87).ripe.net",
           "description": null,
           "impact": "Out of scope"
         }
