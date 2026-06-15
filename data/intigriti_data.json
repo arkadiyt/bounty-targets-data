@@ -5835,133 +5835,6 @@
     }
   },
   {
-    "id": "06ea3a06-58d5-4173-af0e-c2f1f98714c6",
-    "name": "Lansweeper Bug Bounty Program",
-    "company_handle": "lansweeper",
-    "handle": "lansweeper1",
-    "url": "https://www.intigriti.com/programs/lansweeper/lansweeper1/detail",
-    "status": "open",
-    "confidentiality_level": "public",
-    "tacRequired": false,
-    "twoFactorRequired": false,
-    "min_bounty": {
-      "value": 50,
-      "currency": "EUR"
-    },
-    "max_bounty": {
-      "value": 5000,
-      "currency": "EUR"
-    },
-    "targets": {
-      "in_scope": [
-        {
-          "type": "url",
-          "endpoint": "Lansweeper Discovery",
-          "description": "Our new Lansweeper Discovery to discover IT and OT devices. This is the default software you will get when you start a trial.\n\n* Scanner can be downloaded from the cloud platform, more info here: https://community.lansweeper.com/t5/sites/install-network-discovery/ta-p/72388\n* Info on Lansweeper Discovery: https://community.lansweeper.com/t5/sites/lansweeper-discovery/ta-p/75199#feedbackquestions\n* OT specific: https://community.lansweeper.com/t5/lansweeper-ot/how-to-scan-your-ot/ta-p/64599",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "app.lansweeper.com",
-          "description": "The cloud Platform, this also includes lecstaticcontent.lansweeper.com\n\nYou can request your trial on our website: https://www.lansweeper.com/download/ but always use \"intigriti.me\" address for any user account\n\nWith this trial you get access to our cloud platform (app.lansweeper.com) and Lansweeper Discovery.",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "fb.lansweeper.com",
-          "description": "More information: https://www.lansweeper.com/product/features/integrate/flow-builder/",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "edge.lansweeper.com",
-          "description": "Domain used during the two-way sync process between the local web console (on-premises software) and the cloud platform. \n\nYou can request your trial on our website: https://www.lansweeper.com/download/ but always use \"intigriti.me\" address for any user account. You have to install the on-premises software (try on-premises software) and link this to a cloud version. With this set-up you get access to our cloud platform (app.lansweeper.com), our on-premises scanner and the sync process (edge.lansweeper.com) between these two.",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "api.lansweeper.com",
-          "description": "Data API used for integrations with our cloud platform (app.lansweeper.com). \nMore information about our Data API: https://developer.lansweeper.com/docs/data-api/get-started/welcome",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "backoffice.lansweeper.com",
-          "description": "Internal backoffice portal for cloud platform\nNo authorisation will be given",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "https://lsagentrelay.lansweeper.com/",
-          "description": "Our cloud relay server connection using LsAgent. If the computers you're scanning do not have a direct connection to your Lansweeper installation, scanned LsAgent data can be sent to our relay server in the cloud. This is only used in our old Lansweeper Classic software, so if you start the trial you should select our on-premises software (Lansweeper Classic).\n\nOur LsAgent is a cross-platform scanning agent that can scan computers both inside and outside of your network. It automatically collects an inventory from the computer it's installed on and sends the data back to the Lansweeper Classic installation, this can be done through our relay server in the cloud.\n\nFor this, you must enable relay access in your Lansweeper Classic installation. \nScanned LsAgent data is sent securely over HTTPS (TLS 1.2) to the relay server in Microsoft Azure, where it is encrypted as well. Your Lansweeper scanning server can retrieve the scanned data from the relay server, after which it is deleted from the relay. In order to use the relay server, make sure outbound traffic is allowed on your Lansweeper scanning server. Specifically, the scanning server must be able to make an outbound connection to port 443 of lsagentrelay.lansweeper.com, the cloud relay server. \n\nMore information about LsAgent can be found on our website: https://community.lansweeper.com/t5/scanning-your-network/introduction-to-lsagent-for-windows-linux-and-mac/ta-p/64473\n\nThe use of the relay server must explicitly be enabled in the Lansweeper web console. It is not enabled by default!",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "app.lansweeper.com/trial",
-          "description": "Demo site with demo data to test the cloud platform\n\nAlways use \"intigriti.me\" address for any web form",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "autoupdateapi.lansweeper.com",
-          "description": "API for updating on-premise software",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "docs.lansweeper.com",
-          "description": "Lansweeper's technical documentation",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "login.lansweeper.com",
-          "description": "Auth0 identitiy provider for cloud platform.\nAlways use \"intigriti.me\" address for any user account",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "on-premises software",
-          "description": "The on-premises software is the latest available version on our website (www.lansweeper.com/changelog).\n\nYou can request your trial on our website: https://www.lansweeper.com/download/ but always use \"intigriti.me\" address for any user account. Click on 'try on-premises' below.",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "www.lansweeper.com",
-          "description": "Always use \"intigriti.me\" address for any web form\n\n**Out of scope for this domain:**\nStore.lansweeper.com\nwww.lansweeper.com/forum\nThird-party plug-ins (e.g. Pardot - CleverBridge - Botpress)",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.lansweeper.com",
-          "description": "Any other public-facing Lansweeper related URL",
-          "impact": "No Bounty"
-        }
-      ],
-      "out_of_scope": [
-        {
-          "type": "other",
-          "endpoint": " lsrunase2.0 and lsencrypt2.0 ",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "careers.lansweeper.com",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "url",
-          "endpoint": "www.lansweeper.com/forum",
-          "description": null,
-          "impact": "Out of scope"
-        }
-      ]
-    }
-  },
-  {
     "id": "43c4b274-ccbd-4ea2-8047-d40b0b4205ac",
     "name": "Libelle",
     "company_handle": "dpgm",
@@ -10836,6 +10709,24 @@
           "impact": "Tier 1"
         },
         {
+          "type": "android",
+          "endpoint": "Uphold: Buy BTC, ETH and 300+",
+          "description": "The Uphold Wallet Android Application is the primary mobile platform for Uphold users to manage their wallets, providing a full suite of financial services, including account management, real-time price quotes, transactions, and access to account history. Users can deposit, withdraw, exchange assets, and complete KYC verification directly through the app.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "docs.uphold.com",
+          "description": "The Uphold API Documentation (https://docs.uphold.com) serves as the official resource for developers integrating with the Uphold Platform. It provides detailed guidance on API authentication, endpoints, request/response structures, and best practices for interacting with Uphold’s financial services. The documentation covers topics such as account management, transactions, currency conversion, and security protocols. Bug bounty participants can review the documentation for misconfigurations, security flaws, or exposed sensitive information that could impact the integrity of the Uphold API ecosystem.\n\nThis is a production environment—please review the program policy to avoid denial of service and other types of unavailability during security testing.",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "wallet-sandbox.uphold.com",
+          "description": "The Uphold Wallet Web Application (https://wallet.uphold.com) is the primary UI platform for Uphold users to manage their wallets, providing a full suite of financial services, including account management, real-time price quotes, transactions, and access to account history. Users can deposit, withdraw, exchange assets, and complete KYC verification directly through the application. Fund with Crypto Testnet Faucet (e.g. https://coinfaucet.eu/en/btc-testnet/ for Bitcoin)\n\nThis is a sandbox environment designed to closely mimic the production environment, allowing for more extensive testing. However, for a reported issue to be considered valid, it must be reproducible in the production environment. The Uphold security team will verify and confirm the issue in production, and if it cannot be replicated, the report will not be considered. In such cases, the team will provide evidence to support the assessment.",
+          "impact": "Tier 1"
+        },
+        {
           "type": "url",
           "endpoint": "api-sandbox.uphold.com",
           "description": "The Uphold Wallet REST API (https://api.uphold.com) offers developers comprehensive access to Uphold’s financial platform, enabling the creation of innovative services. This API allows for operations such as retrieving account details, managing user accounts, initiating transactions, accessing transaction history, and obtaining real-time market data. By integrating with this API, developers can seamlessly incorporate Uphold’s multi-asset trading and digital wallet functionalities into their applications.\n\nMore information available [here](https://docs.uphold.com).\n\nThis is a sandbox environment designed to closely mimic the production environment, allowing for extensive testing. However, for a reported issue to be considered valid, it must be reproducible in the production environment. The Uphold security team will verify and confirm the issue in production; if it cannot be replicated, the report will not be considered. In such cases, the team will provide evidence to support their assessment.",
@@ -10849,38 +10740,32 @@
         },
         {
           "type": "url",
-          "endpoint": "api.portal.enterprise.uphold.com ",
-          "description": "The Uphold Enterprise API (https://api.portal.enterprise.uphold.com/) is the backend service supporting the Uphold Enterprise Portal (portal.enterprise.uphold.com), enabling enterprise clients to manage their wallets, user delegations, and integrations with Topper widgets. This API facilitates secure enterprise-level account management, transaction processing, and access control. Security testing should focus on authentication mechanisms, authorization flows, data integrity, and potential vulnerabilities that could impact enterprise account security and operations.\n\nThis is a production environment—please review the program policy to avoid denial of service and other types of unavailability during security testing.",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "android",
-          "endpoint": "Uphold: Buy BTC, ETH and 300+",
-          "description": "The Uphold Wallet Android Application is the primary mobile platform for Uphold users to manage their wallets, providing a full suite of financial services, including account management, real-time price quotes, transactions, and access to account history. Users can deposit, withdraw, exchange assets, and complete KYC verification directly through the app.",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
           "endpoint": "portal.enterprise.uphold.com",
           "description": "The Uphold Enterprise Portal (https://portal.enterprise.uphold.com) is a secure platform for Uphold’s enterprise clients, providing tools to manage enterprise wallets, delegate user roles and permissions, and integrate with Topper widgets. This portal enables businesses to oversee digital asset operations, facilitate transactions, and enforce access control within their organization. Key features include multi-user account management, real-time transaction monitoring, and compliance support, allowing enterprises to securely manage financial operations.\n\nThis is a production environment—please review the program policy to avoid denial of service and other types of unavailability during security testing.",
           "impact": "Tier 1"
         },
         {
           "type": "url",
-          "endpoint": "wallet-sandbox.uphold.com",
-          "description": "The Uphold Wallet Web Application (https://wallet.uphold.com) is the primary UI platform for Uphold users to manage their wallets, providing a full suite of financial services, including account management, real-time price quotes, transactions, and access to account history. Users can deposit, withdraw, exchange assets, and complete KYC verification directly through the application. Fund with Crypto Testnet Faucet (e.g. https://coinfaucet.eu/en/btc-testnet/ for Bitcoin)\n\nThis is a sandbox environment designed to closely mimic the production environment, allowing for more extensive testing. However, for a reported issue to be considered valid, it must be reproducible in the production environment. The Uphold security team will verify and confirm the issue in production, and if it cannot be replicated, the report will not be considered. In such cases, the team will provide evidence to support the assessment.",
+          "endpoint": "api.portal.enterprise.uphold.com ",
+          "description": "The Uphold Enterprise API (https://api.portal.enterprise.uphold.com/) is the backend service supporting the Uphold Enterprise Portal (portal.enterprise.uphold.com), enabling enterprise clients to manage their wallets, user delegations, and integrations with Topper widgets. This API facilitates secure enterprise-level account management, transaction processing, and access control. Security testing should focus on authentication mechanisms, authorization flows, data integrity, and potential vulnerabilities that could impact enterprise account security and operations.\n\nThis is a production environment—please review the program policy to avoid denial of service and other types of unavailability during security testing.",
           "impact": "Tier 1"
         },
         {
           "type": "url",
-          "endpoint": "api.sandbox.topperpay.com",
-          "description": "The Topper REST API (https://api.topperpay.com) provides a pre-widget integration layer, allowing clients to retrieve essential information before initializing a Topper widget. This API enables businesses to fetch supported countries, assets, and payment methods, as well as generate pricing simulations for specific transaction flows. By leveraging this API, clients can display relevant information to users before engaging with the Topper on-ramp or off-ramp services.\n\nMore information available [here](https://api.topperpay.com/docs/static/index.html).\n\nThis is a sandbox environment designed to closely mimic the production environment, allowing for more extensive testing. However, for a reported issue to be considered valid, it must be reproducible in the production environment. The Uphold security team will verify and confirm the issue in production, and if it cannot be replicated, the report will not be considered. In such cases, the team will provide evidence to support the assessment.",
-          "impact": "Tier 2"
+          "endpoint": "docs.api.enterprise.uphold.com",
+          "description": "The Uphold Enterprise API Documentation (https://docs.api.enterprise.uphold.com) provides technical resources for Uphold-as-a-Service, a fully licensed white-label solution that enables financial institutions and business partners to integrate and deploy their own branded digital asset services. This platform offers comprehensive API functionality for managing transactions, compliance, user accounts, and asset trading, while ensuring regulatory compliance and security.\n\nThis is a production environment—please review the program policy to avoid denial of service and other types of unavailability during security testing.",
+          "impact": "Tier 3"
         },
         {
           "type": "url",
           "endpoint": "app.sandbox.topperpay.com",
           "description": "The Topper Widget (https://app.topperpay.com) is a live, embeddable component designed for seamless integration into client platforms, enabling end-users to perform cryptocurrency on-ramp and off-ramp transactions. This widget facilitates the conversion between fiat and digital assets directly within the client’s interface, providing a streamlined user experience.\n\nThis is a sandbox environment designed to closely mimic the production environment, allowing for more extensive testing. However, for a reported issue to be considered valid, it must be reproducible in the production environment. The Uphold security team will verify and confirm the issue in production, and if it cannot be replicated, the report will not be considered. In such cases, the team will provide evidence to support the assessment.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.sandbox.topperpay.com",
+          "description": "The Topper REST API (https://api.topperpay.com) provides a pre-widget integration layer, allowing clients to retrieve essential information before initializing a Topper widget. This API enables businesses to fetch supported countries, assets, and payment methods, as well as generate pricing simulations for specific transaction flows. By leveraging this API, clients can display relevant information to users before engaging with the Topper on-ramp or off-ramp services.\n\nMore information available [here](https://api.topperpay.com/docs/static/index.html).\n\nThis is a sandbox environment designed to closely mimic the production environment, allowing for more extensive testing. However, for a reported issue to be considered valid, it must be reproducible in the production environment. The Uphold security team will verify and confirm the issue in production, and if it cannot be replicated, the report will not be considered. In such cases, the team will provide evidence to support the assessment.",
           "impact": "Tier 2"
         },
         {
@@ -10891,9 +10776,21 @@
         },
         {
           "type": "url",
+          "endpoint": "docs.topperpay.com",
+          "description": "The Topper Developer Documentation (https://docs.topperpay.com) provides technical guidance for business customers looking to integrate with Topper, a service that facilitates cryptocurrency purchases and payments. It outlines the onboarding process, API authentication, transaction workflows, and integration requirements for businesses leveraging Topper’s platform. This documentation is intended to assist companies in securely and efficiently embedding Topper’s services into their products. \n\nThis is a production environment—please review the program policy to avoid denial of service and other types of unavailability during security testing.",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
           "endpoint": "uatcms.optimuscards.com",
           "description": "Optimus Cards Management Portal (https://uatcms.optimuscards.com) serves as the User Acceptance Testing (UAT) environment for Optimus Cards’ internal management system. This portal is designed for internal use by authorized personnel to manage and oversee various card services and operations. While it mirrors the functionalities of the production environment (https://cms.optimuscards.com), the UAT portal is intended for testing and validation purposes prior to deploying updates to the live system.\n\nBoth the UAT and production portals may be powered by similar back-end services; however, security assessments should focus exclusively on the UAT environment (https://uatcms.optimuscards.com). This approach allows for the identification of potential vulnerabilities without impacting live operations. \n\nSecurity testing should concentrate on identifying vulnerabilities related to authentication mechanisms, access controls, data handling, and potential misconfigurations within the UAT environment. \n\nPlease note that service degradation attacks are not permitted.",
           "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "docs.optimuscards.com",
+          "description": "Optimus Cards Developer Documentation (https://docs.optimuscards.com) serves as the primary resource for developers integrating with Optimus Cards’ services. This site provides comprehensive API documentation, integration guides, and technical references necessary for implementing Optimus Cards’ payment solutions into applications. While the documentation itself does not process transactions, it acts as a crucial gateway for developers to access sandbox environments, test APIs, and understand the functionalities offered by Optimus Cards.\n\nEach API endpoint and service described in the documentation may be powered by different back-end systems, implying that security assessments should consider varying architectures, data sources, and authentication mechanisms.\n\nSecurity testing should focus on identifying vulnerabilities related to API endpoint security, data exposure, and potential misconfigurations. \n\nPlease note that service degradation attacks are not permitted.",
+          "impact": "Tier 3"
         },
         {
           "type": "wildcard",
@@ -10915,56 +10812,14 @@
         },
         {
           "type": "url",
-          "endpoint": "docs.api.enterprise.uphold.com",
-          "description": "The Uphold Enterprise API Documentation (https://docs.api.enterprise.uphold.com) provides technical resources for Uphold-as-a-Service, a fully licensed white-label solution that enables financial institutions and business partners to integrate and deploy their own branded digital asset services. This platform offers comprehensive API functionality for managing transactions, compliance, user accounts, and asset trading, while ensuring regulatory compliance and security.\n\nThis is a production environment—please review the program policy to avoid denial of service and other types of unavailability during security testing.",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "docs.optimuscards.com",
-          "description": "Optimus Cards Developer Documentation (https://docs.optimuscards.com) serves as the primary resource for developers integrating with Optimus Cards’ services. This site provides comprehensive API documentation, integration guides, and technical references necessary for implementing Optimus Cards’ payment solutions into applications. While the documentation itself does not process transactions, it acts as a crucial gateway for developers to access sandbox environments, test APIs, and understand the functionalities offered by Optimus Cards.\n\nEach API endpoint and service described in the documentation may be powered by different back-end systems, implying that security assessments should consider varying architectures, data sources, and authentication mechanisms.\n\nSecurity testing should focus on identifying vulnerabilities related to API endpoint security, data exposure, and potential misconfigurations. \n\nPlease note that service degradation attacks are not permitted.",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "docs.topperpay.com",
-          "description": "The Topper Developer Documentation (https://docs.topperpay.com) provides technical guidance for business customers looking to integrate with Topper, a service that facilitates cryptocurrency purchases and payments. It outlines the onboarding process, API authentication, transaction workflows, and integration requirements for businesses leveraging Topper’s platform. This documentation is intended to assist companies in securely and efficiently embedding Topper’s services into their products. \n\nThis is a production environment—please review the program policy to avoid denial of service and other types of unavailability during security testing.",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "docs.uphold.com",
-          "description": "The Uphold API Documentation (https://docs.uphold.com) serves as the official resource for developers integrating with the Uphold Platform. It provides detailed guidance on API authentication, endpoints, request/response structures, and best practices for interacting with Uphold’s financial services. The documentation covers topics such as account management, transactions, currency conversion, and security protocols. Bug bounty participants can review the documentation for misconfigurations, security flaws, or exposed sensitive information that could impact the integrity of the Uphold API ecosystem.\n\nThis is a production environment—please review the program policy to avoid denial of service and other types of unavailability during security testing.",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "github.com/uphold/*",
-          "description": "The wildcard scope github.com/uphold/* covers any public repositories made available by Uphold on GitHub. These repositories may include SDKs, developer tools, open-source projects, documentation, and other publicly accessible codebases that support Uphold’s ecosystem.\n\nSecurity testing should focus on identifying misconfigurations, exposed sensitive information, or vulnerabilities that could impact Uphold’s security posture.\n\nWe are willing to give bonuses for any impactful issues found across our repositories, provided we agree on their severity and relevance. Please note that third-party dependencies are out of scope unless the issue is caused by a misconfiguration or security oversight by Uphold.",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
           "endpoint": "status.uphold.com",
           "description": "The Uphold Status Page (https://status.uphold.com/) provides real-time and historical data on the operational status of Uphold’s services, including the Mobile Wallet, Web Wallet, API, and more. It offers transparency regarding system performance, uptime statistics, and incident history, allowing users to monitor the health of Uphold’s platform. \n\nThis is a production environment—please review the program policy to avoid denial of service and other types of unavailability during security testing.",
           "impact": "Tier 3"
         },
         {
           "type": "url",
-          "endpoint": "support-sandbox.uphold.com",
-          "description": "The Uphold Help Center is a comprehensive support platform designed to assist users with various aspects of their Uphold experience. It offers self-service options for tasks such as resetting passwords, managing two-factor authentication, and downloading transaction histories. The Help Center also provides detailed articles covering account setup, management, deposits, withdrawals, trading features, and security measures. Users can access guidance on updating account information, linking payment methods, understanding fees and limits, and ensuring account security. Additionally, the platform includes resources for reporting suspicious activities and accessing tax-related information. For personalized assistance, users can contact the support team directly through the Help Center.\n\nThis is a sandbox environment designed to closely mimic the production environment, allowing for more extensive testing. However, for a reported issue to be considered valid, it must be reproducible in the production environment. The Uphold security team will verify and confirm the issue in production, and if it cannot be replicated, the report will not be considered. In such cases, the team will provide evidence to support the assessment.",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "support-staging.topperpay.com",
-          "description": "The Topper Support Website (https://support-staging.topperpay.com) serves as the informational and support platform for Topper, providing guidance on account management, verification processes, transaction tracking, and partnership opportunities. Users can access resources to understand Topper’s on-ramp and off-ramp functionalities and submit support requests if needed. \n\nThis is a sandbox environment designed to closely mimic the production environment, allowing for more extensive testing. However, for a reported issue to be considered valid, it must be reproducible in the production environment. The Uphold security team will verify and confirm the issue in production, and if it cannot be replicated, the report will not be considered. In such cases, the team will provide evidence to support the assessment.",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "www.optimuscards.com",
-          "description": "Optimus Cards Website (https://www.optimuscards.com) serves as the main informational platform for Optimus Cards, providing an overview of its card issuing and payment solutions. The website primarily offers details on the company’s services, regulatory compliance, and contact information. While it does not facilitate financial transactions or serve as a gateway to customer platforms, it functions as a static informational site for prospective clients and partners.\n\nThe website operates as a standalone informational resource without direct integrations to financial systems or user authentication mechanisms. Security assessments should focus on identifying vulnerabilities related to content integrity, redirections, and potential misconfigurations.\n\nPlease note that service degradation attacks are not permitted.",
+          "endpoint": "www.uphold.com",
+          "description": "The Uphold Website (https://www.uphold.com) serves as the company’s main informational platform, providing an overview of Uphold’s services, institutional offerings, and financial transparency. It includes key sections such as the Transparency Page (real-time reserves data), Institutional and Enterprise offerings, Market Prices, Blog, and Academy, along with general company updates. While the website itself does not provide transactional functionalities, it acts as a gateway to Uphold’s wallet, trading platform, and other financial services.\n\nTechnical Note: Each menu category (Individuals, Enterprise, Institutional, Market Prices, Blog, Academy, Transparency) may be powered by different back-end services, meaning security assessments should consider the possibility of varying architectures, data sources, and API implementations.\n\nSecurity testing should focus on identifying vulnerabilities related to content integrity, redirections, and potential misconfigurations. Please note that service degradation attacks are not permitted.",
           "impact": "Tier 3"
         },
         {
@@ -10975,22 +10830,34 @@
         },
         {
           "type": "url",
-          "endpoint": "www.uphold.com",
-          "description": "The Uphold Website (https://www.uphold.com) serves as the company’s main informational platform, providing an overview of Uphold’s services, institutional offerings, and financial transparency. It includes key sections such as the Transparency Page (real-time reserves data), Institutional and Enterprise offerings, Market Prices, Blog, and Academy, along with general company updates. While the website itself does not provide transactional functionalities, it acts as a gateway to Uphold’s wallet, trading platform, and other financial services.\n\nTechnical Note: Each menu category (Individuals, Enterprise, Institutional, Market Prices, Blog, Academy, Transparency) may be powered by different back-end services, meaning security assessments should consider the possibility of varying architectures, data sources, and API implementations.\n\nSecurity testing should focus on identifying vulnerabilities related to content integrity, redirections, and potential misconfigurations. Please note that service degradation attacks are not permitted.",
+          "endpoint": "www.optimuscards.com",
+          "description": "Optimus Cards Website (https://www.optimuscards.com) serves as the main informational platform for Optimus Cards, providing an overview of its card issuing and payment solutions. The website primarily offers details on the company’s services, regulatory compliance, and contact information. While it does not facilitate financial transactions or serve as a gateway to customer platforms, it functions as a static informational site for prospective clients and partners.\n\nThe website operates as a standalone informational resource without direct integrations to financial systems or user authentication mechanisms. Security assessments should focus on identifying vulnerabilities related to content integrity, redirections, and potential misconfigurations.\n\nPlease note that service degradation attacks are not permitted.",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "github.com/uphold/*",
+          "description": "The wildcard scope github.com/uphold/* covers any public repositories made available by Uphold on GitHub. These repositories may include SDKs, developer tools, open-source projects, documentation, and other publicly accessible codebases that support Uphold’s ecosystem.\n\nSecurity testing should focus on identifying misconfigurations, exposed sensitive information, or vulnerabilities that could impact Uphold’s security posture.\n\nWe are willing to give bonuses for any impactful issues found across our repositories, provided we agree on their severity and relevance. Please note that third-party dependencies are out of scope unless the issue is caused by a misconfiguration or security oversight by Uphold.",
           "impact": "Tier 3"
         }
       ],
       "out_of_scope": [
         {
-          "type": "ios",
-          "endpoint": "UpHODL",
-          "description": "The UpHODL Wallet App is a self-custodial, multichain wallet developed by Uphold Labs, allowing users to securely store, manage, and transact digital assets while maintaining full control over their private keys. The wallet supports Bitcoin (BTC), Ethereum (ETH), XRP, ERC-20 tokens, NFTs, and other blockchain networks, offering seamless DeFi access via WalletConnect and the ability to purchase cryptocurrencies directly using a card.\n\nThis is currently installable on Jailbroken devices, but we don't allow the user to proceed with creating a wallet. Please read the out-of-scope findings.",
+          "type": "url",
+          "endpoint": "support-sandbox.uphold.com",
+          "description": "The Uphold Help Center is a comprehensive support platform designed to assist users with various aspects of their Uphold experience. It offers self-service options for tasks such as resetting passwords, managing two-factor authentication, and downloading transaction histories. The Help Center also provides detailed articles covering account setup, management, deposits, withdrawals, trading features, and security measures. Users can access guidance on updating account information, linking payment methods, understanding fees and limits, and ensuring account security. Additionally, the platform includes resources for reporting suspicious activities and accessing tax-related information. For personalized assistance, users can contact the support team directly through the Help Center.\n\nThis is a sandbox environment designed to closely mimic the production environment, allowing for more extensive testing. However, for a reported issue to be considered valid, it must be reproducible in the production environment. The Uphold security team will verify and confirm the issue in production, and if it cannot be replicated, the report will not be considered. In such cases, the team will provide evidence to support the assessment.",
           "impact": "Out of scope"
         },
         {
-          "type": "android",
-          "endpoint": "UpHODL",
-          "description": "The UpHODL Wallet App is a self-custodial, multichain wallet developed by Uphold Labs, allowing users to securely store, manage, and transact digital assets while maintaining full control over their private keys. The wallet supports Bitcoin (BTC), Ethereum (ETH), XRP, ERC-20 tokens, NFTs, and other blockchain networks, offering seamless DeFi access via WalletConnect and the ability to purchase cryptocurrencies directly using a card.",
+          "type": "url",
+          "endpoint": "support-staging.topperpay.com",
+          "description": "The Topper Support Website (https://support-staging.topperpay.com) serves as the informational and support platform for Topper, providing guidance on account management, verification processes, transaction tracking, and partnership opportunities. Users can access resources to understand Topper’s on-ramp and off-ramp functionalities and submit support requests if needed. \n\nThis is a sandbox environment designed to closely mimic the production environment, allowing for more extensive testing. However, for a reported issue to be considered valid, it must be reproducible in the production environment. The Uphold security team will verify and confirm the issue in production, and if it cannot be replicated, the report will not be considered. In such cases, the team will provide evidence to support the assessment.",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.uphodl.com",
+          "description": "The UpHODL Production Website (https://www.uphodl.com) serves as the institutional website for UpHODL, Uphold Labs’ self-custodial crypto wallet. It provides information about the wallet’s features, supported assets, security model, and integration with decentralized finance (DeFi) platforms. The site is designed for informational and marketing purposes, guiding users on how to download, set up, and use the UpHODL wallet. \n\nThis is a production environment—please review the program policy to avoid denial of service and other types of unavailability during security testing.",
           "impact": "Out of scope"
         },
         {
@@ -11000,9 +10867,15 @@
           "impact": "Out of scope"
         },
         {
-          "type": "url",
-          "endpoint": "www.uphodl.com",
-          "description": "The UpHODL Production Website (https://www.uphodl.com) serves as the institutional website for UpHODL, Uphold Labs’ self-custodial crypto wallet. It provides information about the wallet’s features, supported assets, security model, and integration with decentralized finance (DeFi) platforms. The site is designed for informational and marketing purposes, guiding users on how to download, set up, and use the UpHODL wallet. \n\nThis is a production environment—please review the program policy to avoid denial of service and other types of unavailability during security testing.",
+          "type": "android",
+          "endpoint": "UpHODL",
+          "description": "The UpHODL Wallet App is a self-custodial, multichain wallet developed by Uphold Labs, allowing users to securely store, manage, and transact digital assets while maintaining full control over their private keys. The wallet supports Bitcoin (BTC), Ethereum (ETH), XRP, ERC-20 tokens, NFTs, and other blockchain networks, offering seamless DeFi access via WalletConnect and the ability to purchase cryptocurrencies directly using a card.",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "ios",
+          "endpoint": "UpHODL",
+          "description": "The UpHODL Wallet App is a self-custodial, multichain wallet developed by Uphold Labs, allowing users to securely store, manage, and transact digital assets while maintaining full control over their private keys. The wallet supports Bitcoin (BTC), Ethereum (ETH), XRP, ERC-20 tokens, NFTs, and other blockchain networks, offering seamless DeFi access via WalletConnect and the ability to purchase cryptocurrencies directly using a card.\n\nThis is currently installable on Jailbroken devices, but we don't allow the user to proceed with creating a wallet. Please read the out-of-scope findings.",
           "impact": "Out of scope"
         },
         {
