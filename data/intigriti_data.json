@@ -10836,15 +10836,9 @@
           "impact": "Tier 1"
         },
         {
-          "type": "ios",
-          "endpoint": "UpHODL",
-          "description": "The UpHODL Wallet App is a self-custodial, multichain wallet developed by Uphold Labs, allowing users to securely store, manage, and transact digital assets while maintaining full control over their private keys. The wallet supports Bitcoin (BTC), Ethereum (ETH), XRP, ERC-20 tokens, NFTs, and other blockchain networks, offering seamless DeFi access via WalletConnect and the ability to purchase cryptocurrencies directly using a card.\n\nThis is currently installable on Jailbroken devices, but we don't allow the user to proceed with creating a wallet. Please read the out-of-scope findings.",
-          "impact": "Tier 1"
-        },
-        {
           "type": "url",
           "endpoint": "api-sandbox.uphold.com",
-          "description": "The Uphold Wallet REST API (https://api.uphold.com) offers developers comprehensive access to Uphold’s financial platform, enabling the creation of innovative services. This API allows for operations such as retrieving account details, managing user accounts, initiating transactions, accessing transaction history, and obtaining real-time market data. By integrating with this API, developers can seamlessly incorporate Uphold’s multi-asset trading and digital wallet functionalities into their applications.\n\nMore information available [here](https://docs.uphold.com).\n\nThis is a sandbox environment designed to closely mimic the production environment, allowing for extensive testing. However, for a reported issue to be considered valid, it must be reproducible in the production environment. The Uphold security team will verify and confirm the issue in production; if it cannot be replicated, the report will not be considered. In such cases, the team will provide evidence to support their assessment.\n\n",
+          "description": "The Uphold Wallet REST API (https://api.uphold.com) offers developers comprehensive access to Uphold’s financial platform, enabling the creation of innovative services. This API allows for operations such as retrieving account details, managing user accounts, initiating transactions, accessing transaction history, and obtaining real-time market data. By integrating with this API, developers can seamlessly incorporate Uphold’s multi-asset trading and digital wallet functionalities into their applications.\n\nMore information available [here](https://docs.uphold.com).\n\nThis is a sandbox environment designed to closely mimic the production environment, allowing for extensive testing. However, for a reported issue to be considered valid, it must be reproducible in the production environment. The Uphold security team will verify and confirm the issue in production; if it cannot be replicated, the report will not be considered. In such cases, the team will provide evidence to support their assessment.",
           "impact": "Tier 1"
         },
         {
@@ -10857,12 +10851,6 @@
           "type": "url",
           "endpoint": "api.portal.enterprise.uphold.com ",
           "description": "The Uphold Enterprise API (https://api.portal.enterprise.uphold.com/) is the backend service supporting the Uphold Enterprise Portal (portal.enterprise.uphold.com), enabling enterprise clients to manage their wallets, user delegations, and integrations with Topper widgets. This API facilitates secure enterprise-level account management, transaction processing, and access control. Security testing should focus on authentication mechanisms, authorization flows, data integrity, and potential vulnerabilities that could impact enterprise account security and operations.\n\nThis is a production environment—please review the program policy to avoid denial of service and other types of unavailability during security testing.",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "android",
-          "endpoint": "UpHODL",
-          "description": "The UpHODL Wallet App is a self-custodial, multichain wallet developed by Uphold Labs, allowing users to securely store, manage, and transact digital assets while maintaining full control over their private keys. The wallet supports Bitcoin (BTC), Ethereum (ETH), XRP, ERC-20 tokens, NFTs, and other blockchain networks, offering seamless DeFi access via WalletConnect and the ability to purchase cryptocurrencies directly using a card.",
           "impact": "Tier 1"
         },
         {
@@ -10880,7 +10868,7 @@
         {
           "type": "url",
           "endpoint": "wallet-sandbox.uphold.com",
-          "description": "The Uphold Wallet Web Application (https://wallet.uphold.com) is the primary UI platform for Uphold users to manage their wallets, providing a full suite of financial services, including account management, real-time price quotes, transactions, and access to account history. Users can deposit, withdraw, exchange assets, and complete KYC verification directly through the application. Fund with Crypto Testnet Faucet (e.g. https://coinfaucet.eu/en/btc-testnet/ for Bitcoin)\n\nThis is a sandbox environment designed to closely mimic the production environment, allowing for more extensive testing. However, for a reported issue to be considered valid, it must be reproducible in the production environment. The Uphold security team will verify and confirm the issue in production, and if it cannot be replicated, the report will not be considered. In such cases, the team will provide evidence to support the assessment.\n",
+          "description": "The Uphold Wallet Web Application (https://wallet.uphold.com) is the primary UI platform for Uphold users to manage their wallets, providing a full suite of financial services, including account management, real-time price quotes, transactions, and access to account history. Users can deposit, withdraw, exchange assets, and complete KYC verification directly through the application. Fund with Crypto Testnet Faucet (e.g. https://coinfaucet.eu/en/btc-testnet/ for Bitcoin)\n\nThis is a sandbox environment designed to closely mimic the production environment, allowing for more extensive testing. However, for a reported issue to be considered valid, it must be reproducible in the production environment. The Uphold security team will verify and confirm the issue in production, and if it cannot be replicated, the report will not be considered. In such cases, the team will provide evidence to support the assessment.",
           "impact": "Tier 1"
         },
         {
@@ -10910,19 +10898,13 @@
         {
           "type": "wildcard",
           "endpoint": "*.optimuscards.com",
-          "description": "The wildcard domain *.optimuscards.com includes all subdomains under optimuscards.com, covering various services related to Optimus Cards’ white-label debit and credit card solutions, Banking as a Service (BaaS), and Cards as a Service (CaaS) for financial institutions and corporate clients. These subdomains may encompass customer account management platforms, API access for partners, administrative portals, and other operational services. Given the financial nature of these services, security testing should focus on identifying vulnerabilities that could impact user data, transactions, or system integrity.\n\nWe are willing to give bonuses for any impactful issues found across the rest of our domain, provided we agree on their severity and relevance. ",
+          "description": "The wildcard domain *.optimuscards.com includes all subdomains under optimuscards.com, covering various services related to Optimus Cards’ white-label debit and credit card solutions, Banking as a Service (BaaS), and Cards as a Service (CaaS) for financial institutions and corporate clients. These subdomains may encompass customer account management platforms, API access for partners, administrative portals, and other operational services. Given the financial nature of these services, security testing should focus on identifying vulnerabilities that could impact user data, transactions, or system integrity.\n\nWe are willing to give bonuses for any impactful issues found across the rest of our domain, provided we agree on their severity and relevance.",
           "impact": "Tier 3"
         },
         {
           "type": "wildcard",
           "endpoint": "*.topperpay.com",
-          "description": "The wildcard domain *.topperpay.com covers any **unlisted** subdomains related to Topper, an Uphold brand that provides on-ramp and off-ramp solutions for digital assets, enabling users to seamlessly convert between fiat and cryptocurrency. Security testing should focus on identifying vulnerabilities that could impact user security, transaction integrity, or authentication mechanisms.\n\nWhile we have already listed some subdomains in scope, this wildcard serves to cover any additional subdomains that may be discovered. We are willing to give bonuses for any impactful issues found across the rest of our domain, provided we agree on their severity and relevance. ",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.uphodl.com",
-          "description": "The wildcard domain *.uphodl.com covers all subdomains related to UpHODL, Uphold Labs’ self-custodial multichain crypto wallet, which enables users to securely manage their digital assets. Security testing should focus on identifying vulnerabilities that could impact user security, transaction integrity, or authentication mechanisms.\n\nWhile we have already listed some subdomains in scope, this wildcard serves to cover any additional subdomains that may be discovered. We are willing to give bonuses for any impactful issues found across the rest of our domain, provided we agree on their severity and relevance. ",
+          "description": "The wildcard domain *.topperpay.com covers any **unlisted** subdomains related to Topper, an Uphold brand that provides on-ramp and off-ramp solutions for digital assets, enabling users to seamlessly convert between fiat and cryptocurrency. Security testing should focus on identifying vulnerabilities that could impact user security, transaction integrity, or authentication mechanisms.\n\nWhile we have already listed some subdomains in scope, this wildcard serves to cover any additional subdomains that may be discovered. We are willing to give bonuses for any impactful issues found across the rest of our domain, provided we agree on their severity and relevance.",
           "impact": "Tier 3"
         },
         {
@@ -10993,12 +10975,6 @@
         },
         {
           "type": "url",
-          "endpoint": "www.uphodl.com",
-          "description": "The UpHODL Production Website (https://www.uphodl.com) serves as the institutional website for UpHODL, Uphold Labs’ self-custodial crypto wallet. It provides information about the wallet’s features, supported assets, security model, and integration with decentralized finance (DeFi) platforms. The site is designed for informational and marketing purposes, guiding users on how to download, set up, and use the UpHODL wallet. \n\nThis is a production environment—please review the program policy to avoid denial of service and other types of unavailability during security testing.",
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
           "endpoint": "www.uphold.com",
           "description": "The Uphold Website (https://www.uphold.com) serves as the company’s main informational platform, providing an overview of Uphold’s services, institutional offerings, and financial transparency. It includes key sections such as the Transparency Page (real-time reserves data), Institutional and Enterprise offerings, Market Prices, Blog, and Academy, along with general company updates. While the website itself does not provide transactional functionalities, it acts as a gateway to Uphold’s wallet, trading platform, and other financial services.\n\nTechnical Note: Each menu category (Individuals, Enterprise, Institutional, Market Prices, Blog, Academy, Transparency) may be powered by different back-end services, meaning security assessments should consider the possibility of varying architectures, data sources, and API implementations.\n\nSecurity testing should focus on identifying vulnerabilities related to content integrity, redirections, and potential misconfigurations. Please note that service degradation attacks are not permitted.",
           "impact": "Tier 3"
@@ -11006,9 +10982,33 @@
       ],
       "out_of_scope": [
         {
+          "type": "ios",
+          "endpoint": "UpHODL",
+          "description": "The UpHODL Wallet App is a self-custodial, multichain wallet developed by Uphold Labs, allowing users to securely store, manage, and transact digital assets while maintaining full control over their private keys. The wallet supports Bitcoin (BTC), Ethereum (ETH), XRP, ERC-20 tokens, NFTs, and other blockchain networks, offering seamless DeFi access via WalletConnect and the ability to purchase cryptocurrencies directly using a card.\n\nThis is currently installable on Jailbroken devices, but we don't allow the user to proceed with creating a wallet. Please read the out-of-scope findings.",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "android",
+          "endpoint": "UpHODL",
+          "description": "The UpHODL Wallet App is a self-custodial, multichain wallet developed by Uphold Labs, allowing users to securely store, manage, and transact digital assets while maintaining full control over their private keys. The wallet supports Bitcoin (BTC), Ethereum (ETH), XRP, ERC-20 tokens, NFTs, and other blockchain networks, offering seamless DeFi access via WalletConnect and the ability to purchase cryptocurrencies directly using a card.",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.uphodl.com",
+          "description": "The wildcard domain *.uphodl.com covers all subdomains related to UpHODL, Uphold Labs’ self-custodial multichain crypto wallet, which enables users to securely manage their digital assets. Security testing should focus on identifying vulnerabilities that could impact user security, transaction integrity, or authentication mechanisms.\n\nWhile we have already listed some subdomains in scope, this wildcard serves to cover any additional subdomains that may be discovered. We are willing to give bonuses for any impactful issues found across the rest of our domain, provided we agree on their severity and relevance.",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.uphodl.com",
+          "description": "The UpHODL Production Website (https://www.uphodl.com) serves as the institutional website for UpHODL, Uphold Labs’ self-custodial crypto wallet. It provides information about the wallet’s features, supported assets, security model, and integration with decentralized finance (DeFi) platforms. The site is designed for informational and marketing purposes, guiding users on how to download, set up, and use the UpHODL wallet. \n\nThis is a production environment—please review the program policy to avoid denial of service and other types of unavailability during security testing.",
+          "impact": "Out of scope"
+        },
+        {
           "type": "url",
           "endpoint": "api.topperpay.com",
-          "description": "Topper API (https://api.topperpay.com) serves as the production API for processing transactions and account-related operations. As this is an actively used environment, it is out of scope for security testing.\n",
+          "description": "Topper API (https://api.topperpay.com) serves as the production API for processing transactions and account-related operations. As this is an actively used environment, it is out of scope for security testing.",
           "impact": "Out of scope"
         },
         {
@@ -11026,7 +11026,7 @@
         {
           "type": "url",
           "endpoint": "app.topperpay.com",
-          "description": "Topper App (https://app.topperpay.com) is the production web application for users to manage their Topper accounts and perform financial operations. As this is an actively used environment, it is out of scope for security testing.\n",
+          "description": "Topper App (https://app.topperpay.com) is the production web application for users to manage their Topper accounts and perform financial operations. As this is an actively used environment, it is out of scope for security testing.",
           "impact": "Out of scope"
         },
         {
@@ -11050,13 +11050,13 @@
         {
           "type": "url",
           "endpoint": "support.uphold.com",
-          "description": "Uphold Support (https://support.uphold.com) provides customer support and knowledge base resources for Uphold users. As this is an actively used environment, it is out of scope for security testing.\n",
+          "description": "Uphold Support (https://support.uphold.com) provides customer support and knowledge base resources for Uphold users. As this is an actively used environment, it is out of scope for security testing.",
           "impact": "Out of scope"
         },
         {
           "type": "url",
           "endpoint": "wallet.uphold.com",
-          "description": "Uphold Wallet (https://wallet.uphold.com) serves as the production interface for users to access their Uphold accounts, manage assets, and perform transactions. As this is an actively used environment, it is out of scope for security testing.\n",
+          "description": "Uphold Wallet (https://wallet.uphold.com) serves as the production interface for users to access their Uphold accounts, manage assets, and perform transactions. As this is an actively used environment, it is out of scope for security testing.",
           "impact": "Out of scope"
         }
       ]
