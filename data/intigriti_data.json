@@ -11145,12 +11145,6 @@
         },
         {
           "type": "url",
-          "endpoint": "ai-testing.maventa.com",
-          "description": "**AutoInvoice**\n\nThis is the main UI for Visma AutoInvoice. AutoInvoice is Visma's automated and fully ERP integrated service for sending, receiving and handling invoices. AutoInvoice converts and exchanges electronic invoices, optionally prints invoices that can't be sent electronically, receives and interpret PDF invoices and offers services for scanning and interpretation of paper invoices. AutoInvoice handles both Business to Business (B2B) and Business to Consumer (B2C) invoices.\n\nUses partially the embeddable user interface from autointerface-embeddable-stage.maventa.com\n\nCreate a test account on https://ai-testing.maventa.com/registrations, NOTE staging backend only allows registering companies from DK, FI, NO, SE countries, your own location can be anywhere.\nOr you can use one of the demo accounts in the getting started instructions below:\nhttps://vismabugbountyprod.z16.web.core.windows.net/VismaAutoinvoice-tHNjPCTbrmGiPY5y0xr8-getting-started.pdf\n\n**Out of scope or works as expected (accepted risk):**\n\n* adding users to your own company without consent\n* language change CSRF\n* application level DOS from /gdpr endpoint\n* duplicate BID/organization number check on registration can be circumvented by race condition (e.g. open two accounts with same BID/org number at same time)\n* IDOR to delete Invoice ID's belonging to different companies by using GDPR removal form (background job checks the right to delete invoices)\n* Hyperlink Injection via emails while adding users to your company\n* User Enumeration via Timing Discrepancy while registering new users\n* Logout CSRF\n* Customer service/chatbot (these are a 3rd party service)\n\nNote! ai-testing.maventa.com and testing.maventa.com point to the same application but have different branding on the UI. Authentication to the user interface is handled using the Visma Connect service.",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
           "endpoint": "aiassistant.stage.vismaonline.com",
           "description": "**AI Assistant**\n\nThe AI Assistant is a AI bot that answers support questions based on public product documentation for Visma Spcs products like Visma eAccounting and Visma Advisor.\n\nYou need to register an user to test this system. The sign-up up process is described in this document:\n\nhttps://vismabugbountyprod.z16.web.core.windows.net/Visma-eAccounting-1GWFyEopW9dTKsGYM3FJ-getting-started.pdf\n**Please note that the training code has changed!** It is now: wr0d4 , also make sure to select the same Program/Service options as the Getting Started document has. \n\nThis video also shows the entire setup (only Swedish audio) https://www.youtube.com/watch?v=kVr_CXgfhi0&t=4s\n\nTLDR: Goto https://admin.stage.vismaonline.com/Customer/StudentSignup.aspx and sign up with the training code \"wr0d4\"\n\n**Out of Scope**\n\n* HTML injection, the AI Assistant should be able to output HTML to the chat window.\n* functionalities that belong to other applications that AI Assistant is integrated with (e.g. Visma Advisor or other Visma SPCS products).",
           "impact": "Tier 2"
@@ -11171,18 +11165,6 @@
           "type": "url",
           "endpoint": "authz.workbox.dk",
           "description": "**Dinero**\nUsed for Authorization (OAuth). See instructions for \"app.workbox.dk\"",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "autointerface.stag.visma.net",
-          "description": "**AutoInvoice**\nSee instructions for domain 'ai-testing.maventa.com' to get user credentials.\n\nThe same resource can be accessed through the URL **autointerface-embeddable-stage.maventa.com**\n\nAll data processing is done through the REST API at ax-stage.maventa.com\n\n**Out of scope or works as expected (accepted risk):**\n* Clickjacking is out of scope for this asset since it is designed to be framed (embedded) in other 3rd party services.\n* Regular users are allowed to view certain admin settings pages (but not allowed to edit the settings)",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "ax-stage.maventa.com",
-          "description": "**AutoInvoice**\nhttps://ax-stage.maventa.com is a REST API connected to Visma AutoInvoice.\n\nAPI documentation is available on https://documentation.maventa.com/rest-api/ and https://ax-stage.maventa.com/swagger/#/\n\nSee instructions for domain 'ai-testing.maventa.com' to get user credentials.\n\n**Out of scope or works as expected (accepted risk):**\n* Regular users are allowed to read certain company settings even though they are not perhaps visible in the UI (but they are not allowed to edit the settings)",
           "impact": "Tier 2"
         },
         {
@@ -11237,12 +11219,6 @@
           "type": "url",
           "endpoint": "photoservice.stage.vismaonline.com",
           "description": "**Visma Scanner**\n\nBackend service for Visma Scanner mobile app, see instructions for domain \"com.visma.blue\" or “564141518”",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "testing.maventa.com",
-          "description": "**AutoInvoice**\nhttps://testing.maventa.com/apis/v1.1/wsdl is a SOAP API connected to Visma AutoInvoice.\n\nAPI documentation is available on https://documentation.maventa.com/soap-api/\n\nSee instructions for domain 'ai-testing.maventa.com' to get user credentials.",
           "impact": "Tier 2"
         }
       ],
