@@ -3533,6 +3533,12 @@
         },
         {
           "type": "wildcard",
+          "endpoint": "*.db1.ondigitalocean.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "wildcard",
           "endpoint": "*.digitaloceanspaces.com",
           "description": "Customers' resources are hosted underneath this domain, so the entire domain should be considered out-of-scope.\n\nAny Spaces buckets created inside your own account on this domain are considered in-scope. Use the `cloud.digitalocean.com` asset in that case.",
           "impact": "Out of scope"
@@ -3562,6 +3568,12 @@
           "impact": "Out of scope"
         },
         {
+          "type": "other",
+          "endpoint": "Assets created by other DigitalOcean customers",
+          "description": "**Any asset (Droplet, Space, or otherwise) created by other DigitalOcean customers are not to be tested under any circumstances.**",
+          "impact": "Out of scope"
+        },
+        {
           "type": "wildcard",
           "endpoint": "*.doserverless-dev3.io",
           "description": null,
@@ -3574,9 +3586,9 @@
           "impact": "Out of scope"
         },
         {
-          "type": "other",
-          "endpoint": "Assets created by other DigitalOcean customers",
-          "description": "**Any asset (Droplet, Space, or otherwise) created by other DigitalOcean customers are not to be tested under any circumstances.**",
+          "type": "wildcard",
+          "endpoint": "*.onstagingocean.app",
+          "description": null,
           "impact": "Out of scope"
         },
         {
