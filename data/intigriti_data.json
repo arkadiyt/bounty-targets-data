@@ -11037,13 +11037,13 @@
         {
           "type": "other",
           "endpoint": "API's",
-          "description": "*  vrt.be/vrtnu-api/graphql/v1\n*  vrt.be/vrtnu-api/graphql/public/v1\n*  api.vrt.radio\n*  vrtnws-api.vrt.be\n*  api.sporza.be",
+          "description": "*  vrt.be/vrtnu-api/graphql/v1\n*  vrt.be/vrtnu-api/graphql/public/v1\n*  api.vrt.radio\n*  interactie-api.vrt.be/chat-api/\n*  vrtnws-api.vrt.be\n*  api.sporza.be",
           "impact": "Tier 2"
         },
         {
-          "type": "url",
-          "endpoint": "cds.vrt.radio",
-          "description": "The cds domain for VRT radio sites.\n",
+          "type": "other",
+          "endpoint": "Sockets",
+          "description": "* wss://messaging.vrt.be/",
           "impact": "Tier 2"
         },
         {
@@ -11072,6 +11072,12 @@
         },
         {
           "type": "url",
+          "endpoint": "vrt.be/interactie/121-chat/",
+          "description": "VRT's future messaging platform. It allows users to send chat messages and images with radio-station hosts. In the future, new features will be added like video upload, polls, group chat, ...\n\nTo be able to use the messaging platform, you have to register for a VRT profile.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
           "endpoint": "vrt.be/vrtmax",
           "description": "VRT's online video platform. It allows its users to (re-)watch television programs of its brands één, Canvas and Ketnet on the internet. \n\nTo be able to fully use VRT MAX, you have to register for a VRT profile. Using all of VRT MAX's content is only possible for users with a Belgian residential address. Without the login, you can still watch the live channels.",
           "impact": "Tier 2"
@@ -11079,7 +11085,7 @@
         {
           "type": "url",
           "endpoint": "vrt.be/vrtnws",
-          "description": "\nVRT NWS is the news brand of VRT. Informing the Flemish citizen is an essential part of it's job.",
+          "description": "VRT NWS is the news brand of VRT. Informing the Flemish citizen is an essential part of it's job.",
           "impact": "Tier 2"
         },
         {
@@ -11090,6 +11096,12 @@
         }
       ],
       "out_of_scope": [
+        {
+          "type": "url",
+          "endpoint": "cds.vrt.radio",
+          "description": "The cds domain for VRT radio sites.",
+          "impact": "Out of scope"
+        },
         {
           "type": "url",
           "endpoint": "innovatie.vrt.be",
