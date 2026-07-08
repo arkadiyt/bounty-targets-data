@@ -2752,6 +2752,66 @@
     }
   },
   {
+    "id": "9b5d8125-aab2-4e21-95db-3ed543c003de",
+    "name": "Dashlane Vulnerability Disclosure Program",
+    "company_handle": "dashlane",
+    "handle": "dashlanevulnerabilitydisclosureprogram",
+    "url": "https://www.intigriti.com/programs/dashlane/dashlanevulnerabilitydisclosureprogram/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 0,
+      "currency": "USD"
+    },
+    "max_bounty": {
+      "value": 0,
+      "currency": "USD"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "wildcard",
+          "endpoint": "*.dashlane.com",
+          "description": "This wildcard covers Dashlane-owned and Dashlane-operated internet-facing assets under the dashlane.com domain.\n\nResearchers may report vulnerabilities affecting Dashlane-owned or Dashlane-operated assets under this wildcard, provided the report clearly explains why the affected asset is believed to be controlled by Dashlane.\n\nTesting should focus on vulnerabilities with clear security impact, especially issues affecting authentication, authorization, account security, credential confidentiality, sensitive data exposure, business or enterprise functionality, API security, browser extension security, mobile application security, or Dashlane-controlled user workflows.\n\nThis may include:\n\n* Dashlane-owned web applications\n* Dashlane-owned APIs\n* Dashlane-owned login, account, and onboarding flows\n* Dashlane-owned business and enterprise functionality\n* Dashlane-owned SSO/SAML functionality\n* Dashlane-owned credential security workflows\n* Dashlane-owned support or customer-facing workflows\n* Dashlane-owned public-facing services linked from official Dashlane websites\n\nAssets that are only Dashlane-related, vendor-operated, partner-operated, third-party controlled, or not clearly owned and operated by Dashlane are not automatically in scope.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "Dashlane Mobile Applications",
+          "description": "Dashlane’s native mobile applications are in scope, including [iOS](https://apps.apple.com/us/app/dashlane-password-manager/id517914548) and [Android](https://play.google.com/store/apps/details?id=com.dashlane).\n\nTesting should focus on mobile application security issues with practical impact, including authentication, authorization, session handling, sensitive data exposure, secure storage, deep links with impact, app-to-API authorization, and vulnerabilities affecting credential security or account security.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "Autofill and Autologin Functionality",
+          "description": "Dashlane’s autofill and autologin functionality is in scope.\n\nReports are especially valuable where a vulnerability could allow a remote attacker to force Dashlane extensions or applications to autofill, autologin, submit, expose, or send credentials to a rogue or attacker-controlled site.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "Dashlane Browser Extensions",
+          "description": "[Dashlane’s standalone browser extensions are in scope, including Chrome, Edge, and Firefox.](https://www.dashlane.com/download-dashlane)\n\nTesting should focus on browser extension security, autofill behaviour, autologin behaviour, credential handling, extension-to-web communication, origin validation, rogue-site protection, and vulnerabilities that could cause credentials or sensitive user data to be exposed to an attacker-controlled website.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "Dashlane Business and Enterprise Features",
+          "description": "[Dashlane business and enterprise functionality is in scope.](https://www.dashlane.com/sso)\n\nThis includes business features such as SAML, SSO, group sharing, emergency access, team or organisation workflows, policy-related functionality, administrator workflows, business account management, and shared credential workflows.\n\nTesting should focus on authentication, authorization, privilege escalation, business/team boundary issues, group sharing abuse, emergency access abuse, SAML/SSO misconfigurations with impact, access to another organisation’s data, and business logic flaws affecting enterprise users or administrators.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "Out of Scope",
+          "description": "The following are not automatically in scope unless Dashlane explicitly confirms otherwise:\n\n* Third-party platforms or vendor-operated services\n* Partner-operated infrastructure\n* Assets that only reference Dashlane but are not operated by Dashlane\n* Social media platforms\n* App store infrastructure\n* Browser store infrastructure\n* Payment processor infrastructure\n* Cloud-provider control planes\n* Personal accounts, personal devices, or systems not owned by Dashlane\n* Services where testing would affect availability, integrity, privacy, or normal operations",
+          "impact": "Tier 2"
+        }
+      ],
+      "out_of_scope": []
+    }
+  },
+  {
     "id": "8bf1f259-cac9-4114-9b84-3b950897b1ec",
     "name": "De Morgen",
     "company_handle": "dpgm",
