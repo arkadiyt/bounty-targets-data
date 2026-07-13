@@ -5467,6 +5467,54 @@
     }
   },
   {
+    "id": "fa431861-6fb9-413e-bc33-04325250a2fb",
+    "name": "Ivo: AI VDP",
+    "company_handle": "ivoai",
+    "handle": "ivovulnerabilitydisclosureprogram",
+    "url": "https://www.intigriti.com/programs/ivoai/ivovulnerabilitydisclosureprogram/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 0,
+      "currency": "USD"
+    },
+    "max_bounty": {
+      "value": 0,
+      "currency": "USD"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "wildcard",
+          "endpoint": "*.latchapp.com",
+          "description": "Ivo was previously known as Latch, and this legacy domain remains active to support several feature services that are yet to be migrated to the ivo.ai domain",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "https://app.ivo.ai/*",
+          "description": "The Ivo web application is in scope.\nIvo authentication and authorization flows are also in scope.\n\nTesting should focus on authentication, authorization, access control, session handling, user account security, document access controls, sensitive data exposure, business logic flaws, and vulnerabilities affecting application functionality or user data as well as login security, session management, token handling, account access controls, authorization bypass, privilege escalation, cross-account access, and weaknesses that could allow unauthorized access to user accounts, documents, APIs, or restricted functionality.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "All Ivo public APIs",
+          "description": "Ivo public APIs are in scope.\n\nTesting should focus on API authentication, authorization, access control, IDOR/BOLA, excessive data exposure, token handling, rate-sensitive abuse with clear impact, and API vulnerabilities affecting user data, document data, account data, or Ivo.ai-controlled functionality.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "Ivo Microsoft Word add-in",
+          "description": "The Ivo Microsoft Word add-in is in scope.\n\nTesting should focus on add-in security, authentication flows, authorization boundaries, document handling, data transmission, token handling, sensitive data exposure, and vulnerabilities affecting users’ documents or Ivo.ai integrations.",
+          "impact": "Tier 2"
+        }
+      ],
+      "out_of_scope": []
+    }
+  },
+  {
     "id": "3f6b3170-afd4-411c-84fc-24113a562ecf",
     "name": "KU Leuven Vulnerability Disclosure Program (VDP)",
     "company_handle": "kuleuven",
