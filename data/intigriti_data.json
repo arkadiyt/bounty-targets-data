@@ -192,7 +192,7 @@
         {
           "type": "device",
           "endpoint": "Firmware",
-          "description": "Firmware developed by Altera that executes within our FPGA products regardless of the storage media.   Excludes any software that executes the Hard Processor Subsystem (HPS), or any software that executes on an embedded processor instantiated in soft-logic within the FPGA by a customer.",
+          "description": "SDM Firmware developed by Altera that executes within our FPGA products regardless of the storage media.   **Excludes** any software that executes the Hard Processor Subsystem (HPS), or any software that executes on an embedded processor instantiated in soft-logic within the FPGA by a customer, like the Arm Trusted firmware.",
           "impact": "Tier 1"
         },
         {
@@ -210,7 +210,7 @@
         {
           "type": "other",
           "endpoint": "Software",
-          "description": "Altera Developed Device Drivers that execute on a host computer that is connected to an Altera FPGA, used to manage or control the FPGA or any functions implemented by the customer within the FPGA.",
+          "description": "Altera Developed Device Drivers that execute on a host computer that is connected to an Altera FPGA, used to manage or control the FPGA or any functions implemented by the customer within the FPGA.\nIssues reported in the **ARM trusted Firmware** or in the **Linux kernel** are in this no bounty category.",
           "impact": "No Bounty"
         },
         {
