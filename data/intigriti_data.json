@@ -3356,12 +3356,6 @@
           "impact": "Tier 2"
         },
         {
-          "type": "wildcard",
-          "endpoint": "*.snapshooter.com",
-          "description": "SnapShooter is a cloud backup and recovery solution.",
-          "impact": "Tier 3"
-        },
-        {
           "type": "url",
           "endpoint": "digitaloceanmirrors.com",
           "description": null,
@@ -3429,6 +3423,12 @@
         }
       ],
       "out_of_scope": [
+        {
+          "type": "wildcard",
+          "endpoint": "*.snapshooter.com",
+          "description": "SnapShooter is a cloud backup and recovery solution.",
+          "impact": "Out of scope"
+        },
         {
           "type": null,
           "endpoint": "https://github.com/digitalocean/action-doctl",
