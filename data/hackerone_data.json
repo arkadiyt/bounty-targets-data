@@ -277297,6 +277297,17 @@
           "max_severity": "medium"
         },
         {
+          "asset_identifier": "cert.myvirtualsuper.com",
+          "asset_type": "URL",
+          "availability_requirement": "low",
+          "confidentiality_requirement": "low",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": null,
+          "integrity_requirement": "low",
+          "max_severity": "critical"
+        },
+        {
           "asset_identifier": "certifiedanalytics.deere.com",
           "asset_type": "URL",
           "availability_requirement": "medium",
@@ -408192,7 +408203,7 @@
     "name": "Grindr",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 86,
+    "response_efficiency_percentage": 81,
     "submission_state": "open",
     "url": "https://hackerone.com/grindr",
     "website": "https://www.grindr.com",
@@ -450660,160 +450671,6 @@
   },
   {
     "allows_bounty_splitting": false,
-    "average_time_to_bounty_awarded": 1030.0,
-    "average_time_to_first_program_response": null,
-    "average_time_to_report_resolved": null,
-    "handle": "cosmos",
-    "id": 0,
-    "managed_program": false,
-    "name": "Cosmos",
-    "offers_bounties": true,
-    "offers_swag": false,
-    "response_efficiency_percentage": 90,
-    "submission_state": "open",
-    "url": "https://hackerone.com/cosmos",
-    "website": "https://cosmoslabs.io",
-    "targets": {
-      "in_scope": [
-        {
-          "asset_identifier": "CometBFT",
-          "asset_type": "OTHER",
-          "availability_requirement": "high",
-          "confidentiality_requirement": "high",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "",
-          "integrity_requirement": "high",
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "CosmWasm",
-          "asset_type": "OTHER",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": " CosmWasm is a smart contract platform that focuses on security, performance and interoperability by Confio GMBH. It is the only smart contracting platform for public blockchains with significant adoption outside of the EVM. \n\nFor documentation about the platform and a Getting Started guide, please see https://www.cosmwasm.com/build \n\n## In-scope Repositories\n\n* Execution environment\n  * [cosmwasm](https://github.com/CosmWasm/cosmwasm)\n  * [wasmvm](https://github.com/CosmWasm/wasmvm)\n  * [wasmd](https://github.com/CosmWasm/wasmd)\n* Standard library dependencies\n  * [serde-json-wasm](https://github.com/CosmWasm/serde-json-wasm)\n* Libraries for building contracts\n  * [cw-plus](https://github.com/CosmWasm/cw-plus)\n  * [cw-storage-plus](https://github.com/CosmWasm/cw-storage-plus)\n  * [cw-utils](https://github.com/CosmWasm/cw-utils)\n* Build tools\n  * [rust-optimizer](https://github.com/CosmWasm/rust-optimizer)",
-          "integrity_requirement": null,
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "Cosmos SDK",
-          "asset_type": "OTHER",
-          "availability_requirement": "high",
-          "confidentiality_requirement": "high",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "The Cosmos SDK is an open-source framework for building multi-asset public Proof-of-Stake (PoS) blockchains, like the Cosmos Hub, as well as permissioned Proof-of-Authority (PoA) blockchains. SDK-based blockchains are built out of composable [modules](https://docs.cosmos.network/main/build/building-modules/intro), most of which are open-source and readily available for any developers to use.  To get started, learn more about the [architecture of a Cosmos SDK application](https://docs.cosmos.network/main/learn/intro/sdk-app-architecture), or how to build application-specific blockchain from scratch with the [Cosmos SDK Tutorial](https://cosmos.network/docs/tutorial).\n\n## In-Scope Repositories\n* [cosmossdk](https://github.com/cosmos/cosmos-sdk)\n\n### Core packages\n* [baseapp](https://github.com/cosmos/cosmos-sdk/tree/main/baseapp)\n* [crypto](https://github.com/cosmos/cosmos-sdk/tree/main/crypto)\n* [types](https://github.com/cosmos/cosmos-sdk/tree/main/types)\n* [store](https://github.com/cosmos/cosmos-sdk/tree/main/store)\n\n### Modules\n* [x/auth](https://github.com/cosmos/cosmos-sdk/tree/main/x/auth)\n* [x/bank](https://github.com/cosmos/cosmos-sdk/tree/main/x/bank)\n* [x/staking](https://github.com/cosmos/cosmos-sdk/tree/main/x/staking)\n* [x/slashing](https://github.com/cosmos/cosmos-sdk/tree/main/x/slashing)\n* [x/evidence](https://github.com/cosmos/cosmos-sdk/tree/main/x/evidence)\n* [x/distribution](https://github.com/cosmos/cosmos-sdk/tree/main/x/distribution)\n* [x/mint](https://github.com/cosmos/cosmos-sdk/tree/main/x/mint)\n\nWe are interested in bugs in other modules, however the above are most likely to have significant vulnerabilities, due to the complexity/nuance involved. We also recommend reading the [specification](https://github.com/cosmos/cosmos-sdk/blob/main/docs/building-modules/README.md) of each module before digging into the code.\n",
-          "integrity_requirement": "high",
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "Hermes Relayer",
-          "asset_type": "OTHER",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "Hermes is a Rust implementation of an Inter-Blockchain Communication (IBC) relayer that is developed and maintained by Informal Systems. It provides a CLI to relay packets between Cosmos SDK chains, exposes [Prometheus](https://prometheus.io/) metrics and offers a REST API.\n\nThe [documentation for Hermes](https://hermes.informal.systems/) includes a [guide for installation](https://hermes.informal.systems/quick-start/installation.html) and [several tutorials](https://hermes.informal.systems/tutorials/local-chains/index.html) that will help you get started with security testing in a local environment. \n\n## In-Scope Repositories\n\n This component of the Interchain Stack comprises primarily of 6 crates: \n\n* [ibc-relayer](https://crates.io/crates/ibc-relayer) provides an implementation of an IBC relayer, as a *library*.\n* [ibc-relayer-cli](https://crates.io/crates/ibc-relayer-cli) is a CLI (a wrapper over the ibc-relayer library), comprising the [hermes](https://hermes.informal.systems/) binary.\n* [ibc-chain-registry](https://crates.io/crates/ibc-chain-registry) provides functions to fetch data from the [chain registry](https://github.com/cosmos/chain-registry) and automatically generate chain configuration for Hermes.\n* [ibc-telemetry](https://crates.io/crates/ibc-telemetry) is a library for use in the Hermes CLI, for gathering telemetry data and exposing that in a Prometheus endpoint.\n* [ibc-relayer-rest](https://crates.io/crates/ibc-telemetry) is a library for use in the Hermes CLI, for exposing a REST API to inspect the state of the relayer.\n* [ibc-test-framework](https://crates.io/crates/ibc-test-framework) provides the infrastructure and framework for writing end-to-end (E2E) tests that include the spawning of the relayer together with Cosmos full nodes.",
-          "integrity_requirement": null,
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "Solidity IBC Eureka",
-          "asset_type": "OTHER",
-          "availability_requirement": "high",
-          "confidentiality_requirement": "high",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "IBC v2 is a simplified version of the IBC protocol that is encoding agnostic. This enables a trust-minimized IBC connection between Ethereum and a Cosmos SDK chain.\nhttps://github.com/cosmos/solidity-ibc-eureka",
-          "integrity_requirement": "high",
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "https://github.com/cosmos/gaia",
-          "asset_type": "SOURCE_CODE",
-          "availability_requirement": "high",
-          "confidentiality_requirement": "high",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "The following is a list of examples of the kinds of vulnerabilities that we’re most interested in. It is not exhaustive: there are other kinds of issues we may also be interested in!\n\n* Injection exploits\n* Privilege escalation\n* IBC\n* Inter-module interactions\n* Network channel attacks\n* Replay attacks",
-          "integrity_requirement": "high",
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "https://github.com/cosmos/iavl",
-          "asset_type": "SOURCE_CODE",
-          "availability_requirement": "high",
-          "confidentiality_requirement": "high",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "The `iaviewer` application itself is not in-scope for the bug bounty program, unless there is an underlying bug in the `iavl` library that can be exploited through the application or other applications using the `iavl` library.",
-          "integrity_requirement": "high",
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "https://github.com/cosmos/ics23",
-          "asset_type": "SOURCE_CODE",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "",
-          "integrity_requirement": null,
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "https://github.com/cosmos/ledger-cosmos",
-          "asset_type": "SOURCE_CODE",
-          "availability_requirement": "not_defined",
-          "confidentiality_requirement": "not_defined",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "We are looking for security vulnerabilities that, when exploited, can make a person lose their fund, access to their private key or otherwise impact them _on the production system_, in this case, a public Ledger device.",
-          "integrity_requirement": "not_defined",
-          "max_severity": "low"
-        },
-        {
-          "asset_identifier": "ibc-go",
-          "asset_type": "OTHER",
-          "availability_requirement": "high",
-          "confidentiality_requirement": "high",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "The Inter-Blockchain Communication Protocol (IBC)  allows blockchains to talk to each other. The protocol realizes this interoperability by specifying a set of data structures, abstractions, and semantics that can be implemented by any distributed ledger that satisfies a small set of requirements. \n\nTo learn more about IBC and its components, visit the [documentation site](https://ibc.cosmos.network/main/ibc/overview). \n\n## In-Scope Repositories\n\n* [https://github.com/cosmos/ibc-go/tree/main](https://github.com/cosmos/ibc-go/tree/main)\n\n### IBC Core\n* [02-client](https://github.com/cosmos/ibc-go/tree/main/modules/core/02-client)\n* [03-connection](https://github.com/cosmos/ibc-go/tree/main/modules/core/03-connection)\n* [04-channel](https://github.com/cosmos/ibc-go/tree/main/modules/core/04-channel)\n* [05-port](https://github.com/cosmos/ibc-go/tree/main/modules/core/05-port)\n* [23-commitment](https://github.com/cosmos/ibc-go/tree/main/modules/core/23-commitment)\n* [24-host](https://github.com/cosmos/ibc-go/tree/main/modules/core/24-host)\n\n### Application Modules\n* [Transfer](https://github.com/cosmos/ibc-go/tree/main/modules/apps/transfer)\n* [27-interchain-accounts](https://github.com/cosmos/ibc-go/tree/main/modules/apps/27-interchain-accounts)\n\n### Light Clients\n* [06–solomachine](https://github.com/cosmos/ibc-go/tree/main/modules/light-clients/06-solomachine)\n* [07-tendermint](https://github.com/cosmos/ibc-go/tree/main/modules/light-clients/07-tendermint)\n* [09-localhost](https://github.com/cosmos/ibc-go/tree/main/modules/light-clients/09-localhost)\n* [08-wasm] (https://github.com/cosmos/ibc-go/tree/main/modules/light-clients/08-wasm)\n\n### Middleware Modules\n* [29-fee](https://github.com/cosmos/ibc-go/tree/main/modules/apps/29-fee)\n* [Callbacks](https://github.com/cosmos/ibc-go/tree/main/modules/apps/callbacks)\n\n\n## LTS Policy\n\nThe ibc-go team has implemented a [Stable Release Policy](https://github.com/cosmos/ibc-go/blob/main/RELEASES.md%23stable-release-policy) that covers the protocol and components it maintains.\n",
-          "integrity_requirement": "high",
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "www.github.com/cosmos/evm",
-          "asset_type": "SOURCE_CODE",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "",
-          "integrity_requirement": null,
-          "max_severity": "critical"
-        }
-      ],
-      "out_of_scope": [
-        {
-          "asset_identifier": "Horcrux",
-          "asset_type": "OTHER",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": false,
-          "eligible_for_submission": false,
-          "instruction": "Horcrux is a [multi-party-computation \\(MPC\\)](https://en.wikipedia.org/wiki/Secure_multi-party_computation) signing service for CometBFT nodes built and maintained by Strangelove Labs. It provides high-availability key management for Cosmos validator operations, and mitigates the risk of double signing transactions.\n\nThis documentation and set of guides will help you get started with learning about Horcrux:\n\n### Guides:\n* [PFC-Validator example shell script](https://github.com/PFC-Validator/horcrux-container/blob/main/launch-all.sh)\n* [PFC-Validator Kubernetes Cluster yaml configs](https://github.com/PFC-Validator/PFC-Cluster/tree/main/manifests/cosmos/pisco)\n* [Lavender.Five Ansible Cluster automation](https://github.com/LavenderFive/horcrux-ansible)\n\n### Diagrams:\n* [https://user-images.githubusercontent.com/6722152/157145772-8557b4b5-a0cc-4073-8834-86afda1900fc.png](https://user-images.githubusercontent.com/6722152/157145772-8557b4b5-a0cc-4073-8834-86afda1900fc.png)\n\n## In-Scope Repositories\n* [https://github.com/strangelove-ventures/horcrux](https://github.com/strangelove-ventures/horcrux) \n\n## LTS Policy\n\nThe Strangelove Labs team maintains a dedicated [Horcrux Support Policy](https://docs.google.com/document/d/1XrrOfigfoDuJUp04b_4BMvoDvgQwTQGutXVio5cAfAE/edit?usp=sharing). ",
-          "integrity_requirement": null,
-          "max_severity": "none"
-        }
-      ]
-    }
-  },
-  {
-    "allows_bounty_splitting": false,
     "average_time_to_bounty_awarded": null,
     "average_time_to_first_program_response": 36.0,
     "average_time_to_report_resolved": 543.0,
@@ -451459,7 +451316,7 @@
     "name": "Ping Identity",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 76,
+    "response_efficiency_percentage": 70,
     "submission_state": "open",
     "url": "https://hackerone.com/pingidentity",
     "website": "https://www.pingidentity.com/",
