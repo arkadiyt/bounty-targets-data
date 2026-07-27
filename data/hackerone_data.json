@@ -1,6 +1,215 @@
 [
   {
     "allows_bounty_splitting": true,
+    "average_time_to_bounty_awarded": null,
+    "average_time_to_first_program_response": null,
+    "average_time_to_report_resolved": null,
+    "handle": "wolt",
+    "id": 0,
+    "managed_program": true,
+    "name": "Wolt",
+    "offers_bounties": true,
+    "offers_swag": false,
+    "response_efficiency_percentage": null,
+    "submission_state": "open",
+    "url": "https://hackerone.com/wolt",
+    "website": "https://wolt.com",
+    "targets": {
+      "in_scope": [
+        {
+          "asset_identifier": "*.wolt.com",
+          "asset_type": "WILDCARD",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Anything else under the `.wolt.com` domain is fair game with some exceptions (see the out of scope items). Depending on the affected service and finding type, we might bump this to Tier-1 bounties.",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "1477299281",
+          "asset_type": "APPLE_STORE_APP_ID",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Wolt Courier Partner iOS app: https://apps.apple.com/app/1477299281 \n* Notable use-cases: Receiving delivery requests, tracking orders, completing deliveries, modifying your profile info.\n* For the time being we don't provide accounts of the courier type.\nIt would be very interesting if you can interact with the courier APIs without actually having a courier account.",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "943905271",
+          "asset_type": "APPLE_STORE_APP_ID",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Wolt Customer iOS app: https://apps.apple.com/app/943905271\n\nNotable use-cases: Regular wolt.com account creation, placing orders, tracking your orders, modifying your profile info.",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "authentication.wolt.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Keywords: OAuth2, OIDC, JWT\n* Used by: Regular wolt.com users, Wolt employees, other services (service-to-service communication).\n* Handles the vast majority of our authN/authZ. In other words, JWTs signed by this service can grant you access to other services/APIs.\n* Your JWT as a regular wolt.com user comes from this service.",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "com.wolt.android",
+          "asset_type": "GOOGLE_PLAY_APP_ID",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Wolt  Customer Android app: https://play.google.com/store/apps/details?id=com.wolt.android\n\nNotable use-cases: Regular wolt.com account creation, placing orders, tracking your orders, modifying your profile info.",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "com.wolt.courierapp",
+          "asset_type": "GOOGLE_PLAY_APP_ID",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Wolt Courier Partner Android app: https://play.google.com/store/apps/details?id=com.wolt.courierapp\n\n* Notable use-cases: Receiving delivery requests, tracking orders, completing deliveries, modifying your profile info.\n* For the time being we don't provide accounts of the courier type.\n* It would be very interesting if you can interact with the courier APIs without actually having a courier account.",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "corporate.wolt.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Keywords: admin\n* Used by: Wolt employees, corporate customers.\n* Admin portal for Wolt's corporate customers.\n* Your JWT as a regular wolt.com user should grant you limited access.",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "drive.wolt.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Keywords: admin\n* Used by: Wolt employees, delivery partners.\n* Admin portal for Wolt's last-mile delivery partners.\n* Your JWT as a regular wolt.com user should grant you limited access.",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "merchant.wolt.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Keywords: admin\n* Used by: Wolt employees, store managers.\n* Portal for store managers to update menus.\n* Your JWT as a regular wolt.com user should grant you limited access.",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "ops.wolt.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Keywords: admin\n* Used by: Wolt employees.\n* This service's endpoints are only accessible by Wolt employees (if you can show otherwise, that’ll be very interesting). However, your tainted data (e.g., purchase info, profile info) may be processed by this service.\n",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "restaurant-api.wolt.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "* Used by: Regular wolt.com users, Wolt employees, corporate customers, delivery partners, store managers.\n* Notable use-cases: Creating and editing users, placing orders, tracking orders, setting prices.\n* Your JWT as a regular wolt.com user should grant you access to most functionality for your user type.",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "wolt.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Used by: Everybody.\n* Our main web page.\n* Notable use-cases: Offering an in-browser JavaScript app to interact with other APIs and services. Offering HTTP endpoints to interact with this service's own APIs.",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "asset_identifier": "blog.wolt.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "Keywords: Third-party SaaS, WordPress\n* Used by: Wolt employees.\n* WordPress blog hosted by wpengine.com. wpengine.com owns the infrastructure, but we maintain the WordPress installation.\n* Note: Only WordPress-level probes are allowed.",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "gettest.wolt.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "links.wolt.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "press.wolt.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "This is a third-party SaaS and we aren't authorized to test it.",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "wolt.atlassian.net",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        }
+      ]
+    }
+  },
+  {
+    "allows_bounty_splitting": true,
     "average_time_to_bounty_awarded": 337.0,
     "average_time_to_first_program_response": 0.0,
     "average_time_to_report_resolved": null,
@@ -70746,7 +70955,7 @@
     "name": "SIX Group",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 77,
+    "response_efficiency_percentage": 76,
     "submission_state": "open",
     "url": "https://hackerone.com/six-group",
     "website": "https://six-group.com",
@@ -479284,7 +479493,7 @@
     "name": "Ruby on Rails",
     "offers_bounties": false,
     "offers_swag": false,
-    "response_efficiency_percentage": 63,
+    "response_efficiency_percentage": 67,
     "submission_state": "open",
     "url": "https://hackerone.com/rails",
     "website": "http://rubyonrails.org/security",
