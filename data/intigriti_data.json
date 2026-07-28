@@ -13039,12 +13039,6 @@
     "targets": {
       "in_scope": [
         {
-          "type": "wildcard",
-          "endpoint": "*.mijnwater-link.be",
-          "description": "Our customer facing portal for managing customer information and payments",
-          "impact": "Tier 3"
-        },
-        {
           "type": "url",
           "endpoint": "https://desktop.water-link.be/",
           "description": "Our Citrix environment for remote access",
@@ -13059,7 +13053,13 @@
         {
           "type": "wildcard",
           "endpoint": "*.water-link.be/",
-          "description": null,
+          "description": "Our main website for customer facing content",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.mijnwater-link.be",
+          "description": "Our customer facing portal for managing customer information and payments",
           "impact": "Tier 3"
         },
         {
