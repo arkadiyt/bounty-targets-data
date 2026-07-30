@@ -8637,6 +8637,295 @@
     }
   },
   {
+    "id": "6c8455c8-66b7-4360-bc6d-45b854c6fa85",
+    "name": "Posti Bug Bounty ",
+    "company_handle": "posti",
+    "handle": "postibugbounty",
+    "url": "https://www.intigriti.com/programs/posti/postibugbounty/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 100,
+      "currency": "EUR"
+    },
+    "max_bounty": {
+      "value": 2000,
+      "currency": "EUR"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "url",
+          "endpoint": "postikuori.posti.fi",
+          "description": "Posti envelope store where customers can explore, design and order prepaid envelopes.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "logout.id.posti.fi",
+          "description": "This service implements single logout functionality.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "mfa.posti.fi",
+          "description": "Posti MFA solution for consumer users.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "id.posti.fi",
+          "description": "The service acts as an IdP broker between the main IdP (todentaminen.posti.fi) and other Posti B2B applications (such as kontakti.posti.fi).",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "orgadmin-ext.prd.account.posticloud.fi",
+          "description": "This is a user management service for B2B users published as part of the OmaPosti Pro service (pro.posti.fi), so authentication occurs via OmaPosti Pro. The organization main users can invite new users to their organization and manage existing users’ access rights to Posti’s business services.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "developer.posti.com",
+          "description": "Posti Developer Portal where developers can explore and consume Posti APIs.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.posti.se",
+          "description": "Posti Swedish website describing Posti logistics and delivery services in Sweden.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "yritysmuutto.posti.fi",
+          "description": "Web-based system for address change requests for corporate customers.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "ios",
+          "endpoint": "410789057",
+          "description": "OmaPosti application that can be downloaded from the App Store",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.posti.fi",
+          "description": "Posti APIs descriptions and tutorials to send parcel and mail data, track parcels, interface to warehouse and dropshipping services.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "auth-service.posti.fi",
+          "description": "Authentication service to handle the integration with One Account (a multi-application IAM service for consumer and business customers).\n\nThe user goes to https://oma.posti.fi, he's directed to auth-service.posti.fi which creates the user tokens for OmaPosti, then goes back to oma.posti.fi and from there to todentaminen.posti.fi for the user login",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "cdn.posti.fi",
+          "description": "Common CDN to share assets and libraries within Posti web related services",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "connect.posti.fi",
+          "description": "Load balancer for a Posti integration environment (a platform for integrating several Posti internal and external systems)",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "console.posti.com",
+          "description": "The Console is an interface for maintaining electronic documents stored in the company repository system. The customers can view, download and delete the stored documents (eInvoices, orders etc documents).",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "elma.elma.fi",
+          "description": "This is an SFTP server by which Posti customers send documents, invoices and other data to Posti.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "android",
+          "endpoint": "fi.itella.posti.android",
+          "description": "OmaPosti application that can be downloaded from Google Play store",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "gateway.posti.fi",
+          "description": "Integration service built on the Amazon API Gateway service that provides public endpoints for third parties that want to use Posti APIs.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://kontakti.posti.fi",
+          "description": "Marketing services for business customers",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://my.account.posti.fi",
+          "description": "My Account is a component of One Account, that is an application where the end-users can manage their user account. The application also hosts the registration form for new corporate users.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://my.smartposti.ee/",
+          "description": "Smartposti Estonia website for sending and returning parcels.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://my.smartposti.lt",
+          "description": "Smartposti Lithuania website for sending and returning parcels.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://my.smartposti.lv",
+          "description": "Smartposti Latvia website for sending and returning parcels.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://oma.posti.fi/",
+          "description": "With OmaPosti you can track your parcels in real time and receive your letters and invoices immediately. Invoice payment is also easy.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://printerdriver.posti.com/",
+          "description": "Printer Driver provides a simple way for customers to print and send their letters using a virtual printer and web user interface.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://pro.posti.fi",
+          "description": "With OmaPosti Pro, business customers can send parcels, freight and letters, print out address labels, track deliveries, manage their address book, business account, user rights, access reports regarding posting volumes, geographic distribution, CSAT and customer feedback.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://quicksight.aws.amazon.com",
+          "description": "Aditro Logistics provides inventory, warehousing and logistics services to customers, for example inbound deliveries, storage, picking and packing. The Customer Portal is an online service for Aditro customers to access their data and see the statuses of the logistics processes.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://shop.posti.fi",
+          "description": "Webshop for buying stamps, philatelic items, envelopes, postcards, packaging materials and even order a letter from Santa Claus.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://tuleasiakkaaksi.posti.fi",
+          "description": "Digital onboarding: a service for small and medium-sized Finnish companies that want to send domestic shipments and therefore become a Posti contract customer in a quick and easy way.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://www.posti.fi",
+          "description": "Posti main Finland website for tracking, sending, returning parcels, sending letters and postcards. And also for business services such parcels and logistics, letters and publications, marketing and other services.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://www.smartposti.ee",
+          "description": "Smartposti Estonia website offering postal services to private and business customers",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://www.smartposti.lt",
+          "description": "Smartposti Lithuania website offering postal services to private and business customers",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://www.smartposti.lv",
+          "description": "Smartposti Latvia website offering postal services to private and business customers",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://www.webproteus.com/lpro-web/login",
+          "description": "Material management and warehouse management system (WMS) solutions.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://yrityksennoutopiste.posti.fi",
+          "description": "Service for Posti corporate customers. Posti provides the software for managing the customers webshop orders when their customers (mostly consumers)  choose the \"pick up from store\" option. The service provides parcel receiving and shelling functionalities in the customer's store and when the shipment has the \"received\" status in the store, the consumer will get a notification for picking it from the store's pick up point. The service can also be used for returning parcels and uncollected parcels.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "jakelu.posti.fi",
+          "description": "Dialogue UI is a user-facing service that provides Posti the possibility to interact with its customers regarding parcel receiving functionalities related to shipments\n\nStart from within the OmaPosti application (web or mobile) and access any of the parcel receiving functionalities (payments, options such as delivery time and method, follow the parcel delivery in real time, provide feedback about the received parcel, do the customs clearance)",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "netposti.fi",
+          "description": "Electronic mailbox and archive for consumers (OmaPosti invoices and letters).",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "nextshipping.posti.fi",
+          "description": "Service for printing parcel, freight and postal shipment documents. \n\nStart from OmaPosti Pro application by entering the sending details and choosing the delivery method; or, in case of an online store where Posti delivery options have been added to the store checkout, the online store calls Posti OAuth-service, then OAuth returns a token to the online store and then the online store makes a request to NextShipping API and passes the token along the request",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "partnerselfservice.posti.fi",
+          "description": "Front-end UI of the Posti Service Network Directory that allows Posti partners to send updates to the that service regarding opening hours information and contact details of the postal outlet.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "picc.posti.fi",
+          "description": "Service for sending www.posti.fi webforms data to SalesForce CRM.\n\nStart from www.posti.fi and send forms such as a claim for compensation  https://www.posti.fi/en/customer-support/receiving/claims, a purchase order number order https://www.posti.fi/en/customer-support/company-information/invoicing-and-changing/purchase-order-number, a change of invoicing address  https://www.posti.fi/en/customer-support/company-information/invoicing-and-changing/change-of-invoicing-address",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "posti.com",
+          "description": "Website describing Posti as a company and its services.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "tnt.posti.com",
+          "description": "A tracking system where external and internal users can follow the progress of specific service flows. External customers can find information on their material via the UI.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "todentaminen.posti.fi",
+          "description": "Main IdP for Posti users that offers Single Sign On services to different Posti services. One Account is a service which consists of several different applications. Together these applications offer a complete IAM service for consumer (B2C) and business customers (B2B).\n\nThis is the main log in service for https://oma.posti.fi - https://shop.posti.fi - https://yhteystietoni.posti.fi - https://asiakastiedot.posti.fi - https://www.posti.fi/omatpalvelut",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "yhteystietoni.posti.fi",
+          "description": "Web-based system for address changes, mail delivery interruption and temporary mail redirection requests from consumers.",
+          "impact": "Tier 2"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "url",
+          "endpoint": "www.posti.fi/henkiloasiakkaat/lomakkeet/tuotantohairiot.html",
+          "description": "The following URL www.posti.fi/henkiloasiakkaat/lomakkeet/tuotantohairiot.html contains employee emails within the HTML source. For the time being this is not going to be fixed and therefore should not be reported.",
+          "impact": "Out of scope"
+        }
+      ]
+    }
+  },
+  {
     "id": "c12292a3-d997-406f-863b-42d223dcbae6",
     "name": "Proof.com VDP",
     "company_handle": "proof",
