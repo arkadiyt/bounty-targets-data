@@ -11233,6 +11233,60 @@
     }
   },
   {
+    "id": "7d2af06f-9f70-4561-9ba6-4c044274a94a",
+    "name": "TrueLayer VDP",
+    "company_handle": "truelayer",
+    "handle": "truelayervdp",
+    "url": "https://www.intigriti.com/programs/truelayer/truelayervdp/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 0,
+      "currency": "EUR"
+    },
+    "max_bounty": {
+      "value": 0,
+      "currency": "EUR"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "wildcard",
+          "endpoint": "*.staging.zimpler.net",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.sandbox.zimpler.net",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.zimpler.net",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.truelayer-sandbox.com",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.truelayer.com",
+          "description": null,
+          "impact": "Tier 1"
+        }
+      ],
+      "out_of_scope": []
+    }
+  },
+  {
     "id": "724ad196-90de-4ba8-bf21-dc114ab7fce4",
     "name": "Trusted Firmware",
     "company_handle": "arm",
@@ -12917,6 +12971,139 @@
           "type": "url",
           "endpoint": "https://wpengine.com/contact/",
           "description": null,
+          "impact": "Out of scope"
+        }
+      ]
+    }
+  },
+  {
+    "id": "7999e698-363d-49e2-bd34-4ce47556d03c",
+    "name": "Water-Link",
+    "company_handle": "waterlink",
+    "handle": "water-link",
+    "url": "https://www.intigriti.com/programs/waterlink/water-link/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 50,
+      "currency": "EUR"
+    },
+    "max_bounty": {
+      "value": 5000,
+      "currency": "EUR"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "url",
+          "endpoint": "https://desktop.water-link.be/",
+          "description": "Our Citrix environment for remote access",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://pit.water-link.be/",
+          "description": "Our intranet portal",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.water-link.be/",
+          "description": "Our main website for customer facing content",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.mijnwater-link.be",
+          "description": "Our customer facing portal for managing customer information and payments",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://www.water-link-jaarverslag.be",
+          "description": "Domain with the annual figures of our organisation.",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://www.water-link.be",
+          "description": "This is the general public website for our citizens.",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://www.waterstoring.be/",
+          "description": "Here our citizens can check if their is a (un)planned interruption of the watersupply.",
+          "impact": "Tier 3"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "url",
+          "endpoint": "aquawardsspatial.water-link.be",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "gisacc(*).water-link.be",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://aquawardsoperate.water-link.be/",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://aquawardsoperateacc.water-link.be",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://feedback.water-link.be",
+          "description": "SAAS application managed by an external partner",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://gis.water-link.be",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://gis1.water-link.be",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://gis2.water-link.be",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://jobs.water-link.be",
+          "description": "SAP application managed by an external partner",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://wl_acc.water-link.be/",
+          "description": "dev environment for our public website",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://wl_dev.water-link.be/",
+          "description": "dev environment for our public website",
           "impact": "Out of scope"
         }
       ]
