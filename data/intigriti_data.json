@@ -1528,7 +1528,13 @@
         {
           "type": "url",
           "endpoint": "cmcom.atlassian.net",
-          "description": null,
+          "description": "Our Atlassian instance. **In scope for this program are only misconfiguration on our side exposing sensitive data**. Please consider if an issue you find is indeed a configuration issue we made, or if the issue is on Atlassians side (if this is the case, please report it on their bug bounty program!)",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "other",
+          "endpoint": "https://github.com/cmdotcom",
+          "description": "Our public code repositories are being used by our customers. In scope for this domain is issues with the public code we host (vulnerabilities, libraries that have known security concerns, keys accidentally pushed to the public GitHub etc.). \n**Testing the GitHub itself is out-of-scope**, they have their own bug bounty program if you are interested :)",
           "impact": "Tier 3"
         },
         {
@@ -1583,12 +1589,6 @@
           "type": "wildcard",
           "endpoint": "demo.globalticket.com/*",
           "description": "GlobalTicket is one of our integrations. \nBe sure to check out `/cms` to try and work your way into it.",
-          "impact": "No Bounty"
-        },
-        {
-          "type": "other",
-          "endpoint": "https://github.com/cmdotcom",
-          "description": "Our public code repositories are being used by our customers. In scope for this domain is issues with the public code we host (vulnerabilities, libraries that have known security concerns, keys accidentally pushed to the public GitHub etc.). \n**Testing the GitHub itself is out-of-scope**, they have their own bug bounty program if you are interested :)  ",
           "impact": "No Bounty"
         }
       ],
