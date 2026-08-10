@@ -9958,6 +9958,48 @@
     }
   },
   {
+    "id": "8148a041-c41d-4128-8c73-f4727002515e",
+    "name": "Spacelift VDP",
+    "company_handle": "spacelift",
+    "handle": "spaceliftvdp",
+    "url": "https://www.intigriti.com/programs/spacelift/spaceliftvdp/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 0,
+      "currency": "USD"
+    },
+    "max_bounty": {
+      "value": 0,
+      "currency": "USD"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "wildcard",
+          "endpoint": "*.app.spacelift.dev",
+          "description": "Wildcard covering all per-account subdomains of the Spacelift app (e.g. `<account>.app.spacelift.dev`). This is where the core product lives: authentication and SSO, role-based access control (RBAC), stacks and runs, VCS integrations (GitHub, GitLab, Bitbucket, Azure DevOps), cloud provider integrations (AWS, GCP, Azure), and the REST/GraphQL API. Highest-value areas: tenant isolation, authorization/RBAC bypass, IDOR across accounts, and the cloud-integration confused-deputy scenario.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "app.spacelift.dev",
+          "description": "The application's root entry point: login, signup, and the account-agnostic parts of the dashboard. Same environment and rules as the wildcard above; the wildcard does not cover this apex host, which is why it's listed separately.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "spacelift.dev",
+          "description": "It's a landing page serving mostly static content, and it's also where users can sign up for an account.",
+          "impact": null
+        }
+      ],
+      "out_of_scope": []
+    }
+  },
+  {
     "id": "8f6c92dc-1300-4f11-8284-29b6ed743378",
     "name": "Speakap Responsible Disclosure",
     "company_handle": "speakap",
