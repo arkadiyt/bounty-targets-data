@@ -87,7 +87,14 @@
           "impact": "Tier 3"
         }
       ],
-      "out_of_scope": []
+      "out_of_scope": [
+        {
+          "type": "url",
+          "endpoint": "actie.ad.nl",
+          "description": null,
+          "impact": "Out of scope"
+        }
+      ]
     }
   },
   {
@@ -675,6 +682,18 @@
     },
     "targets": {
       "in_scope": [
+        {
+          "type": "wildcard",
+          "endpoint": "*.emarketer.com",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "emarketer.com",
+          "description": null,
+          "impact": "Tier 2"
+        },
         {
           "type": "url",
           "endpoint": "newsos.com",
@@ -1696,7 +1715,7 @@
         {
           "type": "ios",
           "endpoint": "com.capital.trading",
-          "description": "https://apps.apple.com/BY/app/id1230088754?mt=8",
+          "description": "https://apps.apple.com/ie/app/capital-com-trading-finance/id1230088754",
           "impact": "Tier 2"
         },
         {
@@ -3401,7 +3420,7 @@
         {
           "type": "wildcard",
           "endpoint": "*.db.ondigitalocean.com",
-          "description": "Customers' resources are hosted underneath this domain, so the entire domain should be considered out-of-scope.\n\nAny database created inside your own account on this domain are considered in-scope. Use the `cloud.digitalocean.com` asset in that case.",
+          "description": "Customers' resources are hosted underneath this domain, so the entire domain should be considered out-of-scope.\n\nAny database created inside your own account on this domain are considered in-scope. Use the `cloud.digitalocean.com` asset in that case.\n\nFindings in Standard Edition PostgreSQL, Standard Edition MySQL, Valkey, Kafka, and OpenSearch should be submitted to [our partner, Aiven](https://bugcrowd.com/engagements/aiven-mbb-og).",
           "impact": "Out of scope"
         },
         {
@@ -3907,6 +3926,84 @@
           "impact": "Out of scope"
         }
       ]
+    }
+  },
+  {
+    "id": "d3bee5a5-9107-4e71-8d94-ab5098f2005c",
+    "name": "Dutch Lottery VDP",
+    "company_handle": "nederlandseloterij",
+    "handle": "dutchlotteryvdp",
+    "url": "https://www.intigriti.com/programs/nederlandseloterij/dutchlotteryvdp/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 0,
+      "currency": "EUR"
+    },
+    "max_bounty": {
+      "value": 0,
+      "currency": "EUR"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "url",
+          "endpoint": "www.staatsloterij.nederlandseloterij.nl",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.krasloten.nederlandseloterij.nl",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.eurojackpot.nederlandseloterij.nl",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.luckyday.nederlandseloterij.nl",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.lotto.nederlandseloterij.nl",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.miljoenenspel.nederlandseloterij.nl",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.nederlandseloterij.nl",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.toto.nl",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "See the CSV file attached in the In-scope section for a full list of assets in scope",
+          "description": null,
+          "impact": "No Bounty"
+        }
+      ],
+      "out_of_scope": []
     }
   },
   {
@@ -10379,6 +10476,12 @@
       "out_of_scope": [
         {
           "type": "url",
+          "endpoint": "f29baf0e-81df-4090-a5a5-f33cb9566b0d.storebrand.no",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
           "endpoint": "kvadrat.no",
           "description": null,
           "impact": "Out of scope"
@@ -10733,7 +10836,7 @@
         {
           "type": "other",
           "endpoint": "Brand Sites",
-          "description": "Brand sites owned by The Coca-Cola Company.",
+          "description": "Brand sites owned by The Coca-Cola Company. These brands can be viewed from the following URL: https://www.coca-colacompany.com/brands",
           "impact": "No Bounty"
         },
         {
