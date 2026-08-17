@@ -16564,7 +16564,7 @@
     "name": "Ferrero",
     "offers_bounties": false,
     "offers_swag": false,
-    "response_efficiency_percentage": 82,
+    "response_efficiency_percentage": 81,
     "submission_state": "open",
     "url": "https://hackerone.com/ferrero",
     "website": "https://www.ferrero.com",
@@ -67960,7 +67960,7 @@
     "name": "Visa",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 84,
+    "response_efficiency_percentage": 85,
     "submission_state": "open",
     "url": "https://hackerone.com/visa",
     "website": "http://www.visa.com",
@@ -428741,7 +428741,7 @@
     "name": "Evernote",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 59,
+    "response_efficiency_percentage": 60,
     "submission_state": "open",
     "url": "https://hackerone.com/evernote",
     "website": "http://evernote.com",
@@ -430861,7 +430861,7 @@
     "name": "Thomson Reuters",
     "offers_bounties": false,
     "offers_swag": false,
-    "response_efficiency_percentage": 77,
+    "response_efficiency_percentage": 79,
     "submission_state": "open",
     "url": "https://hackerone.com/thomsonreuters-public",
     "website": "https://thomsonreuters.com",
@@ -457421,17 +457421,6 @@
           "max_severity": "critical"
         },
         {
-          "asset_identifier": "Crypto.com Wallet Extension",
-          "asset_type": "OTHER",
-          "availability_requirement": "low",
-          "confidentiality_requirement": "low",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "",
-          "integrity_requirement": "low",
-          "max_severity": "medium"
-        },
-        {
           "asset_identifier": "Crypto.com mobile app APIs that require an account",
           "asset_type": "API",
           "availability_requirement": null,
@@ -457463,28 +457452,6 @@
           "instruction": "Get the app here: https://play.google.com/store/apps/details?id=co.mona.android\n\nYou won’t need test accounts for this as it will be public-facing sites for now.\n\nThe app should give you the functionality to start using CRO services.",
           "integrity_requirement": null,
           "max_severity": "high"
-        },
-        {
-          "asset_identifier": "com.defi.wallet",
-          "asset_type": "APPLE_STORE_APP_ID",
-          "availability_requirement": "low",
-          "confidentiality_requirement": "medium",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "https://apps.apple.com/app/crypto-com-wallet/id1512048310",
-          "integrity_requirement": "low",
-          "max_severity": "medium"
-        },
-        {
-          "asset_identifier": "com.defi.wallet",
-          "asset_type": "GOOGLE_PLAY_APP_ID",
-          "availability_requirement": "low",
-          "confidentiality_requirement": "medium",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "https://play.google.com/store/apps/details?id=com.defi.wallet",
-          "integrity_requirement": "low",
-          "max_severity": "medium"
         },
         {
           "asset_identifier": "com.monaco.mobile",
@@ -457531,6 +457498,17 @@
           "max_severity": "low"
         },
         {
+          "asset_identifier": "experiences.crypto.com",
+          "asset_type": "URL",
+          "availability_requirement": "low",
+          "confidentiality_requirement": "low",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": "low",
+          "max_severity": "low"
+        },
+        {
           "asset_identifier": "https://crypto.com/exchange",
           "asset_type": "URL",
           "availability_requirement": null,
@@ -457557,7 +457535,7 @@
           "asset_type": "URL",
           "availability_requirement": "low",
           "confidentiality_requirement": "low",
-          "eligible_for_bounty": true,
+          "eligible_for_bounty": false,
           "eligible_for_submission": true,
           "instruction": null,
           "integrity_requirement": "low",
@@ -457634,9 +457612,20 @@
           "asset_type": "URL",
           "availability_requirement": "low",
           "confidentiality_requirement": "low",
-          "eligible_for_bounty": true,
+          "eligible_for_bounty": false,
           "eligible_for_submission": true,
           "instruction": "For this asset, we only accept Critical and High severity issues.",
+          "integrity_requirement": "low",
+          "max_severity": "low"
+        },
+        {
+          "asset_identifier": "tickets.crypto.com",
+          "asset_type": "URL",
+          "availability_requirement": "low",
+          "confidentiality_requirement": "low",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
           "integrity_requirement": "low",
           "max_severity": "low"
         },
@@ -457664,6 +457653,39 @@
         }
       ],
       "out_of_scope": [
+        {
+          "asset_identifier": "Crypto.com Wallet Extension",
+          "asset_type": "OTHER",
+          "availability_requirement": "low",
+          "confidentiality_requirement": "low",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "",
+          "integrity_requirement": "low",
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "com.defi.wallet",
+          "asset_type": "APPLE_STORE_APP_ID",
+          "availability_requirement": "low",
+          "confidentiality_requirement": "medium",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "https://apps.apple.com/app/crypto-com-wallet/id1512048310",
+          "integrity_requirement": "low",
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "com.defi.wallet",
+          "asset_type": "GOOGLE_PLAY_APP_ID",
+          "availability_requirement": "low",
+          "confidentiality_requirement": "medium",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "https://play.google.com/store/apps/details?id=com.defi.wallet",
+          "integrity_requirement": "low",
+          "max_severity": "none"
+        },
         {
           "asset_identifier": "https://github.com/crypto-com/chain-desktop-wallet",
           "asset_type": "SOURCE_CODE",
@@ -484550,7 +484572,7 @@
     "name": "Automattic",
     "offers_bounties": true,
     "offers_swag": true,
-    "response_efficiency_percentage": 60,
+    "response_efficiency_percentage": 61,
     "submission_state": "open",
     "url": "https://hackerone.com/automattic",
     "website": "https://automattic.com",
