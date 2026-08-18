@@ -2770,7 +2770,13 @@
         {
           "type": "other",
           "endpoint": "Qualifio Subdomains",
-          "description": "Any domain that has a CNAME to a Qualifio application.\nSaaS platform - Report at https://qualifio.com/.well-known/security.txt\nExample:\n* actie.dpgmedia.be\n* actie.dpgmedia.nl",
+          "description": "Any domain that has a CNAME to a Qualifio application.\nSaaS platform - Report at https://qualifio.com/.well-known/security.txt",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "actie.*.*",
+          "description": "SaaS platform - Report at https://qualifio.com/.well-known/security.txt",
           "impact": "Out of scope"
         }
       ]
