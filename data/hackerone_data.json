@@ -10,7 +10,7 @@
     "name": "Vercel Sandbox",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 94,
+    "response_efficiency_percentage": 95,
     "submission_state": "open",
     "url": "https://hackerone.com/vercel_sandbox",
     "website": "https://vercel.com/",
@@ -2499,7 +2499,7 @@
     "name": "McGraw Hill",
     "offers_bounties": false,
     "offers_swag": false,
-    "response_efficiency_percentage": 81,
+    "response_efficiency_percentage": 82,
     "submission_state": "open",
     "url": "https://hackerone.com/mcgrawhill",
     "website": "http://mheducation.com",
@@ -466959,7 +466959,7 @@
     "name": "Elastic",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 80,
+    "response_efficiency_percentage": 81,
     "submission_state": "open",
     "url": "https://hackerone.com/elastic",
     "website": "https://www.elastic.co/",
@@ -478491,28 +478491,6 @@
           "max_severity": "critical"
         },
         {
-          "asset_identifier": "irclogs.wordpress.org",
-          "asset_type": "URL",
-          "availability_requirement": "none",
-          "confidentiality_requirement": "none",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "These are public logs of very old conversations. We are not interested in vulnerabilities unless they have a severe impact (e.g., RCE, XSS, modifying the logs, etc). DoS is not severe in this case.",
-          "integrity_requirement": "low",
-          "max_severity": "low"
-        },
-        {
-          "asset_identifier": "lists.wordpress.org",
-          "asset_type": "URL",
-          "availability_requirement": "low",
-          "confidentiality_requirement": "low",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "We are not interested in vulnerabilities unless they have a severe impact.",
-          "integrity_requirement": "low",
-          "max_severity": "medium"
-        },
-        {
           "asset_identifier": "mercantile.wordpress.org",
           "asset_type": "URL",
           "availability_requirement": "none",
@@ -478522,17 +478500,6 @@
           "instruction": "This site runs uses [the WooCommerce plugin](https://woocommerce.com/), but we don't accept reports for that. We only accept reports for our custom code. If you find any vulnerabilities that are also present in WooCommerce itself, please [report them to Automattic](/automattic).\n\nPlease don't submit test orders (especially automated ones). They don't test any of our custom code, and are a pain to clean up.\n\nAdditionally, price manipulation is a common invalid report, please see #682344.",
           "integrity_requirement": "low",
           "max_severity": "medium"
-        },
-        {
-          "asset_identifier": "munin-*.wordpress.org",
-          "asset_type": "WILDCARD",
-          "availability_requirement": "none",
-          "confidentiality_requirement": "none",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "We are not interested in vulnerabilities unless they have a severe impact (e.g., RCE, SSRF). Metrics data is intentionally made public.",
-          "integrity_requirement": "low",
-          "max_severity": "low"
         },
         {
           "asset_identifier": "planet.wordpress.org",
@@ -478611,6 +478578,39 @@
           "eligible_for_submission": false,
           "instruction": "**Please, report vulnerabilities for the WordPress mobile apps through the [Automattic HackerOne page](/automattic).**\n",
           "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "irclogs.wordpress.org",
+          "asset_type": "URL",
+          "availability_requirement": "none",
+          "confidentiality_requirement": "none",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "These are public logs of very old conversations. We are not interested in vulnerabilities unless they have a severe impact (e.g., RCE, XSS, modifying the logs, etc). DoS is not severe in this case.",
+          "integrity_requirement": "low",
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "lists.wordpress.org",
+          "asset_type": "URL",
+          "availability_requirement": "low",
+          "confidentiality_requirement": "low",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "We are not interested in vulnerabilities unless they have a severe impact.",
+          "integrity_requirement": "low",
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "munin-*.wordpress.org",
+          "asset_type": "WILDCARD",
+          "availability_requirement": "none",
+          "confidentiality_requirement": "none",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "We are not interested in vulnerabilities unless they have a severe impact (e.g., RCE, SSRF). Metrics data is intentionally made public.",
+          "integrity_requirement": "low",
           "max_severity": "none"
         },
         {
