@@ -93,7 +93,7 @@
         },
         {
           "type": "ios",
-          "endpoint": "https://play.google.com/store/apps/details?id=com.adobe.lrmobile&hl=en_GB",
+          "endpoint": "Lightroom Video & Photo Editor (IOS)",
           "description": null,
           "impact": "Tier 2"
         },
@@ -146,21 +146,9 @@
           "impact": "Tier 2"
         },
         {
-          "type": "other",
-          "endpoint": "Adobe ColdFusion without ColdFusion Administrator",
-          "description": null,
-          "impact": "Tier 2"
-        },
-        {
-          "type": "other",
-          "endpoint": "ColdFusion Administrator",
-          "description": null,
-          "impact": "Tier 3"
-        },
-        {
           "type": "wildcard",
           "endpoint": "*.lightroom.adobe.com",
-          "description": "Type: Web\n\nAssets:\n* *.lightroom.adobe.com\n* photos.adobe.io\n\nTesting plan: Yes\nCredentials / subscription: Not provided; self-signup; free trial for premium features\n\n---\n\nLightroom Web is in scope.\n\nTesting should focus on authentication, authorization, user photo access controls, cross-account data exposure, sensitive metadata exposure, sharing workflow vulnerabilities, API authorization issues, and business logic flaws affecting Lightroom Web workflows.\n\nRelevant Tier 1 AI bonus features available through this asset include:\n\n* Lightroom AI Edits\n* Lightroom “Edit suggestions” Tech Preview\n\n> Vulnerabilities related to Google Photos are out of scope. Denial-of-service testing is explicitly out of scope.",
+          "description": "Type: Web\n\nAssets:\n* *.lightroom.adobe.com\n* photos.adobe.io\n\nTesting plan: Yes\nCredentials / subscription: Not provided; self-signup; free trial for premium features\n\n---\n\nLightroom Web is in scope.\n\nTesting should focus on authentication, authorization, user photo access controls, cross-account data exposure, sensitive metadata exposure, sharing workflow vulnerabilities, API authorization issues, and business logic flaws affecting Lightroom Web workflows.\n\nRelevant Tier 1 AI bonus features available through this asset include:\n\n* Lightroom AI Edits\n* Lightroom “Edit suggestions” Tech Preview\n\nOut-of-scope items:\n> Vulnerabilities related to Google Photos\n> Access/download image rendetions via API on disabled-download shares\n> Viewing another user's liked content via Lightroom Community API (Discover/Remix/Tutorials)\n> Public shares found via search engine indexing\n> Denial-of-service testing",
           "impact": "Tier 2"
         },
         {
@@ -266,7 +254,20 @@
           "impact": "Tier 3"
         }
       ],
-      "out_of_scope": []
+      "out_of_scope": [
+        {
+          "type": "other",
+          "endpoint": "Adobe ColdFusion without ColdFusion Administrator",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "other",
+          "endpoint": "ColdFusion Administrator",
+          "description": null,
+          "impact": "Out of scope"
+        }
+      ]
     }
   },
   {
@@ -3104,6 +3105,199 @@
         }
       ],
       "out_of_scope": []
+    }
+  },
+  {
+    "id": "bd22f48d-633e-4b26-bf71-e4778d41b247",
+    "name": "DataCamp",
+    "company_handle": "datacamp",
+    "handle": "datacamp",
+    "url": "https://www.intigriti.com/programs/datacamp/datacamp/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 25,
+      "currency": "EUR"
+    },
+    "max_bounty": {
+      "value": 1500,
+      "currency": "EUR"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "url",
+          "endpoint": "profiles-api.datacamp.com",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "app.datacamp.com/certification",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "app.datacamp.com/groups",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "app.datacamp.com/learn",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "assessment-api.datacamp.com",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "assessment-v2.datacamp.com ",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "assessment.datacamp.com",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "campus.datacamp.com",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "android",
+          "endpoint": "com.datacamp",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "ios",
+          "endpoint": "https://apps.apple.com/au/app/datacamp-learn-data-science/id1263413087",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "practice.datacamp.com",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "projects.datacamp.com",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.datacamp.com",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.datacamp.com/datalab",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.datacamp.com",
+          "description": null,
+          "impact": "Tier 3"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "wildcard",
+          "endpoint": "*.it.datacamp.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "app.datacamp.com/recruit",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "ast-viewer.datacamp.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "confluence.datacamp.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "dccertified.datacamp.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "intranet.datacamp.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "jira.datacamp.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "links.datacamp.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "rdocumentation.datacamp.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "signature.datacamp.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "status.datacamp.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "support.datacamp.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "talent-jobs-api.datacamp.com",
+          "description": null,
+          "impact": "Out of scope"
+        }
+      ]
     }
   },
   {
