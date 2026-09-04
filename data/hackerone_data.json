@@ -25976,7 +25976,7 @@
     "name": "MSCI",
     "offers_bounties": false,
     "offers_swag": false,
-    "response_efficiency_percentage": 100,
+    "response_efficiency_percentage": 60,
     "submission_state": "open",
     "url": "https://hackerone.com/msci",
     "website": "https://msci.com",
@@ -64443,204 +64443,6 @@
           "eligible_for_bounty": false,
           "eligible_for_submission": false,
           "instruction": null,
-          "integrity_requirement": null,
-          "max_severity": "none"
-        }
-      ]
-    }
-  },
-  {
-    "allows_bounty_splitting": true,
-    "average_time_to_bounty_awarded": 89.0,
-    "average_time_to_first_program_response": 10.0,
-    "average_time_to_report_resolved": 1928.0,
-    "handle": "klarna",
-    "id": 0,
-    "managed_program": true,
-    "name": "Klarna",
-    "offers_bounties": true,
-    "offers_swag": false,
-    "response_efficiency_percentage": 87,
-    "submission_state": "open",
-    "url": "https://hackerone.com/klarna",
-    "website": "https://klarna.com",
-    "targets": {
-      "in_scope": [
-        {
-          "asset_identifier": "*.klarna.com",
-          "asset_type": "WILDCARD",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "",
-          "integrity_requirement": null,
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "*.klarna.net",
-          "asset_type": "WILDCARD",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "",
-          "integrity_requirement": null,
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "*.klarnacdn.net",
-          "asset_type": "WILDCARD",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "",
-          "integrity_requirement": null,
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "*.pricerunner.com",
-          "asset_type": "WILDCARD",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "",
-          "integrity_requirement": null,
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "Klarna Android App (com.myklarnamobile)",
-          "asset_type": "GOOGLE_PLAY_APP_ID",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "Please use your hacker email alias (e.g. h1username@wearehackerone.com) when testing. URL: https://play.google.com/store/apps/details?id=com.myklarnamobile",
-          "integrity_requirement": null,
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "Klarna iOS App (com.klarna.app)",
-          "asset_type": "APPLE_STORE_APP_ID",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "Please use your hacker email alias (e.g. h1username@wearehackerone.com) when testing. URL: https://apps.apple.com/it/app/klarna-shop-now-pay-later/id1115120118",
-          "integrity_requirement": null,
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "Merchant Portal",
-          "asset_type": "OTHER",
-          "availability_requirement": "not_defined",
-          "confidentiality_requirement": "not_defined",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "https://portal.playground.klarna.com",
-          "integrity_requirement": "not_defined",
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "app.klarna.com",
-          "asset_type": "API",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "Klarna app's API. ",
-          "integrity_requirement": null,
-          "max_severity": "critical"
-        }
-      ],
-      "out_of_scope": [
-        {
-          "asset_identifier": "Kustom",
-          "asset_type": "OTHER",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": false,
-          "eligible_for_submission": false,
-          "instruction": "Any endpoint, URL, or functionality related to Kustom is out of scope. ",
-          "integrity_requirement": null,
-          "max_severity": "none"
-        },
-        {
-          "asset_identifier": "https://api-stage.pricerunner.com/swagger-ui.html",
-          "asset_type": "URL",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": false,
-          "eligible_for_submission": false,
-          "instruction": "",
-          "integrity_requirement": null,
-          "max_severity": "none"
-        },
-        {
-          "asset_identifier": "https://api-us.pricerunner.com/swagger-ui.html",
-          "asset_type": "URL",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": false,
-          "eligible_for_submission": false,
-          "instruction": "",
-          "integrity_requirement": null,
-          "max_severity": "none"
-        },
-        {
-          "asset_identifier": "https://api.pricerunner.com/swagger-ui.html",
-          "asset_type": "URL",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": false,
-          "eligible_for_submission": false,
-          "instruction": "",
-          "integrity_requirement": null,
-          "max_severity": "none"
-        },
-        {
-          "asset_identifier": "https://app.klarna.com/us/api/connected_card_bff/",
-          "asset_type": "URL",
-          "availability_requirement": null,
-          "confidentiality_requirement": "none",
-          "eligible_for_bounty": false,
-          "eligible_for_submission": false,
-          "instruction": "",
-          "integrity_requirement": null,
-          "max_severity": "none"
-        },
-        {
-          "asset_identifier": "jobs.pricerunner.com",
-          "asset_type": "URL",
-          "availability_requirement": "not_defined",
-          "confidentiality_requirement": "not_defined",
-          "eligible_for_bounty": false,
-          "eligible_for_submission": false,
-          "instruction": "",
-          "integrity_requirement": "not_defined",
-          "max_severity": "none"
-        },
-        {
-          "asset_identifier": "locker.klarna.com",
-          "asset_type": "URL",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": false,
-          "eligible_for_submission": false,
-          "instruction": "",
-          "integrity_requirement": null,
-          "max_severity": "none"
-        },
-        {
-          "asset_identifier": "nuji.com",
-          "asset_type": "URL",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": false,
-          "eligible_for_submission": false,
-          "instruction": "",
           "integrity_requirement": null,
           "max_severity": "none"
         }
@@ -174759,7 +174561,7 @@
     "name": "Whatnot",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 87,
+    "response_efficiency_percentage": 88,
     "submission_state": "open",
     "url": "https://hackerone.com/whatnot",
     "website": "https://www.whatnot.com",
@@ -477094,7 +476896,7 @@
     "name": "Discourse",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 69,
+    "response_efficiency_percentage": 68,
     "submission_state": "open",
     "url": "https://hackerone.com/discourse",
     "website": "https://discourse.org",
