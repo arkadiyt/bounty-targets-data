@@ -17837,103 +17837,6 @@
     }
   },
   {
-    "name": "OpenAI",
-    "url": "https://bugcrowd.com/engagements/openai",
-    "allows_disclosure": false,
-    "managed_by_bugcrowd": true,
-    "safe_harbor": "partial",
-    "max_payout": 6500,
-    "targets": {
-      "in_scope": [
-        {
-          "type": "api",
-          "target": "https://api.openai.com",
-          "uri": "https://api.openai.com",
-          "name": "api.openai.com",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "https://chat.openai.com",
-          "uri": "https://chat.openai.com",
-          "name": "ChatGPT",
-          "ipAddress": ""
-        },
-        {
-          "type": "api",
-          "target": "https://chat.openai.com",
-          "uri": "https://chat.openai.com",
-          "name": "ChatGPT Plugins",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "Third Party Targets",
-          "uri": "",
-          "name": "Third Party Targets",
-          "ipAddress": ""
-        },
-        {
-          "type": "api",
-          "target": "OpenAI API Keys",
-          "uri": "",
-          "name": "OpenAI API Keys",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "https://*.openai.org",
-          "uri": "https://*.openai.org",
-          "name": "https://openai.org",
-          "ipAddress": ""
-        },
-        {
-          "type": "api",
-          "target": "https://*.openai.org",
-          "uri": "https://*.openai.org",
-          "name": "*.openai.org",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "https://openai.com/",
-          "uri": "https://openai.com/",
-          "name": "openai.com",
-          "ipAddress": null
-        },
-        {
-          "type": "other",
-          "target": "*.openai.com",
-          "uri": "",
-          "name": "*.openai.com",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "https://platform.openai.com/playground",
-          "uri": "https://platform.openai.com/playground",
-          "name": "Developer Platform Playground",
-          "ipAddress": null
-        },
-        {
-          "type": "other",
-          "target": "Other",
-          "uri": "",
-          "name": "Other",
-          "ipAddress": ""
-        },
-        {
-          "type": "other",
-          "target": "Codex Desktop",
-          "uri": "",
-          "name": "Codex Desktop",
-          "ipAddress": null
-        }
-      ],
-      "out_of_scope": []
-    }
-  },
-  {
     "name": "Safety Bug Bounty",
     "url": "https://bugcrowd.com/engagements/openai-safety",
     "allows_disclosure": false,
@@ -21273,110 +21176,6 @@
           "target": "https://www.pexels.com/",
           "uri": "https://www.pexels.com/",
           "name": "*.pexels.com",
-          "ipAddress": null
-        }
-      ],
-      "out_of_scope": []
-    }
-  },
-  {
-    "name": "Pinterest",
-    "url": "https://bugcrowd.com/engagements/pinterest",
-    "allows_disclosure": false,
-    "managed_by_bugcrowd": true,
-    "safe_harbor": "full",
-    "max_payout": 25000,
-    "targets": {
-      "in_scope": [
-        {
-          "type": "api",
-          "target": "https://api.pinterest.com",
-          "uri": "https://api.pinterest.com",
-          "name": "api.pinterest.com",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "*.pinterest.com Web Apps",
-          "uri": null,
-          "name": "*.pinterest.com Web Apps",
-          "ipAddress": null
-        },
-        {
-          "type": "ios",
-          "target": "https://apps.apple.com/us/app/pinterest/id429047995",
-          "uri": "https://apps.apple.com/us/app/pinterest/id429047995",
-          "name": "Pinterest iOS Mobile Application",
-          "ipAddress": null
-        },
-        {
-          "type": "android",
-          "target": "https://play.google.com/store/apps/details?id=com.pinterest&hl=en_US&gl=US",
-          "uri": "https://play.google.com/store/apps/details?id=com.pinterest&hl=en_US&gl=US",
-          "name": "Pinterest Android Mobile Application",
-          "ipAddress": null
-        },
-        {
-          "type": "android",
-          "target": "https://play.google.com/store/apps/details?id=com.pinterest.twa&hl=en_US&gl=US",
-          "uri": "https://play.google.com/store/apps/details?id=com.pinterest.twa&hl=en_US&gl=US",
-          "name": "Pinterest Lite Android Mobile Application",
-          "ipAddress": ""
-        },
-        {
-          "type": "other",
-          "target": "https://chrome.google.com/webstore/detail/pinterest-save-button/gpdjojdkbbmdfjfahjcgigfpmkopogic?hl=en",
-          "uri": "https://chrome.google.com/webstore/detail/pinterest-save-button/gpdjojdkbbmdfjfahjcgigfpmkopogic?hl=en",
-          "name": "Chrome extension (download at: chrome.google.com/webstore/detail/pinterest-save-button/gpdjojdkbbmdfjfahjcgigfpmkopogic?hl=en)",
-          "ipAddress": null
-        },
-        {
-          "type": "other",
-          "target": "https://microsoftedge.microsoft.com/addons/detail/pinterest-save-button/bkgoflemacdadndiohhdnphcmdhacabg",
-          "uri": "https://microsoftedge.microsoft.com/addons/detail/pinterest-save-button/bkgoflemacdadndiohhdnphcmdhacabg",
-          "name": "Edge extension (download at: https://microsoftedge.microsoft.com/addons/detail/pinterest-save-button/bkgoflemacdadndiohhdnphcmdhacabg)",
-          "ipAddress": null
-        },
-        {
-          "type": "other",
-          "target": "https://addons.mozilla.org/en-US/firefox/addon/pinterest/",
-          "uri": "https://addons.mozilla.org/en-US/firefox/addon/pinterest/",
-          "name": "Firefox extension (download at:   https://addons.mozilla.org/firefox/addon/pinterest/)",
-          "ipAddress": null
-        },
-        {
-          "type": "other",
-          "target": "https://apps.apple.com/us/app/save-to-pinterest/id6473649042",
-          "uri": "https://apps.apple.com/us/app/save-to-pinterest/id6473649042",
-          "name": "Safari extension (download at: https://apps.apple.com/us/app/save-to-pinterest/id6473649042)",
-          "ipAddress": null
-        },
-        {
-          "type": "other",
-          "target": "https://github.com/pinterest/",
-          "uri": "https://github.com/pinterest/",
-          "name": "Open source projects(non-forked) listed at github.com/pinterest/",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "https://www.shffls.com",
-          "uri": "https://www.shffls.com",
-          "name": "https://www.shffls.com",
-          "ipAddress": null
-        },
-        {
-          "type": "android",
-          "target": "https://play.google.com/store/apps/details?id=com.pinterest.shuffles",
-          "uri": "https://play.google.com/store/apps/details?id=com.pinterest.shuffles",
-          "name": "Shuffles App for Android",
-          "ipAddress": null
-        },
-        {
-          "type": "ios",
-          "target": "https://apps.apple.com/us/app/shuffles-by-pinterest/id1573869498",
-          "uri": "https://apps.apple.com/us/app/shuffles-by-pinterest/id1573869498",
-          "name": "Shuffles App for iOS",
           "ipAddress": null
         }
       ],
@@ -25561,6 +25360,237 @@
     }
   },
   {
+    "name": "SimpliSafe Managed Bug Bounty Engagement",
+    "url": "https://bugcrowd.com/engagements/simplisafe",
+    "allows_disclosure": true,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "full",
+    "max_payout": 6000,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "api",
+          "target": "https://bb1.simplisafe.com",
+          "uri": "https://bb1.simplisafe.com",
+          "name": "bb1.simplisafe.com",
+          "ipAddress": ""
+        },
+        {
+          "type": "api",
+          "target": "https://bb2.simplisafe.com",
+          "uri": "https://bb2.simplisafe.com",
+          "name": "bb2.simplisafe.com",
+          "ipAddress": ""
+        },
+        {
+          "type": "api",
+          "target": "https://cb.simplisafe.com",
+          "uri": "https://cb.simplisafe.com",
+          "name": "cb.simplisafe.com",
+          "ipAddress": ""
+        },
+        {
+          "type": "api",
+          "target": "api.simplisafe.com (HSP Endpoints)",
+          "uri": "",
+          "name": "api.simplisafe.com (HSP Endpoints)",
+          "ipAddress": ""
+        },
+        {
+          "type": "api",
+          "target": "api.services.simplisafe.com (HSP Endpoints)",
+          "uri": "",
+          "name": "api.services.simplisafe.com (HSP Endpoints)",
+          "ipAddress": ""
+        },
+        {
+          "type": "api",
+          "target": "*.prd.cam.simplisafe.com (HSP Endpoints)",
+          "uri": "",
+          "name": "*.prd.cam.simplisafe.com (HSP Endpoints)",
+          "ipAddress": ""
+        },
+        {
+          "type": "api",
+          "target": "*.prd.platform.simplisafe.com (HSP Endpoints)",
+          "uri": "",
+          "name": "*.prd.platform.simplisafe.com (HSP Endpoints)",
+          "ipAddress": ""
+        },
+        {
+          "type": "api",
+          "target": "*.prd.services.simplisafe.com (HSP Endpoints)",
+          "uri": "",
+          "name": "*.prd.services.simplisafe.com (HSP Endpoints)",
+          "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "https://webapp.simplisafe.com",
+          "uri": "https://webapp.simplisafe.com",
+          "name": "SimpliSafe Customer Webapp - US",
+          "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "https://webapp.simplisafe.co.uk",
+          "uri": "https://webapp.simplisafe.co.uk",
+          "name": "SimpliSafe Customer Webapp - UK",
+          "ipAddress": ""
+        },
+        {
+          "type": "ios",
+          "target": "https://apps.apple.com/us/app/simplisafe-home-security-app/id555798051",
+          "uri": "https://apps.apple.com/us/app/simplisafe-home-security-app/id555798051",
+          "name": "SimpliSafe Customer iOS App",
+          "ipAddress": ""
+        },
+        {
+          "type": "android",
+          "target": "https://play.google.com/store/search?q=simplisafe&c=apps",
+          "uri": "https://play.google.com/store/search?q=simplisafe&c=apps",
+          "name": "SimpliSafe Customer Android App",
+          "ipAddress": ""
+        },
+        {
+          "type": "api",
+          "target": "mfa.simplisafe.com",
+          "uri": "",
+          "name": "mfa.simplisafe.com",
+          "ipAddress": ""
+        },
+        {
+          "type": "api",
+          "target": "*.prd.aser.simplisafe.com",
+          "uri": "",
+          "name": "*.prd.aser.simplisafe.com",
+          "ipAddress": ""
+        },
+        {
+          "type": "api",
+          "target": "*.prd.webapps.simplisafe.com",
+          "uri": "",
+          "name": "*.prd.webapps.simplisafe.com",
+          "ipAddress": ""
+        },
+        {
+          "type": "api",
+          "target": "api.simplisafe.com (App Endpoints)",
+          "uri": "",
+          "name": "api.simplisafe.com (App Endpoints)",
+          "ipAddress": ""
+        },
+        {
+          "type": "api",
+          "target": "api.services.simplisafe.com (App Endpoints)",
+          "uri": "",
+          "name": "api.services.simplisafe.com (App Endpoints)",
+          "ipAddress": ""
+        },
+        {
+          "type": "api",
+          "target": "*.prd.services.simplisafe.com (App Endpoints)",
+          "uri": "",
+          "name": "*.prd.services.simplisafe.com (App Endpoints)",
+          "ipAddress": ""
+        },
+        {
+          "type": "api",
+          "target": "*.prd.platform.simplisafe.com (App Endpoints)",
+          "uri": "",
+          "name": "*.prd.platform.simplisafe.com (App Endpoints)",
+          "ipAddress": ""
+        },
+        {
+          "type": "api",
+          "target": "media.simplisafe.com",
+          "uri": "",
+          "name": "media.simplisafe.com",
+          "ipAddress": ""
+        },
+        {
+          "type": "api",
+          "target": "*.prd.cam.simplisafe.com (App Endpoints)",
+          "uri": "",
+          "name": "*.prd.cam.simplisafe.com (App Endpoints)",
+          "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "https://simplisafe.com",
+          "uri": "https://simplisafe.com",
+          "name": "SimpliSafe Website - US",
+          "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "https://simplisafe.co.uk",
+          "uri": "https://simplisafe.co.uk",
+          "name": "SimpliSafe Website - UK",
+          "ipAddress": ""
+        },
+        {
+          "type": "api",
+          "target": "api.prd.commerce.simplisafe.com",
+          "uri": "",
+          "name": "api.prd.commerce.simplisafe.com",
+          "ipAddress": ""
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "api",
+          "target": "auth.simplisafe.com",
+          "uri": "",
+          "name": "auth.simplisafe.com",
+          "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "careers.simplisafe.com",
+          "uri": "",
+          "name": "careers.simplisafe.com",
+          "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "clicks.simplisafe.com",
+          "uri": "",
+          "name": "clicks.simplisafe.com",
+          "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "library.simplisafe.com",
+          "uri": "",
+          "name": "library.simplisafe.com",
+          "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "livechat.simplisafe.com",
+          "uri": "",
+          "name": "livechat.simplisafe.com",
+          "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "press.simplisafe.com",
+          "uri": "",
+          "name": "press.simplisafe.com",
+          "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "support.simplisafe.com",
+          "uri": "",
+          "name": "support.simplisafe.com",
+          "ipAddress": ""
+        }
+      ]
+    }
+  },
+  {
     "name": "Skroutz Public Managed Bug Bounty",
     "url": "https://bugcrowd.com/engagements/skroutz",
     "allows_disclosure": false,
@@ -29117,6 +29147,181 @@
         }
       ],
       "out_of_scope": []
+    }
+  },
+  {
+    "name": "20 Minuten",
+    "url": "https://bugcrowd.com/engagements/twentyminuten",
+    "allows_disclosure": false,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "full",
+    "max_payout": 5000,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "website",
+          "target": "https://www.20min.ch",
+          "uri": "https://www.20min.ch",
+          "name": "https://www.20min.ch",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "https://coral.20min.ch/",
+          "uri": "https://coral.20min.ch/",
+          "name": "https://cm.20min.ch/",
+          "ipAddress": null
+        },
+        {
+          "type": "api",
+          "target": "https://api.20min.ch/",
+          "uri": "https://api.20min.ch/",
+          "name": "https://api.20min.ch/",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "https://videoplayer.20min.ch",
+          "uri": "https://videoplayer.20min.ch",
+          "name": "https://videoplayer.20min.ch",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "https://partner-feeds.20min.ch",
+          "uri": "https://partner-feeds.20min.ch",
+          "name": "https://partner-feeds.20min.ch",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "https://screenplayer.20min.ch",
+          "uri": "https://screenplayer.20min.ch",
+          "name": "https://screenplayer.20min.ch",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "https://audio.20min.ch/",
+          "uri": "https://audio.20min.ch/",
+          "name": "https://audio.20min.ch",
+          "ipAddress": ""
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "api",
+          "target": "https://tgt.tamedia.ch",
+          "uri": null,
+          "name": "https://tgt.tamedia.ch",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "http://auth.20min.ch",
+          "uri": null,
+          "name": "http://auth.20min.ch",
+          "ipAddress": null
+        },
+        {
+          "type": "api",
+          "target": "https://cre-api.tamedia.ch",
+          "uri": null,
+          "name": "https://cre-api.tamedia.ch",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "https://track.20min.ch",
+          "uri": null,
+          "name": "https://track.20min.ch",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "Social Media Links (older than 2 years)",
+          "uri": "",
+          "name": "Social Media Links (older than 2 years)",
+          "ipAddress": null
+        },
+        {
+          "type": "other",
+          "target": "Subdomain Takeover ",
+          "uri": "",
+          "name": "Subdomain Takeover ",
+          "ipAddress": null
+        },
+        {
+          "type": "other",
+          "target": "DMARC, SPF, DKIM",
+          "uri": "",
+          "name": "DMARC, SPF, DKIM",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "https://*.connect.ringier.ch",
+          "uri": "",
+          "name": "https://*.connect.ringier.ch",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "*.onelog.ch",
+          "uri": "",
+          "name": "*.onelog.ch",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "*.20min-tv.ch",
+          "uri": "",
+          "name": "*.20min-tv.ch",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "*.newsnetz.tv",
+          "uri": "",
+          "name": "*.newsnetz.tv",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "*.appuser.ch",
+          "uri": "",
+          "name": "*.appuser.ch",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "*.iagentur.ch",
+          "uri": "",
+          "name": "*.iagentur.ch",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "*.streamboat.ch",
+          "uri": "",
+          "name": "*.streamboat.ch",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "*.streamboatserver.ch",
+          "uri": "",
+          "name": "*.streamboatserver.ch",
+          "ipAddress": null
+        },
+        {
+          "type": "other",
+          "target": "Other Domains and Subdomains not specifically in scope",
+          "uri": "",
+          "name": "Other Domains and Subdomains not specifically in scope",
+          "ipAddress": null
+        }
+      ]
     }
   },
   {
