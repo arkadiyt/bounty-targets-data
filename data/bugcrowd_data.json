@@ -21384,110 +21384,6 @@
     }
   },
   {
-    "name": "Pinterest",
-    "url": "https://bugcrowd.com/engagements/pinterest",
-    "allows_disclosure": false,
-    "managed_by_bugcrowd": true,
-    "safe_harbor": "full",
-    "max_payout": 25000,
-    "targets": {
-      "in_scope": [
-        {
-          "type": "api",
-          "target": "https://api.pinterest.com",
-          "uri": "https://api.pinterest.com",
-          "name": "api.pinterest.com",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "*.pinterest.com Web Apps",
-          "uri": null,
-          "name": "*.pinterest.com Web Apps",
-          "ipAddress": null
-        },
-        {
-          "type": "ios",
-          "target": "https://apps.apple.com/us/app/pinterest/id429047995",
-          "uri": "https://apps.apple.com/us/app/pinterest/id429047995",
-          "name": "Pinterest iOS Mobile Application",
-          "ipAddress": null
-        },
-        {
-          "type": "android",
-          "target": "https://play.google.com/store/apps/details?id=com.pinterest&hl=en_US&gl=US",
-          "uri": "https://play.google.com/store/apps/details?id=com.pinterest&hl=en_US&gl=US",
-          "name": "Pinterest Android Mobile Application",
-          "ipAddress": null
-        },
-        {
-          "type": "android",
-          "target": "https://play.google.com/store/apps/details?id=com.pinterest.twa&hl=en_US&gl=US",
-          "uri": "https://play.google.com/store/apps/details?id=com.pinterest.twa&hl=en_US&gl=US",
-          "name": "Pinterest Lite Android Mobile Application",
-          "ipAddress": ""
-        },
-        {
-          "type": "other",
-          "target": "https://chrome.google.com/webstore/detail/pinterest-save-button/gpdjojdkbbmdfjfahjcgigfpmkopogic?hl=en",
-          "uri": "https://chrome.google.com/webstore/detail/pinterest-save-button/gpdjojdkbbmdfjfahjcgigfpmkopogic?hl=en",
-          "name": "Chrome extension (download at: chrome.google.com/webstore/detail/pinterest-save-button/gpdjojdkbbmdfjfahjcgigfpmkopogic?hl=en)",
-          "ipAddress": null
-        },
-        {
-          "type": "other",
-          "target": "https://microsoftedge.microsoft.com/addons/detail/pinterest-save-button/bkgoflemacdadndiohhdnphcmdhacabg",
-          "uri": "https://microsoftedge.microsoft.com/addons/detail/pinterest-save-button/bkgoflemacdadndiohhdnphcmdhacabg",
-          "name": "Edge extension (download at: https://microsoftedge.microsoft.com/addons/detail/pinterest-save-button/bkgoflemacdadndiohhdnphcmdhacabg)",
-          "ipAddress": null
-        },
-        {
-          "type": "other",
-          "target": "https://addons.mozilla.org/en-US/firefox/addon/pinterest/",
-          "uri": "https://addons.mozilla.org/en-US/firefox/addon/pinterest/",
-          "name": "Firefox extension (download at:   https://addons.mozilla.org/firefox/addon/pinterest/)",
-          "ipAddress": null
-        },
-        {
-          "type": "other",
-          "target": "https://apps.apple.com/us/app/save-to-pinterest/id6473649042",
-          "uri": "https://apps.apple.com/us/app/save-to-pinterest/id6473649042",
-          "name": "Safari extension (download at: https://apps.apple.com/us/app/save-to-pinterest/id6473649042)",
-          "ipAddress": null
-        },
-        {
-          "type": "other",
-          "target": "https://github.com/pinterest/",
-          "uri": "https://github.com/pinterest/",
-          "name": "Open source projects(non-forked) listed at github.com/pinterest/",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "https://www.shffls.com",
-          "uri": "https://www.shffls.com",
-          "name": "https://www.shffls.com",
-          "ipAddress": null
-        },
-        {
-          "type": "android",
-          "target": "https://play.google.com/store/apps/details?id=com.pinterest.shuffles",
-          "uri": "https://play.google.com/store/apps/details?id=com.pinterest.shuffles",
-          "name": "Shuffles App for Android",
-          "ipAddress": null
-        },
-        {
-          "type": "ios",
-          "target": "https://apps.apple.com/us/app/shuffles-by-pinterest/id1573869498",
-          "uri": "https://apps.apple.com/us/app/shuffles-by-pinterest/id1573869498",
-          "name": "Shuffles App for iOS",
-          "ipAddress": null
-        }
-      ],
-      "out_of_scope": []
-    }
-  },
-  {
     "name": "Pixabay",
     "url": "https://bugcrowd.com/engagements/pixabay",
     "allows_disclosure": false,
@@ -22387,6 +22283,69 @@
         }
       ],
       "out_of_scope": []
+    }
+  },
+  {
+    "name": "Quizlet",
+    "url": "https://bugcrowd.com/engagements/quizlet",
+    "allows_disclosure": true,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "partial",
+    "max_payout": 2000,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "website",
+          "target": "https://*.quizlet.com",
+          "uri": null,
+          "name": "https://*.quizlet.com",
+          "ipAddress": null
+        },
+        {
+          "type": "ios",
+          "target": "https://itunes.apple.com/us/app/quizlet-flashcards/id546473125",
+          "uri": "https://itunes.apple.com/us/app/quizlet-flashcards/id546473125",
+          "name": "Quizlet iOS App",
+          "ipAddress": null
+        },
+        {
+          "type": "android",
+          "target": "https://play.google.com/store/apps/details?id=com.quizlet.quizletandroid",
+          "uri": "https://play.google.com/store/apps/details?id=com.quizlet.quizletandroid",
+          "name": "Quizlet Android App",
+          "ipAddress": null
+        },
+        {
+          "type": "api",
+          "target": "3.0 API",
+          "uri": null,
+          "name": "3.0 API",
+          "ipAddress": null
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "api",
+          "target": "api.quizlet.com/2.0",
+          "uri": null,
+          "name": "api.quizlet.com/2.0",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": " help.quizlet.com (zendesk)",
+          "uri": "",
+          "name": " help.quizlet.com (zendesk)",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "get.quizlet.com",
+          "uri": "",
+          "name": "get.quizlet.com",
+          "ipAddress": ""
+        }
+      ]
     }
   },
   {
@@ -26333,6 +26292,209 @@
     }
   },
   {
+    "name": "SoundCloud",
+    "url": "https://bugcrowd.com/engagements/soundcloud",
+    "allows_disclosure": true,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "full",
+    "max_payout": 4500,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "android",
+          "target": "https://play.google.com/store/apps/details?id=com.soundcloud.android&hl=en&gl=US",
+          "uri": "https://play.google.com/store/apps/details?id=com.soundcloud.android&hl=en&gl=US",
+          "name": "SoundCloud Android app",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "https://soundcloud.com",
+          "uri": "https://soundcloud.com",
+          "name": "soundcloud.com",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "*.soundcloud.org",
+          "uri": "",
+          "name": "*.soundcloud.org",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "*.s-cloud.net",
+          "uri": "",
+          "name": "*.s-cloud.net",
+          "ipAddress": null
+        },
+        {
+          "type": "ios",
+          "target": "https://apps.apple.com/us/app/soundcloud-music-audio/id336353151",
+          "uri": "https://apps.apple.com/us/app/soundcloud-music-audio/id336353151",
+          "name": "SoundCloud iOS app",
+          "ipAddress": null
+        },
+        {
+          "type": "api",
+          "target": "https://connect.soundcloud.com",
+          "uri": "https://connect.soundcloud.com",
+          "name": "*.soundcloud.com",
+          "ipAddress": null
+        },
+        {
+          "type": "api",
+          "target": "*.services.repostnetwork.com",
+          "uri": "",
+          "name": "*.services.repostnetwork.com",
+          "ipAddress": null
+        },
+        {
+          "type": "api",
+          "target": "api-*.soundcloud.com",
+          "uri": "",
+          "name": "api-*.soundcloud.com",
+          "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "http://artists.soundcloud.com/",
+          "uri": "http://artists.soundcloud.com/",
+          "name": "artists.soundcloud.com",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "https://soundcloud.org",
+          "uri": "https://soundcloud.org",
+          "name": "soundcloud.org",
+          "ipAddress": null
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "website",
+          "target": "blog.soundcloud.com",
+          "uri": null,
+          "name": "blog.soundcloud.com",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "status.soundcloud.com",
+          "uri": null,
+          "name": "status.soundcloud.com",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "help.soundcloud.com",
+          "uri": null,
+          "name": "help.soundcloud.com",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": " community.soundcloud.com",
+          "uri": null,
+          "name": " community.soundcloud.com",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "copyright.soundcloud.com",
+          "uri": null,
+          "name": "copyright.soundcloud.com",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "advertising.soundcloud.com",
+          "uri": null,
+          "name": "advertising.soundcloud.com",
+          "ipAddress": null
+        },
+        {
+          "type": "other",
+          "target": "https://soundcloudmail.com",
+          "uri": "https://soundcloudmail.com",
+          "name": "soundcloudmail.com",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "press.soundcloud.com",
+          "uri": null,
+          "name": "press.soundcloud.com",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "https://scdrops.soundcloud.com",
+          "uri": "https://scdrops.soundcloud.com",
+          "name": "scdrops.soundcloud.com",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "https://promote.soundcloud.com",
+          "uri": "https://promote.soundcloud.com",
+          "name": "promote.soundcloud.com",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "contest.soundcloud.com",
+          "uri": "",
+          "name": "contest.soundcloud.com",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "playback.soundcloud.com",
+          "uri": "",
+          "name": "playback.soundcloud.com",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "jobs.soundcloud.com",
+          "uri": "",
+          "name": "jobs.soundcloud.com",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "playerone.soundcloud.com",
+          "uri": "",
+          "name": "playerone.soundcloud.com",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "support.soundcloud.org",
+          "uri": "",
+          "name": "support.soundcloud.org",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "secdomaintest.soundcloud.com",
+          "uri": "",
+          "name": "secdomaintest.soundcloud.com",
+          "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "firston.soundcloud.com",
+          "uri": "",
+          "name": "firston.soundcloud.com",
+          "ipAddress": ""
+        }
+      ]
+    }
+  },
+  {
     "name": "SpaceX/Starlink",
     "url": "https://bugcrowd.com/engagements/spacex",
     "allows_disclosure": false,
@@ -26739,608 +26901,6 @@
         }
       ],
       "out_of_scope": []
-    }
-  },
-  {
-    "name": "T-Mobile",
-    "url": "https://bugcrowd.com/engagements/t-mobile",
-    "allows_disclosure": false,
-    "managed_by_bugcrowd": true,
-    "safe_harbor": "full",
-    "max_payout": 133700,
-    "targets": {
-      "in_scope": [
-        {
-          "type": "other",
-          "target": "Self-Register Account on T-Mobile Microsoft Entra ID",
-          "uri": null,
-          "name": "Self-Register Account on T-Mobile Microsoft Entra ID",
-          "ipAddress": ""
-        },
-        {
-          "type": "network",
-          "target": "Cellular Network Auth Bypass via Web App/T-Life (404-200-7239)",
-          "uri": null,
-          "name": "Cellular Network Auth Bypass via Web App/T-Life (404-200-7239)",
-          "ipAddress": ""
-        },
-        {
-          "type": "network",
-          "target": "T&P Servers",
-          "uri": "",
-          "name": "T&P Servers",
-          "ipAddress": "http://10.72.218.66/flag.txt, http://10.62.252.214/flag.txt"
-        },
-        {
-          "type": "website",
-          "target": "https://t-mobile.com",
-          "uri": "https://t-mobile.com",
-          "name": "t-mobile.com",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "https://account.t-mobile.com",
-          "uri": "https://account.t-mobile.com",
-          "name": "account.t-mobile.com",
-          "ipAddress": ""
-        },
-        {
-          "type": "api",
-          "target": "https://api.t-mobile.com",
-          "uri": "https://api.t-mobile.com",
-          "name": "*.api.t-mobile.com",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "https://metrobyt-mobile.com",
-          "uri": "https://metrobyt-mobile.com",
-          "name": "metrobyt-mobile.com",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "https://sprint.com",
-          "uri": "https://sprint.com",
-          "name": "sprint.com",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "https://tfb.t-mobile.com",
-          "uri": "https://tfb.t-mobile.com",
-          "name": "tfb.t-mobile.com",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "https://devedge.t-mobile.com",
-          "uri": "https://devedge.t-mobile.com",
-          "name": "devedge.t-mobile.com",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "https://tess.service-now.com",
-          "uri": "https://tess.service-now.com",
-          "name": "tess.service-now.com",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "https://digits.t-mobile.com",
-          "uri": "https://digits.t-mobile.com",
-          "name": "DIGITS - Web, Desktop, Mobile",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "https://account.business.t-mobile.com",
-          "uri": "https://account.business.t-mobile.com",
-          "name": "account.business.t-mobile.com",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "https://t-mobile.com",
-          "uri": "https://t-mobile.com",
-          "name": "*.t-mobile.com",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "https://metrobyt-mobile.com",
-          "uri": "https://metrobyt-mobile.com",
-          "name": "*.metrobyt-mobile.com",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "https://sprint.com",
-          "uri": "https://sprint.com",
-          "name": "*.sprint.com",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "https://api.vistarmedia.com",
-          "uri": "https://api.vistarmedia.com",
-          "name": "api.vistarmedia.com",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "https://packages.cortexpowered.com",
-          "uri": "https://packages.cortexpowered.com",
-          "name": "packages.cortexpowered.com",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "https://api.vistarmedia.eu",
-          "uri": "https://api.vistarmedia.eu",
-          "name": "api.vistarmedia.eu",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "https://production-dynam-creative.vistarmedia.com",
-          "uri": "https://production-dynam-creative.vistarmedia.com",
-          "name": "production-dynam-creative.vistarmedia.com",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "https://storybook.vistarmedia.com",
-          "uri": "https://storybook.vistarmedia.com",
-          "name": "storybook.vistarmedia.com",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "https://creatives.vistarmedia.com",
-          "uri": "https://creatives.vistarmedia.com",
-          "name": "creatives.vistarmedia.com",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "https://sflower.cortexpowered.com",
-          "uri": "https://sflower.cortexpowered.com",
-          "name": "sflower.cortexpowered.com",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "https://production-delivery-metrics-svc.vistarmedia.com",
-          "uri": "https://production-delivery-metrics-svc.vistarmedia.com",
-          "name": "production-delivery-metrics-svc.vistarmedia.com",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "https://maps.vistarmedia.com",
-          "uri": "https://maps.vistarmedia.com",
-          "name": "maps.vistarmedia.com",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "https://transcodes-cdn.vistarmedia.com",
-          "uri": "https://transcodes-cdn.vistarmedia.com",
-          "name": "transcodes-cdn.vistarmedia.com",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "https://assets-cdn.vistarmedia.com",
-          "uri": "https://assets-cdn.vistarmedia.com",
-          "name": "assets-cdn.vistarmedia.com",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "https://docker-staging.adstruc.com",
-          "uri": "https://docker-staging.adstruc.com",
-          "name": "docker-staging.adstruc.com",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "https://staging-trafficking.vistarmedia.com",
-          "uri": "https://staging-trafficking.vistarmedia.com",
-          "name": "staging-trafficking.vistarmedia.com",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "https://job-svc-b.vistarmedia.com",
-          "uri": "https://job-svc-b.vistarmedia.com",
-          "name": "job-svc-b.vistarmedia.com",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "https://docsite.vistarmedia.com",
-          "uri": "https://docsite.vistarmedia.com",
-          "name": "docsite.vistarmedia.com",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "https://sfleet.cortexpowered.com",
-          "uri": "https://sfleet.cortexpowered.com",
-          "name": "sfleet.cortexpowered.com",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "https://audience-builder.vistarmedia.com",
-          "uri": "https://audience-builder.vistarmedia.com",
-          "name": "audience-builder.vistarmedia.com",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "https://staging-login.vistarmedia.com",
-          "uri": "https://staging-login.vistarmedia.com",
-          "name": "staging-login.vistarmedia.com",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "https://clients.adstruc.com",
-          "uri": "https://clients.adstruc.com",
-          "name": "clients.adstruc.com",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "https://demo.adstruc.com",
-          "uri": "https://demo.adstruc.com",
-          "name": "demo.adstruc.com",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "https://*.uscc.net",
-          "uri": "https://*.uscc.net",
-          "name": "*.uscc.net",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "https://*.uscc.com",
-          "uri": "https://*.uscc.com",
-          "name": "*.uscc.com",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "https://*.uscellular.com",
-          "uri": "https://*.uscellular.com",
-          "name": "*.uscellular.com",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "https://dashboard-101.moengage.com",
-          "uri": "https://dashboard-101.moengage.com",
-          "name": "dashboard-101.moengage.com",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "https://www.assurancewireless.com",
-          "uri": "https://www.assurancewireless.com",
-          "name": "assurancewireless.com",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "https://*.assurancewireless.com",
-          "uri": "https://*.assurancewireless.com",
-          "name": "*.assurancewireless.com",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "https://assets.platform.blis.com",
-          "uri": "https://assets.platform.blis.com",
-          "name": "assets.platform.blis.com",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "https://assets.development.amazon-tacticalplanner.com",
-          "uri": "https://assets.development.amazon-tacticalplanner.com",
-          "name": "assets.development.amazon-tacticalplanner.com",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "https://assets.platform.development.blis.com",
-          "uri": "https://assets.platform.development.blis.com",
-          "name": "assets.platform.development.blis.com",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "https://assets.platform.rc.blis.com",
-          "uri": "https://assets.platform.rc.blis.com",
-          "name": "assets.platform.rc.blis.com",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "https://audiencelogos.blis.com",
-          "uri": "https://audiencelogos.blis.com",
-          "name": "audiencelogos.blis.com",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "https://blis.com",
-          "uri": "https://blis.com",
-          "name": "blis.com",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "https://creative.infinity.blismedia.com",
-          "uri": "https://creative.infinity.blismedia.com",
-          "name": "creative.infinity.blismedia.com",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "https://development.wmaudience.com",
-          "uri": "https://development.wmaudience.com",
-          "name": "development.wmaudience.com",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "https://imply-pivot.blis.com",
-          "uri": "https://imply-pivot.blis.com",
-          "name": "imply-pivot.blis.com",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "https://imply-pivot.test.blis.com",
-          "uri": "https://imply-pivot.test.blis.com",
-          "name": "imply-pivot.test.blis.com",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "https://imply.blis.com",
-          "uri": "https://imply.blis.com",
-          "name": "imply.blis.com",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "https://imply.internal.platform.blis.com",
-          "uri": "https://imply.internal.platform.blis.com",
-          "name": "imply.internal.platform.blis.com",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "https://imply.platform.blis.com",
-          "uri": "https://imply.platform.blis.com",
-          "name": "imply.platform.blis.com",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "https://imply.platform.development.blis.com",
-          "uri": "https://imply.platform.development.blis.com",
-          "name": "imply.platform.development.blis.com",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "https://imply.platform.rc.blis.com",
-          "uri": "https://imply.platform.rc.blis.com",
-          "name": "imply.platform.rc.blis.com",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "https://imply.test.blis.com",
-          "uri": "https://imply.test.blis.com",
-          "name": "imply.test.blis.com",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "https://imply.wmaudience.com",
-          "uri": "https://imply.wmaudience.com",
-          "name": "imply.wmaudience.com",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "https://internal.platform.blis.com",
-          "uri": "https://internal.platform.blis.com",
-          "name": "internal.platform.blis.com",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "https://jenkins-github.gcp.blis.com",
-          "uri": "https://jenkins-github.gcp.blis.com",
-          "name": "jenkins-github.gcp.blis.com",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "https://platform.blis.com",
-          "uri": "https://platform.blis.com",
-          "name": "platform.blis.com",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "https://platform.blismedia.com",
-          "uri": "https://platform.blismedia.com",
-          "name": "platform.blismedia.com",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "https://platform.development.blis.com",
-          "uri": "https://platform.development.blis.com",
-          "name": "platform.development.blis.com",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "https://platform.development2.blis.com",
-          "uri": "https://platform.development2.blis.com",
-          "name": "platform.development2.blis.com",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "https://platform.rc.blis.com",
-          "uri": "https://platform.rc.blis.com",
-          "name": "platform.rc.blis.com",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "https://privacy.blismedia.com",
-          "uri": "https://privacy.blismedia.com",
-          "name": "privacy.blismedia.com",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "https://rc.wmaudience.com",
-          "uri": "https://rc.wmaudience.com",
-          "name": "rc.wmaudience.com",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "https://signature.blis.com",
-          "uri": "https://signature.blis.com",
-          "name": "signature.blis.com",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "https://sitepixel.blis.com",
-          "uri": "https://sitepixel.blis.com",
-          "name": "sitepixel.blis.com",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "https://sitepixel.dev.blis.com",
-          "uri": "https://sitepixel.dev.blis.com",
-          "name": "sitepixel.dev.blis.com",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "https://wiki.atom-lens.com",
-          "uri": "https://wiki.atom-lens.com",
-          "name": "wiki.atom-lens.com",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "https://wmaudience.com",
-          "uri": "https://wmaudience.com",
-          "name": "wmaudience.com",
-          "ipAddress": ""
-        },
-        {
-          "type": "other",
-          "target": "Subdomain Takeover",
-          "uri": null,
-          "name": "Subdomain Takeover",
-          "ipAddress": ""
-        },
-        {
-          "type": "other",
-          "target": "Leaked Credentials",
-          "uri": "",
-          "name": "Leaked Credentials",
-          "ipAddress": ""
-        },
-        {
-          "type": "ios",
-          "target": "https://apps.apple.com/us/app/t-mobile/id561625752",
-          "uri": "https://apps.apple.com/us/app/t-mobile/id561625752",
-          "name": "T-Mobile - iOS",
-          "ipAddress": ""
-        },
-        {
-          "type": "android",
-          "target": "https://play.google.com/store/apps/details?id=com.tmobile.pr.mytmobile",
-          "uri": "https://play.google.com/store/apps/details?id=com.tmobile.pr.mytmobile",
-          "name": "T-Mobile - Android",
-          "ipAddress": ""
-        }
-      ],
-      "out_of_scope": [
-        {
-          "type": "website",
-          "target": "*.sprint.net",
-          "uri": "",
-          "name": "*.sprint.net",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "/self-service-*",
-          "uri": "",
-          "name": "/self-service-*",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "*.mobile.uscc.net",
-          "uri": "",
-          "name": "*.mobile.uscc.net",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "*.mobile.uscc.com",
-          "uri": "",
-          "name": "*.mobile.uscc.com",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "https://*.moengage.com",
-          "uri": "https://*.moengage.com",
-          "name": "*.moengage.com",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "https://appointments.uscellular.com",
-          "uri": "https://appointments.uscellular.com",
-          "name": "appointments.uscellular.com",
-          "ipAddress": ""
-        },
-        {
-          "type": "other",
-          "target": "Any domain, property, product, protocol, or service of the app/hardware/software version not explicitly listed in the In-Scope section is out of scope; submissions are welcome but not guaranteed for the bounty/bonus.",
-          "uri": "",
-          "name": "Any domain, property, product, protocol, or service of the app/hardware/software version not explicitly listed in the In-Scope section is out of scope; submissions are welcome but not guaranteed for the bounty/bonus.",
-          "ipAddress": ""
-        }
-      ]
     }
   },
   {
