@@ -194,6 +194,18 @@
           "impact": "Tier 2"
         },
         {
+          "type": "other",
+          "endpoint": "Adobe ColdFusion without ColdFusion Administrator",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "ColdFusion Administrator",
+          "description": null,
+          "impact": "Tier 3"
+        },
+        {
           "type": "wildcard",
           "endpoint": "*.lightroom.adobe.com",
           "description": "Type: Web\n\nAssets:\n* *.lightroom.adobe.com\n* photos.adobe.io\n\nTesting plan: Yes\nCredentials / subscription: Not provided; self-signup; free trial for premium features\n\n---\n\nLightroom Web is in scope.\n\nTesting should focus on authentication, authorization, user photo access controls, cross-account data exposure, sensitive metadata exposure, sharing workflow vulnerabilities, API authorization issues, and business logic flaws affecting Lightroom Web workflows.\n\nRelevant Tier 1 AI bonus features available through this asset include:\n\n* Lightroom AI Edits\n* Lightroom “Edit suggestions” Tech Preview\n\nOut-of-scope items:\n> Vulnerabilities related to Google Photos\n> Access/download image rendetions via API on disabled-download shares\n> Viewing another user's liked content via Lightroom Community API (Discover/Remix/Tutorials)\n> Public shares found via search engine indexing\n> Denial-of-service testing",
@@ -302,20 +314,7 @@
           "impact": "Tier 3"
         }
       ],
-      "out_of_scope": [
-        {
-          "type": "other",
-          "endpoint": "Adobe ColdFusion without ColdFusion Administrator",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "other",
-          "endpoint": "ColdFusion Administrator",
-          "description": null,
-          "impact": "Out of scope"
-        }
-      ]
+      "out_of_scope": []
     }
   },
   {
