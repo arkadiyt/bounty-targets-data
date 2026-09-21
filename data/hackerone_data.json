@@ -158437,7 +158437,7 @@
     "name": "MetaMask",
     "offers_bounties": true,
     "offers_swag": true,
-    "response_efficiency_percentage": 70,
+    "response_efficiency_percentage": 69,
     "submission_state": "open",
     "url": "https://hackerone.com/metamask",
     "website": "https://metamask.io/",
@@ -468254,17 +468254,6 @@
           "max_severity": "high"
         },
         {
-          "asset_identifier": "Elastic Distributions of OpenTelemetry (EDOT)",
-          "asset_type": "DOWNLOADABLE_EXECUTABLES",
-          "availability_requirement": "not_defined",
-          "confidentiality_requirement": "not_defined",
-          "eligible_for_bounty": false,
-          "eligible_for_submission": true,
-          "instruction": "Must be a supported version https://www.elastic.co/support/eol\n\nIncludes:\n\n- Elastic Distribution of OpenTelemetry Collector: https://www.elastic.co/docs/reference/edot-collector\n- Elastic Distribution of OpenTelemetry .NET: https://www.elastic.co/docs/reference/opentelemetry/edot-sdks/dotnet\n- Elastic Distribution of OpenTelemetry Java: https://www.elastic.co/docs/reference/opentelemetry/edot-sdks/java\n- Elastic Distribution of OpenTelemetry Node.js: https://www.elastic.co/docs/reference/opentelemetry/edot-sdks/node\n- Elastic Distribution of OpenTelemetry PHP: https://www.elastic.co/docs/reference/opentelemetry/edot-sdks/php\n- Elastic Distribution of OpenTelemetry Python: https://www.elastic.co/docs/reference/opentelemetry/edot-sdks/python\n- Elastic Distribution of OpenTelemetry Cloud Forwarder for AWS: https://www.elastic.co/docs/reference/opentelemetry/edot-cloud-forwarder/aws\n- Elastic Distribution of OpenTelemetry iOS: https://www.elastic.co/docs/reference/opentelemetry/edot-sdks/ios\n- Elastic Distribution of OpenTelemetry Android: https://www.elastic.co/docs/reference/opentelemetry/edot-sdks/android",
-          "integrity_requirement": "not_defined",
-          "max_severity": "critical"
-        },
-        {
           "asset_identifier": "Other",
           "asset_type": "OTHER",
           "availability_requirement": "medium",
@@ -468296,17 +468285,6 @@
           "instruction": "- Multiple subdomain takeovers resulting from the same underlying record or IP address will be eligible for only one bounty.\n- Subdomain takeovers involving typosquatted domains or parked/reserved domains used for phishing are out of scope.\n- Subdomain takeovers are only eligible if they occur on an in-scope domain.",
           "integrity_requirement": null,
           "max_severity": "low"
-        },
-        {
-          "asset_identifier": "cloud.elastic.co",
-          "asset_type": "URL",
-          "availability_requirement": "medium",
-          "confidentiality_requirement": "medium",
-          "eligible_for_bounty": false,
-          "eligible_for_submission": true,
-          "instruction": "**How to test**\n\n1. Go to https://cloud.elastic.co/\n1. Click “Sign Up”\n1. Enter your @wearehackerone email and click “Start Free Trial” (you can create multiple trials if necessary)\n1. Find your verification email and click “Verify and Accept”\n1. Set your password\n1. Click “Start Free Trial”\n\nWe retain the right to not award bounties to reports where the exploitation did not use @wearehackerone email accounts. \n\nYou should now be able to create a deployment or project in any hosted infrastructure you choose. Once you create a deployment/project, try to find bugs! We also encourage you to find bugs in the Cloud Console, affecting your Organization or your users.\n\nPlease be careful and mindful when you attempt to reproduce attack scenarios affecting the availability of the service. \n\nOnly the latest supported versions of the Elastic Stack will be eligible for a bounty.\n\nBugs describing missing rate limiting on cloud.elastic.co/api/v1/users/_login are out of scope. The API is rate limited but doesn't return a 429.",
-          "integrity_requirement": "medium",
-          "max_severity": "critical"
         }
       ],
       "out_of_scope": [
@@ -468509,6 +468487,17 @@
           "max_severity": "none"
         },
         {
+          "asset_identifier": "Elastic Distributions of OpenTelemetry (EDOT)",
+          "asset_type": "DOWNLOADABLE_EXECUTABLES",
+          "availability_requirement": "not_defined",
+          "confidentiality_requirement": "not_defined",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "Must be a supported version https://www.elastic.co/support/eol\n\nIncludes:\n\n- Elastic Distribution of OpenTelemetry Collector: https://www.elastic.co/docs/reference/edot-collector\n- Elastic Distribution of OpenTelemetry .NET: https://www.elastic.co/docs/reference/opentelemetry/edot-sdks/dotnet\n- Elastic Distribution of OpenTelemetry Java: https://www.elastic.co/docs/reference/opentelemetry/edot-sdks/java\n- Elastic Distribution of OpenTelemetry Node.js: https://www.elastic.co/docs/reference/opentelemetry/edot-sdks/node\n- Elastic Distribution of OpenTelemetry PHP: https://www.elastic.co/docs/reference/opentelemetry/edot-sdks/php\n- Elastic Distribution of OpenTelemetry Python: https://www.elastic.co/docs/reference/opentelemetry/edot-sdks/python\n- Elastic Distribution of OpenTelemetry Cloud Forwarder for AWS: https://www.elastic.co/docs/reference/opentelemetry/edot-cloud-forwarder/aws\n- Elastic Distribution of OpenTelemetry iOS: https://www.elastic.co/docs/reference/opentelemetry/edot-sdks/ios\n- Elastic Distribution of OpenTelemetry Android: https://www.elastic.co/docs/reference/opentelemetry/edot-sdks/android",
+          "integrity_requirement": "not_defined",
+          "max_severity": "none"
+        },
+        {
           "asset_identifier": "Elastic Enterprise Search",
           "asset_type": "DOWNLOADABLE_EXECUTABLES",
           "availability_requirement": "medium",
@@ -468615,6 +468604,17 @@
           "eligible_for_bounty": false,
           "eligible_for_submission": false,
           "instruction": "Must be a supported version: https://www.elastic.co/support/eol\n\nIncludes\n- All platforms: https://www.elastic.co/downloads/apm\n- Docker: https://www.docker.elastic.co/r/apm/apm-server\n- Source code: https://github.com/elastic/apm-server",
+          "integrity_requirement": "medium",
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "cloud.elastic.co",
+          "asset_type": "URL",
+          "availability_requirement": "medium",
+          "confidentiality_requirement": "medium",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "**How to test**\n\n1. Go to https://cloud.elastic.co/\n1. Click “Sign Up”\n1. Enter your @wearehackerone email and click “Start Free Trial” (you can create multiple trials if necessary)\n1. Find your verification email and click “Verify and Accept”\n1. Set your password\n1. Click “Start Free Trial”\n\nWe retain the right to not award bounties to reports where the exploitation did not use @wearehackerone email accounts. \n\nYou should now be able to create a deployment or project in any hosted infrastructure you choose. Once you create a deployment/project, try to find bugs! We also encourage you to find bugs in the Cloud Console, affecting your Organization or your users.\n\nPlease be careful and mindful when you attempt to reproduce attack scenarios affecting the availability of the service. \n\nOnly the latest supported versions of the Elastic Stack will be eligible for a bounty.\n\nBugs describing missing rate limiting on cloud.elastic.co/api/v1/users/_login are out of scope. The API is rate limited but doesn't return a 429.",
           "integrity_requirement": "medium",
           "max_severity": "none"
         },
@@ -493368,7 +493368,7 @@
     "name": "Ruby on Rails",
     "offers_bounties": false,
     "offers_swag": false,
-    "response_efficiency_percentage": 90,
+    "response_efficiency_percentage": 94,
     "submission_state": "open",
     "url": "https://hackerone.com/rails",
     "website": "http://rubyonrails.org/security",
