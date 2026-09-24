@@ -316,6 +316,49 @@
     }
   },
   {
+    "id": "bitoasis-bug-bounty-program",
+    "name": "BitOasis - Bug Bounty Program",
+    "public": true,
+    "disabled": false,
+    "managed": null,
+    "min_bounty": 5,
+    "max_bounty": 2000,
+    "targets": {
+      "in_scope": [
+        {
+          "target": "*.bitoasis.net",
+          "type": "wildcard"
+        },
+        {
+          "target": "https://play.google.com/store/apps/details?id=com.bitoasis&hl=en",
+          "type": "mobile-application-android"
+        },
+        {
+          "target": "https://apps.apple.com/ae/app/bitoasis-buy-bitcoin-crypto/id1521661794",
+          "type": "mobile-application-ios"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "target": "All domains or subdomains not listed in the above list of 'Scopes'",
+          "type": "other"
+        },
+        {
+          "target": "Websites under Bitoasis that utilize CMS frameworks (e.g., WordPress, Joomla, Sitecore).",
+          "type": "other"
+        },
+        {
+          "target": "https://blog.bitoasis.net",
+          "type": "other"
+        },
+        {
+          "target": "All other third parties",
+          "type": "other"
+        }
+      ]
+    }
+  },
+  {
     "id": "bookbeat",
     "name": "BookBeat",
     "public": true,
@@ -424,6 +467,65 @@
         },
         {
           "target": "Finally, fraud related reports are out-of-scope if they do not exploit a security vulnerability. Therefore, fraud activity enabled by bug or incomplete business rules enforcement are out-of-scope.  However, a fraud activity enabled by a CSRF exploit for example is valid.",
+          "type": "other"
+        }
+      ]
+    }
+  },
+  {
+    "id": "coindcx-bug-bounty-program",
+    "name": "Coindcx - Bug Bounty Program",
+    "public": true,
+    "disabled": false,
+    "managed": null,
+    "min_bounty": 50,
+    "max_bounty": 2000,
+    "targets": {
+      "in_scope": [
+        {
+          "target": "*.coindcx.com",
+          "type": "wildcard"
+        },
+        {
+          "target": "api.coindcx.com",
+          "type": "api"
+        },
+        {
+          "target": "https://play.google.com/store/apps/details?id=com.coindcx.btc",
+          "type": "mobile-application-android"
+        },
+        {
+          "target": "https://apps.apple.com/in/app/coindcx-trade-bitcoin-crypto/id1517787269",
+          "type": "mobile-application-ios"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "target": "All domains or subdomains not listed in the above list of 'Scopes'",
+          "type": "other"
+        },
+        {
+          "target": "Zendesk and other third parties",
+          "type": "other"
+        },
+        {
+          "target": "CMS websites own by Coindcx (Anything related to Wordpress etc)",
+          "type": "other"
+        },
+        {
+          "target": "coindcx.com/blog",
+          "type": "other"
+        },
+        {
+          "target": "info.coindcx.com",
+          "type": "other"
+        },
+        {
+          "target": "otcdesk.coindcx.com",
+          "type": "other"
+        },
+        {
+          "target": "careers.coindcx.com",
           "type": "other"
         }
       ]
@@ -3020,6 +3122,45 @@
         },
         {
           "target": "*.osp.ovh.com",
+          "type": "other"
+        }
+      ]
+    }
+  },
+  {
+    "id": "okto-bug-bounty-program",
+    "name": "Okto - Bug Bounty Program",
+    "public": true,
+    "disabled": false,
+    "managed": null,
+    "min_bounty": 0,
+    "max_bounty": 2000,
+    "targets": {
+      "in_scope": [
+        {
+          "target": "https://apps.apple.com/in/app/okto-wallet/id6450688229",
+          "type": "mobile-application-ios"
+        },
+        {
+          "target": "https://play.google.com/store/apps/details?id=com.coindcx.okto",
+          "type": "mobile-application-android"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "target": "All domains or subdomains not listed in the above list of 'Scopes'",
+          "type": "other"
+        },
+        {
+          "target": "CMS websites own by Okto (Anything related to Wordpress etc)",
+          "type": "other"
+        },
+        {
+          "target": "Customer support form (https://help-okto.sprinklr.com/help/)",
+          "type": "other"
+        },
+        {
+          "target": "All other third parties",
           "type": "other"
         }
       ]
