@@ -64814,6 +64814,61 @@
     }
   },
   {
+    "allows_bounty_splitting": false,
+    "average_time_to_bounty_awarded": null,
+    "average_time_to_first_program_response": 9932.0,
+    "average_time_to_report_resolved": null,
+    "handle": "kaltura",
+    "id": 0,
+    "managed_program": false,
+    "name": "Kaltura",
+    "offers_bounties": true,
+    "offers_swag": false,
+    "response_efficiency_percentage": null,
+    "submission_state": "open",
+    "url": "https://hackerone.com/kaltura",
+    "website": "http://kaltura.com",
+    "targets": {
+      "in_scope": [
+        {
+          "asset_identifier": "kmc.kaltura.com",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Your task is to conduct a security assessment of our product by interacting with it as a genuine user. This will help us identify potential vulnerabilities.\n\nStep 1: Registration\n1.\tNavigate to the Registration Page: Visit our demo page here: https://corp.kaltura.com/pricing/video-content-management/.\n2.\tCreate a Demo Account: Follow the instructions on the page to register for a demo account. Ensure you fill out all required fields to access the product features fully.\n3.\tConfirm Your Email: You may receive an email to confirm your registration. Please follow the instructions in the email to activate your demo account.\n\nStep 2: Testing\nOnce registered, you are expected to:\n1.\tExplore all Features: Use the product regularly for all accessible features and functionalities.\n2.\tPerform Standard Operations: Attempt typical user operations such as uploading, editing, deleting, and retrieving information.\n3.\tTest for Security Flaws: Focus on identifying security flaws.\n\nStep 3: Reporting\n1.\tDocument Your Findings: For each vulnerability discovered, please document:\na.\tA clear and concise description of the issue.\nb.\tSteps to reproduce the vulnerability.\nc.\tThe potential impact of the vulnerability.\nd.\tAny suggestions for mitigating the issues found.\n2.\tSubmit Your Report: Use the reporting format provided on your HackerOne dashboard to submit your findings.\n\nRestrictions:\n•\tDo Not Harm the Testing Environment: Any test that could degrade the product's performance (like DDoS attacks) or permanently alter its data (such as deleting data not created by you during testing) is strictly prohibited.\n•\tRespect Privacy: Do not attempt to access or leak real user data.",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "mediaspace.kaltura.com",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Your task is to conduct a security assessment of our product by interacting with it as a genuine user. This will help us identify potential vulnerabilities.\n\nStep 1: Registration\n4.\tNavigate to the Registration Page: Visit our demo page here:\nhttps://corp.kaltura.com/video-collaboration-communication/enterprise-video-portal/.\n5.\tCreate a Demo Account: Follow the instructions on the page to register for a demo account. Ensure you fill out all required fields to access the product features fully.\n6.\tConfirm Your Email: You may receive an email to confirm your registration. Please follow the instructions in the email to activate your demo account.\n\nStep 2: Testing\nOnce registered, you are expected to:\n4.\tExplore all Features: Use the product regularly for all accessible features and functionalities.\n5.\tPerform Standard Operations: Attempt typical user operations such as uploading, editing, deleting, and retrieving information.\n6.\tTest for Security Flaws: Focus on identifying security flaws. \n\nStep 3: Reporting\n3.\tDocument Your Findings: For each vulnerability discovered, please document:\na.\tA clear and concise description of the issue.\nb.\tSteps to reproduce the vulnerability.\nc.\tThe potential impact of the vulnerability.\nd.\tAny suggestions for mitigating the issues found.\n4.\tSubmit Your Report: Use the reporting format provided on your HackerOne dashboard to submit your findings.\n\nRestrictions:\n•\tDo Not Harm the Testing Environment: Any test that could degrade the product's performance (like DDoS attacks) or permanently alter its data (such as deleting data not created by you during testing) is strictly prohibited.\n•\tRespect Privacy: Do not attempt to access or leak real user data.",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "asset_identifier": "eventplatform.kaltura.com",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "",
+          "integrity_requirement": "high",
+          "max_severity": "none"
+        }
+      ]
+    }
+  },
+  {
     "allows_bounty_splitting": true,
     "average_time_to_bounty_awarded": 398.0,
     "average_time_to_first_program_response": 10.0,
@@ -185414,17 +185469,6 @@
           "max_severity": "critical"
         },
         {
-          "asset_identifier": "cat.api.ipg-online.com",
-          "asset_type": "URL",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": false,
-          "eligible_for_submission": true,
-          "instruction": null,
-          "integrity_requirement": null,
-          "max_severity": "critical"
-        },
-        {
           "asset_identifier": "cat.apigee.fiservapps.com",
           "asset_type": "URL",
           "availability_requirement": null,
@@ -189991,6 +190035,17 @@
         },
         {
           "asset_identifier": "connect-uat.latam.fiservapis.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": null,
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "connect.apac.fiservapis.com",
           "asset_type": "URL",
           "availability_requirement": null,
           "confidentiality_requirement": null,
@@ -208867,28 +208922,6 @@
         },
         {
           "asset_identifier": "http://cat.360control.firstdata.com",
-          "asset_type": "URL",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": false,
-          "eligible_for_submission": true,
-          "instruction": null,
-          "integrity_requirement": null,
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "http://cat.api.firstdata.com",
-          "asset_type": "URL",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": false,
-          "eligible_for_submission": true,
-          "instruction": null,
-          "integrity_requirement": null,
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "http://cat.api.fiservapps.com",
           "asset_type": "URL",
           "availability_requirement": null,
           "confidentiality_requirement": null,
@@ -269113,6 +269146,17 @@
           "max_severity": "critical"
         },
         {
+          "asset_identifier": "prod-api-ipg-online.ns1.fiservapis.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": null,
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
           "asset_identifier": "prod-apigee-fiservapps-x-asns1.ns1.fiservapis.com",
           "asset_type": "URL",
           "availability_requirement": null,
@@ -320537,7 +320581,7 @@
     "name": "Global Payments",
     "offers_bounties": false,
     "offers_swag": false,
-    "response_efficiency_percentage": 98,
+    "response_efficiency_percentage": 95,
     "submission_state": "open",
     "url": "https://hackerone.com/global-payments",
     "website": "http://globalpayments.com",
@@ -454422,7 +454466,7 @@
     "name": "Expedia Group Bug Bounty",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 83,
+    "response_efficiency_percentage": 82,
     "submission_state": "open",
     "url": "https://hackerone.com/expediagroup_bbp",
     "website": "https://www.expediagroup.com/",
@@ -455290,7 +455334,7 @@
     "name": "Front",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 61,
+    "response_efficiency_percentage": 62,
     "submission_state": "open",
     "url": "https://hackerone.com/fronthq",
     "website": "https://frontapp.com",
@@ -462481,7 +462525,7 @@
     "name": "Flipkart",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 86,
+    "response_efficiency_percentage": 85,
     "submission_state": "open",
     "url": "https://hackerone.com/flipkart",
     "website": "https://flipkart.com",
@@ -473687,7 +473731,7 @@
     "name": "Bumble",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 80,
+    "response_efficiency_percentage": 81,
     "submission_state": "open",
     "url": "https://hackerone.com/bumble",
     "website": "https://bumble.com/",
