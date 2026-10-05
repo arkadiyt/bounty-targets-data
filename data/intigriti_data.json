@@ -5286,21 +5286,51 @@
     "targets": {
       "in_scope": [
         {
-          "type": "wildcard",
-          "endpoint": "*.account.api.here.com",
+          "type": "url",
+          "endpoint": "registry.service.api.platform.here.com",
           "description": null,
           "impact": "Tier 2"
         },
         {
           "type": "wildcard",
-          "endpoint": "*.account.here.com",
+          "endpoint": "*.data.api.platform.here.com",
           "description": null,
           "impact": "Tier 2"
         },
         {
           "type": "wildcard",
-          "endpoint": "*.mobilitygraph.hereapi.com",
-          "description": "Including, but not limited to, following applications:\nhttps://predictor.mobilitygraph.hereapi.com/\nhttps://profile.mobilitygraph.hereapi.com/\nhttps://subscription.mobilitygraph.hereapi.com/\n",
+          "endpoint": "*.metrics.platform.here.com",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.platform.here.com",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "search.hereapi.com",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "transit.hereapi.com",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "vector.hereapi.com",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "mobilitygraph.hereapi.com",
+          "description": "Including, but not limited to, following applications:\nhttps://predictor.mobilitygraph.hereapi.com/\nhttps://profile.mobilitygraph.hereapi.com/\nhttps://subscription.mobilitygraph.hereapi.com/",
           "impact": "Tier 2"
         },
         {
@@ -5311,56 +5341,86 @@
         },
         {
           "type": "wildcard",
+          "endpoint": "*.subp-router.hereapi.com",
+          "description": "Including, but not limited to, following application:\nhttps://vip-als.subp-router.hereapi.com/",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.hereapi.com",
+          "description": null,
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "account.api.here.com",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "account.here.com",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "listing.here.com",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "mapcreator.here.com",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "xyz.api.here.com",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "wildcard",
           "endpoint": "*.scbe.api.here.com",
           "description": null,
           "impact": "Tier 2"
         },
         {
           "type": "wildcard",
-          "endpoint": "*.subp-router.hereapi.com",
-          "description": "Including, but not limited to, following application:\nhttps://vip-als.subp-router.hereapi.com/\n",
-          "impact": "Tier 2"
+          "endpoint": "*.here.com",
+          "description": null,
+          "impact": "Tier 3"
         },
         {
           "type": "ios",
-          "endpoint": "955837609",
+          "endpoint": "HERE WeGo iOS",
           "description": null,
           "impact": "Tier 2"
         },
         {
           "type": "android",
-          "endpoint": "com.here.app.maps",
-          "description": null,
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "https://jaguar.here.com",
-          "description": null,
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "https://landrover.here.com",
+          "endpoint": "HERE WeGo Android",
           "description": null,
           "impact": "Tier 2"
         },
         {
           "type": "other",
-          "endpoint": "Leaked/compromised employee accounts *.here.com",
-          "description": "Any leaked/compromised employee accounts within the domain @here.com for any service in domains *.here.com (excluding unverified accounts on account.here.com) and here.okta.com, for example john.doe@here.com account for in.here.com. If you come across any such accounts, whether compromised due to malware infections, security breaches, or any other cause, please notify us. Depending on account setup and environment valid (belongs to HERE employee and active) and non-duplicate reports will be accepted with Low/Medium severity. Please make sure to provide as much information as you can on the source and the reason of account compromise, for example - date of compromise, hostname, stealer id, source you obtained info from.\n\nPlease use the CSV format for all credentials. For example:\n\n`username, password, service, source, date_of_leak`\n\nIf the exact `date_of_leak` is unknown, use \"unknown\" instead.\n\n",
+          "endpoint": "Leaked/Compromised Employee Credentials",
+          "description": null,
           "impact": "Tier 2"
         },
         {
-          "type": "wildcard",
-          "endpoint": "*.here.com",
-          "description": "This scope (*.here.com) is for Log4J and Spring4Shell RCE vulnerabilities only.",
-          "impact": "Tier 3"
+          "type": "other",
+          "endpoint": "Leaked Service Credentials",
+          "description": null,
+          "impact": "Tier 2"
         },
         {
-          "type": "wildcard",
-          "endpoint": "*.hereapi.com",
-          "description": "This scope (*.hereapi.com) is for Log4J and Spring4Shell RCE vulnerabilities only.",
+          "type": "other",
+          "endpoint": "All other related services owned by HERE",
+          "description": null,
           "impact": "Tier 3"
         }
       ],
