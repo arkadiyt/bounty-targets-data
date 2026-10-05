@@ -48472,7 +48472,7 @@
           "eligible_for_submission": true,
           "instruction": null,
           "integrity_requirement": "not_defined",
-          "max_severity": "none"
+          "max_severity": "critical"
         },
         {
           "asset_identifier": "Finnair Assets",
@@ -48538,7 +48538,7 @@
           "eligible_for_submission": true,
           "instruction": null,
           "integrity_requirement": "not_defined",
-          "max_severity": "none"
+          "max_severity": "critical"
         },
         {
           "asset_identifier": "customercare.finnair.com",
@@ -48681,7 +48681,7 @@
           "eligible_for_submission": true,
           "instruction": null,
           "integrity_requirement": "not_defined",
-          "max_severity": "none"
+          "max_severity": "critical"
         },
         {
           "asset_identifier": "https://api.finnair.com/d/mobileapp-services/*",
@@ -48714,7 +48714,7 @@
           "eligible_for_submission": true,
           "instruction": null,
           "integrity_requirement": "not_defined",
-          "max_severity": "none"
+          "max_severity": "critical"
         },
         {
           "asset_identifier": "partners.finnair.fi",
@@ -330376,7 +330376,7 @@
     "name": "Stripe",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 78,
+    "response_efficiency_percentage": 77,
     "submission_state": "open",
     "url": "https://hackerone.com/stripe",
     "website": "https://stripe.com",
@@ -459865,7 +459865,7 @@
     "name": "Reddit",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 92,
+    "response_efficiency_percentage": 91,
     "submission_state": "open",
     "url": "https://hackerone.com/reddit",
     "website": "https://www.reddit.com",
@@ -461183,7 +461183,7 @@
     "name": "Expedia Group Bug Bounty",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 64,
+    "response_efficiency_percentage": 63,
     "submission_state": "open",
     "url": "https://hackerone.com/expediagroup_bbp",
     "website": "https://www.expediagroup.com/",
@@ -462125,270 +462125,6 @@
         }
       ],
       "out_of_scope": []
-    }
-  },
-  {
-    "allows_bounty_splitting": true,
-    "average_time_to_bounty_awarded": 353.0,
-    "average_time_to_first_program_response": 55.0,
-    "average_time_to_report_resolved": null,
-    "handle": "netlify",
-    "id": 0,
-    "managed_program": true,
-    "name": "Netlify",
-    "offers_bounties": true,
-    "offers_swag": true,
-    "response_efficiency_percentage": 62,
-    "submission_state": "open",
-    "url": "https://hackerone.com/netlify",
-    "website": "https://www.netlify.com",
-    "targets": {
-      "in_scope": [
-        {
-          "asset_identifier": "*.infra-prod.nsvcs.net",
-          "asset_type": "WILDCARD",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "",
-          "integrity_requirement": null,
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "*.onegraph.com",
-          "asset_type": "WILDCARD",
-          "availability_requirement": "low",
-          "confidentiality_requirement": "medium",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "As of December 28, 2022 this feature is no longer available for Netlify users who have not yet enabled it. See https://docs.netlify.com/netlify-labs/experimental-features/netlify-graph/get-started/.",
-          "integrity_requirement": "low",
-          "max_severity": "high"
-        },
-        {
-          "asset_identifier": "*.ops.netlify.com",
-          "asset_type": "WILDCARD",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "",
-          "integrity_requirement": null,
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "*.services-prod.nsvcs.net",
-          "asset_type": "WILDCARD",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "",
-          "integrity_requirement": null,
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "*.services.netlify.com",
-          "asset_type": "WILDCARD",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "",
-          "integrity_requirement": null,
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "api.netlify.com",
-          "asset_type": "URL",
-          "availability_requirement": "high",
-          "confidentiality_requirement": "high",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "`netlify api --list` after installing the CLI: https://docs.netlify.com/cli/get-started/. See also https://open-api.netlify.com/.",
-          "integrity_requirement": "high",
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "app.netlify.com",
-          "asset_type": "URL",
-          "availability_requirement": "low",
-          "confidentiality_requirement": "high",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "See https://docs.netlify.com/get-started/. Also `netlify init` after installing the CLI: https://docs.netlify.com/cli/get-started/.",
-          "integrity_requirement": "high",
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "internal-docs.netlify.com",
-          "asset_type": "URL",
-          "availability_requirement": "none",
-          "confidentiality_requirement": "low",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "",
-          "integrity_requirement": "low",
-          "max_severity": "medium"
-        },
-        {
-          "asset_identifier": "internal.netlify.com",
-          "asset_type": "URL",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "",
-          "integrity_requirement": null,
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "list-v2--netlify-plugins.netlify.app",
-          "asset_type": "URL",
-          "availability_requirement": "none",
-          "confidentiality_requirement": "low",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "Powers templates offered by app.netlify.com. See: https://www.netlify.com/integrations/templates/.",
-          "integrity_requirement": "low",
-          "max_severity": "medium"
-        },
-        {
-          "asset_identifier": "netlify-cdp-loader.netlify.app",
-          "asset_type": "URL",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "Powers this feature: https://docs.netlify.com/site-deploys/deploy-previews/#collaborative-deploy-previews.",
-          "integrity_requirement": null,
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "netlify-rum.netlify.app",
-          "asset_type": "URL",
-          "availability_requirement": "none",
-          "confidentiality_requirement": "low",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "",
-          "integrity_requirement": "low",
-          "max_severity": "medium"
-        },
-        {
-          "asset_identifier": "screenshot-proxy.netlify.app",
-          "asset_type": "URL",
-          "availability_requirement": "none",
-          "confidentiality_requirement": "low",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "",
-          "integrity_requirement": "low",
-          "max_severity": "medium"
-        },
-        {
-          "asset_identifier": "supportal.netlify.app",
-          "asset_type": "URL",
-          "availability_requirement": "low",
-          "confidentiality_requirement": "low",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "",
-          "integrity_requirement": "low",
-          "max_severity": "medium"
-        }
-      ],
-      "out_of_scope": [
-        {
-          "asset_identifier": "*.netlify.app",
-          "asset_type": "WILDCARD",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": false,
-          "eligible_for_submission": false,
-          "instruction": "Except for the in scope subdomains listed as in scope.",
-          "integrity_requirement": null,
-          "max_severity": "none"
-        },
-        {
-          "asset_identifier": "*.netlify.com",
-          "asset_type": "WILDCARD",
-          "availability_requirement": "none",
-          "confidentiality_requirement": "none",
-          "eligible_for_bounty": false,
-          "eligible_for_submission": false,
-          "instruction": "Except for the in scope subdomains listed as in scope.",
-          "integrity_requirement": "none",
-          "max_severity": "none"
-        },
-        {
-          "asset_identifier": "*.netlifycms.org",
-          "asset_type": "WILDCARD",
-          "availability_requirement": "none",
-          "confidentiality_requirement": "none",
-          "eligible_for_bounty": false,
-          "eligible_for_submission": false,
-          "instruction": "",
-          "integrity_requirement": "none",
-          "max_severity": "none"
-        },
-        {
-          "asset_identifier": "answers.netlify.com",
-          "asset_type": "URL",
-          "availability_requirement": "none",
-          "confidentiality_requirement": "none",
-          "eligible_for_bounty": false,
-          "eligible_for_submission": false,
-          "instruction": "",
-          "integrity_requirement": "none",
-          "max_severity": "none"
-        },
-        {
-          "asset_identifier": "docs.netlify.com",
-          "asset_type": "URL",
-          "availability_requirement": "none",
-          "confidentiality_requirement": "none",
-          "eligible_for_bounty": false,
-          "eligible_for_submission": false,
-          "instruction": "",
-          "integrity_requirement": "none",
-          "max_severity": "none"
-        },
-        {
-          "asset_identifier": "https://github.com/netlify/",
-          "asset_type": "URL",
-          "availability_requirement": "none",
-          "confidentiality_requirement": "none",
-          "eligible_for_bounty": false,
-          "eligible_for_submission": false,
-          "instruction": null,
-          "integrity_requirement": "none",
-          "max_severity": "none"
-        },
-        {
-          "asset_identifier": "webpop.com",
-          "asset_type": "URL",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": false,
-          "eligible_for_submission": false,
-          "instruction": "This is an old asset and will be deprecated in the near future. ",
-          "integrity_requirement": null,
-          "max_severity": "none"
-        },
-        {
-          "asset_identifier": "www.netlify.com",
-          "asset_type": "URL",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": false,
-          "eligible_for_submission": false,
-          "instruction": "This is Netlify's marketing website. ",
-          "integrity_requirement": null,
-          "max_severity": "none"
-        }
-      ]
     }
   },
   {
@@ -494286,7 +494022,7 @@
     "name": "Priceline",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 92,
+    "response_efficiency_percentage": 88,
     "submission_state": "open",
     "url": "https://hackerone.com/priceline",
     "website": "http://www.priceline.com/",
