@@ -3505,7 +3505,7 @@
         {
           "type": "wildcard",
           "endpoint": "*.db1.ondigitalocean.com",
-          "description": null,
+          "description": "Customers' resources are hosted underneath this domain, so the entire domain should be considered out-of-scope.\n\nAny database created inside your own account on this domain are considered in-scope. Use the `cloud.digitalocean.com` asset in that case.\n\nFindings in Standard Edition PostgreSQL, Standard Edition MySQL, Valkey, Kafka, and OpenSearch should be submitted to [our partner, Aiven](https://bugcrowd.com/engagements/aiven-mbb-og).",
           "impact": "Out of scope"
         },
         {
