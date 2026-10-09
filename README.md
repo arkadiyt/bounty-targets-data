@@ -5,20 +5,20 @@
 This repo contains data dumps of Hackerone and Bugcrowd scopes (i.e. the domains that are eligible for bug bounty reports). The files provided are:
 
 Main files:
-- [domains.txt](https://github.com/arkadiyt/bounty-targets-data/blob/master/data/domains.txt): full list of domains, without wildcards.
-- [wildcards.txt](https://github.com/arkadiyt/bounty-targets-data/blob/master/data/wildcards.txt): full list of wildcard domains. **Note:** A program might have `*.example.com` in-scope but `excluded.example.com` out-of-scope so check your program rules before submitting reports.
+- [domains.txt](https://github.com/arkadiyt/bounty-targets-data/blob/main/data/domains.txt): full list of domains, without wildcards.
+- [wildcards.txt](https://github.com/arkadiyt/bounty-targets-data/blob/main/data/wildcards.txt): full list of wildcard domains. **Note:** A program might have `*.example.com` in-scope but `excluded.example.com` out-of-scope so check your program rules before submitting reports.
 
 Extra files:
-- [bugcrowd_data.json](https://github.com/arkadiyt/bounty-targets-data/blob/master/data/bugcrowd_data.json): raw [Bugcrowd](https://bugcrowd.com) data.
-- [hackerone_data.json](https://github.com/arkadiyt/bounty-targets-data/blob/master/data/hackerone_data.json): raw [Hackerone](https://hackerone.com) data.
-- [federacy_data.json](https://github.com/arkadiyt/bounty-targets-data/blob/master/data/federacy_data.json): raw [Federacy](https://federacy.com) data.
-<!-- - [hackenproof_data.json](https://github.com/arkadiyt/bounty-targets-data/blob/master/data/hackenproof_data.json): raw [Hackenproof](https://hackenproof.com) data. -->
-- [intigriti_data.json](https://github.com/arkadiyt/bounty-targets-data/blob/master/data/intigriti_data.json): raw [Intigriti](https://www.intigriti.com) data.
-- [yeswehack_data.json](https://github.com/arkadiyt/bounty-targets-data/blob/master/data/yeswehack_data.json): raw [YesWeHack](https://www.yeswehack.com/) data.
+- [bugcrowd_data.json](https://github.com/arkadiyt/bounty-targets-data/blob/main/data/bugcrowd_data.json): raw [Bugcrowd](https://bugcrowd.com) data.
+- [hackerone_data.json](https://github.com/arkadiyt/bounty-targets-data/blob/main/data/hackerone_data.json): raw [Hackerone](https://hackerone.com) data.
+<!-- - [federacy_data.json](https://github.com/arkadiyt/bounty-targets-data/blob/main/data/federacy_data.json): raw [Federacy](https://federacy.com) data. -->
+<!-- - [hackenproof_data.json](https://github.com/arkadiyt/bounty-targets-data/blob/main/data/hackenproof_data.json): raw [Hackenproof](https://hackenproof.com) data. -->
+- [intigriti_data.json](https://github.com/arkadiyt/bounty-targets-data/blob/main/data/intigriti_data.json): raw [Intigriti](https://www.intigriti.com) data.
+- [yeswehack_data.json](https://github.com/arkadiyt/bounty-targets-data/blob/main/data/yeswehack_data.json): raw [YesWeHack](https://www.yeswehack.com/) data.
 
 ### Status
 
-The last change was detected on `Wednesday 10/07/2026 02:00 (UTC)`. New changes (if any) are picked up every 30 minutes.
+The last change was detected on `Friday 10/09/2026 04:00 (UTC)`. New changes (if any) are picked up every 30 minutes.
 
 ### Code
 
