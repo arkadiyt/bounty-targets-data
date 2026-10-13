@@ -6270,7 +6270,7 @@
     "name": "Vanguard",
     "offers_bounties": false,
     "offers_swag": false,
-    "response_efficiency_percentage": 87,
+    "response_efficiency_percentage": 83,
     "submission_state": "open",
     "url": "https://hackerone.com/vanguard",
     "website": "http://vanguard.com",
@@ -16375,6 +16375,17 @@
           "max_severity": "critical"
         },
         {
+          "asset_identifier": "1console.twilio.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": null,
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
           "asset_identifier": "Any host/web property verified to be owned by Twilio et al.",
           "asset_type": "OTHER",
           "availability_requirement": null,
@@ -16382,17 +16393,6 @@
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
           "instruction": "Any host/web property verified to be owned by Twilio (domains/IP space/etc.) but not listed in the previous target groups and not listed as Out of Scope.",
-          "integrity_requirement": null,
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "Twilio APIs",
-          "asset_type": "API",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "Twilio Primary Targets\n\nMany of our Twilio APIs are available in our Postman collection. Please confirm that your target is within scope before testing. Do not publicly store any sensitive information.",
           "integrity_requirement": null,
           "max_severity": "critical"
         },
@@ -16903,39 +16903,6 @@
           "max_severity": "critical"
         },
         {
-          "asset_identifier": "http://help.twilio.com",
-          "asset_type": "URL",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "",
-          "integrity_requirement": null,
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "http://tsock.us1.twilio.com",
-          "asset_type": "URL",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "Twilio Primary Targets\n\nMany of our Twilio APIs are available in our Postman collection. Please confirm that your target is within scope before testing. Do not publicly store any sensitive information.",
-          "integrity_requirement": null,
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "http://twilio.com/blog",
-          "asset_type": "URL",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "",
-          "integrity_requirement": null,
-          "max_severity": "critical"
-        },
-        {
           "asset_identifier": "https://github.com/stytchauth",
           "asset_type": "SOURCE_CODE",
           "availability_requirement": null,
@@ -16943,17 +16910,6 @@
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
           "instruction": null,
-          "integrity_requirement": null,
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "https://segment.com/docs/connections/sources/",
-          "asset_type": "URL",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "##Source code of Website, Mobile, or Server Libraries\n###Access & Testing (Segment)\nLimit your use of scanner tests based on our technology stack. Our application is primarily powered by Node.js, React, and GraphQL.\nTo test Segment you'll need to create a variety of data sources/destinations. We would recommend using those that have a bug bounty program such as Intercom, Twilio, Facebook, or Google. Services like Heroku can be valuable for creating resources such as Postgres instances to test our warehouse's products.\n\n###Libraries (Segment)\nSegment provides libraries written in various languages to our customers https://segment.com/docs/connections/sources/. We invite you to review the source code of our Website, Mobile, and Server Libraries, all of which are hosted on Github. Qualifying submissions must have a demonstrable impact and realistic attack vector. Submissions that include a proposed fix will be easier for us to evaluate and reward.\n\n",
           "integrity_requirement": null,
           "max_severity": "critical"
         },
@@ -16976,83 +16932,6 @@
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
           "instruction": null,
-          "integrity_requirement": null,
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "https://www.authy.com/download/",
-          "asset_type": "APPLE_STORE_APP_ID",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "",
-          "integrity_requirement": null,
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "https://www.authy.com/download/",
-          "asset_type": "GOOGLE_PLAY_APP_ID",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "",
-          "integrity_requirement": null,
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "https://www.twilio.com/docs/authy/api",
-          "asset_type": "API",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "Twilio Authy API",
-          "integrity_requirement": null,
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "https://www.twilio.com/docs/libraries",
-          "asset_type": "OTHER",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "Twilio Primary Targets\n\nTwilio SDKs \n\nMany of our Twilio APIs are available in our Postman collection. Please confirm that your target is within scope before testing. Do not publicly store any sensitive information.\n\n\n\n",
-          "integrity_requirement": null,
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "https://www.twilio.com/docs/verify/api",
-          "asset_type": "API",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "Twilio Verify",
-          "integrity_requirement": null,
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "https://www.twilio.com/en-us/blog/get-started-webrtc",
-          "asset_type": "OTHER",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "Twilio Primary Targets\n\nTwilio WebRTC Client\n\nMany of our Twilio APIs are available in our Postman collection. Please confirm that your target is within scope before testing. Do not publicly store any sensitive information.",
-          "integrity_requirement": null,
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "https://www.twilio.com/login?g=%2fconsole%3f&t=2b1c98334b25c1a785ef15b6556396290e3c704a9b57fc40687cbccd79c46a8c",
-          "asset_type": "URL",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": "Twilio Primary Targets\n\nTwilio Console\n\nMany of our Twilio APIs are available in our Postman collection. Please confirm that your target is within scope before testing. Do not publicly store any sensitive information.",
           "integrity_requirement": null,
           "max_severity": "critical"
         },
@@ -17444,95 +17323,7 @@
       ],
       "out_of_scope": [
         {
-          "asset_identifier": "All Kurento domains",
-          "asset_type": "OTHER",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": false,
-          "eligible_for_submission": false,
-          "instruction": null,
-          "integrity_requirement": null,
-          "max_severity": "none"
-        },
-        {
           "asset_identifier": "All Twilio acquisitions unless explicitly listed as in-scope",
-          "asset_type": "OTHER",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": false,
-          "eligible_for_submission": false,
-          "instruction": null,
-          "integrity_requirement": null,
-          "max_severity": "none"
-        },
-        {
-          "asset_identifier": "All Twilio acquisitions until explicitly noted under the in-scope targets",
-          "asset_type": "OTHER",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": false,
-          "eligible_for_submission": false,
-          "instruction": null,
-          "integrity_requirement": null,
-          "max_severity": "none"
-        },
-        {
-          "asset_identifier": "Electric Imp and its assets",
-          "asset_type": "OTHER",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": false,
-          "eligible_for_submission": false,
-          "instruction": null,
-          "integrity_requirement": null,
-          "max_severity": "none"
-        },
-        {
-          "asset_identifier": "Third-party services",
-          "asset_type": "OTHER",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": false,
-          "eligible_for_submission": false,
-          "instruction": null,
-          "integrity_requirement": null,
-          "max_severity": "none"
-        },
-        {
-          "asset_identifier": "Twilio Quest",
-          "asset_type": "OTHER",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": false,
-          "eligible_for_submission": false,
-          "instruction": null,
-          "integrity_requirement": null,
-          "max_severity": "none"
-        },
-        {
-          "asset_identifier": "Twilio Wireless",
-          "asset_type": "OTHER",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": false,
-          "eligible_for_submission": false,
-          "instruction": null,
-          "integrity_requirement": null,
-          "max_severity": "none"
-        },
-        {
-          "asset_identifier": "TwimlBins",
-          "asset_type": "OTHER",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": false,
-          "eligible_for_submission": false,
-          "instruction": null,
-          "integrity_requirement": null,
-          "max_severity": "none"
-        },
-        {
-          "asset_identifier": "Ytica and its assets",
           "asset_type": "OTHER",
           "availability_requirement": null,
           "confidentiality_requirement": null,
@@ -17587,85 +17378,8 @@
           "max_severity": "none"
         },
         {
-          "asset_identifier": "community.segment.com",
-          "asset_type": "URL",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": false,
-          "eligible_for_submission": false,
-          "instruction": null,
-          "integrity_requirement": null,
-          "max_severity": "none"
-        },
-        {
           "asset_identifier": "github.com/stytchauth/sqx",
           "asset_type": "SOURCE_CODE",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": false,
-          "eligible_for_submission": false,
-          "instruction": null,
-          "integrity_requirement": null,
-          "max_severity": "none"
-        },
-        {
-          "asset_identifier": "http://apjevents.twilio.com",
-          "asset_type": "URL",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": false,
-          "eligible_for_submission": false,
-          "instruction": null,
-          "integrity_requirement": null,
-          "max_severity": "none"
-        },
-        {
-          "asset_identifier": "http://events.cdpweek.com",
-          "asset_type": "URL",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": false,
-          "eligible_for_submission": false,
-          "instruction": null,
-          "integrity_requirement": null,
-          "max_severity": "none"
-        },
-        {
-          "asset_identifier": "http://segment.com/contact",
-          "asset_type": "URL",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": false,
-          "eligible_for_submission": false,
-          "instruction": null,
-          "integrity_requirement": null,
-          "max_severity": "none"
-        },
-        {
-          "asset_identifier": "http://segment.com/jobs",
-          "asset_type": "URL",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": false,
-          "eligible_for_submission": false,
-          "instruction": null,
-          "integrity_requirement": null,
-          "max_severity": "none"
-        },
-        {
-          "asset_identifier": "http://twilio.com/en-us/company/jobs",
-          "asset_type": "URL",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": false,
-          "eligible_for_submission": false,
-          "instruction": null,
-          "integrity_requirement": null,
-          "max_severity": "none"
-        },
-        {
-          "asset_identifier": "http://twilio.com/labs",
-          "asset_type": "URL",
           "availability_requirement": null,
           "confidentiality_requirement": null,
           "eligible_for_bounty": false,
@@ -43304,6 +43018,17 @@
           "instruction": "",
           "integrity_requirement": null,
           "max_severity": "none"
+        },
+        {
+          "asset_identifier": "https://github.com/deepjavalibrary/*",
+          "asset_type": "WILDCARD",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "critical"
         },
         {
           "asset_identifier": "https://github.com/strands-agents/*",
@@ -305189,7 +304914,7 @@
     "name": "John Deere",
     "offers_bounties": false,
     "offers_swag": true,
-    "response_efficiency_percentage": 81,
+    "response_efficiency_percentage": 82,
     "submission_state": "open",
     "url": "https://hackerone.com/john-deere",
     "website": "http://deere.com",
@@ -455245,7 +454970,7 @@
     "name": "TD Bank Group",
     "offers_bounties": false,
     "offers_swag": true,
-    "response_efficiency_percentage": 89,
+    "response_efficiency_percentage": 91,
     "submission_state": "open",
     "url": "https://hackerone.com/td-bank",
     "website": "https://www.td.com/",
@@ -505364,7 +505089,7 @@
     "name": "Booking.com",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 93,
+    "response_efficiency_percentage": 94,
     "submission_state": "open",
     "url": "https://hackerone.com/bookingcom",
     "website": "http://www.booking.com",
