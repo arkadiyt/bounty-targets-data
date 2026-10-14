@@ -10955,69 +10955,6 @@
     }
   },
   {
-    "name": "Imperva - Thales Bug Bounty",
-    "url": "https://bugcrowd.com/engagements/imperva-mbb",
-    "allows_disclosure": false,
-    "managed_by_bugcrowd": true,
-    "safe_harbor": "full",
-    "max_payout": 2500,
-    "targets": {
-      "in_scope": [
-        {
-          "type": "website",
-          "target": "https://*.imperva.com",
-          "uri": "https://*.imperva.com",
-          "name": "https://*.imperva.com",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "https://www.cloudvector.com/",
-          "uri": "https://www.cloudvector.com/",
-          "name": "https://*.cloudvector.com/",
-          "ipAddress": null
-        },
-        {
-          "type": "api",
-          "target": "https://*.incapsula.com",
-          "uri": "https://*.incapsula.com",
-          "name": "https://*.incapsula.com",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "https://supportportal.thalesgroup.com",
-          "uri": "https://supportportal.thalesgroup.com",
-          "name": "https://supportportal.thalesgroup.com",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "PTaaS Reference",
-          "uri": "",
-          "name": "PTaaS Reference",
-          "ipAddress": ""
-        }
-      ],
-      "out_of_scope": [
-        {
-          "type": "website",
-          "target": "http://docs.imperva.com/",
-          "uri": "",
-          "name": "http://docs.imperva.com/",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "http://docs-be.imperva.com/",
-          "uri": "",
-          "name": "http://docs-be.imperva.com/",
-          "ipAddress": ""
-        }
-      ]
-    }
-  },
-  {
     "name": "Indeed",
     "url": "https://bugcrowd.com/engagements/indeed",
     "allows_disclosure": false,
@@ -16327,6 +16264,118 @@
     }
   },
   {
+    "name": "Moneytree KK",
+    "url": "https://bugcrowd.com/engagements/moneytreekkog",
+    "allows_disclosure": false,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "partial",
+    "max_payout": 5000,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "website",
+          "target": "https://wwws-staging.moneytree.jp/link/",
+          "uri": "https://wwws-staging.moneytree.jp/link/",
+          "name": "Moneytree Web for Web",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "https://vault-staging.getmoneytree.com",
+          "uri": "https://vault-staging.getmoneytree.com",
+          "name": "Moneytree Universal Vault",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "https://redash-staging.getmoneytree.com/",
+          "uri": "https://redash-staging.getmoneytree.com/",
+          "name": "Moneytree Internal Redash",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "https://app-staging.getmoneytree.com",
+          "uri": "https://app-staging.getmoneytree.com",
+          "name": "https://app-staging.getmoneytree.com",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "https://wwws-staging.moneytree.jp/link/mobile/",
+          "uri": "https://wwws-staging.moneytree.jp/link/mobile/",
+          "name": "Moneytree Web for Mobile",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "https://wwws-staging.moneytree.jp/link/mobile/#/signup?client_id=38d99a6e8e9fc87c866f5aa82bdc2569c464b2323a55e0b28f658efa678e9623&redirect_uri=https://wwws-staging.moneytree.jp/link/mobile/callback&response_type=token&scope=guest_read+accounts_read+transactions_read+request_refresh",
+          "uri": "https://wwws-staging.moneytree.jp/link/mobile/#/signup?client_id=38d99a6e8e9fc87c866f5aa82bdc2569c464b2323a55e0b28f658efa678e9623&redirect_uri=https://wwws-staging.moneytree.jp/link/mobile/callback&response_type=token&scope=guest_read+accounts_read+transactions_read+request_refresh",
+          "name": "Moneytree Web for Mobile (with Oauth)",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "https://myaccount-staging.getmoneytree.com",
+          "uri": "https://myaccount-staging.getmoneytree.com",
+          "name": "Moneytree MyAccount",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "https://business-staging.getmoneytree.com/",
+          "uri": "https://business-staging.getmoneytree.com/",
+          "name": "Moneytree Business",
+          "ipAddress": null
+        },
+        {
+          "type": "api",
+          "target": "https://jp-api-staging.getmoneytree.com",
+          "uri": "https://jp-api-staging.getmoneytree.com",
+          "name": "Moneytree API",
+          "ipAddress": null
+        },
+        {
+          "type": "android",
+          "target": "https://play.google.com/store/apps/details?id=jp.moneytree.moneytree&hl=en_AU&gl=US",
+          "uri": "https://play.google.com/store/apps/details?id=jp.moneytree.moneytree&hl=en_AU&gl=US",
+          "name": "Moneytree Android Mobile Application (staging; see below)",
+          "ipAddress": null
+        },
+        {
+          "type": "ios",
+          "target": "https://apps.apple.com/vc/app/moneytree-finance-made-easy/id586847189",
+          "uri": "https://apps.apple.com/vc/app/moneytree-finance-made-easy/id586847189",
+          "name": "Moneytree iOS Mobile Application (production; see below)",
+          "ipAddress": null
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "website",
+          "target": "moneytree.jp",
+          "uri": null,
+          "name": "moneytree.jp",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "Any production asset of Moneytree KK (excepting the iOS app)",
+          "uri": null,
+          "name": "Any production asset of Moneytree KK (excepting the iOS app)",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "getmoneytree.com",
+          "uri": null,
+          "name": "getmoneytree.com",
+          "ipAddress": null
+        }
+      ]
+    }
+  },
+  {
     "name": "Moovit Managed Bug Bounty Program",
     "url": "https://bugcrowd.com/engagements/moovit-mbb-og",
     "allows_disclosure": false,
@@ -20979,6 +21028,300 @@
         }
       ],
       "out_of_scope": []
+    }
+  },
+  {
+    "name": "Origin Energy",
+    "url": "https://bugcrowd.com/engagements/originenergy-og1",
+    "allows_disclosure": true,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "full",
+    "max_payout": 2500,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "website",
+          "target": "https://www.originenergy.com.au/",
+          "uri": "https://www.originenergy.com.au/",
+          "name": "https://www.originenergy.com.au/",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "*.origindigital-pac.com.au",
+          "uri": "",
+          "name": "*.origindigital-pac.com.au",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "*.odcdn.com.au",
+          "uri": "",
+          "name": "*.odcdn.com.au",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "https://dataportal.originenergy.com.au",
+          "uri": "https://dataportal.originenergy.com.au",
+          "name": "dataportal.originenergy.com.au",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "*.support.originenergy.com.au",
+          "uri": "",
+          "name": "*.support.originenergy.com.au",
+          "ipAddress": null
+        },
+        {
+          "type": "api",
+          "target": "*.api.originenergy.com.au",
+          "uri": "",
+          "name": "*.api.originenergy.com.au",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "*.download.originenergy.com.au",
+          "uri": "",
+          "name": "*.download.originenergy.com.au",
+          "ipAddress": null
+        },
+        {
+          "type": "api",
+          "target": "https://api.rx.originenergy.com.au/v1/lpg/graphql",
+          "uri": "https://api.rx.originenergy.com.au/v1/lpg/graphql",
+          "name": "https://api.rx.originenergy.com.au/v1/lpg/graphql",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "https://www.winconnect.com.au/moving-out/",
+          "uri": "https://www.winconnect.com.au/moving-out/",
+          "name": "https://www.winconnect.com.au/moving-out/",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "https://www.winconnect.com.au/get-connected/",
+          "uri": "https://www.winconnect.com.au/get-connected/",
+          "name": "https://www.winconnect.com.au/get-connected/",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "https://customerportal.winconnect.com.au/login",
+          "uri": "https://customerportal.winconnect.com.au/login",
+          "name": "https://customerportal.winconnect.com.au/login",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "portal.myconnect.com.au",
+          "uri": "",
+          "name": "portal.myconnect.com.au",
+          "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "myconnect.com.au",
+          "uri": "",
+          "name": "myconnect.com.au",
+          "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "portal.myconnect.com.au/new-connection",
+          "uri": "",
+          "name": "portal.myconnect.com.au/new-connection",
+          "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "hub.myconnect.com.au",
+          "uri": "",
+          "name": "hub.myconnect.com.au",
+          "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "https://ssu.staging.myconnect.com.au/get-connected",
+          "uri": "https://ssu.staging.myconnect.com.au/get-connected",
+          "name": "ssu.staging.myconnect.com.au",
+          "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "https://portal.anz.kinergysolutions.com",
+          "uri": "https://portal.anz.kinergysolutions.com",
+          "name": "portal.anz.kinergysolutions.com",
+          "ipAddress": null
+        },
+        {
+          "type": "api",
+          "target": "https://portal-api.anz.kinergysolutions.com",
+          "uri": "https://portal-api.anz.kinergysolutions.com",
+          "name": "portal-api.anz.kinergysolutions.com",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "https://portal.originzero.com.au",
+          "uri": "https://portal.originzero.com.au",
+          "name": "portal.originzero.com.au",
+          "ipAddress": null
+        },
+        {
+          "type": "api",
+          "target": "https://api-portal.originzero.com.au",
+          "uri": "https://api-portal.originzero.com.au",
+          "name": "api-portal.originzero.com.au",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "https://sign.originzero.com.au",
+          "uri": "https://sign.originzero.com.au",
+          "name": "sign.originzero.com.au",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "https://businessportal.origin.com.au",
+          "uri": "https://businessportal.origin.com.au",
+          "name": "businessportal.origin.com.au",
+          "ipAddress": null
+        },
+        {
+          "type": "api",
+          "target": "https://api-businessportal.origin.com.au",
+          "uri": "https://api-businessportal.origin.com.au",
+          "name": "api-businessportal.origin.com.au",
+          "ipAddress": null
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "website",
+          "target": "https://www.originenergy.com.au/moving/",
+          "uri": "https://www.originenergy.com.au/moving/",
+          "name": "https://www.originenergy.com.au/moving/",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "https://auth.api.originenergy.com.au/**",
+          "uri": "",
+          "name": "https://auth.api.originenergy.com.au/**",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "https://origin-energy.formstack.com/**",
+          "uri": "",
+          "name": "https://origin-energy.formstack.com/**",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "https://ssu.myconnect.com.au/**",
+          "uri": "https://ssu.myconnect.com.au/**",
+          "name": "https://ssu.myconnect.com.au/",
+          "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "https://reneweclipse.originenergy.com.au/*",
+          "uri": "https://reneweclipse.originenergy.com.au/*",
+          "name": "Renew Eclipse",
+          "ipAddress": ""
+        },
+        {
+          "type": "other",
+          "target": "https://api.rx.originenergy.com.au/v1/gateway/schema/graphql",
+          "uri": "https://api.rx.originenergy.com.au/v1/gateway/schema/graphql",
+          "name": "GraphQL Schema",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "https://www.compareandconnect.com.au/",
+          "uri": "",
+          "name": "https://www.compareandconnect.com.au/",
+          "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "https://agent.compareandconnect.com.au/",
+          "uri": "",
+          "name": "https://agent.compareandconnect.com.au/",
+          "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "https://fastconnect.co.nz",
+          "uri": "",
+          "name": "https://fastconnect.co.nz",
+          "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "https://Yourporter.com.au",
+          "uri": "",
+          "name": "https://Yourporter.com.au",
+          "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "https://raywhitehomenow.com/ ",
+          "uri": "",
+          "name": "https://raywhitehomenow.com/ ",
+          "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "https://www.solarquotes.com.au/leads/",
+          "uri": "https://www.solarquotes.com.au/leads/",
+          "name": "solarquotes.com.au/leads",
+          "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "https://www.solarquotes.com.au/suppliers/",
+          "uri": "https://www.solarquotes.com.au/suppliers/",
+          "name": "solarquotes.com.au/suppliers",
+          "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "https://www.solarquotes.com.au/wp-admin/",
+          "uri": "https://www.solarquotes.com.au/wp-admin/",
+          "name": "solarquotes.com.au/wp-admin",
+          "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "https://manufacturers.solarquotes.com.au/",
+          "uri": "https://manufacturers.solarquotes.com.au/",
+          "name": "manufacturers.solarquotes.com.au",
+          "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "https://www.solarquotes.com.au/quote/start/",
+          "uri": "https://www.solarquotes.com.au/quote/start/",
+          "name": "solarquotes.com.au/quote/start",
+          "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "https://www.solarquotes.com.au/quotesv2/",
+          "uri": "https://www.solarquotes.com.au/quotesv2/",
+          "name": "solarquotes.com.au/quotesv2",
+          "ipAddress": ""
+        }
+      ]
     }
   },
   {
@@ -26187,146 +26530,6 @@
           "target": "All internet facing Sky Italy assets ",
           "uri": "",
           "name": "All internet facing Sky Italy assets ",
-          "ipAddress": ""
-        }
-      ]
-    }
-  },
-  {
-    "name": "Skyscanner",
-    "url": "https://bugcrowd.com/engagements/skyscanner",
-    "allows_disclosure": true,
-    "managed_by_bugcrowd": true,
-    "safe_harbor": "full",
-    "max_payout": 8000,
-    "targets": {
-      "in_scope": [
-        {
-          "type": "ios",
-          "target": "Skyscanner iOS App",
-          "uri": null,
-          "name": "Skyscanner iOS App",
-          "ipAddress": null
-        },
-        {
-          "type": "android",
-          "target": "Skyscanner Android App",
-          "uri": null,
-          "name": "Skyscanner Android App",
-          "ipAddress": null
-        },
-        {
-          "type": "api",
-          "target": "gateway.skyscanner.net/*",
-          "uri": null,
-          "name": "gateway.skyscanner.net/*",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "skyscanner.net/hotels/book/*",
-          "uri": null,
-          "name": "skyscanner.net/hotels/book/*",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "skyscanner.net/*",
-          "uri": null,
-          "name": "skyscanner.net/*",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "partnerportal.skyscanner.net/*",
-          "uri": null,
-          "name": "partnerportal.skyscanner.net/*",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "*.skyscanner.net",
-          "uri": null,
-          "name": "*.skyscanner.net",
-          "ipAddress": null
-        },
-        {
-          "type": "android",
-          "target": "Skyscanner Android app",
-          "uri": null,
-          "name": "Skyscanner Android app",
-          "ipAddress": null
-        },
-        {
-          "type": "ios",
-          "target": "Skyscanner iOS app",
-          "uri": null,
-          "name": "Skyscanner iOS app",
-          "ipAddress": null
-        },
-        {
-          "type": "other",
-          "target": "AWS Infrastructure",
-          "uri": "",
-          "name": "AWS Infrastructure",
-          "ipAddress": ""
-        }
-      ],
-      "out_of_scope": [
-        {
-          "type": "other",
-          "target": "Corporate Email (*@skyscanner.net)",
-          "uri": null,
-          "name": "Corporate Email (*@skyscanner.net)",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "https://help.skyscanner.net",
-          "uri": "https://help.skyscanner.net",
-          "name": "help.skyscanner.net",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "https://carhirehelp.skyscanner.net",
-          "uri": "https://carhirehelp.skyscanner.net",
-          "name": "carhirehelp.skyscanner.net",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "https://hotelshelp.skyscanner.net",
-          "uri": "https://hotelshelp.skyscanner.net",
-          "name": "hotelshelp.skyscanner.net",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "https://support.business.skyscanner.net",
-          "uri": "https://support.business.skyscanner.net",
-          "name": "support.business.skyscanner.net",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "https://www.partners.skyscanner.net",
-          "uri": "https://www.partners.skyscanner.net",
-          "name": "www.partners.skyscanner.net",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "https://creators.skyscanner.net",
-          "uri": "https://creators.skyscanner.net",
-          "name": "creators.skyscanner.net",
-          "ipAddress": ""
-        },
-        {
-          "type": "website",
-          "target": "https://preferences.skyscanner.net",
-          "uri": "https://preferences.skyscanner.net",
-          "name": "preferences.skyscanner.net",
           "ipAddress": ""
         }
       ]
