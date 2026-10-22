@@ -178866,7 +178866,7 @@
     "name": "Razorpay",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 57,
+    "response_efficiency_percentage": 54,
     "submission_state": "open",
     "url": "https://hackerone.com/razorpay",
     "website": "https://razorpay.com",
@@ -344968,7 +344968,7 @@
     "name": "CBRE",
     "offers_bounties": false,
     "offers_swag": false,
-    "response_efficiency_percentage": 91,
+    "response_efficiency_percentage": 90,
     "submission_state": "open",
     "url": "https://hackerone.com/cbre",
     "website": "http://www.cbre.com",
@@ -475402,28 +475402,6 @@
           "max_severity": "critical"
         },
         {
-          "asset_identifier": "*.expediaagents.com",
-          "asset_type": "WILDCARD",
-          "availability_requirement": "medium",
-          "confidentiality_requirement": "medium",
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": null,
-          "integrity_requirement": "medium",
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "*.expediacruises.com",
-          "asset_type": "WILDCARD",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": null,
-          "integrity_requirement": null,
-          "max_severity": "critical"
-        },
-        {
           "asset_identifier": "*.expediagroup.com",
           "asset_type": "WILDCARD",
           "availability_requirement": null,
@@ -476007,17 +475985,6 @@
           "max_severity": "critical"
         },
         {
-          "asset_identifier": "www.expediacruises.com",
-          "asset_type": "URL",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": true,
-          "eligible_for_submission": true,
-          "instruction": null,
-          "integrity_requirement": null,
-          "max_severity": "critical"
-        },
-        {
           "asset_identifier": "www.expediagroup.com",
           "asset_type": "URL",
           "availability_requirement": null,
@@ -476194,7 +476161,41 @@
           "max_severity": "critical"
         }
       ],
-      "out_of_scope": []
+      "out_of_scope": [
+        {
+          "asset_identifier": "*.expediaagents.com",
+          "asset_type": "WILDCARD",
+          "availability_requirement": "medium",
+          "confidentiality_requirement": "medium",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": null,
+          "integrity_requirement": "medium",
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "*.expediacruises.com",
+          "asset_type": "WILDCARD",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": null,
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "www.expediacruises.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": null,
+          "integrity_requirement": null,
+          "max_severity": "none"
+        }
+      ]
     }
   },
   {
