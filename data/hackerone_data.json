@@ -37107,7 +37107,7 @@
     "name": "AWS VDP",
     "offers_bounties": false,
     "offers_swag": false,
-    "response_efficiency_percentage": 44,
+    "response_efficiency_percentage": 43,
     "submission_state": "open",
     "url": "https://hackerone.com/aws_vdp",
     "website": "https://aws.amazon.com/",
@@ -179448,7 +179448,7 @@
     "name": "Tenable",
     "offers_bounties": false,
     "offers_swag": false,
-    "response_efficiency_percentage": 85,
+    "response_efficiency_percentage": 83,
     "submission_state": "open",
     "url": "https://hackerone.com/tenable",
     "website": "http://www.tenable.com",
@@ -311464,6 +311464,17 @@
           "eligible_for_submission": true,
           "instruction": null,
           "integrity_requirement": "medium",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "eetd-pdf.deere.com",
+          "asset_type": "URL",
+          "availability_requirement": "low",
+          "confidentiality_requirement": "low",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": null,
+          "integrity_requirement": "low",
           "max_severity": "critical"
         },
         {
@@ -471535,7 +471546,7 @@
     "name": "Lark Technologies",
     "offers_bounties": true,
     "offers_swag": true,
-    "response_efficiency_percentage": 61,
+    "response_efficiency_percentage": 62,
     "submission_state": "open",
     "url": "https://hackerone.com/lark_technologies",
     "website": "https://www.larksuite.com",
@@ -483444,7 +483455,7 @@
     "name": "Chainlink",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 17,
+    "response_efficiency_percentage": 18,
     "submission_state": "open",
     "url": "https://hackerone.com/chainlink",
     "website": "https://chain.link/",
@@ -496222,6 +496233,82 @@
           "max_severity": "none"
         }
       ]
+    }
+  },
+  {
+    "allows_bounty_splitting": false,
+    "average_time_to_bounty_awarded": null,
+    "average_time_to_first_program_response": 222.0,
+    "average_time_to_report_resolved": 1356.0,
+    "handle": "rocket_chat",
+    "id": 0,
+    "managed_program": false,
+    "name": "Rocket.Chat",
+    "offers_bounties": false,
+    "offers_swag": true,
+    "response_efficiency_percentage": 70,
+    "submission_state": "open",
+    "url": "https://hackerone.com/rocket_chat",
+    "website": "https://rocket.chat",
+    "targets": {
+      "in_scope": [
+        {
+          "asset_identifier": "cloud.rocket.chat",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "This app is responsible for our customers SaaS management.",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://github.com/RocketChat/Rocket.Chat",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "Here is the document in how to install rocket.chat: https://www.rocket.chat/install",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://github.com/RocketChat/Rocket.Chat.Electron",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": "none",
+          "confidentiality_requirement": "low",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "You can build it or download from: https://www.rocket.chat/install#Apps",
+          "integrity_requirement": "low",
+          "max_severity": "medium"
+        },
+        {
+          "asset_identifier": "https://github.com/RocketChat/Rocket.Chat.ReactNative",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "rocket.chat",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "Today we're using a third-party company to host our rocket.chat static website but if you find anything that could compromise us based in our configuration, feel free to report.",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        }
+      ],
+      "out_of_scope": []
     }
   },
   {
