@@ -1811,10 +1811,6 @@
     "targets": {
       "in_scope": [
         {
-          "target": "api.infomaniak.com",
-          "type": "api"
-        },
-        {
           "target": "login.infomaniak.com",
           "type": "web-application"
         },
@@ -1841,6 +1837,10 @@
         {
           "target": "www.infomaniak.com",
           "type": "web-application"
+        },
+        {
+          "target": "api.infomaniak.com",
+          "type": "api"
         },
         {
           "target": "*.kchat.infomaniak.com",
@@ -2008,19 +2008,27 @@
         },
         {
           "target": "*.infomaniak.com",
+          "type": "wildcard"
+        },
+        {
+          "target": "manager.infomaniak.com/*proxy*",
           "type": "web-application"
         },
         {
           "target": "api.pub1.infomaniak.cloud",
-          "type": "web-application"
+          "type": "api"
         },
         {
           "target": "api.pub2.infomaniak.cloud",
-          "type": "web-application"
+          "type": "api"
         },
         {
-          "target": "manager.infomaniak.com/*proxy*",
-          "type": "mobile-application"
+          "target": "s3.gva2.infomaniak.cloud",
+          "type": "api"
+        },
+        {
+          "target": "s3.gva1.infomaniak.cloud",
+          "type": "api"
         }
       ],
       "out_of_scope": [
