@@ -32596,7 +32596,7 @@
     "name": "Whoop Bug Bounty",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 75,
+    "response_efficiency_percentage": 74,
     "submission_state": "open",
     "url": "https://hackerone.com/whoop_bug_bounty",
     "website": "https://www.whoop.com",
@@ -346414,6 +346414,17 @@
           "max_severity": "critical"
         },
         {
+          "asset_identifier": "files.stripe.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
           "asset_identifier": "js.stripe.com",
           "asset_type": "URL",
           "availability_requirement": null,
@@ -346432,6 +346443,17 @@
           "eligible_for_bounty": true,
           "eligible_for_submission": true,
           "instruction": "https://docs.stripe.com/mcp\n\nStripe's MCP server implements Dynamic Client Registration by design. This enables any MCP-compatible client — Cursor, Claude, VS Code, Windsurf, and the broader ecosystem — to connect to Stripe's MCP server without requiring pre-registration. Requiring authentication at the registration endpoint would prevent interoperability with the open MCP ecosystem.\n\nThe security model for OAuth relies on an explicit user consent screen. Before any access is granted, the user must be logged in, review the requesting application and its requested permissions, and actively click \"Authorize.\" This is the same trust model used by OAuth consent flows across the industry (Google, GitHub, Microsoft, etc.), and the user bears responsibility for authorizing applications they do not recognize or trust.\n\nStripe recognizes that OAuth consent phishing is a real and known risk inherent to any open OAuth system, but we do not consider it a vulnerability in Stripe's implementation. Users bear responsibility for reviewing clients requesting authorization.",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "stripe.com",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
           "integrity_requirement": null,
           "max_severity": "critical"
         },
