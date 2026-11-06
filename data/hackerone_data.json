@@ -497671,7 +497671,7 @@
           "confidentiality_requirement": null,
           "eligible_for_bounty": false,
           "eligible_for_submission": true,
-          "instruction": "Please use the [Sandbox translation project](https://hosted.weblate.org/projects/sandbox/) for testing.",
+          "instruction": "Use https://hosted.weblate.org/projects/sandbox/ for testing. Only interact with accounts you own or have explicit permission to use. Follow the program's testing rules.",
           "integrity_requirement": null,
           "max_severity": "critical"
         },
@@ -497682,7 +497682,7 @@
           "confidentiality_requirement": null,
           "eligible_for_bounty": false,
           "eligible_for_submission": true,
-          "instruction": "",
+          "instruction": "Includes the Weblate Docker container source and published container images. Operator-supplied environment variables, container arguments, and mounted configuration are trusted deployment inputs; their ability to configure the deployment is not itself a vulnerability.",
           "integrity_requirement": null,
           "max_severity": "critical"
         },
@@ -497704,7 +497704,7 @@
           "confidentiality_requirement": null,
           "eligible_for_bounty": false,
           "eligible_for_submission": true,
-          "instruction": "",
+          "instruction": "Includes Weblate source code and published Weblate release artifacts. Evaluate findings against the threat model for the affected release: https://docs.weblate.org/en/latest/security/threat-model.html",
           "integrity_requirement": null,
           "max_severity": "critical"
         },
@@ -497726,23 +497726,12 @@
           "confidentiality_requirement": null,
           "eligible_for_bounty": false,
           "eligible_for_submission": true,
-          "instruction": "",
+          "instruction": "Evaluate findings against the Weblate Client threat model: https://github.com/WeblateOrg/wlc/blob/main/THREAT_MODEL.md",
           "integrity_requirement": null,
           "max_severity": "critical"
         }
       ],
       "out_of_scope": [
-        {
-          "asset_identifier": "github.com",
-          "asset_type": "URL",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": false,
-          "eligible_for_submission": false,
-          "instruction": "The GitHub wiki is intentionally open to public.",
-          "integrity_requirement": null,
-          "max_severity": "none"
-        },
         {
           "asset_identifier": "hg.weblate.org",
           "asset_type": "URL",
