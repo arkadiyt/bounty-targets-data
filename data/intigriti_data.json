@@ -3714,14 +3714,14 @@
       "in_scope": [
         {
           "type": "url",
-          "endpoint": "Dropbox.com",
-          "description": "Dropbox Core Web Application",
+          "endpoint": "api.dropbox.com",
+          "description": "Dropbox Public API",
           "impact": "Tier 1"
         },
         {
           "type": "url",
-          "endpoint": "sign.dropbox.com",
-          "description": "Sign by Dropbox (formerly HelloSign)",
+          "endpoint": "Dropbox.com",
+          "description": "Dropbox Core Web Application",
           "impact": "Tier 1"
         },
         {
@@ -3732,26 +3732,14 @@
         },
         {
           "type": "url",
-          "endpoint": "dash.ai",
-          "description": "Web Browser Extension",
+          "endpoint": "sign.dropbox.com",
+          "description": "Sign by Dropbox (formerly HelloSign)",
           "impact": "Tier 1"
         },
         {
-          "type": "other",
-          "endpoint": "dash.dropbox.com",
-          "description": "Dash by Dropbox MacOS and PC",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "api.dropbox.com",
-          "description": "Dropbox Public API",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "other",
-          "endpoint": "Dropbox Desktop Application",
-          "description": "Dropbox for MacOS and PC",
+          "type": "ios",
+          "endpoint": "1080074001",
+          "description": "Dropbox EMM iOS Application",
           "impact": "Tier 2"
         },
         {
@@ -3761,21 +3749,9 @@
           "impact": "Tier 2"
         },
         {
-          "type": "ios",
-          "endpoint": "6450553960",
-          "description": "Dash by Dropbox iOS Application",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "ios",
-          "endpoint": "1080074001",
-          "description": "Dropbox EMM iOS Application",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "android",
-          "endpoint": "com.dropbox.dash",
-          "description": "Dash by Dropbox Android Application",
+          "type": "url",
+          "endpoint": "app.Reclaim.ai",
+          "description": "Reclaim.ai Web Application",
           "impact": "Tier 2"
         },
         {
@@ -3786,20 +3762,14 @@
         },
         {
           "type": "url",
-          "endpoint": "HelloFax.com",
-          "description": "HelloFax Web Application",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
           "endpoint": "docsend.com",
           "description": "Docsend Web Application",
           "impact": "Tier 2"
         },
         {
-          "type": "url",
-          "endpoint": "app.Reclaim.ai",
-          "description": "Reclaim.ai Web Application",
+          "type": "other",
+          "endpoint": "Dropbox Desktop Application",
+          "description": "Dropbox for MacOS and PC",
           "impact": "Tier 2"
         },
         {
@@ -3807,6 +3777,18 @@
           "endpoint": "dropbox.com/paper",
           "description": "Paper by Dropbox Application",
           "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "HelloFax.com",
+          "description": "HelloFax Web Application",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.docsend.com",
+          "description": null,
+          "impact": "Tier 3"
         },
         {
           "type": "wildcard",
@@ -3840,13 +3822,7 @@
         },
         {
           "type": "wildcard",
-          "endpoint": "*.docsend.com",
-          "description": null,
-          "impact": "Tier 3"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.reclaim.ai",
+          "endpoint": "*.hellosign.com",
           "description": null,
           "impact": "Tier 3"
         },
@@ -3858,7 +3834,7 @@
         },
         {
           "type": "wildcard",
-          "endpoint": "*.hellosign.com",
+          "endpoint": "*.reclaim.ai",
           "description": null,
           "impact": "Tier 3"
         },
@@ -3866,20 +3842,50 @@
           "type": "wildcard",
           "endpoint": "*.dash.ai",
           "description": null,
-          "impact": "Tier 3"
+          "impact": "No Bounty"
+        },
+        {
+          "type": "ios",
+          "endpoint": "6450553960",
+          "description": "Dash by Dropbox iOS Application",
+          "impact": "No Bounty"
+        },
+        {
+          "type": "android",
+          "endpoint": "com.dropbox.dash",
+          "description": "Dash by Dropbox Android Application",
+          "impact": "No Bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "dash.ai",
+          "description": "Web Browser Extension",
+          "impact": "No Bounty"
+        },
+        {
+          "type": "other",
+          "endpoint": "dash.dropbox.com",
+          "description": "Dash by Dropbox MacOS and PC",
+          "impact": "No Bounty"
         }
       ],
       "out_of_scope": [
         {
-          "type": "url",
-          "endpoint": "community.dropbox.com",
+          "type": "wildcard",
+          "endpoint": "*.tigrisdata.com",
           "description": null,
           "impact": "Out of scope"
         },
         {
-          "type": "url",
-          "endpoint": "replay.dropbox.com",
-          "description": "Dropbox Replay is undergoing a planned deprecation and replacement. The current Replay application and its associated APIs are out of scope until the new version is released.",
+          "type": "wildcard",
+          "endpoint": "*.tigrisdata.io",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "ios",
+          "endpoint": "1126623662",
+          "description": "Paper by Dropbox iOS Application",
           "impact": "Out of scope"
         },
         {
@@ -3889,39 +3895,15 @@
           "impact": "Out of scope"
         },
         {
-          "type": "other",
-          "endpoint": "Formswift",
-          "description": "Including:\n\n*.formswift.com",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "other",
-          "endpoint": "Dropbox Passwords",
-          "description": "Including:\n\niOS and Android Applications",
-          "impact": "Out of scope"
-        },
-        {
-          "type": "other",
-          "endpoint": "Dropbox Capture Windows Desktop App",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
-          "type": "other",
-          "endpoint": "Dropbox Capture macOS Desktop App",
-          "description": null,
-          "impact": "Out of scope"
-        },
-        {
           "type": "android",
           "endpoint": "com.dropbox.paper",
           "description": "Paper by Dropbox Android Application",
           "impact": "Out of scope"
         },
         {
-          "type": "ios",
-          "endpoint": "1126623662",
-          "description": "Paper by Dropbox iOS Application",
+          "type": "url",
+          "endpoint": "community-dev.dropbox.com",
+          "description": null,
           "impact": "Out of scope"
         },
         {
@@ -3932,8 +3914,38 @@
         },
         {
           "type": "url",
-          "endpoint": "community-dev.dropbox.com",
+          "endpoint": "community.dropbox.com",
           "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "other",
+          "endpoint": "Dropbox Capture macOS Desktop App",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "other",
+          "endpoint": "Dropbox Capture Windows Desktop App",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "other",
+          "endpoint": "Dropbox Passwords",
+          "description": "Including:\n\niOS and Android Applications",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "other",
+          "endpoint": "Formswift",
+          "description": "Including:\n\n*.formswift.com",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "replay.dropbox.com",
+          "description": "Dropbox Replay is undergoing a planned deprecation and replacement. The current Replay application and its associated APIs are out of scope until the new version is released.",
           "impact": "Out of scope"
         }
       ]
