@@ -184561,7 +184561,7 @@
     "name": "JetBlue",
     "offers_bounties": false,
     "offers_swag": false,
-    "response_efficiency_percentage": 67,
+    "response_efficiency_percentage": 71,
     "submission_state": "open",
     "url": "https://hackerone.com/jetblue",
     "website": "https://www.jetblue.com",
@@ -459025,6 +459025,182 @@
     }
   },
   {
+    "allows_bounty_splitting": true,
+    "average_time_to_bounty_awarded": null,
+    "average_time_to_first_program_response": null,
+    "average_time_to_report_resolved": 11512.0,
+    "handle": "oasisprotocol",
+    "id": 0,
+    "managed_program": false,
+    "name": "Oasis Protocol Foundation",
+    "offers_bounties": true,
+    "offers_swag": true,
+    "response_efficiency_percentage": null,
+    "submission_state": "open",
+    "url": "https://hackerone.com/oasisprotocol",
+    "website": "https://oasisprotocol.org",
+    "targets": {
+      "in_scope": [
+        {
+          "asset_identifier": "github.com/oasisprotocol/explorer",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": null,
+          "confidentiality_requirement": "none",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": null,
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "http://emerald.oasis.dev",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "none",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": null,
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "http://grpc.oasis.dev",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "none",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": null,
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "http://rosetta.oasis.dev/api/mainnet",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "none",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": null,
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "http://sapphire.oasis.io",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "none",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": null,
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://github.com/oasisprotocol/curve25519-voi",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Ed25519/Sr25519 implementation.",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://github.com/oasisprotocol/deoxysii",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://github.com/oasisprotocol/deoxysii-rust",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://github.com/oasisprotocol/oasis-core",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Blockchain Software",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://github.com/oasisprotocol/oasis-sdk",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Blockchain Software",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://github.com/oasisprotocol/oasis-wallet-web",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "status.oasis.io",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "none",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": null,
+          "integrity_requirement": "medium",
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "wallet.oasis.io",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": null,
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "asset_identifier": "Not in Scope",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "* Vulnerabilities in SGX hardware that cannot be fixed with software refactors\n* The Oasis Protocol Website (oasisprotocol.org)\n* Layer 3/Layer 4 DoS attacks on testnet infrastructure\n* Social Engineering Attacks on Oasis Protocol Foundation staff\n* Operational vulnerabilities related to any node operator of a testnet or the mainnet\n\n###Domains\n* *.oasisprotocol.org\n",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        }
+      ]
+    }
+  },
+  {
     "allows_bounty_splitting": false,
     "average_time_to_bounty_awarded": null,
     "average_time_to_first_program_response": 28.0,
@@ -480700,7 +480876,7 @@
     "name": "Nutanix",
     "offers_bounties": false,
     "offers_swag": false,
-    "response_efficiency_percentage": 44,
+    "response_efficiency_percentage": 47,
     "submission_state": "open",
     "url": "https://hackerone.com/nutanix",
     "website": "https://www.nutanix.com",
@@ -501739,7 +501915,7 @@
     "name": "Starbucks",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 66,
+    "response_efficiency_percentage": 67,
     "submission_state": "open",
     "url": "https://hackerone.com/starbucks",
     "website": "http://www.starbucks.com",
