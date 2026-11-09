@@ -1477,6 +1477,150 @@
     }
   },
   {
+    "id": "efd8bd86-a986-4b4a-9eda-c9a6a1a6b540",
+    "name": "CM.com",
+    "company_handle": "cmcom",
+    "handle": "cmcom",
+    "url": "https://www.intigriti.com/programs/cmcom/cmcom/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 5,
+      "currency": "EUR"
+    },
+    "max_bounty": {
+      "value": 2625,
+      "currency": "EUR"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "url",
+          "endpoint": "login.cm.com",
+          "description": null,
+          "impact": "Tier 1"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.ticketing.cm.com",
+          "description": "Login to your account and go to https://www.cm.com/en-gb/app/ticketing/\nFrom here you can create tickets and much more!\nMake sure to take a look at the user-side ticket store as well (https://store.ticketing.cm.com/..)\nWant to test a shop? Please don't use our live customer shops but instead use https://shop.ticketing.cm.com/intigriti-pentest-shop/",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.cm.com",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.cmtelecom.com",
+          "description": "Some of the applications that are in our scope use our old api. \nIf you find a bug on this api and it is from a product that is in scope, it is valid.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "cm.com/[locale]/app/*",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "cm.com/[locale]/register",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "appmiral.com",
+          "description": null,
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "building-blocks.com",
+          "description": null,
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "cm.com/app/messagingtrial/",
+          "description": "An application that makes it possible for developers to do a limited test of sending messages using the CM.COM business messaging API.\n\nWhat we would like to know is:\n* Can the application be exploited to allow sending more than the allowed number of messages?\n* Can the app be exploited to send to other recipients besides the whitelisted recipients?",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "cmcom.atlassian.net",
+          "description": "Our Atlassian instance. **In scope for this program are only misconfiguration on our side exposing sensitive data**. Please consider if an issue you find is indeed a configuration issue we made, or if the issue is on Atlassians side (if this is the case, please report it on their bug bounty program!)",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "other",
+          "endpoint": "https://github.com/cmdotcom",
+          "description": "Our public code repositories are being used by our customers. In scope for this domain is issues with the public code we host (vulnerabilities, libraries that have known security concerns, keys accidentally pushed to the public GitHub etc.). \n**Testing the GitHub itself is out-of-scope**, they have their own bug bounty program if you are interested :)",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.cm.com",
+          "description": null,
+          "impact": "Tier 3"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.appmiral.com",
+          "description": null,
+          "impact": "No Bounty"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.cm.com",
+          "description": null,
+          "impact": "No Bounty"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.cmtelecom.com",
+          "description": null,
+          "impact": "No Bounty"
+        },
+        {
+          "type": "ios",
+          "endpoint": "1199521324",
+          "description": "Right now we don't have a way to make test accounts for these apps, this will be added in the future",
+          "impact": "No Bounty"
+        },
+        {
+          "type": "ios",
+          "endpoint": "1579530451",
+          "description": "Right now we don't have a way to make test accounts for these apps, this will be added in the future",
+          "impact": "No Bounty"
+        },
+        {
+          "type": "android",
+          "endpoint": "com.cm.cashregister",
+          "description": "Right now we don't have a way to make test accounts for these apps, this will be added in the future",
+          "impact": "No Bounty"
+        },
+        {
+          "type": "android",
+          "endpoint": "com.ticketflow.ticketscanner",
+          "description": "Right now we don't have a way to make test accounts for these apps, this will be added in the future",
+          "impact": "No Bounty"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "demo.globalticket.com/*",
+          "description": "GlobalTicket is one of our integrations. \nBe sure to check out `/cms` to try and work your way into it.",
+          "impact": "No Bounty"
+        }
+      ],
+      "out_of_scope": []
+    }
+  },
+  {
     "id": "0083a5bf-e54f-4f79-a972-12a795272c8b",
     "name": "Canada Post - Responsible Disclosure Program",
     "company_handle": "innovapost",
@@ -13956,6 +14100,90 @@
     }
   },
   {
+    "id": "92431bf9-ab3e-4e69-9619-c59f8e5193b1",
+    "name": "Voi Scooters",
+    "company_handle": "voi",
+    "handle": "voiscooters",
+    "url": "https://www.intigriti.com/programs/voi/voiscooters/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 0,
+      "currency": "EUR"
+    },
+    "max_bounty": {
+      "value": 3500,
+      "currency": "EUR"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "ios",
+          "endpoint": "Voi – e-scooters & e-bikes",
+          "description": "iOS Mobile Application",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "android",
+          "endpoint": "Voi – e-scooter & e-bike hire",
+          "description": "Android Mobile Application",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://api.voiapp.io/",
+          "description": "Backend REST API",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "mds.voiapp.io",
+          "description": "Partner API as documented at https://docs.voi.com/",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "fm.voiapp.io",
+          "description": "Voi Fleet Management website",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://repair.voiweb.net",
+          "description": "Voi repairs website",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "report.voi.com",
+          "description": "Website to report badly parked scooters.",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "voi.com",
+          "description": "Informational Website",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.voi.com",
+          "description": "This wildcard is intended to cover internally developed applications",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.voiscooters.com",
+          "description": null,
+          "impact": "Tier 3"
+        }
+      ],
+      "out_of_scope": []
+    }
+  },
+  {
     "id": "784ffbc6-daaa-4e7e-8eba-c38a101d7b12",
     "name": "Voi Vulnerability Disclosure Program",
     "company_handle": "voi",
@@ -13987,145 +14215,6 @@
           "type": "other",
           "endpoint": "Third-party systems or domains referencing Voi",
           "description": "Before testing or reporting a vulnerability, confirm that the target asset is owned or managed by Voi. When in doubt, we strongly encourage you to verify the asset's ownership through the program team to avoid unintentional testing of third-party systems.",
-          "impact": "Out of scope"
-        }
-      ]
-    }
-  },
-  {
-    "id": "afc4415d-c004-4cf8-9a12-e0f18cde6db5",
-    "name": "WP Engine Bug Bounty",
-    "company_handle": "wpengine",
-    "handle": "wpenginebugbounty",
-    "url": "https://www.intigriti.com/programs/wpengine/wpenginebugbounty/detail",
-    "status": "open",
-    "confidentiality_level": "public",
-    "tacRequired": false,
-    "twoFactorRequired": false,
-    "min_bounty": {
-      "value": 0,
-      "currency": "EUR"
-    },
-    "max_bounty": {
-      "value": 2500,
-      "currency": "EUR"
-    },
-    "targets": {
-      "in_scope": [
-        {
-          "type": "url",
-          "endpoint": "https://app.getflywheel.com",
-          "description": "This is the primary site for researchers to register and test both the Flywheel App as well as the Flywheel Platform. We will not provide credentials or bypass verification controls (i.e, a researcher will need to either provide a valid phone number or credit card to have a live site), but a researcher may register a demo site that matches the platform's functionality without verification. **Please use your Intigriti credentials to register.** Please note that any issues regarding an individual WordPress installation on the Flywheel platform, outside of plugins owned by WP Engine/Flywheel, will be considered out of scope as we do not monitor or manage customer content. We are, however, very interested in issues that may compromise customer isolation on the platform or cause data to be leaked from either a host or an unrelated customer site.",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "https://getflywheel.com",
-          "description": "This site is the landing page for Flywheel-branded services. Most of this data is static, but there are a number of dynamic fields and functionalities that are available to be tested. Support, contact forms, and chat functionality are out-of-scope - specifically, the Sales Questions functionality or https://getflywheel.com/schedule-a-demo/. No testing should be done against these targets or any 3rd party services. Please do not contact our Support or Sales teams as part of your testing.",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "https://my.wpengine.com",
-          "description": "The User Portal for WP Engine. Customers manage their WordPress sites, addons, and billing details through this portal. **No credentials will be provided**. Researchers are free to test functionally that requires authentication with their own accounts. Please note: no reimbursements will be made for money spent to access this part of the application.\n\nResearchers may sign up for a free trial of our Headless Platform which provides full access to the User Portal and WP Engine platform for testing.  The trial signup page can be found at https://wpengine.com/headless-wordpress/ .  Please use your Intigriti researcher email address when signing up.",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "https://payments.wpengine.com",
-          "description": null,
-          "impact": "Tier 1"
-        },
-        {
-          "type": "url",
-          "endpoint": "https://wpengine.com",
-          "description": "This the landing page for the main WP Engine website. Most of this data is static, but there are a number of dynamic fields and functionalities that are available to be tested. Support, contact forms, and Live Chat are out-of-scope - specifically, the Sales Questions functionality and https://wpengine.com/contact/. No testing should be done against these targets or any 3rd party services.\n\n**Please Note:** All customer sites on subdomains of wpengine.com, unless explicitly listed as in scope, are out of scope.",
-          "impact": "Tier 1"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*. advancedcustomfields.com",
-          "description": null,
-          "impact": "Tier 2"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*. bettersearchreplace.com",
-          "description": null,
-          "impact": "Tier 2"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.deliciousbrains.com",
-          "description": null,
-          "impact": "Tier 2"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.localwp.com",
-          "description": "Local is the #1 local WordPress development tool.",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.nitropack.io",
-          "description": "With NitroPack, you get everything you need for a fast website, in one place. Features like caching, image optimization, and a CDN are ready to go out of the box.",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.studiopress.com",
-          "description": "The studiopress.com, demo.studiopress.com, and my.studiopress.com sites are public facing marketing and WordPress theme e-commerce sites. **No credentials will be provided.** Researchers are free to test functionally that requires authentication with their own accounts.",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.wpengine.io",
-          "description": "This is an apex domain used for microservices hosted as subdomains and service-to-service APIs - these are intended to be \"internal\" services like APIs but have public DNS records and some may be publicly-accessible.",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "wildcard",
-          "endpoint": "*.wpesvc.net",
-          "description": "This is an apex domain used for microservices hosted as subdomains and service-to-service APIs - these are intended to be \"internal\" services like APIs but have public DNS records and some may be publicly-accessible.",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "other",
-          "endpoint": "WP Engine-developed WordPress Plugins and Themes",
-          "description": "We accept any reports of vulnerabilities in plugins or themes managed or developed by WP Engine, with the exception of any application-level vulnerabilities in the Out of Scope section below.  These free versions closely mirror their paid counterparts, so any vulnerabilities discovered should be applicable to both the paid or free plugins.\n\nWe also accept reports for the following plugins:\nAdvanced Custom Fields\nBetter Search Replace \nWP Migrate\nWP Offload Media for Amazon S3, DigitalOcean Spaces, and Google Cloud Storage\nWP Offload SES",
-          "impact": "Tier 2"
-        },
-        {
-          "type": "url",
-          "endpoint": "https://makeshift.film",
-          "description": null,
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "https://studiopress.blog",
-          "description": null,
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "https://torquemag.io",
-          "description": null,
-          "impact": "Tier 3"
-        },
-        {
-          "type": "url",
-          "endpoint": "https://velocitize.com",
-          "description": "This domain is deprecated and bounties are no longer paid.",
-          "impact": "No Bounty"
-        }
-      ],
-      "out_of_scope": [
-        {
-          "type": "url",
-          "endpoint": "marketing.nitropack.io",
-          "description": "This asset is hosted at a third-party vendor and is not eligible for bounties.",
           "impact": "Out of scope"
         }
       ]
