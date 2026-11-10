@@ -1345,7 +1345,7 @@
     "name": "PRISM",
     "offers_bounties": false,
     "offers_swag": false,
-    "response_efficiency_percentage": 88,
+    "response_efficiency_percentage": 87,
     "submission_state": "open",
     "url": "https://hackerone.com/prism_vdp",
     "website": "https://www.prismlife.com/",
@@ -106960,7 +106960,7 @@
     "name": "City of Los Angeles",
     "offers_bounties": false,
     "offers_swag": false,
-    "response_efficiency_percentage": 64,
+    "response_efficiency_percentage": 63,
     "submission_state": "open",
     "url": "https://hackerone.com/city_of_los_angeles_vdp",
     "website": "http://lacity.org",
@@ -181720,6 +181720,17 @@
     "website": "https://newegg.com",
     "targets": {
       "in_scope": [
+        {
+          "asset_identifier": "Other assets (verified Newegg ownership)",
+          "asset_type": "OTHER",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "Covers internet-facing assets owned and operated by Newegg that are not listed elsewhere in this scope. Before testing, verify ownership (e.g., WHOIS, DNS, or by contacting us via HackerOne); reports on assets not owned by Newegg will be closed as N/A. Rewards follow the “Other assets” bounty tier. Third-party hosted services and assets listed as out of scope are excluded. Test only publicly reachable systems; if you gain access to internal networks, stop and report immediately without further exploitation.",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
         {
           "asset_identifier": "com.newegg.app",
           "asset_type": "APPLE_STORE_APP_ID",
@@ -346939,7 +346950,7 @@
     "name": "Freshworks ",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 69,
+    "response_efficiency_percentage": 70,
     "submission_state": "open",
     "url": "https://hackerone.com/freshworks",
     "website": "https://www.freshworks.com/",
@@ -458221,6 +458232,94 @@
   },
   {
     "allows_bounty_splitting": true,
+    "average_time_to_bounty_awarded": 0.0,
+    "average_time_to_first_program_response": null,
+    "average_time_to_report_resolved": null,
+    "handle": "filezilla",
+    "id": 0,
+    "managed_program": false,
+    "name": "FileZilla",
+    "offers_bounties": true,
+    "offers_swag": false,
+    "response_efficiency_percentage": null,
+    "submission_state": "open",
+    "url": "https://hackerone.com/filezilla",
+    "website": "https://filezilla-project.org/",
+    "targets": {
+      "in_scope": [
+        {
+          "asset_identifier": "https://filezilla-project.org/download.php?type=server&show_all=1",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": null,
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://fzssh.filezilla-project.org/download.php",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": null,
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://svn.filezilla-project.org/svn/FileZilla3/trunk/",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://svn.filezilla-project.org/svn/libfilezilla/trunk",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": null,
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "https://svn.filezilla-project.org/svn/libfilezilla/trunk/",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": true,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "asset_identifier": "https://svn.filezilla-project.org/svn/filezilla3/trunk/src/storj/",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "This also includes the libstorj dependency.",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        }
+      ]
+    }
+  },
+  {
+    "allows_bounty_splitting": true,
     "average_time_to_bounty_awarded": 658.0,
     "average_time_to_first_program_response": 1.0,
     "average_time_to_report_resolved": 1030.0,
@@ -498346,7 +498445,7 @@
     "name": "Discourse",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 13,
+    "response_efficiency_percentage": 14,
     "submission_state": "open",
     "url": "https://hackerone.com/discourse",
     "website": "https://discourse.org",
