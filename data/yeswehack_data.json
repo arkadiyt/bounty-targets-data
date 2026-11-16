@@ -300,6 +300,49 @@
     }
   },
   {
+    "id": "boursobank-bug-bounty-program",
+    "name": "BoursoBank Bug Bounty Program",
+    "public": true,
+    "disabled": false,
+    "managed": null,
+    "min_bounty": 50,
+    "max_bounty": 3000,
+    "targets": {
+      "in_scope": [
+        {
+          "target": "https://play.google.com/store/apps/details?id=com.boursorama.android.clients",
+          "type": "mobile-application-android"
+        },
+        {
+          "target": "https://apps.apple.com/fr/app/boursobank/id425368900",
+          "type": "mobile-application-ios"
+        },
+        {
+          "target": "api.boursobank.com",
+          "type": "api"
+        },
+        {
+          "target": "clients.boursobank.com",
+          "type": "web-application"
+        },
+        {
+          "target": "tradingboard.boursobank.com",
+          "type": "web-application"
+        },
+        {
+          "target": "www.boursobank.com",
+          "type": "web-application"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "target": "All domains or subdomains not listed in the above list of 'Scopes'",
+          "type": "other"
+        }
+      ]
+    }
+  },
+  {
     "id": "bug-bounty-program-blablacar",
     "name": "Bug Bounty Program - BlaBlaCar",
     "public": true,
