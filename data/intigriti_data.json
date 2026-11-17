@@ -1,5 +1,78 @@
 [
   {
+    "id": "53a05c4a-0fc0-45a0-b158-a7562b313f79",
+    "name": "1Password Bug Bounty Program",
+    "company_handle": "onepassword",
+    "handle": "1passwordbugbountyprogram",
+    "url": "https://www.intigriti.com/programs/onepassword/1passwordbugbountyprogram/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 50,
+      "currency": "USD"
+    },
+    "max_bounty": {
+      "value": 30000,
+      "currency": "USD"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "url",
+          "endpoint": "<your-own-1password-account>.1password.com",
+          "description": "##### Your Own 1Password Account\n\n> Asset: <your-own-1password-account>.1password.com\n> Type: URL\n> Tier: Tier 1\n\n\nResearchers may test using a 1Password account they own, including Family or Business accounts owned or controlled by the researcher.\n\nTrial accounts may be created for security testing purposes.\n\t\n---\t\n\nTesting should focus on vulnerabilities affecting:\n\n* Authentication\n* Authorization\n* Account isolation\n* Vault isolation\n* User and group permissions\n* Sharing\n* Recovery\n* Account management\n* Passkeys\n* SSO\n* Device enrolment\n* Session handling\n* Cryptographic security boundaries\n* Cross-account or cross-vault access\n\nYou may only interact with accounts you own or accounts for which you have explicit permission from the account holder.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://events.1password.com/api/",
+          "description": "##### 1Password Events API\n\n> Asset: https://events.1password.com/api/\n> Type: API\n> Tier: Tier 1\n\n\nThe 1Password Events API is in scope for security testing.\n\nResearchers should focus on vulnerabilities that result in unauthorized access to protected 1Password data, functionality, accounts, or security-sensitive API operations.\n\n---\n\nTesting should focus on vulnerabilities affecting:\n\n* Authentication bypass\n* Authorization bypass\n* Account isolation\n* Unauthorized API access\n* Cross-account data access\n* Token handling\n* Session handling\n* API trust boundaries\n* Business logic vulnerabilities\n* Unauthorized access to protected 1Password resources\n* Privilege escalation\n* Access control enforcement\n\nReports should demonstrate meaningful security impact rather than unexpected API behaviour or implementation details without a practical attack scenario.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "other",
+          "endpoint": "<your-own-1password-account> → Latest Browser Extension",
+          "description": "##### 1Password Browser Extension\n\n> Asset: <your-own-1password-account> → Latest stable, beta, or nightly 1Password Browser Extension\n> Type: Browser Extension\n> Tier: Tier 1\n\nResearchers may test the latest stable, beta, or nightly versions of the 1Password Browser Extension using a 1Password account they own.\n\nSupported browsers include Chrome, Brave, Firefox, Edge, and Safari.\n\n---\n\t\nTesting should focus on vulnerabilities affecting:\n\n* Autofill security boundaries\n* Origin validation\n* Credential disclosure\n* Cross-origin behaviour\n* Extension privilege boundaries\n* Communication between the extension and 1Password\n* Vault authorization\n* Malicious-page interactions\n* Item access\n* Account isolation\n* Session or token handling\n* Browser-to-extension trust boundaries\n* Unauthorized access to protected vault data\n\nFindings must demonstrate an actual violation of an intended security boundary rather than behaviour that inherently follows from an attacker already controlling the browser, local device, or an already-authorized client.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "<your-own-1password-account> → Latest stable 1Password CLI",
+          "description": "##### 1Password CLI\n\n> Asset: <your-own-1password-account> → Latest stable, beta, or nightly 1Password CLI\n> Type: Other\n> Tier: Tier 1\n\nResearchers may test the latest stable, beta, or nightly versions of the 1Password Command Line Interface using a 1Password account they own.\n\nTesting should focus on vulnerabilities affecting CLI interactions with 1Password accounts, vaults, service accounts, authentication, and Secrets Automation.\n\n---\t\n\nTesting should focus on vulnerabilities affecting:\n \n* Authentication\n* Authorization\n* Local secret handling\n* Vault permissions\n* Session handling\n* Credential exposure\n* Service accounts\n* Secrets Automation\n* Token handling\n* Cryptographic trust boundaries\n* Unauthorized access to protected vault data\n* Privilege escalation\n* Cross-vault or cross-account access\n\nResearchers must only test using accounts, vaults, service accounts, and resources they own or have explicit permission to test.",
+          "impact": "Tier 2"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "url",
+          "endpoint": "https://www.1password.com/",
+          "description": "> 1Password Main Website",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.agilebits.com",
+          "description": "> AgileBits Domains",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://support.1password.com",
+          "description": "> 1Password Support",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "All other 1Password Assets and Accounts",
+          "description": "##### Other 1Password Assets and Accounts\n\n> Asset: All other domains, subdomains, and 1Password accounts not explicitly listed as in scope\n> Type: Other\n> Coverage: Out of Scope\n\nThis includes:\n\n* 1Password accounts not owned by the researcher\n* Accounts where the researcher does not have explicit permission from the account owner\n* Any 1Password domain or subdomain not explicitly listed in the program scope",
+          "impact": "Out of scope"
+        }
+      ]
+    }
+  },
+  {
     "id": "a80f638a-58a5-4f1c-a427-9d944cabd51a",
     "name": "ADAC Vulnerability Disclosure Program",
     "company_handle": "adac",
