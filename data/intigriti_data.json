@@ -9783,6 +9783,151 @@
     }
   },
   {
+    "id": "0fd1d85b-2d33-4966-b5a0-caabfda5108e",
+    "name": "Ninja Kiwi Games Bug Bounty program",
+    "company_handle": "ninjakiwigames",
+    "handle": "ninjakiwigames",
+    "url": "https://www.intigriti.com/programs/ninjakiwigames/ninjakiwigames/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 75,
+      "currency": "EUR"
+    },
+    "max_bounty": {
+      "value": 4125,
+      "currency": "EUR"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "url",
+          "endpoint": "analytics.ninjakiwi.com",
+          "description": "This domain hosts the API that consumed analytics events from our game clients",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "api.ninjakiwi.com",
+          "description": "This domain hosts the API for our mobile and PC games. Monitoring traffic through one of our game clients is the easiest method to investigate our main API. Most of our applications are available for free on [Steam](https://store.steampowered.com/developer/ninjakiwigames/#browse). Please carefully read the in-scope section regarding what sorts of exploits will be considering in-scope for this domain.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "url",
+          "endpoint": "guts.ninjakiwi.com",
+          "description": "This is the backend services for certain BTD6 in-game features such as Contested Territories and the Map Creator.",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.ninjakiwi.me",
+          "description": "ninjakiwi.me is a domain which hosts many of Ninja Kiwi's employtee only services. Any subdomain is eligible for the program.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.nkstatic.com",
+          "description": "This domain hosts static content for Ninja Kiwi games and website.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "battles.tv",
+          "description": "Battles.tv is used to share replays from our Bloons TD Battles game.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "data.ninjakiwi.com",
+          "description": "This domain hosts our **public** data API which grants open access to in-game data from our biggest games. For example player profiles, leaderboards and event information is available through this domain.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "ninja.kiwi",
+          "description": "This domain is used by Ninja Kiwi for our URL shortener service, ie https://ninja.kiwi/intigriti.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "ninjakiwi.com",
+          "description": "Please note that the ninjakiwi.com domain has a number of subdomains which are not in-scope. These are domains which are managed by third party providers. This includes (but it not limited to):\n- support.ninjakiwi.com\n- store.ninjakiwi.com\n- btd6store.ninjakiwi.com\n- battles2store.ninjakiwi.com\n\nIf you are unsure please feel free to reach out to us at security@ninjakiwi.com.",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "alerts.ninjakiwi.com",
+          "description": null,
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "boomer2.ninjakiwi.com",
+          "description": null,
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "ct.ninjakiwi.com",
+          "description": null,
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "mynk-dash.ninjakiwi.com",
+          "description": null,
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "mynk.ninjakiwi.com",
+          "description": "This is a legacy domain which powers our Flash games. Uses Flash AMF. This service will be shut down in early December 2026 and is no longer eligible for bounty payments.",
+          "impact": "No Bounty"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.souparea.com",
+          "description": "This domain will be considered out of scope unless it can be shown to allow an exploit on one of our Tier 1-3 domains.",
+          "impact": "No Bounty"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "url",
+          "endpoint": "rancher.ninjakiwi.com",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "rancher.ninjakiwi.me",
+          "description": null,
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "store.ninjakiwi.com",
+          "description": "If you've found an issue with this domain you can contact Shopify here - https://www.shopify.com/bugbounty",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "support.ninjakiwi.com",
+          "description": "If you've found an issue with this domain you can contact Zendesk here - https://support.zendesk.com/hc/en-us/articles/4409154830874-Zendesk-Bug-Bounty-Program",
+          "impact": "Out of scope"
+        },
+        {
+          "type": "url",
+          "endpoint": "icarusadmin.ninjakiwi.com",
+          "description": null,
+          "impact": "Out of scope"
+        }
+      ]
+    }
+  },
+  {
     "id": "9acf0f0e-f1c5-4b69-8f21-88458eb60009",
     "name": "NxtPort VDP",
     "company_handle": "portofantwerp",
@@ -12081,6 +12226,115 @@
         {
           "type": "url",
           "endpoint": "view.e.rivian.com",
+          "description": null,
+          "impact": "Out of scope"
+        }
+      ]
+    }
+  },
+  {
+    "id": "196fa177-ac2d-41b0-91bb-07bc9db43b7a",
+    "name": "SBB - Swiss Federal Railways",
+    "company_handle": "sbb",
+    "handle": "sbbglobal",
+    "url": "https://www.intigriti.com/programs/sbb/sbbglobal/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 25,
+      "currency": "EUR"
+    },
+    "max_bounty": {
+      "value": 6666,
+      "currency": "EUR"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "other",
+          "endpoint": " Mobile Apps",
+          "description": "**SBB Mobile** - your personal travel companion for public transport.\n[SBB Mobile IOS](https://apps.apple.com/us/app/sbb-mobile/id294855237) | [SBB Mobile Android](https://play.google.com/store/apps/details?id=ch.sbb.mobile.android.b2c&feature=search_result&hl=en)\n\n**SBB Preview** - [always be among the first to test the latest features.](https://www.sbb.ch/en/travel-information/apps/sbb-preview.html)\n[SBB Preview IOS](https://apps.apple.com/us/app/sbb-preview/id1074833098) | [SBB Preview Android](https://play.google.com/store/apps/details?id=ch.sbb.mobile.android.preview)\n\n**Backend URLs**\n[*.sbbmobile.ch]()\n\nPlease find more details about the apps in the\n[FAQ for SBB Mobile and SBB Preview](https://www.sbb.ch/en/help-and-contact/products-services/apps/sbb-mobile-sbb-preview/sbb-mobile-app.html)",
+          "impact": "Tier 1"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.swisspass.ch",
+          "description": "[Swisspass](https://www.swisspass.ch/home?lang=en) is the key to mobility in Switzerland.\n\nWith SwissPass customers can manage their travelcard details easily and use the partner services.\n\nPlease note that the following URL scheme is excluded from the program: `https://mailing.swisspass.ch/r/wxmc/swisspass/{20-chars}/{20-chars}/{13-chars}/{26-chars}`",
+          "impact": "Tier 2"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.sbb.ch",
+          "description": null,
+          "impact": "Tier 2"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.sbb.ch",
+          "description": "Please note that the following URL scheme is excluded from the program: `https://order.info.sbb.ch/r/wxmc/sbb/{20-chars}/{20-chars}/{13-chars}/{26-chars}`",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "other",
+          "endpoint": "Mobile Apps",
+          "description": "**SBB Freesurf** - browse the web for free on the train.\n[SBB Freesurf IOS](https://apps.apple.com/us/app/sbb-freesurf/id1437409619) |  [SBB Freesurf Android](https://play.google.com/store/search?q=freesurf&c=apps&hl=en)\n\n**SBB GO** - as a study paricipant, you can record your customer journey with the SBB go app and evaluate SBB Touchpoints along your journey.\n[SBB GO IOS](https://apps.apple.com/ch/app/sbb-go/id1224135762) | [SBB GO Android](https://play.google.com/store/apps/details?id=ch.sbb.kd.kom.sbbgo)\n\n**SBB Inclusive** - provides visual and digital customer information in stations and on SBB long-distance services\n[SBB Inclusive IOS](https://apps.apple.com/ch/app/sbb-inclusive/id1495023290) | [SBB Inclusive Android](https://play.google.com/store/apps/details?id=ch.sbb.inclusive&hl=en)\n\n**SBB P-Rail**  - [your parking space at the station](https://www.sbb.ch/en/tickets-offers/private-transport/car-parking/park-and-rail.html)\n[P+Rail IOS](https://apps.apple.com/us/app/p-rail/id1355008152) | [P+Rail Android](https://play.google.com/store/apps/details?id=ch.sbb.prail2&hl=en_US&gl=US&pli=1=)",
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.elvetino.ch",
+          "description": null,
+          "impact": "Tier 3"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*elvetino.ch",
+          "description": null,
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.sbbcargo.com",
+          "description": null,
+          "impact": "Tier 3"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*sbbcargo.com",
+          "description": null,
+          "impact": "Tier 3"
+        },
+        {
+          "type": "url",
+          "endpoint": "www.transsicura.ch",
+          "description": null,
+          "impact": "Tier 3"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*transsicura.ch",
+          "description": null,
+          "impact": "Tier 3"
+        },
+        {
+          "type": "other",
+          "endpoint": "All other Web and mobile APPs owned by SBB ",
+          "description": null,
+          "impact": null
+        },
+        {
+          "type": "other",
+          "endpoint": "All other SBB owned IT assets",
+          "description": null,
+          "impact": "No Bounty"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "wildcard",
+          "endpoint": "*.event.sbb.ch",
           "description": null,
           "impact": "Out of scope"
         }
