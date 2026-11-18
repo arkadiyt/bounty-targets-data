@@ -1949,6 +1949,132 @@
     }
   },
   {
+    "name": "Asana",
+    "url": "https://bugcrowd.com/engagements/asana",
+    "allows_disclosure": false,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "partial",
+    "max_payout": 6500,
+    "targets": {
+      "in_scope": [
+        {
+          "type": "website",
+          "target": "https://app.asana.com",
+          "uri": "https://app.asana.com",
+          "name": "app.asana.com",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "https://asana.com",
+          "uri": "https://asana.com",
+          "name": "asana.com",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "https://asana.com/apps?category=made-by-asana",
+          "uri": "https://asana.com/apps?category=made-by-asana",
+          "name": "*.asana.plus",
+          "ipAddress": null
+        },
+        {
+          "type": "other",
+          "target": "https://asana.com/download",
+          "uri": "https://asana.com/download",
+          "name": "Asana Desktop App",
+          "ipAddress": null
+        },
+        {
+          "type": "ios",
+          "target": "https://apps.apple.com/us/app/asana-mobile/id489969512",
+          "uri": "https://apps.apple.com/us/app/asana-mobile/id489969512",
+          "name": "Asana iOS app",
+          "ipAddress": null
+        },
+        {
+          "type": "android",
+          "target": "https://play.google.com/store/apps/details?id=com.asana.app&hl=en",
+          "uri": "https://play.google.com/store/apps/details?id=com.asana.app&hl=en",
+          "name": "Asana Android app",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "https://form.asana.com",
+          "uri": "https://form.asana.com",
+          "name": "form.asana.com",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "*.app.asana.com",
+          "uri": null,
+          "name": "*.app.asana.com",
+          "ipAddress": null
+        },
+        {
+          "type": "other",
+          "target": "https://*.asana.biz",
+          "uri": "https://*.asana.biz",
+          "name": "*.asana.biz",
+          "ipAddress": null
+        },
+        {
+          "type": "other",
+          "target": "Subdomain takeover at *asana.biz",
+          "uri": "",
+          "name": "Subdomain takeover at *asana.biz",
+          "ipAddress": ""
+        }
+      ],
+      "out_of_scope": [
+        {
+          "type": "website",
+          "target": "Other subdomains of asana.com",
+          "uri": null,
+          "name": "Other subdomains of asana.com",
+          "ipAddress": null
+        },
+        {
+          "type": "other",
+          "target": "Social engineering against Asana Support or Asana Employees",
+          "uri": null,
+          "name": "Social engineering against Asana Support or Asana Employees",
+          "ipAddress": null
+        },
+        {
+          "type": "website",
+          "target": "jira*.integrations.asana.plus",
+          "uri": "",
+          "name": "jira*.integrations.asana.plus",
+          "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "asana.okta.com",
+          "uri": "",
+          "name": "asana.okta.com",
+          "ipAddress": ""
+        },
+        {
+          "type": "website",
+          "target": "assets.asana.biz",
+          "uri": "",
+          "name": "assets.asana.biz",
+          "ipAddress": ""
+        },
+        {
+          "type": "other",
+          "target": "Forms that you do not own",
+          "uri": "",
+          "name": "Forms that you do not own",
+          "ipAddress": ""
+        }
+      ]
+    }
+  },
+  {
     "name": "Atlassian",
     "url": "https://bugcrowd.com/engagements/atlassian",
     "allows_disclosure": false,
@@ -6933,139 +7059,6 @@
           "uri": "",
           "name": "Public Network / Veranstaltungsnetz",
           "ipAddress": "141.203.188.0/22"
-        }
-      ]
-    }
-  },
-  {
-    "name": "ClassDojo",
-    "url": "https://bugcrowd.com/engagements/classdojo",
-    "allows_disclosure": true,
-    "managed_by_bugcrowd": true,
-    "safe_harbor": "full",
-    "max_payout": 2500,
-    "targets": {
-      "in_scope": [
-        {
-          "type": "ios",
-          "target": "https://apps.apple.com/us/app/classdojo/id552602056",
-          "uri": "https://apps.apple.com/us/app/classdojo/id552602056",
-          "name": "IoS App",
-          "ipAddress": null
-        },
-        {
-          "type": "api",
-          "target": "https://api.classdojo.com",
-          "uri": "https://api.classdojo.com",
-          "name": "https://api.classdojo.com",
-          "ipAddress": null
-        },
-        {
-          "type": "android",
-          "target": "https://play.google.com/store/apps/details?id=com.classdojo.android",
-          "uri": "https://play.google.com/store/apps/details?id=com.classdojo.android",
-          "name": "Android App",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "https://teach.classdojo.com",
-          "uri": "https://teach.classdojo.com",
-          "name": "https://teach.classdojo.com",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "https://student.classdojo.com",
-          "uri": "https://student.classdojo.com",
-          "name": "https://student.classdojo.com",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "https://www.classdojo.com",
-          "uri": "https://www.classdojo.com",
-          "name": "https://www.classdojo.com",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "https://home.classdojo.com",
-          "uri": "https://home.classdojo.com",
-          "name": "https://home.classdojo.com",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "https://dev.tutoring.classdojo.com",
-          "uri": "https://dev.tutoring.classdojo.com",
-          "name": "https://dev.tutoring.classdojo.com",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "https://ws.multiplayer.classdojo.com/",
-          "uri": "https://ws.multiplayer.classdojo.com/",
-          "name": "wss://ws.multiplayer.classdojo.com",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "https://ticket.multiplayer.classdojo.com",
-          "uri": "https://ticket.multiplayer.classdojo.com",
-          "name": "https://ticket.multiplayer.classdojo.com",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "https://clients.multiplayer.classdojo.com/launcher/prod/latest",
-          "uri": "https://clients.multiplayer.classdojo.com/launcher/prod/latest",
-          "name": "https://clients.multiplayer.classdojo.com/launcher/prod/latest",
-          "ipAddress": null
-        },
-        {
-          "type": "website",
-          "target": "https://monster-customizer.classdojo.com/cf6dfa68-1a81-4c6d-bc0b-38f3666b37d6/index.html",
-          "uri": "https://monster-customizer.classdojo.com/cf6dfa68-1a81-4c6d-bc0b-38f3666b37d6/index.html",
-          "name": "https://monster-customizer.classdojo.com/cf6dfa68-1a81-4c6d-bc0b-38f3666b37d6/index.html",
-          "ipAddress": null
-        },
-        {
-          "type": "api",
-          "target": "*.classdojo.com",
-          "uri": "",
-          "name": "*.classdojo.com",
-          "ipAddress": ""
-        },
-        {
-          "type": "api",
-          "target": "*.classdojo.co.uk",
-          "uri": "",
-          "name": "*.classdojo.co.uk",
-          "ipAddress": ""
-        },
-        {
-          "type": "api",
-          "target": "*.doj.io",
-          "uri": "",
-          "name": "*.doj.io",
-          "ipAddress": ""
-        },
-        {
-          "type": "api",
-          "target": "*.dojo.me",
-          "uri": "",
-          "name": "*.dojo.me",
-          "ipAddress": ""
-        }
-      ],
-      "out_of_scope": [
-        {
-          "type": "website",
-          "target": "https://shop.classdojo.com",
-          "uri": "https://shop.classdojo.com",
-          "name": "https://shop.classdojo.com",
-          "ipAddress": ""
         }
       ]
     }
