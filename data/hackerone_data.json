@@ -7738,7 +7738,7 @@
     "name": "Live Nation",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 98,
+    "response_efficiency_percentage": 99,
     "submission_state": "open",
     "url": "https://hackerone.com/live_nation",
     "website": "http://livenation.com",
@@ -169289,6 +169289,17 @@
           "max_severity": "critical"
         },
         {
+          "asset_identifier": "*.fidsafe.com",
+          "asset_type": "WILDCARD",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
           "asset_identifier": "*.mystreetscape.com",
           "asset_type": "WILDCARD",
           "availability_requirement": null,
@@ -169454,29 +169465,7 @@
           "max_severity": "critical"
         },
         {
-          "asset_identifier": "web.fidsafe.com",
-          "asset_type": "URL",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": false,
-          "eligible_for_submission": true,
-          "instruction": null,
-          "integrity_requirement": null,
-          "max_severity": "critical"
-        },
-        {
           "asset_identifier": "www.fidelityprivateshares.com",
-          "asset_type": "URL",
-          "availability_requirement": null,
-          "confidentiality_requirement": null,
-          "eligible_for_bounty": false,
-          "eligible_for_submission": true,
-          "instruction": null,
-          "integrity_requirement": null,
-          "max_severity": "critical"
-        },
-        {
-          "asset_identifier": "www.fidsafe.com",
           "asset_type": "URL",
           "availability_requirement": null,
           "confidentiality_requirement": null,
@@ -445224,7 +445213,7 @@
     "name": "Anywhere Real Estate",
     "offers_bounties": false,
     "offers_swag": false,
-    "response_efficiency_percentage": 70,
+    "response_efficiency_percentage": 71,
     "submission_state": "open",
     "url": "https://hackerone.com/anywhererealestate",
     "website": "http://anywhere.re",
@@ -455174,7 +455163,7 @@
     "name": "Oasis Protocol Foundation",
     "offers_bounties": true,
     "offers_swag": true,
-    "response_efficiency_percentage": 33,
+    "response_efficiency_percentage": 29,
     "submission_state": "open",
     "url": "https://hackerone.com/oasisprotocol",
     "website": "https://oasisprotocol.org",
@@ -473189,7 +473178,7 @@
     "name": "Instacart",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 76,
+    "response_efficiency_percentage": 75,
     "submission_state": "open",
     "url": "https://hackerone.com/instacart",
     "website": "https://instacart.com",
@@ -473426,6 +473415,50 @@
           "eligible_for_submission": false,
           "instruction": "",
           "integrity_requirement": null,
+          "max_severity": "none"
+        }
+      ]
+    }
+  },
+  {
+    "allows_bounty_splitting": false,
+    "average_time_to_bounty_awarded": null,
+    "average_time_to_first_program_response": 170.0,
+    "average_time_to_report_resolved": 1366.0,
+    "handle": "phpbb",
+    "id": 0,
+    "managed_program": false,
+    "name": "phpBB",
+    "offers_bounties": false,
+    "offers_swag": false,
+    "response_efficiency_percentage": 61,
+    "submission_state": "open",
+    "url": "https://hackerone.com/phpbb",
+    "website": "https://www.phpbb.com",
+    "targets": {
+      "in_scope": [
+        {
+          "asset_identifier": "https://github.com/phpbb/phpbb",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "The Admin Control Panel allows adminstrators to create custom BBcodes. This feature also allows the use of JavaScript, therefore XSS created by an adminstrator is out of scope.",
+          "integrity_requirement": "high",
+          "max_severity": "critical"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "asset_identifier": "www.phpbb.com",
+          "asset_type": "URL",
+          "availability_requirement": "high",
+          "confidentiality_requirement": "high",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "Please limit your reports to the phpBB git repository for now.",
+          "integrity_requirement": "high",
           "max_severity": "none"
         }
       ]
@@ -480741,7 +480774,7 @@
     "name": "Acronis",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 34,
+    "response_efficiency_percentage": 35,
     "submission_state": "open",
     "url": "https://hackerone.com/acronis",
     "website": "https://www.acronis.com",
@@ -498846,7 +498879,7 @@
     "name": "Wealthsimple",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 87,
+    "response_efficiency_percentage": 86,
     "submission_state": "open",
     "url": "https://hackerone.com/wealthsimple",
     "website": "https://www.wealthsimple.com",
@@ -504003,7 +504036,7 @@
     "name": "Ubiquiti Inc.",
     "offers_bounties": true,
     "offers_swag": true,
-    "response_efficiency_percentage": 82,
+    "response_efficiency_percentage": 83,
     "submission_state": "open",
     "url": "https://hackerone.com/ui",
     "website": "https://ui.com",
