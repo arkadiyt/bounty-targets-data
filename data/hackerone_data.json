@@ -753,7 +753,7 @@
     "name": "Smartsheet (VDP)",
     "offers_bounties": false,
     "offers_swag": false,
-    "response_efficiency_percentage": 84,
+    "response_efficiency_percentage": 85,
     "submission_state": "open",
     "url": "https://hackerone.com/smartsheet_vdp",
     "website": "http://www.smartsheet.com",
@@ -36324,7 +36324,7 @@
     "name": "Neon",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 78,
+    "response_efficiency_percentage": 77,
     "submission_state": "open",
     "url": "https://hackerone.com/neon_bbp",
     "website": "http://neon.tech",
@@ -170761,7 +170761,7 @@
     "name": "Hilton",
     "offers_bounties": true,
     "offers_swag": true,
-    "response_efficiency_percentage": 89,
+    "response_efficiency_percentage": 88,
     "submission_state": "open",
     "url": "https://hackerone.com/hilton",
     "website": "http://hilton.com",
@@ -481324,7 +481324,7 @@
     "name": "PayPal",
     "offers_bounties": true,
     "offers_swag": true,
-    "response_efficiency_percentage": 92,
+    "response_efficiency_percentage": 93,
     "submission_state": "open",
     "url": "https://hackerone.com/paypal",
     "website": "http://paypal.com/",
@@ -482442,7 +482442,7 @@
     "name": "Affirm",
     "offers_bounties": true,
     "offers_swag": false,
-    "response_efficiency_percentage": 82,
+    "response_efficiency_percentage": 78,
     "submission_state": "open",
     "url": "https://hackerone.com/affirm",
     "website": "http://www.affirm.com",
@@ -495721,6 +495721,171 @@
           "eligible_for_submission": false,
           "instruction": "These are made by third parties. Please report issues in these directly to the maintainer. ",
           "integrity_requirement": "none",
+          "max_severity": "none"
+        }
+      ]
+    }
+  },
+  {
+    "allows_bounty_splitting": true,
+    "average_time_to_bounty_awarded": null,
+    "average_time_to_first_program_response": 416.0,
+    "average_time_to_report_resolved": 1549.0,
+    "handle": "rubygems",
+    "id": 0,
+    "managed_program": false,
+    "name": "RubyGems",
+    "offers_bounties": false,
+    "offers_swag": false,
+    "response_efficiency_percentage": 88,
+    "submission_state": "open",
+    "url": "https://hackerone.com/rubygems",
+    "website": "https://rubygems.org",
+    "targets": {
+      "in_scope": [
+        {
+          "asset_identifier": "Malicious or compromised gem",
+          "asset_type": "OTHER",
+          "availability_requirement": "none",
+          "confidentiality_requirement": "low",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": "medium",
+          "max_severity": "high"
+        },
+        {
+          "asset_identifier": "https://github.com/rubygems/rubygems",
+          "asset_type": "SOURCE_CODE",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "rubygems.org",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": null,
+          "integrity_requirement": null,
+          "max_severity": "critical"
+        },
+        {
+          "asset_identifier": "shipit.rubygems.org",
+          "asset_type": "URL",
+          "availability_requirement": "medium",
+          "confidentiality_requirement": "medium",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": true,
+          "instruction": null,
+          "integrity_requirement": "medium",
+          "max_severity": "critical"
+        }
+      ],
+      "out_of_scope": [
+        {
+          "asset_identifier": "blog.rubygems.org",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "guide.rubygems.org",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "help.rubygems.org",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "http://rubygems.org/names",
+          "asset_type": "API",
+          "availability_requirement": "none",
+          "confidentiality_requirement": "none",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": null,
+          "integrity_requirement": "none",
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "https://s3-us-west-2.amazonaws.com/rubygems-dumps",
+          "asset_type": "URL",
+          "availability_requirement": "none",
+          "confidentiality_requirement": "none",
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "These database dumps are deliberately public.",
+          "integrity_requirement": "none",
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "stats.rubygems.org",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "status.rubygems.org",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "support.rubygems.org",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "",
+          "integrity_requirement": null,
+          "max_severity": "none"
+        },
+        {
+          "asset_identifier": "uptime.rubygems.org",
+          "asset_type": "URL",
+          "availability_requirement": null,
+          "confidentiality_requirement": null,
+          "eligible_for_bounty": false,
+          "eligible_for_submission": false,
+          "instruction": "",
+          "integrity_requirement": null,
           "max_severity": "none"
         }
       ]
