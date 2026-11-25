@@ -478,6 +478,210 @@
     }
   },
   {
+    "id": "e1d4acde-4edf-4a0c-906b-1db096f134a9",
+    "name": "Aspira VDP",
+    "company_handle": "aspira",
+    "handle": "aspiravdp",
+    "url": "https://www.intigriti.com/programs/aspira/aspiravdp/detail",
+    "status": "open",
+    "confidentiality_level": "public",
+    "tacRequired": false,
+    "twoFactorRequired": false,
+    "min_bounty": {
+      "value": 0,
+      "currency": "USD"
+    },
+    "max_bounty": {
+      "value": 0,
+      "currency": "USD"
+    },
+    "targets": {
+      "in_scope": [
+        {
+          "type": "wildcard",
+          "endpoint": "*.reserveamerica.com",
+          "description": "All ReserveAmerica subdomains, including the main consumer reservation site and per-agency reservation sites. The public uses them to search for and book campsites, cabins, day-use facilities and other recreation at participating parks, and to manage their accounts and reservations. Staff-facing applications (including orms.reserveamerica.com) and UAT, staging and QA hosts are out of scope.",
+          "impact": "No Bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "vtstateparks-visit.com",
+          "description": "Vermont State Parks' reservation site, run by Aspira. Visitors book campsites, lean-tos, cabins and day-use pavilions, change or cancel reservations, and buy gift certificates and park merchandise.",
+          "impact": "No Bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "albertarelm.com",
+          "description": "Alberta's online hunting and fishing licensing site, run by Aspira for the province. Hunters and anglers apply for and renew their Wildlife Identification Number (WIN), buy hunting and sportfishing licences, apply for draws and view draw results.",
+          "impact": "No Bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "peiprovincialparks.ca",
+          "description": "Prince Edward Island Provincial Parks' reservation site, run by Aspira. Visitors book campsites and camp cabins at PEI provincial parks and manage their reservations.",
+          "impact": "No Bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "parks.saskatchewan.ca",
+          "description": "Saskatchewan Provincial Parks' reservation site, run by Aspira. Visitors book nightly, seasonal and group campsites, buy park entry permits, and reserve day-use facilities, events and swimming lessons.",
+          "impact": "No Bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "saskatchewanhal.ca",
+          "description": "Saskatchewan's Hunting, Angling and Trapping Licence (HAL) system, run by Aspira for the province. Users create a HAL account to buy hunting, angling and trapping licences, reprint purchased licences and apply for the big game draw.",
+          "impact": "No Bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "larimercamping.com",
+          "description": "Larimer County (Colorado) Natural Resources' camping reservation site, run by Aspira. Visitors reserve campsites at county parks and reservoirs and buy entrance permits with their reservations.",
+          "impact": "No Bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "shop.albertaparks.ca",
+          "description": "Alberta Parks' reservation site, run by Aspira. Visitors book individual, group, comfort and backcountry camping at Alberta provincial parks and change or cancel their reservations.",
+          "impact": "No Bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "campitks.com",
+          "description": "Kansas Department of Wildlife and Parks' state park reservation site, run by Aspira. Visitors reserve campsites and cabins at Kansas state parks and buy state park vehicle and camping permits.",
+          "impact": "No Bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "campitks.gov",
+          "description": "Kansas Department of Wildlife and Parks' newer domain for its state park reservation site (alongside campitks.com), run by Aspira. Visitors reserve campsites and cabins at Kansas state parks and buy state park vehicle and camping permits.",
+          "impact": "No Bounty"
+        },
+        {
+          "type": "wildcard",
+          "endpoint": "*.aspirafocus.com",
+          "description": "Hosts for Aspira Focus, our hunting, fishing and licensing platform. Agencies use it to sell licenses and permits and run draws, and customers use it to create accounts, buy licenses and manage their records.",
+          "impact": "No Bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "utahdraws.com",
+          "description": "The Utah Division of Wildlife Resources' hunt draw system, run by Aspira. Applicants apply for big game and other hunt draws, edit or withdraw applications, view results and buy permits.",
+          "impact": "No Bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "licenses.wildlife.ca.gov",
+          "description": "California Department of Fish and Wildlife's Online License Sales and Services site, run by Aspira. Customers register for a GO ID, buy and renew fishing and hunting licenses, tags, draw applications and lands passes, and buy duplicates.",
+          "impact": "No Bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "app.fireflyreservations.com",
+          "description": "This platform is Aspira's offering for the private sector. It offers privately owned campgrounds simplified online reservation, payment, and communication management.",
+          "impact": "No Bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://psapi-rest.reserveamerica.com/ps-api-rest-service/",
+          "description": "Public REST API serving US customers. It is the main API behind Aspira’s consumer mobile apps. Functions include customer and reservation data, per-agency configuration data, and digital pass delivery: Google Wallet passes, plus the Apple Wallet pass web service for device registration and pass updates. The easiest way to map endpoints is to proxy traffic from the in-scope mobile apps.",
+          "impact": "No Bounty"
+        },
+        {
+          "type": "url",
+          "endpoint": "https://can-psapi-rest.reserveamerica.com/ps-api-rest-service/",
+          "description": "Canadian instance of the same public REST API, serving Canadian customers and agencies such as Alberta and Saskatchewan. It has the same functions as the US instance: customer and reservation data, agency configuration, and Google and Apple Wallet pass services. The `uatcan-psapirest` host is out of scope.",
+          "impact": "No Bounty"
+        },
+        {
+          "type": "android",
+          "endpoint": "RA Camping - Android",
+          "description": "Aspira’s consumer ReserveAmerica app. Users search for and reserve campsites and other facilities at participating parks, manage existing reservations, and sign in with their ReserveAmerica account. The app talks to the ReserveAmerica public REST API (psapi-rest.reserveamerica.com), which is also in scope.",
+          "impact": "No Bounty"
+        },
+        {
+          "type": "android",
+          "endpoint": "CDFW License - Android",
+          "description": "Official California Department of Fish and Wildlife licensing app, operated by Aspira for CDFW. Users create an account or sign in, then view their hunting and fishing licenses and their validity, and receive license notification letters",
+          "impact": "No Bounty"
+        },
+        {
+          "type": "android",
+          "endpoint": "AlbertaRELM - Android",
+          "description": "Official mobile app for Alberta’s hunting and fishing licensing system, operated by Aspira for the province. Users sign in to view and carry their licences and related customer records.",
+          "impact": "No Bounty"
+        },
+        {
+          "type": "android",
+          "endpoint": "My CPW - Android",
+          "description": "Official Colorado Parks and Wildlife app, operated by Aspira for CPW. Users sign in to view and carry their hunting and fishing licenses and related customer information.",
+          "impact": "No Bounty"
+        },
+        {
+          "type": "android",
+          "endpoint": "SK Hunt & Fish - Android",
+          "description": "Official Saskatchewan hunting and fishing licence app, operated by Aspira for the province. Users sign in to view and carry their licences and related customer records.",
+          "impact": "No Bounty"
+        },
+        {
+          "type": "android",
+          "endpoint": "RV Parky - Android",
+          "description": "Consumer app for finding RV parks, campgrounds and RV-friendly stops, with user accounts and community content. It runs as a separate Aspira business line (Ventures)",
+          "impact": "No Bounty"
+        },
+        {
+          "type": "android",
+          "endpoint": "Campit KS - Android",
+          "description": "Official Kansas state park camping app, operated by Aspira under the Kansas camping contract. Users search for and reserve campsites at Kansas state parks and manage their reservations.",
+          "impact": "No Bounty"
+        },
+        {
+          "type": "ios",
+          "endpoint": "RA Camping - iOS",
+          "description": "Aspira’s consumer ReserveAmerica app. Users search for and reserve campsites and other facilities at participating parks, manage existing reservations, and sign in with their ReserveAmerica account. The app talks to the ReserveAmerica public REST API (psapi-rest.reserveamerica.com), which is also in scope.",
+          "impact": "No Bounty"
+        },
+        {
+          "type": "ios",
+          "endpoint": "CDFW License - iOS",
+          "description": "Official California Department of Fish and Wildlife licensing app, operated by Aspira for CDFW. Users create an account or sign in, then view their hunting and fishing licenses and their validity, and receive license notification letters",
+          "impact": "No Bounty"
+        },
+        {
+          "type": "ios",
+          "endpoint": "AlbertaRELM - iOS",
+          "description": "Official mobile app for Alberta’s hunting and fishing licensing system, operated by Aspira for the province. Users sign in to view and carry their licences and related customer records.",
+          "impact": "No Bounty"
+        },
+        {
+          "type": "ios",
+          "endpoint": "My CPW - iOS",
+          "description": "Official Colorado Parks and Wildlife app, operated by Aspira for CPW. Users sign in to view and carry their hunting and fishing licenses and related customer information.",
+          "impact": "No Bounty"
+        },
+        {
+          "type": "ios",
+          "endpoint": "SK Hunt & Fish - iOS",
+          "description": "Official Saskatchewan hunting and fishing licence app, operated by Aspira for the province. Users sign in to view and carry their licences and related customer records.",
+          "impact": "No Bounty"
+        },
+        {
+          "type": "ios",
+          "endpoint": "RV Parky - iOS",
+          "description": "Consumer app for finding RV parks, campgrounds and RV-friendly stops, with user accounts and community content. It runs as a separate Aspira business line (Ventures)",
+          "impact": "No Bounty"
+        },
+        {
+          "type": "ios",
+          "endpoint": "Campit KS - iOS",
+          "description": "Official Kansas state park camping app, operated by Aspira under the Kansas camping contract. Users search for and reserve campsites at Kansas state parks and manage their reservations.",
+          "impact": "No Bounty"
+        }
+      ],
+      "out_of_scope": []
+    }
+  },
+  {
     "id": "0b7bb6fd-9e64-435f-b944-ded6d6eec842",
     "name": "Atolls Vulnerability Disclosure Program (VDP)",
     "company_handle": "atolls",
